@@ -1,0 +1,59 @@
+name: HOME 4.1.0 P8 local BLR Item8 vtable triage
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p8-item-blr-triage.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p8-item-blr-triage
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install original ELF ARM64 disassembler
+        run: |
+          python -m pip install capstone==5.0.6
+          python -m py_compile tools/home41_native_p8_blr_triage.py
+      - name: Recover register producers for nine native Item8-area BLR sites
+        run: |
+          python tools/home41_native_p8_blr_triage.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --upstream derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json \
+            --out derived/4.1.0/native_item_topics/p8_item_local_blr_triage.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('derived/4.1.0/native_item_topics/p8_item_local_blr_triage.json').read_text())
+          assert d['elf_sha256']=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          assert len(d['rows'])==9
+          assert [int(r['native_blr_rva'],16) for r in d['rows']]==sorted(int(r['native_blr_rva'],16) for r in d['rows'])
+          assert all(r['resolved_target'] is None for r in d['rows'])
+          print('verified BLR count:',d['raw_local_blr_sites'])
+          PY
+      - name: Publish original ELF BLR source register evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- derived/4.1.0/native_item_topics/p8_item_local_blr_triage.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: P8 original ELF nine local Item8 area BLR register producers'
+            git reset --hard HEAD
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
