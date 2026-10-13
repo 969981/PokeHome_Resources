@@ -32,6 +32,7 @@ from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bff
 from home41_tables import decode_grammar, grammar_csv_rows, decode_item_hash_index, decode_form_storage_index
 from home41_reflection_decode import decode_reflected_scalar_vector_tables
 from home41_topics import decode_pokedex_topics
+from home41_topics_semantic import annotate_topics
 from home41_item8_semantic import decode_item8_semantic
 from home41_pokedex_item import (
     decode_pokemon_test, decode_pokemon_valid, decode_pokedex_form,
@@ -41,7 +42,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.6.0"
+PARSER_VERSION = "mirror-0.7.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -261,11 +262,19 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
 
     if category == "topics":
         doc = decode_pokedex_topics(read_file(source))
+        linked = annotate_topics(doc)
         rows = doc["rows"]
+        doc["native_reference_summary"] = {
+            k: v for k, v in linked.items() if k != "rows"
+        }
         sink.put(main.with_suffix(".csv"), csv_bytes(rows, list(rows[0])))
+        sink.put(main.with_name(main.stem + ".references.csv"),
+                 csv_bytes(linked["rows"], list(linked["rows"][0])))
         sink.put(main, json_bytes({k: v for k, v in doc.items() if k != "rows"}))
         return "partial", len(rows), [
-            "7 groups, 99 fixed slots, 140 active and 553 identical placeholder records; inner u32 semantics unknown"
+            "693 original slots; 140 topics and 500 species/form refs native-linked",
+            "game labels based on observed starter trios; UI progress code unverified",
+            "field semantics beyond species/form and native group-bit gate still partial"
         ], sink.commit()
 
     if category == "pokemon":
