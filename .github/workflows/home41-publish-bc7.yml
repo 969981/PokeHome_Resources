@@ -1,0 +1,57 @@
+name: HOME 4.1.0 publish BC7 icons
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home41-publish-bc7.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-publish-bc7
+  cancel-in-progress: false
+jobs:
+  publish-bc7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install texture2ddecoder==1.0.6
+      - name: Verify one real compressed BC7 file
+        run: python -m unittest discover -s tools -p test_home41_extra.py -v
+      - name: Convert all 3538 compressed images
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind images --resume
+          python - <<'PY'
+          import json
+          data=json.load(open('Unpack/_meta/manifest.json'))['files']
+          bc=[x for x in data if x['source_path'].endswith('.bntx.gz')]
+          decoded=[x for x in bc if any(y['path'].endswith('.png') for y in x['outputs'])]
+          print('BNTX.gz',len(bc),'with PNG',len(decoded))
+          assert len(bc)==3538
+          assert len(decoded)>3000, 'BC7 icons not decoded to PNG as expected'
+          assert not any(x['status']=='failed' for x in data)
+          PY
+      - name: Verify source and output hashes
+        run: python tools/unpack_home41.py --root . --out Unpack --verify --strict
+      - name: Commit all new BC7 PNGs and audit metadata
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          files=[str(x) for x in Path('Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1').rglob('*.png')]
+          files.extend(str(x) for x in Path('Unpack/_meta').glob('*') if x.is_file())
+          for i in range(0,len(files),100):
+              subprocess.run(['git','add','--',*files[i:i+100]],check=True)
+          print('Prepared',len(files),'PNG/audit paths')
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m "data: publish real BC7 Pokémon capture icons as PNG"
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
