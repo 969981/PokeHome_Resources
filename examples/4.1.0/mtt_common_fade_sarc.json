@@ -1,0 +1,32 @@
+{
+  "version": "4.1.0",
+  "archive": "bin/appli/mtt_common_fade/bin/mtt_common_fade.arc",
+  "size_bytes": 1516,
+  "endian": "little",
+  "entries": [
+    {
+      "index": 0,
+      "name": "anim/mtt_common_fade_in.bflan",
+      "offset": 192,
+      "bytes": 200,
+      "magic": "FLAN",
+      "first16_hex": "464c414efffe140000000009c8000000"
+    },
+    {
+      "index": 1,
+      "name": "anim/mtt_common_fade_out.bflan",
+      "offset": 400,
+      "bytes": 200,
+      "magic": "FLAN",
+      "first16_hex": "464c414efffe140000000009c8000000"
+    },
+    {
+      "index": 2,
+      "name": "blyt/mtt_common_fade.bflyt",
+      "offset": 608,
+      "bytes": 908,
+      "magic": "FLYT",
+      "first16_hex": "464c5954fffe1400000000098c030000"
+    }
+  ]
+}
