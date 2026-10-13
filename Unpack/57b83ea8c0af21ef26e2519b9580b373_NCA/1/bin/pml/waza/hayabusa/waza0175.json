@@ -1,0 +1,92 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 2.45227231256843e-43,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "af000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 175,
+      "u32_candidate": 175,
+      "u8_candidate": 175
+    },
+    {
+      "field_index": 1,
+      "object_offset": 0,
+      "present": false
+    },
+    {
+      "field_index": 2,
+      "object_offset": 0,
+      "present": false
+    },
+    {
+      "field_index": 3,
+      "object_offset": 0,
+      "present": false
+    },
+    {
+      "field_index": 4,
+      "float32_candidate": 1.401298464324817e-45,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "01000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 1,
+      "u32_candidate": 1,
+      "u8_candidate": 1
+    },
+    {
+      "field_index": 5,
+      "float32_candidate": 1.401298464324817e-45,
+      "object_offset": 12,
+      "present": true,
+      "raw_hex": "01000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 1,
+      "u32_candidate": 1,
+      "u8_candidate": 1
+    },
+    {
+      "field_index": 6,
+      "float32_candidate": 1.401298464324817e-43,
+      "object_offset": 16,
+      "present": true,
+      "raw_hex": "64000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 100,
+      "u32_candidate": 100,
+      "u8_candidate": 100
+    },
+    {
+      "field_index": 7,
+      "float32_candidate": 2.1019476964872256e-44,
+      "object_offset": 20,
+      "present": true,
+      "raw_hex": "0f000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 15,
+      "u32_candidate": 15,
+      "u8_candidate": 15
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4,
+      0,
+      0,
+      0,
+      8,
+      12,
+      16,
+      20
+    ],
+    "object_size": 24,
+    "root": 24,
+    "u32_vector_candidates": {},
+    "vtable": 4,
+    "vtable_size": 20
+  }
+}

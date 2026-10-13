@@ -1,0 +1,26 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 1.2681751102139594e-42,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "89030000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 905,
+      "u32_candidate": 905,
+      "u8_candidate": 137
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4
+    ],
+    "object_size": 8,
+    "root": 12,
+    "u32_vector_candidates": {},
+    "vtable": 6,
+    "vtable_size": 6
+  }
+}

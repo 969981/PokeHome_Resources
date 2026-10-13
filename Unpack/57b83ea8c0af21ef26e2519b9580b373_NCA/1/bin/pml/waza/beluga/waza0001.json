@@ -1,60 +1,95 @@
 {
-  "version": "4.1.0",
-  "resource": "bin/pml/waza/beluga/waza0001.wazabin",
-  "size_bytes": 52,
-  "interpretation": "FlatBuffers untyped field bytes; u32 values are only candidates",
-  "root_offset": 24,
-  "table_vtable_offset": 4,
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
   "fields": [
     {
       "field_index": 0,
+      "float32_candidate": 1.401298464324817e-45,
+      "object_offset": 8,
       "present": true,
-      "offset_in_object": 8,
       "raw_hex": "01000000",
-      "u32_candidate": 1
+      "storage_width_candidate": 4,
+      "u16_candidate": 1,
+      "u32_candidate": 1,
+      "u8_candidate": 1
     },
     {
       "field_index": 1,
+      "object_offset": 7,
       "present": true,
-      "offset_in_object": 7,
       "raw_hex": "01",
-      "u32_candidate": null
+      "storage_width_candidate": 1,
+      "u8_candidate": 1
     },
     {
       "field_index": 2,
+      "object_offset": 0,
       "present": false
     },
     {
       "field_index": 3,
+      "object_offset": 0,
       "present": false
     },
     {
       "field_index": 4,
+      "float32_candidate": 1.401298464324817e-45,
+      "object_offset": 12,
       "present": true,
-      "offset_in_object": 12,
       "raw_hex": "01000000",
-      "u32_candidate": 1
+      "storage_width_candidate": 4,
+      "u16_candidate": 1,
+      "u32_candidate": 1,
+      "u8_candidate": 1
     },
     {
       "field_index": 5,
+      "float32_candidate": 5.605193857299268e-44,
+      "object_offset": 16,
       "present": true,
-      "offset_in_object": 16,
       "raw_hex": "28000000",
-      "u32_candidate": 40
+      "storage_width_candidate": 4,
+      "u16_candidate": 40,
+      "u32_candidate": 40,
+      "u8_candidate": 40
     },
     {
       "field_index": 6,
+      "float32_candidate": 1.401298464324817e-43,
+      "object_offset": 20,
       "present": true,
-      "offset_in_object": 20,
       "raw_hex": "64000000",
-      "u32_candidate": 100
+      "storage_width_candidate": 4,
+      "u16_candidate": 100,
+      "u32_candidate": 100,
+      "u8_candidate": 100
     },
     {
       "field_index": 7,
+      "float32_candidate": 4.90454462513686e-44,
+      "object_offset": 24,
       "present": true,
-      "offset_in_object": 24,
       "raw_hex": "23000000",
-      "u32_candidate": 35
+      "storage_width_candidate": 4,
+      "u16_candidate": 35,
+      "u32_candidate": 35,
+      "u8_candidate": 35
     }
-  ]
+  ],
+  "header": {
+    "field_offsets": [
+      8,
+      7,
+      0,
+      0,
+      12,
+      16,
+      20,
+      24
+    ],
+    "object_size": 28,
+    "root": 24,
+    "u32_vector_candidates": {},
+    "vtable": 4,
+    "vtable_size": 20
+  }
 }

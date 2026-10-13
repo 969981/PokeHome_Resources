@@ -1,0 +1,95 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 2.284116496849452e-43,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "a3000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 163,
+      "u32_candidate": 163,
+      "u8_candidate": 163
+    },
+    {
+      "field_index": 1,
+      "object_offset": 7,
+      "present": true,
+      "raw_hex": "01",
+      "storage_width_candidate": 1,
+      "u8_candidate": 1
+    },
+    {
+      "field_index": 2,
+      "object_offset": 0,
+      "present": false
+    },
+    {
+      "field_index": 3,
+      "object_offset": 0,
+      "present": false
+    },
+    {
+      "field_index": 4,
+      "float32_candidate": 1.401298464324817e-45,
+      "object_offset": 12,
+      "present": true,
+      "raw_hex": "01000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 1,
+      "u32_candidate": 1,
+      "u8_candidate": 1
+    },
+    {
+      "field_index": 5,
+      "float32_candidate": 9.80908925027372e-44,
+      "object_offset": 16,
+      "present": true,
+      "raw_hex": "46000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 70,
+      "u32_candidate": 70,
+      "u8_candidate": 70
+    },
+    {
+      "field_index": 6,
+      "float32_candidate": 1.401298464324817e-43,
+      "object_offset": 20,
+      "present": true,
+      "raw_hex": "64000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 100,
+      "u32_candidate": 100,
+      "u8_candidate": 100
+    },
+    {
+      "field_index": 7,
+      "float32_candidate": 2.802596928649634e-44,
+      "object_offset": 24,
+      "present": true,
+      "raw_hex": "14000000",
+      "storage_width_candidate": 4,
+      "u16_candidate": 20,
+      "u32_candidate": 20,
+      "u8_candidate": 20
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      8,
+      7,
+      0,
+      0,
+      12,
+      16,
+      20,
+      24
+    ],
+    "object_size": 28,
+    "root": 24,
+    "u32_vector_candidates": {},
+    "vtable": 4,
+    "vtable_size": 20
+  }
+}
