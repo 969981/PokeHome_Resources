@@ -1,0 +1,6 @@
+{
+  "certainty": "24-byte alignment and six raw u32 fields only; key/variant and UI semantics not proven",
+  "format": "HOME 4.1.0 sugata raw 24-byte records",
+  "record_count": 3206,
+  "record_stride": 24
+}

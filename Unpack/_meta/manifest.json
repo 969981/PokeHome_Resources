@@ -122242,17 +122242,28 @@
     },
     {
       "collision_fallback": false,
-      "detected_format": "other",
+      "detected_format": "pokemon",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/form_data.csv",
+          "sha256": "ec178abccea63cc27b7570d002e2ab716f9adc9b8dec82a7755d0d1ea9862bf5",
+          "size": 30084
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/form_data.json",
+          "sha256": "c5755505e30cdbfc1cc0896e6c093b26e38cb66518e9068064868db4da93c0db",
+          "size": 220
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.4.0",
+      "records": 1593,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/form_data.bin",
       "source_sha256": "fc8640b959e4a719a6d6479365bd4ca705d6fc6a81a11de8dc6a6dd3adf1db83",
       "source_size": 12744,
-      "status": "unsupported",
-      "warning": "untyped binary array without verified schema"
+      "status": "partial",
+      "warning": "fixed records and cross-file key joins verified; field semantics not fully known"
     },
     {
       "collision_fallback": false,
@@ -127826,31 +127837,58 @@
     },
     {
       "collision_fallback": false,
-      "detected_format": "other",
+      "detected_format": "pokemon",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/shape_data.csv",
+          "sha256": "22ad2c6c041fc80a3541b4bd3ed07b1a3d88631f1569bb1b3d59eecd0cc10f49",
+          "size": 68682
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/shape_data.shape_pairs.csv",
+          "sha256": "060cae8cf13111370a793d091aea895b0a7fb039255a64bd01251c7dbe16d68b",
+          "size": 70637
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/shape_data.json",
+          "sha256": "8110f13ec24424595687efdcb841ed2fb9809dcc9e59351be6e3e1b9f84bae9d",
+          "size": 304
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.4.0",
+      "records": 2980,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/shape_data.bin",
       "source_sha256": "ddc65ccb674bc1b93ed3e004b4e46c7d3142db53acbd69f405d4da6bbf4f542f",
       "source_size": 23840,
-      "status": "unsupported",
-      "warning": "untyped binary array without verified schema"
+      "status": "partial",
+      "warning": "fixed records and cross-file key joins verified; field semantics not fully known"
     },
     {
       "collision_fallback": false,
-      "detected_format": "other",
+      "detected_format": "pokemon",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/sugata.csv",
+          "sha256": "bf3ab141ee1a9b8373fb53d6bf096d1ea371251d9d1390556b9e90adf113ac7b",
+          "size": 100146
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/sugata.json",
+          "sha256": "590cd34b728902f16f849ad3da0ab2603aef346958a41fd2092bf6ef8bddfcbb",
+          "size": 208
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.4.0",
+      "records": 3206,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/sugata.bin",
       "source_sha256": "78405126af7a70128b6abed08720c466ded87546d57dfcea73bf6bd4a1be734a",
       "source_size": 76944,
-      "status": "unsupported",
-      "warning": "untyped binary array without verified schema"
+      "status": "partial",
+      "warning": "fixed records and cross-file key joins verified; field semantics not fully known"
     },
     {
       "collision_fallback": false,
@@ -229195,17 +229233,43 @@
     },
     {
       "collision_fallback": false,
-      "detected_format": "messages",
+      "detected_format": "pokemon",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.id_lookup.csv",
+          "sha256": "6aeaffeb9addae87cb09da5cdb43531ae974f51970a43bce89baeb922350f168",
+          "size": 26320
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.aux_pairs.csv",
+          "sha256": "49ef9f457a0c54ce10427786c794dae507f5a5f807660e50730f5eb53a26de74",
+          "size": 4590
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.hash_join.csv",
+          "sha256": "4535feb0a60178ea52af477562b954944bf52584cc96a0ebcef1c586c28a3ce2",
+          "size": 72733
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.csv",
+          "sha256": "25dafc86dd9285c9a97db55e5e5c6452affd02dca38eaef90531a481e5417ce2",
+          "size": 187008
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.json",
+          "sha256": "8629f10dd7f6a15e8bd11fadcef765c5bec6c15b3d5fad6fa77aa4c7baafdb88",
+          "size": 956
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.4.0",
+      "records": 1166,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.dat",
       "source_sha256": "4f5edd3f0ca8ed0c60ceb91fda0c5385f20ec986a66dcf4aa68d1c145903a1a2",
       "source_size": 61092,
-      "status": "unsupported",
-      "warning": "DAT has no matching AHTB schema"
+      "status": "partial",
+      "warning": "48-byte item fields and auxiliary index pair meanings unresolved; hash join mismatches: [1829]"
     },
     {
       "collision_fallback": false,
@@ -419659,31 +419723,58 @@
     },
     {
       "collision_fallback": false,
-      "detected_format": "other",
+      "detected_format": "pokemon",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_test_list.crosswalk.csv",
+          "sha256": "691026883d11de787952829198551bc6540ecd35dc795dc362623fe607cd04b0",
+          "size": 60128
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_test_list.csv",
+          "sha256": "3c51a9536b186b11729e45c3332313362c3cb2be00c3d21126ada5405333843a",
+          "size": 28683
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_test_list.json",
+          "sha256": "6cc651b1c95daa0f18a2adc169ef09b733e0f164c6bcda6c8836367a6748a1ba",
+          "size": 1171
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.4.0",
+      "records": 1593,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_test_list.bin",
       "source_sha256": "90aa44ccc73e42da212f507e9a0b2709da2f8a99416c2f3c8d6f9fe42bcb7742",
       "source_size": 12744,
-      "status": "unsupported",
-      "warning": "untyped binary array without verified schema"
+      "status": "partial",
+      "warning": "fixed records and cross-file key joins verified; field semantics not fully known"
     },
     {
       "collision_fallback": false,
-      "detected_format": "other",
+      "detected_format": "pokemon",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_valid_list.csv",
+          "sha256": "af410d6d47c5cca5ff1a9a2cd5a0272a2e9ce1637cbac405e908f1e669b57a3d",
+          "size": 31035
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_valid_list.json",
+          "sha256": "81aca648dda2a4f21f90672a7103f8d395a70e350a3e36acdec036a07eb95c6c",
+          "size": 330
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.4.0",
+      "records": 1492,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_valid_list.bin",
       "source_sha256": "2fc4501cb13527f9ac744315cfc55a0a0a5bf4935b9057dbb07e3dd0840ce230",
       "source_size": 11936,
-      "status": "unsupported",
-      "warning": "untyped binary array without verified schema"
+      "status": "partial",
+      "warning": "fixed records and cross-file key joins verified; field semantics not fully known"
     },
     {
       "collision_fallback": false,
@@ -420236,6 +420327,6 @@
       "warning": ""
     }
   ],
-  "parser_version": "mirror-0.3.0",
+  "parser_version": "mirror-0.4.0",
   "version": "4.1.0"
 }

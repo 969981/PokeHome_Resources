@@ -1,0 +1,7 @@
+{
+  "certainty": "8-byte record boundaries and values verified; gameplay meaning of raw codes unconfirmed; all adjacent pairs have same key and values differ by 0x100",
+  "distinct_keys": 1489,
+  "format": "HOME 4.1.0 pokedex_shape_data fixed u32 pair array",
+  "pair_count": 1490,
+  "row_count": 2980
+}

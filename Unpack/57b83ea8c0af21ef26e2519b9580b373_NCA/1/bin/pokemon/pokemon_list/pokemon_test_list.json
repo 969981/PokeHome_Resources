@@ -1,0 +1,30 @@
+{
+  "certainty": "8-byte record boundaries and values verified; gameplay meaning of raw codes unconfirmed",
+  "code_counts": {
+    "0": 101,
+    "1": 101,
+    "2": 303,
+    "3": 956,
+    "4": 52,
+    "5": 80
+  },
+  "crosswalk_counts": {
+    "certainty": "exact equality join on raw 32-bit keys; derived species/form bit meaning remains candidate",
+    "form_keys": 1461,
+    "form_without_test": 54,
+    "shape_keys": 1489,
+    "test_keys": 1492,
+    "test_without_form": 85,
+    "union_count": 1547,
+    "valid_keys": 1492
+  },
+  "distinct_keys": 1492,
+  "duplicate_01_groups": 101,
+  "format": "HOME 4.1.0 pokemon_test_list fixed u32 pair array",
+  "join_dependencies": {
+    "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/form_data.bin": "fc8640b959e4a719a6d6479365bd4ca705d6fc6a81a11de8dc6a6dd3adf1db83",
+    "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/shape_data.bin": "ddc65ccb674bc1b93ed3e004b4e46c7d3142db53acbd69f405d4da6bbf4f542f",
+    "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_valid_list.bin": "2fc4501cb13527f9ac744315cfc55a0a0a5bf4935b9057dbb07e3dd0840ce230"
+  },
+  "row_count": 1593
+}

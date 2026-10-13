@@ -1,0 +1,23 @@
+{
+  "aux_pair_count": 348,
+  "certainty": "offset/count/stride and lookup permutation verified; 48-byte member meanings and auxiliary pair semantics unknown",
+  "declared_first_u16": 1829,
+  "file_bytes": 61092,
+  "format": "HOME 4.1.0 PML item multi-index and fixed-record table",
+  "hash_join_summary": {
+    "certainty": "record ordinals aligned; hash-to-item identity and unmatched tail behavior not assumed",
+    "hash_rows": 1830,
+    "nonzero_both": 1165,
+    "presence_mismatch_rows": [
+      1829
+    ]
+  },
+  "header_first68_hex": "250728078e04c80000280038c80000000000000000250035c80000000000000025001b000a0035008002c800140019009a00000000000000000000000000000004140000",
+  "join_dependencies": {
+    "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item_hash_to_index.dat": "ad0e7c311f8b46db4b216e335dc60897d3261528175a485c286fa4e1dd837639"
+  },
+  "lookup_count": 1832,
+  "record_count": 1166,
+  "record_start": 5124,
+  "record_stride": 48
+}
