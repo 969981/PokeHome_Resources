@@ -19,10 +19,20 @@ class ApkExtractionTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     unpack.safe_member(name)
 
-    def test_reject_case_collision(self):
-        infos = [zipfile.ZipInfo("A/a.bin"), zipfile.ZipInfo("a/A.bin")]
-        with self.assertRaises(ValueError):
-            unpack.inspect_members(infos)
+    def test_preserve_case_collision_with_alias(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            apk = base / "case.apk"
+            with zipfile.ZipFile(apk, "w") as z:
+                z.writestr("res/iW.png", b"A")
+                z.writestr("res/Iw.png", b"B")
+            self.assertEqual(unpack.inspect_members(zipfile.ZipFile(apk).infolist()), 2)
+            rows = unpack.extract(apk, base / "unpack")
+            self.assertEqual(len(rows), 2)
+            self.assertNotEqual(rows[0]["extraction_path"].casefold(),
+                                rows[1]["extraction_path"].casefold())
+            self.assertEqual({(base / "unpack/raw" / row["extraction_path"]).read_bytes()
+                              for row in rows}, {b"A", b"B"})
 
     def test_archive_extract_and_checksum(self):
         with tempfile.TemporaryDirectory() as tmp:
