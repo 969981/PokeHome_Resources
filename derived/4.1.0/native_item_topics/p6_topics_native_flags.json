@@ -1,0 +1,507 @@
+{
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "group_bit_shifts": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    9
+  ],
+  "group_5_pairs_count": 96,
+  "literal_table_va": {
+    "group_shifts": 6476700,
+    "group5_special_pairs": 6476314
+  },
+  "record_access": {
+    "group_stride": 30904,
+    "slot_stride": 312,
+    "species_candidate_first_offset": 48,
+    "form_candidate_first_offset": 84
+  },
+  "opcodes_verified": 14,
+  "group_5_pairs": [
+    {
+      "row": 0,
+      "species_candidate_u16": 3,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 1,
+      "species_candidate_u16": 6,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 2,
+      "species_candidate_u16": 6,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 3,
+      "species_candidate_u16": 9,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 4,
+      "species_candidate_u16": 15,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 5,
+      "species_candidate_u16": 18,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 6,
+      "species_candidate_u16": 26,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 7,
+      "species_candidate_u16": 26,
+      "form_candidate_u16": 3
+    },
+    {
+      "row": 8,
+      "species_candidate_u16": 36,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 9,
+      "species_candidate_u16": 65,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 10,
+      "species_candidate_u16": 71,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 11,
+      "species_candidate_u16": 80,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 12,
+      "species_candidate_u16": 94,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 13,
+      "species_candidate_u16": 115,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 14,
+      "species_candidate_u16": 121,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 15,
+      "species_candidate_u16": 127,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 16,
+      "species_candidate_u16": 130,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 17,
+      "species_candidate_u16": 142,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 18,
+      "species_candidate_u16": 149,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 19,
+      "species_candidate_u16": 150,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 20,
+      "species_candidate_u16": 150,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 21,
+      "species_candidate_u16": 154,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 22,
+      "species_candidate_u16": 160,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 23,
+      "species_candidate_u16": 181,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 24,
+      "species_candidate_u16": 208,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 25,
+      "species_candidate_u16": 212,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 26,
+      "species_candidate_u16": 214,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 27,
+      "species_candidate_u16": 227,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 28,
+      "species_candidate_u16": 229,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 29,
+      "species_candidate_u16": 248,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 30,
+      "species_candidate_u16": 254,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 31,
+      "species_candidate_u16": 257,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 32,
+      "species_candidate_u16": 260,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 33,
+      "species_candidate_u16": 282,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 34,
+      "species_candidate_u16": 302,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 35,
+      "species_candidate_u16": 303,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 36,
+      "species_candidate_u16": 306,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 37,
+      "species_candidate_u16": 308,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 38,
+      "species_candidate_u16": 310,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 39,
+      "species_candidate_u16": 319,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 40,
+      "species_candidate_u16": 323,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 41,
+      "species_candidate_u16": 334,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 42,
+      "species_candidate_u16": 354,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 43,
+      "species_candidate_u16": 358,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 44,
+      "species_candidate_u16": 359,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 45,
+      "species_candidate_u16": 359,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 46,
+      "species_candidate_u16": 362,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 47,
+      "species_candidate_u16": 373,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 48,
+      "species_candidate_u16": 376,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 49,
+      "species_candidate_u16": 380,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 50,
+      "species_candidate_u16": 381,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 51,
+      "species_candidate_u16": 384,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 52,
+      "species_candidate_u16": 398,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 53,
+      "species_candidate_u16": 428,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 54,
+      "species_candidate_u16": 445,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 55,
+      "species_candidate_u16": 445,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 56,
+      "species_candidate_u16": 448,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 57,
+      "species_candidate_u16": 448,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 58,
+      "species_candidate_u16": 460,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 59,
+      "species_candidate_u16": 475,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 60,
+      "species_candidate_u16": 478,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 61,
+      "species_candidate_u16": 485,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 62,
+      "species_candidate_u16": 491,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 63,
+      "species_candidate_u16": 500,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 64,
+      "species_candidate_u16": 530,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 65,
+      "species_candidate_u16": 531,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 66,
+      "species_candidate_u16": 545,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 67,
+      "species_candidate_u16": 560,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 68,
+      "species_candidate_u16": 604,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 69,
+      "species_candidate_u16": 609,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 70,
+      "species_candidate_u16": 623,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 71,
+      "species_candidate_u16": 652,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 72,
+      "species_candidate_u16": 655,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 73,
+      "species_candidate_u16": 658,
+      "form_candidate_u16": 3
+    },
+    {
+      "row": 74,
+      "species_candidate_u16": 668,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 75,
+      "species_candidate_u16": 670,
+      "form_candidate_u16": 6
+    },
+    {
+      "row": 76,
+      "species_candidate_u16": 678,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 77,
+      "species_candidate_u16": 687,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 78,
+      "species_candidate_u16": 689,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 79,
+      "species_candidate_u16": 691,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 80,
+      "species_candidate_u16": 701,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 81,
+      "species_candidate_u16": 718,
+      "form_candidate_u16": 5
+    },
+    {
+      "row": 82,
+      "species_candidate_u16": 719,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 83,
+      "species_candidate_u16": 740,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 84,
+      "species_candidate_u16": 768,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 85,
+      "species_candidate_u16": 780,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 86,
+      "species_candidate_u16": 801,
+      "form_candidate_u16": 2
+    },
+    {
+      "row": 87,
+      "species_candidate_u16": 801,
+      "form_candidate_u16": 3
+    },
+    {
+      "row": 88,
+      "species_candidate_u16": 807,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 89,
+      "species_candidate_u16": 870,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 90,
+      "species_candidate_u16": 952,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 91,
+      "species_candidate_u16": 970,
+      "form_candidate_u16": 1
+    },
+    {
+      "row": 92,
+      "species_candidate_u16": 978,
+      "form_candidate_u16": 3
+    },
+    {
+      "row": 93,
+      "species_candidate_u16": 978,
+      "form_candidate_u16": 4
+    },
+    {
+      "row": 94,
+      "species_candidate_u16": 978,
+      "form_candidate_u16": 5
+    },
+    {
+      "row": 95,
+      "species_candidate_u16": 998,
+      "form_candidate_u16": 1
+    }
+  ],
+  "interpretation": "Game labels remain hypotheses until linked to native group enum. Bit-position vector and pair table are byte-exact."
+}
