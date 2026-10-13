@@ -1,0 +1,90 @@
+name: HOME 4.1.0 Unpack conversion
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-unpack-run.yml'
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: 'Which resource family to convert'
+        type: choice
+        options: [pml, messages, archives, images, other, all]
+        default: pml
+      publish:
+        description: 'Commit generated outputs to 4.1.0 (only safe small text batches)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-conversion-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      KIND: ${{ inputs.kind || 'pml' }}
+      PUBLISH: ${{ inputs.publish || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test parser and mappings
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p 'test_home41_unpack.py' -v
+          python tools/unpack_home41.py --root . --out Unpack --dry-run
+      - name: Run genuine conversion against all selected original assets
+        id: conversion
+        shell: bash
+        run: |
+          set +e
+          python tools/unpack_home41.py --root . --out Unpack --kind "$KIND" --resume
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Print detailed conversion statistics
+        if: always()
+        run: |
+          if [ -f Unpack/_meta/summary.json ]; then
+            cat Unpack/_meta/summary.json
+          fi
+      - name: Upload manifest and failure reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-unpack-${{ env.KIND }}-reports
+          path: |
+            Unpack/_meta/*.csv
+            Unpack/_meta/*.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Publish converted text-only assets
+        if: ${{ env.PUBLISH == 'true' && steps.conversion.outputs.exit_code == '0' && (env.KIND == 'pml' || env.KIND == 'messages') }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- Unpack/
+          if git diff --cached --quiet; then
+            echo "No new converted files"
+          else
+            git commit -m "data: publish HOME 4.1.0 mirrored Unpack $KIND"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Fail if supported conversions had errors
+        if: ${{ steps.conversion.outputs.exit_code != '0' }}
+        run: |
+          echo "Conversion exited with errors; see uploaded reports"
+          exit 1
