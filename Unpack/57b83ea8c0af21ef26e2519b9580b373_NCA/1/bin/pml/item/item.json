@@ -22,6 +22,13 @@
     "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item_hash_to_index.dat": "ad0e7c311f8b46db4b216e335dc60897d3261528175a485c286fa4e1dd837639"
   },
   "lookup_count": 1832,
+  "native_business_consumer_provenance": {
+    "actual_battle_effect_consumer_proven": false,
+    "item_sprite_proven_native_selector": 4,
+    "pouch": "derived/4.1.0/native_item_topics/p7_item_pouch_native_consumer.json",
+    "pouch_proven_native_selector": 14,
+    "sprite_asset_key": "derived/4.1.0/native_item_topics/p7_item_sprite_native_sink.json"
+  },
   "native_effect_selector_matrix": {
     "caveat": "48-byte item record offsets and field bit extraction are Native ELF-verified; effects on gameplay are unproven.",
     "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",

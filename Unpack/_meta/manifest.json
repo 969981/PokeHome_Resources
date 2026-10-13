@@ -122257,7 +122257,7 @@
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.9.3",
+      "parser_version": "mirror-1.0.0",
       "records": 1593,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/form_data.bin",
       "source_sha256": "fc8640b959e4a719a6d6479365bd4ca705d6fc6a81a11de8dc6a6dd3adf1db83",
@@ -127857,7 +127857,7 @@
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.9.3",
+      "parser_version": "mirror-1.0.0",
       "records": 2980,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/shape_data.bin",
       "source_sha256": "ddc65ccb674bc1b93ed3e004b4e46c7d3142db53acbd69f405d4da6bbf4f542f",
@@ -127882,7 +127882,7 @@
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.9.3",
+      "parser_version": "mirror-1.0.0",
       "records": 3206,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/sugata.bin",
       "source_sha256": "78405126af7a70128b6abed08720c466ded87546d57dfcea73bf6bd4a1be734a",
@@ -229264,13 +229264,13 @@
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.semantic.csv",
-          "sha256": "29402436d9fc7b8f9453755ab0f46a72f771f70085592d9355b8ebc2beb9576d",
-          "size": 454366
+          "sha256": "2b5e28cbfc6b27be0912b0621e3fad1cfd09246c71369168e57e951763d42fd8",
+          "size": 542434
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.semantic.json",
-          "sha256": "128165fc8f7bd002691ee2e85ac5370d19d6bf143892b9307892a6b2387f9d9c",
-          "size": 1288
+          "sha256": "c194527872c67798284f1c29fbcda1a5ead7181d195e29b7d1259945ea7690a7",
+          "size": 1977
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.id_lookup.csv",
@@ -229294,12 +229294,12 @@
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.json",
-          "sha256": "1e00d9d5939fc60d0dc07695b6d6ef51268067d18cfa07295731340e58959998",
-          "size": 2794
+          "sha256": "d04715c641a92c89d70c1291a0034e6ae5218669f54f316efdb247a62058398e",
+          "size": 3153
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.9.3",
+      "parser_version": "mirror-1.0.0",
       "records": 1166,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.dat",
       "source_sha256": "4f5edd3f0ca8ed0c60ceb91fda0c5385f20ec986a66dcf4aa68d1c145903a1a2",
@@ -419779,7 +419779,7 @@
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.9.3",
+      "parser_version": "mirror-1.0.0",
       "records": 1593,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_test_list.bin",
       "source_sha256": "90aa44ccc73e42da212f507e9a0b2709da2f8a99416c2f3c8d6f9fe42bcb7742",
@@ -419804,7 +419804,7 @@
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.9.3",
+      "parser_version": "mirror-1.0.0",
       "records": 1492,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/pokemon_valid_list.bin",
       "source_sha256": "2fc4501cb13527f9ac744315cfc55a0a0a5bf4935b9057dbb07e3dd0840ce230",
@@ -420363,6 +420363,6 @@
       "warning": ""
     }
   ],
-  "parser_version": "mirror-0.9.3",
+  "parser_version": "mirror-1.0.0",
   "version": "4.1.0"
 }

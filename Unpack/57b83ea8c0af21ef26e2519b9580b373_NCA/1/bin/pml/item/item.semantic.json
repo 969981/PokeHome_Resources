@@ -7,9 +7,18 @@
   ],
   "indexed_slot_capacity": 1832,
   "item_count": 1829,
+  "native_business_consumer_provenance": {
+    "actual_battle_effect_consumer_proven": false,
+    "item_sprite_proven_native_selector": 4,
+    "pouch": "derived/4.1.0/native_item_topics/p7_item_pouch_native_consumer.json",
+    "pouch_proven_native_selector": 14,
+    "sprite_asset_key": "derived/4.1.0/native_item_topics/p7_item_sprite_native_sink.json"
+  },
   "native_elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
   "native_field_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
   "native_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_getter_proof.json",
+  "native_icon_fallback_key": "item_dummy^o",
+  "native_icon_key_format": "item_%04d^o",
   "native_price_field_width_bits": {
     "alternate": 32,
     "price": 32,
@@ -18,6 +27,28 @@
   "native_record_getter_rva": "0x4FD784",
   "native_sprite_field_signed": true,
   "native_verified": "ELF native 1832-capacity, 1166 records, 0x40 base, 0x44 indexed u16 mapping, 48-byte stride and selected direct field Getter RVA/opcode proofs; field semantic names still pkNX-correlated",
+  "pouch_native_bag_slot_capacities": [
+    60,
+    30,
+    20,
+    80,
+    550,
+    210,
+    100,
+    100,
+    64
+  ],
+  "pouch_native_catalog_record_counts": [
+    37,
+    27,
+    10,
+    53,
+    640,
+    200,
+    20,
+    25,
+    154
+  ],
   "record_bytes": 48,
   "record_start": 5124,
   "schema_confidence": "HOME original ELF native field widths/offsets plus pinned pkNX Item8 business names and exact ROMFS regression",
