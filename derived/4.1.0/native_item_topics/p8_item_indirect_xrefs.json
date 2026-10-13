@@ -1,0 +1,2273 @@
+{
+  "original_elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "target_function_starts": {
+    "item_record_wrapper": "0x4FD06C",
+    "item_property_dispatch": "0x4FD0B8",
+    "item_effect_extended_dispatch": "0x4FD270",
+    "item_property_by_id": "0x4FD48C",
+    "item_sprite_by_id": "0x4FD80C",
+    "item_header_pouch_count": "0x4FD854",
+    "item_record_pointer": "0x4FD784"
+  },
+  "target_range": [
+    "0x4FD000",
+    "0x4FD900"
+  ],
+  "executable_code_words_scanned": 1564840,
+  "address_taken_pc_relative_candidate_count": 2,
+  "address_taken_pc_relative_candidates": [
+    {
+      "kind": "ADR",
+      "pc": "0x4FD0CC",
+      "target": "0x4FD0DC",
+      "register": 10,
+      "opcode_le": "8a000010",
+      "strength": "PC-relative target address; may be control-flow table base, not a callable function",
+      "exact_target_function": null
+    },
+    {
+      "kind": "ADR",
+      "pc": "0x4FD284",
+      "target": "0x4FD294",
+      "register": 10,
+      "opcode_le": "8a000010",
+      "strength": "PC-relative target address; may be control-flow table base, not a callable function",
+      "exact_target_function": null
+    }
+  ],
+  "relocation_sources": [
+    {
+      "source": "ELF section",
+      "number": 7,
+      "type": 4,
+      "entries": 526
+    },
+    {
+      "source": "ELF section",
+      "number": 10,
+      "type": 4,
+      "entries": 535
+    },
+    {
+      "source": "PT_DYNAMIC DT_RELA",
+      "entries": 526
+    }
+  ],
+  "relocation_to_item_address_candidate_count": 0,
+  "relocation_to_item_address_candidates": [],
+  "local_blr_indirect_sites": [
+    {
+      "pc": "0x26603C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x26612C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2661C0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266280",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266304",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266328",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x26633C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266368",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2663A4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x26641C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2664F8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x26658C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266648",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2666A8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2666B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2666CC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2666EC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2666FC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266710",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266730",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266740",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266764",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266774",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266788",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2667A8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2667B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x2667FC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x26688C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266A00",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266A8C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266B68",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266CE0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x266FAC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FC034",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD5D8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD634",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD6B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD6D8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD710",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD72C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD760",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD8D8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD8F0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD908",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD91C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD99C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD9B4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD9CC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FD9E0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDA38",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDA9C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDB64",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDB7C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDB94",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDBAC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDBC4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDBDC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDBF4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDC0C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDCE8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDD60",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDD7C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDDA4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDE58",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDED0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDEEC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDF14",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FDFC8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE040",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE05C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE084",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE138",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE1B0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE1CC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE1F4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE2A8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE320",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE33C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE364",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE418",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE490",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE4AC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE4D4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE588",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE600",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE61C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE644",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE6D4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE6EC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE704",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE71C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE734",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE74C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE764",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE7E4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE7FC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE810",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE888",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE8A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE8B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE8F4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE90C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE920",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE9A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE9B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FE9D0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEA0C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEA24",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEA38",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEAB8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEAD0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEAE8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEB24",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEB3C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEB50",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEBD0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEBE8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEC00",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEC3C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEC54",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEC68",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FECE8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FED00",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FED18",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FED54",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FED6C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FED80",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEE00",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEE18",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEE30",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEE6C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEE84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEE98",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEF18",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEF30",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEF48",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEF84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEF9C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FEFB0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF030",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF048",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF060",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF09C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF0B4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF0C8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF148",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF160",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF178",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF1B4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF1CC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF1E0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF260",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF278",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF290",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF2CC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF2F0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF370",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF388",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF3A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF3DC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF3F4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF408",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF488",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF4A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF4B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF4F4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF50C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF520",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF5A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF5B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF5D0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF60C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF624",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF638",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF6B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF6D0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF6E8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF724",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF73C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF750",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF7D0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF7E8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF800",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF83C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF854",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF868",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF8E8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF900",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF918",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF954",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF96C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FF980",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFA00",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFA18",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFA30",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFA6C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFA84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFA98",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFB18",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFB30",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFB48",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFB84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFB9C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFBB0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFCA4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFCBC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFCD0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFD44",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFD6C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFD84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFE08",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFE30",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFE48",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFEDC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFEF4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFF08",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFF44",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFF6C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFF84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFFD4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x4FFFFC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500014",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5000A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5000C8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5000E0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500184",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500198",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5001AC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500208",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50022C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500244",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50043C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50044C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5004B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50051C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50052C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500598",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5005FC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50060C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500678",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5006DC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5006EC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500754",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5007AC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5007BC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500824",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500A30",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500A7C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500AB0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500ACC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500AE8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500B04",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500B20",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500B3C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500B58",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500B74",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500B90",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500BAC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500BC8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500BE4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500CB8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500D10",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500D84",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500E0C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500E24",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500E5C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500E70",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500E8C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500EEC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500F04",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500F34",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500F94",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x500FAC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501004",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501024",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501044",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501064",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501084",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5010A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5010BC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5010D8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5010F4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501110",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50112C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501148",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501164",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501180",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50119C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5011B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5015C4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5015DC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501634",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501654",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501670",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501684",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5016A0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5016D4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5017B8",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50185C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501884",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x501910",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5021AC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502218",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502230",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502360",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50237C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50245C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502478",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502494",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5024EC",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502508",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x502538",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5026F4",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x5028F0",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    },
+    {
+      "pc": "0x50290C",
+      "instruction": "BLR",
+      "reg": 8,
+      "opcode_le": "00013fd6",
+      "target_proven": false
+    }
+  ],
+  "local_blr_count": 315,
+  "limitations": [
+    "ADR/ADRP+ADD candidates may point into instruction jump tables rather than callable entrypoints",
+    "ADRP+ADD 16-instruction scan does not establish register liveness / alias",
+    "Address-taken and relocation scans exclude runtime-generated/obfuscated pointers and external game executables",
+    "BLR sites prove an indirect call exists but not the target; no gameplay semantics should be inferred",
+    "Raw ELF relocation addends are not automatically resolved virtual vtables"
+  ]
+}
