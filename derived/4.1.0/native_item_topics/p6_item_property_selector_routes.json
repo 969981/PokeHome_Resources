@@ -1,0 +1,337 @@
+{
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "selector_dispatch_rva": "0x4FD0B8",
+  "dispatch_table_rva": "0x657FCC",
+  "selector_count": 26,
+  "dispatch_base_rva": "0x4FD0DC",
+  "selector_input_register": "w1",
+  "dispatch_target_formula": "0x4FD0DC + (byte_at_0x657FCC[selector] << 2)",
+  "above_range_branch": "0x4FD0E4; further test of raw byte record+0x15, separate branch logic",
+  "verified_dispatch_opcodes": [
+    {
+      "pc": 5230744,
+      "mnemonic": "bl",
+      "operands": "#0x4fd784",
+      "opcode_le": "bb010094"
+    },
+    {
+      "pc": 5230776,
+      "mnemonic": "cmp",
+      "operands": "w1, #0x19",
+      "opcode_le": "3f640071"
+    },
+    {
+      "pc": 5230780,
+      "mnemonic": "b.hi",
+      "operands": "#0x4fd0e4",
+      "opcode_le": "48010054"
+    },
+    {
+      "pc": 5230800,
+      "mnemonic": "ldrb",
+      "operands": "w11, [x9, x8]",
+      "opcode_le": "2b696838"
+    },
+    {
+      "pc": 5230804,
+      "mnemonic": "add",
+      "operands": "x10, x10, x11, lsl #2",
+      "opcode_le": "4a090b8b"
+    },
+    {
+      "pc": 5230808,
+      "mnemonic": "br",
+      "operands": "x10",
+      "opcode_le": "40011fd6"
+    }
+  ],
+  "rows": [
+    {
+      "property_selector_u8": 0,
+      "table_byte_raw_u8": 0,
+      "destination_rva": "0x4FD0DC",
+      "destination_opcode": "000840b9",
+      "destination_instruction": "ldr w0, [x0, #8]",
+      "direct_field_getter_rva": null,
+      "direct_field_record_offset": null,
+      "direct_field_width_bits": null,
+      "pkNX_cross_reference_or_unknown": "not directly matched to known basic Getter entry"
+    },
+    {
+      "property_selector_u8": 1,
+      "table_byte_raw_u8": 11,
+      "destination_rva": "0x4FD108",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD108",
+      "direct_field_record_offset": 0,
+      "direct_field_width_bits": 32,
+      "pkNX_cross_reference_or_unknown": "price_pkNX"
+    },
+    {
+      "property_selector_u8": 2,
+      "table_byte_raw_u8": 14,
+      "destination_rva": "0x4FD114",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD114",
+      "direct_field_record_offset": 4,
+      "direct_field_width_bits": 32,
+      "pkNX_cross_reference_or_unknown": "watts_price_pkNX"
+    },
+    {
+      "property_selector_u8": 3,
+      "table_byte_raw_u8": 17,
+      "destination_rva": "0x4FD120",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD120",
+      "direct_field_record_offset": 8,
+      "direct_field_width_bits": 32,
+      "pkNX_cross_reference_or_unknown": "alternate_price_pkNX"
+    },
+    {
+      "property_selector_u8": 4,
+      "table_byte_raw_u8": 20,
+      "destination_rva": "0x4FD12C",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD12C",
+      "direct_field_record_offset": 26,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "signed_sprite_pkNX"
+    },
+    {
+      "property_selector_u8": 5,
+      "table_byte_raw_u8": 23,
+      "destination_rva": "0x4FD138",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD138",
+      "direct_field_record_offset": 12,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_0c_raw"
+    },
+    {
+      "property_selector_u8": 6,
+      "table_byte_raw_u8": 26,
+      "destination_rva": "0x4FD144",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD144",
+      "direct_field_record_offset": 13,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_0d_raw"
+    },
+    {
+      "property_selector_u8": 7,
+      "table_byte_raw_u8": 29,
+      "destination_rva": "0x4FD150",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD150",
+      "direct_field_record_offset": 14,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_0e_raw"
+    },
+    {
+      "property_selector_u8": 8,
+      "table_byte_raw_u8": 32,
+      "destination_rva": "0x4FD15C",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD15C",
+      "direct_field_record_offset": 16,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "flag10_bit12"
+    },
+    {
+      "property_selector_u8": 9,
+      "table_byte_raw_u8": 36,
+      "destination_rva": "0x4FD16C",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD16C",
+      "direct_field_record_offset": 18,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_12_raw"
+    },
+    {
+      "property_selector_u8": 10,
+      "table_byte_raw_u8": 39,
+      "destination_rva": "0x4FD178",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD178",
+      "direct_field_record_offset": 15,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_0f_raw"
+    },
+    {
+      "property_selector_u8": 11,
+      "table_byte_raw_u8": 42,
+      "destination_rva": "0x4FD184",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD184",
+      "direct_field_record_offset": 16,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "flags_10_low5"
+    },
+    {
+      "property_selector_u8": 12,
+      "table_byte_raw_u8": 46,
+      "destination_rva": "0x4FD194",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD194",
+      "direct_field_record_offset": 16,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "flags_10_bit5"
+    },
+    {
+      "property_selector_u8": 13,
+      "table_byte_raw_u8": 50,
+      "destination_rva": "0x4FD1A4",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1A4",
+      "direct_field_record_offset": 16,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "flags_10_bit6"
+    },
+    {
+      "property_selector_u8": 14,
+      "table_byte_raw_u8": 54,
+      "destination_rva": "0x4FD1B4",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1B4",
+      "direct_field_record_offset": 17,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "pouch_low4_pkNX"
+    },
+    {
+      "property_selector_u8": 15,
+      "table_byte_raw_u8": 58,
+      "destination_rva": "0x4FD1C4",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1C4",
+      "direct_field_record_offset": 19,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "effect_field_pkNX"
+    },
+    {
+      "property_selector_u8": 16,
+      "table_byte_raw_u8": 61,
+      "destination_rva": "0x4FD1D0",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1D0",
+      "direct_field_record_offset": 20,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_14_raw"
+    },
+    {
+      "property_selector_u8": 17,
+      "table_byte_raw_u8": 64,
+      "destination_rva": "0x4FD1DC",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1DC",
+      "direct_field_record_offset": 21,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "can_use_on_pokemon_pkNX"
+    },
+    {
+      "property_selector_u8": 18,
+      "table_byte_raw_u8": 67,
+      "destination_rva": "0x4FD1E8",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1E8",
+      "direct_field_record_offset": 22,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_16_raw"
+    },
+    {
+      "property_selector_u8": 19,
+      "table_byte_raw_u8": 70,
+      "destination_rva": "0x4FD1F4",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD1F4",
+      "direct_field_record_offset": 23,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "flags_17_low4"
+    },
+    {
+      "property_selector_u8": 20,
+      "table_byte_raw_u8": 74,
+      "destination_rva": "0x4FD204",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD204",
+      "direct_field_record_offset": 23,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "flags_17_high4"
+    },
+    {
+      "property_selector_u8": 21,
+      "table_byte_raw_u8": 78,
+      "destination_rva": "0x4FD214",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD214",
+      "direct_field_record_offset": 24,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "misc_18_raw"
+    },
+    {
+      "property_selector_u8": 22,
+      "table_byte_raw_u8": 81,
+      "destination_rva": "0x4FD220",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD220",
+      "direct_field_record_offset": 28,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "group_type_pkNX"
+    },
+    {
+      "property_selector_u8": 23,
+      "table_byte_raw_u8": 84,
+      "destination_rva": "0x4FD22C",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD22C",
+      "direct_field_record_offset": 29,
+      "direct_field_width_bits": 8,
+      "pkNX_cross_reference_or_unknown": "group_index_pkNX"
+    },
+    {
+      "property_selector_u8": 24,
+      "table_byte_raw_u8": 87,
+      "destination_rva": "0x4FD238",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD238",
+      "direct_field_record_offset": 16,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "flags_10_bit7"
+    },
+    {
+      "property_selector_u8": 25,
+      "table_byte_raw_u8": 91,
+      "destination_rva": "0x4FD248",
+      "destination_opcode": "080040f9",
+      "destination_instruction": "ldr x8, [x0]",
+      "direct_field_getter_rva": "0x4FD248",
+      "direct_field_record_offset": 16,
+      "direct_field_width_bits": 16,
+      "pkNX_cross_reference_or_unknown": "flags_10_bit13"
+    }
+  ],
+  "limitations": "Selector destination is exact opcode. Direct known Getter only when target exactly equals its verified entry; other cases need branch/SSA tracing. Business names external pkNX labels."
+}
