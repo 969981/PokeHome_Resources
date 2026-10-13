@@ -127901,19 +127901,24 @@
           "size": 176749
         },
         {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.references.csv",
+          "sha256": "425e91c8f9b56420afe07c2d31f9a4b69a1871cf3abcb25e1d20c95059a7f745",
+          "size": 46275
+        },
+        {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.json",
-          "sha256": "6b8ee0a0130ba10b7ac64af3cdc08879fd9e7b63d3942751c88ebaeb0d34cb6b",
-          "size": 2886
+          "sha256": "a3ffc8e0952271c2156e66f81d92fac1f1f421704e868a1e0b7946f8e238fe90",
+          "size": 6400
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.5.0",
+      "parser_version": "mirror-0.7.0",
       "records": 693,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.bin",
       "source_sha256": "141be49529981e5bc56b6605c7f3223f3c506ee4753fb0ff2d3be16e792c3b8f",
       "source_size": 216336,
       "status": "partial",
-      "warning": "7 groups, 99 fixed slots, 140 active and 553 identical placeholder records; inner u32 semantics unknown"
+      "warning": "693 original slots; 140 topics and 500 species/form refs native-linked; game labels based on observed starter trios; UI progress code unverified; field semantics beyond species/form and native group-bit gate still partial"
     },
     {
       "collision_fallback": false,
@@ -420348,6 +420353,6 @@
       "warning": ""
     }
   ],
-  "parser_version": "mirror-0.6.0",
+  "parser_version": "mirror-0.7.0",
   "version": "4.1.0"
 }
