@@ -1,0 +1,84 @@
+{
+  "certainty": "names, indices and types recovered directly from BFBS; no guessed fields",
+  "enums": [],
+  "file_extension": "",
+  "file_identifier": "",
+  "format": "FlatBuffers binary reflection (BFBS)",
+  "objects": [
+    {
+      "byte_size": 0,
+      "fields": [
+        {
+          "default_integer": 0,
+          "deprecated": false,
+          "id": 0,
+          "key": false,
+          "name": "devNo",
+          "offset": 4,
+          "offset64": false,
+          "optional": false,
+          "required": false,
+          "type": {
+            "base_size": 4,
+            "base_type": 5,
+            "element": 0,
+            "element_size": 0,
+            "fixed_length": 0,
+            "index": -1
+          }
+        },
+        {
+          "default_integer": 0,
+          "deprecated": false,
+          "id": 1,
+          "key": false,
+          "name": "formNo",
+          "offset": 6,
+          "offset64": false,
+          "optional": false,
+          "required": false,
+          "type": {
+            "base_size": 4,
+            "base_type": 5,
+            "element": 0,
+            "element_size": 0,
+            "fixed_length": 0,
+            "index": -1
+          }
+        }
+      ],
+      "is_struct": false,
+      "min_align": 1,
+      "name": "PokedexBlackListMain"
+    },
+    {
+      "byte_size": 0,
+      "fields": [
+        {
+          "default_integer": 0,
+          "deprecated": false,
+          "id": 0,
+          "key": false,
+          "name": "values",
+          "offset": 4,
+          "offset64": false,
+          "optional": false,
+          "required": false,
+          "type": {
+            "base_size": 4,
+            "base_type": 14,
+            "element": 15,
+            "element_size": 0,
+            "fixed_length": 0,
+            "index": 0
+          }
+        }
+      ],
+      "is_struct": false,
+      "min_align": 1,
+      "name": "PokedexBlackListMainArray"
+    }
+  ],
+  "root_table": "PokedexBlackListMainArray",
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/ikkaku/world/ik_data/ui/pokedex/black_list_main/black_list_main_array.bfbs"
+}

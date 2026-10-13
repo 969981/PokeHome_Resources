@@ -1,0 +1,13 @@
+// Reconstructed from BFBS reflection; not original comments/formatting.
+// Review union and optional field semantics before recompiling.
+
+table PokedexBlackListMain {
+  devNo: short;
+  formNo: short;
+}
+
+table PokedexBlackListMainArray {
+  values: [PokedexBlackListMain];
+}
+
+root_type PokedexBlackListMainArray;

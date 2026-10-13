@@ -1,0 +1,50 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 1611,
+        "target_offset": 24,
+        "u32_vector_preview": [
+          108680,
+          108576,
+          108472,
+          108372,
+          108268,
+          108156,
+          108072,
+          107976,
+          107872,
+          107776,
+          107672,
+          107568
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4
+    ],
+    "object_size": 8,
+    "root": 16,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 1611,
+        "offset_candidate": 24
+      }
+    },
+    "vtable": 10,
+    "vtable_size": 6
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/hayabusa/appli/pokedex/res_table/pokedex_research_task_table.bin"
+}

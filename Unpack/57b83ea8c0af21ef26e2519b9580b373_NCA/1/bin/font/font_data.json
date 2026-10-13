@@ -1,0 +1,108 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 1.6815581571897805e-44,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "0c000000",
+      "reference_candidate": {
+        "length_candidate": 275,
+        "target_offset": 20,
+        "u32_vector_preview": [
+          8648,
+          8604,
+          8524,
+          8488,
+          8448,
+          8420,
+          8392,
+          8364,
+          8336,
+          8308,
+          8280,
+          8252
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 12,
+      "u32_candidate": 12,
+      "u8_candidate": 12
+    },
+    {
+      "field_index": 1,
+      "float32_candidate": 1.2224927802769704e-41,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "14220000",
+      "reference_candidate": {
+        "length_candidate": 242,
+        "target_offset": 8736,
+        "u32_vector_preview": [
+          5348,
+          5316,
+          5288,
+          5256,
+          5232,
+          5212,
+          5192,
+          5172,
+          5152,
+          5132,
+          5108,
+          5072
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 8724,
+      "u32_candidate": 8724,
+      "u8_candidate": 20
+    },
+    {
+      "field_index": 2,
+      "float32_candidate": 1.976951873469452e-41,
+      "object_offset": 12,
+      "present": true,
+      "raw_hex": "1c370000",
+      "reference_candidate": {
+        "length_candidate": 2,
+        "target_offset": 14124,
+        "u32_vector_preview": [
+          320,
+          12
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 14108,
+      "u32_candidate": 14108,
+      "u8_candidate": 28
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4,
+      8,
+      12
+    ],
+    "object_size": 16,
+    "root": 4,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 275,
+        "offset_candidate": 20
+      },
+      "1": {
+        "length_candidate": 242,
+        "offset_candidate": 8736
+      },
+      "2": {
+        "length_candidate": 2,
+        "offset_candidate": 14124
+      }
+    },
+    "vtable": 8546,
+    "vtable_size": 10
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/font/font_data.prmb"
+}

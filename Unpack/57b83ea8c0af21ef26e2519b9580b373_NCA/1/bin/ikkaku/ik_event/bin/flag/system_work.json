@@ -1,0 +1,50 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 63,
+        "target_offset": 12,
+        "u32_vector_preview": [
+          2500,
+          2448,
+          2400,
+          2352,
+          2308,
+          2276,
+          2228,
+          2192,
+          2160,
+          2128,
+          2084,
+          2028
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4
+    ],
+    "object_size": 8,
+    "root": 4,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 63,
+        "offset_candidate": 12
+      }
+    },
+    "vtable": 2510,
+    "vtable_size": 6
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/ikkaku/ik_event/bin/flag/system_work.bin"
+}

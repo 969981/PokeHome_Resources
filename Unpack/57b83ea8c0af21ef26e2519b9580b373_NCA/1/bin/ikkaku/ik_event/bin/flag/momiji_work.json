@@ -1,0 +1,50 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 264,
+        "target_offset": 12,
+        "u32_vector_preview": [
+          12636,
+          12580,
+          12532,
+          12484,
+          12436,
+          12388,
+          12340,
+          12292,
+          12244,
+          12196,
+          12148,
+          12100
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4
+    ],
+    "object_size": 8,
+    "root": 4,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 264,
+        "offset_candidate": 12
+      }
+    },
+    "vtable": 12646,
+    "vtable_size": 6
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/ikkaku/ik_event/bin/flag/momiji_work.bin"
+}

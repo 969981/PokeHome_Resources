@@ -1,0 +1,67 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 1.0767577399871894e-40,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "282c0100",
+      "reference_candidate": {
+        "length_candidate": 16,
+        "string_candidate": "pokeicon_s_dummy",
+        "target_offset": 76848
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 11304,
+      "u32_candidate": 76840,
+      "u8_candidate": 40
+    },
+    {
+      "field_index": 1,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 243,
+        "target_offset": 16,
+        "u32_vector_preview": [
+          76376,
+          76036,
+          75700,
+          75476,
+          75252,
+          74820,
+          74388,
+          74052,
+          73716,
+          73492,
+          73268,
+          73044
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4,
+      8
+    ],
+    "object_size": 12,
+    "root": 4,
+    "u32_vector_candidates": {
+      "1": {
+        "length_candidate": 243,
+        "offset_candidate": 16
+      }
+    },
+    "vtable": 76780,
+    "vtable_size": 8
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/hayabusa/appli/res_pokemon/list/pokemon_info_list.bin"
+}

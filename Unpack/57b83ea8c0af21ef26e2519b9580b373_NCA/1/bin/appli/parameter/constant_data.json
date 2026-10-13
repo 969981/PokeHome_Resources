@@ -1,0 +1,108 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 1.6815581571897805e-44,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "0c000000",
+      "reference_candidate": {
+        "length_candidate": 52,
+        "target_offset": 24,
+        "u32_vector_preview": [
+          1632,
+          1556,
+          1504,
+          1468,
+          1428,
+          1400,
+          1372,
+          1332,
+          1304,
+          1276,
+          1248,
+          1220
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 12,
+      "u32_candidate": 12,
+      "u8_candidate": 12
+    },
+    {
+      "field_index": 1,
+      "float32_candidate": 2.342971032351094e-42,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "88060000",
+      "reference_candidate": {
+        "length_candidate": 40,
+        "target_offset": 1688,
+        "u32_vector_preview": [
+          940,
+          912,
+          892,
+          860,
+          828,
+          804,
+          780,
+          756,
+          736,
+          712,
+          688,
+          664
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 1672,
+      "u32_candidate": 1672,
+      "u8_candidate": 136
+    },
+    {
+      "field_index": 2,
+      "float32_candidate": 3.6882175581029185e-42,
+      "object_offset": 12,
+      "present": true,
+      "raw_hex": "480a0000",
+      "reference_candidate": {
+        "length_candidate": 2,
+        "target_offset": 2652,
+        "u32_vector_preview": [
+          72,
+          12
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 2632,
+      "u32_candidate": 2632,
+      "u8_candidate": 72
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4,
+      8,
+      12
+    ],
+    "object_size": 16,
+    "root": 8,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 52,
+        "offset_candidate": 24
+      },
+      "1": {
+        "length_candidate": 40,
+        "offset_candidate": 1688
+      },
+      "2": {
+        "length_candidate": 2,
+        "offset_candidate": 2652
+      }
+    },
+    "vtable": 1530,
+    "vtable_size": 10
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/parameter/constant_data.prmb"
+}

@@ -1,0 +1,102 @@
+{
+  "bank_id": 1355168291,
+  "certainty": "bank chunk boundaries, DIDX, and HIRC record headers parsed; events and codec not decoded",
+  "chunks": [
+    {
+      "length": 48,
+      "offset": 8,
+      "type": "BKHD"
+    },
+    {
+      "length": 32,
+      "offset": 64,
+      "type": "INIT"
+    },
+    {
+      "length": 92,
+      "offset": 104,
+      "type": "STMG"
+    },
+    {
+      "length": 941,
+      "offset": 204,
+      "type": "HIRC"
+    },
+    {
+      "length": 168,
+      "offset": 1153,
+      "type": "ENVS"
+    },
+    {
+      "length": 7,
+      "offset": 1329,
+      "type": "PLAT"
+    }
+  ],
+  "embedded_media_index": [],
+  "format": "Wwise SoundBank",
+  "hirc_objects": [
+    {
+      "bytes": 20,
+      "object_id": 2317455096,
+      "source_offset": 208,
+      "type_id": 21
+    },
+    {
+      "bytes": 32,
+      "object_id": 3859886410,
+      "source_offset": 233,
+      "type_id": 21
+    },
+    {
+      "bytes": 12,
+      "object_id": 438450864,
+      "source_offset": 270,
+      "type_id": 1
+    },
+    {
+      "bytes": 112,
+      "object_id": 3803692087,
+      "source_offset": 287,
+      "type_id": 8
+    },
+    {
+      "bytes": 218,
+      "object_id": 814663814,
+      "source_offset": 404,
+      "type_id": 8
+    },
+    {
+      "bytes": 72,
+      "object_id": 3774782230,
+      "source_offset": 627,
+      "type_id": 8
+    },
+    {
+      "bytes": 218,
+      "object_id": 4141759354,
+      "source_offset": 704,
+      "type_id": 8
+    },
+    {
+      "bytes": 72,
+      "object_id": 412724365,
+      "source_offset": 927,
+      "type_id": 8
+    },
+    {
+      "bytes": 90,
+      "object_id": 3073030106,
+      "source_offset": 1004,
+      "type_id": 8
+    },
+    {
+      "bytes": 41,
+      "object_id": 4177309132,
+      "source_offset": 1099,
+      "type_id": 16
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/sound/NX64/wwise/bank/Init.bnk",
+  "version": 145
+}

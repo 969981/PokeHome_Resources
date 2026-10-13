@@ -1,0 +1,9 @@
+{
+  "certainty": "signature/header only; 0x1C meaning unresolved; shader programs NOT disassembled",
+  "format": "Nintendo Switch BNSH shader archive",
+  "header_hex": "424e53480000000005010200fffe0c004a4000000000600060400000c84100000000000000000000000000000000000000000000000000000000000000000000",
+  "header_u32_0x1c": 16840,
+  "header_u32_0x1c_equals_file_size": true,
+  "size_bytes": 16840,
+  "version_raw": "05010200"
+}

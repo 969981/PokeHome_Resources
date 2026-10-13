@@ -1,0 +1,39 @@
+{
+  "certainty": "header and section layout only; font glyphs remain proprietary",
+  "endian": "little",
+  "file_bytes": 271380,
+  "format": "Nintendo FFNT",
+  "sections": [
+    {
+      "bytes": 32,
+      "offset": 20,
+      "tag": "FINF"
+    },
+    {
+      "bytes": 270388,
+      "offset": 52,
+      "tag": "TGLP"
+    },
+    {
+      "bytes": 664,
+      "offset": 270440,
+      "tag": "CWDH"
+    },
+    {
+      "bytes": 28,
+      "offset": 271104,
+      "tag": "CMAP"
+    },
+    {
+      "bytes": 28,
+      "offset": 271132,
+      "tag": "CMAP"
+    },
+    {
+      "bytes": 220,
+      "offset": 271160,
+      "tag": "CMAP"
+    }
+  ],
+  "version_raw": "00000104"
+}

@@ -1,0 +1,400 @@
+{
+  "bank_id": 412724365,
+  "certainty": "bank chunk boundaries, DIDX, and HIRC record headers parsed; events and codec not decoded",
+  "chunks": [
+    {
+      "length": 40,
+      "offset": 8,
+      "type": "BKHD"
+    },
+    {
+      "length": 1877,
+      "offset": 56,
+      "type": "HIRC"
+    }
+  ],
+  "embedded_media_index": [],
+  "format": "Wwise SoundBank",
+  "hirc_objects": [
+    {
+      "bytes": 50,
+      "object_id": 665834294,
+      "source_offset": 60,
+      "type_id": 2
+    },
+    {
+      "bytes": 50,
+      "object_id": 542868397,
+      "source_offset": 115,
+      "type_id": 7
+    },
+    {
+      "bytes": 55,
+      "object_id": 164884996,
+      "source_offset": 170,
+      "type_id": 2
+    },
+    {
+      "bytes": 55,
+      "object_id": 317450210,
+      "source_offset": 230,
+      "type_id": 2
+    },
+    {
+      "bytes": 50,
+      "object_id": 402997825,
+      "source_offset": 290,
+      "type_id": 2
+    },
+    {
+      "bytes": 55,
+      "object_id": 624913516,
+      "source_offset": 345,
+      "type_id": 2
+    },
+    {
+      "bytes": 55,
+      "object_id": 745708873,
+      "source_offset": 405,
+      "type_id": 2
+    },
+    {
+      "bytes": 55,
+      "object_id": 848302692,
+      "source_offset": 465,
+      "type_id": 2
+    },
+    {
+      "bytes": 50,
+      "object_id": 865983667,
+      "source_offset": 525,
+      "type_id": 2
+    },
+    {
+      "bytes": 74,
+      "object_id": 991040454,
+      "source_offset": 580,
+      "type_id": 7
+    },
+    {
+      "bytes": 21,
+      "object_id": 260460496,
+      "source_offset": 659,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 757756035,
+      "source_offset": 685,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 881844601,
+      "source_offset": 717,
+      "type_id": 3
+    },
+    {
+      "bytes": 17,
+      "object_id": 998662229,
+      "source_offset": 749,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 571464344,
+      "source_offset": 771,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 858449100,
+      "source_offset": 797,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 806093155,
+      "source_offset": 823,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 781377680,
+      "source_offset": 849,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 600576020,
+      "source_offset": 875,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 845549318,
+      "source_offset": 901,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 229388694,
+      "source_offset": 927,
+      "type_id": 3
+    },
+    {
+      "bytes": 33,
+      "object_id": 998662230,
+      "source_offset": 959,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 378223357,
+      "source_offset": 997,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 248343919,
+      "source_offset": 1023,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 642143570,
+      "source_offset": 1049,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 306053844,
+      "source_offset": 1075,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 1059891867,
+      "source_offset": 1101,
+      "type_id": 3
+    },
+    {
+      "bytes": 21,
+      "object_id": 618842826,
+      "source_offset": 1127,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 584245109,
+      "source_offset": 1153,
+      "type_id": 3
+    },
+    {
+      "bytes": 33,
+      "object_id": 998662231,
+      "source_offset": 1185,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 174111704,
+      "source_offset": 1223,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 207372145,
+      "source_offset": 1249,
+      "type_id": 3
+    },
+    {
+      "bytes": 13,
+      "object_id": 1117859722,
+      "source_offset": 1281,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 228797405,
+      "source_offset": 1299,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1155554056,
+      "source_offset": 1325,
+      "type_id": 4
+    },
+    {
+      "bytes": 22,
+      "object_id": 1054425827,
+      "source_offset": 1339,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1158231234,
+      "source_offset": 1366,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 775064873,
+      "source_offset": 1380,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1205887047,
+      "source_offset": 1406,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 877534207,
+      "source_offset": 1420,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1206034104,
+      "source_offset": 1446,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 333157075,
+      "source_offset": 1460,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1256367095,
+      "source_offset": 1486,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 1044516634,
+      "source_offset": 1500,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1273291741,
+      "source_offset": 1526,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 548488657,
+      "source_offset": 1540,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 1357179902,
+      "source_offset": 1566,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 296240270,
+      "source_offset": 1580,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 89345438,
+      "source_offset": 1606,
+      "type_id": 3
+    },
+    {
+      "bytes": 13,
+      "object_id": 2835963463,
+      "source_offset": 1638,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 395870063,
+      "source_offset": 1656,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 3068644037,
+      "source_offset": 1682,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 992602735,
+      "source_offset": 1696,
+      "type_id": 3
+    },
+    {
+      "bytes": 27,
+      "object_id": 206737896,
+      "source_offset": 1722,
+      "type_id": 3
+    },
+    {
+      "bytes": 13,
+      "object_id": 3078573180,
+      "source_offset": 1754,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 780847444,
+      "source_offset": 1772,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 3152532198,
+      "source_offset": 1798,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 37721756,
+      "source_offset": 1812,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 3202173313,
+      "source_offset": 1838,
+      "type_id": 4
+    },
+    {
+      "bytes": 22,
+      "object_id": 811034338,
+      "source_offset": 1852,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 3428541903,
+      "source_offset": 1879,
+      "type_id": 4
+    },
+    {
+      "bytes": 21,
+      "object_id": 352790225,
+      "source_offset": 1893,
+      "type_id": 3
+    },
+    {
+      "bytes": 9,
+      "object_id": 4254187606,
+      "source_offset": 1919,
+      "type_id": 4
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/sound/NX64/wwise/bank/BGM.bnk",
+  "version": 145
+}

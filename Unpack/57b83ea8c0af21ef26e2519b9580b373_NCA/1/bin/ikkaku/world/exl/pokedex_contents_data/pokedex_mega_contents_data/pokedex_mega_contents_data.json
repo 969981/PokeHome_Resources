@@ -1,0 +1,50 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 93,
+        "target_offset": 20,
+        "u32_vector_preview": [
+          2080,
+          2048,
+          2012,
+          1980,
+          1960,
+          1940,
+          1920,
+          1900,
+          1880,
+          1860,
+          1840,
+          1820
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4
+    ],
+    "object_size": 8,
+    "root": 12,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 93,
+        "offset_candidate": 20
+      }
+    },
+    "vtable": 6,
+    "vtable_size": 6
+  },
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/ikkaku/world/exl/pokedex_contents_data/pokedex_mega_contents_data/pokedex_mega_contents_data.bin"
+}
