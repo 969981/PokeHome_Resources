@@ -1,4 +1,5 @@
 name: HOME 4.1.0 P6 proven Item8 native getter
+# Exact producer load is at main+0x4FD76C, not stack-restore at 0x4FD768.
 on:
   push:
     branches: ['4.1.0']
