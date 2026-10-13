@@ -1,0 +1,48 @@
+name: HOME 4.1.0 mirrored Unpack tests
+
+on:
+  push:
+    branches:
+      - '4.1.0'
+    paths:
+      - 'tools/unpack_home41.py'
+      - 'tools/test_home41_unpack.py'
+      - 'tools/export_home41_resources.py'
+      - 'tools/home41_romfs_core.py'
+      - 'tools/home41_bntx_to_png.py'
+      - '.github/workflows/home41-unpack.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout real HOME 4.1.0 resources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax check
+        run: python -m compileall -q tools
+      - name: Existing and mirrored real-byte tests
+        run: python -m unittest discover -s tools -p 'test_home41_*.py' -v
+      - name: Read-only dry-run against all original resource paths
+        run: python tools/unpack_home41.py --root . --out Unpack --dry-run
+      - name: Convert real small samples into mirrored output
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --file bin/pml/waza/beluga/waza0001.wazabin
+          python tools/unpack_home41.py --root . --out Unpack --file system_resource/texture/primitive_renderer_texture.bntx
+      - name: Upload reproducible manifest and sample
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-unpack-smoke
+          path: Unpack/
+          if-no-files-found: error
+          retention-days: 14
