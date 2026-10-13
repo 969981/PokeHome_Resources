@@ -8,7 +8,11 @@
     "26way_selector_compare": "0x4FD0B8",
     "extended_selector_entry": "0x4FD258",
     "extended_selector_45way": "0x4FD270",
-    "original_record_pointer_getter": "0x4FD784"
+    "original_record_pointer_getter": "0x4FD784",
+    "item_dispatch_wrapper_1": "0x4FD48C",
+    "item_dispatch_wrapper_2": "0x4FD800",
+    "property_caller_1": "0x4FD4D4",
+    "property_caller_2": "0x4FD830"
   },
   "code_words_4byte_scanned": 1564840,
   "all_executable_direct_branch_counts": {
@@ -17,10 +21,122 @@
   },
   "raw_branch_hits_targeting_item_selector_range": [
     {
+      "callsite_rva": "0x69B0C",
+      "target_rva": "0x4FD65C",
+      "kind": "B",
+      "code_word_le": "14124ed4",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x69B70",
+      "target_rva": "0x4FD50C",
+      "kind": "BL",
+      "code_word_le": "94124e67",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x69B9C",
+      "target_rva": "0x4FD50C",
+      "kind": "BL",
+      "code_word_le": "94124e5c",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BA4",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b2c",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BB0",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b29",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BBC",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b26",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BC8",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b23",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BD4",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b20",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BE0",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b1d",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BEC",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b1a",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266BF8",
+      "target_rva": "0x4FD854",
+      "kind": "BL",
+      "code_word_le": "940a5b17",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x266C0C",
+      "target_rva": "0x4FD854",
+      "kind": "B",
+      "code_word_le": "140a5b12",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
       "callsite_rva": "0x266D58",
       "target_rva": "0x4FD48C",
       "kind": "BL",
       "code_word_le": "940a59cd",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x2C3040",
+      "target_rva": "0x4FD4F8",
+      "kind": "BL",
+      "code_word_le": "9408e92e",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
+    },
+    {
+      "callsite_rva": "0x2C3054",
+      "target_rva": "0x4FD80C",
+      "kind": "BL",
+      "code_word_le": "9408e9ee",
       "is_inside_selector_function": false,
       "is_local_control_flow": false
     },
@@ -45,7 +161,7 @@
       "target_rva": "0x4FD06C",
       "kind": "BL",
       "code_word_le": "97fffee9",
-      "is_inside_selector_function": false,
+      "is_inside_selector_function": true,
       "is_local_control_flow": true
     },
     {
@@ -53,7 +169,7 @@
       "target_rva": "0x4FD0B8",
       "kind": "BL",
       "code_word_le": "97fffef9",
-      "is_inside_selector_function": false,
+      "is_inside_selector_function": true,
       "is_local_control_flow": true
     },
     {
@@ -61,7 +177,23 @@
       "target_rva": "0x4FD0B4",
       "kind": "BL",
       "code_word_le": "97fffef5",
-      "is_inside_selector_function": false,
+      "is_inside_selector_function": true,
+      "is_local_control_flow": true
+    },
+    {
+      "callsite_rva": "0x4FD508",
+      "target_rva": "0x4FD7D0",
+      "kind": "B",
+      "code_word_le": "140000b2",
+      "is_inside_selector_function": true,
+      "is_local_control_flow": true
+    },
+    {
+      "callsite_rva": "0x4FD54C",
+      "target_rva": "0x4FD554",
+      "kind": "B",
+      "code_word_le": "14000002",
+      "is_inside_selector_function": true,
       "is_local_control_flow": true
     },
     {
@@ -69,7 +201,7 @@
       "target_rva": "0x4FD06C",
       "kind": "BL",
       "code_word_le": "97fffe12",
-      "is_inside_selector_function": false,
+      "is_inside_selector_function": true,
       "is_local_control_flow": true
     },
     {
@@ -77,7 +209,7 @@
       "target_rva": "0x4FD0B8",
       "kind": "BL",
       "code_word_le": "97fffe22",
-      "is_inside_selector_function": false,
+      "is_inside_selector_function": true,
       "is_local_control_flow": true
     },
     {
@@ -85,11 +217,19 @@
       "target_rva": "0x4FD0B4",
       "kind": "BL",
       "code_word_le": "97fffe1e",
-      "is_inside_selector_function": false,
+      "is_inside_selector_function": true,
       "is_local_control_flow": true
+    },
+    {
+      "callsite_rva": "0x4FD93C",
+      "target_rva": "0x4FD8F4",
+      "kind": "B",
+      "code_word_le": "17ffffee",
+      "is_inside_selector_function": false,
+      "is_local_control_flow": false
     }
   ],
-  "direct_branch_hit_count": 9,
+  "direct_branch_hit_count": 26,
   "candidate_literal_function_pointers": {
     "0x4FD06C": [],
     "0x4FD098": [],
@@ -97,7 +237,11 @@
     "0x4FD0B8": [],
     "0x4FD258": [],
     "0x4FD270": [],
-    "0x4FD784": []
+    "0x4FD784": [],
+    "0x4FD48C": [],
+    "0x4FD800": [],
+    "0x4FD4D4": [],
+    "0x4FD830": []
   },
   "local_disassembly": [
     {
