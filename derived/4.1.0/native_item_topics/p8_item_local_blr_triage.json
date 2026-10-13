@@ -2,6 +2,9 @@
   "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
   "source_indirect_scan": "derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json",
   "raw_local_blr_sites": 9,
+  "interface_slot_0x18_sites": 7,
+  "interface_slot_0x10_sites": 1,
+  "owner_callback_sites": 1,
   "direct_item_property_dispatch_call_count": 2,
   "item_effect_selector_26_to_70_consumer_confirmed": false,
   "rows": [
@@ -88,6 +91,8 @@
           "bytes_le": "fd7bc2a8"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -175,6 +180,8 @@
           "bytes_le": "fd7bc2a8"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -262,6 +269,8 @@
           "bytes_le": "940200b4"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -349,6 +358,8 @@
           "bytes_le": "080109aa"
         }
       ],
+      "target_source_class": "object_interface_slot_0x10",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -436,6 +447,8 @@
           "bytes_le": "e00340f9"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -523,6 +536,8 @@
           "bytes_le": "4884b0f2"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -610,6 +625,8 @@
           "bytes_le": "08c940f9"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -697,6 +714,8 @@
           "bytes_le": "60020491"
         }
       ],
+      "target_source_class": "object_interface_slot_0x18",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
@@ -784,6 +803,8 @@
           "bytes_le": "60020291"
         }
       ],
+      "target_source_class": "owner_callback_member_0xE8",
+      "is_direct_item_property_dispatch": false,
       "resolved_target": null,
       "confirmed_item_property_or_battle_effect_call": false,
       "note": "Register-derived BLR, target requires exact live object and vtable values."
