@@ -61,6 +61,10 @@ def classify(i):
 def scan_elf(data):
     segments = elf_segments(data)
     md = Cs(CS_ARCH_ARM64, CS_MODE_ARM)
+    # ELF PT_LOAD contains noninstruction bytes at the start of text region.
+    # Without skipdata Capstone stops at the first invalid word, producing
+    # false empty results on this exact main.elf. Skip invalid 4-byte words.
+    md.skipdata = True
     # Capstone emits one instruction at a time; do not keep millions of objects.
     sources = {}
     hits = []
@@ -70,6 +74,8 @@ def scan_elf(data):
             continue
         p, n = seg["file_offset"], seg["size"]
         for ins in md.disasm(data[p:p+n], seg["vaddr"]):
+            if ins.mnemonic == ".byte":
+                continue
             visited += 1
             tags = classify(ins)
             if tags:
