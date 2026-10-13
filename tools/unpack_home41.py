@@ -28,10 +28,11 @@ from export_home41_resources import fbs_details, layout_sections, safe_member
 from home41_bntx_to_png import decode_bntx
 from home41_p2_pml_readonly import payload, records
 from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
+from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bffnt, decode_bnsh, decode_akpk
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.1.2"
+PARSER_VERSION = "mirror-0.2.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -114,7 +115,7 @@ def output_name(relative: Path) -> Path | None:
         new = name[: -len(relative.suffix)] + ".json"
     elif suffix == ".bntx":
         new = name[: -len(relative.suffix)] + ".png"
-    elif suffix == ".bin" and (lower.endswith(("_lyt.bin", "_uikit.bin")) or lower.startswith("grow_")):
+    elif suffix in (".bfbs", ".prmb", ".bnk", ".pck", ".bnsh", ".bffnt", ".bin"):
         new = name[: -len(relative.suffix)] + ".json"
     else:
         return None
@@ -233,6 +234,62 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
     if main is None:
         return "unsupported", 0, ["format parser not implemented"], sink.commit()
 
+    if suffix == ".bfbs":
+        doc = Reflection(read_file(source)).extract()
+        doc["source"] = relative.as_posix()
+        sink.put(main, json_bytes(doc))
+        sink.put(main.with_suffix(".fbs"), bfbs_to_fbs(doc).encode("utf-8"))
+        return "converted", sum(len(x["fields"]) for x in doc["objects"]), warnings, sink.commit()
+
+    if suffix == ".bnk":
+        blob = read_file(source)
+        doc, media = decode_bnk(blob)
+        doc["source"] = relative.as_posix()
+        sink.put(main, json_bytes(doc))
+        if media:
+            prefix = Path("_audio") / relative
+            for row in doc["embedded_media_index"]:
+                if row["bytes"] > MAX_SOURCE:
+                    warnings.append("oversized WEM " + str(row["wem_id"]))
+                    continue
+                start = media["offset"] + row["offset"]
+                chunk = blob[start:start + row["bytes"]]
+                if not chunk.startswith(b"RIFF"):
+                    warnings.append("WEM without RIFF " + str(row["wem_id"]))
+                    continue
+                sink.put(prefix / (str(row["wem_id"]) + ".wem"), chunk)
+        return ("partial" if warnings else "converted"), len(doc["embedded_media_index"]), warnings, sink.commit()
+
+    if suffix == ".bnsh":
+        sink.put(main, json_bytes(decode_bnsh(read_file(source))))
+        return "partial", 1, ["shader binary not disassembled"], sink.commit()
+
+    if suffix == ".bffnt":
+        doc = decode_bffnt(read_file(source))
+        sink.put(main, json_bytes(doc))
+        return "partial", len(doc["sections"]), ["font glyphs not converted"], sink.commit()
+
+    if suffix == ".pck":
+        sink.put(main, json_bytes(decode_akpk(read_file(source))))
+        return "partial", 1, ["package index and WEM extraction not implemented"], sink.commit()
+
+    if suffix == ".prmb":
+        doc = fbs_details(read_file(source))
+        doc["source"] = relative.as_posix()
+        sink.put(main, json_bytes(doc))
+        return "partial", len(doc["fields"]), ["FlatBuffers field meaning unverified"], sink.commit()
+
+    if suffix == ".bin" and "zukan_sort_" in name:
+        blob = read_file(source)
+        if len(blob) % 4: raise ValueError("unaligned u32 sort table")
+        rows = [{"row": i, "packed_u32": n, "low16_candidate": n & 65535,
+                 "high16_candidate": n >> 16}
+                for i, (n,) in enumerate(struct.iter_unpack("<I", blob))]
+        sink.put(main.with_suffix(".csv"), csv_bytes(rows, list(rows[0]) if rows else ["row","packed_u32","low16_candidate","high16_candidate"]))
+        sink.put(main, json_bytes({"format":"u32 sorting keys", "count":len(rows),
+                                  "certainty":"numeric boundaries only; species/form meaning unverified"}))
+        return "partial", len(rows), ["sort key bit interpretation unverified"], sink.commit()
+
     if suffix == ".tbl":
         raw = read_file(source)
         if not raw.startswith(b"AHTB"):
@@ -298,6 +355,15 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 for i, x in enumerate(struct.iter_unpack("<I", raw))]
         sink.put(main, json_bytes({"certainty": "u32_candidate", "rows": rows}))
         return "partial", len(rows), ["growth array interpretation unverified"], sink.commit()
+
+    if suffix == ".bin":
+        try:
+            doc = fbs_details(read_file(source))
+        except (ValueError, struct.error, IndexError):
+            return "unsupported", 0, ["untyped binary array without verified schema"], sink.commit()
+        doc["source"] = relative.as_posix()
+        sink.put(main, json_bytes(doc))
+        return "partial", len(doc["fields"]), ["FlatBuffers schema unavailable"], sink.commit()
 
     if suffix == ".arc":
         data = read_file(source)
