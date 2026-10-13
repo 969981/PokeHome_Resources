@@ -102,7 +102,7 @@ class ItemSemanticTests(unittest.TestCase):
             status, n, warnings, outputs = export_one(SRC, ROOT, out, main)
             self.assertEqual(status, "partial")
             self.assertEqual(n, 1166)
-            self.assertEqual(len(outputs), 8)
+            self.assertEqual(len(outputs), 9)
             self.assertTrue(warnings)
             self.assertTrue(all((out / entry["path"]).is_file() for entry in outputs))
             semantic = out / main.with_name("item.semantic.csv")
@@ -118,6 +118,13 @@ class ItemSemanticTests(unittest.TestCase):
             self.assertEqual(selected[2]["native_s02_watts_price_pkNX"], "40")
             self.assertEqual(selected[100]["native_s04_signed_sprite_pkNX"], "-1")
             self.assertEqual(selected[2]["native_s14_pouch_low4_pkNX"], "1")
+            with (out / main.with_name("item.native_effects.csv")).open(
+                    encoding="utf-8-sig", newline="") as f:
+                extended = list(csv.DictReader(f))
+            self.assertEqual(len(extended), 1829)
+            self.assertEqual(extended[2]["native_effect_variant_at_0x15"], "0")
+            self.assertEqual(extended[2]["native_effect_s26_raw"], "1")
+            self.assertEqual(extended[17]["native_effect_variant_at_0x15"], "1")
             self.assertEqual(entries[2]["pouch_name_pkNX"], "Balls")
             meta = json.loads((out / main.with_name("item.semantic.json")).read_text())
             self.assertEqual(meta["item_count"], 1829)
