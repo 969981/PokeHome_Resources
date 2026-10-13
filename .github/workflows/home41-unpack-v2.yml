@@ -1,0 +1,90 @@
+name: HOME 4.1.0 Unpack v2 full Release
+on:
+  workflow_run:
+    workflows: ['HOME 4.1.0 publish P4 structural resources']
+    types: [completed]
+    branches: ['4.1.0']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-unpack-v2-release
+  cancel-in-progress: false
+jobs:
+  release-v2:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: home41-unpack-4.1.0-mirror-v2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Native BC7 decoder dependency
+        run: python -m pip install texture2ddecoder==1.0.6
+      - name: Validate on original ROMFS test vectors
+        run: |
+          python -m unittest discover -s tools -p 'test_home41_*.py' -v
+      - name: Regenerate missing raw members, WEM, BNTX and advanced PNG
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --all --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --strict
+          cat Unpack/_meta/summary.json
+          python - <<'PY'
+          import json
+          d=json.load(open('Unpack/_meta/summary.json'))
+          assert d['source_files']==12074
+          assert d['status_counts'].get('failed',0)==0
+          assert d['status_counts'].get('not_run',0)==0
+          assert d['status_counts'].get('unsupported',999)<65
+          PY
+      - name: Publish any newly decoded archive visuals
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          base=Path('Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1')
+          paths=[str(x) for x in base.rglob('*') if x.is_file() and x.suffix.lower() in {'.json','.csv','.png','.fbs'} and x.stat().st_size<50*1024*1024]
+          paths += [str(x) for x in Path('Unpack/_meta').glob('*') if x.is_file()]
+          for i in range(0,len(paths),100):
+              subprocess.run(['git','add','--',*paths[i:i+100]],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: finalize HOME 4.1.0 full verified mirror v2'
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
+      - name: Build v2 permanent complete binary archive
+        run: |
+          mkdir -p release-out
+          tar -czf release-out/home41-unpack-complete-v2.tar.gz Unpack/
+          (cd release-out && sha256sum home41-unpack-complete-v2.tar.gz > SHA256SUMS.txt)
+          ls -lh release-out
+      - name: Publish Release with honest parser coverage
+        run: |
+          set -euo pipefail
+          status=$(python -c "import json;d=json.load(open('Unpack/_meta/summary.json'));print(d['status_counts'])")
+          notes="HOME 4.1.0 full mirrored resource v2 with BC7 0x2001 PNG, BFBS reflection .fbs, FlatBuffers PRMB and verified format indexes. Sources: 12074. Parser coverage: $status. Partial means semantics are not completely restored. No failed sources. Archive includes raw SARC members and Wwise WEM where present, plus BNTX payloads. Verify with the included SHA256SUMS.txt."
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" release-out/* --clobber
+          else
+            gh release create "$RELEASE_TAG" release-out/* --target "$(git rev-parse HEAD)" --title 'HOME 4.1.0 mirrored Unpack v2' --notes "$notes" --prerelease
+          fi
+          gh release view "$RELEASE_TAG" --json url --jq .url
+      - name: Upload final manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-unpack-v2-manifest
+          path: Unpack/_meta/
+          retention-days: 30
+          if-no-files-found: warn
