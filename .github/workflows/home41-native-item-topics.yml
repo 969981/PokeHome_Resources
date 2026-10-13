@@ -1,0 +1,56 @@
+name: HOME 4.1.0 native ELF resource XREF audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-native-item-topics.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-native-item-topics
+  cancel-in-progress: false
+jobs:
+  native-item-topics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify real ELF and scanner syntax
+        run: |
+          python -m py_compile tools/home41_elf_resource_xrefs.py
+          test -s 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+          file 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+          sha256sum 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+      - name: Collect address-level native string and instruction evidence
+        run: |
+          python tools/home41_elf_resource_xrefs.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out derived/4.1.0/native_elf_item_topics_xrefs.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('derived/4.1.0/native_elf_item_topics_xrefs.json')
+          d=json.loads(p.read_text())
+          assert d['elf_bytes']>1_000_000
+          assert len(d['elf_sha256'])==64
+          assert isinstance(d['references'], list)
+          print('file:',p,'strings:',d['string_hits'],'direct refs:',d['direct_reference_hits'])
+          PY
+      - name: Publish ELF evidence to Git
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- derived/4.1.0/native_elf_item_topics_xrefs.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish static 4.1.0 ELF resource path and ADRP reference audit'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
