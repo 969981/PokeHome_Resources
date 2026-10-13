@@ -97,7 +97,8 @@ class TablesTests(unittest.TestCase):
             decoded = list(csv.DictReader(io.StringIO(grammar_main.read_text("utf-8-sig"))))
             self.assertEqual(decoded[0]["text"], "the ")
             matrix = out / NCA / "1/bin/message/grammar/English.selectors.csv"
-            self.assertEqual(len(list(csv.DictReader(io.StringIO(matrix.read_text("utf-8-sig")))), 24)
+            matrix_rows = list(csv.DictReader(io.StringIO(matrix.read_text(encoding="utf-8-sig"))))
+            self.assertEqual(len(matrix_rows), 24)
             meta = json.loads((out / NCA / "1/bin/message/grammar/English.json").read_text())
             self.assertEqual(meta["term_count"], 4)
 
