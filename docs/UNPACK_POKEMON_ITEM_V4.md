@@ -92,8 +92,16 @@ purported complete legal item database.
 - `python tools/unpack_home41.py --root . --out Unpack --kind pokemon --verify --strict`
 - [Publish workflow](../.github/workflows/home41-publish-pokemon-item.yml)
 - All original NCA files remain read-only.
-- The baseline before this pass was **10 unsupported**. If all six
-  sources pass CI and are published, the expected remainder is **4**:
-  `topics_data.bin` plus three proprietary `BFOTF` files.
-  This remains a projection until the conversion and full-source
-  summary actually pass, not an asserted current state.
+- **Published and verified:** the six new source files passed the
+  original-byte regression tests and full output SHA verification in
+  [GitHub Actions run 38344005393](https://github.com/969981/PokeHome_Resources/actions/runs/38344005393).
+- The 4.1.0 branch now contains the actual outputs at
+  [commit 1984cc3](https://github.com/969981/PokeHome_Resources/commit/1984cc331fd5ab5930987abf4a8d9d93b5cd576b).
+- The verified complete manifest covers 12,074 RomFS source files:
+  **converted=6,700; partial=5,370; unsupported=4; failed=0**.
+  The 4 unsupported are `topics_data.bin` and three `BFOTF` fonts.
+- The separate [v2 Release](https://github.com/969981/PokeHome_Resources/releases/tag/home41-unpack-4.1.0-mirror-v2)
+  succeeded and contains a 791,953,572-byte archive plus SHA256SUMS.
+  It was built from the earlier pre-P4.2 snapshot. For the latest
+  parsed arrays and current manifest, use the **Git branch**, not that
+  older Release bundle.
