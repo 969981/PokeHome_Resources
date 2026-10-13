@@ -1,0 +1,58 @@
+name: HOME 4.1.0 P6 topics ELF pair and flag table audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p6-topics-native-flags.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p6-topics-native-flags
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile and provide Capstone ARM64 disassembler
+        run: |
+          python -m pip install capstone==5.0.6
+          python -m compileall -q tools
+      - name: Extract native group and species-form flags from original ELF
+        run: |
+          python tools/home41_topics_native_flags.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out-dir derived/4.1.0/native_item_topics/
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('derived/4.1.0/native_item_topics/p6_topics_native_flags.json')
+          d=json.loads(p.read_text())
+          assert d['elf_sha256']=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          assert len(d['group_bit_shifts'])==7
+          assert len(d['group_5_pairs'])==96
+          assert d['opcodes_verified']>=14
+          print('verified group shift values:',d['group_bit_shifts'])
+          print('special group 5 pairs:',d['group_5_pairs'][:8])
+          PY
+      - name: Commit exact native data and disassembly proof
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- derived/4.1.0/native_item_topics/p6_topics_native_flags.json \
+            derived/4.1.0/native_item_topics/p6_topics_group5_special_pairs.csv \
+            derived/4.1.0/native_item_topics/p6_topics_native_accessors.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish verified 4.1.0 P6 topic group bit shifts, group 5 pairs and native opcode evidence'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
