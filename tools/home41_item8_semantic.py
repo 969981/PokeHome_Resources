@@ -17,6 +17,13 @@ POUCH_NAMES = (
     "Medicine", "Balls", "Battle", "Berries", "Items",
     "TMs", "Treasures", "Ingredients", "Key"
 )
+# Original Native ELF Pouch selector14 at main+0x266D58 dispatches into
+# these nine bag storage pointer members and capacities. NOT item catalog
+# record counts, which appear separately at source header +0x20.
+POUCH_NATIVE_OWNER_MEMBERS = (0x2650,0x2658,0x2660,0x2668,0x2670,0x2678,0x2680,0x2688,0x2690)
+POUCH_NATIVE_STORAGE_SLOTS = (60,30,20,80,550,210,100,100,64)
+POUCH_NATIVE_EVIDENCE = "derived/4.1.0/native_item_topics/p7_item_pouch_native_consumer.json"
+SPRITE_NATIVE_EVIDENCE = "derived/4.1.0/native_item_topics/p7_item_sprite_native_sink.json"
 GROUP_NAMES = {
     0: "None", 1: "Ball", 2: "Unknown_2",
     3: "Berries", 4: "TM", 5: "Gems"
@@ -38,6 +45,18 @@ def decode_item8_semantic(data: bytes) -> dict:
     padding = list(entries[item_count:])
     if padding != [0, 0, 0]:
         raise ValueError("three unused alignment slots unexpectedly populated")
+    # Independent per-unique-record census is verified against the original
+    # catalogue header and the native 0x4FD854 accessor of its +0x20 array.
+    catalog_counts = struct.unpack_from("<9H", data, 0x20)
+    physical_by_pouch = [0] * 9
+    for physical_record_index in range(record_count):
+        raw_pos = record_start + physical_record_index*0x30
+        cat = data[raw_pos+0x11] & 15
+        if cat >= 9:
+            raise ValueError(f"unrecognized Native pouch index in physical record {physical_record_index}")
+        physical_by_pouch[cat] += 1
+    if tuple(physical_by_pouch) != catalog_counts or sum(catalog_counts) != record_count:
+        raise ValueError("item.dat header catalog category counts mismatch physical records")
     records = []
     for item_id, index in enumerate(entries[:item_count]):
         ofs = record_start + index * 0x30
@@ -59,6 +78,9 @@ def decode_item8_semantic(data: bytes) -> dict:
         pouch_raw = raw[0x11]
         pouch = pouch_raw & 15
         group_type = raw[0x1C]
+        icon_i16 = struct.unpack_from("<h", raw, 0x1A)[0]
+        if pouch >= len(POUCH_NAMES):
+            raise ValueError(f"unknown native pouch index {pouch} for ItemID={item_id}")
         rec = {
             "item_id": item_id,
             "record_index": index,
@@ -79,13 +101,21 @@ def decode_item8_semantic(data: bytes) -> dict:
             "native_item_sprite_signed_rva": "0x4FD12C",
             "pouch_raw_u8": pouch_raw,
             "pouch_index": pouch,
+            "native_pouch_business_consumer_rva": "0x266D30",
+            "native_pouch_owner_member_offset": POUCH_NATIVE_OWNER_MEMBERS[pouch],
+            "native_pouch_bag_slot_capacity": POUCH_NATIVE_STORAGE_SLOTS[pouch],
+            "native_pouch_catalog_unique_records": catalog_counts[pouch],
             "pouch_name_pkNX": (POUCH_NAMES[pouch] if pouch < len(POUCH_NAMES)
                                 else f"Unknown_{pouch}"),
             "effect_field_u8": raw[0x13],
             "can_use_on_pokemon": raw[0x15] == 1,
             "can_use_on_pokemon_raw_u8": raw[0x15],
             "item_sprite_u16": struct.unpack_from("<H", raw, 0x1A)[0],
-            "item_sprite_native_i16": struct.unpack_from("<h", raw, 0x1A)[0],
+            "item_sprite_native_i16": icon_i16,
+            "native_icon_resource_key": (f"item_{icon_i16:04d}^o" if icon_i16 >= 0 else "item_dummy^o"),
+            "native_icon_uses_fallback_key": icon_i16 < 0,
+            "native_icon_asset_path_consumer_rva": "0x2C3018",
+
             "group_type_u8": group_type,
             "group_type_name_pkNX": GROUP_NAMES.get(group_type, f"Unknown_{group_type}"),
             "group_index_u8": raw[0x1D],
@@ -115,6 +145,17 @@ def decode_item8_semantic(data: bytes) -> dict:
         "native_field_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
         "native_price_field_width_bits": {"price": 32, "watts": 32, "alternate": 32},
         "native_sprite_field_signed": True,
+        "native_business_consumer_provenance": {
+            "pouch": POUCH_NATIVE_EVIDENCE,
+            "sprite_asset_key": SPRITE_NATIVE_EVIDENCE,
+            "pouch_proven_native_selector": 14,
+            "item_sprite_proven_native_selector": 4,
+            "actual_battle_effect_consumer_proven": False,
+        },
+        "pouch_native_catalog_record_counts": list(catalog_counts),
+        "pouch_native_bag_slot_capacities": list(POUCH_NATIVE_STORAGE_SLOTS),
+        "native_icon_key_format": "item_%04d^o",
+        "native_icon_fallback_key": "item_dummy^o",
         "item_count": item_count,
         "indexed_slot_capacity": capacity,
         "indexed_padding": padding,
