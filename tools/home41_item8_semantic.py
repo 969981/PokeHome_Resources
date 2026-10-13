@@ -9,6 +9,7 @@ require independent ELF verification; therefore fields stay annotated as
 from __future__ import annotations
 import hashlib
 import struct
+from home41_native_item_getter import native_item_record, EXPECTED_SHA_ELF
 
 SCHEMA_SOURCE = ("https://github.com/kwsch/pkNX/blob/"
     "0936c08eb14ed08eb9042c008404b24bf60e088a/"
@@ -42,6 +43,10 @@ def decode_item8_semantic(data: bytes) -> dict:
     for item_id, index in enumerate(entries[:item_count]):
         ofs = record_start + index * 0x30
         raw = data[ofs:ofs + 0x30]
+        # Same pointer calculation as original main+0x4FD784.
+        native = native_item_record(data, item_id)
+        if native.data_offset != ofs or native.record_bytes != raw or native.record_index_u16 != index:
+            raise ValueError(f"native Item8 record mismatch for ID {item_id}")
         price = struct.unpack_from("<I", raw, 0)[0]
         watts = struct.unpack_from("<H", raw, 4)[0]
         alternative = struct.unpack_from("<H", raw, 8)[0]
@@ -53,6 +58,7 @@ def decode_item8_semantic(data: bytes) -> dict:
             "record_index": index,
             "shared_default_record": index == 0 and item_id != 0,
             "source_offset": ofs,
+            "native_record_pointer_getter_rva": "0x4FD784",
             "price_u32": price,
             "price_watts_u16": watts,
             "price_alternate_u16": alternative,
@@ -85,6 +91,10 @@ def decode_item8_semantic(data: bytes) -> dict:
         "format": "HOME 4.1.0 item.dat / pkNX Item8 0x30-compatible fields",
         "source_sha256": hashlib.sha256(data).hexdigest(),
         "schema_reference": SCHEMA_SOURCE,
+        "native_record_getter_rva": "0x4FD784",
+        "native_elf_sha256": EXPECTED_SHA_ELF,
+        "native_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_getter_proof.json",
+        "native_verified": "native 1832-capacity, 1166 records, 0x40 start, 0x44 lookup and 48-byte stride; NOT per-field business names",
         "schema_confidence": "pkNX Item8 offset definitions plus HOME original real-byte cross-validation; not yet each native getter",
         "item_count": item_count,
         "indexed_slot_capacity": capacity,
