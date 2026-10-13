@@ -1,0 +1,171 @@
+{
+  "source_sha256": "141be49529981e5bc56b6605c7f3223f3c506ee4753fb0ff2d3be16e792c3b8f",
+  "source_bytes": 216336,
+  "u32_count": 54084,
+  "zero_u32_count": 46090,
+  "three_u32_count": 1286,
+  "first_32_u32": [
+    7,
+    0,
+    3192483846,
+    2262386092,
+    2818090,
+    0,
+    1021400720,
+    3543445279,
+    1623643883,
+    2704465965,
+    0,
+    0,
+    19,
+    69,
+    43,
+    16,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    3
+  ],
+  "three_runs_at_least_four": 140,
+  "first_25_three_runs": [
+    {
+      "file_byte_offset": 120,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 432,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 744,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 1056,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 1368,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 1680,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 1992,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 2304,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 2616,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 2928,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 3240,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 3552,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 3864,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 4176,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 4488,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 4800,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 5112,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 5424,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 5736,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 6048,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 31024,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 31336,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 31648,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 31960,
+      "length_u32": 9
+    },
+    {
+      "file_byte_offset": 32272,
+      "length_u32": 9
+    }
+  ],
+  "top_25_gap_frequency": [
+    {
+      "gap": 312,
+      "count": 129
+    },
+    {
+      "gap": 24976,
+      "count": 6
+    },
+    {
+      "gap": 320,
+      "count": 1
+    },
+    {
+      "gap": 304,
+      "count": 1
+    },
+    {
+      "gap": 316,
+      "count": 1
+    },
+    {
+      "gap": 308,
+      "count": 1
+    }
+  ],
+  "certainty": "statistical u32 signatures only; variable record boundaries, floats and header still UNVERIFIED"
+}
