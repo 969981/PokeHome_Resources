@@ -1,0 +1,299 @@
+{
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "isa": "AArch64 little-endian",
+  "limitations": "callers and multiply patterns are static; no recovered item.dat data-pointer alias or property getter yet",
+  "caller_count": {
+    "0x5020a0_item_dat_formatted_path": 1,
+    "0x50213c_generic_resource_forwarder": 10,
+    "0x50226c_resource_descriptor_builder": 1,
+    "0x502950_global_resource_context": 32,
+    "0x5020c4_item_path_call_string_helper": 0,
+    "0x69e90_hash_lookup_entry_consumer": 1
+  },
+  "callers": {
+    "0x5020a0_item_dat_formatted_path": [
+      {
+        "pc": 5232252,
+        "mn": "bl",
+        "op": "#0x5020a0",
+        "byte": "89120094"
+      }
+    ],
+    "0x50213c_generic_resource_forwarder": [
+      {
+        "pc": 5249876,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "7a010094"
+      },
+      {
+        "pc": 5250036,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "52010094"
+      },
+      {
+        "pc": 5250196,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "2a010094"
+      },
+      {
+        "pc": 5250356,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "02010094"
+      },
+      {
+        "pc": 5250516,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "da000094"
+      },
+      {
+        "pc": 5250676,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "b2000094"
+      },
+      {
+        "pc": 5250836,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "8a000094"
+      },
+      {
+        "pc": 5251016,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "5d000094"
+      },
+      {
+        "pc": 5251196,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "30000094"
+      },
+      {
+        "pc": 5251364,
+        "mn": "bl",
+        "op": "#0x50213c",
+        "byte": "06000094"
+      }
+    ],
+    "0x50226c_resource_descriptor_builder": [
+      {
+        "pc": 5251464,
+        "mn": "bl",
+        "op": "#0x50226c",
+        "byte": "39000094"
+      }
+    ],
+    "0x502950_global_resource_context": [
+      {
+        "pc": 432084,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "5f641294"
+      },
+      {
+        "pc": 5246404,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "e3060094"
+      },
+      {
+        "pc": 5246416,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "e0060094"
+      },
+      {
+        "pc": 5246744,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "8e060094"
+      },
+      {
+        "pc": 5247496,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "d2050094"
+      },
+      {
+        "pc": 5247876,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "73050094"
+      },
+      {
+        "pc": 5248384,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "f4040094"
+      },
+      {
+        "pc": 5249768,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "9a030094"
+      },
+      {
+        "pc": 5249928,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "72030094"
+      },
+      {
+        "pc": 5250088,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "4a030094"
+      },
+      {
+        "pc": 5250248,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "22030094"
+      },
+      {
+        "pc": 5250408,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "fa020094"
+      },
+      {
+        "pc": 5250568,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "d2020094"
+      },
+      {
+        "pc": 5250728,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "aa020094"
+      },
+      {
+        "pc": 5251092,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "4f020094"
+      },
+      {
+        "pc": 5251256,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "26020094"
+      },
+      {
+        "pc": 5253548,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "e9ffff97"
+      },
+      {
+        "pc": 5253580,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "e1ffff97"
+      },
+      {
+        "pc": 5386004,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "8f7eff97"
+      },
+      {
+        "pc": 5442204,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "ad47ff97"
+      },
+      {
+        "pc": 5479016,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "ba23ff97"
+      },
+      {
+        "pc": 5486428,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "7d1cff97"
+      },
+      {
+        "pc": 5486612,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "4f1cff97"
+      },
+      {
+        "pc": 5486796,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "211cff97"
+      },
+      {
+        "pc": 5486980,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "f31bff97"
+      },
+      {
+        "pc": 5487164,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "c51bff97"
+      },
+      {
+        "pc": 5487348,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "971bff97"
+      },
+      {
+        "pc": 5510496,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "fc04ff97"
+      },
+      {
+        "pc": 5521084,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "a5fafe97"
+      },
+      {
+        "pc": 5527276,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "99f4fe97"
+      },
+      {
+        "pc": 5543740,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "85e4fe97"
+      },
+      {
+        "pc": 5550056,
+        "mn": "bl",
+        "op": "#0x502950",
+        "byte": "5adefe97"
+      }
+    ],
+    "0x5020c4_item_path_call_string_helper": [],
+    "0x69e90_hash_lookup_entry_consumer": [
+      {
+        "pc": 432244,
+        "mn": "bl",
+        "op": "#0x69e90",
+        "byte": "87010094"
+      }
+    ]
+  },
+  "item_region_instructions": 81920,
+  "candidate_count": 0,
+  "record_stride_candidates": []
+}
