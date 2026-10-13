@@ -22,6 +22,7 @@ TARGETS={
     0x502950:"global_resource_context",
     0x5020C4:"item_path_call_string_helper",
     0x69E90:"hash_lookup_entry_consumer",
+    0x4FD784:"item_dat_record_pointer_getter",
 }
 IMMEDIATE=re.compile(r"^#0x([0-9a-f]+)$")
 
