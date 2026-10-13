@@ -1,0 +1,57 @@
+name: Android REA JADX toolchain bootstrap
+on:
+  workflow_dispatch:
+  push:
+    branches: ["4.1.0"]
+    paths:
+      - ".github/workflows/android41-rea-jadx-bootstrap.yml"
+permissions:
+  contents: read
+jobs:
+  install-official-upstream:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Download official GitHub releases and install REA
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p .android-tools/rea .android-tools/jadx .android-tools/jadx-headless
+          # REA is distributed through npm by the upstream GitHub project.
+          npm install --prefix "$PWD/.android-tools/rea" --no-audit --no-fund rea-agents@6.4.0
+          gh release download v1.5.6 --repo skylot/jadx -p jadx-1.5.6.zip -D /tmp
+          unzip -q /tmp/jadx-1.5.6.zip -d .android-tools/jadx
+          chmod +x .android-tools/jadx/bin/jadx
+          gh release download v0.7.1 --repo 1013503897/jadx-headless-mcp -p jadx-headless-mcp-0.7.1-all.jar -D .android-tools/jadx-headless
+          # Output includes exact artifact SHA hashes, rather than claiming SHA verification from names alone.
+          sha256sum /tmp/jadx-1.5.6.zip .android-tools/jadx-headless/jadx-headless-mcp-0.7.1-all.jar | tee .android-tools/artifact-sha256.txt
+          java -version
+          node --version
+          node .android-tools/rea/node_modules/rea-agents/scripts/rea.mjs --version
+          .android-tools/jadx/bin/jadx --version
+          jar tf .android-tools/jadx-headless/jadx-headless-mcp-0.7.1-all.jar >/dev/null
+          echo "Toolchain installed successfully in GitHub Actions runner."
+      - name: Archive installed Linux toolchain for local reuse
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -czf rea-jadx-linux-x64.tar.gz -C .android-tools .
+          ls -lh rea-jadx-linux-x64.tar.gz
+      - name: Upload toolchain
+        uses: actions/upload-artifact@v4
+        with:
+          name: rea-jadx-linux-x64
+          path: rea-jadx-linux-x64.tar.gz
+          retention-days: 2
+          if-no-files-found: error
