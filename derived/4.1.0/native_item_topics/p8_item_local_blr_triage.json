@@ -1,0 +1,793 @@
+{
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "source_indirect_scan": "derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json",
+  "raw_local_blr_sites": 9,
+  "direct_item_property_dispatch_call_count": 2,
+  "item_effect_selector_26_to_70_consumer_confirmed": false,
+  "rows": [
+    {
+      "native_blr_rva": "0x4FD5D8",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD5D4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD5B8",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd5ec",
+          "bytes_le": "a00100b4"
+        },
+        {
+          "rva": "0x4FD5BC",
+          "mnemonic": "add",
+          "operands": "x1, x19, #0x50",
+          "bytes_le": "61420191"
+        },
+        {
+          "rva": "0x4FD5C0",
+          "mnemonic": "bl",
+          "operands": "#0x4d9290",
+          "bytes_le": "346fff97"
+        },
+        {
+          "rva": "0x4FD5C4",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19, #0x58]",
+          "bytes_le": "602e40f9"
+        },
+        {
+          "rva": "0x4FD5C8",
+          "mnemonic": "str",
+          "operands": "xzr, [x19, #0x58]",
+          "bytes_le": "7f2e00f9"
+        },
+        {
+          "rva": "0x4FD5CC",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd5dc",
+          "bytes_le": "800000b4"
+        },
+        {
+          "rva": "0x4FD5D0",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD5D4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD5D8",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD5DC",
+          "mnemonic": "str",
+          "operands": "xzr, [x19, #0x160]",
+          "bytes_le": "7fb200f9"
+        },
+        {
+          "rva": "0x4FD5E0",
+          "mnemonic": "ldr",
+          "operands": "x19, [sp, #0x10]",
+          "bytes_le": "f30b40f9"
+        },
+        {
+          "rva": "0x4FD5E4",
+          "mnemonic": "ldp",
+          "operands": "x29, x30, [sp], #0x20",
+          "bytes_le": "fd7bc2a8"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD634",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD630",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD614",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd648",
+          "bytes_le": "a00100b4"
+        },
+        {
+          "rva": "0x4FD618",
+          "mnemonic": "add",
+          "operands": "x1, x19, #8",
+          "bytes_le": "61220091"
+        },
+        {
+          "rva": "0x4FD61C",
+          "mnemonic": "bl",
+          "operands": "#0x4d9290",
+          "bytes_le": "1d6fff97"
+        },
+        {
+          "rva": "0x4FD620",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19, #0x10]",
+          "bytes_le": "600a40f9"
+        },
+        {
+          "rva": "0x4FD624",
+          "mnemonic": "str",
+          "operands": "xzr, [x19, #0x10]",
+          "bytes_le": "7f0a00f9"
+        },
+        {
+          "rva": "0x4FD628",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd638",
+          "bytes_le": "800000b4"
+        },
+        {
+          "rva": "0x4FD62C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD630",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD634",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD638",
+          "mnemonic": "str",
+          "operands": "xzr, [x19, #0x118]",
+          "bytes_le": "7f8e00f9"
+        },
+        {
+          "rva": "0x4FD63C",
+          "mnemonic": "ldr",
+          "operands": "x19, [sp, #0x10]",
+          "bytes_le": "f30b40f9"
+        },
+        {
+          "rva": "0x4FD640",
+          "mnemonic": "ldp",
+          "operands": "x29, x30, [sp], #0x20",
+          "bytes_le": "fd7bc2a8"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD6B8",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD6B4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD698",
+          "mnemonic": "add",
+          "operands": "x8, x29, #0x18",
+          "bytes_le": "a8630091"
+        },
+        {
+          "rva": "0x4FD69C",
+          "mnemonic": "mov",
+          "operands": "x4, x20",
+          "bytes_le": "e40314aa"
+        },
+        {
+          "rva": "0x4FD6A0",
+          "mnemonic": "mov",
+          "operands": "x5, xzr",
+          "bytes_le": "e5031faa"
+        },
+        {
+          "rva": "0x4FD6A4",
+          "mnemonic": "bl",
+          "operands": "#0x13bb0",
+          "bytes_le": "4359ec97"
+        },
+        {
+          "rva": "0x4FD6A8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19, #0x58]",
+          "bytes_le": "602e40f9"
+        },
+        {
+          "rva": "0x4FD6AC",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd6bc",
+          "bytes_le": "800000b4"
+        },
+        {
+          "rva": "0x4FD6B0",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD6B4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD6B8",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD6BC",
+          "mnemonic": "ldr",
+          "operands": "x20, [x29, #0x18]",
+          "bytes_le": "b40f40f9"
+        },
+        {
+          "rva": "0x4FD6C0",
+          "mnemonic": "str",
+          "operands": "x20, [x19, #0x58]",
+          "bytes_le": "742e00f9"
+        },
+        {
+          "rva": "0x4FD6C4",
+          "mnemonic": "cbz",
+          "operands": "x20, #0x4fd714",
+          "bytes_le": "940200b4"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD6D8",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD6D4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x10]",
+        "bytes_le": "080940f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD6B8",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD6BC",
+          "mnemonic": "ldr",
+          "operands": "x20, [x29, #0x18]",
+          "bytes_le": "b40f40f9"
+        },
+        {
+          "rva": "0x4FD6C0",
+          "mnemonic": "str",
+          "operands": "x20, [x19, #0x58]",
+          "bytes_le": "742e00f9"
+        },
+        {
+          "rva": "0x4FD6C4",
+          "mnemonic": "cbz",
+          "operands": "x20, #0x4fd714",
+          "bytes_le": "940200b4"
+        },
+        {
+          "rva": "0x4FD6C8",
+          "mnemonic": "mov",
+          "operands": "x21, x20",
+          "bytes_le": "f50314aa"
+        },
+        {
+          "rva": "0x4FD6CC",
+          "mnemonic": "ldr",
+          "operands": "x8, [x21, #0x48]!",
+          "bytes_le": "a88e44f8"
+        },
+        {
+          "rva": "0x4FD6D0",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "bytes_le": "e00315aa"
+        },
+        {
+          "rva": "0x4FD6D4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x10]",
+          "bytes_le": "080940f9"
+        },
+        {
+          "rva": "0x4FD6D8",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD6DC",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x60]",
+          "bytes_le": "683240f9"
+        },
+        {
+          "rva": "0x4FD6E0",
+          "mnemonic": "ldr",
+          "operands": "x9, [x19, #0xe0]",
+          "bytes_le": "697240f9"
+        },
+        {
+          "rva": "0x4FD6E4",
+          "mnemonic": "orr",
+          "operands": "x8, x8, x9",
+          "bytes_le": "080109aa"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD710",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD70C",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD6F0",
+          "mnemonic": "mov",
+          "operands": "x0, x20",
+          "bytes_le": "e00314aa"
+        },
+        {
+          "rva": "0x4FD6F4",
+          "mnemonic": "mov",
+          "operands": "w2, #1",
+          "bytes_le": "22008052"
+        },
+        {
+          "rva": "0x4FD6F8",
+          "mnemonic": "bl",
+          "operands": "#0x4d9010",
+          "bytes_le": "466eff97"
+        },
+        {
+          "rva": "0x4FD6FC",
+          "mnemonic": "mov",
+          "operands": "x0, x20",
+          "bytes_le": "e00314aa"
+        },
+        {
+          "rva": "0x4FD700",
+          "mnemonic": "bl",
+          "operands": "#0x4d8de0",
+          "bytes_le": "b86dff97"
+        },
+        {
+          "rva": "0x4FD704",
+          "mnemonic": "ldr",
+          "operands": "x8, [x20, #0x48]",
+          "bytes_le": "882640f9"
+        },
+        {
+          "rva": "0x4FD708",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "bytes_le": "e00315aa"
+        },
+        {
+          "rva": "0x4FD70C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD710",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD714",
+          "mnemonic": "ldr",
+          "operands": "x8, [sp, #0x18]",
+          "bytes_le": "e80f40f9"
+        },
+        {
+          "rva": "0x4FD718",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x4fd730",
+          "bytes_le": "c80000b4"
+        },
+        {
+          "rva": "0x4FD71C",
+          "mnemonic": "ldr",
+          "operands": "x0, [sp]",
+          "bytes_le": "e00340f9"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD72C",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD728",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD70C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD710",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD714",
+          "mnemonic": "ldr",
+          "operands": "x8, [sp, #0x18]",
+          "bytes_le": "e80f40f9"
+        },
+        {
+          "rva": "0x4FD718",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x4fd730",
+          "bytes_le": "c80000b4"
+        },
+        {
+          "rva": "0x4FD71C",
+          "mnemonic": "ldr",
+          "operands": "x0, [sp]",
+          "bytes_le": "e00340f9"
+        },
+        {
+          "rva": "0x4FD720",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd730",
+          "bytes_le": "800000b4"
+        },
+        {
+          "rva": "0x4FD724",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD728",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD72C",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD730",
+          "mnemonic": "ldr",
+          "operands": "x0, [sp, #0x20]",
+          "bytes_le": "e01340f9"
+        },
+        {
+          "rva": "0x4FD734",
+          "mnemonic": "mov",
+          "operands": "x8, #0x2645",
+          "bytes_le": "a8c884d2"
+        },
+        {
+          "rva": "0x4FD738",
+          "mnemonic": "movk",
+          "operands": "x8, #0x8422, lsl #16",
+          "bytes_le": "4884b0f2"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD760",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD75C",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD740",
+          "mnemonic": "movk",
+          "operands": "x8, #0xcbf2, lsl #48",
+          "bytes_le": "487ef9f2"
+        },
+        {
+          "rva": "0x4FD744",
+          "mnemonic": "stp",
+          "operands": "xzr, x8, [sp]",
+          "bytes_le": "ff2300a9"
+        },
+        {
+          "rva": "0x4FD748",
+          "mnemonic": "adrp",
+          "operands": "x8, #0x60f000",
+          "bytes_le": "880800d0"
+        },
+        {
+          "rva": "0x4FD74C",
+          "mnemonic": "add",
+          "operands": "x8, x8, #0x683",
+          "bytes_le": "080d1a91"
+        },
+        {
+          "rva": "0x4FD750",
+          "mnemonic": "stp",
+          "operands": "x8, xzr, [sp, #0x10]",
+          "bytes_le": "e87f01a9"
+        },
+        {
+          "rva": "0x4FD754",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd764",
+          "bytes_le": "800000b4"
+        },
+        {
+          "rva": "0x4FD758",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD75C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD760",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD764",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x58]",
+          "bytes_le": "682e40f9"
+        },
+        {
+          "rva": "0x4FD768",
+          "mnemonic": "ldr",
+          "operands": "x21, [sp, #0x40]",
+          "bytes_le": "f52340f9"
+        },
+        {
+          "rva": "0x4FD76C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x190]",
+          "bytes_le": "08c940f9"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD8D8",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD8D4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x8, #0x18]",
+        "bytes_le": "080d40f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD8B8",
+          "mnemonic": "str",
+          "operands": "x9, [x1, #0x50]!",
+          "bytes_le": "290c05f8"
+        },
+        {
+          "rva": "0x4FD8BC",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd930",
+          "bytes_le": "a00300b4"
+        },
+        {
+          "rva": "0x4FD8C0",
+          "mnemonic": "bl",
+          "operands": "#0x4d9290",
+          "bytes_le": "746eff97"
+        },
+        {
+          "rva": "0x4FD8C4",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19, #0x58]",
+          "bytes_le": "602e40f9"
+        },
+        {
+          "rva": "0x4FD8C8",
+          "mnemonic": "str",
+          "operands": "xzr, [x19, #0x58]",
+          "bytes_le": "7f2e00f9"
+        },
+        {
+          "rva": "0x4FD8CC",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x4fd8dc",
+          "bytes_le": "800000b4"
+        },
+        {
+          "rva": "0x4FD8D0",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD8D4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD8D8",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD8DC",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0xe8]",
+          "bytes_le": "687640f9"
+        },
+        {
+          "rva": "0x4FD8E0",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x4fd8f4",
+          "bytes_le": "a80000b4"
+        },
+        {
+          "rva": "0x4FD8E4",
+          "mnemonic": "add",
+          "operands": "x0, x19, #0x100",
+          "bytes_le": "60020491"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    },
+    {
+      "native_blr_rva": "0x4FD8F0",
+      "blr_argument_register": "x8",
+      "last_load_into_x8": {
+        "rva": "0x4FD8DC",
+        "mnemonic": "ldr",
+        "operands": "x8, [x19, #0xe8]",
+        "bytes_le": "687640f9"
+      },
+      "neighbor_instructions": [
+        {
+          "rva": "0x4FD8D0",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0x48]!",
+          "bytes_le": "088c44f8"
+        },
+        {
+          "rva": "0x4FD8D4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0x18]",
+          "bytes_le": "080d40f9"
+        },
+        {
+          "rva": "0x4FD8D8",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD8DC",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0xe8]",
+          "bytes_le": "687640f9"
+        },
+        {
+          "rva": "0x4FD8E0",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x4fd8f4",
+          "bytes_le": "a80000b4"
+        },
+        {
+          "rva": "0x4FD8E4",
+          "mnemonic": "add",
+          "operands": "x0, x19, #0x100",
+          "bytes_le": "60020491"
+        },
+        {
+          "rva": "0x4FD8E8",
+          "mnemonic": "stp",
+          "operands": "xzr, xzr, [x19, #0xf0]",
+          "bytes_le": "7f7e0fa9"
+        },
+        {
+          "rva": "0x4FD8EC",
+          "mnemonic": "stp",
+          "operands": "xzr, xzr, [x19, #0xe0]",
+          "bytes_le": "7f7e0ea9"
+        },
+        {
+          "rva": "0x4FD8F0",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "bytes_le": "00013fd6"
+        },
+        {
+          "rva": "0x4FD8F4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x68]",
+          "bytes_le": "683640f9"
+        },
+        {
+          "rva": "0x4FD8F8",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x4fd90c",
+          "bytes_le": "a80000b4"
+        },
+        {
+          "rva": "0x4FD8FC",
+          "mnemonic": "add",
+          "operands": "x0, x19, #0x80",
+          "bytes_le": "60020291"
+        }
+      ],
+      "resolved_target": null,
+      "confirmed_item_property_or_battle_effect_call": false,
+      "note": "Register-derived BLR, target requires exact live object and vtable values."
+    }
+  ],
+  "limitations": "BLR target registers cannot be statically labelled by a small window; exact vtable/context object alias must be proven before item effect or gameplay conclusions."
+}
