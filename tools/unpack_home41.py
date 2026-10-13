@@ -44,7 +44,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.9.3"
+PARSER_VERSION = "mirror-1.0.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -326,6 +326,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 k: v for k, v in native_matrix.items() if k not in ("rows", "column_names")
             }
             doc["pkNX_item8_semantic_provenance"] = typed["schema_reference"]
+            doc["native_business_consumer_provenance"] = typed["native_business_consumer_provenance"]
             doc["native_item_record_getter"] = typed["native_record_getter_rva"]
             doc["native_item_field_getter_evidence"] = typed["native_field_getter_evidence"]
             doc["native_elf_sha256"] = typed["native_elf_sha256"]
