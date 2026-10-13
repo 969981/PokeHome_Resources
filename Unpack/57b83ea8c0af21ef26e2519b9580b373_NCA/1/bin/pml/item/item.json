@@ -25,6 +25,17 @@
   "native_elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
   "native_item_field_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
   "native_item_record_getter": "0x4FD784",
+  "native_item_selector_matrix": {
+    "business_semantics_caveat": "Raw values and native selectors verified; pkNX labels are cross-referenced; effect behavior has not been traced.",
+    "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+    "exact_opcode_proof": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
+    "exact_route_proof": "derived/4.1.0/native_item_topics/p6_item_property_selector_routes.json",
+    "format": "HOME 4.1.0 original native item selector value matrix",
+    "logical_item_count": 1829,
+    "native_branch_table_rva": "0x657FCC",
+    "native_dispatch_rva": "0x4FD0B8",
+    "selector_count": 26
+  },
   "padding_index_slots": 3,
   "pkNX_item8_semantic_provenance": "https://github.com/kwsch/pkNX/blob/0936c08eb14ed08eb9042c008404b24bf60e088a/pkNX.Structures/Item/Item8.cs",
   "record_count": 1166,
