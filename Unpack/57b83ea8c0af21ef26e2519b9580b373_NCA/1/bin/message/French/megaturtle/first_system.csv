@@ -1,0 +1,91 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_first_language_010,CF9AFAE832358AFF,Quelle langue voulez-vous utiliser ?,0,484
+1,nx_first_language_020,CF9108E8322D4E44,Voulez-vous utiliser cette langue ?,0,560
+2,nx_first_language_030,CF948EE8323067CD,"Vous pouvez changer la langue à tout moment
+depuis le menu « Paramètres ».",0,632
+3,nx_first_language_040,CF89FCE832271B32,Oui,4,784
+4,nx_first_language_050,CF8D82E8322A34BB,Non,0,792
+5,nx_first_language_060,CF8370E83221C1A0,Langue sélectionnée,0,800
+6,	,AF66E44C86071324,[REF:6],0,840
+7,nx_first_button_000,49B92A8E35961C28,Retour,0,852
+8,	,AF66E44C86071324,[REF:8],0,868
+9,nx_first_msg_yes,40C7F89C556E59B8,Oui,4,880
+10,nx_first_msg_no,6E87EFBD44DBB0A2,Non,0,888
+11,nx_first_msg_back,7303F07B84CC565A,Retour,0,896
+12,nx_first_msg_next,EA8C2D16530F4790,Suivant,0,912
+13,nx_first_msg_010,62E85A9B46586956,[REF:13],0,928
+14,nx_first_msg_020,62E4F49B4655862D,Utilisez-vous Pokémon HOME sur votre appareil mobile ?,4,940
+15,nx_first_msg_021,62E4F39B4655847A,[REF:15],0,1052
+16,nx_first_msg_022,62E4F29B465582C7,"Si vous associez votre compte Nintendo à ce logiciel,
+vous pourrez partager vos informations d’utilisation[RETURN]
+entre appareils.[CLEAR]
+Avez-vous associé votre compte Nintendo à la version
+mobile de Pokémon HOME ?",0,1064
+17,nx_first_msg_025,62E4EF9B46557DAE,[REF:17],0,1480
+18,nx_first_msg_026,62E4EE9B46557BFB,"À partir de maintenant, si vous associez votre compte
+Nintendo à la version mobile, vous pourrez partager[RETURN]
+vos informations d’utilisation avec vos autres appareils.",4,1492
+19,nx_first_msg_027,62E4ED9B46557A48,"Vous ne pourrez pas partager vos informations d’utilisation
+avec d’autres appareils à moins d’avoir associé votre compte[RETURN]
+Nintendo à la version mobile ![CLEAR]
+Nous vous recommandons d’associer votre compte Nintendo
+à la version mobile avant de continuer.",0,1828
+20,nx_first_msg_028,62E4EC9B46557895,Lancement de Pokémon HOME...,0,2336
+21,nx_first_msg_030,62E16E9B46526CA4,[REF:21],0,2396
+22,nx_first_msg_031,62E16F9B46526E57,"Les Conditions d’utilisation et l’Avis sur la confidentialité
+ont été mises à jour ![CLEAR]
+Pour utiliser Pokémon HOME, vous devez accepter
+les deux de nouveau.[CLEAR]
+Veuillez lire leur contenu attentivement avant de les accepter.",0,2408
+23,nx_first_msg_032,62E1709B4652700A,"Pour utiliser Pokémon HOME, veuillez prendre connaissance
+des Conditions d’utilisation et de l’Avis sur la confidentialité.[CLEAR]",0,2856
+24,nx_first_msg_033,62E1719B465271BD,"Les Conditions d’utilisation vont vous être présentées.
+Veuillez les lire attentivement avant de les accepter.[CLEAR]",0,3112
+25,nx_first_msg_034,62E16A9B465265D8,Acceptez-vous les Conditions d’utilisation ?,4,3340
+26,nx_first_msg_035,62E16B9B4652678B,"L’Avis sur la confidentialité va vous être présenté.
+Veuillez le lire attentivement avant de l’accepter.[CLEAR]",0,3432
+27,nx_first_msg_036,62E16C9B4652693E,Avez-vous pris connaissance de l’Avis sur la confidentialité ?,4,3648
+28,nx_first_msg_040,62DE689B46502C9B,"Vérification des informations en cours...
+Veuillez patienter.",0,3776
+29,nx_first_msg_050,62DAE29B464D1312,Voulez-vous retourner à l’écran titre ?,0,3900
+30,	,AF66E44C86071324,[REF:30],0,3980
+31,nx_first_terms_region_head,C98D2569F8DD4B6A,[REF:31],0,3992
+32,nx_first_terms_region_010,2B3214FBED0BD2E1,[REF:32],0,4004
+33,nx_first_terms_region_020,2B359AFBED0EEC6A,[REF:33],0,4016
+34,nx_first_terms_region_030,2B3900FBED11CF93,[REF:34],0,4028
+35,nx_first_terms_region_040,2B3C86FBED14E91C,[REF:35],0,4040
+36,nx_first_terms_region_050,2B3F8CFBED172925,[REF:36],0,4052
+37,nx_first_terms_region_060,2B4312FBED1A42AE,[REF:37],0,4064
+38,nx_first_terms_region_070,2B4698FBED1D5C37,[REF:38],0,4076
+39,nx_first_terms_region_080,2B137EFBECF1D670,[REF:39],0,4088
+40,nx_first_terms_title,2CA7E66F180C5D97,Conditions d’utilisation et Avis sur la confidentialité,0,4100
+41,nx_first_terms_guide_010,9741787758FE581B,"Vous pourrez continuer une fois que vous aurez atteint la fin du texte.
+Si vous êtes mineur, veuillez lire ce texte avec un adulte.",0,4212
+42,nx_first_terms_guide_020,9736E67758F50B80,[REF:42],0,4476
+43,nx_first_terms_guide_021,9736E77758F50D33,Oui,4,4488
+44,nx_first_terms_guide_022,9736E87758F50EE6,Non,0,4496
+45,	,AF66E44C86071324,[REF:45],0,4504
+46,nx_first_msg_100,59D5C59B41175574,"Tadaaa !
+Et un membre de Pokémon HOME en plus, un ![CLEAR]
+Comme disent les jeunes, « c’est É-NORME ! »",0,4516
+47,nx_first_msg_101,59D5C69B41175727,"Mais... suis-je bête ![CLEAR]
+J’ai oublié d’activer ma webcam !
+Alors, le bouton... il est où, le bouton ?...",0,4716
+48,nx_first_msg_110,59D8CB9B4119957D,"Ah !
+Et voilààà !",4,4928
+49,nx_first_msg_120,59DC319B411C78A6,"Sous tes yeux ébahis se dresse l’un des plus grands
+experts en Pokémon que le monde ait connu...",0,4964
+50,nx_first_msg_121,59DC329B411C7A59,"Le seul, l’unique : Big Chen !
+À ton service !",0,5160
+51,nx_first_msg_122,59DC2F9B411C7540,"Mon rêve, c’est de remplir un Pokédex
+avec tous les Pokémon du monde !",0,5256
+52,nx_first_msg_123,59DC309B411C76F3,"Mais tout seul, je dois bien avouer que c’est compliqué...",0,5400
+53,nx_first_msg_124,59DC359B411C7F72,"Heureusement, j’ai des alliés de taille !",0,5520
+54,nx_first_msg_130,59DFB79B411F922F,"Mais oui, je parle des Dresseurs comme toi ![CLEAR]
+Du coup, j’ai un grand service à te demander !",0,5604
+55,nx_first_msg_131,59DFB69B411F907C,"Je veux que tu amènes tout plein de Pokémon
+dans cet endroit que j’ai créé : Pokémon HOME !",0,5796
+56,nx_first_msg_140,59C82D9B410BC8D0,"Cela dit, j’imagine que tu as des tas de questions
+sur Pokémon HOME...",0,5980
+57,nx_first_msg_141,59C82E9B410BCA83,"Ne t’inquiète pas ! Si tu as le moindre doute,
+tu peux t’adresser à l’ami Boball !",0,6124

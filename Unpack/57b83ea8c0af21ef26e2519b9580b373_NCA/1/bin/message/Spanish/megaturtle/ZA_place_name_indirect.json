@@ -1,0 +1,1372 @@
+[
+  {
+    "hash_fnv64": "FADE0BA571FD5390",
+    "index": 0,
+    "label": "MAPNAME_NOTHING"
+  },
+  {
+    "hash_fnv64": "7C3A2382589CDF12",
+    "index": 1,
+    "label": "MAPNAME_NOTHING_01"
+  },
+  {
+    "hash_fnv64": "4C0B1782A5642760",
+    "index": 2,
+    "label": "MAPNAME_NAZONOBASYO"
+  },
+  {
+    "hash_fnv64": "0E4A765A3F3A33E2",
+    "index": 3,
+    "label": "MAPNAME_NAZONOBASYO_01"
+  },
+  {
+    "hash_fnv64": "DD9E67A3A54EF3FC",
+    "index": 4,
+    "label": "MAPNAME_TOOIBASYO"
+  },
+  {
+    "hash_fnv64": "23EA5E602503300E",
+    "index": 5,
+    "label": "MAPNAME_TOOIBASYO_01"
+  },
+  {
+    "hash_fnv64": "C86C7D26BBB0DE20",
+    "index": 6,
+    "label": "PLACENAME_A01"
+  },
+  {
+    "hash_fnv64": "C86C8026BBB0E339",
+    "index": 7,
+    "label": "PLACENAME_A02"
+  },
+  {
+    "hash_fnv64": "C86C7F26BBB0E186",
+    "index": 8,
+    "label": "PLACENAME_A03"
+  },
+  {
+    "hash_fnv64": "C86C8226BBB0E69F",
+    "index": 9,
+    "label": "PLACENAME_A04"
+  },
+  {
+    "hash_fnv64": "C86C8126BBB0E4EC",
+    "index": 10,
+    "label": "PLACENAME_A05"
+  },
+  {
+    "hash_fnv64": "C86C8426BBB0EA05",
+    "index": 11,
+    "label": "PLACENAME_A06"
+  },
+  {
+    "hash_fnv64": "467E2A267218BF21",
+    "index": 12,
+    "label": "PLACENAME_R01"
+  },
+  {
+    "hash_fnv64": "467E27267218BA08",
+    "index": 13,
+    "label": "PLACENAME_R02"
+  },
+  {
+    "hash_fnv64": "467E28267218BBBB",
+    "index": 14,
+    "label": "PLACENAME_R03"
+  },
+  {
+    "hash_fnv64": "467E2D267218C43A",
+    "index": 15,
+    "label": "PLACENAME_R04"
+  },
+  {
+    "hash_fnv64": "467E2E267218C5ED",
+    "index": 16,
+    "label": "PLACENAME_R05"
+  },
+  {
+    "hash_fnv64": "80D6381AA8B8D762",
+    "index": 17,
+    "label": "PLACENAME_A01_r01"
+  },
+  {
+    "hash_fnv64": "80D6371AA8B8D5AF",
+    "index": 18,
+    "label": "PLACENAME_A01_r02"
+  },
+  {
+    "hash_fnv64": "80D6361AA8B8D3FC",
+    "index": 19,
+    "label": "PLACENAME_A01_r03"
+  },
+  {
+    "hash_fnv64": "80D6351AA8B8D249",
+    "index": 20,
+    "label": "PLACENAME_A01_r04"
+  },
+  {
+    "hash_fnv64": "43B66ACBC2556894",
+    "index": 21,
+    "label": "PLACENAME_A01_z01_01"
+  },
+  {
+    "hash_fnv64": "43B66DCBC2556DAD",
+    "index": 22,
+    "label": "PLACENAME_A01_z01_02"
+  },
+  {
+    "hash_fnv64": "43B66CCBC2556BFA",
+    "index": 23,
+    "label": "PLACENAME_A01_z01_03"
+  },
+  {
+    "hash_fnv64": "43B667CBC255637B",
+    "index": 24,
+    "label": "PLACENAME_A01_z01_04"
+  },
+  {
+    "hash_fnv64": "43B666CBC25561C8",
+    "index": 25,
+    "label": "PLACENAME_A01_z01_05"
+  },
+  {
+    "hash_fnv64": "43B669CBC25566E1",
+    "index": 26,
+    "label": "PLACENAME_A01_z01_06"
+  },
+  {
+    "hash_fnv64": "17AF62C560EB564B",
+    "index": 27,
+    "label": "PLACENAME_A01_z02_01"
+  },
+  {
+    "hash_fnv64": "17AF63C560EB57FE",
+    "index": 28,
+    "label": "PLACENAME_A01_z02_02"
+  },
+  {
+    "hash_fnv64": "17AF64C560EB59B1",
+    "index": 29,
+    "label": "PLACENAME_A01_z02_03"
+  },
+  {
+    "hash_fnv64": "17AF65C560EB5B64",
+    "index": 30,
+    "label": "PLACENAME_A01_z02_04"
+  },
+  {
+    "hash_fnv64": "17AF66C560EB5D17",
+    "index": 31,
+    "label": "PLACENAME_A01_z02_05"
+  },
+  {
+    "hash_fnv64": "6C8C96BB51831676",
+    "index": 32,
+    "label": "PLACENAME_A01_z03_01"
+  },
+  {
+    "hash_fnv64": "2F3E5DF898CF74F3",
+    "index": 33,
+    "label": "PLACENAME_A02_r01"
+  },
+  {
+    "hash_fnv64": "2F3E5EF898CF76A6",
+    "index": 34,
+    "label": "PLACENAME_A02_r02"
+  },
+  {
+    "hash_fnv64": "2F3E5FF898CF7859",
+    "index": 35,
+    "label": "PLACENAME_A02_r03"
+  },
+  {
+    "hash_fnv64": "2F3E60F898CF7A0C",
+    "index": 36,
+    "label": "PLACENAME_A02_r04"
+  },
+  {
+    "hash_fnv64": "0885310E8148110F",
+    "index": 37,
+    "label": "PLACENAME_A02_z01_01"
+  },
+  {
+    "hash_fnv64": "0885320E814812C2",
+    "index": 38,
+    "label": "PLACENAME_A02_z01_02"
+  },
+  {
+    "hash_fnv64": "0885330E81481475",
+    "index": 39,
+    "label": "PLACENAME_A02_z01_03"
+  },
+  {
+    "hash_fnv64": "08852C0E81480890",
+    "index": 40,
+    "label": "PLACENAME_A02_z01_04"
+  },
+  {
+    "hash_fnv64": "08852D0E81480A43",
+    "index": 41,
+    "label": "PLACENAME_A02_z01_05"
+  },
+  {
+    "hash_fnv64": "B33B7918905451B8",
+    "index": 42,
+    "label": "PLACENAME_A02_z02_01"
+  },
+  {
+    "hash_fnv64": "B33B7C18905456D1",
+    "index": 43,
+    "label": "PLACENAME_A02_z02_02"
+  },
+  {
+    "hash_fnv64": "B33B7B189054551E",
+    "index": 44,
+    "label": "PLACENAME_A02_z02_03"
+  },
+  {
+    "hash_fnv64": "B33B7E1890545A37",
+    "index": 45,
+    "label": "PLACENAME_A02_z02_04"
+  },
+  {
+    "hash_fnv64": "B33B7D1890545884",
+    "index": 46,
+    "label": "PLACENAME_A02_z02_05"
+  },
+  {
+    "hash_fnv64": "B33B801890545D9D",
+    "index": 47,
+    "label": "PLACENAME_A02_z02_06"
+  },
+  {
+    "hash_fnv64": "B33B7F1890545BEA",
+    "index": 48,
+    "label": "PLACENAME_A02_z02_07"
+  },
+  {
+    "hash_fnv64": "E0F5851EF32FFF4D",
+    "index": 49,
+    "label": "PLACENAME_A02_z03_01"
+  },
+  {
+    "hash_fnv64": "0CFDA20C22331CD0",
+    "index": 50,
+    "label": "PLACENAME_A03_r01"
+  },
+  {
+    "hash_fnv64": "0CFDA50C223321E9",
+    "index": 51,
+    "label": "PLACENAME_A03_r02"
+  },
+  {
+    "hash_fnv64": "0CFDA40C22332036",
+    "index": 52,
+    "label": "PLACENAME_A03_r03"
+  },
+  {
+    "hash_fnv64": "0CFDA70C2233254F",
+    "index": 53,
+    "label": "PLACENAME_A03_r04"
+  },
+  {
+    "hash_fnv64": "C3F9F20B817F9EDA",
+    "index": 54,
+    "label": "PLACENAME_A03_z01_01"
+  },
+  {
+    "hash_fnv64": "C3F9F10B817F9D27",
+    "index": 55,
+    "label": "PLACENAME_A03_z01_02"
+  },
+  {
+    "hash_fnv64": "C3F9F00B817F9B74",
+    "index": 56,
+    "label": "PLACENAME_A03_z01_03"
+  },
+  {
+    "hash_fnv64": "C3F9EF0B817F99C1",
+    "index": 57,
+    "label": "PLACENAME_A03_z01_04"
+  },
+  {
+    "hash_fnv64": "C3F9EE0B817F980E",
+    "index": 58,
+    "label": "PLACENAME_A03_z01_05"
+  },
+  {
+    "hash_fnv64": "C871322254D16FCD",
+    "index": 59,
+    "label": "PLACENAME_A03_z02_01"
+  },
+  {
+    "hash_fnv64": "C8712F2254D16AB4",
+    "index": 60,
+    "label": "PLACENAME_A03_z02_02"
+  },
+  {
+    "hash_fnv64": "C871302254D16C67",
+    "index": 61,
+    "label": "PLACENAME_A03_z02_03"
+  },
+  {
+    "hash_fnv64": "C8712D2254D1674E",
+    "index": 62,
+    "label": "PLACENAME_A03_z02_04"
+  },
+  {
+    "hash_fnv64": "C8712E2254D16901",
+    "index": 63,
+    "label": "PLACENAME_A03_z02_05"
+  },
+  {
+    "hash_fnv64": "C8712B2254D163E8",
+    "index": 64,
+    "label": "PLACENAME_A03_z02_06"
+  },
+  {
+    "hash_fnv64": "9AB7261BF1F5C238",
+    "index": 65,
+    "label": "PLACENAME_A03_z03_01"
+  },
+  {
+    "hash_fnv64": "00449FEA392CDDD9",
+    "index": 66,
+    "label": "PLACENAME_A04_r01"
+  },
+  {
+    "hash_fnv64": "00449CEA392CD8C0",
+    "index": 67,
+    "label": "PLACENAME_A04_r02"
+  },
+  {
+    "hash_fnv64": "00449DEA392CDA73",
+    "index": 68,
+    "label": "PLACENAME_A04_r03"
+  },
+  {
+    "hash_fnv64": "0044A2EA392CE2F2",
+    "index": 69,
+    "label": "PLACENAME_A04_r04"
+  },
+  {
+    "hash_fnv64": "65D337BCFA7CFD4D",
+    "index": 70,
+    "label": "PLACENAME_A04_z01_01"
+  },
+  {
+    "hash_fnv64": "65D334BCFA7CF834",
+    "index": 71,
+    "label": "PLACENAME_A04_z01_02"
+  },
+  {
+    "hash_fnv64": "65D335BCFA7CF9E7",
+    "index": 72,
+    "label": "PLACENAME_A04_z01_03"
+  },
+  {
+    "hash_fnv64": "65D332BCFA7CF4CE",
+    "index": 73,
+    "label": "PLACENAME_A04_z01_04"
+  },
+  {
+    "hash_fnv64": "65D333BCFA7CF681",
+    "index": 74,
+    "label": "PLACENAME_A04_z01_05"
+  },
+  {
+    "hash_fnv64": "615BF7A6272B2C5A",
+    "index": 75,
+    "label": "PLACENAME_A04_z02_01"
+  },
+  {
+    "hash_fnv64": "615BF6A6272B2AA7",
+    "index": 76,
+    "label": "PLACENAME_A04_z02_02"
+  },
+  {
+    "hash_fnv64": "615BF5A6272B28F4",
+    "index": 77,
+    "label": "PLACENAME_A04_z02_03"
+  },
+  {
+    "hash_fnv64": "615BF4A6272B2741",
+    "index": 78,
+    "label": "PLACENAME_A04_z02_04"
+  },
+  {
+    "hash_fnv64": "615BF3A6272B258E",
+    "index": 79,
+    "label": "PLACENAME_A04_z02_05"
+  },
+  {
+    "hash_fnv64": "8D62E3AC88950F0F",
+    "index": 80,
+    "label": "PLACENAME_A04_z03_01"
+  },
+  {
+    "hash_fnv64": "E040DFD2A7556B56",
+    "index": 81,
+    "label": "PLACENAME_A05_r01"
+  },
+  {
+    "hash_fnv64": "E040DED2A75569A3",
+    "index": 82,
+    "label": "PLACENAME_A05_r02"
+  },
+  {
+    "hash_fnv64": "E040DDD2A75567F0",
+    "index": 83,
+    "label": "PLACENAME_A05_r03"
+  },
+  {
+    "hash_fnv64": "E040E4D2A75573D5",
+    "index": 84,
+    "label": "PLACENAME_A05_r04"
+  },
+  {
+    "hash_fnv64": "765713910F5952B8",
+    "index": 85,
+    "label": "PLACENAME_A05_z01_01"
+  },
+  {
+    "hash_fnv64": "765716910F5957D1",
+    "index": 86,
+    "label": "PLACENAME_A05_z01_02"
+  },
+  {
+    "hash_fnv64": "765715910F59561E",
+    "index": 87,
+    "label": "PLACENAME_A05_z01_03"
+  },
+  {
+    "hash_fnv64": "765718910F595B37",
+    "index": 88,
+    "label": "PLACENAME_A05_z01_04"
+  },
+  {
+    "hash_fnv64": "765717910F595984",
+    "index": 89,
+    "label": "PLACENAME_A05_z01_05"
+  },
+  {
+    "hash_fnv64": "76571A910F595E9D",
+    "index": 90,
+    "label": "PLACENAME_A05_z01_06"
+  },
+  {
+    "hash_fnv64": "CBA0CB87004D120F",
+    "index": 91,
+    "label": "PLACENAME_A05_z02_01"
+  },
+  {
+    "hash_fnv64": "CBA0CC87004D13C2",
+    "index": 92,
+    "label": "PLACENAME_A05_z02_02"
+  },
+  {
+    "hash_fnv64": "CBA0CD87004D1575",
+    "index": 93,
+    "label": "PLACENAME_A05_z02_03"
+  },
+  {
+    "hash_fnv64": "CBA0C687004D0990",
+    "index": 94,
+    "label": "PLACENAME_A05_z02_04"
+  },
+  {
+    "hash_fnv64": "CBA0C787004D0B43",
+    "index": 95,
+    "label": "PLACENAME_A05_z02_05"
+  },
+  {
+    "hash_fnv64": "CBA0C887004D0CF6",
+    "index": 96,
+    "label": "PLACENAME_A05_z02_06"
+  },
+  {
+    "hash_fnv64": "CBA0C987004D0EA9",
+    "index": 97,
+    "label": "PLACENAME_A05_z02_07"
+  },
+  {
+    "hash_fnv64": "9F99DF809EE32F5A",
+    "index": 98,
+    "label": "PLACENAME_A05_z03_01"
+  },
+  {
+    "hash_fnv64": "800E1507FA1155B4",
+    "index": 99,
+    "label": "PLACENAME_R01_mainstreet"
+  },
+  {
+    "hash_fnv64": "EFD98634598B63F5",
+    "index": 100,
+    "label": "PLACENAME_A04_artmuseum"
+  },
+  {
+    "hash_fnv64": "7F1DECAAE0B084FE",
+    "index": 101,
+    "label": "PLACENAME_pokesen_veil"
+  },
+  {
+    "hash_fnv64": "DBA0A4EBBB1C9848",
+    "index": 102,
+    "label": "PLACENAME_hotelz"
+  },
+  {
+    "hash_fnv64": "944B0EAFB99E0CE6",
+    "index": 103,
+    "label": "PLACENAME_poke_labo"
+  },
+  {
+    "hash_fnv64": "C5B9F341906D6AA3",
+    "index": 104,
+    "label": "PLACENAME_prism_tower"
+  },
+  {
+    "hash_fnv64": "9F1351B48F50496D",
+    "index": 105,
+    "label": "PLACENAME_handsome"
+  },
+  {
+    "hash_fnv64": "3561470A7661B51A",
+    "index": 106,
+    "label": "PLACENAME_quasar_building"
+  },
+  {
+    "hash_fnv64": "1E17B77CBF542E9A",
+    "index": 107,
+    "label": "PLACENAME_gamedan_hideout"
+  },
+  {
+    "hash_fnv64": "ECE5BE699EE90190",
+    "index": 108,
+    "label": "PLACENAME_veil"
+  },
+  {
+    "hash_fnv64": "2762BBD03FFD04E4",
+    "index": 109,
+    "label": "PLACENAME_veil_sg_station"
+  },
+  {
+    "hash_fnv64": "04E836CE90FEDC84",
+    "index": 110,
+    "label": "PLACENAME_blue"
+  },
+  {
+    "hash_fnv64": "E36CE08953E16F46",
+    "index": 111,
+    "label": "PLACENAME_blue_gang"
+  },
+  {
+    "hash_fnv64": "3A5175EB97FC4976",
+    "index": 112,
+    "label": "PLACENAME_blue_pokecen"
+  },
+  {
+    "hash_fnv64": "14B4A35341B07E8C",
+    "index": 113,
+    "label": "PLACENAME_blue_pokecen2"
+  },
+  {
+    "hash_fnv64": "A6233D46B349C16F",
+    "index": 114,
+    "label": "PLACENAME_rose"
+  },
+  {
+    "hash_fnv64": "169D351CF917B96E",
+    "index": 115,
+    "label": "PLACENAME_rose_fleur_cafe"
+  },
+  {
+    "hash_fnv64": "203DBFF63F267681",
+    "index": 116,
+    "label": "PLACENAME_rose_pokecen"
+  },
+  {
+    "hash_fnv64": "EF63E26D4E5BB229",
+    "index": 117,
+    "label": "PLACENAME_rose_pokecen2"
+  },
+  {
+    "hash_fnv64": "C9E13F22C24BA12E",
+    "index": 118,
+    "label": "PLACENAME_rouge"
+  },
+  {
+    "hash_fnv64": "B0ACE02413AC997B",
+    "index": 119,
+    "label": "PLACENAME_rouge_grandhotel"
+  },
+  {
+    "hash_fnv64": "D5A96AF74C051FBC",
+    "index": 120,
+    "label": "PLACENAME_rouge_pokecen"
+  },
+  {
+    "hash_fnv64": "140050362CB49E4A",
+    "index": 121,
+    "label": "PLACENAME_rouge_pokecen2"
+  },
+  {
+    "hash_fnv64": "E6507B2DBC9DB33D",
+    "index": 122,
+    "label": "PLACENAME_jaune"
+  },
+  {
+    "hash_fnv64": "E9F34E8E21931F43",
+    "index": 123,
+    "label": "PLACENAME_jaune_justice"
+  },
+  {
+    "hash_fnv64": "EB4E92E619C8D9E3",
+    "index": 124,
+    "label": "PLACENAME_jaune_pokecen"
+  },
+  {
+    "hash_fnv64": "9F5D6DFDD04A1E23",
+    "index": 125,
+    "label": "PLACENAME_jaune_pokecen2"
+  },
+  {
+    "hash_fnv64": "A89EA42E70FBE0B5",
+    "index": 126,
+    "label": "PLACENAME_hairsalon_01"
+  },
+  {
+    "hash_fnv64": "CC53B4738852500D",
+    "index": 127,
+    "label": "PLACENAME_stoneshop_01"
+  },
+  {
+    "hash_fnv64": "E6FFB74181CC8EDD",
+    "index": 128,
+    "label": "PLACENAME_ballshop_01"
+  },
+  {
+    "hash_fnv64": "0A986827D7081F21",
+    "index": 129,
+    "label": "PLACENAME_A01_dressup_01"
+  },
+  {
+    "hash_fnv64": "0A986527D7081A08",
+    "index": 130,
+    "label": "PLACENAME_A01_dressup_02"
+  },
+  {
+    "hash_fnv64": "79C173CBEA5644E8",
+    "index": 131,
+    "label": "PLACENAME_A01_restaurant_01"
+  },
+  {
+    "hash_fnv64": "8C33F55D1BEEE252",
+    "index": 132,
+    "label": "PLACENAME_A01_cafe_01"
+  },
+  {
+    "hash_fnv64": "8C33F45D1BEEE09F",
+    "index": 133,
+    "label": "PLACENAME_A01_cafe_02"
+  },
+  {
+    "hash_fnv64": "8C33F35D1BEEDEEC",
+    "index": 134,
+    "label": "PLACENAME_A01_cafe_03"
+  },
+  {
+    "hash_fnv64": "4E2DBF293D05F980",
+    "index": 135,
+    "label": "PLACENAME_A02_emptyroom"
+  },
+  {
+    "hash_fnv64": "AB8BCD9D360A3287",
+    "index": 136,
+    "label": "PLACENAME_A02_undergroundsewer_01"
+  },
+  {
+    "hash_fnv64": "2C45634363F2F602",
+    "index": 137,
+    "label": "PLACENAME_A02_dressup_01"
+  },
+  {
+    "hash_fnv64": "2C45624363F2F44F",
+    "index": 138,
+    "label": "PLACENAME_A02_dressup_02"
+  },
+  {
+    "hash_fnv64": "2C45614363F2F29C",
+    "index": 139,
+    "label": "PLACENAME_A02_dressup_03"
+  },
+  {
+    "hash_fnv64": "2C45604363F2F0E9",
+    "index": 140,
+    "label": "PLACENAME_A02_dressup_04"
+  },
+  {
+    "hash_fnv64": "2C455F4363F2EF36",
+    "index": 141,
+    "label": "PLACENAME_A02_dressup_05"
+  },
+  {
+    "hash_fnv64": "2C455E4363F2ED83",
+    "index": 142,
+    "label": "PLACENAME_A02_dressup_06"
+  },
+  {
+    "hash_fnv64": "2C455D4363F2EBD0",
+    "index": 143,
+    "label": "PLACENAME_A02_dressup_07"
+  },
+  {
+    "hash_fnv64": "2C456C4363F3054D",
+    "index": 144,
+    "label": "PLACENAME_A02_dressup_08"
+  },
+  {
+    "hash_fnv64": "2C456B4363F3039A",
+    "index": 145,
+    "label": "PLACENAME_A02_dressup_09"
+  },
+  {
+    "hash_fnv64": "567BC10DED3F5F53",
+    "index": 146,
+    "label": "PLACENAME_A02_hairsalon_01"
+  },
+  {
+    "hash_fnv64": "A3ED382F52203A73",
+    "index": 147,
+    "label": "PLACENAME_A02_cafe_01"
+  },
+  {
+    "hash_fnv64": "A3ED392F52203C26",
+    "index": 148,
+    "label": "PLACENAME_A02_cafe_02"
+  },
+  {
+    "hash_fnv64": "A3ED3A2F52203DD9",
+    "index": 149,
+    "label": "PLACENAME_A02_cafe_03"
+  },
+  {
+    "hash_fnv64": "FFEA3C08CB6AC605",
+    "index": 150,
+    "label": "PLACENAME_A03_undergroundsewer_02"
+  },
+  {
+    "hash_fnv64": "5EB21C2AB0423930",
+    "index": 151,
+    "label": "PLACENAME_A03_cafe_01"
+  },
+  {
+    "hash_fnv64": "5EB21F2AB0423E49",
+    "index": 152,
+    "label": "PLACENAME_A03_cafe_02"
+  },
+  {
+    "hash_fnv64": "5EB21E2AB0423C96",
+    "index": 153,
+    "label": "PLACENAME_A03_cafe_03"
+  },
+  {
+    "hash_fnv64": "5EB2212AB04241AF",
+    "index": 154,
+    "label": "PLACENAME_A03_cafe_04"
+  },
+  {
+    "hash_fnv64": "10596620EDA91B78",
+    "index": 155,
+    "label": "PLACENAME_A04_dressup_01"
+  },
+  {
+    "hash_fnv64": "10596920EDA92091",
+    "index": 156,
+    "label": "PLACENAME_A04_dressup_02"
+  },
+  {
+    "hash_fnv64": "10596820EDA91EDE",
+    "index": 157,
+    "label": "PLACENAME_A04_dressup_03"
+  },
+  {
+    "hash_fnv64": "10596B20EDA923F7",
+    "index": 158,
+    "label": "PLACENAME_A04_dressup_04"
+  },
+  {
+    "hash_fnv64": "10596A20EDA92244",
+    "index": 159,
+    "label": "PLACENAME_A04_dressup_05"
+  },
+  {
+    "hash_fnv64": "10596D20EDA9275D",
+    "index": 160,
+    "label": "PLACENAME_A04_dressup_06"
+  },
+  {
+    "hash_fnv64": "10596C20EDA925AA",
+    "index": 161,
+    "label": "PLACENAME_A04_dressup_07"
+  },
+  {
+    "hash_fnv64": "10595F20EDA90F93",
+    "index": 162,
+    "label": "PLACENAME_A04_dressup_08"
+  },
+  {
+    "hash_fnv64": "10595E20EDA90DE0",
+    "index": 163,
+    "label": "PLACENAME_A04_dressup_09"
+  },
+  {
+    "hash_fnv64": "1055E120EDA603A2",
+    "index": 164,
+    "label": "PLACENAME_A04_dressup_10"
+  },
+  {
+    "hash_fnv64": "1055E220EDA60555",
+    "index": 165,
+    "label": "PLACENAME_A04_dressup_11"
+  },
+  {
+    "hash_fnv64": "1055DF20EDA6003C",
+    "index": 166,
+    "label": "PLACENAME_A04_dressup_12"
+  },
+  {
+    "hash_fnv64": "1055E020EDA601EF",
+    "index": 167,
+    "label": "PLACENAME_A04_dressup_13"
+  },
+  {
+    "hash_fnv64": "1055DD20EDA5FCD6",
+    "index": 168,
+    "label": "PLACENAME_A04_dressup_14"
+  },
+  {
+    "hash_fnv64": "1055DE20EDA5FE89",
+    "index": 169,
+    "label": "PLACENAME_A04_dressup_15"
+  },
+  {
+    "hash_fnv64": "1055DB20EDA5F970",
+    "index": 170,
+    "label": "PLACENAME_A04_dressup_16"
+  },
+  {
+    "hash_fnv64": "1055DC20EDA5FB23",
+    "index": 171,
+    "label": "PLACENAME_A04_dressup_17"
+  },
+  {
+    "hash_fnv64": "1055E920EDA6113A",
+    "index": 172,
+    "label": "PLACENAME_A04_dressup_18"
+  },
+  {
+    "hash_fnv64": "1055EA20EDA612ED",
+    "index": 173,
+    "label": "PLACENAME_A04_dressup_19"
+  },
+  {
+    "hash_fnv64": "10525B20EDA2EA19",
+    "index": 174,
+    "label": "PLACENAME_A04_dressup_20"
+  },
+  {
+    "hash_fnv64": "10525A20EDA2E866",
+    "index": 175,
+    "label": "PLACENAME_A04_dressup_21"
+  },
+  {
+    "hash_fnv64": "10525920EDA2E6B3",
+    "index": 176,
+    "label": "PLACENAME_A04_dressup_22"
+  },
+  {
+    "hash_fnv64": "10525820EDA2E500",
+    "index": 177,
+    "label": "PLACENAME_A04_dressup_23"
+  },
+  {
+    "hash_fnv64": "10525F20EDA2F0E5",
+    "index": 178,
+    "label": "PLACENAME_A04_dressup_24"
+  },
+  {
+    "hash_fnv64": "10525E20EDA2EF32",
+    "index": 179,
+    "label": "PLACENAME_A04_dressup_25"
+  },
+  {
+    "hash_fnv64": "10525D20EDA2ED7F",
+    "index": 180,
+    "label": "PLACENAME_A04_dressup_26"
+  },
+  {
+    "hash_fnv64": "10525C20EDA2EBCC",
+    "index": 181,
+    "label": "PLACENAME_A04_dressup_27"
+  },
+  {
+    "hash_fnv64": "10526320EDA2F7B1",
+    "index": 182,
+    "label": "PLACENAME_A04_dressup_28"
+  },
+  {
+    "hash_fnv64": "10526220EDA2F5FE",
+    "index": 183,
+    "label": "PLACENAME_A04_dressup_29"
+  },
+  {
+    "hash_fnv64": "104F5520EDA0AA10",
+    "index": 184,
+    "label": "PLACENAME_A04_dressup_30"
+  },
+  {
+    "hash_fnv64": "70982FB2CD7CDD6B",
+    "index": 185,
+    "label": "PLACENAME_A04_restaurant_01"
+  },
+  {
+    "hash_fnv64": "709830B2CD7CDF1E",
+    "index": 186,
+    "label": "PLACENAME_A04_restaurant_02"
+  },
+  {
+    "hash_fnv64": "709831B2CD7CE0D1",
+    "index": 187,
+    "label": "PLACENAME_A04_restaurant_03"
+  },
+  {
+    "hash_fnv64": "608D84A69F6FB0EE",
+    "index": 188,
+    "label": "PLACENAME_A05_undergroundsewer_01"
+  },
+  {
+    "hash_fnv64": "EA235CE49D3E86CE",
+    "index": 189,
+    "label": "PLACENAME_A05_cafe_01"
+  },
+  {
+    "hash_fnv64": "EA235BE49D3E851B",
+    "index": 190,
+    "label": "PLACENAME_A05_cafe_02"
+  },
+  {
+    "hash_fnv64": "EA235AE49D3E8368",
+    "index": 191,
+    "label": "PLACENAME_A05_cafe_03"
+  },
+  {
+    "hash_fnv64": "EA2361E49D3E8F4D",
+    "index": 192,
+    "label": "PLACENAME_A05_cafe_04"
+  },
+  {
+    "hash_fnv64": "2BD9F75A00BB8F31",
+    "index": 193,
+    "label": "PLACENAME_wild_a0101_w01"
+  },
+  {
+    "hash_fnv64": "314DC738223EB424",
+    "index": 194,
+    "label": "PLACENAME_wild_a0102_w01"
+  },
+  {
+    "hash_fnv64": "FB7CBD76BD0CDCB7",
+    "index": 195,
+    "label": "PLACENAME_wild_a0103_w01"
+  },
+  {
+    "hash_fnv64": "92DE467BB66CB18C",
+    "index": 196,
+    "label": "PLACENAME_wild_a0201_w01"
+  },
+  {
+    "hash_fnv64": "23F95484F5C2DFF9",
+    "index": 197,
+    "label": "PLACENAME_wild_a0202_w01"
+  },
+  {
+    "hash_fnv64": "23F95184F5C2DAE0",
+    "index": 198,
+    "label": "PLACENAME_wild_a0202_w02"
+  },
+  {
+    "hash_fnv64": "BD7B08B52F7BFCA6",
+    "index": 199,
+    "label": "PLACENAME_wild_a0203_w01"
+  },
+  {
+    "hash_fnv64": "AA0098D9A36F0B67",
+    "index": 200,
+    "label": "PLACENAME_wild_a0301_w01"
+  },
+  {
+    "hash_fnv64": "AA0099D9A36F0D1A",
+    "index": 201,
+    "label": "PLACENAME_wild_a0301_w02"
+  },
+  {
+    "hash_fnv64": "BA6BE2BC8324DD2E",
+    "index": 202,
+    "label": "PLACENAME_wild_a0302_w01"
+  },
+  {
+    "hash_fnv64": "D966D6E8036D9AE1",
+    "index": 203,
+    "label": "PLACENAME_wild_a0303_w01"
+  },
+  {
+    "hash_fnv64": "BE08E5E3580DAC62",
+    "index": 204,
+    "label": "PLACENAME_wild_a0401_w01"
+  },
+  {
+    "hash_fnv64": "7BC807D0269E60EB",
+    "index": 205,
+    "label": "PLACENAME_wild_a0402_w01"
+  },
+  {
+    "hash_fnv64": "00F41BFFC410DF38",
+    "index": 206,
+    "label": "PLACENAME_wild_a0403_w01"
+  },
+  {
+    "hash_fnv64": "15636FD35B489EDD",
+    "index": 207,
+    "label": "PLACENAME_wild_a0501_w01"
+  },
+  {
+    "hash_fnv64": "15636CD35B4899C4",
+    "index": 208,
+    "label": "PLACENAME_wild_a0501_w02"
+  },
+  {
+    "hash_fnv64": "F94431C9CD168D60",
+    "index": 209,
+    "label": "PLACENAME_wild_a0502_w01"
+  },
+  {
+    "hash_fnv64": "F94434C9CD169279",
+    "index": 210,
+    "label": "PLACENAME_wild_a0502_w02"
+  },
+  {
+    "hash_fnv64": "5A0185EFC8BD2FD3",
+    "index": 211,
+    "label": "PLACENAME_wild_a0503_w01"
+  },
+  {
+    "hash_fnv64": "A631157DC93A1E88",
+    "index": 212,
+    "label": "PLACENAME_wild_a0601_w01"
+  },
+  {
+    "hash_fnv64": "39F51DD675A41C8C",
+    "index": 213,
+    "label": "PLACENAME_battle_01"
+  },
+  {
+    "hash_fnv64": "ACE3DF0A4FDD33A2",
+    "index": 214,
+    "label": "PLACENAME_passage_a02_z02_04"
+  },
+  {
+    "hash_fnv64": "82B3179D098E9C22",
+    "index": 215,
+    "label": "PLACENAME_passage_a04_z01_03"
+  },
+  {
+    "hash_fnv64": "AD310D91C025DB73",
+    "index": 216,
+    "label": "PLACENAME_passage_a04_z02_01"
+  },
+  {
+    "hash_fnv64": "AD311191C025E23F",
+    "index": 217,
+    "label": "PLACENAME_passage_a04_z02_05"
+  },
+  {
+    "hash_fnv64": "1A03D1706AFCF8B5",
+    "index": 218,
+    "label": "PLACENAME_base_a05_z02_01"
+  },
+  {
+    "hash_fnv64": "C78421613390DE9F",
+    "index": 219,
+    "label": "PLACENAME_hotelZ_i001"
+  },
+  {
+    "hash_fnv64": "37D6E219913A6EF9",
+    "index": 220,
+    "label": "PLACENAME_base_i011"
+  },
+  {
+    "hash_fnv64": "37D6DF19913A69E0",
+    "index": 221,
+    "label": "PLACENAME_base_i012"
+  },
+  {
+    "hash_fnv64": "37D6E519913A7412",
+    "index": 222,
+    "label": "PLACENAME_base_i014"
+  },
+  {
+    "hash_fnv64": "165E9C99EEF38995",
+    "index": 223,
+    "label": "PLACENAME__station_a01_z01_06"
+  },
+  {
+    "hash_fnv64": "F42582B1A46FA235",
+    "index": 224,
+    "label": "PLACENAME__i003"
+  },
+  {
+    "hash_fnv64": "7CFBCD55E78BF634",
+    "index": 225,
+    "label": "PLACENAME_i004a"
+  },
+  {
+    "hash_fnv64": "7CFBD055E78BFB4D",
+    "index": 226,
+    "label": "PLACENAME_i004b"
+  },
+  {
+    "hash_fnv64": "7CFBCF55E78BF99A",
+    "index": 227,
+    "label": "PLACENAME_i004c"
+  },
+  {
+    "hash_fnv64": "7CFBCA55E78BF11B",
+    "index": 228,
+    "label": "PLACENAME_i004d"
+  },
+  {
+    "hash_fnv64": "2D4CC082D8838CEA",
+    "index": 229,
+    "label": "PLACENAME_i005"
+  },
+  {
+    "hash_fnv64": "2D4CBF82D8838B37",
+    "index": 230,
+    "label": "PLACENAME_i006"
+  },
+  {
+    "hash_fnv64": "2D4CBE82D8838984",
+    "index": 231,
+    "label": "PLACENAME_i007"
+  },
+  {
+    "hash_fnv64": "2D4CB582D8837A39",
+    "index": 232,
+    "label": "PLACENAME_i008"
+  },
+  {
+    "hash_fnv64": "2D493C82D88076C7",
+    "index": 233,
+    "label": "PLACENAME_i015"
+  },
+  {
+    "hash_fnv64": "423BFD25DE929B8C",
+    "index": 234,
+    "label": "PLACENAME_t2f"
+  },
+  {
+    "hash_fnv64": "232A6287718139D5",
+    "index": 235,
+    "label": "PLACENAME_t3"
+  },
+  {
+    "hash_fnv64": "98A985900B1F208B",
+    "index": 236,
+    "label": "PLACENAME_t1_i001_2"
+  },
+  {
+    "hash_fnv64": "98A984900B1F1ED8",
+    "index": 237,
+    "label": "PLACENAME_t1_i001_3"
+  },
+  {
+    "hash_fnv64": "98A98A900B1F290A",
+    "index": 238,
+    "label": "PLACENAME_t1_i001_5"
+  },
+  {
+    "hash_fnv64": "98A989900B1F2757",
+    "index": 239,
+    "label": "PLACENAME_t1_i001_6"
+  },
+  {
+    "hash_fnv64": "3C6008D9E923C052",
+    "index": 240,
+    "label": "PLACENAME_short_001"
+  },
+  {
+    "hash_fnv64": "3C6007D9E923BE9F",
+    "index": 241,
+    "label": "PLACENAME_short_002"
+  },
+  {
+    "hash_fnv64": "3C6006D9E923BCEC",
+    "index": 242,
+    "label": "PLACENAME_short_003"
+  },
+  {
+    "hash_fnv64": "3C6005D9E923BB39",
+    "index": 243,
+    "label": "PLACENAME_short_004"
+  },
+  {
+    "hash_fnv64": "3C6004D9E923B986",
+    "index": 244,
+    "label": "PLACENAME_short_005"
+  },
+  {
+    "hash_fnv64": "F61EB13714E4CA82",
+    "index": 245,
+    "label": "PLACENAME_i00_floor_001"
+  },
+  {
+    "hash_fnv64": "F61EB03714E4C8CF",
+    "index": 246,
+    "label": "PLACENAME_i00_floor_002"
+  },
+  {
+    "hash_fnv64": "F61EAF3714E4C71C",
+    "index": 247,
+    "label": "PLACENAME_i00_floor_003"
+  },
+  {
+    "hash_fnv64": "B8CFE9708CA4F305",
+    "index": 248,
+    "label": "PLACENAME_base_001"
+  },
+  {
+    "hash_fnv64": "B8CFE6708CA4EDEC",
+    "index": 249,
+    "label": "PLACENAME_base_002"
+  },
+  {
+    "hash_fnv64": "B8CFE7708CA4EF9F",
+    "index": 250,
+    "label": "PLACENAME_base_003"
+  },
+  {
+    "hash_fnv64": "30497248A19F2134",
+    "index": 251,
+    "label": "PLACENAME_t2f_basement_001"
+  },
+  {
+    "hash_fnv64": "30497548A19F264D",
+    "index": 252,
+    "label": "PLACENAME_t2f_basement_002"
+  },
+  {
+    "hash_fnv64": "30497448A19F249A",
+    "index": 253,
+    "label": "PLACENAME_t2f_basement_003"
+  },
+  {
+    "hash_fnv64": "232A618771813822",
+    "index": 254,
+    "label": "PLACENAME_t2"
+  },
+  {
+    "hash_fnv64": "2809F6B93095923E",
+    "index": 255,
+    "label": "PLACENAME_floor_001"
+  },
+  {
+    "hash_fnv64": "2809F5B93095908B",
+    "index": 256,
+    "label": "PLACENAME_floor_002"
+  },
+  {
+    "hash_fnv64": "2809F4B930958ED8",
+    "index": 257,
+    "label": "PLACENAME_floor_003"
+  },
+  {
+    "hash_fnv64": "E347E8A24EC6A9B5",
+    "index": 258,
+    "label": "PLACENAME_floorname_001"
+  },
+  {
+    "hash_fnv64": "E347E5A24EC6A49C",
+    "index": 259,
+    "label": "PLACENAME_floorname_002"
+  },
+  {
+    "hash_fnv64": "E347E6A24EC6A64F",
+    "index": 260,
+    "label": "PLACENAME_floorname_003"
+  },
+  {
+    "hash_fnv64": "3F2426A1AD639DFD",
+    "index": 261,
+    "label": "PLACENAME_basement_001"
+  },
+  {
+    "hash_fnv64": "3F2423A1AD6398E4",
+    "index": 262,
+    "label": "PLACENAME_basement_002"
+  },
+  {
+    "hash_fnv64": "3F2424A1AD639A97",
+    "index": 263,
+    "label": "PLACENAME_basement_003"
+  },
+  {
+    "hash_fnv64": "263CC7DA563BBCC0",
+    "index": 264,
+    "label": "PLACENAME_index_1"
+  },
+  {
+    "hash_fnv64": "8C33F25D1BEEDD39",
+    "index": 265,
+    "label": "PLACENAME_A01_cafe_04"
+  },
+  {
+    "hash_fnv64": "A3ED3B2F52203F8C",
+    "index": 266,
+    "label": "PLACENAME_A02_cafe_04"
+  },
+  {
+    "hash_fnv64": "5EB2202AB0423FFC",
+    "index": 267,
+    "label": "PLACENAME_A03_cafe_05"
+  },
+  {
+    "hash_fnv64": "CC21F1110C687A55",
+    "index": 268,
+    "label": "PLACENAME_dungeon_t2_01"
+  },
+  {
+    "hash_fnv64": "CAE6A50BE55ADDE0",
+    "index": 269,
+    "label": "PLACENAME_dungeon_t3_01"
+  },
+  {
+    "hash_fnv64": "CAE6A80BE55AE2F9",
+    "index": 270,
+    "label": "PLACENAME_dungeon_t3_02"
+  },
+  {
+    "hash_fnv64": "D2101CED7A5DE84F",
+    "index": 271,
+    "label": "PLACENAME_dungeon_t3_2_01"
+  },
+  {
+    "hash_fnv64": "DF21CB17544D97C6",
+    "index": 272,
+    "label": "PLACENAME_dim_1"
+  },
+  {
+    "hash_fnv64": "5874B564936C0A6E",
+    "index": 273,
+    "label": "msg_ZA_place_name_indirect_max"
+  }
+]

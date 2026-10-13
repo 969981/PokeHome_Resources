@@ -1,0 +1,193 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_load_index_010,9B5D4D6BD3CC5B45,宝可梦,0,860
+1,nx_load_index_020,9B60D36BD3CF74CE,点数,0,868
+2,	,AF66E44C86071324,[REF:2],0,876
+3,nx_load_button_000,B1C23ADB2AC36796,返回,0,888
+4,nx_load_button_001,B1C23BDB2AC36949,帮助,0,896
+5,	,AF66E44C86071324,[REF:5],0,904
+6,nx_load_guide_010,61707553C26B9525,请选择想要连动的游戏软件。,0,916
+7,nx_load_guide_020,6173FB53C26EAEAE,请选择想要传送BP的游戏软件。,0,944
+8,	,AF66E44C86071324,[REF:8],0,976
+9,nx_load_mile,968D0E49A0115FA0,"持有点数：[CTRL:0204:0000,0000]P",0,988
+10,nx_load_accountname,105B61787869E78F,[CTRL:01D9:0000],0,1012
+11,	,AF66E44C86071324,[REF:11],0,1024
+12,nx_load_none,0DE124626741DDF3,没有找到可用的软件记录。,0,1036
+13,	,AF66E44C86071324,[REF:13],0,1064
+14,nx_load_savedata_010,7EB61251F77F27FE,,0,1076
+15,nx_load_savedata_020,7EB30C51F77CE7F5,名字,0,1080
+16,nx_load_savedata_021,7EB30B51F77CE642,[CTRL:0189:0000],0,1088
+17,nx_load_savedata_030,7EAF8651F779CE6C,ID No.,0,1100
+18,nx_load_savedata_031,7EAF8751F779D01F,"[CTRL:0205:0000,0000]",0,1116
+19,nx_load_savedata_040,7EAC0051F776B4E3,图鉴,0,1128
+20,nx_load_savedata_041,7EABFF51F776B330,"[CTRL:0203:0000,0000]只",0,1136
+21,nx_load_savedata_050,7EA89A51F773D1BA,游戏时间,0,1152
+22,nx_load_savedata_051,7EA89B51F773D36D,[CTRL:0202:0000]:[CTRL:0201:0001],0,1164
+23,nx_load_savedata_060,7EA51451F770B831,上次的记录,0,1184
+24,nx_load_savedata_061,7EA51351F770B67E,"[CTRL:0203:0000,0000]/[CTRL:0201:0001]/[CTRL:0201:0002]　[CTRL:0201:0003]:[CTRL:0201:0004]",0,1196
+25,nx_load_savedata_070,7EA20E51F76E7828,不连动直接开始,0,1248
+26,nx_load_savedata_071,7EA20F51F76E79DB,"不与游戏软件连动，
+整理《Pokémon HOME》的盒子。",0,1264
+27,nx_load_savedata_080,7E9E8851F76B5E9F,游戏软件用户,0,1328
+28,nx_load_savedata_081,7E9E8751F76B5CEC,"目前显示的是
+[CTRL:01D9:0000]的游戏软件记录。",0,1344
+29,nx_load_savedata_090,7E9B0251F7684516,"此记录的版本过低，无法被
+最新版《Pokémon HOME》读取。",0,1384
+30,nx_load_savedata_100,75A35D51F23DDDBC,"请更新《Pokémon HOME》
+以读取此版本的记录。",0,1452
+31,nx_load_savedata_110,75A6E351F240F745,"无法读取记录，
+此记录或已损坏。",0,1512
+32,nx_load_savedata_error,C55CE1BE671BCBF1,？？？？？？？,0,1548
+33,	,AF66E44C86071324,[REF:33],0,1564
+34,nx_load_msg_yes,99747AF82159E002,是,0,1576
+35,nx_load_msg_no,9835E3CDF53E5574,否,0,1580
+36,nx_load_msg_010,BC52E8F712E52D0C,要与此游戏软件连动吗？,0,1584
+37,nx_load_msg_011,BC52E9F712E52EBF,要确认《Pokémon HOME》的盒子吗？,0,1608
+38,nx_load_msg_020,BC5D7AF712EE79A7,"正在与游戏软件连动，
+请稍等……",0,1656
+39,nx_load_msg_021,BC5D79F712EE77F4,"正在连接盒子，
+请稍等……",0,1692
+40,nx_load_msg_030,BC59F4F712EB601E,要显示其他用户的游戏软件记录吗？,0,1720
+41,nx_load_msg_040,BC48F6F712DCF051,"现在无法与此游戏软件的记录连动！[CLEAR]
+请在获得“宝可梦图鉴”后写入记录。",0,1756
+42,nx_load_msg_041,BC48F5F712DCEE9E,[REF:42],0,1832
+43,nx_load_msg_050,BC4570F712D9D6C8,"此软件记录内的BP已满，
+无法再将BP传送过去！",0,1844
+44,nx_load_msg_060,BC4FE2F712E2ED03,此游戏软件无法进行点数连动！,0,1896
+45,nx_load_msg_070,BC4C7CF712E009DA,"无法读取此游戏软件的记录！[CLEAR]
+记录数据或已损坏。",0,1928
+46,nx_load_msg_080,BC3B7EF712D19A0D,"此游戏软件的记录不是最新版！[CLEAR]
+请在“更新软件”之后，
+启动游戏并写入记录。",0,1984
+47,nx_load_msg_080_1_1,391B8F906963DCED,"《精灵宝可梦 Let's Go！皮卡丘》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,2068
+48,nx_load_msg_080_1_2,391B8C906963D7D4,"《精灵宝可梦 Let's Go！伊布》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,2208
+49,nx_load_msg_080_2_1,1D3C88905911DCC8,"《宝可梦 剑》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,2344
+50,nx_load_msg_080_2_2,1D3C8B905911E1E1,"《宝可梦 盾》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,2456
+51,nx_load_msg_090,BC37F8F712CE8084,"需要更新《Pokémon HOME》
+以完成与此软件记录的连动！[CLEAR]
+请在“更新软件”之前，
+先关闭《Pokémon HOME》。",0,2568
+52,	,AF66E44C86071324,[REF:52],0,2704
+53,nx_load_userchange_title,06E6C6C2D7A42653,选择用户,0,2716
+54,nx_load_userchange_01,DA606E6F26E33CE8,[REF:54],0,2728
+55,	,AF66E44C86071324,[REF:55],0,2740
+56,nx_load_title_beluga_1,79CDCAF8F1656B34,精灵宝可梦 Let's Go！皮卡丘,0,2752
+57,nx_load_title_beluga_2,79CDCDF8F165704D,精灵宝可梦 Let's Go！伊布,0,2792
+58,nx_load_title_orion_1,09BE518446BE061F,宝可梦 剑,0,2828
+59,nx_load_title_orion_2,09BE528446BE07D2,宝可梦 盾,0,2840
+60,	,AF66E44C86071324,[REF:60],0,2852
+61,nx_load_help_1_010,165A1F76FB4FC2F4,"在这个画面可以选择
+想要与《Pokémon HOME》
+连动的软件记录！",0,2864
+62,nx_load_help_1_020,16641176FB57FFAF,"如果你的Nintendo Switch内
+有可以连动的记录的话，
+软件的图标就会显示在这里哦萌！",0,2940
+63,nx_load_help_1_030,16608B76FB54E626,"如果不进行连动，只是想
+整理《Pokémon HOME》的盒子，
+那么选这个图标就对了哦萌！",0,3040
+64,	,AF66E44C86071324,[REF:64],0,3136
+65,nx_load_help_2_010,8E9EAB46CBC85EE9,"只要将宝可梦寄放到盒子里，
+每天就可获得“Pokémon HOME点数”！
+寄放的宝可梦越多，获得的点数就越多哦萌！",0,3148
+66,nx_load_help_2_020,8EA1B146CBCA9EF2,"获得的点数可以兑换为BP
+并传送至游戏软件内哦萌！
+（虽然有的软件无法进行连动……）",0,3268
+67,nx_load_msg_100,B34053F70DA4192A,"无法读取此游戏软件的记录！[CLEAR]
+盒子[CTRL:01C0:0000]的
+第[CTRL:0200:0001]列左起第[CTRL:0200:0002]只[CLEAR]
+宝可梦有问题。",0,3356
+68,nx_load_msg_101,B34054F70DA41ADD,"无法读取此游戏软件的记录！[CLEAR]
+宝可梦盒的第[CTRL:0202:0001]列
+左起第[CTRL:0200:0002]只宝可梦有问题。",0,3460
+69,	,AF66E44C86071324,[REF:69],0,3552
+70,nx_load_msg_102,B34051F70DA415C4,"无法读取此游戏软件的记录！[CLEAR]
+放牧场的盒子[CTRL:01C0:0000]的
+第[CTRL:0200:0001]列左起第[CTRL:0200:0002]只[CLEAR]
+宝可梦有问题。",0,3564
+71,nx_load_title_delphis_1,ADBFF99A2886C9AB,宝可梦 晶灿钻石,0,3676
+72,nx_load_title_delphis_2,ADBFFA9A2886CB5E,宝可梦 明亮珍珠,0,3696
+73,nx_load_title_hayabusa_1,0946731A41A3B00A,宝可梦传说 阿尔宙斯,0,3716
+74,nx_load_guide_021,6173FC53C26EB061,请选择想要使用点数的游戏软件。,0,3740
+75,nx_load_msg_051,BC4571F712D9D87B,"此软件记录内的FP已满，
+无法再将FP传送过去！",0,3772
+76,nx_load_msg_080_2_3,1D3C8A905911E02E,"《宝可梦 晶灿钻石》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,3824
+77,nx_load_msg_080_2_4,1D3C8D905911E547,"《宝可梦 明亮珍珠》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,3944
+78,nx_load_msg_080_2_5,1D3C8C905911E394,"《宝可梦传说 阿尔宙斯》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,4064
+79,nx_load_help_2_021,8EA1B246CBCAA0A5,"获得的点数可以兑换为各游戏内的
+各种点数并传送至游戏软件内哦萌！
+（虽然有的软件无法进行连动……）",0,4188
+80,	,AF66E44C86071324,[REF:80],0,4288
+81,nx_load_title_scarlet_01,6C5F64D7DE1F636E,宝可梦 朱,0,4300
+82,nx_load_title_violet_01,5B1851154D8FB139,宝可梦 紫,0,4312
+83,nx_load_msg_052,BC4572F712D9DA2E,"此软件记录内的LP已满，
+目前无法再将LP传送过去！",0,4324
+84,nx_load_msg_080_5_1,15EDD39055509A39,"《宝可梦 朱》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,4380
+85,nx_load_msg_080_5_2,15EDD09055509520,"《宝可梦 紫》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,4492
+86,	,AF66E44C86071324,[REF:86],0,4604
+87,nx_load_title_Ikkaku,2182971FD64F981A,宝可梦传说 Z-A,0,4616
+88,nx_load_msg_080_6_1,FC9B6C9047292F34,"《宝可梦传说 Z-A》的
+记录不是最新版！[CLEAR]
+请更新至最新版，重新写入记录后
+再启动《Pokémon HOME》。",0,4636
+89,nx_load_msg_042,BC48F4F712DCECEB,"现在无法与此游戏软件的记录连动！[CLEAR]
+请在《宝可梦传说 Z-A》完成
+副任务“茉蜜姬的请求”后，[RETURN]
+再写入记录。",0,4756
+90,nx_load_msg_043,BC48F3F712DCEB38,"现在无法与此游戏软件的记录连动！[CLEAR]
+请在开启《宝可梦传说 Z-A》的
+连接游玩功能后，[RETURN]
+再写入记录。",0,4876
+91,nx_load_msg_044,BC48FAF712DCF71D,[REF:91],0,4988
+92,nx_load_msg_045,BC48F9F712DCF56A,[REF:92],0,5000
+93,nx_load_msg_046,BC48F8F712DCF3B7,"现在无法与此游戏软件的记录连动！[CLEAR]
+请在《宝可梦传说 Z-A》
+从异次元密阿雷返回后，[RETURN]
+再写入记录。",0,5012
+94,	,AF66E44C86071324,[REF:94],0,5124
+95,nx_load_index_030,9B63D96BD3D1B4D7,GBA系列连动,0,5136
+96,nx_load_msg_022,BC5D7CF712EE7D0D,"传送到《Pokémon HOME》的宝可梦
+将无法返回。[CLEAR]
+要开始连动吗？",0,5152
+97,nx_load_msg_023,BC5D7BF712EE7B5A,"正在将图鉴的添加状态
+更新到《Pokémon HOME》……",0,5232
+98,nx_load_msg_024,BC5D76F712EE72DB,"GBA系列连动
+每分钟内最多进行一次。[RETURN]
+请稍等片刻。",0,5296
+99,nx_load_title_gbasoft_1,069CD36CD3EA7506,宝可梦 火红,0,5356
+100,nx_load_title_gbasoft_2,069CD26CD3EA7353,宝可梦 叶绿,0,5372
+101,	,AF66E44C86071324,[REF:101],0,5388
+102,nx_load_help_3_010,694E876FE122C3BA,"在这个画面可以选择
+想要与《Pokémon HOME》
+连动的GBA系列记录！",0,5400
+103,nx_load_help_3_020,694B016FE11FAA31,"如果你的Nintendo Switch内
+有可以连动的记录的话，
+软件的图标就会显示在这里哦萌！",0,5480
+104,nx_load_help_3_030,6947FB6FE11D6A28,"选择图标后，就会根据
+那个软件的宝可梦图鉴的状态来更新
+《Pokémon HOME》的图鉴哦萌！",0,5580

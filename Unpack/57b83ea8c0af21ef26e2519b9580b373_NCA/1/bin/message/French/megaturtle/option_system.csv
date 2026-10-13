@@ -1,0 +1,84 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_option_index_010,D3D5D6955965FC64,Paramètres,0,580
+1,	,AF66E44C86071324,[REF:1],0,604
+2,nx_option_button_000,020C276686A840F1,Retour,0,616
+3,nx_option_button_001,020C266686A83F3E,Aide,4,632
+4,nx_option_button_010,0209216686A600E8,Paramètres par défaut,0,644
+5,	,AF66E44C86071324,[REF:5],0,688
+6,nx_option_data_account,1A7C63DB4FCD3986,[CTRL:01D9:0000],0,700
+7,nx_option_data_support_010,1B3B3B781028F808,ID de clientèle,4,712
+8,nx_option_data_support_020,1B45AD7810320E43,XXXX-XXXX-XXXX-XXXX,0,744
+9,nx_option_data_ticket_010,84DE9A90FF88DC9D,Compte actuel,0,784
+10,nx_option_data_ticket_040,84CD7C90FF7A3670,[REF:10],0,812
+11,nx_option_data_ticket_050,84D10290FF7D4FF9,Compte basique,0,824
+12,nx_option_data_ticket_060,84D48890FF806982,Compte premium,0,856
+13,nx_option_data_language_010,A2AB1A90E943EFE3,Langue d’affichage,0,888
+14,nx_option_data_language_020,A2A12890E93BB328,,0,928
+15,	,AF66E44C86071324,[REF:15],0,932
+16,nx_option_bgm_010,C63A296F68446F3A,Volume de la musique,0,944
+17,nx_option_bgm_020,C636A36F684155B1,[CTRL:0200:0000],0,988
+18,nx_option_se_010,6ABDB5A028E653D0,Volume des effets sonores,0,1000
+19,nx_option_se_020,6AC7C7A028EEC6EB,[CTRL:0200:0000],0,1052
+20,nx_option_language_010,2404027014F8120A,Changer la langue,0,1064
+21,	,AF66E44C86071324,[REF:21],0,1100
+22,nx_option_comment_01,A01FCE44CB875827,Permet d’ajuster le volume de la musique.,0,1112
+23,nx_option_comment_02,A01FCF44CB8759DA,Permet d’ajuster le volume des effets sonores.,0,1196
+24,nx_option_comment_03,A01FD044CB875B8D,Permet de changer la langue du texte.,0,1292
+25,	,AF66E44C86071324,[REF:25],0,1368
+26,nx_option_item_volume_00,9C85FA43A4893D7D,0,0,1380
+27,nx_option_item_volume_01,9C85F943A4893BCA,1,0,1384
+28,nx_option_item_volume_02,9C85F843A4893A17,2,0,1388
+29,nx_option_item_volume_03,9C85F743A4893864,3,0,1392
+30,nx_option_item_volume_04,9C85F643A48936B1,4,0,1396
+31,nx_option_item_volume_05,9C85F543A48934FE,5,0,1400
+32,	,AF66E44C86071324,[REF:32],0,1404
+33,nx_option_item_language_title,CF260B0E11C2DF7D,Changer la langue,0,1416
+34,nx_option_item_language_01,BC4C6250CB27F4C6,Japonais (kana),0,1452
+35,nx_option_item_language_02,BC4C6150CB27F313,Japonais (kanji),0,1484
+36,nx_option_item_language_03,BC4C6050CB27F160,Anglais,4,1520
+37,nx_option_item_language_04,BC4C6750CB27FD45,Français,0,1536
+38,nx_option_item_language_05,BC4C6650CB27FB92,Allemand,4,1556
+39,nx_option_item_language_06,BC4C6550CB27F9DF,Italien,4,1576
+40,nx_option_item_language_07,BC4C6450CB27F82C,Coréen,0,1592
+41,nx_option_item_language_08,BC4C6B50CB280411,Espagnol (Espagne),4,1608
+42,nx_option_item_language_09,BC4C6A50CB28025E,Chinois simplifié,0,1648
+43,nx_option_item_language_10,BC48DD50CB24DCF0,Chinois traditionnel,0,1684
+44,nx_option_item_language_11,BC48DE50CB24DEA3,Espagnol (Amérique latine),4,1728
+45,	,AF66E44C86071324,[REF:45],0,1784
+46,nx_option_msg_yes,79827F0E5AC6E477,Oui,4,1796
+47,nx_option_msg_no,DDF6627943AD136B,Non,0,1804
+48,nx_option_msg_010,8BA4210D4302527D,"La langue d’affichage va être changée.[CLEAR]
+Voulez-vous sauvegarder les changements effectués
+et revenir à l’écran titre ?",0,1812
+49,nx_option_msg_020,8BA7870D430535A6,"Voulez-vous réinitialiser les paramètres du son
+et de la langue d’affichage ?",0,2056
+50,nx_option_msg_030,8BAB0D0D43084F2F,"La langue d’affichage a été changée.
+Retour à l’écran titre après la sauvegarde des paramètres.",0,2212
+51,nx_option_msg_040,8B93830D42F485D0,"Sauvegarde des paramètres...
+Veuillez ne pas quitter Pokémon HOME.",0,2404
+52,	,AF66E44C86071324,[REF:52],0,2540
+53,nx_option_help_010,222D69D9F5432327,"Alors, ici, c’est le menu des paramètres ! Vous pouvez changer le volume
+des sons ou la langue d’affichage du logiciel, et puis vous pouvez aussi
+voir quel type de compte vous avez !",4,2552
+54,nx_option_help_015,222D64D9F5431AA8,"Par contre, vous pourrez pas voir ici pendant combien de temps
+votre abonnement à un compte premium est encore valide.
+Pour voir ça, il faut aller voir dans la boutique où vous avez souscrit !",0,2920
+55,nx_option_help_020,2222D7D9F539D68C,"Vous avez vu l’ID Client qui s’affiche sur cet écran ?
+Je vous conseille de le noter quelque part, parce que si vous avez
+un problème un jour et que vous devez contacter le service client,
+vous en aurez besoin !",0,3308
+56,	,AF66E44C86071324,[REF:56],0,3732
+57,nx_option_comment_04,A01FC944CB874FA8,Permet de consulter les Conditions d’utilisation et l’Avis sur la confidentialité.,0,3744
+58,nx_option_policy_010,6657138BEFA39CA6,Conditions d’utilisation et Avis sur la confidentialité,0,3912
+59,nx_option_policy_msg_010,D8BE5005D9C7FB1C,"Voulez-vous lire les Conditions d’utilisation
+et l’Avis sur la confidentialité ?",0,4024
+60,nx_option_policy_msg_020,D8C86205D9D06E37,Conditions d’utilisation,0,4188
+61,nx_option_policy_msg_030,D8C4DC05D9CD54AE,Avis sur la confidentialité,4,4240
+62,nx_option_policy_msg_040,D8B3DE05D9BEE4E1,Annuler,4,4296
+63,nx_option_policy_link_msg_010,CE65E5AB6FF38E29,"Si vous résidez au Japon, sélectionnez ceci.",0,4312
+64,nx_option_policy_link_msg_020,CE68EBAB6FF5CE32,"Si vous résidez en Corée du Sud, sélectionnez ceci.",0,4404
+65,nx_option_policy_link_msg_030,CE6C71AB6FF8E7BB,"Si vous résidez en Asie (hors Japon et Corée du Sud), sélectionnez ceci.",0,4508
+66,nx_option_policy_link_msg_040,CE6FF7AB6FFC0144,"Si vous résidez ailleurs, sélectionnez ceci.",0,4656
+67,	,AF66E44C86071324,[REF:67],0,4748
+68,nx_option_companyinfo_010,1FE7B8AFB5ED75C3,Informations sur la société,4,4760
+69,nx_option_companyinfo_msg_010,21D4273A24E5744D,Consulter les informations sur la société,0,4816

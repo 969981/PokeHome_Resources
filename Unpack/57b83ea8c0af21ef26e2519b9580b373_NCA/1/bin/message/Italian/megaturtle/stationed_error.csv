@@ -1,0 +1,63 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,error_maintenance_010,DEFD4837D0B0BA8B,"Operazioni di manutenzione in corso.
+Termine della manutenzione:
+[CTRL:0201:0002]/[CTRL:0201:0001]/[CTRL:0203:0000,0000] alle ore [CTRL:0201:0003]:[CTRL:0201:0004].",4,180
+1,error_maintenance_020,DEF33637D0A84770,"Operazioni di manutenzione in corso.
+Ti preghiamo di attendere fino a quando
+non saranno terminate.",4,384
+2,error_maintenance_030,DEF6BC37D0AB60F9,"Operazioni di manutenzione in corso.
+Ci scusiamo per il disagio e ti preghiamo di
+attendere fino a quando non saranno terminate.",4,584
+3,error_maintenance_040,DF07BA37D0B9D0C6,[REF:3],0,844
+4,error_maintenance_050,DF0B4037D0BCEA4F,[REF:4],0,856
+5,error_maintenance_060,DF00CE37D0B3D414,"Si è verificato un errore.
+Tornerai allo schermo del titolo.
+Codice errore: [CTRL:0204:0000,0000]",0,868
+6,error_maintenance_061,DF00CF37D0B3D5C7,"Si è verificato un errore.
+Tornerai allo schermo del titolo.",0,1032
+7,error_maintenance_070,DF045437D0B6ED9D,"Si è verificato un errore. Riprova.
+Codice errore: [CTRL:0204:0000,0000]",0,1156
+8,error_maintenance_080,DF155237D0C55D6A,"Non è stata eseguita alcuna operazione per un
+po’ di tempo.
+Tornerai allo schermo del titolo.",0,1272
+9,error_maintenance_090,DF18B837D0C84093,"È stato effettuato l’accesso da un altro
+dispositivo. Tornerai allo schermo del titolo.",4,1460
+10,error_maintenance_100,E8107D37D5F2DE4D,"L’operazione non può essere completata
+perché sono state effettuate troppe azioni
+consecutive nei box.
+Riprova più tardi.",0,1636
+11,error_maintenance_990,2CD0BF37FCBC0554,"Non puoi utilizzare Pokémon HOME con questo
+account.",0,1880
+12,error_maintenance_999,2CD0B837FCBBF96F,Il servizio Pokémon HOME non è più disponibile.,4,1988
+13,error_maintenance_200,CD3A6C37C681E1AC,"Il servizio premium in uso nel tuo dispositivo
+mobile è stato messo in pausa.
+Puoi controllare lo stato del servizio
+selezionando “Gestisci rinnovo servizio”.",4,2084
+14,error_save_sv_001,5078FA5A8DC16A3D,"Si è verificato un errore durante il salvataggio
+dei dati del gioco connesso.
+
+Se avevi apportato modifiche soltanto ai tuoi
+box in Pokémon HOME, tali modifiche sono
+state salvate. Se avevi apportato modifiche
+ai tuoi Box Pokémon nel gioco connesso, nessuna
+modifica a questi box o ai box in Pokémon
+HOME è stata salvata.
+Tornerai allo schermo del titolo.",0,2404
+15,error_maintenance_300,D650A737CBC64577,"A questo Nintendo Network ID non è permesso
+trasferire Pokémon a Pokémon HOME.",4,3116
+16,error_maintenance_110,E80CF737D5EFC4C4,"Le operazioni di manutenzione sono terminate.
+Al momento gli accessi sono stati limitati per
+ridurre il carico sui server. Gli utenti potranno
+effettuare l’accesso in modo scaglionato.
+Ti preghiamo di attendere.",0,3276
+17,	,AF66E44C86071324,[REF:17],0,3700
+18,error_save_gba_001,49093D0A743FFC18,"Si è verificato un errore durante il salvataggio
+dei dati del gioco connesso.
+Nessun Pokémon è stato trasferito dal gioco
+collegato a Pokémon HOME.
+
+Tornerai allo schermo del titolo.",0,3712
+19,error_account_gba_001,C0F989DC026CCB4E,"Al momento, il tuo account ha subito delle restrizioni
+nell’utilizzo di questa funzione.[CLEAR]
+Il collegamento ai giochi per Game Boy Advance (GBA)
+è stato interrotto.",4,4080

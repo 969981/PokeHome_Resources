@@ -1,0 +1,2042 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,WAZAINFO_BDSP_000,F3771036C6A663DF,"-
+-
+-",0,6636
+1,WAZAINFO_BDSP_001,F3770F36C6A6622C,"Écrase l’ennemi avec les pattes avant ou la queue,
+par exemple.",4,6648
+2,WAZAINFO_BDSP_002,F3771236C6A66745,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,6776
+3,WAZAINFO_BDSP_003,F3771136C6A66592,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,7052
+4,WAZAINFO_BDSP_004,F3770C36C6A65D13,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,7328
+5,WAZAINFO_BDSP_005,F3770B36C6A65B60,"L’ennemi reçoit un coup de poing d’une puissance
+incroyable.",0,7604
+6,WAZAINFO_BDSP_006,F3770E36C6A66079,"Des pièces sont lancées sur l’ennemi.
+Permet d’obtenir de l’argent à la fin du combat.",0,7728
+7,WAZAINFO_BDSP_007,F3770D36C6A65EC6,"Un coup de poing enflammé vient frapper l’ennemi.
+Peut le brûler.",4,7904
+8,WAZAINFO_BDSP_008,F3771836C6A67177,"Un coup de poing glacé vient frapper l’ennemi.
+Peut le geler.",4,8036
+9,WAZAINFO_BDSP_009,F3771736C6A66FC4,"Un coup de poing électrique vient frapper l’ennemi.
+Peut le paralyser.",4,8160
+10,WAZAINFO_BDSP_010,F3738A36C6A34A56,"Lacère l’ennemi avec des griffes acérées pour lui
+infliger des dégâts.",0,8304
+11,WAZAINFO_BDSP_011,F3738B36C6A34C09,L’ennemi est attrapé et compressé par les côtés.,0,8448
+12,WAZAINFO_BDSP_012,F3738836C6A346F0,"Des pinces lacèrent violemment l’ennemi, le mettant
+K.O. sur le coup s’il est touché.",0,8548
+13,WAZAINFO_BDSP_013,F3738936C6A348A3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,8720
+14,WAZAINFO_BDSP_014,F3738E36C6A35122,"Une danse frénétique qui exalte l’esprit combatif.
+Augmente beaucoup l’Attaque du lanceur.",4,8996
+15,WAZAINFO_BDSP_015,F3738F36C6A352D5,"Une des capacités secrètes de la Pokémontre.
+Coupe l’ennemi avec des lames ou des griffes.",4,9180
+16,WAZAINFO_BDSP_016,F3738C36C6A34DBC,"Le lanceur bat des ailes pour générer une bourrasque
+qui blesse l’ennemi.",0,9364
+17,WAZAINFO_BDSP_017,F3738D36C6A34F6F,"L’ennemi est frappé par de larges ailes déployées
+pour infliger des dégâts.",0,9512
+18,WAZAINFO_BDSP_018,F3739236C6A357EE,"Éjecte le Pokémon ennemi et le remplace par un autre.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",4,9664
+19,WAZAINFO_BDSP_019,F3739336C6A359A1,"Une des capacités secrètes de la Pokémontre.
+Le lanceur s’envole au premier tour et frappe
+au second.",4,9908
+20,WAZAINFO_BDSP_020,F3702436C6A0672D,"Ligote l’ennemi avec les tentacules ou le corps
+pour l’écraser durant quatre à cinq tours.",0,10112
+21,WAZAINFO_BDSP_021,F3702336C6A0657A,"Fouette l’ennemi avec la queue ou une liane,
+par exemple, pour infliger des dégâts.",0,10296
+22,WAZAINFO_BDSP_022,F3702236C6A063C7,"Fouette l’ennemi avec de fines lianes pour infliger
+des dégâts.",0,10464
+23,WAZAINFO_BDSP_023,F3702136C6A06214,"Écrase l’ennemi avec un énorme pied.
+Peut aussi l’apeurer.",4,10592
+24,WAZAINFO_BDSP_024,F3702036C6A06061,"Deux coups de pied qui frappent l’ennemi deux fois
+d’affilée.",0,10712
+25,WAZAINFO_BDSP_025,F3701F36C6A05EAE,Un coup de pied surpuissant qui frappe l’ennemi.,4,10836
+26,WAZAINFO_BDSP_026,F3701E36C6A05CFB,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,10936
+27,WAZAINFO_BDSP_027,F3701D36C6A05B48,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,11212
+28,WAZAINFO_BDSP_028,F3701C36C6A05995,"Lance du sable au visage de l’ennemi pour baisser
+sa Précision.",0,11488
+29,WAZAINFO_BDSP_029,F3701B36C6A057E2,"Le lanceur donne un coup de tête.
+Peut apeurer l’ennemi.",0,11616
+30,WAZAINFO_BDSP_030,F36C9E36C69D4DA4,"Frappe l’ennemi d’un coup de corne pointue pour
+infliger des dégâts.",0,11732
+31,WAZAINFO_BDSP_031,F36C9F36C69D4F57,"Frappe l’ennemi deux à cinq fois d’affilée avec un bec
+ou une corne, par exemple.",0,11872
+32,WAZAINFO_BDSP_032,F36CA036C69D510A,"Un coup de corne en vrille qui empale l’ennemi,
+le mettant K.O. sur le coup s’il est touché.",4,12036
+33,WAZAINFO_BDSP_033,F36CA136C69D52BD,"Le lanceur charge l’ennemi et le percute de tout
+son poids.",0,12224
+34,WAZAINFO_BDSP_034,F36C9A36C69D46D8,"Le lanceur se laisse tomber sur l’ennemi
+de tout son poids. Peut aussi le paralyser.",0,12344
+35,WAZAINFO_BDSP_035,F36C9B36C69D488B,"Le lanceur ligote l’ennemi avec des lianes ou son corps
+pour l’écraser durant quatre à cinq tours.",0,12516
+36,WAZAINFO_BDSP_036,F36C9C36C69D4A3E,"Une charge violente qui blesse aussi légèrement
+le lanceur.",4,12716
+37,WAZAINFO_BDSP_037,F36C9D36C69D4BF1,"Une attaque furieuse qui dure de deux à trois tours.
+Le lanceur devient confus.",4,12836
+38,WAZAINFO_BDSP_038,F36C9636C69D400C,"Une charge dangereuse et imprudente.
+Blesse aussi gravement le lanceur.",4,12996
+39,WAZAINFO_BDSP_039,F36C9736C69D41BF,"Le lanceur remue son adorable queue pour tromper
+la vigilance de l’ennemi et baisser sa Défense.",0,13140
+40,WAZAINFO_BDSP_040,F3699836C69B0D9B,"Un dard toxique qui transperce l’ennemi.
+Peut aussi l’empoisonner.",4,13336
+41,WAZAINFO_BDSP_041,F3699736C69B0BE8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,13472
+42,WAZAINFO_BDSP_042,F3699A36C69B1101,"Envoie une rafale de dards.
+Peut toucher de deux à cinq fois.",4,13748
+43,WAZAINFO_BDSP_043,F3699936C69B0F4E,"Le lanceur fait les gros yeux à l’ennemi pour l’intimider
+et baisser sa Défense.",0,13872
+44,WAZAINFO_BDSP_044,F3699C36C69B1467,"L’ennemi est mordu par de tranchantes canines.
+Peut l’apeurer.",0,14036
+45,WAZAINFO_BDSP_045,F3699B36C69B12B4,"Le lanceur pousse un cri tout mimi pour tromper
+la vigilance de l’ennemi et baisser son Attaque.",0,14164
+46,WAZAINFO_BDSP_046,F3699E36C69B17CD,"Effraie le Pokémon ennemi et le remplace par un autre.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",4,14360
+47,WAZAINFO_BDSP_047,F3699D36C69B161A,Une berceuse plonge l’ennemi dans un profond sommeil.,4,14608
+48,WAZAINFO_BDSP_048,F3699036C69B0003,"Le lanceur produit d’étranges ondes sonores
+qui rendent la cible confuse.",0,14716
+49,WAZAINFO_BDSP_049,F3698F36C69AFE50,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,14864
+50,WAZAINFO_BDSP_050,F3661236C697F412,"Empêche l’ennemi d’employer à nouveau
+sa dernière attaque. Dure quatre tours.",4,15140
+51,WAZAINFO_BDSP_051,F3661336C697F5C5,"Le lanceur attaque l’ennemi avec un jet d’acide
+corrosif. Peut aussi baisser sa Défense Spéciale.",0,15296
+52,WAZAINFO_BDSP_052,F3661036C697F0AC,"L’ennemi est attaqué par une faible flamme.
+Peut aussi le brûler.",0,15492
+53,WAZAINFO_BDSP_053,F3661136C697F25F,"L’ennemi reçoit un torrent de flammes.
+Peut aussi le brûler.",0,15624
+54,WAZAINFO_BDSP_054,F3660E36C697ED46,"Une brume blanche enveloppe l’équipe du lanceur
+et empêche la réduction des stats pour cinq tours.",4,15748
+55,WAZAINFO_BDSP_055,F3660F36C697EEF9,De l’eau est projetée avec force sur l’ennemi.,0,15948
+56,WAZAINFO_BDSP_056,F3660C36C697E9E0,Un puissant jet d’eau est dirigé sur l’ennemi.,4,16044
+57,WAZAINFO_BDSP_057,F3660D36C697EB93,"Une des capacités secrètes de la Pokémontre.
+Une énorme vague s’abat sur le champ de bataille et
+inflige des dégâts à tous les Pokémon autour du lanceur.",4,16140
+58,WAZAINFO_BDSP_058,F3661A36C69801AA,"Un rayon de glace frappe l’ennemi.
+Peut aussi le geler.",4,16448
+59,WAZAINFO_BDSP_059,F3661B36C698035D,"Une violente tempête de neige s’abat sur l’ennemi.
+Peut aussi le geler.",4,16560
+60,WAZAINFO_BDSP_060,F3628C36C694DA89,"Un étrange rayon frappe l’ennemi.
+Peut aussi le rendre confus.",4,16704
+61,WAZAINFO_BDSP_061,F3628B36C694D8D6,"Des bulles sont envoyées avec puissance sur l’ennemi.
+Peut aussi baisser sa Vitesse.",0,16832
+62,WAZAINFO_BDSP_062,F3628A36C694D723,"Envoie un rayon arc-en-ciel sur l’ennemi.
+Peut aussi baisser son Attaque.",4,17004
+63,WAZAINFO_BDSP_063,F3628936C694D570,"Projette un puissant rayon sur l’ennemi.
+Le lanceur doit se reposer au tour suivant.",0,17152
+64,WAZAINFO_BDSP_064,F3629036C694E155,"Frappe l’ennemi d’un bec pointu ou d’une corne
+pour infliger des dégâts.",0,17324
+65,WAZAINFO_BDSP_065,F3628F36C694DFA2,Une attaque utilisant le bec comme une perceuse.,4,17472
+66,WAZAINFO_BDSP_066,F3628E36C694DDEF,"Le lanceur agrippe l’ennemi et l’écrase au sol.
+Blesse aussi légèrement le lanceur.",0,17572
+67,WAZAINFO_BDSP_067,F3628D36C694DC3C,"Un puissant coup de pied bas qui fauche l’ennemi.
+Il est plus efficace contre les ennemis lourds.",4,17740
+68,WAZAINFO_BDSP_068,F3629436C694E821,"Une riposte qui répond à toute capacité physique
+en infligeant le double de dégâts.",4,17936
+69,WAZAINFO_BDSP_069,F3629336C694E66E,"L’ennemi est projeté grâce au pouvoir de la gravité.
+Inflige des dégâts équivalents au niveau du lanceur.",0,18104
+70,WAZAINFO_BDSP_070,F35F0636C691C100,"Une des capacités secrètes de la Pokémontre.
+Le lanceur cogne l’ennemi de toutes ses forces.",4,18316
+71,WAZAINFO_BDSP_071,F35F0736C691C2B3,"Une attaque qui convertit la moitié des dégâts
+infligés en PV pour le lanceur.",4,18504
+72,WAZAINFO_BDSP_072,F35F0836C691C466,"Une attaque qui convertit la moitié des dégâts
+infligés en PV pour le lanceur.",4,18664
+73,WAZAINFO_BDSP_073,F35F0936C691C619,"Une graine est semée sur l’ennemi.
+À chaque tour, elle lui dérobe des PV
+que le lanceur récupère.",4,18824
+74,WAZAINFO_BDSP_074,F35F0A36C691C7CC,"Le corps du lanceur se développe.
+Augmente l’Attaque et l’Attaque Spéciale.",0,19020
+75,WAZAINFO_BDSP_075,F35F0B36C691C97F,"Des feuilles aiguisées comme des rasoirs entaillent
+l’ennemi. Taux de critiques élevé.",0,19172
+76,WAZAINFO_BDSP_076,F35F0C36C691CB32,"Absorbe la lumière au premier tour et envoie un rayon
+puissant au tour suivant.",4,19348
+77,WAZAINFO_BDSP_077,F35F0D36C691CCE5,Une poudre toxique empoisonne l’ennemi.,4,19508
+78,WAZAINFO_BDSP_078,F35F0E36C691CE98,"Le lanceur répand sur l’ennemi une poudre
+qui le paralyse.",0,19588
+79,WAZAINFO_BDSP_079,F35F0F36C691D04B,"Le lanceur répand une poudre soporifique
+qui endort la cible.",0,19708
+80,WAZAINFO_BDSP_080,F3922036C6BD46C7,"Le lanceur attaque en projetant des pétales pendant
+deux à trois tours avant de céder à la confusion.",0,19832
+81,WAZAINFO_BDSP_081,F3921F36C6BD4514,"Le lanceur crache de la soie pour ligoter l’ennemi
+et beaucoup baisser sa Vitesse.",0,20036
+82,WAZAINFO_BDSP_082,F3922236C6BD4A2D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,20204
+83,WAZAINFO_BDSP_083,F3922136C6BD487A,"Un tourbillon de flammes emprisonne l’ennemi
+pendant quatre à cinq tours.",4,20480
+84,WAZAINFO_BDSP_084,F3921C36C6BD3FFB,"Une décharge électrique tombe sur l’ennemi.
+Peut aussi le paralyser.",4,20628
+85,WAZAINFO_BDSP_085,F3921B36C6BD3E48,"Une grosse décharge électrique tombe sur l’ennemi.
+Peut aussi le paralyser.",4,20768
+86,WAZAINFO_BDSP_086,F3921E36C6BD4361,"Un faible choc électrique frappe l’ennemi.
+Si l’attaque le touche, celui-ci est paralysé.",4,20920
+87,WAZAINFO_BDSP_087,F3921D36C6BD41AE,"La foudre tombe sur l’ennemi pour lui infliger
+des dégâts. Peut aussi le paralyser.",0,21100
+88,WAZAINFO_BDSP_088,F3921836C6BD392F,Le lanceur lâche une pierre sur l’ennemi.,0,21268
+89,WAZAINFO_BDSP_089,F3921736C6BD377C,"Le lanceur provoque un tremblement de terre
+touchant tous les Pokémon autour de lui.",0,21352
+90,WAZAINFO_BDSP_090,F38E9A36C6BA2D3E,"Le lanceur fait tomber l’ennemi dans une crevasse.
+Si cette attaque réussit, elle met K.O. sur le coup.",0,21524
+91,WAZAINFO_BDSP_091,F38E9B36C6BA2EF1,"Le lanceur creuse un tunnel au premier tour et frappe
+au second. Permet également de sortir d’une grotte,
+entre autres.",0,21732
+92,WAZAINFO_BDSP_092,F38E9836C6BA29D8,"Empoisonne gravement l’ennemi.
+Les dégâts dus au poison augmentent à chaque tour.",4,21972
+93,WAZAINFO_BDSP_093,F38E9936C6BA2B8B,"Une faible vague télékinétique frappe l’ennemi.
+Peut aussi le plonger dans la confusion.",4,22136
+94,WAZAINFO_BDSP_094,F38E9E36C6BA340A,"Une puissante force télékinétique frappe l’ennemi.
+Peut aussi faire baisser sa Défense Spéciale.",4,22316
+95,WAZAINFO_BDSP_095,F38E9F36C6BA35BD,"Le lanceur hypnotise l’ennemi pour le plonger
+dans un profond sommeil.",0,22512
+96,WAZAINFO_BDSP_096,F38E9C36C6BA30A4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,22656
+97,WAZAINFO_BDSP_097,F38E9D36C6BA3257,"Le lanceur se relaxe et allège son corps pour beaucoup
+augmenter sa Vitesse.",0,22932
+98,WAZAINFO_BDSP_098,F38E9236C6BA1FA6,"Le lanceur fonce sur l’ennemi si rapidement qu’on
+parvient à peine à le discerner. Frappe en priorité.",0,23088
+99,WAZAINFO_BDSP_099,F38E9336C6BA2159,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,23296
+100,WAZAINFO_BDSP_100,EA60F536C1623674,"Le Pokémon change de place avec un autre de l’équipe.
+Si un Pokémon sauvage l’utilise, celui-ci fuit le combat.
+Peut vous téléporter au dernier Centre Pokémon visité.",0,23572
+101,WAZAINFO_BDSP_101,EA60F636C1623827,"Le lanceur invoque un mirage.
+Inflige des dégâts équivalents au niveau du lanceur.",0,23908
+102,WAZAINFO_BDSP_102,EA60F736C16239DA,"Le lanceur copie la dernière capacité utilisée par
+la cible et la conserve tant qu’il reste au combat.",0,24076
+103,WAZAINFO_BDSP_103,EA60F836C1623B8D,"Le lanceur émet un son strident qui baisse
+beaucoup la Défense de l’ennemi.",0,24284
+104,WAZAINFO_BDSP_104,EA60F136C1622FA8,"Le lanceur se déplace si vite qu’il crée des copies
+illusoires de lui-même, augmentant son Esquive.",0,24436
+105,WAZAINFO_BDSP_105,EA60F236C162315B,"Un soin qui permet au lanceur de récupérer
+jusqu’à la moitié de ses PV max.",4,24636
+106,WAZAINFO_BDSP_106,EA60F336C162330E,"Le lanceur contracte tous ses muscles pour augmenter
+sa Défense.",0,24788
+107,WAZAINFO_BDSP_107,EA60F436C16234C1,"Le lanceur comprime son corps pour se faire tout petit
+et beaucoup augmenter son Esquive.",0,24920
+108,WAZAINFO_BDSP_108,EA60ED36C16228DC,"Le lanceur disperse un nuage d’encre ou de fumée.
+Réduit la Précision de l’ennemi.",0,25100
+109,WAZAINFO_BDSP_109,EA60EE36C1622A8F,"Un rayon sinistre qui plonge l’ennemi dans un état
+de confusion.",4,25268
+110,WAZAINFO_BDSP_110,EA63FB36C164767D,"Le lanceur se recroqueville dans sa carapace,
+ce qui augmente sa Défense.",0,25400
+111,WAZAINFO_BDSP_111,EA63FA36C16474CA,"Le lanceur s’enroule pour cacher ses points faibles,
+ce qui augmente sa Défense.",0,25548
+112,WAZAINFO_BDSP_112,EA63F936C1647317,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,25712
+113,WAZAINFO_BDSP_113,EA63F836C1647164,"Crée un fabuleux mur de lumière qui réduit les dégâts
+causés par les capacités spéciales pendant cinq tours.",0,25988
+114,WAZAINFO_BDSP_114,EA63F736C1646FB1,"Crée un brouillard qui annule les changements
+de stats de tous les Pokémon au combat.",0,26208
+115,WAZAINFO_BDSP_115,EA63F636C1646DFE,"Crée un fabuleux mur de lumière qui réduit les dégâts
+causés par les capacités physiques pendant cinq tours.",0,26380
+116,WAZAINFO_BDSP_116,EA63F536C1646C4B,"Le lanceur prend une profonde inspiration et se
+concentre pour augmenter son taux de critiques.",0,26600
+117,WAZAINFO_BDSP_117,EA63F436C1646A98,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,26792
+118,WAZAINFO_BDSP_118,EA63F336C16468E5,"Le lanceur agite un doigt et stimule son cerveau pour
+utiliser presque n’importe quelle capacité au hasard.",0,27068
+119,WAZAINFO_BDSP_119,EA63F236C1646732,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,27284
+120,WAZAINFO_BDSP_120,EA676136C16759A6,"Le lanceur explose en blessant tous les Pokémon
+autour de lui. Le lanceur tombe K.O.",0,27560
+121,WAZAINFO_BDSP_121,EA676236C1675B59,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,27732
+122,WAZAINFO_BDSP_122,EA675F36C1675640,"Un grand coup de langue qui inflige des dégâts
+à l’ennemi. Peut aussi le paralyser.",4,28008
+123,WAZAINFO_BDSP_123,EA676036C16757F3,"Le lanceur attaque à l’aide d’une éruption de gaz
+répugnants. Peut aussi empoisonner l’ennemi.",0,28176
+124,WAZAINFO_BDSP_124,EA676536C1676072,"Des détritus toxiques sont projetés sur l’ennemi.
+Peut aussi l’empoisonner.",0,28368
+125,WAZAINFO_BDSP_125,EA676636C1676225,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,28520
+126,WAZAINFO_BDSP_126,EA676336C1675D0C,"Un déluge de flammes ardentes submerge l’ennemi.
+Peut aussi le brûler.",4,28796
+127,WAZAINFO_BDSP_127,EA676436C1675EBF,"Une des capacités secrètes de la Pokémontre.
+Le lanceur charge l’ennemi à une vitesse remarquable,
+ce qui peut l’apeurer.",4,28940
+128,WAZAINFO_BDSP_128,EA676936C167673E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,29184
+129,WAZAINFO_BDSP_129,EA676A36C16768F1,"Le lanceur envoie des rayons d’étoiles.
+Touche toujours l’ennemi.",0,29460
+130,WAZAINFO_BDSP_130,EA6AE736C16A732F,"Le lanceur baisse la tête pour augmenter sa Défense
+au premier tour et percuter l’ennemi au second.",0,29592
+131,WAZAINFO_BDSP_131,EA6AE636C16A717C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,29792
+132,WAZAINFO_BDSP_132,EA6AE936C16A7695,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,30068
+133,WAZAINFO_BDSP_133,EA6AE836C16A74E2,"Le lanceur fait le vide dans son esprit pour oublier
+ses soucis. Augmente beaucoup sa Défense Spéciale.",0,30344
+134,WAZAINFO_BDSP_134,EA6AE336C16A6C63,"Le lanceur distrait l’ennemi en pliant une cuillère,
+ce qui baisse sa Précision.",0,30552
+135,WAZAINFO_BDSP_135,EA6AE236C16A6AB0,"Le lanceur récupère jusqu’à la moitié de ses PV max.
+En dehors des combats, permet de transférer des PV
+du lanceur à un allié.",0,30716
+136,WAZAINFO_BDSP_136,EA6AE536C16A6FC9,"Le lanceur s’élance pour effectuer un coup de genou
+sauté. S’il échoue, le lanceur se blesse.",0,30972
+137,WAZAINFO_BDSP_137,EA6AE436C16A6E16,"Le lanceur intimide l’ennemi grâce à son regard
+terrifiant pour le paralyser.",0,31160
+138,WAZAINFO_BDSP_138,EA6AEF36C16A80C7,"Le lanceur mange le rêve de l’ennemi endormi
+et récupère en PV la moitié des dégâts infligés.",0,31316
+139,WAZAINFO_BDSP_139,EA6AEE36C16A7F14,"Un nuage de gaz toxique est projeté au visage
+de l’ennemi pour l’empoisonner.",4,31504
+140,WAZAINFO_BDSP_140,EA535D36C156A9D0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,31660
+141,WAZAINFO_BDSP_141,EA535E36C156AB83,"Une attaque qui aspire le sang de l’ennemi.
+La moitié des dégâts sont convertis en PV
+pour le lanceur.",4,31936
+142,WAZAINFO_BDSP_142,EA535F36C156AD36,"Le lanceur fait un bisou à l’ennemi en prenant
+une mine effrayante. Endort l’ennemi.",0,32144
+143,WAZAINFO_BDSP_143,EA536036C156AEE9,"Une attaque en deux tours au taux de critiques élevé.
+Peut aussi apeurer l’ennemi.",4,32316
+144,WAZAINFO_BDSP_144,EA536136C156B09C,"Le lanceur devient une copie de sa cible et obtient
+la même palette de capacités.",0,32484
+145,WAZAINFO_BDSP_145,EA536236C156B24F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,32648
+146,WAZAINFO_BDSP_146,EA536336C156B402,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,32924
+147,WAZAINFO_BDSP_147,EA536436C156B5B5,Le lanceur répand un nuage de spores qui endort.,0,33200
+148,WAZAINFO_BDSP_148,EA536536C156B768,"Une explosion lumineuse qui baisse la Précision
+de l’ennemi.
+Permet aussi d’éclairer les grottes trop sombres.",4,33300
+149,WAZAINFO_BDSP_149,EA536636C156B91B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,33524
+150,WAZAINFO_BDSP_150,EA566336C158E9D9,"Le lanceur barbote et éclabousse les environs.
+Cette capacité n’a aucun effet.",0,33800
+151,WAZAINFO_BDSP_151,EA566236C158E826,"Le lanceur modifie sa structure moléculaire pour
+se liquéfier et beaucoup augmenter sa Défense.",0,33960
+152,WAZAINFO_BDSP_152,EA566136C158E673,"Une grande pince martèle l’ennemi.
+Taux de critiques élevé.",4,34152
+153,WAZAINFO_BDSP_153,EA566036C158E4C0,"Le lanceur explose et inflige des dégâts à tous
+les Pokémon autour de lui. Met K.O. le lanceur.",0,34272
+154,WAZAINFO_BDSP_154,EA566736C158F0A5,"L’ennemi est lacéré par des faux ou des griffes
+de deux à cinq fois d’affilée.",0,34464
+155,WAZAINFO_BDSP_155,EA566636C158EEF2,"Le lanceur projette son os comme un boomerang.
+Cette attaque frappe à l’aller et au retour.",0,34624
+156,WAZAINFO_BDSP_156,EA566536C158ED3F,"Le lanceur regagne tous ses PV et soigne ses altérations
+de statut, puis il dort pendant deux tours.",0,34808
+157,WAZAINFO_BDSP_157,EA566436C158EB8C,"Envoie de gros rochers sur l’ennemi pour infliger
+des dégâts. Peut aussi l’apeurer.",4,35012
+158,WAZAINFO_BDSP_158,EA566B36C158F771,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,35180
+159,WAZAINFO_BDSP_159,EA566A36C158F5BE,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,35456
+160,WAZAINFO_BDSP_160,EA59E936C15C0362,"Le lanceur change de type pour prendre celui
+de la première capacité de sa liste.",0,35732
+161,WAZAINFO_BDSP_161,EA59EA36C15C0515,"Le lanceur envoie trois boules d’énergie simultanément.
+Peut aussi paralyser, brûler ou geler l’ennemi.",0,35896
+162,WAZAINFO_BDSP_162,EA59E736C15BFFFC,"Une vilaine morsure d’incisives qui réduit de moitié
+les PV de l’ennemi.",4,36104
+163,WAZAINFO_BDSP_163,EA59E836C15C01AF,"Un coup de griffe ou autre tranche l’ennemi.
+Taux de critiques élevé.",4,36252
+164,WAZAINFO_BDSP_164,EA59E536C15BFC96,"Le lanceur crée un clone en sacrifiant quelques PV.
+Ce clone sert de leurre.",0,36392
+165,WAZAINFO_BDSP_165,EA59E636C15BFE49,"Une attaque désespérée, utilisée quand le lanceur
+n’a plus de PP. Le blesse aussi légèrement.",4,36548
+166,WAZAINFO_BDSP_166,EA59E336C15BF930,"Le lanceur apprend la dernière capacité utilisée
+par la cible. Gribouille disparaît après utilisation.",0,36736
+167,WAZAINFO_BDSP_167,EA59E436C15BFAE3,"Une salve de un à trois coups de pied dont la puissance
+augmente à chaque coup porté.",4,36944
+168,WAZAINFO_BDSP_168,EA59F136C15C10FA,"Le lanceur attaque la cible et vole son objet.
+Le lanceur ne peut rien voler s’il tient déjà un objet.",0,37116
+169,WAZAINFO_BDSP_169,EA59F236C15C12AD,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,37324
+170,WAZAINFO_BDSP_170,EA5D6F36C15F1CEB,"Le lanceur analyse les mouvements de l’ennemi
+pour être sûr de toucher au coup suivant.",0,37600
+171,WAZAINFO_BDSP_171,EA5D6E36C15F1B38,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,37776
+172,WAZAINFO_BDSP_172,EA5D7136C15F2051,"Le lanceur s’entoure de feu et charge l’ennemi.
+Peut aussi le brûler.",0,38052
+173,WAZAINFO_BDSP_173,EA5D7036C15F1E9E,"Une attaque qui ne fonctionne que si le lanceur
+est endormi. Le boucan peut aussi apeurer l’ennemi.",4,38192
+174,WAZAINFO_BDSP_174,EA5D7336C15F23B7,"Une capacité à l’effet différent selon que le lanceur
+est un Pokémon Spectre ou non.",4,38392
+175,WAZAINFO_BDSP_175,EA5D7236C15F2204,"Le lanceur attaque en gigotant dans tous les sens.
+Plus ses PV sont bas, plus l’attaque est puissante.",0,38564
+176,WAZAINFO_BDSP_176,EA5D7536C15F271D,"Le lanceur change de type pour être résistant au type
+de la dernière attaque lancée par sa cible.",0,38772
+177,WAZAINFO_BDSP_177,EA5D7436C15F256A,"Le lanceur projette une tornade sur l’ennemi
+pour infliger des dégâts. Taux de critiques élevé.",0,38968
+178,WAZAINFO_BDSP_178,EA5D6736C15F0F53,"Le lanceur libère des spores cotonneuses qui collent
+à l’ennemi et baissent beaucoup sa Vitesse.",0,39160
+179,WAZAINFO_BDSP_179,EA5D6636C15F0DA0,"Le lanceur ne retient plus ses coups.
+Plus ses PV sont bas, plus l’attaque est puissante.",0,39356
+180,WAZAINFO_BDSP_180,EA7BE536C178E2FC,"Le lanceur exprime son ressentiment en retirant 4 PP
+de la dernière capacité de l’ennemi.",0,39536
+181,WAZAINFO_BDSP_181,EA7BE636C178E4AF,"Le lanceur projette de la neige poudreuse.
+Peut aussi geler l’ennemi.",0,39716
+182,WAZAINFO_BDSP_182,EA7BE736C178E662,"Le lanceur se protège de toutes les attaques.
+Peut échouer si utilisée plusieurs fois de suite.",0,39856
+183,WAZAINFO_BDSP_183,EA7BE836C178E815,"Coup de poing fulgurant.
+Frappe en priorité.",0,40048
+184,WAZAINFO_BDSP_184,EA7BE136C178DC30,"Le lanceur fait une grimace qui effraie l’ennemi
+et réduit beaucoup sa Vitesse.",0,40140
+185,WAZAINFO_BDSP_185,EA7BE236C178DDE3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,40300
+186,WAZAINFO_BDSP_186,EA7BE336C178DF96,"Le lanceur envoie un bisou si mignon et désarmant
+qu’il plonge l’ennemi dans la confusion.",0,40576
+187,WAZAINFO_BDSP_187,EA7BE436C178E149,"Améliore l’Attaque au maximum en sacrifiant la moitié
+des PV max.",4,40760
+188,WAZAINFO_BDSP_188,EA7BED36C178F094,"Des détritus toxiques sont projetés sur l’ennemi.
+Peut aussi l’empoisonner.",0,40892
+189,WAZAINFO_BDSP_189,EA7BEE36C178F247,"Le lanceur envoie de la boue au visage de l’ennemi
+pour infliger des dégâts et baisser sa Précision.",0,41044
+190,WAZAINFO_BDSP_190,EA7F6B36C17BFC85,"Le lanceur attaque en projetant de l’encre au visage
+de l’ennemi. Peut aussi baisser sa Précision.",0,41248
+191,WAZAINFO_BDSP_191,EA7F6A36C17BFAD2,"Le lanceur disperse des piquants sur le sol pour blesser
+tout ennemi qui entre au combat.",0,41448
+192,WAZAINFO_BDSP_192,EA7F6936C17BF91F,"Un boulet de canon électrifié qui inflige des dégâts
+et paralyse l’ennemi.",4,41628
+193,WAZAINFO_BDSP_193,EA7F6836C17BF76C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,41780
+194,WAZAINFO_BDSP_194,EA7F6736C17BF5B9,"Si un ennemi porte un coup fatal au lanceur après qu’il
+a activé cette capacité, ils sont tous les deux mis K.O.
+La capacité échoue si elle est immédiatement réutilisée.",0,42056
+195,WAZAINFO_BDSP_195,EA7F6636C17BF406,"Tout Pokémon qui entend ce requiem est K.O.
+dans trois tours à moins qu’il ne soit remplacé.",0,42396
+196,WAZAINFO_BDSP_196,EA7F6536C17BF253,"Une bourrasque de vent froid blesse l’ennemi.
+Réduit aussi sa Vitesse.",4,42584
+197,WAZAINFO_BDSP_197,EA7F6436C17BF0A0,"Le lanceur se protège de toutes les attaques.
+Peut échouer si utilisée plusieurs fois de suite.",0,42728
+198,WAZAINFO_BDSP_198,EA7F7336C17C0A1D,"Le lanceur frappe l’ennemi avec un os
+de deux à cinq fois d’affilée.",0,42920
+199,WAZAINFO_BDSP_199,EA7F7236C17C086A,Verrouille l’ennemi pour ne pas le rater au tour suivant.,0,43060
+200,WAZAINFO_BDSP_200,05A36636D12EF515,"Le lanceur enrage et attaque pendant deux ou trois tours
+avant de devenir confus.",0,43176
+201,WAZAINFO_BDSP_201,05A36536D12EF362,"Une tempête de sable blesse tous les Pokémon pendant
+cinq tours, sauf ceux de type Roche, Sol ou Acier.
+Augmente la Défense Spéciale des Pokémon Roche.",4,43340
+202,WAZAINFO_BDSP_202,05A36436D12EF1AF,"Une attaque qui convertit la moitié des dégâts
+infligés en PV pour le lanceur.",4,43644
+203,WAZAINFO_BDSP_203,05A36336D12EEFFC,"Le lanceur résiste aux attaques avec 1 PV.
+Peut échouer si utilisée plusieurs fois de suite.",0,43804
+204,WAZAINFO_BDSP_204,05A36236D12EEE49,"Le lanceur fait les yeux doux pour berner l’ennemi
+et beaucoup réduire son Attaque.",0,43992
+205,WAZAINFO_BDSP_205,05A36136D12EEC96,"Un rocher roule sur l’ennemi pendant cinq tours.
+L’attaque gagne en puissance à chaque coup.",4,44160
+206,WAZAINFO_BDSP_206,05A36036D12EEAE3,"Le lanceur retient ses coups pour que l’ennemi
+garde au moins 1 PV et ne tombe pas K.O.",0,44348
+207,WAZAINFO_BDSP_207,05A35F36D12EE930,"Fait enrager la cible et la plonge dans la confusion,
+mais augmente beaucoup son Attaque.",0,44524
+208,WAZAINFO_BDSP_208,05A36E36D12F02AD,"Le lanceur récupère jusqu’à la moitié de ses PV max.
+En dehors des combats, permet de transférer des PV
+du lanceur à un allié.",0,44704
+209,WAZAINFO_BDSP_209,05A36D36D12F00FA,"Lance une charge électrique sur l’ennemi.
+Peut aussi le paralyser.",0,44960
+210,WAZAINFO_BDSP_210,059FE036D12BDB8C,"Un coup de faux ou de griffe dont la force augmente
+quand il touche plusieurs fois d’affilée.",4,45096
+211,WAZAINFO_BDSP_211,059FE136D12BDD3F,"Le lanceur frappe l’ennemi avec des ailes d’acier.
+Peut aussi augmenter la Défense du lanceur.",0,45284
+212,WAZAINFO_BDSP_212,059FE236D12BDEF2,"Le lanceur pétrifie l’ennemi en lui lançant un regard noir.
+Il devient incapable de s’enfuir.",0,45476
+213,WAZAINFO_BDSP_213,059FE336D12BE0A5,"Si l’ennemi est du sexe opposé, il tombe amoureux
+et rechigne alors à attaquer.",0,45664
+214,WAZAINFO_BDSP_214,059FDC36D12BD4C0,"Le lanceur utilise une de ses capacités au hasard
+pendant qu’il dort.",0,45824
+215,WAZAINFO_BDSP_215,059FDD36D12BD673,"Carillon apaisant qui soigne les altérations de statut
+de tous les Pokémon de l’équipe.",0,45964
+216,WAZAINFO_BDSP_216,059FDE36D12BD826,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,46140
+217,WAZAINFO_BDSP_217,059FDF36D12BD9D9,"Le lanceur attaque en offrant un cadeau piégé à la cible.
+Peut cependant restaurer certains de ses PV.",0,46416
+218,WAZAINFO_BDSP_218,059FE836D12BE924,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,46624
+219,WAZAINFO_BDSP_219,059FE936D12BEAD7,"Crée un champ protecteur qui empêche toutes
+les altérations de statut pendant cinq tours.",0,46900
+220,WAZAINFO_BDSP_220,05AA7236D1352827,"Le lanceur ajoute ses PV à ceux de sa cible
+et les répartit équitablement.",0,47080
+221,WAZAINFO_BDSP_221,05AA7136D1352674,"Le lanceur génère un feu mystique d’une intensité
+redoutable pour attaquer l’ennemi.
+Peut aussi le brûler.",0,47232
+222,WAZAINFO_BDSP_222,05AA7436D1352B8D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,47448
+223,WAZAINFO_BDSP_223,05AA7336D13529DA,"Le lanceur rassemble ses forces et envoie un coup
+de poing à l’ennemi. Rend ce dernier confus.",0,47724
+224,WAZAINFO_BDSP_224,05AA6E36D135215B,"Le lanceur utilise ses gigantesques cornes pour
+charger l’ennemi.",0,47916
+225,WAZAINFO_BDSP_225,05AA6D36D1351FA8,"Le lanceur souffle fort sur l’ennemi pour lui infliger
+des dégâts. Peut aussi le paralyser.",0,48048
+226,WAZAINFO_BDSP_226,05AA7036D13524C1,"Le lanceur échange sa place et tout changement
+de stat avec un Pokémon de l’équipe.",0,48232
+227,WAZAINFO_BDSP_227,05AA6F36D135230E,"Oblige l’ennemi à répéter la dernière capacité utilisée
+durant trois tours.",4,48400
+228,WAZAINFO_BDSP_228,05AA6A36D1351A8F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,48552
+229,WAZAINFO_BDSP_229,05AA6936D13518DC,"Une attaque tournoyante pouvant aussi annuler,
+par exemple, Étreinte, Ligotage ou Vampigraine.
+Augmente également la Vitesse du lanceur.",4,48828
+230,WAZAINFO_BDSP_230,05A6EC36D1320E9E,"Réduit beaucoup l’Esquive de l’ennemi. Lorsqu’elle
+est utilisée dans des lieux comme les hautes herbes,
+cette capacité attire aussi les Pokémon sauvages.",0,49104
+231,WAZAINFO_BDSP_231,05A6ED36D1321051,"Attaque l’ennemi avec une queue de fer.
+Peut aussi baisser sa Défense.",4,49412
+232,WAZAINFO_BDSP_232,05A6EA36D1320B38,"Attaque avec des griffes d’acier.
+Peut aussi augmenter l’Attaque du lanceur.",4,49556
+233,WAZAINFO_BDSP_233,05A6EB36D1320CEB,"Le lanceur porte son coup en dernier.
+En échange, cette capacité n’échoue jamais.",0,49712
+234,WAZAINFO_BDSP_234,05A6F036D132156A,"Un soin qui restaure des PV au lanceur.
+Son efficacité varie en fonction de la météo.",4,49876
+235,WAZAINFO_BDSP_235,05A6F136D132171D,"Un soin qui restaure des PV au lanceur.
+Son efficacité varie en fonction de la météo.",4,50048
+236,WAZAINFO_BDSP_236,05A6EE36D1321204,"Un soin qui restaure des PV au lanceur.
+Son efficacité varie en fonction de la météo.",4,50220
+237,WAZAINFO_BDSP_237,05A6EF36D13213B7,"Une attaque dont le type dépend du Pokémon
+qui l’utilise.",4,50392
+238,WAZAINFO_BDSP_238,05A6E436D1320106,"Le lanceur délivre un coup double en croisant
+les avant-bras. Taux de critiques élevé.",0,50508
+239,WAZAINFO_BDSP_239,05A6E536D13202B9,"Déclenche un terrible ouragan sur l’ennemi.
+Peut aussi l’apeurer.",0,50684
+240,WAZAINFO_BDSP_240,0595EE36D1239ED1,"Invoque de fortes pluies qui durent cinq tours,
+augmentant la puissance des capacités de type Eau
+et baissant celle des capacités de type Feu.",4,50816
+241,WAZAINFO_BDSP_241,0595ED36D1239D1E,"Fait briller le soleil pendant cinq tours, augmentant
+la puissance des capacités de type Feu et baissant
+celle des capacités de type Eau.",0,51104
+242,WAZAINFO_BDSP_242,0595EC36D1239B6B,"Le lanceur mord l’ennemi de ses crocs pointus.
+Peut aussi baisser sa Défense.",0,51380
+243,WAZAINFO_BDSP_243,0595EB36D12399B8,"Une riposte qui contre n’importe quelle capacité
+spéciale en infligeant le double des dégâts subis.",4,51536
+244,WAZAINFO_BDSP_244,0595F236D123A59D,"Une autohypnose qui permet au lanceur de copier
+les changements de stats de la cible.",4,51736
+245,WAZAINFO_BDSP_245,0595F136D123A3EA,"Le lanceur charge à une vitesse renversante.
+Frappe en priorité.",0,51908
+246,WAZAINFO_BDSP_246,0595F036D123A237,"Une attaque préhistorique qui peut augmenter
+toutes les stats du lanceur d’un seul coup.",4,52040
+247,WAZAINFO_BDSP_247,0595EF36D123A084,"Projette une grande ombre sur l’ennemi.
+Peut aussi faire baisser sa Défense Spéciale.",0,52220
+248,WAZAINFO_BDSP_248,0595E636D1239139,"De l’énergie psychique vient frapper l’ennemi
+deux tours après l’utilisation de cette capacité.",0,52392
+249,WAZAINFO_BDSP_249,0595E536D1238F86,"Une des capacités secrètes de la Pokémontre.
+Porte un coup de poing à l’ennemi, ce qui peut baisser
+sa Défense.",4,52584
+250,WAZAINFO_BDSP_250,05926836D1208548,"Piège l’ennemi dans une trombe d’eau pendant
+quatre à cinq tours.",0,52808
+251,WAZAINFO_BDSP_251,05926936D12086FB,"Le lanceur appelle tous les Pokémon de son équipe
+à attaquer. Plus ils sont nombreux, plus il y a d’attaques.",0,52940
+252,WAZAINFO_BDSP_252,05926A36D12088AE,"Permet de frapper en priorité et apeure l’ennemi.
+Ne fonctionne qu’au premier tour.",0,53160
+253,WAZAINFO_BDSP_253,05926B36D1208A61,"Le lanceur attaque en rugissant durant trois tours.
+Pendant ce temps, aucun Pokémon ne peut s’endormir.",0,53328
+254,WAZAINFO_BDSP_254,05926C36D1208C14,"Le lanceur accumule de la puissance et augmente
+sa Défense et sa Défense Spéciale.
+Peut être utilisée trois fois.",0,53536
+255,WAZAINFO_BDSP_255,05926D36D1208DC7,"Libère dans une attaque la puissance précédemment
+accumulée avec Stockage.",0,53764
+256,WAZAINFO_BDSP_256,05926E36D1208F7A,"Le lanceur absorbe la puissance accumulée
+avec Stockage pour restaurer ses PV.",0,53916
+257,WAZAINFO_BDSP_257,05926F36D120912D,"Le lanceur provoque une vague de chaleur.
+Peut aussi brûler l’ennemi.",0,54076
+258,WAZAINFO_BDSP_258,05926036D12077B0,"Invoque une tempête de grêle qui dure cinq tours.
+Blesse tous les Pokémon, sauf ceux de type Glace.",4,54216
+259,WAZAINFO_BDSP_259,05926136D1207963,"Le lanceur irrite l’ennemi pour l’empêcher d’utiliser
+la même capacité deux fois de suite.",0,54416
+260,WAZAINFO_BDSP_260,059CDA36D1299B83,"Rend la cible confuse, mais augmente
+son Attaque Spéciale.",0,54600
+261,WAZAINFO_BDSP_261,059CD936D12999D0,"Lance un bouquet de flammes maléfiques à l’ennemi
+pour lui infliger une brûlure.",0,54720
+262,WAZAINFO_BDSP_262,059CDC36D1299EE9,"Le lanceur est mis K.O., mais l’Attaque et
+l’Attaque Spéciale de l’ennemi baissent beaucoup.",0,54884
+263,WAZAINFO_BDSP_263,059CDB36D1299D36,"Une attaque dont la puissance double lorsque
+le lanceur est empoisonné, paralysé ou brûlé.",4,55072
+264,WAZAINFO_BDSP_264,059CDE36D129A24F,"Le lanceur se concentre avant d’attaquer.
+Échoue s’il est touché avant d’avoir frappé.",0,55256
+265,WAZAINFO_BDSP_265,059CDD36D129A09C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,55432
+266,WAZAINFO_BDSP_266,059CE036D129A5B5,"Attire l’attention des ennemis pour les forcer
+à n’attaquer que le lanceur.",4,55708
+267,WAZAINFO_BDSP_267,059CDF36D129A402,"Une attaque qui tire sa force de la nature.
+Son type varie selon le terrain.",4,55860
+268,WAZAINFO_BDSP_268,059CE236D129A91B,"Le lanceur concentre sa puissance pour sa prochaine
+attaque Électrik. Augmente sa Défense Spéciale.",0,56016
+269,WAZAINFO_BDSP_269,059CE136D129A768,"Provoque l’ennemi. L’oblige à n’utiliser que des attaques
+pendant trois tours.",0,56216
+270,WAZAINFO_BDSP_270,05997436D126B85A,"Une capacité qui augmente la puissance d’attaque
+d’un allié.",4,56376
+271,WAZAINFO_BDSP_271,05997536D126BA0D,"Le lanceur prend la cible au dépourvu et l’oblige
+à échanger son objet contre le sien.",0,56500
+272,WAZAINFO_BDSP_272,05997236D126B4F4,Imite la cible et copie son talent.,4,56676
+273,WAZAINFO_BDSP_273,05997336D126B6A7,"Un vœu qui permet au lanceur ou au Pokémon
+entrant sur le terrain au tour suivant de récupérer
+la moitié des PV max du lanceur.",4,56748
+274,WAZAINFO_BDSP_274,05997036D126B18E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,57004
+275,WAZAINFO_BDSP_275,05997136D126B341,"Le lanceur plante ses racines et récupère des PV
+à chaque tour. Une fois enraciné, il ne peut plus fuir.",0,57280
+276,WAZAINFO_BDSP_276,05996E36D126AE28,"Une attaque puissante, mais qui baisse l’Attaque
+et la Défense du lanceur.",4,57492
+277,WAZAINFO_BDSP_277,05996F36D126AFDB,"Une barrière qui renvoie les capacités comme
+Vampigraine et celles affectant le statut et les stats.",4,57644
+278,WAZAINFO_BDSP_278,05996C36D126AAC2,"Recycle un objet tenu à usage unique déjà utilisé
+lors du combat pour pouvoir l’utiliser à nouveau.",0,57848
+279,WAZAINFO_BDSP_279,05996D36D126AC75,"Une attaque deux fois plus puissante si le lanceur
+a été blessé par l’ennemi durant ce tour.",4,58048
+280,WAZAINFO_BDSP_280,05887636D118488D,"Le lanceur attaque avec le tranchant de la main.
+Permet aussi de briser les barrières
+comme Mur Lumière et Protection.",0,58236
+281,WAZAINFO_BDSP_281,05887536D11846DA,"Fait bâiller l’ennemi, qui s’endort au tour suivant.",0,58476
+282,WAZAINFO_BDSP_282,05887436D1184527,"Fait plus de dégâts aux cibles qui tiennent un objet.
+De plus, fait tomber cet objet et empêche la cible
+de l’utiliser jusqu’à la fin du combat.",0,58584
+283,WAZAINFO_BDSP_283,05887336D1184374,"Une attaque qui réduit les PV de l’ennemi au niveau
+des PV du lanceur.",4,58876
+284,WAZAINFO_BDSP_284,05887236D11841C1,"Le lanceur laisse exploser sa colère.
+Plus ses PV sont bas, moins l’attaque est puissante.",0,59020
+285,WAZAINFO_BDSP_285,05887136D118400E,"Le lanceur utilise ses pouvoirs psychiques pour échanger
+son talent avec la cible.",0,59204
+286,WAZAINFO_BDSP_286,05887036D1183E5B,"Si l’ennemi et le lanceur ont des capacités en commun,
+l’ennemi ne pourra pas les utiliser.",0,59372
+287,WAZAINFO_BDSP_287,05886F36D1183CA8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,59556
+288,WAZAINFO_BDSP_288,05886E36D1183AF5,"Si le lanceur est mis K.O., sa rancune épuise les PP
+de la capacité utilisée par l’ennemi pour le mettre K.O.",0,59832
+289,WAZAINFO_BDSP_289,05886D36D1183942,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,60052
+290,WAZAINFO_BDSP_290,0584F036D1152F04,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,60328
+291,WAZAINFO_BDSP_291,0584F136D11530B7,"Le lanceur plonge sous l’eau au premier tour
+et frappe au second.",0,60604
+292,WAZAINFO_BDSP_292,0584F236D115326A,"Un déluge de coups adressés avec la paume qui frappe
+de deux à cinq fois d’affilée.",4,60736
+293,WAZAINFO_BDSP_293,0584F336D115341D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,60904
+294,WAZAINFO_BDSP_294,0584EC36D1152838,"Le lanceur regarde un flash lumineux fixement.
+Augmente énormément son Attaque Spéciale.",0,61180
+295,WAZAINFO_BDSP_295,0584ED36D11529EB,"Le lanceur libère un éclair lumineux.
+Peut aussi baisser la Défense Spéciale de l’ennemi.",0,61360
+296,WAZAINFO_BDSP_296,0584EE36D1152B9E,"Une bulle de brume inflige des dégâts à l’ennemi.
+Peut aussi réduire son Attaque Spéciale.",4,61540
+297,WAZAINFO_BDSP_297,0584EF36D1152D51,"Une montagne de plumes ensevelit l’ennemi
+et réduit beaucoup son Attaque.",4,61724
+298,WAZAINFO_BDSP_298,0584E836D115216C,"Danse qui rend confus tous les Pokémon autour
+du lanceur.",0,61872
+299,WAZAINFO_BDSP_299,0584E936D115231F,"Le lanceur envoie un coup de pied au taux de critiques
+élevé. Peut aussi brûler la cible.",0,61988
+300,WAZAINFO_BDSP_300,FC8D4B36CBEAC7AA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,62168
+301,WAZAINFO_BDSP_301,FC8D4C36CBEAC95D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,62444
+302,WAZAINFO_BDSP_302,FC8D4936CBEAC444,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,62720
+303,WAZAINFO_BDSP_303,FC8D4A36CBEAC5F7,"Le lanceur se tourne les pouces et récupère
+jusqu’à la moitié de ses PV max.",0,62996
+304,WAZAINFO_BDSP_304,FC8D4736CBEAC0DE,"Le lanceur pousse un cri dont l’écho terrifiant
+a le pouvoir d’infliger des dégâts à l’ennemi.",0,63152
+305,WAZAINFO_BDSP_305,FC8D4836CBEAC291,"Le lanceur mord l’ennemi de ses crocs toxiques.
+Peut aussi l’empoisonner gravement.",0,63344
+306,WAZAINFO_BDSP_306,FC8D4536CBEABD78,"Lacère l’ennemi avec des griffes solides et aiguisées.
+Peut aussi baisser sa Défense.",0,63512
+307,WAZAINFO_BDSP_307,FC8D4636CBEABF2B,"Une explosion ardente souffle l’adversaire.
+Le lanceur doit se reposer au tour suivant.",4,63684
+308,WAZAINFO_BDSP_308,FC8D4336CBEABA12,"Une trombe d’eau heurte l’ennemi.
+Le lanceur doit se reposer au tour suivant.",4,63860
+309,WAZAINFO_BDSP_309,FC8D4436CBEABBC5,"Un coup de poing lancé à la vitesse d’un météore.
+Peut aussi augmenter l’Attaque du lanceur.",4,64016
+310,WAZAINFO_BDSP_310,FC90B136CBEDAAD3,"Le lanceur attaque l’ennemi en poussant un cri
+terrifiant. Peut aussi l’apeurer.",0,64204
+311,WAZAINFO_BDSP_311,FC90B036CBEDA920,"Une attaque dont la puissance et le type varient
+en fonction du temps qu’il fait.",4,64368
+312,WAZAINFO_BDSP_312,FC90B336CBEDAE39,"Le lanceur libère un parfum apaisant qui guérit
+toutes les altérations de statut de l’équipe.",0,64532
+313,WAZAINFO_BDSP_313,FC90B236CBEDAC86,"Le lanceur fait semblant de pleurer pour troubler
+l’ennemi et beaucoup baisser sa Défense Spéciale.",0,64720
+314,WAZAINFO_BDSP_314,FC90B536CBEDB19F,"Le lanceur appelle des vents tranchants qui lacèrent
+l’ennemi. Taux de critiques élevé.",0,64920
+315,WAZAINFO_BDSP_315,FC90B436CBEDAFEC,"Attaque l’ennemi à pleine puissance.
+Le contrecoup baisse beaucoup l’Attaque Spéciale
+du lanceur.",4,65096
+316,WAZAINFO_BDSP_316,FC90B736CBEDB505,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,65292
+317,WAZAINFO_BDSP_317,FC90B636CBEDB352,"Des rochers frappent l’ennemi.
+Réduit aussi sa Vitesse.",0,65568
+318,WAZAINFO_BDSP_318,FC90B936CBEDB86B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,65680
+319,WAZAINFO_BDSP_319,FC90B836CBEDB6B8,"Un cri horrible tel un crissement métallique qui
+réduit beaucoup la Défense Spéciale de l’ennemi.",4,65956
+320,WAZAINFO_BDSP_320,FC863F36CBE49498,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,66152
+321,WAZAINFO_BDSP_321,FC864036CBE4964B,"Le lanceur chatouille l’ennemi, ce qui baisse
+son Attaque et sa Défense.",0,66428
+322,WAZAINFO_BDSP_322,FC864136CBE497FE,"Le lanceur absorbe un pouvoir mystique spatial
+qui augmente sa Défense et sa Défense Spéciale.",0,66576
+323,WAZAINFO_BDSP_323,FC864236CBE499B1,"Le lanceur attaque avec un jet d’eau.
+Moins il a de PV et moins l’attaque est puissante.",0,66768
+324,WAZAINFO_BDSP_324,FC864336CBE49B64,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,66948
+325,WAZAINFO_BDSP_325,FC864436CBE49D17,"Le lanceur surgit des ombres et donne un coup de poing.
+N’échoue jamais.",0,67224
+326,WAZAINFO_BDSP_326,FC864536CBE49ECA,"Le lanceur attaque avec un pouvoir étrange
+et invisible. Peut aussi apeurer l’ennemi.",0,67372
+327,WAZAINFO_BDSP_327,FC864636CBE4A07D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,67544
+328,WAZAINFO_BDSP_328,FC863736CBE48700,"Le lanceur emprisonne l’ennemi dans une tempête
+de sable terrifiante qui dure de quatre à cinq tours.",0,67820
+329,WAZAINFO_BDSP_329,FC863836CBE488B3,"Une vague de froid glacial frappe l’ennemi pour
+le mettre K.O. en un coup. A peu de chances de réussir
+si le lanceur ne possède pas le type Glace.",4,68024
+330,WAZAINFO_BDSP_330,FC89C536CBE7AE21,"Le lanceur attaque en projetant de l’eau boueuse.
+Peut aussi réduire la Précision de l’ennemi.",0,68320
+331,WAZAINFO_BDSP_331,FC89C436CBE7AC6E,"Le lanceur mitraille l’ennemi avec une rafale de graines.
+De deux à cinq rafales sont lancées à la suite.",0,68512
+332,WAZAINFO_BDSP_332,FC89C336CBE7AABB,"Le lanceur prend l’ennemi de vitesse et le lacère.
+N’échoue jamais.",0,68724
+333,WAZAINFO_BDSP_333,FC89C236CBE7A908,"Le lanceur jette des pics de glace sur l’ennemi,
+de deux à cinq fois de suite.",0,68860
+334,WAZAINFO_BDSP_334,FC89C936CBE7B4ED,"L’épiderme du lanceur devient dur comme du fer,
+ce qui augmente beaucoup sa Défense.",0,69020
+335,WAZAINFO_BDSP_335,FC89C836CBE7B33A,"Le lanceur bloque la route de l’ennemi pour
+empêcher sa fuite.",0,69192
+336,WAZAINFO_BDSP_336,FC89C736CBE7B187,"Le lanceur grogne pour se rassurer, ce qui augmente
+son Attaque et celle de ses alliés.",0,69320
+337,WAZAINFO_BDSP_337,FC89C636CBE7AFD4,"Le lanceur lacère l’ennemi de ses grandes griffes
+aiguisées.",0,69496
+338,WAZAINFO_BDSP_338,FC89BD36CBE7A089,"Un violent coup de racines s’abat sur l’ennemi.
+Immobilise le lanceur au tour suivant.",4,69620
+339,WAZAINFO_BDSP_339,FC89BC36CBE79ED6,"Le lanceur tend ses muscles pour se gonfler,
+ce qui booste son Attaque et sa Défense.",0,69796
+340,WAZAINFO_BDSP_340,FC9AC336CBF61DEE,"Le lanceur bondit très haut et plonge sur l’ennemi
+au second tour. Peut aussi le paralyser.",0,69968
+341,WAZAINFO_BDSP_341,FC9AC436CBF61FA1,"Le lanceur attaque en projetant de la boue sur l’ennemi.
+Réduit aussi la Vitesse de la cible.",0,70152
+342,WAZAINFO_BDSP_342,FC9AC136CBF61A88,"Attaque à taux de critiques élevé.
+Peut aussi empoisonner l’ennemi.",4,70340
+343,WAZAINFO_BDSP_343,FC9AC236CBF61C3B,"Le lanceur s’approche de la cible avec un air angélique
+afin de dérober l’objet qu’elle tient.",0,70476
+344,WAZAINFO_BDSP_344,FC9AC736CBF624BA,"Le lanceur électrifie son corps avant de charger.
+Le choc blesse aussi gravement le lanceur
+et peut paralyser l’ennemi.",0,70668
+345,WAZAINFO_BDSP_345,FC9AC836CBF6266D,"Le lanceur disperse d’étranges feuilles qui poursuivent
+l’ennemi. N’échoue jamais.",0,70908
+346,WAZAINFO_BDSP_346,FC9AC536CBF62154,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,71076
+347,WAZAINFO_BDSP_347,FC9AC636CBF62307,"Le lanceur se concentre et fait le vide dans son esprit
+pour augmenter son Attaque Spéciale et sa Défense
+Spéciale.",0,71352
+348,WAZAINFO_BDSP_348,FC9ABB36CBF61056,"Une feuille coupante comme une lame entaille l’ennemi.
+Taux de critiques élevé.",4,71584
+349,WAZAINFO_BDSP_349,FC9ABC36CBF61209,"Une danse mystique dont le rythme effréné
+augmente l’Attaque et la Vitesse du lanceur.",4,71744
+350,WAZAINFO_BDSP_350,FC9E4936CBF93777,"Le lanceur projette un rocher sur l’ennemi
+de deux à cinq fois d’affilée.",0,71920
+351,WAZAINFO_BDSP_351,FC9E4836CBF935C4,"Le lanceur envoie un choc électrique rapide à l’ennemi.
+Impossible à esquiver.",0,72068
+352,WAZAINFO_BDSP_352,FC9E4B36CBF93ADD,"Le lanceur envoie un puissant jet d’eau sur l’ennemi.
+Peut le rendre confus.",0,72228
+353,WAZAINFO_BDSP_353,FC9E4A36CBF9392A,"Le lanceur génère une sphère lumineuse qu’il projette
+sur l’ennemi deux tours plus tard.",0,72384
+354,WAZAINFO_BDSP_354,FC9E4536CBF930AB,"Attaque l’ennemi à pleine puissance.
+Le contrecoup baisse beaucoup l’Attaque Spéciale
+du lanceur.",4,72564
+355,WAZAINFO_BDSP_355,FC9E4436CBF92EF8,"Le lanceur atterrit et se repose.
+Restaure jusqu’à la moitié de ses PV max.",0,72760
+356,WAZAINFO_BDSP_356,FC9E4736CBF93411,"Pendant cinq tours, les Pokémon Vol ou qui ont
+Lévitation deviennent sensibles aux capacités Sol,
+et les capacités volantes deviennent inutilisables.",0,72912
+357,WAZAINFO_BDSP_357,FC9E4636CBF9325E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,73212
+358,WAZAINFO_BDSP_358,FC9E4136CBF929DF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,73488
+359,WAZAINFO_BDSP_359,FC9E4036CBF9282C,"Le lanceur donne un puissant coup de poing à l’ennemi.
+Réduit la Vitesse du lanceur.",0,73764
+360,WAZAINFO_BDSP_360,FC943736CBF0C45C,"Le lanceur effectue une rotation et frappe l’ennemi.
+Plus la Vitesse du lanceur est basse par rapport à celle
+de sa cible, plus il inflige de dégâts.",0,73936
+361,WAZAINFO_BDSP_361,FC943836CBF0C60F,"Le lanceur tombe K.O. pour soigner les PV et le statut
+du Pokémon qui passe après lui.",0,74236
+362,WAZAINFO_BDSP_362,FC943936CBF0C7C2,"Cette attaque est deux fois plus puissante lorsque
+l’ennemi a moins de la moitié de ses PV.",0,74412
+363,WAZAINFO_BDSP_363,FC943A36CBF0C975,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,74596
+364,WAZAINFO_BDSP_364,FC943336CBF0BD90,"Une attaque capable de toucher un ennemi qui utilise
+une capacité comme Détection ou Abri.
+Annule l’effet de ces capacités.",4,74872
+365,WAZAINFO_BDSP_365,FC943436CBF0BF43,"Le lanceur picore la cible.
+Si cette dernière tient une Baie, le lanceur la mange
+et profite de ses effets.",0,75120
+366,WAZAINFO_BDSP_366,FC943536CBF0C0F6,"Génère une rafale de vent qui augmente la Vitesse
+des Pokémon de l’équipe pendant quatre tours.",0,75336
+367,WAZAINFO_BDSP_367,FC943636CBF0C2A9,"Le lanceur utilise sa connaissance des points de pression
+pour beaucoup augmenter une stat.",0,75528
+368,WAZAINFO_BDSP_368,FC943F36CBF0D1F4,"Le lanceur attaque le dernier ennemi l’ayant blessé
+durant le même tour en frappant plus fort.",0,75712
+369,WAZAINFO_BDSP_369,FC944036CBF0D3A7,"Après son attaque, le lanceur revient à toute vitesse
+et change de place avec un Pokémon de l’équipe
+prêt au combat.",4,75904
+370,WAZAINFO_BDSP_370,FC973D36CBF30465,"Le lanceur combat au corps à corps sans se protéger.
+Baisse aussi sa Défense et sa Défense Spéciale.",0,76140
+371,WAZAINFO_BDSP_371,FC973C36CBF302B2,"Le lanceur concentre son énergie puis attaque.
+La puissance de cette capacité est doublée si
+le lanceur agit après l’ennemi.",0,76344
+372,WAZAINFO_BDSP_372,FC973B36CBF300FF,"Cette attaque est deux fois plus efficace si l’ennemi
+a déjà été blessé durant ce tour.",0,76596
+373,WAZAINFO_BDSP_373,FC973A36CBF2FF4C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,76772
+374,WAZAINFO_BDSP_374,FC973936CBF2FD99,"Le lanceur envoie l’objet qu’il tient sur l’ennemi.
+La puissance et les effets dépendent de l’objet.",0,77048
+375,WAZAINFO_BDSP_375,FC973836CBF2FBE6,"Le lanceur transfère ses altérations de statut à l’ennemi
+grâce à son pouvoir de suggestion.",0,77252
+376,WAZAINFO_BDSP_376,FC973736CBF2FA33,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,77440
+377,WAZAINFO_BDSP_377,FC973636CBF2F880,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,77716
+378,WAZAINFO_BDSP_378,FC974536CBF311FD,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,77992
+379,WAZAINFO_BDSP_379,FC974436CBF3104A,"Le lanceur utilise ses pouvoirs psychiques pour
+échanger sa Défense et son Attaque.",0,78268
+380,WAZAINFO_BDSP_380,FC723B36CBD3E4C2,"Le lanceur répand ses sucs digestifs sur l’ennemi.
+Le fluide neutralise le talent de l’ennemi.",0,78436
+381,WAZAINFO_BDSP_381,FC723C36CBD3E675,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,78628
+382,WAZAINFO_BDSP_382,FC723936CBD3E15C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,78904
+383,WAZAINFO_BDSP_383,FC723A36CBD3E30F,"Le lanceur imite la dernière capacité employée.
+Échoue si aucune capacité n’a été utilisée.",0,79180
+384,WAZAINFO_BDSP_384,FC723736CBD3DDF6,"Pouvoir qui échange les modifications de l’Attaque
+Spéciale et de l’Attaque du lanceur avec la cible.",0,79364
+385,WAZAINFO_BDSP_385,FC723836CBD3DFA9,"Pouvoir qui échange les modifications de la Défense
+Spéciale et de la Défense avec la cible.",0,79568
+386,WAZAINFO_BDSP_386,FC723536CBD3DA90,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,79756
+387,WAZAINFO_BDSP_387,FC723636CBD3DC43,"Cette capacité ne peut être utilisée qu’après
+que le lanceur a utilisé toutes les autres.",0,80032
+388,WAZAINFO_BDSP_388,FC724336CBD3F25A,"Plante sur la cible une graine qui la rend soucieuse
+et remplace son talent par Insomnia, l’empêchant
+ainsi de dormir.",0,80212
+389,WAZAINFO_BDSP_389,FC724436CBD3F40D,"Permet au lanceur de frapper en priorité.
+Échoue si l’ennemi ne prépare pas une attaque.",0,80452
+390,WAZAINFO_BDSP_390,FC754136CBD624CB,"Lance des pics autour de l’ennemi.
+Ils empoisonnent les ennemis qui entrent au combat.",0,80632
+391,WAZAINFO_BDSP_391,FC754036CBD62318,"Le lanceur utilise un pouvoir psychique pour échanger
+ses changements de stats avec la cible.",0,80808
+392,WAZAINFO_BDSP_392,FC754336CBD62831,"Un voile d’eau recouvre le lanceur et régénère ses PV
+à chaque tour.",4,80996
+393,WAZAINFO_BDSP_393,FC754236CBD6267E,"Le lanceur utilise l’électricité pour générer un champ
+magnétique et léviter durant cinq tours.",0,81136
+394,WAZAINFO_BDSP_394,FC754536CBD62B97,"Le lanceur s’embrase avant de charger l’ennemi.
+Le choc blesse aussi gravement le lanceur.
+Peut brûler l’ennemi.",0,81328
+395,WAZAINFO_BDSP_395,FC754436CBD629E4,"Une onde de choc frappe l’ennemi.
+Peut aussi paralyser la cible.",4,81556
+396,WAZAINFO_BDSP_396,FC754736CBD62EFD,"Le lanceur dégage une aura et projette de l’énergie.
+N’échoue jamais.",0,81688
+397,WAZAINFO_BDSP_397,FC754636CBD62D4A,"Le lanceur polit son corps pour diminuer sa résistance
+au vent. Augmente beaucoup la Vitesse.",0,81828
+398,WAZAINFO_BDSP_398,FC753936CBD61733,"Attaque l’ennemi avec un tentacule, un bras,
+ou un autre membre plein de poison.
+Peut aussi l’empoisonner.",4,82016
+399,WAZAINFO_BDSP_399,FC753836CBD61580,"Le lanceur dégage une horrible aura chargée
+de pensées maléfiques. Peut aussi apeurer l’ennemi.",0,82232
+400,WAZAINFO_BDSP_400,D13DE436B362CE53,"Le lanceur lacère l’ennemi à la première occasion.
+Taux de critiques élevé.",0,82424
+401,WAZAINFO_BDSP_401,D13DE336B362CCA0,"Le lanceur attaque en balançant sa queue comme
+une lame de fond en pleine tempête.",0,82576
+402,WAZAINFO_BDSP_402,D13DE636B362D1B9,"Le lanceur fait pleuvoir un déluge de graines explosives
+sur l’ennemi.",0,82744
+403,WAZAINFO_BDSP_403,D13DE536B362D006,"Le lanceur attaque avec une lame d’air qui fend tout.
+Peut aussi apeurer l’ennemi.",0,82888
+404,WAZAINFO_BDSP_404,D13DE836B362D51F,"Le lanceur taillade l’ennemi en utilisant ses faux
+ou ses griffes comme une paire de ciseaux.",0,83056
+405,WAZAINFO_BDSP_405,D13DE736B362D36C,"Le lanceur fait vibrer son corps pour lancer une vague
+sonique. Peut aussi baisser la Défense Spéciale
+de l’ennemi.",0,83244
+406,WAZAINFO_BDSP_406,D13DEA36B362D885,"Le lanceur ouvre la bouche pour envoyer
+une onde de choc qui frappe l’ennemi.",0,83476
+407,WAZAINFO_BDSP_407,D13DE936B362D6D2,"Le lanceur frappe l’ennemi en prenant un air menaçant.
+Peut aussi l’apeurer.",0,83632
+408,WAZAINFO_BDSP_408,D13DEC36B362DBEB,"Le lanceur attaque avec un rayon de lumière
+qui scintille comme s’il était composé de gemmes.",0,83788
+409,WAZAINFO_BDSP_409,D13DEB36B362DA38,"Un coup de poing qui draine l’énergie.
+Convertit la moitié des dégâts infligés en PV
+pour le lanceur.",4,83976
+410,WAZAINFO_BDSP_410,D13A7E36B35FEB2A,"Le lanceur agite son poing pour projeter une onde
+de vide. Frappe en priorité.",0,84180
+411,WAZAINFO_BDSP_411,D13A7F36B35FECDD,"Le lanceur rassemble ses forces et laisse éclater
+son pouvoir. Peut aussi baisser la Défense Spéciale
+de l’ennemi.",0,84340
+412,WAZAINFO_BDSP_412,D13A7C36B35FE7C4,"Utilise les pouvoirs de la nature pour attaquer l’ennemi.
+Peut aussi baisser sa Défense Spéciale.",4,84572
+413,WAZAINFO_BDSP_413,D13A7D36B35FE977,"Le lanceur replie ses ailes et charge en rase-mottes.
+Blesse gravement le lanceur.",0,84768
+414,WAZAINFO_BDSP_414,D13A7A36B35FE45E,"De terribles séismes secouent l’ennemi.
+Peut aussi baisser sa Défense Spéciale.",0,84936
+415,WAZAINFO_BDSP_415,D13A7B36B35FE611,"Le lanceur échange son objet avec celui de la cible
+à une vitesse que l’œil a du mal à suivre.",0,85096
+416,WAZAINFO_BDSP_416,D13A7836B35FE0F8,"Le lanceur charge l’ennemi de toute sa puissance
+et doit ensuite se reposer au tour suivant.",0,85288
+417,WAZAINFO_BDSP_417,D13A7936B35FE2AB,"Stimule l’esprit par de mauvaises pensées.
+Augmente beaucoup l’Attaque Spéciale du lanceur.",0,85476
+418,WAZAINFO_BDSP_418,D13A7636B35FDD92,"Le lanceur envoie des coups de poing aussi rapides
+que des balles de revolver. Frappe en priorité.",0,85660
+419,WAZAINFO_BDSP_419,D13A7736B35FDF45,"Une capacité dont la puissance est doublée si le lanceur
+a été blessé par l’ennemi durant le tour.",4,85860
+420,WAZAINFO_BDSP_420,D136F836B35CD1A1,"Le lanceur crée des éclats de glace qu’il envoie
+sur l’ennemi. Frappe en priorité.",0,86060
+421,WAZAINFO_BDSP_421,D136F736B35CCFEE,"Attaque avec une griffe puissante faite d’ombres.
+Taux de critiques élevé.",4,86228
+422,WAZAINFO_BDSP_422,D136F636B35CCE3B,"Le lanceur utilise une morsure électrifiée.
+Peut aussi paralyser ou apeurer l’ennemi.",0,86380
+423,WAZAINFO_BDSP_423,D136F536B35CCC88,"Le lanceur utilise une morsure glaciale.
+Peut aussi geler ou apeurer l’ennemi.",0,86552
+424,WAZAINFO_BDSP_424,D136FC36B35CD86D,"Le lanceur utilise une morsure enflammée.
+Peut aussi brûler ou apeurer l’ennemi.",0,86712
+425,WAZAINFO_BDSP_425,D136FB36B35CD6BA,"Le lanceur étend son ombre pour frapper par-derrière.
+Frappe en priorité.",0,86876
+426,WAZAINFO_BDSP_426,D136FA36B35CD507,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,87024
+427,WAZAINFO_BDSP_427,D136F936B35CD354,"Le lanceur entaille l’ennemi grâce à des lames
+faites d’énergie psychique. Taux de critiques élevé.",0,87300
+428,WAZAINFO_BDSP_428,D136F036B35CC409,"Le lanceur concentre sa volonté et donne
+un coup de tête. Peut aussi apeurer l’ennemi.",0,87500
+429,WAZAINFO_BDSP_429,D136EF36B35CC256,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,87676
+430,WAZAINFO_BDSP_430,D1337236B359B818,"Le lanceur concentre son énergie lumineuse
+et la fait exploser.
+Peut aussi baisser la Défense Spéciale de l’ennemi.",0,87952
+431,WAZAINFO_BDSP_431,D1337336B359B9CB,"Une des capacités secrètes de la Pokémontre.
+Le lanceur charge l’ennemi, ce qui peut rendre
+ce dernier confus.",4,88184
+432,WAZAINFO_BDSP_432,D1337436B359BB7E,"Une des capacités secrètes de la Pokémontre. Disperse
+certains effets mis en place par l’ennemi, tels que
+Protection ou Mur Lumière. Diminue aussi son Esquive.",4,88408
+433,WAZAINFO_BDSP_433,D1337536B359BD31,"Le lanceur crée une zone mystérieuse où les Pokémon
+les plus lents frappent en priorité pendant cinq tours.",0,88728
+434,WAZAINFO_BDSP_434,D1337636B359BEE4,"Le lanceur invoque des comètes.
+Le contrecoup réduit beaucoup son Attaque Spéciale.",0,88944
+435,WAZAINFO_BDSP_435,D1337736B359C097,"Un flamboiement d’électricité frappe tous les Pokémon
+autour du lanceur. Peut aussi les paralyser.",4,89112
+436,WAZAINFO_BDSP_436,D1337836B359C24A,"Des boules de feu s’abattent sur tous les Pokémon
+autour du lanceur. Peut aussi les brûler.",0,89312
+437,WAZAINFO_BDSP_437,D1337936B359C3FD,"Invoque une tempête de feuilles acérées.
+Le contrecoup réduit beaucoup l’Attaque Spéciale
+du lanceur.",4,89496
+438,WAZAINFO_BDSP_438,D1336A36B359AA80,"Le lanceur fait virevolter violemment ses lianes
+ou ses tentacules pour fouetter l’ennemi.",0,89700
+439,WAZAINFO_BDSP_439,D1336B36B359AC33,"Le lanceur attaque en projetant un gros rocher
+sur l’ennemi. Il doit se reposer au tour suivant.",0,89884
+440,WAZAINFO_BDSP_440,D14B7C36B36E5AF7,"Un coup tranchant qui peut empoisonner l’ennemi.
+Taux de critiques élevé.",4,90080
+441,WAZAINFO_BDSP_441,D14B7B36B36E5944,"Le lanceur envoie des détritus sur l’ennemi.
+Peut aussi l’empoisonner.",0,90228
+442,WAZAINFO_BDSP_442,D14B7E36B36E5E5D,"Le lanceur heurte l’ennemi avec sa tête dure
+comme de l’acier. Peut aussi l’apeurer.",0,90372
+443,WAZAINFO_BDSP_443,D14B7D36B36E5CAA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,90544
+444,WAZAINFO_BDSP_444,D14B7836B36E542B,"Fait surgir des pierres aiguisées sous l’ennemi.
+Taux de critiques élevé.",0,90820
+445,WAZAINFO_BDSP_445,D14B7736B36E5278,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,90968
+446,WAZAINFO_BDSP_446,D14B7A36B36E5791,"Lance des pierres flottantes autour de l’ennemi,
+qui blessent tout adversaire entrant au combat.",0,91244
+447,WAZAINFO_BDSP_447,D14B7936B36E55DE,"L’ennemi est piégé dans de l’herbe qui le fait trébucher.
+Plus il est lourd, plus la puissance de cette capacité
+augmente.",0,91440
+448,WAZAINFO_BDSP_448,D14B7436B36E4D5F,"Attaque avec les ondes sonores assourdissantes
+qu’il émet en bavardant. Rend l’ennemi confus.",4,91688
+449,WAZAINFO_BDSP_449,D14B7336B36E4BAC,"Le lanceur libère une myriade de rayons de lumière.
+Le type varie selon la Plaque que tient le lanceur.",0,91876
+450,WAZAINFO_BDSP_450,D147F636B36B416E,"Le lanceur pique l’ennemi.
+Si ce dernier tient une Baie, le lanceur la dévore
+et obtient son effet.",0,92084
+451,WAZAINFO_BDSP_451,D147F736B36B4321,"Le lanceur tire un rayon chargé d’électricité.
+Peut aussi augmenter son Attaque Spéciale.",0,92284
+452,WAZAINFO_BDSP_452,D147F436B36B3E08,"Le lanceur heurte l’ennemi de son corps robuste.
+Blesse aussi gravement le lanceur.",0,92464
+453,WAZAINFO_BDSP_453,D147F536B36B3FBB,"Le lanceur fonce sur l’ennemi si rapidement qu’on
+parvient à peine à le discerner. Frappe en priorité.",0,92632
+454,WAZAINFO_BDSP_454,D147FA36B36B483A,"Le lanceur appelle ses sous-fifres pour frapper l’ennemi.
+Taux de critiques élevé.",0,92840
+455,WAZAINFO_BDSP_455,D147FB36B36B49ED,"Le lanceur appelle ses sous-fifres pour former
+un bouclier qui augmente sa Défense et sa Défense
+Spéciale.",0,93008
+456,WAZAINFO_BDSP_456,D147F836B36B44D4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,93224
+457,WAZAINFO_BDSP_457,D147F936B36B4687,"Le lanceur assène un coup de tête désespéré.
+Blesse aussi gravement le lanceur.",0,93500
+458,WAZAINFO_BDSP_458,D147EE36B36B33D6,"Le lanceur frappe l’ennemi deux fois d’affilée à l’aide
+de sa queue, de lianes ou d’un autre membre.",0,93660
+459,WAZAINFO_BDSP_459,D147EF36B36B3589,"Le lanceur frappe si fort qu’il affecte le cours du temps.
+Il se repose au tour suivant.",0,93864
+460,WAZAINFO_BDSP_460,D1447036B36827E5,"Le lanceur déchire l’ennemi et l’espace autour de lui.
+Taux de critiques élevé.",0,94044
+461,WAZAINFO_BDSP_461,D1446F36B3682632,"Le lanceur tombe K.O. pour soigner le statut et les PV
+du Pokémon qui prendra sa place au combat.",0,94204
+462,WAZAINFO_BDSP_462,D1446E36B368247F,"Une force puissante écrase l’ennemi. Plus il lui reste
+de PV et plus l’attaque est puissante.",4,94400
+463,WAZAINFO_BDSP_463,D1446D36B36822CC,"L’ennemi est pris dans un tourbillon de feu qui dure
+de quatre à cinq tours.",0,94588
+464,WAZAINFO_BDSP_464,D1446C36B3682119,"L’ennemi est plongé dans les ténèbres.
+Il tombe dans un profond sommeil.",0,94744
+465,WAZAINFO_BDSP_465,D1446B36B3681F66,"Le corps du lanceur émet une onde de choc.
+Peut aussi beaucoup baisser la Défense Spéciale
+de la cible.",0,94892
+466,WAZAINFO_BDSP_466,D1446A36B3681DB3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,95100
+467,WAZAINFO_BDSP_467,D1446936B3681C00,"Le lanceur disparaît et frappe l’ennemi au second tour.
+Fonctionne même si l’ennemi se protège.",0,95376
+468,WAZAINFO_BDSP_468,D1447836B368357D,"Le lanceur s’aiguise les griffes.
+Augmente l’Attaque et la Précision.",0,95568
+469,WAZAINFO_BDSP_469,D1447736B36833CA,"Annule les attaques visant toute l’équipe pendant
+un tour.",4,95708
+470,WAZAINFO_BDSP_470,D1416A36B365E7DC,"Additionne la Défense et la Défense Spéciale
+du lanceur et de sa cible et les redistribue
+équitablement entre les deux.",4,95828
+471,WAZAINFO_BDSP_471,D1416B36B365E98F,"Additionne l’Attaque Spéciale et l’Attaque du lanceur
+et de sa cible et les redistribue équitablement
+entre les deux.",4,96068
+472,WAZAINFO_BDSP_472,D1416C36B365EB42,"Le lanceur crée une zone mystérieuse
+où la Défense et la Défense Spéciale de tous
+les Pokémon sont inversées pendant cinq tours.",0,96304
+473,WAZAINFO_BDSP_473,D1416D36B365ECF5,"Le lanceur matérialise des ondes mystérieuses
+qu’il projette sur l’ennemi. Inflige des dégâts physiques.",0,96564
+474,WAZAINFO_BDSP_474,D1416636B365E110,"Le lanceur inocule un poison spécial à l’ennemi.
+L’effet est doublé si l’ennemi est déjà empoisonné.",0,96776
+475,WAZAINFO_BDSP_475,D1416736B365E2C3,"Le lanceur se débarrasse des parties inutiles
+de son corps. Son poids diminue et sa Vitesse
+augmente beaucoup.",0,96980
+476,WAZAINFO_BDSP_476,D1416836B365E476,"Le lanceur s’asperge d’une poudre irritante pour attirer
+l’attention. Il attire toutes les attaques ennemies.",0,97204
+477,WAZAINFO_BDSP_477,D1416936B365E629,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,97424
+478,WAZAINFO_BDSP_478,D1417236B365F574,"Le lanceur crée une zone mystérieuse où les objets
+tenus par tous les Pokémon n’ont plus aucun effet
+pendant cinq tours.",0,97700
+479,WAZAINFO_BDSP_479,D1417336B365F727,"Le lanceur jette toutes sortes de projectiles à un ennemi.
+Si ce dernier vole, il tombe au sol.",0,97944
+480,WAZAINFO_BDSP_480,D1227436B34B484B,Un coup très puissant dont l’effet est toujours critique.,4,98136
+481,WAZAINFO_BDSP_481,D1227336B34B4698,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,98252
+482,WAZAINFO_BDSP_482,D1227636B34B4BB1,"Une vague de détritus attaque tous les Pokémon
+autour du lanceur. Peut aussi empoisonner.",4,98528
+483,WAZAINFO_BDSP_483,D1227536B34B49FE,"Une danse mystique dont le rythme parfait augmente
+l’Attaque Spéciale, la Défense Spéciale et la Vitesse
+du lanceur.",4,98708
+484,WAZAINFO_BDSP_484,D1227836B34B4F17,"Le lanceur se jette sur l’ennemi de tout son poids.
+S’il est plus lourd que l’ennemi, l’effet augmente
+en conséquence.",0,98944
+485,WAZAINFO_BDSP_485,D1227736B34B4D64,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,99184
+486,WAZAINFO_BDSP_486,D1227A36B34B527D,"Le lanceur envoie une boule d’électricité.
+Si sa Vitesse est plus grande que celle de l’ennemi,
+les dégâts augmentent d’autant.",0,99460
+487,WAZAINFO_BDSP_487,D1227936B34B50CA,"Le lanceur projette beaucoup d’eau sur sa cible,
+qui devient de type Eau.",0,99716
+488,WAZAINFO_BDSP_488,D1226C36B34B3AB3,"Le lanceur s’entoure de flammes pour attaquer l’ennemi.
+Il se concentre et sa Vitesse augmente.",0,99864
+489,WAZAINFO_BDSP_489,D1226B36B34B3900,"Le lanceur s’enroule sur lui-même et se concentre.
+Son Attaque, sa Défense et sa Précision augmentent.",0,100056
+490,WAZAINFO_BDSP_490,D11F6E36B3490842,"Un coup rapide qui affecte la mobilité de l’ennemi
+et diminue sa Vitesse.",4,100264
+491,WAZAINFO_BDSP_491,D11F6F36B34909F5,"Projette un liquide acide qui fait fondre l’ennemi.
+Sa Défense Spéciale diminue beaucoup.",0,100412
+492,WAZAINFO_BDSP_492,D11F6C36B34904DC,"Le lanceur utilise la force de l’ennemi.
+Plus l’Attaque de l’ennemi est élevée,
+plus le lanceur inflige de dégâts.",0,100592
+493,WAZAINFO_BDSP_493,D11F6D36B349068F,"Le lanceur envoie des ondes mystérieuses à l’ennemi.
+Son talent devient Simple.",0,100824
+494,WAZAINFO_BDSP_494,D11F6A36B3490176,"Le lanceur danse sur un rythme étrange.
+Il force sa cible à l’imiter, ce qui lui fait adopter
+son talent.",0,100984
+495,WAZAINFO_BDSP_495,D11F6B36B3490329,"S’il est le premier à agir, le lanceur permet à sa cible
+d’utiliser une capacité juste après lui.",0,101196
+496,WAZAINFO_BDSP_496,D11F6836B348FE10,"Le lanceur attaque l’ennemi en chantant.
+Si plusieurs Pokémon déclenchent cette attaque
+à la suite, l’effet augmente.",0,101392
+497,WAZAINFO_BDSP_497,D11F6936B348FFC3,"Un cri retentissant blesse l’ennemi.
+Si le lanceur ou d’autres Pokémon l’utilisent
+à chaque tour, l’effet augmente.",4,101628
+498,WAZAINFO_BDSP_498,D11F7636B34915DA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,101860
+499,WAZAINFO_BDSP_499,D11F7736B349178D,"Le lanceur jette un tas de détritus spéciaux sur la cible.
+Les changements de stats de la cible sont annulés.",0,102136
+500,WAZAINFO_BDSP_500,C827C936AE1EA0E8,"Le lanceur attaque l’ennemi avec une force accumulée.
+Plus les stats du lanceur sont augmentées,
+plus le coup est efficace.",0,102356
+501,WAZAINFO_BDSP_501,C827CA36AE1EA29B,"Le lanceur et son équipe sont protégés contre
+les attaques prioritaires.",0,102604
+502,WAZAINFO_BDSP_502,C827CB36AE1EA44E,"Le lanceur se téléporte à l’aide d’un pouvoir mystérieux.
+Il échange sa place avec celle d’un allié sur le terrain.",0,102752
+503,WAZAINFO_BDSP_503,C827CC36AE1EA601,"L’ennemi est attaqué par un jet d’eau bouillante.
+Peut aussi le brûler.",0,102984
+504,WAZAINFO_BDSP_504,C827CD36AE1EA7B4,"Le lanceur brise sa coquille. Il baisse sa Défense
+et sa Défense Spéciale, mais augmente beaucoup
+son Attaque, son Attaque Spéciale et sa Vitesse.",0,103128
+505,WAZAINFO_BDSP_505,C827CE36AE1EA967,"Une aura de bien-être fait récupérer la moitié
+de ses PV max à la cible.",4,103424
+506,WAZAINFO_BDSP_506,C827CF36AE1EAB1A,"Attaque acharnée qui cause davantage de dégâts
+à l’ennemi s’il a une altération de statut.",4,103572
+507,WAZAINFO_BDSP_507,C827D036AE1EACCD,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,103756
+508,WAZAINFO_BDSP_508,C827C136AE1E9350,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,104032
+509,WAZAINFO_BDSP_509,C827C236AE1E9503,"Projette le Pokémon ennemi et le remplace par un autre.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",0,104308
+510,WAZAINFO_BDSP_510,C82ACF36AE20E0F1,"Des flammes calcinent l’ennemi.
+S’il tient un objet, une Baie par exemple, celui-ci
+est brûlé et devient inutilisable.",0,104556
+511,WAZAINFO_BDSP_511,C82ACE36AE20DF3E,"Retient la cible de force, l’obligeant à agir en dernier.",0,104796
+512,WAZAINFO_BDSP_512,C82ACD36AE20DD8B,"Attaque agile. Si le lanceur ne tient pas d’objet,
+l’attaque inflige davantage de dégâts.",4,104912
+513,WAZAINFO_BDSP_513,C82ACC36AE20DBD8,"Le lanceur copie le type de la cible et devient
+du même type.",0,105092
+514,WAZAINFO_BDSP_514,C82AD336AE20E7BD,"Venge un Pokémon de l’équipe mis K.O.
+Si un Pokémon de l’équipe a été mis K.O. au tour
+d’avant, l’effet augmente.",0,105216
+515,WAZAINFO_BDSP_515,C82AD236AE20E60A,"Une attaque très risquée.
+Le lanceur perd tous ses PV restants et inflige autant
+de dégâts à l’ennemi.",4,105444
+516,WAZAINFO_BDSP_516,C82AD136AE20E457,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,105652
+517,WAZAINFO_BDSP_517,C82AD036AE20E2A4,"L’ennemi est entouré d’un torrent de flammes ardentes
+qui le brûlent.",0,105928
+518,WAZAINFO_BDSP_518,C82AC736AE20D359,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,106068
+519,WAZAINFO_BDSP_519,C82AC636AE20D1A6,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,106344
+520,WAZAINFO_BDSP_520,C82E5536AE23FA7A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,106620
+521,WAZAINFO_BDSP_521,C82E5636AE23FC2D,"Après son attaque, le lanceur revient à toute vitesse
+et change de place avec un Pokémon de l’équipe
+prêt au combat.",4,106896
+522,WAZAINFO_BDSP_522,C82E5336AE23F714,"Le lanceur se débat de toutes ses forces, et baisse
+l’Attaque Spéciale de l’ennemi.",0,107132
+523,WAZAINFO_BDSP_523,C82E5436AE23F8C7,"Le lanceur piétine le sol et inflige des dégâts à tous
+les Pokémon autour de lui. Baisse aussi leur Vitesse.",0,107300
+524,WAZAINFO_BDSP_524,C82E5136AE23F3AE,"Un souffle froid blesse l’ennemi.
+L’effet est toujours critique.",4,107520
+525,WAZAINFO_BDSP_525,C82E5236AE23F561,"Un coup puissant qui blesse la cible et l’envoie au loin.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",4,107652
+526,WAZAINFO_BDSP_526,C82E4F36AE23F048,"Le lanceur se rengorge.
+Augmente l’Attaque et l’Attaque Spéciale.",0,107904
+527,WAZAINFO_BDSP_527,C82E5036AE23F1FB,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,108036
+528,WAZAINFO_BDSP_528,C82E4D36AE23ECE2,"Une charge électrique violente qui blesse aussi
+légèrement le lanceur.",4,108312
+529,WAZAINFO_BDSP_529,C82E4E36AE23EE95,"Le lanceur tourne sur lui-même comme une perceuse
+et se jette sur l’ennemi. Taux de critiques élevé.",0,108456
+530,WAZAINFO_BDSP_530,C831BB36AE26DDA3,"Le lanceur frappe l’ennemi deux fois d’affilée
+avec les parties les plus robustes de son corps.",0,108660
+531,WAZAINFO_BDSP_531,C831BA36AE26DBF0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,108852
+532,WAZAINFO_BDSP_532,C831BD36AE26E109,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,109128
+533,WAZAINFO_BDSP_533,C831BC36AE26DF56,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,109404
+534,WAZAINFO_BDSP_534,C831BF36AE26E46F,"Un coquillage aiguisé lacère l’ennemi.
+Peut aussi baisser sa Défense.",4,109680
+535,WAZAINFO_BDSP_535,C831BE36AE26E2BC,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,109820
+536,WAZAINFO_BDSP_536,C831C136AE26E7D5,"L’ennemi est pris dans un tourbillon de feuilles acérées.
+Peut aussi baisser sa Précision.",0,110096
+537,WAZAINFO_BDSP_537,C831C036AE26E622,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,110280
+538,WAZAINFO_BDSP_538,C831C336AE26EB3B,"Le lanceur se protège en s’emmitouflant dans du coton.
+Sa Défense augmente énormément.",0,110556
+539,WAZAINFO_BDSP_539,C831C236AE26E988,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,110732
+540,WAZAINFO_BDSP_540,C8354136AE29F72C,"Le lanceur matérialise des ondes mystérieuses
+qu’il projette sur l’ennemi. Inflige des dégâts physiques.",0,111008
+541,WAZAINFO_BDSP_541,C8354236AE29F8DF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,111220
+542,WAZAINFO_BDSP_542,C8354336AE29FA92,"Le lanceur déclenche une tempête de vents violents
+qui s’abat sur l’ennemi. Peut aussi le rendre confus.",0,111496
+543,WAZAINFO_BDSP_543,C8354436AE29FC45,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,111708
+544,WAZAINFO_BDSP_544,C8353D36AE29F060,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,111984
+545,WAZAINFO_BDSP_545,C8353E36AE29F213,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,112260
+546,WAZAINFO_BDSP_546,C8353F36AE29F3C6,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,112536
+547,WAZAINFO_BDSP_547,C8354036AE29F579,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,112812
+548,WAZAINFO_BDSP_548,C8354936AE2A04C4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,113088
+549,WAZAINFO_BDSP_549,C8354A36AE2A0677,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,113364
+550,WAZAINFO_BDSP_550,C838C736AE2D10B5,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,113640
+551,WAZAINFO_BDSP_551,C838C636AE2D0F02,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,113916
+552,WAZAINFO_BDSP_552,C838C536AE2D0D4F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,114192
+553,WAZAINFO_BDSP_553,C838C436AE2D0B9C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,114468
+554,WAZAINFO_BDSP_554,C838C336AE2D09E9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,114744
+555,WAZAINFO_BDSP_555,C838C236AE2D0836,"Le lanceur hurle sur l’ennemi.
+Baisse l’Attaque Spéciale de l’ennemi.",0,115020
+556,WAZAINFO_BDSP_556,C838C136AE2D0683,"Envoie de gros blocs de glace sur l’ennemi
+pour lui infliger des dégâts. Peut aussi l’apeurer.",4,115160
+557,WAZAINFO_BDSP_557,C838C036AE2D04D0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,115352
+558,WAZAINFO_BDSP_558,C838CF36AE2D1E4D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,115628
+559,WAZAINFO_BDSP_559,C838CE36AE2D1C9A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,115904
+560,WAZAINFO_BDSP_560,C83BCD36AE2F50BE,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,116180
+561,WAZAINFO_BDSP_561,C83BCE36AE2F5271,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,116456
+562,WAZAINFO_BDSP_562,C83BCB36AE2F4D58,"Le lanceur se tourne vers l’ennemi et lui éructe dessus,
+infligeant des dégâts. Ne fonctionne que si le lanceur
+consomme la Baie qu’il tient.",0,116732
+563,WAZAINFO_BDSP_563,C83BCC36AE2F4F0B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,117016
+564,WAZAINFO_BDSP_564,C83BD136AE2F578A,"Déploie une toile visqueuse autour de l’ennemi
+qui ralentit la Vitesse de tout adversaire entrant
+au combat.",0,117292
+565,WAZAINFO_BDSP_565,C83BD236AE2F593D,"Augmente énormément l’Attaque du lanceur
+si un ennemi est mis K.O. avec cette capacité.",4,117512
+566,WAZAINFO_BDSP_566,C83BCF36AE2F5424,"Le lanceur disparaît au premier tour et frappe au second.
+Cette attaque passe outre les protections.",0,117688
+567,WAZAINFO_BDSP_567,C83BD036AE2F55D7,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,117892
+568,WAZAINFO_BDSP_568,C83BC536AE2F4326,"Le lanceur pousse un rugissement qui intimide l’ennemi
+et diminue son Attaque et son Attaque Spéciale.",0,118168
+569,WAZAINFO_BDSP_569,C83BC636AE2F44D9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,118376
+570,WAZAINFO_BDSP_570,C83F5336AE326A47,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,118652
+571,WAZAINFO_BDSP_571,C83F5236AE326894,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,118928
+572,WAZAINFO_BDSP_572,C83F5536AE326DAD,"Déclenche une violente tempête de fleurs qui inflige
+des dégâts à tous les Pokémon alentour.",0,119204
+573,WAZAINFO_BDSP_573,C83F5436AE326BFA,"Refroidit violemment l’ennemi et peut le geler.
+Super efficace sur les Pokémon de type Eau.",0,119392
+574,WAZAINFO_BDSP_574,C83F4F36AE32637B,"Laisse s’échapper une voix enchanteresse qui inflige
+des dégâts psychiques à l’ennemi.
+Touche à coup sûr.",0,119576
+575,WAZAINFO_BDSP_575,C83F4E36AE3261C8,"Menace l’ennemi dans une ultime tirade avant
+de changer de place avec un autre Pokémon.
+Réduit l’Attaque et l’Attaque Spéciale de l’ennemi.",0,119788
+576,WAZAINFO_BDSP_576,C83F5136AE3266E1,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,120068
+577,WAZAINFO_BDSP_577,C83F5036AE32652E,"Aspire la force vitale de l’ennemi par un baiser.
+Rend au lanceur un nombre de PV supérieur ou égal
+à la moitié des dégâts infligés.",4,120344
+578,WAZAINFO_BDSP_578,C83F4B36AE325CAF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,120612
+579,WAZAINFO_BDSP_579,C83F4A36AE325AFC,"Grâce à une force mystérieuse, la Défense
+de tous les Pokémon Plante au combat augmente.",0,120888
+580,WAZAINFO_BDSP_580,C80C3936AE06E480,"Pendant cinq tours, les Pokémon au sol récupèrent
+quelques PV à chaque tour et la puissance
+des capacités de type Plante augmente.",0,121068
+581,WAZAINFO_BDSP_581,C80C3A36AE06E633,"Pendant cinq tours, les Pokémon au sol ne peuvent
+pas subir d’altération de statut et la puissance
+des capacités de type Dragon est divisée par deux.",0,121332
+582,WAZAINFO_BDSP_582,C80C3B36AE06E7E6,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,121632
+583,WAZAINFO_BDSP_583,C80C3C36AE06E999,"Attaque l’ennemi avec un câlin.
+Peut diminuer son Attaque.",4,121908
+584,WAZAINFO_BDSP_584,C80C3D36AE06EB4C,Déchaîne un vent magique qui cingle l’ennemi.,0,122028
+585,WAZAINFO_BDSP_585,C80C3E36AE06ECFF,"Attaque l’ennemi grâce au pouvoir de la lune.
+Peut diminuer son Attaque Spéciale.",4,122120
+586,WAZAINFO_BDSP_586,C80C3F36AE06EEB2,"Attaque les Pokémon alentour grâce à une onde sonore
+assourdissante qui détruit tout sur son passage.",4,122284
+587,WAZAINFO_BDSP_587,C80C4036AE06F065,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,122488
+588,WAZAINFO_BDSP_588,C80C4136AE06F218,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,122764
+589,WAZAINFO_BDSP_589,C80C4236AE06F3CB,"L’ennemi se lie d’amitié avec le lanceur et perd
+sa combativité, diminuant son Attaque.",0,123040
+590,WAZAINFO_BDSP_590,C80FBF36AE09FE09,"Dévoile des secrets à l’ennemi, qui perd alors
+sa concentration et voit son Attaque Spéciale diminuer.",0,123216
+591,WAZAINFO_BDSP_591,C80FBE36AE09FC56,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,123424
+592,WAZAINFO_BDSP_592,C80FBD36AE09FAA3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,123700
+593,WAZAINFO_BDSP_593,C80FBC36AE09F8F0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,123976
+594,WAZAINFO_BDSP_594,C80FC336AE0A04D5,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,124252
+595,WAZAINFO_BDSP_595,C80FC236AE0A0322,"Attaque avec des flammes brûlantes soufflées
+de la bouche du lanceur. Diminue l’Attaque Spéciale
+de l’ennemi.",4,124528
+596,WAZAINFO_BDSP_596,C80FC136AE0A016F,"Protège des attaques, et diminue les PV de tout
+attaquant qui entre en contact avec le lanceur.",0,124748
+597,WAZAINFO_BDSP_597,C80FC036AE09FFBC,"Grâce à un parfum mystérieux, augmente la Défense
+Spéciale d’un allié.",0,124940
+598,WAZAINFO_BDSP_598,C80FC736AE0A0BA1,"Le corps du lanceur produit des ondes anormales
+qui enveloppent l’ennemi et diminuent beaucoup
+son Attaque Spéciale.",0,125084
+599,WAZAINFO_BDSP_599,C80FC636AE0A09EE,"Sécrète un liquide empoisonné.
+Diminue l’Attaque, l’Attaque Spéciale et la Vitesse
+de l’ennemi empoisonné.",0,125320
+600,WAZAINFO_BDSP_600,E2FDBA36BD8F6729,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,125536
+601,WAZAINFO_BDSP_601,E2FDB936BD8F6576,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,125812
+602,WAZAINFO_BDSP_602,E2FDB836BD8F63C3,"Manipule les champs magnétiques pour augmenter
+la Défense et la Défense Spéciale des Pokémon alliés
+dotés du talent Plus ou du talent Moins.",0,126088
+603,WAZAINFO_BDSP_603,E2FDB736BD8F6210,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,126372
+604,WAZAINFO_BDSP_604,E2FDBE36BD8F6DF5,"Pendant cinq tours, le terrain se charge d’électricité.
+Les Pokémon au sol ne peuvent pas s’endormir
+et la puissance des capacités de type Électrik augmente.",0,126648
+605,WAZAINFO_BDSP_605,E2FDBD36BD8F6C42,"Libère une puissante décharge lumineuse
+qui inflige des dégâts à l’ennemi.",0,126964
+606,WAZAINFO_BDSP_606,E2FDBC36BD8F6A8F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,127116
+607,WAZAINFO_BDSP_607,E2FDBB36BD8F68DC,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,127392
+608,WAZAINFO_BDSP_608,E2FDC236BD8F74C1,"Fixe l’ennemi d’un air très attendrissant qui le touche
+et diminue son Attaque. Agit en priorité.",0,127668
+609,WAZAINFO_BDSP_609,E2FDC136BD8F730E,"Le lanceur attaque en frottant ses bajoues chargées
+d’électricité. Paralyse l’ennemi.",0,127864
+610,WAZAINFO_BDSP_610,E2FA3436BD8C4DA0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,128036
+611,WAZAINFO_BDSP_611,E2FA3536BD8C4F53,"Cette attaque perdure pendant quatre à cinq tours.
+L’ennemi ne peut pas fuir au cours de cette période.",0,128312
+612,WAZAINFO_BDSP_612,E2FA3636BD8C5106,"À force de frapper, les poings deviennent plus durs.
+Augmente l’Attaque du lanceur si l’ennemi est touché.",4,128520
+613,WAZAINFO_BDSP_613,E2FA3736BD8C52B9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,128736
+614,WAZAINFO_BDSP_614,E2FA3836BD8C546C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,129012
+615,WAZAINFO_BDSP_615,E2FA3936BD8C561F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,129288
+616,WAZAINFO_BDSP_616,E2FA3A36BD8C57D2,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,129564
+617,WAZAINFO_BDSP_617,E2FA3B36BD8C5985,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,129840
+618,WAZAINFO_BDSP_618,E2FA3C36BD8C5B38,"D’innombrables rayons lumineux d’un bleu étincelant
+s’abattent sur la cible.",0,130116
+619,WAZAINFO_BDSP_619,E2FA3D36BD8C5CEB,"Le Pokémon transforme la puissance de la terre
+et attaque la cible avec une lame acérée.",0,130272
+620,WAZAINFO_BDSP_620,E3044636BD94C0BB,"Le Pokémon s’abat à toute vitesse sur la cible
+depuis les hautes couches de l’atmosphère.
+Baisse la Défense et la Défense Spéciale du lanceur.",0,130452
+621,WAZAINFO_BDSP_621,E3044536BD94BF08,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,130740
+622,WAZAINFO_BDSP_622,E3044836BD94C421,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,131016
+623,WAZAINFO_BDSP_623,E3044736BD94C26E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,131292
+624,WAZAINFO_BDSP_624,E3044A36BD94C787,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,131568
+625,WAZAINFO_BDSP_625,E3044936BD94C5D4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,131844
+626,WAZAINFO_BDSP_626,E3044C36BD94CAED,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,132120
+627,WAZAINFO_BDSP_627,E3044B36BD94C93A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,132396
+628,WAZAINFO_BDSP_628,E3043E36BD94B323,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,132672
+629,WAZAINFO_BDSP_629,E3043D36BD94B170,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,132948
+630,WAZAINFO_BDSP_630,E300C036BD91A732,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,133224
+631,WAZAINFO_BDSP_631,E300C136BD91A8E5,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,133500
+632,WAZAINFO_BDSP_632,E300BE36BD91A3CC,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,133776
+633,WAZAINFO_BDSP_633,E300BF36BD91A57F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,134052
+634,WAZAINFO_BDSP_634,E300BC36BD91A066,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,134328
+635,WAZAINFO_BDSP_635,E300BD36BD91A219,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,134604
+636,WAZAINFO_BDSP_636,E300BA36BD919D00,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,134880
+637,WAZAINFO_BDSP_637,E300BB36BD919EB3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,135156
+638,WAZAINFO_BDSP_638,E300C836BD91B4CA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,135432
+639,WAZAINFO_BDSP_639,E300C936BD91B67D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,135708
+640,WAZAINFO_BDSP_640,E30B5236BD9AF3CD,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,135984
+641,WAZAINFO_BDSP_641,E30B5136BD9AF21A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,136260
+642,WAZAINFO_BDSP_642,E30B5036BD9AF067,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,136536
+643,WAZAINFO_BDSP_643,E30B4F36BD9AEEB4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,136812
+644,WAZAINFO_BDSP_644,E30B4E36BD9AED01,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,137088
+645,WAZAINFO_BDSP_645,E30B4D36BD9AEB4E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,137364
+646,WAZAINFO_BDSP_646,E30B4C36BD9AE99B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,137640
+647,WAZAINFO_BDSP_647,E30B4B36BD9AE7E8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,137916
+648,WAZAINFO_BDSP_648,E30B4A36BD9AE635,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,138192
+649,WAZAINFO_BDSP_649,E30B4936BD9AE482,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,138468
+650,WAZAINFO_BDSP_650,E307CC36BD97DA44,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,138744
+651,WAZAINFO_BDSP_651,E307CD36BD97DBF7,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,139020
+652,WAZAINFO_BDSP_652,E307CE36BD97DDAA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,139296
+653,WAZAINFO_BDSP_653,E307CF36BD97DF5D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,139572
+654,WAZAINFO_BDSP_654,E307C836BD97D378,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,139848
+655,WAZAINFO_BDSP_655,E307C936BD97D52B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,140124
+656,WAZAINFO_BDSP_656,E307CA36BD97D6DE,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,140400
+657,WAZAINFO_BDSP_657,E307CB36BD97D891,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,140676
+658,WAZAINFO_BDSP_658,E307C436BD97CCAC,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,140952
+659,WAZAINFO_BDSP_659,E307C536BD97CE5F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,141228
+660,WAZAINFO_BDSP_660,E311BE36BDA016FF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,141504
+661,WAZAINFO_BDSP_661,E311BD36BDA0154C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,141780
+662,WAZAINFO_BDSP_662,E311C036BDA01A65,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,142056
+663,WAZAINFO_BDSP_663,E311BF36BDA018B2,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,142332
+664,WAZAINFO_BDSP_664,E311BA36BDA01033,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,142608
+665,WAZAINFO_BDSP_665,E311B936BDA00E80,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,142884
+666,WAZAINFO_BDSP_666,E311BC36BDA01399,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,143160
+667,WAZAINFO_BDSP_667,E311BB36BDA011E6,"Le lanceur attaque violemment en utilisant
+tout son poids.",0,143436
+668,WAZAINFO_BDSP_668,E311C636BDA02497,"Rend au lanceur une quantité de PV équivalente
+à la stat d’Attaque de la cible, puis baisse celle-ci.",0,143556
+669,WAZAINFO_BDSP_669,E311C536BDA022E4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,143760
+670,WAZAINFO_BDSP_670,E30EB836BD9DD6F6,Le lanceur attaque l’ennemi avec des feuilles.,0,144036
+671,WAZAINFO_BDSP_671,E30EB936BD9DD8A9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,144132
+672,WAZAINFO_BDSP_672,E30EB636BD9DD390,"Tisse un fil imprégné de venin. Empoisonne la cible
+et baisse sa Vitesse.",0,144408
+673,WAZAINFO_BDSP_673,E30EB736BD9DD543,"Le lanceur se concentre pour être sûr de porter
+un coup critique au tour suivant.",0,144556
+674,WAZAINFO_BDSP_674,E30EBC36BD9DDDC2,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,144720
+675,WAZAINFO_BDSP_675,E30EBD36BD9DDF75,"Inflige une douleur tellement violente à la cible
+qu’elle ne peut plus émettre de sons pendant deux tours.",4,144996
+676,WAZAINFO_BDSP_676,E30EBA36BD9DDA5C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,145212
+677,WAZAINFO_BDSP_677,E30EBB36BD9DDC0F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,145488
+678,WAZAINFO_BDSP_678,E30EC036BD9DE48E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,145764
+679,WAZAINFO_BDSP_679,E30EC136BD9DE641,"Le lanceur se jette sur la cible de toutes ses forces
+pour lui infliger des dégâts et baisser son Attaque.",0,146040
+680,WAZAINFO_BDSP_680,E318CA36BDA64A11,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,146256
+681,WAZAINFO_BDSP_681,E318C936BDA6485E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,146532
+682,WAZAINFO_BDSP_682,E318C836BDA646AB,"Le Pokémon se consume et les flammes de son corps
+infligent des dégâts élevés à la cible.
+Le lanceur perd le type Feu.",0,146808
+683,WAZAINFO_BDSP_683,E318C736BDA644F8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,147048
+684,WAZAINFO_BDSP_684,E318CE36BDA650DD,"Le lanceur transperce la cible avec sa corne effilée.
+Touche toujours l’ennemi.",0,147324
+685,WAZAINFO_BDSP_685,E318CD36BDA64F2A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,147484
+686,WAZAINFO_BDSP_686,E318CC36BDA64D77,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,147760
+687,WAZAINFO_BDSP_687,E318CB36BDA64BC4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,148036
+688,WAZAINFO_BDSP_688,E318C236BDA63C79,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,148312
+689,WAZAINFO_BDSP_689,E318C136BDA63AC6,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,148588
+690,WAZAINFO_BDSP_690,E3154436BDA33088,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,148864
+691,WAZAINFO_BDSP_691,E3154536BDA3323B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,149140
+692,WAZAINFO_BDSP_692,E3154636BDA333EE,"Le lanceur utilise son corps comme un véritable
+marteau pour écraser la cible.",0,149416
+693,WAZAINFO_BDSP_693,E3154736BDA335A1,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,149576
+694,WAZAINFO_BDSP_694,E3154836BDA33754,"Réduit les dégâts causés par les capacités physiques
+et spéciales durant cinq tours.
+Ne peut être utilisée que lorsqu’il grêle.",0,149852
+695,WAZAINFO_BDSP_695,E3154936BDA33907,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,150108
+696,WAZAINFO_BDSP_696,E3154A36BDA33ABA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,150384
+697,WAZAINFO_BDSP_697,E3154B36BDA33C6D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,150660
+698,WAZAINFO_BDSP_698,E3153C36BDA322F0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,150936
+699,WAZAINFO_BDSP_699,E3153D36BDA324A3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,151212
+700,WAZAINFO_BDSP_700,DA541F36B8A7321E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,151488
+701,WAZAINFO_BDSP_701,DA542036B8A733D1,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,151764
+702,WAZAINFO_BDSP_702,DA541D36B8A72EB8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,152040
+703,WAZAINFO_BDSP_703,DA541E36B8A7306B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,152316
+704,WAZAINFO_BDSP_704,DA542336B8A738EA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,152592
+705,WAZAINFO_BDSP_705,DA542436B8A73A9D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,152868
+706,WAZAINFO_BDSP_706,DA542136B8A73584,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,153144
+707,WAZAINFO_BDSP_707,DA542236B8A73737,"Le lanceur attaque en utilisant sa frustration. S’il a
+utilisé une capacité qui a échoué au tour précédent,
+la puissance de Trépignement est doublée.",0,153420
+708,WAZAINFO_BDSP_708,DA541736B8A72486,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,153720
+709,WAZAINFO_BDSP_709,DA541836B8A72639,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,153996
+710,WAZAINFO_BDSP_710,DA57A536B8AA4BA7,"Le lanceur utilise la force de l’eau pour attaquer.
+Peut aussi baisser la Défense de la cible.",0,154272
+711,WAZAINFO_BDSP_711,DA57A436B8AA49F4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,154464
+712,WAZAINFO_BDSP_712,DA57A736B8AA4F0D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,154740
+713,WAZAINFO_BDSP_713,DA57A636B8AA4D5A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,155016
+714,WAZAINFO_BDSP_714,DA57A136B8AA44DB,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,155292
+715,WAZAINFO_BDSP_715,DA57A036B8AA4328,"Le lanceur jette un regard plein de larmes à la cible.
+Celle-ci perd toute velléité de combat et voit
+son Attaque et son Attaque Spéciale baisser.",0,155568
+716,WAZAINFO_BDSP_716,DA57A336B8AA4841,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,155864
+717,WAZAINFO_BDSP_717,DA57A236B8AA468E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,156140
+718,WAZAINFO_BDSP_718,DA579D36B8AA3E0F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,156416
+719,WAZAINFO_BDSP_719,DA579C36B8AA3C5C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,156692
+720,WAZAINFO_BDSP_720,DA4D1336B8A0FF0C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,156968
+721,WAZAINFO_BDSP_721,DA4D1436B8A100BF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,157244
+722,WAZAINFO_BDSP_722,DA4D1536B8A10272,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,157520
+723,WAZAINFO_BDSP_723,DA4D1636B8A10425,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,157796
+724,WAZAINFO_BDSP_724,DA4D0F36B8A0F840,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,158072
+725,WAZAINFO_BDSP_725,DA4D1036B8A0F9F3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,158348
+726,WAZAINFO_BDSP_726,DA4D1136B8A0FBA6,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,158624
+727,WAZAINFO_BDSP_727,DA4D1236B8A0FD59,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,158900
+728,WAZAINFO_BDSP_728,DA4D1B36B8A10CA4,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,159176
+729,WAZAINFO_BDSP_729,DA4D1C36B8A10E57,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,159452
+730,WAZAINFO_BDSP_730,DA509936B8A41895,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,159728
+731,WAZAINFO_BDSP_731,DA509836B8A416E2,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,160004
+732,WAZAINFO_BDSP_732,DA509736B8A4152F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,160280
+733,WAZAINFO_BDSP_733,DA509636B8A4137C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,160556
+734,WAZAINFO_BDSP_734,DA509536B8A411C9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,160832
+735,WAZAINFO_BDSP_735,DA509436B8A41016,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,161108
+736,WAZAINFO_BDSP_736,DA509336B8A40E63,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,161384
+737,WAZAINFO_BDSP_737,DA509236B8A40CB0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,161660
+738,WAZAINFO_BDSP_738,DA50A136B8A4262D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,161936
+739,WAZAINFO_BDSP_739,DA50A036B8A4247A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,162212
+740,WAZAINFO_BDSP_740,DA46A736B89BDBDA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,162488
+741,WAZAINFO_BDSP_741,DA46A836B89BDD8D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,162764
+742,WAZAINFO_BDSP_742,DA46A536B89BD874,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,163040
+743,WAZAINFO_BDSP_743,DA46A636B89BDA27,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,163316
+744,WAZAINFO_BDSP_744,DA46A336B89BD50E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,163592
+745,WAZAINFO_BDSP_745,DA46A436B89BD6C1,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,163868
+746,WAZAINFO_BDSP_746,DA46A136B89BD1A8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,164144
+747,WAZAINFO_BDSP_747,DA46A236B89BD35B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,164420
+748,WAZAINFO_BDSP_748,DA469F36B89BCE42,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,164696
+749,WAZAINFO_BDSP_749,DA46A036B89BCFF5,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,164972
+750,WAZAINFO_BDSP_750,DA4A0D36B89EBF03,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,165248
+751,WAZAINFO_BDSP_751,DA4A0C36B89EBD50,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,165524
+752,WAZAINFO_BDSP_752,DA4A0F36B89EC269,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,165800
+753,WAZAINFO_BDSP_753,DA4A0E36B89EC0B6,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,166076
+754,WAZAINFO_BDSP_754,DA4A1136B89EC5CF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,166352
+755,WAZAINFO_BDSP_755,DA4A1036B89EC41C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,166628
+756,WAZAINFO_BDSP_756,DA4A1336B89EC935,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,166904
+757,WAZAINFO_BDSP_757,DA4A1236B89EC782,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,167180
+758,WAZAINFO_BDSP_758,DA4A1536B89ECC9B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,167456
+759,WAZAINFO_BDSP_759,DA4A1436B89ECAE8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,167732
+760,WAZAINFO_BDSP_760,DA3F9B36B895A8C8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,168008
+761,WAZAINFO_BDSP_761,DA3F9C36B895AA7B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,168284
+762,WAZAINFO_BDSP_762,DA3F9D36B895AC2E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,168560
+763,WAZAINFO_BDSP_763,DA3F9E36B895ADE1,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,168836
+764,WAZAINFO_BDSP_764,DA3F9F36B895AF94,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,169112
+765,WAZAINFO_BDSP_765,DA3FA036B895B147,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,169388
+766,WAZAINFO_BDSP_766,DA3FA136B895B2FA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,169664
+767,WAZAINFO_BDSP_767,DA3FA236B895B4AD,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,169940
+768,WAZAINFO_BDSP_768,DA3F9336B8959B30,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,170216
+769,WAZAINFO_BDSP_769,DA3F9436B8959CE3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,170492
+770,WAZAINFO_BDSP_770,DA432136B898C251,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,170768
+771,WAZAINFO_BDSP_771,DA432036B898C09E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,171044
+772,WAZAINFO_BDSP_772,DA431F36B898BEEB,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,171320
+773,WAZAINFO_BDSP_773,DA431E36B898BD38,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,171596
+774,WAZAINFO_BDSP_774,DA432536B898C91D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,171872
+775,WAZAINFO_BDSP_775,DA432436B898C76A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,172148
+776,WAZAINFO_BDSP_776,DA432336B898C5B7,"Le lanceur utilise son corps pour attaquer sa cible.
+Plus la Défense du lanceur est élevée,
+plus les dégâts infligés sont importants.",0,172424
+777,WAZAINFO_BDSP_777,DA432236B898C404,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,172692
+778,WAZAINFO_BDSP_778,DA431936B898B4B9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,172968
+779,WAZAINFO_BDSP_779,DA431836B898B306,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,173244
+780,WAZAINFO_BDSP_780,DA390F36B8904F36,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,173520
+781,WAZAINFO_BDSP_781,DA391036B89050E9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,173796
+782,WAZAINFO_BDSP_782,DA390D36B8904BD0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,174072
+783,WAZAINFO_BDSP_783,DA390E36B8904D83,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,174348
+784,WAZAINFO_BDSP_784,DA391336B8905602,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,174624
+785,WAZAINFO_BDSP_785,DA391436B89057B5,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,174900
+786,WAZAINFO_BDSP_786,DA391136B890529C,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,175176
+787,WAZAINFO_BDSP_787,DA391236B890544F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,175452
+788,WAZAINFO_BDSP_788,DA391736B8905CCE,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,175728
+789,WAZAINFO_BDSP_789,DA391836B8905E81,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,176004
+790,WAZAINFO_BDSP_790,DA3C1536B8928F3F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,176280
+791,WAZAINFO_BDSP_791,DA3C1436B8928D8C,"Le lanceur projette une eau mystérieuse
+autour du terrain pour restaurer ses PV
+et ceux de ses alliés au combat.",0,176556
+792,WAZAINFO_BDSP_792,DA3C1736B89292A5,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,176784
+793,WAZAINFO_BDSP_793,DA3C1636B89290F2,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,177060
+794,WAZAINFO_BDSP_794,DA3C1136B8928873,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,177336
+795,WAZAINFO_BDSP_795,DA3C1036B89286C0,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,177612
+796,WAZAINFO_BDSP_796,DA3C1336B8928BD9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,177888
+797,WAZAINFO_BDSP_797,DA3C1236B8928A26,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,178164
+798,WAZAINFO_BDSP_798,DA3C1D36B8929CD7,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,178440
+799,WAZAINFO_BDSP_799,DA3C1C36B8929B24,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,178716
+800,WAZAINFO_BDSP_800,AF04D836A01F6F27,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,178992
+801,WAZAINFO_BDSP_801,AF04D736A01F6D74,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,179268
+802,WAZAINFO_BDSP_802,AF04DA36A01F728D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,179544
+803,WAZAINFO_BDSP_803,AF04D936A01F70DA,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,179820
+804,WAZAINFO_BDSP_804,AF04D436A01F685B,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,180096
+805,WAZAINFO_BDSP_805,AF04D336A01F66A8,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,180372
+806,WAZAINFO_BDSP_806,AF04D636A01F6BC1,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,180648
+807,WAZAINFO_BDSP_807,AF04D536A01F6A0E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,180924
+808,WAZAINFO_BDSP_808,AF04D036A01F618F,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,181200
+809,WAZAINFO_BDSP_809,AF04CF36A01F5FDC,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,181476
+810,WAZAINFO_BDSP_810,AF015236A01C559E,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,181752
+811,WAZAINFO_BDSP_811,AF015336A01C5751,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,182028
+812,WAZAINFO_BDSP_812,AF015036A01C5238,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,182304
+813,WAZAINFO_BDSP_813,AF015136A01C53EB,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,182580
+814,WAZAINFO_BDSP_814,AF015636A01C5C6A,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,182856
+815,WAZAINFO_BDSP_815,AF015736A01C5E1D,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,183132
+816,WAZAINFO_BDSP_816,AF015436A01C5904,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,183408
+817,WAZAINFO_BDSP_817,AF015536A01C5AB7,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,183684
+818,WAZAINFO_BDSP_818,AF014A36A01C4806,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,183960
+819,WAZAINFO_BDSP_819,AF014B36A01C49B9,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,184236
+820,WAZAINFO_BDSP_820,AEFDCC36A0193C15,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,184512
+821,WAZAINFO_BDSP_821,AEFDCB36A0193A62,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,184788
+822,WAZAINFO_BDSP_822,AEFDCA36A01938AF,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,185064
+823,WAZAINFO_BDSP_823,AEFDC936A01936FC,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,185340
+824,WAZAINFO_BDSP_824,AEFDC836A0193549,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,185616
+825,WAZAINFO_BDSP_825,AEFDC736A0193396,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,185892
+826,WAZAINFO_BDSP_826,AEFDC636A01931E3,"Cette capacité ne peut pas être utilisée.
+Il est recommandé de l’oublier, même s’il sera
+impossible de se la remémorer une fois oubliée.",0,186168

@@ -1,0 +1,68 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_main_index_010,584CD9E407258EC0,MAIN MENU,0,444
+1,	,AF66E44C86071324,[REF:1],0,464
+2,nx_main_button_000,2469972884056955,Back,0,476
+3,nx_main_button_001,24699628840567A2,Help,0,488
+4,	,AF66E44C86071324,[REF:4],0,500
+5,nx_main_box_010,1A46EF5B1FB74199,POKÉMON,0,512
+6,nx_main_box_020,1A4A755B1FBA5B22,"Number deposited: [CTRL:0203:0000,002C]",0,528
+7,nx_main_pokedex_010,D00ADF22BD2805EA,POKÉDEX,0,576
+8,nx_main_pokedex_020,D0075922BD24EC61,"Number registered: [CTRL:0203:0000,002C]",0,592
+9,nx_main_pokedex_021,D0075822BD24EAAE,[REF:9],0,644
+10,nx_main_eshop_010,F2911EFA46A1BC6F,Nintendo eShop,0,656
+11,nx_main_small_title_010,94DE8C9018BBEC7A,POKÉMON,0,688
+12,nx_main_small_title_020,94DB069018B8D2F1,POKÉDEX,0,704
+13,nx_main_small_title_030,94D8009018B692E8,NOTEBOOK,0,720
+14,nx_main_small_title_040,94EF8A9018CA5C47,MOVE,0,740
+15,nx_main_small_title_050,94EC049018C742BE,POINTS,0,752
+16,nx_main_small_title_060,94E8FE9018C502B5,OPTIONS,4,768
+17,	,AF66E44C86071324,[REF:17],0,784
+18,nx_main_comment_01,D94EEB682EE7E5B3,Deposit your Pokémon,0,796
+19,nx_main_comment_02,D94EEC682EE7E766,Check information about Pokémon,0,840
+20,nx_main_comment_03,D94EED682EE7E919,Check the records of your use,0,904
+21,nx_main_comment_04,D94EEE682EE7EACC,Move Pokémon from a Nintendo 3DS game,0,964
+22,nx_main_comment_05,D94EEF682EE7EC7F,Use your Pokémon HOME Points,4,1040
+23,nx_main_comment_06,D94EF0682EE7EE32,Change settings for Pokémon HOME,0,1100
+24,nx_main_comment_07,D94EF1682EE7EFE5,About the Premium Plan (available for purchase),4,1168
+25,nx_main_comment_07_ex,7432D629AEA9EF2B,"You can learn more about the Premium Plan
+on Nintendo eShop.
+Children should have an adult check this
+with them.",0,1264
+26,	,AF66E44C86071324,[REF:26],0,1492
+27,nx_main_eshop_msg_010,5769BF9354BD9841,"Would you like to check the Premium Plan on
+Nintendo eShop?",0,1504
+28,nx_main_eshop_msg_pot_010,13FA00777B30FE85,View 1 Month Plan (30 Days),0,1624
+29,nx_main_eshop_msg_pot_020,13FD86777B34180E,View 3 Month Plan (90 Days),0,1680
+30,nx_main_eshop_msg_pot_030,14008C777B365817,View 12 Month Plan (365 Days),0,1736
+31,nx_main_eshop_msg_pot_999,6349F077A87F68F9,Cancel,0,1796
+32,	,AF66E44C86071324,[REF:32],0,1812
+33,nx_main_msg_010,09F05BFC15443881,"This feature can’t be accessed on the Basic Plan.[CLEAR]
+The feature can be accessed with the Premium Plan,
+available for purchase on Nintendo eShop.",0,1824
+34,nx_main_msg_020,09F361FC1546788A,[REF:34],0,2116
+35,nx_main_msg_021,09F362FC15467A3D,[REF:35],0,2128
+36,nx_main_msg_022,09F35FFC15467524,[REF:36],0,2140
+37,nx_main_msg_030,09F6C7FC15495BB3,New Research Tasks are now available!,0,2152
+38,	,AF66E44C86071324,[REF:38],0,2228
+39,nx_main_help_010,B131D26A7BFF4C93,"This screen is the main menu!
+This is where you’ll be able to access ALL the
+available features. Just pick the one you want!",0,2240
+40,nx_main_help_020,B127606A7BF63658,"Move the cursor with the Left Stick and select
+the function you want with the A Button!
+And if you want to go back to the previous screen,
+just press the B Button!",0,2492
+41,	,AF66E44C86071324,[REF:41],0,2820
+42,nx_main_help_first_010,AE567A0D58881F2A,"Hello there! My name is Poké Boy!
+It’s my job to help you figure out your way around Pokémon HOME!",0,2832
+43,nx_main_help_first_020,AE52F40D588505A1,"If you want to know what you can do on any
+given screen, just press the - Button and I’ll
+be with you in a jiffy! Now, let’s start with this screen...",4,3032
+44,nx_main_small_title_070,94E5789018C1E92C,Pokémon GO,0,3336
+45,nx_main_msg_010,09F05BFC15443881,[REF:45],0,3360
+46,nx_main_comment_08,D94EF2682EE7F198,Receive Pokémon from Pokémon GO,0,3372
+47,nx_main_msg_011,09F05AFC154436CE,[REF:47],0,3436
+48,nx_main_small_title_080,94C7029018A8231B,Pokémon Champions,0,3448
+49,nx_main_comment_09,D94EF3682EE7F34B,Send Pokémon to Pokémon Champions,0,3484
+50,	,AF66E44C86071324,[REF:50],0,3552
+51,nx_main_small_title_090,94C37C9018A50992,GBA games,0,3564
+52,nx_main_comment_10,D95270682EEAFD89,Move Pokémon from GBA games on the Nintendo Switch,0,3584

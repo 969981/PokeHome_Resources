@@ -1,0 +1,2120 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,WAZAINFO_ALL_000,3492417E74D1CC0B,"-
+-
+-",0,7396
+1,WAZAINFO_ALL_001,3492407E74D1CA58,"Le lanceur écrase la cible avec l’un de ses membres,
+tels qu’une de ses pattes avant ou sa longue queue.",0,7408
+2,WAZAINFO_ALL_002,3492437E74D1CF71,"L’ennemi est tranché violemment.
+Taux de critique élevé.",0,7620
+3,WAZAINFO_ALL_003,3492427E74D1CDBE,Gifle rapidement l’ennemi de deux à cinq fois d’affilée.,0,7736
+4,WAZAINFO_ALL_004,3492457E74D1D2D7,"Une tornade de coups de poing qui frappe de
+deux à cinq fois d’affilée.",4,7852
+5,WAZAINFO_ALL_005,3492447E74D1D124,"La cible reçoit un coup de poing d’une grande
+puissance.",0,7996
+6,WAZAINFO_ALL_006,3492477E74D1D63D,"Des pièces sont lancées sur la cible.
+Permet d’obtenir de l’argent à la fin du combat.",0,8112
+7,WAZAINFO_ALL_007,3492467E74D1D48A,"Un coup de poing enflammé vient frapper la cible,
+ce qui peut la brûler.",4,8288
+8,WAZAINFO_ALL_008,3492397E74D1BE73,"Un coup de poing glacé vient frapper la cible,
+ce qui peut la geler.",4,8436
+9,WAZAINFO_ALL_009,3492387E74D1BCC0,"Un coup de poing électrique vient frapper la cible,
+ce qui peut la paralyser.",4,8576
+10,WAZAINFO_ALL_010,348F3B7E74CF8C02,"Lacère la cible avec des griffes acérées pour lui
+infliger des dégâts.",0,8732
+11,WAZAINFO_ALL_011,348F3C7E74CF8DB5,La cible est attrapée et compressée par les côtés.,0,8876
+12,WAZAINFO_ALL_012,348F397E74CF889C,"Des pinces lacèrent violemment la cible, la mettant
+K.O. sur le coup si elle est touchée.",0,8980
+13,WAZAINFO_ALL_013,348F3A7E74CF8A4F,"Attaque en deux tours.
+Des lames de vent frappent l’ennemi au second tour.
+Taux de critique élevé.",4,9160
+14,WAZAINFO_ALL_014,348F377E74CF8536,"Une danse frénétique qui exalte l’esprit combatif.
+Augmente beaucoup l’Attaque du lanceur.",4,9360
+15,WAZAINFO_ALL_015,348F387E74CF86E9,Coupe la cible avec des lames ou des griffes.,0,9544
+16,WAZAINFO_ALL_016,348F357E74CF81D0,"Le lanceur bat des ailes pour générer une bourrasque
+qui blesse la cible.",0,9636
+17,WAZAINFO_ALL_017,348F367E74CF8383,"Le lanceur déploie largement ses ailes majestueuses
+pour attaquer la cible.",0,9784
+18,WAZAINFO_ALL_018,348F437E74CF999A,"Éjecte le Pokémon ennemi et le remplace par un autre.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",4,9936
+19,WAZAINFO_ALL_019,348F447E74CF9B4D,Le lanceur s’envole au premier tour et frappe au second.,0,10180
+20,WAZAINFO_ALL_020,348BB57E74CC7279,"Le lanceur ligote la cible avec son corps allongé ou
+ses tentacules pour la compresser durant quatre
+à cinq tours.",0,10296
+21,WAZAINFO_ALL_021,348BB47E74CC70C6,"Le lanceur utilise l’un de ses membres, tels qu’une queue
+ou une liane, pour infliger des dégâts à la cible.",0,10528
+22,WAZAINFO_ALL_022,348BB37E74CC6F13,"Fouette la cible avec de fines lianes pour infliger
+des dégâts.",0,10748
+23,WAZAINFO_ALL_023,348BB27E74CC6D60,"Écrase la cible avec un énorme pied, ce qui peut aussi
+l’apeurer.",4,10876
+24,WAZAINFO_ALL_024,348BB97E74CC7945,"Deux coups de pied qui frappent la cible deux fois
+d’affilée.",0,11008
+25,WAZAINFO_ALL_025,348BB87E74CC7792,Un coup de pied surpuissant qui frappe la cible.,4,11132
+26,WAZAINFO_ALL_026,348BB77E74CC75DF,"Le lanceur s’envole pour décocher un coup de pied
+sauté. S’il échoue, le lanceur se blesse.",0,11232
+27,WAZAINFO_ALL_027,348BB67E74CC742C,"Le lanceur effectue un coup de pied tournoyant
+et extrêmement rapide. Peut apeurer l’ennemi.",0,11416
+28,WAZAINFO_ALL_028,348BBD7E74CC8011,"Lance du sable au visage de la cible pour baisser
+sa Précision.",0,11604
+29,WAZAINFO_ALL_029,348BBC7E74CC7E5E,"Le lanceur donne un coup de tête à la cible qui peut
+aussi l’apeurer.",0,11732
+30,WAZAINFO_ALL_030,34882F7E74C958F0,"Frappe la cible d’un coup de corne pointue pour
+infliger des dégâts.",0,11872
+31,WAZAINFO_ALL_031,3488307E74C95AA3,"Frappe la cible deux à cinq fois d’affilée avec
+un membre pointu tel qu’un bec ou une corne.",0,12012
+32,WAZAINFO_ALL_032,3488317E74C95C56,"Un coup de corne en vrille qui empale la cible,
+la mettant K.O. sur le coup si elle est touchée.",4,12200
+33,WAZAINFO_ALL_033,3488327E74C95E09,"Le lanceur charge la cible et la percute de tout
+son poids.",0,12396
+34,WAZAINFO_ALL_034,3488337E74C95FBC,"Le lanceur se laisse tomber sur la cible de tout
+son poids, ce qui peut aussi la paralyser.",0,12516
+35,WAZAINFO_ALL_035,3488347E74C9616F,"Le lanceur ligote la cible avec son corps allongé ou
+ses tentacules pour la compresser durant quatre
+à cinq tours.",0,12700
+36,WAZAINFO_ALL_036,3488357E74C96322,"Une charge violente qui blesse aussi légèrement
+le lanceur.",4,12932
+37,WAZAINFO_ALL_037,3488367E74C964D5,"Une attaque furieuse qui dure de deux à trois tours.
+Le lanceur devient confus.",4,13052
+38,WAZAINFO_ALL_038,3488377E74C96688,"Une charge dangereuse et imprudente.
+Blesse aussi gravement le lanceur.",4,13212
+39,WAZAINFO_ALL_039,3488387E74C9683B,"Le lanceur remue son adorable queue pour tromper
+la vigilance de la cible et baisser sa Défense.",0,13356
+40,WAZAINFO_ALL_040,34A0397E74DDFBCF,"Un dard toxique transperce la cible et peut aussi
+l’empoisonner.",4,13552
+41,WAZAINFO_ALL_041,34A0387E74DDFA1C,"Un double coup de dard qui transperce l’ennemi
+deux fois d’affilée. Peut aussi l’empoisonner.",4,13684
+42,WAZAINFO_ALL_042,34A03B7E74DDFF35,"Envoie une rafale de dards.
+Peut toucher de deux à cinq fois.",4,13872
+43,WAZAINFO_ALL_043,34A03A7E74DDFD82,"Le lanceur fait les gros yeux à la cible pour l’intimider
+et baisser sa Défense.",0,13996
+44,WAZAINFO_ALL_044,34A0357E74DDF503,"Le lanceur utilise ses canines tranchantes pour mordre
+la cible, ce qui peut aussi l’apeurer.",0,14160
+45,WAZAINFO_ALL_045,34A0347E74DDF350,"Le lanceur pousse un cri tout mimi pour tromper
+la vigilance de la cible et baisser son Attaque.",0,14348
+46,WAZAINFO_ALL_046,34A0377E74DDF869,"Effraie le Pokémon ennemi et le remplace par un autre.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",4,14544
+47,WAZAINFO_ALL_047,34A0367E74DDF6B6,Une berceuse plonge la cible dans un profond sommeil.,4,14792
+48,WAZAINFO_ALL_048,34A0417E74DE0967,"Le lanceur produit d’étranges ondes sonores
+qui rendent la cible confuse.",0,14900
+49,WAZAINFO_ALL_049,34A0407E74DE07B4,"Une onde de choc destructrice qui inflige toujours
+20 PV de dégâts.",4,15048
+50,WAZAINFO_ALL_050,349CB37E74DAE246,"Empêche la cible de répéter sa dernière attaque.
+Dure quatre tours.",4,15184
+51,WAZAINFO_ALL_051,349CB47E74DAE3F9,"Le lanceur attaque la cible avec un jet d’acide
+corrosif qui peut aussi baisser sa Défense Spéciale.",0,15320
+52,WAZAINFO_ALL_052,349CB17E74DADEE0,"La cible est attaquée par une faible flamme qui peut
+aussi la brûler.",0,15524
+53,WAZAINFO_ALL_053,349CB27E74DAE093,"La cible reçoit un torrent de flammes qui peut aussi
+la brûler.",0,15664
+54,WAZAINFO_ALL_054,349CB77E74DAE912,"Une brume blanche enveloppe le lanceur et ses alliés
+et empêche la réduction des stats pour cinq tours.",4,15792
+55,WAZAINFO_ALL_055,349CB87E74DAEAC5,De l’eau est projetée avec force sur la cible.,0,16000
+56,WAZAINFO_ALL_056,349CB57E74DAE5AC,Un puissant jet d’eau est dirigé sur la cible.,4,16096
+57,WAZAINFO_ALL_057,349CB67E74DAE75F,"Une énorme vague s’abat sur le champ de bataille
+et inflige des dégâts à tous les Pokémon autour
+du lanceur.",4,16192
+58,WAZAINFO_ALL_058,349CBB7E74DAEFDE,"Un rayon de glace frappe la cible, ce qui peut aussi
+la geler.",4,16412
+59,WAZAINFO_ALL_059,349CBC7E74DAF191,"Une violente tempête de neige s’abat sur la cible,
+ce qui peut aussi la geler.",4,16540
+60,WAZAINFO_ALL_060,34994D7E74D7FF1D,"Un étrange rayon frappe la cible, ce qui peut aussi
+la rendre confuse.",4,16700
+61,WAZAINFO_ALL_061,34994C7E74D7FD6A,"Des bulles sont envoyées avec puissance sur la cible,
+ce qui peut aussi baisser sa Vitesse.",0,16844
+62,WAZAINFO_ALL_062,34994B7E74D7FBB7,"Le lanceur envoie un rayon arc-en-ciel sur la cible,
+ce qui peut aussi baisser son Attaque.",0,17028
+63,WAZAINFO_ALL_063,34994A7E74D7FA04,"Le lanceur projette un puissant rayon sur la cible,
+mais doit se reposer au tour suivant.",0,17212
+64,WAZAINFO_ALL_064,3499497E74D7F851,"Le lanceur frappe la cible d’un bec acéré ou
+d’une corne pointue pour infliger des dégâts.",0,17392
+65,WAZAINFO_ALL_065,3499487E74D7F69E,Une attaque utilisant le bec comme une perceuse.,4,17576
+66,WAZAINFO_ALL_066,3499477E74D7F4EB,"Le lanceur agrippe l’ennemi et l’écrase au sol.
+Blesse aussi légèrement le lanceur.",0,17676
+67,WAZAINFO_ALL_067,3499467E74D7F338,"Un grand coup de pied bas qui fauche la cible.
+Plus celle-ci est lourde, plus la puissance de
+cette capacité augmente.",4,17844
+68,WAZAINFO_ALL_068,3499457E74D7F185,"Une riposte qui répond à toute attaque physique
+en infligeant le double de dégâts.",4,18084
+69,WAZAINFO_ALL_069,3499447E74D7EFD2,"La cible est projetée grâce au pouvoir de la gravité.
+Cette capacité inflige des dégâts égaux au niveau
+du lanceur.",0,18252
+70,WAZAINFO_ALL_070,3495C77E74D4E594,Le lanceur cogne la cible de toutes ses forces.,0,18484
+71,WAZAINFO_ALL_071,3495C87E74D4E747,"Une attaque qui absorbe les nutriments et convertit
+la moitié des dégâts infligés en PV pour le lanceur.",4,18580
+72,WAZAINFO_ALL_072,3495C97E74D4E8FA,"Une attaque qui absorbe les nutriments et convertit
+la moitié des dégâts infligés en PV pour le lanceur.",4,18792
+73,WAZAINFO_ALL_073,3495CA7E74D4EAAD,"Une graine est semée sur la cible. À chaque tour,
+elle lui dérobe des PV que le lanceur récupère.",4,19004
+74,WAZAINFO_ALL_074,3495C37E74D4DEC8,"Le corps du lanceur se développe.
+Augmente l’Attaque et l’Attaque Spéciale.",0,19200
+75,WAZAINFO_ALL_075,3495C47E74D4E07B,"Des feuilles aiguisées comme des rasoirs entaillent
+la cible. Taux de critiques élevé.",0,19352
+76,WAZAINFO_ALL_076,3495C57E74D4E22E,"Le lanceur absorbe une grande quantité de lumière
+au premier tour et envoie un rayon puissant au tour
+suivant.",0,19528
+77,WAZAINFO_ALL_077,3495C67E74D4E3E1,Une poudre toxique empoisonne la cible.,4,19752
+78,WAZAINFO_ALL_078,3495BF7E74D4D7FC,"Le lanceur répand sur la cible une poudre
+qui la paralyse.",0,19832
+79,WAZAINFO_ALL_079,3495C07E74D4D9AF,"Le lanceur répand une poudre soporifique
+qui endort la cible.",0,19952
+80,WAZAINFO_ALL_080,34ADB17E74E95213,"Le lanceur attaque en projetant des pétales pendant
+deux à trois tours avant de céder à la confusion.",0,20076
+81,WAZAINFO_ALL_081,34ADB07E74E95060,"Le lanceur crache de la soie pour ligoter la cible
+et beaucoup baisser sa Vitesse.",0,20280
+82,WAZAINFO_ALL_082,34ADB37E74E95579,"La colère du lanceur déclenche une onde de choc
+destructrice qui inflige toujours 40 PV de dégâts.",0,20448
+83,WAZAINFO_ALL_083,34ADB27E74E953C6,"Un tourbillon de flammes emprisonne la cible
+pendant quatre à cinq tours.",4,20648
+84,WAZAINFO_ALL_084,34ADB57E74E958DF,"Une décharge électrique tombe sur la cible,
+ce qui peut aussi la paralyser.",4,20796
+85,WAZAINFO_ALL_085,34ADB47E74E9572C,"Une grosse décharge électrique tombe sur la cible,
+ce qui peut aussi la paralyser.",4,20948
+86,WAZAINFO_ALL_086,34ADB77E74E95C45,Un faible choc électrique paralyse la cible.,4,21116
+87,WAZAINFO_ALL_087,34ADB67E74E95A92,"La foudre tombe sur la cible pour lui infliger
+des dégâts, ce qui peut aussi la paralyser.",0,21208
+88,WAZAINFO_ALL_088,34ADB97E74E95FAB,Le lanceur soulève une pierre et la lance sur la cible.,0,21392
+89,WAZAINFO_ALL_089,34ADB87E74E95DF8,"Le lanceur provoque un tremblement de terre
+touchant tous les Pokémon autour de lui.",0,21504
+90,WAZAINFO_ALL_090,34AA4B7E74E66EEA,"Le lanceur fait tomber la cible dans une crevasse.
+Si cette attaque réussit, elle met K.O. sur le coup.",0,21676
+91,WAZAINFO_ALL_091,34AA4C7E74E6709D,Le lanceur creuse au premier tour et frappe au second.,0,21884
+92,WAZAINFO_ALL_092,34AA497E74E66B84,"Le lanceur empoisonne gravement la cible.
+Les dégâts dus au poison augmentent à chaque tour.",0,21996
+93,WAZAINFO_ALL_093,34AA4A7E74E66D37,"Une faible vague télékinétique frappe la cible,
+ce qui peut aussi la plonger dans la confusion.",4,22184
+94,WAZAINFO_ALL_094,34AA477E74E6681E,"Une puissante force télékinétique frappe la cible,
+ce qui peut aussi faire baisser sa Défense Spéciale.",4,22376
+95,WAZAINFO_ALL_095,34AA487E74E669D1,"Le lanceur hypnotise la cible pour la plonger
+dans un profond sommeil.",0,22584
+96,WAZAINFO_ALL_096,34AA457E74E664B8,"Le lanceur médite pour éveiller son pouvoir latent
+et augmenter son Attaque.",0,22728
+97,WAZAINFO_ALL_097,34AA467E74E6666B,"Le lanceur se relaxe et allège son corps pour beaucoup
+augmenter sa Vitesse.",0,22884
+98,WAZAINFO_ALL_098,34AA437E74E66152,"Le lanceur fonce sur la cible si rapidement qu’on
+parvient à peine à le discerner. Frappe en priorité.",0,23040
+99,WAZAINFO_ALL_099,34AA447E74E66305,"Une fois activée, cette capacité augmente l’Attaque
+du lanceur à mesure que celui-ci subit des attaques.",4,23248
+100,WAZAINFO_ALL_100,2B7C067E6F8D6840,"Permet de changer de place avec un autre Pokémon
+de l’équipe s’il y en a. Quand cette capacité est utilisée
+par un Pokémon sauvage, celui-ci fuit le combat.",0,23460
+101,WAZAINFO_ALL_101,2B7C077E6F8D69F3,"Le lanceur invoque un mirage et inflige des dégâts égaux
+au niveau du lanceur.",0,23776
+102,WAZAINFO_ALL_102,2B7C087E6F8D6BA6,"Le lanceur copie la dernière capacité utilisée par
+la cible et la conserve tant qu’il reste au combat.",0,23936
+103,WAZAINFO_ALL_103,2B7C097E6F8D6D59,"Le lanceur émet un son strident qui donne envie de
+se boucher les oreilles. Baisse beaucoup la Défense
+de la cible.",0,24144
+104,WAZAINFO_ALL_104,2B7C0A7E6F8D6F0C,"Le lanceur se déplace si vite qu’il crée des copies
+illusoires de lui-même, augmentant son Esquive.",0,24376
+105,WAZAINFO_ALL_105,2B7C0B7E6F8D70BF,"Un soin qui permet au lanceur de récupérer
+jusqu’à la moitié de ses PV max.",4,24576
+106,WAZAINFO_ALL_106,2B7C0C7E6F8D7272,"Le lanceur contracte tous ses muscles pour augmenter
+sa Défense.",0,24728
+107,WAZAINFO_ALL_107,2B7C0D7E6F8D7425,"Le lanceur comprime son corps pour se faire tout petit
+et beaucoup augmenter son Esquive.",0,24860
+108,WAZAINFO_ALL_108,2B7C0E7E6F8D75D8,"Le lanceur disperse un nuage d’encre ou de fumée
+qui réduit la Précision de la cible.",0,25040
+109,WAZAINFO_ALL_109,2B7C0F7E6F8D778B,"Une lumière étrange qui plonge la cible dans un état
+de confusion.",4,25212
+110,WAZAINFO_ALL_110,2B7F8C7E6F9081C9,"Le lanceur se recroqueville dans sa carapace,
+ce qui augmente sa Défense.",0,25348
+111,WAZAINFO_ALL_111,2B7F8B7E6F908016,"Le lanceur s’enroule pour cacher ses points faibles,
+ce qui augmente sa Défense.",0,25496
+112,WAZAINFO_ALL_112,2B7F8A7E6F907E63,"Le lanceur érige un mur solide qui augmente beaucoup
+sa Défense.",0,25660
+113,WAZAINFO_ALL_113,2B7F897E6F907CB0,"Crée un fabuleux mur de lumière qui réduit les dégâts
+causés par les capacités spéciales pendant cinq tours.",0,25792
+114,WAZAINFO_ALL_114,2B7F907E6F908895,"Crée un brouillard qui annule les changements
+de stats de tous les Pokémon au combat.",0,26012
+115,WAZAINFO_ALL_115,2B7F8F7E6F9086E2,"Crée un fabuleux mur de lumière qui réduit les dégâts
+causés par les capacités physiques pendant cinq tours.",0,26184
+116,WAZAINFO_ALL_116,2B7F8E7E6F90852F,"Le lanceur prend une profonde inspiration et se
+concentre pour augmenter son taux de critiques.",0,26404
+117,WAZAINFO_ALL_117,2B7F8D7E6F90837C,"Le lanceur encaisse les coups durant deux tours et
+réplique en infligeant le double des dégâts subis.",0,26596
+118,WAZAINFO_ALL_118,2B7F947E6F908F61,"Le lanceur agite un doigt et stimule son cerveau pour
+utiliser presque n’importe quelle capacité au hasard.",0,26800
+119,WAZAINFO_ALL_119,2B7F937E6F908DAE,"Le lanceur riposte à l’attaque de l’ennemi
+avec la même attaque.",0,27016
+120,WAZAINFO_ALL_120,2B83127E6F939B52,"Le lanceur explose en blessant tous les Pokémon
+autour de lui. Le lanceur tombe K.O.",0,27148
+121,WAZAINFO_ALL_121,2B83137E6F939D05,"De toutes ses forces, le lanceur jette un gros œuf
+sur l’ennemi pour lui infliger des dégâts.",0,27320
+122,WAZAINFO_ALL_122,2B83107E6F9397EC,"Un grand coup de langue qui inflige des dégâts
+à la cible et peut aussi la paralyser.",4,27508
+123,WAZAINFO_ALL_123,2B83117E6F93999F,"Le lanceur attaque à l’aide d’une éruption de gaz
+répugnants qui peuvent aussi empoisonner la cible.",0,27680
+124,WAZAINFO_ALL_124,2B830E7E6F939486,"Des détritus toxiques sont projetés sur la cible,
+ce qui peut aussi l’empoisonner.",0,27884
+125,WAZAINFO_ALL_125,2B830F7E6F939639,"Le lanceur frappe l’ennemi à grands coups d’os.
+Peut aussi l’apeurer.",0,28052
+126,WAZAINFO_ALL_126,2B830C7E6F939120,"Un déluge de flammes ardentes submerge la cible,
+ce qui peut aussi la brûler.",4,28192
+127,WAZAINFO_ALL_127,2B830D7E6F9392D3,"Le lanceur charge la cible avec une intensité
+remarquable, ce qui peut l’apeurer.",0,28348
+128,WAZAINFO_ALL_128,2B831A7E6F93A8EA,"Le lanceur piège l’ennemi dans sa dure coquille
+et l’écrase pendant quatre à cinq tours.",0,28512
+129,WAZAINFO_ALL_129,2B831B7E6F93AA9D,"Le lanceur envoie des rayons d’étoiles qui touchent
+toujours la cible.",0,28692
+130,WAZAINFO_ALL_130,2B86987E6F96B4DB,"Le lanceur baisse la tête pour augmenter sa Défense
+au premier tour et percuter l’ennemi au second.",0,28836
+131,WAZAINFO_ALL_131,2B86977E6F96B328,"Envoie une rafale de dards.
+Peut toucher de deux à cinq fois.",4,29036
+132,WAZAINFO_ALL_132,2B869A7E6F96B841,"De longs tentacules ou lianes attaquent l’ennemi.
+Peut aussi baisser sa Vitesse.",0,29160
+133,WAZAINFO_ALL_133,2B86997E6F96B68E,"Le lanceur fait le vide dans son esprit pour oublier
+ses soucis. Augmente beaucoup sa Défense Spéciale.",0,29324
+134,WAZAINFO_ALL_134,2B869C7E6F96BBA7,"Le lanceur distrait la cible en pliant une cuillère,
+ce qui baisse sa Précision.",0,29532
+135,WAZAINFO_ALL_135,2B869B7E6F96B9F4,Le lanceur récupère jusqu’à la moitié de ses PV max.,0,29696
+136,WAZAINFO_ALL_136,2B869E7E6F96BF0D,"Le lanceur s’élance pour effectuer un coup de genou
+sauté. S’il échoue, le lanceur se blesse.",0,29804
+137,WAZAINFO_ALL_137,2B869D7E6F96BD5A,"Le lanceur intimide la cible grâce à son regard
+terrifiant pour la paralyser.",0,29992
+138,WAZAINFO_ALL_138,2B86907E6F96A743,"Le lanceur mange le rêve de la cible endormie
+et récupère en PV la moitié des dégâts infligés.",0,30148
+139,WAZAINFO_ALL_139,2B868F7E6F96A590,"Le lanceur empoisonne la cible en lui projetant
+un nuage de gaz toxique au visage.",0,30340
+140,WAZAINFO_ALL_140,2B899E7E6F98F4E4,Projette de deux à cinq grosses boules sur l’ennemi.,0,30508
+141,WAZAINFO_ALL_141,2B899F7E6F98F697,"Une attaque qui aspire le sang de la cible.
+La moitié des dégâts sont convertis en PV
+pour le lanceur.",4,30616
+142,WAZAINFO_ALL_142,2B89A07E6F98F84A,"Le lanceur fait un bisou à la cible en prenant
+une mine effrayante, ce qui la fait s’endormir.",0,30824
+143,WAZAINFO_ALL_143,2B89A17E6F98F9FD,"Une attaque en deux tours au taux de critiques élevé,
+qui peut aussi apeurer la cible.",4,31016
+144,WAZAINFO_ALL_144,2B899A7E6F98EE18,"Le lanceur devient une copie de sa cible et obtient
+la même palette de capacités.",0,31192
+145,WAZAINFO_ALL_145,2B899B7E6F98EFCB,"Des bulles frappent l’ennemi.
+Peut réduire sa Vitesse.",0,31356
+146,WAZAINFO_ALL_146,2B899C7E6F98F17E,"Un enchaînement de coups de poing cadencés
+frappe l’ennemi. Peut aussi le rendre confus.",4,31468
+147,WAZAINFO_ALL_147,2B899D7E6F98F331,Le lanceur répand un nuage de spores qui endort.,0,31648
+148,WAZAINFO_ALL_148,2B89967E6F98E74C,"Explosion lumineuse qui fait baisser la Précision
+de l’ennemi.",4,31748
+149,WAZAINFO_ALL_149,2B89977E6F98E8FF,"Une étrange onde d’énergie chaude frappe l’ennemi.
+Cette attaque est d’intensité variable.",4,31876
+150,WAZAINFO_ALL_150,2B8D247E6F9C0E6D,"Le lanceur barbote et éclabousse les environs.
+Cette capacité n’a aucun effet.",0,32060
+151,WAZAINFO_ALL_151,2B8D237E6F9C0CBA,"Le lanceur modifie sa structure moléculaire pour
+se liquéfier et beaucoup augmenter sa Défense.",0,32220
+152,WAZAINFO_ALL_152,2B8D227E6F9C0B07,"Une grande pince martèle la cible.
+Taux de critiques élevé.",4,32412
+153,WAZAINFO_ALL_153,2B8D217E6F9C0954,"Le lanceur explose et inflige des dégâts à tous
+les Pokémon autour de lui. Met K.O. le lanceur.",0,32532
+154,WAZAINFO_ALL_154,2B8D207E6F9C07A1,"La cible est lacérée par des faux ou des griffes
+de deux à cinq fois d’affilée.",0,32724
+155,WAZAINFO_ALL_155,2B8D1F7E6F9C05EE,"Le lanceur projette son os comme un boomerang.
+Cette attaque frappe deux fois d’affilée, à l’aller et
+au retour.",0,32884
+156,WAZAINFO_ALL_156,2B8D1E7E6F9C043B,"Le lanceur regagne tous ses PV et ses altérations de
+statut sont soignées, puis il dort pendant deux tours.",0,33112
+157,WAZAINFO_ALL_157,2B8D1D7E6F9C0288,"Le lanceur envoie de gros rochers sur la cible pour
+lui infliger des dégâts, ce qui peut aussi l’apeurer.",0,33328
+158,WAZAINFO_ALL_158,2B8D1C7E6F9C00D5,"Le lanceur mord l’ennemi à l’aide de ses incisives
+aiguisées. Peut aussi l’apeurer.",0,33540
+159,WAZAINFO_ALL_159,2B8D1B7E6F9BFF22,"Le lanceur réduit son nombre de polygones pour
+accentuer ses angles et augmenter son Attaque.",0,33708
+160,WAZAINFO_ALL_160,2B908A7E6F9EF196,"Le lanceur change de type pour prendre celui
+de la première capacité de sa liste.",0,33896
+161,WAZAINFO_ALL_161,2B908B7E6F9EF349,"Le lanceur envoie trois boules d’énergie simultanément
+qui peuvent aussi paralyser, brûler ou geler la cible.",0,34060
+162,WAZAINFO_ALL_162,2B90887E6F9EEE30,"Une vilaine morsure d’incisives qui réduit de moitié
+les PV de la cible.",4,34280
+163,WAZAINFO_ALL_163,2B90897E6F9EEFE3,"Le lanceur donne un coup de griffe ou de faux.
+Taux de critiques élevé.",0,34428
+164,WAZAINFO_ALL_164,2B908E7E6F9EF862,"Le lanceur crée un clone en sacrifiant quelques PV.
+Ce clone sert de leurre.",0,34572
+165,WAZAINFO_ALL_165,2B908F7E6F9EFA15,"Une attaque désespérée, utilisée quand le lanceur
+n’a plus de PP. Le blesse aussi légèrement.",4,34728
+166,WAZAINFO_ALL_166,2B908C7E6F9EF4FC,"Le lanceur apprend la dernière capacité utilisée
+par la cible. Gribouille disparaît après utilisation.",0,34916
+167,WAZAINFO_ALL_167,2B908D7E6F9EF6AF,"Une série d’un à trois coups de pied distincts dont
+la puissance augmente à chaque fois que la capacité
+touche sa cible.",4,35124
+168,WAZAINFO_ALL_168,2B90927E6F9EFF2E,"Le lanceur attaque la cible et vole son objet.
+Le lanceur ne peut rien voler s’il tient déjà un objet.",0,35368
+169,WAZAINFO_ALL_169,2B90937E6F9F00E1,"Le lanceur enserre l’ennemi à l’aide d’une fine
+soie gluante pour l’empêcher de fuir le combat.",0,35576
+170,WAZAINFO_ALL_170,2B94107E6FA20B1F,"Le lanceur analyse les mouvements de l’ennemi
+pour être sûr de toucher au coup suivant.",0,35768
+171,WAZAINFO_ALL_171,2B940F7E6FA2096C,"Un cauchemar qui inflige des dégâts à chaque tour
+à un ennemi endormi.",4,35944
+172,WAZAINFO_ALL_172,2B94127E6FA20E85,"Le lanceur s’entoure de feu et charge la cible,
+ce qui peut aussi la brûler.",0,36088
+173,WAZAINFO_ALL_173,2B94117E6FA20CD2,"Une attaque qui ne fonctionne que si le lanceur
+est endormi. Le boucan peut aussi apeurer la cible.",4,36244
+174,WAZAINFO_ALL_174,2B940C7E6FA20453,"Une capacité à l’effet différent selon que le lanceur
+est un Pokémon Spectre ou non.",4,36444
+175,WAZAINFO_ALL_175,2B940B7E6FA202A0,"Le lanceur attaque en gigotant dans tous les sens.
+Plus ses PV sont bas, plus l’attaque est puissante.",0,36616
+176,WAZAINFO_ALL_176,2B940E7E6FA207B9,"Le lanceur change de type pour être résistant au type
+de la dernière attaque lancée par sa cible.",0,36824
+177,WAZAINFO_ALL_177,2B940D7E6FA20606,"Le lanceur projette une tornade sur la cible
+pour infliger des dégâts. Taux de critiques élevé.",0,37020
+178,WAZAINFO_ALL_178,2B94187E6FA218B7,"Le lanceur libère des spores cotonneuses qui collent
+à la cible et baissent beaucoup sa Vitesse.",0,37212
+179,WAZAINFO_ALL_179,2B94177E6FA21704,"Le lanceur ne retient plus ses coups.
+Plus ses PV sont bas, plus la puissance
+de cette capacité augmente.",0,37408
+180,WAZAINFO_ALL_180,2B97967E6FA524A8,"Le lanceur exprime son ressentiment en retirant 4 PP
+à la dernière capacité utilisée par la cible.",0,37620
+181,WAZAINFO_ALL_181,2B97977E6FA5265B,"Le lanceur projette de la neige poudreuse qui peut
+aussi geler la cible.",0,37820
+182,WAZAINFO_ALL_182,2B97987E6FA5280E,"Le lanceur se protège de toutes les attaques.
+Peut échouer si utilisée plusieurs fois de suite.",0,37968
+183,WAZAINFO_ALL_183,2B97997E6FA529C1,"Coup de poing fulgurant.
+Frappe en priorité.",0,38160
+184,WAZAINFO_ALL_184,2B979A7E6FA52B74,"Le lanceur fait une grimace qui effraie la cible
+et réduit beaucoup sa Vitesse.",0,38252
+185,WAZAINFO_ALL_185,2B979B7E6FA52D27,"Le lanceur s’approche l’air de rien avant de frapper
+par surprise. N’échoue jamais.",0,38412
+186,WAZAINFO_ALL_186,2B979C7E6FA52EDA,"Le lanceur envoie un bisou si mignon et désarmant
+qu’il plonge la cible dans la confusion.",0,38580
+187,WAZAINFO_ALL_187,2B979D7E6FA5308D,"Améliore l’Attaque au maximum en sacrifiant la moitié
+des PV max.",4,38764
+188,WAZAINFO_ALL_188,2B978E7E6FA51710,"Des détritus toxiques sont projetés sur la cible, ce qui
+peut aussi l’empoisonner.",0,38896
+189,WAZAINFO_ALL_189,2B978F7E6FA518C3,"Le lanceur envoie de la boue au visage de la cible
+pour infliger des dégâts et baisser sa Précision.",0,39064
+190,WAZAINFO_ALL_190,2B9A9C7E6FA764B1,"Le lanceur attaque en projetant de l’encre au visage
+de la cible, ce qui peut aussi baisser sa Précision.",0,39268
+191,WAZAINFO_ALL_191,2B9A9B7E6FA762FE,"Le lanceur disperse des picots sur le sol pour blesser
+tout ennemi qui entre au combat.",0,39480
+192,WAZAINFO_ALL_192,2B9A9A7E6FA7614B,"Un boulet de canon électrifié qui inflige des dégâts
+à la cible et la paralyse.",4,39656
+193,WAZAINFO_ALL_193,2B9A997E6FA75F98,"Permet de toucher un Pokémon Spectre avec
+n’importe quelle capacité ou de toucher un ennemi
+insaisissable.",0,39816
+194,WAZAINFO_ALL_194,2B9AA07E6FA76B7D,"Si un assaillant porte un coup fatal au lanceur après qu’il
+a activé cette capacité, ils sont tous les deux mis K.O.
+La capacité échoue si elle est immédiatement réutilisée.",0,40032
+195,WAZAINFO_ALL_195,2B9A9F7E6FA769CA,"Tout Pokémon qui entend ce requiem est K.O.
+dans trois tours à moins qu’il ne soit remplacé.",0,40380
+196,WAZAINFO_ALL_196,2B9A9E7E6FA76817,"Une bourrasque de vent froid blesse la cible et
+réduit sa Vitesse.",4,40568
+197,WAZAINFO_ALL_197,2B9A9D7E6FA76664,"Le lanceur se protège de toutes les attaques.
+Peut échouer si utilisée plusieurs fois de suite.",0,40704
+198,WAZAINFO_ALL_198,2B9A947E6FA75719,"Le lanceur frappe la cible avec un os de deux à cinq fois
+d’affilée.",0,40896
+199,WAZAINFO_ALL_199,2B9A937E6FA75566,"Le lanceur verrouille la cible pour ne pas la rater
+au tour suivant.",0,41036
+200,WAZAINFO_ALL_200,450C177E7DE9A241,"Le lanceur enrage et attaque pendant deux ou trois tours
+avant de devenir confus.",0,41176
+201,WAZAINFO_ALL_201,450C167E7DE9A08E,"Une tempête de sable blesse tous les Pokémon pendant
+cinq tours, sauf ceux de type Roche, Sol ou Acier.
+Augmente la Défense Spéciale des Pokémon Roche.",4,41340
+202,WAZAINFO_ALL_202,450C157E7DE99EDB,"Une attaque qui absorbe les nutriments et convertit
+la moitié des dégâts infligés en PV pour le lanceur.",4,41644
+203,WAZAINFO_ALL_203,450C147E7DE99D28,"Le lanceur résiste aux attaques avec 1 PV.
+Peut échouer si utilisée plusieurs fois de suite.",0,41856
+204,WAZAINFO_ALL_204,450C1B7E7DE9A90D,"Le lanceur fait les yeux doux pour berner la cible
+et beaucoup réduire son Attaque.",0,42044
+205,WAZAINFO_ALL_205,450C1A7E7DE9A75A,"Un rocher roule sur la cible pendant cinq tours.
+L’attaque gagne en puissance à chaque coup.",4,42212
+206,WAZAINFO_ALL_206,450C197E7DE9A5A7,"Le lanceur retient ses coups pour que la cible
+garde au moins 1 PV et ne tombe pas K.O.",0,42400
+207,WAZAINFO_ALL_207,450C187E7DE9A3F4,"Fait enrager la cible et la plonge dans la confusion,
+mais augmente beaucoup son Attaque.",0,42576
+208,WAZAINFO_ALL_208,450C0F7E7DE994A9,Le lanceur récupère jusqu’à la moitié de ses PV max.,0,42756
+209,WAZAINFO_ALL_209,450C0E7E7DE992F6,"Le lanceur envoie une charge électrique sur la cible qui
+peut aussi la paralyser.",0,42864
+210,WAZAINFO_ALL_210,4508917E7DE688B8,"Un coup de faux ou de griffe dont la puissance
+augmente quand il touche plusieurs fois d’affilée.",4,43028
+211,WAZAINFO_ALL_211,4508927E7DE68A6B,"Le lanceur frappe la cible avec des ailes d’acier,
+ce qui peut aussi augmenter la Défense du lanceur.",0,43224
+212,WAZAINFO_ALL_212,4508937E7DE68C1E,"Le lanceur pétrifie la cible en lui lançant un regard noir
+qui la rend incapable de quitter le terrain.",0,43428
+213,WAZAINFO_ALL_213,4508947E7DE68DD1,"Si la cible est du sexe opposé, elle tombe amoureuse
+et rechigne alors à attaquer.",0,43636
+214,WAZAINFO_ALL_214,4508957E7DE68F84,"Le lanceur utilise une de ses capacités au hasard.
+Il ne peut utiliser cette capacité que quand il dort.",0,43804
+215,WAZAINFO_ALL_215,4508967E7DE69137,"Carillon apaisant qui soigne les altérations de statut
+de tous les Pokémon de l’équipe.",0,44016
+216,WAZAINFO_ALL_216,4508977E7DE692EA,"Plus le Pokémon apprécie son Dresseur, plus la puissance
+de cette attaque furieuse augmente.",0,44192
+217,WAZAINFO_ALL_217,4508987E7DE6949D,"Le lanceur attaque en offrant un cadeau piégé à la cible,
+mais le cadeau peut parfois restaurer les PV de celle-ci
+à la place.",0,44380
+218,WAZAINFO_ALL_218,4508897E7DE67B20,"Moins le Pokémon aime son Dresseur, plus cette attaque
+est puissante.",0,44636
+219,WAZAINFO_ALL_219,45088A7E7DE67CD3,"Crée un champ protecteur qui empêche toutes
+les altérations de statut pendant cinq tours.",0,44776
+220,WAZAINFO_ALL_220,4512837E7DEEC573,"Le lanceur ajoute ses PV à ceux de sa cible
+et les répartit équitablement.",0,44956
+221,WAZAINFO_ALL_221,4512827E7DEEC3C0,"Le lanceur génère un feu mystique d’une intensité
+redoutable pour attaquer la cible, ce qui peut aussi
+la brûler.",0,45108
+222,WAZAINFO_ALL_222,4512857E7DEEC8D9,"Provoque un tremblement de terre d’intensité
+variable qui affecte tous les Pokémon alentour.
+L’efficacité varie.",0,45336
+223,WAZAINFO_ALL_223,4512847E7DEEC726,"Le lanceur rassemble ses forces et envoie un coup
+de poing à la cible, ce qui la rend confuse à coup sûr.",0,45564
+224,WAZAINFO_ALL_224,4512877E7DEECC3F,Le lanceur inflige un grand coup de corne à la cible.,0,45776
+225,WAZAINFO_ALL_225,4512867E7DEECA8C,"Le lanceur souffle fort sur la cible pour lui infliger
+des dégâts, ce qui peut aussi la paralyser.",0,45884
+226,WAZAINFO_ALL_226,4512897E7DEECFA5,"Le lanceur échange sa place et tout changement
+de stats avec un Pokémon de l’équipe.",0,46084
+227,WAZAINFO_ALL_227,4512887E7DEECDF2,"Le lanceur oblige la cible à répéter la dernière capacité
+utilisée durant trois tours.",0,46256
+228,WAZAINFO_ALL_228,45128B7E7DEED30B,"Une attaque qui inflige deux fois plus de dégâts
+à un ennemi qui s’apprête à être remplacé.",4,46432
+229,WAZAINFO_ALL_229,45128A7E7DEED158,"Le lanceur attaque en tournant sur lui-même. Sa Vitesse
+augmente également. Il se libère également des effets
+de capacités comme Étreinte, Ligotage ou Vampigraine.",0,46616
+230,WAZAINFO_ALL_230,450F1D7E7DEBE24A,"Un doux parfum qui réduit beaucoup l’Esquive
+de la cible.",4,46944
+231,WAZAINFO_ALL_231,450F1E7E7DEBE3FD,"Le lanceur attaque la cible avec une queue de fer,
+ce qui peut aussi baisser la Défense de la cible.",0,47060
+232,WAZAINFO_ALL_232,450F1B7E7DEBDEE4,"Attaque avec des griffes d’acier.
+Peut aussi augmenter l’Attaque du lanceur.",4,47264
+233,WAZAINFO_ALL_233,450F1C7E7DEBE097,"Le lanceur porte son coup en dernier.
+En échange, cette capacité n’échoue jamais.",0,47420
+234,WAZAINFO_ALL_234,450F197E7DEBDB7E,"Un soin qui restaure des PV au lanceur.
+Son efficacité varie en fonction de la météo.",4,47584
+235,WAZAINFO_ALL_235,450F1A7E7DEBDD31,"Un soin qui restaure des PV au lanceur.
+Son efficacité varie en fonction de la météo.",4,47756
+236,WAZAINFO_ALL_236,450F177E7DEBD818,"Un soin qui restaure des PV au lanceur.
+Son efficacité varie en fonction de la météo.",4,47928
+237,WAZAINFO_ALL_237,450F187E7DEBD9CB,Attaque dont le type dépend du Pokémon qui l’utilise.,4,48100
+238,WAZAINFO_ALL_238,450F157E7DEBD4B2,"Le lanceur délivre un coup double en croisant
+les avant-bras. Taux de critiques élevé.",0,48208
+239,WAZAINFO_ALL_239,450F167E7DEBD665,"Le lanceur déclenche un terrible ouragan sur la cible,
+ce qui peut aussi apeurer celle-ci.",0,48384
+240,WAZAINFO_ALL_240,45198F7E7DF4F885,"Invoque de fortes pluies qui durent cinq tours,
+augmentant la puissance des capacités de type Eau
+et baissant celle des capacités de type Feu.",4,48568
+241,WAZAINFO_ALL_241,45198E7E7DF4F6D2,"Fait briller le soleil pendant cinq tours, augmentant
+la puissance des capacités de type Feu et baissant
+celle des capacités de type Eau.",0,48856
+242,WAZAINFO_ALL_242,45198D7E7DF4F51F,"Le lanceur mord la cible de ses crocs pointus, ce qui
+peut aussi baisser sa Défense.",0,49132
+243,WAZAINFO_ALL_243,45198C7E7DF4F36C,"Une riposte qui contre n’importe quelle capacité
+spéciale en infligeant le double des dégâts subis.",4,49304
+244,WAZAINFO_ALL_244,45198B7E7DF4F1B9,"Une autohypnose qui permet au lanceur de copier
+les changements de stats de la cible.",4,49504
+245,WAZAINFO_ALL_245,45198A7E7DF4F006,"Le lanceur charge à une vitesse renversante.
+Frappe en priorité.",0,49676
+246,WAZAINFO_ALL_246,4519897E7DF4EE53,"Une attaque préhistorique qui peut augmenter
+toutes les stats du lanceur d’un seul coup.",4,49808
+247,WAZAINFO_ALL_247,4519887E7DF4ECA0,"Le lanceur projette une grande ombre sur la cible qui
+peut aussi faire baisser la Défense Spéciale de celle-ci.",0,49988
+248,WAZAINFO_ALL_248,4519977E7DF5061D,"De l’énergie psychique vient frapper la cible
+deux tours après l’utilisation de cette capacité.",0,50212
+249,WAZAINFO_ALL_249,4519967E7DF5046A,"Le lanceur porte un coup de poing à la cible, ce qui
+peut baisser la Défense de celle-ci.",0,50404
+250,WAZAINFO_ALL_250,4516097E7DF1DEFC,"Le lanceur piège la cible dans une trombe d’eau
+pendant quatre à cinq tours.",0,50584
+251,WAZAINFO_ALL_251,45160A7E7DF1E0AF,"Le lanceur appelle tous les Pokémon de son équipe
+à attaquer. Plus ils sont nombreux, plus il y a d’attaques.",0,50740
+252,WAZAINFO_ALL_252,45160B7E7DF1E262,"Le lanceur frappe en priorité et apeure la cible.
+La capacité ne fonctionne que si elle est utilisée
+immédiatement en entrant au combat.",0,50960
+253,WAZAINFO_ALL_253,45160C7E7DF1E415,"Le lanceur attaque en rugissant durant trois tours.
+Pendant ce temps, aucun Pokémon ne peut s’endormir.",0,51236
+254,WAZAINFO_ALL_254,4516057E7DF1D830,"Le lanceur emmagasine de l’énergie et augmente
+sa Défense et sa Défense Spéciale.
+Peut être utilisée trois fois.",0,51444
+255,WAZAINFO_ALL_255,4516067E7DF1D9E3,"Libère dans une attaque l’énergie précédemment
+emmagasinée avec Stockage. La puissance augmente en
+fonction du nombre de fois où Stockage a été utilisée.",0,51672
+256,WAZAINFO_ALL_256,4516077E7DF1DB96,"Le lanceur absorbe l’énergie emmagasinée avec Stockage
+pour restaurer ses PV. Le nombre de PV soignés augmente
+en fonction du nombre de fois où Stockage a été utilisée.",0,51980
+257,WAZAINFO_ALL_257,4516087E7DF1DD49,"Le lanceur provoque une vague de chaleur qui
+peut aussi brûler la cible.",0,52320
+258,WAZAINFO_ALL_258,4516117E7DF1EC94,"Invoque une tempête de grêle qui dure cinq tours.
+Blesse tous les Pokémon, sauf ceux de type Glace.",4,52468
+259,WAZAINFO_ALL_259,4516127E7DF1EE47,"Le lanceur irrite la cible pour l’empêcher d’utiliser
+la même capacité deux fois de suite.",0,52668
+260,WAZAINFO_ALL_260,45201B7E7DFA5217,"Rend la cible confuse, mais augmente
+son Attaque Spéciale.",0,52852
+261,WAZAINFO_ALL_261,45201A7E7DFA5064,"Le lanceur projette des flammes maléfiques
+à la cible pour lui infliger une brûlure.",0,52972
+262,WAZAINFO_ALL_262,45201D7E7DFA557D,"Le lanceur est mis K.O., mais l’Attaque et
+l’Attaque Spéciale de la cible baissent beaucoup.",0,53144
+263,WAZAINFO_ALL_263,45201C7E7DFA53CA,"Une capacité dont la puissance double lorsque
+le lanceur est empoisonné, paralysé ou brûlé.",4,53332
+264,WAZAINFO_ALL_264,4520177E7DFA4B4B,"Le lanceur se concentre avant d’attaquer.
+Échoue s’il est touché avant d’avoir frappé.",0,53516
+265,WAZAINFO_ALL_265,4520167E7DFA4998,"Cette attaque est doublement efficace sur les Pokémon
+paralysés, mais elle soigne leur paralysie.",0,53692
+266,WAZAINFO_ALL_266,4520197E7DFA4EB1,"Le lanceur attire l’attention des cibles présentes pour
+les forcer à n’attaquer que le lanceur.",0,53888
+267,WAZAINFO_ALL_267,4520187E7DFA4CFE,"Une attaque qui tire sa force de la nature.
+Son type varie selon le terrain.",4,54080
+268,WAZAINFO_ALL_268,4520137E7DFA447F,"Le lanceur se charge en électricité, ce qui augmente
+la puissance de la prochaine capacité Électrik qu’il
+utilisera. Sa Défense Spéciale augmente également.",0,54236
+269,WAZAINFO_ALL_269,4520127E7DFA42CC,"Le lanceur provoque la cible, ce qui oblige celle-ci
+à n’utiliser que des capacités qui infligent des dégâts
+pendant trois tours.",0,54552
+270,WAZAINFO_ALL_270,451D157E7DF8120E,"Le lanceur donne un coup de main à son allié, qui voit
+la puissance de ses capacités augmenter.",0,54812
+271,WAZAINFO_ALL_271,451D167E7DF813C1,"Le lanceur prend la cible au dépourvu et l’oblige
+à échanger son objet contre le sien.",0,55004
+272,WAZAINFO_ALL_272,451D137E7DF80EA8,Imite la cible et copie son talent.,4,55180
+273,WAZAINFO_ALL_273,451D147E7DF8105B,"Un vœu qui permet au lanceur ou au Pokémon
+entrant sur le terrain au tour suivant de récupérer
+la moitié des PV max du lanceur.",4,55252
+274,WAZAINFO_ALL_274,451D197E7DF818DA,"Le lanceur se dépêche d’utiliser une capacité au hasard
+parmi celles des Pokémon de l’équipe.",0,55508
+275,WAZAINFO_ALL_275,451D1A7E7DF81A8D,"Le lanceur plante ses racines et récupère des PV
+à chaque tour. Une fois enraciné, il ne peut plus quitter
+le terrain.",0,55696
+276,WAZAINFO_ALL_276,451D177E7DF81574,"Une attaque puissante, mais qui baisse l’Attaque
+et la Défense du lanceur.",4,55936
+277,WAZAINFO_ALL_277,451D187E7DF81727,"Une barrière qui renvoie les capacités comme
+Vampigraine et celles affectant le statut et les stats.",4,56088
+278,WAZAINFO_ALL_278,451D0D7E7DF80476,"Recycle un objet tenu à usage unique déjà utilisé
+lors du combat pour pouvoir l’utiliser à nouveau.",0,56292
+279,WAZAINFO_ALL_279,451D0E7E7DF80629,"Une attaque deux fois plus puissante si le lanceur
+a été blessé par l’ennemi durant ce tour.",4,56492
+280,WAZAINFO_ALL_280,44F0877E7DD1E5D9,"Le lanceur attaque avec le tranchant de la main.
+Permet aussi de briser les barrières
+comme Mur Lumière et Protection.",0,56680
+281,WAZAINFO_ALL_281,44F0867E7DD1E426,"Le lanceur fait bâiller la cible, qui s’endort au tour
+suivant.",0,56920
+282,WAZAINFO_ALL_282,44F0857E7DD1E273,"Fait plus de dégâts aux cibles qui tiennent un objet.
+De plus, fait tomber cet objet et empêche la cible
+de l’utiliser jusqu’à la fin du combat.",0,57048
+283,WAZAINFO_ALL_283,44F0847E7DD1E0C0,"Une attaque qui réduit les PV de la cible au niveau
+des PV du lanceur.",4,57340
+284,WAZAINFO_ALL_284,44F08B7E7DD1ECA5,"Le lanceur laisse exploser sa colère.
+Plus ses PV sont bas, moins l’attaque est puissante.",0,57484
+285,WAZAINFO_ALL_285,44F08A7E7DD1EAF2,"Le lanceur utilise ses pouvoirs psychiques pour échanger
+son talent avec la cible.",0,57668
+286,WAZAINFO_ALL_286,44F0897E7DD1E93F,"Si la cible et le lanceur ont des capacités en commun,
+la cible ne pourra pas les utiliser.",0,57836
+287,WAZAINFO_ALL_287,44F0887E7DD1E78C,"Le lanceur se repose pour guérir d’un empoisonnement,
+d’une brûlure ou d’une paralysie.",0,58020
+288,WAZAINFO_ALL_288,44F08F7E7DD1F371,"Si le lanceur est mis K.O., sa rancune épuise les PP
+de la capacité utilisée par l’ennemi pour le mettre K.O.",0,58196
+289,WAZAINFO_ALL_289,44F08E7E7DD1F1BE,"Lorsqu’une capacité de soin ou de changement de stats
+est utilisée, le lanceur vole ses effets.",0,58416
+290,WAZAINFO_ALL_290,44ED817E7DCFA5D0,"Les effets de cette attaque varient en fonction
+de l’environnement.",0,58608
+291,WAZAINFO_ALL_291,44ED827E7DCFA783,"Le lanceur plonge sous l’eau au premier tour
+et frappe au second.",0,58744
+292,WAZAINFO_ALL_292,44ED837E7DCFA936,"Un déluge de coups adressés avec la paume qui frappe
+de deux à cinq fois d’affilée.",4,58876
+293,WAZAINFO_ALL_293,44ED847E7DCFAAE9,"Modifie le type du lanceur en fonction du terrain,
+comme une berge, une grotte, l’herbe, etc.",0,59044
+294,WAZAINFO_ALL_294,44ED857E7DCFAC9C,"Le lanceur regarde un flash lumineux fixement.
+Augmente énormément son Attaque Spéciale.",0,59232
+295,WAZAINFO_ALL_295,44ED867E7DCFAE4F,"Le lanceur libère un éclair lumineux qui peut aussi
+baisser la Défense Spéciale de la cible.",0,59412
+296,WAZAINFO_ALL_296,44ED877E7DCFB002,"Une bulle de brume inflige des dégâts à la cible et
+peut aussi réduire son Attaque Spéciale.",4,59600
+297,WAZAINFO_ALL_297,44ED887E7DCFB1B5,"Une montagne de plumes ensevelit la cible
+et réduit beaucoup son Attaque.",4,59788
+298,WAZAINFO_ALL_298,44ED897E7DCFB368,"Danse qui rend confus tous les Pokémon autour
+du lanceur.",0,59936
+299,WAZAINFO_ALL_299,44ED8A7E7DCFB51B,"Le lanceur envoie un coup de pied au taux de critiques
+élevé. Peut aussi brûler la cible.",0,60052
+300,WAZAINFO_ALL_300,3DA8DC7E7A16D2F6,"Asperge les alentours de boue.
+Affaiblit les capacités Électrik pendant cinq tours.",4,60232
+301,WAZAINFO_ALL_301,3DA8DD7E7A16D4A9,"Frappe l’ennemi pendant cinq tours.
+L’attaque gagne en puissance à chaque coup.",0,60400
+302,WAZAINFO_ALL_302,3DA8DA7E7A16CF90,"Le lanceur attaque en fouettant l’ennemi
+de ses bras épineux. Peut aussi l’apeurer.",0,60560
+303,WAZAINFO_ALL_303,3DA8DB7E7A16D143,"Le lanceur se tourne les pouces et récupère
+jusqu’à la moitié de ses PV max.",0,60728
+304,WAZAINFO_ALL_304,3DA8E07E7A16D9C2,"Le lanceur pousse un cri dont l’écho terrifiant
+a le pouvoir d’infliger des dégâts à la cible.",0,60884
+305,WAZAINFO_ALL_305,3DA8E17E7A16DB75,"Le lanceur mord la cible avec ses crocs toxiques, ce qui
+peut aussi l’empoisonner gravement.",0,61076
+306,WAZAINFO_ALL_306,3DA8DE7E7A16D65C,"Le lanceur lacère la cible avec des griffes solides
+et aiguisées, ce qui peut aussi baisser la Défense
+de celle-ci.",0,61264
+307,WAZAINFO_ALL_307,3DA8DF7E7A16D80F,"Une explosion ardente consume la cible.
+Le lanceur doit se reposer au tour suivant.",4,61496
+308,WAZAINFO_ALL_308,3DA8E47E7A16E08E,"Le lanceur projette un missile d’eau sur la cible,
+mais il doit se reposer au tour suivant.",0,61664
+309,WAZAINFO_ALL_309,3DA8E57E7A16E241,"Un coup de poing lancé à la vitesse d’un météore.
+Peut aussi augmenter l’Attaque du lanceur.",4,61848
+310,WAZAINFO_ALL_310,3DABE27E7A1912FF,"Le lanceur attaque la cible en poussant un cri
+terrifiant qui peut aussi l’apeurer.",0,62036
+311,WAZAINFO_ALL_311,3DABE17E7A19114C,"Une capacité dont la puissance et le type varient
+en fonction du temps qu’il fait.",4,62204
+312,WAZAINFO_ALL_312,3DABE47E7A191665,"Le lanceur libère un parfum apaisant qui guérit
+toutes les altérations de statut de l’équipe.",0,62372
+313,WAZAINFO_ALL_313,3DABE37E7A1914B2,"Le lanceur fait semblant de pleurer pour troubler
+la cible et beaucoup baisser sa Défense Spéciale.",0,62560
+314,WAZAINFO_ALL_314,3DABDE7E7A190C33,"Le lanceur appelle des vents tranchants qui lacèrent
+la cible. Taux de critiques élevé.",0,62760
+315,WAZAINFO_ALL_315,3DABDD7E7A190A80,"Le lanceur attaque la cible à pleine puissance, mais
+le contrecoup baisse beaucoup l’Attaque Spéciale
+du lanceur.",0,62936
+316,WAZAINFO_ALL_316,3DABE07E7A190F99,"Permet de toucher un Pokémon Spectre avec
+n’importe quelle capacité ou de toucher
+un ennemi insaisissable.",0,63164
+317,WAZAINFO_ALL_317,3DABDF7E7A190DE6,Des rochers frappent la cible et baissent sa Vitesse.,0,63380
+318,WAZAINFO_ALL_318,3DABEA7E7A192097,"Un vent se lève et projette des écailles poudreuses
+sur l’ennemi. Peut aussi monter toutes les stats du lanceur.",4,63488
+319,WAZAINFO_ALL_319,3DABE97E7A191EE4,"Un cri horrible tel un crissement métallique qui
+réduit beaucoup la Défense Spéciale de la cible.",4,63716
+320,WAZAINFO_ALL_320,3DA1F07E7A10D644,"Le lanceur joue une douce mélodie qui plonge l’ennemi
+dans un profond sommeil.",0,63912
+321,WAZAINFO_ALL_321,3DA1F17E7A10D7F7,"Le lanceur chatouille la cible, ce qui baisse
+son Attaque et sa Défense.",0,64072
+322,WAZAINFO_ALL_322,3DA1F27E7A10D9AA,"Le lanceur absorbe un pouvoir mystique spatial
+qui augmente sa Défense et sa Défense Spéciale.",0,64220
+323,WAZAINFO_ALL_323,3DA1F37E7A10DB5D,"Le lanceur attaque avec un jet d’eau.
+Moins il a de PV et moins l’attaque est puissante.",0,64412
+324,WAZAINFO_ALL_324,3DA1EC7E7A10CF78,"Le lanceur projette un rayon de lumière sinistre.
+Peut aussi rendre l’ennemi confus.",0,64592
+325,WAZAINFO_ALL_325,3DA1ED7E7A10D12B,"Le lanceur se fond dans les ombres pour porter
+un coup de poing. N’échoue jamais.",0,64764
+326,WAZAINFO_ALL_326,3DA1EE7E7A10D2DE,"Le lanceur attaque avec un pouvoir étrange
+et invisible qui peut aussi apeurer la cible.",0,64928
+327,WAZAINFO_ALL_327,3DA1EF7E7A10D491,"Le lanceur attaque avec un uppercut.
+Il envoie son poing vers le ciel de toutes ses forces.",0,65108
+328,WAZAINFO_ALL_328,3DA1E87E7A10C8AC,"Le lanceur emprisonne la cible dans une tempête
+de sable terrifiante qui dure de quatre à cinq tours.",0,65292
+329,WAZAINFO_ALL_329,3DA1E97E7A10CA5F,"Une vague de froid glacial frappe la cible pour la mettre
+K.O. en un coup. Cela a peu de chances de réussir si
+le lanceur ne possède pas le type Glace.",4,65496
+330,WAZAINFO_ALL_330,3DA5767E7A13EFCD,"Le lanceur attaque en projetant de l’eau boueuse.
+Peut aussi réduire la Précision de la cible.",0,65800
+331,WAZAINFO_ALL_331,3DA5757E7A13EE1A,"Le lanceur mitraille la cible avec une rafale de graines.
+De deux à cinq rafales sont lancées à la suite.",0,65992
+332,WAZAINFO_ALL_332,3DA5747E7A13EC67,"Le lanceur prend la cible de vitesse et la lacère.
+N’échoue jamais.",0,66204
+333,WAZAINFO_ALL_333,3DA5737E7A13EAB4,"Le lanceur jette des pics de glace sur la cible,
+de deux à cinq fois de suite.",0,66340
+334,WAZAINFO_ALL_334,3DA5727E7A13E901,"L’épiderme du lanceur devient dur comme du fer,
+ce qui augmente beaucoup sa Défense.",0,66500
+335,WAZAINFO_ALL_335,3DA5717E7A13E74E,"Le lanceur bloque la route de la cible pour empêcher
+sa fuite.",0,66672
+336,WAZAINFO_ALL_336,3DA5707E7A13E59B,"Le lanceur pousse un grand cri d’encouragement,
+ce qui augmente son Attaque et celle de ses alliés.",0,66800
+337,WAZAINFO_ALL_337,3DA56F7E7A13E3E8,"Le lanceur lacère la cible de ses grandes griffes
+aiguisées.",0,67000
+338,WAZAINFO_ALL_338,3DA56E7E7A13E235,"Un violent coup de racines s’abat sur la cible.
+Le lanceur doit se reposer au tour suivant.",4,67124
+339,WAZAINFO_ALL_339,3DA56D7E7A13E082,"Le lanceur tend ses muscles pour se gonfler,
+ce qui booste son Attaque et sa Défense.",0,67308
+340,WAZAINFO_ALL_340,3D9AE47E7A0AA332,"Le lanceur bondit très haut et plonge sur la cible
+au second tour, ce qui peut aussi la paralyser.",0,67480
+341,WAZAINFO_ALL_341,3D9AE57E7A0AA4E5,"Le lanceur attaque en projetant de la boue sur la cible,
+ce qui réduit aussi la Vitesse de celle-ci.",0,67680
+342,WAZAINFO_ALL_342,3D9AE27E7A0A9FCC,"Le lanceur attaque la cible avec sa queue, ce qui peut
+aussi l’empoisonner. Taux de critiques élevés.",0,67884
+343,WAZAINFO_ALL_343,3D9AE37E7A0AA17F,"Le lanceur s’approche de la cible avec un air angélique
+afin de dérober l’objet qu’elle tient.",0,68088
+344,WAZAINFO_ALL_344,3D9AE07E7A0A9C66,"Le lanceur électrifie son corps avant de charger.
+Le choc blesse aussi gravement le lanceur
+et peut paralyser la cible.",0,68280
+345,WAZAINFO_ALL_345,3D9AE17E7A0A9E19,"Le lanceur disperse d’étranges feuilles qui poursuivent
+la cible. N’échoue jamais.",0,68520
+346,WAZAINFO_ALL_346,3D9ADE7E7A0A9900,"Asperge d’eau les alentours.
+Affaiblit les capacités de type Feu
+pendant cinq tours.",4,68688
+347,WAZAINFO_ALL_347,3D9ADF7E7A0A9AB3,"Le lanceur se concentre et fait le vide dans son esprit
+pour augmenter son Attaque Spéciale
+et sa Défense Spéciale.",0,68860
+348,WAZAINFO_ALL_348,3D9AEC7E7A0AB0CA,"Une feuille coupante comme une lame entaille la cible.
+Taux de critiques élevé.",4,69092
+349,WAZAINFO_ALL_349,3D9AED7E7A0AB27D,"Une danse mystique dont le rythme effréné
+augmente l’Attaque et la Vitesse du lanceur.",4,69252
+350,WAZAINFO_ALL_350,3D9E6A7E7A0DBCBB,"Le lanceur projette un rocher sur la cible de deux à cinq
+fois d’affilée.",0,69428
+351,WAZAINFO_ALL_351,3D9E697E7A0DBB08,"Le lanceur envoie un choc électrique rapide à la cible.
+N’échoue jamais.",0,69576
+352,WAZAINFO_ALL_352,3D9E6C7E7A0DC021,"Le lanceur projette une aura aquatique sur la cible, et
+peut la rendre confuse.",0,69724
+353,WAZAINFO_ALL_353,3D9E6B7E7A0DBE6E,"Le lanceur génère une sphère lumineuse qu’il projette
+sur l’ennemi deux tours plus tard.",0,69884
+354,WAZAINFO_ALL_354,3D9E6E7E7A0DC387,"Le lanceur attaque la cible à pleine puissance, mais
+le contrecoup baisse beaucoup l’Attaque Spéciale
+du lanceur.",0,70064
+355,WAZAINFO_ALL_355,3D9E6D7E7A0DC1D4,"Le lanceur atterrit et se repose.
+Restaure jusqu’à la moitié de ses PV max.",0,70292
+356,WAZAINFO_ALL_356,3D9E707E7A0DC6ED,"Pendant cinq tours, les Pokémon Vol ou qui ont
+Lévitation deviennent sensibles aux capacités Sol,
+et les capacités volantes deviennent inutilisables.",0,70444
+357,WAZAINFO_ALL_357,3D9E6F7E7A0DC53A,"Permet de toucher un Pokémon Ténèbres avec
+les capacités de type Psy ou de toucher un ennemi
+ayant beaucoup d’esquive.",0,70744
+358,WAZAINFO_ALL_358,3D9E627E7A0DAF23,"Cette attaque inflige d’importants dégâts à un Pokémon
+endormi, mais elle le réveille également.",0,70984
+359,WAZAINFO_ALL_359,3D9E617E7A0DAD70,"Le lanceur donne un puissant coup de poing à la cible,
+ce qui réduit la Vitesse du lanceur.",0,71180
+360,WAZAINFO_ALL_360,3D94587E7A0549A0,"Le lanceur effectue une rotation rapide et frappe
+la cible. Plus la Vitesse du lanceur est basse par
+rapport à celle de la cible, plus il inflige de dégâts.",0,71364
+361,WAZAINFO_ALL_361,3D94597E7A054B53,"Le lanceur tombe K.O. pour soigner les altérations de
+statut et les PV du Pokémon qui viendra le remplacer
+sur le terrain.",0,71680
+362,WAZAINFO_ALL_362,3D945A7E7A054D06,"La puissance de cette capacité est doublée lorsque
+la cible a moins de la moitié de ses PV.",0,71928
+363,WAZAINFO_ALL_363,3D945B7E7A054EB9,"Avant d’attaquer, le lanceur rassemble ses forces
+grâce à sa Baie. Elle détermine le type et la puissance
+de l’attaque.",4,72112
+364,WAZAINFO_ALL_364,3D945C7E7A05506C,"Une attaque capable de toucher une cible qui utilise
+une capacité similaire à Détection ou Abri, et annule
+l’effet de cette capacité.",4,72352
+365,WAZAINFO_ALL_365,3D945D7E7A05521F,"Le lanceur picore la cible.
+Si cette dernière tient une Baie, le lanceur la mange
+et profite de ses effets.",0,72620
+366,WAZAINFO_ALL_366,3D945E7E7A0553D2,"Génère une rafale de vent qui augmente la Vitesse
+des Pokémon de l’équipe pendant quatre tours.",0,72836
+367,WAZAINFO_ALL_367,3D945F7E7A055585,"Le lanceur utilise sa connaissance des points de pression
+pour beaucoup augmenter une stat.",0,73028
+368,WAZAINFO_ALL_368,3D94607E7A055738,"Le lanceur contre-attaque avec un coup infligeant
+des dégâts supérieurs à ceux de la dernière capacité
+qui l’a blessé.",0,73212
+369,WAZAINFO_ALL_369,3D94617E7A0558EB,"Après son attaque, le lanceur revient à toute vitesse
+et change de place avec un Pokémon de l’équipe
+prêt à combattre.",4,73452
+370,WAZAINFO_ALL_370,3D97DE7E7A086329,"Le lanceur ne pense plus à se protéger et frappe
+sa cible violemment au corps à corps. Cette capacité
+baisse la Défense et la Défense Spéciale du lanceur.",0,73692
+371,WAZAINFO_ALL_371,3D97DD7E7A086176,"Le lanceur charge son énergie, puis attaque.
+La puissance de la capacité est doublée si
+le lanceur agit après la cible.",0,74004
+372,WAZAINFO_ALL_372,3D97DC7E7A085FC3,"La puissance de cette capacité est deux fois plus élevée
+si la cible a déjà été blessée durant ce tour.",0,74244
+373,WAZAINFO_ALL_373,3D97DB7E7A085E10,"Empêche la cible d’utiliser un objet tenu
+et son Dresseur d’utiliser un objet sur lui
+pendant cinq tours.",4,74452
+374,WAZAINFO_ALL_374,3D97E27E7A0869F5,"Le lanceur envoie l’objet qu’il tient sur la cible.
+La puissance et les effets dépendent de l’objet.",0,74664
+375,WAZAINFO_ALL_375,3D97E17E7A086842,"Le lanceur transfère ses problèmes de statut à l’ennemi
+grâce à son pouvoir de suggestion.",0,74868
+376,WAZAINFO_ALL_376,3D97E07E7A08668F,"Moins cette capacité possède de PP,
+plus elle est puissante.",0,75052
+377,WAZAINFO_ALL_377,3D97DF7E7A0864DC,"Le lanceur empêche l’ennemi de récupérer des PV
+à l’aide de capacités, talents ou objets tenus,
+pendant cinq tours.",0,75176
+378,WAZAINFO_ALL_378,3D97E67E7A0870C1,"Le lanceur essore l’ennemi. Plus l’ennemi a de PV,
+plus cette attaque est puissante.",0,75408
+379,WAZAINFO_ALL_379,3D97E57E7A086F0E,"Le lanceur utilise ses pouvoirs psychiques pour
+échanger sa Défense et son Attaque.",0,75580
+380,WAZAINFO_ALL_380,3DC3EC7E7A2DB5DE,"Le lanceur répand ses sucs digestifs sur la cible.
+Le fluide neutralise le talent de celle-ci.",0,75748
+381,WAZAINFO_ALL_381,3DC3ED7E7A2DB791,"Le lanceur envoie une incantation vers le ciel et protège
+l’équipe des coups critiques pendant cinq tours.",0,75940
+382,WAZAINFO_ALL_382,3DC3EA7E7A2DB278,"Le lanceur vole la capacité prévue par l’ennemi
+et l’utilise en faisant plus de dégâts. Il doit frapper
+en premier.",0,76156
+383,WAZAINFO_ALL_383,3DC3EB7E7A2DB42B,"Le lanceur imite la dernière capacité employée.
+Échoue si aucune capacité n’a été utilisée.",0,76388
+384,WAZAINFO_ALL_384,3DC3F07E7A2DBCAA,"Le lanceur utilise un pouvoir psychique qui échange
+les changements de son Attaque et de son Attaque
+Spéciale avec celles de la cible.",0,76572
+385,WAZAINFO_ALL_385,3DC3F17E7A2DBE5D,"Le lanceur utilise un pouvoir psychique qui échange
+les changements de sa Défense et de sa Défense
+Spéciale avec celles de la cible.",0,76844
+386,WAZAINFO_ALL_386,3DC3EE7E7A2DB944,"Plus l’ennemi a utilisé d’augmentations de stats
+et plus cette capacité est puissante.",0,77112
+387,WAZAINFO_ALL_387,3DC3EF7E7A2DBAF7,"Cette capacité ne peut être utilisée qu’après
+que le lanceur a utilisé toutes les autres.",0,77288
+388,WAZAINFO_ALL_388,3DC3E47E7A2DA846,"Plante sur la cible une graine qui la rend soucieuse
+et remplace son talent par Insomnia, l’empêchant
+ainsi de dormir.",0,77468
+389,WAZAINFO_ALL_389,3DC3E57E7A2DA9F9,"Permet au lanceur de frapper en priorité.
+Échoue si la cible ne prépare pas une attaque.",0,77708
+390,WAZAINFO_ALL_390,3DC7727E7A30CF67,"Le lanceur éparpille des pics autour de la cible,
+ce qui empoisonne les Pokémon entrant au combat
+de ce côté.",0,77888
+391,WAZAINFO_ALL_391,3DC7717E7A30CDB4,"Le lanceur utilise un pouvoir psychique pour
+échanger ses changements de stats avec la cible.",0,78108
+392,WAZAINFO_ALL_392,3DC7747E7A30D2CD,"Un voile d’eau recouvre le lanceur et régénère ses PV
+à chaque tour.",4,78296
+393,WAZAINFO_ALL_393,3DC7737E7A30D11A,"Le lanceur utilise l’électricité pour générer un champ
+magnétique et léviter durant cinq tours.",0,78436
+394,WAZAINFO_ALL_394,3DC76E7E7A30C89B,"Le lanceur s’embrase avant de charger la cible, ce qui
+peut la brûler. Le choc blesse aussi gravement le lanceur.",0,78628
+395,WAZAINFO_ALL_395,3DC76D7E7A30C6E8,"Une onde de choc frappe la cible, ce qui peut aussi
+la paralyser.",4,78856
+396,WAZAINFO_ALL_396,3DC7707E7A30CC01,"Le lanceur puise au fond de lui-même pour dégager
+une aura et projeter de l’énergie sur la cible.
+N’échoue jamais.",0,78988
+397,WAZAINFO_ALL_397,3DC76F7E7A30CA4E,"Le lanceur polit son corps pour diminuer sa résistance
+au vent. Augmente beaucoup la Vitesse.",0,79220
+398,WAZAINFO_ALL_398,3DC76A7E7A30C1CF,"Le lanceur attaque la cible avec un tentacule, un bras,
+ou un autre membre imprégné de poison, ce qui peut
+aussi empoisonner la cible.",0,79408
+399,WAZAINFO_ALL_399,3DC7697E7A30C01C,"Le lanceur projette une horrible aura chargée
+de pensées maléfiques, ce qui peut aussi apeurer
+la cible.",0,79680
+400,WAZAINFO_ALL_400,57386D7E88723377,"Le lanceur lacère la cible à la première occasion.
+Taux de critiques élevé.",0,79892
+401,WAZAINFO_ALL_401,57386C7E887231C4,"Le lanceur attaque en balançant sa queue comme
+une lame de fond en pleine tempête.",0,80044
+402,WAZAINFO_ALL_402,57386F7E887236DD,"Le lanceur déclenche un déluge de grosses graines
+à la coque solide sur la cible.",0,80212
+403,WAZAINFO_ALL_403,57386E7E8872352A,"Le lanceur attaque avec une lame d’air capable
+de fendre le ciel, ce qui peut aussi apeurer la cible.",0,80376
+404,WAZAINFO_ALL_404,5738697E88722CAB,"Le lanceur taillade la cible en utilisant ses faux
+ou ses griffes comme une paire de ciseaux.",0,80580
+405,WAZAINFO_ALL_405,5738687E88722AF8,"Le lanceur fait vibrer son corps pour lancer une vague
+sonique, ce qui peut aussi baisser la Défense Spéciale
+de la cible.",0,80768
+406,WAZAINFO_ALL_406,57386B7E88723011,"Le lanceur ouvre la bouche pour projeter une aura
+qui frappe la cible.",0,81016
+407,WAZAINFO_ALL_407,57386A7E88722E5E,"Le lanceur frappe la cible en prenant un air menaçant,
+ce qui peut aussi l’apeurer.",0,81160
+408,WAZAINFO_ALL_408,5738657E887225DF,"Le lanceur attaque avec un rayon de lumière
+qui scintille comme s’il était composé de gemmes.",0,81328
+409,WAZAINFO_ALL_409,5738647E8872242C,"Un coup de poing qui draine l’énergie.
+Convertit la moitié des dégâts infligés en PV
+pour le lanceur.",4,81516
+410,WAZAINFO_ALL_410,5734E77E886F19EE,"Le lanceur agite son poing pour projeter une onde
+de vide. Frappe en priorité.",0,81720
+411,WAZAINFO_ALL_411,5734E87E886F1BA1,"Le lanceur rassemble ses forces et laisse éclater
+son pouvoir, ce qui peut aussi baisser la Défense
+Spéciale de la cible.",0,81880
+412,WAZAINFO_ALL_412,5734E57E886F1688,"Le lanceur utilise les pouvoirs de la nature pour attaquer
+la cible, ce qui peut aussi baisser la Défense Spéciale de
+celle-ci.",0,82124
+413,WAZAINFO_ALL_413,5734E67E886F183B,"Le lanceur replie ses ailes et charge en rase-mottes.
+Blesse gravement le lanceur.",0,82380
+414,WAZAINFO_ALL_414,5734EB7E886F20BA,"De terribles séismes secouent la cible et peuvent aussi
+baisser sa Défense Spéciale.",0,82548
+415,WAZAINFO_ALL_415,5734EC7E886F226D,"Le lanceur échange son objet avec celui de la cible
+à une vitesse que l’œil a du mal à suivre.",0,82720
+416,WAZAINFO_ALL_416,5734E97E886F1D54,"Le lanceur charge la cible de toute ses forces et doit
+ensuite se reposer au tour suivant.",0,82912
+417,WAZAINFO_ALL_417,5734EA7E886F1F07,"Stimule l’esprit par de mauvaises pensées.
+Augmente beaucoup l’Attaque Spéciale du lanceur.",0,83096
+418,WAZAINFO_ALL_418,5734DF7E886F0C56,"Le lanceur envoie des coups de poing aussi rapides
+que des balles de revolver. Frappe en priorité.",0,83280
+419,WAZAINFO_ALL_419,5734E07E886F0E09,"Une capacité dont la puissance est doublée si le lanceur
+a été blessé par la cible durant ce tour.",4,83480
+420,WAZAINFO_ALL_420,5731617E886C0065,"Le lanceur crée des éclats de glace qu’il envoie
+sur la cible. Frappe en priorité.",0,83680
+421,WAZAINFO_ALL_421,5731607E886BFEB2,"Attaque avec une griffe puissante faite d’ombres.
+Taux de critiques élevé.",4,83848
+422,WAZAINFO_ALL_422,57315F7E886BFCFF,"Le lanceur utilise une morsure électrifiée qui peut aussi
+paralyser ou apeurer la cible.",0,84000
+423,WAZAINFO_ALL_423,57315E7E886BFB4C,"Le lanceur utilise une morsure glaciale qui peut aussi
+geler ou apeurer la cible.",0,84180
+424,WAZAINFO_ALL_424,57315D7E886BF999,"Le lanceur utilise une morsure enflammée qui peut aussi
+brûler ou apeurer la cible.",0,84344
+425,WAZAINFO_ALL_425,57315C7E886BF7E6,"Le lanceur étend son ombre pour frapper par-derrière.
+Frappe en priorité.",0,84512
+426,WAZAINFO_ALL_426,57315B7E886BF633,"Le lanceur attaque à l’aide d’une boule de boue solidifiée.
+Peut aussi baisser la Précision de l’ennemi.",0,84660
+427,WAZAINFO_ALL_427,57315A7E886BF480,"Le lanceur entaille la cible grâce à des lames faites
+d’énergie psychique. Taux de critiques élevé.",0,84872
+428,WAZAINFO_ALL_428,5731697E886C0DFD,"Le lanceur concentre sa volonté et donne un coup
+de tête à la cible, ce qui peut aussi apeurer celle-ci.",0,85072
+429,WAZAINFO_ALL_429,5731687E886C0C4A,"Le corps poli du lanceur libère un éclair d’énergie.
+Peut aussi baisser la Précision de l’ennemi.",0,85284
+430,WAZAINFO_ALL_430,572E5B7E8869C05C,"Le lanceur concentre son énergie lumineuse
+et la fait exploser, ce qui peut aussi baisser
+la Défense Spéciale de la cible.",0,85480
+431,WAZAINFO_ALL_431,572E5C7E8869C20F,"Le lanceur se jette violemment sur l’ennemi.
+Peut aussi le rendre confus.",0,85728
+432,WAZAINFO_ALL_432,572E5D7E8869C3C2,"Un grand coup de vent disperse Protection ou
+Mur Lumière de la cible et diminue également
+son Esquive.",4,85876
+433,WAZAINFO_ALL_433,572E5E7E8869C575,"Le lanceur crée une zone mystérieuse où les Pokémon
+les plus lents frappent en priorité pendant cinq tours.",0,86084
+434,WAZAINFO_ALL_434,572E577E8869B990,"Le lanceur invoque des comètes.
+Le contrecoup réduit beaucoup son Attaque Spéciale.",0,86300
+435,WAZAINFO_ALL_435,572E587E8869BB43,"Un flamboiement d’électricité frappe tous les Pokémon
+autour du lanceur. Peut aussi les paralyser.",4,86468
+436,WAZAINFO_ALL_436,572E597E8869BCF6,"Des flammes s’abattent sur tous les Pokémon autour
+du lanceur, ce qui peut aussi les brûler.",0,86668
+437,WAZAINFO_ALL_437,572E5A7E8869BEA9,"Invoque une tempête de feuilles acérées.
+Le contrecoup réduit beaucoup l’Attaque Spéciale
+du lanceur.",4,86856
+438,WAZAINFO_ALL_438,572E637E8869CDF4,"Le lanceur fait virevolter violemment ses lianes
+ou ses tentacules pour fouetter la cible.",0,87060
+439,WAZAINFO_ALL_439,572E647E8869CFA7,"Le lanceur attaque en projetant un gros rocher
+sur la cible. Il doit se reposer au tour suivant.",0,87244
+440,WAZAINFO_ALL_440,572AD57E8866A6D3,"Un coup tranchant qui peut empoisonner la cible.
+Taux de critiques élevé.",4,87440
+441,WAZAINFO_ALL_441,572AD47E8866A520,"Le lanceur envoie des détritus sur la cible, ce qui peut
+aussi l’empoisonner.",0,87588
+442,WAZAINFO_ALL_442,572AD77E8866AA39,"Le lanceur heurte la cible avec sa tête dure
+comme de l’acier, ce qui peut aussi l’apeurer.",0,87744
+443,WAZAINFO_ALL_443,572AD67E8866A886,"Le lanceur projette des bombes d’acier qui collent
+à l’ennemi. N’échoue jamais.",0,87928
+444,WAZAINFO_ALL_444,572AD97E8866AD9F,"Le lanceur transperce la cible avec des rochers aiguisés.
+Taux de critiques élevé.",0,88088
+445,WAZAINFO_ALL_445,572AD87E8866ABEC,"Si l’ennemi est de sexe opposé au lanceur, il est séduit
+et son Attaque Spéciale baisse beaucoup.",0,88256
+446,WAZAINFO_ALL_446,572ADB7E8866B105,"Le lanceur fait flotter des pierres autour de la cible
+qui blessent tout adversaire entrant au combat.",0,88452
+447,WAZAINFO_ALL_447,572ADA7E8866AF52,"Le lanceur fait des nœuds dans l’herbe pour faire
+trébucher la cible. Plus la cible est lourde, plus
+la puissance de cette capacité augmente.",0,88660
+448,WAZAINFO_ALL_448,572ADD7E8866B46B,"Le lanceur attaque avec les ondes sonores
+assourdissantes qu’il émet en bavardant,
+ce qui rend la cible confuse.",0,88944
+449,WAZAINFO_ALL_449,572ADC7E8866B2B8,"Le lanceur libère une myriade de rayons de lumière.
+Le type varie selon la plaque que tient le lanceur.",0,89172
+450,WAZAINFO_ALL_450,57276F7E8863C3AA,"Le lanceur pique la cible. Si celle-ci tient une Baie,
+le lanceur la dévore et obtient son effet.",0,89380
+451,WAZAINFO_ALL_451,5727707E8863C55D,"Le lanceur tire un rayon chargé d’électricité.
+Peut aussi augmenter son Attaque Spéciale.",0,89576
+452,WAZAINFO_ALL_452,57276D7E8863C044,"Le lanceur heurte la cible de son corps robuste, ce qui
+blesse aussi gravement le lanceur.",0,89756
+453,WAZAINFO_ALL_453,57276E7E8863C1F7,"Le lanceur fonce sur la cible si rapidement qu’on
+parvient à peine à le discerner. Frappe en priorité.",0,89940
+454,WAZAINFO_ALL_454,57276B7E8863BCDE,"Le lanceur appelle ses subalternes pour frapper la cible.
+Taux de critiques élevé.",0,90148
+455,WAZAINFO_ALL_455,57276C7E8863BE91,"Le lanceur appelle ses subalternes pour former
+un bouclier qui augmente sa Défense et sa Défense
+Spéciale.",0,90316
+456,WAZAINFO_ALL_456,5727697E8863B978,"Le lanceur appelle ses sous-fifres pour le soigner.
+Il récupère jusqu’à la moitié de ses PV max.",0,90532
+457,WAZAINFO_ALL_457,57276A7E8863BB2B,"Le lanceur assène un coup de tête désespéré,
+ce qui le blesse aussi très gravement.",0,90728
+458,WAZAINFO_ALL_458,5727677E8863B612,"Le lanceur frappe la cible deux fois d’affilée à l’aide
+de sa queue ou d’un autre membre.",0,90896
+459,WAZAINFO_ALL_459,5727687E8863B7C5,"Le lanceur frappe si fort qu’il affecte le cours du temps.
+Il se repose au tour suivant.",0,91076
+460,WAZAINFO_ALL_460,5723E97E8860AA21,"Le lanceur déchire la cible et l’espace autour de lui.
+Taux de critiques élevé.",0,91256
+461,WAZAINFO_ALL_461,5723E87E8860A86E,"Le lanceur tombe K.O. pour soigner totalement
+le Pokémon qui prendra sa place au combat.",0,91416
+462,WAZAINFO_ALL_462,5723E77E8860A6BB,"Une force oppressante écrase la cible. Plus il lui reste
+de PV, plus la puissance de la capacité augmente.",4,91596
+463,WAZAINFO_ALL_463,5723E67E8860A508,"La cible est prise dans un tourbillon de feu qui dure
+de quatre à cinq tours.",0,91812
+464,WAZAINFO_ALL_464,5723ED7E8860B0ED,"La cible est plongée dans les ténèbres et
+tombe dans un profond sommeil.",0,91968
+465,WAZAINFO_ALL_465,5723EC7E8860AF3A,"Le corps du lanceur émet une onde de choc.
+Peut aussi beaucoup baisser la Défense Spéciale
+de la cible.",0,92116
+466,WAZAINFO_ALL_466,5723EB7E8860AD87,"Le lanceur crée une violente bourrasque.
+Peut aussi augmenter toutes ses stats.",0,92324
+467,WAZAINFO_ALL_467,5723EA7E8860ABD4,"Le lanceur disparaît au premier tour et frappe
+la cible au deuxième. Cette capacité fonctionne
+même si la cible se protège.",0,92484
+468,WAZAINFO_ALL_468,5723E17E88609C89,"Le lanceur s’aiguise les griffes.
+Augmente l’Attaque et la Précision.",0,92732
+469,WAZAINFO_ALL_469,5723E07E88609AD6,"Bloque les attaques visant tous les alliés pendant
+un tour.",0,92872
+470,WAZAINFO_ALL_470,5720637E885D9098,"Additionne la Défense et la Défense Spéciale
+du lanceur et de sa cible et les redistribue
+équitablement entre les deux.",4,92992
+471,WAZAINFO_ALL_471,5720647E885D924B,"Additionne l’Attaque Spéciale et l’Attaque du lanceur
+et de sa cible et les redistribue équitablement
+entre les deux.",4,93232
+472,WAZAINFO_ALL_472,5720657E885D93FE,"Le lanceur crée une zone mystérieuse
+où la Défense et la Défense Spéciale de tous
+les Pokémon sont inversées pendant cinq tours.",0,93468
+473,WAZAINFO_ALL_473,5720667E885D95B1,"Le lanceur matérialise des ondes mystérieuses
+qu’il projette sur la cible, ce qui inflige des dégâts
+physiques à celle-ci.",0,93728
+474,WAZAINFO_ALL_474,5720677E885D9764,"Le lanceur asperge la cible d’un poison spécial.
+La puissance de la capacité est doublée si la cible
+est empoisonnée.",0,93976
+475,WAZAINFO_ALL_475,5720687E885D9917,"Le lanceur se débarrasse des parties inutiles
+de son corps. Son poids diminue et sa Vitesse
+augmente beaucoup.",0,94212
+476,WAZAINFO_ALL_476,5720697E885D9ACA,"Le lanceur s’asperge d’une poudre irritante pour attirer
+l’attention et diriger toutes les attaques ennemies sur lui.",0,94436
+477,WAZAINFO_ALL_477,57206A7E885D9C7D,"Un pouvoir qui fait flotter l’ennemi dans les airs.
+Pendant trois tours, il devient plus facile à atteindre.",4,94672
+478,WAZAINFO_ALL_478,57205B7E885D8300,"Le lanceur crée une zone mystérieuse où les objets
+tenus par tous les Pokémon n’ont plus aucun effet
+pendant cinq tours.",0,94892
+479,WAZAINFO_ALL_479,57205C7E885D84B3,"Le lanceur jette un projectile sur la cible.
+Si cette dernière vole, elle tombe au sol.",0,95136
+480,WAZAINFO_ALL_480,571D5D7E885B508F,Un coup très puissant dont l’effet est toujours critique.,4,95312
+481,WAZAINFO_ALL_481,571D5C7E885B4EDC,"Quand l’attaque atteint sa cible, elle projette des
+flammes qui touchent tout ennemi situé à côté.",0,95428
+482,WAZAINFO_ALL_482,571D5F7E885B53F5,"Une vague de détritus attaque tous les Pokémon
+autour du lanceur. Peut aussi empoisonner.",4,95628
+483,WAZAINFO_ALL_483,571D5E7E885B5242,"Une danse mystique dont le rythme parfait augmente
+l’Attaque Spéciale, la Défense Spéciale et la Vitesse
+du lanceur.",4,95808
+484,WAZAINFO_ALL_484,571D597E885B49C3,"Le lanceur se jette sur la cible de tout son poids.
+Plus il est lourd par rapport à la cible, plus la puissance
+de cette capacité augmente.",0,96044
+485,WAZAINFO_ALL_485,571D587E885B4810,"Des ondes mystérieuses blessent tous les
+Pokémon alentour qui sont du même type que
+le lanceur.",0,96324
+486,WAZAINFO_ALL_486,571D5B7E885B4D29,"Le lanceur envoie une boule d’électricité. Plus la Vitesse
+du lanceur est élevée par rapport à celle de la cible,
+plus la puissance de la capacité augmente.",0,96516
+487,WAZAINFO_ALL_487,571D5A7E885B4B76,"Le lanceur projette beaucoup d’eau sur sa cible,
+qui devient de type Eau.",0,96832
+488,WAZAINFO_ALL_488,571D657E885B5E27,"Le lanceur s’entoure de flammes pour attaquer la cible.
+Il se concentre et sa Vitesse augmente.",0,96980
+489,WAZAINFO_ALL_489,571D647E885B5C74,"Le lanceur s’enroule sur lui-même et se concentre.
+Son Attaque, sa Défense et sa Précision augmentent.",0,97172
+490,WAZAINFO_ALL_490,5719D77E88583706,"Un coup rapide qui affecte la mobilité de la cible
+et diminue sa Vitesse.",4,97380
+491,WAZAINFO_ALL_491,5719D87E885838B9,"Le lanceur projette un liquide acide qui fait fondre
+la cible, ce qui diminue beaucoup la Défense Spéciale
+de celle-ci.",0,97528
+492,WAZAINFO_ALL_492,5719D57E885833A0,"Le lanceur utilise la force de la cible. Plus l’Attaque de
+celle-ci est élevée, plus le lanceur inflige de dégâts.",0,97768
+493,WAZAINFO_ALL_493,5719D67E88583553,"Le lanceur envoie des ondes mystérieuses à la cible,
+dont le talent est remplacé par le talent Simple.",0,98000
+494,WAZAINFO_ALL_494,5719DB7E88583DD2,"Le lanceur danse sur un rythme étrange.
+Il force sa cible à l’imiter, ce qui lui fait adopter
+son talent.",0,98208
+495,WAZAINFO_ALL_495,5719DC7E88583F85,"S’il est le premier à agir, le lanceur permet à sa cible
+d’utiliser une capacité juste après lui.",0,98420
+496,WAZAINFO_ALL_496,5719D97E88583A6C,"Le lanceur attaque la cible en chantant. Si plusieurs
+Pokémon déclenchent cette attaque à la suite,
+la puissance augmente.",0,98616
+497,WAZAINFO_ALL_497,5719DA7E88583C1F,"Un cri retentissant blesse la cible. Si le lanceur
+ou d’autres Pokémon utilisent cette capacité à
+chaque tour, la puissance augmente.",4,98864
+498,WAZAINFO_ALL_498,5719DF7E8858449E,"Une attaque puissante quand l’ennemi baisse sa garde.
+Inflige des dégâts sans tenir compte des changements
+de stats.",4,99132
+499,WAZAINFO_ALL_499,5719E07E88584651,"Le lanceur projette de la boue bizarre sur la cible.
+Les changements de stats de la cible sont annulés.",0,99368
+500,WAZAINFO_ALL_500,4E22327E832DCFAC,"Le lanceur attaque la cible avec une force cumulée.
+Plus les stats du lanceur sont augmentées,
+plus la puissance de cette capacité augmente.",0,99576
+501,WAZAINFO_ALL_501,4E22337E832DD15F,Protège le lanceur et ses alliés des attaques prioritaires.,0,99860
+502,WAZAINFO_ALL_502,4E22347E832DD312,"Le lanceur se téléporte à l’aide d’un pouvoir mystérieux.
+Il échange sa place avec celle d’un allié sur le terrain.
+Peut échouer si utilisée plusieurs fois de suite.",0,99980
+503,WAZAINFO_ALL_503,4E22357E832DD4C5,"Le lanceur projette un jet d’eau bouillante sur la cible,
+ce qui peut aussi la brûler.",0,100312
+504,WAZAINFO_ALL_504,4E222E7E832DC8E0,"Le lanceur brise sa carapace. Il baisse sa Défense
+et sa Défense Spéciale, mais augmente beaucoup
+son Attaque, son Attaque Spéciale et sa Vitesse.",0,100488
+505,WAZAINFO_ALL_505,4E222F7E832DCA93,"Le lanceur projette une aura de bien-être qui fait
+récupérer la moitié de ses PV max à la cible.",0,100784
+506,WAZAINFO_ALL_506,4E22307E832DCC46,"Une attaque acharnée qui cause davantage de dégâts
+à la cible si elle a une altération de statut.",4,100980
+507,WAZAINFO_ALL_507,4E22317E832DCDF9,"Le lanceur emmène l’ennemi dans les airs au
+premier tour et le lâche dans le vide au second.
+L’ennemi saisi ne peut pas attaquer.",0,101176
+508,WAZAINFO_ALL_508,4E223A7E832DDD44,"Le lanceur fait tourner ses engrenages.
+Cela augmente son Attaque et augmente beaucoup
+sa Vitesse.",0,101436
+509,WAZAINFO_ALL_509,4E223B7E832DDEF7,"Le lanceur fait une projection sur un Pokémon ennemi
+et le remplace par un autre. Lors d’un combat contre
+un Pokémon sauvage seul, cela met fin au combat.",0,101636
+510,WAZAINFO_ALL_510,4E25B87E8330E935,"Des flammes calcinent la cible. Si elle tient un objet,
+une Baie par exemple, celui-ci est brûlé et devient
+inutilisable.",0,101948
+511,WAZAINFO_ALL_511,4E25B77E8330E782,"Retient la cible de force, l’obligeant à agir en dernier.",0,102192
+512,WAZAINFO_ALL_512,4E25B67E8330E5CF,"Le lanceur frappe la cible avec agilité. S’il ne tient pas
+d’objet, l’attaque inflige davantage de dégâts.",0,102308
+513,WAZAINFO_ALL_513,4E25B57E8330E41C,Le lanceur adopte le même type que la cible.,0,102524
+514,WAZAINFO_ALL_514,4E25B47E8330E269,"Le lanceur venge un allié K.O. Si un Pokémon
+de l’équipe a été mis K.O. au tour d’avant,
+la puissance augmente.",0,102616
+515,WAZAINFO_ALL_515,4E25B37E8330E0B6,"Une attaque très risquée. Le lanceur perd tous ses PV
+restants et inflige autant de dégâts à la cible.",4,102840
+516,WAZAINFO_ALL_516,4E25B27E8330DF03,"Si la cible ne tient pas d’objet, le lanceur lui donne
+l’objet qu’il tient.",0,103048
+517,WAZAINFO_ALL_517,4E25B17E8330DD50,"La cible est entourée d’un torrent de flammes ardentes
+qui la brûlent.",0,103200
+518,WAZAINFO_ALL_518,4E25C07E8330F6CD,"Une masse d’eau s’abat sur la cible. Si cette capacité
+est utilisée en même temps qu’Aire de Feu, la puissance
+augmente et un arc-en-ciel apparaît.",4,103344
+519,WAZAINFO_ALL_519,4E25BF7E8330F51A,"Une masse de feu s’abat sur la cible. Si cette capacité
+est utilisée en même temps qu’Aire d’Herbe, la puissance
+augmente et une mer de feu apparaît.",4,103640
+520,WAZAINFO_ALL_520,4E28BE7E8333293E,"Une masse végétale s’abat sur la cible. Si cette capacité
+est utilisée en même temps qu’Aire d’Eau, la puissance
+augmente et un marécage apparaît.",4,103940
+521,WAZAINFO_ALL_521,4E28BF7E83332AF1,"Après son attaque, le lanceur revient à toute vitesse
+et change de place avec un Pokémon de l’équipe
+prêt à combattre.",4,104236
+522,WAZAINFO_ALL_522,4E28BC7E833325D8,"Le lanceur frappe en se débattant de toutes ses forces,
+et baisse l’Attaque Spéciale de la cible.",0,104476
+523,WAZAINFO_ALL_523,4E28BD7E8333278B,"Le lanceur piétine le sol et inflige des dégâts à tous
+les Pokémon autour de lui. Baisse aussi leur Vitesse.",0,104672
+524,WAZAINFO_ALL_524,4E28C27E8333300A,"Un souffle froid blesse la cible.
+L’effet est toujours critique.",4,104892
+525,WAZAINFO_ALL_525,4E28C37E833331BD,"Un coup puissant qui blesse la cible et l’envoie au loin.
+Lors d’un combat contre un Pokémon sauvage seul,
+met fin au combat.",4,105024
+526,WAZAINFO_ALL_526,4E28C07E83332CA4,"Le lanceur se rengorge et augmente son Attaque
+et son Attaque Spéciale.",0,105276
+527,WAZAINFO_ALL_527,4E28C17E83332E57,"Le lanceur attaque la cible en l’attrapant dans un filet
+électrique. Baisse aussi la Vitesse de la cible.",0,105420
+528,WAZAINFO_ALL_528,4E28B67E83331BA6,"Une charge électrique violente qui blesse aussi
+légèrement le lanceur.",4,105632
+529,WAZAINFO_ALL_529,4E28B77E83331D59,"Le lanceur tourne sur lui-même comme une perceuse
+et se jette sur la cible. Taux de critiques élevé.",0,105776
+530,WAZAINFO_ALL_530,4E2C447E833642C7,"Le lanceur frappe l’ennemi deux fois d’affilée
+avec les parties les plus robustes de son corps.",0,105980
+531,WAZAINFO_ALL_531,4E2C437E83364114,"Déconcentre l’ennemi avec des mouvements mignons
+avant de le frapper violemment. Peut aussi l’apeurer.",0,106172
+532,WAZAINFO_ALL_532,4E2C467E8336462D,"Un coup de cornes qui draine l’énergie de la cible.
+La capacité convertit la moitié des dégâts infligés
+en PV pour le lanceur.",4,106380
+533,WAZAINFO_ALL_533,4E2C457E8336447A,"Un violent coup d’épée qui lacère la cible et lui inflige
+des dégâts en ignorant ses changements de stats.",4,106636
+534,WAZAINFO_ALL_534,4E2C407E83363BFB,"Un coquillage aiguisé lacère la cible et peut aussi baisser
+sa Défense.",4,106852
+535,WAZAINFO_ALL_535,4E2C3F7E83363A48,"Le lanceur projette son corps enflammé contre la cible.
+Plus il est lourd par rapport à la cible, plus la puissance
+de cette capacité augmente.",0,106996
+536,WAZAINFO_ALL_536,4E2C427E83363F61,"L’ennemi est pris dans un tourbillon de feuilles acérées.
+Peut aussi baisser sa Précision.",0,107284
+537,WAZAINFO_ALL_537,4E2C417E83363DAE,"Le lanceur se roule en boule et écrase son ennemi.
+Peut aussi l’apeurer.",0,107468
+538,WAZAINFO_ALL_538,4E2C3C7E8336352F,"Le lanceur se protège en s’emmitouflant dans du coton.
+Sa Défense augmente énormément.",0,107616
+539,WAZAINFO_ALL_539,4E2C3B7E8336337C,"Le lanceur attaque avec une onde de choc ténébreuse
+qui peut aussi baisser la Précision de la cible.",0,107792
+540,WAZAINFO_ALL_540,4E14BA7E83227968,"Le lanceur matérialise des ondes mystérieuses
+qu’il projette sur la cible, ce qui inflige des dégâts
+physiques à celle-ci.",0,107996
+541,WAZAINFO_ALL_541,4E14BB7E83227B1B,"Le lanceur frappe la cible de deux à cinq fois d’affilée
+avec sa queue robuste.",0,108244
+542,WAZAINFO_ALL_542,4E14BC7E83227CCE,"Le lanceur déclenche une tempête de vents violents
+qui s’abat sur la cible, et peut aussi la rendre confuse.",0,108404
+543,WAZAINFO_ALL_543,4E14BD7E83227E81,"Le lanceur donne un coup avec sa tête couronnée
+d’une fière crinière. Blesse aussi légèrement le lanceur.",0,108624
+544,WAZAINFO_ALL_544,4E14BE7E83228034,"Le lanceur jette deux écrous d’acier qui frappent
+la cible deux fois d’affilée.",0,108836
+545,WAZAINFO_ALL_545,4E14BF7E832281E7,"Des flammes s’abattent sur tous les Pokémon autour
+du lanceur, ce qui peut aussi les brûler.",0,108996
+546,WAZAINFO_ALL_546,4E14C07E8322839A,"Le lanceur projette un rayon lumineux sur la cible.
+Le type varie selon le module que tient le lanceur.",0,109184
+547,WAZAINFO_ALL_547,4E14C17E8322854D,"Le lanceur attaque la cible en lui chantant une chanson
+d’un autre temps qui peut aussi l’endormir.",0,109392
+548,WAZAINFO_ALL_548,4E14B27E83226BD0,"La cible est lacérée par une longue corne dont
+le pouvoir mystérieux inflige des dégâts physiques.",0,109592
+549,WAZAINFO_ALL_549,4E14B37E83226D83,"Un souffle de vent qui congèle tout sur son passage
+s’abat sur la cible et réduit aussi sa Vitesse.",4,109792
+550,WAZAINFO_ALL_550,4E17C07E8324B971,"Le lanceur s’enveloppe d’une charge électrique
+surpuissante et se jette sur la cible, ce qui peut aussi
+la paralyser.",0,109992
+551,WAZAINFO_ALL_551,4E17BF7E8324B7BE,"De magnifiques et redoutables flammes bleues
+s’abattent sur la cible, et peuvent aussi la brûler.",0,110228
+552,WAZAINFO_ALL_552,4E17BE7E8324B60B,"Le lanceur s’enveloppe de flammes et attaque la cible,
+Cela peut aussi augmenter l’Attaque Spéciale du lanceur.",0,110424
+553,WAZAINFO_ALL_553,4E17BD7E8324B458,"Le lanceur projette un bloc de glace électrifié sur
+la cible au second tour, ce qui peut aussi la paralyser.",0,110648
+554,WAZAINFO_ALL_554,4E17C47E8324C03D,"Au second tour, le lanceur projette un souffle de vent
+glacial dévastateur sur la cible, ce qui peut aussi la
+brûler.",4,110868
+555,WAZAINFO_ALL_555,4E17C37E8324BE8A,"Le lanceur hurle sur la cible et baisse l’Attaque Spéciale
+de celle-ci.",0,111104
+556,WAZAINFO_ALL_556,4E17C27E8324BCD7,"Le lanceur envoie de gros blocs de glace sur la cible
+pour lui infliger des dégâts, ce qui peut aussi l’apeurer.",0,111248
+557,WAZAINFO_ALL_557,4E17C17E8324BB24,"Le lanceur fait jaillir des flammes ardentes de son front
+et se jette sur la cible, ce qui baisse la Défense,
+la Défense Spéciale et la Vitesse du lanceur.",0,111476
+558,WAZAINFO_ALL_558,4E17B87E8324ABD9,"Le lanceur projette une boule de feu gigantesque.
+La puissance de la capacité augmente sous l’influence
+d’Éclair Croix.",0,111788
+559,WAZAINFO_ALL_559,4E17B77E8324AA26,"Le lanceur projette un orbe électrique gigantesque.
+La puissance de la capacité augmente sous l’influence
+de Flamme Croix.",0,112028
+560,WAZAINFO_ALL_560,4E1B467E8327D2FA,"Une attaque en piqué depuis le ciel, à la fois
+de type Combat et de type Vol.",4,112276
+561,WAZAINFO_ALL_561,4E1B477E8327D4AD,"Retourne un tatami pour bloquer, comme avec
+un bouclier, les capacités visant le lanceur ou ses alliés.
+N’a pas d’effet sur les attaques de statut.",0,112432
+562,WAZAINFO_ALL_562,4E1B447E8327CF94,"Le lanceur se tourne vers la cible et lui éructe dessus,
+infligeant des dégâts. Ne fonctionne que si le lanceur
+consomme une Baie tenue.",0,112728
+563,WAZAINFO_ALL_563,4E1B457E8327D147,"Laboure le sol et le rend plus fertile.
+Augmente l’Attaque et l’Attaque Spéciale
+des Pokémon de type Plante.",0,113004
+564,WAZAINFO_ALL_564,4E1B427E8327CC2E,"Le lanceur déploie une toile visqueuse autour de la cible
+qui ralentit la Vitesse de tout adversaire entrant
+au combat.",0,113224
+565,WAZAINFO_ALL_565,4E1B437E8327CDE1,"Le lanceur augmente énormément son Attaque
+si une cible est mise K.O. par cette capacité.",0,113464
+566,WAZAINFO_ALL_566,4E1B407E8327C8C8,"Le lanceur disparaît au premier tour et frappe au second.
+Cette attaque passe outre les protections.",0,113644
+567,WAZAINFO_ALL_567,4E1B417E8327CA7B,"Insuffle à la cible l’esprit d’Halloween, et ajoute le type
+Spectre à ses types actuels.",4,113848
+568,WAZAINFO_ALL_568,4E1B3E7E8327C562,"Le lanceur pousse un rugissement qui intimide la cible
+et diminue l’Attaque et l’Attaque Spéciale de celle-ci.",0,114028
+569,WAZAINFO_ALL_569,4E1B3F7E8327C715,"Diffuse des particules saturées d’électricité qui
+transforment les capacités de type Normal en
+capacités de type Électrik.",0,114252
+570,WAZAINFO_ALL_570,4E1EAC7E832AB623,"Inflige des dégâts à tous les Pokémon autour du lanceur.
+Il récupère en PV la moitié des dégâts infligés.",4,114500
+571,WAZAINFO_ALL_571,4E1EAB7E832AB470,"La cible est charmée par l’esprit de la forêt.
+Le type Plante est ajouté à ses types actuels.",0,114712
+572,WAZAINFO_ALL_572,4E1EAE7E832AB989,"Déclenche une violente tempête de fleurs qui inflige
+des dégâts à tous les Pokémon alentour.",0,114900
+573,WAZAINFO_ALL_573,4E1EAD7E832AB7D6,"Le lanceur refroidit violemment la cible et peut la geler.
+Super efficace sur les Pokémon de type Eau.",0,115088
+574,WAZAINFO_ALL_574,4E1EB07E832ABCEF,"Le lanceur laisse s’échapper une voix enchanteresse
+qui inflige des dégâts psychiques à la cible.
+N’échoue jamais.",0,115296
+575,WAZAINFO_ALL_575,4E1EAF7E832ABB3C,"Le lanceur menace la cible dans une ultime tirade avant
+de changer de place avec un autre Pokémon.
+Réduit l’Attaque et l’Attaque Spéciale de la cible.",0,115528
+576,WAZAINFO_ALL_576,4E1EB27E832AC055,Inverse tous les changements de stats de la cible.,4,115832
+577,WAZAINFO_ALL_577,4E1EB17E832ABEA2,"Le lanceur aspire la force vitale de la cible par un baiser
+qui rend au lanceur un nombre de PV supérieur ou égal
+à la moitié des dégâts infligés.",0,115936
+578,WAZAINFO_ALL_578,4E1EB47E832AC3BB,"Utilise une force mystérieuse pour protéger l’équipe
+des capacités de statut. Ne protège pas des autres
+capacités.",4,116232
+579,WAZAINFO_ALL_579,4E1EB37E832AC208,"Grâce à une force mystérieuse, la Défense
+de tous les Pokémon Plante au combat augmente.",0,116464
+580,WAZAINFO_ALL_580,4E06C27E831649A4,"Pendant cinq tours, les Pokémon au sol récupèrent
+quelques PV à chaque tour et la puissance
+des capacités de type Plante augmente.",0,116644
+581,WAZAINFO_ALL_581,4E06C37E83164B57,"Pendant cinq tours, les Pokémon au sol ne peuvent
+pas subir d’altération de statut et les dégâts infligés
+par les capacités de type Dragon sont divisés par deux.",0,116908
+582,WAZAINFO_ALL_582,4E06C47E83164D0A,"Si le lanceur attaque avant la cible, les capacités
+de celle-ci seront de type Électrik jusqu’à la fin du tour.",0,117232
+583,WAZAINFO_ALL_583,4E06C57E83164EBD,"Le lanceur attaque la cible en lui faisant des câlineries,
+ce qui peut aussi diminuer l’Attaque de celle-ci.",0,117456
+584,WAZAINFO_ALL_584,4E06BE7E831642D8,Le lanceur déchaîne un vent magique qui cingle la cible.,0,117676
+585,WAZAINFO_ALL_585,4E06BF7E8316448B,"Le lanceur attaque la cible grâce au pouvoir de la lune,
+ce qui peut diminuer l’Attaque Spéciale de celle-ci.",0,117792
+586,WAZAINFO_ALL_586,4E06C07E8316463E,"Attaque les Pokémon alentour grâce à une onde sonore
+assourdissante qui détruit tout sur son passage.",4,118012
+587,WAZAINFO_ALL_587,4E06C17E831647F1,"Des chaînes entourent la zone de combat, empêchant
+tous les Pokémon de quitter le terrain au tour suivant.",0,118216
+588,WAZAINFO_ALL_588,4E06BA7E83163C0C,"Le lanceur prend une posture défensive pour bloquer
+les dégâts. Cela diminue l’Attaque de tout assaillant
+qui entre en contact avec le lanceur.",0,118432
+589,WAZAINFO_ALL_589,4E06BB7E83163DBF,"La cible se lie d’amitié avec le lanceur et perd
+sa combativité, ce qui diminue son Attaque.",0,118720
+590,WAZAINFO_ALL_590,4E0A487E8319632D,"Le lanceur dévoile des secrets à la cible, qui perd alors
+sa concentration et voit son Attaque Spéciale diminuer.",0,118908
+591,WAZAINFO_ALL_591,4E0A477E8319617A,"Provoque une tempête de diamants qui inflige
+des dégâts. Peut beaucoup augmenter la Défense
+du lanceur.",0,119136
+592,WAZAINFO_ALL_592,4E0A467E83195FC7,"Le lanceur projette de la vapeur extrêmement chaude
+sur la cible, ce qui peut aussi la brûler.",0,119344
+593,WAZAINFO_ALL_593,4E0A457E83195E14,"Le lanceur crée une faille dimensionnelle pour
+attaquer soudainement la cible de côté. Ignore
+même les capacités comme Abri ou Détection.",0,119536
+594,WAZAINFO_ALL_594,4E0A447E83195C61,"Le lanceur attaque la cible avec des shuriken
+de mucus. Cette capacité frappe en priorité
+deux à cinq fois d’affilée en un tour.",0,119812
+595,WAZAINFO_ALL_595,4E0A437E83195AAE,"Le lanceur attaque en soufflant des flammes brûlantes
+par la bouche et diminue l’Attaque Spéciale de la cible.",0,120072
+596,WAZAINFO_ALL_596,4E0A427E831958FB,"Protège des attaques, et diminue les PV de tout
+assaillant qui entre en contact avec le lanceur.",0,120296
+597,WAZAINFO_ALL_597,4E0A417E83195748,"Grâce à un parfum mystérieux, augmente la Défense
+Spéciale d’un allié.",0,120492
+598,WAZAINFO_ALL_598,4E0A407E83195595,"Le corps du lanceur produit des ondes anormales
+qui enveloppent la cible et diminuent beaucoup
+son Attaque Spéciale.",0,120636
+599,WAZAINFO_ALL_599,4E0A3F7E831953E2,"Sécrète un liquide empoisonné.
+Diminue l’Attaque, l’Attaque Spéciale et la Vitesse
+de l’ennemi empoisonné.",0,120872
+600,WAZAINFO_ALL_600,68F8437E929ECC4D,"L’ennemi est pris dans un nuage de poudre.
+S’il utilise une capacité de type Feu lors du même tour,
+le nuage explose et lui inflige des dégâts.",0,121088
+601,WAZAINFO_ALL_601,68F8427E929ECA9A,"Le lanceur absorbe de l’énergie au premier tour
+et augmente beaucoup son Attaque Spéciale,
+sa Défense Spéciale et sa Vitesse au second.",0,121376
+602,WAZAINFO_ALL_602,68F8417E929EC8E7,"Manipule les champs magnétiques pour augmenter
+la Défense et la Défense Spéciale des Pokémon alliés
+dotés du talent Plus ou du talent Moins.",0,121648
+603,WAZAINFO_ALL_603,68F8407E929EC734,"Utilisée pendant un combat, multiplie par deux l’argent
+gagné à la fin.",4,121932
+604,WAZAINFO_ALL_604,68F83F7E929EC581,"Pendant cinq tours, le terrain se charge d’électricité.
+Les Pokémon au sol ne peuvent pas s’endormir
+et la puissance des capacités de type Électrik augmente.",0,122076
+605,WAZAINFO_ALL_605,68F83E7E929EC3CE,"Le lanceur libère une puissante décharge lumineuse
+qui inflige des dégâts à l’ennemi.",0,122392
+606,WAZAINFO_ALL_606,68F83D7E929EC21B,"Le Pokémon vous souhaite plein de bonnes choses
+pour cet évènement spécial.",0,122564
+607,WAZAINFO_ALL_607,68F83C7E929EC068,"Le lanceur et un allié se prennent la main,
+ce qui les rend heureux.",0,122716
+608,WAZAINFO_ALL_608,68F83B7E929EBEB5,"Le lanceur fixe la cible d’un air très attendrissant qui la
+touche et diminue son Attaque. Agit en priorité.",0,122856
+609,WAZAINFO_ALL_609,68F83A7E929EBD02,"Le lanceur attaque en frottant ses bajoues chargées
+d’électricité, ce qui paralyse la cible.",0,123076
+610,WAZAINFO_ALL_610,68F4BD7E929BB2C4,"Le lanceur attaque avec retenue, et laisse au moins
+1 PV à la cible.",0,123264
+611,WAZAINFO_ALL_611,68F4BE7E929BB477,"Cette attaque perdure pendant quatre à cinq tours.
+La cible ne peut pas quitter le terrain pendant
+cette période.",0,123404
+612,WAZAINFO_ALL_612,68F4BF7E929BB62A,"À force de frapper, les poings deviennent plus durs.
+Augmente l’Attaque du lanceur si l’ennemi est touché.",4,123632
+613,WAZAINFO_ALL_613,68F4C07E929BB7DD,"Vole l’énergie de la cible.
+Rend au lanceur un nombre de PV supérieur ou égal
+à la moitié des dégâts infligés.",0,123848
+614,WAZAINFO_ALL_614,68F4B97E929BABF8,"Touche même les Pokémon dans les airs.
+Dans ce cas, la cible retombe au sol.",0,124072
+615,WAZAINFO_ALL_615,68F4BA7E929BADAB,"Le lanceur attaque avec des vagues glissant au sol.
+La cible y est prise et ne peut pas quitter le terrain.",0,124228
+616,WAZAINFO_ALL_616,68F4BB7E929BAF5E,"Le lanceur utilise la puissance du sol et la concentre
+sur la cible pour infliger des dégâts.",0,124444
+617,WAZAINFO_ALL_617,68F4BC7E929BB111,"Le lanceur utilise la puissance de la fleur Éternelle pour
+lancer un formidable rayon d’énergie. Cela blesse aussi
+très gravement le lanceur.",0,124632
+618,WAZAINFO_ALL_618,68F4B57E929BA52C,"Le lanceur projette une aura, et d’innombrables rayons
+lumineux d’un bleu étincelant s’abattent sur la cible.",0,124916
+619,WAZAINFO_ALL_619,68F4B67E929BA6DF,"Le Pokémon transforme la puissance de la terre
+et attaque la cible avec une lame acérée.",0,125136
+620,WAZAINFO_ALL_620,68FEAF7E92A3EF7F,"Le Pokémon s’abat à toute vitesse sur la cible
+depuis les hautes couches de l’atmosphère.
+Baisse la Défense et la Défense Spéciale du lanceur.",0,125316
+621,WAZAINFO_ALL_621,68FEAE7E92A3EDCC,"Le Pokémon utilise sa multitude de bras pour infliger
+une nuée de coups qui ignorent les capacités telles
+qu’Abri ou Détection. Baisse la Défense du lanceur.",0,125604
+622,WAZAINFO_ALL_622,68FEB17E92A3F2E5,"Le Pokémon utilise la Force Z pour s’élancer
+à toute vitesse sur l’adversaire. La puissance
+varie selon celle de la capacité originale.",0,125920
+623,WAZAINFO_ALL_623,68FEB07E92A3F132,Dummy,0,126192
+624,WAZAINFO_ALL_624,68FEAB7E92A3E8B3,"Le Pokémon utilise la Force Z pour créer une boule
+d’énergie qu’il projette sur l’adversaire. La puissance
+varie selon celle de la capacité originale.",0,126204
+625,WAZAINFO_ALL_625,68FEAA7E92A3E700,Dummy,0,126508
+626,WAZAINFO_ALL_626,68FEAD7E92A3EC19,"Le Pokémon utilise la Force Z pour s’envoler très haut
+dans le ciel avant de plonger sur l’adversaire.
+La puissance varie selon celle de la capacité originale.",0,126520
+627,WAZAINFO_ALL_627,68FEAC7E92A3EA66,Dummy,0,126840
+628,WAZAINFO_ALL_628,68FEB77E92A3FD17,"Le Pokémon utilise la Force Z pour répandre
+un marécage empoisonné où l’adversaire sombre.
+La puissance varie selon celle de la capacité originale.",0,126852
+629,WAZAINFO_ALL_629,68FEB67E92A3FB64,Dummy,0,127148
+630,WAZAINFO_ALL_630,68FBA97E92A1AF76,"Le Pokémon utilise la Force Z pour entraîner l’adversaire
+dans les profondeurs de la terre. La puissance varie
+selon celle de la capacité originale.",0,127160
+631,WAZAINFO_ALL_631,68FBAA7E92A1B129,Dummy,0,127460
+632,WAZAINFO_ALL_632,68FBA77E92A1AC10,"Le Pokémon utilise la Force Z pour créer un immense
+rocher et écraser l’adversaire avec. La puissance varie
+selon celle de la capacité originale.",0,127472
+633,WAZAINFO_ALL_633,68FBA87E92A1ADC3,Dummy,0,127764
+634,WAZAINFO_ALL_634,68FBAD7E92A1B642,"Le Pokémon utilise la Force Z pour cracher de longs
+fils de soie et enserrer l’adversaire. La puissance varie
+selon celle de la capacité originale.",0,127776
+635,WAZAINFO_ALL_635,68FBAE7E92A1B7F5,Dummy,0,128072
+636,WAZAINFO_ALL_636,68FBAB7E92A1B2DC,"Le Pokémon utilise la Force Z pour invoquer des esprits
+rancuniers qui s’abattent sur l’adversaire. La puissance
+varie selon celle de la capacité originale.",0,128084
+637,WAZAINFO_ALL_637,68FBAC7E92A1B48F,Dummy,0,128400
+638,WAZAINFO_ALL_638,68FBB17E92A1BD0E,"Le Pokémon utilise la Force Z pour tourner à toute
+vitesse et écraser l’adversaire. La puissance varie
+selon celle de la capacité originale.",0,128412
+639,WAZAINFO_ALL_639,68FBB27E92A1BEC1,Dummy,0,128696
+640,WAZAINFO_ALL_640,68EAAB7E92933FA9,"Le Pokémon utilise la Force Z pour cracher une boule
+de feu qui réduit l’adversaire en cendres. La puissance
+varie selon celle de la capacité originale.",0,128708
+641,WAZAINFO_ALL_641,68EAAA7E92933DF6,Dummy,0,129016
+642,WAZAINFO_ALL_642,68EAA97E92933C43,"Le Pokémon utilise la Force Z pour créer un tourbillon
+gigantesque qui avale l’adversaire. La puissance varie
+selon celle de la capacité originale.",0,129028
+643,WAZAINFO_ALL_643,68EAA87E92933A90,Dummy,0,129324
+644,WAZAINFO_ALL_644,68EAAF7E92934675,"Le Pokémon utilise la Force Z pour libérer l’énergie
+des plantes et attaquer l’adversaire. La puissance varie
+selon celle de la capacité originale.",0,129336
+645,WAZAINFO_ALL_645,68EAAE7E929344C2,Dummy,0,129632
+646,WAZAINFO_ALL_646,68EAAD7E9293430F,"Le Pokémon utilise la Force Z pour générer un courant
+électrique puissant qu’il projette sur l’adversaire.
+La puissance varie selon celle de la capacité originale.",0,129644
+647,WAZAINFO_ALL_647,68EAAC7E9293415C,Dummy,0,129972
+648,WAZAINFO_ALL_648,68EAB37E92934D41,"Le Pokémon utilise la Force Z pour manipuler l’adversaire
+et lui infliger de sérieux dégâts. La puissance varie selon
+celle de la capacité originale.",0,129984
+649,WAZAINFO_ALL_649,68EAB27E92934B8E,Dummy,0,130284
+650,WAZAINFO_ALL_650,68E7257E92902620,"Le Pokémon utilise la Force Z pour baisser la température
+brutalement et congeler l’adversaire. La puissance varie
+selon celle de la capacité originale.",0,130296
+651,WAZAINFO_ALL_651,68E7267E929027D3,Dummy,0,130604
+652,WAZAINFO_ALL_652,68E7277E92902986,"Le Pokémon utilise la Force Z pour matérialiser son aura
+et assaillir l’adversaire. La puissance varie selon celle
+de la capacité originale.",0,130616
+653,WAZAINFO_ALL_653,68E7287E92902B39,Dummy,0,130900
+654,WAZAINFO_ALL_654,68E7297E92902CEC,"Le Pokémon utilise la Force Z pour rassembler l’énergie
+négative et y aspirer l’adversaire. La puissance varie selon
+celle de la capacité originale.",0,130912
+655,WAZAINFO_ALL_655,68E72A7E92902E9F,Dummy,0,131212
+656,WAZAINFO_ALL_656,68E72B7E92903052,"Le Pokémon utilise la Force Z pour créer une dimension
+irréelle où l’adversaire est à sa merci. La puissance varie
+selon celle de la capacité originale.",0,131224
+657,WAZAINFO_ALL_657,68E72C7E92903205,Dummy,0,131532
+658,WAZAINFO_ALL_658,68E72D7E929033B8,"Pikachu utilise la Force Z pour concentrer toute
+son électricité avant de se jeter à toute vitesse
+sur l’adversaire.",0,131544
+659,WAZAINFO_ALL_659,68E72E7E9290356B,"Le lanceur récupère jusqu’à la moitié de ses PV max.
+Durant une tempête de sable, il en récupère encore plus.",0,131780
+660,WAZAINFO_ALL_660,68F1377E9298993B,"Une capacité très puissante, mais qui ne fonctionne
+que lorsque le lanceur entre au combat.",4,132000
+661,WAZAINFO_ALL_661,68F1367E92989788,"Le lanceur se protège contre les attaques, et si
+un assaillant utilise une attaque directe contre lui,
+il l’empoisonne.",0,132184
+662,WAZAINFO_ALL_662,68F1397E92989CA1,"Une attaque qui coud la cible à son ombre,
+ce qui l’empêche de s’enfuir.",4,132424
+663,WAZAINFO_ALL_663,68F1387E92989AEE,"Le lanceur étend les bras et frappe l’adversaire
+en tournant violemment. Il inflige des dégâts et
+ignore les changements de stats de la cible.",0,132572
+664,WAZAINFO_ALL_664,68F13B7E9298A007,"Le lanceur émet plusieurs bulles en chantant.
+Soigne les brûlures des Pokémon touchés par ces bulles.",0,132860
+665,WAZAINFO_ALL_665,68F13A7E92989E54,"Le lanceur donne un puissant coup de poing à la cible,
+ce qui réduit la Vitesse du lanceur.",0,133064
+666,WAZAINFO_ALL_666,68F13D7E9298A36D,"Rend la moitié de ses PV max à la cible.
+Plus efficace sur un champ herbu.",0,133248
+667,WAZAINFO_ALL_667,68F13C7E9298A1BA,"Le lanceur attaque violemment en utilisant
+tout son poids.",0,133400
+668,WAZAINFO_ALL_668,68F12F7E92988BA3,"Rend au lanceur une quantité de PV équivalente
+à la stat d’Attaque de la cible, puis baisse celle-ci.",0,133520
+669,WAZAINFO_ALL_669,68F12E7E929889F0,"Le lanceur absorbe une grande quantité de lumière au
+premier tour et attaque au second tour en libérant
+cette énergie sous la forme d’une lame.",0,133724
+670,WAZAINFO_ALL_670,68EDB17E92957FB2,Le lanceur attaque la cible avec des feuilles.,0,134012
+671,WAZAINFO_ALL_671,68EDB27E92958165,"Met un Pokémon sous le feu des projecteurs
+et force tout le monde à le viser.",0,134108
+672,WAZAINFO_ALL_672,68EDAF7E92957C4C,"Tisse un fil imprégné de venin. Empoisonne la cible
+et baisse sa Vitesse.",0,134264
+673,WAZAINFO_ALL_673,68EDB07E92957DFF,"Le lanceur se concentre pour être sûr de porter
+un coup critique au tour suivant.",0,134412
+674,WAZAINFO_ALL_674,68EDAD7E929578E6,"Change de réglage pour augmenter l’Attaque
+et l’Attaque Spéciale des alliés ayant les talents
+Plus ou Moins.",0,134576
+675,WAZAINFO_ALL_675,68EDAE7E92957A99,"Inflige une douleur tellement violente à la cible
+qu’elle ne peut plus émettre de sons pendant deux tours.",4,134796
+676,WAZAINFO_ALL_676,68EDAB7E92957580,"Sur un ennemi, le lanceur envoie une boule explosive
+qui fait des dégâts. Sur un allié, il envoie du bon
+pollen nutritif qui fait récupérer des PV.",0,135012
+677,WAZAINFO_ALL_677,68EDAC7E92957733,"Le lanceur jette son ancre sur la cible pour l’attaquer.
+Une fois accrochée, elle l’empêche de quitter le terrain.",0,135308
+678,WAZAINFO_ALL_678,68EDB97E92958D4A,"Pendant cinq tours, les Pokémon au sol ne peuvent
+plus subir d’attaques prioritaires et la puissance
+des capacités de type Psy augmente.",0,135540
+679,WAZAINFO_ALL_679,68EDBA7E92958EFD,"Le lanceur se jette sur la cible de toutes ses forces
+pour lui infliger des dégâts et baisser son Attaque.",0,135816
+680,WAZAINFO_ALL_680,6913337E92B578D5,"Frappe la cible avec un fouet incandescent et baisse
+sa Défense.",0,136032
+681,WAZAINFO_ALL_681,6913327E92B57722,"Ivre de puissance, le lanceur attaque de toutes
+ses forces. Plus ses stats ont été augmentées,
+plus la puissance de cette capacité augmente.",4,136164
+682,WAZAINFO_ALL_682,6913317E92B5756F,"Le Pokémon se consume et les flammes de son corps
+infligent des dégâts élevés à la cible.
+Le lanceur perd le type Feu.",0,136448
+683,WAZAINFO_ALL_683,6913307E92B573BC,Intervertit la Vitesse du lanceur et celle de la cible.,4,136688
+684,WAZAINFO_ALL_684,69132F7E92B57209,"Le lanceur transperce la cible avec sa corne effilée.
+N’échoue jamais.",0,136800
+685,WAZAINFO_ALL_685,69132E7E92B57056,"Le lanceur soigne les altérations de statut de la cible,
+ce qui lui permet de regagner des PV.",0,136944
+686,WAZAINFO_ALL_686,69132D7E92B56EA3,"Le lanceur attaque en dansant avec enthousiasme.
+Le type de la capacité est le même que celui du lanceur.",0,137136
+687,WAZAINFO_ALL_687,69132C7E92B56CF0,"La cible subit des dégâts et, si elle a déjà agi pendant
+ce tour, elle perd aussi son talent.",0,137348
+688,WAZAINFO_ALL_688,69133B7E92B5866D,"Un coup de pied chaud comme les tropiques qui inflige
+des dégâts à la cible et baisse son Attaque.",4,137536
+689,WAZAINFO_ALL_689,69133A7E92B584BA,"Force la cible à lancer immédiatement la dernière
+capacité qu’elle a utilisée.",0,137736
+690,WAZAINFO_ALL_690,690FAD7E92B25F4C,"Le lanceur fait chauffer son bec avant d’attaquer.
+S’il subit une attaque directe pendant la montée
+en température, l’attaquant sera brûlé.",0,137896
+691,WAZAINFO_ALL_691,690FAE7E92B260FF,"Le lanceur déclenche un vacarme en frottant
+ses écailles les unes contre les autres pour attaquer.
+Baisse la Défense du lanceur.",0,138176
+692,WAZAINFO_ALL_692,690FAF7E92B262B2,"Le lanceur utilise son corps comme un véritable
+marteau pour écraser la cible.",0,138436
+693,WAZAINFO_ALL_693,690FB07E92B26465,"Le lanceur pivote pour prendre de l’élan et infliger
+des dégâts.",0,138596
+694,WAZAINFO_ALL_694,690FA97E92B25880,"Réduit les dégâts causés par les capacités physiques
+et spéciales durant cinq tours. Ne peut être utilisée
+que lorsqu’il neige.",0,138728
+695,WAZAINFO_ALL_695,690FAA7E92B25A33,"Archéduc utilise la Force Z pour créer un nuage de flèches
+qui transpercent la cible.",4,138984
+696,WAZAINFO_ALL_696,690FAB7E92B25BE6,"Félinferno utilise la Force Z pour gonfler ses muscles
+et écraser la cible de toutes ses forces.",0,139156
+697,WAZAINFO_ALL_697,690FAC7E92B25D99,"Oratoria utilise la Force Z pour rassembler
+une grande quantité d’eau et la projeter
+sur la cible à pleine puissance.",4,139352
+698,WAZAINFO_ALL_698,690FB57E92B26CE4,"Le Pokémon Tutélaire utilise la Force Z et déchaîne
+toute la puissance d’Alola sur sa cible. Inflige des dégâts
+en fonction des PV restants de celle-ci.",0,139588
+699,WAZAINFO_ALL_699,690FB67E92B26E97,"Marshadow concentre toute la Force Z dans ses poings
+et ses pieds pour infliger un déluge de coups à la cible.",0,139896
+700,WAZAINFO_ALL_700,5FE2087E8D5A6882,"Le Raichu de la région d’Alola utilise la Force Z
+pour frapper la cible et la paralyser.",0,140120
+701,WAZAINFO_ALL_701,5FE2097E8D5A6A35,"Ronflex utilise la Force Z pour montrer ce qu’il a
+dans le ventre et écraser la cible de tout son poids.",0,140300
+702,WAZAINFO_ALL_702,5FE2067E8D5A651C,"Évoli utilise la Force Z pour emprunter la puissance
+de tous ses amis évolués et beaucoup augmenter
+toutes ses stats.",4,140512
+703,WAZAINFO_ALL_703,5FE2077E8D5A66CF,"Mew utilise la Force Z pour attaquer la cible.
+Le terrain devient un Champ Psychique.",0,140748
+704,WAZAINFO_ALL_704,5FE2047E8D5A61B6,"Le lanceur utilise sa carapace comme un appât piégé.
+Si un Pokémon l’attaque avec une capacité physique,
+la carapace explose et lui inflige des dégâts.",0,140920
+705,WAZAINFO_ALL_705,5FE2057E8D5A6369,"Envoie un rayon laser dévastateur.
+Baisse beaucoup l’Attaque Spéciale du lanceur.",4,141224
+706,WAZAINFO_ALL_706,5FE2027E8D5A5E50,"Le lanceur mord la cible avec ses pouvoirs psychiques.
+Brise aussi les barrières comme Mur Lumière
+et Protection.",0,141388
+707,WAZAINFO_ALL_707,5FE2037E8D5A6003,"Le lanceur attaque en utilisant sa frustration. S’il a
+utilisé une capacité qui a échoué au tour précédent,
+la puissance de Trépignement est doublée.",0,141616
+708,WAZAINFO_ALL_708,5FE2107E8D5A761A,"Le lanceur frappe avec un os possédé par l’âme
+d’un défunt. Peut aussi baisser la Défense de la cible.",0,141916
+709,WAZAINFO_ALL_709,5FE2117E8D5A77CD,"Le lanceur charge la cible à toute vitesse.
+Frappe en priorité.",0,142124
+710,WAZAINFO_ALL_710,5FE50E7E8D5CA88B,"Le lanceur utilise la force de l’eau pour attaquer.
+Peut aussi baisser la Défense de la cible.",0,142252
+711,WAZAINFO_ALL_711,5FE50D7E8D5CA6D8,"Le lanceur utilise la puissance d’un prisme pour envoyer
+un laser destructeur, mais il doit se reposer
+au tour suivant.",0,142444
+712,WAZAINFO_ALL_712,5FE5107E8D5CABF1,"Le lanceur plonge dans l’ombre de la cible,
+vole ses augmentations de stats et l’attaque.",0,142684
+713,WAZAINFO_ALL_713,5FE50F7E8D5CAA3E,"Le lanceur fonce sur la cible avec la puissance
+d’une météorite. Ignore le talent de la cible.",0,142864
+714,WAZAINFO_ALL_714,5FE5127E8D5CAF57,"Le lanceur attaque avec un rayon de lumière mystérieux.
+Ignore le talent de la cible.",0,143056
+715,WAZAINFO_ALL_715,5FE5117E8D5CADA4,"Le lanceur regarde la cible avec des yeux remplis
+de larmes. Celle-ci perd toute combativité et voit
+son Attaque et son Attaque Spéciale baisser.",0,143228
+716,WAZAINFO_ALL_716,5FE5147E8D5CB2BD,"Le lanceur fonce sur la cible et lui envoie un puissant
+choc électrique, ce qui peut aussi l’effrayer.",0,143520
+717,WAZAINFO_ALL_717,5FE5137E8D5CB10A,"Le lanceur déchaîne toute la colère de la nature
+pour baisser les PV de la cible de moitié.",0,143728
+718,WAZAINFO_ALL_718,5FE5067E8D5C9AF3,"Le Pokémon s’entoure d’une puissante énergie
+avant de foncer sur sa cible. Le type de la capacité
+dépend de la ROM installée.",0,143912
+719,WAZAINFO_ALL_719,5FE5057E8D5C9940,"Le Pikachu à casquette utilise la Force Z pour augmenter
+sa puissance électrique avant de la déchaîner sur la cible.
+Taux de critique élevé.",0,144164
+720,WAZAINFO_ALL_720,5FDAFC7E8D543570,"Le lanceur fait exploser sa tête pour attaquer
+toutes les cibles autour de lui.
+Il subit aussi des dégâts.",0,144448
+721,WAZAINFO_ALL_721,5FDAFD7E8D543723,"Le lanceur attaque en projetant de l’électricité
+avec ses poings. Convertit les capacités de type Normal
+en type Électrik.",0,144664
+722,WAZAINFO_ALL_722,5FDAFE7E8D5438D6,"Le lanceur fait jaillir un pilier de lumière.
+Compare l’Attaque et l’Attaque Spéciale, et utilise
+celle qui infligera le plus de dégâts.",0,144912
+723,WAZAINFO_ALL_723,5FDAFF7E8D543A89,"Compare l’Attaque et l’Attaque Spéciale,
+et utilise celle qui infligera le plus de dégâts.
+Ignore le talent de la cible.",0,145188
+724,WAZAINFO_ALL_724,5FDB007E8D543C3C,"Baigné dans la Force Z, Solgaleo attaque
+en déchaînant toute sa puissance.
+Ignore le talent de la cible.",0,145432
+725,WAZAINFO_ALL_725,5FDB017E8D543DEF,"Baigné dans la Force Z, Lunala attaque
+en déchaînant toute sa puissance.
+Ignore le talent de la cible.",0,145644
+726,WAZAINFO_ALL_726,5FDB027E8D543FA2,"Mimiqui concentre toute la Force Z dans son corps,
+et attaque dans le plus grand fracas !",0,145852
+727,WAZAINFO_ALL_727,5FDB037E8D544155,"Lougaroc utilise la Force Z pour attaquer
+la cible de toutes ses forces.
+Efface aussi tout Champ existant.",0,146032
+728,WAZAINFO_ALL_728,5FDB047E8D544308,"Ékaïser utilise la Force Z pour frapper l’ennemi
+de toutes ses forces. Augmente aussi ses stats.",4,146248
+729,WAZAINFO_ALL_729,5FDB057E8D5444BB,"Une attaque électrique rapide comme l’éclair qui inflige
+un coup critique à coup sûr. Frappe en priorité.",4,146444
+730,WAZAINFO_ALL_730,5FDE827E8D574EF9,"Pikachu frappe l’adversaire avec une vague géante
+chargée d’électricité. Peut aussi paralyser l’ennemi.",0,146656
+731,WAZAINFO_ALL_731,5FDE817E8D574D46,"Pikachu prend de la hauteur avant de fondre sur
+son adversaire. Peut aussi apeurer l’ennemi.",0,146864
+732,WAZAINFO_ALL_732,5FDE807E8D574B93,"Une attaque électrique dont la puissance est
+proportionnelle à l’amour que Pikachu vous porte.
+Touche à coup sûr.",4,147052
+733,WAZAINFO_ALL_733,5FDE7F7E8D5749E0,"Évoli frappe l’adversaire avec des bulles d’eau qu’il
+absorbe ensuite pour récupérer un nombre de PV égal
+à la moitié des dégâts infligés à l’ennemi.",4,147280
+734,WAZAINFO_ALL_734,5FDE867E8D5755C5,Une attaque qui foudroie et paralyse l’adversaire.,4,147580
+735,WAZAINFO_ALL_735,5FDE857E8D575412,"Évoli s’embrase et percute violemment l’adversaire.
+Brûle aussi l’ennemi.",4,147684
+736,WAZAINFO_ALL_736,5FDE847E8D57525F,"Évoli submerge l’adversaire sous un flot d’ondes
+psychiques et crée un mur fabuleux qui réduit les
+dégâts causés par les attaques spéciales de l’ennemi.",4,147832
+737,WAZAINFO_ALL_737,5FDE837E8D5750AC,"Évoli fait appel à son côté sombre pour attaquer
+l’adversaire et créer un mur fabuleux qui réduit les
+dégâts causés par les attaques physiques de l’ennemi.",4,148140
+738,WAZAINFO_ALL_738,5FDE8A7E8D575C91,"Une liane géante surgit du sol et bombarde l’adversaire
+de graines qui lui dérobent des PV à chaque tour.
+Ces PV sont ensuite absorbés par Évoli.",4,148452
+739,WAZAINFO_ALL_739,5FDE897E8D575ADE,"Évoli frappe l’adversaire avec un cristal de buée noire
+gelée. Annule les changements de stats de tous les
+Pokémon au combat.",4,148744
+740,WAZAINFO_ALL_740,5FEF807E8D65BEC6,"Une attaque qui enserre l’adversaire dans un tourbillon
+de senteurs oppressantes. Guérit toutes les altérations
+de statut de l’équipe.",4,148996
+741,WAZAINFO_ALL_741,5FEF817E8D65C079,"Une charge dont la puissance est proportionnelle
+à l’amour qu’Évoli vous porte. Touche à coup sûr.",4,149268
+742,WAZAINFO_ALL_742,5FEF7E7E8D65BB60,"Le lanceur fait pivoter l’écrou de sa poitrine pour
+frapper la cible avec ses bras deux fois d’affilée,
+ce qui peut aussi apeurer celle-ci.",0,149468
+743,WAZAINFO_ALL_743,5FEF7F7E8D65BD13,"Le lanceur se protège de toutes les attaques.
+Peut échouer si utilisée plusieurs fois de suite.",0,149748
+744,WAZAINFO_ALL_744,5FEF847E8D65C592,"Le lanceur attaque en libérant l’énergie concentrée
+dans son noyau.",0,149940
+745,WAZAINFO_ALL_745,5FEF857E8D65C745,"Le lanceur parvient toujours à viser la cible voulue,
+en ignorant l’effet des talents et des capacités capables
+de détourner les attaques.",0,150076
+746,WAZAINFO_ALL_746,5FEF827E8D65C22C,"Le lanceur et sa cible ne peuvent plus être échangés
+jusqu’à ce que l’un d’entre eux tombe K.O. L’effet est
+annulé si l’un des deux Pokémon quitte le terrain.",0,150356
+747,WAZAINFO_ALL_747,5FEF837E8D65C3DF,"Le lanceur mange la Baie qu’il tient, ce qui augmente
+beaucoup sa Défense.",0,150676
+748,WAZAINFO_ALL_748,5FEF887E8D65CC5E,"Le lanceur voit toutes ses stats augmenter, mais
+en contrepartie, il ne peut plus quitter le terrain.",0,150828
+749,WAZAINFO_ALL_749,5FEF897E8D65CE11,"Le lanceur recouvre sa cible de goudron liquide
+pour baisser sa Vitesse et la rendre vulnérable au feu.",0,151032
+750,WAZAINFO_ALL_750,5FF3067E8D68D84F,"Le lanceur recouvre sa cible d’une poudre magique
+qui change son type en Psy.",0,151240
+751,WAZAINFO_ALL_751,5FF3057E8D68D69C,"Le lanceur attaque en propulsant deux Fantyrm.
+S’il y a deux cibles, chacune d’entre elles est frappée
+par un Fantyrm.",0,151396
+752,WAZAINFO_ALL_752,5FF3087E8D68DBB5,"Le lanceur invite tous les Pokémon sur le terrain
+à prendre le goûter autour d’une tasse de thé.
+Ceux qui tiennent une Baie la mangent.",0,151636
+753,WAZAINFO_ALL_753,5FF3077E8D68DA02,"Le lanceur empêche la cible de quitter le terrain.
+À chaque tour qui passe, cette capacité baisse
+la Défense et la Défense Spéciale de celle-ci.",0,151908
+754,WAZAINFO_ALL_754,5FF3027E8D68D183,"Le lanceur transperce sa cible avec son bec chargé
+d’électricité. Si cette attaque est lancée avant que
+la cible n’attaque, elle infligera deux fois plus de dégâts.",0,152200
+755,WAZAINFO_ALL_755,5FF3017E8D68CFD0,"Le lanceur mord sa cible avec ses solides branchies.
+Si cette capacité est lancée avant que la cible n’attaque,
+elle infligera deux fois plus de dégâts.",0,152532
+756,WAZAINFO_ALL_756,5FF3047E8D68D4E9,"Une force mystérieuse intervertit les effets
+affectant chaque côté du terrain.",4,152840
+757,WAZAINFO_ALL_757,5FF3037E8D68D336,"Une attaque de type Feu que seuls
+les Pokémon Dynamax peuvent utiliser.
+Fait briller le soleil pendant cinq tours.",4,153000
+758,WAZAINFO_ALL_758,5FF30E7E8D68E5E7,"Une attaque de type Insecte que seuls
+les Pokémon Dynamax peuvent utiliser.
+Baisse l’Attaque Spéciale de la cible.",4,153232
+759,WAZAINFO_ALL_759,5FF30D7E8D68E434,"Une attaque de type Électrik que seuls
+les Pokémon Dynamax peuvent utiliser.
+Crée un champ électrifié qui dure cinq tours.",4,153464
+760,WAZAINFO_ALL_760,5FE8947E8D5FC214,"Une attaque de type Normal que seuls
+les Pokémon Dynamax peuvent utiliser.
+Baisse la Vitesse de la cible.",4,153712
+761,WAZAINFO_ALL_761,5FE8957E8D5FC3C7,"Une attaque de type Combat que seuls
+les Pokémon Dynamax peuvent utiliser.
+Augmente l’Attaque des alliés.",4,153924
+762,WAZAINFO_ALL_762,5FE8967E8D5FC57A,"Une attaque de type Spectre que seuls
+les Pokémon Dynamax peuvent utiliser.
+Baisse la Défense de la cible.",4,154136
+763,WAZAINFO_ALL_763,5FE8977E8D5FC72D,"Une attaque de type Glace que seuls les Pokémon
+Dynamax peuvent utiliser. Invoque une tempête de
+neige qui dure cinq tours.",4,154352
+764,WAZAINFO_ALL_764,5FE8907E8D5FBB48,"Une attaque de type Poison que seuls
+les Pokémon Dynamax peuvent utiliser.
+Augmente l’Attaque Spéciale des alliés.",4,154600
+765,WAZAINFO_ALL_765,5FE8917E8D5FBCFB,"Une attaque de type Eau que seuls
+les Pokémon Dynamax peuvent utiliser.
+Invoque de fortes pluies qui durent cinq tours.",4,154832
+766,WAZAINFO_ALL_766,5FE8927E8D5FBEAE,"Une attaque de type Vol que seuls
+les Pokémon Dynamax peuvent utiliser.
+Augmente la Vitesse des alliés.",4,155072
+767,WAZAINFO_ALL_767,5FE8937E8D5FC061,"Une attaque de type Fée que seuls
+les Pokémon Dynamax peuvent utiliser.
+Crée un champ brumeux qui dure cinq tours.",4,155280
+768,WAZAINFO_ALL_768,5FE88C7E8D5FB47C,"Une attaque de type Dragon que seuls
+les Pokémon Dynamax peuvent utiliser.
+Baisse l’Attaque de la cible.",4,155512
+769,WAZAINFO_ALL_769,5FE88D7E8D5FB62F,"Une attaque de type Psy que seuls
+les Pokémon Dynamax peuvent utiliser.
+Crée un champ psychique qui dure cinq tours.",4,155724
+770,WAZAINFO_ALL_770,5FEC1A7E8D62DB9D,"Une attaque de type Roche que seuls
+les Pokémon Dynamax peuvent utiliser.
+Invoque une tempête de sable qui dure cinq tours.",4,155960
+771,WAZAINFO_ALL_771,5FEC197E8D62D9EA,"Une attaque de type Sol que seuls
+les Pokémon Dynamax peuvent utiliser.
+Augmente la Défense Spéciale des alliés.",4,156208
+772,WAZAINFO_ALL_772,5FEC187E8D62D837,"Une attaque de type Ténèbres que seuls
+les Pokémon Dynamax peuvent utiliser.
+Baisse la Défense Spéciale de la cible.",4,156436
+773,WAZAINFO_ALL_773,5FEC177E8D62D684,"Une attaque de type Plante que seuls
+les Pokémon Dynamax peuvent utiliser.
+Crée un champ herbu qui dure cinq tours.",4,156672
+774,WAZAINFO_ALL_774,5FEC167E8D62D4D1,"Une attaque de type Acier que seuls
+les Pokémon Dynamax peuvent utiliser.
+Augmente la Défense des alliés.",4,156904
+775,WAZAINFO_ALL_775,5FEC157E8D62D31E,"Le lanceur sacrifie une partie de ses PV
+pour augmenter toutes ses stats.",0,157116
+776,WAZAINFO_ALL_776,5FEC147E8D62D16B,"Le lanceur utilise son corps pour attaquer sa cible.
+Plus la Défense du lanceur est élevée,
+plus les dégâts infligés sont importants.",0,157264
+777,WAZAINFO_ALL_777,5FEC137E8D62CFB8,"Le lanceur augmente beaucoup l’Attaque et l’Attaque
+Spéciale de la cible en la nappant de glaçage.",0,157532
+778,WAZAINFO_ALL_778,5FEC127E8D62CE05,"Le lanceur bat son tambour pour en diriger les racines
+sur la cible, l’attaquer, et baisser sa Vitesse.",0,157732
+779,WAZAINFO_ALL_779,5FEC117E8D62CC52,"Le lanceur attrape sa cible dans un piège et lui inflige
+des dégâts pendant quatre ou cinq tours.",0,157940
+780,WAZAINFO_ALL_780,5FFD187E8D714B6A,"Le lanceur attaque avec un ballon fait à partir
+d’un caillou enflammé. Peut aussi brûler la cible.",0,158136
+781,WAZAINFO_ALL_781,5FFD197E8D714D1D,"Le lanceur se transforme en épée extrêmement grande
+et pourfend vigoureusement sa cible.",0,158336
+782,WAZAINFO_ALL_782,5FFD167E8D714804,"Le lanceur se transforme en bouclier extrêmement solide
+et charge vigoureusement sa cible.",0,158516
+783,WAZAINFO_ALL_783,5FFD177E8D7149B7,"Morpeko libère l’énergie stockée dans ses joues
+pour attaquer et augmenter sa Vitesse. Le type de cette
+capacité change en fonction de la forme de Morpeko.",0,158700
+784,WAZAINFO_ALL_784,5FFD147E8D71449E,"Le lanceur balaie violemment le camp adverse
+avec son immense queue. Baisse l’Attaque de la cible.",0,159012
+785,WAZAINFO_ALL_785,5FFD157E8D714651,"Le lanceur attaque sa cible en la piquant
+avec une branche pointue.",0,159212
+786,WAZAINFO_ALL_786,5FFD127E8D714138,"Le lanceur gratte ses cordes de guitare ou de basse
+pour créer de violentes vibrations sonores qui blessent
+la cible.",0,159348
+787,WAZAINFO_ALL_787,5FFD137E8D7142EB,"Le lanceur projette un liquide corrosif créé à partir
+d’une pomme acide sur la cible, ce qui baisse
+la Défense Spéciale de celle-ci.",0,159584
+788,WAZAINFO_ALL_788,5FFD107E8D713DD2,"Le lanceur fait tomber une pomme de très haut sur
+la cible, ce qui baisse la Défense de celle-ci.",0,159852
+789,WAZAINFO_ALL_789,5FFD117E8D713F85,"Le lanceur attaque la cible avec une telle force
+que celle-ci peut s’en retrouver profondément
+troublée et voir son Attaque Spéciale baisser.",0,160048
+790,WAZAINFO_ALL_790,60007E7E8D742E93,"Le lanceur émet de la vapeur pour attaquer sa cible.
+Peut aussi la rendre confuse.",0,160332
+791,WAZAINFO_ALL_791,60007D7E8D742CE0,"Le lanceur projette une eau mystérieuse sur le terrain
+pour restaurer ses PV et ceux de ses alliés au combat.",0,160500
+792,WAZAINFO_ALL_792,6000807E8D7431F9,"Le lanceur se protège de toutes les attaques. Peut
+échouer si utilisée plusieurs fois de suite. Baisse beaucoup
+la Défense de l’assaillant s’il utilise une attaque directe.",0,160720
+793,WAZAINFO_ALL_793,60007F7E8D743046,"Le lanceur fait semblant de se prosterner et utilise
+ses cheveux pour transpercer sa cible. N’échoue jamais.",0,161068
+794,WAZAINFO_ALL_794,6000827E8D74355F,"Le lanceur attaque la cible avec son poireau.
+Toutefois, cette action le fait vaciller et il doit
+se reposer au tour suivant.",0,161288
+795,WAZAINFO_ALL_795,6000817E8D7433AC,"L’attaque la plus puissante d’Éthernatos sous
+sa forme originelle. S’il l’utilise, il devra se reposer
+au tour suivant.",0,161540
+796,WAZAINFO_ALL_796,6000847E8D7438C5,"Le lanceur concentre du métal issu de tout son corps
+en un rayon qu’il projette violemment sur sa cible.
+Il subit aussi des dégâts.",0,161780
+797,WAZAINFO_ALL_797,6000837E8D743712,"Le lanceur attaque la cible avec ses pouvoirs psychiques.
+Si un champ psychique est actif, la puissance de cette
+capacité augmente et elle touche tous les ennemis.",0,162044
+798,WAZAINFO_ALL_798,6000867E8D743C2B,"Une attaque qui inflige des dégâts et fait disparaître
+le champ actif, mais qui échoue s’il n’y en a pas
+à ce moment.",4,162372
+799,WAZAINFO_ALL_799,6000857E8D743A78,"Le lanceur projette des écailles sur la cible de deux à
+cinq fois d’affilée. Augmente la Vitesse, mais diminue
+la Défense.",0,162608
+800,WAZAINFO_ALL_800,7971797E9BB592A3,"Le lanceur concentre l’énergie cosmique au premier
+tour, ce qui augmente son Attaque Spéciale, et frappe
+au second.",0,162856
+801,WAZAINFO_ALL_801,7971787E9BB590F0,"Une attaque physique ou spéciale, en fonction
+de ce qui inflige le plus de dégâts à la cible.
+Peut aussi empoisonner.",4,163088
+802,WAZAINFO_ALL_802,79717B7E9BB59609,"Le lanceur frappe tous les Pokémon autour de lui
+en explosant, ce qui le met K.O. La puissance de
+cette attaque augmente si un champ brumeux est actif.",0,163324
+803,WAZAINFO_ALL_803,79717A7E9BB59456,"Le lanceur attaque la cible en glissant sur le terrain.
+Frappe toujours en priorité si un champ herbu est actif.",0,163628
+804,WAZAINFO_ALL_804,79717D7E9BB5996F,"Des éclairs surgissent du sol et frappent la cible.
+La puissance de cette attaque est doublée si la cible
+est sur un champ électrifié.",0,163856
+805,WAZAINFO_ALL_805,79717C7E9BB597BC,"Une attaque qui utilise la force des champs pour
+projeter une aura. Son type et sa puissance varient
+selon le champ actif.",4,164128
+806,WAZAINFO_ALL_806,79717F7E9BB59CD5,"Le lanceur rampe derrière la cible pour l’attaquer,
+ce qui baisse l’Attaque Spéciale de celle-ci.",0,164376
+807,WAZAINFO_ALL_807,79717E7E9BB59B22,"Le lanceur attaque sa cible avec toute sa jalousie.
+Cette capacité brûle tout Pokémon dont les stats
+ont augmenté pendant ce tour.",0,164572
+808,WAZAINFO_ALL_808,7971817E9BB5A03B,"Le lanceur frappe la cible avec toute sa rancune.
+Si les stats du lanceur ont diminué pendant ce tour,
+la puissance de cette attaque est doublée.",0,164836
+809,WAZAINFO_ALL_809,7971807E9BB59E88,"Le lanceur manipule l’objet tenu par la cible pour
+l’attaquer. Cette capacité échoue si celle-ci ne tient rien.",0,165128
+810,WAZAINFO_ALL_810,796E137E9BB2AF7A,"Un gaz corrosif qui enveloppe tous les Pokémon
+alentour et qui dissout les objets qu’ils tiennent.",4,165352
+811,WAZAINFO_ALL_811,796E147E9BB2B12D,"Le lanceur coache ses alliés, augmentant ainsi
+leur Attaque et leur Défense.",0,165552
+812,WAZAINFO_ALL_812,796E117E9BB2AC14,"Après son attaque, le lanceur revient à toute vitesse
+et change de place avec un Pokémon de l’équipe prêt
+à combattre.",4,165708
+813,WAZAINFO_ALL_813,796E127E9BB2ADC7,"Une série d’un à trois coups de pied distincts dont
+la puissance augmente à chaque fois que la capacité
+touche sa cible.",4,165948
+814,WAZAINFO_ALL_814,796E0F7E9BB2A8AE,"Le lanceur frappe la cible avec ses ailes deux fois
+d’affilée.",0,166192
+815,WAZAINFO_ALL_815,796E107E9BB2AA61,"Le lanceur projette du sable chauffé à blanc
+sur la cible, ce qui peut aussi la brûler.",0,166320
+816,WAZAINFO_ALL_816,796E0D7E9BB2A548,"Le lanceur fait appel au pouvoir de la jungle pour
+restaurer les PV et soigner les altérations d’état
+de ses alliés et de lui-même.",0,166496
+817,WAZAINFO_ALL_817,796E0E7E9BB2A6FB,"Le lanceur assène un coup puissant à la cible.
+Cette technique qui inflige toujours un coup critique est
+réservée à ceux qui maîtrisent la puissance des Ténèbres.",0,166760
+818,WAZAINFO_ALL_818,796E0B7E9BB2A1E2,"Le lanceur assène trois coups fluides à la cible.
+Cette technique qui inflige toujours un coup critique
+est réservée à ceux qui maîtrisent la puissance de l’Eau.",0,167088
+819,WAZAINFO_ALL_819,796E0C7E9BB2A395,"Le lanceur frappe la cible, et le piège dans une prison
+électrique qui dure de quatre à cinq tours.",0,167412
+820,WAZAINFO_ALL_820,796A8D7E9BAF95F1,"Le lanceur utilise son énergie vitale pour attaquer
+la cible. Moins il a de PV, moins l’attaque est puissante.",0,167612
+821,WAZAINFO_ALL_821,796A8C7E9BAF943E,"Les yeux du lanceur tirent des rayons psychiques qui
+attaquent la cible et peuvent aussi la geler.",0,167836
+822,WAZAINFO_ALL_822,796A8B7E9BAF928B,"Le lanceur canalise sa colère et la transforme en
+émanation brûlante, avec laquelle il attaque la cible,
+ce qui peut aussi apeurer celle-ci.",0,168036
+823,WAZAINFO_ALL_823,796A8A7E9BAF90D8,"Le lanceur assène un coup de pied à la cible
+à la vitesse de l’éclair. Baisse aussi la Défense
+de la cible.",0,168320
+824,WAZAINFO_ALL_824,796A917E9BAF9CBD,"Le lanceur attaque la cible avec une lance de glace
+entourée d’un blizzard.",0,168536
+825,WAZAINFO_ALL_825,796A907E9BAF9B0A,"Le lanceur attaque la cible avec une multitude
+de petits spectres.",0,168688
+826,WAZAINFO_ALL_826,796A8F7E9BAF9957,"Le lanceur attaque avec de puissants pouvoirs
+psychiques et retire 3 PP de la dernière capacité
+utilisée par la cible.",0,168824
+827,WAZAINFO_ALL_827,796A8E7E9BAF97A4,"Le lanceur attaque avec des griffes destructrices.
+La cible peut aussi être empoisonnée, paralysée,
+ou endormie.",0,169064
+828,WAZAINFO_ALL_828,796A857E9BAF8859,"Le lanceur s’enveloppe d’énergie psychique et frappe
+sa cible de plein fouet. Cela augmente également
+la Défense du lanceur.",0,169292
+829,WAZAINFO_ALL_829,796A847E9BAF86A6,Le lanceur échange son Attaque avec sa Défense.,0,169544
+830,WAZAINFO_ALL_830,7967877E9BAD55E8,"Le lanceur attaque avec sa hache de pierre.
+Des débris de pierre se répandent alors et se mettent
+à flotter autour de la cible.",0,169640
+831,WAZAINFO_ALL_831,7967887E9BAD579B,"Le lanceur déclenche un violent typhon de haine et
+d’amour qui s’abat sur la cible. Peut baisser l’Attaque
+de celle-ci.",0,169896
+832,WAZAINFO_ALL_832,7967897E9BAD594E,"Le lanceur attaque en libérant un pouvoir mystique.
+Cela augmente également son Attaque Spéciale.",0,170136
+833,WAZAINFO_ALL_833,79678A7E9BAD5B01,"Le lanceur se déchaîne et attaque en projetant
+de violentes flammes pendant deux ou trois tours.
+Il devient ensuite confus.",0,170332
+834,WAZAINFO_ALL_834,79678B7E9BAD5CB4,"Le lanceur se recouvre entièrement d’eau avant
+de charger sa cible. Cela blesse aussi gravement
+le lanceur.",0,170580
+835,WAZAINFO_ALL_835,79678C7E9BAD5E67,"Le lanceur tire un concentré de sa propre chlorophylle
+sur la cible, ce qui le blesse également.",0,170796
+836,WAZAINFO_ALL_836,79678D7E9BAD601A,"Le lanceur envoie un bloc de glace de la taille
+d’un iceberg sur la cible, ce qui peut aussi l’apeurer.",0,170992
+837,WAZAINFO_ALL_837,79678E7E9BAD61CD,"Le lanceur danse vigoureusement pour invoquer
+la victoire, ce qui augmente son Attaque, sa Défense
+et sa Vitesse.",0,171200
+838,WAZAINFO_ALL_838,79677F7E9BAD4850,"Le lanceur charge la cible de toutes ses forces, ce qui
+baisse la Défense et la Défense Spéciale du lanceur.",0,171428
+839,WAZAINFO_ALL_839,7967807E9BAD4A03,"Une multitude de pointes toxiques frappent la cible
+et peuvent l’empoisonner. La puissance est doublée
+si celle-ci est déjà empoisonnée.",4,171648
+840,WAZAINFO_ALL_840,797F117E9BC11F47,"Le lanceur entaille la cible avec ses ailes renforcées
+par une émanation psychique. Taux de critiques élevé.
+Cela augmente la Vitesse du lanceur.",0,171924
+841,WAZAINFO_ALL_841,797F107E9BC11D94,"Une rancœur glaciale frappe la cible et baisse
+son Attaque.",4,172216
+842,WAZAINFO_ALL_842,797F137E9BC122AD,"Rend la peau du lanceur dure comme un mur de fer,
+ce qui augmente beaucoup sa Défense.",0,172336
+843,WAZAINFO_ALL_843,797F127E9BC120FA,"Le lanceur donne un coup de pied et tire trois flèches
+simultanément, ce qui peut baisser la Défense de la cible
+ou l’apeurer. Taux de critiques élevé.",0,172512
+844,WAZAINFO_ALL_844,797F0D7E9BC1187B,"Une multitude de boules de feu frappent la cible,
+ce qui peut aussi la brûler. La puissance est doublée
+si celle-ci souffre d’une altération de statut.",4,172816
+845,WAZAINFO_ALL_845,797F0C7E9BC116C8,"Le lanceur entaille la cible avec des lames de
+coquillages. Des débris de coquillage se répandent
+sous la forme de picots aux pieds de la cible.",0,173120
+846,WAZAINFO_ALL_846,797F0F7E9BC11BE1,"Le lanceur déclenche un typhon froid et brutal qui fait
+trembler le cœur et le corps de la cible, ce qui peut
+aussi baisser sa Vitesse.",0,173412
+847,WAZAINFO_ALL_847,797F0E7E9BC11A2E,"Le lanceur déclenche un violent typhon orageux
+dont les rafales et la foudre frappent la cible,
+ce qui peut aussi la paralyser.",0,173684
+848,WAZAINFO_ALL_848,797F097E9BC111AF,"Le lanceur déclenche un violent typhon mêlé à du sable
+ardent qui s’abat sur la cible, ce qui peut la brûler.",0,173940
+849,WAZAINFO_ALL_849,797F087E9BC10FFC,"Le lanceur adresse une prière à la lune pour restaurer
+les PV et soigner ses altérations de statut ainsi que
+celles de ses alliés.",0,174160
+850,WAZAINFO_ALL_850,797B8B7E9BBE05BE,"Le lanceur fait preuve de bravoure pour soigner
+ses altérations de statut et augmenter son Attaque
+Spéciale ainsi que sa Défense Spéciale.",0,174424
+851,WAZAINFO_ALL_851,797B8C7E9BBE0771,"Si le lanceur est téracristallisé, il libère l’énergie de son
+type Téracristal. La capacité utilise l’Attaque ou l’Attaque
+Spéciale, selon ce qui infligera le plus de dégâts.",0,174704
+852,WAZAINFO_ALL_852,797B897E9BBE0258,"Le lanceur déploie un piège de fil pour se protéger
+contre les attaques, et si un assaillant utilise une attaque
+directe contre lui, la Vitesse de l’assaillant baisse.",0,175056
+853,WAZAINFO_ALL_853,797B8A7E9BBE040B,"Le lanceur donne un coup de talon descendant
+à la cible, ce qui peut aussi la rendre confuse.
+S’il échoue, le lanceur se blesse.",0,175392
+854,WAZAINFO_ALL_854,797B8F7E9BBE0C8A,"Le lanceur attaque pour venger ses alliés. Plus le nombre
+de Pokémon alliés mis K.O. est élevé, plus la puissance
+de cette capacité augmente.",0,175652
+855,WAZAINFO_ALL_855,797B907E9BBE0E3D,"Le lanceur attaque en émettant une étrange lumière
+qui ébranle l’esprit de la cible. Cela baisse beaucoup
+la Défense Spéciale de la cible.",0,175936
+856,WAZAINFO_ALL_856,797B8D7E9BBE0924,"Le lanceur attaque avec adresse et élégance.
+S’il a un Nigirigon dans la gueule, une de ses stats
+augmente en fonction de la forme de celui-ci.",0,176216
+857,WAZAINFO_ALL_857,797B8E7E9BBE0AD7,"Le lanceur enveloppe son poing d’un torrent furieux
+et attaque si rapidement qu’on peine à le discerner.
+Frappe en priorité.",0,176504
+858,WAZAINFO_ALL_858,797B837E9BBDF826,"Le lanceur relâche un concentré extrêmement pimenté
+sur la cible, ce qui augmente beaucoup l’Attaque de
+celle-ci, mais baisse aussi beaucoup sa Défense.",0,176756
+859,WAZAINFO_ALL_859,797B847E9BBDF9D9,"Le lanceur met tout son poids sur ses pattes et effectue
+de violentes rotations, ce qui inflige des dégâts à
+la cible, mais baisse beaucoup la Vitesse du lanceur.",0,177064
+860,WAZAINFO_ALL_860,7978857E9BBBC5B5,"Le lanceur et ses congénères prolifèrent en masse
+et attaquent ensemble d’une à dix fois d’affilée.",0,177392
+861,WAZAINFO_ALL_861,7978847E9BBBC402,"Le lanceur enveloppe ses jambes d’une fine couche
+de glace et heurte la cible en tournant sur lui-même.
+Ses rotations détruisent le champ actif sur le terrain.",0,177592
+862,WAZAINFO_ALL_862,7978837E9BBBC24F,"Le lanceur se jette dans une charge inconsciente sur la
+cible. Une fois cette capacité utilisée, toute attaque sur
+le lanceur inflige le double de dégâts et n’échoue jamais.",0,177912
+863,WAZAINFO_ALL_863,7978827E9BBBC09C,"Dans un élan de compassion, le lanceur adresse une
+prière afin de ranimer un Pokémon de l’équipe K.O.
+en lui rendant la moitié de ses PV.",0,178260
+864,WAZAINFO_ALL_864,7978817E9BBBBEE9,"Le lanceur couvre la cible de sel, ce qui lui inflige
+des dégâts à chaque tour. Si la cible est de type Acier
+ou Eau, ces dégâts sont plus élevés.",0,178536
+865,WAZAINFO_ALL_865,7978807E9BBBBD36,"Le lanceur effectue des plongeons parfaitement
+cadencés pour éclabousser la cible et lui infliger
+des dégâts trois fois d’affilée.",0,178832
+866,WAZAINFO_ALL_866,79787F7E9BBBBB83,"Le lanceur attaque en tournant sur lui-même et
+empoisonne la cible. Il se libère également des effets
+de capacités comme Étreinte, Ligotage ou Vampigraine.",0,179096
+867,WAZAINFO_ALL_867,79787E7E9BBBB9D0,"Le lanceur capture l’essence de la cible et la décalque.
+Le talent du lanceur et de ses alliés devient alors
+identique à celui de la cible.",0,179408
+868,WAZAINFO_ALL_868,79788D7E9BBBD34D,"Le lanceur sacrifie des PV pour beaucoup augmenter
+son Attaque, son Attaque Spéciale, et sa Vitesse.",0,179688
+869,WAZAINFO_ALL_869,79788C7E9BBBD19A,"Le lanceur se prosterne devant la cible et profite
+de cette distraction pour l’attaquer avec une lame.
+N’échoue jamais.",0,179892
+870,WAZAINFO_ALL_870,7974FF7E9BB8AC2C,"Le lanceur attaque en jetant un bouquet de fleurs piégé
+sur la cible. N’échoue jamais et inflige toujours un coup
+critique.",0,180132
+871,WAZAINFO_ALL_871,7975007E9BB8ADDF,"Le lanceur carbonise la cible en projetant sur elle
+de vives flammes créées par un chant. Cette capacité
+augmente l’Attaque Spéciale du lanceur.",0,180380
+872,WAZAINFO_ALL_872,7975017E9BB8AF92,"Le lanceur se joue de la cible et lui inflige des dégâts
+avec ses pas de danse gracieux et légers. Cette capacité
+augmente la Vitesse du lanceur.",0,180672
+873,WAZAINFO_ALL_873,7975027E9BB8B145,"Le lanceur charge la cible comme un taureau enragé.
+Le type de cette capacité dépend de la race du lanceur,
+et brise les barrières comme Mur Lumière et Protection.",0,180964
+874,WAZAINFO_ALL_874,7974FB7E9BB8A560,"Le lanceur attaque en lançant de nombreuses pièces,
+ce qui baisse son Attaque Spéciale.
+Permet d’obtenir plus d’argent à la fin du combat.",0,181292
+875,WAZAINFO_ALL_875,7974FC7E9BB8A713,"Le lanceur lacère la cible à l’aide d’une lame intangible.
+S’il se trouve dans un champ électrifié, la puissance
+de cette capacité augmente de 50 %.",0,181572
+876,WAZAINFO_ALL_876,7974FD7E9BB8A8C6,"Le lanceur asperge la cible avec un puissant jet d’eau
+bouillante. Quand le soleil brille, la puissance de cette
+capacité augmente de 50 % au lieu de baisser.",0,181872
+877,WAZAINFO_ALL_877,7974FE7E9BB8AA79,"Le lanceur déclenche un cataclysme qui baisse
+les PV de la cible de moitié.",0,182192
+878,WAZAINFO_ALL_878,7975077E9BB8B9C4,"Le lanceur change de forme et s’écrase sur la cible dans
+une explosion antique. Si la capacité est super efficace,
+sa puissance augmente encore plus que d’habitude.",0,182344
+879,WAZAINFO_ALL_879,7975087E9BB8BB77,"Le lanceur change de forme et fonce sur la cible en la
+perforant d’électricité futuriste. Si la capacité est super
+efficace, sa puissance augmente encore plus que d’habitude.",0,182676
+880,WAZAINFO_ALL_880,7956897E9B9EE61B,"Le lanceur crée un clone en sacrifiant des PV,
+puis il revient et échange sa place avec un Pokémon
+de l’équipe prêt à combattre.",0,183028
+881,WAZAINFO_ALL_881,7956887E9B9EE468,"Le lanceur fait un si mauvais jeu de mots qu’il jette un
+froid et échange sa place avec un Pokémon de l’équipe
+prêt à combattre. La neige tombe pendant cinq tours.",0,183288
+882,WAZAINFO_ALL_882,79568B7E9B9EE981,"Le lanceur fait le ménage sur le terrain, ce qui annule les
+effets de Picots, Piège de Roc, Toile Gluante, Pics Toxik,
+et Clonage. Augmente l’Attaque et la Vitesse du lanceur.",0,183616
+883,WAZAINFO_ALL_883,79568A7E9B9EE7CE,"Le lanceur invoque une tempête de neige qui
+dure cinq tours, ce qui augmente la Défense
+des Pokémon de type Glace.",0,183968
+884,WAZAINFO_ALL_884,79568D7E9B9EECE7,"Le lanceur attaque en bondissant sur la cible, ce qui
+baisse la Vitesse de celle-ci.",0,184200
+885,WAZAINFO_ALL_885,79568C7E9B9EEB34,"Le lanceur surgit des hautes herbes pour attaquer
+la cible. Les mouvements agiles du lanceur augmentent
+sa Vitesse.",0,184372
+886,WAZAINFO_ALL_886,79568F7E9B9EF04D,"Le lanceur attaque la cible en l’arrosant d’une eau
+si froide qu’elle détériore son esprit combatif.
+Baisse l’Attaque de la cible.",0,184604
+887,WAZAINFO_ALL_887,79568E7E9B9EEE9A,"Le lanceur fait tourner à toute vitesse la partie pointue
+de son corps afin de transpercer la cible. Ignore même
+les capacités comme Abri ou Détection.",0,184868
+888,WAZAINFO_ALL_888,7956817E9B9ED883,"Le lanceur projette d’étranges rayons lumineux avec
+ses yeux et inflige des dégâts deux fois d’affilée.",0,185172
+889,WAZAINFO_ALL_889,7956807E9B9ED6D0,"Le lanceur transforme sa colère en énergie pour
+attaquer. Plus il a subi d’attaques, plus la puissance
+de cette capacité augmente.",0,185380
+890,WAZAINFO_ALL_890,7953037E9B9BCC92,"Le lanceur tire un boulet de canon ardent provenant
+de sa propre armure sur la cible. Cela baisse la Défense
+et la Défense Spéciale du lanceur.",0,185644
+891,WAZAINFO_ALL_891,7953047E9B9BCE45,"Le lanceur concentre son amertume du monde des vivants
+dans la pointe de ses épées et tranche la cible. La moitié
+des dégâts infligés sont convertis en PV pour le lanceur.",0,185932
+892,WAZAINFO_ALL_892,7953017E9B9BC92C,"Le lanceur libère toute l’électricité contenue dans
+son corps pour infliger des dégâts élevés à la cible.
+Le lanceur perd le type Électrik.",0,186276
+893,WAZAINFO_ALL_893,7953027E9B9BCADF,"Le lanceur met tout son corps à contribution pour
+attaquer la cible avec un immense marteau. Cette
+capacité ne peut pas être utilisée deux fois d’affilée.",0,186556
+894,WAZAINFO_ALL_894,7952FF7E9B9BC5C6,"Le lanceur contre-attaque avec un coup infligeant
+des dégâts supérieurs à ceux de la dernière capacité
+qui l’a blessé.",0,186868
+895,WAZAINFO_ALL_895,7953007E9B9BC779,"Le lanceur projette de l’eau pressurisée qui entaille
+la cible comme une lame. Taux de critiques élevé.",0,187108
+896,WAZAINFO_ALL_896,7952FD7E9B9BC260,"-
+-
+-",0,187316
+897,WAZAINFO_ALL_897,7952FE7E9B9BC413,"-
+-
+-",0,187328
+898,WAZAINFO_ALL_898,79530B7E9B9BDA2A,"-
+-
+-",0,187340
+899,WAZAINFO_ALL_899,79530C7E9B9BDBDD,"-
+-
+-",0,187352
+900,WAZAINFO_ALL_900,705B5E7E96716538,"-
+-
+-",0,187364
+901,WAZAINFO_ALL_901,705B5F7E967166EB,"Le lanceur concentre toute son énergie dans la lune
+rouge sang sur son front et la projette sur la cible. Cette
+capacité ne peut pas être utilisée deux fois d’affilée.",0,187376
+902,WAZAINFO_ALL_902,705B607E9671689E,"Le lanceur remue son thé et en bombarde la cible.
+La moitié des dégâts infligés sont convertis en PV pour
+le lanceur. Cette capacité peut aussi brûler la cible.",0,187712
+903,WAZAINFO_ALL_903,705B617E96716A51,"Le lanceur jette une bombe qui recouvre la cible
+de sirop gluant et fait progressivement baisser
+la Vitesse de la cible pendant trois tours.",0,188036
+904,WAZAINFO_ALL_904,705B627E96716C04,"Le lanceur frappe la cible à l’aide d’une massue entourée
+d’une liane. Le type de cette capacité varie en fonction
+du masque que porte le lanceur. Taux de critiques élevé.",0,188320
+905,WAZAINFO_ALL_905,705B637E96716DB7,"Le lanceur absorbe de l’électricité au premier tour, ce qui
+augmente son Attaque Spéciale, et envoie une puissante
+décharge au second. S’il pleut, il l’envoie au premier tour.",0,188664
+906,WAZAINFO_ALL_906,705B647E96716F6A,"Le lanceur bombarde la cible afin de l’éliminer grâce au
+pouvoir des cristaux. Si le lanceur est Terapagos sous sa
+Forme Stellaire, la capacité touche tous les ennemis.",0,189016
+907,WAZAINFO_ALL_907,705B657E9671711D,"Le lanceur attaque en tirant un rayon lumineux.
+Il arrive parfois que toutes les têtes agissent ensemble,
+ce qui double la puissance de la capacité.",0,189356
+908,WAZAINFO_ALL_908,705B567E967157A0,"Le lanceur se protège contre les attaques grâce
+à son pelage incandescent, et si un assaillant utilise
+une attaque directe contre lui, il le brûle.",0,189656
+909,WAZAINFO_ALL_909,705B577E96715953,"Permet au lanceur d’attaquer la cible en priorité avec
+une décharge électrique. Échoue si la cible ne prépare
+pas une attaque.",0,189952
+910,WAZAINFO_ALL_910,705EE47E96747EC1,"Le lanceur pourfend la cible avec la lumière accumulée
+sur sa tête. Cette attaque passe outre les protections.",0,190208
+911,WAZAINFO_ALL_911,705EE37E96747D0E,"Le lanceur concentre des particules élémentaires
+pour créer une lame qui inflige des dégâts à la cible
+deux fois d’affilée. N’échoue jamais.",0,190432
+912,WAZAINFO_ALL_912,705EE27E96747B5B,"Le lanceur écrase la cible avec ses bras ou ses pinces.
+Plus il reste de PV à la cible, plus la puissance
+de la capacité augmente.",0,190716
+913,WAZAINFO_ALL_913,705EE17E967479A8,"Le lanceur galvanise ses alliés avec un encouragement
+draconique qui augmente leur taux de critiques.
+L’effet est plus puissant si les alliés ont le type Dragon.",0,190980
+914,WAZAINFO_ALL_914,705EE87E9674858D,"Le lanceur attaque sa cible avec sa voix angélique.
+Cette capacité rend la cible confuse si ses stats
+ont augmenté pendant ce tour.",0,191304
+915,WAZAINFO_ALL_915,705EE77E967483DA,"Le lanceur utilise la force de son dépit pour attaquer.
+S’il a utilisé une capacité qui a échoué au tour
+précédent, la puissance d’Indignition est doublée.",0,191568
+916,WAZAINFO_ALL_916,705EE67E96748227,"Le lanceur se charge en électricité et fond sur la cible.
+S’il échoue, le lanceur se blesse.",0,191880
+917,WAZAINFO_ALL_917,705EE57E96748074,"Le lanceur attaque avec des ondes sonores dissonantes.
+Cela empêche la cible de récupérer des PV à l’aide de
+capacités, talents ou objets tenus pendant deux tours.",0,192068
+918,WAZAINFO_ALL_918,705EDC7E96747129,"Le lanceur réagit instinctivement au moindre mouvement
+et donne un coup de paume qui apeure la cible. Échoue
+si cette dernière n’a pas utilisé une attaque prioritaire.",0,192396
+919,WAZAINFO_ALL_919,705EDB7E96746F76,"Le lanceur ligote la cible avec une chaîne faite de
+poison et lui injecte un venin corrosif, ce qui peut
+aussi gravement l’empoisonner.",0,192732
+920,WAZAINFO_ALL_920,7061EA7E9676BECA,"Le lanceur ignore les lois de l’univers et libère un puissant
+rayon de lumière qui ignore les changements de stats de
+la cible et inflige aussi des dégâts aux Pokémon Fée.",0,193004
+921,WAZAINFO_ALL_851_01,F634A2ADC56223AD,"Utilise l’Attaque ou l’Atq. Spé., selon ce qui infligera
+le plus de dégâts. Super efficace si la cible est
+téracristallisée. Baisse l’Attaque et l’Atq. Spé. du lanceur.",4,193348

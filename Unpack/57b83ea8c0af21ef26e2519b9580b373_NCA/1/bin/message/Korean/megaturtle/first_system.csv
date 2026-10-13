@@ -1,0 +1,94 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_first_language_010,CF9AFAE832358AFF,어떤 언어로 플레이하겠습니까?,0,484
+1,nx_first_language_020,CF9108E8322D4E44,이 언어로 시작하겠습니까?,0,520
+2,nx_first_language_030,CF948EE8323067CD,"선택한 언어는 “설정”에서
+언제든지 변경할 수 있습니다",0,552
+3,nx_first_language_040,CF89FCE832271B32,시작한다,0,616
+4,nx_first_language_050,CF8D82E8322A34BB,다시 선택한다,0,628
+5,nx_first_language_060,CF8370E83221C1A0,선택한 언어,0,644
+6,	,AF66E44C86071324,[REF:6],0,660
+7,nx_first_button_000,49B92A8E35961C28,돌아간다,0,672
+8,	,AF66E44C86071324,[REF:8],0,684
+9,nx_first_msg_yes,40C7F89C556E59B8,예,0,696
+10,nx_first_msg_no,6E87EFBD44DBB0A2,아니요,0,700
+11,nx_first_msg_back,7303F07B84CC565A,돌아간다,0,708
+12,nx_first_msg_next,EA8C2D16530F4790,다음으로,0,720
+13,nx_first_msg_010,62E85A9B46586956,[REF:13],0,732
+14,nx_first_msg_020,62E4F49B4655862D,"스마트폰 버전 “Pokémon HOME”을
+이용하고 있습니까?",0,744
+15,nx_first_msg_021,62E4F39B4655847A,[REF:15],0,816
+16,nx_first_msg_022,62E4F29B465582C7,"닌텐도 어카운트를 연동하면
+스마트폰 버전과[RETURN]
+이용 상황을 공유할 수 있습니다[CLEAR]
+스마트폰 버전에서 닌텐도 어카운트를
+연동하고 있습니까?",0,828
+17,nx_first_msg_025,62E4EF9B46557DAE,[REF:17],0,988
+18,nx_first_msg_026,62E4EE9B46557BFB,"추후 스마트폰 버전을 이용할 때
+닌텐도 어카운트를 연동하면[RETURN]
+이용 상황을 공유할 수 있습니다",0,1000
+19,nx_first_msg_027,62E4ED9B46557A48,"먼저 스마트폰 버전에서
+닌텐도 어카운트를 연동하지 않으면[RETURN]
+이용 상황을 공유할 수 없습니다![CLEAR]
+다음 단계로 넘어가기 전에 스마트폰 버전에서
+연동을 진행해두는 것을 권장합니다",0,1108
+20,nx_first_msg_028,62E4EC9B46557895,...그럼 “Pokémon HOME”을 시작합니다!,0,1312
+21,nx_first_msg_030,62E16E9B46526CA4,[REF:21],0,1372
+22,nx_first_msg_031,62E16F9B46526E57,"이용 약관과 개인정보 처리방침이
+업데이트되었습니다![CLEAR]
+“Pokémon HOME”을 이용하려면
+내용에 다시 동의해야 합니다[CLEAR]
+내용을 자세히 확인한 다음 동의해 주십시오",0,1384
+23,nx_first_msg_032,62E1709B4652700A,"“Pokémon HOME”을 이용하기에 앞서
+이용 약관과 개인정보 처리방침을 확인해 주십시오[CLEAR]",0,1580
+24,nx_first_msg_033,62E1719B465271BD,"이용 약관을 표시합니다
+내용을 자세히 확인한 다음 동의해 주십시오[CLEAR]",0,1692
+25,nx_first_msg_034,62E16A9B465265D8,이용 약관에 동의하겠습니까?,0,1772
+26,nx_first_msg_035,62E16B9B4652678B,"개인정보 처리방침을 표시합니다
+내용을 자세히 확인해 주십시오[CLEAR]",0,1804
+27,nx_first_msg_036,62E16C9B4652693E,개인정보 처리방침을 확인하였습니까?,0,1880
+28,nx_first_msg_040,62DE689B46502C9B,"정보를 확인하고 있습니다
+잠시 기다려 주십시오...",0,1920
+29,nx_first_msg_050,62DAE29B464D1312,타이틀 화면으로 돌아가겠습니까?,0,1980
+30,	,AF66E44C86071324,[REF:30],0,2016
+31,nx_first_terms_region_head,C98D2569F8DD4B6A,[REF:31],0,2028
+32,nx_first_terms_region_010,2B3214FBED0BD2E1,[REF:32],0,2040
+33,nx_first_terms_region_020,2B359AFBED0EEC6A,[REF:33],0,2052
+34,nx_first_terms_region_030,2B3900FBED11CF93,[REF:34],0,2064
+35,nx_first_terms_region_040,2B3C86FBED14E91C,[REF:35],0,2076
+36,nx_first_terms_region_050,2B3F8CFBED172925,[REF:36],0,2088
+37,nx_first_terms_region_060,2B4312FBED1A42AE,[REF:37],0,2100
+38,nx_first_terms_region_070,2B4698FBED1D5C37,[REF:38],0,2112
+39,nx_first_terms_region_080,2B137EFBECF1D670,[REF:39],0,2124
+40,nx_first_terms_title,2CA7E66F180C5D97,이용 약관/개인정보 처리방침,0,2136
+41,nx_first_terms_guide_010,9741787758FE581B,"끝까지 스크롤을 내리면 다음 단계로 넘어갑니다
+어린이의 경우 보호자와 함께 확인해 주십시오",0,2168
+42,nx_first_terms_guide_020,9736E67758F50B80,[REF:42],0,2272
+43,nx_first_terms_guide_021,9736E77758F50D33,예,0,2284
+44,nx_first_terms_guide_022,9736E87758F50EE6,아니요,0,2288
+45,	,AF66E44C86071324,[REF:45],0,2296
+46,nx_first_msg_100,59D5C59B41175574,"오케이! 접속 성공이다![CLEAR]
+이건 “Pokémon HOME”에 있어서
+위~대한 한 걸음이 되겠군!",0,2308
+47,nx_first_msg_101,59D5C69B41175727,"호오...?[CLEAR]
+어이쿠! 이런 미안하다!
+내 모습이 나오지 않고 있었구나!",0,2420
+48,nx_first_msg_110,59D8CB9B4119957D,"자, 이제 됐다!",0,2508
+49,nx_first_msg_120,59DC319B411C78A6,나는야 위~대한 포켓몬 연구가...,0,2528
+50,nx_first_msg_121,59DC329B411C7A59,"그 이름도 위~대한 오대호란다![CLEAR]
+만나서 반갑구나!",0,2568
+51,nx_first_msg_122,59DC2F9B411C7540,"바로 본론으로 들어가서, 나의 꿈은
+이 세상에 사는 포켓몬들이[CLEAR]
+모두 등록된 위~대한
+포켓몬 도감을 완성하는 거란다!",0,2632
+52,nx_first_msg_123,59DC309B411C76F3,"하지만 그것은 혼자만의 힘으로
+실현하기에는 어려운 꿈이지...",0,2768
+53,nx_first_msg_124,59DC359B411C7F72,"그런데! 조금 전!
+내 눈앞에 위~대한 아군이 나타났단다!",0,2840
+54,nx_first_msg_130,59DFB79B411F922F,"...그래! 바로 너다![CLEAR]
+네게 부탁이 있다!",0,2908
+55,nx_first_msg_131,59DFB69B411F907C,"내가 개발한 이 “Pokémon HOME”에
+되도록 많이 포켓몬을 맡겨주었으면 한다!",0,2964
+56,nx_first_msg_140,59C82D9B410BC8D0,"물론 아직 “Pokémon HOME”에 대해
+잘 모르는 게 많겠지?",0,3060
+57,nx_first_msg_141,59C82E9B410BCA83,"하지만 걱정 붙들어 매거라!
+잘 모르는 것은 몬보가 알려줄 테니까!",0,3136

@@ -1,0 +1,52 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_pokemile_index_010,6C05095BCA478F69,POINTS,0,324
+1,	,AF66E44C86071324,[REF:1],0,340
+2,nx_pokemile_button_000,2A630686D9EFFF22,Back,0,352
+3,nx_pokemile_button_001,2A630786D9F000D5,Help,0,364
+4,	,AF66E44C86071324,[REF:4],0,376
+5,nx_pokemile_010,A584652620CE94FA,Pokémon HOME Points,0,388
+6,nx_pokemile_011,A584662620CE96AD,"[CTRL:0204:0000,002C] point(s)",0,428
+7,nx_pokemile_020,A580DF2620CB7B71,1 BP = [CTRL:0201:0000] point(s),0,460
+8,nx_pokemile_030,A57DD92620C93B68,"Points that will be used: [CTRL:0204:0000,002C]",0,504
+9,nx_pokemile_040,A595632620DD04C7,[CTRL:0200:0000],0,568
+10,nx_pokemile_041,A595622620DD0314,BP,0,580
+11,nx_pokemile_050,A591DD2620D9EB3E,OK,4,588
+12,nx_pokemile_060,A58ED72620D7AB35,Choose how many points to convert to BP,0,596
+13,nx_pokemile_061,A58ED62620D7A982,BP,0,676
+14,nx_pokemile_062,A58ED52620D7A7CF,"[CTRL:0203:0000,002C]/[CTRL:0203:0001,002C]",0,684
+15,	,AF66E44C86071324,[REF:15],0,708
+16,nx_pokemile_msg_yes,189337D573D9EBE6,Yes,0,720
+17,nx_pokemile_msg_no,D4E97CD168E02068,No,0,728
+18,nx_pokemile_msg_010,068D25D68BB63A48,"You’ll exceed the maximum points for that game if you send
+that much, so the amount has been changed to send just[RETURN]
+as much as possible!",0,736
+19,nx_pokemile_msg_020,069797D68BBF5083,"Convert [CTRL:0204:0000,002C] point(s) and send [CTRL:0203:0001,002C] BP to
+your game?",0,1012
+20,nx_pokemile_msg_030,069431D68BBC6D5A,"Now saving...
+Please don’t close Pokémon HOME.",0,1124
+21,nx_pokemile_msg_031,069432D68BBC6F0D,"You saved your progress![CLEAR]
+Your points have been converted!",0,1220
+22,	,AF66E44C86071324,[REF:22],0,1344
+23,nx_pokemile_help_010,C1E70C42F87C36D8,"You can send BP to one of your games here! Choose the amount
+you want to send by moving the Left Stick up and down.
+Then choose OK to send that BP on its way! Hooray!",0,1356
+24,	,AF66E44C86071324,[REF:24],0,1692
+25,nx_pokemile_063,A58ED42620D7A61C,Choose how many points to convert to MP,0,1704
+26,nx_pokemile_065,A58ED22620D7A2B6,"[CTRL:0206:0000,002C]/[CTRL:0206:0001,002C]",0,1784
+27,nx_pokemile_021,A580DE2620CB79BE,1 MP = [CTRL:0201:0000] point(s),0,1808
+28,nx_pokemile_064,A58ED32620D7A469,MP,0,1852
+29,nx_pokemile_msg_021,069796D68BBF4ED0,"Convert [CTRL:0204:0000,002C] point(s) and send [CTRL:0204:0001,002C] MP to
+your game?",0,1860
+30,nx_pokemile_help_011,C1E70D42F87C388B,"You can send MP to one of your game files here! Choose the amount you
+want to send by moving the Left Stick up and down, then select OK to
+send that MP on its way! Hooray!",0,1972
+31,	,AF66E44C86071324,[REF:31],0,2316
+32,nx_pokemile_070,A58B512620D491AC,Choose how many points to convert to LP,0,2328
+33,nx_pokemile_071,A58B522620D4935F,"[CTRL:0206:0000,002C]/[CTRL:0206:0001,002C]",0,2408
+34,nx_pokemile_072,A58B532620D49512,1 point = [CTRL:0201:0000] LP,0,2432
+35,nx_pokemile_073,A58B542620D496C5,LP,0,2468
+36,nx_pokemile_msg_070,06A1A9D68BC7C39E,"Convert [CTRL:0204:0000,002C] point(s) and send [CTRL:0205:0001,0000] LP to
+your game?",0,2476
+37,nx_pokemile_help_070,C1FB9042F88DC02E,"You can send LP to one of your game files here! Choose the amount you
+want to send by moving the Left Stick up and down, then select OK to
+send that LP on its way! Hooray!",0,2588

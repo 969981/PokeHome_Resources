@@ -1,0 +1,17 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_title_push_button,5B3FE769877CCCA8,DRÜCKE EINEN KNOPF,0,124
+1,nx_title_ver,9F35F53B0D9738C8,Ver. [CTRL:0200:0000].[CTRL:0200:0001].[CTRL:0200:0002],0,164
+2,	,AF66E44C86071324,[REF:2],0,204
+3,nx_title_error1_010,A023DB54EC54E55C,[REF:3],0,216
+4,nx_title_support_01,FBEC9A53F0EAC644,Kunden-ID,0,228
+5,nx_title_support_02,FBEC9D53F0EACB5D,XXXX-XXXX-XXXX-XXXX,0,248
+6,	,AF66E44C86071324,[REF:6],0,288
+7,nx_title_casherror_msg_01,48B32C8C799FBB72,Möchtest du den Cache leeren?,0,300
+8,nx_title_casherror_msg_02,48B32B8C799FB9BF,"Wenn du den Cache leerst, kann die Anmeldung
+länger dauern.[CLEAR]
+Deine aktuellen Pokémon HOME-Speicherdaten werden bei
+diesem Vorgang nicht gelöscht. Willst du den Cache leeren?",0,360
+9,nx_title_msg_yes,CBEDD9311A84C300,Ja,0,712
+10,nx_title_msg_no,73427AE765741C0A,Nein,0,720
+11,nx_title_cashclear_msg_01,90BAD9C632ABF86B,Cache wird geleert...,0,732
+12,nx_title_cashclear_msg_02,90BADAC632ABFA1E,Der Cache wurde geleert.,0,776

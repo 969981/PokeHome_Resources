@@ -1,0 +1,340 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,mes_ribbon_name_000,EFD55246391A3E8A,Cinta Campeón de Kalos,1,2404
+1,mes_ribbon_name_001,EFD55346391A403D,Cinta Campeón,1,2452
+2,mes_ribbon_name_002,EFD55046391A3B24,Cinta Campeón de Sinnoh,1,2480
+3,mes_ribbon_name_003,EFD55146391A3CD7,Cinta Amistad,1,2528
+4,mes_ribbon_name_004,EFD54E46391A37BE,Cinta Entrenamiento,1,2556
+5,mes_ribbon_name_005,EFD54F46391A3971,Cinta Élite del Combate,1,2596
+6,mes_ribbon_name_006,EFD54C46391A3458,Cinta As del Combate,1,2644
+7,mes_ribbon_name_007,EFD54D46391A360B,Cinta Esfuerzo,1,2688
+8,mes_ribbon_name_008,EFD54A46391A30F2,Cinta Alerta,1,2720
+9,mes_ribbon_name_009,EFD54B46391A32A5,Cinta Impacto,1,2748
+10,mes_ribbon_name_010,EFD8B846391D21B3,Cinta Abatimiento,1,2776
+11,mes_ribbon_name_011,EFD8B746391D2000,Cinta Descuido,1,2812
+12,mes_ribbon_name_012,EFD8BA46391D2519,Cinta Relajación,1,2844
+13,mes_ribbon_name_013,EFD8B946391D2366,Cinta Siesta,1,2880
+14,mes_ribbon_name_014,EFD8BC46391D287F,Cinta Sonrisa,1,2908
+15,mes_ribbon_name_015,EFD8BB46391D26CC,Cinta Maravilla,1,2936
+16,mes_ribbon_name_016,EFD8BE46391D2BE5,Cinta Realeza,1,2968
+17,mes_ribbon_name_017,EFD8BD46391D2A32,Cinta Realeza Maravilla,1,2996
+18,mes_ribbon_name_018,EFD8C046391D2F4B,Cinta Artista,1,3044
+19,mes_ribbon_name_019,EFD8BF46391D2D98,Cinta Huella,1,3072
+20,mes_ribbon_name_020,EFCEC6463914E4F8,Cinta Récord,1,3100
+21,mes_ribbon_name_021,EFCEC7463914E6AB,Cinta Leyenda,1,3128
+22,mes_ribbon_name_022,EFCEC8463914E85E,Cinta Campo,1,3156
+23,mes_ribbon_name_023,EFCEC9463914EA11,Cinta Nacional,1,3180
+24,mes_ribbon_name_024,EFCECA463914EBC4,Cinta Planeta,1,3212
+25,mes_ribbon_name_025,EFCECB463914ED77,Cinta Mundo,1,3240
+26,mes_ribbon_name_026,EFCECC463914EF2A,Cinta Clásica,1,3264
+27,mes_ribbon_name_027,EFCECD463914F0DD,Cinta Principal,1,3292
+28,mes_ribbon_name_028,EFCEBE463914D760,Cinta Evento,1,3324
+29,mes_ribbon_name_029,EFCEBF463914D913,Cinta Cumpleaños,1,3352
+30,mes_ribbon_name_030,EFD24C463917FE81,Cinta Especial,1,3388
+31,mes_ribbon_name_031,EFD24B463917FCCE,Cinta Recuerdo,1,3420
+32,mes_ribbon_name_032,EFD24A463917FB1B,Cinta Deseo,1,3452
+33,mes_ribbon_name_033,EFD249463917F968,Cinta Campeón de Torneo,1,3476
+34,mes_ribbon_name_034,EFD250463918054D,Cinta Campeón Regional,1,3524
+35,mes_ribbon_name_035,EFD24F463918039A,Cinta Campeón Nacional,1,3572
+36,mes_ribbon_name_036,EFD24E46391801E7,Cinta Campeón Mundial,1,3620
+37,mes_ribbon_name_037,EFD24D4639180034,Cinta Recuerdo de Concurso,1,3664
+38,mes_ribbon_name_038,EFD244463917F0E9,Cinta Recuerdo de Combate,1,3720
+39,mes_ribbon_name_039,EFD243463917EF36,Cinta Campeón de Hoenn,1,3772
+40,mes_ribbon_name_040,EFE34A4639266E4E,Cinta Estelar de Concursos,1,3820
+41,mes_ribbon_name_041,EFE34B4639267001,Cinta Estrella del Carisma,1,3876
+42,mes_ribbon_name_042,EFE3484639266AE8,Cinta Estrella de la Belleza,1,3932
+43,mes_ribbon_name_043,EFE3494639266C9B,Cinta Estrella de la Dulzura,1,3992
+44,mes_ribbon_name_044,EFE34E463926751A,Cinta Estrella del Ingenio,1,4052
+45,mes_ribbon_name_045,EFE34F46392676CD,Cinta Estrella de la Solidez,1,4108
+46,mes_ribbon_name_046,EFE34C46392671B4,Cinta Campeón de Alola,1,4168
+47,mes_ribbon_name_047,EFE34D4639267367,Cinta Maestro Batalla Royale,1,4216
+48,mes_ribbon_name_048,EFE34246392660B6,Cinta As del Árbol,1,4276
+49,mes_ribbon_name_049,EFE3434639266269,Cinta Maestro del Árbol,1,4316
+50,mes_ribbon_name_099,EFBDBF46390665E0,Cinta Estrella Resplandeciente,1,4364
+51,RIBBON_NAME_055,7B5A1EA399DF9604,RIBBON_NAME_055,0,4428
+52,mes_ribbon_info_000,20F93C62D8DCE9C9,"Cinta obtenida por vencer a la Campeona de Kalos
+y entrar en el Salón de la Fama.",1,4460
+53,mes_ribbon_info_001,20F93B62D8DCE816,"Cinta obtenida por superar la Liga Pokémon de otra región
+y entrar en su Salón de la Fama.",1,4624
+54,mes_ribbon_info_002,20F93A62D8DCE663,"Cinta obtenida por vencer a la Campeona de Sinnoh
+y entrar en el Salón de la Fama.",1,4808
+55,mes_ribbon_info_003,20F93962D8DCE4B0,"Cinta que se concede a un Pokémon con el que
+se comparte un profundo lazo de amistad.",1,4976
+56,mes_ribbon_info_004,20F94062D8DCF095,"Cinta que se concede a un Pokémon que superó
+pruebas y entrenamientos muy duros.",1,5148
+57,mes_ribbon_info_005,20F93F62D8DCEEE2,"Cinta que se concede a un Pokémon que obtuvo
+la victoria en combates complicados.",1,5312
+58,mes_ribbon_info_006,20F93E62D8DCED2F,"Cinta que se concede a un Pokémon valiente que
+dominó con maestría el arte de combatir.",1,5476
+59,mes_ribbon_info_007,20F93D62D8DCEB7C,Cinta obtenida por esforzarse al máximo.,1,5652
+60,mes_ribbon_info_008,20F94462D8DCF761,"Cinta que revigoriza la energía vital al evocar
+un suceso alentador.",1,5736
+61,mes_ribbon_info_009,20F94362D8DCF5AE,"Cinta que provoca entusiasmo al evocar un suceso
+emocionante.",1,5876
+62,mes_ribbon_info_010,20F5B662D8D9D040,"Cinta que evoca momentos de tristeza, pero que le añaden
+sabor a la vida.",1,6000
+63,mes_ribbon_info_011,20F5B762D8D9D1F3,"Cinta que hace pensar en la esencia de la vida
+al evocar errores pasados.",1,6148
+64,mes_ribbon_info_012,20F5B862D8D9D3A6,"Cinta que le añade chispa a la vida al evocar
+una experiencia estimulante.",1,6296
+65,mes_ribbon_info_013,20F5B962D8D9D559,Cinta que da tranquilidad al evocar un sueño reconfortante.,1,6448
+66,mes_ribbon_info_014,20F5BA62D8D9D70C,"Cinta que enriquece la vida al evocar lo importante
+que es sonreír.",1,6568
+67,mes_ribbon_info_015,20F5BB62D8D9D8BF,Cinta extremadamente bonita y extravagante.,1,6704
+68,mes_ribbon_info_016,20F5BC62D8D9DA72,"Cinta increíblemente majestuosa y con aire
+aristocrático.",1,6792
+69,mes_ribbon_info_017,20F5BD62D8D9DC25,"Cinta más preciosa y majestuosa que cualquier otra
+cosa en el mundo.",1,6908
+70,mes_ribbon_info_018,20F5BE62D8D9DDD8,"Cinta obtenida al haberse convertido en supermodelo
+en Hoenn.",1,7048
+71,mes_ribbon_info_019,20F5BF62D8D9DF8B,"Cinta concedida a un Pokémon que deja huellas de
+calidad excepcional.",1,7172
+72,mes_ribbon_info_020,21004862D8E31CDB,Cinta obtenida por establecer un récord increíble.,1,7312
+73,mes_ribbon_info_021,21004762D8E31B28,Cinta obtenida por establecer un récord legendario.,1,7416
+74,mes_ribbon_info_022,21004A62D8E32041,Cinta obtenida por vencer la Liga Pokémon.,1,7520
+75,mes_ribbon_info_023,21004962D8E31E8E,"Cinta obtenida por superar todos los desafíos
+difíciles.",1,7608
+76,mes_ribbon_info_024,21004C62D8E323A7,Cinta obtenida por lograr 100 victorias consecutivas.,1,7724
+77,mes_ribbon_info_025,21004B62D8E321F4,Cinta obtenida por vencer la Liga Pokémon.,1,7832
+78,mes_ribbon_info_026,21004E62D8E3270D,Cinta que denota amor por los Pokémon.,1,7920
+79,mes_ribbon_info_027,21004D62D8E3255A,Cinta de vacaciones especiales.,1,8000
+80,mes_ribbon_info_028,21004062D8E30F43,Cinta obtenida por participar en un evento Pokémon.,1,8064
+81,mes_ribbon_info_029,21003F62D8E30D90,Cinta conmemorativa de un cumpleaños.,1,8168
+82,mes_ribbon_info_030,20FCC262D8E00352,Cinta para conmemorar un día muy especial.,1,8244
+83,mes_ribbon_info_031,20FCC362D8E00505,Cinta para mantener vivo un recuerdo muy especial.,1,8332
+84,mes_ribbon_info_032,20FCC062D8DFFFEC,Cinta que supuestamente concede deseos.,1,8436
+85,mes_ribbon_info_033,20FCC162D8E0019F,Cinta obtenida por ganar un torneo.,1,8516
+86,mes_ribbon_info_034,20FCBE62D8DFFC86,"Cinta de campeón regional del Pokémon World
+Championships.",1,8588
+87,mes_ribbon_info_035,20FCBF62D8DFFE39,"Cinta de campeón nacional del Pokémon World
+Championships.",1,8708
+88,mes_ribbon_info_036,20FCBC62D8DFF920,"Cinta de campeón del Pokémon World
+Championships.",1,8828
+89,mes_ribbon_info_037,20FCBD62D8DFFAD3,"Cinta de recuerdo obtenida tras conseguir cintas en algún
+lugar por concursos anteriores.",1,8928
+90,mes_ribbon_info_038,20FCCA62D8E010EA,"Cinta de recuerdo obtenida tras conseguir cintas en algún
+lugar por combates anteriores.",1,9108
+91,mes_ribbon_info_039,20FCCB62D8E0129D,"Cinta obtenida por vencer al Campeón de Hoenn
+y entrar en el Salón de la Fama.",1,9288
+92,mes_ribbon_info_040,2106D462D8E8766D,"Cinta que se concede a un Pokémon por haber
+brillado con luz propia en una Gala Superconcurso.",1,9448
+93,mes_ribbon_info_041,2106D362D8E874BA,"Cinta que se concede a un Pokémon por exhibir su
+carisma en un concurso.",1,9640
+94,mes_ribbon_info_042,2106D262D8E87307,"Cinta que se concede a un Pokémon por exhibir su
+belleza en un concurso.",1,9788
+95,mes_ribbon_info_043,2106D162D8E87154,"Cinta que se concede a un Pokémon por exhibir su
+dulzura en un concurso.",1,9936
+96,mes_ribbon_info_044,2106D062D8E86FA1,"Cinta que se concede a un Pokémon por exhibir su
+ingenio en un concurso.",1,10084
+97,mes_ribbon_info_045,2106CF62D8E86DEE,"Cinta que se concede a un Pokémon por exhibir su
+solidez en un concurso.",1,10232
+98,mes_ribbon_info_046,2106CE62D8E86C3B,"Cinta que se recibe al formar parte del equipo
+campeón de Alola y entrar en el Salón de la Fama.",1,10380
+99,mes_ribbon_info_047,2106CD62D8E86A88,"Cinta que se concede a un Pokémon por alcanzar
+la victoria en una Batalla Royale.",1,10576
+100,mes_ribbon_info_048,2106CC62D8E868D5,"Cinta que se concede en el Árbol de Combate al
+vencer a los Campeones Legendarios.",1,10740
+101,mes_ribbon_info_049,2106CB62D8E86722,"Cinta concedida en el Árbol de Combate al vencer
+a los Campeones Legendarios en los Supercombates.",1,10908
+102,mes_ribbon_info_050,21034E62D8E55CE4,"Cinta que se recibe al formar parte del equipo
+campeón de Galar y entrar en el Salón de la Fama.",1,11108
+103,mes_ribbon_info_051,21034F62D8E55E97,"Cinta que se concede al conquistar la cima de la
+Torre de Batalla.",1,11304
+104,mes_ribbon_info_052,21035062D8E5604A,"Cinta que se concede al vencer a un Entrenador de
+Nivel Maestro en un Combate Clasificatorio.",1,11440
+105,mes_ribbon_info_099,21113F62D8F180C3,"Cinta que se concede a un Pokémon por haber
+brillado con luz propia en una Gala Superconcurso.",0,11628
+106,RIBBON_INFO_055,53FBB5C4473A8497,RIBBON_INFO_055,0,11820
+107,mes_ribbon_info_053,21035162D8E561FD,Emblema que distingue a un Pokémon hambriento.,4,11852
+108,mes_ribbon_info_054,21034A62D8E55618,Emblema que distingue a un Pokémon adormilado.,4,11948
+109,mes_ribbon_info_055,21034B62D8E557CB,Emblema que distingue a un Pokémon somnoliento.,4,12044
+110,mes_ribbon_info_056,21034C62D8E5597E,Emblema que distingue a un Pokémon madrugador.,4,12140
+111,mes_ribbon_info_057,21034D62D8E55B31,Emblema que distingue a un Pokémon obnubilado.,4,12236
+112,mes_ribbon_info_058,21034662D8E54F4C,Emblema que distingue a un Pokémon empapado.,4,12332
+113,mes_ribbon_info_059,21034762D8E550FF,Emblema que distingue a un Pokémon atronador.,4,12424
+114,mes_ribbon_info_060,210DC062D8EE731F,Emblema que distingue a un Pokémon invernal.,4,12516
+115,mes_ribbon_info_061,210DBF62D8EE716C,Emblema que distingue a un Pokémon congelado.,4,12608
+116,mes_ribbon_info_062,210DC262D8EE7685,Emblema que distingue a un Pokémon sediento.,4,12700
+117,mes_ribbon_info_063,210DC162D8EE74D2,Emblema que distingue a un Pokémon arenoso.,4,12792
+118,mes_ribbon_info_064,210DBC62D8EE6C53,"Emblema que distingue a un Pokémon errante de
+la niebla.",4,12880
+119,mes_ribbon_info_065,210DBB62D8EE6AA0,Emblema que distingue a un Pokémon predestinado.,4,12996
+120,mes_ribbon_info_066,210DBE62D8EE6FB9,Emblema que distingue a un Pokémon recién pescado.,4,13096
+121,mes_ribbon_info_067,210DBD62D8EE6E06,"Emblema que distingue a un Pokémon entusiasta del
+curry.",4,13200
+122,mes_ribbon_info_068,210DC862D8EE80B7,Emblema que distingue a un Pokémon sociable.,4,13316
+123,mes_ribbon_info_069,210DC762D8EE7F04,Emblema que distingue a un Pokémon ermitaño.,4,13408
+124,mes_ribbon_info_070,210A3A62D8EB5996,Emblema que distingue a un Pokémon travieso.,4,13500
+125,mes_ribbon_info_071,210A3B62D8EB5B49,"Emblema que distingue a un Pokémon
+despreocupado.",4,13592
+126,mes_ribbon_info_072,210A3862D8EB5630,Emblema que distingue a un Pokémon nervioso.,4,13692
+127,mes_ribbon_info_073,210A3962D8EB57E3,Emblema que distingue a un Pokémon ilusionado.,4,13784
+128,mes_ribbon_info_074,210A3E62D8EB6062,Emblema que distingue a un Pokémon carismático.,4,13880
+129,mes_ribbon_info_075,210A3F62D8EB6215,Emblema que distingue a un Pokémon sereno.,4,13976
+130,mes_ribbon_info_076,210A3C62D8EB5CFC,Emblema que distingue a un Pokémon apasionado.,4,14064
+131,mes_ribbon_info_077,210A3D62D8EB5EAF,Emblema que distingue a un Pokémon distraído.,4,14160
+132,mes_ribbon_info_078,210A4262D8EB672E,Emblema que distingue a un Pokémon feliz.,4,14252
+133,mes_ribbon_info_079,210A4362D8EB68E1,Emblema que distingue a un Pokémon iracundo.,4,14336
+134,mes_ribbon_info_080,21144C62D8F3CCB1,Emblema que distingue a un Pokémon sonriente.,4,14428
+135,mes_ribbon_info_081,21144B62D8F3CAFE,Emblema que distingue a un Pokémon llorón.,4,14520
+136,mes_ribbon_info_082,21144A62D8F3C94B,Emblema que distingue a un Pokémon bienhumorado.,4,14608
+137,mes_ribbon_info_083,21144962D8F3C798,Emblema que distingue a un Pokémon malhumorado.,4,14708
+138,mes_ribbon_info_084,21145062D8F3D37D,Emblema que distingue a un Pokémon intelectual.,4,14804
+139,mes_ribbon_info_085,21144F62D8F3D1CA,Emblema que distingue a un Pokémon impulsivo.,4,14900
+140,mes_ribbon_info_086,21144E62D8F3D017,Emblema que distingue a un Pokémon astuto.,4,14992
+141,mes_ribbon_info_087,21144D62D8F3CE64,Emblema que distingue a un Pokémon amenazante.,4,15080
+142,mes_ribbon_info_088,21144462D8F3BF19,Emblema que distingue a un Pokémon amable.,4,15176
+143,mes_ribbon_info_089,21144362D8F3BD66,Emblema que distingue a un Pokémon desconcertado.,4,15264
+144,mes_ribbon_info_090,21114662D8F18CA8,Emblema que distingue a un Pokémon motivado.,4,15364
+145,mes_ribbon_info_091,21114762D8F18E5B,Emblema que distingue a un Pokémon desidioso.,4,15456
+146,mes_ribbon_info_092,21114862D8F1900E,Emblema que distingue a un Pokémon confiado.,4,15548
+147,mes_ribbon_info_093,21114962D8F191C1,Emblema que distingue a un Pokémon inseguro.,4,15640
+148,mes_ribbon_info_094,21114A62D8F19374,Emblema que distingue a un Pokémon humilde.,4,15732
+149,mes_ribbon_info_095,21114B62D8F19527,Emblema que distingue a un Pokémon pretencioso.,4,15820
+150,mes_ribbon_info_096,21114C62D8F196DA,Emblema que distingue a un Pokémon fortachón.,4,15916
+151,mes_ribbon_info_097,21114D62D8F1988D,Emblema que distingue a un Pokémon agotado.,4,16008
+152,mes_ribbon_name_050,EFE650463928AE57,Cinta de Campeón de Galar,1,16096
+153,mes_ribbon_name_051,EFE64F463928ACA4,Cinta Maestro de la Torre,1,16148
+154,mes_ribbon_name_052,EFE652463928B1BD,Cinta Rango Maestro,1,16200
+155,mes_ribbon_name_053,EFE651463928B00A,Emblema Almuerzo,4,16240
+156,mes_ribbon_name_054,EFE64C463928A78B,Emblema Noche,4,16276
+157,mes_ribbon_name_055,EFE64B463928A5D8,Emblema Ocaso,4,16304
+158,mes_ribbon_name_056,EFE64E463928AAF1,Emblema Alba,4,16332
+159,mes_ribbon_name_057,EFE64D463928A93E,Emblema Nube,4,16360
+160,mes_ribbon_name_058,EFE648463928A0BF,Emblema Lluvia,4,16388
+161,mes_ribbon_name_059,EFE6474639289F0C,Emblema Tormenta,4,16420
+162,mes_ribbon_name_060,EFDC3E4639203B3C,Emblema Nieve,4,16456
+163,mes_ribbon_name_061,EFDC3F4639203CEF,Emblema Nevasca,4,16484
+164,mes_ribbon_name_062,EFDC404639203EA2,Emblema Sequedad,4,16516
+165,mes_ribbon_name_063,EFDC414639204055,Emblema Polvareda,4,16552
+166,mes_ribbon_name_064,EFDC3A4639203470,Emblema Bruma,4,16588
+167,mes_ribbon_name_065,EFDC3B4639203623,Emblema Destino,4,16616
+168,mes_ribbon_name_066,EFDC3C46392037D6,Emblema Pesca,4,16648
+169,mes_ribbon_name_067,EFDC3D4639203989,Emblema Curry,4,16676
+170,mes_ribbon_name_068,EFDC4646392048D4,Emblema Familiaridad,4,16704
+171,mes_ribbon_name_069,EFDC474639204A87,Emblema Introspección,4,16748
+172,mes_ribbon_name_070,EFDFC446392354C5,Emblema Travesura,4,16792
+173,mes_ribbon_name_071,EFDFC34639235312,Emblema Despreocupación,4,16828
+174,mes_ribbon_name_072,EFDFC2463923515F,Emblema Nerviosismo,4,16876
+175,mes_ribbon_name_073,EFDFC14639234FAC,Emblema Ilusión,4,16916
+176,mes_ribbon_name_074,EFDFC04639234DF9,Emblema Carisma,4,16948
+177,mes_ribbon_name_075,EFDFBF4639234C46,Emblema Compostura,4,16980
+178,mes_ribbon_name_076,EFDFBE4639234A93,Emblema Pasión,4,17020
+179,mes_ribbon_name_077,EFDFBD46392348E0,Emblema Distracción,4,17052
+180,mes_ribbon_name_078,EFDFCC463923625D,Emblema Felicidad,4,17092
+181,mes_ribbon_name_079,EFDFCB46392360AA,Emblema Ira,4,17128
+182,mes_ribbon_name_080,EFBA424639035BA2,Emblema Sonrisa,4,17152
+183,mes_ribbon_name_081,EFBA434639035D55,Emblema Llanto,4,17184
+184,mes_ribbon_name_082,EFBA40463903583C,Emblema Buen Humor,4,17216
+185,mes_ribbon_name_083,EFBA4146390359EF,Emblema Mal Humor,4,17256
+186,mes_ribbon_name_084,EFBA3E46390354D6,Emblema Intelecto,4,17292
+187,mes_ribbon_name_085,EFBA3F4639035689,Emblema Impulsividad,4,17328
+188,mes_ribbon_name_086,EFBA3C4639035170,Emblema Astucia,4,17372
+189,mes_ribbon_name_087,EFBA3D4639035323,Emblema Intimidación,4,17404
+190,mes_ribbon_name_088,EFBA4A463903693A,Emblema Amabilidad,4,17448
+191,mes_ribbon_name_089,EFBA4B4639036AED,Emblema Desconcierto,4,17488
+192,mes_ribbon_name_090,EFBDC8463906752B,Emblema Motivación,4,17532
+193,mes_ribbon_name_091,EFBDC74639067378,Emblema Desgano,4,17572
+194,mes_ribbon_name_092,EFBDCA4639067891,Emblema Confianza,4,17604
+195,mes_ribbon_name_093,EFBDC946390676DE,Emblema Inseguridad,4,17640
+196,mes_ribbon_name_094,EFBDCC4639067BF7,Emblema Modestia,4,17680
+197,mes_ribbon_name_095,EFBDCB4639067A44,Emblema Altanería,4,17716
+198,mes_ribbon_name_096,EFBDCE4639067F5D,Emblema Vigor,4,17752
+199,mes_ribbon_name_097,EFBDCD4639067DAA,Emblema Extenuación,4,17780
+200,RIBBON_NAME_197,845BB9A39F1240E5,[REF:200],0,17820
+201,RIBBON_NAME_198,845BBAA39F124298,[REF:201],0,17832
+202,RIBBON_NAME_199,845BBBA39F12444B,[REF:202],0,17844
+203,RIBBON_NAME_200,6AEAB7A390D0D0F0,[REF:203],0,17856
+204,RIBBON_NAME_201,6AEAB8A390D0D2A3,[REF:204],0,17868
+205,RIBBON_NAME_202,6AEAB9A390D0D456,[REF:205],0,17880
+206,RIBBON_NAME_203,6AEABAA390D0D609,[REF:206],0,17892
+207,RIBBON_NAME_204,6AEABBA390D0D7BC,[REF:207],0,17904
+208,RIBBON_NAME_205,6AEABCA390D0D96F,[REF:208],0,17916
+209,RIBBON_NAME_206,6AEABDA390D0DB22,[REF:209],0,17928
+210,RIBBON_NAME_207,6AEABEA390D0DCD5,[REF:210],0,17940
+211,RIBBON_NAME_208,6AEABFA390D0DE88,[REF:211],0,17952
+212,RIBBON_NAME_209,6AEAC0A390D0E03B,[REF:212],0,17964
+213,RIBBON_NAME_210,6AEE3DA390D3EA79,[REF:213],0,17976
+214,RIBBON_NAME_211,6AEE3CA390D3E8C6,[REF:214],0,17988
+215,RIBBON_NAME_212,6AEE3BA390D3E713,[REF:215],0,18000
+216,RIBBON_NAME_213,6AEE3AA390D3E560,[REF:216],0,18012
+217,RIBBON_NAME_214,6AEE41A390D3F145,[REF:217],0,18024
+218,RIBBON_NAME_215,6AEE40A390D3EF92,[REF:218],0,18036
+219,RIBBON_NAME_216,6AEE3FA390D3EDDF,[REF:219],0,18048
+220,RIBBON_NAME_217,6AEE3EA390D3EC2C,[REF:220],0,18060
+221,RIBBON_NAME_218,6AEE45A390D3F811,[REF:221],0,18072
+222,RIBBON_NAME_219,6AEE44A390D3F65E,[REF:222],0,18084
+223,RIBBON_NAME_220,6AF1C3A390D70402,[REF:223],0,18096
+224,RIBBON_NAME_221,6AF1C4A390D705B5,[REF:224],0,18108
+225,RIBBON_NAME_222,6AF1C1A390D7009C,[REF:225],0,18120
+226,RIBBON_NAME_223,6AF1C2A390D7024F,[REF:226],0,18132
+227,RIBBON_NAME_224,6AF1BFA390D6FD36,[REF:227],0,18144
+228,RIBBON_NAME_225,6AF1C0A390D6FEE9,[REF:228],0,18156
+229,RIBBON_NAME_226,6AF1BDA390D6F9D0,[REF:229],0,18168
+230,RIBBON_NAME_227,6AF1BEA390D6FB83,[REF:230],0,18180
+231,RIBBON_NAME_228,6AF1CBA390D7119A,[REF:231],0,18192
+232,RIBBON_NAME_229,6AF1CCA390D7134D,[REF:232],0,18204
+233,RIBBON_NAME_230,6AF4C9A390D9440B,[REF:233],0,18216
+234,RIBBON_NAME_231,6AF4C8A390D94258,[REF:234],0,18228
+235,RIBBON_NAME_232,6AF4CBA390D94771,[REF:235],0,18240
+236,RIBBON_NAME_233,6AF4CAA390D945BE,[REF:236],0,18252
+237,RIBBON_NAME_234,6AF4CDA390D94AD7,[REF:237],0,18264
+238,RIBBON_NAME_235,6AF4CCA390D94924,[REF:238],0,18276
+239,RIBBON_NAME_236,6AF4CFA390D94E3D,[REF:239],0,18288
+240,RIBBON_NAME_237,6AF4CEA390D94C8A,[REF:240],0,18300
+241,RIBBON_NAME_238,6AF4C1A390D93673,[REF:241],0,18312
+242,RIBBON_NAME_239,6AF4C0A390D934C0,[REF:242],0,18324
+243,RIBBON_NAME_240,6AF84FA390DC5D94,[REF:243],0,18336
+244,RIBBON_NAME_241,6AF850A390DC5F47,[REF:244],0,18348
+245,RIBBON_NAME_242,6AF851A390DC60FA,[REF:245],0,18360
+246,RIBBON_NAME_243,6AF852A390DC62AD,[REF:246],0,18372
+247,RIBBON_NAME_244,6AF84BA390DC56C8,[REF:247],0,18384
+248,RIBBON_NAME_245,6AF84CA390DC587B,[REF:248],0,18396
+249,RIBBON_NAME_246,6AF84DA390DC5A2E,[REF:249],0,18408
+250,RIBBON_NAME_247,6AF84EA390DC5BE1,[REF:250],0,18420
+251,RIBBON_NAME_248,6AF847A390DC4FFC,[REF:251],0,18432
+252,RIBBON_NAME_249,6AF848A390DC51AF,[REF:252],0,18444
+253,RIBBON_NAME_250,6AFBD5A390DF771D,[REF:253],0,18456
+254,RIBBON_NAME_251,6AFBD4A390DF756A,[REF:254],0,18468
+255,RIBBON_NAME_252,6AFBD3A390DF73B7,[REF:255],0,18480
+256,RIBBON_NAME_253,6AFBD2A390DF7204,[REF:256],0,18492
+257,RIBBON_NAME_254,6AFBD1A390DF7051,[REF:257],0,18504
+258,RIBBON_NAME_255,6AFBD0A390DF6E9E,[REF:258],0,18516
+259,RIBBON_NAME_256,6AFBCFA390DF6CEB,[REF:259],0,18528
+260,RIBBON_NAME_257,6AFBCEA390DF6B38,[REF:260],0,18540
+261,RIBBON_NAME_258,6AFBCDA390DF6985,[REF:261],0,18552
+262,RIBBON_NAME_259,6AFBCCA390DF67D2,[REF:262],0,18564
+263,RIBBON_NAME_260,6AFF3BA390E25A46,[REF:263],0,18576
+264,RIBBON_NAME_261,6AFF3CA390E25BF9,[REF:264],0,18588
+265,RIBBON_NAME_262,6AFF39A390E256E0,[REF:265],0,18600
+266,RIBBON_NAME_263,6AFF3AA390E25893,[REF:266],0,18612
+267,RIBBON_NAME_264,6AFF3FA390E26112,[REF:267],0,18624
+268,RIBBON_NAME_265,6AFF40A390E262C5,[REF:268],0,18636
+269,RIBBON_NAME_266,6AFF3DA390E25DAC,[REF:269],0,18648
+270,RIBBON_NAME_267,6AFF3EA390E25F5F,[REF:270],0,18660
+271,RIBBON_NAME_268,6AFF43A390E267DE,[REF:271],0,18672
+272,RIBBON_NAME_269,6AFF44A390E26991,[REF:272],0,18684
+273,RIBBON_NAME_270,6B02C1A390E573CF,[REF:273],0,18696
+274,RIBBON_NAME_271,6B02C0A390E5721C,[REF:274],0,18708
+275,RIBBON_NAME_272,6B02C3A390E57735,[REF:275],0,18720
+276,RIBBON_NAME_273,6B02C2A390E57582,[REF:276],0,18732
+277,RIBBON_NAME_274,6B02BDA390E56D03,[REF:277],0,18744
+278,RIBBON_NAME_275,6B02BCA390E56B50,[REF:278],0,18756
+279,RIBBON_NAME_276,6B02BFA390E57069,[REF:279],0,18768
+280,RIBBON_NAME_277,6B02BEA390E56EB6,[REF:280],0,18780
+281,RIBBON_NAME_278,6B02C9A390E58167,[REF:281],0,18792
+282,RIBBON_NAME_279,6B02C8A390E57FB4,[REF:282],0,18804
+283,RIBBON_NAME_280,6B05C7A390E7B3D8,[REF:283],0,18816
+284,RIBBON_NAME_281,6B05C8A390E7B58B,[REF:284],0,18828
+285,RIBBON_NAME_282,6B05C9A390E7B73E,[REF:285],0,18840
+286,RIBBON_NAME_283,6B05CAA390E7B8F1,[REF:286],0,18852
+287,RIBBON_NAME_284,6B05CBA390E7BAA4,[REF:287],0,18864
+288,RIBBON_NAME_285,6B05CCA390E7BC57,[REF:288],0,18876
+289,RIBBON_NAME_286,6B05CDA390E7BE0A,[REF:289],0,18888
+290,RIBBON_NAME_287,6B05CEA390E7BFBD,[REF:290],0,18900
+291,RIBBON_NAME_288,6B05BFA390E7A640,[REF:291],0,18912
+292,RIBBON_NAME_289,6B05C0A390E7A7F3,[REF:292],0,18924
+293,RIBBON_NAME_290,6B094DA390EACD61,[REF:293],0,18936
+294,RIBBON_NAME_291,6B094CA390EACBAE,[REF:294],0,18948
+295,RIBBON_NAME_292,6B094BA390EAC9FB,[REF:295],0,18960
+296,RIBBON_NAME_293,6B094AA390EAC848,[REF:296],0,18972
+297,RIBBON_NAME_294,6B0951A390EAD42D,[REF:297],0,18984

@@ -1,0 +1,94 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_stationed_time,163732EE7FD7089B,[REF:0],0,364
+1,nx_stationed_login,F9D68A6C971B932F,"“Pokémon HOME”에 로그인하고 있습니다
+잠시 기다려 주십시오...",0,376
+2,nx_stationed_login_moving,2654C1EFAC981C96,"현재 이사 작업 중입니다![CLEAR]
+이사가 끝날 때까지
+“Pokémon HOME”을 이용할 수 없습니다[CLEAR]
+잠시 시간을 두고
+로그인해 주십시오",0,460
+3,nx_stationed_login_moving_ng,D0B83E0C548E1BE8,"포켓몬 뱅크에서
+이사하지 못했습니다[CLEAR]
+에러로 인해 이용을 제한 중입니다
+고객센터에 문의해주시기 바랍니다",0,620
+4,nx_stationed_login_moving_retry1,6CDFF67E2B1206B6,"포켓몬 뱅크에서
+이사하지 못했습니다[CLEAR]
+“Pokémon HOME”의 박스에
+빈 공간이 부족합니다![RETURN]
+박스를 정리하고 다시 시도해 주십시오",0,740
+5,nx_stationed_login_moving_retry2,6CDFF57E2B120503,"포켓몬 뱅크에서
+이사하지 못했습니다[CLEAR]
+다시 한번 이사를 시도해 주십시오",0,900
+6,nx_stationed_login_lock_10,C7CB49F1D293AEA1,"현재 다른 단말기에서
+“Pokémon HOME”을 이용하고 있습니다![CLEAR]
+이 본체로 로그인하면 조작 중이던
+데이터가 저장되지 않을 수 있습니다[CLEAR]
+“Pokémon HOME”에 로그인하겠습니까?",0,984
+7,nx_stationed_login_lock_11,C7CB48F1D293ACEE,로그인한다,0,1204
+8,nx_stationed_login_lock_12,C7CB47F1D293AB3B,그만둔다,0,1216
+9,nx_stationed_login_lock_20,C7CECFF1D296C82A,"현재 다른 단말기에서
+“Pokémon HOME”을 이용하고 있습니다![CLEAR]
+중요한 조작을 하는 중이므로
+현재 이 본체로 로그인할 수 없습니다",0,1228
+10,nx_stationed_login_none,65EDC6D945E3E542,"현재 이 닌텐도 어카운트로는
+기존 박스에 접속할 수 없습니다[CLEAR]
+스마트폰 버전 “Pokémon HOME”에서
+닌텐도 어카운트의 연동 상황을[RETURN]
+확인해 주십시오[CLEAR]
+본체의 설정에서
+“Pokémon HOME”의 저장 데이터를 삭제하면[RETURN]
+“Pokémon HOME”을 새로 시작할 수 있습니다",0,1388
+11,nx_stationed_message,F5B60E778F34DCC1,,0,1720
+12,nx_stationed_10_N,3DF0B6C2373BBD9E,,0,1724
+13,nx_stationed_01_N_small,3C08F3C0BECFDD6C,,0,1728
+14,nx_stationed_02_N_small,40B8D9D9505A27C5,,0,1732
+15,nx_stationed_03_N_small,2C22B297AD8196B6,,0,1736
+16,nx_stationed_04_N_small,D4D8FEEA054278DF,,0,1740
+17,nx_stationed_05_N_small,67017E69E24F2F80,,0,1744
+18,nx_stationed_06_N_small,A6DB866650E19BB9,,0,1748
+19,nx_stationed_07_N_small,7F56FA029CAF85CA,,0,1752
+20,nx_stationed_08_N_small,238BBA0CB1684393,,0,1756
+21,nx_stationed_09_N_small,58163C472696B494,,0,1760
+22,nx_stationed_10_N_small,7512A608D38D8352,,0,1764
+23,nx_stationed_11_N_small,EABFEA9E7E1E3301,,0,1768
+24,nx_stationed_12_N_small,E788E80CD10C41A8,,0,1772
+25,nx_stationed_13_N_small,E7726C8951AAC007,,0,1776
+26,nx_stationed_14_N_small,BF238F76958B185E,,0,1780
+27,nx_stationed_15_N_small,D8CC1E31633BABCD,,0,1784
+28,nx_stationed_16_N_small,B8F673B968E944D4,,0,1788
+29,nx_stationed_35_N_small,D71C211FFE1AA1BB,,0,1792
+30,nx_stationed_login_none_2,34BAC98D0FE2B6CF,"이 본체에 저장된
+“Pokémon HOME”의 저장 데이터를[RETURN]
+삭제하겠습니까?",0,1796
+31,nx_stationed_login_none_3,34BAC88D0FE2B51C,"“Pokémon HOME”의 저장 데이터를
+삭제 중입니다...",0,1888
+32,nx_stationed_login_none_4,34BAC78D0FE2B369,"저장 데이터 삭제를
+완료했습니다[CLEAR]
+HOME 메뉴로 돌아가서
+“Pokémon HOME”을 종료한 다음[RETURN]
+다시 시작해 주십시오",0,1960
+33,nx_stationed_login_none_5,34BAC68D0FE2B1B6,삭제한다,0,2108
+34,nx_stationed_login_none_6,34BAC58D0FE2B003,돌아간다,0,2120
+35,nx_stationed_login_go_1,3220729DE15136F6,"“Pokémon GO”에서 전송된
+포켓몬을 찾았습니다[CLEAR]
+메인 메뉴에서 “Pokémon GO”를 선택하면
+“Pokémon HOME”에서 받을 수 있습니다",0,2132
+36,nx_stationed_message_010,F96079E0C3A33757,"저장 데이터에
+일부 문제가 발견되었습니다[CLEAR]
+맡긴 포켓몬에게는 영향이 없지만
+“Pokémon HOME”을 시작할 수 없습니다",0,2308
+37,nx_stationed_message_011,F96078E0C3A335A4,"이 본체에 저장된
+“Pokémon HOME”의 저장 데이터 설정을[RETURN]
+초기화하겠습니까?",0,2452
+38,nx_stationed_message_012,F9607BE0C3A33ABD,"“Pokémon HOME”의 저장 데이터 설정을
+초기화 중입니다...",0,2552
+39,nx_stationed_message_013,F9607AE0C3A3390A,"저장 데이터 설정의 초기화를
+완료했습니다[CLEAR]
+HOME 메뉴로 돌아가서
+“Pokémon HOME”을 종료한 다음[RETURN]
+다시 시작해 주십시오",0,2632
+40,nx_stationed_message_020,F95667E0C39AC43C,"“Pokémon HOME”을 시작할 수 없습니다
+HOME 메뉴로 돌아가서[RETURN]
+“Pokémon HOME”을 종료해 주십시오",0,2788
+41,nx_stationed_login_none_7,34BAC48D0FE2AE50,예,0,2928
+42,nx_stationed_login_none_8,34BAD38D0FE2C7CD,아니요,0,2932

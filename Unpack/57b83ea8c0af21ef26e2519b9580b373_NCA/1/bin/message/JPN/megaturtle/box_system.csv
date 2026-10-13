@@ -1,0 +1,647 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_box_index_010,1F1DBF6C8CE43914,ポケモン,0,3388
+1,nx_box_index_020,1F28316C8CED4F4F,ポケモンいちらん,0,3408
+2,	,AF66E44C86071324,[REF:2],0,3444
+3,nx_box_guide_010,EB995BBF9C61C030,[CTRL:01DA:0000]  （しぼりこみ なし）,0,3464
+4,nx_box_guide_020,EBA36DBF9C6A334B,"[CTRL:01DA:0000]  (しぼりこみ [CTRL:0204:0001,0000]/[CTRL:0204:0002,0000])",0,3532
+5,nx_box_guide_030,EBA067BF9C67F342,[CTRL:01DA:0000]  (しぼりこみちゅう…),0,3636
+6,	,AF66E44C86071324,[REF:6],0,3708
+7,nx_box_nameframe_010,D9A81028346DA738,[CTRL:0102:0000] (Lv.[CTRL:0202:0001]),0,3728
+8,nx_box_nameframe_011,D9A81128346DA8EB,[CTRL:0102:0000],0,3788
+9,nx_box_nameframe_015,D9A81528346DAFB7,タマゴ,0,3808
+10,nx_box_nameframe_020,D9B202283475E3F3,[REF:10],0,3824
+11,	,AF66E44C86071324,[REF:11],0,3844
+12,nx_box_catch_multiple,5CEE54657E408716,[CTRL:0201:0000],0,3864
+13,	,AF66E44C86071324,[REF:13],0,3884
+14,nx_box_button_000,0401AB36E6AC7441,もどる,0,3904
+15,nx_box_button_001,0401AA36E6AC728E,ヘルプ,0,3920
+16,nx_box_button_010,03FE2536E6A95AB8,おわる,0,3936
+17,nx_box_button_020,04081736E6B19773,いちらん,0,3952
+18,nx_box_button_030,0404B136E6AEB44A,いれかえ,0,3972
+19,nx_box_button_040,040F2336E6B7CA85,ひょうじきりかえ,0,3992
+20,nx_box_button_031,0404B236E6AEB5FD,[REF:20],0,4028
+21,nx_box_button_050,040B9D36E6B4B0FC,すべてリセット,0,4048
+22,nx_box_button_060,0415AF36E6BD2417,まとめてにがす,0,4080
+23,nx_box_button_065,0415AA36E6BD1B98,やめる,0,4112
+24,nx_box_button_070,0412A936E6BAE40E,しぼりこみ,0,4128
+25,nx_box_button_080,03E61B36E694B7D9,ならびかえ,0,4152
+26,nx_box_button_090,03E31536E69277D0,すべてリセット,0,4176
+27,nx_box_button_100,FC9E7036E2D9A4F6,ひとつリセット,0,4208
+28,	,AF66E44C86071324,[REF:28],0,4240
+29,nx_box_context_010,506E965A3BE1E68F,いどうする,0,4260
+30,nx_box_context_020,5064245A3BD8D054,ようすをみる,0,4284
+31,nx_box_context_030,5067AA5A3BDBE9DD,マーキング,0,4312
+32,nx_box_context_040,505D985A3BD376C2,にがす,0,4336
+33,nx_box_context_050,50609E5A3BD5B6CB,ボックスへ,0,4352
+34,nx_box_context_999,9E0B865A67BEBC83,やめる,0,4376
+35,	,AF66E44C86071324,[REF:35],0,4392
+36,nx_box_marking_010,F86E02F7B40F654F,マーキング,0,4412
+37,nx_box_marking_020,F86390F7B4064F14,けってい,0,4436
+38,nx_box_marking_030,F86716F7B409689D,[REF:38],0,4456
+39,	,AF66E44C86071324,[REF:39],0,4476
+40,nx_box_release_010,356516A162FB1D51,１ぴきだけ　にがす,0,4496
+41,nx_box_release_020,35689CA162FE36DA,まとめて　にがす,0,4536
+42,nx_box_release_030,356C02A163011A03,にがす,0,4572
+43,nx_box_release_040,356F08A163035A0C,やめる,0,4588
+44,nx_box_release_050,35728EA163067395,つづける,0,4604
+45,nx_box_release_060,357614A163098D1E,おわる,0,4624
+46,nx_box_release_msg_010,BCFD45B3B6B0F8DF,"[CTRL:0102:0000]　だけを　にがしますか？
+ほかの　ポケモンも　まとめて　にがしますか？",0,4640
+47,nx_box_release_msg_020,BCF2D3B3B6A7E2A4,"ほんとうに　[CTRL:0102:0000]を　にがしますか？
+にがした　ポケモンは　かえってきません！",0,4800
+48,nx_box_release_msg_030,BCF659B3B6AAFC2D,"ほんとうに　[CTRL:0202:0000]ひきを　にがしますか？
+にがした　ポケモンは　かえってきません！",0,4964
+49,nx_box_release_msg_040,BCEC47B3B6A28912,"[CTRL:0102:0000]を　にがしてあげた
+ばいばい　[CTRL:0102:0000]！",0,5136
+50,nx_box_release_msg_050,BCEFCDB3B6A5A29B,"[CTRL:0102:0000]たちを　にがしてあげた
+ばいばい　みんな！",0,5236
+51,nx_box_release_msg_060,BCE53BB3B69C5600,"これいじょう　にがせません！[CLEAR]
+いちどの　れんどうで　にがせるのは
+[CTRL:0203:0000,0000]ひき　まで　です[CLEAR]
+さらに　ポケモンを　にがしたい　ばあいは
+いったん　レポートに　きろくして　ください",0,5340
+52,nx_box_release_msg_070,BCE8C1B3B69F6F89,ポケモンを　にがさないで　おわりますか？,0,5724
+53,nx_box_release_msg_080,BD14CFB3B6C4C23E,この　ポケモンは　にがせません！,0,5808
+54,nx_box_release_msg_081,BD14D0B3B6C4C3F1,"スマートフォンばんで　おきにいりに　している
+ポケモンは　にがせません！",0,5876
+55,nx_box_release_msg_090,BD1855B3B6C7DBC7,タマゴを　にがすことは　できません！,0,6024
+56,	,AF66E44C86071324,[REF:56],0,6100
+57,nx_box_operation_010,43F3BD16C47B6A65,[REF:57],0,6120
+58,nx_box_operation_020,43F74316C47E83EE,[REF:58],0,6140
+59,nx_box_operation_030,43FAC916C4819D77,[REF:59],0,6160
+60,nx_box_operation_040,43E2BF16C46CFA98,[REF:60],0,6180
+61,	,AF66E44C86071324,[REF:61],0,6200
+62,nx_box_pokedata_010,786A1E4480312115,[CTRL:0102:0000],0,6220
+63,nx_box_pokedata_020,786DA44480343A9E,Lv.[CTRL:0202:0000],0,6240
+64,nx_box_pokedata_030,78712A4480375427,[REF:64],0,6272
+65,nx_box_pokedata_031,7871294480375274,[CTRL:0189:0000],0,6292
+66,nx_box_pokedata_040,785920448022B148,せいかく,0,6312
+67,nx_box_pokedata_041,785921448022B2FB,[CTRL:0108:0000],0,6332
+68,nx_box_pokedata_050,785CA6448025CAD1,とくせい,0,6352
+69,nx_box_pokedata_051,785CA5448025C91E,[CTRL:0106:0000],0,6372
+70,nx_box_pokedata_060,78602C448028E45A,HP,0,6392
+71,nx_box_pokedata_061,78602D448028E60D,[CTRL:0202:0000],0,6404
+72,nx_box_pokedata_070,78639244802BC783,こうげき,0,6424
+73,nx_box_pokedata_071,78639144802BC5D0,[CTRL:0202:0000],0,6444
+74,nx_box_pokedata_080,784BA84480175B04,ぼうぎょ,0,6464
+75,nx_box_pokedata_081,784BA94480175CB7,[CTRL:0202:0000],0,6484
+76,nx_box_pokedata_090,784F2E44801A748D,とくこう,0,6504
+77,nx_box_pokedata_091,784F2D44801A72DA,[CTRL:0202:0000],0,6524
+78,nx_box_pokedata_100,7FC9D3448400D6D7,とくぼう,0,6544
+79,nx_box_pokedata_101,7FC9D2448400D524,[CTRL:0202:0000],0,6564
+80,nx_box_pokedata_110,7FC6CD4483FE96CE,すばやさ,0,6584
+81,nx_box_pokedata_111,7FC6CE4483FE9881,[CTRL:0202:0000],0,6604
+82,nx_box_pokedata_120,7FC3474483FB7D45,[CTRL:0107:0000],0,6624
+83,nx_box_pokedata_none_1,87AEB72D8BE2523E,－,0,6644
+84,nx_box_pokedata_none_2,87AEB62D8BE2508B,－－－－－,0,6652
+85,	,AF66E44C86071324,[REF:85],0,6676
+86,nx_box_boxname_default_010,36A3274EA11CD2B0,HOME[CTRL:0202:0000],0,6696
+87,nx_box_boxname_default_020,36AD394EA12545CB,ボックス[CTRL:0202:0000],0,6732
+88,nx_box_boxname_010,D0FE60B9DF49C356,[CTRL:01C0:0000],0,6768
+89,nx_box_boxname_030,D0F774B9DF43C6A4,ボックススペース [CTRL:0201:0000]/[CTRL:0201:0001],0,6788
+90,nx_box_boxname_040,D0F46EB9DF41869B,さいしん30,0,6864
+91,nx_box_boxname_050,D0F0E8B9DF3E6D12,フリーボックス,0,6892
+92,nx_box_boxpage_010,1D8AD436B757FC46,[CTRL:0202:0000]/[CTRL:0202:0001],0,6924
+93,nx_box_boxpage_030,1D83E836B751FF94,[REF:93],0,6964
+94,nx_box_switching_010,49CF13AA54B9496C,ボックス,0,6984
+95,nx_box_switching_020,49D925AA54C1BC87,もどる,0,7004
+96,nx_box_switching_030,49D59FAA54BEA2FE,さいしん30,0,7020
+97,	,AF66E44C86071324,[REF:97],0,7048
+98,nx_box_boxshumbnail_010,6EDC950F42D305CE,[CTRL:0201:0000]/[CTRL:0201:0001],0,7068
+99,	,AF66E44C86071324,[REF:99],0,7108
+100,nx_box_save_010,09A43B773847465D,はい,0,7128
+101,nx_box_save_020,09A7A177384A2986,いいえ,0,7140
+102,nx_box_save_030,09AB2777384D430F,きろくして　おわる,0,7156
+103,nx_box_save_040,09931D773838A030,きろくしないで　おわる,0,7196
+104,nx_box_save_050,0996A377383BB9B9,このまま　つづける,0,7244
+105,nx_box_save_msg_010,849A26FC5D7272F3,"げんざいの　ボックスの　じょうたいを
+レポートに　きろくして　おわりますか？",0,7284
+106,nx_box_save_msg_011,849A25FC5D727140,"『？』アイコンが　ついた　ポケモンが　います！[CLEAR]
+このまま　レポートを　すると　そのポケモンを
+ひきだせるソフトが　すくなく　なります……[CLEAR]
+げんざいの　ボックスの　じょうたいを
+レポートに　きろくして　おわりますか？",0,7440
+107,nx_box_save_msg_012,849A28FC5D727659,"ポケモンが　おぼえられる　わざは
+ソフトによって　ことなるので[CLEAR]
+ソフトごとに　わざとPPを　きおくしていて
+ひきだすソフトに　あわせて　おぼえなおします[CLEAR]
+げんざいの　ボックスの　じょうたいを
+レポートに　きろくして　おわりますか？",0,7896
+108,nx_box_save_msg_013,849A27FC5D7274A6,"『？』アイコンが　ついた　ポケモンが　います！[CLEAR]
+このまま　レポートを　かくと　そのポケモンを
+ひきだせるソフトが　すくなくなります[CLEAR]
+また　ポケモンが　おぼえられる　わざは
+ソフトによって　ことなるので[CLEAR]
+ソフトごとに　わざとPPを　きおくしていて
+ひきだすソフトに　あわせて　おぼえなおします[CLEAR]
+げんざいの　ボックスの　じょうたいを
+レポートに　きろくして　おわりますか？",0,8384
+109,nx_box_save_msg_020,849034FC5D6A3638,"レポートに　きろく　しています…
+『Pokémon HOME』を　しゅうりょう　しないでください",0,9172
+110,nx_box_save_msg_030,8493BAFC5D6D4FC1,レポートに　しっかり　きろくした！,0,9368
+111,nx_box_save_msg_040,84A4B8FC5D7BBF8E,"ゲームソフトの　げんごと　あわない
+ボックスの　なまえが　へんこう　されました！",0,9440
+112,nx_box_save_msg_040,84A4B8FC5D7BBF8E,[REF:112],0,9604
+113,nx_box_save_msg_050,84A7BEFC5D7DFF97,[REF:113],0,9624
+114,nx_box_save_msg_055,84A7B9FC5D7DF718,"ボックスの　じょうたいが　きろく　されません！
+ほんとうに　よろしいですか？",0,9644
+115,nx_box_save_msg_060,849DACFC5D758C7C,"レポートに　きろく　しないで　もどります
+『Pokémon HOME』を　しゅうりょう　しないでください",0,9800
+116,nx_box_save_msg_070,84A132FC5D78A605,"『？』アイコンが　ついた　ポケモンが　います！
+
+『ポケットモンスター Let's Go! ピカチュウ』
+『ポケットモンスター Let's Go! イーブイ』　から
+あずけたポケモンを　ほかのソフトに　ひきだすと
+『ポケットモンスター Let's Go! ピカチュウ』
+『ポケットモンスター Let's Go! イーブイ』　へは
+ひきだせなく　なります",0,10012
+117,nx_box_save_msg_080,847BB0FC5D58ACE2,"ポケモンの　おぼえられるわざ　や　とくせいは
+ソフトに　よって　ことなるため
+わざ　PP　とくせいは　ソフトごとに　きおくして
+ひきだすソフトに　あわせた　ないようになります
+
+ほかのソフトで　おぼえていたわざは
+『Pokémon HOME』から　ポケモンを　ひきだすときに
+おもいだすことが　できます",0,10720
+118,nx_box_save_msg_085,847BADFC5D58A7C9,"『ポケットモンスター スカーレット』
+『ポケットモンスター バイオレット』で
+てにいれた　ポケモンを
+『Pokémon LEGENDS アルセウス』に
+ひきだすと　ポケモンの　IDNo.が　かわります
+
+『Pokémon HOME』に　あずけいれると
+もとの　ポケモンの　IDNo.に　もどります",0,11328
+119,nx_box_save_msg_090,847F36FC5D5BC66B,[CTRL:0200:0000]/[CTRL:0200:0001],0,11924
+120,nx_box_save_msg_095,847F39FC5D5BCB84,ごちゅうい！,0,11964
+121,nx_box_save_msg_100,8DAD5BFC62B496B5,"『ポケモン ブリリアントダイヤモンド』
+『ポケモン シャイニングパール』で
+てにいれた　ポケモンを
+『ポケモン スカーレット』
+『ポケモン バイオレット』　のなかで
+すごいとっくん　をさせたばあい
+レベル100に　ならないと
+『ポケモン ブリリアントダイヤモンド』
+『ポケモン シャイニングパール』へ
+ひきだせなく　なります",0,11992
+122,	,AF66E44C86071324,[REF:122],0,12644
+123,nx_box_msg_010,83083F333E19AFED,"この　ソフトでは
+ひきだせない　ポケモンです！",0,12664
+124,nx_box_msg_011,83083E333E19AE3A,"この　ソフトでは　ひきだせない
+ポケモンが　ふくまれて　います！",0,12760
+125,nx_box_msg_012,83083D333E19AC87,"いれかえさきに　れんどうちゅうの　ソフトで
+ひきだせない　ポケモンが　います！",0,12892
+126,nx_box_msg_015,83083A333E19A76E,"『Pokémon HOME』には
+あずけられない　ポケモンです！",0,13052
+127,nx_box_msg_016,830839333E19A5BB,"『Pokémon HOME』には　あずけられない
+ポケモンが　ふくまれて　います！",0,13184
+128,nx_box_msg_017,830838333E19A408,"いれかえさきに　『Pokémon HOME』へ
+あずけられない　ポケモンが　います！",0,13352
+129,nx_box_msg_020,830BA5333E1C9316,"バトルメンバーの　ポケモンは
+あずけいれや　ひきだしが　できません！",0,13524
+130,nx_box_msg_021,830BA6333E1C94C9,"てもちの　ポケモンは
+あずけいれや　ひきだしが　できません！",0,13664
+131,nx_box_msg_030,830F2B333E1FAC9F,"こうかんに　だしている　ポケモンは
+あずけいれや　ひきだしが　できません！",0,13788
+132,nx_box_msg_035,830F26333E1FA420,"『Pokémon HOME』に
+タマゴを　あずけることは　できません！",0,13940
+133,nx_box_msg_036,830F29333E1FA939,"『Pokémon HOME』から
+タマゴを　ひきだすことは　できません！",0,14084
+134,nx_box_msg_040,82F721333E0B09C0,"『？』アイコンが　ついた　ポケモンは　レポートを
+すると　ひきだせるソフトが　すくなく　なります！",0,14232
+135,nx_box_msg_050,82FAA7333E0E2349,いれかえ　できない　ボックスです！,0,14432
+136,nx_box_msg_060,82FE2D333E113CD2,"この　ゲームソフトの　ボックスは
+なまえの　へんこうが　できません！",0,14504
+137,nx_box_msg_061,82FE2E333E113E85,"ひょうじげんごが　ゲームソフトと　ちがうため
+なまえの　へんこうが　できません！",0,14644
+138,nx_box_msg_070,8301B3333E14565B,"ボックスの　いちらんを　ひょうじする　モード
+Yボタンで　いれかえを　することも　できます",0,14808
+139,nx_box_msg_080,832029333E2E1C6C,"これまでの　れんどうで　『Pokémon HOME』に
+あずけられた　ポケモン　さいしん　30ぴきを[RETURN]
+かんたんに　みつけることが　できる　モードです",0,14992
+140,nx_box_msg_090,8323AF333E3135F5,"フリーボックスで　あつかえる
+ポケモンの　かずは　30ぴきまで　です",0,15304
+141,nx_box_msg_100,8C1B5433435B9D4F,[REF:141],0,15444
+142,nx_box_msg_110,8C17CE33435883C6,[REF:142],0,15464
+143,nx_box_msg_120,8C1468334355A09D,"この　ポケモンは
+あずけいれや　ひきだしが　できません！",0,15484
+144,nx_box_msg_150,8C0A5633434D2D82,"　『Pokémon HOME』の　ボックスに
+わざを　へんこうした　ポケモンが　います！[CLEAR]
+　『Pokémon HOME』に　あずけた　ポケモンは
+わざの　へんこうが　きろくされません！",0,15600
+145,nx_box_msg_140,8C0D5C33434F6D8B,"　『Pokémon HOME』の　ボックスに
+わざを　へんこうした　ポケモンが　ふくまれて　います！[CLEAR]
+　『Pokémon HOME』に　あずけた　ポケモンは
+わざの　へんこうが　きろくされません！",0,15984
+146,	,AF66E44C86071324,[REF:146],0,16392
+147,nx_box_alone_010,29DA684996638307,　『Pokémon HOME』の　ボックスデータ,0,16412
+148,nx_box_alone_020,29D05649965B0FEC,あずけているかず,0,16512
+149,nx_box_alone_021,29D05749965B119F,"[CTRL:0203:0000,0000]/[CTRL:0203:0001,0000]",0,16548
+150,nx_box_alone_030,29D3DC49965E2975,からっぽのボックス,0,16596
+151,nx_box_alone_031,29D3DB49965E27C2,"[CTRL:0203:0000,0000]",0,16636
+152,nx_box_alone_040,29C96A499655133A,むかえいれるボックス,0,16660
+153,nx_box_alone_041,29C96B49965514ED,[CTRL:0202:0000],0,16704
+154,nx_box_alone_none,E11FA23D148E4650,---,0,16724
+155,	,AF66E44C86071324,[REF:155],0,16740
+156,nx_box_alone_msg_yes,8FD29780ACB18ECB,[REF:156],0,16760
+157,nx_box_alone_msg_no,69D3CF8F4D5E5F5F,[REF:157],0,16780
+158,	,AF66E44C86071324,[REF:158],0,16800
+159,nx_box_applet_010,FA33F711C9978B4C,[REF:159],0,16820
+160,nx_box_applet_020,FA3E8911C9A0D7E7,[REF:160],0,16840
+161,	,AF66E44C86071324,[REF:161],0,16860
+162,nx_box_adddata_010,8C22C8AC79DB8CBB,ラベル,0,16880
+163,nx_box_adddata_020,8C18B6AC79D319A0,ボックス,0,16896
+164,nx_box_adddata_021,8C18B7AC79D31B53,[REF:164],0,16916
+165,	,AF66E44C86071324,[REF:165],0,16936
+166,nx_box_list_search_title,B4D5556B85248BD6,しぼりこみじょうけん,0,16956
+167,nx_box_list_search_race,4BE24885284BC085,ポケモン,0,17000
+168,nx_box_list_search_mf,AB902AE45B60E463,せいべつ,0,17020
+169,nx_box_list_search_type1,6BF6B0E322C6A0FB,タイプ１,0,17040
+170,nx_box_list_search_type2,6BF6B1E322C6A2AE,タイプ２,0,17060
+171,nx_box_list_search_personal,328467F0CE3B4A00,せいかく,0,17080
+172,nx_box_list_search_marking,FEB1129802DB375F,マーキング,0,17100
+173,nx_box_list_search_graduate,D27CE397978EA655,しゅっしんマーク,0,17124
+174,nx_box_list_search_skill1,E18AA8EF63634CE4,わざ１,0,17160
+175,nx_box_list_search_skill2,E18AABEF636351FD,わざ２,0,17176
+176,nx_box_list_search_skill3,E18AAAEF6363504A,わざ３,0,17192
+177,nx_box_list_search_skill4,E18AA5EF636347CB,わざ４,0,17208
+178,nx_box_list_search_chara,4C54E4775F4D43C7,とくせい,0,17224
+179,nx_box_list_search_parent,A6F4248A97384D80,おや,0,17244
+180,nx_box_list_search_color,DD6E9AA14EA41BF7,いろちがい,0,17256
+181,nx_box_list_search_pokerus,3423579E7B213D19,ポケルス,0,17280
+182,nx_box_list_search_pokedex,8AA6FA9EAC1A1EFE,ずかんピックアップ,0,17300
+183,nx_box_list_search_moving,E5DAEF28C42A9F26,ひきだせるソフト,0,17340
+184,nx_box_list_search_label,801E255792BE09BE,ラベル,0,17376
+185,	,AF66E44C86071324,[REF:185],0,17392
+186,nx_box_skill_set_010,E6C0730ACF4F10AE,わざをおもいだす,0,17412
+187,nx_box_skill_set_020,E6BCED0ACF4BF725,タイプ,0,17448
+188,nx_box_skill_set_030,E6B9E70ACF49B71C,PP,0,17464
+189,nx_box_skill_set_040,E6B6610ACF469D93,[CTRL:0201:0000],0,17476
+190,nx_box_skill_set_050,E6B2FB0ACF43BA6A,ぶんるい,0,17496
+191,nx_box_skill_set_060,E6AF750ACF40A0E1,いりょく,0,17516
+192,nx_box_skill_set_070,E6ABEF0ACF3D8758,[CTRL:0202:0000],0,17536
+193,nx_box_skill_set_080,E6A8E90ACF3B474F,めいちゅう,0,17556
+194,nx_box_skill_set_090,E6A5630ACF382DC6,[CTRL:0202:0000],0,17580
+195,nx_box_skill_set_100,DDADBE0ACA0DC66C,わざをわすれる,0,17600
+196,nx_box_skill_set_110,DDB1440ACA10DFF5,"[CTRL:0107:0000]を
+わすれますか？",0,17632
+197,nx_box_skill_set_120,DDB44A0ACA131FFE,"[CTRL:0107:0000]を
+わすれました！",0,17688
+198,nx_box_skill_set_130,DDB7D00ACA163987,"つかえる　わざが　なくなります！
+わすれることは　できません",0,17744
+199,nx_box_skill_set_140,DDA0460ACA027028,ごじゅうおんじゅん,0,17868
+200,nx_box_skill_set_150,DDA34C0ACA04B031,はつどうじかん,0,17908
+201,nx_box_skill_set_160,DDA6D20ACA07C9BA,[REF:201],0,17940
+202,	,AF66E44C86071324,[REF:202],0,17960
+203,nx_box_list_search_nil,F13636074BFA870F,じょうけんにあう　ポケモンが　いません！,0,17980
+204,	,AF66E44C86071324,[REF:204],0,18064
+205,nx_box_list_search_head_race,1A93531C23FE656A,ポケモンで　さがす,0,18084
+206,nx_box_list_search_head_mf,20163C142C2DA0E8,せいべつで　さがす,0,18124
+207,nx_box_list_search_head_type,F5579B0A64A7115F,タイプで　さがす,0,18164
+208,nx_box_list_search_head_personal,EAA83B894BA6A4C7,せいかくで　さがす,0,18200
+209,nx_box_list_search_head_marking,215A61C518C45C8E,マーキングで　さがす,0,18240
+210,nx_box_list_search_head_graduate,A5A019A5A9F75AD6,しゅっしんマークで　さがす,0,18284
+211,nx_box_list_search_head_skill,DB146DB093CFB28C,おぼえているわざで　さがす,0,18340
+212,nx_box_list_search_head_chara,D4B8CDADBB81A2FA,とくせいで　さがす,0,18396
+213,nx_box_list_search_head_parent,EECA8C01FC4A99C7,おやめいで　さがす,0,18436
+214,nx_box_list_search_head_color,5F0FFFA7C184D696,いろちがいで　さがす,0,18476
+215,nx_box_list_search_head_pokerus,8A532E9246E7F1A0,ポケルスで　さがす,0,18520
+216,nx_box_list_search_head_pokedex,EF785391EF7EE2BB,ずかんピックアップで　さがす,0,18560
+217,nx_box_list_search_head_moving,7EF0462AF6D70D89,ひきだせるソフトで　さがす,0,18620
+218,nx_box_list_search_head_label,EB546C298C1A511F,ラベルで　さがす,0,18676
+219,	,AF66E44C86071324,[REF:219],0,18712
+220,nx_box_list_mf_01,97CEE218AF999482,♂,0,18732
+221,nx_box_list_mf_02,97CEE118AF9992CF,♀,0,18740
+222,nx_box_list_mf_03,97CEE018AF99911C,せいべつなし,0,18748
+223,	,AF66E44C86071324,[REF:223],0,18776
+224,nx_box_list_type_01,19C01AC32B99FE4B,ノーマル,0,18796
+225,nx_box_list_type_02,19C01BC32B99FFFE,かくとう,0,18816
+226,nx_box_list_type_03,19C01CC32B9A01B1,ひこう,0,18836
+227,nx_box_list_type_04,19C01DC32B9A0364,どく,0,18852
+228,nx_box_list_type_05,19C01EC32B9A0517,じめん,0,18864
+229,nx_box_list_type_06,19C01FC32B9A06CA,いわ,0,18880
+230,nx_box_list_type_07,19C020C32B9A087D,むし,0,18892
+231,nx_box_list_type_08,19C011C32B99EF00,ゴースト,0,18904
+232,nx_box_list_type_09,19C012C32B99F0B3,はがね,0,18924
+233,nx_box_list_type_10,19C39FC32B9D1621,ほのお,0,18940
+234,nx_box_list_type_11,19C39EC32B9D146E,みず,0,18956
+235,nx_box_list_type_12,19C39DC32B9D12BB,くさ,0,18968
+236,nx_box_list_type_13,19C39CC32B9D1108,でんき,0,18980
+237,nx_box_list_type_14,19C3A3C32B9D1CED,エスパー,0,18996
+238,nx_box_list_type_15,19C3A2C32B9D1B3A,こおり,0,19016
+239,nx_box_list_type_16,19C3A1C32B9D1987,ドラゴン,0,19032
+240,nx_box_list_type_17,19C3A0C32B9D17D4,あく,0,19052
+241,nx_box_list_type_18,19C397C32B9D0889,フェアリー,0,19064
+242,nx_box_list_type_19,19C396C32B9D06D6,[REF:242],0,19088
+243,	,AF66E44C86071324,[REF:243],0,19108
+244,nx_box_list_seikaku_1,136CEBEEF7FB1972,[REF:244],0,19128
+245,nx_box_list_seikaku_2,136CEAEEF7FB17BF,[REF:245],0,19148
+246,nx_box_list_seikaku_3,136CE9EEF7FB160C,[REF:246],0,19168
+247,nx_box_list_seikaku_4,136CE8EEF7FB1459,[REF:247],0,19188
+248,nx_box_list_seikaku_5,136CE7EEF7FB12A6,[REF:248],0,19208
+249,nx_box_list_seikaku_6,136CE6EEF7FB10F3,[REF:249],0,19228
+250,nx_box_list_seikaku_7,136CE5EEF7FB0F40,[REF:250],0,19248
+251,nx_box_list_seikaku_8,136CF4EEF7FB28BD,[REF:251],0,19268
+252,nx_box_list_seikaku_9,136CF3EEF7FB270A,[REF:252],0,19288
+253,nx_box_list_seikaku_10,FD2E290F5FABEB26,[REF:253],0,19308
+254,nx_box_list_seikaku_11,FD2E2A0F5FABECD9,[REF:254],0,19328
+255,nx_box_list_seikaku_12,FD2E270F5FABE7C0,[REF:255],0,19348
+256,nx_box_list_seikaku_13,FD2E280F5FABE973,[REF:256],0,19368
+257,nx_box_list_seikaku_14,FD2E2D0F5FABF1F2,[REF:257],0,19388
+258,nx_box_list_seikaku_15,FD2E2E0F5FABF3A5,[REF:258],0,19408
+259,nx_box_list_seikaku_16,FD2E2B0F5FABEE8C,[REF:259],0,19428
+260,nx_box_list_seikaku_17,FD2E2C0F5FABF03F,[REF:260],0,19448
+261,nx_box_list_seikaku_18,FD2E310F5FABF8BE,[REF:261],0,19468
+262,nx_box_list_seikaku_19,FD2E320F5FABFA71,[REF:262],0,19488
+263,nx_box_list_seikaku_20,FD2AC30F5FA907FD,[REF:263],0,19508
+264,nx_box_list_seikaku_21,FD2AC20F5FA9064A,[REF:264],0,19528
+265,nx_box_list_seikaku_22,FD2AC10F5FA90497,[REF:265],0,19548
+266,nx_box_list_seikaku_23,FD2AC00F5FA902E4,[REF:266],0,19568
+267,nx_box_list_seikaku_24,FD2ABF0F5FA90131,[REF:267],0,19588
+268,nx_box_list_seikaku_25,FD2ABE0F5FA8FF7E,[REF:268],0,19608
+269,nx_box_list_seikaku_1_m,E113301F90E3512E,がんばりや＋ミント,0,19628
+270,nx_box_list_seikaku_2_m,D9C4E31F8D22BF57,さみしがり＋ミント,0,19668
+271,nx_box_list_seikaku_3_m,D19CBA1F88A8C6EC,ゆうかん＋ミント,0,19708
+272,nx_box_list_seikaku_4_m,C6E7B51F8203D36D,いじっぱり＋ミント,0,19744
+273,nx_box_list_seikaku_5_m,C0728C1F7EFB6F82,やんちゃ＋ミント,0,19784
+274,nx_box_list_seikaku_6_m,B5BD3F1F785601AB,ずぶとい＋ミント,0,19820
+275,nx_box_list_seikaku_7_m,AD95161F73DC0940,すなお＋ミント,0,19856
+276,nx_box_list_seikaku_8_m,3071811FBE3E9DD1,のんき＋ミント,0,19888
+277,nx_box_list_seikaku_9_m,2848581FB9C2F266,わんぱく＋ミント,0,19920
+278,nx_box_list_seikaku_10_m,0F2985A39B479C02,のうてんき＋ミント,0,19956
+279,nx_box_list_seikaku_11_m,159EAEA39E4FFFED,おくびょう＋ミント,0,19996
+280,nx_box_list_seikaku_12_m,FC4C0FA3902835C0,せっかち＋ミント,0,20036
+281,nx_box_list_seikaku_13_m,047438A394A22E2B,まじめ＋ミント,0,20072
+282,nx_box_list_seikaku_14_m,2FCA29A3AD2F7DAE,ようき＋ミント,0,20104
+283,nx_box_list_seikaku_15_m,3A7F32A3B3D477F9,むじゃき＋ミント,0,20136
+284,nx_box_list_seikaku_16_m,2053B3A3A4F4F36C,ひかえめ＋ミント,0,20172
+285,nx_box_list_seikaku_17_m,287BDCA3A96EEBD7,おっとり＋ミント,0,20208
+286,nx_box_list_seikaku_18_m,53D1CDA3C1FC3B5A,れいせい＋ミント,0,20244
+287,nx_box_list_seikaku_19_m,5B20D6A3C5BE0CA5,てれや＋ミント,0,20280
+288,nx_box_list_seikaku_20_m,6CDF0F9B431AB111,うっかりや＋ミント,0,20312
+289,nx_box_list_seikaku_21_m,64B6E69B3EA0B8A6,おだやか＋ミント,0,20352
+290,nx_box_list_seikaku_22_m,5D67D99B3ADEE08F,おとなしい＋ミント,0,20388
+291,nx_box_list_seikaku_23_m,538C909B34F31D44,なまいき＋ミント,0,20428
+292,nx_box_list_seikaku_24_m,4C3D6B9B31311C65,しんちょう＋ミント,0,20464
+293,nx_box_list_seikaku_25_m,4189629B2A8DD51A,きまぐれ＋ミント,0,20504
+294,	,AF66E44C86071324,[REF:294],0,20540
+295,nx_box_list_graduate_01,D3970A8349B80418,マークなし,0,20560
+296,	,AF66E44C86071324,[REF:296],0,20584
+297,nx_box_list_color_01,3F669A3DE577C658,いろちがい,0,20604
+298,nx_box_list_color_02,3F669D3DE577CB71,つうじょう,0,20628
+299,	,AF66E44C86071324,[REF:299],0,20652
+300,nx_box_list_pokerus_01,CC886724CCB5565A,ポケルスなし,0,20672
+301,	,AF66E44C86071324,[REF:301],0,20700
+302,nx_box_list_pokedex_01,05AF2CD3AA78B0E7,カントーちほう,0,20720
+303,nx_box_list_pokedex_02,05AF2DD3AA78B29A,ジョウトちほう,0,20752
+304,nx_box_list_pokedex_03,05AF2ED3AA78B44D,ホウエンちほう,0,20784
+305,nx_box_list_pokedex_04,05AF27D3AA78A868,シンオウちほう,0,20816
+306,nx_box_list_pokedex_05,05AF28D3AA78AA1B,イッシュちほう,0,20848
+307,nx_box_list_pokedex_06,05AF29D3AA78ABCE,カロスちほう,0,20880
+308,nx_box_list_pokedex_07,05AF2AD3AA78AD81,アローラちほう,0,20908
+309,nx_box_list_pokedex_08,05AF23D3AA78A19C,ガラルちほう,0,20940
+310,nx_box_list_pokedex_09,05AF24D3AA78A34F,ヒスイちほう,0,20968
+311,nx_box_list_pokedex_10,05B231D3AA7AEF3D,パルデアちほう,0,20996
+312,nx_box_list_pokedex_unkown,0E311B8F76767D74,ふめい,0,21028
+313,	,AF66E44C86071324,[REF:313],0,21044
+314,nx_box_list_moving_01,D8DD44CDBB4E4E2D,なし,0,21064
+315,	,AF66E44C86071324,[REF:315],0,21076
+316,nx_box_list_label_01,05C28278AC8C8B0B,（ラベル表示枠）,0,21096
+317,	,AF66E44C86071324,[REF:317],0,21132
+318,nx_box_list_none_3,D12262633D3EE2DB,－－－,0,21152
+319,nx_box_list_none_5,D12268633D3EED0D,－－－－－,0,21168
+320,nx_box_list_none_8,D1225B633D3ED6F6,－－－－－－－－,0,21192
+321,	,AF66E44C86071324,[REF:321],0,21228
+322,nx_box_list_head_sort,BE838C473EC4AF0E,ならびかえ,0,21248
+323,	,AF66E44C86071324,[REF:323],0,21272
+324,nx_box_list_sort_01,24A1D0223A2A487B,ボックスじゅん,0,21292
+325,nx_box_list_sort_02,24A1D1223A2A4A2E,さいきんあずけたじゅん,0,21324
+326,nx_box_list_sort_03,24A1D2223A2A4BE1,むかしあずけたじゅん,0,21372
+327,nx_box_list_sort_04,24A1D3223A2A4D94,レベルたかいじゅん,0,21416
+328,nx_box_list_sort_05,24A1D4223A2A4F47,レベルひくいじゅん,0,21456
+329,nx_box_list_sort_06,24A1D5223A2A50FA,ＨＰたかいじゅん,0,21496
+330,nx_box_list_sort_07,24A1D6223A2A52AD,ＨＰひくいじゅん,0,21532
+331,nx_box_list_sort_08,24A1C7223A2A3930,こうげきたかいじゅん,0,21568
+332,nx_box_list_sort_09,24A1C8223A2A3AE3,こうげきひくいじゅん,0,21612
+333,nx_box_list_sort_10,24A555223A2D6051,ぼうぎょたかいじゅん,0,21656
+334,nx_box_list_sort_11,24A554223A2D5E9E,ぼうぎょひくいじゅん,0,21700
+335,nx_box_list_sort_12,24A553223A2D5CEB,とくこうたかいじゅん,0,21744
+336,nx_box_list_sort_13,24A552223A2D5B38,とくこうひくいじゅん,0,21788
+337,nx_box_list_sort_14,24A559223A2D671D,とくぼうたかいじゅん,0,21832
+338,nx_box_list_sort_15,24A558223A2D656A,とくぼうひくいじゅん,0,21876
+339,nx_box_list_sort_16,24A557223A2D63B7,すばやさたかいじゅん,0,21920
+340,nx_box_list_sort_17,24A556223A2D6204,すばやさひくいじゅん,0,21964
+341,nx_box_list_sort_18,24A54D223A2D52B9,ぜんこくずかんじゅん,0,22008
+342,nx_box_list_sort_19,24A54C223A2D5106,しゅぞくめいじゅん,0,22052
+343,	,AF66E44C86071324,[REF:343],0,22092
+344,nx_box_help1_010,6699567399801466,"ここは　ポケモンボックスの　がめん！
+れんどうした　セーブデータから　ポケモンを　
+あずけたり　ひきだしたり　できる　ばしょだモン！",0,22112
+345,nx_box_help1_020,6695F073997D313D,"ZL・ZRボタンで　そうさモード　へんこう！
+あかの　カーソルは　『つうじょうモード』
+あおの　カーソルは　『いれかえモード』
+みどりの　カーソルは　『はんいモード』",0,22380
+346,nx_box_help1_025,6695EB73997D28BE,"ボックスボタンを　えらべば　ボックスを　
+いちらんで　みる　ボックススペースに　きりかえ！
+ボックスどうしの　いれかえも　できるモン！",0,22716
+347,nx_box_help1_030,6692EA73997AF134,"それから　こっちは　さいしん30ボタン！
+　『Pokémon HOME』に　さいきん　あずけた
+30ぴきの　ボックスに　アクセス　できるモン！",0,22988
+348,nx_box_help1_040,668F64739977D7AB,"ボックスの　せいりが　おわったら
+＋ボタンで　レポートに　きろくして　おわり！
+きろく　しないと　キミの　そうさが
+ぜーんぶ　なかった　ことに　なっちゃうモン！",0,23276
+349,nx_box_help2_010,3562B89246FC4A4F,[REF:349],0,23600
+350,nx_box_help2_020,3558469246F33414,"いまの　キミのプランは　フリープランだから
+３０ぴきまでの　ポケモンを　あずけられる
+『フリーボックス』が　つかえるモン！",0,23620
+351,nx_box_help2_030,355BCC9246F64D9D,"プレミアムプランで　　『Pokémon HOME』に
+たくさんの　ポケモンを　あずけていた　ばあいは
+さいごに　あずけた　３０ぴきを　ひきだせるモン！",0,23868
+352,nx_box_help2_040,3551BA9246EDDA82,[REF:352],0,24172
+353,nx_box_help2_050,3554C09246F01A8B,[REF:353],0,24192
+354,nx_box_help3_010,16ACEC6527AF83E0,"ボックス　そのままで　むかえいれるには
+『むかえいれるボックス』が　おさまるぶんの
+『からっぽのボックス』が　ひつようだモン！",0,24212
+355,nx_box_help4_010,E66CCA58B8DB0349,"　『Pokémon HOME』と　セーブデータのボックス
+りょうほうの　ポケモンを　ずらーっと　ならべて
+かくにんできる　がめんだモン！",0,24468
+356,nx_box_help4_020,E6705058B8DE1CD2,"Ｙボタンで　ならびじゅん　へんこう！
+ポケモンの　こうげきや　ぼうぎょが
+たかいじゅん　ひくいじゅん　などなど
+すきな　じゅんばんに　ならびかえるモン！",0,24744
+357,nx_box_help4_030,E673D658B8E1365B,"Ｘボタンで　いろいろな　じょうけんを　いれて
+おこのみの　ポケモンを　すばやく　チェック！
+わざや　とくせいなど　いろいろ　しぼりこめるモン！",0,25052
+358,nx_box_msg_130,8C10E23343528714,"『Pokémon GO』から　つれてきた　この　ポケモンは[CLEAR]
+この　レポートで　てにいれた　ことがないので
+ひきだす　ことが　できません",0,25340
+359,hade,F38ED1C313C0C8D5,[REF:359],0,25624
+360,nx_box_msg_018,830837333E19A255,"『Pokémon HOME』には
+げんざい　あずけられない　ポケモンです！",0,25644
+361,nx_box_msg_019,830836333E19A0A2,"『Pokémon HOME』には　げんざい　あずけられない
+ポケモンが　ふくまれて　います！",0,25796
+362,nx_box_msg_022,830BA3333E1C8FB0,"いれかえさきに　『Pokémon HOME』へ
+げんざい　あずけられない　ポケモンが　います！",0,25984
+363,nx_box_msg_023,830BA4333E1C9163,"いれかえさきに　『Pokémon HOME』へ
+げんざい　あずけられない　ポケモンが　います！",0,26176
+364,nx_box_msg_024,830BA9333E1C99E2,"いろちがい　[CTRL:0101:0000]は　この　レポートから
+すでに　あずけたことが　あります！[CLEAR]
+いろちがい　[CTRL:0101:0000]は　おなじ
+レポートから　１ひきまで　あずけられます！",0,26368
+365,nx_box_msg_025,830BAA333E1C9B95,"[CTRL:0101:0000]は　この　レポートから
+すでに　あずけたことが　あります！[CLEAR]
+[CTRL:0101:0000]は　おなじ　レポートから
+１ひきまで　あずけることが　できます！",0,26692
+366,nx_box_msg_026,830BA7333E1C967C,"[CTRL:0102:0000]に　もんだいが　あるので
+あずけることが　できません！",0,26988
+367,nx_box_msg_032,830F2D333E1FB005,"[CTRL:0102:0000]に　もんだいが　あるので
+あずけることが　できません！",0,27116
+368,nx_box_msg_027,830BA8333E1C982F,"いろちがい　[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　あずけたことが　ある
+ポケモンが　ふくまれて　います！[CLEAR]
+いろちがい　[CTRL:0101:0000]は　おなじ
+レポートから　１ひきまで　あずけられます！",0,27244
+369,nx_box_msg_028,830BAD333E1CA0AE,"[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　あずけたことが　ある
+ポケモンが　ふくまれて　います！[CLEAR]
+[CTRL:0101:0000]は　おなじ　レポートから
+１ひきまで　あずけることが　できます！",0,27628
+370,nx_box_msg_029,830BAE333E1CA261,"[CTRL:0101:0000]が　２ひきいじょう
+えらばれています！[CLEAR]
+[CTRL:0101:0000]は　おなじ　レポートから
+１ひきまで　あずけることが　できます！",0,27984
+371,nx_box_msg_031,830F2A333E1FAAEC,"いろちがい　[CTRL:0101:0000]が
+２ひきいじょう　えらばれています！[CLEAR]
+いろちがい　[CTRL:0101:0000]は　おなじ
+レポートから　１ひきまで　あずけられます！",0,28240
+372,nx_box_msg_033,830F2C333E1FAE52,"[CTRL:0102:0000]は　すごいとっくんを　していて
+レベル100に　なっていません！[CLEAR]
+レベル100に　ならないと
+ひきだすことは　できません！",0,28524
+373,nx_box_msg_034,830F27333E1FA5D3,"[CTRL:0102:0000]など　すごいとっくんを　していて
+レベル100に　なっていません！[CLEAR]
+レベル100に　ならないと
+ひきだすことは　できません！",0,28800
+374,nx_box_boxflame_syn,905496878E46A587,『Pokémon Champions』の　えんせいボックス,0,29080
+375,nx_box_boxtitle_syn_01,1022B9BCBF893AB0,えんせいしたことがある,0,29200
+376,nx_box_boxtitle_syn_02,1022BCBCBF893FC9,えんせいちゅう,0,29248
+377,nx_box_boxdata_syn_01,0BFE9757FB6FE868,"[CTRL:0203:0000,0000]",0,29280
+378,nx_box_boxdata_syn_02,0BFE9A57FB6FED81,"[CTRL:0203:0000,0000]",0,29304
+379,nx_box_button_syn_02,346E39D095D83DD6,ようすをみる,0,29328
+380,nx_box_button_syn_03,346E3AD095D83F89,えんせいさせる,0,29356
+381,nx_box_msg_syn_01,CAFC381465C07700,"げんざい　せんたくちゅうの　ポケモンを
+『Pokémon Champions』に　えんせいさせますか？",0,29388
+382,nx_box_msg_syn_02,CAFC3B1465C07C19,"えんせいちゅうです…
+『Pokémon HOME』を　しゅうりょうしないでください",0,29596
+383,nx_box_msg_syn_03,CAFC3A1465C07A66,"[CTRL:0102:0000]を
+えんせいさせました！",0,29764
+384,nx_box_msg_syn_04,CAFC3D1465C07F7F,"[CTRL:0102:0000]たち　を
+えんせいさせました！",0,29832
+385,nx_box_msg_syn_05,CAFC3C1465C07DCC,"これいじょう　せんたくすることが　できません！[CLEAR]
+いちどに　えんせいさせられるのは
+[CTRL:0201:0000]ひき　まで　です",0,29912
+386,nx_box_msg_syn_07,CAFC3E1465C08132,"えんせいせんたくちゅうの　ポケモンが
+のこっています[CLEAR]
+このまま　メインメニューに　もどりますか？",0,30140
+387,nx_box_msg_syn_08,CAFC411465C0864B,[REF:387],0,30348
+388,nx_box_msg_syn_09,CAFC401465C08498,"『Pokémon Champions』の　ボックスが
+いっぱいです[CLEAR]
+あたらしく　ポケモンを
+えんせいさせたいばあいは[CLEAR]
+『Pokémon Champions』の　ボックスに
+あきを　つくってください",0,30368
+389,nx_box_msg_syn_10,CAF8D31465BD958A,"えんせいを　ちゅうしして
+メインメニューに　もどりますか？",0,30788
+390,nx_box_msg_syn_11,CAF8D41465BD973D,[REF:390],0,30908
+391,nx_box_msg_syn_12,CAF8D11465BD9224,"この　ポケモンは
+えんせいさせることが　できません",0,30928
+392,nx_box_msg_syn_13,CAF8D21465BD93D7,"こうかんに　だしている　ポケモンは
+えんせいさせることが　できません",0,31032
+393,nx_box_msg_syn_14,CAF8CF1465BD8EBE,このポケモンは　すでに　えんせいちゅうです,0,31172
+394,nx_box_msg_syn_15,CAF8D01465BD9071,タマゴを　えんせいさせることは　できません,0,31260
+395,nx_box_list_sort_20,24A8DB223A3079DA,えんせいちゅうのポケモン,0,31348
+396,nx_box_save_msg_110,8DA9D5FC62B17D2C,"『？』アイコンが　ついた　ポケモンが　います！
+
+『Pokémon LEGENDS Z-A』に　ひきだすと
+ほかのソフトへは　ひきだせなく　なります",0,31400
+397,nx_box_help_syn1_010,F8E9C69849585A1D,"ここでは　『Pokémon Champions』と
+れんけいが　できるモン！",0,31700
+398,nx_box_help_syn1_020,F8ED2C98495B3D46,"『Pokémon HOME』に　あずけている　ポケモンを
+『Pokémon Champions』へ　えんせい　させたり
+『Pokémon Champions』から　かえってきた
+ポケモンを　かくにんしたり　できるモン！",0,31856
+399,nx_box_help_syn1_030,F8F0B298495E56CF,"えんせいちゅうの　ポケモンは
+ほかの　『ポケットモンスター』シリーズに
+つれていくことが　できなくなるモン！",0,32296
+400,nx_box_help_syn1_040,F8D8A8984949B3F0,"えんせいちゅうの　ポケモンを　ほかの
+『ポケットモンスター』シリーズに　つれていきたい　ときは
+『Pokémon Champions』で　ポケモンを
+かえす　ひつようがあるので　ちゅういして　ほしいモン！",0,32516
+401,nx_box_help_syn1_050,F8DC2E98494CCD79,"『Pokémon Champions』へ　えんせい　できる
+ポケモンの　かずは　いちどに　３０ひき　まで！
+ぜんぶで　１０００ひきまで　えんせいできるモン！",0,32928
+402,nx_box_help_syn2_010,6C4F7AC7DC98E968,"『Pokémon HOME』の　ポケモンを
+ずらーっと　ならべて　かくにんできる　がめんだモン！",0,33244
+403,nx_box_help_syn2_020,6C596CC7DCA12623,"Ｌボタンで　ならびじゅん　へんこう！
+ポケモンの　こうげきや　ぼうぎょが
+たかいじゅん　ひくいじゅん　などなど
+すきな　じゅんばんに　ならびかえるモン！",0,33440
+404,nx_box_help_syn2_030,6C5606C7DC9E42FA,"Ｒボタンで　いろいろな　じょうけんを　いれて
+おこのみの　ポケモンを　すばやく　チェック！
+わざや　とくせいなど　いろいろ　しぼりこめるモン！",0,33748
+405,nx_box_syn_save_01,2A084AD8D8D33D4E,"『Pokémon Champions』に
+えんせいさせる　ポケモンは　えんせいちゅう
+『Pokémon HOME』で　いかの　そうさが
+できなくなります
+
+・ボックスから　ほかのソフトへひきだす
+・ボックスから　にがす
+・マーキングをする",0,34036
+406,nx_box_syn_save_02,2A0849D8D8D33B9B,ごちゅうい！,0,34516
+407,nx_box_msg_syn_06,CAFC3F1465C082E5,"すでに　『Pokémon Champions』へ　[CTRL:0203:0000,0000]ひきの
+ポケモンを　えんせいしています[CLEAR]
+これいじょう　えんせいさせることは　できません",0,34544
+408,nx_box_msg_syn_16,CAF8CD1465BD8B58,"『Pokémon Champions』へ
+えんせいできない　ポケモンがいます",0,34852
+409,nx_box_msg_syn_17,CAF8CE1465BD8D0B,"えんせいさせようと　している
+ポケモンのなかに
+ぜんかい　『Pokémon Champions』に
+えんせいしたときから　すがたが
+かわっている　ポケモンが　いるようです
+
+このまま　えんせいをおこなうと
+『Pokémon Champions』での
+トレーニングのないようが
+まっさらになりますので　ちゅういしてください",0,35008
+410,nx_box_msg_syn_18,CAF8CB1465BD87F2,"このまま　『Pokémon Champions』に
+ポケモンを　えんせいさせますか？",0,35652
+411,nx_box_msg_037,830F28333E1FA786,"このソフトでは　ひきだせない　げんごの
+ポケモンです！",0,35824
+412,nx_box_msg_038,830F33333E1FBA37,"このソフトでは　ひきだせない　げんごの
+ポケモンが　ふくまれて　います！",0,35936
+413,nx_box_syn_save_03,2A0848D8D8D339E8,"『ポケットモンスター Let's Go! ピカチュウ』
+『ポケットモンスター Let's Go! イーブイ』から
+あずけたポケモンは　いちど　えんせいすると
+
+『ポケットモンスター Let's Go! ピカチュウ』
+『ポケットモンスター Let's Go! イーブイ』へ
+ひきだせなくなります
+
+ほかのソフトへは　ひきだせます",0,36084
+414,nx_box_help_syn3_010,A661DE9F63E151B7,"『Pokémon Champions』に　えんせい　したことがある
+ポケモンは　ポケモンせんたくがめんや　いちらんがめんで
+えんせいアイコンが　ひょうじされるモン！",0,36740
+415,nx_box_help_syn3_020,A657CC9F63D8DE9C,"げんざい　えんせい　している　ポケモンには
+えんせいアイコンが　ついて
+グレーアウトで　ひょうじされて　えらべないモン！",0,37072
+416,nx_box_help_msg_syn_01,8EEA3656F34221B4,"『Pokémon Champions れんけい』　について
+せつめいを　ききますか？",0,37316
+417,nx_box_help_syn_select_01,7DDA40CE79383089,れんけい　について,0,37488
+418,nx_box_help_syn_select_02,7DDA3DCE79382B70,えんせいアイコン　について,0,37528
+419,nx_box_help_syn_select_03,7DDA3ECE79382D23,やめる,0,37584
+420,nx_box_save_msg_121,8DB3E6FC62B9EE94,"GBAシリーズれんどうで　てにいれたポケモンを
+れんどうちゅうのソフトに　ひきだすと
+ポケモンの　IDNo.が　かわります
+
+『Pokémon HOME』に　あずけいれると
+もとのポケモンの　IDNo.に　もどります",0,37600

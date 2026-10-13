@@ -1,0 +1,83 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_option_index_010,D3D5D6955965FC64,Opciones,4,580
+1,	,AF66E44C86071324,[REF:1],0,600
+2,nx_option_button_000,020C276686A840F1,Atrás,4,612
+3,nx_option_button_001,020C266686A83F3E,Ayuda,4,624
+4,nx_option_button_010,0209216686A600E8,Valores por defecto,0,636
+5,	,AF66E44C86071324,[REF:5],0,676
+6,nx_option_data_account,1A7C63DB4FCD3986,[CTRL:01D9:0000],0,688
+7,nx_option_data_support_010,1B3B3B781028F808,ID de usuario,4,700
+8,nx_option_data_support_020,1B45AD7810320E43,XXXX-XXXX-XXXX-XXXX,0,728
+9,nx_option_data_ticket_010,84DE9A90FF88DC9D,Plan actual,0,768
+10,nx_option_data_ticket_040,84CD7C90FF7A3670,[REF:10],0,792
+11,nx_option_data_ticket_050,84D10290FF7D4FF9,Plan básico,0,804
+12,nx_option_data_ticket_060,84D48890FF806982,Plan prémium,0,828
+13,nx_option_data_language_010,A2AB1A90E943EFE3,Idioma,4,856
+14,nx_option_data_language_020,A2A12890E93BB328,,0,872
+15,	,AF66E44C86071324,[REF:15],0,876
+16,nx_option_bgm_010,C63A296F68446F3A,Volumen de la música,0,888
+17,nx_option_bgm_020,C636A36F684155B1,[CTRL:0200:0000],0,932
+18,nx_option_se_010,6ABDB5A028E653D0,Volumen de los efectos,0,944
+19,nx_option_se_020,6AC7C7A028EEC6EB,[CTRL:0200:0000],0,992
+20,nx_option_language_010,2404027014F8120A,Cambiar idioma,0,1004
+21,	,AF66E44C86071324,[REF:21],0,1036
+22,nx_option_comment_01,A01FCE44CB875827,Ajusta el volumen de la música de fondo.,4,1048
+23,nx_option_comment_02,A01FCF44CB8759DA,Ajusta el volumen de los efectos de sonido.,4,1132
+24,nx_option_comment_03,A01FD044CB875B8D,Cambia el idioma del programa.,0,1220
+25,	,AF66E44C86071324,[REF:25],0,1284
+26,nx_option_item_volume_00,9C85FA43A4893D7D,0,0,1296
+27,nx_option_item_volume_01,9C85F943A4893BCA,1,0,1300
+28,nx_option_item_volume_02,9C85F843A4893A17,2,0,1304
+29,nx_option_item_volume_03,9C85F743A4893864,3,0,1308
+30,nx_option_item_volume_04,9C85F643A48936B1,4,0,1312
+31,nx_option_item_volume_05,9C85F543A48934FE,5,0,1316
+32,	,AF66E44C86071324,[REF:32],0,1320
+33,nx_option_item_language_title,CF260B0E11C2DF7D,Cambiar idioma,0,1332
+34,nx_option_item_language_01,BC4C6250CB27F4C6,Japonés (hiragana),0,1364
+35,nx_option_item_language_02,BC4C6150CB27F313,Japonés (kanji),0,1404
+36,nx_option_item_language_03,BC4C6050CB27F160,Inglés,4,1436
+37,nx_option_item_language_04,BC4C6750CB27FD45,Francés,0,1452
+38,nx_option_item_language_05,BC4C6650CB27FB92,Alemán,4,1468
+39,nx_option_item_language_06,BC4C6550CB27F9DF,Italiano,4,1484
+40,nx_option_item_language_07,BC4C6450CB27F82C,Coreano,0,1504
+41,nx_option_item_language_08,BC4C6B50CB280411,Español (España),4,1520
+42,nx_option_item_language_09,BC4C6A50CB28025E,Chino simplificado,0,1556
+43,nx_option_item_language_10,BC48DD50CB24DCF0,Chino tradicional,0,1596
+44,nx_option_item_language_11,BC48DE50CB24DEA3,Español (Latinoamérica),4,1632
+45,	,AF66E44C86071324,[REF:45],0,1680
+46,nx_option_msg_yes,79827F0E5AC6E477,Sí,0,1692
+47,nx_option_msg_no,DDF6627943AD136B,No,0,1700
+48,nx_option_msg_010,8BA4210D4302527D,"Se ha cambiado el idioma de Pokémon HOME.[CLEAR]
+¿Quieres guardar los cambios realizados y volver a la pantalla
+del título?",0,1708
+49,nx_option_msg_020,8BA7870D430535A6,"¿Quieres restablecer los valores de configuración iniciales
+para el volumen del sonido y el idioma?",0,1948
+50,nx_option_msg_030,8BAB0D0D43084F2F,"Se ha cambiado el idioma de Pokémon HOME.[CLEAR]
+Se procederá a guardar los cambios realizados y regresarás a
+la pantalla del título.",0,2148
+51,nx_option_msg_040,8B93830D42F485D0,"Guardando los cambios...
+No cierres Pokémon HOME.",0,2408
+52,	,AF66E44C86071324,[REF:52],0,2508
+53,nx_option_help_010,222D69D9F5432327,"Este es el menú de opciones de Pokémon HOME. Aquí podrás ajustar
+el volumen de la música y de los efectos de sonido, cambiar el idioma...
+¡y consultar tu plan, que siempre viene bien!",4,2520
+54,nx_option_help_015,222D64D9F5431AA8,"Aunque, eso sí, lo que no podrás ver es cuánto dura tu plan prémium...
+Para saberlo, consulta en la tienda donde lo compraste, ¿vale?",4,2888
+55,nx_option_help_020,2222D7D9F539D68C,"Y un consejo: ¡no pierdas de vista el ID de usuario que sale en esta
+pantalla! Te hará falta si tienes algún problema con Pokémon HOME
+y necesitas ponerte en contacto con el servicio de atención al cliente.",0,3156
+56,	,AF66E44C86071324,[REF:56],0,3572
+57,nx_option_comment_04,A01FC944CB874FA8,Ver las condiciones de uso y la política de privacidad.,0,3584
+58,nx_option_policy_010,6657138BEFA39CA6,Condiciones de uso y política de privacidad,0,3696
+59,nx_option_policy_msg_010,D8BE5005D9C7FB1C,"¿Quieres ver las condiciones de uso y la política de
+privacidad?",0,3784
+60,nx_option_policy_msg_020,D8C86205D9D06E37,Condiciones de uso,0,3916
+61,nx_option_policy_msg_030,D8C4DC05D9CD54AE,Política de privacidad,0,3956
+62,nx_option_policy_msg_040,D8B3DE05D9BEE4E1,Salir,0,4004
+63,nx_option_policy_link_msg_010,CE65E5AB6FF38E29,Residentes en Japón,0,4016
+64,nx_option_policy_link_msg_020,CE68EBAB6FF5CE32,Residentes en Corea,0,4056
+65,nx_option_policy_link_msg_030,CE6C71AB6FF8E7BB,Residentes en otras regiones de Asia (exceptuando Japón y Corea),0,4096
+66,nx_option_policy_link_msg_040,CE6FF7AB6FFC0144,Residentes en otras regiones,0,4228
+67,	,AF66E44C86071324,[REF:67],0,4288
+68,nx_option_companyinfo_010,1FE7B8AFB5ED75C3,Información de la empresa,4,4300
+69,nx_option_companyinfo_msg_010,21D4273A24E5744D,Consulta una serie de datos relativos a la empresa.,0,4352

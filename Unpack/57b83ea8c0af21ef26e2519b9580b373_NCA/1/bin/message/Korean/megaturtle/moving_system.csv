@@ -1,0 +1,142 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_moving_index_010,CB86EFAD618F68B3,이사,0,604
+1,	,AF66E44C86071324,[REF:1],0,612
+2,nx_moving_button_000,14CC139DFB8CF9E0,돌아간다,0,624
+3,nx_moving_button_001,14CC149DFB8CFB93,도움말,0,636
+4,	,AF66E44C86071324,[REF:4],0,644
+5,nx_moving_guide_010,68FAD02E6B8472FB,"닌텐도 3DS의 “포켓몬 뱅크”에서
+포켓몬을 데려올 수 있습니다",0,656
+6,nx_moving_guide_011,68FACF2E6B847148,이사한 포켓몬은 닌텐도 3DS로 돌려보낼 수 없습니다!,0,728
+7,nx_moving_guide_012,68FAD22E6B847661,"이사하기 전에 게임 소프트웨어에서 찾을 수 있는 포켓몬을
+스마트폰 버전 “Pokémon HOME”에서 확인해 주십시오",0,792
+8,nx_moving_guide_020,68F0BE2E6B7BFFE0,"닌텐도 3DS의 “포켓몬 뱅크”에서
+“Pokémon HOME으로 이사”를 선택하고
+이사 패스워드를 입력해 주십시오",0,924
+9,nx_moving_guide_021,68F0BF2E6B7C0193,"패스워드의 시간이 끝나기 전까지
+어떤 조작도 할 수 없습니다",0,1052
+10,	,AF66E44C86071324,[REF:10],0,1120
+11,nx_moving_opt_010,68C8516A21551BFA,이사를 시작한다,0,1132
+12,nx_moving_opt_020,68C4CB6A21520271,닌텐도 3DS가 없다,0,1152
+13,	,AF66E44C86071324,[REF:13],0,1176
+14,nx_moving_comment_010,BC0EB6EB7431CC2E,[REF:14],0,1188
+15,nx_moving_comment_020,BC0B30EB742EB2A5,[REF:15],0,1200
+16,nx_moving_comment_030,BC082AEB742C729C,[REF:16],0,1212
+17,nx_moving_comment_040,BC04A4EB74295913,[REF:17],0,1224
+18,	,AF66E44C86071324,[REF:18],0,1236
+19,nx_moving_boxdata_010,3B867679FE0CD7AE,맡길 수 있는 포켓몬 수,0,1248
+20,nx_moving_boxdata_011,3B867779FE0CD961,"[CTRL:0203:0000,0000]마리",0,1276
+21,nx_moving_boxdata_020,3B82F079FE09BE25,빈 박스,0,1292
+22,nx_moving_boxdata_021,3B82EF79FE09BC72,[CTRL:0202:0000]개,0,1304
+23,	,AF66E44C86071324,[REF:23],0,1316
+24,nx_moving_pass_010,17F21C1F27D89F74,현재 이사 패스워드,0,1328
+25,nx_moving_pass_020,17FC0E1F27E0DC2F,앞으로,0,1352
+26,nx_moving_pass_021,17FC0D1F27E0DA7C,[CTRL:0201:0000]:[CTRL:0201:0001],0,1360
+27,nx_moving_pass_030,17F8881F27DDC2A6,,0,1380
+28,	,AF66E44C86071324,[REF:28],0,1384
+29,nx_moving_msg_010,11CF321701DB564E,"주의! 이사가 완료될 때까지
+“Pokémon HOME”을 이용할 수 없게 됩니다![RETURN]
+이사 준비를 시작하겠습니까?",0,1396
+30,nx_moving_msg_020,11CBAC1701D83CC5,"닌텐도 3DS “포켓몬 뱅크”의
+“Pokémon HOME으로 이사”에서[RETURN]
+박스를 선택하고 이 화면까지 진행해 주십시오",0,1528
+31,nx_moving_msg_025,11CBA71701D83446,"“포켓몬 뱅크”의 버전이
+오래되었을 가능성이 있습니다[CLEAR]
+최신 버전의 “포켓몬 뱅크”로
+데이터를 업데이트해 주십시오[CLEAR]
+자세한 내용은 “Pokémon HOME”
+공식 사이트를 확인해 주십시오",0,1664
+32,nx_moving_msg_030,11C8261701D5233C,"이사 패스워드는 3분 동안만 사용할 수 있습니다
+바로 포켓몬 뱅크에 입력해 주십시오[CLEAR]
+또, 이사 패스워드가 표시되면 시간이 끝나기 전까지
+이전 화면으로 돌아갈 수 없습니다![CLEAR]
+이사 패스워드를 표시하겠습니까?",0,1884
+33,nx_moving_msg_040,11C4A01701D209B3,"“Pokémon HOME”의 박스가 가득 찼습니다!
+박스를 정리해 주십시오",0,2124
+34,nx_moving_msg_050,11C13A1701CF268A,"“포켓몬 뱅크”의 데이터를 찾았습니다!
+이사 준비를 시작합니다[CLEAR]
+이사가 완료될 때까지
+“Pokémon HOME”을 이용할 수 없습니다",0,2208
+35,nx_moving_msg_060,11BE341701CCE681,"자세한 내용은 “Pokémon HOME”
+공식 사이트를 확인해 주십시오",0,2364
+36,nx_moving_msg_070,11BAAE1701C9CCF8,"포켓몬 뱅크의 입력을 확인했습니다!
+이사 준비를 시작합니다[CLEAR]
+이사가 완료될 때까지
+“Pokémon HOME”을 이용할 수 없습니다",0,2444
+37,nx_moving_msg_075,11BAB31701C9D577,"이사 패스워드를 확인하고 있습니다
+잠시 기다려 주십시오...",0,2596
+38,nx_moving_msg_080,11B7281701C6B36F,이사 패스워드의 입력 가능 시간이 지났습니다!,0,2664
+39,nx_moving_msg_090,11B3A21701C399E6,"“포켓몬 뱅크”에서 사용하던
+“닌텐도 네트워크 ID”가[CLEAR]
+이 유저의 닌텐도 어카운트에
+등록되었는지 확인하겠습니까?",0,2716
+40,nx_moving_msg_100,0A6EFD16FE0AC70C,"확인이 된 경우
+자동으로 이사가 시작됩니다![CLEAR]
+“포켓몬 뱅크”의 모든 포켓몬이
+“Pokémon HOME”으로 이사 오게 됩니다[CLEAR]
+이사가 완료될 때까지
+“Pokémon HOME”을 이용할 수 없습니다[CLEAR]
+정말 닌텐도 네트워크 ID의 확인과
+이사를 시작하겠습니까?",0,2848
+41,nx_moving_msg_0110,1E6C011827B6DB43,"“포켓몬 뱅크”의 데이터를 확인하고 있습니다
+현재 화면 그대로 잠시 기다려 주십시오...",0,3152
+42,nx_moving_msg_0120,1E618F1827ADC508,[REF:42],0,3252
+43,nx_moving_msg_0130,1E65151827B0DE91,"이사할 수 있는 “포켓몬 뱅크”의
+데이터를 찾지 못했습니다[CLEAR]
+닌텐도 네트워크 ID와
+연동되어 있는지 확인해 주십시오[CLEAR]
+또한, 닌텐도 네트워크 ID의
+연동 조작을 한 직후인 경우[RETURN]
+잠시 시간을 두고 시도해 주십시오",0,3264
+44,nx_moving_msg_pot_010,59DE40FD3D2345AA,시작한다,0,3516
+45,nx_moving_msg_pot_020,59DABAFD3D202C21,준비 OK,0,3528
+46,nx_moving_msg_pot_025,59DABDFD3D20313A,“이사”가 없다,0,3540
+47,nx_moving_msg_pot_030,59D734FD3D1D1298,표시한다,0,3560
+48,nx_moving_msg_pot_040,59EF3EFD3D31B577,그만둔다,0,3572
+49,nx_moving_msg_pot_050,59EBB8FD3D2E9BEE,확인한다,0,3584
+50,	,AF66E44C86071324,[REF:50],0,3596
+51,nx_moving_immigrate_010,0B2ECD65BE4BC5D0,예,0,3608
+52,nx_moving_immigrate_020,0B38DF65BE5438EB,아니요,0,3612
+53,nx_moving_immigrate_030,0B355965BE511F62,박스째로 받는다,0,3620
+54,nx_moving_immigrate_040,0B3F6B65BE59927D,1마리씩 받는다,0,3640
+55,nx_moving_immigrate_045,0B3F6665BE5989FE,박스 정리,0,3660
+56,nx_moving_immigrate_050,0B3C6565BE575274,취소,0,3672
+57,nx_moving_immigrate_msg_010,1F55A46D4D841D6A,"이사 준비가 끝난 포켓몬이
+[CTRL:0203:0000,0000]마리 있습니다![CLEAR]
+“Pokémon HOME”의 박스에
+어떤 방식으로 받겠습니까?",0,3680
+58,nx_moving_immigrate_msg_020,1F521E6D4D8103E1,"포켓몬 뱅크의 박스 배치
+그대로 포켓몬을 받겠습니다[CLEAR]
+리포트를 기록하겠습니까?",0,3816
+59,nx_moving_immigrate_msg_025,1F52216D4D8108FA,"포켓몬 뱅크의 박스 배치와 상관없이
+1마리씩 빈 공간에 포켓몬을 받겠습니다[CLEAR]
+리포트를 기록하겠습니까?",0,3908
+60,nx_moving_immigrate_msg_030,1F4E986D4D7DEA58,"리포트에 기록하고 있습니다...
+“Pokémon HOME”을 종료하지 않도록 주의해 주십시오",0,4028
+61,nx_moving_immigrate_msg_040,1F66A26D4D928D37,"리포트를 꼼꼼히 기록했다![CLEAR]
+포켓몬 뱅크에서 이사 온 포켓몬을
+“Pokémon HOME”의 박스에 받았다!",0,4132
+62,nx_moving_immigrate_msg_045,1F669D6D4D9284B8,"첫 이사 포인트로
+“Pokémon HOME 포인트”를[RETURN]
+[CTRL:0203:0000,0000]P 받았습니다!",0,4256
+63,nx_moving_immigrate_msg_050,1F631C6D4D8F73AE,"박스 스페이스가 [CTRL:0202:0000]개 부족합니다!
+박스를 정리하겠습니까?",0,4352
+64,nx_moving_immigrate_msg_060,1F5F966D4D8C5A25,[REF:64],0,4424
+65,nx_moving_immigrate_msg_070,1F5C906D4D8A1A1C,[REF:65],0,4436
+66,nx_moving_immigrate_msg_080,1F3D9A6D4D6F7A8B,[REF:66],0,4448
+67,	,AF66E44C86071324,[REF:67],0,4460
+68,nx_moving_help_010,96110053E176176A,"닌텐도 3DS의 “포켓몬 뱅크”에서
+포켓몬들을 데려오는 것을
+이사라고 부른다몬!",0,4472
+69,nx_moving_help_020,960D7A53E172FDE1,"“이사를 시작한다”를 선택했을 때 표시되는
+이사 패스워드를 “포켓몬 뱅크”에
+입력하면 이사할 수 있다몬!",0,4564
+70,nx_moving_help_030,9609F453E16FE458,"이사 패스워드는 유효 시간이 있으니까
+입력 가능 시간 안에 입력해야 한다몬!
+그리고 패스워드가 표시되는 동안에는
+“Pokémon HOME”의 조작을 할 수 없게 된다몬!",0,4684
+71,nx_moving_help_035,9609F953E16FECD7,"오오! 기쁜 소식이 있다몬!
+이사로 연동한 “포켓몬 뱅크”의 도감 데이터도
+함께 이어받을 수 있다고 한다몬!",0,4876
+72,nx_moving_help_040,9621FE53E1848737,"이사하는 방법을 잘 모르겠거나
+닌텐도 3DS를 가지고 있지 않다면
+“Pokémon HOME” 공식 사이트를 확인해봐라몬!",0,5000

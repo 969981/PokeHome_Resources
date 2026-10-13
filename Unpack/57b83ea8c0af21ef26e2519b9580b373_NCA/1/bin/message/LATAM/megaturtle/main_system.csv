@@ -1,0 +1,69 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_main_index_010,584CD9E407258EC0,Menú principal,0,444
+1,	,AF66E44C86071324,[REF:1],0,476
+2,nx_main_button_000,2469972884056955,Atrás,4,488
+3,nx_main_button_001,24699628840567A2,Ayuda,4,500
+4,	,AF66E44C86071324,[REF:4],0,512
+5,nx_main_box_010,1A46EF5B1FB74199,Pokémon,0,524
+6,nx_main_box_020,1A4A755B1FBA5B22,"Depositados: [CTRL:0203:0000,002C]",0,540
+7,nx_main_pokedex_010,D00ADF22BD2805EA,Pokédex,0,580
+8,nx_main_pokedex_020,D0075922BD24EC61,"Registrados: [CTRL:0203:0000,002C]",0,596
+9,nx_main_pokedex_021,D0075822BD24EAAE,[REF:9],0,636
+10,nx_main_eshop_010,F2911EFA46A1BC6F,Nintendo eShop,0,648
+11,nx_main_small_title_010,94DE8C9018BBEC7A,Pokémon,0,680
+12,nx_main_small_title_020,94DB069018B8D2F1,Pokédex,0,696
+13,nx_main_small_title_030,94D8009018B692E8,Libreta,0,712
+14,nx_main_small_title_040,94EF8A9018CA5C47,Traspaso,0,728
+15,nx_main_small_title_050,94EC049018C742BE,Puntos,0,748
+16,nx_main_small_title_060,94E8FE9018C502B5,Opciones,4,764
+17,	,AF66E44C86071324,[REF:17],0,784
+18,nx_main_comment_01,D94EEB682EE7E5B3,Deposita tus Pokémon en estas cajas.,0,796
+19,nx_main_comment_02,D94EEC682EE7E766,Consulta información exhaustiva sobre tus Pokémon.,0,872
+20,nx_main_comment_03,D94EED682EE7E919,Lleva la cuenta de los Pokémon que depositas y retiras.,0,976
+21,nx_main_comment_04,D94EEE682EE7EACC,Traspasa tus Pokémon desde una consola Nintendo 3DS.,0,1088
+22,nx_main_comment_05,D94EEF682EE7EC7F,Usa los puntos Pokémon HOME que llevas acumulados.,4,1196
+23,nx_main_comment_06,D94EF0682EE7EE32,Configura los ajustes de Pokémon HOME.,0,1300
+24,nx_main_comment_07,D94EF1682EE7EFE5,Información acerca del plan prémium (de pago),4,1380
+25,nx_main_comment_07_ex,7432D629AEA9EF2B,"Visita la Nintendo eShop para obtener más
+información sobre el plan prémium. Si eres
+menor de edad, pídele a un adulto que lo
+vea contigo.",0,1472
+26,	,AF66E44C86071324,[REF:26],0,1752
+27,nx_main_eshop_msg_010,5769BF9354BD9841,"¿Quieres acceder a la Nintendo eShop
+y consultar información acerca del plan prémium?",0,1764
+28,nx_main_eshop_msg_pot_010,13FA00777B30FE85,Ver subscripción de 1 mes (30 días),0,1936
+29,nx_main_eshop_msg_pot_020,13FD86777B34180E,Ver subscripción de 3 meses (90 días),0,2008
+30,nx_main_eshop_msg_pot_030,14008C777B365817,Ver subscripción de 12 meses (365 días),0,2084
+31,nx_main_eshop_msg_pot_999,6349F077A87F68F9,Cancelar,0,2164
+32,	,AF66E44C86071324,[REF:32],0,2184
+33,nx_main_msg_010,09F05BFC15443881,"Esta función no está incluida en el plan básico.[CLEAR]
+Se puede acceder a ella con el plan prémium, a la venta en
+la Nintendo eShop.",4,2196
+34,nx_main_msg_020,09F361FC1546788A,[REF:34],0,2456
+35,nx_main_msg_021,09F362FC15467A3D,[REF:35],0,2468
+36,nx_main_msg_022,09F35FFC15467524,[REF:36],0,2480
+37,nx_main_msg_030,09F6C7FC15495BB3,¡Se actualizó la lista de tareas!,0,2492
+38,	,AF66E44C86071324,[REF:38],0,2560
+39,nx_main_help_010,B131D26A7BFF4C93,"Este es el menú principal, tu punto de partida para disfrutar de
+Pokémon HOME. Desde aquí puedes acceder a completamente todas
+sus funciones. ¡Elige la que quieras y listo!",4,2572
+40,nx_main_help_020,B127606A7BF63658,"Mueve el cursor con la palanca izquierda y presiona el botón A para
+confirmar tu selección. Cuando quieras volver a la pantalla anterior,
+presiona el botón B.",0,2920
+41,	,AF66E44C86071324,[REF:41],0,3240
+42,nx_main_help_first_010,AE567A0D58881F2A,"¡Qué onda! Me llamo Pokébolito y estoy aquí para ayudarte a navegar
+por Pokémon HOME. Cuando tengas alguna duda sobre cómo funciona
+alguna opción o algún menú, te ayudaré encantado. ¡Ya verás que
+es facilísimo!",0,3252
+43,nx_main_help_first_020,AE52F40D588505A1,"Para llamarme solo tienes que presionar el botón - en cualquier momento
+y te explicaré cómo funciona la pantalla donde estés. ¿Qué te parece
+si empezamos por esta misma?",0,3676
+44,nx_main_small_title_070,94E5789018C1E92C,Pokémon GO,0,4016
+45,nx_main_msg_010,09F05BFC15443881,[REF:45],0,4040
+46,nx_main_comment_08,D94EF2682EE7F198,Recibe Pokémon de Pokémon GO.,0,4052
+47,nx_main_msg_011,09F05AFC154436CE,[REF:47],0,4112
+48,nx_main_small_title_080,94C7029018A8231B,Pokémon Champions,0,4124
+49,nx_main_comment_09,D94EF3682EE7F34B,Envía Pokémon de visita a Pokémon Champions,4,4160
+50,	,AF66E44C86071324,[REF:50],0,4248
+51,nx_main_small_title_090,94C37C9018A50992,Juegos de GBA,0,4260
+52,nx_main_comment_10,D95270682EEAFD89,Recibe Pokémon desde un juego de Game Boy Advance (GBA) para Nintendo Switch.,0,4288

@@ -1,0 +1,510 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,TOKUSEIINFO_LA_000,14B4478FE0D240DC,-,0,2164
+1,TOKUSEIINFO_LA_001,14B4488FE0D2428F,"Lässt das Ziel beim Angriff eventuell durch Gestank
+zurückschrecken.",0,2168
+2,TOKUSEIINFO_LA_002,14B4498FE0D24442,Ruft bei Kampfantritt Regen herbei.,0,2308
+3,TOKUSEIINFO_LA_003,14B44A8FE0D245F5,Erhöht in jeder Runde die Initiative.,0,2380
+4,TOKUSEIINFO_LA_004,14B4438FE0D23A10,"Wehrt gegnerische Volltreffer mit einem harten
+Panzer ab.",0,2456
+5,TOKUSEIINFO_LA_005,14B4448FE0D23BC3,"Bietet Schutz gegen K.O.-Attacken. Bei vollen KP
+übersteht das Pokémon auch K.O.-Treffer.",0,2572
+6,TOKUSEIINFO_LA_006,14B4458FE0D23D76,"Befeuchtet die Umgebung und verhindert so den Einsatz
+von Attacken wie Finale, die Explosionen auslösen.",0,2752
+7,TOKUSEIINFO_LA_007,14B4468FE0D23F29,"Der flexible Körper des Pokémon schützt es vor
+Paralyse.",0,2964
+8,TOKUSEIINFO_LA_008,14B44F8FE0D24E74,Erhöht in Sandstürmen den Ausweichwert.,0,3080
+9,TOKUSEIINFO_LA_009,14B4508FE0D25027,"Kann bei Berührung durch statisch aufgeladenen Körper
+paralysieren.",0,3160
+10,TOKUSEIINFO_LA_010,14B74D8FE0D480E5,"Treffer durch Elektro-Attacken verursachen keinen
+Schaden, sondern regenerieren stattdessen KP.",0,3296
+11,TOKUSEIINFO_LA_011,14B74C8FE0D47F32,"Treffer durch Wasser-Attacken verursachen keinen
+Schaden, sondern regenerieren stattdessen KP.",0,3488
+12,TOKUSEIINFO_LA_012,14B74B8FE0D47D7F,"Das Pokémon ist so apathisch, dass es nicht betört oder
+provoziert werden kann.",0,3680
+13,TOKUSEIINFO_LA_013,14B74A8FE0D47BCC,Hebt alle Wetter-Effekte auf.,0,3840
+14,TOKUSEIINFO_LA_014,14B7498FE0D47A19,Erhöht die Genauigkeit von Attacken.,0,3900
+15,TOKUSEIINFO_LA_015,14B7488FE0D47866,Verhindert Einschlafen.,0,3976
+16,TOKUSEIINFO_LA_016,14B7478FE0D476B3,Ändert seinen Typ zu dem der Attacke des Angreifers.,0,4024
+17,TOKUSEIINFO_LA_017,14B7468FE0D47500,"Das starke Immunsystem des Pokémon verhindert
+Vergiftungen.",0,4132
+18,TOKUSEIINFO_LA_018,14B7558FE0D48E7D,"Verstärkt Feuer-Attacken, wenn es von Feuer-Attacken
+getroffen wird.",0,4252
+19,TOKUSEIINFO_LA_019,14B7548FE0D48CCA,"Blockiert durch Puder die Zusatzeffekte gegnerischer
+Angriffe.",0,4392
+20,TOKUSEIINFO_LA_020,14BAD38FE0D79A6E,"Das Pokémon lässt sich nicht aus der Ruhe bringen und
+verhindert so Verwirrung.",0,4520
+21,TOKUSEIINFO_LA_021,14BAD48FE0D79C21,"Blockt Attacken und Items, die Pokémon austauschen,
+indem es sich mit einem Saugnapf am Boden verankert.",0,4680
+22,TOKUSEIINFO_LA_022,14BAD18FE0D79708,"Senkt den Angriff der Gegner, indem es sie gleich zu
+Kampfantritt bedroht und einschüchtert.",0,4892
+23,TOKUSEIINFO_LA_023,14BAD28FE0D798BB,"Hindert Gegner an der Flucht beziehungsweise am
+Auswechseln, indem es ihnen den Weg versperrt.",0,5080
+24,TOKUSEIINFO_LA_024,14BAD78FE0D7A13A,"Angreifer werden durch die raue Haut des Pokémon
+bei direkten Attacken verletzt.",0,5272
+25,TOKUSEIINFO_LA_025,14BAD88FE0D7A2ED,"Wundersame Kräfte bewirken, dass nur sehr effektive
+Treffer bei ihm Schaden anrichten.",0,5436
+26,TOKUSEIINFO_LA_026,14BAD58FE0D79DD4,"Verleiht volle Immunität gegen alle Boden-Attacken
+durch Schwebezustand.",0,5612
+27,TOKUSEIINFO_LA_027,14BAD68FE0D79F87,"Wird dieses Pokémon durch eine direkte Attacke
+angegriffen, kann das beim Gegner Paralyse,
+Vergiftung oder Schlaf auslösen.",0,5760
+28,TOKUSEIINFO_LA_028,14BACB8FE0D78CD6,"Erleidet das Pokémon Verbrennungen, Vergiftungen
+oder Paralyse, ereilt das jeweilige Statusproblem
+auch den Verursacher.",0,6008
+29,TOKUSEIINFO_LA_029,14BACC8FE0D78E89,"Verhindert das Senken der Statuswerte durch Attacken
+und Fähigkeiten von Angreifern.",0,6252
+30,TOKUSEIINFO_LA_030,14BE598FE0DAB3F7,"Wird das Pokémon ausgewechselt, werden seine
+Statusprobleme geheilt.",0,6424
+31,TOKUSEIINFO_LA_031,14BE588FE0DAB244,"Zieht Elektro-Attacken an. Statt durch diese Schaden
+zu nehmen, erhöht es den eigenen Spezial-Angriff.",0,6564
+32,TOKUSEIINFO_LA_032,14BE5B8FE0DAB75D,"Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte von
+Attacken auftreten.",0,6772
+33,TOKUSEIINFO_LA_033,14BE5A8FE0DAB5AA,Erhöht bei Regen die Initiative.,0,6920
+34,TOKUSEIINFO_LA_034,14BE558FE0DAAD2B,Erhöht bei Sonnenschein die Initiative.,0,6988
+35,TOKUSEIINFO_LA_035,14BE548FE0DAAB78,"Erhellt die Umgebung und erhöht dadurch die
+Wahrscheinlichkeit, wilden Pokémon zu begegnen.",0,7068
+36,TOKUSEIINFO_LA_036,14BE578FE0DAB091,Kopiert bei Kampfantritt die Fähigkeit eines Gegners.,0,7252
+37,TOKUSEIINFO_LA_037,14BE568FE0DAAEDE,Verdoppelt die Stärke von physischen Attacken.,0,7360
+38,TOKUSEIINFO_LA_038,14BE518FE0DAA65F,Vergiftet den Angreifer bei Berührung eventuell.,0,7456
+39,TOKUSEIINFO_LA_039,14BE508FE0DAA4AC,"Verhindert durch erhöhte Konzentrationsfähigkeit
+Zurückschrecken.",0,7556
+40,TOKUSEIINFO_LA_040,14A64F8FE0C61118,"Dank eines Panzers aus Magma kann dieses Pokémon
+nicht eingefroren werden.",0,7688
+41,TOKUSEIINFO_LA_041,14A6508FE0C612CB,Verhindert durch eine Hülle aus Wasser Verbrennungen.,0,7840
+42,TOKUSEIINFO_LA_042,14A6518FE0C6147E,"Hindert Stahl-Pokémon durch Magnetismus an der
+Flucht.",0,7948
+43,TOKUSEIINFO_LA_043,14A6528FE0C61631,"Bietet durch Schalldämmung volle Immunität gegen
+alle Lärm-Attacken.",0,8060
+44,TOKUSEIINFO_LA_044,14A6538FE0C617E4,Regeneriert bei Regen nach und nach KP.,0,8200
+45,TOKUSEIINFO_LA_045,14A6548FE0C61997,Erzeugt bei Kampfantritt Sandstürme.,0,8280
+46,TOKUSEIINFO_LA_046,14A6558FE0C61B4A,"Zwingt Gegner dazu, beim Einsatz von Attacken
+mehr AP zu verbrauchen.",0,8356
+47,TOKUSEIINFO_LA_047,14A6568FE0C61CFD,"Das Pokémon wird von einer dicken Fettschicht
+geschützt, was den durch Feuer- und Eis-Attacken
+erlittenen Schaden halbiert.",0,8496
+48,TOKUSEIINFO_LA_048,14A6478FE0C60380,"Wenn es eingeschlafen ist, kann es doppelt so schnell
+wieder aufwachen wie andere Pokémon.",0,8744
+49,TOKUSEIINFO_LA_049,14A6488FE0C60533,"Fügt dem Angreifer bei Berührung eventuell
+Verbrennungen zu.",0,8928
+50,TOKUSEIINFO_LA_050,14A9D58FE0C92AA1,Die Flucht vor wilden Pokémon gelingt immer.,0,9052
+51,TOKUSEIINFO_LA_051,14A9D48FE0C928EE,"Sein scharfer Blick hindert Angreifer daran,
+seine Genauigkeit zu senken.",0,9144
+52,TOKUSEIINFO_LA_052,14A9D38FE0C9273B,"Hindert Angreifer durch mächtige Scheren daran,
+den Angriffs-Wert zu senken.",0,9292
+53,TOKUSEIINFO_LA_053,14A9D28FE0C92588,"Hebt gelegentlich von Gegnern benutzte Items auf.
+Dies geschieht nicht nur während Kämpfen, sondern
+auch unterwegs.",0,9448
+54,TOKUSEIINFO_LA_054,14A9D98FE0C9316D,"Das Pokémon muss nach Einsatz einer Attacke
+eine Runde lang aussetzen.",0,9680
+55,TOKUSEIINFO_LA_055,14A9D88FE0C92FBA,"Erhöht den Angriffs-Wert, aber senkt die Genauigkeit.",0,9824
+56,TOKUSEIINFO_LA_056,14A9D78FE0C92E07,"Wird dieses Pokémon durch eine direkte Attacke
+angegriffen, verliebt sich der Gegner eventuell in es.",0,9932
+57,TOKUSEIINFO_LA_057,14A9D68FE0C92C54,"Erhöht den Spezial-Angriff, wenn das Pokémon einen
+Mitstreiter mit der Fähigkeit Plus oder Minus hat.",0,10136
+58,TOKUSEIINFO_LA_058,14A9CD8FE0C91D09,"Erhöht den Spezial-Angriff, wenn das Pokémon einen
+Mitstreiter mit der Fähigkeit Plus oder Minus hat.",0,10340
+59,TOKUSEIINFO_LA_059,14A9CC8FE0C91B56,"Nimmt je nach Wetter entweder den Typ Wasser, Feuer
+oder Eis an.",0,10544
+60,TOKUSEIINFO_LA_060,14AD5B8FE0CC442A,"Trägt es ein Item, bleibt dieses an seinem klebrigen
+Körper haften, wodurch Item-Diebstahl verhindert wird.",0,10676
+61,TOKUSEIINFO_LA_061,14AD5C8FE0CC45DD,"Das Pokémon befreit sich eventuell von
+Statusproblemen, indem es seine Haut abstreift.",0,10892
+62,TOKUSEIINFO_LA_062,14AD598FE0CC40C4,"Bei Statusproblemen setzt es Adrenalin frei und
+erhöht so seinen Angriffs-Wert.",0,11068
+63,TOKUSEIINFO_LA_063,14AD5A8FE0CC4277,"Bei Statusproblemen schützt es sich mit mysteriösen
+Schuppen und erhöht so seine Verteidigung.",0,11228
+64,TOKUSEIINFO_LA_064,14AD578FE0CC3D5E,"Angreifer, die durch Saug-Attacken Kloakensoße in
+sich aufgenommen haben, nehmen durch deren
+widerwärtigen Gestank Schaden.",0,11420
+65,TOKUSEIINFO_LA_065,14AD588FE0CC3F11,"Erhöht die Stärke von Pflanzen-Attacken, wenn die KP
+auf einen gewissen Wert fallen.",0,11668
+66,TOKUSEIINFO_LA_066,14AD558FE0CC39F8,"Erhöht die Stärke von Feuer-Attacken, wenn die KP auf
+einen gewissen Wert fallen.",0,11840
+67,TOKUSEIINFO_LA_067,14AD568FE0CC3BAB,"Erhöht die Stärke von Wasser-Attacken, wenn die KP auf
+einen gewissen Wert fallen.",0,12004
+68,TOKUSEIINFO_LA_068,14AD538FE0CC3692,"Erhöht die Stärke von Käfer-Attacken, wenn die KP auf
+einen gewissen Wert fallen.",0,12172
+69,TOKUSEIINFO_LA_069,14AD548FE0CC3845,"Verhindert Schaden, der durch Rückstoß entstehen
+würde.",0,12336
+70,TOKUSEIINFO_LA_070,14B0C18FE0CF2753,Erzeugt bei Kampfantritt gleißendes Sonnenlicht.,0,12448
+71,TOKUSEIINFO_LA_071,14B0C08FE0CF25A0,Hindert Gegner im Kampf an der Flucht.,0,12548
+72,TOKUSEIINFO_LA_072,14B0C38FE0CF2AB9,"Das Pokémon ist so munter, dass es nicht
+einschlafen kann.",0,12628
+73,TOKUSEIINFO_LA_073,14B0C28FE0CF2906,"Indem es sich mit pulvrigem Rauch umhüllt, hindert es
+Angreifer daran, seine Statuswerte zu senken.",0,12748
+74,TOKUSEIINFO_LA_074,14B0C58FE0CF2E1F,"Verdoppelt mit reiner Willenskraft die Stärke seiner
+physischen Attacken.",0,12948
+75,TOKUSEIINFO_LA_075,14B0C48FE0CF2C6C,"Wehrt gegnerische Volltreffer mit einem harten
+Panzer ab.",0,13096
+76,TOKUSEIINFO_LA_076,14B0C78FE0CF3185,Hebt alle Wetter-Effekte auf.,0,13212
+77,TOKUSEIINFO_LA_077,14B0C68FE0CF2FD2,"Erhöht den Ausweichwert, wenn das Pokémon
+verwirrt ist.",0,13272
+78,TOKUSEIINFO_LA_078,14B0C98FE0CF34EB,"Treffer durch Elektro-Attacken verursachen keinen
+Schaden, sondern geben dem Pokémon eine
+Starthilfe und erhöhen so seine Initiative.",0,13384
+79,TOKUSEIINFO_LA_079,14B0C88FE0CF3338,"Greift es einen Rivalen desselben Geschlechts an,
+wird es stärker. Greift es ein Ziel des anderen
+Geschlechts an, wird es schwächer.",0,13652
+80,TOKUSEIINFO_LA_080,1498D78FE0BABAD4,"Sein eiserner Wille erhöht die Initiative, wann immer
+das Pokémon zurückschreckt.",0,13920
+81,TOKUSEIINFO_LA_081,1498D88FE0BABC87,Erhöht bei Hagel den Ausweichwert.,0,14084
+82,TOKUSEIINFO_LA_082,1498D98FE0BABE3A,"Setzt bestimmte Beeren nicht erst in einer Notlage ein,
+sondern bereits dann, wenn seine KP auf die Hälfte des
+Maximalwerts fallen.",0,14156
+83,TOKUSEIINFO_LA_083,1498DA8FE0BABFED,"Wird nach Einstecken eines Volltreffers wütend und
+maximiert dabei seinen Angriffs-Wert.",0,14420
+84,TOKUSEIINFO_LA_084,1498D38FE0BAB408,"Wenn das von ihm getragene Item verwendet wird
+oder verloren geht, erhöht dies seine Initiative.",0,14600
+85,TOKUSEIINFO_LA_085,1498D48FE0BAB5BB,"Sein Hitze abweisender Körper halbiert den durch
+Feuer-Attacken erlittenen Schaden.",0,14796
+86,TOKUSEIINFO_LA_086,1498D58FE0BAB76E,Verdoppelt die Wirkung eigener Statusveränderungen.,0,14964
+87,TOKUSEIINFO_LA_087,1498D68FE0BAB921,"Bei Sonnenschein verliert das Pokémon KP und der
+Schaden durch Feuer-Attacken steigt. Bei Regen und
+Treffern durch Wasser-Attacken regeneriert es KP.",0,15068
+88,TOKUSEIINFO_LA_088,1498CF8FE0BAAD3C,"Ist die Spezial-Verteidigung des Gegners höher als
+seine Verteidigung, wird der eigene Spezial-Angriff
+erhöht. Ist die Verteidigung höher, steigt der Angriff.",0,15368
+89,TOKUSEIINFO_LA_089,1498D08FE0BAAEEF,"Erhöht die Stärke von Hieb-, Punch-, Faust- und
+Schlag-Attacken.",0,15688
+90,TOKUSEIINFO_LA_090,149C5D8FE0BDD45D,"Das Pokémon erleidet keinen Schaden durch Vergiftung,
+sondern regeneriert KP.",0,15820
+91,TOKUSEIINFO_LA_091,149C5C8FE0BDD2AA,"Erhöht die Stärke von Attacken, die dem Typ des
+Pokémon entsprechen.",0,15976
+92,TOKUSEIINFO_LA_092,149C5B8FE0BDD0F7,"Landet mit Serien-Attacken immer die maximale Anzahl
+an Treffern.",0,16116
+93,TOKUSEIINFO_LA_093,149C5A8FE0BDCF44,Heilt bei Regen Statusprobleme.,0,16248
+94,TOKUSEIINFO_LA_094,149C598FE0BDCD91,"Führt bei Sonnenschein in jeder Runde zu KP-Verlusten,
+erhöht aber den Spezial-Angriff.",0,16312
+95,TOKUSEIINFO_LA_095,149C588FE0BDCBDE,Erhöht bei Statusproblemen die Initiative.,0,16488
+96,TOKUSEIINFO_LA_096,149C578FE0BDCA2B,"Alle Attacken des Pokémon nehmen den Typ Normal
+an und ihre Stärke erhöht sich ein wenig.",0,16576
+97,TOKUSEIINFO_LA_097,149C568FE0BDC878,"Erhöht bei Volltreffern die Stärke der Attacke noch
+weiter.",0,16756
+98,TOKUSEIINFO_LA_098,149C558FE0BDC6C5,"Das Pokémon nimmt nur durch Offensiv-Attacken
+Schaden.",0,16876
+99,TOKUSEIINFO_LA_099,149C548FE0BDC512,"Alle Attacken des oder auf das Pokémon gelingen
+aufgrund seiner deckungslosen Kampftaktik.",0,16988
+100,TOKUSEIINFO_LA_100,1DCA828FE616A4A7,Handelt auch mit Initiative-Vorteil stets als Letztes.,0,17172
+101,TOKUSEIINFO_LA_101,1DCA818FE616A2F4,Erhöht die Stärke von schwächeren Attacken.,0,17284
+102,TOKUSEIINFO_LA_102,1DCA848FE616A80D,Verhindert bei Sonnenschein Statusprobleme.,0,17372
+103,TOKUSEIINFO_LA_103,1DCA838FE616A65A,Das Pokémon kann keine getragenen Items verwenden.,0,17460
+104,TOKUSEIINFO_LA_104,1DCA7E8FE6169DDB,"Attacken können ungeachtet der Fähigkeiten des
+Zieles verwendet werden.",0,17564
+105,TOKUSEIINFO_LA_105,1DCA7D8FE6169C28,"Großes Glück erhöht die Wahrscheinlichkeit,
+einen Volltreffer zu landen.",0,17708
+106,TOKUSEIINFO_LA_106,1DCA808FE616A141,"Wird das Pokémon durch eine direkte Attacke besiegt,
+fügt es dem Angreifer Schaden zu.",0,17856
+107,TOKUSEIINFO_LA_107,1DCA7F8FE6169F8E,Kann gefährliche gegnerische Attacken erahnen.,0,18032
+108,TOKUSEIINFO_LA_108,1DCA7A8FE616970F,"Gibt bei Kampfantritt Auskunft über eine Attacke aus
+dem gegnerischen Repertoire.",0,18128
+109,TOKUSEIINFO_LA_109,1DCA798FE616955C,"Greift das Pokémon an, ignoriert es sämtliche
+Statusveränderungen des Zieles.",0,18292
+110,TOKUSEIINFO_LA_110,1DC6FC8FE6138B1E,"Bewirkt, dass nicht sehr effektive Attacken dem Ziel
+trotz des Typennachteils normalen Schaden zufügen.",0,18448
+111,TOKUSEIINFO_LA_111,1DC6FD8FE6138CD1,"Reduziert die Stärke von sehr effektiven Attacken und
+verringert damit den Schaden, den das Pokémon durch
+sie erleidet.",0,18656
+112,TOKUSEIINFO_LA_112,1DC6FA8FE61387B8,"Halbiert fünf Runden lang den Angriffs-Wert und die
+Initiative des Pokémon.",0,18896
+113,TOKUSEIINFO_LA_113,1DC6FB8FE613896B,"Bewirkt, dass Normal- und Kampf-Attacken auch
+Pokémon vom Typ Geist treffen können.",0,19048
+114,TOKUSEIINFO_LA_114,1DC7008FE61391EA,"Zieht Wasser-Attacken an. Statt durch diese Schaden
+zu nehmen, erhöht es den eigenen Spezial-Angriff.",0,19216
+115,TOKUSEIINFO_LA_115,1DC7018FE613939D,Regeneriert bei Hagel nach und nach KP.,0,19420
+116,TOKUSEIINFO_LA_116,1DC6FE8FE6138E84,"Reduziert die Stärke von sehr effektiven Attacken und
+verringert damit den Schaden, den das Pokémon durch
+sie erleidet.",0,19500
+117,TOKUSEIINFO_LA_117,1DC6FF8FE6139037,Löst bei Kampfantritt Hagel aus.,0,19740
+118,TOKUSEIINFO_LA_118,1DC6F48FE6137D86,"Das Pokémon sammelt nach Kämpfen eventuell
+Honig auf.",0,19808
+119,TOKUSEIINFO_LA_119,1DC6F58FE6137F39,"Kann bei Kampfantritt Auskunft über das vom Gegner
+getragene Item geben.",0,19916
+120,TOKUSEIINFO_LA_120,1DC3768FE6107195,Erhöht die Stärke von Attacken mit Rückstoßschaden.,0,20064
+121,TOKUSEIINFO_LA_121,1DC3758FE6106FE2,"Das Pokémon passt seinen Typ dem der getragenen
+Tafel bzw. des getragenen Z-Kristalls an.",0,20168
+122,TOKUSEIINFO_LA_122,1DC3748FE6106E2F,"Erhöht bei Sonnenschein den Angriff und die
+Spezial-Verteidigung aller Team-Pokémon.",0,20348
+123,TOKUSEIINFO_LA_123,1DC3738FE6106C7C,Fügt schlafenden Gegnern Schaden zu.,0,20520
+124,TOKUSEIINFO_LA_124,1DC3728FE6106AC9,Stiehlt das Item des Angreifers bei Berührung.,0,20596
+125,TOKUSEIINFO_LA_125,1DC3718FE6106916,"Erhöht die Stärke von Attacken, aber hebt dafür ihre
+Zusatzeffekte auf.",0,20692
+126,TOKUSEIINFO_LA_126,1DC3708FE6106763,"Statusveränderungen werden umgekehrt: Statuswerte,
+die eigentlich erhöht werden sollten, sinken und
+umgekehrt.",0,20836
+127,TOKUSEIINFO_LA_127,1DC36F8FE61065B0,"Erzeugt bei Gegnern Stress und hindert sie so daran,
+Beeren zu konsumieren.",0,21060
+128,TOKUSEIINFO_LA_128,1DC37E8FE6107F2D,"Erhöht den Angriff stark, wenn ein Statuswert
+gesenkt wurde.",0,21212
+129,TOKUSEIINFO_LA_129,1DC37D8FE6107D7A,"Fallen seine KP auf die Hälfte des Maximalwerts oder
+weniger, bekommt es Angst. Dadurch wird die Stärke
+seines Angriffs und Spezial-Angriffs halbiert.",0,21336
+130,TOKUSEIINFO_LA_130,1DBFF08FE60D580C,"Blockiert eventuell die Attacke, mit welcher der
+Angreifer es getroffen hat.",0,21640
+131,TOKUSEIINFO_LA_131,1DBFF18FE60D59BF,Befreit Mitstreiter gelegentlich von Statusproblemen.,0,21796
+132,TOKUSEIINFO_LA_132,1DBFF28FE60D5B72,"Kann den Schaden, den Mitstreiter erleiden, verringern.",0,21904
+133,TOKUSEIINFO_LA_133,1DBFF38FE60D5D25,"Senkt bei erlittenem Treffer durch eine physische
+Attacke die Verteidigung des Pokémon, aber erhöht
+dafür seine Initiative stark.",0,22016
+134,TOKUSEIINFO_LA_134,1DBFEC8FE60D5140,Verdoppelt das eigene Gewicht.,0,22276
+135,TOKUSEIINFO_LA_135,1DBFED8FE60D52F3,Halbiert das eigene Gewicht.,0,22340
+136,TOKUSEIINFO_LA_136,1DBFEE8FE60D54A6,Verringert den erlittenen Schaden bei vollen KP.,0,22400
+137,TOKUSEIINFO_LA_137,1DBFEF8FE60D5659,"Erhöht bei Vergiftungen die Stärke von physischen
+Attacken.",0,22500
+138,TOKUSEIINFO_LA_138,1DBFF88FE60D65A4,"Erhöht bei Verbrennungen die Stärke von
+Spezial-Attacken.",0,22620
+139,TOKUSEIINFO_LA_139,1DBFF98FE60D6757,Dieselbe Beere kann mehrmals verwendet werden.,0,22736
+140,TOKUSEIINFO_LA_140,1DBCEA8FE60B1803,Erkennt und pariert Attacken von Mitstreitern.,0,22832
+141,TOKUSEIINFO_LA_141,1DBCE98FE60B1650,"Erhöht in jeder Runde aufs Neue einen Statuswert stark
+und senkt einen anderen.",0,22928
+142,TOKUSEIINFO_LA_142,1DBCEC8FE60B1B69,"Nimmt weder durch Wetterlagen wie Sandsturm oder
+Hagel noch durch Pulver oder Puder Schaden.",0,23088
+143,TOKUSEIINFO_LA_143,1DBCEB8FE60B19B6,Kann das Ziel durch bloßes Berühren vergiften.,0,23276
+144,TOKUSEIINFO_LA_144,1DBCEE8FE60B1ECF,"Wird das Pokémon ausgewechselt, regeneriert es eine
+kleine Menge an KP.",0,23372
+145,TOKUSEIINFO_LA_145,1DBCED8FE60B1D1C,"Hindert Angreifer daran, die Verteidigung des Pokémon
+zu senken.",0,23516
+146,TOKUSEIINFO_LA_146,1DBCF08FE60B2235,Erhöht in Sandstürmen die Initiative.,0,23648
+147,TOKUSEIINFO_LA_147,1DBCEF8FE60B2082,Wehrt mit robustem Körper viele Status-Attacken ab.,0,23724
+148,TOKUSEIINFO_LA_148,1DBCF28FE60B259B,"Greift das Pokémon zuletzt an, erhöht sich die Stärke
+der Attacke, die es einsetzt.",0,23828
+149,TOKUSEIINFO_LA_149,1DBCF18FE60B23E8,"Führt den Gegner hinters Licht, indem es bei
+Kampfantritt die Gestalt des Pokémon an der
+letzten Stelle im Team annimmt.",0,23996
+150,TOKUSEIINFO_LA_150,1DB9848FE60834DA,Kämpft als Kopie seines Gegenübers.,0,24240
+151,TOKUSEIINFO_LA_151,1DB9858FE608368D,"Überwindet gegnerische Schilde sowie Delegatoren
+und greift an.",0,24312
+152,TOKUSEIINFO_LA_152,1DB9828FE6083174,"Überträgt bei Berührung die Fähigkeit Mumie auf den
+Angreifer.",0,24440
+153,TOKUSEIINFO_LA_153,1DB9838FE6083327,"Besiegt es ein Pokémon, steigt sein Selbstvertrauen
+und somit auch sein Angriff.",0,24568
+154,TOKUSEIINFO_LA_154,1DB9808FE6082E0E,"Wird es von einer Unlicht-Attacke getroffen, meldet
+sich sein Sinn für Gerechtigkeit zu Wort und sein
+Angriff steigt.",0,24732
+155,TOKUSEIINFO_LA_155,1DB9818FE6082FC1,"Wird es von einer Unlicht-, Geister- oder Käfer-Attacke
+getroffen, bekommt es Angst und seine Initiative steigt.",0,24968
+156,TOKUSEIINFO_LA_156,1DB97E8FE6082AA8,"Lenkt Status-Attacken auf den Angreifer um,
+ohne selbst von ihnen getroffen zu werden.",0,25196
+157,TOKUSEIINFO_LA_157,1DB97F8FE6082C5B,"Wird es von einer Pflanzen-Attacke getroffen, erleidet
+es keinerlei Schaden und sein Angriff steigt.",0,25372
+158,TOKUSEIINFO_LA_158,1DB97C8FE6082742,Ermöglicht einen Erstschlag mit Status-Attacken.,0,25576
+159,TOKUSEIINFO_LA_159,1DB97D8FE60828F5,"Erhöht in Sandstürmen die Stärke von Gesteins-,
+Boden- und Stahl-Attacken.",0,25676
+160,TOKUSEIINFO_LA_160,1DB5FE8FE6051B51,"Fügt dem Angreifer bei Berührung mit eisernen Stacheln
+Schaden zu.",0,25828
+161,TOKUSEIINFO_LA_161,1DB5FD8FE605199E,"Fallen seine KP auf die Hälfte des Maximalwerts oder
+weniger, wechselt es seine Gestalt.",0,25964
+162,TOKUSEIINFO_LA_162,1DB5FC8FE60517EB,Erhöht die Genauigkeit aller Team-Pokémon.,0,26144
+163,TOKUSEIINFO_LA_163,1DB5FB8FE6051638,"Attacken können ungeachtet der Fähigkeit des Zieles
+eingesetzt werden.",0,26232
+164,TOKUSEIINFO_LA_164,1DB6028FE605221D,"Attacken können ungeachtet der Fähigkeit des Zieles
+eingesetzt werden.",0,26376
+165,TOKUSEIINFO_LA_165,1DB6018FE605206A,"Kann alle Team-Pokémon vor mentalen Angriffen
+schützen.",0,26520
+166,TOKUSEIINFO_LA_166,1DB6008FE6051EB7,"Schützt Mitstreiter vom Typ Pflanze vor dem Senken
+ihrer Statuswerte sowie vor Statusproblemen.",0,26632
+167,TOKUSEIINFO_LA_167,1DB5FF8FE6051D04,"Regeneriert beim Konsum von Beeren ungeachtet
+der Beerensorte KP.",0,26824
+168,TOKUSEIINFO_LA_168,1DB5F68FE6050DB9,"Das Pokémon nimmt bei Einsatz einer Attacke deren
+Typ an.",0,26956
+169,TOKUSEIINFO_LA_169,1DB5F58FE6050C06,"Halbiert den Schaden, den das Pokémon durch
+physische Attacken erleidet.",0,27072
+170,TOKUSEIINFO_LA_170,1DB2788FE60201C8,"Trifft das Pokémon ein Ziel mit einer Attacke, kann es
+ihm dabei sein Item stehlen.",0,27220
+171,TOKUSEIINFO_LA_171,1DB2798FE602037B,"Kann das Pokémon vor geworfenen kugelförmigen
+Objekten, wie zum Beispiel Bomben, schützen.",0,27388
+172,TOKUSEIINFO_LA_172,1DB27A8FE602052E,"Erhöht den Spezial-Angriff stark, wenn ein Statuswert
+gesenkt wurde.",0,27572
+173,TOKUSEIINFO_LA_173,1DB27B8FE60206E1,"Der kräftige Kiefer des Pokémon erhöht die Stärke
+von Biss-Attacken.",0,27712
+174,TOKUSEIINFO_LA_174,1DB27C8FE6020894,"Attacken vom Typ Normal nehmen den Typ Eis an und
+ihre Stärke erhöht sich ein wenig.",0,27852
+175,TOKUSEIINFO_LA_175,1DB27D8FE6020A47,Alle Team-Pokémon können nicht einschlafen.,0,28024
+176,TOKUSEIINFO_LA_176,1DB27E8FE6020BFA,"Setzt das Pokémon eine Offensiv-Attacke ein, nimmt
+es die Klingenform an. Setzt es danach die Attacke
+Königsschild ein, nimmt es die Schildform an.",0,28112
+177,TOKUSEIINFO_LA_177,1DB27F8FE6020DAD,"Kann bei vollen KP einen Erstschlag mit Flug-Attacken
+ermöglichen.",0,28408
+178,TOKUSEIINFO_LA_178,1DB2708FE601F430,"Erhöht die Stärke einiger Wellen-, Aura- und
+Puls-Attacken.",0,28544
+179,TOKUSEIINFO_LA_179,1DB2718FE601F5E3,"Erhöht die Verteidigung, wenn Grasfeld aktiv ist.",0,28664
+180,TOKUSEIINFO_LA_180,1DAEF28FE5FEE83F,"Gibt Mitstreitern, die ihr Item aufgebraucht haben,
+sein eigenes Item.",0,28764
+181,TOKUSEIINFO_LA_181,1DAEF18FE5FEE68C,Erhöht die Stärke von direkten Attacken.,0,28908
+182,TOKUSEIINFO_LA_182,1DAEF48FE5FEEBA5,"Attacken vom Typ Normal nehmen den Typ Fee an und
+ihre Stärke erhöht sich ein wenig.",0,28992
+183,TOKUSEIINFO_LA_183,1DAEF38FE5FEE9F2,"Senkt bei Berührung im Zuge eines Angriffs die
+Initiative des Angreifers.",0,29164
+184,TOKUSEIINFO_LA_184,1DAEEE8FE5FEE173,"Attacken vom Typ Normal nehmen den Typ Flug an und
+ihre Stärke erhöht sich ein wenig.",0,29312
+185,TOKUSEIINFO_LA_185,1DAEED8FE5FEDFC0,"Zwei Generationen setzen jeweils ein Mal zum
+Angriff an.",0,29484
+186,TOKUSEIINFO_LA_186,1DAEF08FE5FEE4D9,Erhöht die Stärke aller Attacken des Typs Unlicht.,0,29600
+187,TOKUSEIINFO_LA_187,1DAEEF8FE5FEE326,Erhöht die Stärke aller Attacken des Typs Fee.,0,29704
+188,TOKUSEIINFO_LA_188,1DAEFA8FE5FEF5D7,"Kehrt die Wirkung von Auren um und senkt so die
+Stärke bestimmter Attacken, anstatt sie zu erhöhen.",0,29800
+189,TOKUSEIINFO_LA_189,1DAEF98FE5FEF424,"Ändert das Wetter, um Feuer-Attacken wirkungslos
+zu machen.",0,30000
+190,TOKUSEIINFO_LA_190,1DABEC8FE5FCA836,"Ändert das Wetter, um Wasser-Attacken wirkungslos
+zu machen.",0,30120
+191,TOKUSEIINFO_LA_191,1DABED8FE5FCA9E9,"Ändert das Wetter, um die Schwächen des Typs Flug
+zu beseitigen.",0,30244
+192,TOKUSEIINFO_LA_192,1DABEA8FE5FCA4D0,"Wird es von einer Attacke getroffen, steigt seine
+Verteidigung.",0,30376
+193,TOKUSEIINFO_LA_193,1DABEB8FE5FCA683,"Fallen seine KP auf die Hälfte des Maximalwerts oder
+weniger, zieht es sich ängstlich zurück.",0,30504
+194,TOKUSEIINFO_LA_194,1DABF08FE5FCAF02,"Fallen seine KP auf die Hälfte des Maximalwerts oder
+weniger, bringt es sich in Sicherheit.",0,30692
+195,TOKUSEIINFO_LA_195,1DABF18FE5FCB0B5,"Wird es von einer Wasser-Attacke getroffen, steigt
+seine Verteidigung stark.",0,30876
+196,TOKUSEIINFO_LA_196,1DABEE8FE5FCAB9C,"Sorgt bei Angriffen auf vergiftete Ziele für
+Volltreffergarantie.",0,31032
+197,TOKUSEIINFO_LA_197,1DABEF8FE5FCAD4F,"Fallen seine KP auf die Hälfte des Maximalwerts oder
+weniger, zerbricht die Panzerung des Pokémon und es
+wird aggressiver.",0,31164
+198,TOKUSEIINFO_LA_198,1DABF48FE5FCB5CE,"Bewirkt bei Angriffen auf neu eingewechselte Ziele
+doppelten Schaden.",0,31412
+199,TOKUSEIINFO_LA_199,1DABF58FE5FCB781,"Feuer-Attacken fügen dem Pokémon weniger
+Schaden zu. Verhindert Verbrennungen.",0,31552
+200,TOKUSEIINFO_LA_200,26739D8FEAFE0032,Erhöht die Stärke von Stahl-Attacken.,0,31712
+201,TOKUSEIINFO_LA_201,26739E8FEAFE01E5,"Fallen seine KP nach einem Angriff auf die Hälfte des
+Maximalwerts oder weniger, steigt sein Spezial-Angriff.",0,31788
+202,TOKUSEIINFO_LA_202,26739B8FEAFDFCCC,Erhöht bei Hagel die Initiative.,0,32008
+203,TOKUSEIINFO_LA_203,26739C8FEAFDFE7F,"Ermöglicht dem Pokémon den Einsatz aller seiner
+Attacken, ohne das Ziel dabei direkt zu berühren.",0,32076
+204,TOKUSEIINFO_LA_204,2673998FEAFDF966,"Bewirkt, dass alle Lärm-Attacken des Pokémon den
+Typ Wasser annehmen.",0,32272
+205,TOKUSEIINFO_LA_205,26739A8FEAFDFB19,"Ermöglicht einen Erstschlag mit Attacken, welche die
+KP des Anwenders direkt regenerieren.",0,32412
+206,TOKUSEIINFO_LA_206,2673978FEAFDF600,"Attacken vom Typ Normal nehmen den Typ Elektro an
+und ihre Stärke erhöht sich ein wenig.",0,32596
+207,TOKUSEIINFO_LA_207,2673988FEAFDF7B3,"Verdoppelt die Initiative, wenn zuvor ein Elektrofeld
+erzeugt wurde.",0,32776
+208,TOKUSEIINFO_LA_208,2673A58FEAFE0DCA,"Verfügt es über einen hohen KP-Wert, wird es zu einem
+Schwarm und gewinnt an Stärke. Ist der KP-Wert niedrig,
+löst sich der Schwarm wieder auf.",0,32916
+209,TOKUSEIINFO_LA_209,2673A68FEAFE0F7D,"Kann ein Mal pro Kampf mit seinem gruseligen Kostüm
+einen Angriff abwehren.",0,33204
+210,TOKUSEIINFO_LA_210,2677238FEB0119BB,"Besiegt es ein Ziel, vertieft dies die Freundschaft zu
+seinem Trainer, wodurch es die Ash-Form annimmt
+und sein Wasser-Shuriken stärker wird.",0,33356
+211,TOKUSEIINFO_LA_211,2677228FEB011808,"Fallen seine KP auf die Hälfte des Maximalwerts oder
+weniger, eilen ihm weitere Zellen zu Hilfe und es
+nimmt die Optimumform an.",0,33640
+212,TOKUSEIINFO_LA_212,2677258FEB011D21,Kann selbst Pokémon vom Typ Stahl oder Gift vergiften.,0,33900
+213,TOKUSEIINFO_LA_213,2677248FEB011B6E,"Das Pokémon befindet sich ununterbrochen im
+Halbschlaf und wacht nie vollständig auf. Es kann
+jedoch im Schlaf angreifen.",0,34012
+214,TOKUSEIINFO_LA_214,2677278FEB012087,"Schüchtert Gegner ein und hindert sie so daran,
+Erstschlag-Attacken gegen es einzusetzen.",0,34256
+215,TOKUSEIINFO_LA_215,2677268FEB011ED4,"Wird es durch eine Attacke besiegt, fügt es dem
+Angreifer Schaden in Höhe des KP-Werts zu,
+den es besaß, bevor es kampfunfähig wurde.",0,34436
+216,TOKUSEIINFO_LA_216,2677298FEB0123ED,"Kann direkt im Anschluss an die Tanz-Attacke eines
+anderen Pokémon ebenfalls eine solche einsetzen.",0,34704
+217,TOKUSEIINFO_LA_217,2677288FEB01223A,"Erhöht die Stärke der Spezial-Attacken seiner
+Mitstreiter.",0,34904
+218,TOKUSEIINFO_LA_218,26771B8FEB010C23,"Halbiert den Schaden, den es durch direkte Attacken
+nimmt, aber verdoppelt dafür den durch Feuer-Attacken
+erlittenen Schaden.",0,35024
+219,TOKUSEIINFO_LA_219,26771A8FEB010A70,"Überrascht Gegner und hindert sie so daran,
+Erstschlag-Attacken gegen es einzusetzen.",0,35276
+220,TOKUSEIINFO_LA_220,266D118FEAF8A6A0,"Erhöht jedes Mal, wenn ein Pokémon besiegt wird,
+den eigenen Spezial-Angriff.",0,35448
+221,TOKUSEIINFO_LA_221,266D128FEAF8A853,"Senkt bei Berührung im Zuge eines Angriffs die
+Initiative des Angreifers.",0,35604
+222,TOKUSEIINFO_LA_222,266D138FEAF8AA06,"Wird einer seiner Mitstreiter besiegt, erhält es
+dessen Fähigkeit.",0,35752
+223,TOKUSEIINFO_LA_223,266D148FEAF8ABB9,"Wechselt seine Fähigkeit zu der eines kampfunfähig
+gewordenen Mitstreiters.",0,35888
+224,TOKUSEIINFO_LA_224,266D158FEAF8AD6C,"Erhöht in jeder Runde, in der es ein anderes Pokémon
+besiegt, seinen höchsten Statuswert.",0,36040
+225,TOKUSEIINFO_LA_225,266D168FEAF8AF1F,Das Pokémon passt seinen Typ der getragenen Disc an.,0,36220
+226,TOKUSEIINFO_LA_226,266D178FEAF8B0D2,Erzeugt bei Kampfantritt ein Elektrofeld.,0,36328
+227,TOKUSEIINFO_LA_227,266D188FEAF8B285,Erzeugt bei Kampfantritt ein Psychofeld.,0,36412
+228,TOKUSEIINFO_LA_228,266D198FEAF8B438,Erzeugt bei Kampfantritt ein Nebelfeld.,0,36496
+229,TOKUSEIINFO_LA_229,266D1A8FEAF8B5EB,Erzeugt bei Kampfantritt ein Grasfeld.,0,36576
+230,TOKUSEIINFO_LA_230,2670978FEAFBC029,"Verhindert das Senken der Statuswerte durch Attacken
+und Fähigkeiten von Angreifern.",0,36656
+231,TOKUSEIINFO_LA_231,2670968FEAFBBE76,Verringert den erlittenen Schaden bei vollen KP.,0,36828
+232,TOKUSEIINFO_LA_232,2670958FEAFBBCC3,"Reduziert die Stärke von sehr effektiven Attacken und
+verringert damit den Schaden, den das Pokémon durch
+sie erleidet.",0,36928
+233,TOKUSEIINFO_LA_233,2670948FEAFBBB10,Erhöht die Stärke von sehr effektiven Attacken.,0,37168
+234,TOKUSEIINFO_LA_234,26709B8FEAFBC6F5,Erhöht bei Kampfantritt den Angriff.,0,37264
+235,TOKUSEIINFO_LA_235,26709A8FEAFBC542,Erhöht bei Kampfantritt die Verteidigung.,0,37340
+236,TOKUSEIINFO_LA_236,2670998FEAFBC38F,"Das Pokémon nimmt bei Einsatz einer Attacke deren
+Typ an.",0,37424
+237,TOKUSEIINFO_LA_237,2670988FEAFBC1DC,"Trägt das Pokémon kein Item bei sich, hebt es den Ball
+aus dem ersten gescheiterten Fangversuch des Kampfes
+wieder auf.",0,37540
+238,TOKUSEIINFO_LA_238,26709F8FEAFBCDC1,"Wird es von einem Angriff getroffen, verstreut es Teile
+seines Wollflaums, wodurch die Initiative aller anderen
+Pokémon sinkt.",0,37780
+239,TOKUSEIINFO_LA_239,26709E8FEAFBCC0E,"Ignoriert die Effekte von Fähigkeiten und Attacken
+anderer Pokémon, die Attacken auf sich lenken.",0,38036
+240,TOKUSEIINFO_LA_240,2681958FEB0A2FF6,"Lenkt ausschließlich Effekte, welche die Statuswerte
+des Pokémon senken würden, auf den Angreifer um.",0,38232
+241,TOKUSEIINFO_LA_241,2681968FEB0A31A9,"Wenn das Pokémon Surfer oder Taucher einsetzt, fängt
+es sich dabei Beute. Erleidet es anschließend Schaden,
+greift es an, indem es die Beute wieder ausspuckt.",0,38436
+242,TOKUSEIINFO_LA_242,2681938FEB0A2C90,"Ignoriert die Effekte von Fähigkeiten und Attacken
+anderer Pokémon, die Attacken auf sich lenken.",0,38756
+243,TOKUSEIINFO_LA_243,2681948FEB0A2E43,"Wird es von einer Wasser- oder Feuer-Attacke
+getroffen, steigt seine Initiative drastisch.",0,38952
+244,TOKUSEIINFO_LA_244,2681998FEB0A36C2,"Erhöht die Stärke von eigenen Lärm-Attacken und
+halbiert den Schaden, den das Pokémon selbst durch
+Lärm-Attacken erleidet.",0,39136
+245,TOKUSEIINFO_LA_245,26819A8FEB0A3875,"Löst einen Sandsturm aus, wenn das Pokémon von einer
+Attacke erfasst wird.",0,39384
+246,TOKUSEIINFO_LA_246,2681978FEB0A335C,"Halbiert mithilfe von schützendem Eisflügelstaub den
+Schaden, den das Pokémon durch Spezial-Attacken
+erleidet.",0,39536
+247,TOKUSEIINFO_LA_247,2681988FEB0A350F,"Verdoppelt den Effekt von Beeren, indem es sie
+heranreifen lässt.",0,39760
+248,TOKUSEIINFO_LA_248,26819D8FEB0A3D8E,"Der Eisblock um seinen Kopf blockt eine physische
+Attacke ab. Dies bewirkt jedoch einen Formwechsel.
+Durch Hagel wird der Eisblock wiederhergestellt.",0,39892
+249,TOKUSEIINFO_LA_249,26819E8FEB0A3F41,"Erhöht bei direkt benachbarten Pokémon die Stärke
+von Attacken.",0,40192
+250,TOKUSEIINFO_LA_250,26849B8FEB0C6FFF,"Der Typ des Pokémon ändert sich in Abhängigkeit vom
+Zustand des Feldes.",0,40320
+251,TOKUSEIINFO_LA_251,26849A8FEB0C6E4C,"Hebt bei Kampfantritt die Wirkung von Lichtschild,
+Reflektor und Auroraschleier auf Mitstreiter- und
+Gegnerseite auf.",0,40464
+252,TOKUSEIINFO_LA_252,26849D8FEB0C7365,"Erhöht die Stärke von Stahl-Attacken auf
+Mitstreiterseite.",0,40700
+253,TOKUSEIINFO_LA_253,26849C8FEB0C71B2,"Erleidet es einen Treffer von einer direkten Attacke,
+wird es zusammen mit dem Angreifer nach drei Runden
+besiegt. Rettung ist durch Austausch möglich.",0,40820
+254,TOKUSEIINFO_LA_254,2684978FEB0C6933,"Wird das Pokémon von einer direkten Attacke
+getroffen, tauscht es seine Fähigkeit mit der des
+Angreifers.",0,41124
+255,TOKUSEIINFO_LA_255,2684968FEB0C6780,"Erhöht den Angriff, aber nur die zuerst gewählte
+Attacke kann eingesetzt werden.",0,41336
+256,TOKUSEIINFO_LA_256,2684998FEB0C6C99,"Solange ein Pokémon mit der Fähigkeit Reaktionsgas
+am Kampf beteiligt ist, werden die Fähigkeiten aller
+anderen Pokémon unterdrückt oder aufgehoben.",0,41500
+257,TOKUSEIINFO_LA_257,2684988FEB0C6AE6,"Schützt das Pokémon und seine Mitstreiter vor
+Vergiftung.",0,41800
+258,TOKUSEIINFO_LA_258,2684A38FEB0C7D97,"Das Pokémon ändert zum Ende jeder Runde seine
+Form und wechselt somit zwischen dem Pappsatt- und
+dem Kohldampfmuster.",0,41916
+259,TOKUSEIINFO_LA_259,2684A28FEB0C7BE4,Ermöglicht dem Pokémon gelegentlich den Erstschlag.,0,42152
+260,TOKUSEIINFO_LA_260,267AA98FEB043344,"Wenn das Pokémon eine direkte Attacke einsetzt,
+trifft diese auch dann, wenn sich das Ziel selbst
+schützt.",0,42256
+261,TOKUSEIINFO_LA_261,267AAA8FEB0434F7,"Das Pokémon versprüht bei Kampfantritt Arznei aus
+seiner Muschel, die alle Statusveränderungen auf der
+Mitstreiterseite aufhebt.",0,42472
+262,TOKUSEIINFO_LA_262,267AAB8FEB0436AA,Erhöht die Stärke von Elektro-Attacken.,0,42732
+263,TOKUSEIINFO_LA_263,267AAC8FEB04385D,Erhöht die Stärke von Drachen-Attacken.,0,42812
+264,TOKUSEIINFO_LA_264,267AA58FEB042C78,"Besiegt es ein Pokémon, stößt es ein frostiges Wiehern
+aus und erhöht damit seinen Angriff.",0,42892
+265,TOKUSEIINFO_LA_265,267AA68FEB042E2B,"Besiegt es ein Pokémon, stößt es ein furchteinflößendes
+Wiehern aus und erhöht damit seinen Spezial-Angriff.",0,43076
+266,TOKUSEIINFO_LA_266,267AA78FEB042FDE,"Das Pokémon verfügt sowohl über Coronospas Fähigkeit
+Anspannung als auch über Polaross’ Fähigkeit
+Helles Wiehern.",0,43296
+267,TOKUSEIINFO_LA_267,267AA88FEB043191,"Das Pokémon verfügt sowohl über Coronospas Fähigkeit
+Anspannung als auch über Phantoross’ Fähigkeit
+Dunkles Wiehern.",0,43524

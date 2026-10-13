@@ -1,0 +1,410 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,TOKUSEIINFO_LPLE_000,60D50874BC6FC7EC,—,0,1892
+1,TOKUSEIINFO_LPLE_001,60D50974BC6FC99F,"Debido al mal olor que emana al atacar,
+puede atemorizar a un Pokémon.",0,1896
+2,TOKUSEIINFO_LPLE_002,60D50A74BC6FCB52,Hace que llueva al entrar en combate.,0,2040
+3,TOKUSEIINFO_LPLE_003,60D50B74BC6FCD05,Aumenta su Velocidad en cada turno.,4,2116
+4,TOKUSEIINFO_LPLE_004,60D50474BC6FC120,"La robusta coraza que lo protege bloquea los golpes
+críticos.",0,2188
+5,TOKUSEIINFO_LPLE_005,60D50574BC6FC2D3,"El Pokémon no puede debilitarse de un solo golpe
+cuando tiene los PS al máximo.
+También evita los movimientos fulminantes.",4,2312
+6,TOKUSEIINFO_LPLE_006,60D50674BC6FC486,"Aumenta la humedad del entorno y evita que se puedan
+utilizar movimientos explosivos, como Autodestrucción.",4,2560
+7,TOKUSEIINFO_LPLE_007,60D50774BC6FC639,La flexibilidad de su cuerpo le permite evitar la parálisis.,0,2776
+8,TOKUSEIINFO_LPLE_008,60D51074BC6FD584,Aumenta su Evasión durante las tormentas de arena.,4,2900
+9,TOKUSEIINFO_LPLE_009,60D51174BC6FD737,"La electricidad estática que lo envuelve puede paralizar
+al Pokémon que lo ataque con un movimiento de
+contacto.",0,3004
+10,TOKUSEIINFO_LPLE_010,60D88E74BC72E175,"Si lo alcanza un movimiento de tipo Eléctrico, recupera
+PS en vez de sufrir daño.",0,3232
+11,TOKUSEIINFO_LPLE_011,60D88D74BC72DFC2,"Si lo alcanza un movimiento de tipo Agua, recupera PS
+en vez de sufrir daño.",0,3396
+12,TOKUSEIINFO_LPLE_012,60D88C74BC72DE0F,"Su indiferencia evita que sea provocado, caiga presa
+del enamoramiento.",0,3552
+13,TOKUSEIINFO_LPLE_013,60D88B74BC72DC5C,Anula todos los efectos del tiempo atmosférico.,4,3696
+14,TOKUSEIINFO_LPLE_014,60D88A74BC72DAA9,Aumenta la precisión de sus movimientos.,4,3792
+15,TOKUSEIINFO_LPLE_015,60D88974BC72D8F6,Su resistencia al sueño le impide quedarse dormido.,0,3876
+16,TOKUSEIINFO_LPLE_016,60D88874BC72D743,"Adopta el tipo del último movimiento del que es
+blanco.",4,3980
+17,TOKUSEIINFO_LPLE_017,60D88774BC72D590,Su sistema inmunológico evita el envenenamiento.,0,4092
+18,TOKUSEIINFO_LPLE_018,60D89674BC72EF0D,"Si lo alcanza algún movimiento de tipo Fuego, potencia
+sus propios movimientos de dicho tipo.",0,4192
+19,TOKUSEIINFO_LPLE_019,60D89574BC72ED5A,"El polvo de escamas que lo envuelve lo protege de
+los efectos secundarios de los ataques recibidos.",4,4380
+20,TOKUSEIINFO_LPLE_020,60DB9474BC75217E,"Como le gusta hacer las cosas a su manera, no le afecta
+la confusión.",0,4580
+21,TOKUSEIINFO_LPLE_021,60DB9574BC752331,"Sus ventosas se aferran al suelo, lo que le permite anular
+movimientos y objetos que quieran forzar el cambio
+de Pokémon.",0,4720
+22,TOKUSEIINFO_LPLE_022,60DB9274BC751E18,"Al entrar en combate, intimida al rival de tal manera
+que reduce su Ataque.",4,4964
+23,TOKUSEIINFO_LPLE_023,60DB9374BC751FCB,"Pisa la sombra del rival para impedir que huya
+o lo cambien por otro.",0,5116
+24,TOKUSEIINFO_LPLE_024,60DB9874BC75284A,"Daña con su piel áspera al Pokémon que lo ataque
+con un movimiento de contacto.",0,5256
+25,TOKUSEIINFO_LPLE_025,60DB9974BC7529FD,"Gracias a un poder misterioso, solo le hacen daño los
+movimientos supereficaces.",0,5416
+26,TOKUSEIINFO_LPLE_026,60DB9674BC7524E4,"Su capacidad de flotar sobre el suelo le proporciona
+inmunidad frente a los movimientos de tipo Tierra.",0,5580
+27,TOKUSEIINFO_LPLE_027,60DB9774BC752697,"Puede dormir, envenenar o paralizar al Pokémon que lo
+ataque con un movimiento de contacto.",0,5788
+28,TOKUSEIINFO_LPLE_028,60DB8C74BC7513E6,"Contagia el envenenamiento, las quemaduras o la
+parálisis al Pokémon que le cause ese estado.",0,5972
+29,TOKUSEIINFO_LPLE_029,60DB8D74BC751599,"Evita que se reduzcan sus características a causa
+de movimientos o habilidades de otros Pokémon.",4,6160
+30,TOKUSEIINFO_LPLE_030,60DF1A74BC783B07,"Sus problemas de estado desaparecen cuando se retira
+del combate.",0,6356
+31,TOKUSEIINFO_LPLE_031,60DF1974BC783954,"Atrae y neutraliza los movimientos de tipo Eléctrico,
+que además le aumentan el Ataque Especial.",4,6488
+32,TOKUSEIINFO_LPLE_032,60DF1C74BC783E6D,"Aumenta la probabilidad de que los movimientos
+causen efectos secundarios.",4,6684
+33,TOKUSEIINFO_LPLE_033,60DF1B74BC783CBA,Aumenta su Velocidad cuando llueve.,4,6836
+34,TOKUSEIINFO_LPLE_034,60DF1674BC78343B,Aumenta su Velocidad cuando hace sol.,4,6908
+35,TOKUSEIINFO_LPLE_035,60DF1574BC783288,"Aumenta la probabilidad de encontrar Pokémon al
+iluminar el entorno.",4,6984
+36,TOKUSEIINFO_LPLE_036,60DF1874BC7837A1,Copia la habilidad del rival al entrar en combate.,0,7124
+37,TOKUSEIINFO_LPLE_037,60DF1774BC7835EE,Duplica la potencia de sus ataques físicos.,0,7228
+38,TOKUSEIINFO_LPLE_038,60DF1274BC782D6F,"Puede envenenar al Pokémon que lo ataque con un
+movimiento de contacto.",0,7316
+39,TOKUSEIINFO_LPLE_039,60DF1174BC782BBC,"Gracias a su profunda concentración, no se atemoriza
+ante los ataques de otros Pokémon.",0,7460
+40,TOKUSEIINFO_LPLE_040,60C79074BC6471A8,"Evita el congelamiento gracias al magma candente
+que lo envuelve.",4,7636
+41,TOKUSEIINFO_LPLE_041,60C79174BC64735B,"Evita las quemaduras gracias a la capa de agua que
+lo envuelve.",4,7768
+42,TOKUSEIINFO_LPLE_042,60C79274BC64750E,"Su magnetismo atrae a los Pokémon de tipo Acero y
+les impide huir o ser cambiados por otros.",0,7896
+43,TOKUSEIINFO_LPLE_043,60C79374BC6476C1,"Su aislamiento acústico lo protege de movimientos
+que usan sonido.",0,8084
+44,TOKUSEIINFO_LPLE_044,60C79474BC647874,Recupera PS de forma gradual cuando llueve.,0,8220
+45,TOKUSEIINFO_LPLE_045,60C79574BC647A27,Crea una tormenta de arena al entrar en combate.,0,8308
+46,TOKUSEIINFO_LPLE_046,60C79674BC647BDA,"Presiona al rival de tal manera que este consume más PP
+al usar sus movimientos.",0,8408
+47,TOKUSEIINFO_LPLE_047,60C79774BC647D8D,"Gracias a la gruesa capa de grasa que lo protege,
+reduce a la mitad el daño que recibe de ataques de
+tipo Fuego o Hielo.",0,8572
+48,TOKUSEIINFO_LPLE_048,60C78874BC646410,"Si se duerme, tardará la mitad de tiempo en
+despertarse.",0,8816
+49,TOKUSEIINFO_LPLE_049,60C78974BC6465C3,"Puede quemar al Pokémon que lo ataque con un
+movimiento de contacto.",0,8932
+50,TOKUSEIINFO_LPLE_050,60CA9674BC66B1B1,Puede escaparse de cualquier Pokémon salvaje.,0,9072
+51,TOKUSEIINFO_LPLE_051,60CA9574BC66AFFE,Su aguda vista evita que su Precisión se reduzca.,0,9164
+52,TOKUSEIINFO_LPLE_052,60CA9474BC66AE4B,Evita que otros Pokémon le reduzcan el Ataque.,4,9264
+53,TOKUSEIINFO_LPLE_053,60CA9374BC66AC98,"Puede recoger objetos que otros Pokémon hayan usado,
+o bien los que encuentre en plena aventura.",0,9360
+54,TOKUSEIINFO_LPLE_054,60CA9A74BC66B87D,"Cada vez que ejecute un movimiento,
+tendrá que descansar en el turno siguiente.",0,9556
+55,TOKUSEIINFO_LPLE_055,60CA9974BC66B6CA,"Aumenta su Ataque, pero reduce su Precisión.",4,9716
+56,TOKUSEIINFO_LPLE_056,60CA9874BC66B517,"Puede causar enamoramiento al Pokémon que lo ataque
+con un movimiento de contacto.",0,9808
+57,TOKUSEIINFO_LPLE_057,60CA9774BC66B364,"Aumenta su Ataque Especial si un Pokémon aliado
+tiene la habilidad Más o la habilidad Menos.",4,9976
+58,TOKUSEIINFO_LPLE_058,60CA8E74BC66A419,"Aumenta su Ataque Especial si un Pokémon aliado
+tiene la habilidad Más o la habilidad Menos.",4,10164
+59,TOKUSEIINFO_LPLE_059,60CA8D74BC66A266,"Cambia a tipo Agua, Fuego o Hielo dependiendo del
+tiempo atmosférico.",0,10352
+60,TOKUSEIINFO_LPLE_060,60CE1C74BC69CB3A,"Los objetos se quedan pegados a su cuerpo, por lo que
+no pueden robárselos.",0,10492
+61,TOKUSEIINFO_LPLE_061,60CE1D74BC69CCED,Puede curar sus problemas de estado al mudar la piel.,0,10644
+62,TOKUSEIINFO_LPLE_062,60CE1A74BC69C7D4,"Si sufre un problema de estado, se arma de valor
+y aumenta su Ataque.",0,10752
+63,TOKUSEIINFO_LPLE_063,60CE1B74BC69C987,"Si sufre un problema de estado, sus escamas especiales
+reaccionan y aumenta su Defensa.",0,10892
+64,TOKUSEIINFO_LPLE_064,60CE1874BC69C46E,"Exuda una secreción tóxica y viscosa de intenso hedor
+que hiere a quienes intentan drenarle PS.",4,11068
+65,TOKUSEIINFO_LPLE_065,60CE1974BC69C621,"Potencia sus movimientos de tipo Planta cuando le
+quedan pocos PS.",0,11260
+66,TOKUSEIINFO_LPLE_066,60CE1674BC69C108,"Potencia sus movimientos de tipo Fuego cuando le
+quedan pocos PS.",0,11396
+67,TOKUSEIINFO_LPLE_067,60CE1774BC69C2BB,"Potencia sus movimientos de tipo Agua cuando le
+quedan pocos PS.",0,11528
+68,TOKUSEIINFO_LPLE_068,60CE1474BC69BDA2,"Potencia sus movimientos de tipo Insecto cuando le
+quedan pocos PS.",0,11660
+69,TOKUSEIINFO_LPLE_069,60CE1574BC69BF55,"No pierde PS al usar movimientos con los que puede
+herirse a sí mismo.",0,11796
+70,TOKUSEIINFO_LPLE_070,60D18274BC6CAE63,"Al entrar en combate, el tiempo pasa a ser soleado.",4,11940
+71,TOKUSEIINFO_LPLE_071,60D18174BC6CACB0,Evita que el rival huya o sea cambiado por otro.,4,12044
+72,TOKUSEIINFO_LPLE_072,60D18474BC6CB1C9,Su determinación le impide quedarse dormido.,0,12144
+73,TOKUSEIINFO_LPLE_073,60D18374BC6CB016,"El humo blanco que lo protege evita que otros Pokémon
+le reduzcan las características.",4,12236
+74,TOKUSEIINFO_LPLE_074,60D18674BC6CB52F,"Duplica la potencia de sus ataques físicos gracias al
+yoga.",0,12412
+75,TOKUSEIINFO_LPLE_075,60D18574BC6CB37C,"La robusta coraza que lo protege bloquea los golpes
+críticos.",0,12532
+76,TOKUSEIINFO_LPLE_076,60D18874BC6CB895,Neutraliza todos los efectos del tiempo atmosférico.,0,12656
+77,TOKUSEIINFO_LPLE_077,60D18774BC6CB6E2,Aumenta su Evasión si está confundido.,4,12764
+78,TOKUSEIINFO_LPLE_078,60D18A74BC6CBBFB,"Si lo alcanza un movimiento de tipo Eléctrico, aumenta
+su Velocidad en vez de sufrir daño.",0,12844
+79,TOKUSEIINFO_LPLE_079,60D18974BC6CBA48,"Si el objetivo es del mismo sexo, su competitividad lo
+lleva a causar más daño. Si es del sexo contrario, en
+cambio, el daño será menor.",0,13028
+80,TOKUSEIINFO_LPLE_080,60B99874BC5841E4,"Cada vez que se atemoriza, aumenta su Velocidad
+gracias a su voluntad inquebrantable.",0,13304
+81,TOKUSEIINFO_LPLE_081,60B99974BC584397,Aumenta su Evasión cuando graniza.,4,13476
+82,TOKUSEIINFO_LPLE_082,60B99A74BC58454A,"Cuando sus PS se reducen a la mitad, engulle
+la baya que normalmente solo se comería
+cuando tuviese pocos PS.",0,13548
+83,TOKUSEIINFO_LPLE_083,60B99B74BC5846FD,"Si recibe un golpe crítico, se enfurece y su Ataque
+aumenta al máximo.",0,13768
+84,TOKUSEIINFO_LPLE_084,60B99474BC583B18,"Aumenta su Velocidad si usa o pierde el objeto que
+lleva.",4,13912
+85,TOKUSEIINFO_LPLE_085,60B99574BC583CCB,"Su cuerpo, resistente al calor, reduce a la mitad el daño
+recibido por movimientos de tipo Fuego.",0,14028
+86,TOKUSEIINFO_LPLE_086,60B99674BC583E7E,Duplica los cambios en las características.,0,14224
+87,TOKUSEIINFO_LPLE_087,60B99774BC584031,"Pierde PS si hace sol y los recupera si llueve o recibe
+un movimiento de tipo Agua. Los movimientos de tipo
+Fuego, por su parte, le hacen más daño de lo normal.",0,14312
+88,TOKUSEIINFO_LPLE_088,60B99074BC58344C,"Compara la Defensa y la Defensa Especial del rival
+para ver cuál es inferior y aumenta su propio Ataque
+o Ataque Especial según lo que sea más eficaz.",0,14636
+89,TOKUSEIINFO_LPLE_089,60B99174BC5835FF,Aumenta la potencia de los movimientos con los puños.,4,14940
+90,TOKUSEIINFO_LPLE_090,60BD1E74BC5B5B6D,"Si resulta envenenado, recupera PS en vez de perderlos.",0,15048
+91,TOKUSEIINFO_LPLE_091,60BD1D74BC5B59BA,"Potencia aún más los movimientos cuyo tipo coincida
+con el suyo.",0,15160
+92,TOKUSEIINFO_LPLE_092,60BD1C74BC5B5807,"Ejecuta siempre los movimientos de ataque múltiple con
+el número máximo de golpes.",4,15292
+93,TOKUSEIINFO_LPLE_093,60BD1B74BC5B5654,Cura los problemas de estado si está lloviendo.,0,15460
+94,TOKUSEIINFO_LPLE_094,60BD1A74BC5B54A1,"Si hace sol, aumenta su Ataque Especial, pero pierde PS
+en cada turno.",0,15556
+95,TOKUSEIINFO_LPLE_095,60BD1974BC5B52EE,Aumenta su Velocidad si sufre problemas de estado.,4,15700
+96,TOKUSEIINFO_LPLE_096,60BD1874BC5B513B,"Hace que todos sus movimientos se vuelvan de tipo
+Normal y aumenta ligeramente su potencia.",0,15804
+97,TOKUSEIINFO_LPLE_097,60BD1774BC5B4F88,"Potencia aún más de lo normal los golpes críticos
+que lanza.",0,15988
+98,TOKUSEIINFO_LPLE_098,60BD1674BC5B4DD5,Solo recibe daño de ataques.,0,16112
+99,TOKUSEIINFO_LPLE_099,60BD1574BC5B4C22,"Al quedar ambos expuestos, tanto sus movimientos
+como los del Pokémon que lo ataque acertarán siempre.",4,16172
+100,TOKUSEIINFO_LPLE_100,69EB4374C1B42BB7,Ejecuta su movimiento luego de todos los demás.,4,16380
+101,TOKUSEIINFO_LPLE_101,69EB4274C1B42A04,Aumenta la potencia de sus movimientos débiles.,4,16476
+102,TOKUSEIINFO_LPLE_102,69EB4574C1B42F1D,Evita los problemas de estado si hace sol.,4,16572
+103,TOKUSEIINFO_LPLE_103,69EB4474C1B42D6A,No puede usar objetos equipados.,0,16660
+104,TOKUSEIINFO_LPLE_104,69EB3F74C1B424EB,La habilidad del objetivo no afectará sus movimientos.,0,16728
+105,TOKUSEIINFO_LPLE_105,69EB3E74C1B42338,"Su buena suerte aumenta la probabilidad de lanzar
+golpes críticos.",0,16840
+106,TOKUSEIINFO_LPLE_106,69EB4174C1B42851,"Daña al Pokémon que le dio el golpe de gracia con
+un movimiento de contacto.",0,16976
+107,TOKUSEIINFO_LPLE_107,69EB4074C1B4269E,Prevé los movimientos peligrosos del rival.,0,17132
+108,TOKUSEIINFO_LPLE_108,69EB3B74C1B41E1F,"Revela uno de los movimientos del rival al entrar
+en combate.",0,17220
+109,TOKUSEIINFO_LPLE_109,69EB3A74C1B41C6C,"Ignora las mejoras en las características de un Pokémon
+al atacarlo o recibir daño.",4,17344
+110,TOKUSEIINFO_LPLE_110,69E7BD74C1B1122E,"Potencia los movimientos que no son muy eficaces
+para causar daño normal.",0,17512
+111,TOKUSEIINFO_LPLE_111,69E7BE74C1B113E1,"Mitiga el daño que le causan los movimientos
+supereficaces.",0,17660
+112,TOKUSEIINFO_LPLE_112,69E7BB74C1B10EC8,"Reduce su Ataque y su Velocidad a la mitad durante
+cinco turnos.",0,17780
+113,TOKUSEIINFO_LPLE_113,69E7BC74C1B1107B,"Puede alcanzar a Pokémon de tipo Fantasma con
+movimientos de tipo Normal o Pelea.",0,17912
+114,TOKUSEIINFO_LPLE_114,69E7C174C1B118FA,"Atrae y neutraliza los movimientos de tipo Agua, que
+además le aumentan el Ataque Especial.",4,18076
+115,TOKUSEIINFO_LPLE_115,69E7C274C1B11AAD,"Recupera PS de forma gradual cuando hay tormentas
+de granizo.",0,18260
+116,TOKUSEIINFO_LPLE_116,69E7BF74C1B11594,"Mitiga el daño que le causan los movimientos
+supereficaces.",0,18384
+117,TOKUSEIINFO_LPLE_117,69E7C074C1B11747,Invoca una tormenta de granizo al entrar en combate.,4,18504
+118,TOKUSEIINFO_LPLE_118,69E7B574C1B10496,"Puede que encuentre Miel luego de terminar
+el combate.",0,18612
+119,TOKUSEIINFO_LPLE_119,69E7B674C1B10649,"Puede ver el objeto que lleva el rival al entrar en
+combate.",0,18724
+120,TOKUSEIINFO_LPLE_120,69E43774C1ADF8A5,Potencia los movimientos que también dañan al usuario.,0,18848
+121,TOKUSEIINFO_LPLE_121,69E43674C1ADF6F2,"Cambia su tipo al de la placa o al del Cristal Z que
+lleve.",0,18960
+122,TOKUSEIINFO_LPLE_122,69E43574C1ADF53F,"Si hace sol, aumenta su Ataque y su Defensa Especial,
+así como los de sus aliados.",0,19080
+123,TOKUSEIINFO_LPLE_123,69E43474C1ADF38C,Causa daño a cualquier rival que esté dormido.,0,19248
+124,TOKUSEIINFO_LPLE_124,69E43374C1ADF1D9,"Roba el objeto del Pokémon que lo ataque con un
+movimiento de contacto.",0,19344
+125,TOKUSEIINFO_LPLE_125,69E43274C1ADF026,"Aumenta la potencia de sus movimientos, pero, a
+cambio, se anulan los efectos secundarios.",4,19488
+126,TOKUSEIINFO_LPLE_126,69E43174C1ADEE73,"Invierte los cambios en las características: se reducen
+cuando deben aumentar y aumentan cuando deben
+reducirse.",4,19672
+127,TOKUSEIINFO_LPLE_127,69E43074C1ADECC0,Pone nervioso al rival y le impide comer bayas.,0,19900
+128,TOKUSEIINFO_LPLE_128,69E43F74C1AE063D,"Aumenta mucho su Ataque cuando el rival le reduce las
+características.",4,19996
+129,TOKUSEIINFO_LPLE_129,69E43E74C1AE048A,"Cuando se reducen sus PS a la mitad, se cansa
+tanto que su Ataque y su Ataque Especial también
+se reducen a la mitad.",0,20140
+130,TOKUSEIINFO_LPLE_130,69E13174C1ABB89C,Puede anular el movimiento usado en su contra.,0,20376
+131,TOKUSEIINFO_LPLE_131,69E13274C1ABBA4F,A veces cura los problemas de estado de un aliado.,4,20472
+132,TOKUSEIINFO_LPLE_132,69E13374C1ABBC02,Reduce el daño que sufren los aliados.,0,20576
+133,TOKUSEIINFO_LPLE_133,69E13474C1ABBDB5,"Al recibir daño de un ataque físico, se reduce
+su Defensa, pero aumenta mucho su Velocidad.",4,20656
+134,TOKUSEIINFO_LPLE_134,69E12D74C1ABB1D0,Duplica su peso.,0,20840
+135,TOKUSEIINFO_LPLE_135,69E12E74C1ABB383,Reduce su peso a la mitad.,0,20876
+136,TOKUSEIINFO_LPLE_136,69E12F74C1ABB536,Reduce el daño que sufre si sus PS están al máximo.,0,20932
+137,TOKUSEIINFO_LPLE_137,69E13074C1ABB6E9,"Aumenta la potencia de sus ataques físicos cuando
+está envenenado.",4,21036
+138,TOKUSEIINFO_LPLE_138,69E13974C1ABC634,"Aumenta la potencia de sus ataques especiales cuando
+sufre quemaduras.",4,21172
+139,TOKUSEIINFO_LPLE_139,69E13A74C1ABC7E7,Puede reutilizar varias veces una misma baya.,0,21316
+140,TOKUSEIINFO_LPLE_140,69DDAB74C1A89F13,Elude los ataques de los aliados durante el combate.,4,21408
+141,TOKUSEIINFO_LPLE_141,69DDAA74C1A89D60,"Aumenta mucho una característica en cada turno,
+pero reduce otra.",4,21516
+142,TOKUSEIINFO_LPLE_142,69DDAD74C1A8A279,"No le afectan las tormentas de arena, el granizo y los
+movimientos con polvos.",0,21648
+143,TOKUSEIINFO_LPLE_143,69DDAC74C1A8A0C6,"Puede envenenar al Pokémon al que ataque con un
+movimiento de contacto.",0,21808
+144,TOKUSEIINFO_LPLE_144,69DDAF74C1A8A5DF,Recupera unos pocos PS cuando se retira del combate.,0,21952
+145,TOKUSEIINFO_LPLE_145,69DDAE74C1A8A42C,Impide que otros Pokémon le reduzcan la Defensa.,4,22060
+146,TOKUSEIINFO_LPLE_146,69DDB174C1A8A945,Aumenta su Velocidad durante las tormentas de arena.,4,22160
+147,TOKUSEIINFO_LPLE_147,69DDB074C1A8A792,"Presenta una mayor resistencia frente a los movimientos
+de estado.",0,22268
+148,TOKUSEIINFO_LPLE_148,69DDB374C1A8ACAB,"Aumenta la potencia de su movimiento si es el último
+en atacar.",4,22404
+149,TOKUSEIINFO_LPLE_149,69DDB274C1A8AAF8,"Al entrar en combate, adopta el aspecto del último
+Pokémon del equipo para desconcertar al rival.",4,22532
+150,TOKUSEIINFO_LPLE_150,69DA4574C1A5BBEA,Se transforma en el Pokémon que tiene enfrente.,0,22728
+151,TOKUSEIINFO_LPLE_151,69DA4674C1A5BD9D,Ataca evitando las barreras o el sustituto del objetivo.,4,22824
+152,TOKUSEIINFO_LPLE_152,69DA4374C1A5B884,"Contagia la habilidad Momia al Pokémon que lo ataque
+con un movimiento de contacto.",0,22940
+153,TOKUSEIINFO_LPLE_153,69DA4474C1A5BA37,"Al debilitar a un objetivo, su confianza se refuerza
+de tal manera que aumenta su Ataque.",4,23108
+154,TOKUSEIINFO_LPLE_154,69DA4174C1A5B51E,"Si lo alcanza un movimiento de tipo Siniestro, aumenta
+el Ataque debido a su integridad.",0,23288
+155,TOKUSEIINFO_LPLE_155,69DA4274C1A5B6D1,"Si lo alcanza un movimiento de tipo Siniestro, Insecto o
+Fantasma, el miedo hace que aumente su Velocidad.",0,23468
+156,TOKUSEIINFO_LPLE_156,69DA3F74C1A5B1B8,"Puede devolver los movimientos de estado sin verse
+afectado por ellos.",0,23684
+157,TOKUSEIINFO_LPLE_157,69DA4074C1A5B36B,"Si lo alcanza un movimiento de tipo Planta, aumenta
+su Ataque en vez de sufrir daño.",0,23828
+158,TOKUSEIINFO_LPLE_158,69DA3D74C1A5AE52,Sus movimientos de estado tienen prioridad alta.,0,24000
+159,TOKUSEIINFO_LPLE_159,69DA3E74C1A5B005,"Potencia los movimientos de tipo Tierra, Acero y Roca
+durante las tormentas de arena.",0,24100
+160,TOKUSEIINFO_LPLE_160,69D6BF74C1A2A261,"Le causa daño con sus púas de acero al Pokémon
+que lo ataque con un movimiento de contacto.",0,24272
+161,TOKUSEIINFO_LPLE_161,69D6BE74C1A2A0AE,"Cambia de forma si sus PS se reducen a la mitad
+o menos.",0,24456
+162,TOKUSEIINFO_LPLE_162,69D6BD74C1A29EFB,Aumenta su Precisión y la de sus aliados.,4,24572
+163,TOKUSEIINFO_LPLE_163,69D6BC74C1A29D48,"La habilidad del objetivo no afecta a los
+movimientos que usa.",0,24656
+164,TOKUSEIINFO_LPLE_164,69D6C374C1A2A92D,"La habilidad del objetivo no afecta a los
+movimientos que usa.",0,24784
+165,TOKUSEIINFO_LPLE_165,69D6C274C1A2A77A,"Se protege a sí mismo y a sus aliados de efectos
+que impiden usar movimientos.",0,24912
+166,TOKUSEIINFO_LPLE_166,69D6C174C1A2A5C7,"Evita que los Pokémon de tipo Planta aliados sufran
+problemas de estado o que les reduzcan sus
+características.",4,25072
+167,TOKUSEIINFO_LPLE_167,69D6C074C1A2A414,Recupera PS al comer cualquier baya.,0,25296
+168,TOKUSEIINFO_LPLE_168,69D6B774C1A294C9,Cambia su tipo al del movimiento que va a usar.,0,25372
+169,TOKUSEIINFO_LPLE_169,69D6B674C1A29316,"Reduce a la mitad el daño que recibe de ataques
+físicos.",0,25468
+170,TOKUSEIINFO_LPLE_170,69D33974C19F88D8,"Roba el objeto del Pokémon al que alcance con un
+movimiento.",0,25584
+171,TOKUSEIINFO_LPLE_171,69D33A74C19F8A8B,No lo afectan las bombas ni algunos proyectiles.,0,25708
+172,TOKUSEIINFO_LPLE_172,69D33B74C19F8C3E,"Aumenta mucho su Ataque Especial cuando el rival
+le reduce cualquiera de sus características.",4,25808
+173,TOKUSEIINFO_LPLE_173,69D33C74C19F8DF1,"Su robusta mandíbula le confiere una mordedura
+mucho más potente.",0,25996
+174,TOKUSEIINFO_LPLE_174,69D33D74C19F8FA4,"Convierte los movimientos de tipo Normal en tipo
+Hielo y aumenta ligeramente su potencia.",0,26128
+175,TOKUSEIINFO_LPLE_175,69D33E74C19F9157,"No cae dormido y también evita que sus aliados se
+duerman.",0,26308
+176,TOKUSEIINFO_LPLE_176,69D33F74C19F930A,"Adopta la Forma Espada al lanzar un ataque, o bien la
+Forma Escudo si usa el movimiento Escudo Real.",4,26428
+177,TOKUSEIINFO_LPLE_177,69D34074C19F94BD,"Da prioridad a los movimientos de tipo Volador si sus
+PS están al máximo.",0,26632
+178,TOKUSEIINFO_LPLE_178,69D33174C19F7B40,"Aumenta la potencia de algunos movimientos de pulsos
+y auras.",4,26780
+179,TOKUSEIINFO_LPLE_179,69D33274C19F7CF3,"Aumenta su Defensa si hay un campo de césped en el
+terreno de combate.",4,26904
+180,TOKUSEIINFO_LPLE_180,69D03374C19D48CF,Pasa su objeto a un aliado que ya haya utilizado el suyo.,0,27048
+181,TOKUSEIINFO_LPLE_181,69D03274C19D471C,Aumenta la potencia de los movimientos de contacto.,4,27164
+182,TOKUSEIINFO_LPLE_182,69D03574C19D4C35,"Convierte los movimientos de tipo Normal en tipo Hada
+y aumenta ligeramente su potencia.",0,27268
+183,TOKUSEIINFO_LPLE_183,69D03474C19D4A82,"Reduce la Velocidad del Pokémon que lo ataque con un
+movimiento de contacto.",0,27448
+184,TOKUSEIINFO_LPLE_184,69D02F74C19D4203,"Convierte los movimientos de tipo Normal en tipo
+Volador y aumenta ligeramente su potencia.",0,27604
+185,TOKUSEIINFO_LPLE_185,69D02E74C19D4050,Une fuerzas con su cría y ataca dos veces.,4,27788
+186,TOKUSEIINFO_LPLE_186,69D03174C19D4569,"Aumenta la potencia de los movimientos de tipo
+Siniestro de todos los Pokémon.",4,27876
+187,TOKUSEIINFO_LPLE_187,69D03074C19D43B6,"Aumenta la potencia de los movimientos de tipo Hada
+de todos los Pokémon.",4,28036
+188,TOKUSEIINFO_LPLE_188,69D03B74C19D5667,"Invierte los efectos de las habilidades de auras,
+por lo que reduce la potencia de ciertos movimientos
+en vez de aumentarla.",4,28184
+189,TOKUSEIINFO_LPLE_189,69D03A74C19D54B4,"Altera el tiempo atmosférico para anular los ataques
+de tipo Fuego.",4,28436
+190,TOKUSEIINFO_LPLE_190,69CCAD74C19A2F46,"Altera el tiempo atmosférico para anular los ataques
+de tipo Agua.",4,28572
+191,TOKUSEIINFO_LPLE_191,69CCAE74C19A30F9,"Altera el tiempo atmosférico para anular
+las debilidades del tipo Volador.",4,28708
+192,TOKUSEIINFO_LPLE_192,69CCAB74C19A2BE0,Aumenta su Defensa al recibir un ataque.,4,28860
+193,TOKUSEIINFO_LPLE_193,69CCAC74C19A2D93,"Se asusta y abandona el terreno de combate
+cuando sus PS se reducen a la mitad.",0,28944
+194,TOKUSEIINFO_LPLE_194,69CCB174C19A3612,"Abandona el terreno de combate cuando sus PS
+se reducen a la mitad para evitar males mayores.",4,29104
+195,TOKUSEIINFO_LPLE_195,69CCB274C19A37C5,"Aumenta mucho su Defensa si lo alcanza un movimiento
+de tipo Agua.",4,29292
+196,TOKUSEIINFO_LPLE_196,69CCAF74C19A32AC,"Hace que sus movimientos lancen siempre un golpe
+crítico si el rival está envenenado.",0,29428
+197,TOKUSEIINFO_LPLE_197,69CCB074C19A345F,"Rompe su coraza cuando sus PS se reducen
+a la mitad y adopta una forma ofensiva.",0,29600
+198,TOKUSEIINFO_LPLE_198,69CCB574C19A3CDE,"Si el objetivo de su ataque es sustituido por otro,
+duplica el daño que causará.",0,29764
+199,TOKUSEIINFO_LPLE_199,69CCB674C19A3E91,"Reduce el daño que le provocan los movimientos de
+tipo Fuego y es inmune a las quemaduras.",0,29928
+200,TOKUSEIINFO_LPLE_200,7294DE74C69C60C2,Potencia los movimientos de tipo Acero.,0,30112
+201,TOKUSEIINFO_LPLE_201,7294DF74C69C6275,"Aumenta su Ataque Especial si sus PS se reducen
+a la mitad debido a algún ataque.",4,30192
+202,TOKUSEIINFO_LPLE_202,7294DC74C69C5D5C,Aumenta su Velocidad cuando graniza.,4,30356
+203,TOKUSEIINFO_LPLE_203,7294DD74C69C5F0F,"Puede usar cualquier movimiento sin entrar en contacto
+con su objetivo.",0,30432
+204,TOKUSEIINFO_LPLE_204,7294DA74C69C59F6,"Hace que todos sus movimientos que usan sonido pasen
+a ser de tipo Agua.",0,30576
+205,TOKUSEIINFO_LPLE_205,7294DB74C69C5BA9,Da prioridad a los movimientos que restauran PS.,0,30724
+206,TOKUSEIINFO_LPLE_206,7294D874C69C5690,"Convierte los movimientos de tipo Normal en tipo
+Eléctrico y aumenta ligeramente su potencia.",0,30824
+207,TOKUSEIINFO_LPLE_207,7294D974C69C5843,"Duplica su Velocidad si hay un campo eléctrico en el
+terreno de combate.",0,31012
+208,TOKUSEIINFO_LPLE_208,7294E674C69C6E5A,"Forma bancos con sus congéneres cuando tiene muchos
+PS, lo cual le otorga más fuerza. Cuando le quedan
+pocos PS, el banco se dispersa.",0,31160
+209,TOKUSEIINFO_LPLE_209,7294E774C69C700D,"Una vez por combate puede eludir un ataque usando
+la tela que le cubre el cuerpo.",4,31432
+210,TOKUSEIINFO_LPLE_210,7297E474C69EA0CB,"Al derrotar a un Pokémon, los vínculos con su
+Entrenador se refuerzan y se convierte en Greninja Ash.
+Su Shuriken de Agua también se potencia.",4,31596
+211,TOKUSEIINFO_LPLE_211,7297E374C69E9F18,"Cuando sus PS se reducen a la mitad, las células
+se reagrupan y adopta su Forma Completa.",0,31884
+212,TOKUSEIINFO_LPLE_212,7297E674C69EA431,"Puede envenenar incluso a Pokémon de tipo Acero o
+Veneno.",0,32064
+213,TOKUSEIINFO_LPLE_213,7297E574C69EA27E,"No despierta jamás de su profundo letargo e incluso
+ataca dormido.",0,32180
+214,TOKUSEIINFO_LPLE_214,7297E874C69EA797,"Intimida al rival y le impide usar movimientos con
+prioridad contra él y sus aliados.",4,32316
+215,TOKUSEIINFO_LPLE_215,7297E774C69EA5E4,"Al caer debilitado, le causa al atacante un daño
+equivalente a los PS que le quedaran antes de
+recibir el golpe de gracia.",4,32488
+216,TOKUSEIINFO_LPLE_216,7297EA74C69EAAFD,"Puede copiar inmediatamente cualquier movimiento
+de baile que haya usado otro Pokémon presente en
+el combate.",0,32736
+217,TOKUSEIINFO_LPLE_217,7297E974C69EA94A,Potencia los ataques especiales de los aliados.,0,32956
+218,TOKUSEIINFO_LPLE_218,7297DC74C69E9333,"Reduce a la mitad el daño recibido por los movimientos
+de contacto, pero duplica el que le causan los de tipo
+Fuego.",0,33052
+219,TOKUSEIINFO_LPLE_219,7297DB74C69E9180,"Desconcierta al rival y le impide usar movimientos
+con prioridad contra él y sus aliados.",0,33288
+220,TOKUSEIINFO_LPLE_220,728DD274C6962DB0,"Aumenta su Ataque Especial cada vez que un Pokémon
+cae debilitado.",4,33468
+221,TOKUSEIINFO_LPLE_221,728DD374C6962F63,"Reduce la Velocidad del Pokémon que lo ataque con un
+movimiento de contacto.",0,33604
+222,TOKUSEIINFO_LPLE_222,728DD474C6963116,Adquiere la habilidad de un aliado debilitado.,4,33760
+223,TOKUSEIINFO_LPLE_223,728DD574C69632C9,"Reacciona copiando la habilidad de un aliado
+debilitado.",0,33856
+224,TOKUSEIINFO_LPLE_224,728DD674C696347C,"Al derrotar a un Pokémon, aumenta su característica más
+fuerte.",4,33972
+225,TOKUSEIINFO_LPLE_225,728DD774C696362F,Cambia su tipo según el disco que tenga instalado.,0,34100
+226,TOKUSEIINFO_LPLE_226,728DD874C69637E2,Crea un campo eléctrico al entrar en combate.,0,34204
+227,TOKUSEIINFO_LPLE_227,728DD974C6963995,Crea un campo psíquico al entrar en combate.,0,34296
+228,TOKUSEIINFO_LPLE_228,728DDA74C6963B48,Crea un campo de niebla al entrar en combate.,0,34388
+229,TOKUSEIINFO_LPLE_229,728DDB74C6963CFB,Crea un campo de césped al entrar en combate.,0,34480
+230,TOKUSEIINFO_LPLE_230,72915874C6994739,"Evita que se reduzcan sus características a causa
+de movimientos o habilidades de otros Pokémon.",4,34572
+231,TOKUSEIINFO_LPLE_231,72915774C6994586,Reduce el daño que sufre si sus PS están al máximo.,0,34768
+232,TOKUSEIINFO_LPLE_232,72915674C69943D3,"Mitiga el daño que le causan los movimientos
+supereficaces.",0,34872
+233,TOKUSEIINFO_LPLE_233,72915574C6994220,Potencia los ataques supereficaces.,0,34992

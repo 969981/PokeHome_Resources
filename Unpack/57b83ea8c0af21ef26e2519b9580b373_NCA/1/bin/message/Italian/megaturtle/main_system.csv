@@ -1,0 +1,66 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_main_index_010,584CD9E407258EC0,Menu principale,0,444
+1,	,AF66E44C86071324,[REF:1],0,476
+2,nx_main_button_000,2469972884056955,Indietro,4,488
+3,nx_main_button_001,24699628840567A2,Aiuto,4,508
+4,	,AF66E44C86071324,[REF:4],0,520
+5,nx_main_box_010,1A46EF5B1FB74199,Pokémon,0,532
+6,nx_main_box_020,1A4A755B1FBA5B22,"Pokémon depositati: [CTRL:0203:0000,002E]",0,548
+7,nx_main_pokedex_010,D00ADF22BD2805EA,Pokédex,0,600
+8,nx_main_pokedex_020,D0075922BD24EC61,"Pokémon registrati: [CTRL:0203:0000,002E]",0,616
+9,nx_main_pokedex_021,D0075822BD24EAAE,[REF:9],0,668
+10,nx_main_eshop_010,F2911EFA46A1BC6F,Nintendo eShop,0,680
+11,nx_main_small_title_010,94DE8C9018BBEC7A,Pokémon,0,712
+12,nx_main_small_title_020,94DB069018B8D2F1,Pokédex,0,728
+13,nx_main_small_title_030,94D8009018B692E8,Note,0,744
+14,nx_main_small_title_040,94EF8A9018CA5C47,Trasferimento,0,756
+15,nx_main_small_title_050,94EC049018C742BE,Punti,0,784
+16,nx_main_small_title_060,94E8FE9018C502B5,Opzioni,4,796
+17,	,AF66E44C86071324,[REF:17],0,812
+18,nx_main_comment_01,D94EEB682EE7E5B3,Accedi per depositare i tuoi Pokémon nei box.,4,824
+19,nx_main_comment_02,D94EEC682EE7E766,Qui puoi vedere tutte le informazioni sui Pokémon.,0,916
+20,nx_main_comment_03,D94EED682EE7E919,Qui trovi un resoconto dei Pokémon depositati e ritirati.,0,1020
+21,nx_main_comment_04,D94EEE682EE7EACC,Trasferisci i Pokémon da una console Nintendo 3DS.,0,1136
+22,nx_main_comment_05,D94EEF682EE7EC7F,Qui puoi usare i punti Pokémon HOME.,0,1240
+23,nx_main_comment_06,D94EF0682EE7EE32,Qui puoi modificare le impostazioni di Pokémon HOME.,0,1316
+24,nx_main_comment_07,D94EF1682EE7EFE5,Informazioni sul servizio premium (disponibile per l’acquisto),4,1424
+25,nx_main_comment_07_ex,7432D629AEA9EF2B,"Puoi trovare informazioni sul servizio
+premium sul Nintendo eShop.
+Se sei minorenne, è necessario che
+un adulto controlli insieme a te.",0,1552
+26,	,AF66E44C86071324,[REF:26],0,1824
+27,nx_main_eshop_msg_010,5769BF9354BD9841,"Vuoi verificare i dettagli del servizio premium
+sul Nintendo eShop?",0,1836
+28,nx_main_eshop_msg_pot_010,13FA00777B30FE85,Info servizio mensile (30 giorni),4,1972
+29,nx_main_eshop_msg_pot_020,13FD86777B34180E,Info servizio trimestrale (90 giorni),4,2040
+30,nx_main_eshop_msg_pot_030,14008C777B365817,Info servizio annuale (365 giorni),4,2116
+31,nx_main_eshop_msg_pot_999,6349F077A87F68F9,Annulla,4,2188
+32,	,AF66E44C86071324,[REF:32],0,2204
+33,nx_main_msg_010,09F05BFC15443881,"Non puoi accedere a questa funzione con il servizio base.[CLEAR]
+Puoi accedervi con il servizio premium, disponibile
+per l’acquisto sul Nintendo eShop.",0,2216
+34,nx_main_msg_020,09F361FC1546788A,[REF:34],0,2512
+35,nx_main_msg_021,09F362FC15467A3D,[REF:35],0,2524
+36,nx_main_msg_022,09F35FFC15467524,[REF:36],0,2536
+37,nx_main_msg_030,09F6C7FC15495BB3,La tua lista delle missioni è stata aggiornata!,0,2548
+38,	,AF66E44C86071324,[REF:38],0,2644
+39,nx_main_help_010,B131D26A7BFF4C93,"Questo è il menu principale.
+Da qui puoi accedere a tutte le funzioni disponibili!
+Basta sceglierne una!",0,2656
+40,nx_main_help_020,B127606A7BF63658,"Sposta il cursore con lo stick sinistro e premi il pulsante A per confermare!
+Se vuoi tornare alla schermata precedente, premi il pulsante B!",8,2868
+41,	,AF66E44C86071324,[REF:41],0,3152
+42,nx_main_help_first_010,AE567A0D58881F2A,"Ciao! Io sono Poké-B e sono qui per spiegarti tutto quello
+che c’è da sapere su Pokémon HOME!",0,3164
+43,nx_main_help_first_020,AE52F40D588505A1,"Se hai dei dubbi su qualsiasi funzione o menu, chiamami
+premendo il pulsante − e sarò felice di aiutarti!
+E dato che ci siamo, iniziamo da questa schermata...",0,3352
+44,nx_main_small_title_070,94E5789018C1E92C,Pokémon GO,0,3672
+45,nx_main_msg_010,09F05BFC15443881,[REF:45],0,3696
+46,nx_main_comment_08,D94EF2682EE7F198,Ricevi Pokémon da Pokémon GO.,0,3708
+47,nx_main_msg_011,09F05AFC154436CE,[REF:47],0,3768
+48,nx_main_small_title_080,94C7029018A8231B,Pokémon Champions,0,3780
+49,nx_main_comment_09,D94EF3682EE7F34B,Manda Pokémon in trasferta a Pokémon Champions.,0,3816
+50,	,AF66E44C86071324,[REF:50],0,3912
+51,nx_main_small_title_090,94C37C9018A50992,Giochi per GBA,0,3924
+52,nx_main_comment_10,D95270682EEAFD89,Trasferisci i Pokémon dai giochi per Game Boy Advance (GBA) per Nintendo Switch.,0,3956

@@ -1,0 +1,189 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_load_index_010,9B5D4D6BD3CC5B45,Pokémon,0,860
+1,nx_load_index_020,9B60D36BD3CF74CE,Punti,0,876
+2,	,AF66E44C86071324,[REF:2],0,888
+3,nx_load_button_000,B1C23ADB2AC36796,Indietro,4,900
+4,nx_load_button_001,B1C23BDB2AC36949,Aiuto,4,920
+5,	,AF66E44C86071324,[REF:5],0,932
+6,nx_load_guide_010,61707553C26B9525,Scegli un gioco da collegare a Pokémon HOME.,8,944
+7,nx_load_guide_020,6173FB53C26EAEAE,Scegli un gioco a cui inviare PL.,8,1036
+8,	,AF66E44C86071324,[REF:8],0,1104
+9,nx_load_mile,968D0E49A0115FA0,"Punti disponibili: [CTRL:0204:0000,002E]",0,1116
+10,nx_load_accountname,105B61787869E78F,[CTRL:01D9:0000],0,1168
+11,	,AF66E44C86071324,[REF:11],0,1180
+12,nx_load_none,0DE124626741DDF3,Non sono presenti dati di salvataggio.,0,1192
+13,	,AF66E44C86071324,[REF:13],0,1272
+14,nx_load_savedata_010,7EB61251F77F27FE,,0,1284
+15,nx_load_savedata_020,7EB30C51F77CE7F5,Nome,0,1288
+16,nx_load_savedata_021,7EB30B51F77CE642,[CTRL:0189:0000],0,1300
+17,nx_load_savedata_030,7EAF8651F779CE6C,ID,4,1312
+18,nx_load_savedata_031,7EAF8751F779D01F,"[CTRL:0205:0000,0000]",0,1320
+19,nx_load_savedata_040,7EAC0051F776B4E3,Pokédex,0,1332
+20,nx_load_savedata_041,7EABFF51F776B330,"[CTRL:0203:0000,002E] Pokémon",0,1348
+21,nx_load_savedata_050,7EA89A51F773D1BA,Tempo di gioco,0,1376
+22,nx_load_savedata_051,7EA89B51F773D36D,[CTRL:0202:0000]:[CTRL:0201:0001],0,1408
+23,nx_load_savedata_060,7EA51451F770B831,Ultimo salvataggio,4,1428
+24,nx_load_savedata_061,7EA51351F770B67E,"[CTRL:0201:0002]/[CTRL:0201:0001]/[CTRL:0203:0000,0000]    [CTRL:0201:0003]:[CTRL:0201:0004]",0,1468
+25,nx_load_savedata_070,7EA20E51F76E7828,Continua senza collegare un gioco,0,1528
+26,nx_load_savedata_071,7EA20F51F76E79DB,"Organizza i box di Pokémon HOME senza effettuare
+il collegamento a un gioco.",4,1596
+27,nx_load_savedata_080,7E9E8851F76B5E9F,Utente,4,1752
+28,nx_load_savedata_081,7E9E8751F76B5CEC,"Stai visualizzando i dati di salvataggio
+di [CTRL:01D9:0000].",8,1768
+29,nx_load_savedata_090,7E9B0251F7684516,"Questi dati di salvataggio appartengono a una versione
+precedente del software e non sono compatibili
+con la versione aggiornata di Pokémon HOME.",0,1868
+30,nx_load_savedata_100,75A35D51F23DDDBC,"Questi dati di salvataggio appartengono a una versione
+precedente del software. Sarà possibile leggere i dati
+di salvataggio solo dopo aver aggiornato Pokémon HOME.",0,2160
+31,nx_load_savedata_110,75A6E351F240F745,"Lettura dei dati di salvataggio non riuscita.
+I dati potrebbero essere danneggiati.",0,2492
+32,nx_load_savedata_error,C55CE1BE671BCBF1,???,0,2660
+33,	,AF66E44C86071324,[REF:33],0,2668
+34,nx_load_msg_yes,99747AF82159E002,Sì,0,2680
+35,nx_load_msg_no,9835E3CDF53E5574,No,0,2688
+36,nx_load_msg_010,BC52E8F712E52D0C,Vuoi collegarti a questo gioco?,0,2696
+37,nx_load_msg_011,BC52E9F712E52EBF,Vuoi vedere i box di Pokémon HOME?,0,2760
+38,nx_load_msg_020,BC5D7AF712EE79A7,"Collegamento al gioco in corso.
+Attendi...",0,2832
+39,nx_load_msg_021,BC5D79F712EE77F4,"Accesso ai box in corso.
+Attendi...",4,2920
+40,nx_load_msg_030,BC59F4F712EB601E,"Vuoi visualizzare i dati di salvataggio
+di un altro utente?",0,2992
+41,nx_load_msg_040,BC48F6F712DCF051,"Al momento non puoi collegare i dati di salvataggio
+di questo gioco a Pokémon HOME.[CLEAR]
+Salva il gioco una volta ricevuto il Pokédex per poter
+collegare i dati.",4,3112
+42,nx_load_msg_041,BC48F5F712DCEE9E,[REF:42],0,3432
+43,nx_load_msg_050,BC4570F712D9D6C8,"Nei dati di salvataggio di questo gioco è già presente la
+quantità massima di PL. Al momento non puoi inviarne altri.",0,3444
+44,nx_load_msg_060,BC4FE2F712E2ED03,"Non è possibile inviare punti a questo gioco in quanto
+non compatibile.",0,3680
+45,nx_load_msg_070,BC4C7CF712E009DA,"Lettura dei dati di salvataggio di questo gioco non riuscita.
+I dati potrebbero essere danneggiati.",0,3824
+46,nx_load_msg_080,BC3B7EF712D19A0D,"I dati di salvataggio di questo gioco non sono aggiornati.
+Effettua l’aggiornamento, quindi avvia il gioco e salva.",4,4024
+47,nx_load_msg_080_1_1,391B8F906963DCED,"I dati di salvataggio di Pokémon: Let’s Go, Pikachu!
+non sono aggiornati.[CLEAR]
+Aggiorna Pokémon: Let’s Go, Pikachu! e salva il gioco,
+poi avvia Pokémon HOME.",4,4256
+48,nx_load_msg_080_1_2,391B8C906963D7D4,"I dati di salvataggio di Pokémon: Let’s Go, Eevee!
+non sono aggiornati.[CLEAR]
+Aggiorna Pokémon: Let’s Go, Eevee! e salva il gioco,
+poi avvia Pokémon HOME.",4,4568
+49,nx_load_msg_080_2_1,1D3C88905911DCC8,"I dati di salvataggio di Pokémon Spada non sono aggiornati.[CLEAR]
+Aggiorna Pokémon Spada e salva il gioco, poi avvia
+Pokémon HOME.",4,4872
+50,nx_load_msg_080_2_2,1D3C8B905911E1E1,"I dati di salvataggio di Pokémon Scudo non sono aggiornati.[CLEAR]
+Aggiorna Pokémon Scudo e salva il gioco, poi avvia
+Pokémon HOME.",4,5128
+51,nx_load_msg_090,BC37F8F712CE8084,"Per collegare i dati di salvataggio di questo gioco devi
+aggiornare Pokémon HOME.[CLEAR]
+Chiudi l’applicazione ed esegui l’aggiornamento.",0,5384
+52,	,AF66E44C86071324,[REF:52],0,5652
+53,nx_load_userchange_title,06E6C6C2D7A42653,Seleziona un utente,0,5664
+54,nx_load_userchange_01,DA606E6F26E33CE8,[REF:54],0,5704
+55,	,AF66E44C86071324,[REF:55],0,5716
+56,nx_load_title_beluga_1,79CDCAF8F1656B34,"Pokémon: Let’s Go, Pikachu!",0,5728
+57,nx_load_title_beluga_2,79CDCDF8F165704D,"Pokémon: Let’s Go, Eevee!",0,5784
+58,nx_load_title_orion_1,09BE518446BE061F,Pokémon Spada,0,5836
+59,nx_load_title_orion_2,09BE528446BE07D2,Pokémon Scudo,0,5864
+60,	,AF66E44C86071324,[REF:60],0,5892
+61,nx_load_help_1_010,165A1F76FB4FC2F4,"In questa schermata puoi scegliere i dati di salvataggio
+del gioco che vuoi collegare a Pokémon HOME!",4,5904
+62,nx_load_help_1_020,16641176FB57FFAF,"Se nel tuo Nintendo Switch ci sono dati di salvataggio di giochi che
+puoi collegare a Pokémon HOME, le loro icone appariranno qui!",0,6108
+63,nx_load_help_1_030,16608B76FB54E626,"Se vuoi organizzare i box senza collegare un gioco
+a Pokémon HOME, seleziona questa icona!",0,6372
+64,	,AF66E44C86071324,[REF:64],0,6556
+65,nx_load_help_2_010,8E9EAB46CBC85EE9,"Se depositi dei Pokémon nei box di Pokémon HOME,
+guadagnerai dei punti Pokémon HOME ogni giorno!
+Più Pokémon hai nei box, più punti guadagnerai!",0,6568
+66,nx_load_help_2_020,8EA1B146CBCA9EF2,"I punti accumulati potranno essere convertiti in PL e inviati a un gioco!
+Tieni presente, però, che alcuni giochi non sono compatibili...",4,6860
+67,nx_load_msg_100,B34053F70DA4192A,"Si è verificato un errore durante la lettura dei dati di
+salvataggio di questo gioco.[CLEAR]
+Il problema è causato dal [CTRL:0200:0002]º Pokémon da sinistra nella [CTRL:0200:0001]ª fila
+del box [CTRL:01C0:0000].",0,7136
+68,nx_load_msg_101,B34054F70DA41ADD,"Si è verificato un errore durante la lettura dei dati di
+salvataggio di questo gioco.[CLEAR]
+Il problema è causato dal [CTRL:0200:0002]º Pokémon da sinistra
+nella [CTRL:0202:0001]ª fila del Box Pokémon.",0,7480
+69,	,AF66E44C86071324,[REF:69],0,7832
+70,nx_load_msg_102,B34051F70DA415C4,"Si è verificato un errore durante la lettura dei dati di
+salvataggio di questo gioco.[CLEAR]
+Il problema è causato dal [CTRL:0200:0002]º Pokémon da sinistra nella [CTRL:0200:0001]ª fila
+del Pascolo [CTRL:01C0:0000].",0,7844
+71,nx_load_title_delphis_1,ADBFF99A2886C9AB,Pokémon Diamante Lucente,0,8196
+72,nx_load_title_delphis_2,ADBFFA9A2886CB5E,Pokémon Perla Splendente,0,8248
+73,nx_load_title_hayabusa_1,0946731A41A3B00A,Leggende Pokémon: Arceus,0,8300
+74,nx_load_guide_021,6173FC53C26EB061,Scegli un gioco in cui usare i punti.,8,8352
+75,nx_load_msg_051,BC4571F712D9D87B,"Nei dati di salvataggio di questo gioco è già presente la
+quantità massima di PG. Al momento non puoi inviarne altri.",0,8428
+76,nx_load_msg_080_2_3,1D3C8A905911E02E,"I dati di salvataggio di Pokémon Diamante Lucente
+non sono aggiornati.[CLEAR]
+Aggiorna Pokémon Diamante Lucente e salva il gioco,
+poi avvia Pokémon HOME.",4,8664
+77,nx_load_msg_080_2_4,1D3C8D905911E547,"I dati di salvataggio di Pokémon Perla Splendente
+non sono aggiornati.[CLEAR]
+Aggiorna Pokémon Perla Splendente e salva il gioco,
+poi avvia Pokémon HOME.",4,8964
+78,nx_load_msg_080_2_5,1D3C8C905911E394,"I dati di salvataggio di Leggende Pokémon: Arceus
+non sono aggiornati.[CLEAR]
+Aggiorna Leggende Pokémon: Arceus e salva il gioco,
+poi avvia Pokémon HOME.",4,9264
+79,nx_load_help_2_021,8EA1B246CBCAA0A5,"Puoi usare i punti accumulati anche in altri giochi! Come? È semplice!
+Puoi convertirli nei punti utilizzabili in quei giochi e inviarli!
+Tieni presente, però, che alcuni giochi non sono compatibili...",0,9564
+80,	,AF66E44C86071324,[REF:80],0,9968
+81,nx_load_title_scarlet_01,6C5F64D7DE1F636E,Pokémon Scarlatto,0,9980
+82,nx_load_title_violet_01,5B1851154D8FB139,Pokémon Violetto,0,10016
+83,nx_load_msg_052,BC4572F712D9DA2E,"Nei dati di salvataggio di questo gioco è già presente la
+quantità massima di CL. Al momento non puoi inviarne altri.",0,10052
+84,nx_load_msg_080_5_1,15EDD39055509A39,"I dati di salvataggio di Pokémon Scarlatto non sono
+aggiornati.[CLEAR]
+Aggiorna Pokémon Scarlatto e salva il gioco, poi avvia
+Pokémon HOME.",4,10288
+85,nx_load_msg_080_5_2,15EDD09055509520,"I dati di salvataggio di Pokémon Violetto non sono
+aggiornati.[CLEAR]
+Aggiorna Pokémon Violetto e salva il gioco, poi avvia
+Pokémon HOME.",4,10560
+86,	,AF66E44C86071324,[REF:86],0,10828
+87,nx_load_title_Ikkaku,2182971FD64F981A,Leggende Pokémon: Z-A,0,10840
+88,nx_load_msg_080_6_1,FC9B6C9047292F34,"I dati di salvataggio di Leggende Pokémon: Z-A
+non sono aggiornati.[CLEAR]
+Aggiorna Leggende Pokémon: Z-A e salva il gioco,
+poi avvia Pokémon HOME.",4,10884
+89,nx_load_msg_042,BC48F4F712DCECEB,"Al momento non puoi collegare i dati di salvataggio
+di questo gioco a Pokémon HOME.[CLEAR]
+Completa la missione secondaria ""Una chiamata da parte
+di Martynia"" di Leggende Pokémon: Z-A e salva il gioco.",4,11172
+90,nx_load_msg_043,BC48F3F712DCEB38,"Al momento non puoi collegare i dati di salvataggio
+di questo gioco a Pokémon HOME.[CLEAR]
+Gioca a Leggende Pokémon: Z-A fino a sbloccare le funzioni
+di comunicazione e salva il gioco.",4,11568
+91,nx_load_msg_044,BC48FAF712DCF71D,[REF:91],0,11932
+92,nx_load_msg_045,BC48F9F712DCF56A,[REF:92],0,11944
+93,nx_load_msg_046,BC48F8F712DCF3B7,"Al momento non puoi collegare i dati di salvataggio
+di questo gioco a Pokémon HOME.[CLEAR]
+Fai ritorno dalla Luminopoli dimensionale in
+Leggende Pokémon: Z-A e salva il gioco.",4,11956
+94,	,AF66E44C86071324,[REF:94],0,12300
+95,nx_load_index_030,9B63D96BD3D1B4D7,Collegamento giochi per GBA,0,12312
+96,nx_load_msg_022,BC5D7CF712EE7D0D,"I Pokémon trasferiti in Pokémon HOME non potranno tornare
+indietro.[CLEAR]
+Vuoi iniziare il collegamento?",4,12368
+97,nx_load_msg_023,BC5D7BF712EE7B5A,"È in corso l’aggiornamento di Pokémon HOME
+con i dati del Pokédex...",4,12572
+98,nx_load_msg_024,BC5D76F712EE72DB,"Il collegamento ai giochi per Game Boy Advance (GBA)
+può essere effettuato al massimo una volta al minuto.[RETURN]
+Ti preghiamo di attendere.",4,12712
+99,nx_load_title_gbasoft_1,069CD36CD3EA7506,Pokémon Rosso Fuoco,0,12988
+100,nx_load_title_gbasoft_2,069CD26CD3EA7353,Pokémon Verde Foglia,0,13028
+101,	,AF66E44C86071324,[REF:101],0,13072
+102,nx_load_help_3_010,694E876FE122C3BA,"In questa schermata puoi scegliere i dati di salvataggio del gioco
+per Game Boy Advance (GBA) che vuoi collegare a Pokémon HOME!",4,13084
+103,nx_load_help_3_020,694B016FE11FAA31,"Se nel tuo Nintendo Switch ci sono dati di salvataggio di giochi che
+puoi collegare a Pokémon HOME, le loro icone appariranno qui!",0,13344
+104,nx_load_help_3_030,6947FB6FE11D6A28,"Se scegli un’icona, il Pokédex di Pokémon HOME verrà aggiornato
+in base allo stato di completamento del Pokédex di quel gioco.",0,13608

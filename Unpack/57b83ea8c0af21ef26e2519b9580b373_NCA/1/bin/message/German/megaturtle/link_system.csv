@@ -1,0 +1,62 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_link_index_010,5E27A64FD90FA579,Verknüpfung mit Pokémon Champions,0,252
+1,nx_link_msg_001,5D24D6555855126E,"Es wird überprüft, ob gerade Pokémon von
+Pokémon Champions zurückkehren...",0,320
+2,nx_link_msg_yes,6DE163543F60E996,Ja,0,472
+3,nx_link_msg_no,69760125DBDFD8F8,Nein,0,480
+4,nx_link_msg_008,5D24CF5558550689,Dein Nintendo-Account wird überprüft...,0,492
+5,nx_link_msg_009,5D24CE55585504D6,"Die Nutzung dieser Funktion deines Pokémon Champions-
+Accounts ist derzeit eingeschränkt.[CLEAR]
+Der Versuch, eine Verknüpfung mit Pokémon Champions
+herzustellen, wurde abgebrochen.",0,572
+6,nx_link_msg_010,5D2151555851FA98,"Der ausgewählte Account wird verknüpft.
+Möchtest du fortfahren?",0,928
+7,nx_link_msg_011,5D2152555851FC4B,"Die Verknüpfung mit Pokémon Champions wird abgebrochen.
+Du kehrst nun zum Hauptmenü zurück.",0,1056
+8,nx_link_msg_012,5D2153555851FDFE,[REF:8],0,1240
+9,nx_link_msg_013,5D2154555851FFB1,"Mindestens ein Pokémon wartet darauf, wieder von
+Pokémon Champions zu Pokémon HOME zurückzukehren.",0,1252
+10,nx_link_msg_014,5D21555558520164,"Es w[CTRL:1101:0000,0503]irderden [CTRL:0203:0000,202F] Pokémon von Pokémon Champions
+in Empfang genommen...",0,1452
+11,nx_link_msg_015,5D21565558520317,Pokémon kehren nun zu Pokémon HOME zurück...,0,1608
+12,nx_link_msg_016,5D215755585204CA,"Mindestens eines deiner Pokémon ist von
+Pokémon Champions zurückgekehrt!",0,1700
+13,nx_link_dialog_001,B4A51C1FF7B01785,Details des ausgewählten Pokémon Champions-Accounts,0,1848
+14,nx_link_dialog_002,B4A5191FF7B0126C,Trainername:,0,1952
+15,nx_link_dialog_003,B4A51A1FF7B0141F,[CTRL:0100:0000],0,1980
+16,nx_link_dialog_004,B4A5171FF7B00F06,Kunden-ID:,0,1992
+17,nx_link_msg_019,5D214A555851EEB3,"Mindestens ein Pokémon, das du an Pokémon Champions
+geschickt hast, wurde dort noch nicht in Empfang genommen.[CLEAR]
+Bitte starte zunächst Pokémon Champions und nimm es dort
+in Empfang.",0,2016
+18,nx_link_msg_020,5D2BC355585B10D3,"Es werden gerade Wartungsarbeiten an Pokémon Champions
+durchgeführt.",0,2384
+19,nx_link_msg_021,5D2BC255585B0F20,"Bitte warte, bis die Wartungsarbeiten an Pokémon Champions
+abgeschlossen wurden.",0,2524
+20,nx_link_msg_022,5D2BC555585B1439,Es wurde kein Pokémon Champions-Account gefunden.,0,2688
+21,nx_link_msg_023,5D2BC455585B1286,Du kehrst nun zum Hauptmenü zurück.,0,2788
+22,nx_link_msg_024,5D2BC755585B179F,"Dein ausgewählter Nintendo-Account ist mit einem
+Pokémon Champions-Account verknüpft, bei dem bereits[CLEAR]
+eine vorherige Verknüpfung mit Pokémon HOME besteht.
+Bitte starte Pokémon Champions und löse die vorherige[CLEAR]
+Verknüpfung mit Pokémon HOME zunächst auf.",0,2860
+23,nx_link_msg_025,5D2BC655585B15EC,"Du hast bereits [CTRL:0203:0000,202F] Pokémon auf einen Besuch entsandt.[CLEAR]
+Es können keine weiteren auf einen Besuch entsandt werden.
+Du kehrst nun zum Hauptmenü zurück.",0,3376
+24,nx_link_msg_026,5D2BC955585B1B05,"Die Funktion zur Verknüpfung mit Pokémon Champions
+ist derzeit von Wartungsarbeiten betroffen.[CLEAR]
+Der Versuch, eine Verknüpfung mit Pokémon Champions
+herzustellen, wurde abgebrochen.",0,3688
+25,nx_link_msg_027,5D2BC855585B1952,"Die Funktion zur Verknüpfung mit Pokémon Champions
+ist derzeit von Wartungsarbeiten betroffen.[CLEAR]
+Das geplante Ende dieser Wartungsarbeiten ist am
+[CTRL:0201:0002].[CTRL:0201:0001].[CTRL:0203:0000,0000] um [CTRL:0201:0003]:[CTRL:0201:0004] Uhr[CLEAR]
+Der Versuch, eine Verknüpfung mit Pokémon Champions
+herzustellen, wurde abgebrochen.",0,4056
+26,nx_link_msg_028,5D2BCB55585B1E6B,"Deine Box in Pokémon Champions ist voll![CLEAR]
+Wenn du weitere Pokémon auf einen Besuch entsenden
+möchtest, musst du dort zunächst Platz schaffen.",0,4592
+27,nx_link_msg_029,5D2BCA55585B1CB8,"Ein Fehler ist aufgetreten.
+Bitte versuche es noch einmal von vorn.",0,4880
+28,nx_link_msg_030,5D285D5558582DAA,"Ein Fehler ist aufgetreten.
+Du kehrst nun zum Hauptmenü zurück.",0,5016

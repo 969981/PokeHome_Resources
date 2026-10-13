@@ -1,0 +1,1304 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,WAZAINFO_ZA_000,63FCB9B8F858C02B,"-
+-
+-",0,7396
+1,WAZAINFO_ZA_001,63FCB8B8F858BE78,[REF:1],0,7408
+2,WAZAINFO_ZA_002,63FCBBB8F858C391,[REF:2],0,7420
+3,WAZAINFO_ZA_003,63FCBAB8F858C1DE,[REF:3],0,7432
+4,WAZAINFO_ZA_004,63FCBDB8F858C6F7,"Ráfaga de puñetazos que golpea al objetivo cinco veces
+seguidas.",0,7444
+5,WAZAINFO_ZA_005,63FCBCB8F858C544,[REF:5],0,7576
+6,WAZAINFO_ZA_006,63FCBFB8F858CA5D,"Ataca al objetivo arrojándole monedas. Si acierta,
+las recupera en forma de ganancias.",4,7588
+7,WAZAINFO_ZA_007,63FCBEB8F858C8AA,Puñetazo ardiente que puede causar quemaduras.,0,7764
+8,WAZAINFO_ZA_008,63FCB1B8F858B293,Puñetazo helado que puede llegar a congelar.,0,7860
+9,WAZAINFO_ZA_009,63FCB0B8F858B0E0,Puñetazo eléctrico que puede paralizar.,0,7952
+10,WAZAINFO_ZA_010,63F933B8F855A6A2,[REF:10],0,8032
+11,WAZAINFO_ZA_011,63F934B8F855A855,[REF:11],0,8044
+12,WAZAINFO_ZA_012,63F931B8F855A33C,[REF:12],0,8056
+13,WAZAINFO_ZA_013,63F932B8F855A4EF,"Ataca al objetivo con numerosas ráfagas de viento
+cortante. Este movimiento suele asestar un golpe
+crítico, pero requiere tiempo para ejecutarse.",4,8068
+14,WAZAINFO_ZA_014,63F92FB8F8559FD6,"Este frenético baile de combate aumenta el Ataque
+durante un tiempo.",4,8360
+15,WAZAINFO_ZA_015,63F930B8F855A189,[REF:15],0,8500
+16,WAZAINFO_ZA_016,63F92DB8F8559C70,Crea un tornado con las alas y lo lanza contra el objetivo.,0,8512
+17,WAZAINFO_ZA_017,63F92EB8F8559E23,"Extiende totalmente sus majestuosas alas para golpear
+al objetivo con ellas.",4,8632
+18,WAZAINFO_ZA_018,63F93BB8F855B43A,"Genera un potente viento que empuja al objetivo hacia
+atrás.",0,8788
+19,WAZAINFO_ZA_019,63F93CB8F855B5ED,"Vuela muy alto hasta quedar fuera de vista y, tras un
+breve período de tiempo, arremete contra el objetivo.",0,8912
+20,WAZAINFO_ZA_020,63F5ADB8F8528D19,[REF:20],0,9128
+21,WAZAINFO_ZA_021,63F5ACB8F8528B66,[REF:21],0,9140
+22,WAZAINFO_ZA_022,63F5ABB8F85289B3,"Azota al objetivo con lianas delgadas y largas tan flexibles
+como látigos.",4,9152
+23,WAZAINFO_ZA_023,63F5AAB8F8528800,[REF:23],0,9304
+24,WAZAINFO_ZA_024,63F5B1B8F85293E5,[REF:24],0,9316
+25,WAZAINFO_ZA_025,63F5B0B8F8529232,[REF:25],0,9328
+26,WAZAINFO_ZA_026,63F5AFB8F852907F,[REF:26],0,9340
+27,WAZAINFO_ZA_027,63F5AEB8F8528ECC,[REF:27],0,9352
+28,WAZAINFO_ZA_028,63F5B5B8F8529AB1,[REF:28],0,9364
+29,WAZAINFO_ZA_029,63F5B4B8F85298FE,Potente cabezazo que puede amedrentar al objetivo.,0,9376
+30,WAZAINFO_ZA_030,63F2A7B8F8504D10,[REF:30],0,9480
+31,WAZAINFO_ZA_031,63F2A8B8F8504EC3,[REF:31],0,9492
+32,WAZAINFO_ZA_032,63F2A9B8F8505076,[REF:32],0,9504
+33,WAZAINFO_ZA_033,63F2AAB8F8505229,Embestida con todo el cuerpo.,4,9516
+34,WAZAINFO_ZA_034,63F2ABB8F85053DC,"Salta sobre el objetivo con todo su peso y puede llegar
+a paralizarlo.",0,9576
+35,WAZAINFO_ZA_035,63F2ACB8F850558F,[REF:35],0,9720
+36,WAZAINFO_ZA_036,63F2ADB8F8505742,Carga desmedida que también hiere al usuario.,0,9732
+37,WAZAINFO_ZA_037,63F2AEB8F85058F5,[REF:37],0,9824
+38,WAZAINFO_ZA_038,63F2AFB8F8505AA8,Ataque arriesgado que también hiere al usuario.,4,9836
+39,WAZAINFO_ZA_039,63F2B0B8F8505C5B,"Agita la cola para despistar al objetivo y reducir
+su Defensa durante un breve período de tiempo.",4,9932
+40,WAZAINFO_ZA_040,640A31B8F864166F,Lanza un aguijón tóxico que puede envenenar al objetivo.,0,10128
+41,WAZAINFO_ZA_041,640A30B8F86414BC,[REF:41],0,10244
+42,WAZAINFO_ZA_042,640A33B8F86419D5,"Lanza afiladas púas que hieren al objetivo cinco veces
+seguidas.",0,10256
+43,WAZAINFO_ZA_043,640A32B8F8641822,"Intimida al objetivo con una mirada torva para reducir
+su Defensa durante un breve período de tiempo.",4,10388
+44,WAZAINFO_ZA_044,640A2DB8F8640FA3,"Un voraz bocado con dientes afilados que puede
+amedrentar al objetivo.",4,10592
+45,WAZAINFO_ZA_045,640A2CB8F8640DF0,"Dulce gruñido que distrae al objetivo para que baje
+la guardia y reduce su Ataque durante un breve período
+de tiempo.",0,10736
+46,WAZAINFO_ZA_046,640A2FB8F8641309,"Emite un temible rugido que sobresalta al objetivo y
+lo empuja hacia atrás.",4,10972
+47,WAZAINFO_ZA_047,640A2EB8F8641156,Cancioncilla que induce somnolencia en el objetivo.,0,11124
+48,WAZAINFO_ZA_048,640A39B8F8642407,"El cuerpo del usuario emite unas ondas sónicas raras que
+confunden al objetivo.",4,11228
+49,WAZAINFO_ZA_049,640A38B8F8642254,[REF:49],0,11388
+50,WAZAINFO_ZA_050,6406ABB8F860FCE6,[REF:50],0,11400
+51,WAZAINFO_ZA_051,6406ACB8F860FE99,[REF:51],0,11412
+52,WAZAINFO_ZA_052,6406A9B8F860F980,"Ataca con llamas pequeñas que pueden causar
+quemaduras al objetivo.",4,11424
+53,WAZAINFO_ZA_053,6406AAB8F860FB33,"Ataca con una gran ráfaga de fuego que puede causar
+quemaduras al objetivo.",4,11560
+54,WAZAINFO_ZA_054,6406AFB8F86103B2,"Genera a su alrededor una niebla blanquecina que impide
+que se reduzcan las características de los Pokémon que
+permanezcan dentro.",0,11712
+55,WAZAINFO_ZA_055,6406B0B8F8610565,Ataca disparando agua con gran potencia.,4,11976
+56,WAZAINFO_ZA_056,6406ADB8F861004C,Lanza una gran masa de agua a presión para atacar.,0,12060
+57,WAZAINFO_ZA_057,6406AEB8F86101FF,Una ola gigante que causa daño a su alrededor.,4,12164
+58,WAZAINFO_ZA_058,6406B3B8F8610A7E,Ataca con un rayo de hielo que puede llegar a congelar.,4,12260
+59,WAZAINFO_ZA_059,6406B4B8F8610C31,"Ataca con una tormenta de hielo que puede llegar
+a congelar.",4,12372
+60,WAZAINFO_ZA_060,640345B8F85E19BD,Ataca con un extraño rayo que puede causar confusión.,4,12496
+61,WAZAINFO_ZA_061,640344B8F85E180A,"Ataca con una ráfaga de burbujas que puede volver más
+lento al objetivo.",4,12604
+62,WAZAINFO_ZA_062,640343B8F85E1657,[REF:62],0,12752
+63,WAZAINFO_ZA_063,640342B8F85E14A4,"El usuario ataca al objetivo con un potente haz de luz,
+pero no podrá moverse durante un breve período de
+tiempo.",4,12764
+64,WAZAINFO_ZA_064,640341B8F85E12F1,Ensarta al objetivo con un cuerno o pico punzante.,4,12992
+65,WAZAINFO_ZA_065,640340B8F85E113E,[REF:65],0,13096
+66,WAZAINFO_ZA_066,64033FB8F85E0F8B,[REF:66],0,13108
+67,WAZAINFO_ZA_067,64033EB8F85E0DD8,[REF:67],0,13120
+68,WAZAINFO_ZA_068,64033DB8F85E0C25,[REF:68],0,13132
+69,WAZAINFO_ZA_069,64033CB8F85E0A72,[REF:69],0,13144
+70,WAZAINFO_ZA_070,64003FB8F85BD9B4,[REF:70],0,13156
+71,WAZAINFO_ZA_071,640040B8F85BDB67,"Un ataque que absorbe nutrientes. El usuario recupera
+algunos PS según el daño que produzca.",4,13168
+72,WAZAINFO_ZA_072,640041B8F85BDD1A,[REF:72],0,13356
+73,WAZAINFO_ZA_073,640042B8F85BDECD,"Planta semillas que absorben PS del objetivo poco a poco
+y que le sirven para recuperarse.",0,13368
+74,WAZAINFO_ZA_074,64003BB8F85BD2E8,"Hace que su cuerpo crezca a marchas forzadas, con lo
+que aumenta su Ataque y su Ataque Especial durante
+un breve período de tiempo.",0,13552
+75,WAZAINFO_ZA_075,64003CB8F85BD49B,Corta con hojas afiladas. Suele asestar un golpe crítico.,0,13816
+76,WAZAINFO_ZA_076,64003DB8F85BD64E,"Absorbe mucha luz para atacar con un potente rayo de
+energía. Necesita algo de tiempo antes de poder atacar.",4,13932
+77,WAZAINFO_ZA_077,64003EB8F85BD801,Esparce polvo tóxico que envenena al objetivo.,4,14152
+78,WAZAINFO_ZA_078,640037B8F85BCC1C,Esparce polvo que paraliza al objetivo.,4,14248
+79,WAZAINFO_ZA_079,640038B8F85BCDCF,Esparce polvo que induce somnolencia en el objetivo.,4,14328
+80,WAZAINFO_ZA_080,6417A9B8F86F6CB3,"Ataca al objetivo lanzando pétalos tres veces seguidas y,
+al finalizar, el usuario se queda confuso.",4,14436
+81,WAZAINFO_ZA_081,6417A8B8F86F6B00,"Lanza seda por la boca y vuelve más lento al objetivo
+durante un breve período de tiempo.",0,14640
+82,WAZAINFO_ZA_082,6417ABB8F86F7019,[REF:82],0,14820
+83,WAZAINFO_ZA_083,6417AAB8F86F6E66,"Un aro de fuego que envuelve al objetivo y que inflige
+daño continuo a los rivales que permanezcan dentro.",4,14832
+84,WAZAINFO_ZA_084,6417ADB8F86F737F,"Ataca con una descarga eléctrica que puede paralizar
+al objetivo.",4,15048
+85,WAZAINFO_ZA_085,6417ACB8F86F71CC,Potente ataque eléctrico que puede paralizar al objetivo.,0,15180
+86,WAZAINFO_ZA_086,6417AFB8F86F76E5,Una ligera descarga que paraliza al objetivo.,4,15296
+87,WAZAINFO_ZA_087,6417AEB8F86F7532,"Un poderoso rayo que daña al objetivo y puede
+paralizarlo.",4,15388
+88,WAZAINFO_ZA_088,6417B1B8F86F7A4B,Tira una pequeña roca al objetivo.,0,15508
+89,WAZAINFO_ZA_089,6417B0B8F86F7898,Un terremoto que causa daño a su alrededor.,4,15580
+90,WAZAINFO_ZA_090,641443B8F86C898A,"Abre una enorme grieta en el suelo por la que hace caer
+al objetivo. Este movimiento requiere mucho tiempo para
+ejecutarse.",4,15668
+91,WAZAINFO_ZA_091,641444B8F86C8B3D,"Cava en la tierra hasta quedar fuera de vista y, tras un
+breve período de tiempo, arremete contra el objetivo.",0,15916
+92,WAZAINFO_ZA_092,641441B8F86C8624,"Envenena gravemente al objetivo y causa más daño
+cuanto más tiempo pasa.",4,16140
+93,WAZAINFO_ZA_093,641442B8F86C87D7,Débil ataque telequinético que puede causar confusión.,0,16288
+94,WAZAINFO_ZA_094,64143FB8F86C82BE,"Fuerte ataque telequinético que puede reducir la
+Defensa Especial del objetivo.",0,16400
+95,WAZAINFO_ZA_095,641440B8F86C8471,"Movimiento hipnótico que induce somnolencia en
+el objetivo.",0,16560
+96,WAZAINFO_ZA_096,64143DB8F86C7F58,[REF:96],0,16680
+97,WAZAINFO_ZA_097,64143EB8F86C810B,"Relaja y aligera el cuerpo para volverse más rápido
+durante un breve período de tiempo.",0,16692
+98,WAZAINFO_ZA_098,64143BB8F86C7BF2,"Ataca al objetivo a tal velocidad que es casi
+imperceptible.",4,16868
+99,WAZAINFO_ZA_099,64143CB8F86C7DA5,[REF:99],0,16992
+100,WAZAINFO_ZA_100,5C997EB8F485F0E0,El usuario se teletransporta a su Entrenador.,4,17004
+101,WAZAINFO_ZA_101,5C997FB8F485F293,[REF:101],0,17096
+102,WAZAINFO_ZA_102,5C9980B8F485F446,"Copia el último movimiento usado por el objetivo
+y lo utiliza para atacar.",0,17108
+103,WAZAINFO_ZA_103,5C9981B8F485F5F9,"Alarido agudo que reduce la Defensa del objetivo durante
+un tiempo.",4,17260
+104,WAZAINFO_ZA_104,5C9982B8F485F7AC,"El usuario se mueve a velocidad vertiginosa y crea
+copias ilusorias de sí mismo, lo que le permite evadir
+los ataques del rival.",4,17396
+105,WAZAINFO_ZA_105,5C9983B8F485F95F,El usuario regenera sus células y recupera PS.,4,17656
+106,WAZAINFO_ZA_106,5C9984B8F485FB12,"El usuario tensa su musculatura para aumentar la
+Defensa durante un breve período de tiempo.",4,17752
+107,WAZAINFO_ZA_107,5C9985B8F485FCC5,[REF:107],0,17940
+108,WAZAINFO_ZA_108,5C9986B8F485FE78,"Genera a su alrededor una nube de humo o tinta que
+impide que los Pokémon salvajes detecten a quien se
+oculte en su interior.",0,17952
+109,WAZAINFO_ZA_109,5C9987B8F486002B,Rayo siniestro que confunde al objetivo.,0,18204
+110,WAZAINFO_ZA_110,5C9D04B8F4890A69,[REF:110],0,18288
+111,WAZAINFO_ZA_111,5C9D03B8F48908B6,[REF:111],0,18300
+112,WAZAINFO_ZA_112,5C9D02B8F4890703,[REF:112],0,18312
+113,WAZAINFO_ZA_113,5C9D01B8F4890550,"Barrera misteriosa que reduce durante un tiempo el daño
+producido por los ataques especiales del rival. El efecto
+permanece aunque se cambie de Pokémon.",0,18324
+114,WAZAINFO_ZA_114,5C9D08B8F4891135,"Genera a su alrededor una neblina oscura que elimina
+los cambios en las características de todos los Pokémon
+que entren en contacto con ella.",0,18632
+115,WAZAINFO_ZA_115,5C9D07B8F4890F82,"Barrera misteriosa que reduce durante un tiempo el daño
+producido por los ataques físicos del rival. El efecto
+permanece aunque se cambie de Pokémon.",0,18916
+116,WAZAINFO_ZA_116,5C9D06B8F4890DCF,"Concentra energía para aumentar durante un tiempo
+la probabilidad de asestar un golpe crítico.",0,19216
+117,WAZAINFO_ZA_117,5C9D05B8F4890C1C,[REF:117],0,19408
+118,WAZAINFO_ZA_118,5C9D0CB8F4891801,"Mueve un dedo y estimula su cerebro para usar al azar
+casi cualquier movimiento.",0,19420
+119,WAZAINFO_ZA_119,5C9D0BB8F489164E,[REF:119],0,19584
+120,WAZAINFO_ZA_120,5CA00AB8F48B4A72,"El atacante explota y causa daño a su alrededor.
+El usuario se debilita de inmediato.",4,19596
+121,WAZAINFO_ZA_121,5CA00BB8F48B4C25,[REF:121],0,19768
+122,WAZAINFO_ZA_122,5CA008B8F48B470C,"El usuario ataca al objetivo lamiéndolo con su larga
+lengua. Puede causar parálisis.",4,19780
+123,WAZAINFO_ZA_123,5CA009B8F48B48BF,[REF:123],0,19952
+124,WAZAINFO_ZA_124,5CA006B8F48B43A6,[REF:124],0,19964
+125,WAZAINFO_ZA_125,5CA007B8F48B4559,[REF:125],0,19976
+126,WAZAINFO_ZA_126,5CA004B8F48B4040,"Llama intensa que chamusca y puede causar
+quemaduras.",0,19988
+127,WAZAINFO_ZA_127,5CA005B8F48B41F3,"Embiste con un gran impulso y puede llegar a
+amedrentar al objetivo.",4,20096
+128,WAZAINFO_ZA_128,5CA012B8F48B580A,[REF:128],0,20236
+129,WAZAINFO_ZA_129,5CA013B8F48B59BD,Ataca al objetivo con rayos en forma de estrella.,4,20248
+130,WAZAINFO_ZA_130,5CA390B8F48E63FB,"El usuario retrae la cabeza y aumenta su Defensa durante
+un breve período de tiempo, tras lo cual embiste al
+objetivo. El movimiento requiere tiempo para ejecutarse.",4,20348
+131,WAZAINFO_ZA_131,5CA38FB8F48E6248,[REF:131],0,20680
+132,WAZAINFO_ZA_132,5CA392B8F48E6761,[REF:132],0,20692
+133,WAZAINFO_ZA_133,5CA391B8F48E65AE,"El usuario olvida sus preocupaciones y aumenta su
+Defensa Especial durante un tiempo.",4,20704
+134,WAZAINFO_ZA_134,5CA394B8F48E6AC7,[REF:134],0,20876
+135,WAZAINFO_ZA_135,5CA393B8F48E6914,[REF:135],0,20888
+136,WAZAINFO_ZA_136,5CA396B8F48E6E2D,[REF:136],0,20900
+137,WAZAINFO_ZA_137,5CA395B8F48E6C7A,"Intimida y asusta al objetivo con su temible mirada para
+dejarlo paralizado.",4,20912
+138,WAZAINFO_ZA_138,5CA388B8F48E5663,"Engulle los sueños de un objetivo somnoliento.
+El usuario recupera algunos PS según el daño que
+produzca.",4,21068
+139,WAZAINFO_ZA_139,5CA387B8F48E54B0,[REF:139],0,21280
+140,WAZAINFO_ZA_140,5CA716B8F4917D84,[REF:140],0,21292
+141,WAZAINFO_ZA_141,5CA717B8F4917F37,"Ataca chupándole la sangre al objetivo. El usuario
+recupera algunos PS según el daño que produzca.",4,21304
+142,WAZAINFO_ZA_142,5CA718B8F49180EA,[REF:142],0,21504
+143,WAZAINFO_ZA_143,5CA719B8F491829D,"Acumula energías y, luego, embiste al objetivo. Suele
+asestar un golpe crítico y puede amedrentar al objetivo.
+Este movimiento requiere tiempo para ejecutarse.",4,21516
+144,WAZAINFO_ZA_144,5CA712B8F49176B8,[REF:144],0,21836
+145,WAZAINFO_ZA_145,5CA713B8F491786B,[REF:145],0,21848
+146,WAZAINFO_ZA_146,5CA714B8F4917A1E,[REF:146],0,21860
+147,WAZAINFO_ZA_147,5CA715B8F4917BD1,"Esparce a su alrededor esporas que inducen somnolencia
+en el objetivo.",4,21872
+148,WAZAINFO_ZA_148,5CA70EB8F4916FEC,[REF:148],0,22016
+149,WAZAINFO_ZA_149,5CA70FB8F491719F,[REF:149],0,22028
+150,WAZAINFO_ZA_150,5CAA9CB8F494970D,No tiene ningún efecto. Solo salpica.,0,22040
+151,WAZAINFO_ZA_151,5CAA9BB8F494955A,"Transforma su estructura celular para hacerse líquido y
+aumentar la Defensa durante un tiempo.",0,22116
+152,WAZAINFO_ZA_152,5CAA9AB8F49493A7,[REF:152],0,22308
+153,WAZAINFO_ZA_153,5CAA99B8F49491F4,"El atacante ocasiona una grandísima explosión y causa
+daño a su alrededor. El usuario se debilita de inmediato.",4,22320
+154,WAZAINFO_ZA_154,5CAA98B8F4949041,[REF:154],0,22544
+155,WAZAINFO_ZA_155,5CAA97B8F4948E8E,"Lanza el hueso que lleva a modo de bumerán contra
+el objetivo y le inflige daño dos veces seguidas.",0,22556
+156,WAZAINFO_ZA_156,5CAA96B8F4948CDB,[REF:156],0,22756
+157,WAZAINFO_ZA_157,5CAA95B8F4948B28,"Ataca lanzando grandes pedruscos. Puede amedrentar
+al objetivo.",4,22768
+158,WAZAINFO_ZA_158,5CAA94B8F4948975,[REF:158],0,22896
+159,WAZAINFO_ZA_159,5CAA93B8F49487C2,[REF:159],0,22908
+160,WAZAINFO_ZA_160,5CAE02B8F4977A36,"Cambia el tipo del usuario por el del primer movimiento
+en su lista.",0,22920
+161,WAZAINFO_ZA_161,5CAE03B8F4977BE9,"Ataque con tres rayos de luz que puede paralizar, quemar
+o congelar al objetivo.",4,23060
+162,WAZAINFO_ZA_162,5CAE00B8F49776D0,"Asesta una dentellada con sus afilados incisivos. El daño
+que inflige varía según los PS del objetivo.",4,23224
+163,WAZAINFO_ZA_163,5CAE01B8F4977883,"Ataca con cuchillas o con pinzas. Suele asestar un golpe
+crítico.",4,23432
+164,WAZAINFO_ZA_164,5CAE06B8F4978102,Utiliza parte de los PS propios para crear un sustituto.,4,23564
+165,WAZAINFO_ZA_165,5CAE07B8F49782B5,[REF:165],0,23680
+166,WAZAINFO_ZA_166,5CAE04B8F4977D9C,[REF:166],0,23692
+167,WAZAINFO_ZA_167,5CAE05B8F4977F4F,[REF:167],0,23704
+168,WAZAINFO_ZA_168,5CAE0AB8F49787CE,[REF:168],0,23716
+169,WAZAINFO_ZA_169,5CAE0BB8F4978981,[REF:169],0,23728
+170,WAZAINFO_ZA_170,5CB108B8F499BA3F,[REF:170],0,23740
+171,WAZAINFO_ZA_171,5CB107B8F499B88C,[REF:171],0,23752
+172,WAZAINFO_ZA_172,5CB10AB8F499BDA5,"Ataca al objetivo envuelto en fuego. Puede causar
+quemaduras.",4,23764
+173,WAZAINFO_ZA_173,5CB109B8F499BBF2,[REF:173],0,23888
+174,WAZAINFO_ZA_174,5CB104B8F499B373,"Durante un breve período de tiempo, aumenta el Ataque
+y la Defensa del usuario pero lo vuelve más lento. Tiene
+efectos distintos si el usuario es de tipo Fantasma.",0,23900
+175,WAZAINFO_ZA_175,5CB103B8F499B1C0,[REF:175],0,24228
+176,WAZAINFO_ZA_176,5CB106B8F499B6D9,"El usuario cambia de tipo para hacerse resistente al tipo
+del último movimiento usado por el objetivo.",4,24240
+177,WAZAINFO_ZA_177,5CB105B8F499B526,[REF:177],0,24448
+178,WAZAINFO_ZA_178,5CB110B8F499C7D7,[REF:178],0,24460
+179,WAZAINFO_ZA_179,5CB10FB8F499C624,[REF:179],0,24472
+180,WAZAINFO_ZA_180,5CB48EB8F49CD3C8,[REF:180],0,24484
+181,WAZAINFO_ZA_181,5CB48FB8F49CD57B,[REF:181],0,24496
+182,WAZAINFO_ZA_182,5CB490B8F49CD72E,Se defiende con firmeza y frena todos los ataques.,0,24508
+183,WAZAINFO_ZA_183,5CB491B8F49CD8E1,Puñetazo de velocidad fulminante.,0,24612
+184,WAZAINFO_ZA_184,5CB492B8F49CDA94,[REF:184],0,24680
+185,WAZAINFO_ZA_185,5CB493B8F49CDC47,[REF:185],0,24692
+186,WAZAINFO_ZA_186,5CB494B8F49CDDFA,[REF:186],0,24704
+187,WAZAINFO_ZA_187,5CB495B8F49CDFAD,[REF:187],0,24716
+188,WAZAINFO_ZA_188,5CB486B8F49CC630,"Ataca arrojando residuos al objetivo. Puede llegar
+a envenenar.",4,24728
+189,WAZAINFO_ZA_189,5CB487B8F49CC7E3,[REF:189],0,24856
+190,WAZAINFO_ZA_190,5CB814B8F49FED51,[REF:190],0,24868
+191,WAZAINFO_ZA_191,5CB813B8F49FEB9E,"Lanza una trampa de púas delante de sí mismo que hiere
+a los rivales que la pisen.",0,24880
+192,WAZAINFO_ZA_192,5CB812B8F49FE9EB,"Dispara una descarga eléctrica que causa daño y
+parálisis.",0,25048
+193,WAZAINFO_ZA_193,5CB811B8F49FE838,[REF:193],0,25168
+194,WAZAINFO_ZA_194,5CB818B8F49FF41D,[REF:194],0,25180
+195,WAZAINFO_ZA_195,5CB817B8F49FF26A,"Si un Pokémon escucha este canto y no es cambiado
+por otro, se debilita tras un tiempo.",0,25192
+196,WAZAINFO_ZA_196,5CB816B8F49FF0B7,"Ataque con aire helado que vuelve más lento al objetivo
+durante un breve período de tiempo.",4,25368
+197,WAZAINFO_ZA_197,5CB815B8F49FEF04,Se defiende con firmeza y frena todos los ataques.,0,25552
+198,WAZAINFO_ZA_198,5CB80CB8F49FDFB9,[REF:198],0,25656
+199,WAZAINFO_ZA_199,5CB80BB8F49FDE06,[REF:199],0,25668
+200,WAZAINFO_ZA_200,76290FB902E15161,"El usuario ataca enfurecido y, después, se queda confuso.",4,25680
+201,WAZAINFO_ZA_201,76290EB902E14FAE,[REF:201],0,25796
+202,WAZAINFO_ZA_202,76290DB902E14DFB,"Un ataque que absorbe nutrientes. El usuario recupera
+algunos PS según el daño que produzca.",4,25808
+203,WAZAINFO_ZA_203,76290CB902E14C48,"El usuario se prepara para recibir ataques. En esta
+posición, resiste cualquier ataque y se queda con 1 PS
+como mínimo.",4,25996
+204,WAZAINFO_ZA_204,762913B902E1582D,"Engatusa al objetivo y reduce su Ataque durante
+un tiempo.",4,26236
+205,WAZAINFO_ZA_205,762912B902E1567A,"El usuario rueda como una roca contra el objetivo y le
+inflige daño.",4,26356
+206,WAZAINFO_ZA_206,762911B902E154C7,"Ataque moderado que no debilita al objetivo y le deja
+al menos 1 PS.",4,26496
+207,WAZAINFO_ZA_207,762910B902E15314,"Hace enfurecer y confunde al objetivo, pero también
+aumenta su Ataque durante un tiempo.",0,26636
+208,WAZAINFO_ZA_208,762907B902E143C9,[REF:208],0,26816
+209,WAZAINFO_ZA_209,762906B902E14216,"Se envuelve de electricidad y arremete contra el
+objetivo. Puede llegar a paralizar.",0,26828
+210,WAZAINFO_ZA_210,762589B902DE37D8,[REF:210],0,27000
+211,WAZAINFO_ZA_211,76258AB902DE398B,"Golpea al objetivo con unas alas robustas y macizas.
+Puede aumentar la Defensa del usuario.",0,27012
+212,WAZAINFO_ZA_212,76258BB902DE3B3E,[REF:212],0,27196
+213,WAZAINFO_ZA_213,76258CB902DE3CF1,[REF:213],0,27208
+214,WAZAINFO_ZA_214,76258DB902DE3EA4,[REF:214],0,27220
+215,WAZAINFO_ZA_215,76258EB902DE4057,[REF:215],0,27232
+216,WAZAINFO_ZA_216,76258FB902DE420A,[REF:216],0,27244
+217,WAZAINFO_ZA_217,762590B902DE43BD,[REF:217],0,27256
+218,WAZAINFO_ZA_218,762581B902DE2A40,[REF:218],0,27268
+219,WAZAINFO_ZA_219,762582B902DE2BF3,"Un poder misterioso que protege de los problemas de
+estado durante un tiempo. El efecto permanece aunque
+se cambie de Pokémon.",4,27280
+220,WAZAINFO_ZA_220,762FFBB902E74E13,[REF:220],0,27536
+221,WAZAINFO_ZA_221,762FFAB902E74C60,[REF:221],0,27548
+222,WAZAINFO_ZA_222,762FFDB902E75179,[REF:222],0,27560
+223,WAZAINFO_ZA_223,762FFCB902E74FC6,"Puñetazo con toda la fuerza concentrada que causa
+confusión.",0,27572
+224,WAZAINFO_ZA_224,762FFFB902E754DF,"Ensarta al objetivo con su imponente cuerno
+o cornamenta.",4,27696
+225,WAZAINFO_ZA_225,762FFEB902E7532C,"Poderosa ráfaga de aliento que golpea al objetivo y
+puede paralizarlo.",0,27812
+226,WAZAINFO_ZA_226,763001B902E75845,[REF:226],0,27956
+227,WAZAINFO_ZA_227,763000B902E75692,[REF:227],0,27968
+228,WAZAINFO_ZA_228,763003B902E75BAB,[REF:228],0,27980
+229,WAZAINFO_ZA_229,763002B902E759F8,[REF:229],0,27992
+230,WAZAINFO_ZA_230,762C95B902E46AEA,[REF:230],0,28004
+231,WAZAINFO_ZA_231,762C96B902E46C9D,"Ataca con una cola férrea y puede reducir la Defensa
+del objetivo.",4,28016
+232,WAZAINFO_ZA_232,762C93B902E46784,"Ataque con garras de acero que puede aumentar el
+Ataque del usuario.",4,28152
+233,WAZAINFO_ZA_233,762C94B902E46937,[REF:233],0,28292
+234,WAZAINFO_ZA_234,762C91B902E4641E,El usuario restaura sus PS tomando el sol plácidamente.,4,28304
+235,WAZAINFO_ZA_235,762C92B902E465D1,"El usuario restaura sus PS produciendo energía gracias
+a la fotosíntesis.",4,28416
+236,WAZAINFO_ZA_236,762C8FB902E460B8,"El usuario restaura sus PS exponiéndose a la relajante
+luz de la luna.",4,28564
+237,WAZAINFO_ZA_237,762C90B902E4626B,[REF:237],0,28708
+238,WAZAINFO_ZA_238,762C8DB902E45D52,[REF:238],0,28720
+239,WAZAINFO_ZA_239,762C8EB902E45F05,"Crea un violento tornado para hacer trizas al objetivo.
+Puede amedrentarlo.",0,28732
+240,WAZAINFO_ZA_240,763687B902ECA7A5,[REF:240],0,28884
+241,WAZAINFO_ZA_241,763686B902ECA5F2,[REF:241],0,28896
+242,WAZAINFO_ZA_242,763685B902ECA43F,"Tritura con afilados colmillos y puede reducir la Defensa
+del objetivo.",0,28908
+243,WAZAINFO_ZA_243,763684B902ECA28C,[REF:243],0,29052
+244,WAZAINFO_ZA_244,763683B902ECA0D9,[REF:244],0,29064
+245,WAZAINFO_ZA_245,763682B902EC9F26,Carga contra el objetivo a velocidad extrema y lo ataca.,0,29076
+246,WAZAINFO_ZA_246,763681B902EC9D73,"Canaliza un poder prehistórico con el que ataca al
+objetivo. Puede aumentar todas las características
+del usuario.",0,29192
+247,WAZAINFO_ZA_247,763680B902EC9BC0,"Lanza una bola oscura que puede reducir la Defensa
+Especial del objetivo.",0,29424
+248,WAZAINFO_ZA_248,76368FB902ECB53D,"Poco después de usar este movimiento, ataca el lugar
+en el que se encontraba el objetivo con energía psíquica
+concentrada.",0,29572
+249,WAZAINFO_ZA_249,76368EB902ECB38A,"Propina un gran puñetazo que puede reducir la Defensa
+del objetivo.",0,29820
+250,WAZAINFO_ZA_250,763381B902EA679C,"Una tromba de agua que atrapa al objetivo y que inflige
+daño continuo a los rivales que permanezcan dentro.",4,29956
+251,WAZAINFO_ZA_251,763382B902EA694F,[REF:251],0,30172
+252,WAZAINFO_ZA_252,763383B902EA6B02,"Amedrenta al objetivo con este movimiento de prioridad
+alta. Solo tiene efecto si el usuario lo usa nada más
+entrar en combate.",4,30184
+253,WAZAINFO_ZA_253,763384B902EA6CB5,[REF:253],0,30440
+254,WAZAINFO_ZA_254,76337DB902EA60D0,[REF:254],0,30452
+255,WAZAINFO_ZA_255,76337EB902EA6283,[REF:255],0,30464
+256,WAZAINFO_ZA_256,76337FB902EA6436,[REF:256],0,30476
+257,WAZAINFO_ZA_257,763380B902EA65E9,"Provoca un viento abrasador que daña al objetivo y
+puede causar quemaduras.",0,30488
+258,WAZAINFO_ZA_258,763389B902EA7534,[REF:258],0,30640
+259,WAZAINFO_ZA_259,76338AB902EA76E7,"Atormenta y enfurece al objetivo, de modo que le
+resultará difícil usar el mismo movimiento de forma
+consecutiva.",4,30652
+260,WAZAINFO_ZA_260,763D93B902F2DAB7,[REF:260],0,30880
+261,WAZAINFO_ZA_261,763D92B902F2D904,Siniestras llamas moradas que producen quemaduras.,0,30892
+262,WAZAINFO_ZA_262,763D95B902F2DE1D,[REF:262],0,30996
+263,WAZAINFO_ZA_263,763D94B902F2DC6A,"Si el usuario está quemado, paralizado, somnoliento o
+envenenado, se duplica la potencia del movimiento.",0,31008
+264,WAZAINFO_ZA_264,763D8FB902F2D3EB,[REF:264],0,31220
+265,WAZAINFO_ZA_265,763D8EB902F2D238,[REF:265],0,31232
+266,WAZAINFO_ZA_266,763D91B902F2D751,[REF:266],0,31244
+267,WAZAINFO_ZA_267,763D90B902F2D59E,[REF:267],0,31256
+268,WAZAINFO_ZA_268,763D8BB902F2CD1F,"Recarga energía para potenciar su siguiente movimiento
+de tipo Eléctrico. También aumenta la Defensa Especial
+durante un breve período de tiempo.",0,31268
+269,WAZAINFO_ZA_269,763D8AB902F2CB6C,"Enfurece al objetivo para que solo use movimientos de
+ataque durante un breve período de tiempo.",4,31560
+270,WAZAINFO_ZA_270,763A0DB902EFC12E,[REF:270],0,31756
+271,WAZAINFO_ZA_271,763A0EB902EFC2E1,[REF:271],0,31768
+272,WAZAINFO_ZA_272,763A0BB902EFBDC8,[REF:272],0,31780
+273,WAZAINFO_ZA_273,763A0CB902EFBF7B,"Poco después de usar este movimiento, el usuario o el
+Pokémon que lo sustituya recupera PS.",0,31792
+274,WAZAINFO_ZA_274,763A11B902EFC7FA,[REF:274],0,31976
+275,WAZAINFO_ZA_275,763A12B902EFC9AD,[REF:275],0,31988
+276,WAZAINFO_ZA_276,763A0FB902EFC494,[REF:276],0,32000
+277,WAZAINFO_ZA_277,763A10B902EFC647,[REF:277],0,32012
+278,WAZAINFO_ZA_278,763A05B902EFB396,[REF:278],0,32024
+279,WAZAINFO_ZA_279,763A06B902EFB549,[REF:279],0,32036
+280,WAZAINFO_ZA_280,760DFFB902CA6E79,"Ataca al objetivo con un potente golpe con el filo de la
+mano capaz de destruir barreras como Pantalla de Luz
+y Reflejo.",4,32048
+281,WAZAINFO_ZA_281,760DFEB902CA6CC6,[REF:281],0,32292
+282,WAZAINFO_ZA_282,760DFDB902CA6B13,"Hace que el objetivo suelte el objeto que lleva y le
+impide usarlo hasta que concluye el combate. Inflige
+más daño si el objetivo lleva un objeto.",0,32304
+283,WAZAINFO_ZA_283,760DFCB902CA6960,[REF:283],0,32600
+284,WAZAINFO_ZA_284,760E03B902CA7545,[REF:284],0,32612
+285,WAZAINFO_ZA_285,760E02B902CA7392,[REF:285],0,32624
+286,WAZAINFO_ZA_286,760E01B902CA71DF,[REF:286],0,32636
+287,WAZAINFO_ZA_287,760E00B902CA702C,[REF:287],0,32648
+288,WAZAINFO_ZA_288,760E07B902CA7C11,[REF:288],0,32660
+289,WAZAINFO_ZA_289,760E06B902CA7A5E,[REF:289],0,32672
+290,WAZAINFO_ZA_290,760A79B902C754F0,[REF:290],0,32684
+291,WAZAINFO_ZA_291,760A7AB902C756A3,[REF:291],0,32696
+292,WAZAINFO_ZA_292,760A7BB902C75856,[REF:292],0,32708
+293,WAZAINFO_ZA_293,760A7CB902C75A09,[REF:293],0,32720
+294,WAZAINFO_ZA_294,760A7DB902C75BBC,[REF:294],0,32732
+295,WAZAINFO_ZA_295,760A7EB902C75D6F,"Fogonazo de luz que inflige daño al objetivo y puede
+reducir su Defensa Especial.",0,32744
+296,WAZAINFO_ZA_296,760A7FB902C75F22,"Bola de plumas neblinosas que inflige daño al objetivo
+y puede reducir su Ataque Especial.",0,32908
+297,WAZAINFO_ZA_297,760A80B902C760D5,"Envuelve al objetivo con un manto de plumas para
+reducir su Ataque durante un tiempo.",4,33092
+298,WAZAINFO_ZA_298,760A81B902C76288,[REF:298],0,33264
+299,WAZAINFO_ZA_299,760A82B902C7643B,"Patada que suele asestar un golpe crítico y puede causar
+quemaduras.",0,33276
+300,WAZAINFO_ZA_300,6D12D4B8FD9CED96,[REF:300],0,33416
+301,WAZAINFO_ZA_301,6D12D5B8FD9CEF49,[REF:301],0,33428
+302,WAZAINFO_ZA_302,6D12D2B8FD9CEA30,[REF:302],0,33440
+303,WAZAINFO_ZA_303,6D12D3B8FD9CEBE3,[REF:303],0,33452
+304,WAZAINFO_ZA_304,6D12D8B8FD9CF462,"Grito desgarrador cuyas vibraciones le infligen daño
+al objetivo.",0,33464
+305,WAZAINFO_ZA_305,6D12D9B8FD9CF615,"Mordedura con colmillos venenosos que inflige daño
+al objetivo y puede envenenarlo gravemente.",0,33596
+306,WAZAINFO_ZA_306,6D12D6B8FD9CF0FC,[REF:306],0,33788
+307,WAZAINFO_ZA_307,6D12D7B8FD9CF2AF,"El usuario calcina al objetivo con una explosión de fuego,
+pero no podrá moverse durante un breve período de
+tiempo.",4,33800
+308,WAZAINFO_ZA_308,6D12DCB8FD9CFB2E,"El usuario ataca al objetivo con un cañonazo de agua,
+pero no podrá moverse durante un breve período de
+tiempo.",4,34036
+309,WAZAINFO_ZA_309,6D12DDB8FD9CFCE1,[REF:309],0,34260
+310,WAZAINFO_ZA_310,6D165AB8FDA0071F,[REF:310],0,34272
+311,WAZAINFO_ZA_311,6D1659B8FDA0056C,[REF:311],0,34284
+312,WAZAINFO_ZA_312,6D165CB8FDA00A85,[REF:312],0,34296
+313,WAZAINFO_ZA_313,6D165BB8FDA008D2,"Lágrimas de cocodrilo que desconciertan al objetivo
+y reducen su Defensa Especial durante un tiempo.",0,34308
+314,WAZAINFO_ZA_314,6D1656B8FDA00053,[REF:314],0,34512
+315,WAZAINFO_ZA_315,6D1655B8FD9FFEA0,"Ataca al objetivo con toda su fuerza, pero reduce
+el Ataque Especial del usuario durante un tiempo.",4,34524
+316,WAZAINFO_ZA_316,6D1658B8FDA003B9,[REF:316],0,34724
+317,WAZAINFO_ZA_317,6D1657B8FDA00206,"Lanza rocas que infligen daño al objetivo y que lo vuelven
+más lento. Si no aciertan, se quedarán en el terreno de
+combate.",0,34736
+318,WAZAINFO_ZA_318,6D1662B8FDA014B7,"Ataque con un fuerte viento con polvo de escamas que
+además puede aumentar todas las características del
+usuario.",4,34984
+319,WAZAINFO_ZA_319,6D1661B8FDA01304,"Horrible chirrido metálico que reduce la Defensa Especial
+del objetivo durante un tiempo.",0,35212
+320,WAZAINFO_ZA_320,6D0BE8B8FD96F0E4,[REF:320],0,35392
+321,WAZAINFO_ZA_321,6D0BE9B8FD96F297,[REF:321],0,35404
+322,WAZAINFO_ZA_322,6D0BEAB8FD96F44A,[REF:322],0,35416
+323,WAZAINFO_ZA_323,6D0BEBB8FD96F5FD,[REF:323],0,35428
+324,WAZAINFO_ZA_324,6D0BE4B8FD96EA18,[REF:324],0,35440
+325,WAZAINFO_ZA_325,6D0BE5B8FD96EBCB,Puñetazo rápido procedente de las sombras.,0,35452
+326,WAZAINFO_ZA_326,6D0BE6B8FD96ED7E,[REF:326],0,35540
+327,WAZAINFO_ZA_327,6D0BE7B8FD96EF31,[REF:327],0,35552
+328,WAZAINFO_ZA_328,6D0BE0B8FD96E34C,"Envuelve al objetivo en un violento remolino de arena que
+inflige daño continuo a los rivales que permanezcan
+dentro.",4,35564
+329,WAZAINFO_ZA_329,6D0BE1B8FD96E4FF,"El usuario ataca con una temperatura del cero absoluto
+que congela al objetivo si acierta. Este movimiento
+requiere mucho tiempo para ejecutarse.",4,35800
+330,WAZAINFO_ZA_330,6D0F6EB8FD9A0A6D,"Ataque con agua lodosa que vuelve más lento al objetivo
+durante un breve período de tiempo.",4,36092
+331,WAZAINFO_ZA_331,6D0F6DB8FD9A08BA,"Dispara rápido cinco ráfagas de semillas que dañan al
+objetivo.",0,36276
+332,WAZAINFO_ZA_332,6D0F6CB8FD9A0707,"Desconcierta al objetivo con movimientos muy rápidos
+antes de cercenarlo.",0,36404
+333,WAZAINFO_ZA_333,6D0F6BB8FD9A0554,"Lanza cinco carámbanos afilados al objetivo al mismo
+tiempo.",0,36552
+334,WAZAINFO_ZA_334,6D0F6AB8FD9A03A1,"Fortalece el cuerpo como si fuera de hierro y aumenta
+la Defensa durante un tiempo.",0,36676
+335,WAZAINFO_ZA_335,6D0F69B8FD9A01EE,[REF:335],0,36844
+336,WAZAINFO_ZA_336,6D0F68B8FD9A003B,[REF:336],0,36856
+337,WAZAINFO_ZA_337,6D0F67B8FD99FE88,Araña al objetivo con unas enormes garras afiladas.,4,36868
+338,WAZAINFO_ZA_338,6D0F66B8FD99FCD5,"El usuario golpea al objetivo con las raíces de una
+enorme planta, pero no podrá moverse durante un
+breve período de tiempo.",4,36972
+339,WAZAINFO_ZA_339,6D0F65B8FD99FB22,"Robustece el cuerpo para aumentar el Ataque y la
+Defensa durante un breve período de tiempo.",0,37224
+340,WAZAINFO_ZA_340,6D055CB8FD919752,"Bota muy alto hasta quedar fuera de vista y, tras un
+breve período de tiempo, arremete contra el objetivo.
+Puede paralizar.",0,37412
+341,WAZAINFO_ZA_341,6D055DB8FD919905,"El usuario ataca lanzando una bola de lodo al objetivo
+que también lo vuelve más lento durante un breve
+período de tiempo.",4,37660
+342,WAZAINFO_ZA_342,6D055AB8FD9193EC,[REF:342],0,37908
+343,WAZAINFO_ZA_343,6D055BB8FD91959F,[REF:343],0,37920
+344,WAZAINFO_ZA_344,6D0558B8FD919086,"El usuario electrifica su cuerpo para luego atacar, pero
+también se hiere a sí mismo. Puede paralizar al objetivo.",4,37932
+345,WAZAINFO_ZA_345,6D0559B8FD919239,Esparce extrañas hojas que persiguen al objetivo.,4,38164
+346,WAZAINFO_ZA_346,6D0556B8FD918D20,[REF:346],0,38264
+347,WAZAINFO_ZA_347,6D0557B8FD918ED3,"Mejora la concentración y calma el espíritu para
+aumentar el Ataque Especial y la Defensa Especial
+durante un breve período de tiempo.",0,38276
+348,WAZAINFO_ZA_348,6D0564B8FD91A4EA,"Acuchilla con una hoja fina. Suele asestar un golpe
+crítico.",4,38548
+349,WAZAINFO_ZA_349,6D0565B8FD91A69D,[REF:349],0,38672
+350,WAZAINFO_ZA_350,6D08E2B8FD94B0DB,Ataca lanzando cinco pedruscos seguidos al objetivo.,4,38684
+351,WAZAINFO_ZA_351,6D08E1B8FD94AF28,[REF:351],0,38792
+352,WAZAINFO_ZA_352,6D08E4B8FD94B441,"Ataca con una potente onda de agua. Puede confundir
+al objetivo.",4,38804
+353,WAZAINFO_ZA_353,6D08E3B8FD94B28E,[REF:353],0,38936
+354,WAZAINFO_ZA_354,6D08E6B8FD94B7A7,[REF:354],0,38948
+355,WAZAINFO_ZA_355,6D08E5B8FD94B5F4,[REF:355],0,38960
+356,WAZAINFO_ZA_356,6D08E8B8FD94BB0D,[REF:356],0,38972
+357,WAZAINFO_ZA_357,6D08E7B8FD94B95A,[REF:357],0,38984
+358,WAZAINFO_ZA_358,6D08DAB8FD94A343,[REF:358],0,38996
+359,WAZAINFO_ZA_359,6D08D9B8FD94A190,[REF:359],0,39008
+360,WAZAINFO_ZA_360,6CFE50B8FD8B6440,[REF:360],0,39020
+361,WAZAINFO_ZA_361,6CFE51B8FD8B65F3,[REF:361],0,39032
+362,WAZAINFO_ZA_362,6CFE52B8FD8B67A6,[REF:362],0,39044
+363,WAZAINFO_ZA_363,6CFE53B8FD8B6959,[REF:363],0,39056
+364,WAZAINFO_ZA_364,6CFE54B8FD8B6B0C,[REF:364],0,39068
+365,WAZAINFO_ZA_365,6CFE55B8FD8B6CBF,[REF:365],0,39080
+366,WAZAINFO_ZA_366,6CFE56B8FD8B6E72,[REF:366],0,39092
+367,WAZAINFO_ZA_367,6CFE57B8FD8B7025,[REF:367],0,39104
+368,WAZAINFO_ZA_368,6CFE58B8FD8B71D8,[REF:368],0,39116
+369,WAZAINFO_ZA_369,6CFE59B8FD8B738B,"Tras atacar, el usuario vuelve a toda prisa con su
+Entrenador.",0,39128
+370,WAZAINFO_ZA_370,6D01D6B8FD8E7DC9,"Ataca ferozmente al objetivo sin protegerse, lo cual
+reduce la Defensa y la Defensa Especial del usuario
+durante un breve período de tiempo.",4,39256
+371,WAZAINFO_ZA_371,6D01D5B8FD8E7C16,[REF:371],0,39540
+372,WAZAINFO_ZA_372,6D01D4B8FD8E7A63,[REF:372],0,39552
+373,WAZAINFO_ZA_373,6D01D3B8FD8E78B0,[REF:373],0,39564
+374,WAZAINFO_ZA_374,6D01DAB8FD8E8495,[REF:374],0,39576
+375,WAZAINFO_ZA_375,6D01D9B8FD8E82E2,[REF:375],0,39588
+376,WAZAINFO_ZA_376,6D01D8B8FD8E812F,[REF:376],0,39600
+377,WAZAINFO_ZA_377,6D01D7B8FD8E7F7C,"Impide que el objetivo recupere PS mediante
+movimientos u objetos durante un tiempo.",4,39612
+378,WAZAINFO_ZA_378,6D01DEB8FD8E8B61,[REF:378],0,39784
+379,WAZAINFO_ZA_379,6D01DDB8FD8E89AE,[REF:379],0,39796
+380,WAZAINFO_ZA_380,6D2DE4B8FDB3D07E,[REF:380],0,39808
+381,WAZAINFO_ZA_381,6D2DE5B8FDB3D231,[REF:381],0,39820
+382,WAZAINFO_ZA_382,6D2DE2B8FDB3CD18,[REF:382],0,39832
+383,WAZAINFO_ZA_383,6D2DE3B8FDB3CECB,[REF:383],0,39844
+384,WAZAINFO_ZA_384,6D2DE8B8FDB3D74A,[REF:384],0,39856
+385,WAZAINFO_ZA_385,6D2DE9B8FDB3D8FD,[REF:385],0,39868
+386,WAZAINFO_ZA_386,6D2DE6B8FDB3D3E4,[REF:386],0,39880
+387,WAZAINFO_ZA_387,6D2DE7B8FDB3D597,[REF:387],0,39892
+388,WAZAINFO_ZA_388,6D2DDCB8FDB3C2E6,[REF:388],0,39904
+389,WAZAINFO_ZA_389,6D2DDDB8FDB3C499,[REF:389],0,39916
+390,WAZAINFO_ZA_390,6D316AB8FDB6EA07,"Lanza una trampa de púas tóxicas delante de sí mismo
+que envenena a los rivales que las pisan.",0,39928
+391,WAZAINFO_ZA_391,6D3169B8FDB6E854,[REF:391],0,40120
+392,WAZAINFO_ZA_392,6D316CB8FDB6ED6D,"El usuario se cubre con un manto de agua que restaura
+PS poco a poco.",4,40132
+393,WAZAINFO_ZA_393,6D316BB8FDB6EBBA,[REF:393],0,40272
+394,WAZAINFO_ZA_394,6D3166B8FDB6E33B,"El usuario se cubre de llamas y ataca cargando contra el
+objetivo, aunque se hiere a sí mismo. Puede
+causar quemaduras.",4,40284
+395,WAZAINFO_ZA_395,6D3165B8FDB6E188,[REF:395],0,40524
+396,WAZAINFO_ZA_396,6D3168B8FDB6E6A1,Libera una inmensa descarga de aura desde su interior.,0,40536
+397,WAZAINFO_ZA_397,6D3167B8FDB6E4EE,[REF:397],0,40648
+398,WAZAINFO_ZA_398,6D3162B8FDB6DC6F,"Pincha al objetivo con un tentáculo o brazo envenenado.
+Puede llegar a envenenar al objetivo.",0,40660
+399,WAZAINFO_ZA_399,6D3161B8FDB6DABC,"Libera una horrible aura llena de malos pensamientos
+que puede amedrentar al objetivo.",0,40848
+400,WAZAINFO_ZA_400,86A265B90BF84E17,"Ataca al objetivo a la primera oportunidad. Suele asestar
+un golpe crítico.",4,41024
+401,WAZAINFO_ZA_401,86A264B90BF84C64,[REF:401],0,41176
+402,WAZAINFO_ZA_402,86A267B90BF8517D,"Lanza al objetivo una descarga de enormes semillas
+de cáscara muy dura desde arriba.",0,41188
+403,WAZAINFO_ZA_403,86A266B90BF84FCA,"Ataca con un viento afilado que incluso corta el aire.
+También puede amedrentar al objetivo.",4,41360
+404,WAZAINFO_ZA_404,86A261B90BF8474B,"Cruza las guadañas o las garras para atacar al objetivo
+como si fueran unas tijeras.",0,41548
+405,WAZAINFO_ZA_405,86A260B90BF84598,"El usuario crea una onda sónica dañina mediante
+vibraciones que también puede reducir la Defensa
+Especial del objetivo.",4,41720
+406,WAZAINFO_ZA_406,86A263B90BF84AB1,"Abre mucho la boca y libera una onda de choque con
+la que ataca al objetivo.",4,41960
+407,WAZAINFO_ZA_407,86A262B90BF848FE,"Ataca de forma brutal mientras intimida al objetivo.
+Puede amedrentarlo.",4,42116
+408,WAZAINFO_ZA_408,86A25DB90BF8407F,"Ataca con un rayo de luz que centellea como si lo
+formaran miles de joyas.",4,42264
+409,WAZAINFO_ZA_409,86A25CB90BF83ECC,"Un golpe que drena energía. El usuario recupera algunos
+PS según el daño que produzca.",4,42416
+410,WAZAINFO_ZA_410,869F5FB90BF60E0E,"Gira los puños y libera una rápida onda de vacío contra
+el objetivo.",0,42592
+411,WAZAINFO_ZA_411,869F60B90BF60FC1,"Agudiza la concentración mental y libera su poder.
+Puede reducir la Defensa Especial del objetivo.",4,42732
+412,WAZAINFO_ZA_412,869F5DB90BF60AA8,"Aúna fuerzas de la naturaleza y libera su ataque.
+Puede reducir la Defensa Especial del objetivo.",4,42932
+413,WAZAINFO_ZA_413,869F5EB90BF60C5B,"Pliega las alas y ataca con un vuelo rasante. El usuario
+se hiere a sí mismo.",0,43128
+414,WAZAINFO_ZA_414,869F63B90BF614DA,"La tierra a los pies del objetivo erupciona
+violentamente. Puede reducir la Defensa Especial
+del objetivo.",0,43284
+415,WAZAINFO_ZA_415,869F64B90BF6168D,[REF:415],0,43500
+416,WAZAINFO_ZA_416,869F61B90BF61174,"El usuario carga contra el objetivo con toda la fuerza
+que tiene, pero no podrá moverse durante un breve
+período de tiempo.",4,43512
+417,WAZAINFO_ZA_417,869F62B90BF61327,"Estimula su cerebro pensando en cosas malas.
+Aumenta el Ataque Especial durante un tiempo.",4,43760
+418,WAZAINFO_ZA_418,869F57B90BF60076,"Ataca con fuertes puñetazos tan rápidos como
+proyectiles.",4,43944
+419,WAZAINFO_ZA_419,869F58B90BF60229,[REF:419],0,44060
+420,WAZAINFO_ZA_420,869BD9B90BF2F485,"Crea esquirlas de hielo y las lanza a gran velocidad contra
+el objetivo.",0,44072
+421,WAZAINFO_ZA_421,869BD8B90BF2F2D2,"Ataca con una garra afilada hecha de sombras. Suele
+asestar un golpe crítico.",4,44220
+422,WAZAINFO_ZA_422,869BD7B90BF2F11F,"El usuario muerde al objetivo con colmillos electrificados
+y puede hacer que se amedrente o se paralice.",4,44376
+423,WAZAINFO_ZA_423,869BD6B90BF2EF6C,"El usuario muerde al objetivo con colmillos helados y
+puede hacer que se amedrente o se congele.",4,44588
+424,WAZAINFO_ZA_424,869BD5B90BF2EDB9,"El usuario muerde al objetivo con colmillos en llamas y
+puede hacer que se amedrente o sufra quemaduras.",4,44784
+425,WAZAINFO_ZA_425,869BD4B90BF2EC06,Extiende su sombra y ataca al objetivo por la espalda.,4,44996
+426,WAZAINFO_ZA_426,869BD3B90BF2EA53,[REF:426],0,45108
+427,WAZAINFO_ZA_427,869BD2B90BF2E8A0,"Ataca al objetivo con cuchillas formadas por energía
+psíquica. Suele asestar un golpe crítico.",4,45120
+428,WAZAINFO_ZA_428,869BE1B90BF3021D,"Concentra su energía psíquica en la cabeza para golpear.
+Puede hacer que el objetivo se amedrente.",0,45312
+429,WAZAINFO_ZA_429,869BE0B90BF3006A,[REF:429],0,45512
+430,WAZAINFO_ZA_430,869853B90BEFDAFC,"El usuario concentra toda la luz del cuerpo y la libera.
+Puede reducir la Defensa Especial del objetivo.",4,45524
+431,WAZAINFO_ZA_431,869854B90BEFDCAF,[REF:431],0,45736
+432,WAZAINFO_ZA_432,869855B90BEFDE62,[REF:432],0,45748
+433,WAZAINFO_ZA_433,869856B90BEFE015,[REF:433],0,45760
+434,WAZAINFO_ZA_434,86984FB90BEFD430,"Hace que grandes cometas caigan del cielo sobre el
+objetivo. Reduce el Ataque Especial del usuario durante
+un tiempo.",0,45772
+435,WAZAINFO_ZA_435,869850B90BEFD5E3,"Una deslumbradora onda eléctrica que causa daño a su
+alrededor. Puede paralizar.",4,46008
+436,WAZAINFO_ZA_436,869851B90BEFD796,"Un infierno de llamas que causa daño a su alrededor.
+Puede quemar.",4,46172
+437,WAZAINFO_ZA_437,869852B90BEFD949,"Envuelve al objetivo con una lluvia de hojas afiladas,
+pero reduce el Ataque Especial del usuario durante
+un tiempo.",4,46308
+438,WAZAINFO_ZA_438,86985BB90BEFE894,"El usuario agita violentamente sus lianas o tentáculos
+para golpear al objetivo.",4,46544
+439,WAZAINFO_ZA_439,86985CB90BEFEA47,[REF:439],0,46708
+440,WAZAINFO_ZA_440,8694CDB90BECC173,[REF:440],0,46720
+441,WAZAINFO_ZA_441,8694CCB90BECBFC0,"Ataca al objetivo lanzando basura asquerosa y puede
+envenenarlo.",4,46732
+442,WAZAINFO_ZA_442,8694CFB90BECC4D9,"Ataca con su cabeza dura como el hierro. Puede hacer
+que el objetivo se amedrente.",4,46864
+443,WAZAINFO_ZA_443,8694CEB90BECC326,Lanza unas bombas de hierro que se pegan al objetivo.,0,47032
+444,WAZAINFO_ZA_444,8694D1B90BECC83F,"Clava piedras muy afiladas al objetivo. Suele asestar
+un golpe crítico.",0,47140
+445,WAZAINFO_ZA_445,8694D0B90BECC68C,[REF:445],0,47284
+446,WAZAINFO_ZA_446,8694D3B90BECCBA5,"Hace flotar innumerables rocas delante de sí mismo
+que hieren a quienes entren en contacto con ellas.",0,47296
+447,WAZAINFO_ZA_447,8694D2B90BECC9F2,[REF:447],0,47500
+448,WAZAINFO_ZA_448,8694D5B90BECCF0B,[REF:448],0,47512
+449,WAZAINFO_ZA_449,8694D4B90BECCD58,[REF:449],0,47524
+450,WAZAINFO_ZA_450,869167B90BE9DE4A,[REF:450],0,47536
+451,WAZAINFO_ZA_451,869168B90BE9DFFD,"Lanza un rayo eléctrico contra el objetivo. Puede
+aumentar el Ataque Especial del usuario.",0,47548
+452,WAZAINFO_ZA_452,869165B90BE9DAE4,"Arremete contra el objetivo con su robusto cuerpo.
+El usuario se hiere a sí mismo.",4,47732
+453,WAZAINFO_ZA_453,869166B90BE9DC97,Ataca al objetivo a tal velocidad que es casi imperceptible.,4,47900
+454,WAZAINFO_ZA_454,869163B90BE9D77E,[REF:454],0,48024
+455,WAZAINFO_ZA_455,869164B90BE9D931,[REF:455],0,48036
+456,WAZAINFO_ZA_456,869161B90BE9D418,[REF:456],0,48048
+457,WAZAINFO_ZA_457,869162B90BE9D5CB,"El usuario arriesga su vida y lanza un cabezazo con toda
+su fuerza, pero también se hiere a sí mismo.",4,48060
+458,WAZAINFO_ZA_458,86915FB90BE9D0B2,"Golpea al objetivo dos veces seguidas con la cola u otras
+partes de su cuerpo.",0,48264
+459,WAZAINFO_ZA_459,869160B90BE9D265,[REF:459],0,48424
+460,WAZAINFO_ZA_460,868E61B90BE79E41,[REF:460],0,48436
+461,WAZAINFO_ZA_461,868E60B90BE79C8E,[REF:461],0,48448
+462,WAZAINFO_ZA_462,868E5FB90BE79ADB,[REF:462],0,48460
+463,WAZAINFO_ZA_463,868E5EB90BE79928,"Provoca una tormenta de fuego alrededor del objetivo
+que inflige daño continuo a los rivales que permanezcan
+dentro.",0,48472
+464,WAZAINFO_ZA_464,868E65B90BE7A50D,"Envía al objetivo a un mundo de tinieblas y le induce
+somnolencia. Inflige más daño a objetivos somnolientos
+y restaura PS al usuario según el daño que produzca.",4,48708
+465,WAZAINFO_ZA_465,868E64B90BE7A35A,[REF:465],0,49032
+466,WAZAINFO_ZA_466,868E63B90BE7A1A7,"Ataca con un viento horripilante que además puede
+aumentar todas las características del usuario.",4,49044
+467,WAZAINFO_ZA_467,868E62B90BE79FF4,[REF:467],0,49240
+468,WAZAINFO_ZA_468,868E59B90BE790A9,[REF:468],0,49252
+469,WAZAINFO_ZA_469,868E58B90BE78EF6,[REF:469],0,49264
+470,WAZAINFO_ZA_470,868ADBB90BE484B8,[REF:470],0,49276
+471,WAZAINFO_ZA_471,868ADCB90BE4866B,[REF:471],0,49288
+472,WAZAINFO_ZA_472,868ADDB90BE4881E,[REF:472],0,49300
+473,WAZAINFO_ZA_473,868ADEB90BE489D1,Crea una onda psíquica que causa daño físico al objetivo.,0,49312
+474,WAZAINFO_ZA_474,868ADFB90BE48B84,[REF:474],0,49428
+475,WAZAINFO_ZA_475,868AE0B90BE48D37,[REF:475],0,49440
+476,WAZAINFO_ZA_476,868AE1B90BE48EEA,[REF:476],0,49452
+477,WAZAINFO_ZA_477,868AE2B90BE4909D,[REF:477],0,49464
+478,WAZAINFO_ZA_478,868AD3B90BE47720,[REF:478],0,49476
+479,WAZAINFO_ZA_479,868AD4B90BE478D3,[REF:479],0,49488
+480,WAZAINFO_ZA_480,868755B90BE16B2F,"Lanza un golpe devastador. Siempre asesta un golpe
+crítico.",0,49500
+481,WAZAINFO_ZA_481,868754B90BE1697C,[REF:481],0,49620
+482,WAZAINFO_ZA_482,868757B90BE16E95,"Una onda tóxica que causa daño a su alrededor.
+Puede envenenar.",4,49632
+483,WAZAINFO_ZA_483,868756B90BE16CE2,[REF:483],0,49760
+484,WAZAINFO_ZA_484,868751B90BE16463,"El usuario golpea con todo su cuerpo. Cuanto mayor
+sea su peso comparado con el del objetivo, mayor será
+la potencia del movimiento.",4,49772
+485,WAZAINFO_ZA_485,868750B90BE162B0,[REF:485],0,50040
+486,WAZAINFO_ZA_486,868753B90BE167C9,[REF:486],0,50052
+487,WAZAINFO_ZA_487,868752B90BE16616,[REF:487],0,50064
+488,WAZAINFO_ZA_488,86875DB90BE178C7,"El usuario carga contra el objetivo envuelto en llamas
+y se vuelve más rápido durante un breve período de
+tiempo.",4,50076
+489,WAZAINFO_ZA_489,86875CB90BE17714,[REF:489],0,50304
+490,WAZAINFO_ZA_490,8683CFB90BDE51A6,"Ataque rápido dirigido a los pies del objetivo que lo
+vuelve más lento durante un breve período de tiempo.",4,50316
+491,WAZAINFO_ZA_491,8683D0B90BDE5359,"Ataca con un líquido corrosivo que reduce la Defensa
+Especial del objetivo durante un tiempo.",4,50532
+492,WAZAINFO_ZA_492,8683CDB90BDE4E40,[REF:492],0,50720
+493,WAZAINFO_ZA_493,8683CEB90BDE4FF3,[REF:493],0,50732
+494,WAZAINFO_ZA_494,8683D3B90BDE5872,[REF:494],0,50744
+495,WAZAINFO_ZA_495,8683D4B90BDE5A25,[REF:495],0,50756
+496,WAZAINFO_ZA_496,8683D1B90BDE550C,[REF:496],0,50768
+497,WAZAINFO_ZA_497,8683D2B90BDE56BF,[REF:497],0,50780
+498,WAZAINFO_ZA_498,8683D7B90BDE5F3E,[REF:498],0,50792
+499,WAZAINFO_ZA_499,8683D8B90BDE60F1,[REF:499],0,50804
+500,WAZAINFO_ZA_500,7F3F2AB908257ECC,[REF:500],0,50816
+501,WAZAINFO_ZA_501,7F3F2BB90825807F,[REF:501],0,50828
+502,WAZAINFO_ZA_502,7F3F2CB908258232,[REF:502],0,50840
+503,WAZAINFO_ZA_503,7F3F2DB9082583E5,"Ataca arrojando agua hirviendo al objetivo. Puede causar
+quemaduras.",4,50852
+504,WAZAINFO_ZA_504,7F3F26B908257800,[REF:504],0,50992
+505,WAZAINFO_ZA_505,7F3F27B9082579B3,[REF:505],0,51004
+506,WAZAINFO_ZA_506,7F3F28B908257B66,[REF:506],0,51016
+507,WAZAINFO_ZA_507,7F3F29B908257D19,[REF:507],0,51028
+508,WAZAINFO_ZA_508,7F3F32B908258C64,[REF:508],0,51040
+509,WAZAINFO_ZA_509,7F3F33B908258E17,"Lanza por los aires al objetivo y lo aleja de sí.
+Puede reducir su Defensa.",0,51052
+510,WAZAINFO_ZA_510,7F42B0B908289855,[REF:510],0,51204
+511,WAZAINFO_ZA_511,7F42AFB9082896A2,[REF:511],0,51216
+512,WAZAINFO_ZA_512,7F42AEB9082894EF,[REF:512],0,51228
+513,WAZAINFO_ZA_513,7F42ADB90828933C,[REF:513],0,51240
+514,WAZAINFO_ZA_514,7F42ACB908289189,[REF:514],0,51252
+515,WAZAINFO_ZA_515,7F42ABB908288FD6,[REF:515],0,51264
+516,WAZAINFO_ZA_516,7F42AAB908288E23,[REF:516],0,51276
+517,WAZAINFO_ZA_517,7F42A9B908288C70,[REF:517],0,51288
+518,WAZAINFO_ZA_518,7F42B8B90828A5ED,[REF:518],0,51300
+519,WAZAINFO_ZA_519,7F42B7B90828A43A,[REF:519],0,51312
+520,WAZAINFO_ZA_520,7F4636B9082BB1DE,[REF:520],0,51324
+521,WAZAINFO_ZA_521,7F4637B9082BB391,"Tras atacar, el usuario vuelve a toda prisa con su
+Entrenador.",0,51336
+522,WAZAINFO_ZA_522,7F4634B9082BAE78,[REF:522],0,51464
+523,WAZAINFO_ZA_523,7F4635B9082BB02B,"Sacudida sísmica que daña al objetivo y lo vuelve más
+lento durante un breve período de tiempo.",0,51476
+524,WAZAINFO_ZA_524,7F463AB9082BB8AA,"El usuario ataca expulsando un aliento gélido. Siempre
+asesta un golpe crítico.",4,51668
+525,WAZAINFO_ZA_525,7F463BB9082BBA5D,[REF:525],0,51828
+526,WAZAINFO_ZA_526,7F4638B9082BB544,"El usuario se concentra y aumenta su Ataque y su
+Ataque Especial durante un breve período de tiempo.",4,51840
+527,WAZAINFO_ZA_527,7F4639B9082BB6F7,"Atrapa y ataca al objetivo con una telaraña eléctrica
+y lo vuelve más lento durante un breve período de tiempo.",4,52044
+528,WAZAINFO_ZA_528,7F462EB9082BA446,"El usuario se envuelve de electricidad y carga contra el
+objetivo, pero también se hiere a sí mismo.",4,52268
+529,WAZAINFO_ZA_529,7F462FB9082BA5F9,"El usuario golpea usando su cuerpo como un taladro.
+Suele asestar un golpe crítico.",4,52472
+530,WAZAINFO_ZA_530,7F49BCB9082ECB67,"Golpea al objetivo dos veces seguidas con las partes más
+recias de su cuerpo.",0,52640
+531,WAZAINFO_ZA_531,7F49BBB9082EC9B4,[REF:531],0,52796
+532,WAZAINFO_ZA_532,7F49BEB9082ECECD,"Ensarta al objetivo con su cornamenta y absorbe su
+energía. El usuario recupera algunos PS según el daño
+que produzca.",4,52808
+533,WAZAINFO_ZA_533,7F49BDB9082ECD1A,"El usuario ataca con una espada, ignorando cualquier
+cambio en las características del objetivo.",4,53048
+534,WAZAINFO_ZA_534,7F49B8B9082EC49B,[REF:534],0,53244
+535,WAZAINFO_ZA_535,7F49B7B9082EC2E8,"El usuario ataca con su cuerpo ardiente. Cuanto mayor
+sea su peso comparado con el del objetivo, mayor será
+la potencia del movimiento.",4,53256
+536,WAZAINFO_ZA_536,7F49BAB9082EC801,[REF:536],0,53528
+537,WAZAINFO_ZA_537,7F49B9B9082EC64E,[REF:537],0,53540
+538,WAZAINFO_ZA_538,7F49B4B9082EBDCF,"El usuario se cubre de una esponjosa madeja protectora.
+Aumenta su Defensa durante un largo período de tiempo.",4,53552
+539,WAZAINFO_ZA_539,7F49B3B9082EBC1C,[REF:539],0,53776
+540,WAZAINFO_ZA_540,7F31B2B9081A2888,Crea una onda psíquica que causa daño físico al objetivo.,0,53788
+541,WAZAINFO_ZA_541,7F31B3B9081A2A3B,[REF:541],0,53904
+542,WAZAINFO_ZA_542,7F31B4B9081A2BEE,"Golpea al objetivo con un fuerte torbellino que
+lo envuelve y puede confundirlo.",0,53916
+543,WAZAINFO_ZA_543,7F31B5B9081A2DA1,[REF:543],0,54080
+544,WAZAINFO_ZA_544,7F31B6B9081A2F54,[REF:544],0,54092
+545,WAZAINFO_ZA_545,7F31B7B9081A3107,[REF:545],0,54104
+546,WAZAINFO_ZA_546,7F31B8B9081A32BA,"Ataca al objetivo con un gran láser. El tipo del ataque
+lo determina el cartucho que porta el usuario.",4,54116
+547,WAZAINFO_ZA_547,7F31B9B9081A346D,"Ataca conmoviendo al objetivo con un antiguo canto
+mientras esquiva sus ataques con una encantadora
+danza. Puede inducir somnolencia en el objetivo.",4,54324
+548,WAZAINFO_ZA_548,7F31AAB9081A1AF0,"Ensarta al objetivo con un largo cuerno dotado de un
+poder místico que provoca daño físico.",4,54624
+549,WAZAINFO_ZA_549,7F31ABB9081A1CA3,[REF:549],0,54808
+550,WAZAINFO_ZA_550,7F3538B9081D4211,[REF:550],0,54820
+551,WAZAINFO_ZA_551,7F3537B9081D405E,[REF:551],0,54832
+552,WAZAINFO_ZA_552,7F3536B9081D3EAB,[REF:552],0,54844
+553,WAZAINFO_ZA_553,7F3535B9081D3CF8,[REF:553],0,54856
+554,WAZAINFO_ZA_554,7F353CB9081D48DD,[REF:554],0,54868
+555,WAZAINFO_ZA_555,7F353BB9081D472A,"Chillido desagradable que reduce el Ataque Especial del
+objetivo durante un breve período de tiempo.",0,54880
+556,WAZAINFO_ZA_556,7F353AB9081D4577,"Ataca con grandes carámbanos que lanza con violencia.
+Puede amedrentar al objetivo.",4,55084
+557,WAZAINFO_ZA_557,7F3539B9081D43C4,[REF:557],0,55252
+558,WAZAINFO_ZA_558,7F3530B9081D3479,[REF:558],0,55264
+559,WAZAINFO_ZA_559,7F352FB9081D32C6,[REF:559],0,55276
+560,WAZAINFO_ZA_560,7F38BEB908205B9A,"El usuario se lanza sobre su objetivo desde el aire.
+Este movimiento es de tipo Lucha y tipo Volador al
+mismo tiempo.",4,55288
+561,WAZAINFO_ZA_561,7F38BFB908205D4D,[REF:561],0,55524
+562,WAZAINFO_ZA_562,7F38BCB908205834,[REF:562],0,55536
+563,WAZAINFO_ZA_563,7F38BDB9082059E7,[REF:563],0,55548
+564,WAZAINFO_ZA_564,7F38BAB9082054CE,"Coloca una red pegajosa alrededor del objetivo
+que reduce la Velocidad de los rivales que entran
+en combate.",0,55560
+565,WAZAINFO_ZA_565,7F38BBB908205681,[REF:565],0,55780
+566,WAZAINFO_ZA_566,7F38B8B908205168,"Se oculta en las sombras hasta quedar fuera de vista y,
+tras un breve período de tiempo, ataca al objetivo. Ignora
+los efectos de movimientos como Protección y Detección.",0,55792
+567,WAZAINFO_ZA_567,7F38B9B90820531B,"Invita al objetivo a celebrar Halloween, lo que añade
+el tipo Fantasma a los tipos de este.",4,56136
+568,WAZAINFO_ZA_568,7F38B6B908204E02,[REF:568],0,56320
+569,WAZAINFO_ZA_569,7F38B7B908204FB5,[REF:569],0,56332
+570,WAZAINFO_ZA_570,7F3C24B908233EC3,"Ataca con una descarga eléctrica. El usuario recupera
+algunos PS según el daño que produzca.",4,56344
+571,WAZAINFO_ZA_571,7F3C23B908233D10,"El objetivo es presa de la maldición del bosque, por lo
+que pasa a ser un Pokémon de tipo Planta, además de
+conservar sus tipos habituales.",4,56532
+572,WAZAINFO_ZA_572,7F3C26B908234229,[REF:572],0,56812
+573,WAZAINFO_ZA_573,7F3C25B908234076,"Ataca al objetivo enfriándolo súbitamente. Puede
+congelar y es supereficaz contra Pokémon de tipo Agua.",4,56824
+574,WAZAINFO_ZA_574,7F3C28B90823458F,"Obnubila al objetivo con su fascinante voz y le provoca
+daños emocionales.",4,57032
+575,WAZAINFO_ZA_575,7F3C27B9082343DC,"El usuario regresa con su Entrenador, pero antes intimida
+al objetivo y reduce su Ataque y su Ataque Especial
+durante un breve período de tiempo.",4,57184
+576,WAZAINFO_ZA_576,7F3C2AB9082348F5,"Invierte por completo los cambios en las características
+del objetivo.",4,57476
+577,WAZAINFO_ZA_577,7F3C29B908234742,"El usuario absorbe energía del objetivo con un beso y
+recupera PS.",4,57620
+578,WAZAINFO_ZA_578,7F3C2CB908234C5B,[REF:578],0,57756
+579,WAZAINFO_ZA_579,7F3C2BB908234AA8,[REF:579],0,57768
+580,WAZAINFO_ZA_580,7F243AB9080ED244,[REF:580],0,57780
+581,WAZAINFO_ZA_581,7F243BB9080ED3F7,[REF:581],0,57792
+582,WAZAINFO_ZA_582,7F243CB9080ED5AA,[REF:582],0,57804
+583,WAZAINFO_ZA_583,7F243DB9080ED75D,"El usuario le hace cucamonas al objetivo y lo ataca.
+Puede reducir el Ataque del objetivo.",4,57816
+584,WAZAINFO_ZA_584,7F2436B9080ECB78,"El usuario desata un vendaval feérico que arremete
+contra el objetivo.",4,58000
+585,WAZAINFO_ZA_585,7F2437B9080ECD2B,"Invoca el poder de la luna para atacar al objetivo.
+Puede reducir su Ataque Especial.",4,58144
+586,WAZAINFO_ZA_586,7F2438B9080ECEDE,"Ataca con una potentísima onda sonora que causa daño
+a su alrededor.",4,58316
+587,WAZAINFO_ZA_587,7F2439B9080ED091,[REF:587],0,58456
+588,WAZAINFO_ZA_588,7F2432B9080EC4AC,"El usuario adopta una postura defensiva y se protege de
+cualquier daño. Reduce el Ataque de cualquier Pokémon
+que lo ataque con un movimiento de contacto.",4,58468
+589,WAZAINFO_ZA_589,7F2433B9080EC65F,[REF:589],0,58780
+590,WAZAINFO_ZA_590,7F27C0B90811EBCD,[REF:590],0,58792
+591,WAZAINFO_ZA_591,7F27BFB90811EA1A,"Desata un devastador vendaval de diamantes para dañar
+al objetivo. Puede aumentar la Defensa del usuario.",0,58804
+592,WAZAINFO_ZA_592,7F27BEB90811E867,"Envuelve al objetivo con vapor extremadamente caliente
+que puede causar quemaduras.",4,59016
+593,WAZAINFO_ZA_593,7F27BDB90811E6B4,"El usuario aparece frente al objetivo usando un agujero
+dimensional y le asesta un golpe que ignora los efectos
+de movimientos como Protección y Detección.",4,59184
+594,WAZAINFO_ZA_594,7F27BCB90811E501,"Golpea al objetivo cinco veces seguidas con estrellas
+arrojadizas hechas de mucosidad.",0,59496
+595,WAZAINFO_ZA_595,7F27BBB90811E34E,"El usuario lanza por la boca una singular llama a gran
+temperatura con la que ataca a su objetivo y reduce
+su Ataque Especial durante un breve período de tiempo.",4,59672
+596,WAZAINFO_ZA_596,7F27BAB90811E19B,"Protege al usuario de ataques e inflige daño a quien se
+los lance si entra en contacto con él.",0,59996
+597,WAZAINFO_ZA_597,7F27B9B90811DFE8,[REF:597],0,60188
+598,WAZAINFO_ZA_598,7F27B8B90811DE35,"El usuario irradia unas raras ondas que, al alcanzar al
+objetivo, reducen su Ataque Especial durante un tiempo.",4,60200
+599,WAZAINFO_ZA_599,7F27B7B90811DC82,[REF:599],0,60424
+600,WAZAINFO_ZA_600,98623BB91624E6ED,[REF:600],0,60436
+601,WAZAINFO_ZA_601,98623AB91624E53A,"Concentra energía y, durante un tiempo, se vuelve más
+rápido y aumenta su Ataque Especial y Defensa Especial.
+Este movimiento tarda en hacer efecto.",0,60448
+602,WAZAINFO_ZA_602,986239B91624E387,[REF:602],0,60748
+603,WAZAINFO_ZA_603,986238B91624E1D4,[REF:603],0,60760
+604,WAZAINFO_ZA_604,986237B91624E021,[REF:604],0,60772
+605,WAZAINFO_ZA_605,986236B91624DE6E,Inflige daño al objetivo con una potente luz.,4,60784
+606,WAZAINFO_ZA_606,986235B91624DCBB,[REF:606],0,60876
+607,WAZAINFO_ZA_607,986234B91624DB08,[REF:607],0,60888
+608,WAZAINFO_ZA_608,986233B91624D955,[REF:608],0,60900
+609,WAZAINFO_ZA_609,986232B91624D7A2,"El usuario frota sus mofletes cargados de electricidad
+contra el objetivo para dañarlo y paralizarlo.",4,60912
+610,WAZAINFO_ZA_610,985EB5B91621CD64,[REF:610],0,61116
+611,WAZAINFO_ZA_611,985EB6B91621CF17,"Hostiga y daña al objetivo durante un tiempo e impide
+que pueda ser cambiado por otro mientras tanto.",0,61128
+612,WAZAINFO_ZA_612,985EB7B91621D0CA,"Ataca con puñetazos que fortalecen sus puños, por lo
+que su Ataque aumenta durante un breve período de
+tiempo.",4,61332
+613,WAZAINFO_ZA_613,985EB8B91621D27D,"El usuario libera una onda destructiva que absorbe
+energía del objetivo y le permite recuperar PS.",4,61556
+614,WAZAINFO_ZA_614,985EB1B91621C698,"Transforma su energía interna en un millar de flechas
+y ataca al objetivo con ellas. Acierta incluso a Pokémon
+de tipo Volador.",0,61756
+615,WAZAINFO_ZA_615,985EB2B91621C84B,"El usuario genera ondas sísmicas que se propagan por
+el suelo y sacuden al objetivo. Los Pokémon alcanzados
+no podrán ser cambiados por otros.",4,62012
+616,WAZAINFO_ZA_616,985EB3B91621C9FE,"Acumula energía de la corteza terrestre y la concentra
+contra el objetivo para dañarlo.",4,62300
+617,WAZAINFO_ZA_617,985EB4B91621CBB1,"El usuario emplea el poder de la Flor Eterna para lanzar
+un potente rayo de luz, pero también se hiere gravemente
+a sí mismo.",4,62476
+618,WAZAINFO_ZA_618,985EADB91621BFCC,"Ataca al objetivo con una infinidad de rayos de luz
+azulada.",4,62728
+619,WAZAINFO_ZA_619,985EAEB91621C17F,"Hace que el poder latente de la tierra se manifieste en
+forma de hojas afiladas y ataca al objetivo con ellas.",0,62852
+620,WAZAINFO_ZA_620,986927B9162AE39F,"El usuario se precipita desde el cielo a una velocidad de
+vértigo para atacar al objetivo, pero reduce su Defensa y
+su Defensa Especial durante un breve período de tiempo.",4,63076
+621,WAZAINFO_ZA_621,986926B9162AE1EC,"Ataca con una ráfaga de golpes que ignoran los efectos
+de movimientos como Protección o Detección. Reduce la
+Defensa del usuario durante un breve período de tiempo.",4,63420
+622,WAZAINFO_ZA_622,986929B9162AE705,[REF:622],0,63752
+623,WAZAINFO_ZA_623,986928B9162AE552,[REF:623],0,63764
+624,WAZAINFO_ZA_624,986923B9162ADCD3,[REF:624],0,63776
+625,WAZAINFO_ZA_625,986922B9162ADB20,[REF:625],0,63788
+626,WAZAINFO_ZA_626,986925B9162AE039,[REF:626],0,63800
+627,WAZAINFO_ZA_627,986924B9162ADE86,[REF:627],0,63812
+628,WAZAINFO_ZA_628,98692FB9162AF137,[REF:628],0,63824
+629,WAZAINFO_ZA_629,98692EB9162AEF84,[REF:629],0,63836
+630,WAZAINFO_ZA_630,9865A1B91627CA16,[REF:630],0,63848
+631,WAZAINFO_ZA_631,9865A2B91627CBC9,[REF:631],0,63860
+632,WAZAINFO_ZA_632,98659FB91627C6B0,[REF:632],0,63872
+633,WAZAINFO_ZA_633,9865A0B91627C863,[REF:633],0,63884
+634,WAZAINFO_ZA_634,9865A5B91627D0E2,[REF:634],0,63896
+635,WAZAINFO_ZA_635,9865A6B91627D295,[REF:635],0,63908
+636,WAZAINFO_ZA_636,9865A3B91627CD7C,[REF:636],0,63920
+637,WAZAINFO_ZA_637,9865A4B91627CF2F,[REF:637],0,63932
+638,WAZAINFO_ZA_638,9865A9B91627D7AE,[REF:638],0,63944
+639,WAZAINFO_ZA_639,9865AAB91627D961,[REF:639],0,63956
+640,WAZAINFO_ZA_640,9854A3B916195A49,[REF:640],0,63968
+641,WAZAINFO_ZA_641,9854A2B916195896,[REF:641],0,63980
+642,WAZAINFO_ZA_642,9854A1B9161956E3,[REF:642],0,63992
+643,WAZAINFO_ZA_643,9854A0B916195530,[REF:643],0,64004
+644,WAZAINFO_ZA_644,9854A7B916196115,[REF:644],0,64016
+645,WAZAINFO_ZA_645,9854A6B916195F62,[REF:645],0,64028
+646,WAZAINFO_ZA_646,9854A5B916195DAF,[REF:646],0,64040
+647,WAZAINFO_ZA_647,9854A4B916195BFC,[REF:647],0,64052
+648,WAZAINFO_ZA_648,9854ABB9161967E1,[REF:648],0,64064
+649,WAZAINFO_ZA_649,9854AAB91619662E,[REF:649],0,64076
+650,WAZAINFO_ZA_650,98511DB9161640C0,[REF:650],0,64088
+651,WAZAINFO_ZA_651,98511EB916164273,[REF:651],0,64100
+652,WAZAINFO_ZA_652,98511FB916164426,[REF:652],0,64112
+653,WAZAINFO_ZA_653,985120B9161645D9,[REF:653],0,64124
+654,WAZAINFO_ZA_654,985121B91616478C,[REF:654],0,64136
+655,WAZAINFO_ZA_655,985122B91616493F,[REF:655],0,64148
+656,WAZAINFO_ZA_656,985123B916164AF2,[REF:656],0,64160
+657,WAZAINFO_ZA_657,985124B916164CA5,[REF:657],0,64172
+658,WAZAINFO_ZA_658,985125B916164E58,[REF:658],0,64184
+659,WAZAINFO_ZA_659,985126B91616500B,"Recoge arena de los alrededores y la absorbe para
+restaurar algunos PS.",0,64196
+660,WAZAINFO_ZA_660,985BAFB9161F8D5B,"Movimiento de gran potencia que solo tiene efecto
+si el usuario lo usa nada más entrar en combate.",0,64340
+661,WAZAINFO_ZA_661,985BAEB9161F8BA8,[REF:661],0,64540
+662,WAZAINFO_ZA_662,985BB1B9161F90C1,[REF:662],0,64552
+663,WAZAINFO_ZA_663,985BB0B9161F8F0E,[REF:663],0,64564
+664,WAZAINFO_ZA_664,985BB3B9161F9427,[REF:664],0,64576
+665,WAZAINFO_ZA_665,985BB2B9161F9274,"El usuario propina un golpe devastador con el puño, pero
+se vuelve más lento durante un breve período de tiempo.",4,64588
+666,WAZAINFO_ZA_666,985BB5B9161F978D,[REF:666],0,64816
+667,WAZAINFO_ZA_667,985BB4B9161F95DA,[REF:667],0,64828
+668,WAZAINFO_ZA_668,985BA7B9161F7FC3,[REF:668],0,64840
+669,WAZAINFO_ZA_669,985BA6B9161F7E10,"El usuario absorbe energía lumínica y la concentra en
+forma de cuchilla gigante con la que ataca al objetivo.
+Este movimiento requiere tiempo para ejecutarse.",4,64852
+670,WAZAINFO_ZA_670,985829B9161C73D2,Ataca al objetivo lanzando hojas.,4,65172
+671,WAZAINFO_ZA_671,98582AB9161C7585,[REF:671],0,65240
+672,WAZAINFO_ZA_672,985827B9161C706C,[REF:672],0,65252
+673,WAZAINFO_ZA_673,985828B9161C721F,[REF:673],0,65264
+674,WAZAINFO_ZA_674,985825B9161C6D06,[REF:674],0,65276
+675,WAZAINFO_ZA_675,985826B9161C6EB9,[REF:675],0,65288
+676,WAZAINFO_ZA_676,985823B9161C69A0,[REF:676],0,65300
+677,WAZAINFO_ZA_677,985824B9161C6B53,[REF:677],0,65312
+678,WAZAINFO_ZA_678,985831B9161C816A,[REF:678],0,65324
+679,WAZAINFO_ZA_679,985832B9161C831D,"Ataca al objetivo abalanzándose sobre él con todas sus
+fuerzas y reduce su Ataque durante un breve período de
+tiempo.",4,65336
+680,WAZAINFO_ZA_680,987DABB9163C6CF5,[REF:680],0,65572
+681,WAZAINFO_ZA_681,987DAAB9163C6B42,[REF:681],0,65584
+682,WAZAINFO_ZA_682,987DA9B9163C698F,[REF:682],0,65596
+683,WAZAINFO_ZA_683,987DA8B9163C67DC,[REF:683],0,65608
+684,WAZAINFO_ZA_684,987DA7B9163C6629,[REF:684],0,65620
+685,WAZAINFO_ZA_685,987DA6B9163C6476,[REF:685],0,65632
+686,WAZAINFO_ZA_686,987DA5B9163C62C3,[REF:686],0,65644
+687,WAZAINFO_ZA_687,987DA4B9163C6110,"Ataca con un poderosísimo rayo que deja un rastro
+quemado que se asemeja a la letra Z.",4,65656
+688,WAZAINFO_ZA_688,987DB3B9163C7A8D,[REF:688],0,65832
+689,WAZAINFO_ZA_689,987DB2B9163C78DA,[REF:689],0,65844
+690,WAZAINFO_ZA_690,987A25B91639536C,[REF:690],0,65856
+691,WAZAINFO_ZA_691,987A26B91639551F,[REF:691],0,65868
+692,WAZAINFO_ZA_692,987A27B9163956D2,[REF:692],0,65880
+693,WAZAINFO_ZA_693,987A28B916395885,Hace pivotar su cuerpo para causar daño a su alrededor.,0,65892
+694,WAZAINFO_ZA_694,987A21B916394CA0,[REF:694],0,66004
+695,WAZAINFO_ZA_695,987A22B916394E53,[REF:695],0,66016
+696,WAZAINFO_ZA_696,987A23B916395006,[REF:696],0,66028
+697,WAZAINFO_ZA_697,987A24B9163951B9,[REF:697],0,66040
+698,WAZAINFO_ZA_698,987A2DB916396104,[REF:698],0,66052
+699,WAZAINFO_ZA_699,987A2EB9163962B7,[REF:699],0,66064
+700,WAZAINFO_ZA_700,8F4C00B910E08322,[REF:700],0,66076
+701,WAZAINFO_ZA_701,8F4C01B910E084D5,[REF:701],0,66088
+702,WAZAINFO_ZA_702,8F4BFEB910E07FBC,[REF:702],0,66100
+703,WAZAINFO_ZA_703,8F4BFFB910E0816F,[REF:703],0,66112
+704,WAZAINFO_ZA_704,8F4BFCB910E07C56,[REF:704],0,66124
+705,WAZAINFO_ZA_705,8F4BFDB910E07E09,"El usuario emite un potente rayo, pero su Ataque Especial
+se reduce durante un tiempo.",4,66136
+706,WAZAINFO_ZA_706,8F4BFAB910E078F0,"Ataca a su objetivo con poderes psíquicos que además
+destruyen barreras como Pantalla de Luz y Reflejo.",4,66312
+707,WAZAINFO_ZA_707,8F4BFBB910E07AA3,[REF:707],0,66520
+708,WAZAINFO_ZA_708,8F4C08B910E090BA,"Ataca golpeando con un hueso poseído por un espíritu.
+Puede reducir la Defensa del objetivo.",4,66532
+709,WAZAINFO_ZA_709,8F4C09B910E0926D,[REF:709],0,66720
+710,WAZAINFO_ZA_710,8F4F86B910E39CAB,"Ataca golpeando gracias a la fuerza del agua.
+También puede reducir la Defensa del objetivo.",4,66732
+711,WAZAINFO_ZA_711,8F4F85B910E39AF8,[REF:711],0,66920
+712,WAZAINFO_ZA_712,8F4F88B910E3A011,"El usuario se esconde en la sombra del objetivo y lo ataca
+tras robarle las mejoras en sus características.",4,66932
+713,WAZAINFO_ZA_713,8F4F87B910E39E5E,[REF:713],0,67148
+714,WAZAINFO_ZA_714,8F4F8AB910E3A377,[REF:714],0,67160
+715,WAZAINFO_ZA_715,8F4F89B910E3A1C4,[REF:715],0,67172
+716,WAZAINFO_ZA_716,8F4F8CB910E3A6DD,[REF:716],0,67184
+717,WAZAINFO_ZA_717,8F4F8BB910E3A52A,[REF:717],0,67196
+718,WAZAINFO_ZA_718,8F4F7EB910E38F13,[REF:718],0,67208
+719,WAZAINFO_ZA_719,8F4F7DB910E38D60,[REF:719],0,67220
+720,WAZAINFO_ZA_720,8F4574B910DB2990,[REF:720],0,67232
+721,WAZAINFO_ZA_721,8F4575B910DB2B43,"El usuario ataca con puños cargados de electricidad.
+Suele asestar un golpe crítico y también puede
+amedrentar al objetivo.",4,67244
+722,WAZAINFO_ZA_722,8F4576B910DB2CF6,[REF:722],0,67492
+723,WAZAINFO_ZA_723,8F4577B910DB2EA9,[REF:723],0,67504
+724,WAZAINFO_ZA_724,8F4578B910DB305C,[REF:724],0,67516
+725,WAZAINFO_ZA_725,8F4579B910DB320F,[REF:725],0,67528
+726,WAZAINFO_ZA_726,8F457AB910DB33C2,[REF:726],0,67540
+727,WAZAINFO_ZA_727,8F457BB910DB3575,[REF:727],0,67552
+728,WAZAINFO_ZA_728,8F457CB910DB3728,[REF:728],0,67564
+729,WAZAINFO_ZA_729,8F457DB910DB38DB,[REF:729],0,67576
+730,WAZAINFO_ZA_730,8F487AB910DD6999,[REF:730],0,67588
+731,WAZAINFO_ZA_731,8F4879B910DD67E6,[REF:731],0,67600
+732,WAZAINFO_ZA_732,8F4878B910DD6633,[REF:732],0,67612
+733,WAZAINFO_ZA_733,8F4877B910DD6480,[REF:733],0,67624
+734,WAZAINFO_ZA_734,8F487EB910DD7065,[REF:734],0,67636
+735,WAZAINFO_ZA_735,8F487DB910DD6EB2,[REF:735],0,67648
+736,WAZAINFO_ZA_736,8F487CB910DD6CFF,[REF:736],0,67660
+737,WAZAINFO_ZA_737,8F487BB910DD6B4C,[REF:737],0,67672
+738,WAZAINFO_ZA_738,8F4882B910DD7731,[REF:738],0,67684
+739,WAZAINFO_ZA_739,8F4881B910DD757E,[REF:739],0,67696
+740,WAZAINFO_ZA_740,8F5978B910EBD966,[REF:740],0,67708
+741,WAZAINFO_ZA_741,8F5979B910EBDB19,[REF:741],0,67720
+742,WAZAINFO_ZA_742,8F5976B910EBD600,"Usando la tuerca del pecho como eje, gira sobre sí
+mismo y golpea con los brazos dos veces seguidas.
+Puede amedrentar al objetivo.",4,67732
+743,WAZAINFO_ZA_743,8F5977B910EBD7B3,[REF:743],0,67996
+744,WAZAINFO_ZA_744,8F597CB910EBE032,[REF:744],0,68008
+745,WAZAINFO_ZA_745,8F597DB910EBE1E5,[REF:745],0,68020
+746,WAZAINFO_ZA_746,8F597AB910EBDCCC,[REF:746],0,68032
+747,WAZAINFO_ZA_747,8F597BB910EBDE7F,[REF:747],0,68044
+748,WAZAINFO_ZA_748,8F5980B910EBE6FE,"El usuario se prepara para lo que venga y aumenta todas
+sus características durante un breve período de tiempo,
+pero ya no puede ser cambiado por otro.",4,68056
+749,WAZAINFO_ZA_749,8F5981B910EBE8B1,[REF:749],0,68360
+750,WAZAINFO_ZA_750,8F5CFEB910EEF2EF,[REF:750],0,68372
+751,WAZAINFO_ZA_751,8F5CFDB910EEF13C,[REF:751],0,68384
+752,WAZAINFO_ZA_752,8F5D00B910EEF655,[REF:752],0,68396
+753,WAZAINFO_ZA_753,8F5CFFB910EEF4A2,"Retiene al objetivo e impide que pueda huir o ser
+cambiado por otro, a la vez que reduce de forma gradual
+su Defensa y su Defensa Especial durante un tiempo.",0,68408
+754,WAZAINFO_ZA_754,8F5CFAB910EEEC23,[REF:754],0,68724
+755,WAZAINFO_ZA_755,8F5CF9B910EEEA70,[REF:755],0,68736
+756,WAZAINFO_ZA_756,8F5CFCB910EEEF89,[REF:756],0,68748
+757,WAZAINFO_ZA_757,8F5CFBB910EEEDD6,[REF:757],0,68760
+758,WAZAINFO_ZA_758,8F5D06B910EF0087,[REF:758],0,68772
+759,WAZAINFO_ZA_759,8F5D05B910EEFED4,[REF:759],0,68784
+760,WAZAINFO_ZA_760,8F530CB910E6B634,[REF:760],0,68796
+761,WAZAINFO_ZA_761,8F530DB910E6B7E7,[REF:761],0,68808
+762,WAZAINFO_ZA_762,8F530EB910E6B99A,[REF:762],0,68820
+763,WAZAINFO_ZA_763,8F530FB910E6BB4D,[REF:763],0,68832
+764,WAZAINFO_ZA_764,8F5308B910E6AF68,[REF:764],0,68844
+765,WAZAINFO_ZA_765,8F5309B910E6B11B,[REF:765],0,68856
+766,WAZAINFO_ZA_766,8F530AB910E6B2CE,[REF:766],0,68868
+767,WAZAINFO_ZA_767,8F530BB910E6B481,[REF:767],0,68880
+768,WAZAINFO_ZA_768,8F5304B910E6A89C,[REF:768],0,68892
+769,WAZAINFO_ZA_769,8F5305B910E6AA4F,[REF:769],0,68904
+770,WAZAINFO_ZA_770,8F5612B910E8F63D,[REF:770],0,68916
+771,WAZAINFO_ZA_771,8F5611B910E8F48A,[REF:771],0,68928
+772,WAZAINFO_ZA_772,8F5610B910E8F2D7,[REF:772],0,68940
+773,WAZAINFO_ZA_773,8F560FB910E8F124,[REF:773],0,68952
+774,WAZAINFO_ZA_774,8F560EB910E8EF71,[REF:774],0,68964
+775,WAZAINFO_ZA_775,8F560DB910E8EDBE,[REF:775],0,68976
+776,WAZAINFO_ZA_776,8F560CB910E8EC0B,[REF:776],0,68988
+777,WAZAINFO_ZA_777,8F560BB910E8EA58,[REF:777],0,69000
+778,WAZAINFO_ZA_778,8F560AB910E8E8A5,[REF:778],0,69012
+779,WAZAINFO_ZA_779,8F5609B910E8E6F2,[REF:779],0,69024
+780,WAZAINFO_ZA_780,8F6710B910F7660A,[REF:780],0,69036
+781,WAZAINFO_ZA_781,8F6711B910F767BD,[REF:781],0,69048
+782,WAZAINFO_ZA_782,8F670EB910F762A4,[REF:782],0,69060
+783,WAZAINFO_ZA_783,8F670FB910F76457,"La energía acumulada en las mejillas le sirve para atacar y
+volverse más rápido durante un breve período de tiempo.
+El movimiento cambia de tipo según la forma que adopte.",0,69072
+784,WAZAINFO_ZA_784,8F670CB910F75F3E,"El usuario sacude violentamente su enorme cola para
+golpear al objetivo y reducir su Ataque durante un breve
+período de tiempo.",4,69416
+785,WAZAINFO_ZA_785,8F670DB910F760F1,[REF:785],0,69672
+786,WAZAINFO_ZA_786,8F670AB910F75BD8,"El usuario rasguea la guitarra o el bajo para generar
+enormes vibraciones de intensa reverberación con las
+que ataca al objetivo.",4,69684
+787,WAZAINFO_ZA_787,8F670BB910F75D8B,[REF:787],0,69944
+788,WAZAINFO_ZA_788,8F6708B910F75872,[REF:788],0,69956
+789,WAZAINFO_ZA_789,8F6709B910F75A25,[REF:789],0,69968
+790,WAZAINFO_ZA_790,8F6A76B910FA4933,[REF:790],0,69980
+791,WAZAINFO_ZA_791,8F6A75B910FA4780,[REF:791],0,69992
+792,WAZAINFO_ZA_792,8F6A78B910FA4C99,[REF:792],0,70004
+793,WAZAINFO_ZA_793,8F6A77B910FA4AE6,[REF:793],0,70016
+794,WAZAINFO_ZA_794,8F6A7AB910FA4FFF,"El usuario agita violentamente su grueso puerro para
+atacar, pero el mareo que le provocan las sacudidas le
+impide moverse durante un breve período de tiempo.",4,70028
+795,WAZAINFO_ZA_795,8F6A79B910FA4E4C,[REF:795],0,70348
+796,WAZAINFO_ZA_796,8F6A7CB910FA5365,"Utiliza el acero de su cuerpo para disparar un potente
+rayo. El usuario se hiere a sí mismo.",4,70360
+797,WAZAINFO_ZA_797,8F6A7BB910FA51B2,[REF:797],0,70548
+798,WAZAINFO_ZA_798,8F6A7EB910FA56CB,[REF:798],0,70560
+799,WAZAINFO_ZA_799,8F6A7DB910FA5518,"Lanza escamas al objetivo cinco veces seguidas.
+Durante un breve período de tiempo, el usuario se
+vuelve más rápido, pero reduce su Defensa.",0,70572
+800,WAZAINFO_ZA_800,AA8EF1B920AE1B43,"El usuario acumula energía cósmica y aumenta su
+Ataque Especial durante un tiempo, tras el cual ataca.
+Este movimiento requiere tiempo para ejecutarse.",4,70856
+801,WAZAINFO_ZA_801,AA8EF0B920AE1990,[REF:801],0,71160
+802,WAZAINFO_ZA_802,AA8EF3B920AE1EA9,[REF:802],0,71172
+803,WAZAINFO_ZA_803,AA8EF2B920AE1CF6,[REF:803],0,71184
+804,WAZAINFO_ZA_804,AA8EF5B920AE220F,[REF:804],0,71196
+805,WAZAINFO_ZA_805,AA8EF4B920AE205C,[REF:805],0,71208
+806,WAZAINFO_ZA_806,AA8EF7B920AE2575,[REF:806],0,71220
+807,WAZAINFO_ZA_807,AA8EF6B920AE23C2,[REF:807],0,71232
+808,WAZAINFO_ZA_808,AA8EF9B920AE28DB,[REF:808],0,71244
+809,WAZAINFO_ZA_809,AA8EF8B920AE2728,[REF:809],0,71256
+810,WAZAINFO_ZA_810,AA8B8BB920AB381A,[REF:810],0,71268
+811,WAZAINFO_ZA_811,AA8B8CB920AB39CD,[REF:811],0,71280
+812,WAZAINFO_ZA_812,AA8B89B920AB34B4,"Tras atacar, el usuario vuelve a toda prisa con su
+Entrenador.",0,71292
+813,WAZAINFO_ZA_813,AA8B8AB920AB3667,"Propina tres patadas seguidas, el alcance de las cuales
+aumenta con cada salto.",0,71420
+814,WAZAINFO_ZA_814,AA8B87B920AB314E,"Ataca al objetivo golpeándolo dos veces seguidas con
+las alas.",4,71580
+815,WAZAINFO_ZA_815,AA8B88B920AB3301,"Ataca al objetivo arrojándole arena a temperaturas muy
+elevadas. Puede causar quemaduras.",4,71708
+816,WAZAINFO_ZA_816,AA8B85B920AB2DE8,[REF:816],0,71888
+817,WAZAINFO_ZA_817,AA8B86B920AB2F9B,[REF:817],0,71900
+818,WAZAINFO_ZA_818,AA8B83B920AB2A82,[REF:818],0,71912
+819,WAZAINFO_ZA_819,AA8B84B920AB2C35,[REF:819],0,71924
+820,WAZAINFO_ZA_820,AA8805B920A81E91,[REF:820],0,71936
+821,WAZAINFO_ZA_821,AA8804B920A81CDE,[REF:821],0,71948
+822,WAZAINFO_ZA_822,AA8803B920A81B2B,[REF:822],0,71960
+823,WAZAINFO_ZA_823,AA8802B920A81978,[REF:823],0,71972
+824,WAZAINFO_ZA_824,AA8809B920A8255D,[REF:824],0,71984
+825,WAZAINFO_ZA_825,AA8808B920A823AA,[REF:825],0,71996
+826,WAZAINFO_ZA_826,AA8807B920A821F7,[REF:826],0,72008
+827,WAZAINFO_ZA_827,AA8806B920A82044,[REF:827],0,72020
+828,WAZAINFO_ZA_828,AA87FDB920A810F9,[REF:828],0,72032
+829,WAZAINFO_ZA_829,AA87FCB920A80F46,[REF:829],0,72044
+830,WAZAINFO_ZA_830,AA847FB920A50508,"Ataca con un hacha de piedra y, al hacerlo, se
+desprenden fragmentos que rodean al objetivo.",4,72056
+831,WAZAINFO_ZA_831,AA8480B920A506BB,[REF:831],0,72244
+832,WAZAINFO_ZA_832,AA8481B920A5086E,[REF:832],0,72256
+833,WAZAINFO_ZA_833,AA8482B920A50A21,[REF:833],0,72268
+834,WAZAINFO_ZA_834,AA8483B920A50BD4,[REF:834],0,72280
+835,WAZAINFO_ZA_835,AA8484B920A50D87,[REF:835],0,72292
+836,WAZAINFO_ZA_836,AA8485B920A50F3A,[REF:836],0,72304
+837,WAZAINFO_ZA_837,AA8486B920A510ED,[REF:837],0,72316
+838,WAZAINFO_ZA_838,AA8477B920A4F770,[REF:838],0,72328
+839,WAZAINFO_ZA_839,AA8478B920A4F923,"Dispara un sinfín de púas tóxicas que pueden envenenar
+al objetivo. La potencia del movimiento se duplica si este
+ya está envenenado.",0,72340
+840,WAZAINFO_ZA_840,AA9C89B920B9A7E7,[REF:840],0,72608
+841,WAZAINFO_ZA_841,AA9C88B920B9A634,[REF:841],0,72620
+842,WAZAINFO_ZA_842,AA9C8BB920B9AB4D,[REF:842],0,72632
+843,WAZAINFO_ZA_843,AA9C8AB920B9A99A,[REF:843],0,72644
+844,WAZAINFO_ZA_844,AA9C85B920B9A11B,[REF:844],0,72656
+845,WAZAINFO_ZA_845,AA9C84B920B99F68,[REF:845],0,72668
+846,WAZAINFO_ZA_846,AA9C87B920B9A481,[REF:846],0,72680
+847,WAZAINFO_ZA_847,AA9C86B920B9A2CE,[REF:847],0,72692
+848,WAZAINFO_ZA_848,AA9C81B920B99A4F,[REF:848],0,72704
+849,WAZAINFO_ZA_849,AA9C80B920B9989C,[REF:849],0,72716
+850,WAZAINFO_ZA_850,AA9903B920B68E5E,[REF:850],0,72728
+851,WAZAINFO_ZA_851,AA9904B920B69011,[REF:851],0,72740
+852,WAZAINFO_ZA_852,AA9901B920B68AF8,[REF:852],0,72752
+853,WAZAINFO_ZA_853,AA9902B920B68CAB,[REF:853],0,72764
+854,WAZAINFO_ZA_854,AA9907B920B6952A,"Ataca para vengar a sus compañeros caídos y aplacar
+su desazón. Cuantos más miembros del equipo se hayan
+debilitado, mayor será la potencia del movimiento.",4,72776
+855,WAZAINFO_ZA_855,AA9908B920B696DD,[REF:855],0,73088
+856,WAZAINFO_ZA_856,AA9905B920B691C4,"Ataca con porte gallardo. Si lleva un Tatsugiri en la boca,
+aumenta una de sus características en función de
+la forma de este último.",4,73100
+857,WAZAINFO_ZA_857,AA9906B920B69377,[REF:857],0,73368
+858,WAZAINFO_ZA_858,AA98FBB920B680C6,"Libera un extracto extraordinariamente picante que,
+durante un tiempo, aumenta el Ataque del objetivo,
+pero también reduce su Defensa.",0,73380
+859,WAZAINFO_ZA_859,AA98FCB920B68279,[REF:859],0,73652
+860,WAZAINFO_ZA_860,AA957DB920B374D5,[REF:860],0,73664
+861,WAZAINFO_ZA_861,AA957CB920B37322,[REF:861],0,73676
+862,WAZAINFO_ZA_862,AA957BB920B3716F,"Embiste de forma temeraria con todo el cuerpo.
+Tras ejecutar el movimiento, el usuario baja la guardia
+y no podrá moverse durante un breve período de tiempo.",4,73688
+863,WAZAINFO_ZA_863,AA957AB920B36FBC,[REF:863],0,74004
+864,WAZAINFO_ZA_864,AA9579B920B36E09,"Deja en salazón al objetivo, que pierde PS de forma
+gradual. Afecta especialmente a Pokémon de tipo Acero
+y tipo Agua.",0,74016
+865,WAZAINFO_ZA_865,AA9578B920B36C56,[REF:865],0,74256
+866,WAZAINFO_ZA_866,AA9577B920B36AA3,"Ataque giratorio que envenena al objetivo y vuelve más
+rápido al usuario durante un breve período de tiempo.",4,74268
+867,WAZAINFO_ZA_867,AA9576B920B368F0,[REF:867],0,74488
+868,WAZAINFO_ZA_868,AA9585B920B3826D,[REF:868],0,74500
+869,WAZAINFO_ZA_869,AA9584B920B380BA,[REF:869],0,74512
+870,WAZAINFO_ZA_870,AA91F7B920B05B4C,[REF:870],0,74524
+871,WAZAINFO_ZA_871,AA91F8B920B05CFF,[REF:871],0,74536
+872,WAZAINFO_ZA_872,AA91F9B920B05EB2,[REF:872],0,74548
+873,WAZAINFO_ZA_873,AA91FAB920B06065,[REF:873],0,74560
+874,WAZAINFO_ZA_874,AA91F3B920B05480,"El usuario ataca arrojando una generosa cantidad de
+monedas, pero su Ataque Especial se ve reducido durante
+un breve período de tiempo. Si acierta, se gana dinero.",4,74572
+875,WAZAINFO_ZA_875,AA91F4B920B05633,[REF:875],0,74900
+876,WAZAINFO_ZA_876,AA91F5B920B057E6,[REF:876],0,74912
+877,WAZAINFO_ZA_877,AA91F6B920B05999,[REF:877],0,74924
+878,WAZAINFO_ZA_878,AA91FFB920B068E4,[REF:878],0,74936
+879,WAZAINFO_ZA_879,AA9200B920B06A97,[REF:879],0,74948
+880,WAZAINFO_ZA_880,AA7381B92096953B,"El usuario regresa con su Entrenador, pero antes utiliza
+parte de los PS propios para crear un sustituto. También
+se vuelve más rápido durante un breve período de tiempo.",4,74960
+881,WAZAINFO_ZA_881,AA7380B920969388,[REF:881],0,75304
+882,WAZAINFO_ZA_882,AA7383B9209698A1,[REF:882],0,75316
+883,WAZAINFO_ZA_883,AA7382B9209696EE,[REF:883],0,75328
+884,WAZAINFO_ZA_884,AA7385B920969C07,[REF:884],0,75340
+885,WAZAINFO_ZA_885,AA7384B920969A54,"Ataca de pronto como si saltara desde la hierba alta.
+El usuario se mueve con gran agilidad y se vuelve más
+rápido durante un breve período de tiempo.",4,75352
+886,WAZAINFO_ZA_886,AA7387B920969F6D,"Ataca rociando un agua gélida y desalentadora que
+reduce el Ataque del objetivo durante un breve período
+de tiempo.",4,75656
+887,WAZAINFO_ZA_887,AA7386B920969DBA,[REF:887],0,75888
+888,WAZAINFO_ZA_888,AA7379B9209687A3,[REF:888],0,75900
+889,WAZAINFO_ZA_889,AA7378B9209685F0,"Convierte su rabia en energía para atacar. Cuantos más
+golpes haya recibido el usuario, mayor será la potencia
+del movimiento.",0,75912
+890,WAZAINFO_ZA_890,AA6FFBB920937BB2,"Se deshace de su armadura y arroja las partes al objetivo
+cuales proyectiles ardientes, pero reduce su Defensa y su
+Defensa Especial durante un breve período de tiempo.",0,76168
+891,WAZAINFO_ZA_891,AA6FFCB920937D65,"Imbuye la punta de su espada con su desazón por el
+mundo y asesta una estocada llena de rencor. El usuario
+recupera algunos PS según el daño que produzca.",4,76508
+892,WAZAINFO_ZA_892,AA6FF9B92093784C,[REF:892],0,76820
+893,WAZAINFO_ZA_893,AA6FFAB9209379FF,"El usuario se ayuda de su propio peso corporal para
+propinar un golpe con un enorme martillo. No se puede
+volver a ejecutar el movimiento hasta pasado un tiempo.",4,76832
+894,WAZAINFO_ZA_894,AA6FF7B9209374E6,[REF:894],0,77156
+895,WAZAINFO_ZA_895,AA6FF8B920937699,[REF:895],0,77168
+896,WAZAINFO_ZA_896,AA6FF5B920937180,[REF:896],0,77180
+897,WAZAINFO_ZA_897,AA6FF6B920937333,[REF:897],0,77192
+898,WAZAINFO_ZA_898,AA7003B92093894A,[REF:898],0,77204
+899,WAZAINFO_ZA_899,AA7004B920938AFD,[REF:899],0,77216
+900,WAZAINFO_ZA_900,A17856B91B691458,[REF:900],0,77228
+901,WAZAINFO_ZA_901,A17857B91B69160B,[REF:901],0,77240
+902,WAZAINFO_ZA_902,A17858B91B6917BE,[REF:902],0,77252
+903,WAZAINFO_ZA_903,A17859B91B691971,[REF:903],0,77264
+904,WAZAINFO_ZA_904,A1785AB91B691B24,[REF:904],0,77276
+905,WAZAINFO_ZA_905,A1785BB91B691CD7,[REF:905],0,77288
+906,WAZAINFO_ZA_906,A1785CB91B691E8A,[REF:906],0,77300
+907,WAZAINFO_ZA_907,A1785DB91B69203D,[REF:907],0,77312
+908,WAZAINFO_ZA_908,A1784EB91B6906C0,[REF:908],0,77324
+909,WAZAINFO_ZA_909,A1784FB91B690873,[REF:909],0,77336
+910,WAZAINFO_ZA_910,A17BDCB91B6C2DE1,[REF:910],0,77348
+911,WAZAINFO_ZA_911,A17BDBB91B6C2C2E,[REF:911],0,77360
+912,WAZAINFO_ZA_912,A17BDAB91B6C2A7B,[REF:912],0,77372
+913,WAZAINFO_ZA_913,A17BD9B91B6C28C8,[REF:913],0,77384
+914,WAZAINFO_ZA_914,A17BE0B91B6C34AD,[REF:914],0,77396
+915,WAZAINFO_ZA_915,A17BDFB91B6C32FA,[REF:915],0,77408
+916,WAZAINFO_ZA_916,A17BDEB91B6C3147,[REF:916],0,77420
+917,WAZAINFO_ZA_917,A17BDDB91B6C2F94,[REF:917],0,77432
+918,WAZAINFO_ZA_918,A17BD4B91B6C2049,[REF:918],0,77444
+919,WAZAINFO_ZA_919,A17BD3B91B6C1E96,[REF:919],0,77456
+920,WAZAINFO_ZA_920,A17F62B91B6F476A,"Desata una poderosa luz que ignora todas las leyes de
+la naturaleza. Puede golpear a Pokémon de tipo Hada
+e ignora los cambios en las características del rival.",0,77468
+921,WAZAINFO_ZA_851_01,59EC001B6C0CB30D,[REF:921],0,77792

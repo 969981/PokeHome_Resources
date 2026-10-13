@@ -1,0 +1,77 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,Conexión con juegos de GBA,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,Selección de cajas,0,352
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,Capacidad,0,392
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,202F]",0,412
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"No es posible enviar a Pokémon HOME ni Huevos ni Pokémon que lleven equipado algún objeto
+o que conozcan movimientos ocultos.",0,424
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"¿Quieres cancelar la conexión con juegos de GBA
+y regresar al menú principal?",0,676
+7,nx_gbasoft_msg_020,22A650A5467D0077,"Una vez transferidos a Pokémon HOME, no podrás devolver
+los Pokémon a su juego original y los movimientos que[RETURN]
+conocen cambiarán.[CLEAR]
+¿Seguro que quieres continuar?",4,832
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"Transfiriendo el contenido de la caja seleccionada
+a Pokémon HOME...",0,1164
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"¡El contenido de la caja se ha transferido del juego de GBA a
+Pokémon HOME!",0,1304
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,Sí,0,1456
+11,nx_gbasoft_msg_no,FA151C506B6DA084,No,0,1464
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,Ayuda,4,1472
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,Terminar,0,1484
+14,	,AF66E44C86071324,[REF:14],0,1504
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"Esta es la pantalla de conexión con juegos de Game Boy Advance (GBA).
+Desde aquí podrás transferir a Pokémon HOME los Pokémon que hubieras
+capturado en tus juegos de Game Boy Advance (GBA).",4,1516
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"Lo único que tienes que saber es que, en este caso, la transferencia
+se hace por cajas. ¡Selecciona la que quieras y podrás transferir todos
+los Pokémon que contiene del tirón!",0,1896
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"Los Pokémon que transfieras de esta forma ocuparán los espacios libres
+que tengas en tus cajas de Pokémon HOME tal como vayan llegando.",0,2252
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"Eso significa que es probable que acaben repartidos por distintas cajas.
+Así que no te rayes si no los encuentras a la primera porque estar, están.",4,2524
+19,	,AF66E44C86071324,[REF:19],0,2820
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"Ya has transferido un [CTRL:0101:0000] procedente de estos
+datos de guardado.[CLEAR]
+No puedes transferir más de un [CTRL:0101:0000]
+procedente de la misma partida.",0,2832
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"Ya has transferido un [CTRL:0101:0000] variocolor
+procedente de estos datos de guardado.[CLEAR]
+No puedes transferir más de un [CTRL:0101:0000] variocolor
+procedente de la misma partida.",0,3108
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"Ya has transferido un [CTRL:0101:0000] procedente de estos
+datos de guardado.[CLEAR]
+Tu selección incluye un [CTRL:0101:0000], pero no puedes
+transferir más de uno procedente de la misma partida.",0,3428
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"Ya has transferido un [CTRL:0101:0000] variocolor
+procedente de estos datos de guardado.[CLEAR]
+Tu selección incluye un [CTRL:0101:0000] variocolor, pero no
+puedes transferir más de uno procedente de la misma[RETURN]
+partida.",0,3764
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"Tu selección incluye dos o más [CTRL:0101:0000].[CLEAR]
+No puedes transferir más de un [CTRL:0101:0000]
+procedente de la misma partida.",0,4152
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"Tu selección incluye dos o más [CTRL:0101:0000] variocolor.[CLEAR]
+No puedes transferir más de un [CTRL:0101:0000] variocolor
+procedente de la misma partida.",0,4368
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"Solo puedes transferir un [CTRL:0101:0000] procedente de
+esta partida.[CLEAR]
+¿Quieres transferir el contenido de la caja seleccionada?",0,4628
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"Solo puedes transferir un [CTRL:0101:0000] variocolor
+procedente de esta partida.[CLEAR]
+¿Quieres transferir el contenido de la caja seleccionada?",0,4868
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"Tu selección incluye Pokémon que solo se pueden transferir
+una vez desde esta partida, como un [CTRL:0101:0000].[CLEAR]
+¿Seguro que quieres transferir el contenido de esta caja a
+Pokémon HOME?",0,5132
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"Tu selección incluye Pokémon que solo se pueden transferir
+una vez desde esta partida, como un [CTRL:0101:0000][RETURN]
+variocolor.[CLEAR]
+¿Seguro que quieres transferir el contenido de esta caja a
+Pokémon HOME?",0,5488
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"Esta caja contiene Pokémon que no se pueden transferir
+a Pokémon HOME.",4,5872
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,Esta caja está vacía.,4,6016
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"El contenido de esta caja supera el número de espacios
+libres de tus cajas de Pokémon HOME.",4,6060

@@ -1,0 +1,75 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_link_index_010,5E27A64FD90FA579,Pokémon Champions連携,0,252
+1,nx_link_msg_001,5D24D6555855126E,"『Pokémon Champions』から
+帰ってくる　ポケモンを　確認しています",0,332
+2,nx_link_msg_yes,6DE163543F60E996,はい,0,500
+3,nx_link_msg_no,69760125DBDFD8F8,いいえ,0,512
+4,nx_link_msg_008,5D24CF5558550689,"ニンテンドーアカウントを
+確認しています…",0,528
+5,nx_link_msg_009,5D24CE55585504D6,"現在　お客様の
+『Pokémon Champions』アカウントは[RETURN]
+機能の　利用が　制限されています[CLEAR]
+『Pokémon Champions』への　連携を
+中止しました",0,616
+6,nx_link_msg_010,5D2151555851FA98,"この　アカウントと　連携します
+よろしいですか？",0,976
+7,nx_link_msg_011,5D2152555851FC4B,"『Pokémon Champions』　連携を　中止して
+メインメニューに　戻ります",0,1076
+8,nx_link_msg_012,5D2153555851FDFE,[REF:8],0,1248
+9,nx_link_msg_013,5D2154555851FFB1,"『Pokémon Champions』から　帰ってくる
+ポケモンが　みつかりました",0,1268
+10,nx_link_msg_014,5D21555558520164,"『Pokémon Champions』から　[CTRL:0203:0000,0000]匹の
+ポケモンが　帰ってきます",0,1436
+11,nx_link_msg_015,5D21565558520317,ポケモンが　帰ってきています…,0,1608
+12,nx_link_msg_016,5D215755585204CA,"『Pokémon Champions』から
+ポケモンが　帰ってきました！",0,1672
+13,nx_link_dialog_001,B4A51C1FF7B01785,『Pokémon Champions』アカウントの　確認,0,1820
+14,nx_link_dialog_002,B4A5191FF7B0126C,トレーナー名：,0,1936
+15,nx_link_dialog_003,B4A51A1FF7B0141F,[CTRL:0100:0000],0,1968
+16,nx_link_dialog_004,B4A5171FF7B00F06,サポートID：,0,1988
+17,nx_link_msg_019,5D214A555851EEB3,"前に　『Pokémon Champions』へ
+ポケモンを　遠征させてから[CLEAR]
+『Pokémon Champions』側で　ポケモンの
+引き取りが　行われて　おりません[CLEAR]
+一度　『Pokémon Champions』を
+起動し　引き取りを　行ってください",0,2020
+18,nx_link_msg_020,5D2BC355585B10D3,"『Pokémon Champions』が
+メンテナンス中　です",0,2544
+19,nx_link_msg_021,5D2BC255585B0F20,"『Pokémon Champions』の　メンテナンスの
+終了を　おまちください",0,2672
+20,nx_link_msg_022,5D2BC555585B1439,"連携先の　『Pokémon Champions』の
+アカウントが　ありません",0,2836
+21,nx_link_msg_023,5D2BC455585B1286,メインメニューに　戻ります,0,2992
+22,nx_link_msg_024,5D2BC755585B179F,"現在　このアカウントで　利用している
+ニンテンドーアカウントの[CLEAR]
+『Pokémon Champions』の　アカウントは
+以前　使用されていた[CLEAR]
+『Pokémon HOME』アカウントと
+連携されています[CLEAR]
+一度　『Pokémon Champions』で
+ログインを行い[CLEAR]
+以前　使用されていた
+『Pokémon HOME』との[CLEAR]
+連携を　解除してください",0,3048
+23,nx_link_msg_025,5D2BC655585B15EC,"既に　[CTRL:0203:0000,0000]匹の　ポケモンを　遠征しています[CLEAR]
+これ以上　遠征させることは　できません
+メインメニューに　もどります",0,3804
+24,nx_link_msg_026,5D2BC955585B1B05,"『Pokémon Champions』への　連携機能は 
+現在　メンテナンス中です[CLEAR]
+『Pokémon Champions』への　連携を
+中止しました",0,4056
+25,nx_link_msg_027,5D2BC855585B1952,"『Pokémon Champions』への　連携機能は 
+現在　メンテナンス中です[CLEAR]
+終了予定時刻　[CTRL:0203:0000,0000]/[CTRL:0201:0001]/[CTRL:0201:0002]　[CTRL:0201:0003]:[CTRL:0201:0004][CLEAR]
+『Pokémon Champions』への　連携を
+中止しました",0,4368
+26,nx_link_msg_028,5D2BCB55585B1E6B,"『Pokémon Champions』の　ボックスが
+いっぱいです[CLEAR]
+新しく　ポケモンを
+遠征させたい場合は[CLEAR]
+『Pokémon Champions』の　ボックスに
+空きを　作ってください",0,4824
+27,nx_link_msg_029,5D2BCA55585B1CB8,"エラーが　発生しました
+操作を　最初から　やり直してください",0,5220
+28,nx_link_msg_030,5D285D5558582DAA,"エラーが　発生しました
+メインメニューに　戻ります",0,5344

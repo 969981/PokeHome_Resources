@@ -1,0 +1,94 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_first_language_010,CF9AFAE832358AFF,どの言語を　使いますか？,0,484
+1,nx_first_language_020,CF9108E8322D4E44,この言語で　はじめますか？,0,536
+2,nx_first_language_030,CF948EE8323067CD,"選んだ言語は　『設定』から
+いつでも　変更できます",0,592
+3,nx_first_language_040,CF89FCE832271B32,はじめる,0,696
+4,nx_first_language_050,CF8D82E8322A34BB,選びなおす,0,716
+5,nx_first_language_060,CF8370E83221C1A0,選んだ言語,0,740
+6,	,AF66E44C86071324,[REF:6],0,764
+7,nx_first_button_000,49B92A8E35961C28,もどる,0,784
+8,	,AF66E44C86071324,[REF:8],0,800
+9,nx_first_msg_yes,40C7F89C556E59B8,はい,0,820
+10,nx_first_msg_no,6E87EFBD44DBB0A2,いいえ,0,832
+11,nx_first_msg_back,7303F07B84CC565A,もどる,0,848
+12,nx_first_msg_next,EA8C2D16530F4790,次に進む,0,864
+13,nx_first_msg_010,62E85A9B46586956,[REF:13],0,884
+14,nx_first_msg_020,62E4F49B4655862D,"スマートフォン版　　『Pokémon HOME』を
+すでに　利用していますか？",0,904
+15,nx_first_msg_021,62E4F39B4655847A,[REF:15],0,1064
+16,nx_first_msg_022,62E4F29B465582C7,"ニンテンドーアカウントを　連携すれば
+スマートフォン版と　利用状況を　共有できます[CLEAR]
+スマートフォン版で
+ニンテンドーアカウントを　連携していますか？",0,1084
+17,nx_first_msg_025,62E4EF9B46557DAE,[REF:17],0,1396
+18,nx_first_msg_026,62E4EE9B46557BFB,"今後　スマートフォン版を　始めるとき
+ニンテンドーアカウントを　連携すれば[RETURN]
+利用状況を　共有できます",0,1416
+19,nx_first_msg_027,62E4ED9B46557A48,"あらかじめ　スマートフォン版で
+ニンテンドーアカウントを　連携しないと[RETURN]
+利用状況が　共有できません！[CLEAR]
+次に進む前に　スマートフォン版で
+連携しておくことを　おすすめします",0,1632
+20,nx_first_msg_028,62E4EC9B46557895,……それでは　　『Pokémon HOME』を　始めます！,0,2000
+21,nx_first_msg_030,62E16E9B46526CA4,[REF:21],0,2120
+22,nx_first_msg_031,62E16F9B46526E57,"利用規約と　プライバシーポリシーが
+更新されています！[CLEAR]
+　『Pokémon HOME』を　利用するには
+改めて　同意が　必要です[CLEAR]
+内容を　よく読んでから　同意してください",0,2140
+23,nx_first_msg_032,62E1709B4652700A,"　『Pokémon HOME』を　利用するため
+利用規約と　プライバシーポリシーを[RETURN]
+確認してください[CLEAR]",0,2508
+24,nx_first_msg_033,62E1719B465271BD,"利用規約を　表示します
+内容を　よく読んでから　同意してください[CLEAR]",0,2736
+25,nx_first_msg_034,62E16A9B465265D8,利用規約に　同意しますか？,0,2880
+26,nx_first_msg_035,62E16B9B4652678B,"プライバシーポリシーを　表示します
+内容を　よく読んでください[CLEAR]",0,2936
+27,nx_first_msg_036,62E16C9B4652693E,プライバシーポリシーを　確認しましたか？,0,3076
+28,nx_first_msg_040,62DE689B46502C9B,"情報を　確認しています
+しばらく　お待ちください……",0,3160
+29,nx_first_msg_050,62DAE29B464D1312,タイトル画面に　もどりますか？,0,3268
+30,	,AF66E44C86071324,[REF:30],0,3332
+31,nx_first_terms_region_head,C98D2569F8DD4B6A,[REF:31],0,3352
+32,nx_first_terms_region_010,2B3214FBED0BD2E1,[REF:32],0,3372
+33,nx_first_terms_region_020,2B359AFBED0EEC6A,[REF:33],0,3392
+34,nx_first_terms_region_030,2B3900FBED11CF93,[REF:34],0,3412
+35,nx_first_terms_region_040,2B3C86FBED14E91C,[REF:35],0,3432
+36,nx_first_terms_region_050,2B3F8CFBED172925,[REF:36],0,3452
+37,nx_first_terms_region_060,2B4312FBED1A42AE,[REF:37],0,3472
+38,nx_first_terms_region_070,2B4698FBED1D5C37,[REF:38],0,3492
+39,nx_first_terms_region_080,2B137EFBECF1D670,[REF:39],0,3512
+40,nx_first_terms_title,2CA7E66F180C5D97,利用規約 ／ プライバシーポリシー,0,3532
+41,nx_first_terms_guide_010,9741787758FE581B,"最後まで　スクロールすると　次に進みます
+おこさまは　おうちの　ひとと　いっしょに　よんでください",0,3604
+42,nx_first_terms_guide_020,9736E67758F50B80,[REF:42],0,3804
+43,nx_first_terms_guide_021,9736E77758F50D33,はい,0,3824
+44,nx_first_terms_guide_022,9736E87758F50EE6,いいえ,0,3836
+45,	,AF66E44C86071324,[REF:45],0,3852
+46,nx_first_msg_100,59D5C59B41175574,"オーケイ！　アクセス　成功だ！[CLEAR]
+これは　　『Pokémon HOME』に　とって
+ビッグな　一歩で　ある！",0,3872
+47,nx_first_msg_101,59D5C69B41175727,"おや……？[CLEAR]
+おっと　こいつは　失礼！
+私が　映って　おらんかった！",0,4100
+48,nx_first_msg_110,59D8CB9B4119957D,うむ！　これで　オーケイだ！,0,4248
+49,nx_first_msg_120,59DC319B411C78A6,わたしは　偉大な　ポケモン研究家……,0,4308
+50,nx_first_msg_121,59DC329B411C7A59,"ひと呼んで　ダイオーキド！[CLEAR]
+はじめまして　よろしくな！",0,4384
+51,nx_first_msg_122,59DC2F9B411C7540,"いきなりだが　私の　夢は
+世界に　すむ　あらゆる　ポケモンが[CLEAR]
+すべて　登録された
+偉大な　ポケモン図鑑の　完成だ！",0,4508
+52,nx_first_msg_123,59DC309B411C76F3,"ハッキリ　いって　私ひとりで
+実現するのは　難しい……",0,4752
+53,nx_first_msg_124,59DC359B411C7F72,"だが　しかし！　たった今！
+ビッグな　味方が　現れた！",0,4864
+54,nx_first_msg_130,59DFB79B411F922F,"……そう　キミだ！[CLEAR]
+キミに　お願いが　ある！",0,4976
+55,nx_first_msg_131,59DFB69B411F907C,"私が　開発した　　『Pokémon HOME』に
+たくさんの　ポケモンを　預けてくれい！",0,5080
+56,nx_first_msg_140,59C82D9B410BC8D0,"まあ　　『Pokémon HOME』に　ついて
+よく分からないことも　あるだろう！",0,5260
+57,nx_first_msg_141,59C82E9B410BCA83,"オーケイ！　
+困ったら　モンボーに　きいてくれい！",0,5428

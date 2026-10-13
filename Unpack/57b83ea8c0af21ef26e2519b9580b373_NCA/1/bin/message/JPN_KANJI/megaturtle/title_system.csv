@@ -1,0 +1,19 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_title_push_button,5B3FE769877CCCA8,PUSH A BUTTON,0,124
+1,nx_title_ver,9F35F53B0D9738C8,Ver.[CTRL:0200:0000].[CTRL:0200:0001].[CTRL:0200:0002],0,180
+2,	,AF66E44C86071324,[REF:2],0,256
+3,nx_title_error1_010,A023DB54EC54E55C,[REF:3],0,276
+4,nx_title_support_01,FBEC9A53F0EAC644,サポートID,0,296
+5,nx_title_support_02,FBEC9D53F0EACB5D,XXXX-XXXX-XXXX-XXXX,0,324
+6,	,AF66E44C86071324,[REF:6],0,404
+7,nx_title_casherror_msg_01,48B32C8C799FBB72,キャッシュクリアを　行いますか？,0,424
+8,nx_title_casherror_msg_02,48B32B8C799FB9BF,"キャッシュクリアすると　ログインするまでの
+時間が　長くなることが　あります[CLEAR]
+ご利用中の　『Pokémon HOME』の
+データは　削除されません[CLEAR]
+本当に　キャッシュクリアしますか？",0,492
+9,nx_title_msg_yes,CBEDD9311A84C300,はい,0,884
+10,nx_title_msg_no,73427AE765741C0A,いいえ,0,896
+11,nx_title_cashclear_msg_01,90BAD9C632ABF86B,"キャッシュクリアしています
+しばらく　おまちください…",0,912
+12,nx_title_cashclear_msg_02,90BADAC632ABFA1E,キャッシュクリアが　完了しました,0,1024

@@ -1,0 +1,137 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,mes_ribbon_name_000,EFD55246391A3E8A,Kalos Champion Ribbon,0,820
+1,mes_ribbon_name_001,EFD55346391A403D,Champion Ribbon,0,864
+2,mes_ribbon_name_002,EFD55046391A3B24,Sinnoh Champion Ribbon,0,896
+3,mes_ribbon_name_003,EFD55146391A3CD7,Best Friends Ribbon,0,944
+4,mes_ribbon_name_004,EFD54E46391A37BE,Training Ribbon,0,984
+5,mes_ribbon_name_005,EFD54F46391A3971,Skillful Battler Ribbon,0,1016
+6,mes_ribbon_name_006,EFD54C46391A3458,Expert Battler Ribbon,4,1064
+7,mes_ribbon_name_007,EFD54D46391A360B,Effort Ribbon,4,1108
+8,mes_ribbon_name_008,EFD54A46391A30F2,Alert Ribbon,4,1136
+9,mes_ribbon_name_009,EFD54B46391A32A5,Shock Ribbon,0,1164
+10,mes_ribbon_name_010,EFD8B846391D21B3,Downcast Ribbon,0,1192
+11,mes_ribbon_name_011,EFD8B746391D2000,Careless Ribbon,0,1224
+12,mes_ribbon_name_012,EFD8BA46391D2519,Relax Ribbon,0,1256
+13,mes_ribbon_name_013,EFD8B946391D2366,Snooze Ribbon,0,1284
+14,mes_ribbon_name_014,EFD8BC46391D287F,Smile Ribbon,0,1312
+15,mes_ribbon_name_015,EFD8BB46391D26CC,Gorgeous Ribbon,0,1340
+16,mes_ribbon_name_016,EFD8BE46391D2BE5,Royal Ribbon,0,1372
+17,mes_ribbon_name_017,EFD8BD46391D2A32,Gorgeous Royal Ribbon,0,1400
+18,mes_ribbon_name_018,EFD8C046391D2F4B,Artist Ribbon,4,1444
+19,mes_ribbon_name_019,EFD8BF46391D2D98,Footprint Ribbon,0,1472
+20,mes_ribbon_name_020,EFCEC6463914E4F8,Record Ribbon,0,1508
+21,mes_ribbon_name_021,EFCEC7463914E6AB,Legend Ribbon,0,1536
+22,mes_ribbon_name_022,EFCEC8463914E85E,Country Ribbon,0,1564
+23,mes_ribbon_name_023,EFCEC9463914EA11,National Ribbon,0,1596
+24,mes_ribbon_name_024,EFCECA463914EBC4,Earth Ribbon,4,1628
+25,mes_ribbon_name_025,EFCECB463914ED77,World Ribbon,0,1656
+26,mes_ribbon_name_026,EFCECC463914EF2A,Classic Ribbon,0,1684
+27,mes_ribbon_name_027,EFCECD463914F0DD,Premier Ribbon,0,1716
+28,mes_ribbon_name_028,EFCEBE463914D760,Event Ribbon,4,1748
+29,mes_ribbon_name_029,EFCEBF463914D913,Birthday Ribbon,0,1776
+30,mes_ribbon_name_030,EFD24C463917FE81,Special Ribbon,0,1808
+31,mes_ribbon_name_031,EFD24B463917FCCE,Souvenir Ribbon,0,1840
+32,mes_ribbon_name_032,EFD24A463917FB1B,Wishing Ribbon,0,1872
+33,mes_ribbon_name_033,EFD249463917F968,Battle Champion Ribbon,0,1904
+34,mes_ribbon_name_034,EFD250463918054D,Regional Champion Ribbon,0,1952
+35,mes_ribbon_name_035,EFD24F463918039A,National Champion Ribbon,0,2004
+36,mes_ribbon_name_036,EFD24E46391801E7,World Champion Ribbon,0,2056
+37,mes_ribbon_name_037,EFD24D4639180034,Contest Memory Ribbon,0,2100
+38,mes_ribbon_name_038,EFD244463917F0E9,Battle Memory Ribbon,0,2144
+39,mes_ribbon_name_039,EFD243463917EF36,Hoenn Champion Ribbon,0,2188
+40,mes_ribbon_name_040,EFE34A4639266E4E,Contest Star Ribbon,0,2232
+41,mes_ribbon_name_041,EFE34B4639267001,Coolness Master Ribbon,0,2272
+42,mes_ribbon_name_042,EFE3484639266AE8,Beauty Master Ribbon,0,2320
+43,mes_ribbon_name_043,EFE3494639266C9B,Cuteness Master Ribbon,0,2364
+44,mes_ribbon_name_044,EFE34E463926751A,Cleverness Master Ribbon,0,2412
+45,mes_ribbon_name_045,EFE34F46392676CD,Toughness Master Ribbon,0,2464
+46,mes_ribbon_name_046,EFE34C46392671B4,Alola Champion Ribbon,4,2512
+47,mes_ribbon_name_047,EFE34D4639267367,Battle Royal Master Ribbon,0,2556
+48,mes_ribbon_name_048,EFE34246392660B6,Battle Tree Great Ribbon,0,2612
+49,mes_ribbon_name_049,EFE3434639266269,Battle Tree Master Ribbon,0,2664
+50,mes_ribbon_info_000,20F93C62D8DCE9C9,"A Ribbon awarded for beating the Kalos Champion
+and entering the Kalos Hall of Fame.",4,2716
+51,mes_ribbon_info_001,20F93B62D8DCE816,"A Ribbon awarded for clearing the Pokémon League
+and entering the Hall of Fame somewhere long ago.",4,2888
+52,mes_ribbon_info_002,20F93A62D8DCE663,"A Ribbon awarded for beating the Sinnoh Champion
+and entering the Sinnoh Hall of Fame.",4,3088
+53,mes_ribbon_info_003,20F93962D8DCE4B0,"A Ribbon that can be given to a Pokémon with which
+you share a close and meaningful bond.",4,3264
+54,mes_ribbon_info_004,20F94062D8DCF095,"A Ribbon that can be given to a Pokémon that has
+overcome rigorous trials and training.",4,3444
+55,mes_ribbon_info_005,20F93F62D8DCEEE2,"A Ribbon that can be given to a Pokémon that has
+achieved victory in difficult battles.",4,3620
+56,mes_ribbon_info_006,20F93E62D8DCED2F,"A Ribbon that can be given to a brave Pokémon
+that has honed its battle skills to an art.",4,3796
+57,mes_ribbon_info_007,20F93D62D8DCEB7C,"A Ribbon awarded for being an exceptionally
+hard worker.",4,3976
+58,mes_ribbon_info_008,20F94462D8DCF761,"A Ribbon for recalling an invigorating
+event that created life energy.",4,4092
+59,mes_ribbon_info_009,20F94362D8DCF5AE,"A Ribbon for recalling a thrilling
+event that made life more exciting.",4,4236
+60,mes_ribbon_info_010,20F5B662D8D9D040,"A Ribbon for recalling feelings of
+sadness that added spice to life.",4,4380
+61,mes_ribbon_info_011,20F5B762D8D9D1F3,"A Ribbon for recalling a careless error
+that helped steer life decisions.",4,4520
+62,mes_ribbon_info_012,20F5B862D8D9D3A6,"A Ribbon for recalling a refreshing
+event that added sparkle to life.",4,4668
+63,mes_ribbon_info_013,20F5B962D8D9D559,"A Ribbon for recalling a deep
+slumber that made life soothing.",4,4808
+64,mes_ribbon_info_014,20F5BA62D8D9D70C,"A Ribbon for recalling that smiles
+enrich the quality of life.",4,4936
+65,mes_ribbon_info_015,20F5BB62D8D9D8BF,An extraordinarily gorgeous and extravagant Ribbon.,4,5064
+66,mes_ribbon_info_016,20F5BC62D8D9DA72,An incredibly regal Ribbon with an air of nobility.,4,5168
+67,mes_ribbon_info_017,20F5BD62D8D9DC25,"A gorgeous and regal Ribbon
+that is the peak of fabulous.",4,5272
+68,mes_ribbon_info_018,20F5BE62D8D9DDD8,"A Ribbon awarded for being chosen as a super
+sketch model in the Hoenn region.",4,5388
+69,mes_ribbon_info_019,20F5BF62D8D9DF8B,"A Ribbon awarded to a Pokémon deemed
+to have a top-quality footprint.",4,5548
+70,mes_ribbon_info_020,21004862D8E31CDB,A Ribbon awarded for setting an incredible record.,4,5688
+71,mes_ribbon_info_021,21004762D8E31B28,A Ribbon awarded for setting a legendary record.,4,5792
+72,mes_ribbon_info_022,21004A62D8E32041,A Ribbon awarded to a Pokémon League Champion.,4,5892
+73,mes_ribbon_info_023,21004962D8E31E8E,"A Ribbon awarded for overcoming
+all difficult challenges.",4,5988
+74,mes_ribbon_info_024,21004C62D8E323A7,A Ribbon awarded for winning 100 battles in a row.,4,6104
+75,mes_ribbon_info_025,21004B62D8E321F4,A Ribbon awarded to a Pokémon League Champion.,4,6208
+76,mes_ribbon_info_026,21004E62D8E3270D,A Ribbon that proclaims love for Pokémon.,4,6304
+77,mes_ribbon_info_027,21004D62D8E3255A,A Ribbon awarded for a special holiday.,4,6388
+78,mes_ribbon_info_028,21004062D8E30F43,"A Ribbon awarded for participating in a special
+Pokémon event.",4,6468
+79,mes_ribbon_info_029,21003F62D8E30D90,A Ribbon that commemorates a birthday.,4,6596
+80,mes_ribbon_info_030,20FCC262D8E00352,A special Ribbon for a special day.,4,6676
+81,mes_ribbon_info_031,20FCC362D8E00505,A Ribbon for cherishing a special memory.,4,6748
+82,mes_ribbon_info_032,20FCC062D8DFFFEC,A Ribbon said to make your wish come true.,4,6832
+83,mes_ribbon_info_033,20FCC162D8E0019F,A Ribbon awarded to a Battle Competition Champion.,4,6920
+84,mes_ribbon_info_034,20FCBE62D8DFFC86,"A Ribbon awarded to a Regional Champion in the
+Pokémon World Championships.",4,7024
+85,mes_ribbon_info_035,20FCBF62D8DFFE39,"A Ribbon awarded to a National Champion in the
+Pokémon World Championships.",4,7176
+86,mes_ribbon_info_036,20FCBC62D8DFF920,"A Ribbon awarded to a World Champion in the
+Pokémon World Championships.",4,7328
+87,mes_ribbon_info_037,20FCBD62D8DFFAD3,"A commemorative Ribbon representing all of the Ribbons
+you collected for contests somewhere long ago.",4,7476
+88,mes_ribbon_info_038,20FCCA62D8E010EA,"A commemorative Ribbon representing all of the Ribbons
+you collected for battling somewhere long ago.",4,7680
+89,mes_ribbon_info_039,20FCCB62D8E0129D,"A Ribbon awarded for beating the Hoenn Champion
+and entering the Hoenn Hall of Fame.",4,7884
+90,mes_ribbon_info_040,2106D462D8E8766D,"A Ribbon awarded to a Pokémon that has
+performed superbly in every kind of contest.",4,8056
+91,mes_ribbon_info_041,2106D362D8E874BA,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Coolness in Pokémon Contests.",4,8224
+92,mes_ribbon_info_042,2106D262D8E87307,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Beauty in Pokémon Contests.",4,8400
+93,mes_ribbon_info_043,2106D162D8E87154,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Cuteness in Pokémon Contests.",4,8572
+94,mes_ribbon_info_044,2106D062D8E86FA1,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Cleverness in Pokémon Contests.",4,8748
+95,mes_ribbon_info_045,2106CF62D8E86DEE,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Toughness in Pokémon Contests.",4,8928
+96,mes_ribbon_info_046,2106CE62D8E86C3B,"A Ribbon awarded for becoming the Alola Champion
+and entering the Alola Hall of Fame.",4,9108
+97,mes_ribbon_info_047,2106CD62D8E86A88,"A Ribbon that can be given to a Pokémon that has
+achieved victory in the Battle Royal.",4,9280
+98,mes_ribbon_info_048,2106CC62D8E868D5,"A Ribbon awarded for winning against a Battle Legend in the
+Battle Tree.",4,9456
+99,mes_ribbon_info_049,2106CB62D8E86722,"A Ribbon awarded for winning against a Battle Legend in
+super battles in the Battle Tree.",4,9604

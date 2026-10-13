@@ -1,0 +1,87 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,Mit GBA-Software verlinken,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,Wähle eine Box aus,0,352
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,Anzahl der einlagerbaren Pokémon,0,392
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,202F]",0,460
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"Pokémon, die Items tragen oder VM-Attacken erlernt haben, sowie Eier
+können nicht auf Pokémon HOME übertragen werden.",0,472
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"Möchtest du ins Hauptmenü zurückkehren,
+ohne eine GBA-Software zu verlinken?",0,708
+7,nx_gbasoft_msg_020,22A650A5467D0077,"Pokémon, die du auf Pokémon HOME übertragen hast, kannst
+du nicht mehr an die ursprüngliche Software zurückschicken.[RETURN]
+Beachte außerdem, dass sich ihre Attacken ändern.[CLEAR]
+Möchtest du trotzdem fortfahren?",0,864
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"Die Pokémon in der ausgewählten Box
+werden auf Pokémon HOME übertragen...",0,1276
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"Deine Pokémon wurden von der GBA-Software
+auf Pokémon HOME übertragen!",0,1424
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,Ja,0,1568
+11,nx_gbasoft_msg_no,FA151C506B6DA084,Nein,0,1576
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,Hilfe,0,1588
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,Beenden,0,1600
+14,	,AF66E44C86071324,[REF:14],0,1616
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"Das hier ist der Bildschirm zur Verlinkung einer
+Game Boy Advance (GBA)-Software mit Pokémon HOME. Wenn du
+Pokémon, die du in einer Game Boy Advance (GBA)-Software gefangen
+hast, auf Pokémon HOME übertragen möchtest, kannst du das hier tun.",0,1628
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"Das Ganze funktioniert so: Du wählst eine Box
+aus deiner Software aus und sämtliche Pokémon,
+die sich darin befinden, werden in einem Rutsch
+auf Pokémon HOME übertragen!",0,2112
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"Die übertragenen Pokémon werden dann der Reihe nach
+auf freie Plätze in deinen Boxen in Pokémon HOME verteilt.
+Ganz einfach!",0,2452
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"Achte aber darauf, dass es deshalb manchmal vorkommen kann,
+dass sie auf verschiedene Boxen verteilt werden!",0,2704
+19,	,AF66E44C86071324,[REF:19],0,2924
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"Du hast bereits ein [CTRL:0101:0000] aus diesem
+Speicherstand auf Pokémon HOME übertragen.[CLEAR]
+Du kannst jeweils nur ein [CTRL:0101:0000]
+pro Speicherstand übertragen.",0,2936
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"Du hast bereits ein Schillerndes [CTRL:0101:0000] aus diesem
+Speicherstand auf Pokémon HOME übertragen.[CLEAR]
+Du kannst jeweils nur ein Schillerndes [CTRL:0101:0000]
+pro Speicherstand auf Pokémon HOME übertragen.",0,3224
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"Deine Auswahl enthält mindestens ein Pokémon, das bereits
+aus diesem Speicherstand auf Pokémon HOME übertragen[RETURN]
+wurde, wie zum Beispiel [CTRL:0101:0000].[CLEAR]
+Du kannst nur ein [CTRL:0101:0000] pro Speicherstand auf
+Pokémon HOME übertragen.",0,3596
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"Deine Auswahl enthält mindestens ein Pokémon, das bereits
+aus diesem Speicherstand auf Pokémon HOME übertragen[RETURN]
+wurde, wie zum Beispiel ein Schillerndes [CTRL:0101:0000].[CLEAR]
+Du kannst nur ein Schillerndes [CTRL:0101:0000]
+pro Speicherstand auf Pokémon HOME übertragen.",0,4032
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"Es kann nur ein [CTRL:0101:0000] pro Speicherstand
+übertragen werden.[CLEAR]
+Da deine Auswahl mindestens zwei [CTRL:0101:0000] enthält,
+kannst du die Pokémon dieser Box nicht übertragen.",0,4528
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"Es kann nur ein Schillerndes [CTRL:0101:0000]
+pro Speicherstand übertragen werden.[CLEAR]
+Da deine Auswahl mindestens zwei
+Schillernde [CTRL:0101:0000] enthält,[CLEAR]
+kannst du die Pokémon dieser Box nicht übertragen.",0,4848
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"Es kann nur ein [CTRL:0101:0000] aus diesem Speicherstand
+übertragen werden.[CLEAR]
+Willst du die Box, die ein [CTRL:0101:0000] enthält,
+wirklich übertragen?",0,5224
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"Es kann nur ein Schillerndes [CTRL:0101:0000] aus diesem
+Speicherstand übertragen werden.[CLEAR]
+Willst du die Box, die ein Schillerndes [CTRL:0101:0000]
+enthält, wirklich übertragen?",0,5484
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"In deiner Auswahl sind Pokémon wie
+[CTRL:0101:0000] enthalten, die nur einmal pro[CLEAR]
+Speicherstand übertragen werden können.
+Bist du sicher, dass du diese Box auf Pokémon HOME[CLEAR]
+übertragen möchtest?",0,5796
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"In deiner Auswahl sind Pokémon wie ein
+Schillerndes [CTRL:0101:0000] enthalten, die nur einmal[CLEAR]
+pro Speicherstand übertragen werden können.
+Bist du sicher, dass du diese Box auf Pokémon HOME[CLEAR]
+übertragen möchtest?",0,6172
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"In dieser Box sind Pokémon enthalten, die nicht
+auf Pokémon HOME übertragen werden können.",0,6584
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,In dieser Box sind keine Pokémon enthalten.,0,6768
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"In dieser Box sind mehr Pokémon enthalten, als in deinen
+Boxen auf Pokémon HOME Platz finden können.",0,6856

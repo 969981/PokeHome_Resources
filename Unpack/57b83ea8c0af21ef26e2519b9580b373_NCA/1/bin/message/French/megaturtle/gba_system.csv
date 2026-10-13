@@ -1,0 +1,81 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,Synchronisation avec un jeu GBA,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,Choix de Boîte,0,360
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,Nb. de Pokémon pouvant être déposés :,0,392
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,202F]",0,468
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"Les Pokémon tenant un objet, connaissant une CS (capacité secrète) ainsi que les Œufs
+ne peuvent pas être envoyés dans Pokémon HOME.",0,480
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"Souhaitez-vous retourner au menu principal sans effectuer
+de synchronisation avec un jeu Game Boy Advance (GBA) ?",0,748
+7,nx_gbasoft_msg_020,22A650A5467D0077,"Les Pokémon envoyés dans Pokémon HOME ne pourront
+pas retourner dans leur jeu d’origine.[CLEAR]
+Les capacités qu’ils connaîtront seront en outre différentes
+de celles qu’ils connaissent actuellement.[CLEAR]
+Souhaitez-vous vraiment effectuer cet envoi ?",0,976
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"Les Pokémon de la Boîte sélectionnée sont
+en cours d’envoi vers Pokémon HOME...",0,1468
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"Le ou les Pokémon ont été envoyés du jeu
+Game Boy Advance (GBA) vers Pokémon HOME !",0,1628
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,Oui,4,1796
+11,nx_gbasoft_msg_no,FA151C506B6DA084,Non,0,1804
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,Aide,4,1812
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,Quitter,0,1824
+14,	,AF66E44C86071324,[REF:14],0,1840
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"Ici, c’est l’écran de la synchronisation avec les jeux Game Boy Advance (GBA) !
+Ça permet d’envoyer les Pokémon attrapés dans ces jeux vers Pokémon HOME !",4,1852
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"Et les Pokémon s’envoient par Boîtes entières !
+Vous choisissez une Boîte, et touuus les Pokémon
+qu’elle contient partiront direction Pokémon HOME !",4,2164
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"Ces Pokémon chercheront des emplacements vides
+dans les Boîtes de Pokémon HOME, et ils s’y installeront
+bien sagement dans l’ordre où ils ont été envoyés !",0,2464
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"Du coup, ouvrez bien l’œil, parce qu’ils atterriront
+peut-être dans plusieurs Boîtes différentes !",0,2776
+19,	,AF66E44C86071324,[REF:19],0,2976
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"Vous avez déjà envoyé un [CTRL:0101:0000]
+depuis cette sauvegarde.[CLEAR]
+Il n’est possible d’envoyer qu’un seul [CTRL:0101:0000]
+par sauvegarde.",0,2988
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"Vous avez déjà envoyé un [CTRL:0101:0000] chromatique
+depuis cette sauvegarde.[CLEAR]
+Il n’est possible d’envoyer qu’un seul [CTRL:0101:0000]
+chromatique par sauvegarde.",0,3224
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"Votre sélection contient au moins un [CTRL:0101:0000].[CLEAR]
+Un [CTRL:0101:0000] a déjà été envoyé depuis cette
+sauvegarde, vous ne pouvez donc pas en envoyer davantage.",0,3508
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"Votre sélection contient au moins un [CTRL:0101:0000] chromatique.[CLEAR]
+Un [CTRL:0101:0000] chromatique a déjà été envoyé depuis
+cette sauvegarde, vous ne pouvez donc pas en envoyer davantage.",0,3796
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"Vous ne pouvez envoyer qu’un seul [CTRL:0101:0000]
+par sauvegarde.[CLEAR]
+Il y a plus d’un [CTRL:0101:0000] dans cette Boîte,
+celle-ci ne peut donc pas être envoyée.",0,4132
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"Vous ne pouvez envoyer qu’un seul [CTRL:0101:0000]
+chromatique par sauvegarde.[CLEAR]
+Il y a plus d’un [CTRL:0101:0000] chromatique dans cette Boîte,
+celle-ci ne peut donc pas être envoyée.",0,4408
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"Vous ne pouvez envoyer qu’un seul [CTRL:0101:0000]
+depuis cette sauvegarde.[CLEAR]
+Un [CTRL:0101:0000] est compris dans votre sélection actuelle.
+Souhaitez-vous bien effectuer cet envoi ?",0,4732
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"Vous ne pouvez envoyer qu’un seul [CTRL:0101:0000]
+chromatique depuis cette sauvegarde.[CLEAR]
+Un [CTRL:0101:0000] chromatique est compris
+dans votre sélection actuelle.[RETURN]
+Souhaitez-vous bien effectuer cet envoi ?",0,5052
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"Votre sélection actuelle comprend plus d’un Pokémon
+ne pouvant être envoyé qu’une seule fois[RETURN]
+depuis cette sauvegarde, dont un [CTRL:0101:0000].[CLEAR]
+Souhaitez-vous bien effectuer l’envoi de cette Boîte
+vers Pokémon HOME ?",0,5428
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"Votre sélection actuelle comprend plus d’un Pokémon
+ne pouvant être envoyé qu’une seule fois[RETURN]
+depuis cette sauvegarde, dont un [CTRL:0101:0000] chromatique.[CLEAR]
+Souhaitez-vous bien effectuer l’envoi de cette Boîte
+vers Pokémon HOME ?",0,5852
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"Cette Boîte contient un Pokémon ne pouvant pas
+être envoyé vers Pokémon HOME.",0,6300
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,Cette Boîte ne contient aucun Pokémon.,0,6456
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"Cette Boîte contient plus de Pokémon que vous ne pouvez
+en déposer dans Pokémon HOME.",0,6536

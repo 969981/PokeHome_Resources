@@ -1,0 +1,373 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,mes_ribbon_name_000,EFD55246391A3E8A,칼로스챔피언리본,0,2580
+1,mes_ribbon_name_001,EFD55346391A403D,챔피언리본,0,2600
+2,mes_ribbon_name_002,EFD55046391A3B24,신오챔피언리본,0,2612
+3,mes_ribbon_name_003,EFD55146391A3CD7,절친리본,0,2628
+4,mes_ribbon_name_004,EFD54E46391A37BE,수행리본,0,2640
+5,mes_ribbon_name_005,EFD54F46391A3971,그레이트배틀리본,0,2652
+6,mes_ribbon_name_006,EFD54C46391A3458,마스터배틀리본,0,2672
+7,mes_ribbon_name_007,EFD54D46391A360B,노력리본,0,2688
+8,mes_ribbon_name_008,EFD54A46391A30F2,뚝심리본,0,2700
+9,mes_ribbon_name_009,EFD54B46391A32A5,철렁리본,0,2712
+10,mes_ribbon_name_010,EFD8B846391D21B3,풀죽기리본,0,2724
+11,mes_ribbon_name_011,EFD8B746391D2000,덜렁이리본,0,2736
+12,mes_ribbon_name_012,EFD8BA46391D2519,상쾌리본,0,2748
+13,mes_ribbon_name_013,EFD8B946391D2366,잠보리본,0,2760
+14,mes_ribbon_name_014,EFD8BC46391D287F,방글방글리본,0,2772
+15,mes_ribbon_name_015,EFD8BB46391D26CC,고저스리본,0,2788
+16,mes_ribbon_name_016,EFD8BE46391D2BE5,로열리본,0,2800
+17,mes_ribbon_name_017,EFD8BD46391D2A32,고저스로열리본,0,2812
+18,mes_ribbon_name_018,EFD8C046391D2F4B,브로마이드리본,0,2828
+19,mes_ribbon_name_019,EFD8BF46391D2D98,발자국리본,0,2844
+20,mes_ribbon_name_020,EFCEC6463914E4F8,레코드리본,0,2856
+21,mes_ribbon_name_021,EFCEC7463914E6AB,레전드리본,0,2868
+22,mes_ribbon_name_022,EFCEC8463914E85E,컨트리리본,0,2880
+23,mes_ribbon_name_023,EFCEC9463914EA11,내셔널리본,0,2892
+24,mes_ribbon_name_024,EFCECA463914EBC4,어스리본,0,2904
+25,mes_ribbon_name_025,EFCECB463914ED77,월드리본,0,2916
+26,mes_ribbon_name_026,EFCECC463914EF2A,클래식리본,0,2928
+27,mes_ribbon_name_027,EFCECD463914F0DD,프리미어리본,0,2940
+28,mes_ribbon_name_028,EFCEBE463914D760,이벤트리본,0,2956
+29,mes_ribbon_name_029,EFCEBF463914D913,버스데이리본,0,2968
+30,mes_ribbon_name_030,EFD24C463917FE81,스페셜리본,0,2984
+31,mes_ribbon_name_031,EFD24B463917FCCE,메모리얼리본,0,2996
+32,mes_ribbon_name_032,EFD24A463917FB1B,위시리본,0,3012
+33,mes_ribbon_name_033,EFD249463917F968,배틀챔피언리본,0,3024
+34,mes_ribbon_name_034,EFD250463918054D,에리어챔피언리본,0,3040
+35,mes_ribbon_name_035,EFD24F463918039A,내셔널챔피언리본,0,3060
+36,mes_ribbon_name_036,EFD24E46391801E7,월드챔피언리본,0,3080
+37,mes_ribbon_name_037,EFD24D4639180034,추억콘테스트리본,0,3096
+38,mes_ribbon_name_038,EFD244463917F0E9,추억배틀리본,0,3116
+39,mes_ribbon_name_039,EFD243463917EF36,호연챔피언리본,0,3132
+40,mes_ribbon_name_040,EFE34A4639266E4E,콘테스트스타리본,0,3148
+41,mes_ribbon_name_041,EFE34B4639267001,근사함마스터리본,0,3168
+42,mes_ribbon_name_042,EFE3484639266AE8,아름다움마스터리본,0,3188
+43,mes_ribbon_name_043,EFE3494639266C9B,귀여움마스터리본,0,3208
+44,mes_ribbon_name_044,EFE34E463926751A,슬기로움마스터리본,0,3228
+45,mes_ribbon_name_045,EFE34F46392676CD,강인함마스터리본,0,3248
+46,mes_ribbon_name_046,EFE34C46392671B4,알로라챔피언리본,0,3268
+47,mes_ribbon_name_047,EFE34D4639267367,로열마스터리본,0,3288
+48,mes_ribbon_name_048,EFE34246392660B6,그레이트트리리본,0,3304
+49,mes_ribbon_name_049,EFE3434639266269,마스터트리리본,0,3324
+50,mes_ribbon_name_050,EFE650463928AE57,가라르챔피언리본,0,3340
+51,mes_ribbon_name_051,EFE64F463928ACA4,마스터타워리본,0,3360
+52,mes_ribbon_name_052,EFE652463928B1BD,마스터랭크리본,0,3376
+53,mes_ribbon_name_053,EFE651463928B00A,정오의증표,0,3392
+54,mes_ribbon_name_054,EFE64C463928A78B,자정의증표,0,3404
+55,mes_ribbon_name_055,EFE64B463928A5D8,황혼의증표,0,3416
+56,mes_ribbon_name_056,EFE64E463928AAF1,새벽의증표,0,3428
+57,mes_ribbon_name_057,EFE64D463928A93E,흐림의증표,0,3440
+58,mes_ribbon_name_058,EFE648463928A0BF,강우의증표,0,3452
+59,mes_ribbon_name_059,EFE6474639289F0C,우레의증표,0,3464
+60,mes_ribbon_name_060,EFDC3E4639203B3C,강설의증표,0,3476
+61,mes_ribbon_name_061,EFDC3F4639203CEF,폭설의증표,0,3488
+62,mes_ribbon_name_062,EFDC404639203EA2,건조의증표,0,3500
+63,mes_ribbon_name_063,EFDC414639204055,모래먼지의증표,0,3512
+64,mes_ribbon_name_064,EFDC3A4639203470,짙은안개의증표,0,3528
+65,mes_ribbon_name_065,EFDC3B4639203623,운명의증표,0,3544
+66,mes_ribbon_name_066,EFDC3C46392037D6,낚아올린증표,0,3556
+67,mes_ribbon_name_067,EFDC3D4639203989,카레의증표,0,3572
+68,mes_ribbon_name_068,EFDC4646392048D4,가끔보는증표,0,3584
+69,mes_ribbon_name_069,EFDC474639204A87,본적없는증표,0,3600
+70,mes_ribbon_name_070,EFDFC446392354C5,장난꾸러기증표,0,3616
+71,mes_ribbon_name_071,EFDFC34639235312,촐랑거리는증표,0,3632
+72,mes_ribbon_name_072,EFDFC2463923515F,긴장의증표,0,3648
+73,mes_ribbon_name_073,EFDFC14639234FAC,기대의증표,0,3660
+74,mes_ribbon_name_074,EFDFC04639234DF9,카리스마의증표,0,3672
+75,mes_ribbon_name_075,EFDFBF4639234C46,냉정의증표,0,3688
+76,mes_ribbon_name_076,EFDFBE4639234A93,정열의증표,0,3700
+77,mes_ribbon_name_077,EFDFBD46392348E0,방심의증표,0,3712
+78,mes_ribbon_name_078,EFDFCC463923625D,다행의증표,0,3724
+79,mes_ribbon_name_079,EFDFCB46392360AA,분노의증표,0,3736
+80,mes_ribbon_name_080,EFBA424639035BA2,미소의증표,0,3748
+81,mes_ribbon_name_081,EFBA434639035D55,비통의증표,0,3760
+82,mes_ribbon_name_082,EFBA40463903583C,쾌조의증표,0,3772
+83,mes_ribbon_name_083,EFBA4146390359EF,격렬의증표,0,3784
+84,mes_ribbon_name_084,EFBA3E46390354D6,이성의증표,0,3796
+85,mes_ribbon_name_085,EFBA3F4639035689,본능의증표,0,3808
+86,mes_ribbon_name_086,EFBA3C4639035170,교활의증표,0,3820
+87,mes_ribbon_name_087,EFBA3D4639035323,두려움의증표,0,3832
+88,mes_ribbon_name_088,EFBA4A463903693A,상냥함의증표,0,3848
+89,mes_ribbon_name_089,EFBA4B4639036AED,동요의증표,0,3864
+90,mes_ribbon_name_090,EFBDC8463906752B,고양의증표,0,3876
+91,mes_ribbon_name_091,EFBDC74639067378,권태의증표,0,3888
+92,mes_ribbon_name_092,EFBDCA4639067891,자신의증표,0,3900
+93,mes_ribbon_name_093,EFBDC946390676DE,불신의증표,0,3912
+94,mes_ribbon_name_094,EFBDCC4639067BF7,순박의증표,0,3924
+95,mes_ribbon_name_095,EFBDCB4639067A44,불순의증표,0,3936
+96,mes_ribbon_name_096,EFBDCE4639067F5D,기력의증표,0,3948
+97,mes_ribbon_name_097,EFBDCD4639067DAA,피곤의증표,0,3960
+98,mes_ribbon_name_098,EFBDC04639066793,히스이리본,0,3972
+99,mes_ribbon_name_099,EFBDBF46390665E0,트윙클스타리본,0,3984
+100,mes_ribbon_name_100,F8EBED463E5F4575,팔데아챔피언리본,0,4000
+101,mes_ribbon_name_101,F8EBEC463E5F43C2,커다란증표,0,4020
+102,mes_ribbon_name_102,F8EBEB463E5F420F,조그만증표,0,4032
+103,mes_ribbon_name_103,F8EBEA463E5F405C,습득의증표,0,4044
+104,mes_ribbon_name_104,F8EBE9463E5F3EA9,파트너의증표,0,4056
+105,mes_ribbon_name_105,F8EBE8463E5F3CF6,미식가의증표,0,4072
+106,mes_ribbon_name_106,F8EBE7463E5F3B43,천재일우리본,0,4088
+107,mes_ribbon_name_107,F8EBE6463E5F3990,우두머리의증표,0,4104
+108,mes_ribbon_name_108,F8EBF5463E5F530D,최강의증표,0,4120
+109,mes_ribbon_name_109,F8EBF4463E5F515A,주인의증표,0,4132
+110,mes_ribbon_name_110,F8E867463E5C2BEC,파트너리본,0,4144
+111,mes_ribbon_info_000,20F93C62D8DCE9C9,"칼로스에서 챔피언에게 이겨서
+전당등록한 기념리본",0,4156
+112,mes_ribbon_info_001,20F93B62D8DCE816,"옛날 어딘가의 리그에서 이겨서
+전당등록한 기념리본",0,4212
+113,mes_ribbon_info_002,20F93A62D8DCE663,"신오에서 챔피언에게 이겨서
+전당등록한 기념리본",0,4268
+114,mes_ribbon_info_003,20F93962D8DCE4B0,"깊은 인연으로 맺어진
+포켓몬에게 수여되는 리본",0,4320
+115,mes_ribbon_info_004,20F94062D8DCF095,"가혹한 시련을 뛰어넘은
+포켓몬에게 수여되는 리본",0,4372
+116,mes_ribbon_info_005,20F93F62D8DCEEE2,"혹독한 배틀에서 승리한
+포켓몬에게 수여되는 리본",0,4428
+117,mes_ribbon_info_006,20F93E62D8DCED2F,"배틀을 평정한
+강한 포켓몬에게 수여되는 리본",0,4484
+118,mes_ribbon_info_007,20F93D62D8DCEB7C,"많이 노력하고 있는
+포켓몬에게 수여되는 리본",0,4536
+119,mes_ribbon_info_008,20F94462D8DCF761,"의지를 굽히지 않았던 일을 떠올려서
+인생의 에너지가 되는 리본",0,4588
+120,mes_ribbon_info_009,20F94362D8DCF5AE,"두근두근했던 일을 떠올려서
+인생을 설레게 하는 리본",0,4660
+121,mes_ribbon_info_010,20F5B662D8D9D040,"쓸쓸했던 기분을 떠올려서
+인생의 묘미가 되는 리본",0,4720
+122,mes_ribbon_info_011,20F5B762D8D9D1F3,"깜빡했던 실패를 떠올려서
+인생의 에센스가 되는 리본",0,4776
+123,mes_ribbon_info_012,20F5B862D8D9D3A6,"산뜻했던 경험을 떠올려서
+인생을 산뜻하게 만들어 주는 리본",0,4836
+124,mes_ribbon_info_013,20F5B962D8D9D559,"푹 잠들었던 것을 떠올려서
+인생에 평온함을 주는 리본",0,4904
+125,mes_ribbon_info_014,20F5BA62D8D9D70C,"방긋 미소 지을 일을 떠올려서
+인생을 풍부하게 해 주는 리본",0,4964
+126,mes_ribbon_info_015,20F5BB62D8D9D8BF,"더할 나위 없이 호화롭고
+화려한 느낌의 리본",0,5032
+127,mes_ribbon_info_016,20F5BC62D8D9DA72,"굉장히 기품있고
+고상한 느낌이 나는 리본",0,5084
+128,mes_ribbon_info_017,20F5BD62D8D9DC25,"이보다 더 훌륭한 것이 없을 만큼
+호화스럽고 기품 있는 리본",0,5132
+129,mes_ribbon_info_018,20F5BE62D8D9DDD8,"호연에서 호화로운 초상화의
+모델이 된 기념리본",0,5200
+130,mes_ribbon_info_019,20F5BF62D8D9DF8B,"최고의 발자국을 가진
+포켓몬이 받을 수 있는 리본",0,5252
+131,mes_ribbon_info_020,21004862D8E31CDB,"대단한 기록을 남긴
+기념리본",0,5308
+132,mes_ribbon_info_021,21004762D8E31B28,"전설적 기록을 남긴
+기념리본",0,5340
+133,mes_ribbon_info_022,21004A62D8E32041,"포켓몬리그
+우승 기념리본",0,5372
+134,mes_ribbon_info_023,21004962D8E31E8E,"모든 고난을
+극복한 기념리본",0,5400
+135,mes_ribbon_info_024,21004C62D8E323A7,"100명에게 승리 달성
+기념리본",0,5432
+136,mes_ribbon_info_025,21004B62D8E321F4,"포켓몬리그
+우승 기념리본",0,5468
+137,mes_ribbon_info_026,21004E62D8E3270D,"포켓몬을 매우 좋아하는 것을
+증명하는 기념리본",0,5496
+138,mes_ribbon_info_027,21004D62D8E3255A,기념일 기념리본,0,5548
+139,mes_ribbon_info_028,21004062D8E30F43,"포켓몬 이벤트에
+참가한 기념리본",0,5568
+140,mes_ribbon_info_029,21003F62D8E30D90,생일 기념리본,0,5604
+141,mes_ribbon_info_030,20FCC262D8E00352,특별한 날의 특별한 리본,0,5620
+142,mes_ribbon_info_031,20FCC362D8E00505,특별한 추억을 기념하는 리본,0,5648
+143,mes_ribbon_info_032,20FCC062D8DFFFEC,소원이 이루어진다고 전해지는 리본,0,5680
+144,mes_ribbon_info_033,20FCC162D8E0019F,배틀 대회 우승 기념리본,0,5720
+145,mes_ribbon_info_034,20FCBE62D8DFFC86,"포켓몬 월드 챔피언십
+에리어 대회 우승 기념리본",0,5748
+146,mes_ribbon_info_035,20FCBF62D8DFFE39,"포켓몬 월드 챔피언십
+국내 대회 우승 기념리본",0,5804
+147,mes_ribbon_info_036,20FCBC62D8DFF920,"포켓몬 월드 챔피언십
+세계 대회 우승 기념리본",0,5856
+148,mes_ribbon_info_037,20FCBD62D8DFFAD3,"옛날 어딘가에서 수집한 리본
+콘테스트의 추억이 담겨 있다!",0,5908
+149,mes_ribbon_info_038,20FCCA62D8E010EA,"옛날 어딘가에서 수집한 리본
+배틀의 추억이 담겨 있다!",0,5976
+150,mes_ribbon_info_039,20FCCB62D8E0129D,"호연에서 챔피언에게 이겨서
+전당등록한 기념리본",0,6040
+151,mes_ribbon_info_040,2106D462D8E8766D,"모든 콘테스트에서 대활약한
+포켓몬에게 수여되는 기념리본",0,6092
+152,mes_ribbon_info_041,2106D362D8E874BA,"콘테스트에서 근사함을 발휘한
+포켓몬에게 수여되는 기념리본",0,6156
+153,mes_ribbon_info_042,2106D262D8E87307,"콘테스트에서 아름다움을 발휘한
+포켓몬에게 수여되는 기념리본",0,6220
+154,mes_ribbon_info_043,2106D162D8E87154,"콘테스트에서 귀여움을 발휘한
+포켓몬에게 수여되는 기념리본",0,6288
+155,mes_ribbon_info_044,2106D062D8E86FA1,"콘테스트에서 슬기로움을 발휘한
+포켓몬에게 수여되는 기념리본",0,6352
+156,mes_ribbon_info_045,2106CF62D8E86DEE,"콘테스트에서 강인함을 발휘한
+포켓몬에게 수여되는 기념리본",0,6420
+157,mes_ribbon_info_046,2106CE62D8E86C3B,"알로라에서 챔피언이 되어
+전당등록한 기념리본",0,6484
+158,mes_ribbon_info_047,2106CD62D8E86A88,"배틀로열을 이겨 낸
+포켓몬에게 수여되는 기념리본",0,6536
+159,mes_ribbon_info_048,2106CC62D8E868D5,"배틀트리의 배틀레전드를
+이긴 기념리본",0,6592
+160,mes_ribbon_info_049,2106CB62D8E86722,"배틀트리의 배틀레전드를
+슈퍼배틀에서 이긴 기념리본",0,6636
+161,mes_ribbon_info_050,21034E62D8E55CE4,"가라르에서 챔피언이 되어
+전당등록한 기념리본",0,6692
+162,mes_ribbon_info_051,21034F62D8E55E97,"배틀타워의 챔피언을
+이긴 기념리본",0,6744
+163,mes_ribbon_info_052,21035062D8E5604A,"랭크배틀의 마스터볼급에서
+트레이너를 이긴 기념리본",0,6784
+164,mes_ribbon_info_053,21035162D8E561FD,배가 고픈 포켓몬임을 나타내는 증표,0,6840
+165,mes_ribbon_info_054,21034A62D8E55618,졸린 포켓몬임을 나타내는 증표,0,6880
+166,mes_ribbon_info_055,21034B62D8E557CB,슬슬 졸린 포켓몬임을 나타내는 증표,0,6916
+167,mes_ribbon_info_056,21034C62D8E5597E,일찍 일어난 포켓몬임을 나타내는 증표,0,6956
+168,mes_ribbon_info_057,21034D62D8E55B31,구름을 바라보는 포켓몬임을 나타내는 증표,0,7000
+169,mes_ribbon_info_058,21034662D8E54F4C,비에 젖은 포켓몬임을 나타내는 증표,0,7048
+170,mes_ribbon_info_059,21034762D8E550FF,번개에 놀라는 포켓몬임을 나타내는 증표,0,7088
+171,mes_ribbon_info_060,210DC062D8EE731F,눈밭을 구르는 포켓몬임을 나타내는 증표,0,7132
+172,mes_ribbon_info_061,210DBF62D8EE716C,추위에 떠는 포켓몬임을 나타내는 증표,0,7176
+173,mes_ribbon_info_062,210DC262D8EE7685,목이 마른 포켓몬임을 나타내는 증표,0,7220
+174,mes_ribbon_info_063,210DC162D8EE74D2,모래투성이인 포켓몬임을 나타내는 증표,0,7260
+175,mes_ribbon_info_064,210DBC62D8EE6C53,안개 속을 헤매는 포켓몬임을 나타내는 증표,0,7304
+176,mes_ribbon_info_065,210DBB62D8EE6AA0,운명을 느끼는 포켓몬임을 나타내는 증표,0,7352
+177,mes_ribbon_info_066,210DBE62D8EE6FB9,방금 낚아 팔팔한 포켓몬임을 나타내는 증표,0,7396
+178,mes_ribbon_info_067,210DBD62D8EE6E06,카레를 좋아하는 포켓몬임을 나타내는 증표,0,7444
+179,mes_ribbon_info_068,210DC862D8EE80B7,사람을 따르는 포켓몬임을 나타내는 증표,0,7492
+180,mes_ribbon_info_069,210DC762D8EE7F04,사람을 모르는 포켓몬임을 나타내는 증표,0,7536
+181,mes_ribbon_info_070,210A3A62D8EB5996,난폭한 포켓몬임을 나타내는 증표,0,7580
+182,mes_ribbon_info_071,210A3B62D8EB5B49,아무 생각이 없는 포켓몬임을 나타내는 증표,0,7616
+183,mes_ribbon_info_072,210A3862D8EB5630,두근거리는 포켓몬임을 나타내는 증표,0,7664
+184,mes_ribbon_info_073,210A3962D8EB57E3,기대에 찬 포켓몬임을 나타내는 증표,0,7704
+185,mes_ribbon_info_074,210A3E62D8EB6062,오라가 느껴지는 포켓몬임을 나타내는 증표,0,7744
+186,mes_ribbon_info_075,210A3F62D8EB6215,쿨한 포켓몬임을 나타내는 증표,0,7792
+187,mes_ribbon_info_076,210A3C62D8EB5CFC,적극적인 포켓몬임을 나타내는 증표,0,7828
+188,mes_ribbon_info_077,210A3D62D8EB5EAF,멍한 포켓몬임을 나타내는 증표,0,7868
+189,mes_ribbon_info_078,210A4262D8EB672E,행복해 보이는 포켓몬임을 나타내는 증표,0,7904
+190,mes_ribbon_info_079,210A4362D8EB68E1,화가 난 포켓몬임을 나타내는 증표,0,7948
+191,mes_ribbon_info_080,21144C62D8F3CCB1,생긋생긋 웃는 포켓몬임을 나타내는 증표,0,7988
+192,mes_ribbon_info_081,21144B62D8F3CAFE,훌쩍훌쩍 우는 포켓몬임을 나타내는 증표,0,8032
+193,mes_ribbon_info_082,21144A62D8F3C94B,기분이 좋은 포켓몬임을 나타내는 증표,0,8076
+194,mes_ribbon_info_083,21144962D8F3C798,기분이 나쁜 포켓몬임을 나타내는 증표,0,8120
+195,mes_ribbon_info_084,21145062D8F3D37D,지적인 포켓몬임을 나타내는 증표,0,8164
+196,mes_ribbon_info_085,21144F62D8F3D1CA,거칠게 날뛰는 포켓몬임을 나타내는 증표,0,8200
+197,mes_ribbon_info_086,21144E62D8F3D017,빈틈을 노리는 포켓몬임을 나타내는 증표,0,8244
+198,mes_ribbon_info_087,21144D62D8F3CE64,엄격한 포켓몬임을 나타내는 증표,0,8288
+199,mes_ribbon_info_088,21144462D8F3BF19,상냥한 포켓몬임을 나타내는 증표,0,8324
+200,mes_ribbon_info_089,21144362D8F3BD66,덤벙대는 포켓몬임을 나타내는 증표,0,8360
+201,mes_ribbon_info_090,21114662D8F18CA8,의욕이 넘치는 포켓몬임을 나타내는 증표,0,8400
+202,mes_ribbon_info_091,21114762D8F18E5B,의욕이 없는 포켓몬임을 나타내는 증표,0,8444
+203,mes_ribbon_info_092,21114862D8F1900E,거만한 포켓몬임을 나타내는 증표,0,8488
+204,mes_ribbon_info_093,21114962D8F191C1,자신감이 없는 포켓몬임을 나타내는 증표,0,8524
+205,mes_ribbon_info_094,21114A62D8F19374,순박한 포켓몬임을 나타내는 증표,0,8568
+206,mes_ribbon_info_095,21114B62D8F19527,잘난 체하는 포켓몬임을 나타내는 증표,0,8604
+207,mes_ribbon_info_096,21114C62D8F196DA,기운이 넘치는 포켓몬임을 나타내는 증표,0,8648
+208,mes_ribbon_info_097,21114D62D8F1988D,어딘가 지쳐 보이는 포켓몬임을 나타내는 증표,0,8692
+209,mes_ribbon_info_098,21113E62D8F17F10,"먼 옛날 히스이에서
+사진 모델이 된 기념리본",0,8744
+210,mes_ribbon_info_099,21113F62D8F180C3,"슈퍼 콘테스트 쇼!에서 최고의 반짝임을 발휘한
+포켓몬에게 수여되는 기념리본",0,8796
+211,mes_ribbon_info_100,184FA162D3F4B4BE,"팔데아에서 챔피언이 되어
+전당등록한 기념리본",0,8880
+212,mes_ribbon_info_101,184FA262D3F4B671,가장 큰 포켓몬임을 나타내는 증표,0,8932
+213,mes_ribbon_info_102,184F9F62D3F4B158,가장 작은 포켓몬임을 나타내는 증표,0,8972
+214,mes_ribbon_info_103,184FA062D3F4B30B,물건을 잘 줍는 포켓몬임을 나타내는 증표,0,9012
+215,mes_ribbon_info_104,184FA562D3F4BB8A,절친한 포켓몬임을 나타내는 증표,0,9060
+216,mes_ribbon_info_105,184FA662D3F4BD3D,미식가인 포켓몬임을 나타내는 증표,0,9096
+217,mes_ribbon_info_106,184FA362D3F4B824,"매지컬 교환으로 손에 넣은 포켓몬이
+매우 드물게 달고 있는 희귀한 리본",0,9136
+218,mes_ribbon_info_107,184FA462D3F4B9D7,우두머리였던 포켓몬임을 나타내는 증표,0,9216
+219,mes_ribbon_info_108,184F9962D3F4A726,특별히 강한 포켓몬임을 나타내는 증표,0,9260
+220,mes_ribbon_info_109,184F9A62D3F4A8D9,주인이었던 포켓몬임을 나타내는 증표,0,9304
+221,mes_ribbon_info_110,18532762D3F7CE47,"특별한 트레이너로부터 받은
+파트너가 달고 있는 특별한 리본",0,9344
+222,mes_another_name_000,173EBBCED5F75421,[REF:222],0,9412
+223,mes_another_name_001,173EBACED5F7526E,[REF:223],0,9424
+224,mes_another_name_002,173EB9CED5F750BB,[REF:224],0,9436
+225,mes_another_name_003,173EB8CED5F74F08,[REF:225],0,9448
+226,mes_another_name_004,173EBFCED5F75AED,[REF:226],0,9460
+227,mes_another_name_005,173EBECED5F7593A,[REF:227],0,9472
+228,mes_another_name_006,173EBDCED5F75787,[REF:228],0,9484
+229,mes_another_name_007,173EBCCED5F755D4,[REF:229],0,9496
+230,mes_another_name_008,173EB3CED5F74689,[REF:230],0,9508
+231,mes_another_name_009,173EB2CED5F744D6,[REF:231],0,9520
+232,mes_another_name_010,173B35CED5F43A98,[REF:232],0,9532
+233,mes_another_name_011,173B36CED5F43C4B,[REF:233],0,9544
+234,mes_another_name_012,173B37CED5F43DFE,[REF:234],0,9556
+235,mes_another_name_013,173B38CED5F43FB1,[REF:235],0,9568
+236,mes_another_name_014,173B39CED5F44164,[REF:236],0,9580
+237,mes_another_name_015,173B3ACED5F44317,[REF:237],0,9592
+238,mes_another_name_016,173B3BCED5F444CA,[REF:238],0,9604
+239,mes_another_name_017,173B3CCED5F4467D,[REF:239],0,9616
+240,mes_another_name_018,173B2DCED5F42D00,[REF:240],0,9628
+241,mes_another_name_019,173B2ECED5F42EB3,[REF:241],0,9640
+242,mes_another_name_020,1745A7CED5FD50D3,[REF:242],0,9652
+243,mes_another_name_021,1745A6CED5FD4F20,[REF:243],0,9664
+244,mes_another_name_022,1745A9CED5FD5439,[REF:244],0,9676
+245,mes_another_name_023,1745A8CED5FD5286,[REF:245],0,9688
+246,mes_another_name_024,1745ABCED5FD579F,[REF:246],0,9700
+247,mes_another_name_025,1745AACED5FD55EC,[REF:247],0,9712
+248,mes_another_name_026,1745ADCED5FD5B05,[REF:248],0,9724
+249,mes_another_name_027,1745ACCED5FD5952,[REF:249],0,9736
+250,mes_another_name_028,1745AFCED5FD5E6B,[REF:250],0,9748
+251,mes_another_name_029,1745AECED5FD5CB8,[REF:251],0,9760
+252,mes_another_name_030,174241CED5FA6DAA,[REF:252],0,9772
+253,mes_another_name_031,174242CED5FA6F5D,[REF:253],0,9784
+254,mes_another_name_032,17423FCED5FA6A44,[REF:254],0,9796
+255,mes_another_name_033,174240CED5FA6BF7,[REF:255],0,9808
+256,mes_another_name_034,17423DCED5FA66DE,[REF:256],0,9820
+257,mes_another_name_035,17423ECED5FA6891,[REF:257],0,9832
+258,mes_another_name_036,17423BCED5FA6378,[REF:258],0,9844
+259,mes_another_name_037,17423CCED5FA652B,[REF:259],0,9856
+260,mes_another_name_038,174239CED5FA6012,[REF:260],0,9868
+261,mes_another_name_039,17423ACED5FA61C5,[REF:261],0,9880
+262,mes_another_name_040,174C33CED602AA65,[REF:262],0,9892
+263,mes_another_name_041,174C32CED602A8B2,[REF:263],0,9904
+264,mes_another_name_042,174C31CED602A6FF,[REF:264],0,9916
+265,mes_another_name_043,174C30CED602A54C,[REF:265],0,9928
+266,mes_another_name_044,174C2FCED602A399,[REF:266],0,9940
+267,mes_another_name_045,174C2ECED602A1E6,[REF:267],0,9952
+268,mes_another_name_046,174C2DCED602A033,[REF:268],0,9964
+269,mes_another_name_047,174C2CCED6029E80,[REF:269],0,9976
+270,mes_another_name_048,174C3BCED602B7FD,[REF:270],0,9988
+271,mes_another_name_049,174C3ACED602B64A,[REF:271],0,10000
+272,mes_another_name_050,17492DCED6006A5C,[REF:272],0,10012
+273,mes_another_name_051,17492ECED6006C0F,[REF:273],0,10024
+274,mes_another_name_052,17492FCED6006DC2,[REF:274],0,10036
+275,mes_another_name_053,174930CED6006F75,[REF:275],0,10048
+276,mes_another_name_054,174929CED6006390,[REF:276],0,10060
+277,mes_another_name_055,17492ACED6006543,[REF:277],0,10072
+278,mes_another_name_056,17492BCED60066F6,[REF:278],0,10084
+279,mes_another_name_057,17492CCED60068A9,[REF:279],0,10096
+280,mes_another_name_058,174935CED60077F4,[REF:280],0,10108
+281,mes_another_name_059,174936CED60079A7,[REF:281],0,10120
+282,mes_another_name_060,17533FCED608DD77,[REF:282],0,10132
+283,mes_another_name_061,17533ECED608DBC4,[REF:283],0,10144
+284,mes_another_name_062,175341CED608E0DD,[REF:284],0,10156
+285,mes_another_name_063,175340CED608DF2A,[REF:285],0,10168
+286,mes_another_name_064,17533BCED608D6AB,[REF:286],0,10180
+287,mes_another_name_065,17533ACED608D4F8,[REF:287],0,10192
+288,mes_another_name_066,17533DCED608DA11,[REF:288],0,10204
+289,mes_another_name_067,17533CCED608D85E,[REF:289],0,10216
+290,mes_another_name_068,175337CED608CFDF,[REF:290],0,10228
+291,mes_another_name_069,175336CED608CE2C,[REF:291],0,10240
+292,mes_another_name_070,174FB9CED605C3EE,[REF:292],0,10252
+293,mes_another_name_071,174FBACED605C5A1,[REF:293],0,10264
+294,mes_another_name_072,174FB7CED605C088,[REF:294],0,10276
+295,mes_another_name_075,174FBECED605CC6D,[REF:295],0,10288
+296,mes_another_name_076,174FBBCED605C754,[REF:296],0,10300
+297,mes_another_name_077,174FBCCED605C907,[REF:297],0,10312
+298,mes_another_name_078,174FB1CED605B656,[REF:298],0,10324
+299,mes_another_name_079,174FB2CED605B809,[REF:299],0,10336
+300,mes_another_name_080,1723ABCED5E07139,[REF:300],0,10348
+301,mes_another_name_081,1723AACED5E06F86,[REF:301],0,10360
+302,mes_another_name_082,1723A9CED5E06DD3,[REF:302],0,10372
+303,mes_another_name_083,1723A8CED5E06C20,[REF:303],0,10384
+304,mes_another_name_084,1723AFCED5E07805,[REF:304],0,10396
+305,mes_another_name_085,1723AECED5E07652,[REF:305],0,10408
+306,mes_another_name_086,1723ADCED5E0749F,[REF:306],0,10420
+307,mes_another_name_087,1723ACCED5E072EC,[REF:307],0,10432
+308,mes_another_name_088,1723B3CED5E07ED1,[REF:308],0,10444
+309,mes_another_name_089,1723B2CED5E07D1E,[REF:309],0,10456
+310,mes_another_name_090,172025CED5DD57B0,[REF:310],0,10468
+311,mes_another_name_091,172026CED5DD5963,[REF:311],0,10480
+312,mes_another_name_092,172027CED5DD5B16,[REF:312],0,10492
+313,mes_another_name_093,172028CED5DD5CC9,[REF:313],0,10504
+314,mes_another_name_094,172029CED5DD5E7C,[REF:314],0,10516
+315,mes_another_name_095,17202ACED5DD602F,[REF:315],0,10528
+316,mes_another_name_096,17202BCED5DD61E2,[REF:316],0,10540
+317,mes_another_name_097,17202CCED5DD6395,[REF:317],0,10552
+318,mes_another_name_098,17202DCED5DD6548,[REF:318],0,10564
+319,mes_another_name_099,17202ECED5DD66FB,[REF:319],0,10576

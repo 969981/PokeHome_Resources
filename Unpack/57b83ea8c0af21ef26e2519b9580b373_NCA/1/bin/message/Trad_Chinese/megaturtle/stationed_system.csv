@@ -1,0 +1,85 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_stationed_time,163732EE7FD7089B,[REF:0],0,364
+1,nx_stationed_login,F9D68A6C971B932F,"正在登入『Pokémon HOME』……
+請稍候片刻。",0,376
+2,nx_stationed_login_moving,2654C1EFAC981C96,"正在進行轉移！[CLEAR]
+轉移完成之前，
+無法使用『Pokémon HOME』。[CLEAR]
+請過一段時間後重新登入。",0,432
+3,nx_stationed_login_moving_ng,D0B83E0C548E1BE8,"來自寶可夢虛擬銀行的轉移操作失敗。[CLEAR]
+由於發生錯誤，目前使用受到限制。
+請向用戶服務洽詢。",0,544
+4,nx_stationed_login_moving_retry1,6CDFF67E2B1206B6,"來自寶可夢虛擬銀行的轉移操作失敗。[CLEAR]
+『Pokémon HOME』的盒子裡空間不足！
+請整理盒子之後再試一次。",0,640
+5,nx_stationed_login_moving_retry2,6CDFF57E2B120503,"來自寶可夢虛擬銀行的轉移操作失敗。[CLEAR]
+請重新轉移。",0,756
+6,nx_stationed_login_lock_10,C7CB49F1D293AEA1,"你正在其他裝置上
+使用『Pokémon HOME』！[CLEAR]
+如果你在這台主機登入，
+操作到途中的資料可能不會被儲存。[CLEAR]
+確定要登入『Pokémon HOME』嗎？",0,812
+7,nx_stationed_login_lock_11,C7CB48F1D293ACEE,登入,0,980
+8,nx_stationed_login_lock_12,C7CB47F1D293AB3B,退出,0,988
+9,nx_stationed_login_lock_20,C7CECFF1D296C82A,"你正在其他裝置上
+使用『Pokémon HOME』！[CLEAR]
+由於正在進行重要的操作，
+現在無法在這台主機上登入。",0,996
+10,nx_stationed_login_none,65EDC6D945E3E542,"現在無法從這個Nintendo Account
+連線到原本的盒子。[CLEAR]
+請到智慧型手機版『Pokémon HOME』
+確認Nintendo Account的連結狀況。[CLEAR]
+從主機的設定中刪除
+『Pokémon HOME』的儲存資料後，[RETURN]
+可重新開始使用『Pokémon HOME』。",0,1112
+11,nx_stationed_message,F5B60E778F34DCC1,,0,1404
+12,nx_stationed_10_N,3DF0B6C2373BBD9E,,0,1408
+13,nx_stationed_01_N_small,3C08F3C0BECFDD6C,,0,1412
+14,nx_stationed_02_N_small,40B8D9D9505A27C5,,0,1416
+15,nx_stationed_03_N_small,2C22B297AD8196B6,,0,1420
+16,nx_stationed_04_N_small,D4D8FEEA054278DF,,0,1424
+17,nx_stationed_05_N_small,67017E69E24F2F80,,0,1428
+18,nx_stationed_06_N_small,A6DB866650E19BB9,,0,1432
+19,nx_stationed_07_N_small,7F56FA029CAF85CA,,0,1436
+20,nx_stationed_08_N_small,238BBA0CB1684393,,0,1440
+21,nx_stationed_09_N_small,58163C472696B494,,0,1444
+22,nx_stationed_10_N_small,7512A608D38D8352,,0,1448
+23,nx_stationed_11_N_small,EABFEA9E7E1E3301,,0,1452
+24,nx_stationed_12_N_small,E788E80CD10C41A8,,0,1456
+25,nx_stationed_13_N_small,E7726C8951AAC007,,0,1460
+26,nx_stationed_14_N_small,BF238F76958B185E,,0,1464
+27,nx_stationed_15_N_small,D8CC1E31633BABCD,,0,1468
+28,nx_stationed_16_N_small,B8F673B968E944D4,,0,1472
+29,nx_stationed_35_N_small,D71C211FFE1AA1BB,,0,1476
+30,nx_stationed_login_none_2,34BAC98D0FE2B6CF,"即將刪除儲存在這台主機中的
+『Pokémon HOME』儲存資料。[RETURN]
+確定要繼續嗎？",0,1480
+31,nx_stationed_login_none_3,34BAC88D0FE2B51C,"正在刪除『Pokémon HOME』的
+儲存資料……",0,1572
+32,nx_stationed_login_none_4,34BAC78D0FE2B369,"已刪除儲存資料。[CLEAR]
+請先返回HOME選單，
+並關閉『Pokémon HOME』後[RETURN]
+再重新啟動。",0,1628
+33,nx_stationed_login_none_5,34BAC68D0FE2B1B6,刪除,0,1736
+34,nx_stationed_login_none_6,34BAC58D0FE2B003,返回,0,1744
+35,nx_stationed_login_go_1,3220729DE15136F6,"已找到從『Pokémon GO』
+傳送過來的寶可夢。[CLEAR]
+從主選單選擇『『Pokémon GO』』後，
+可接收到『Pokémon HOME』。",0,1752
+36,nx_stationed_message_010,F96079E0C3A33757,"在部分的儲存資料中發現了問題。[CLEAR]
+雖然對你目前寄放的寶可夢沒有影響，
+但是『Pokémon HOME』無法啟動。",0,1900
+37,nx_stationed_message_011,F96078E0C3A335A4,"即將初始化儲存在這台主機中的
+『Pokémon HOME』儲存資料的設定。[RETURN]
+確定要繼續嗎？",0,2020
+38,nx_stationed_message_012,F9607BE0C3A33ABD,"正在初始化『Pokémon HOME』
+儲存資料的設定……",0,2120
+39,nx_stationed_message_013,F9607AE0C3A3390A,"已初始化儲存資料的設定。[CLEAR]
+請先返回HOME選單，
+並關閉『Pokémon HOME』後[RETURN]
+再重新啟動。",0,2180
+40,nx_stationed_message_020,F95667E0C39AC43C,"無法啟動『Pokémon HOME』。
+請返回HOME選單，[RETURN]
+並關閉『Pokémon HOME』。",0,2296
+41,nx_stationed_login_none_7,34BAC48D0FE2AE50,是,0,2404
+42,nx_stationed_login_none_8,34BAD38D0FE2C7CD,否,0,2408

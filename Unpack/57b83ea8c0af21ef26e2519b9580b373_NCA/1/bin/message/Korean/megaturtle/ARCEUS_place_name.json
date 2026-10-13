@@ -1,0 +1,787 @@
+[
+  {
+    "hash_fnv64": "FADE0BA571FD5390",
+    "index": 0,
+    "label": "MAPNAME_NOTHING"
+  },
+  {
+    "hash_fnv64": "7C3A2382589CDF12",
+    "index": 1,
+    "label": "MAPNAME_NOTHING_01"
+  },
+  {
+    "hash_fnv64": "4C0B1782A5642760",
+    "index": 2,
+    "label": "MAPNAME_NAZONOBASYO"
+  },
+  {
+    "hash_fnv64": "0E4A765A3F3A33E2",
+    "index": 3,
+    "label": "MAPNAME_NAZONOBASYO_01"
+  },
+  {
+    "hash_fnv64": "DD9E67A3A54EF3FC",
+    "index": 4,
+    "label": "MAPNAME_TOOIBASYO"
+  },
+  {
+    "hash_fnv64": "23EA5E602503300E",
+    "index": 5,
+    "label": "MAPNAME_TOOIBASYO_01"
+  },
+  {
+    "hash_fnv64": "2FA8E96B046AD519",
+    "index": 6,
+    "label": "PLACENAME_AREA00"
+  },
+  {
+    "hash_fnv64": "2FA8E86B046AD366",
+    "index": 7,
+    "label": "PLACENAME_AREA01"
+  },
+  {
+    "hash_fnv64": "2FA8E76B046AD1B3",
+    "index": 8,
+    "label": "PLACENAME_AREA02"
+  },
+  {
+    "hash_fnv64": "2FA8E66B046AD000",
+    "index": 9,
+    "label": "PLACENAME_AREA03"
+  },
+  {
+    "hash_fnv64": "2FA8ED6B046ADBE5",
+    "index": 10,
+    "label": "PLACENAME_AREA04"
+  },
+  {
+    "hash_fnv64": "2FA8EC6B046ADA32",
+    "index": 11,
+    "label": "PLACENAME_AREA05"
+  },
+  {
+    "hash_fnv64": "2FA8EB6B046AD87F",
+    "index": 12,
+    "label": "PLACENAME_AREA06"
+  },
+  {
+    "hash_fnv64": "EB42D7B542A7D410",
+    "index": 13,
+    "label": "PLACENAME_AREA01_R01"
+  },
+  {
+    "hash_fnv64": "EB42DAB542A7D929",
+    "index": 14,
+    "label": "PLACENAME_AREA01_R02"
+  },
+  {
+    "hash_fnv64": "EB42D9B542A7D776",
+    "index": 15,
+    "label": "PLACENAME_AREA01_R03"
+  },
+  {
+    "hash_fnv64": "EB42DCB542A7DC8F",
+    "index": 16,
+    "label": "PLACENAME_AREA01_R04"
+  },
+  {
+    "hash_fnv64": "EB42DBB542A7DADC",
+    "index": 17,
+    "label": "PLACENAME_AREA01_R05"
+  },
+  {
+    "hash_fnv64": "EB42DEB542A7DFF5",
+    "index": 18,
+    "label": "PLACENAME_AREA01_R06"
+  },
+  {
+    "hash_fnv64": "EB42DDB542A7DE42",
+    "index": 19,
+    "label": "PLACENAME_AREA01_R07"
+  },
+  {
+    "hash_fnv64": "EB42E0B542A7E35B",
+    "index": 20,
+    "label": "PLACENAME_AREA01_R08"
+  },
+  {
+    "hash_fnv64": "EB42DFB542A7E1A8",
+    "index": 21,
+    "label": "PLACENAME_AREA01_R09"
+  },
+  {
+    "hash_fnv64": "EB3F72B542A4F29A",
+    "index": 22,
+    "label": "PLACENAME_AREA01_R10"
+  },
+  {
+    "hash_fnv64": "EB3F73B542A4F44D",
+    "index": 23,
+    "label": "PLACENAME_AREA01_R11"
+  },
+  {
+    "hash_fnv64": "EB3F70B542A4EF34",
+    "index": 24,
+    "label": "PLACENAME_AREA01_R12"
+  },
+  {
+    "hash_fnv64": "EB3F71B542A4F0E7",
+    "index": 25,
+    "label": "PLACENAME_AREA01_R13"
+  },
+  {
+    "hash_fnv64": "EB3F6EB542A4EBCE",
+    "index": 26,
+    "label": "PLACENAME_AREA01_R14"
+  },
+  {
+    "hash_fnv64": "EB3F6FB542A4ED81",
+    "index": 27,
+    "label": "PLACENAME_AREA01_R15"
+  },
+  {
+    "hash_fnv64": "EB3F6CB542A4E868",
+    "index": 28,
+    "label": "PLACENAME_AREA01_R16"
+  },
+  {
+    "hash_fnv64": "EB3F6DB542A4EA1B",
+    "index": 29,
+    "label": "PLACENAME_AREA01_R17"
+  },
+  {
+    "hash_fnv64": "EB3F6AB542A4E502",
+    "index": 30,
+    "label": "PLACENAME_AREA01_R18"
+  },
+  {
+    "hash_fnv64": "EB3F6BB542A4E6B5",
+    "index": 31,
+    "label": "PLACENAME_AREA01_R19"
+  },
+  {
+    "hash_fnv64": "EB3BECB542A1D911",
+    "index": 32,
+    "label": "PLACENAME_AREA01_R20"
+  },
+  {
+    "hash_fnv64": "EB3BEBB542A1D75E",
+    "index": 33,
+    "label": "PLACENAME_AREA01_R21"
+  },
+  {
+    "hash_fnv64": "282DADE042A7B3C5",
+    "index": 34,
+    "label": "PLACENAME_AREA02_R01"
+  },
+  {
+    "hash_fnv64": "282DAAE042A7AEAC",
+    "index": 35,
+    "label": "PLACENAME_AREA02_R02"
+  },
+  {
+    "hash_fnv64": "282DABE042A7B05F",
+    "index": 36,
+    "label": "PLACENAME_AREA02_R03"
+  },
+  {
+    "hash_fnv64": "282DA8E042A7AB46",
+    "index": 37,
+    "label": "PLACENAME_AREA02_R04"
+  },
+  {
+    "hash_fnv64": "282DA9E042A7ACF9",
+    "index": 38,
+    "label": "PLACENAME_AREA02_R05"
+  },
+  {
+    "hash_fnv64": "282DA6E042A7A7E0",
+    "index": 39,
+    "label": "PLACENAME_AREA02_R06"
+  },
+  {
+    "hash_fnv64": "282DA7E042A7A993",
+    "index": 40,
+    "label": "PLACENAME_AREA02_R07"
+  },
+  {
+    "hash_fnv64": "282DB4E042A7BFAA",
+    "index": 41,
+    "label": "PLACENAME_AREA02_R08"
+  },
+  {
+    "hash_fnv64": "282DB5E042A7C15D",
+    "index": 42,
+    "label": "PLACENAME_AREA02_R09"
+  },
+  {
+    "hash_fnv64": "283132E042AACB9B",
+    "index": 43,
+    "label": "PLACENAME_AREA02_R10"
+  },
+  {
+    "hash_fnv64": "283131E042AAC9E8",
+    "index": 44,
+    "label": "PLACENAME_AREA02_R11"
+  },
+  {
+    "hash_fnv64": "283134E042AACF01",
+    "index": 45,
+    "label": "PLACENAME_AREA02_R12"
+  },
+  {
+    "hash_fnv64": "283133E042AACD4E",
+    "index": 46,
+    "label": "PLACENAME_AREA02_R13"
+  },
+  {
+    "hash_fnv64": "283136E042AAD267",
+    "index": 47,
+    "label": "PLACENAME_AREA02_R14"
+  },
+  {
+    "hash_fnv64": "283135E042AAD0B4",
+    "index": 48,
+    "label": "PLACENAME_AREA02_R15"
+  },
+  {
+    "hash_fnv64": "86D031F01E0B81E2",
+    "index": 49,
+    "label": "PLACENAME_AREA03_R01"
+  },
+  {
+    "hash_fnv64": "86D030F01E0B802F",
+    "index": 50,
+    "label": "PLACENAME_AREA03_R02"
+  },
+  {
+    "hash_fnv64": "86D02FF01E0B7E7C",
+    "index": 51,
+    "label": "PLACENAME_AREA03_R03"
+  },
+  {
+    "hash_fnv64": "86D02EF01E0B7CC9",
+    "index": 52,
+    "label": "PLACENAME_AREA03_R04"
+  },
+  {
+    "hash_fnv64": "86D02DF01E0B7B16",
+    "index": 53,
+    "label": "PLACENAME_AREA03_R05"
+  },
+  {
+    "hash_fnv64": "86D02CF01E0B7963",
+    "index": 54,
+    "label": "PLACENAME_AREA03_R06"
+  },
+  {
+    "hash_fnv64": "86D02BF01E0B77B0",
+    "index": 55,
+    "label": "PLACENAME_AREA03_R07"
+  },
+  {
+    "hash_fnv64": "86D03AF01E0B912D",
+    "index": 56,
+    "label": "PLACENAME_AREA03_R08"
+  },
+  {
+    "hash_fnv64": "86D039F01E0B8F7A",
+    "index": 57,
+    "label": "PLACENAME_AREA03_R09"
+  },
+  {
+    "hash_fnv64": "86CCACF01E086A0C",
+    "index": 58,
+    "label": "PLACENAME_AREA03_R10"
+  },
+  {
+    "hash_fnv64": "86CCADF01E086BBF",
+    "index": 59,
+    "label": "PLACENAME_AREA03_R11"
+  },
+  {
+    "hash_fnv64": "86CCAEF01E086D72",
+    "index": 60,
+    "label": "PLACENAME_AREA03_R12"
+  },
+  {
+    "hash_fnv64": "86CCAFF01E086F25",
+    "index": 61,
+    "label": "PLACENAME_AREA03_R13"
+  },
+  {
+    "hash_fnv64": "86CCA8F01E086340",
+    "index": 62,
+    "label": "PLACENAME_AREA03_R14"
+  },
+  {
+    "hash_fnv64": "86CCA9F01E0864F3",
+    "index": 63,
+    "label": "PLACENAME_AREA03_R15"
+  },
+  {
+    "hash_fnv64": "86CCAAF01E0866A6",
+    "index": 64,
+    "label": "PLACENAME_AREA03_R16"
+  },
+  {
+    "hash_fnv64": "86CCABF01E086859",
+    "index": 65,
+    "label": "PLACENAME_AREA03_R17"
+  },
+  {
+    "hash_fnv64": "86CCB4F01E0877A4",
+    "index": 66,
+    "label": "PLACENAME_AREA03_R18"
+  },
+  {
+    "hash_fnv64": "86CCB5F01E087957",
+    "index": 67,
+    "label": "PLACENAME_AREA03_R19"
+  },
+  {
+    "hash_fnv64": "86D73EF01E11B6A7",
+    "index": 68,
+    "label": "PLACENAME_AREA03_R20"
+  },
+  {
+    "hash_fnv64": "D422819D7242BD87",
+    "index": 69,
+    "label": "PLACENAME_AREA04_R01"
+  },
+  {
+    "hash_fnv64": "D422829D7242BF3A",
+    "index": 70,
+    "label": "PLACENAME_AREA04_R02"
+  },
+  {
+    "hash_fnv64": "D422839D7242C0ED",
+    "index": 71,
+    "label": "PLACENAME_AREA04_R03"
+  },
+  {
+    "hash_fnv64": "D4227C9D7242B508",
+    "index": 72,
+    "label": "PLACENAME_AREA04_R04"
+  },
+  {
+    "hash_fnv64": "D4227D9D7242B6BB",
+    "index": 73,
+    "label": "PLACENAME_AREA04_R05"
+  },
+  {
+    "hash_fnv64": "D4227E9D7242B86E",
+    "index": 74,
+    "label": "PLACENAME_AREA04_R06"
+  },
+  {
+    "hash_fnv64": "D4227F9D7242BA21",
+    "index": 75,
+    "label": "PLACENAME_AREA04_R07"
+  },
+  {
+    "hash_fnv64": "D422789D7242AE3C",
+    "index": 76,
+    "label": "PLACENAME_AREA04_R08"
+  },
+  {
+    "hash_fnv64": "D422799D7242AFEF",
+    "index": 77,
+    "label": "PLACENAME_AREA04_R09"
+  },
+  {
+    "hash_fnv64": "D426069D7245D55D",
+    "index": 78,
+    "label": "PLACENAME_AREA04_R10"
+  },
+  {
+    "hash_fnv64": "D426059D7245D3AA",
+    "index": 79,
+    "label": "PLACENAME_AREA04_R11"
+  },
+  {
+    "hash_fnv64": "D426049D7245D1F7",
+    "index": 80,
+    "label": "PLACENAME_AREA04_R12"
+  },
+  {
+    "hash_fnv64": "D426039D7245D044",
+    "index": 81,
+    "label": "PLACENAME_AREA04_R13"
+  },
+  {
+    "hash_fnv64": "D426029D7245CE91",
+    "index": 82,
+    "label": "PLACENAME_AREA04_R14"
+  },
+  {
+    "hash_fnv64": "D426019D7245CCDE",
+    "index": 83,
+    "label": "PLACENAME_AREA04_R15"
+  },
+  {
+    "hash_fnv64": "D426009D7245CB2B",
+    "index": 84,
+    "label": "PLACENAME_AREA04_R16"
+  },
+  {
+    "hash_fnv64": "D425FF9D7245C978",
+    "index": 85,
+    "label": "PLACENAME_AREA04_R17"
+  },
+  {
+    "hash_fnv64": "D425FE9D7245C7C5",
+    "index": 86,
+    "label": "PLACENAME_AREA04_R18"
+  },
+  {
+    "hash_fnv64": "7024E7C4B15CD284",
+    "index": 87,
+    "label": "PLACENAME_AREA05_R01"
+  },
+  {
+    "hash_fnv64": "7024EAC4B15CD79D",
+    "index": 88,
+    "label": "PLACENAME_AREA05_R02"
+  },
+  {
+    "hash_fnv64": "7024E9C4B15CD5EA",
+    "index": 89,
+    "label": "PLACENAME_AREA05_R03"
+  },
+  {
+    "hash_fnv64": "7024E4C4B15CCD6B",
+    "index": 90,
+    "label": "PLACENAME_AREA05_R04"
+  },
+  {
+    "hash_fnv64": "7024E3C4B15CCBB8",
+    "index": 91,
+    "label": "PLACENAME_AREA05_R05"
+  },
+  {
+    "hash_fnv64": "7024E6C4B15CD0D1",
+    "index": 92,
+    "label": "PLACENAME_AREA05_R06"
+  },
+  {
+    "hash_fnv64": "7024E5C4B15CCF1E",
+    "index": 93,
+    "label": "PLACENAME_AREA05_R07"
+  },
+  {
+    "hash_fnv64": "7024E0C4B15CC69F",
+    "index": 94,
+    "label": "PLACENAME_AREA05_R08"
+  },
+  {
+    "hash_fnv64": "7024DFC4B15CC4EC",
+    "index": 95,
+    "label": "PLACENAME_AREA05_R09"
+  },
+  {
+    "hash_fnv64": "702162C4B159BAAE",
+    "index": 96,
+    "label": "PLACENAME_AREA05_R10"
+  },
+  {
+    "hash_fnv64": "702163C4B159BC61",
+    "index": 97,
+    "label": "PLACENAME_AREA05_R11"
+  },
+  {
+    "hash_fnv64": "702160C4B159B748",
+    "index": 98,
+    "label": "PLACENAME_AREA05_R12"
+  },
+  {
+    "hash_fnv64": "702161C4B159B8FB",
+    "index": 99,
+    "label": "PLACENAME_AREA05_R13"
+  },
+  {
+    "hash_fnv64": "702166C4B159C17A",
+    "index": 100,
+    "label": "PLACENAME_AREA05_R14"
+  },
+  {
+    "hash_fnv64": "702167C4B159C32D",
+    "index": 101,
+    "label": "PLACENAME_AREA05_R15"
+  },
+  {
+    "hash_fnv64": "702164C4B159BE14",
+    "index": 102,
+    "label": "PLACENAME_AREA05_R16"
+  },
+  {
+    "hash_fnv64": "702165C4B159BFC7",
+    "index": 103,
+    "label": "PLACENAME_AREA05_R17"
+  },
+  {
+    "hash_fnv64": "EB3BEAB542A1D5AB",
+    "index": 104,
+    "label": "PLACENAME_AREA01_R22"
+  },
+  {
+    "hash_fnv64": "283138E042AAD5CD",
+    "index": 105,
+    "label": "PLACENAME_AREA02_R16"
+  },
+  {
+    "hash_fnv64": "283137E042AAD41A",
+    "index": 106,
+    "label": "PLACENAME_AREA02_R17"
+  },
+  {
+    "hash_fnv64": "D425FD9D7245C612",
+    "index": 107,
+    "label": "PLACENAME_AREA04_R19"
+  },
+  {
+    "hash_fnv64": "D4296C9D7248B886",
+    "index": 108,
+    "label": "PLACENAME_AREA04_R20"
+  },
+  {
+    "hash_fnv64": "D4296D9D7248BA39",
+    "index": 109,
+    "label": "PLACENAME_AREA04_R21"
+  },
+  {
+    "hash_fnv64": "70215AC4B159AD16",
+    "index": 110,
+    "label": "PLACENAME_AREA05_R18"
+  },
+  {
+    "hash_fnv64": "70215BC4B159AEC9",
+    "index": 111,
+    "label": "PLACENAME_AREA05_R19"
+  },
+  {
+    "hash_fnv64": "701DDCC4B156A125",
+    "index": 112,
+    "label": "PLACENAME_AREA05_R20"
+  },
+  {
+    "hash_fnv64": "701DDBC4B1569F72",
+    "index": 113,
+    "label": "PLACENAME_AREA05_R21"
+  },
+  {
+    "hash_fnv64": "353857CE0E221F73",
+    "index": 114,
+    "label": "PLACENAME_AREA00_R01"
+  },
+  {
+    "hash_fnv64": "353858CE0E222126",
+    "index": 115,
+    "label": "PLACENAME_AREA00_R02"
+  },
+  {
+    "hash_fnv64": "353859CE0E2222D9",
+    "index": 116,
+    "label": "PLACENAME_AREA00_R03"
+  },
+  {
+    "hash_fnv64": "35385ACE0E22248C",
+    "index": 117,
+    "label": "PLACENAME_AREA00_R04"
+  },
+  {
+    "hash_fnv64": "35385BCE0E22263F",
+    "index": 118,
+    "label": "PLACENAME_AREA00_R05"
+  },
+  {
+    "hash_fnv64": "35385CCE0E2227F2",
+    "index": 119,
+    "label": "PLACENAME_AREA00_R06"
+  },
+  {
+    "hash_fnv64": "35385DCE0E2229A5",
+    "index": 120,
+    "label": "PLACENAME_AREA00_R07"
+  },
+  {
+    "hash_fnv64": "35385ECE0E222B58",
+    "index": 121,
+    "label": "PLACENAME_AREA00_R08"
+  },
+  {
+    "hash_fnv64": "35385FCE0E222D0B",
+    "index": 122,
+    "label": "PLACENAME_AREA00_R09"
+  },
+  {
+    "hash_fnv64": "353BDCCE0E253749",
+    "index": 123,
+    "label": "PLACENAME_AREA00_R10"
+  },
+  {
+    "hash_fnv64": "353BDBCE0E253596",
+    "index": 124,
+    "label": "PLACENAME_AREA00_R11"
+  },
+  {
+    "hash_fnv64": "353BDACE0E2533E3",
+    "index": 125,
+    "label": "PLACENAME_AREA00_R12"
+  },
+  {
+    "hash_fnv64": "353BD9CE0E253230",
+    "index": 126,
+    "label": "PLACENAME_AREA00_R13"
+  },
+  {
+    "hash_fnv64": "353BE0CE0E253E15",
+    "index": 127,
+    "label": "PLACENAME_AREA00_R14"
+  },
+  {
+    "hash_fnv64": "86D73DF01E11B4F4",
+    "index": 128,
+    "label": "PLACENAME_AREA03_R21"
+  },
+  {
+    "hash_fnv64": "86D740F01E11BA0D",
+    "index": 129,
+    "label": "PLACENAME_AREA03_R22"
+  },
+  {
+    "hash_fnv64": "D4296A9D7248B520",
+    "index": 130,
+    "label": "PLACENAME_AREA04_R22"
+  },
+  {
+    "hash_fnv64": "D4296B9D7248B6D3",
+    "index": 131,
+    "label": "PLACENAME_AREA04_R23"
+  },
+  {
+    "hash_fnv64": "353BDFCE0E253C62",
+    "index": 132,
+    "label": "PLACENAME_AREA00_R15"
+  },
+  {
+    "hash_fnv64": "353BDECE0E253AAF",
+    "index": 133,
+    "label": "PLACENAME_AREA00_R16"
+  },
+  {
+    "hash_fnv64": "353BDDCE0E2538FC",
+    "index": 134,
+    "label": "PLACENAME_AREA00_R17"
+  },
+  {
+    "hash_fnv64": "353BE4CE0E2544E1",
+    "index": 135,
+    "label": "PLACENAME_AREA00_R18"
+  },
+  {
+    "hash_fnv64": "353BE3CE0E25432E",
+    "index": 136,
+    "label": "PLACENAME_AREA00_R19"
+  },
+  {
+    "hash_fnv64": "353F62CE0E2850D2",
+    "index": 137,
+    "label": "PLACENAME_AREA00_R20"
+  },
+  {
+    "hash_fnv64": "353F63CE0E285285",
+    "index": 138,
+    "label": "PLACENAME_AREA00_R21"
+  },
+  {
+    "hash_fnv64": "28312AE042AABE03",
+    "index": 139,
+    "label": "PLACENAME_AREA02_R18"
+  },
+  {
+    "hash_fnv64": "86D73FF01E11B85A",
+    "index": 140,
+    "label": "PLACENAME_AREA03_R23"
+  },
+  {
+    "hash_fnv64": "701DDAC4B1569DBF",
+    "index": 141,
+    "label": "PLACENAME_AREA05_R22"
+  },
+  {
+    "hash_fnv64": "701DD9C4B1569C0C",
+    "index": 142,
+    "label": "PLACENAME_AREA05_R23"
+  },
+  {
+    "hash_fnv64": "353F60CE0E284D6C",
+    "index": 143,
+    "label": "PLACENAME_AREA00_R22"
+  },
+  {
+    "hash_fnv64": "353F61CE0E284F1F",
+    "index": 144,
+    "label": "PLACENAME_AREA00_R23"
+  },
+  {
+    "hash_fnv64": "353F5ECE0E284A06",
+    "index": 145,
+    "label": "PLACENAME_AREA00_R24"
+  },
+  {
+    "hash_fnv64": "353F5FCE0E284BB9",
+    "index": 146,
+    "label": "PLACENAME_AREA00_R25"
+  },
+  {
+    "hash_fnv64": "283129E042AABC50",
+    "index": 147,
+    "label": "PLACENAME_AREA02_R19"
+  },
+  {
+    "hash_fnv64": "2826A0E042A17F00",
+    "index": 148,
+    "label": "PLACENAME_AREA02_R20"
+  },
+  {
+    "hash_fnv64": "86D73AF01E11AFDB",
+    "index": 149,
+    "label": "PLACENAME_AREA03_R24"
+  },
+  {
+    "hash_fnv64": "86D739F01E11AE28",
+    "index": 150,
+    "label": "PLACENAME_AREA03_R25"
+  },
+  {
+    "hash_fnv64": "86D73CF01E11B341",
+    "index": 151,
+    "label": "PLACENAME_AREA03_R26"
+  },
+  {
+    "hash_fnv64": "353F5CCE0E2846A0",
+    "index": 152,
+    "label": "PLACENAME_AREA00_R26"
+  },
+  {
+    "hash_fnv64": "353F5DCE0E284853",
+    "index": 153,
+    "label": "PLACENAME_AREA00_R27"
+  },
+  {
+    "hash_fnv64": "353F6ACE0E285E6A",
+    "index": 154,
+    "label": "PLACENAME_AREA00_R28"
+  },
+  {
+    "hash_fnv64": "353F6BCE0E28601D",
+    "index": 155,
+    "label": "PLACENAME_AREA00_R29"
+  },
+  {
+    "hash_fnv64": "9233EFA54C48C857",
+    "index": 156,
+    "label": "msg_ARCEUS_place_name_max"
+  }
+]

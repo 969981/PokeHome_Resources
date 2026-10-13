@@ -1,0 +1,67 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,error_maintenance_010,DEFD4837D0B0BA8B,"En estos momentos se están realizando labores
+de mantenimiento.
+Está previsto que concluyan el [CTRL:0201:0002]/[CTRL:0201:0001]/[CTRL:0203:0000,0000]
+a las [CTRL:0201:0003]:[CTRL:0201:0004].",4,180
+1,error_maintenance_020,DEF33637D0A84770,"En estos momentos se están realizando labores
+de mantenimiento.
+Disculpa las molestias.",4,436
+2,error_maintenance_030,DEF6BC37D0AB60F9,"En estos momentos se están realizando labores
+de mantenimiento urgentes.
+Disculpa las molestias.",4,612
+3,error_maintenance_040,DF07BA37D0B9D0C6,[REF:3],0,808
+4,error_maintenance_050,DF0B4037D0BCEA4F,[REF:4],0,820
+5,error_maintenance_060,DF00CE37D0B3D414,"Se ha producido un error.
+Regresarás a la pantalla del título.
+Código del error: [CTRL:0204:0000,0000]",0,832
+6,error_maintenance_061,DF00CF37D0B3D5C7,"Se ha producido un error.
+Regresarás a la pantalla del título.",0,1008
+7,error_maintenance_070,DF045437D0B6ED9D,"Se ha producido un error.
+Inténtalo de nuevo.
+Código del error: [CTRL:0204:0000,0000]",0,1136
+8,error_maintenance_080,DF155237D0C55D6A,"Se ha detectado un largo período de inactividad.
+Regresarás a la pantalla del título.",0,1276
+9,error_maintenance_090,DF18B837D0C84093,"Has iniciado sesión en otro dispositivo.
+Regresarás a la pantalla del título.",0,1448
+10,error_maintenance_100,E8107D37D5F2DE4D,"Has realizado demasiadas operaciones
+consecutivas en tus cajas, por lo que no
+se han podido procesar.
+Inténtalo de nuevo más tarde.",0,1604
+11,error_maintenance_990,2CD0BF37FCBC0554,"No se puede utilizar Pokémon HOME con esta
+cuenta.",0,1868
+12,error_maintenance_999,2CD0B837FCBBF96F,"Los servicios de Pokémon HOME ya no están
+disponibles.",0,1972
+13,error_maintenance_200,CD3A6C37C681E1AC,"Se ha pausado el plan prémium que estabas
+utilizando en tu dispositivo móvil.
+Comprueba el estado de tu cuenta en la sección
+Gestión de la suscripción.",0,2084
+14,error_save_sv_001,5078FA5A8DC16A3D,"Se ha producido un error al guardar los datos del
+juego conectado.
+
+Si solo has realizado cambios en las cajas de
+Pokémon HOME, estos se habrán guardado. 
+Si has hecho cambios en las cajas del juego,
+no se habrán guardado los cambios en las cajas
+de dicho juego ni en las de Pokémon HOME.
+
+Regresarás a la pantalla del título.",0,2388
+15,error_maintenance_300,D650A737CBC64577,"Las transferencias de Pokémon a Pokémon HOME
+desde este Nintendo Network ID están
+restringidas.",0,3044
+16,error_maintenance_110,E80CF737D5EFC4C4,"Han concluido las labores de mantenimiento.
+Para equilibrar el tráfico en los servidores,
+estamos limitando temporalmente el número
+de usuarios que pueden iniciar sesión
+de forma simultánea. Dicha limitación se irá
+retirando gradualmente. Espera y disculpa
+las molestias.",0,3236
+17,	,AF66E44C86071324,[REF:17],0,3780
+18,error_save_gba_001,49093D0A743FFC18,"Se ha producido un error al guardar los datos
+del juego conectado, por lo que no ha podido
+realizarse la transferencia.
+
+Regresarás a la pantalla del título.",0,3792
+19,error_account_gba_001,C0F989DC026CCB4E,"Actualmente, tu cuenta tiene restringido el uso de
+esta función.[CLEAR]
+Se ha cancelado la conexión con juegos de
+Game Boy Advance (GBA).",4,4108

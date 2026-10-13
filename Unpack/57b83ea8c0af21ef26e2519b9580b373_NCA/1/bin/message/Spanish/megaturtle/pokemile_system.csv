@@ -1,0 +1,51 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_pokemile_index_010,6C05095BCA478F69,Puntos,0,324
+1,	,AF66E44C86071324,[REF:1],0,340
+2,nx_pokemile_button_000,2A630686D9EFFF22,Atrás,4,352
+3,nx_pokemile_button_001,2A630786D9F000D5,Ayuda,4,364
+4,	,AF66E44C86071324,[REF:4],0,376
+5,nx_pokemile_010,A584652620CE94FA,Puntos Pokémon HOME,0,388
+6,nx_pokemile_011,A584662620CE96AD,"[CTRL:0204:0000,202F] punto[CTRL:1101:0000,0100]s",0,428
+7,nx_pokemile_020,A580DF2620CB7B71,"1 PB = [CTRL:0201:0000] punto[CTRL:1101:0000,0100]s",0,464
+8,nx_pokemile_030,A57DD92620C93B68,"Puntos necesarios: [CTRL:0204:0000,202F]",0,512
+9,nx_pokemile_040,A595632620DD04C7,[CTRL:0200:0000],0,564
+10,nx_pokemile_041,A595622620DD0314,PB,0,576
+11,nx_pokemile_050,A591DD2620D9EB3E,Confirmar,0,584
+12,nx_pokemile_060,A58ED72620D7AB35,Introduce la cantidad de PB que quieres obtener a cambio de puntos.,4,604
+13,nx_pokemile_061,A58ED62620D7A982,PB,0,740
+14,nx_pokemile_062,A58ED52620D7A7CF,"[CTRL:0203:0000,0000]/[CTRL:0203:0001,0000]",0,748
+15,	,AF66E44C86071324,[REF:15],0,772
+16,nx_pokemile_msg_yes,189337D573D9EBE6,Sí,0,784
+17,nx_pokemile_msg_no,D4E97CD168E02068,No,0,792
+18,nx_pokemile_msg_010,068D25D68BB63A48,"La cantidad de puntos que querías enviar al juego superaba
+el límite, por lo que se ha ajustado al máximo posible.",0,800
+19,nx_pokemile_msg_020,069797D68BBF5083,"¿Quieres convertir [CTRL:0204:0000,202F] punto[CTRL:1101:0000,0100]s a [CTRL:0203:0001,0000] PB y enviar dicha
+suma a tu juego?",0,1032
+20,nx_pokemile_msg_030,069431D68BBC6D5A,"Guardando...
+No cierres Pokémon HOME.",0,1192
+21,nx_pokemile_msg_031,069432D68BBC6F0D,"Se han guardado los datos.[CLEAR]
+La conversión de puntos se ha realizado con éxito.",0,1268
+22,	,AF66E44C86071324,[REF:22],0,1432
+23,nx_pokemile_help_010,C1E70C42F87C36D8,"Aquí puedes convertir puntos Pokémon HOME en puntos de batalla (PB)
+y enviarlos a tus juegos. Usa la palanca izquierda para seleccionar una
+cantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!",4,1444
+24,	,AF66E44C86071324,[REF:24],0,1852
+25,nx_pokemile_063,A58ED42620D7A61C,Introduce la cantidad de PG que quieres obtener a cambio de puntos.,4,1864
+26,nx_pokemile_065,A58ED22620D7A2B6,"[CTRL:0206:0000,202F]/[CTRL:0206:0001,202F]",0,2000
+27,nx_pokemile_021,A580DE2620CB79BE,"1 PG = [CTRL:0201:0000] punto[CTRL:1101:0000,0100]s",0,2024
+28,nx_pokemile_064,A58ED32620D7A469,PG,0,2072
+29,nx_pokemile_msg_021,069796D68BBF4ED0,"¿Quieres convertir [CTRL:0204:0000,202F] punto[CTRL:1101:0000,0100]s a [CTRL:0204:0001,202F] PG y enviar dicha
+suma a tu juego?",0,2080
+30,nx_pokemile_help_011,C1E70D42F87C388B,"Aquí puedes convertir puntos Pokémon HOME en Puntos de Gratitud
+(PG) y enviarlos a tus juegos. Usa la palanca izquierda para seleccionar
+una cantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!",4,2240
+31,	,AF66E44C86071324,[REF:31],0,2648
+32,nx_pokemile_070,A58B512620D491AC,Introduce la cantidad de PL que quieres obtener a cambio de puntos.,4,2660
+33,nx_pokemile_071,A58B522620D4935F,"[CTRL:0206:0000,202F] / [CTRL:0206:0001,202F]",0,2796
+34,nx_pokemile_072,A58B532620D49512,[CTRL:0201:0000] PL = 1 punto,0,2824
+35,nx_pokemile_073,A58B542620D496C5,PL,0,2860
+36,nx_pokemile_msg_070,06A1A9D68BC7C39E,"¿Quieres convertir [CTRL:0204:0000,202F] punto[CTRL:1101:0000,0100]s a [CTRL:0205:0001,202F] PL y enviar
+dicha suma a tu juego?",0,2868
+37,nx_pokemile_help_070,C1FB9042F88DC02E,"Aquí puedes convertir puntos Pokémon HOME en puntos de liga (PL)
+y enviarlos a tus juegos. Usa la palanca izquierda para seleccionar una
+cantidad y, cuando la tengas, dale a Confirmar. ¡Así de fácil!",4,3028

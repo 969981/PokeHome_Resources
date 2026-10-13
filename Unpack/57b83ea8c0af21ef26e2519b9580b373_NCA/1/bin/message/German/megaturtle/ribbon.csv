@@ -1,0 +1,382 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,mes_ribbon_name_000,EFD55246391A3E8A,Band des Kalos-Champs,0,2580
+1,mes_ribbon_name_001,EFD55346391A403D,Band des Champs,0,2624
+2,mes_ribbon_name_002,EFD55046391A3B24,Band des Sinnoh-Champs,0,2656
+3,mes_ribbon_name_003,EFD55146391A3CD7,Zutraulichkeitsband,0,2704
+4,mes_ribbon_name_004,EFD54E46391A37BE,Trainingsband,0,2744
+5,mes_ribbon_name_005,EFD54F46391A3971,Profikampfband,0,2772
+6,mes_ribbon_name_006,EFD54C46391A3458,Meisterkampfband,0,2804
+7,mes_ribbon_name_007,EFD54D46391A360B,Fleißband,0,2840
+8,mes_ribbon_name_008,EFD54A46391A30F2,Band der Wachsamkeit,0,2860
+9,mes_ribbon_name_009,EFD54B46391A32A5,Band des Schocks,0,2904
+10,mes_ribbon_name_010,EFD8B846391D21B3,Band der Traurigkeit,0,2940
+11,mes_ribbon_name_011,EFD8B746391D2000,Band der Sorglosigkeit,0,2984
+12,mes_ribbon_name_012,EFD8BA46391D2519,Band der Entspannung,0,3032
+13,mes_ribbon_name_013,EFD8B946391D2366,Band des Schlafens,0,3076
+14,mes_ribbon_name_014,EFD8BC46391D287F,Band des Lächelns,0,3116
+15,mes_ribbon_name_015,EFD8BB46391D26CC,Hinreißendes Band,0,3152
+16,mes_ribbon_name_016,EFD8BE46391D2BE5,Königliches Band,0,3188
+17,mes_ribbon_name_017,EFD8BD46391D2A32,Hinreißendes Königliches Band,0,3224
+18,mes_ribbon_name_018,EFD8C046391D2F4B,Band des Künstlers,0,3284
+19,mes_ribbon_name_019,EFD8BF46391D2D98,Fußabdruckband,0,3324
+20,mes_ribbon_name_020,EFCEC6463914E4F8,Rekordband,0,3356
+21,mes_ribbon_name_021,EFCEC7463914E6AB,Band der Legende,0,3380
+22,mes_ribbon_name_022,EFCEC8463914E85E,Band des Landes,0,3416
+23,mes_ribbon_name_023,EFCEC9463914EA11,Band der Nation,0,3448
+24,mes_ribbon_name_024,EFCECA463914EBC4,Band der Erde,0,3480
+25,mes_ribbon_name_025,EFCECB463914ED77,Band der Welt,0,3508
+26,mes_ribbon_name_026,EFCECC463914EF2A,Klassisches Band,0,3536
+27,mes_ribbon_name_027,EFCECD463914F0DD,Premierband,0,3572
+28,mes_ribbon_name_028,EFCEBE463914D760,Veranstaltungsband,0,3596
+29,mes_ribbon_name_029,EFCEBF463914D913,Geburtstagsband,0,3636
+30,mes_ribbon_name_030,EFD24C463917FE81,Sonderband,0,3668
+31,mes_ribbon_name_031,EFD24B463917FCCE,Gedenkband,0,3692
+32,mes_ribbon_name_032,EFD24A463917FB1B,Wunschband,0,3716
+33,mes_ribbon_name_033,EFD249463917F968,Kampfmeisterband,0,3740
+34,mes_ribbon_name_034,EFD250463918054D,Regionalmeisterband,0,3776
+35,mes_ribbon_name_035,EFD24F463918039A,Nationalmeisterband,0,3816
+36,mes_ribbon_name_036,EFD24E46391801E7,Weltmeisterband,0,3856
+37,mes_ribbon_name_037,EFD24D4639180034,Wettbewerbsgedenkband,0,3888
+38,mes_ribbon_name_038,EFD244463917F0E9,Kampfgedenkband,0,3932
+39,mes_ribbon_name_039,EFD243463917EF36,Band des Hoenn-Champs,0,3964
+40,mes_ribbon_name_040,EFE34A4639266E4E,Band des Wettbewerbsstars,0,4008
+41,mes_ribbon_name_041,EFE34B4639267001,Coolnessmeisterband,0,4060
+42,mes_ribbon_name_042,EFE3484639266AE8,Schönheitsmeisterband,0,4100
+43,mes_ribbon_name_043,EFE3494639266C9B,Putzigkeitsmeisterband,0,4144
+44,mes_ribbon_name_044,EFE34E463926751A,Klugheitsmeisterband,0,4192
+45,mes_ribbon_name_045,EFE34F46392676CD,Stärkemeisterband,0,4236
+46,mes_ribbon_name_046,EFE34C46392671B4,Band des Alola-Champs,0,4272
+47,mes_ribbon_name_047,EFE34D4639267367,Battle-Royale-Meisterband,0,4316
+48,mes_ribbon_name_048,EFE34246392660B6,Profibaumband,0,4368
+49,mes_ribbon_name_049,EFE3434639266269,Meisterbaumband,0,4396
+50,mes_ribbon_name_050,EFE650463928AE57,Band des Galar-Champs,0,4428
+51,mes_ribbon_name_051,EFE64F463928ACA4,Meisterturmband,0,4472
+52,mes_ribbon_name_052,EFE652463928B1BD,Meisterrangband,0,4504
+53,mes_ribbon_name_053,EFE651463928B00A,Mittags-Zeichen,0,4536
+54,mes_ribbon_name_054,EFE64C463928A78B,Mitternachts-Zeichen,0,4568
+55,mes_ribbon_name_055,EFE64B463928A5D8,Abenddämmerungs-Zeichen,0,4612
+56,mes_ribbon_name_056,EFE64E463928AAF1,Morgendämmerungs-Zeichen,0,4660
+57,mes_ribbon_name_057,EFE64D463928A93E,Wolken-Zeichen,0,4712
+58,mes_ribbon_name_058,EFE648463928A0BF,Regen-Zeichen,0,4744
+59,mes_ribbon_name_059,EFE6474639289F0C,Gewitter-Zeichen,0,4772
+60,mes_ribbon_name_060,EFDC3E4639203B3C,Schneefall-Zeichen,0,4808
+61,mes_ribbon_name_061,EFDC3F4639203CEF,Schneesturm-Zeichen,0,4848
+62,mes_ribbon_name_062,EFDC404639203EA2,Dürre-Zeichen,0,4888
+63,mes_ribbon_name_063,EFDC414639204055,Sandsturm-Zeichen,0,4916
+64,mes_ribbon_name_064,EFDC3A4639203470,Nebel-Zeichen,0,4952
+65,mes_ribbon_name_065,EFDC3B4639203623,Schicksals-Zeichen,0,4980
+66,mes_ribbon_name_066,EFDC3C46392037D6,Angel-Zeichen,0,5020
+67,mes_ribbon_name_067,EFDC3D4639203989,Curry-Zeichen,0,5048
+68,mes_ribbon_name_068,EFDC4646392048D4,Gängigkeits-Zeichen,0,5076
+69,mes_ribbon_name_069,EFDC474639204A87,Raritäts-Zeichen,0,5116
+70,mes_ribbon_name_070,EFDFC446392354C5,Raufbold-Zeichen,0,5152
+71,mes_ribbon_name_071,EFDFC34639235312,Sorglos-Zeichen,0,5188
+72,mes_ribbon_name_072,EFDFC2463923515F,Spannungs-Zeichen,0,5220
+73,mes_ribbon_name_073,EFDFC14639234FAC,Vorfreude-Zeichen,0,5256
+74,mes_ribbon_name_074,EFDFC04639234DF9,Charisma-Zeichen,0,5292
+75,mes_ribbon_name_075,EFDFBF4639234C46,Gelassenheits-Zeichen,0,5328
+76,mes_ribbon_name_076,EFDFBE4639234A93,Hitzkopf-Zeichen,0,5372
+77,mes_ribbon_name_077,EFDFBD46392348E0,Achtlos-Zeichen,0,5408
+78,mes_ribbon_name_078,EFDFCC463923625D,Glücklichkeits-Zeichen,0,5440
+79,mes_ribbon_name_079,EFDFCB46392360AA,Wut-Zeichen,0,5488
+80,mes_ribbon_name_080,EFBA424639035BA2,Lächel-Zeichen,0,5512
+81,mes_ribbon_name_081,EFBA434639035D55,Trübsal-Zeichen,0,5544
+82,mes_ribbon_name_082,EFBA40463903583C,Heiterkeits-Zeichen,0,5576
+83,mes_ribbon_name_083,EFBA4146390359EF,Missmut-Zeichen,0,5616
+84,mes_ribbon_name_084,EFBA3E46390354D6,Verstands-Zeichen,0,5648
+85,mes_ribbon_name_085,EFBA3F4639035689,Impulsiv-Zeichen,0,5684
+86,mes_ribbon_name_086,EFBA3C4639035170,Listigkeits-Zeichen,0,5720
+87,mes_ribbon_name_087,EFBA3D4639035323,Grimmig-Zeichen,0,5760
+88,mes_ribbon_name_088,EFBA4A463903693A,Sanftmut-Zeichen,0,5792
+89,mes_ribbon_name_089,EFBA4B4639036AED,Panik-Zeichen,0,5828
+90,mes_ribbon_name_090,EFBDC8463906752B,Ansporn-Zeichen,0,5856
+91,mes_ribbon_name_091,EFBDC74639067378,Lustlos-Zeichen,0,5888
+92,mes_ribbon_name_092,EFBDCA4639067891,Selbstvertrauens-Zeichen,0,5920
+93,mes_ribbon_name_093,EFBDC946390676DE,Selbstzweifel-Zeichen,0,5972
+94,mes_ribbon_name_094,EFBDCC4639067BF7,Arglos-Zeichen,0,6016
+95,mes_ribbon_name_095,EFBDCB4639067A44,Scheinheilig-Zeichen,0,6048
+96,mes_ribbon_name_096,EFBDCE4639067F5D,Elan-Zeichen,0,6092
+97,mes_ribbon_name_097,EFBDCD4639067DAA,Formtief-Zeichen,0,6120
+98,mes_ribbon_name_098,EFBDC04639066793,Hisui-Band,0,6156
+99,mes_ribbon_name_099,EFBDBF46390665E0,Glitzersternband,0,6180
+100,mes_ribbon_name_100,F8EBED463E5F4575,Band des Paldea-Champs,0,6216
+101,mes_ribbon_name_101,F8EBEC463E5F43C2,Riesen-Zeichen,0,6264
+102,mes_ribbon_name_102,F8EBEB463E5F420F,Winzlings-Zeichen,0,6296
+103,mes_ribbon_name_103,F8EBEA463E5F405C,Aufsammler-Zeichen,0,6332
+104,mes_ribbon_name_104,F8EBE9463E5F3EA9,Partner-Zeichen,0,6372
+105,mes_ribbon_name_105,F8EBE8463E5F3CF6,Gourmet-Zeichen,0,6404
+106,mes_ribbon_name_106,F8EBE7463E5F3B43,Glückstrefferband,0,6436
+107,mes_ribbon_name_107,F8EBE6463E5F3990,Elite-Zeichen,0,6472
+108,mes_ribbon_name_108,F8EBF5463E5F530D,Titanen-Zeichen,0,6500
+109,mes_ribbon_name_109,F8EBF4463E5F515A,Herrscher-Zeichen,0,6532
+110,mes_ribbon_name_110,F8E867463E5C2BEC,Partnerband,0,6568
+111,mes_ribbon_info_000,20F93C62D8DCE9C9,"Band für den Sieg über den Champ von Kalos und
+den Einzug in die Ruhmeshalle.",0,6592
+112,mes_ribbon_info_001,20F93B62D8DCE816,"Band für einen alten Sieg über den Champ einer
+anderen Region und den Einzug in die Ruhmeshalle.",0,6748
+113,mes_ribbon_info_002,20F93A62D8DCE663,"Band für den Sieg über den Champ von Sinnoh und
+den Einzug in die Ruhmeshalle.",0,6944
+114,mes_ribbon_info_003,20F93962D8DCE4B0,"Band zur Ehrung eines Pokémon, das durch die enge
+Beziehung zu seinem Trainer besticht.",0,7104
+115,mes_ribbon_info_004,20F94062D8DCF095,"Band zur Ehrung eines Pokémon, das schwere
+Prüfungen gemeistert hat.",0,7280
+116,mes_ribbon_info_005,20F93F62D8DCEEE2,"Band zur Ehrung eines Pokémon, das selbst aus dem
+härtesten Kampf als Sieger hervorgegangen ist.",0,7420
+117,mes_ribbon_info_006,20F93E62D8DCED2F,"Band zur Ehrung eines heldenhaften Pokémon,
+das die Kunst des Kämpfens perfektioniert hat.",0,7616
+118,mes_ribbon_info_007,20F93D62D8DCEB7C,Band für einen extrem fleißigen Arbeiter.,0,7800
+119,mes_ribbon_info_008,20F94462D8DCF761,"Band zur Erinnerung an ein stärkendes, Lebensenergie
+gebendes Ereignis.",0,7884
+120,mes_ribbon_info_009,20F94362D8DCF5AE,"Band zur Erinnerung an ein Ereignis, das das Leben
+aufregender machte.",0,8028
+121,mes_ribbon_info_010,20F5B662D8D9D040,"Band zur Erinnerung an die Traurigkeit, die dem Leben
+Würze gab.",0,8172
+122,mes_ribbon_info_011,20F5B762D8D9D1F3,"Band zur Erinnerung an einen Fehler, der zu
+lebenswichtigen Entscheidungen führte.",0,8304
+123,mes_ribbon_info_012,20F5B862D8D9D3A6,"Band zur Erinnerung an ein erfrischendes Ereignis,
+das dem Leben Glanz gab.",0,8472
+124,mes_ribbon_info_013,20F5B962D8D9D559,"Band zur Erinnerung an einen tiefen Schlaf, der den
+Fluss des Lebens beruhigte.",0,8624
+125,mes_ribbon_info_014,20F5BA62D8D9D70C,"Band zur Erinnerung daran, dass ein Lächeln das
+Leben bereichert.",0,8784
+126,mes_ribbon_info_015,20F5BB62D8D9D8BF,Außergewöhnlich schönes und extravagantes Band.,0,8916
+127,mes_ribbon_info_016,20F5BC62D8D9DA72,"Unglaublich königliches Band, das eine Aura der
+Erhabenheit ausstrahlt.",0,9012
+128,mes_ribbon_info_017,20F5BD62D8D9DC25,"Wunderschönes und königliches Band, das einfach
+sagenhaft ist.",0,9156
+129,mes_ribbon_info_018,20F5BE62D8D9DDD8,"Band zur Belohnung für die Wahl zum Super-Modell
+in Hoenn.",0,9284
+130,mes_ribbon_info_019,20F5BF62D8D9DF8B,"Band für ein Pokémon, das einen besonders guten
+Fußabdruck hinterlässt.",0,9404
+131,mes_ribbon_info_020,21004862D8E31CDB,Band für das Aufstellen eines unglaublichen Rekords.,0,9548
+132,mes_ribbon_info_021,21004762D8E31B28,Band für das Aufstellen eines legendären Rekords.,0,9656
+133,mes_ribbon_info_022,21004A62D8E32041,Band zur Ehrung des Champs der Pokémon-Liga.,0,9756
+134,mes_ribbon_info_023,21004962D8E31E8E,"Band für das erfolgreiche Überstehen aller
+Widrigkeiten.",0,9848
+135,mes_ribbon_info_024,21004C62D8E323A7,Band zur Erinnerung an hundert Siege in Folge.,0,9964
+136,mes_ribbon_info_025,21004B62D8E321F4,Band zur Ehrung des Champs der Pokémon-Liga.,0,10060
+137,mes_ribbon_info_026,21004E62D8E3270D,"Band zur Auszeichnung von wahren
+Pokémon-Liebhabern.",0,10152
+138,mes_ribbon_info_027,21004D62D8E3255A,Band zur Erinnerung an einen besonderen Tag.,0,10260
+139,mes_ribbon_info_028,21004062D8E30F43,Teilnehmerband einer Pokémon-Veranstaltung.,0,10352
+140,mes_ribbon_info_029,21003F62D8E30D90,Band für Geburtstagskinder.,0,10440
+141,mes_ribbon_info_030,20FCC262D8E00352,Besonderes Band für einen besonderen Tag.,0,10496
+142,mes_ribbon_info_031,20FCC362D8E00505,"Band, das als Andenken an ganz besondere
+Erinnerungen dient.",0,10580
+143,mes_ribbon_info_032,20FCC062D8DFFFEC,"Band, das angeblich Wünsche erfüllt.",0,10704
+144,mes_ribbon_info_033,20FCC162D8E0019F,Band des Siegers eines Kampfturniers.,0,10780
+145,mes_ribbon_info_034,20FCBE62D8DFFC86,"Siegerband für die Regionalmeisterschaft
+der Pokémon World Championships.",0,10856
+146,mes_ribbon_info_035,20FCBF62D8DFFE39,"Siegerband für die Nationalmeisterschaft
+der Pokémon World Championships.",0,11004
+147,mes_ribbon_info_036,20FCBC62D8DFF920,"Siegerband für das Finale der
+Pokémon World Championships.",0,11152
+148,mes_ribbon_info_037,20FCBD62D8DFFAD3,"Band zur Erinnerung an vergangene Wettbewerbssiege
+in einer anderen Region.",0,11272
+149,mes_ribbon_info_038,20FCCA62D8E010EA,"Band zur Erinnerung an vergangene gewonnene
+Kämpfe in einer anderen Region.",0,11424
+150,mes_ribbon_info_039,20FCCB62D8E0129D,"Band für den Sieg über den Champ von Hoenn und
+den Einzug in die Ruhmeshalle.",0,11576
+151,mes_ribbon_info_040,2106D462D8E8766D,"Band zur Auszeichnung eines Pokémon, das in allen
+Wettbewerben großartige Leistungen vollbracht hat.",0,11732
+152,mes_ribbon_info_041,2106D362D8E874BA,"Band zur Auszeichnung eines Pokémon, das im
+Wettbewerb seine Coolness bewiesen hat.",0,11936
+153,mes_ribbon_info_042,2106D262D8E87307,"Band zur Auszeichnung eines Pokémon, das im
+Wettbewerb seine Schönheit bewiesen hat.",0,12104
+154,mes_ribbon_info_043,2106D162D8E87154,"Band zur Auszeichnung eines Pokémon, das im
+Wettbewerb seine Putzigkeit bewiesen hat.",0,12276
+155,mes_ribbon_info_044,2106D062D8E86FA1,"Band zur Auszeichnung eines Pokémon, das im
+Wettbewerb seine Klugheit bewiesen hat.",0,12448
+156,mes_ribbon_info_045,2106CF62D8E86DEE,"Band zur Auszeichnung eines Pokémon, das im
+Wettbewerb seine Stärke bewiesen hat.",0,12616
+157,mes_ribbon_info_046,2106CE62D8E86C3B,"Band zur Ehrung des Champs in Alola und
+für den Einzug in die Ruhmeshalle.",0,12780
+158,mes_ribbon_info_047,2106CD62D8E86A88,"Band zur Auszeichnung eines Pokémon, das beim
+Battle Royale gesiegt hat.",0,12932
+159,mes_ribbon_info_048,2106CC62D8E868D5,"Band für den Sieg über eine Kampflegende im
+Kampfbaum.",0,13080
+160,mes_ribbon_info_049,2106CB62D8E86722,"Band zur Auszeichnung eines Pokémon, das im
+Super-Rang gegen eine Kampflegende gewonnen hat.",0,13192
+161,mes_ribbon_info_050,21034E62D8E55CE4,"Band zur Ehrung des Champs von Galar und
+für den Einzug in die Ruhmeshalle.",0,13380
+162,mes_ribbon_info_051,21034F62D8E55E97,Band für den Sieg über den Meister des Kampfturms.,0,13532
+163,mes_ribbon_info_052,21035062D8E5604A,"Band zur Auszeichnung eines Pokémon, das bei einem
+Rangkampf in der Meisterball-Klasse gewonnen hat.",0,13636
+164,mes_ribbon_info_053,21035162D8E561FD,"Zeichen eines Pokémon, das großen Hunger hat.",0,13840
+165,mes_ribbon_info_054,21034A62D8E55618,"Zeichen eines Pokémon, das schläfrig ist.",0,13932
+166,mes_ribbon_info_055,21034B62D8E557CB,"Zeichen eines Pokémon, das langsam müde wird.",0,14016
+167,mes_ribbon_info_056,21034C62D8E5597E,"Zeichen eines Pokémon, das früh aufgestanden ist.",0,14108
+168,mes_ribbon_info_057,21034D62D8E55B31,"Zeichen eines Pokémon, das gern die Wolken
+betrachtet.",0,14208
+169,mes_ribbon_info_058,21034662D8E54F4C,"Zeichen eines Pokémon, das vom Regen klitschnass ist.",0,14320
+170,mes_ribbon_info_059,21034762D8E550FF,"Zeichen eines Pokémon, das bei Gewittern einen
+Aufstand macht.",0,14428
+171,mes_ribbon_info_060,210DC062D8EE731F,"Zeichen eines Pokémon, das im Schnee herumtollt.",0,14556
+172,mes_ribbon_info_061,210DBF62D8EE716C,"Zeichen eines Pokémon, das vor Kälte zittert.",0,14656
+173,mes_ribbon_info_062,210DC262D8EE7685,"Zeichen eines Pokémon, das mächtig Durst hat.",0,14748
+174,mes_ribbon_info_063,210DC162D8EE74D2,"Zeichen eines Pokémon, das über und über mit
+Sand bedeckt ist.",0,14840
+175,mes_ribbon_info_064,210DBC62D8EE6C53,"Zeichen eines Pokémon, das sich im Nebel verläuft.",0,14968
+176,mes_ribbon_info_065,210DBB62D8EE6AA0,"Zeichen eines Pokémon, das etwas Schicksalhaftes
+an sich hat.",0,15072
+177,mes_ribbon_info_066,210DBE62D8EE6FB9,"Zeichen eines Pokémon, das frisch an Land gezogen
+wurde.",0,15196
+178,mes_ribbon_info_067,210DBD62D8EE6E06,"Zeichen eines Pokémon, das gerne Curry isst.",0,15312
+179,mes_ribbon_info_068,210DC862D8EE80B7,"Zeichen eines Pokémon, das an Menschen gewöhnt ist.",0,15404
+180,mes_ribbon_info_069,210DC762D8EE7F04,"Zeichen eines Pokémon, das keine Erfahrung mit
+Menschen hat.",0,15508
+181,mes_ribbon_info_070,210A3A62D8EB5996,"Zeichen eines Pokémon, das sich wie ein Rabauke
+verhält.",0,15632
+182,mes_ribbon_info_071,210A3B62D8EB5B49,"Zeichen eines Pokémon, das sich um nichts wirklich
+Gedanken macht.",0,15748
+183,mes_ribbon_info_072,210A3862D8EB5630,"Zeichen eines Pokémon, das angespannt ist.",0,15884
+184,mes_ribbon_info_073,210A3962D8EB57E3,"Zeichen eines Pokémon, das aufgeregt ist.",0,15972
+185,mes_ribbon_info_074,210A3E62D8EB6062,"Zeichen eines Pokémon, das eine besondere
+Ausstrahlung hat.",0,16056
+186,mes_ribbon_info_075,210A3F62D8EB6215,"Zeichen eines Pokémon, das stets gelassen ist.",0,16176
+187,mes_ribbon_info_076,210A3C62D8EB5CFC,"Zeichen eines Pokémon, das aggressiv ist.",0,16272
+188,mes_ribbon_info_077,210A3D62D8EB5EAF,"Zeichen eines Pokémon, das nicht ganz bei der
+Sache ist.",0,16356
+189,mes_ribbon_info_078,210A4262D8EB672E,"Zeichen eines Pokémon, das glücklich wirkt.",0,16472
+190,mes_ribbon_info_079,210A4362D8EB68E1,"Zeichen eines Pokémon, das ziemlich sauer ist.",0,16560
+191,mes_ribbon_info_080,21144C62D8F3CCB1,"Zeichen eines Pokémon, das vor Freude strahlt.",0,16656
+192,mes_ribbon_info_081,21144B62D8F3CAFE,"Zeichen eines Pokémon, das schluchzend weint.",0,16752
+193,mes_ribbon_info_082,21144A62D8F3C94B,"Zeichen eines Pokémon, das gut drauf ist.",0,16844
+194,mes_ribbon_info_083,21144962D8F3C798,"Zeichen eines Pokémon, das miese Laune hat.",0,16928
+195,mes_ribbon_info_084,21145062D8F3D37D,"Zeichen eines Pokémon, das Köpfchen hat.",0,17016
+196,mes_ribbon_info_085,21144F62D8F3D1CA,"Zeichen eines Pokémon, das wütet und tobt.",0,17100
+197,mes_ribbon_info_086,21144E62D8F3D017,"Zeichen eines Pokémon, das auf den richtigen
+Moment wartet, um zuzuschlagen.",0,17188
+198,mes_ribbon_info_087,21144D62D8F3CE64,"Zeichen eines Pokémon, das ein böses Gesicht macht.",0,17344
+199,mes_ribbon_info_088,21144462D8F3BF19,"Zeichen eines Pokémon, das ein gutes Herz hat.",0,17448
+200,mes_ribbon_info_089,21144362D8F3BD66,"Zeichen eines Pokémon, das leicht in Panik gerät.",0,17544
+201,mes_ribbon_info_090,21114662D8F18CA8,"Zeichen eines Pokémon, das voller Tatendrang steckt.",0,17644
+202,mes_ribbon_info_091,21114762D8F18E5B,"Zeichen eines Pokémon, das keinen Bock auf
+nichts hat.",0,17752
+203,mes_ribbon_info_092,21114862D8F1900E,"Zeichen eines Pokémon, das einiges auf sich hält.",0,17864
+204,mes_ribbon_info_093,21114962D8F191C1,"Zeichen eines Pokémon, das kein Selbstvertrauen hat.",0,17964
+205,mes_ribbon_info_094,21114A62D8F19374,"Zeichen eines Pokémon, das einfach gestrickt ist.",0,18072
+206,mes_ribbon_info_095,21114B62D8F19527,"Zeichen eines Pokémon, das sich gerne in den
+Vordergrund spielt.",0,18172
+207,mes_ribbon_info_096,21114C62D8F196DA,"Zeichen eines Pokémon, das voller Energie steckt.",0,18304
+208,mes_ribbon_info_097,21114D62D8F1988D,"Zeichen eines Pokémon, das irgendwie einen
+Durchhänger hat.",0,18404
+209,mes_ribbon_info_098,21113E62D8F17F10,"Band zur Auszeichnung eines Pokémon, das in der
+fernen Vergangenheit in Hisui für ein Foto posiert hat.",0,18524
+210,mes_ribbon_info_099,21113F62D8F180C3,"Band zur Auszeichnung eines Pokémon, das in der
+Super-Wettbewerbs-Show perfekten Glanz gezeigt hat.",0,18732
+211,mes_ribbon_info_100,184FA162D3F4B4BE,"Band zur Ehrung eines Champs von Paldea und
+für den Einzug in die Ruhmeshalle.",0,18932
+212,mes_ribbon_info_101,184FA262D3F4B671,"Zeichen eines Pokémon, das so groß wie möglich ist.",0,19092
+213,mes_ribbon_info_102,184F9F62D3F4B158,"Zeichen eines Pokémon, das so klein wie möglich ist.",0,19196
+214,mes_ribbon_info_103,184FA062D3F4B30B,"Zeichen eines Pokémon, das gerne Gegenstände
+aufsammelt.",0,19304
+215,mes_ribbon_info_104,184FA562D3F4BB8A,Zeichen eines zutraulichen Pokémon.,0,19420
+216,mes_ribbon_info_105,184FA662D3F4BD3D,"Zeichen eines Pokémon, das ein Feinschmecker ist.",0,19492
+217,mes_ribbon_info_106,184FA362D3F4B824,"Besonderes Band, das nur sehr selten an Pokémon
+zu finden ist, die man per Zaubertausch erhält.",0,19592
+218,mes_ribbon_info_107,184FA462D3F4B9D7,"Zeichen eines Pokémon, das einst ein
+Elite-Pokémon war.",0,19784
+219,mes_ribbon_info_108,184F9962D3F4A726,Zeichen eines besonders starken Pokémon.,0,19896
+220,mes_ribbon_info_109,184F9A62D3F4A8D9,"Zeichen eines Pokémon, das einst ein
+Herrscher-Pokémon war.",0,19980
+221,mes_ribbon_info_110,18532762D3F7CE47,"Spezielles Band zur Auszeichnung eines Pokémon, das
+dir von einem besonderen Trainer anvertraut wurde.",0,20100
+222,mes_another_name_000,173EBBCED5F75421,[REF:222],0,20308
+223,mes_another_name_001,173EBACED5F7526E,[REF:223],0,20320
+224,mes_another_name_002,173EB9CED5F750BB,[REF:224],0,20332
+225,mes_another_name_003,173EB8CED5F74F08,[REF:225],0,20344
+226,mes_another_name_004,173EBFCED5F75AED,[REF:226],0,20356
+227,mes_another_name_005,173EBECED5F7593A,[REF:227],0,20368
+228,mes_another_name_006,173EBDCED5F75787,[REF:228],0,20380
+229,mes_another_name_007,173EBCCED5F755D4,[REF:229],0,20392
+230,mes_another_name_008,173EB3CED5F74689,[REF:230],0,20404
+231,mes_another_name_009,173EB2CED5F744D6,[REF:231],0,20416
+232,mes_another_name_010,173B35CED5F43A98,[REF:232],0,20428
+233,mes_another_name_011,173B36CED5F43C4B,[REF:233],0,20440
+234,mes_another_name_012,173B37CED5F43DFE,[REF:234],0,20452
+235,mes_another_name_013,173B38CED5F43FB1,[REF:235],0,20464
+236,mes_another_name_014,173B39CED5F44164,[REF:236],0,20476
+237,mes_another_name_015,173B3ACED5F44317,[REF:237],0,20488
+238,mes_another_name_016,173B3BCED5F444CA,[REF:238],0,20500
+239,mes_another_name_017,173B3CCED5F4467D,[REF:239],0,20512
+240,mes_another_name_018,173B2DCED5F42D00,[REF:240],0,20524
+241,mes_another_name_019,173B2ECED5F42EB3,[REF:241],0,20536
+242,mes_another_name_020,1745A7CED5FD50D3,[REF:242],0,20548
+243,mes_another_name_021,1745A6CED5FD4F20,[REF:243],0,20560
+244,mes_another_name_022,1745A9CED5FD5439,[REF:244],0,20572
+245,mes_another_name_023,1745A8CED5FD5286,[REF:245],0,20584
+246,mes_another_name_024,1745ABCED5FD579F,[REF:246],0,20596
+247,mes_another_name_025,1745AACED5FD55EC,[REF:247],0,20608
+248,mes_another_name_026,1745ADCED5FD5B05,[REF:248],0,20620
+249,mes_another_name_027,1745ACCED5FD5952,[REF:249],0,20632
+250,mes_another_name_028,1745AFCED5FD5E6B,[REF:250],0,20644
+251,mes_another_name_029,1745AECED5FD5CB8,[REF:251],0,20656
+252,mes_another_name_030,174241CED5FA6DAA,[REF:252],0,20668
+253,mes_another_name_031,174242CED5FA6F5D,[REF:253],0,20680
+254,mes_another_name_032,17423FCED5FA6A44,[REF:254],0,20692
+255,mes_another_name_033,174240CED5FA6BF7,[REF:255],0,20704
+256,mes_another_name_034,17423DCED5FA66DE,[REF:256],0,20716
+257,mes_another_name_035,17423ECED5FA6891,[REF:257],0,20728
+258,mes_another_name_036,17423BCED5FA6378,[REF:258],0,20740
+259,mes_another_name_037,17423CCED5FA652B,[REF:259],0,20752
+260,mes_another_name_038,174239CED5FA6012,[REF:260],0,20764
+261,mes_another_name_039,17423ACED5FA61C5,[REF:261],0,20776
+262,mes_another_name_040,174C33CED602AA65,[REF:262],0,20788
+263,mes_another_name_041,174C32CED602A8B2,[REF:263],0,20800
+264,mes_another_name_042,174C31CED602A6FF,[REF:264],0,20812
+265,mes_another_name_043,174C30CED602A54C,[REF:265],0,20824
+266,mes_another_name_044,174C2FCED602A399,[REF:266],0,20836
+267,mes_another_name_045,174C2ECED602A1E6,[REF:267],0,20848
+268,mes_another_name_046,174C2DCED602A033,[REF:268],0,20860
+269,mes_another_name_047,174C2CCED6029E80,[REF:269],0,20872
+270,mes_another_name_048,174C3BCED602B7FD,[REF:270],0,20884
+271,mes_another_name_049,174C3ACED602B64A,[REF:271],0,20896
+272,mes_another_name_050,17492DCED6006A5C,[REF:272],0,20908
+273,mes_another_name_051,17492ECED6006C0F,[REF:273],0,20920
+274,mes_another_name_052,17492FCED6006DC2,[REF:274],0,20932
+275,mes_another_name_053,174930CED6006F75,[REF:275],0,20944
+276,mes_another_name_054,174929CED6006390,[REF:276],0,20956
+277,mes_another_name_055,17492ACED6006543,[REF:277],0,20968
+278,mes_another_name_056,17492BCED60066F6,[REF:278],0,20980
+279,mes_another_name_057,17492CCED60068A9,[REF:279],0,20992
+280,mes_another_name_058,174935CED60077F4,[REF:280],0,21004
+281,mes_another_name_059,174936CED60079A7,[REF:281],0,21016
+282,mes_another_name_060,17533FCED608DD77,[REF:282],0,21028
+283,mes_another_name_061,17533ECED608DBC4,[REF:283],0,21040
+284,mes_another_name_062,175341CED608E0DD,[REF:284],0,21052
+285,mes_another_name_063,175340CED608DF2A,[REF:285],0,21064
+286,mes_another_name_064,17533BCED608D6AB,[REF:286],0,21076
+287,mes_another_name_065,17533ACED608D4F8,[REF:287],0,21088
+288,mes_another_name_066,17533DCED608DA11,[REF:288],0,21100
+289,mes_another_name_067,17533CCED608D85E,[REF:289],0,21112
+290,mes_another_name_068,175337CED608CFDF,[REF:290],0,21124
+291,mes_another_name_069,175336CED608CE2C,[REF:291],0,21136
+292,mes_another_name_070,174FB9CED605C3EE,[REF:292],0,21148
+293,mes_another_name_071,174FBACED605C5A1,[REF:293],0,21160
+294,mes_another_name_072,174FB7CED605C088,[REF:294],0,21172
+295,mes_another_name_075,174FBECED605CC6D,[REF:295],0,21184
+296,mes_another_name_076,174FBBCED605C754,[REF:296],0,21196
+297,mes_another_name_077,174FBCCED605C907,[REF:297],0,21208
+298,mes_another_name_078,174FB1CED605B656,[REF:298],0,21220
+299,mes_another_name_079,174FB2CED605B809,[REF:299],0,21232
+300,mes_another_name_080,1723ABCED5E07139,[REF:300],0,21244
+301,mes_another_name_081,1723AACED5E06F86,[REF:301],0,21256
+302,mes_another_name_082,1723A9CED5E06DD3,[REF:302],0,21268
+303,mes_another_name_083,1723A8CED5E06C20,[REF:303],0,21280
+304,mes_another_name_084,1723AFCED5E07805,[REF:304],0,21292
+305,mes_another_name_085,1723AECED5E07652,[REF:305],0,21304
+306,mes_another_name_086,1723ADCED5E0749F,[REF:306],0,21316
+307,mes_another_name_087,1723ACCED5E072EC,[REF:307],0,21328
+308,mes_another_name_088,1723B3CED5E07ED1,[REF:308],0,21340
+309,mes_another_name_089,1723B2CED5E07D1E,[REF:309],0,21352
+310,mes_another_name_090,172025CED5DD57B0,[REF:310],0,21364
+311,mes_another_name_091,172026CED5DD5963,[REF:311],0,21376
+312,mes_another_name_092,172027CED5DD5B16,[REF:312],0,21388
+313,mes_another_name_093,172028CED5DD5CC9,[REF:313],0,21400
+314,mes_another_name_094,172029CED5DD5E7C,[REF:314],0,21412
+315,mes_another_name_095,17202ACED5DD602F,[REF:315],0,21424
+316,mes_another_name_096,17202BCED5DD61E2,[REF:316],0,21436
+317,mes_another_name_097,17202CCED5DD6395,[REF:317],0,21448
+318,mes_another_name_098,17202DCED5DD6548,[REF:318],0,21460
+319,mes_another_name_099,17202ECED5DD66FB,[REF:319],0,21472

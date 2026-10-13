@@ -1,0 +1,53 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_pokemile_index_010,6C05095BCA478F69,Points,0,324
+1,	,AF66E44C86071324,[REF:1],0,340
+2,nx_pokemile_button_000,2A630686D9EFFF22,Retour,0,352
+3,nx_pokemile_button_001,2A630786D9F000D5,Aide,4,368
+4,	,AF66E44C86071324,[REF:4],0,380
+5,nx_pokemile_010,A584652620CE94FA,Points Pokémon HOME,0,392
+6,nx_pokemile_011,A584662620CE96AD,"[CTRL:0204:0000,202F] P",0,432
+7,nx_pokemile_020,A580DF2620CB7B71,"1 PCo = [CTRL:0201:0000] point[CTRL:1101:0000,0100]s",0,448
+8,nx_pokemile_030,A57DD92620C93B68,"Points nécessaires : [CTRL:0204:0000,202F]",0,500
+9,nx_pokemile_040,A595632620DD04C7,[CTRL:0200:0000],0,556
+10,nx_pokemile_041,A595622620DD0314,PCo,0,568
+11,nx_pokemile_050,A591DD2620D9EB3E,Confirmer,0,576
+12,nx_pokemile_060,A58ED72620D7AB35,Choisissez le nombre de points que vous souhaitez convertir en PCo.,0,596
+13,nx_pokemile_061,A58ED62620D7A982,PCo,0,732
+14,nx_pokemile_062,A58ED52620D7A7CF,"[CTRL:0203:0000,202F]/[CTRL:0203:0001,202F]",0,740
+15,	,AF66E44C86071324,[REF:15],0,764
+16,nx_pokemile_msg_yes,189337D573D9EBE6,Oui,4,776
+17,nx_pokemile_msg_no,D4E97CD168E02068,Non,0,784
+18,nx_pokemile_msg_010,068D25D68BB63A48,"Vous allez dépasser la limite de points recevables dans ce jeu
+si vous envoyez tout ça ! La quantité de points a été ajustée[RETURN]
+pour en envoyer autant que possible !",0,792
+19,nx_pokemile_msg_020,069797D68BBF5083,"Voulez-vous convertir [CTRL:0204:0000,202F] points en [CTRL:0203:0001,202F] PCo
+et les envoyer dans votre jeu ?",0,1124
+20,nx_pokemile_msg_030,069431D68BBC6D5A,"Sauvegarde en cours...
+Veuillez ne pas quitter Pokémon HOME.",0,1284
+21,nx_pokemile_msg_031,069432D68BBC6F0D,"Données sauvegardées !
+Vos points ont été convertis avec succès !",0,1408
+22,	,AF66E44C86071324,[REF:22],0,1540
+23,nx_pokemile_help_010,C1E70C42F87C36D8,"Alors, ici, vous pouvez convertir vos Points Pokémon HOME en PCo,
+ou Points Combat ! C’est simple : vous choisissez la quantité de points
+à convertir avec le stick gauche, vous sélectionnez « Confirmer »,
+et c’est tout bon !",4,1552
+24,	,AF66E44C86071324,[REF:24],0,2004
+25,nx_pokemile_063,A58ED42620D7A61C,Choisissez le nombre de points que vous souhaitez convertir en PBA.,0,2016
+26,nx_pokemile_065,A58ED22620D7A2B6,"[CTRL:0206:0000,202F]/[CTRL:0206:0001,202F]",0,2152
+27,nx_pokemile_021,A580DE2620CB79BE,"1 PBA = [CTRL:0201:0000] point[CTRL:1101:0000,0100]s",0,2176
+28,nx_pokemile_064,A58ED32620D7A469,PBA,0,2228
+29,nx_pokemile_msg_021,069796D68BBF4ED0,"Voulez-vous convertir [CTRL:0204:0000,202F] point[CTRL:1101:0000,0100]s en [CTRL:0204:0001,202F] PBA
+à envoyer vers votre jeu ?",0,2236
+30,nx_pokemile_help_011,C1E70D42F87C388B,"Ici, vous pouvez envoyer des PBA dans l’un de vos jeux !
+Choisissez le nombre de points à envoyer avec le stick gauche,
+sélectionnez « Confirmer », et c’est tout bon !",4,2396
+31,	,AF66E44C86071324,[REF:31],0,2732
+32,nx_pokemile_070,A58B512620D491AC,Choisissez le nombre de points que vous souhaitez convertir en PL.,0,2744
+33,nx_pokemile_071,A58B522620D4935F,"[CTRL:0206:0000,202F]/[CTRL:0206:0001,202F]",0,2880
+34,nx_pokemile_072,A58B532620D49512,1 point = [CTRL:0201:0000] PL,0,2904
+35,nx_pokemile_073,A58B542620D496C5,PL,0,2940
+36,nx_pokemile_msg_070,06A1A9D68BC7C39E,"Voulez-vous convertir [CTRL:0204:0000,202F] point[CTRL:1101:0000,0100]s en [CTRL:0205:0001,202F] PL
+à envoyer vers votre jeu ?",0,2948
+37,nx_pokemile_help_070,C1FB9042F88DC02E,"Ici, vous pouvez envoyer des PL dans l’un de vos jeux !
+Choisissez le nombre de points à envoyer avec le stick gauche,
+sélectionnez « Confirmer », et c’est tout bon !",4,3108

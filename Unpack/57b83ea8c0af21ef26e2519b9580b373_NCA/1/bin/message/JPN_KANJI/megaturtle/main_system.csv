@@ -1,0 +1,73 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_main_index_010,584CD9E407258EC0,メインメニュー,0,444
+1,	,AF66E44C86071324,[REF:1],0,476
+2,nx_main_button_000,2469972884056955,もどる,0,496
+3,nx_main_button_001,24699628840567A2,ヘルプ,0,512
+4,	,AF66E44C86071324,[REF:4],0,528
+5,nx_main_box_010,1A46EF5B1FB74199,ポケモン,0,548
+6,nx_main_box_020,1A4A755B1FBA5B22,"預けている数　[CTRL:0203:0000,0000]",0,568
+7,nx_main_pokedex_010,D00ADF22BD2805EA,図鑑,0,620
+8,nx_main_pokedex_020,D0075922BD24EC61,"登録した数　[CTRL:0203:0000,0000]",0,632
+9,nx_main_pokedex_021,D0075822BD24EAAE,[REF:9],0,680
+10,nx_main_eshop_010,F2911EFA46A1BC6F,ニンテンドーeショップ,0,700
+11,nx_main_small_title_010,94DE8C9018BBEC7A,ポケモン,0,748
+12,nx_main_small_title_020,94DB069018B8D2F1,図鑑,0,768
+13,nx_main_small_title_030,94D8009018B692E8,手帳,0,780
+14,nx_main_small_title_040,94EF8A9018CA5C47,ひっこし,0,792
+15,nx_main_small_title_050,94EC049018C742BE,ポイント,0,812
+16,nx_main_small_title_060,94E8FE9018C502B5,設定,0,832
+17,	,AF66E44C86071324,[REF:17],0,844
+18,nx_main_comment_01,D94EEB682EE7E5B3,たくさんのポケモンを　預けられるボックス,0,864
+19,nx_main_comment_02,D94EEC682EE7E766,ポケモンの情報を　チェックできる図鑑,0,948
+20,nx_main_comment_03,D94EED682EE7E919,ボックスの預け入れと　引き出しの記録,0,1024
+21,nx_main_comment_04,D94EEE682EE7EACC,ニンテンドー3DSから　ポケモンを　連れてくる,0,1100
+22,nx_main_comment_05,D94EEF682EE7EC7F,貯まった　『Pokémon HOMEポイント』を　使う,0,1196
+23,nx_main_comment_06,D94EF0682EE7EE32,『Pokémon HOME』を　あれこれ調整,0,1308
+24,nx_main_comment_07,D94EF1682EE7EFE5,プレミアムプランに　切り替える,0,1400
+25,nx_main_comment_07_ex,7432D629AEA9EF2B,"プレミアムプランの　詳細は
+『ニンテンドーeショップ』で
+確認することが　できます
+よく　わからない　ばあいは
+おうちの　ひとと　いっしょに
+そうさを　すすめて　ください",0,1464
+26,	,AF66E44C86071324,[REF:26],0,1808
+27,nx_main_eshop_msg_010,5769BF9354BD9841,"ニンテンドーeショップで
+プレミアムプランの　確認をしますか？",0,1828
+28,nx_main_eshop_msg_pot_010,13FA00777B30FE85,1か月プラン (30日),0,1956
+29,nx_main_eshop_msg_pot_020,13FD86777B34180E,3か月プラン (90日),0,2008
+30,nx_main_eshop_msg_pot_030,14008C777B365817,12か月プラン (365日),0,2060
+31,nx_main_eshop_msg_pot_999,6349F077A87F68F9,やめる,0,2120
+32,	,AF66E44C86071324,[REF:32],0,2136
+33,nx_main_msg_010,09F05BFC15443881,"フリープランでは　この項目を
+利用することが　できません！[CLEAR]
+ニンテンドーeショップで
+プレミアムプランに　切り替えて　ください",0,2156
+34,nx_main_msg_020,09F361FC1546788A,[REF:34],0,2424
+35,nx_main_msg_021,09F362FC15467A3D,[REF:35],0,2444
+36,nx_main_msg_022,09F35FFC15467524,[REF:36],0,2464
+37,nx_main_msg_030,09F6C7FC15495BB3,"『調査リクエスト』に　新たな
+リクエストファイルが　追加されました！",0,2484
+38,	,AF66E44C86071324,[REF:38],0,2624
+39,nx_main_help_010,B131D26A7BFF4C93,"この　画面は　メインメニュー
+あらゆる機能に　アクセスできるモン！
+使いたい項目を　自由に　選ぶモン！",0,2644
+40,nx_main_help_020,B127606A7BF63658,"Lスティックで　カーソルを　移動して
+Aボタンで　決定するモン！
+ひとつ前の　画面に　戻りたいときは
+Bボタンを　押せば　オッケー！",0,2852
+41,	,AF66E44C86071324,[REF:41],0,3120
+42,nx_main_help_first_010,AE567A0D58881F2A,"ハーイ！　ボクの　名前は　モンボー！
+キミに　『Pokémon HOME』の　使い方を　
+レクチャー　するのが　ボクの　つとめだモン！",0,3140
+43,nx_main_help_first_020,AE52F40D588505A1,"－ボタンで　ボクを　呼び出して　くれれば
+それぞれの画面の　使い方を　教えるモン！
+では　さっそく！　この画面の　説明から……",0,3412
+44,nx_main_small_title_070,94E5789018C1E92C,Pokémon GO,0,3668
+45,nx_main_msg_010,09F05BFC15443881,[REF:45],0,3712
+46,nx_main_comment_08,D94EF2682EE7F198,『Pokémon GO』の　ポケモンを　引き取る,0,3732
+47,nx_main_msg_011,09F05AFC154436CE,[REF:47],0,3832
+48,nx_main_small_title_080,94C7029018A8231B,Pokémon Champions,0,3852
+49,nx_main_comment_09,D94EF3682EE7F34B,『Pokémon Champions』に　ポケモンを　遠征させる,0,3924
+50,	,AF66E44C86071324,[REF:50],0,4056
+51,nx_main_small_title_090,94C37C9018A50992,GBAシリーズ,0,4076
+52,nx_main_comment_10,D95270682EEAFD89,Nintendo Switchの　ゲームボーイアドバンスシリーズから　ポケモンを　連れてくる,0,4108

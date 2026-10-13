@@ -1,0 +1,331 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_zukan_index_010,53108D8DFB3981DC,POKÉDEX,0,1884
+1,nx_zukan_index_011,53108E8DFB39838F,"[CTRL:0203:0000,002C]",0,1900
+2,nx_zukan_index_012,53108F8DFB398542,Number registered:,0,1912
+3,nx_zukan_index_020,531A9F8DFB41F4F7,RESEARCH TASKS,0,1952
+4,nx_zukan_index_030,5317198DFB3EDB6E,[REF:4],0,1984
+5,nx_zukan_index_picup_0000,9AACD375CCD66365,ALL POKÉMON,4,1996
+6,nx_zukan_index_picup_0010,9AA9CD75CCD4235C,KANTO REGION,0,2020
+7,nx_zukan_index_picup_0020,9AB3DF75CCDC9677,JOHTO REGION,0,2048
+8,nx_zukan_index_picup_0030,9AB05975CCD97CEE,HOENN REGION,0,2076
+9,nx_zukan_index_picup_0040,9A9F5B75CCCB0D21,SINNOH REGION,0,2104
+10,nx_zukan_index_picup_0050,9A9BD575CCC7F398,UNOVA REGION,4,2132
+11,nx_zukan_index_picup_0060,9AA64775CCD109D3,KALOS REGION,0,2160
+12,nx_zukan_index_picup_0070,9AA2E175CCCE26AA,ALOLA REGION,4,2188
+13,nx_zukan_index_picup_0080,9A91E375CCBFB6DD,GALAR REGION,0,2216
+14,nx_zukan_index_picup_0090,9A8E5D75CCBC9D54,HISUI REGION,0,2244
+15,nx_zukan_index_picup_0100,9196B875C79235FA,PALDEA REGION,0,2272
+16,nx_zukan_index_picup_9999,5D573DB0F12E19D9,UNKNOWN ORIGINS,4,2300
+17,	,AF66E44C86071324,[REF:17],0,2332
+18,nx_zukan_button_000,2D10F432335C5089,Back,0,2344
+19,nx_zukan_button_001,2D10F332335C4ED6,Help,0,2356
+20,nx_zukan_button_010,2D0D6E3233593700,Cry,0,2368
+21,nx_zukan_button_020,2D1800323362839B,Shiny,0,2376
+22,nx_zukan_button_030,2D147A32335F6A12,Games,0,2388
+23,nx_zukan_button_040,2D1E8C323367DD2D,Descriptions,0,2400
+24,nx_zukan_button_050,2D1B06323364C3A4,Rotate,0,2428
+25,nx_zukan_button_060,2D257832336DD9DF,Rotate,0,2444
+26,nx_zukan_button_065,2D257332336DD160,Language,0,2460
+27,nx_zukan_button_070,2D21F232336AC056,Reset Filter,0,2480
+28,nx_zukan_button_080,2D2C043233733371,Reset View,0,2508
+29,nx_zukan_button_081,2D2C0332337331BE,Filter,0,2532
+30,nx_zukan_button_082,2D2C02323373300B,Sort,0,2548
+31,nx_zukan_button_090,2D28FE323370F368,[REF:31],0,2560
+32,	,AF66E44C86071324,[REF:32],0,2572
+33,nx_zukan_menu_040,EAE4A6390F678062,[REF:33],0,2584
+34,nx_zukan_menu_050,EAE82C390F6A99EB,[REF:34],0,2596
+35,	,AF66E44C86071324,[REF:35],0,2608
+36,nx_zukan_top_010,1FB53F2EF34B87D7,National Pokédex,0,2620
+37,nx_zukan_top_020,1FAB2D2EF34314BC,Research Tasks,0,2656
+38,nx_zukan_top_030,1FAEB32EF3462E45,Number registered:,0,2688
+39,nx_zukan_top_031,1FAEB22EF3462C92,"[CTRL:0203:0000,002C]",0,2728
+40,nx_zukan_top_040,1FA4412EF33D180A,[REF:40],0,2740
+41,nx_zukan_top_041,1FA4422EF33D19BD,[REF:41],0,2752
+42,nx_zukan_top_050,1FA7A72EF33FFB33,"Choose to view all the species in the Pokédex or put
+the spotlight on the species that were first discovered
+in a certain region by selecting that region’s name.",0,2764
+43,nx_zukan_top_060,1F9DB52EF337BE78,Research Targets,0,3088
+44,nx_zukan_top_070,1FA13B2EF33AD801,"Collect Pokémon that fit into Grand Oak’s research
+themes, and you can help support him in his work.
+Which game the Pokémon was caught in will be key!",0,3124
+45,nx_zukan_top_080,1F96A92EF3318B66,"You don’t have any tasks to work on yet!
+If you connect to a game from the Pokémon menu,
+research tasks will start to appear here.",0,3428
+46,nx_zukan_top_list_010,99EFA016330102E0,,0,3692
+47,nx_zukan_top_list_020,99F9B216330975FB,[REF:47],0,3696
+48,nx_zukan_top_list_030,99F62C1633065C72,[CTRL:0201:0000],0,3708
+49,	,AF66E44C86071324,[REF:49],0,3720
+50,nx_zukan_top_announce_010,49EC2E3FDB583C8F,"[CTRL:0101:0000] has been
+registered to your Pokédex!",0,3732
+51,nx_zukan_top_announce_020,49E1BC3FDB4F2654,"You added [CTRL:0203:0000,002C] new Pokémon
+species to your Pokédex!",0,3816
+52,	,AF66E44C86071324,[REF:52],0,3924
+53,nx_zukan_top_msg_010,615D626D9054C229,"You don’t have any matching Pokémon yet![CLEAR]
+Bring some Pokémon to your Pokémon HOME Boxes if you
+want to have their data registered in your Pokédex.",0,3936
+54,	,AF66E44C86071324,[REF:54],0,4236
+55,nx_zukan_top_picup_0000,42BDB5000DB2CB60,All Pokémon,4,4248
+56,nx_zukan_top_picup_0010,42C13B000DB5E4E9,Kanto Region,0,4272
+57,nx_zukan_top_picup_0020,42C441000DB824F2,Johto Region,0,4300
+58,nx_zukan_top_picup_0030,42C7C7000DBB3E7B,Hoenn Region,0,4328
+59,nx_zukan_top_picup_0040,42CB4D000DBE5804,Sinnoh Region,0,4356
+60,nx_zukan_top_picup_0050,42CED3000DC1718D,Unova Region,4,4384
+61,nx_zukan_top_picup_0060,42D239000DC454B6,Kalos Region,0,4412
+62,nx_zukan_top_picup_0070,42D53F000DC694BF,Alola Region,4,4440
+63,nx_zukan_top_picup_0080,42D8C5000DC9AE48,Galar Region,0,4468
+64,nx_zukan_top_picup_0090,42DC4B000DCCC7D1,Hisui Region,0,4496
+65,nx_zukan_top_picup_0100,4A20F00011859AAB,Paldea Region,0,4524
+66,nx_zukan_top_picup_9999,93DD5B4AE8CF64FC,Unknown Origins,4,4552
+67,	,AF66E44C86071324,[REF:67],0,4584
+68,nx_zukan_top_topics_0010,86D945ACBE497006,Kanto Region Tasks,0,4596
+69,nx_zukan_top_topics_0020,86D5DFACBE468CDD,Galar Region Tasks,0,4636
+70,nx_zukan_top_topics_0030,86D259ACBE437354,Sinnoh Region Tasks,0,4676
+71,nx_zukan_top_topics_0040,86CED3ACBE4059CB,Hisui Region Tasks,0,4716
+72,nx_zukan_top_topics_0041,86CED2ACBE405818,Paldea Region Tasks,0,4756
+73,nx_zukan_top_topics_0060,86C847ACBE3B0039,Kalos Region Tasks,0,4796
+74,nx_zukan_top_topics_0070,86C4C1ACBE37E6B0,Kanto Region Tasks (GBA),0,4836
+75,	,AF66E44C86071324,[REF:75],0,4888
+76,nx_zukan_topics_filenumber_0010,E4D9F09C2A967D14,Kanto Task #[CTRL:0201:0000],0,4900
+77,nx_zukan_topics_filenumber_0020,E4E4629C2A9F934F,Galar Task #[CTRL:0201:0000],0,4936
+78,nx_zukan_topics_filenumber_0030,E4E0DC9C2A9C79C6,Sinnoh Task #[CTRL:0201:0000],0,4972
+79,nx_zukan_topics_filenumber_0040,E4CFDE9C2A8E09F9,Hisui Task #[CTRL:0201:0000],0,5008
+80,nx_zukan_topics_filenumber_0050,E4CC589C2A8AF070,Paldea Task #[CTRL:0201:0000],0,5044
+81,nx_zukan_topics_filenumber_0060,E4D66A9C2A93638B,Kalos Task #[CTRL:0201:0000],0,5080
+82,nx_zukan_topics_filenumber_0070,E4D3649C2A912382,Kanto Task (GBA) #[CTRL:0201:0000],0,5116
+83,	,AF66E44C86071324,[REF:83],0,5164
+84,nx_zukan_detailed_000,4DA3659B58E91D49,"No. [CTRL:0203:0000,0000]",0,5176
+85,nx_zukan_detailed_001,4DA3649B58E91B96,[CTRL:0101:0000],0,5196
+86,nx_zukan_detailed_010,4D9FDF9B58E603C0,Height,0,5208
+87,nx_zukan_detailed_011,4D9FE09B58E60573,,0,5224
+88,nx_zukan_detailed_020,4DAA719B58EF505B,Weight,0,5228
+89,nx_zukan_detailed_021,4DAA709B58EF4EA8,,0,5244
+90,nx_zukan_detailed_030,4DA6EB9B58EC36D2,[CTRL:0104:0000],0,5248
+91,nx_zukan_detailed_040,4DB0FD9B58F4A9ED,,0,5260
+92,nx_zukan_detailed_041,4DB0FC9B58F4A83A,(Form [CTRL:0201:0000] of [CTRL:0201:0001]),0,5264
+93,nx_zukan_detailed_050,4DAD779B58F19064,,0,5304
+94,nx_zukan_detailed_051,4DAD789B58F19217,[REF:94],0,5308
+95,nx_zukan_detailed_060,4DB7E99B58FAA69F,Games it appears in ([CTRL:0200:0000] of [CTRL:0200:0001]),0,5320
+96,nx_zukan_detailed_061,4DB7E89B58FAA4EC,Games it appears in,0,5392
+97,nx_zukan_detailed_070_jpn,9E9E5B539B79F195,"Bring a Japanese-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in Japanese, too!",0,5432
+98,nx_zukan_detailed_070_eng,0E825753DAA66411,"Bring an English-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in English, too!",0,5644
+99,nx_zukan_detailed_070_spa,656BEB540BF5DFAB,"Bring a Castilian Spanish-language (ES-ES) [CTRL:0101:0000]
+to Pokémon HOME, and you’ll be able to view its
+details in Castilian Spanish, too!",0,5852
+100,nx_zukan_detailed_070_fra,07635453D70DC0BA,"Bring a French-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in French, too!",0,6116
+101,nx_zukan_detailed_070_ger,FFC60253D3095213,"Bring a German-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in German, too!",0,6320
+102,nx_zukan_detailed_070_ita,A95A8153A2253BD5,"Bring an Italian-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in Italian, too!",0,6524
+103,nx_zukan_detailed_070_kor,97382E5397A5043D,"Bring a Korean-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in Korean, too!",0,6732
+104,nx_zukan_detailed_070_chs,DC355D53BEA1B919,"Bring a simplified-Chinese-language [CTRL:0101:0000]
+to Pokémon HOME, and you’ll be able to view its
+details in simplified Chinese, too!",0,6936
+105,nx_zukan_detailed_070_cht,DC355E53BEA1BACC,"Bring a traditional-Chinese-language [CTRL:0101:0000]
+to Pokémon HOME, and you’ll be able to view its
+details in traditional Chinese, too!",0,7188
+106,nx_zukan_detailed_070_latam,15FA3EDC47203C72,"Bring a Latin American Spanish-language (ES-LA)
+[CTRL:0101:0000] to Pokémon HOME, and you’ll be able to
+view its details in Latin American Spanish, too!",0,7444
+107,nx_zukan_detailed_gba,F6BD8D9C49E0B3C9,"There is no Pokédex entry for this Pokémon. Please either
+change the game or the language you’re using.",0,7728
+108,nx_zukan_detailed_070_jpn_small,5959B58400BEB11D,"Bring a Japanese-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in Japanese, too!",0,7936
+109,nx_zukan_detailed_070_eng_small,09D53AE9DACF7199,"Bring an English-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in English, too!",0,8148
+110,nx_zukan_detailed_070_spa_small,9EE4BBE5898355C3,"Bring a Castilian Spanish-language (ES-ES) [CTRL:0101:0000]
+to Pokémon HOME, and you’ll be able to view its
+details in Castilian Spanish, too!",0,8356
+111,nx_zukan_detailed_070_fra_small,506CE34FF4CDCBCE,"Bring a French-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in French, too!",0,8620
+112,nx_zukan_detailed_070_ger_small,CF301537DDF410EB,"Bring a German-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in German, too!",0,8824
+113,nx_zukan_detailed_070_ita_small,CB0BE19F2363F05D,"Bring an Italian-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in Italian, too!",0,9028
+114,nx_zukan_detailed_070_kor_small,50A8F366D4F841A5,"Bring a Korean-language [CTRL:0101:0000] to
+Pokémon HOME, and you’ll be able to view its
+details in Korean, too!",0,9236
+115,nx_zukan_detailed_070_chs_small,34B32A2D8D93CAC1,"Bring a simplified-Chinese-language [CTRL:0101:0000]
+to Pokémon HOME, and you’ll be able to view its
+details in simplified Chinese, too!",0,9440
+116,nx_zukan_detailed_070_cht_small,1F7CC30F25045F00,"Bring a traditional-Chinese-language [CTRL:0101:0000]
+to Pokémon HOME, and you’ll be able to view its
+details in traditional Chinese, too!",0,9692
+117,nx_zukan_detailed_070_latam_small,9C6D1F6C20E078E6,"Bring a Latin American Spanish-language (ES-LA)
+[CTRL:0101:0000] to Pokémon HOME, and you’ll be able to
+view its details in Latin American Spanish, too!",0,9948
+118,nx_zukan_detailed_gba_small,B5876ED04F4B1D31,"There is no Pokédex entry for this Pokémon. Please either
+change the game or the language you’re using.",0,10232
+119,	,AF66E44C86071324,[REF:119],0,10440
+120,nx_zukan_list_010,441FCA488FC577D4,,0,10452
+121,nx_zukan_list_020,442A3C488FCE8E0F,"No. [CTRL:0203:0000,0000]",0,10456
+122,nx_zukan_list_021,442A3B488FCE8C5C,,0,10476
+123,nx_zukan_list_022,442A3E488FCE9175,,0,10480
+124,nx_zukan_list_030,4426B6488FCB7486,[CTRL:0101:0000],0,10484
+125,nx_zukan_list_040,4415B8488FBD04B9,??????,0,10496
+126,	,AF66E44C86071324,[REF:126],0,10512
+127,nx_zukan_language_01,375806079A591BC6,Japanese (Kana),0,10524
+128,nx_zukan_language_02,375805079A591A13,Japanese (Kanji),0,10556
+129,nx_zukan_language_03,375804079A591860,English,4,10592
+130,nx_zukan_language_04,37580B079A592445,French,0,10608
+131,nx_zukan_language_05,37580A079A592292,German,0,10624
+132,nx_zukan_language_06,375809079A5920DF,Italian,4,10640
+133,nx_zukan_language_07,375808079A591F2C,Korean,0,10656
+134,nx_zukan_language_08,37580F079A592B11,Spanish (Spain),0,10672
+135,nx_zukan_language_09,37580E079A59295E,Chinese (Simplified),0,10704
+136,nx_zukan_language_10,375481079A5603F0,Chinese (Traditional),0,10748
+137,nx_zukan_language_11,375482079A5605A3,Spanish (Latin America),0,10792
+138,	,AF66E44C86071324,[REF:138],0,10840
+139,nx_zukan_search_data_010,C437552C67A3C3C5,"No. [CTRL:0203:0000,0000]",0,10852
+140,nx_zukan_search_data_020,C43ADB2C67A6DD4E,[CTRL:0101:0000],0,10872
+141,nx_zukan_search_guide_010,07DF7A205ADD7D67,Sorted By: [CTRL:01DA:0000] (No Filters Applied),0,10884
+142,nx_zukan_search_guide_020,07D4E8205AD430CC,"Sorted By: [CTRL:01DA:0000] (Filters Showing [CTRL:0203:0001,002C] out of [CTRL:0203:0002,002C])",0,10960
+143,nx_zukan_search_guide_030,07D86E205AD74A55,"Sorted By: [CTRL:01DA:0000] (Filters Showing [CTRL:0203:0001,002C] Forms)",0,11068
+144,	,AF66E44C86071324,[REF:144],0,11160
+145,nx_zukan_search_title,16395A443366EC8B,Filter Pokémon by...,0,11172
+146,nx_zukan_search_sort,3DF65C4B7FFD7C93,Sort Pokémon by...,0,11216
+147,nx_zukan_search_name,32DBC8ABDF0B1330,First Initial,0,11256
+148,nx_zukan_search_type1,A42D3ECCBCD63B06,Type 1,0,11284
+149,nx_zukan_search_type2,A42D3DCCBCD63953,Type 2,0,11300
+150,nx_zukan_search_color,31D0B67882CD256A,Color,0,11316
+151,nx_zukan_search_shape,2B61830E94584E54,Shape,0,11328
+152,nx_zukan_search_form,19ED76ED60C728B9,Form,0,11340
+153,nx_zukan_search_version,44BE3BA7FAB1A205,Featured Game,0,11352
+154,nx_zukan_search_register,4708974DCBD995AE,Pokédex Status,0,11380
+155,	,AF66E44C86071324,[REF:155],0,11412
+156,nx_zukan_search_head_name,9ED0D0EE6F31CD91,Filter by initial letter,0,11424
+157,nx_zukan_search_head_type,8C6575CA67F751EA,Filter by type,0,11476
+158,nx_zukan_search_head_color,76ED2EB5F462AEFD,Filter by main color,0,11508
+159,nx_zukan_search_head_shape,D4EEFD95193B2287,Filter by body shape,0,11552
+160,nx_zukan_search_head_form,4FCE4B34EAAB8FFC,Filter by form,0,11596
+161,nx_zukan_search_head_version,73E6812EB2613716,Filter by the games it appears in,0,11628
+162,nx_zukan_search_head_register,5A26B2CF49C77D73,Filter by Pokédex registration status,0,11696
+163,nx_zukan_search_nil,CECDBE77DC8628AA,No matches found!,0,11772
+164,	,AF66E44C86071324,[REF:164],0,11808
+165,nx_zukan_sort_01,00BF326FDFB37690,Pokédex Number,0,11820
+166,nx_zukan_sort_02,00BF356FDFB37BA9,Alphabetical Order,4,11852
+167,nx_zukan_sort_03,00BF346FDFB379F6,Heaviest to Lightest,0,11892
+168,nx_zukan_sort_04,00BF376FDFB37F0F,Lightest to Heaviest,0,11936
+169,nx_zukan_sort_05,00BF366FDFB37D5C,Tallest to Shortest,0,11980
+170,nx_zukan_sort_06,00BF396FDFB38275,Shortest to Tallest,0,12020
+171,	,AF66E44C86071324,[REF:171],0,12060
+172,nx_zukan_color_01,AA189EFD1AD46075,Red,0,12072
+173,nx_zukan_color_02,AA189BFD1AD45B5C,Blue,0,12080
+174,nx_zukan_color_03,AA189CFD1AD45D0F,Green,0,12092
+175,nx_zukan_color_04,AA1899FD1AD457F6,Yellow,0,12104
+176,nx_zukan_color_05,AA189AFD1AD459A9,Pink,0,12120
+177,nx_zukan_color_06,AA1897FD1AD45490,Purple,0,12132
+178,nx_zukan_color_07,AA1898FD1AD45643,Brown,0,12148
+179,nx_zukan_color_08,AA18A5FD1AD46C5A,Gray,0,12160
+180,nx_zukan_color_09,AA18A6FD1AD46E0D,White,0,12172
+181,nx_zukan_color_10,AA1BA3FD1AD69ECB,Black,0,12184
+182,	,AF66E44C86071324,[REF:182],0,12196
+183,nx_zukan_form_0010,1446FAA819DE8CB4,Show all forms,0,12208
+184,nx_zukan_form_0020,1450ECA819E6C96F,Shiny form,0,12240
+185,nx_zukan_form_0030,144D66A819E3AFE6,Male form,0,12264
+186,nx_zukan_form_0040,143C68A819D54019,Female form,0,12284
+187,nx_zukan_form_0050,143962A819D30010,Gender unknown,0,12308
+188,nx_zukan_form_1010,5F907A9F270B2635,Mega Evolved,0,12340
+189,nx_zukan_form_1020,5F93809F270D663E,Primal Reversion,0,12368
+190,nx_zukan_form_1030,5F97069F27107FC7,Gigantamax,0,12404
+191,nx_zukan_form_2010,2B23D2B78D5F8A76,Alolan Form,4,12428
+192,nx_zukan_form_2020,2B206CB78D5CA74D,Galarian Form,0,12452
+193,nx_zukan_form_2030,2B1CE6B78D598DC4,Hisuian Form,0,12480
+194,nx_zukan_form_2040,2B1960B78D56743B,Paldean Form,0,12508
+195,	,AF66E44C86071324,[REF:195],0,12536
+196,nx_zukan_register_01,2E6379413994C3B3,Registered,0,12548
+197,nx_zukan_register_02,2E637A413994C566,Not yet registered,0,12572
+198,	,AF66E44C86071324,[REF:198],0,12612
+199,nx_zukan_none_3,A45FE3B062A9EF1E,———,0,12624
+200,nx_zukan_none_5,A45FE5B062A9F284,——————,0,12632
+201,nx_zukan_none_8,A45FDAB062A9DFD3,—————————,0,12648
+202,	,AF66E44C86071324,[REF:202],0,12668
+203,nx_zukan_topics_name1,F4DE6150C341F9F3,[CTRL:0101:0000],0,12680
+204,nx_zukan_topics_name2,F4DE6250C341FBA6,??????,0,12692
+205,nx_zukan_topics_conditions,9766CE8A635DF69D,,0,12708
+206,nx_zukan_topics_conditions_inactive_01,122F97415D3C578F,"Complete [CTRL:0201:0000] task[CTRL:1101:0000,0100]s for this region
+to unlock this task and see its details!",0,12712
+207,nx_zukan_topics_list_title,BF4A734F4DDC7452,,0,12876
+208,nx_zukan_topics_list_inactive,F4430E9C35355895,?????????????????????,0,12880
+209,nx_zukan_topics_list_progress,75015AE069AB084F,[CTRL:0200:0000]/[CTRL:0200:0001],0,12924
+210,nx_zukan_topics_guide_010,836CFEBA09CCD7A7,[CTRL:01DA:0000] (Completed Tasks: [CTRL:0201:0001]),0,12944
+211,	,AF66E44C86071324,[REF:211],0,13004
+212,nx_zukan_help1_010,DCF169A3820C5F5E,"This is the grand Pokédex that Grand Oak whipped up.
+Neat-o, right? It’ll automatically register any Pokémon you bring
+along to your cozy Boxes here in Pokémon HOME!",0,13016
+213,nx_zukan_help1_020,DCEDE3A3820945D5,"Of course it’s a super goal to complete the WHOLE Pokédex with
+every last Pokémon out there! But, boy, is that ever a lot of work!
+Try using Spotlight Mode to focus in on different regional Pokédexes,
+and keep chipping away at that goal—one region at a time!",4,13348
+214,nx_zukan_help1_030,DCEA5DA382062C4C,"But that’s not all! Have you tried giving your L or R Buttons a squeeze?
+Press ’em and you’ll be switched right on over to your Research Tasks!
+Grand Oak himself wants YOUR help with his great research,
+so help an old man out, won’t you?",0,13868
+215,	,AF66E44C86071324,[REF:215],0,14344
+216,nx_zukan_help2_010,C0106BC2CBCF33A7,"This here is the details screen, where you’ll find all the spiffy key details
+about your Pokémon crammed into one place!
+Get started off by choosing a Pokémon from the list on the right!",0,14356
+217,nx_zukan_help2_020,C005D9C2CBC5E70C,"If you want to learn even more about your Pokémon,
+give your ZL or ZR Buttons a friendly tap, won’t you?
+You’ll be able to see their Pokédex entries from different games
+you’ve found ’em in. It’s super nifty!",4,14732
+218,nx_zukan_help2_030,C0095FC2CBC90095,"And if you’ve got Pokémon that you’ve registered in more than one form,
+you can use those handy L and R Buttons to flip between their forms!
+Did you know that sometimes forms have different Pokédex entries, too?
+Be sure you give ’em all a good look!",4,15152
+219,nx_zukan_help2_040,BFFF6DC2CBC0C3DA,"And you’ve got the Y Button there to help you check which games
+that Pokémon appears in.
+That means you might be able to get the Pokémon in those games!",4,15652
+220,	,AF66E44C86071324,[REF:220],0,15960
+221,nx_zukan_help3_010,3693FF929ACA0B58,"This list view lets you just go on and take a gander at all the Pokémon
+you’ve registered in all their glory! It sure is a sight, isn’t it?
+Whenever you want to take a closer look at any one of your Pokémon
+as you scroll through, give that A Button a little press!",0,15972
+222,nx_zukan_help3_020,369E71929AD32193,"The X Button opens up the filter window! Fwooosh! Just like that!
+You can filter your list of Pokémon by all sorts of conditions, including
+things like their types, their main color, or even shape!
+Want to know what my type is? Why, I’m the having-a-ball type!",0,16504
+223,nx_zukan_help3_030,369B0B929AD03E6A,"The Y Button lets you change up the order that your Pokémon are
+sorted in! Sure, you’ve got your familiar old Pokédex-number order...
+But how about sorting by height or by weight? It’s good to turn things
+on their head sometimes and look at ’em from a whole new angle!",0,17028
+224,	,AF66E44C86071324,[REF:224],0,17568
+225,nx_zukan_help4_010,1C5CFD86C9AE9721,"Research Tasks might seem a bit taxing, but they’re really rewarding!
+They’re requests that come from Grand Oak, see, and what could
+be better than helping out the grand old gent himself?",0,17580
+226,nx_zukan_help4_020,1C608386C9B1B0AA,"If you’ve got save data on your Nintendo Switch from a region
+that Grand Oak wants to research, then you’ll see task lists start
+popping up for each region on this screen!",4,17956
+227,nx_zukan_help4_030,1C63E986C9B493D3,"But consider this your warning, pal! To complete a task, you’ve got to get
+the Pokémon Grand Oak is interested in seeing AND get it in that same
+region as the task belongs to. He’s a bit of a stickler like that!",0,18300
+228,	,AF66E44C86071324,[REF:228],0,18724
+229,nx_zukan_help5_010,E39F9799B4F70A92,"On the right side of this screen, you’ve got your list of Research Tasks.
+All you’ve got to do to complete a Research Task is get your hands on the
+necessary Pokémon! I bet you’re a catching pro, aren’t you?",4,18736
+230,nx_zukan_help5_020,E39C1199B4F3F109,"But there are still a few little tricks to these tasks!
+Even if you get your hands on the right Pokémon species, it won’t
+count if it’s from the wrong game or in the wrong form!
+Be sure you check carefully where your Pokémon were caught!",0,19152
+231,nx_zukan_help5_030,E3988B99B4F0D780,"But if you do manage to get the right Pokémon that meet every condition,
+then all you have to do is bring ’em to your Pokémon HOME Boxes and
+you’ll find your tasks automatically get marked off as complete!
+You don’t even have to lift a finger!",0,19628
+232,nx_zukan_help5_031,E3988C99B4F0D933,"And once a task is done, it’s done for good.
+It won’t be affected if you take the Pokémon you used to fulfill a task
+out of Pokémon HOME or if you decide to let ’em go.
+No one can take this accomplishment away from you, champ!",4,20116

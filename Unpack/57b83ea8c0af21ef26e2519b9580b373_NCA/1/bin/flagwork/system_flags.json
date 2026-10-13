@@ -1,0 +1,1057 @@
+[
+  {
+    "hash_fnv64": "7D0B1CED4DBE8A87",
+    "index": 0,
+    "label": "FSYS_GAME_CLEAR"
+  },
+  {
+    "hash_fnv64": "711644F9ED6E814D",
+    "index": 1,
+    "label": "FSYS_XMENU_OPEN_ZUKAN"
+  },
+  {
+    "hash_fnv64": "6E7137BDE4EB839D",
+    "index": 2,
+    "label": "FSYS_XMENU_OPEN_POKEMON"
+  },
+  {
+    "hash_fnv64": "B0C294D6B1C29772",
+    "index": 3,
+    "label": "FSYS_XMENU_OPEN_BAG"
+  },
+  {
+    "hash_fnv64": "24395E11B39286E2",
+    "index": 4,
+    "label": "FSYS_XMENU_OPEN_SETTEI"
+  },
+  {
+    "hash_fnv64": "4F5F068981386C6E",
+    "index": 5,
+    "label": "FSYS_XMENU_OPEN_REPORT"
+  },
+  {
+    "hash_fnv64": "557160D5E49BDA61",
+    "index": 6,
+    "label": "FSYS_XMENU_OPEN_CAMP"
+  },
+  {
+    "hash_fnv64": "040F875664C9A71F",
+    "index": 7,
+    "label": "FSYS_XMENU_OPEN_OKURIMONO"
+  },
+  {
+    "hash_fnv64": "402094D671F4F522",
+    "index": 8,
+    "label": "FSYS_XMENU_OPEN_MAP"
+  },
+  {
+    "hash_fnv64": "627252F20DDE1E67",
+    "index": 9,
+    "label": "FSYS_XMENU_OPEN_LICENSE"
+  },
+  {
+    "hash_fnv64": "5A7C7F4806373534",
+    "index": 10,
+    "label": "FSYS_XMENU_OPEN_TUUSIN"
+  },
+  {
+    "hash_fnv64": "22936F41299E4801",
+    "index": 11,
+    "label": "FSYS_GYM_CLEAR_FIRST"
+  },
+  {
+    "hash_fnv64": "A8094414FF80169D",
+    "index": 12,
+    "label": "FSYS_GYM_CLEAR_SECOND"
+  },
+  {
+    "hash_fnv64": "82D47CF97F29D95E",
+    "index": 13,
+    "label": "FSYS_GYM_CLEAR_THIRD"
+  },
+  {
+    "hash_fnv64": "E10DC20971BFDED1",
+    "index": 14,
+    "label": "FSYS_GYM_CLEAR_FOURTH"
+  },
+  {
+    "hash_fnv64": "CFE185418BCBBCDE",
+    "index": 15,
+    "label": "FSYS_GYM_CLEAR_FIFTH"
+  },
+  {
+    "hash_fnv64": "E0522BD5FE5A7D5F",
+    "index": 16,
+    "label": "FSYS_GYM_CLEAR_SIXTH"
+  },
+  {
+    "hash_fnv64": "D02C8568C90B46C2",
+    "index": 17,
+    "label": "FSYS_GYM_CLEAR_SEVENTH"
+  },
+  {
+    "hash_fnv64": "2277DCC8375FD6A8",
+    "index": 18,
+    "label": "FSYS_GYM_CLEAR_EIGHTH"
+  },
+  {
+    "hash_fnv64": "D618FE95D0E267EB",
+    "index": 19,
+    "label": "FSYS_JUDGE_OPEN"
+  },
+  {
+    "hash_fnv64": "AFEFD2F29686664A",
+    "index": 20,
+    "label": "FSYS_FLAG_WILD_SPAWN"
+  },
+  {
+    "hash_fnv64": "2FD93CC0CA69D102",
+    "index": 21,
+    "label": "FSYS_FLAG_SYMBOL_SPAWN"
+  },
+  {
+    "hash_fnv64": "903B22367526A53C",
+    "index": 22,
+    "label": "FSYS_FLAG_NAMINORI_OPEN"
+  },
+  {
+    "hash_fnv64": "40D19A490012B380",
+    "index": 23,
+    "label": "FSYS_FLAG_SORAWOTOBU_OPEN"
+  },
+  {
+    "hash_fnv64": "EB5178B9A0F65ED4",
+    "index": 24,
+    "label": "FSYS_FLAG_CAN_NOT_FLY"
+  },
+  {
+    "hash_fnv64": "C4EA335D95278FBB",
+    "index": 25,
+    "label": "FSYS_TIPS_OPEN_JIKKYOU"
+  },
+  {
+    "hash_fnv64": "42B184DBA09A6686",
+    "index": 26,
+    "label": "FSYS_TIPS_OPEN_LICENSE"
+  },
+  {
+    "hash_fnv64": "D0D740A8A9C7E138",
+    "index": 27,
+    "label": "FSYS_TIPS_OPEN_BTL_SPOT"
+  },
+  {
+    "hash_fnv64": "3D668A5C40194E2C",
+    "index": 28,
+    "label": "FSYS_TIPS_OPEN_G_POKE"
+  },
+  {
+    "hash_fnv64": "8DF10A9D399F7947",
+    "index": 29,
+    "label": "FSYS_TIPS_OPEN_KAWAIGARI"
+  },
+  {
+    "hash_fnv64": "9719FFCA86F6E0B7",
+    "index": 30,
+    "label": "FSYS_TIPS_OPEN_RYOURI"
+  },
+  {
+    "hash_fnv64": "BEE016A074F7B837",
+    "index": 31,
+    "label": "FSYS_TIPS_OPEN_POKE_SU"
+  },
+  {
+    "hash_fnv64": "9A3C19AA53415676",
+    "index": 32,
+    "label": "FSYS_TIPS_OPEN_BTL_KYOURYOKU"
+  },
+  {
+    "hash_fnv64": "69DA3D5D146ADD4A",
+    "index": 33,
+    "label": "FSYS_TIPS_OPEN_SORAWOTOBU"
+  },
+  {
+    "hash_fnv64": "3FB1528165D77740",
+    "index": 34,
+    "label": "FSYS_TIPS_OPEN_BOX"
+  },
+  {
+    "hash_fnv64": "FBE234813FDB1006",
+    "index": 35,
+    "label": "FSYS_TIPS_OPEN_JOB"
+  },
+  {
+    "hash_fnv64": "A4FFE440B21CD9C3",
+    "index": 36,
+    "label": "FSYS_BTL_BGM_OPEN_VS04"
+  },
+  {
+    "hash_fnv64": "A4FFE340B21CD810",
+    "index": 37,
+    "label": "FSYS_BTL_BGM_OPEN_VS05"
+  },
+  {
+    "hash_fnv64": "A4FFE640B21CDD29",
+    "index": 38,
+    "label": "FSYS_BTL_BGM_OPEN_VS06"
+  },
+  {
+    "hash_fnv64": "A4FFE540B21CDB76",
+    "index": 39,
+    "label": "FSYS_BTL_BGM_OPEN_VS07"
+  },
+  {
+    "hash_fnv64": "A4FFF040B21CEE27",
+    "index": 40,
+    "label": "FSYS_BTL_BGM_OPEN_VS08"
+  },
+  {
+    "hash_fnv64": "A4FFEF40B21CEC74",
+    "index": 41,
+    "label": "FSYS_BTL_BGM_OPEN_VS09"
+  },
+  {
+    "hash_fnv64": "A4FC6240B219C706",
+    "index": 42,
+    "label": "FSYS_BTL_BGM_OPEN_VS10"
+  },
+  {
+    "hash_fnv64": "A4FC6340B219C8B9",
+    "index": 43,
+    "label": "FSYS_BTL_BGM_OPEN_VS11"
+  },
+  {
+    "hash_fnv64": "A4FC6140B219C553",
+    "index": 44,
+    "label": "FSYS_BTL_BGM_OPEN_VS13"
+  },
+  {
+    "hash_fnv64": "A4FC6640B219CDD2",
+    "index": 45,
+    "label": "FSYS_BTL_BGM_OPEN_VS14"
+  },
+  {
+    "hash_fnv64": "A4FC6740B219CF85",
+    "index": 46,
+    "label": "FSYS_BTL_BGM_OPEN_VS15"
+  },
+  {
+    "hash_fnv64": "A4FC6440B219CA6C",
+    "index": 47,
+    "label": "FSYS_BTL_BGM_OPEN_VS16"
+  },
+  {
+    "hash_fnv64": "A4FC6540B219CC1F",
+    "index": 48,
+    "label": "FSYS_BTL_BGM_OPEN_VS17"
+  },
+  {
+    "hash_fnv64": "A4FC6A40B219D49E",
+    "index": 49,
+    "label": "FSYS_BTL_BGM_OPEN_VS18"
+  },
+  {
+    "hash_fnv64": "A4FC6B40B219D651",
+    "index": 50,
+    "label": "FSYS_BTL_BGM_OPEN_VS19"
+  },
+  {
+    "hash_fnv64": "A4F8FC40B216E3DD",
+    "index": 51,
+    "label": "FSYS_BTL_BGM_OPEN_VS20"
+  },
+  {
+    "hash_fnv64": "A4F8FB40B216E22A",
+    "index": 52,
+    "label": "FSYS_BTL_BGM_OPEN_VS21"
+  },
+  {
+    "hash_fnv64": "A4F8FA40B216E077",
+    "index": 53,
+    "label": "FSYS_BTL_BGM_OPEN_VS22"
+  },
+  {
+    "hash_fnv64": "A4F8F940B216DEC4",
+    "index": 54,
+    "label": "FSYS_BTL_BGM_OPEN_VS23"
+  },
+  {
+    "hash_fnv64": "973FE0E132A339E9",
+    "index": 55,
+    "label": "FSYS_SECRET_BOX"
+  },
+  {
+    "hash_fnv64": "85E072D492F1C8F1",
+    "index": 56,
+    "label": "FSYS_ROTOM_TANMATSU_OPEN_BOX"
+  },
+  {
+    "hash_fnv64": "2EE9DA3BA2B57E1B",
+    "index": 57,
+    "label": "FSYS_ROTOM_TANMATSU_OPEN_LICENSE"
+  },
+  {
+    "hash_fnv64": "40CA80D46BDF36DB",
+    "index": 58,
+    "label": "FSYS_ROTOM_TANMATSU_OPEN_JOB"
+  },
+  {
+    "hash_fnv64": "74197E9AC3E193FD",
+    "index": 59,
+    "label": "FSYS_D1_GAMEOVER"
+  },
+  {
+    "hash_fnv64": "240B6D544F18BEC3",
+    "index": 60,
+    "label": "FSYS_NPC_TRADE_01"
+  },
+  {
+    "hash_fnv64": "240B6E544F18C076",
+    "index": 61,
+    "label": "FSYS_NPC_TRADE_02"
+  },
+  {
+    "hash_fnv64": "240B6F544F18C229",
+    "index": 62,
+    "label": "FSYS_NPC_TRADE_03"
+  },
+  {
+    "hash_fnv64": "240B70544F18C3DC",
+    "index": 63,
+    "label": "FSYS_NPC_TRADE_04"
+  },
+  {
+    "hash_fnv64": "240B71544F18C58F",
+    "index": 64,
+    "label": "FSYS_NPC_TRADE_05"
+  },
+  {
+    "hash_fnv64": "240B72544F18C742",
+    "index": 65,
+    "label": "FSYS_NPC_TRADE_06"
+  },
+  {
+    "hash_fnv64": "240B73544F18C8F5",
+    "index": 66,
+    "label": "FSYS_NPC_TRADE_07"
+  },
+  {
+    "hash_fnv64": "240B74544F18CAA8",
+    "index": 67,
+    "label": "FSYS_NPC_TRADE_08"
+  },
+  {
+    "hash_fnv64": "240B75544F18CC5B",
+    "index": 68,
+    "label": "FSYS_NPC_TRADE_09"
+  },
+  {
+    "hash_fnv64": "240E72544F1AFD19",
+    "index": 69,
+    "label": "FSYS_NPC_TRADE_10"
+  },
+  {
+    "hash_fnv64": "240E71544F1AFB66",
+    "index": 70,
+    "label": "FSYS_NPC_TRADE_11"
+  },
+  {
+    "hash_fnv64": "9D64F44D62746803",
+    "index": 71,
+    "label": "FSYS_POKEJOB_OPEN_EV01"
+  },
+  {
+    "hash_fnv64": "9D64F54D627469B6",
+    "index": 72,
+    "label": "FSYS_POKEJOB_OPEN_EV02"
+  },
+  {
+    "hash_fnv64": "9D64F64D62746B69",
+    "index": 73,
+    "label": "FSYS_POKEJOB_OPEN_EV03"
+  },
+  {
+    "hash_fnv64": "9D64F74D62746D1C",
+    "index": 74,
+    "label": "FSYS_POKEJOB_OPEN_EV04"
+  },
+  {
+    "hash_fnv64": "9D64F84D62746ECF",
+    "index": 75,
+    "label": "FSYS_POKEJOB_OPEN_EV05"
+  },
+  {
+    "hash_fnv64": "9D64F94D62747082",
+    "index": 76,
+    "label": "FSYS_POKEJOB_OPEN_EV06"
+  },
+  {
+    "hash_fnv64": "9D64FA4D62747235",
+    "index": 77,
+    "label": "FSYS_POKEJOB_OPEN_EV07"
+  },
+  {
+    "hash_fnv64": "9D64FB4D627473E8",
+    "index": 78,
+    "label": "FSYS_POKEJOB_OPEN_EV08"
+  },
+  {
+    "hash_fnv64": "9D64FC4D6274759B",
+    "index": 79,
+    "label": "FSYS_POKEJOB_OPEN_EV09"
+  },
+  {
+    "hash_fnv64": "9D67F94D6276A659",
+    "index": 80,
+    "label": "FSYS_POKEJOB_OPEN_EV10"
+  },
+  {
+    "hash_fnv64": "9D67F84D6276A4A6",
+    "index": 81,
+    "label": "FSYS_POKEJOB_OPEN_EV11"
+  },
+  {
+    "hash_fnv64": "11F4E1CBDE0EEF6F",
+    "index": 82,
+    "label": "FSYS_LIVE_COMM_OPEN"
+  },
+  {
+    "hash_fnv64": "8481568245E850BE",
+    "index": 83,
+    "label": "FSYS_POKECAMP_OPEN_YASURAGI_BALL"
+  },
+  {
+    "hash_fnv64": "5C5CDF729B6CD5A2",
+    "index": 84,
+    "label": "FSYS_POKECAMP_OPEN_MIRROR_BALL"
+  },
+  {
+    "hash_fnv64": "F12D7D1BEA3E6881",
+    "index": 85,
+    "label": "FSYS_POKECAMP_OPEN_OTAMA_BALL"
+  },
+  {
+    "hash_fnv64": "0933F41945FD94D6",
+    "index": 86,
+    "label": "FSYS_POKECAMP_OPEN_CHAMPION_BALL"
+  },
+  {
+    "hash_fnv64": "6BD193CD72D4B15E",
+    "index": 87,
+    "label": "FSYS_POKECAMP_OPEN_GOLDEN_KITCHENWARE"
+  },
+  {
+    "hash_fnv64": "B8668E3A88FE6F97",
+    "index": 88,
+    "label": "FSYS_POKECAMP_USE_GOLDEN_KITCHENWARE"
+  },
+  {
+    "hash_fnv64": "9D10531FE49088C4",
+    "index": 89,
+    "label": "FSYS_POKECAMP_OPEN_HEAVY_BALL"
+  },
+  {
+    "hash_fnv64": "15641741AFA33CBD",
+    "index": 90,
+    "label": "FSYS_POKECAMP_OPEN_FRESH_BALL"
+  },
+  {
+    "hash_fnv64": "E27E36C9E7CFD0E6",
+    "index": 91,
+    "label": "FSYS_TUUTI_WR_ENABLE"
+  },
+  {
+    "hash_fnv64": "301C8139368419BF",
+    "index": 92,
+    "label": "FSYS_CAPTURE_COUNT"
+  },
+  {
+    "hash_fnv64": "67F239D261A2C946",
+    "index": 93,
+    "label": "FSYS_BIRTHDAY"
+  },
+  {
+    "hash_fnv64": "CF2478287DF6C2AA",
+    "index": 94,
+    "label": "FSYS_LEAPER_BIRTHDAY"
+  },
+  {
+    "hash_fnv64": "BD07C2B80232E9B0",
+    "index": 95,
+    "label": "FSYS_SEED_CHALLENGE"
+  },
+  {
+    "hash_fnv64": "62D01CDB4884649A",
+    "index": 96,
+    "label": "FSYS_LICENSE_MATERIAL_ADD"
+  },
+  {
+    "hash_fnv64": "7305C919D8BFA59C",
+    "index": 97,
+    "label": "FSYS_DESUMASU_EVOLVE_ENABLE"
+  },
+  {
+    "hash_fnv64": "55D23C0D106AC553",
+    "index": 98,
+    "label": "FSYS_ROTOM_TANMATSU_OPEN_ID_LOTTERY"
+  },
+  {
+    "hash_fnv64": "4562C6961C74460E",
+    "index": 99,
+    "label": "FSYS_PLAY_LETSGO_PIKACHU"
+  },
+  {
+    "hash_fnv64": "97EED939C804E4AF",
+    "index": 100,
+    "label": "FSYS_PLAY_LETSGO_EEVEE"
+  },
+  {
+    "hash_fnv64": "ADF4EF67BF24DDAE",
+    "index": 101,
+    "label": "FSYS_PLAY_POKEMON_QUEST"
+  },
+  {
+    "hash_fnv64": "A5061DD5B223288C",
+    "index": 102,
+    "label": "FSYS_MAPICON_T03"
+  },
+  {
+    "hash_fnv64": "A5061CD5B22326D9",
+    "index": 103,
+    "label": "FSYS_MAPICON_T04"
+  },
+  {
+    "hash_fnv64": "F28F14D5DDEF615B",
+    "index": 104,
+    "label": "FSYS_MAPICON_C01"
+  },
+  {
+    "hash_fnv64": "A5061BD5B2232526",
+    "index": 105,
+    "label": "FSYS_MAPICON_T05"
+  },
+  {
+    "hash_fnv64": "A5061AD5B2232373",
+    "index": 106,
+    "label": "FSYS_MAPICON_T06"
+  },
+  {
+    "hash_fnv64": "A50619D5B22321C0",
+    "index": 107,
+    "label": "FSYS_MAPICON_T07"
+  },
+  {
+    "hash_fnv64": "F28F15D5DDEF630E",
+    "index": 108,
+    "label": "FSYS_MAPICON_C02"
+  },
+  {
+    "hash_fnv64": "A52B1C47E24FEA30",
+    "index": 109,
+    "label": "FSYS_TRLICENCE_EV0570_END"
+  },
+  {
+    "hash_fnv64": "B9985332FDCC9451",
+    "index": 110,
+    "label": "FSYS_TRLICENCE_EV0700_END"
+  },
+  {
+    "hash_fnv64": "EC7C1A9080A703C5",
+    "index": 111,
+    "label": "FSYS_TRLICENCE_EV1260_END"
+  },
+  {
+    "hash_fnv64": "AF55E69334B0D5E8",
+    "index": 112,
+    "label": "FSYS_TRLICENCE_EXEV_START"
+  },
+  {
+    "hash_fnv64": "DCAF3A788CBE6D4B",
+    "index": 113,
+    "label": "FSYS_TRLICENCE_EXEV_HONOO"
+  },
+  {
+    "hash_fnv64": "436F9A1F37AFE5F0",
+    "index": 114,
+    "label": "FSYS_TRLICENCE_EXEV_KUSA"
+  },
+  {
+    "hash_fnv64": "EBF7B5ED6DB18113",
+    "index": 115,
+    "label": "FSYS_TRLICENCE_EXEV_MIZU"
+  },
+  {
+    "hash_fnv64": "322A965A75333DAB",
+    "index": 116,
+    "label": "FSYS_TRLICENCE_EXEV_RYUU"
+  },
+  {
+    "hash_fnv64": "71AB43933C0A523D",
+    "index": 117,
+    "label": "FSYS_TRLICENCE_EXEV_KAKUTOU_GOOSUTO"
+  },
+  {
+    "hash_fnv64": "8F5BBE547A67C926",
+    "index": 118,
+    "label": "FSYS_TRLICENCE_EXEV_IWA_KOORI"
+  },
+  {
+    "hash_fnv64": "147DC72EE4136279",
+    "index": 119,
+    "label": "FSYS_TRLICENCE_EXEV_END"
+  },
+  {
+    "hash_fnv64": "E8DA890413007B5C",
+    "index": 120,
+    "label": "FSYS_TRLICENCE_SUB_EV_BALLGUY_END"
+  },
+  {
+    "hash_fnv64": "98132C2AAC8DEEFF",
+    "index": 121,
+    "label": "FSYS_ARRIVE_T0101"
+  },
+  {
+    "hash_fnv64": "B1363B2ABA8D53BA",
+    "index": 122,
+    "label": "FSYS_ARRIVE_T0201"
+  },
+  {
+    "hash_fnv64": "F9F940E4EC527076",
+    "index": 123,
+    "label": "FSYS_ARRIVE_C0101"
+  },
+  {
+    "hash_fnv64": "A820022AB548F355",
+    "index": 124,
+    "label": "FSYS_ARRIVE_T0301"
+  },
+  {
+    "hash_fnv64": "7CD0B92A9CC12CF8",
+    "index": 125,
+    "label": "FSYS_ARRIVE_T0401"
+  },
+  {
+    "hash_fnv64": "DF2351E4DCE1AD9B",
+    "index": 126,
+    "label": "FSYS_ARRIVE_C0201"
+  },
+  {
+    "hash_fnv64": "756D802A98EE6113",
+    "index": 127,
+    "label": "FSYS_ARRIVE_T0501"
+  },
+  {
+    "hash_fnv64": "8EFD0F2AA749BE2E",
+    "index": 128,
+    "label": "FSYS_ARRIVE_T0601"
+  },
+  {
+    "hash_fnv64": "85E6D62AA2055DC9",
+    "index": 129,
+    "label": "FSYS_ARRIVE_T0701"
+  },
+  {
+    "hash_fnv64": "E59C1D2AD85A1D9C",
+    "index": 130,
+    "label": "FSYS_ARRIVE_T0801"
+  },
+  {
+    "hash_fnv64": "E8396AE4E225D7A0",
+    "index": 131,
+    "label": "FSYS_ARRIVE_C0301"
+  },
+  {
+    "hash_fnv64": "E83971E4E225E385",
+    "index": 132,
+    "label": "FSYS_ARRIVE_C0306"
+  },
+  {
+    "hash_fnv64": "94CD43C0C123D2F9",
+    "index": 133,
+    "label": "FSYS_ARRIVE_R0101"
+  },
+  {
+    "hash_fnv64": "8BB726C0BBDFA228",
+    "index": 134,
+    "label": "FSYS_ARRIVE_R0201"
+  },
+  {
+    "hash_fnv64": "8BB729C0BBDFA741",
+    "index": 135,
+    "label": "FSYS_ARRIVE_R0202"
+  },
+  {
+    "hash_fnv64": "82A0EDC0B69B41C3",
+    "index": 136,
+    "label": "FSYS_ARRIVE_R0301"
+  },
+  {
+    "hash_fnv64": "C01CA8C0D9ABC8EA",
+    "index": 137,
+    "label": "FSYS_ARRIVE_R0401"
+  },
+  {
+    "hash_fnv64": "B7066FC0D4676885",
+    "index": 138,
+    "label": "FSYS_ARRIVE_R0501"
+  },
+  {
+    "hash_fnv64": "AE5CD2C0CF7F3014",
+    "index": 139,
+    "label": "FSYS_ARRIVE_R0601"
+  },
+  {
+    "hash_fnv64": "A54699C0CA3ACFAF",
+    "index": 140,
+    "label": "FSYS_ARRIVE_R0701"
+  },
+  {
+    "hash_fnv64": "E255B4C0ECEF2816",
+    "index": 141,
+    "label": "FSYS_ARRIVE_R0801"
+  },
+  {
+    "hash_fnv64": "D9AC1BC0E806F671",
+    "index": 142,
+    "label": "FSYS_ARRIVE_R0901"
+  },
+  {
+    "hash_fnv64": "D9AC18C0E806F158",
+    "index": 143,
+    "label": "FSYS_ARRIVE_R0902"
+  },
+  {
+    "hash_fnv64": "D9AC1EC0E806FB8A",
+    "index": 144,
+    "label": "FSYS_ARRIVE_R0904"
+  },
+  {
+    "hash_fnv64": "D9AC19C0E806F30B",
+    "index": 145,
+    "label": "FSYS_ARRIVE_R0903"
+  },
+  {
+    "hash_fnv64": "E8B972B7D332A4D3",
+    "index": 146,
+    "label": "FSYS_ARRIVE_R1001"
+  },
+  {
+    "hash_fnv64": "E8B973B7D332A686",
+    "index": 147,
+    "label": "FSYS_ARRIVE_R1002"
+  },
+  {
+    "hash_fnv64": "E8B974B7D332A839",
+    "index": 148,
+    "label": "FSYS_ARRIVE_R1003"
+  },
+  {
+    "hash_fnv64": "0CF13879E78374CF",
+    "index": 149,
+    "label": "FSYS_ARRIVE_D0101"
+  },
+  {
+    "hash_fnv64": "0CF13979E7837682",
+    "index": 150,
+    "label": "FSYS_ARRIVE_D0102"
+  },
+  {
+    "hash_fnv64": "0CF13A79E7837835",
+    "index": 151,
+    "label": "FSYS_ARRIVE_D0103"
+  },
+  {
+    "hash_fnv64": "2613C779F582000A",
+    "index": 152,
+    "label": "FSYS_ARRIVE_D0201"
+  },
+  {
+    "hash_fnv64": "1EB08E79F1AF3425",
+    "index": 153,
+    "label": "FSYS_ARRIVE_D0301"
+  },
+  {
+    "hash_fnv64": "1EB08B79F1AF2F0C",
+    "index": 154,
+    "label": "FSYS_ARRIVE_D0302"
+  },
+  {
+    "hash_fnv64": "F3614579D9276DC8",
+    "index": 155,
+    "label": "FSYS_ARRIVE_D0401"
+  },
+  {
+    "hash_fnv64": "EA4B0C79D3E30D63",
+    "index": 156,
+    "label": "FSYS_ARRIVE_D0501"
+  },
+  {
+    "hash_fnv64": "F628242A3F422630",
+    "index": 157,
+    "label": "FSYS_ARRIVE_WR0101"
+  },
+  {
+    "hash_fnv64": "F628272A3F422B49",
+    "index": 158,
+    "label": "FSYS_ARRIVE_WR0102"
+  },
+  {
+    "hash_fnv64": "F628262A3F422996",
+    "index": 159,
+    "label": "FSYS_ARRIVE_WR0103"
+  },
+  {
+    "hash_fnv64": "F628292A3F422EAF",
+    "index": 160,
+    "label": "FSYS_ARRIVE_WR0104"
+  },
+  {
+    "hash_fnv64": "F628282A3F422CFC",
+    "index": 161,
+    "label": "FSYS_ARRIVE_WR0105"
+  },
+  {
+    "hash_fnv64": "F6282B2A3F423215",
+    "index": 162,
+    "label": "FSYS_ARRIVE_WR0106"
+  },
+  {
+    "hash_fnv64": "F6282A2A3F423062",
+    "index": 163,
+    "label": "FSYS_ARRIVE_WR0107"
+  },
+  {
+    "hash_fnv64": "F6282D2A3F42357B",
+    "index": 164,
+    "label": "FSYS_ARRIVE_WR0108"
+  },
+  {
+    "hash_fnv64": "F6282C2A3F4233C8",
+    "index": 165,
+    "label": "FSYS_ARRIVE_WR0109"
+  },
+  {
+    "hash_fnv64": "F624BF2A3F3F44BA",
+    "index": 166,
+    "label": "FSYS_ARRIVE_WR0110"
+  },
+  {
+    "hash_fnv64": "F621382A3F3C297E",
+    "index": 167,
+    "label": "FSYS_ARRIVE_WR0121"
+  },
+  {
+    "hash_fnv64": "F621372A3F3C27CB",
+    "index": 168,
+    "label": "FSYS_ARRIVE_WR0122"
+  },
+  {
+    "hash_fnv64": "F61E342A3F39ECDB",
+    "index": 169,
+    "label": "FSYS_ARRIVE_WR0131"
+  },
+  {
+    "hash_fnv64": "F61E352A3F39EE8E",
+    "index": 170,
+    "label": "FSYS_ARRIVE_WR0132"
+  },
+  {
+    "hash_fnv64": "F61E362A3F39F041",
+    "index": 171,
+    "label": "FSYS_ARRIVE_WR0133"
+  },
+  {
+    "hash_fnv64": "F61E372A3F39F1F4",
+    "index": 172,
+    "label": "FSYS_ARRIVE_WR0134"
+  },
+  {
+    "hash_fnv64": "F61E382A3F39F3A7",
+    "index": 173,
+    "label": "FSYS_ARRIVE_WR0135"
+  },
+  {
+    "hash_fnv64": "F61E392A3F39F55A",
+    "index": 174,
+    "label": "FSYS_ARRIVE_WR0136"
+  },
+  {
+    "hash_fnv64": "BF8CDF02032A1569",
+    "index": 175,
+    "label": "FSYS_BTL_TOWER_CHALLENGED"
+  },
+  {
+    "hash_fnv64": "BED0A45B6C5DAA08",
+    "index": 176,
+    "label": "FSYS_NESTHOLE_TIPS_END"
+  },
+  {
+    "hash_fnv64": "F3E80E69B65B81FE",
+    "index": 177,
+    "label": "FSYS_POKEMONBOX_DISABLE"
+  },
+  {
+    "hash_fnv64": "873DB5B0AB26AFF8",
+    "index": 178,
+    "label": "FSYS_WR_OTHER_PLAYER_VISIBLE"
+  },
+  {
+    "hash_fnv64": "58CDFD5003982BD8",
+    "index": 179,
+    "label": "FSYS_A_0101_CAMERA_REPLACE"
+  },
+  {
+    "hash_fnv64": "A2AC4BFDB223D309",
+    "index": 180,
+    "label": "FSYS_BIRTHDAY_EVENT"
+  },
+  {
+    "hash_fnv64": "71DEDF0BB06D2925",
+    "index": 181,
+    "label": "FSYS_LIVE_COMM_DISABLE"
+  },
+  {
+    "hash_fnv64": "BE2C57FD0EDEC7B9",
+    "index": 182,
+    "label": "FSYS_FLY_R0301_CAMP"
+  },
+  {
+    "hash_fnv64": "EB086D61EA8770E2",
+    "index": 183,
+    "label": "FSYS_FLY_R0401_CAMP"
+  },
+  {
+    "hash_fnv64": "8A77B4955907C6A7",
+    "index": 184,
+    "label": "FSYS_FLY_R0501_CAMP"
+  },
+  {
+    "hash_fnv64": "74A17C8082A60018",
+    "index": 185,
+    "label": "FSYS_FLY_R0601_CAMP"
+  },
+  {
+    "hash_fnv64": "8DB8E4D6356177FD",
+    "index": 186,
+    "label": "FSYS_FLY_R0701_CAMP"
+  },
+  {
+    "hash_fnv64": "7BC0B9EB761607C6",
+    "index": 187,
+    "label": "FSYS_FLY_R0801_CAMP"
+  },
+  {
+    "hash_fnv64": "66F9EC56B598DB42",
+    "index": 188,
+    "label": "FSYS_FLY_R0904_CAMP"
+  },
+  {
+    "hash_fnv64": "1F6C9FE281615D96",
+    "index": 189,
+    "label": "FSYS_FLY_R1002_CAMP"
+  },
+  {
+    "hash_fnv64": "9856D4151FC1D317",
+    "index": 190,
+    "label": "FSYS_FLY_R0501_AZUKARIYA"
+  },
+  {
+    "hash_fnv64": "24C74D39957B3E05",
+    "index": 191,
+    "label": "FSYS_FLY_WR0122_AZUKARIYA"
+  },
+  {
+    "hash_fnv64": "33BD915D0811F6E5",
+    "index": 192,
+    "label": "FSYS_FLY_T0301"
+  },
+  {
+    "hash_fnv64": "5C965D45EBEB88EF",
+    "index": 193,
+    "label": "FSYS_FLY_C0201PC_RIGHT"
+  },
+  {
+    "hash_fnv64": "FF580F5CEA45D023",
+    "index": 194,
+    "label": "FSYS_FLY_T0501"
+  },
+  {
+    "hash_fnv64": "0FD1655CF35CCCD9",
+    "index": 195,
+    "label": "FSYS_FLY_T0701"
+  },
+  {
+    "hash_fnv64": "0ED9A8F0C55FE61B",
+    "index": 196,
+    "label": "FSYS_FLY_R0903"
+  },
+  {
+    "hash_fnv64": "7B290BCB4A8185B7",
+    "index": 197,
+    "label": "FSYS_GAME_CLEAR_RIGHT_AFTER"
+  },
+  {
+    "hash_fnv64": "60D13065831247E3",
+    "index": 198,
+    "label": "FSYS_C02_JOKER_IS_SPAWN"
+  },
+  {
+    "hash_fnv64": "517C8582756F0920",
+    "index": 199,
+    "label": "FSYS_BICYCLE_EVENT_DISABLE"
+  },
+  {
+    "hash_fnv64": "350ABD7C98947C04",
+    "index": 200,
+    "label": "FSYS_AFTER_CLEAR_FIRST"
+  },
+  {
+    "hash_fnv64": "1F02F78D7B3217A1",
+    "index": 201,
+    "label": "FSYS_WEATHER_CHANGE_SNOWSTORM"
+  },
+  {
+    "hash_fnv64": "D59B9DA4A17BC4DA",
+    "index": 202,
+    "label": "FSYS_WEATHER_CHANGE_SANDSTORM"
+  },
+  {
+    "hash_fnv64": "5EF93375D158283E",
+    "index": 203,
+    "label": "FSYS_WEATHER_CHANGE_MIST"
+  },
+  {
+    "hash_fnv64": "6FE26B172C9B4E78",
+    "index": 204,
+    "label": "FSYS_FISHING_TIPS_END"
+  },
+  {
+    "hash_fnv64": "E1384F38AC4C43FC",
+    "index": 205,
+    "label": "FSYS_R04_GAMEOVER"
+  },
+  {
+    "hash_fnv64": "8E3E92ECE093C7FC",
+    "index": 206,
+    "label": "FSYS_D02_GAMEOVER"
+  },
+  {
+    "hash_fnv64": "E44B16771524B07E",
+    "index": 207,
+    "label": "FSYS_INPUT_SHIRT_NUMBER"
+  },
+  {
+    "hash_fnv64": "E36DD9AF23C8B21F",
+    "index": 208,
+    "label": "FSYS_A_1101_CAMERA_REPLACE"
+  },
+  {
+    "hash_fnv64": "D24AB4FC3EBF4268",
+    "index": 209,
+    "label": "FSYS_GYM_CHALLENGE"
+  },
+  {
+    "hash_fnv64": "FB1D3589A6368342",
+    "index": 210,
+    "label": "FSYS_FLY_C0201PC_LEFT"
+  }
+]

@@ -1,0 +1,599 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_box_index_010,1F1DBF6C8CE43914,Pokémon,0,3388
+1,nx_box_index_020,1F28316C8CED4F4F,Lista dei Pokémon,0,3404
+2,	,AF66E44C86071324,[REF:2],0,3440
+3,nx_box_guide_010,EB995BBF9C61C030,[CTRL:01DA:0000] (nessun filtro),0,3452
+4,nx_box_guide_020,EBA36DBF9C6A334B,"[CTRL:01DA:0000] (trovati: [CTRL:0204:0001,002E]/[CTRL:0204:0002,002E])",0,3496
+5,nx_box_guide_030,EBA067BF9C67F342,[CTRL:01DA:0000] (Ricerca in corso...),0,3552
+6,	,AF66E44C86071324,[REF:6],0,3608
+7,nx_box_nameframe_010,D9A81028346DA738,[CTRL:0102:0000] (L. [CTRL:0202:0001]),0,3620
+8,nx_box_nameframe_011,D9A81128346DA8EB,[CTRL:0102:0000],0,3652
+9,nx_box_nameframe_015,D9A81528346DAFB7,Uovo,4,3664
+10,nx_box_nameframe_020,D9B202283475E3F3,[REF:10],0,3676
+11,	,AF66E44C86071324,[REF:11],0,3688
+12,nx_box_catch_multiple,5CEE54657E408716,[CTRL:0201:0000],0,3700
+13,	,AF66E44C86071324,[REF:13],0,3712
+14,nx_box_button_000,0401AB36E6AC7441,Indietro,4,3724
+15,nx_box_button_001,0401AA36E6AC728E,Aiuto,4,3744
+16,nx_box_button_010,03FE2536E6A95AB8,Esci,4,3756
+17,nx_box_button_020,04081736E6B19773,Lista,0,3768
+18,nx_box_button_030,0404B136E6AEB44A,Sposta,8,3780
+19,nx_box_button_040,040F2336E6B7CA85,Cambia info,0,3796
+20,nx_box_button_031,0404B236E6AEB5FD,[REF:20],0,3820
+21,nx_box_button_050,040B9D36E6B4B0FC,Ripristina,0,3832
+22,nx_box_button_060,0415AF36E6BD2417,Libera i Pokémon,0,3856
+23,nx_box_button_065,0415AA36E6BD1B98,Indietro,4,3892
+24,nx_box_button_070,0412A936E6BAE40E,Filtra,0,3912
+25,nx_box_button_080,03E61B36E694B7D9,Ordina,4,3928
+26,nx_box_button_090,03E31536E69277D0,Ripristina,0,3944
+27,nx_box_button_100,FC9E7036E2D9A4F6,Rimuovi filtro,0,3968
+28,	,AF66E44C86071324,[REF:28],0,4000
+29,nx_box_context_010,506E965A3BE1E68F,Sposta,8,4012
+30,nx_box_context_020,5064245A3BD8D054,Info,4,4028
+31,nx_box_context_030,5067AA5A3BDBE9DD,Segna,0,4040
+32,nx_box_context_040,505D985A3BD376C2,Libera,0,4052
+33,nx_box_context_050,50609E5A3BD5B6CB,Vai al box,0,4068
+34,nx_box_context_999,9E0B865A67BEBC83,Indietro,4,4092
+35,	,AF66E44C86071324,[REF:35],0,4112
+36,nx_box_marking_010,F86E02F7B40F654F,Segna,0,4124
+37,nx_box_marking_020,F86390F7B4064F14,Ok,4,4136
+38,nx_box_marking_030,F86716F7B409689D,[REF:38],0,4144
+39,	,AF66E44C86071324,[REF:39],0,4156
+40,nx_box_release_010,356516A162FB1D51,Libera questo Pokémon,0,4168
+41,nx_box_release_020,35689CA162FE36DA,Libera più Pokémon,0,4212
+42,nx_box_release_030,356C02A163011A03,Libera,0,4252
+43,nx_box_release_040,356F08A163035A0C,Indietro,4,4268
+44,nx_box_release_050,35728EA163067395,Continua,0,4288
+45,nx_box_release_060,357614A163098D1E,Esci,4,4308
+46,nx_box_release_msg_010,BCFD45B3B6B0F8DF,Vuoi liberare solo [CTRL:0102:0000] o anche altri Pokémon?,0,4320
+47,nx_box_release_msg_020,BCF2D3B3B6A7E2A4,"Vuoi davvero liberare [CTRL:0102:0000]?
+Una volta liberato non tornerà più indietro!",0,4416
+48,nx_box_release_msg_030,BCF659B3B6AAFC2D,"Vuoi davvero liberare questi [CTRL:0202:0000] Pokémon?
+Una volta liberati non torneranno più indietro!",0,4564
+49,nx_box_release_msg_040,BCEC47B3B6A28912,"Hai liberato [CTRL:0102:0000].
+Addio, [CTRL:0102:0000]!",4,4748
+50,nx_box_release_msg_050,BCEFCDB3B6A5A29B,"Hai liberato [CTRL:0102:0000] e gli altri Pokémon selezionati.
+Addio, amici!",4,4812
+51,nx_box_release_msg_060,BCE53BB3B69C5600,"Non puoi liberare altri Pokémon.[CLEAR]
+Ogni volta che ti colleghi a uno dei tuoi giochi puoi liberare
+un massimo di [CTRL:0203:0000,002E] Pokémon.[CLEAR]
+Se vuoi liberarne altri, devi prima salvare il gioco.",0,4944
+52,nx_box_release_msg_070,BCE8C1B3B69F6F89,Vuoi annullare l’operazione senza liberare alcun Pokémon?,0,5316
+53,nx_box_release_msg_080,BD14CFB3B6C4C23E,Non puoi liberare questo Pokémon!,0,5432
+54,nx_box_release_msg_081,BD14D0B3B6C4C3F1,"Non puoi liberare un Pokémon se è tra i tuoi preferiti
+nella versione per dispositivi mobili!",0,5500
+55,nx_box_release_msg_090,BD1855B3B6C7DBC7,Non puoi liberare un Uovo!,0,5688
+56,	,AF66E44C86071324,[REF:56],0,5744
+57,nx_box_operation_010,43F3BD16C47B6A65,[REF:57],0,5756
+58,nx_box_operation_020,43F74316C47E83EE,[REF:58],0,5768
+59,nx_box_operation_030,43FAC916C4819D77,[REF:59],0,5780
+60,nx_box_operation_040,43E2BF16C46CFA98,[REF:60],0,5792
+61,	,AF66E44C86071324,[REF:61],0,5804
+62,nx_box_pokedata_010,786A1E4480312115,[CTRL:0102:0000],0,5816
+63,nx_box_pokedata_020,786DA44480343A9E,L. [CTRL:0202:0000],0,5828
+64,nx_box_pokedata_030,78712A4480375427,[REF:64],0,5844
+65,nx_box_pokedata_031,7871294480375274,[CTRL:0189:0000],0,5856
+66,nx_box_pokedata_040,785920448022B148,Natura,0,5868
+67,nx_box_pokedata_041,785921448022B2FB,[CTRL:0108:0000],0,5884
+68,nx_box_pokedata_050,785CA6448025CAD1,Abilità,4,5896
+69,nx_box_pokedata_051,785CA5448025C91E,[CTRL:0106:0000],0,5912
+70,nx_box_pokedata_060,78602C448028E45A,PS,64,5924
+71,nx_box_pokedata_061,78602D448028E60D,[CTRL:0202:0000],0,5932
+72,nx_box_pokedata_070,78639244802BC783,Attacco,4,5944
+73,nx_box_pokedata_071,78639144802BC5D0,[CTRL:0202:0000],0,5960
+74,nx_box_pokedata_080,784BA84480175B04,Difesa,1,5972
+75,nx_box_pokedata_081,784BA94480175CB7,[CTRL:0202:0000],0,5988
+76,nx_box_pokedata_090,784F2E44801A748D,Att. Sp.,4,6000
+77,nx_box_pokedata_091,784F2D44801A72DA,[CTRL:0202:0000],0,6020
+78,nx_box_pokedata_100,7FC9D3448400D6D7,Dif. Sp.,1,6032
+79,nx_box_pokedata_101,7FC9D2448400D524,[CTRL:0202:0000],0,6052
+80,nx_box_pokedata_110,7FC6CD4483FE96CE,Velocità,1,6064
+81,nx_box_pokedata_111,7FC6CE4483FE9881,[CTRL:0202:0000],0,6084
+82,nx_box_pokedata_120,7FC3474483FB7D45,[CTRL:0107:0000],0,6096
+83,nx_box_pokedata_none_1,87AEB72D8BE2523E,-,0,6108
+84,nx_box_pokedata_none_2,87AEB62D8BE2508B,-----,0,6112
+85,	,AF66E44C86071324,[REF:85],0,6124
+86,nx_box_boxname_default_010,36A3274EA11CD2B0,HOME [CTRL:0202:0000],4,6136
+87,nx_box_boxname_default_020,36AD394EA12545CB,Box [CTRL:0202:0000],0,6156
+88,nx_box_boxname_010,D0FE60B9DF49C356,[CTRL:01C0:0000],0,6176
+89,nx_box_boxname_030,D0F774B9DF43C6A4,Raccolta box: [CTRL:0201:0000]/[CTRL:0201:0001],0,6188
+90,nx_box_boxname_040,D0F46EB9DF41869B,Ultimi 30,4,6236
+91,nx_box_boxname_050,D0F0E8B9DF3E6D12,Box base,0,6256
+92,nx_box_boxpage_010,1D8AD436B757FC46,[CTRL:0202:0000]/[CTRL:0202:0001],0,6276
+93,nx_box_boxpage_030,1D83E836B751FF94,[REF:93],0,6296
+94,nx_box_switching_010,49CF13AA54B9496C,Box,0,6308
+95,nx_box_switching_020,49D925AA54C1BC87,Indietro,4,6316
+96,nx_box_switching_030,49D59FAA54BEA2FE,Ultimi 30,4,6336
+97,	,AF66E44C86071324,[REF:97],0,6356
+98,nx_box_boxshumbnail_010,6EDC950F42D305CE,[CTRL:0201:0000]/[CTRL:0201:0001],0,6368
+99,	,AF66E44C86071324,[REF:99],0,6388
+100,nx_box_save_010,09A43B773847465D,Sì,0,6400
+101,nx_box_save_020,09A7A177384A2986,No,0,6408
+102,nx_box_save_030,09AB2777384D430F,Salva ed esci,0,6416
+103,nx_box_save_040,09931D773838A030,Annulla le modifiche ed esci,4,6444
+104,nx_box_save_050,0996A377383BB9B9,Continua,0,6504
+105,nx_box_save_msg_010,849A26FC5D7272F3,Vuoi salvare il contenuto dei box e uscire?,0,6524
+106,nx_box_save_msg_011,849A25FC5D727140,"Alcuni Pokémon sono contrassegnati con un punto
+interrogativo![CLEAR]
+Se salvi adesso, il numero dei giochi con cui sono compatibili
+potrebbe diminuire.[CLEAR]
+Vuoi davvero salvare i box e uscire?",4,6612
+107,nx_box_save_msg_012,849A28FC5D727659,"Le mosse che un Pokémon può imparare cambiano
+a seconda del gioco.[CLEAR]
+Per ogni gioco, Pokémon HOME ricorda le mosse
+dei Pokémon assieme ai loro PP.[CLEAR]
+Quando un Pokémon viene trasferito, le mosse che conosce
+verranno adattate al gioco di arrivo.[CLEAR]
+Vuoi salvare il contenuto dei box e uscire?",0,6992
+108,nx_box_save_msg_013,849A27FC5D7274A6,"Alcuni Pokémon sono contrassegnati con un punto
+interrogativo![CLEAR]
+Se salvi adesso, il numero dei giochi con cui sono compatibili
+potrebbe diminuire.[CLEAR]
+Inoltre, le mosse che un Pokémon può imparare cambiano
+a seconda del gioco.[CLEAR]
+Per ogni gioco, Pokémon HOME ricorda le mosse
+dei Pokémon assieme ai loro PP.[CLEAR]
+Quando un Pokémon viene trasferito, le mosse che conosce
+verranno adattate al gioco di arrivo.[CLEAR]
+Vuoi davvero salvare i box e uscire?",4,7580
+109,nx_box_save_msg_020,849034FC5D6A3638,"Salvataggio in corso.
+Non chiudere Pokémon HOME.",0,8476
+110,nx_box_save_msg_030,8493BAFC5D6D4FC1,Salvataggio completato.,0,8576
+111,nx_box_save_msg_040,84A4B8FC5D7BBF8E,"I nomi dei box scritti in una lingua diversa da quella
+del gioco sono stati modificati!",4,8624
+112,nx_box_save_msg_040,84A4B8FC5D7BBF8E,[REF:112],0,8800
+113,nx_box_save_msg_050,84A7BEFC5D7DFF97,[REF:113],0,8812
+114,nx_box_save_msg_055,84A7B9FC5D7DF718,"Le modifiche ai box non verranno salvate.
+Vuoi davvero continuare?",0,8824
+115,nx_box_save_msg_060,849DACFC5D758C7C,"Tornerai alla schermata precedente senza salvare i dati.
+Non chiudere Pokémon HOME.",0,8960
+116,nx_box_save_msg_070,84A132FC5D78A605,"Alcuni Pokémon sono contrassegnati con un punto
+interrogativo!
+
+Se trasferisci in un altro gioco i Pokémon provenienti da
+Pokémon: Let’s Go, Pikachu! e Pokémon: Let’s Go, Eevee!,
+non saranno più compatibili con i giochi d’origine.",4,9128
+117,nx_box_save_msg_080,847BB0FC5D58ACE2,"Le mosse che un Pokémon può imparare e le abilità che può
+avere cambiano a seconda del gioco.
+Per ogni gioco, Pokémon HOME ricorda le abilità dei
+Pokémon e le loro mosse con i rispettivi PP.
+Quando un Pokémon viene trasferito, le mosse che conosce
+verranno adattate al gioco di arrivo.
+Quando ritiri un Pokémon da Pokémon HOME, potrai fargli
+ricordare le mosse imparate in altri giochi.",0,9592
+118,nx_box_save_msg_085,847BADFC5D58A7C9,"Se trasferisci i Pokémon ottenuti in Pokémon Scarlatto
+e Pokémon Violetto in Leggende Pokémon: Arceus,
+il loro ID cambierà.
+
+Se li riporti in Pokémon HOME, il loro ID tornerà quello
+precedente.",0,10368
+119,nx_box_save_msg_090,847F36FC5D5BC66B,[CTRL:0200:0000]/[CTRL:0200:0001],0,10756
+120,nx_box_save_msg_095,847F39FC5D5BCB84,Attenzione!,4,10776
+121,nx_box_save_msg_100,8DAD5BFC62B496B5,"Se sottoponi all’Allenamento Pro di Pokémon Scarlatto
+e Pokémon Violetto un Pokémon ottenuto in
+Pokémon Diamante Lucente o Pokémon Perla Splendente,
+non potrai riportarlo nel gioco d’origine a meno che non
+sia di livello 100.",0,10800
+122,	,AF66E44C86071324,[REF:122],0,11252
+123,nx_box_msg_010,83083F333E19AFED,"Il Pokémon selezionato non può essere spostato
+in questo gioco!",4,11264
+124,nx_box_msg_011,83083E333E19AE3A,"Tra i Pokémon selezionati ce n’è almeno uno che non può
+essere spostato in questo gioco!",0,11392
+125,nx_box_msg_012,83083D333E19AC87,"Tra i Pokémon selezionati ce n’è almeno uno che non può
+essere spostato nel gioco collegato!",0,11572
+126,nx_box_msg_015,83083A333E19A76E,"Il Pokémon selezionato non può essere depositato
+in Pokémon HOME!",4,11760
+127,nx_box_msg_016,830839333E19A5BB,"Tra i Pokémon selezionati ce n’è almeno uno che non può
+essere depositato in Pokémon HOME!",0,11892
+128,nx_box_msg_017,830838333E19A408,"Tra i Pokémon selezionati ce n’è almeno uno che non può
+essere depositato in Pokémon HOME!",0,12076
+129,nx_box_msg_020,830BA5333E1C9316,"Non puoi depositare o ritirare Pokémon registrati
+in una Squadra Lotta!",0,12260
+130,nx_box_msg_021,830BA6333E1C94C9,"Non puoi depositare o ritirare i Pokémon che hai
+in squadra!",0,12404
+131,nx_box_msg_030,830F2B333E1FAC9F,"Non puoi depositare o ritirare Pokémon che hai messo
+a disposizione per uno scambio!",0,12528
+132,nx_box_msg_035,830F26333E1FA420,Non puoi depositare Uova in Pokémon HOME!,0,12700
+133,nx_box_msg_036,830F29333E1FA939,Non puoi ritirare Uova da Pokémon HOME!,0,12784
+134,nx_box_msg_040,82F721333E0B09C0,"Se ci sono Pokémon con un punto interrogativo, perderanno
+la compatibilità con alcuni giochi una volta che avrai salvato.",0,12864
+135,nx_box_msg_050,82FAA7333E0E2349,Non puoi spostare questo box.,0,13108
+136,nx_box_msg_060,82FE2D333E113CD2,Non puoi cambiare il nome dei box di questo gioco.,0,13168
+137,nx_box_msg_061,82FE2E333E113E85,"Non è possibile modificare il nome perché la lingua
+del gioco è diversa da quella di Pokémon HOME.",0,13272
+138,nx_box_msg_070,8301B3333E14565B,"Questa modalità ti permette di visualizzare la lista dei box.
+Puoi usare il pulsante Y per modificarne l’ordine.",0,13472
+139,nx_box_msg_080,832029333E2E1C6C,"Questa modalità ti permette di trovare facilmente gli ultimi
+30 Pokémon depositati in Pokémon HOME.",0,13700
+140,nx_box_msg_090,8323AF333E3135F5,Nel Box base puoi depositare al massimo 30 Pokémon.,0,13900
+141,nx_box_msg_100,8C1B5433435B9D4F,[REF:141],0,14004
+142,nx_box_msg_110,8C17CE33435883C6,[REF:142],0,14016
+143,nx_box_msg_120,8C1468334355A09D,Questo Pokémon non può essere depositato né ritirato!,0,14028
+144,nx_box_msg_150,8C0A5633434D2D82,"Nei box di Pokémon HOME c’è un Pokémon a cui
+sono state modificate le mosse.[CLEAR]
+Le modifiche alle mosse dei Pokémon depositati
+in Pokémon HOME non possono essere salvate.",0,14136
+145,nx_box_msg_140,8C0D5C33434F6D8B,"Nei box di Pokémon HOME ci sono uno o più Pokémon
+a cui sono state modificate le mosse.[CLEAR]
+Le modifiche alle mosse dei Pokémon depositati
+in Pokémon HOME non possono essere salvate.",0,14480
+146,	,AF66E44C86071324,[REF:146],0,14844
+147,nx_box_alone_010,29DA684996638307,Box di Pokémon HOME,0,14856
+148,nx_box_alone_020,29D05649965B0FEC,Pokémon depositati,0,14896
+149,nx_box_alone_021,29D05749965B119F,"[CTRL:0203:0000,002E]/[CTRL:0203:0001,002E]",0,14936
+150,nx_box_alone_030,29D3DC49965E2975,Box vuoti,0,14960
+151,nx_box_alone_031,29D3DB49965E27C2,"[CTRL:0203:0000,002E]",0,14980
+152,nx_box_alone_040,29C96A499655133A,Trasferimento box,0,14992
+153,nx_box_alone_041,29C96B49965514ED,[CTRL:0202:0000],0,15028
+154,nx_box_alone_none,E11FA23D148E4650,---,0,15040
+155,	,AF66E44C86071324,[REF:155],0,15048
+156,nx_box_alone_msg_yes,8FD29780ACB18ECB,[REF:156],0,15060
+157,nx_box_alone_msg_no,69D3CF8F4D5E5F5F,[REF:157],0,15072
+158,	,AF66E44C86071324,[REF:158],0,15084
+159,nx_box_applet_010,FA33F711C9978B4C,[REF:159],0,15096
+160,nx_box_applet_020,FA3E8911C9A0D7E7,[REF:160],0,15108
+161,	,AF66E44C86071324,[REF:161],0,15120
+162,nx_box_adddata_010,8C22C8AC79DB8CBB,Etichetta,4,15132
+163,nx_box_adddata_020,8C18B6AC79D319A0,Box,0,15152
+164,nx_box_adddata_021,8C18B7AC79D31B53,[REF:164],0,15160
+165,	,AF66E44C86071324,[REF:165],0,15172
+166,nx_box_list_search_title,B4D5556B85248BD6,Filtri,0,15184
+167,nx_box_list_search_race,4BE24885284BC085,Pokémon,0,15200
+168,nx_box_list_search_mf,AB902AE45B60E463,Sesso,0,15216
+169,nx_box_list_search_type1,6BF6B0E322C6A0FB,Tipo 1,0,15228
+170,nx_box_list_search_type2,6BF6B1E322C6A2AE,Tipo 2,0,15244
+171,nx_box_list_search_personal,328467F0CE3B4A00,Natura,0,15260
+172,nx_box_list_search_marking,FEB1129802DB375F,Simboli,0,15276
+173,nx_box_list_search_graduate,D27CE397978EA655,Simbolo della regione,0,15292
+174,nx_box_list_search_skill1,E18AA8EF63634CE4,Mossa 1,0,15336
+175,nx_box_list_search_skill2,E18AABEF636351FD,Mossa 2,0,15352
+176,nx_box_list_search_skill3,E18AAAEF6363504A,Mossa 3,0,15368
+177,nx_box_list_search_skill4,E18AA5EF636347CB,Mossa 4,0,15384
+178,nx_box_list_search_chara,4C54E4775F4D43C7,Abilità,4,15400
+179,nx_box_list_search_parent,A6F4248A97384D80,Allenatore Originale,4,15416
+180,nx_box_list_search_color,DD6E9AA14EA41BF7,Cromatico,0,15460
+181,nx_box_list_search_pokerus,3423579E7B213D19,Pokérus,0,15480
+182,nx_box_list_search_pokedex,8AA6FA9EAC1A1EFE,Regione d’origine,0,15496
+183,nx_box_list_search_moving,E5DAEF28C42A9F26,Giochi compatibili,0,15532
+184,nx_box_list_search_label,801E255792BE09BE,Etichetta,4,15572
+185,	,AF66E44C86071324,[REF:185],0,15592
+186,nx_box_skill_set_010,E6C0730ACF4F10AE,Fai ricordare una mossa,0,15604
+187,nx_box_skill_set_020,E6BCED0ACF4BF725,Tipo,0,15652
+188,nx_box_skill_set_030,E6B9E70ACF49B71C,PP,0,15664
+189,nx_box_skill_set_040,E6B6610ACF469D93,[CTRL:0201:0000],0,15672
+190,nx_box_skill_set_050,E6B2FB0ACF43BA6A,Categoria,0,15684
+191,nx_box_skill_set_060,E6AF750ACF40A0E1,Potenza,0,15704
+192,nx_box_skill_set_070,E6ABEF0ACF3D8758,[CTRL:0202:0000],0,15720
+193,nx_box_skill_set_080,E6A8E90ACF3B474F,Precisione,0,15732
+194,nx_box_skill_set_090,E6A5630ACF382DC6,[CTRL:0202:0000],0,15756
+195,nx_box_skill_set_100,DDADBE0ACA0DC66C,Fai dimenticare una mossa,0,15768
+196,nx_box_skill_set_110,DDB1440ACA10DFF5,Vuoi che il Pokémon dimentichi [CTRL:0107:0000]?,0,15820
+197,nx_box_skill_set_120,DDB44A0ACA131FFE,Il Pokémon ha dimenticato [CTRL:0107:0000]!,4,15896
+198,nx_box_skill_set_130,DDB7D00ACA163987,"Il Pokémon non può dimenticare questa mossa.
+Non gliene rimarrebbero altre da usare.",4,15960
+199,nx_box_skill_set_140,DDA0460ACA027028,Ordine alfabetico,4,16132
+200,nx_box_skill_set_150,DDA34C0ACA04B031,Tempo di recupero,0,16168
+201,nx_box_skill_set_160,DDA6D20ACA07C9BA,[REF:201],0,16204
+202,	,AF66E44C86071324,[REF:202],0,16216
+203,nx_box_list_search_nil,F13636074BFA870F,Nessun risultato!,0,16228
+204,	,AF66E44C86071324,[REF:204],0,16264
+205,nx_box_list_search_head_race,1A93531C23FE656A,Cerca per specie,0,16276
+206,nx_box_list_search_head_mf,20163C142C2DA0E8,Cerca per sesso,0,16312
+207,nx_box_list_search_head_type,F5579B0A64A7115F,Cerca per tipo,0,16344
+208,nx_box_list_search_head_personal,EAA83B894BA6A4C7,Cerca per natura,0,16376
+209,nx_box_list_search_head_marking,215A61C518C45C8E,Cerca per simbolo,0,16412
+210,nx_box_list_search_head_graduate,A5A019A5A9F75AD6,Cerca per simbolo della regione,0,16448
+211,nx_box_list_search_head_skill,DB146DB093CFB28C,Cerca per mosse conosciute,0,16512
+212,nx_box_list_search_head_chara,D4B8CDADBB81A2FA,Cerca per abilità,0,16568
+213,nx_box_list_search_head_parent,EECA8C01FC4A99C7,Cerca per Allenatore Originale,0,16604
+214,nx_box_list_search_head_color,5F0FFFA7C184D696,Cerca cromatici,0,16668
+215,nx_box_list_search_head_pokerus,8A532E9246E7F1A0,Cerca per stato del Pokérus,0,16700
+216,nx_box_list_search_head_pokedex,EF785391EF7EE2BB,Cerca per regione d’origine,0,16756
+217,nx_box_list_search_head_moving,7EF0462AF6D70D89,Cerca per giochi compatibili,0,16812
+218,nx_box_list_search_head_label,EB546C298C1A511F,Cerca per etichetta,0,16872
+219,	,AF66E44C86071324,[REF:219],0,16912
+220,nx_box_list_mf_01,97CEE218AF999482,♂,0,16924
+221,nx_box_list_mf_02,97CEE118AF9992CF,♀,0,16928
+222,nx_box_list_mf_03,97CEE018AF99911C,Sconosciuto,8,16932
+223,	,AF66E44C86071324,[REF:223],0,16956
+224,nx_box_list_type_01,19C01AC32B99FE4B,Normale,0,16968
+225,nx_box_list_type_02,19C01BC32B99FFFE,Lotta,0,16984
+226,nx_box_list_type_03,19C01CC32B9A01B1,Volante,0,16996
+227,nx_box_list_type_04,19C01DC32B9A0364,Veleno,0,17012
+228,nx_box_list_type_05,19C01EC32B9A0517,Terra,0,17028
+229,nx_box_list_type_06,19C01FC32B9A06CA,Roccia,0,17040
+230,nx_box_list_type_07,19C020C32B9A087D,Coleottero,0,17056
+231,nx_box_list_type_08,19C011C32B99EF00,Spettro,8,17080
+232,nx_box_list_type_09,19C012C32B99F0B3,Acciaio,4,17096
+233,nx_box_list_type_10,19C39FC32B9D1621,Fuoco,0,17112
+234,nx_box_list_type_11,19C39EC32B9D146E,Acqua,4,17124
+235,nx_box_list_type_12,19C39DC32B9D12BB,Erba,4,17136
+236,nx_box_list_type_13,19C39CC32B9D1108,Elettro,4,17148
+237,nx_box_list_type_14,19C3A3C32B9D1CED,Psico,8,17164
+238,nx_box_list_type_15,19C3A2C32B9D1B3A,Ghiaccio,0,17176
+239,nx_box_list_type_16,19C3A1C32B9D1987,Drago,0,17196
+240,nx_box_list_type_17,19C3A0C32B9D17D4,Buio,0,17208
+241,nx_box_list_type_18,19C397C32B9D0889,Folletto,0,17220
+242,nx_box_list_type_19,19C396C32B9D06D6,[REF:242],0,17240
+243,	,AF66E44C86071324,[REF:243],0,17252
+244,nx_box_list_seikaku_1,136CEBEEF7FB1972,[REF:244],0,17264
+245,nx_box_list_seikaku_2,136CEAEEF7FB17BF,[REF:245],0,17276
+246,nx_box_list_seikaku_3,136CE9EEF7FB160C,[REF:246],0,17288
+247,nx_box_list_seikaku_4,136CE8EEF7FB1459,[REF:247],0,17300
+248,nx_box_list_seikaku_5,136CE7EEF7FB12A6,[REF:248],0,17312
+249,nx_box_list_seikaku_6,136CE6EEF7FB10F3,[REF:249],0,17324
+250,nx_box_list_seikaku_7,136CE5EEF7FB0F40,[REF:250],0,17336
+251,nx_box_list_seikaku_8,136CF4EEF7FB28BD,[REF:251],0,17348
+252,nx_box_list_seikaku_9,136CF3EEF7FB270A,[REF:252],0,17360
+253,nx_box_list_seikaku_10,FD2E290F5FABEB26,[REF:253],0,17372
+254,nx_box_list_seikaku_11,FD2E2A0F5FABECD9,[REF:254],0,17384
+255,nx_box_list_seikaku_12,FD2E270F5FABE7C0,[REF:255],0,17396
+256,nx_box_list_seikaku_13,FD2E280F5FABE973,[REF:256],0,17408
+257,nx_box_list_seikaku_14,FD2E2D0F5FABF1F2,[REF:257],0,17420
+258,nx_box_list_seikaku_15,FD2E2E0F5FABF3A5,[REF:258],0,17432
+259,nx_box_list_seikaku_16,FD2E2B0F5FABEE8C,[REF:259],0,17444
+260,nx_box_list_seikaku_17,FD2E2C0F5FABF03F,[REF:260],0,17456
+261,nx_box_list_seikaku_18,FD2E310F5FABF8BE,[REF:261],0,17468
+262,nx_box_list_seikaku_19,FD2E320F5FABFA71,[REF:262],0,17480
+263,nx_box_list_seikaku_20,FD2AC30F5FA907FD,[REF:263],0,17492
+264,nx_box_list_seikaku_21,FD2AC20F5FA9064A,[REF:264],0,17504
+265,nx_box_list_seikaku_22,FD2AC10F5FA90497,[REF:265],0,17516
+266,nx_box_list_seikaku_23,FD2AC00F5FA902E4,[REF:266],0,17528
+267,nx_box_list_seikaku_24,FD2ABF0F5FA90131,[REF:267],0,17540
+268,nx_box_list_seikaku_25,FD2ABE0F5FA8FF7E,[REF:268],0,17552
+269,nx_box_list_seikaku_1_m,E113301F90E3512E,Ardita (nessuna menta),4,17564
+270,nx_box_list_seikaku_2_m,D9C4E31F8D22BF57,Schiva (o Menta Schiva),8,17612
+271,nx_box_list_seikaku_3_m,D19CBA1F88A8C6EC,Audace (o Menta Audace),4,17660
+272,nx_box_list_seikaku_4_m,C6E7B51F8203D36D,Decisa (o Menta Decisa),0,17708
+273,nx_box_list_seikaku_5_m,C0728C1F7EFB6F82,Birbona (o Menta Birbona),0,17756
+274,nx_box_list_seikaku_6_m,B5BD3F1F785601AB,Sicura (o Menta Sicura),0,17808
+275,nx_box_list_seikaku_7_m,AD95161F73DC0940,Docile (nessuna menta),0,17856
+276,nx_box_list_seikaku_8_m,3071811FBE3E9DD1,Placida (o Menta Placida),0,17904
+277,nx_box_list_seikaku_9_m,2848581FB9C2F266,Scaltra (o Menta Scaltra),8,17956
+278,nx_box_list_seikaku_10_m,0F2985A39B479C02,Fiacca (o Menta Fiacca),0,18008
+279,nx_box_list_seikaku_11_m,159EAEA39E4FFFED,Timida (o Menta Timida),0,18056
+280,nx_box_list_seikaku_12_m,FC4C0FA3902835C0,Lesta (o Menta Lesta),0,18104
+281,nx_box_list_seikaku_13_m,047438A394A22E2B,Seria (o Menta Seria),0,18148
+282,nx_box_list_seikaku_14_m,2FCA29A3AD2F7DAE,Allegra (o Menta Allegra),4,18192
+283,nx_box_list_seikaku_15_m,3A7F32A3B3D477F9,Ingenua (o Menta Ingenua),4,18244
+284,nx_box_list_seikaku_16_m,2053B3A3A4F4F36C,Modesta (o Menta Modesta),0,18296
+285,nx_box_list_seikaku_17_m,287BDCA3A96EEBD7,Mite (o Menta Mite),0,18348
+286,nx_box_list_seikaku_18_m,53D1CDA3C1FC3B5A,Quieta (o Menta Quieta),0,18388
+287,nx_box_list_seikaku_19_m,5B20D6A3C5BE0CA5,Ritrosa (nessuna menta),0,18436
+288,nx_box_list_seikaku_20_m,6CDF0F9B431AB111,Ardente (o Menta Ardente),4,18484
+289,nx_box_list_seikaku_21_m,64B6E69B3EA0B8A6,Calma (o Menta Calma),0,18536
+290,nx_box_list_seikaku_22_m,5D67D99B3ADEE08F,Gentile (o Menta Gentile),0,18580
+291,nx_box_list_seikaku_23_m,538C909B34F31D44,Vivace (o Menta Vivace),0,18632
+292,nx_box_list_seikaku_24_m,4C3D6B9B31311C65,Cauta (o Menta Cauta),0,18680
+293,nx_box_list_seikaku_25_m,4189629B2A8DD51A,Furba (nessuna menta),0,18724
+294,	,AF66E44C86071324,[REF:294],0,18768
+295,nx_box_list_graduate_01,D3970A8349B80418,Senza simboli,0,18780
+296,	,AF66E44C86071324,[REF:296],0,18808
+297,nx_box_list_color_01,3F669A3DE577C658,Cromatico,0,18820
+298,nx_box_list_color_02,3F669D3DE577CB71,Non cromatico,0,18840
+299,	,AF66E44C86071324,[REF:299],0,18868
+300,nx_box_list_pokerus_01,CC886724CCB5565A,Senza Pokérus,0,18880
+301,	,AF66E44C86071324,[REF:301],0,18908
+302,nx_box_list_pokedex_01,05AF2CD3AA78B0E7,Kanto,0,18920
+303,nx_box_list_pokedex_02,05AF2DD3AA78B29A,Johto,0,18932
+304,nx_box_list_pokedex_03,05AF2ED3AA78B44D,Hoenn,4,18944
+305,nx_box_list_pokedex_04,05AF27D3AA78A868,Sinnoh,0,18956
+306,nx_box_list_pokedex_05,05AF28D3AA78AA1B,Unima,4,18972
+307,nx_box_list_pokedex_06,05AF29D3AA78ABCE,Kalos,0,18984
+308,nx_box_list_pokedex_07,05AF2AD3AA78AD81,Alola,4,18996
+309,nx_box_list_pokedex_08,05AF23D3AA78A19C,Galar,0,19008
+310,nx_box_list_pokedex_09,05AF24D3AA78A34F,Hisui,4,19020
+311,nx_box_list_pokedex_10,05B231D3AA7AEF3D,Paldea,0,19032
+312,nx_box_list_pokedex_unkown,0E311B8F76767D74,Origine sconosciuta,4,19048
+313,	,AF66E44C86071324,[REF:313],0,19088
+314,nx_box_list_moving_01,D8DD44CDBB4E4E2D,Nessuno,0,19100
+315,	,AF66E44C86071324,[REF:315],0,19116
+316,nx_box_list_label_01,05C28278AC8C8B0B,（ラベル表示枠）,0,19128
+317,	,AF66E44C86071324,[REF:317],0,19148
+318,nx_box_list_none_3,D12262633D3EE2DB,———,0,19160
+319,nx_box_list_none_5,D12268633D3EED0D,—————,0,19168
+320,nx_box_list_none_8,D1225B633D3ED6F6,————————,0,19180
+321,	,AF66E44C86071324,[REF:321],0,19200
+322,nx_box_list_head_sort,BE838C473EC4AF0E,Mostra per,0,19212
+323,	,AF66E44C86071324,[REF:323],0,19236
+324,nx_box_list_sort_01,24A1D0223A2A487B,Ordine dei box,4,19248
+325,nx_box_list_sort_02,24A1D1223A2A4A2E,Data (più recenti),0,19280
+326,nx_box_list_sort_03,24A1D2223A2A4BE1,Data (meno recenti),0,19320
+327,nx_box_list_sort_04,24A1D3223A2A4D94,Livello (decrescente),0,19360
+328,nx_box_list_sort_05,24A1D4223A2A4F47,Livello (crescente),0,19404
+329,nx_box_list_sort_06,24A1D5223A2A50FA,PS (decrescenti),8,19444
+330,nx_box_list_sort_07,24A1D6223A2A52AD,PS (crescenti),8,19480
+331,nx_box_list_sort_08,24A1C7223A2A3930,Attacco (decrescente),4,19512
+332,nx_box_list_sort_09,24A1C8223A2A3AE3,Attacco (crescente),4,19556
+333,nx_box_list_sort_10,24A555223A2D6051,Difesa (decrescente),0,19596
+334,nx_box_list_sort_11,24A554223A2D5E9E,Difesa (crescente),0,19640
+335,nx_box_list_sort_12,24A553223A2D5CEB,Att. Sp. (decrescente),4,19680
+336,nx_box_list_sort_13,24A552223A2D5B38,Att. Sp. (crescente),4,19728
+337,nx_box_list_sort_14,24A559223A2D671D,Dif. Sp. (decrescente),0,19772
+338,nx_box_list_sort_15,24A558223A2D656A,Dif. Sp. (crescente),0,19820
+339,nx_box_list_sort_16,24A557223A2D63B7,Velocità (decrescente),0,19864
+340,nx_box_list_sort_17,24A556223A2D6204,Velocità (crescente),0,19912
+341,nx_box_list_sort_18,24A54D223A2D52B9,Numero del Pokédex Nazionale,0,19956
+342,nx_box_list_sort_19,24A54C223A2D5106,Ordine alfabetico,4,20016
+343,	,AF66E44C86071324,[REF:343],0,20052
+344,nx_box_help1_010,6699567399801466,"In questa schermata trovi i box dei Pokémon.
+Puoi trasferire o ritirare i Pokémon di giochi collegati
+a Pokémon HOME!",4,20064
+345,nx_box_help1_020,6695F073997D313D,"Con i pulsanti ZL e ZR puoi cambiare la funzione del cursore
+di selezione. Quando è rosso puoi accedere ad alcune opzioni di base,
+quando è blu puoi spostare singoli Pokémon e quando è verde
+puoi selezionare più Pokémon contemporaneamente!",0,20300
+346,nx_box_help1_025,6695EB73997D28BE,"Con il pulsante “box”, puoi visualizzare una lista dei tuoi box
+raggruppati per pagina. Se vuoi, puoi anche modificarne l’ordine!",0,20780
+347,nx_box_help1_030,6692EA73997AF134,"Con il pulsante “Ultimi 30”, invece, potrai visualizzare velocemente
+gli ultimi 30 Pokémon depositati in Pokémon HOME!",0,21040
+348,nx_box_help1_040,668F64739977D7AB,"Quando hai finito di sistemare i tuoi box, tocca il pulsante + per salvare.
+Attenzione: se non lo fai, perderai tutte le modifiche effettuate!",0,21280
+349,nx_box_help2_010,3562B89246FC4A4F,[REF:349],0,21568
+350,nx_box_help2_020,3558469246F33414,"Al momento stai usando il servizio base di Pokémon HOME!
+Ciò significa che hai a disposizione il Box base, in cui puoi depositare
+al massimo 30 Pokémon.",4,21580
+351,nx_box_help2_030,355BCC9246F64D9D,"Se in passato avevi il servizio premium e hai depositato molti Pokémon
+in Pokémon HOME, potrai ritirare gli ultimi 30!",0,21888
+352,nx_box_help2_040,3551BA9246EDDA82,[REF:352],0,22128
+353,nx_box_help2_050,3554C09246F01A8B,[REF:353],0,22140
+354,nx_box_help3_010,16ACEC6527AF83E0,"Se vuoi trasferire box interi, dovrai avere altrettanti
+box vuoti in Pokémon HOME!",0,22152
+355,nx_box_help4_010,E66CCA58B8DB0349,"Qui puoi scorrere facilmente la lista dei Pokémon presenti
+in Pokémon HOME e nei box dei giochi collegati!",0,22320
+356,nx_box_help4_020,E6705058B8DE1CD2,"Usa il pulsante Y per scegliere l’ordine di visualizzazione che preferisci!
+Puoi organizzare i Pokémon in base a criteri e valori diversi, sia in ordine
+crescente che decrescente, in base alle tue esigenze.",4,22536
+357,nx_box_help4_030,E673D658B8E1365B,"Con il pulsante X puoi filtrare la lista tramite vari criteri, come
+mosse conosciute, abilità e molto altro. Così troverai i Pokémon
+che stai cercando in men che non si dica!",0,22952
+358,nx_box_msg_130,8C10E23343528714,"Hai selezionato un Pokémon trasferito da Pokémon GO
+che non è stato ottenuto in questo salvataggio.[CLEAR]
+Non è possibile riceverlo.",4,23304
+359,hade,F38ED1C313C0C8D5,[REF:359],0,23564
+360,nx_box_msg_018,830837333E19A255,"Al momento il Pokémon selezionato non può essere
+depositato in Pokémon HOME!",4,23576
+361,nx_box_msg_019,830836333E19A0A2,"Tra i Pokémon selezionati ce n’è almeno uno che al momento
+non può essere depositato in Pokémon HOME!",0,23732
+362,nx_box_msg_022,830BA3333E1C8FB0,"Tra i Pokémon selezionati ce n’è almeno uno che al momento
+non può essere depositato in Pokémon HOME!",0,23936
+363,nx_box_msg_023,830BA4333E1C9163,"Tra i Pokémon selezionati ce n’è almeno uno che al momento
+non può essere depositato in Pokémon HOME!",0,24140
+364,nx_box_msg_024,830BA9333E1C99E2,"[CTRL:1002:][CTRL:1503:0000,0001][CTRL:0101:0000] cromatico è già stato trasferito
+da questi dati di salvataggio![CLEAR]
+Un solo [CTRL:0101:0000] cromatico può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",0,24344
+365,nx_box_msg_025,830BAA333E1C9B95,"[CTRL:1002:][CTRL:1503:0000,0001][CTRL:0101:0000] è già stato trasferito da questi dati
+di salvataggio![CLEAR]
+Un solo [CTRL:0101:0000] può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",0,24680
+366,nx_box_msg_026,830BA7333E1C967C,"C’è un problema con [CTRL:0102:0000].
+Impossibile depositarlo.",0,24976
+367,nx_box_msg_032,830F2D333E1FB005,"C’è un problema con [CTRL:0102:0000].
+Impossibile depositare i Pokémon selezionati.",0,25080
+368,nx_box_msg_027,830BA8333E1C982F,"Uno o più Pokémon selezionati, tra cui
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000] cromatico, sono già stati trasferiti[RETURN]
+in Pokémon HOME da questi dati di salvataggio.[CLEAR]
+Un solo [CTRL:0101:0000] cromatico può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",4,25224
+369,nx_box_msg_028,830BAD333E1CA0AE,"Uno o più Pokémon selezionati, tra cui
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000], sono già stati trasferiti[RETURN]
+in Pokémon HOME da questi dati di salvataggio.[CLEAR]
+Un solo [CTRL:0101:0000] può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",4,25684
+370,nx_box_msg_029,830BAE333E1CA261,"È stato selezionato più di [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]![CLEAR]
+Un solo [CTRL:0101:0000] può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",4,26104
+371,nx_box_msg_031,830F2A333E1FAAEC,"È stato selezionato più di [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000] cromatico![CLEAR]
+Un solo [CTRL:0101:0000] cromatico può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",4,26348
+372,nx_box_msg_033,830F2C333E1FAE52,"[CTRL:0102:0000] è stato sottoposto all’Allenamento Pro,
+ma non è di livello 100.[CLEAR]
+Dovrai prima portarlo a quel livello per poterlo trasferire in
+Pokémon Diamante Lucente o Pokémon Perla Splendente.",0,26632
+373,nx_box_msg_034,830F27333E1FA5D3,"Alcuni Pokémon, tra cui [CTRL:0102:0000], sono stati
+sottoposti all’Allenamento Pro, ma non sono di livello 100.[CLEAR]
+Dovrai prima portarli a quel livello per poterli trasferire in
+Pokémon Diamante Lucente o Pokémon Perla Splendente.",4,27012
+374,nx_box_boxflame_syn,905496878E46A587,Box trasferta di Pokémon Champions,0,27452
+375,nx_box_boxtitle_syn_01,1022B9BCBF893AB0,Già andati in trasferta,0,27524
+376,nx_box_boxtitle_syn_02,1022BCBCBF893FC9,In trasferta attualmente,4,27572
+377,nx_box_boxdata_syn_01,0BFE9757FB6FE868,"[CTRL:0203:0000,002E]",0,27624
+378,nx_box_boxdata_syn_02,0BFE9A57FB6FED81,"[CTRL:0203:0000,002E]",0,27636
+379,nx_box_button_syn_02,346E39D095D83DD6,Info,4,27648
+380,nx_box_button_syn_03,346E3AD095D83F89,Manda in trasferta,0,27660
+381,nx_box_msg_syn_01,CAFC381465C07700,"Vuoi mandare in trasferta a Pokémon Champions i Pokémon
+selezionati?",0,27700
+382,nx_box_msg_syn_02,CAFC3B1465C07C19,"Trasferimento in corso.
+Non chiudere Pokémon HOME.",0,27840
+383,nx_box_msg_syn_03,CAFC3A1465C07A66,[CTRL:0102:0000] è stato mandato in trasferta!,0,27944
+384,nx_box_msg_syn_04,CAFC3D1465C07F7F,[CTRL:0102:0000] e gli altri sono stati mandati in trasferta!,0,28016
+385,nx_box_msg_syn_05,CAFC3C1465C07DCC,"Non puoi scegliere altri Pokémon.[CLEAR]
+Puoi mandarne in trasferta al massimo [CTRL:0201:0000] alla volta.",0,28116
+386,nx_box_msg_syn_07,CAFC3E1465C08132,"Ci sono ancora dei Pokémon selezionati per la trasferta.[CLEAR]
+Vuoi tornare comunque al menu principale?",0,28300
+387,nx_box_msg_syn_08,CAFC411465C0864B,[REF:387],0,28504
+388,nx_box_msg_syn_09,CAFC401465C08498,"Il box di Pokémon Champions è pieno![CLEAR]
+Se vuoi mandare in trasferta altri Pokémon, fai un po’
+di spazio nel box di Pokémon Champions.",4,28516
+389,nx_box_msg_syn_10,CAF8D31465BD958A,"Vuoi interrompere il trasferimento e tornare al menu
+principale?",0,28788
+390,nx_box_msg_syn_11,CAF8D41465BD973D,[REF:390],0,28920
+391,nx_box_msg_syn_12,CAF8D11465BD9224,Questo Pokémon non può essere mandato in trasferta.,0,28932
+392,nx_box_msg_syn_13,CAF8D21465BD93D7,"Non puoi mandare in trasferta i Pokémon che hai messo
+a disposizione per uno scambio.",0,29036
+393,nx_box_msg_syn_14,CAF8CF1465BD8EBE,Questo Pokémon è già in trasferta.,0,29208
+394,nx_box_msg_syn_15,CAF8D01465BD9071,Non puoi mandare in trasferta un Uovo.,0,29280
+395,nx_box_list_sort_20,24A8DB223A3079DA,Pokémon in trasferta,0,29360
+396,nx_box_save_msg_110,8DA9D5FC62B17D2C,"Alcuni Pokémon sono contrassegnati con un punto
+interrogativo!
+
+Se li trasferisci in Leggende Pokémon: Z-A, non saranno
+più compatibili con gli altri giochi.",4,29404
+397,nx_box_help_syn1_010,F8E9C69849585A1D,Qui puoi effettuare il collegamento a Pokémon Champions!,0,29720
+398,nx_box_help_syn1_020,F8ED2C98495B3D46,"Così potrai mandare in trasferta a Pokémon Champions i Pokémon
+depositati in Pokémon HOME e controllare quelli che sono tornati
+indietro!",0,29836
+399,nx_box_help_syn1_030,F8F0B298495E56CF,"I Pokémon in trasferta non possono essere inviati ad altri giochi
+della serie principale!",4,30112
+400,nx_box_help_syn1_040,F8D8A8984949B3F0,"Se vuoi trasferire in un altro gioco della serie principale un Pokémon in
+trasferta, dovrai prima andare in Pokémon Champions e farlo tornare qui!",0,30292
+401,nx_box_help_syn1_050,F8DC2E98494CCD79,"Puoi mandare in trasferta a Pokémon Champions al massimo 30 Pokémon
+alla volta, e fino a 1.000 Pokémon in tutto!",0,30588
+402,nx_box_help_syn2_010,6C4F7AC7DC98E968,"In questa schermata trovi tutti i Pokémon di Pokémon HOME
+ben allineati per poterli controllare facilmente!",4,30816
+403,nx_box_help_syn2_020,6C596CC7DCA12623,"Usa il pulsante L per cambiare l’ordine di visualizzazione!
+Puoi organizzare i Pokémon in base all’Attacco, alla Difesa
+o ad altri criteri, sia in ordine crescente che decrescente.
+Scegli in base alle tue esigenze!",4,31032
+404,nx_box_help_syn2_030,6C5606C7DC9E42FA,"Con il pulsante R puoi filtrare la lista tramite vari criteri, come
+mosse conosciute, abilità e altri ancora. Così troverai i Pokémon
+che stai cercando in men che non si dica!",0,31464
+405,nx_box_syn_save_01,2A084AD8D8D33D4E,"Non potrai più effettuare le seguenti operazioni in
+Pokémon HOME con i Pokémon mandati in trasferta
+a Pokémon Champions mentre sono in trasferta:
+
+- Trasferirli dai box ad altri giochi
+- Liberarli dai box
+- Segnarli",0,31816
+406,nx_box_syn_save_02,2A0849D8D8D33B9B,Attenzione!,4,32248
+407,nx_box_msg_syn_06,CAFC3F1465C082E5,"Hai già mandato [CTRL:0203:0000,002E] Pokémon in trasferta
+a Pokémon Champions.[CLEAR]
+Non puoi mandarne in trasferta più di così.",4,32272
+408,nx_box_msg_syn_16,CAF8CD1465BD8B58,"Uno o più Pokémon tra quelli selezionati non possono
+essere mandati in trasferta a Pokémon Champions.",4,32496
+409,nx_box_msg_syn_17,CAF8CE1465BD8D0B,"Uno o più Pokémon che stai cercando di mandare in trasferta
+hanno una forma diversa rispetto all’ultima volta che sono
+stati inviati a Pokémon Champions.
+
+Se li mandi in trasferta nella forma attuale, l’allenamento
+che avevano già effettuato in Pokémon Champions sarà
+annullato.",4,32700
+410,nx_box_msg_syn_18,CAF8CB1465BD87F2,"Vuoi procedere comunque con l’invio a Pokémon
+Champions?",0,33260
+411,nx_box_msg_037,830F28333E1FA786,"Il Pokémon selezionato non può essere spostato
+in questo gioco a causa della lingua associata!",4,33376
+412,nx_box_msg_038,830F33333E1FBA37,"Tra i Pokémon selezionati ce n’è almeno uno che non può
+essere spostato in questo gioco a causa della lingua[RETURN]
+associata!",0,33568
+413,nx_box_syn_save_03,2A0848D8D8D339E8,"Se mandi in trasferta dei Pokémon provenienti da
+Pokémon: Let’s Go, Pikachu! e Pokémon: Let’s Go, Eevee!
+non potrai più trasferirli in Pokémon: Let’s Go, Pikachu! e
+Pokémon: Let’s Go, Eevee!
+
+Potrai tuttavia trasferirli in altri giochi.",0,33816
+414,nx_box_help_syn3_010,A661DE9F63E151B7,"I Pokémon che sono già andati in trasferta a Pokémon Champions
+sono contrassegnati con un’icona trasferta sia nella schermata di
+selezione sia nella lista dei Pokémon!",4,34292
+415,nx_box_help_syn3_020,A657CC9F63D8DE9C,"I Pokémon che al momento sono in trasferta, oltre ad avere un’icona
+trasferta, appaiono in grigio e non possono essere selezionati!",4,34628
+416,nx_box_help_msg_syn_01,8EEA3656F34221B4,Vuoi saperne di più sul collegamento a Pokémon Champions?,0,34892
+417,nx_box_help_syn_select_01,7DDA40CE79383089,Il collegamento,4,35008
+418,nx_box_help_syn_select_02,7DDA3DCE79382B70,L’icona trasferta,0,35040
+419,nx_box_help_syn_select_03,7DDA3ECE79382D23,Indietro,4,35076
+420,nx_box_save_msg_121,8DB3E6FC62B9EE94,"Se trasferisci un Pokémon proveniente da un gioco per
+Game Boy Advance (GBA) nel gioco collegato in questo
+momento, il suo ID cambierà.
+
+Se lo riporti in Pokémon HOME, il suo ID tornerà quello
+precedente.",0,35096

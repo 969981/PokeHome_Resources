@@ -1,0 +1,190 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_load_index_010,9B5D4D6BD3CC5B45,POKÉMON,0,860
+1,nx_load_index_020,9B60D36BD3CF74CE,POINTS,0,876
+2,	,AF66E44C86071324,[REF:2],0,892
+3,nx_load_button_000,B1C23ADB2AC36796,Back,0,904
+4,nx_load_button_001,B1C23BDB2AC36949,Help,0,916
+5,	,AF66E44C86071324,[REF:5],0,928
+6,nx_load_guide_010,61707553C26B9525,Select a game to connect to Pokémon HOME,0,940
+7,nx_load_guide_020,6173FB53C26EAEAE,Select a game to send BP to,0,1024
+8,	,AF66E44C86071324,[REF:8],0,1080
+9,nx_load_mile,968D0E49A0115FA0,"Your points: [CTRL:0204:0000,002C] P",0,1092
+10,nx_load_accountname,105B61787869E78F,[CTRL:01D9:0000],0,1136
+11,	,AF66E44C86071324,[REF:11],0,1148
+12,nx_load_none,0DE124626741DDF3,No save data was found.,0,1160
+13,	,AF66E44C86071324,[REF:13],0,1208
+14,nx_load_savedata_010,7EB61251F77F27FE,,0,1220
+15,nx_load_savedata_020,7EB30C51F77CE7F5,Name,0,1224
+16,nx_load_savedata_021,7EB30B51F77CE642,[CTRL:0189:0000],0,1236
+17,nx_load_savedata_030,7EAF8651F779CE6C,ID No.,4,1248
+18,nx_load_savedata_031,7EAF8751F779D01F,"[CTRL:0205:0000,0000]",0,1264
+19,nx_load_savedata_040,7EAC0051F776B4E3,Pokémon,0,1276
+20,nx_load_savedata_041,7EABFF51F776B330,"[CTRL:0203:0000,002C]",0,1292
+21,nx_load_savedata_050,7EA89A51F773D1BA,Play time,0,1304
+22,nx_load_savedata_051,7EA89B51F773D36D,[CTRL:0202:0000]:[CTRL:0201:0001],0,1324
+23,nx_load_savedata_060,7EA51451F770B831,Last saved on,0,1344
+24,nx_load_savedata_061,7EA51351F770B67E,"[CTRL:0201:0001]/[CTRL:0201:0002]/[CTRL:0203:0000,0000]  [CTRL:0201:0003]:[CTRL:0201:0004]",0,1372
+25,nx_load_savedata_070,7EA20E51F76E7828,Start without connecting a game,0,1428
+26,nx_load_savedata_071,7EA20F51F76E79DB,"Select this option to organize your Pokémon HOME Boxes
+without connecting to a game.",0,1492
+27,nx_load_savedata_080,7E9E8851F76B5E9F,Current User,0,1664
+28,nx_load_savedata_081,7E9E8751F76B5CEC,"You’re currently viewing
+[CTRL:01D9:0000]’s save data.",0,1692
+29,nx_load_savedata_090,7E9B0251F7684516,"This save data is from an old software version. It isn’t
+compatible with the latest version of Pokémon HOME.",0,1780
+30,nx_load_savedata_100,75A35D51F23DDDBC,"You’ll need to update Pokémon HOME if you wish to use
+this save data.",0,2000
+31,nx_load_savedata_110,75A6E351F240F745,"This save data can’t be read.
+It may be corrupted.",0,2140
+32,nx_load_savedata_error,C55CE1BE671BCBF1,???????????????,0,2244
+33,	,AF66E44C86071324,[REF:33],0,2276
+34,nx_load_msg_yes,99747AF82159E002,Yes,0,2288
+35,nx_load_msg_no,9835E3CDF53E5574,No,0,2296
+36,nx_load_msg_010,BC52E8F712E52D0C,Do you want to connect to this game?,0,2304
+37,nx_load_msg_011,BC52E9F712E52EBF,Do you want to check the Boxes in Pokémon HOME?,0,2380
+38,nx_load_msg_020,BC5D7AF712EE79A7,"Connecting to the game...
+Please wait.",0,2476
+39,nx_load_msg_021,BC5D79F712EE77F4,"Accessing Boxes...
+Please wait.",4,2556
+40,nx_load_msg_030,BC59F4F712EB601E,Do you want to check a different user’s save data?,0,2620
+41,nx_load_msg_040,BC48F6F712DCF051,"You can’t connect this game’s save data to
+Pokémon HOME yet.[CLEAR]
+Please save the game after receiving the Pokédex.",0,2724
+42,nx_load_msg_041,BC48F5F712DCEE9E,[REF:42],0,2952
+43,nx_load_msg_050,BC4570F712D9D6C8,"This game’s save data already has the maximum
+amount of BP. You can’t send any more BP right now.",0,2964
+44,nx_load_msg_060,BC4FE2F712E2ED03,This game isn’t compatible for sending points!,0,3160
+45,nx_load_msg_070,BC4C7CF712E009DA,"Failed to read this game’s save data.
+It may be corrupted.",0,3256
+46,nx_load_msg_080,BC3B7EF712D19A0D,"This game’s save data isn’t the latest version.
+Please start and save the game after updating it.",0,3376
+47,nx_load_msg_080_1_1,391B8F906963DCED,"The save data for your Pokémon: Let’s Go, Pikachu! game
+is not from the latest version.[CLEAR]
+Please update your Pokémon: Let’s Go, Pikachu! game to
+the latest version, save your progress, and then start up[RETURN]
+Pokémon HOME again.",0,3572
+48,nx_load_msg_080_1_2,391B8C906963D7D4,"The save data for your Pokémon: Let’s Go, Eevee! game
+is not from the latest version.[CLEAR]
+Please update your Pokémon: Let’s Go, Eevee! game to
+the latest version, save your progress, and then start up[RETURN]
+Pokémon HOME again.",0,4028
+49,nx_load_msg_080_2_1,1D3C88905911DCC8,"The save data for your Pokémon Sword game is not from
+the latest version.[CLEAR]
+Please update your Pokémon Sword game to the
+latest version, save your progress, and then start[RETURN]
+up Pokémon HOME again.",0,4476
+50,nx_load_msg_080_2_2,1D3C8B905911E1E1,"The save data for your Pokémon Shield game is not from
+the latest version.[CLEAR]
+Please update your Pokémon Shield game to the
+latest version, save your progress, and then start[RETURN]
+up Pokémon HOME again.",0,4876
+51,nx_load_msg_090,BC37F8F712CE8084,"You need to update Pokémon HOME to connect this game’s
+save data to it.[CLEAR]
+Please close Pokémon HOME and update it.",0,5280
+52,	,AF66E44C86071324,[REF:52],0,5512
+53,nx_load_userchange_title,06E6C6C2D7A42653,Select a user,0,5524
+54,nx_load_userchange_01,DA606E6F26E33CE8,[REF:54],0,5552
+55,	,AF66E44C86071324,[REF:55],0,5564
+56,nx_load_title_beluga_1,79CDCAF8F1656B34,"Pokémon: Let’s Go, Pikachu!",0,5576
+57,nx_load_title_beluga_2,79CDCDF8F165704D,"Pokémon: Let’s Go, Eevee!",0,5632
+58,nx_load_title_orion_1,09BE518446BE061F,Pokémon Sword,0,5684
+59,nx_load_title_orion_2,09BE528446BE07D2,Pokémon Shield,0,5712
+60,	,AF66E44C86071324,[REF:60],0,5744
+61,nx_load_help_1_010,165A1F76FB4FC2F4,"This is the screen where you select a game’s save data that you want to
+connect to Pokémon HOME! Oh boy!",0,5756
+62,nx_load_help_1_020,16641176FB57FFAF,"If there is save data on your Nintendo Switch that you can connect to
+Pokémon HOME, the icons for the games will be listed HERE!",4,5968
+63,nx_load_help_1_030,16608B76FB54E626,"If you want to organize Boxes without connecting a game to
+Pokémon HOME, please select this icon!",4,6228
+64,	,AF66E44C86071324,[REF:64],0,6424
+65,nx_load_help_2_010,8E9EAB46CBC85EE9,"Pokémon HOME Points are the points you can get little by little every day
+if you have Pokémon in Pokémon HOME Boxes. Pretty neat-o, right?
+The more Pokémon you have in the Boxes, the more points you can get!",0,6436
+66,nx_load_help_2_020,8EA1B146CBCA9EF2,"The points you got can be converted to BP and SENT to a game!
+(Though there are some games that aren’t compatible for that...)",0,6852
+67,nx_load_msg_100,B34053F70DA4192A,"There was a problem reading the save data for this game.[CLEAR]
+The problem is due to the Pokémon [CTRL:0200:0002] place[CTRL:1101:0002,0100]s from the left
+on row [CTRL:0200:0001] of the Box named [CTRL:01C0:0000].",0,7108
+68,nx_load_msg_101,B34054F70DA41ADD,"There was a problem reading the save data for this game.[CLEAR]
+The problem is due to the Pokémon [CTRL:0200:0002] place[CTRL:1101:0002,0100]s from the left
+on row [CTRL:0202:0001] of your Pokémon Box.",0,7428
+69,	,AF66E44C86071324,[REF:69],0,7744
+70,nx_load_msg_102,B34051F70DA415C4,"There was a problem reading the save data for this game.[CLEAR]
+The problem is due to the Pokémon [CTRL:0200:0002] place[CTRL:1101:0002,0100]s from the left
+on row [CTRL:0200:0001] of the Pasture named [CTRL:01C0:0000].",0,7756
+71,nx_load_title_delphis_1,ADBFF99A2886C9AB,Pokémon Brilliant Diamond,0,8084
+72,nx_load_title_delphis_2,ADBFFA9A2886CB5E,Pokémon Shining Pearl,0,8136
+73,nx_load_title_hayabusa_1,0946731A41A3B00A,Pokémon Legends: Arceus,0,8180
+74,nx_load_guide_021,6173FC53C26EB061,Select a game to use points in,0,8228
+75,nx_load_msg_051,BC4571F712D9D87B,"This game’s save data already has the maximum amount of
+MP. You can’t send any more MP right now.",0,8292
+76,nx_load_msg_080_2_3,1D3C8A905911E02E,"The save data for your Pokémon Brilliant Diamond game is
+not from the latest version.[CLEAR]
+Please update your Pokémon Brilliant Diamond game to
+the latest version, save your progress, and then start up[RETURN]
+Pokémon HOME again.",0,8488
+77,nx_load_msg_080_2_4,1D3C8D905911E547,"The save data for your Pokémon Shining Pearl game is
+not from the latest version.[CLEAR]
+Please update your Pokémon Shining Pearl game to
+the latest version, save your progress, and then start[RETURN]
+up Pokémon HOME again.",0,8936
+78,nx_load_msg_080_2_5,1D3C8C905911E394,"The save data for your Pokémon Legends: Arceus game is
+not from the latest version.[CLEAR]
+Please update your Pokémon Legends: Arceus game to
+the latest version, save your progress, and then start up[RETURN]
+Pokémon HOME again.",0,9368
+79,nx_load_help_2_021,8EA1B246CBCAA0A5,"You can use the points you got in other games too! How? Easy! Just
+convert ’em to the kinds of points that game uses, and send ’em over!
+(Though there are some games that aren’t compatible...)",0,9808
+80,	,AF66E44C86071324,[REF:80],0,10196
+81,nx_load_title_scarlet_01,6C5F64D7DE1F636E,Pokémon Scarlet,0,10208
+82,nx_load_title_violet_01,5B1851154D8FB139,Pokémon Violet,0,10240
+83,nx_load_msg_052,BC4572F712D9DA2E,"This game’s save data already has the maximum amount of LP.
+You can’t send any more LP right now.",0,10272
+84,nx_load_msg_080_5_1,15EDD39055509A39,"The save data for your Pokémon Scarlet game is not from
+the latest version.[CLEAR]
+Please update your Pokémon Scarlet game to the
+latest version, save your progress, and then start[RETURN]
+up Pokémon HOME again.",0,10468
+85,nx_load_msg_080_5_2,15EDD09055509520,"The save data for your Pokémon Violet game is not from
+the latest version.[CLEAR]
+Please update your Pokémon Violet game to the
+latest version, save your progress, and then start[RETURN]
+up Pokémon HOME again.",0,10876
+86,	,AF66E44C86071324,[REF:86],0,11280
+87,nx_load_title_Ikkaku,2182971FD64F981A,Pokémon Legends: Z-A,0,11292
+88,nx_load_msg_080_6_1,FC9B6C9047292F34,"The save data for your Pokémon Legends: Z-A game is not
+from the latest version.[CLEAR]
+Please update your Pokémon Legends: Z-A game to
+the latest version, save your progress, and then start up[RETURN]
+Pokémon HOME again.",0,11336
+89,nx_load_msg_042,BC48F4F712DCECEB,"You can’t connect this game’s save data to Pokémon HOME
+right now.[CLEAR]
+Please save the game after completing the side mission
+named “A Call from Mable.”",0,11764
+90,nx_load_msg_043,BC48F3F712DCEB38,"You can’t connect this game’s save data to
+Pokémon HOME yet.[CLEAR]
+Please save the game after you have unlocked the ability
+to play with others online.",0,12068
+91,nx_load_msg_044,BC48FAF712DCF71D,[REF:91],0,12368
+92,nx_load_msg_045,BC48F9F712DCF56A,[REF:92],0,12380
+93,nx_load_msg_046,BC48F8F712DCF3B7,"You can’t connect this game’s save data to Pokémon HOME
+right now.[CLEAR]
+Please save your progress in your Pokémon Legends: Z-A
+game after returning from Hyperspace Lumiose.",0,12392
+94,	,AF66E44C86071324,[REF:94],0,12736
+95,nx_load_index_030,9B63D96BD3D1B4D7,Connect to GBA games,0,12748
+96,nx_load_msg_022,BC5D7CF712EE7D0D,"Pokémon sent to Pokémon HOME can’t come back.[CLEAR]
+Are you sure you want to proceed?",0,12792
+97,nx_load_msg_023,BC5D7BF712EE7B5A,Your Pokédex is being synchronized with Pokémon HOME...,0,12960
+98,nx_load_msg_024,BC5D76F712EE72DB,"You can only connect to Game Boy Advance (GBA) games
+once per minute. Please wait.",0,13072
+99,nx_load_title_gbasoft_1,069CD36CD3EA7506,Pokémon FireRed,0,13240
+100,nx_load_title_gbasoft_2,069CD26CD3EA7353,Pokémon LeafGreen,0,13272
+101,	,AF66E44C86071324,[REF:101],0,13308
+102,nx_load_help_3_010,694E876FE122C3BA,"Here’s where you choose the save file of the Game Boy Advance (GBA)
+game you want to connect to Pokémon HOME!",0,13320
+103,nx_load_help_3_020,694B016FE11FAA31,"If there’s a save file you can connect to on your Nintendo Switch, that
+game’s icon will show up here!",4,13540
+104,nx_load_help_3_030,6947FB6FE11D6A28,"Just select an icon, and your Pokédex here in Pokémon HOME will
+automatically sync with the Pokédex in the chosen game!",0,13748

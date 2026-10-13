@@ -1,0 +1,19 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_title_push_button,5B3FE769877CCCA8,PUSH A BUTTON,0,124
+1,nx_title_ver,9F35F53B0D9738C8,Ver.[CTRL:0200:0000].[CTRL:0200:0001].[CTRL:0200:0002],0,152
+2,	,AF66E44C86071324,[REF:2],0,192
+3,nx_title_error1_010,A023DB54EC54E55C,[REF:3],0,204
+4,nx_title_support_01,FBEC9A53F0EAC644,서포트 ID,0,216
+5,nx_title_support_02,FBEC9D53F0EACB5D,XXXX-XXXX-XXXX-XXXX,0,232
+6,	,AF66E44C86071324,[REF:6],0,272
+7,nx_title_casherror_msg_01,48B32C8C799FBB72,캐시를 삭제하겠습니까?,0,284
+8,nx_title_casherror_msg_02,48B32B8C799FB9BF,"캐시를 삭제하면
+로그인에 시간이 오래 걸리는 경우가 있습니다[CLEAR]
+이용 중인 “Pokémon HOME”의
+데이터는 삭제되지 않습니다[CLEAR]
+정말 캐시를 삭제하겠습니까?",0,312
+9,nx_title_msg_yes,CBEDD9311A84C300,예,0,500
+10,nx_title_msg_no,73427AE765741C0A,아니요,0,504
+11,nx_title_cashclear_msg_01,90BAD9C632ABF86B,"캐시를 삭제하고 있습니다
+잠시 기다려 주십시오...",0,512
+12,nx_title_cashclear_msg_02,90BADAC632ABFA1E,캐시 삭제를 완료했습니다,0,572

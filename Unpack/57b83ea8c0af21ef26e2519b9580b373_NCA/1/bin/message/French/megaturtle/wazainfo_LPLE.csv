@@ -1,0 +1,978 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,WAZAINFO_LPLE_000,EA5681FA62DE1699,"
+
+",0,5964
+1,WAZAINFO_LPLE_001,EA5680FA62DE14E6,"Écrase l’ennemi avec les pattes avant ou la queue,
+par exemple.",4,5972
+2,WAZAINFO_LPLE_002,EA567FFA62DE1333,"L’ennemi est tranché violemment.
+Taux de critique élevé.",0,6100
+3,WAZAINFO_LPLE_003,EA567EFA62DE1180,Gifle rapidement l’ennemi de deux à cinq fois d’affilée.,0,6216
+4,WAZAINFO_LPLE_004,EA5685FA62DE1D65,"Une tornade de coups de poing qui frappe de
+deux à cinq fois d’affilée.",4,6332
+5,WAZAINFO_LPLE_005,EA5684FA62DE1BB2,"L’ennemi reçoit un coup de poing d’une puissance
+incroyable.",0,6476
+6,WAZAINFO_LPLE_006,EA5683FA62DE19FF,"Des pièces sont lancées sur l’ennemi.
+Permet d’obtenir de l’argent à la fin du combat.",0,6600
+7,WAZAINFO_LPLE_007,EA5682FA62DE184C,"Un coup de poing enflammé vient frapper l’ennemi.
+Peut le brûler.",4,6776
+8,WAZAINFO_LPLE_008,EA5689FA62DE2431,"Un coup de poing glacé vient frapper l’ennemi.
+Peut le geler.",4,6908
+9,WAZAINFO_LPLE_009,EA5688FA62DE227E,"Un coup de poing électrique vient frapper l’ennemi.
+Peut le paralyser.",4,7032
+10,WAZAINFO_LPLE_010,EA537BFA62DBD690,"Lacère l’ennemi avec des griffes acérées pour lui
+infliger des dégâts.",0,7176
+11,WAZAINFO_LPLE_011,EA537CFA62DBD843,L’ennemi est attrapé et compressé par les côtés.,0,7320
+12,WAZAINFO_LPLE_012,EA537DFA62DBD9F6,"Des pinces lacèrent violemment l’ennemi, le mettant
+K.O. sur le coup s’il est touché.",0,7420
+13,WAZAINFO_LPLE_013,EA537EFA62DBDBA9,"Attaque en deux tours.
+Des lames de vent frappent l’ennemi au second tour.
+Taux de critique élevé.",4,7592
+14,WAZAINFO_LPLE_014,EA537FFA62DBDD5C,"Une danse frénétique qui exalte l’esprit combatif.
+Augmente beaucoup l’Attaque du lanceur.",4,7792
+15,WAZAINFO_LPLE_015,EA5380FA62DBDF0F,Coupe l’ennemi avec des lames ou des griffes.,0,7976
+16,WAZAINFO_LPLE_016,EA5381FA62DBE0C2,"Le lanceur bat des ailes pour générer une bourrasque
+qui blesse l’ennemi.",0,8068
+17,WAZAINFO_LPLE_017,EA5382FA62DBE275,"L’ennemi est frappé par de larges ailes déployées
+pour infliger des dégâts.",0,8216
+18,WAZAINFO_LPLE_018,EA5383FA62DBE428,Éjecte le Pokémon ennemi et le remplace par un autre.,4,8368
+19,WAZAINFO_LPLE_019,EA5384FA62DBE5DB,Le lanceur s’envole au premier tour et frappe au second.,0,8476
+20,WAZAINFO_LPLE_020,EA5D8DFA62E449AB,"Ligote l’ennemi avec les tentacules ou le corps
+pour l’écraser durant quatre à cinq tours.",0,8592
+21,WAZAINFO_LPLE_021,EA5D8CFA62E447F8,"Fouette l’ennemi avec la queue ou une liane,
+par exemple, pour infliger des dégâts.",0,8776
+22,WAZAINFO_LPLE_022,EA5D8FFA62E44D11,"Fouette l’ennemi avec de fines lianes pour infliger
+des dégâts.",0,8944
+23,WAZAINFO_LPLE_023,EA5D8EFA62E44B5E,"Écrase l’ennemi avec un énorme pied.
+Peut aussi l’apeurer.",4,9072
+24,WAZAINFO_LPLE_024,EA5D91FA62E45077,"Deux coups de pied qui frappent l’ennemi deux
+fois d’affilée.",0,9192
+25,WAZAINFO_LPLE_025,EA5D90FA62E44EC4,Un coup de pied surpuissant qui frappe l’ennemi.,4,9316
+26,WAZAINFO_LPLE_026,EA5D93FA62E453DD,"Le lanceur s’envole pour décocher un coup de pied
+sauté. S’il échoue, le lanceur se blesse.",0,9416
+27,WAZAINFO_LPLE_027,EA5D92FA62E4522A,"Le lanceur effectue un coup de pied tournoyant
+et extrêmement rapide. Peut apeurer l’ennemi.",0,9600
+28,WAZAINFO_LPLE_028,EA5D85FA62E43C13,"Lance du sable au visage de l’ennemi pour baisser
+sa Précision.",0,9788
+29,WAZAINFO_LPLE_029,EA5D84FA62E43A60,"Le lanceur donne un coup de tête.
+Peut apeurer l’ennemi.",0,9916
+30,WAZAINFO_LPLE_030,EA5A07FA62E13022,"Frappe l’ennemi d’un coup de corne pointue pour
+infliger des dégâts.",0,10032
+31,WAZAINFO_LPLE_031,EA5A08FA62E131D5,"Frappe l’ennemi deux à cinq fois d’affilée avec un bec
+ou une corne, par exemple.",0,10172
+32,WAZAINFO_LPLE_032,EA5A05FA62E12CBC,"Un coup de corne en vrille qui empale l’ennemi,
+le mettant K.O. sur le coup s’il est touché.",4,10336
+33,WAZAINFO_LPLE_033,EA5A06FA62E12E6F,"Le lanceur charge l’ennemi et le percute de tout
+son poids.",0,10524
+34,WAZAINFO_LPLE_034,EA5A03FA62E12956,"Le lanceur se laisse tomber sur l’ennemi de tout
+son poids. Peut aussi le paralyser.",0,10644
+35,WAZAINFO_LPLE_035,EA5A04FA62E12B09,"Le lanceur ligote l’ennemi avec des lianes ou son corps
+pour l’écraser durant quatre à cinq tours.",0,10816
+36,WAZAINFO_LPLE_036,EA5A01FA62E125F0,"Une charge violente qui blesse aussi légèrement
+le lanceur.",4,11016
+37,WAZAINFO_LPLE_037,EA5A02FA62E127A3,"Une attaque furieuse qui dure de deux à trois tours.
+Le lanceur devient confus.",4,11136
+38,WAZAINFO_LPLE_038,EA5A0FFA62E13DBA,"Une charge dangereuse et imprudente.
+Blesse aussi gravement le lanceur.",4,11296
+39,WAZAINFO_LPLE_039,EA5A10FA62E13F6D,"Le lanceur remue son adorable queue pour tromper
+la vigilance de l’ennemi et baisser sa Défense.",0,11440
+40,WAZAINFO_LPLE_040,EA6419FA62E9A33D,"Un dard toxique qui transperce l’ennemi.
+Peut aussi l’empoisonner.",4,11636
+41,WAZAINFO_LPLE_041,EA6418FA62E9A18A,"Un double coup de dard qui transperce l’ennemi
+deux fois d’affilée. Peut aussi l’empoisonner.",4,11772
+42,WAZAINFO_LPLE_042,EA6417FA62E99FD7,"Envoie une rafale de dards.
+Peut toucher de deux à cinq fois.",4,11960
+43,WAZAINFO_LPLE_043,EA6416FA62E99E24,"Le lanceur fait les gros yeux à l’ennemi pour l’intimider
+et baisser sa Défense.",0,12084
+44,WAZAINFO_LPLE_044,EA6415FA62E99C71,"L’ennemi est mordu par de tranchantes canines.
+Peut l’apeurer.",0,12248
+45,WAZAINFO_LPLE_045,EA6414FA62E99ABE,"Le lanceur pousse un cri tout mimi pour tromper
+la vigilance de l’ennemi et baisser son Attaque.",0,12376
+46,WAZAINFO_LPLE_046,EA6413FA62E9990B,Effraie le Pokémon ennemi et le remplace par un autre.,4,12572
+47,WAZAINFO_LPLE_047,EA6412FA62E99758,Une berceuse plonge l’ennemi dans un profond sommeil.,4,12684
+48,WAZAINFO_LPLE_048,EA6411FA62E995A5,"Le lanceur produit d’étranges ondes sonores qui rendent
+la cible confuse.",0,12792
+49,WAZAINFO_LPLE_049,EA6410FA62E993F2,"Une onde de choc destructrice qui inflige toujours
+20 PV de dégâts.",4,12940
+50,WAZAINFO_LPLE_050,EA6113FA62E76334,"Empêche l’ennemi d’employer à nouveau sa dernière
+attaque. Dure quatre tours.",4,13076
+51,WAZAINFO_LPLE_051,EA6114FA62E764E7,"Le lanceur attaque l’ennemi avec un jet d’acide corrosif.
+Peut aussi baisser sa Défense Spéciale.",0,13232
+52,WAZAINFO_LPLE_052,EA6115FA62E7669A,"L’ennemi est attaqué par une faible flamme.
+Peut aussi le brûler.",0,13428
+53,WAZAINFO_LPLE_053,EA6116FA62E7684D,"L’ennemi reçoit un torrent de flammes.
+Peut aussi le brûler.",0,13560
+54,WAZAINFO_LPLE_054,EA610FFA62E75C68,"Une brume blanche enveloppe l’équipe du lanceur
+et empêche la réduction des stats pour cinq tours.",4,13684
+55,WAZAINFO_LPLE_055,EA6110FA62E75E1B,De l’eau est projetée avec force sur l’ennemi.,0,13884
+56,WAZAINFO_LPLE_056,EA6111FA62E75FCE,Un puissant jet d’eau est dirigé sur l’ennemi.,4,13980
+57,WAZAINFO_LPLE_057,EA6112FA62E76181,"Une énorme vague s’abat sur le champ de bataille
+et inflige des dégâts à tous les Pokémon autour
+du lanceur.",4,14076
+58,WAZAINFO_LPLE_058,EA610BFA62E7559C,"Un rayon de glace frappe l’ennemi.
+Peut aussi le geler.",4,14296
+59,WAZAINFO_LPLE_059,EA610CFA62E7574F,"Une violente tempête de neige s’abat sur l’ennemi.
+Peut aussi le geler.",4,14408
+60,WAZAINFO_LPLE_060,EA6B05FA62EF9FEF,"Un étrange rayon frappe l’ennemi.
+Peut aussi le rendre confus.",4,14552
+61,WAZAINFO_LPLE_061,EA6B04FA62EF9E3C,"Des bulles sont envoyées avec puissance sur l’ennemi.
+Peut aussi baisser sa Vitesse.",0,14680
+62,WAZAINFO_LPLE_062,EA6B07FA62EFA355,"Envoie un rayon arc-en-ciel sur l’ennemi.
+Peut aussi baisser son Attaque.",4,14852
+63,WAZAINFO_LPLE_063,EA6B06FA62EFA1A2,"Projette un puissant rayon sur l’ennemi.
+Le lanceur doit se reposer au tour suivant.",0,15000
+64,WAZAINFO_LPLE_064,EA6B01FA62EF9923,"Frappe l’ennemi d’un bec pointu ou d’une corne
+pour infliger des dégâts.",0,15172
+65,WAZAINFO_LPLE_065,EA6B00FA62EF9770,Une attaque utilisant le bec comme une perceuse.,4,15320
+66,WAZAINFO_LPLE_066,EA6B03FA62EF9C89,"Le lanceur agrippe l’ennemi et l’écrase au sol.
+Blesse aussi légèrement le lanceur.",0,15420
+67,WAZAINFO_LPLE_067,EA6B02FA62EF9AD6,"Un puissant coup de pied bas qui fauche l’ennemi.
+Il est plus efficace contre les ennemis lourds.",4,15588
+68,WAZAINFO_LPLE_068,EA6B0DFA62EFAD87,"Une riposte qui répond à toute capacité physique
+en infligeant le double de dégâts.",4,15784
+69,WAZAINFO_LPLE_069,EA6B0CFA62EFABD4,"L’ennemi est projeté grâce au pouvoir de la gravité.
+Inflige des dégâts équivalents au niveau du lanceur.",0,15952
+70,WAZAINFO_LPLE_070,EA677FFA62EC8666,Le lanceur cogne l’ennemi de toutes ses forces.,0,16164
+71,WAZAINFO_LPLE_071,EA6780FA62EC8819,"Une attaque qui convertit la moitié des dégâts infligés
+en PV pour le lanceur.",4,16260
+72,WAZAINFO_LPLE_072,EA677DFA62EC8300,"Une attaque qui convertit la moitié des dégâts infligés
+en PV pour le lanceur.",4,16420
+73,WAZAINFO_LPLE_073,EA677EFA62EC84B3,"Une graine est semée sur l’ennemi.
+À chaque tour, elle lui dérobe des PV
+que le lanceur récupère.",4,16580
+74,WAZAINFO_LPLE_074,EA6783FA62EC8D32,"Le corps du lanceur se développe.
+Augmente l’Attaque et l’Attaque Spéciale.",0,16776
+75,WAZAINFO_LPLE_075,EA6784FA62EC8EE5,"Des feuilles aiguisées comme des rasoirs entaillent
+l’ennemi. Taux de critique élevé.",0,16928
+76,WAZAINFO_LPLE_076,EA6781FA62EC89CC,"Absorbe la lumière au premier tour et envoie
+un rayon puissant au tour suivant.",4,17100
+77,WAZAINFO_LPLE_077,EA6782FA62EC8B7F,Une poudre toxique empoisonne l’ennemi.,4,17260
+78,WAZAINFO_LPLE_078,EA6787FA62EC93FE,"Le lanceur répand sur l’ennemi une poudre
+qui le paralyse.",0,17340
+79,WAZAINFO_LPLE_079,EA6788FA62EC95B1,"Le lanceur répand une poudre soporifique
+qui endort la cible.",0,17460
+80,WAZAINFO_LPLE_080,EA7211FA62F5D301,"Le lanceur attaque en projetant des pétales pendant
+deux à trois tours avant de céder à la confusion.",0,17584
+81,WAZAINFO_LPLE_081,EA7210FA62F5D14E,"Le lanceur crache de la soie pour ligoter l’ennemi
+et beaucoup baisser sa Vitesse.",0,17788
+82,WAZAINFO_LPLE_082,EA720FFA62F5CF9B,"La colère du lanceur déclenche une onde de choc
+destructrice qui inflige toujours 40 PV de dégâts.",0,17956
+83,WAZAINFO_LPLE_083,EA720EFA62F5CDE8,"Un tourbillon de flammes emprisonne l’ennemi
+pendant quatre à cinq tours.",4,18156
+84,WAZAINFO_LPLE_084,EA7215FA62F5D9CD,"Une décharge électrique tombe sur l’ennemi.
+Peut aussi le paralyser.",4,18304
+85,WAZAINFO_LPLE_085,EA7214FA62F5D81A,"Une grosse décharge électrique tombe sur l’ennemi.
+Peut aussi le paralyser.",4,18444
+86,WAZAINFO_LPLE_086,EA7213FA62F5D667,"Un faible choc électrique frappe l’ennemi.
+Si l’attaque le touche, celui-ci est paralysé.",4,18596
+87,WAZAINFO_LPLE_087,EA7212FA62F5D4B4,"La foudre tombe sur l’ennemi pour lui infliger
+des dégâts. Peut aussi le paralyser.",0,18776
+88,WAZAINFO_LPLE_088,EA7209FA62F5C569,Le lanceur lâche une pierre sur l’ennemi.,0,18944
+89,WAZAINFO_LPLE_089,EA7208FA62F5C3B6,"Le lanceur provoque un tremblement de terre
+touchant tous les Pokémon autour de lui.",0,19028
+90,WAZAINFO_LPLE_090,EA6E8BFA62F2B978,"Le lanceur fait tomber l’ennemi dans une crevasse.
+Si cette attaque réussit, elle met K.O. sur le coup.",0,19200
+91,WAZAINFO_LPLE_091,EA6E8CFA62F2BB2B,Le lanceur creuse au premier tour et frappe au second.,0,19408
+92,WAZAINFO_LPLE_092,EA6E8DFA62F2BCDE,"Empoisonne gravement l’ennemi.
+Les dégâts dus au poison augmentent à chaque tour.",4,19520
+93,WAZAINFO_LPLE_093,EA6E8EFA62F2BE91,"Une faible vague télékinétique frappe l’ennemi.
+Peut aussi le plonger dans la confusion.",4,19684
+94,WAZAINFO_LPLE_094,EA6E8FFA62F2C044,"Une puissante force télékinétique frappe l’ennemi.
+Peut aussi faire baisser sa Défense Spéciale.",4,19864
+95,WAZAINFO_LPLE_095,EA6E90FA62F2C1F7,"Le lanceur hypnotise l’ennemi pour le plonger
+dans un profond sommeil.",0,20060
+96,WAZAINFO_LPLE_096,EA6E91FA62F2C3AA,"Le lanceur médite pour éveiller son pouvoir latent
+et augmenter son Attaque.",0,20204
+97,WAZAINFO_LPLE_097,EA6E92FA62F2C55D,"Le lanceur se relaxe et allège son corps
+pour beaucoup augmenter sa Vitesse.",0,20360
+98,WAZAINFO_LPLE_098,EA6E83FA62F2ABE0,"Le lanceur fonce sur l’ennemi si rapidement qu’on
+parvient à peine à le discerner. Frappe en priorité.",0,20516
+99,WAZAINFO_LPLE_099,EA6E84FA62F2AD93,"Une fois activée, cette capacité augmente l’Attaque
+du lanceur à mesure que celui-ci subit des attaques.",4,20724
+100,WAZAINFO_LPLE_100,E1AD66FA5DF6BB0E,"Le lanceur utilise sa force psychique pour se téléporter
+et échanger sa place avec un autre Pokémon de l’équipe.",0,20936
+101,WAZAINFO_LPLE_101,E1AD67FA5DF6BCC1,"Le lanceur invoque un mirage.
+Inflige des dégâts équivalents au niveau du lanceur.",0,21164
+102,WAZAINFO_LPLE_102,E1AD64FA5DF6B7A8,"Le lanceur copie la dernière capacité utilisée par
+la cible et la conserve tant qu’il reste au combat.",0,21332
+103,WAZAINFO_LPLE_103,E1AD65FA5DF6B95B,Cri strident qui baisse beaucoup la Défense de l’ennemi.,0,21540
+104,WAZAINFO_LPLE_104,E1AD6AFA5DF6C1DA,"Le lanceur se déplace si vite qu’il crée des copies
+illusoires de lui-même, augmentant son Esquive.",0,21656
+105,WAZAINFO_LPLE_105,E1AD6BFA5DF6C38D,"Un soin qui permet au lanceur de récupérer
+jusqu’à la moitié de ses PV max.",4,21856
+106,WAZAINFO_LPLE_106,E1AD68FA5DF6BE74,"Le lanceur contracte tous ses muscles pour augmenter
+sa Défense.",0,22008
+107,WAZAINFO_LPLE_107,E1AD69FA5DF6C027,"Le lanceur comprime son corps pour se faire tout petit
+et beaucoup augmenter son Esquive.",0,22140
+108,WAZAINFO_LPLE_108,E1AD5EFA5DF6AD76,"Le lanceur disperse un nuage d’encre ou de fumée.
+Réduit la Précision de l’ennemi.",0,22320
+109,WAZAINFO_LPLE_109,E1AD5FFA5DF6AF29,"Un rayon sinistre qui plonge l’ennemi dans un état
+de confusion.",4,22488
+110,WAZAINFO_LPLE_110,E1B06CFA5DF8FB17,"Le lanceur se recroqueville dans sa carapace,
+ce qui augmente sa Défense.",0,22620
+111,WAZAINFO_LPLE_111,E1B06BFA5DF8F964,"Le lanceur s’enroule pour cacher ses points faibles,
+ce qui augmente sa Défense.",0,22768
+112,WAZAINFO_LPLE_112,E1B06EFA5DF8FE7D,"Le lanceur érige un mur solide qui augmente beaucoup
+sa Défense.",0,22932
+113,WAZAINFO_LPLE_113,E1B06DFA5DF8FCCA,"Un fabuleux mur de lumière qui réduit les dégâts causés
+par les capacités spéciales durant cinq tours.",4,23064
+114,WAZAINFO_LPLE_114,E1B068FA5DF8F44B,"Un brouillard qui annule les changements de stats
+de tous les Pokémon au combat.",4,23272
+115,WAZAINFO_LPLE_115,E1B067FA5DF8F298,"Un fabuleux mur de lumière qui réduit les dégâts causés
+par les capacités physiques durant cinq tours.",4,23436
+116,WAZAINFO_LPLE_116,E1B06AFA5DF8F7B1,"Le lanceur prend une profonde inspiration et se
+concentre pour augmenter son taux de critique.",0,23644
+117,WAZAINFO_LPLE_117,E1B069FA5DF8F5FE,"Le lanceur encaisse les coups durant deux tours et
+réplique en infligeant le double des dégâts subis.",0,23836
+118,WAZAINFO_LPLE_118,E1B064FA5DF8ED7F,"Le lanceur agite un doigt et stimule son cerveau pour
+utiliser presque n’importe quelle capacité au hasard.",0,24040
+119,WAZAINFO_LPLE_119,E1B063FA5DF8EBCC,"Le lanceur riposte à l’attaque de l’ennemi
+avec la même attaque.",0,24256
+120,WAZAINFO_LPLE_120,E1A65AFA5DF087FC,"Le lanceur explose en blessant tous les Pokémon
+autour de lui. Le lanceur tombe K.O.",0,24388
+121,WAZAINFO_LPLE_121,E1A65BFA5DF089AF,"De toutes ses forces, le lanceur jette un gros œuf
+sur l’ennemi pour lui infliger des dégâts.",0,24560
+122,WAZAINFO_LPLE_122,E1A65CFA5DF08B62,"Un grand coup de langue qui inflige des dégâts
+à l’ennemi. Peut aussi le paralyser.",4,24748
+123,WAZAINFO_LPLE_123,E1A65DFA5DF08D15,"Le lanceur attaque à l’aide d’une éruption de gaz
+répugnants. Peut aussi empoisonner l’ennemi.",0,24916
+124,WAZAINFO_LPLE_124,E1A656FA5DF08130,"Des détritus toxiques sont projetés sur l’ennemi.
+Peut aussi l’empoisonner.",0,25108
+125,WAZAINFO_LPLE_125,E1A657FA5DF082E3,"Le lanceur frappe l’ennemi à grands coups d’os.
+Peut aussi l’apeurer.",0,25260
+126,WAZAINFO_LPLE_126,E1A658FA5DF08496,"Un déluge de flammes ardentes submerge l’ennemi.
+Peut aussi le brûler.",4,25400
+127,WAZAINFO_LPLE_127,E1A659FA5DF08649,"Le lanceur charge l’ennemi à une vitesse remarquable,
+ce qui peut l’apeurer.",0,25544
+128,WAZAINFO_LPLE_128,E1A662FA5DF09594,"Le lanceur piège l’ennemi dans sa dure coquille
+et l’écrase pendant quatre à cinq tours.",0,25700
+129,WAZAINFO_LPLE_129,E1A663FA5DF09747,"Le lanceur envoie des rayons d’étoiles.
+Touche toujours l’ennemi.",0,25880
+130,WAZAINFO_LPLE_130,E1A9E0FA5DF3A185,"Le lanceur baisse la tête pour augmenter sa Défense
+au premier tour et percuter l’ennemi au second.",0,26012
+131,WAZAINFO_LPLE_131,E1A9DFFA5DF39FD2,"Envoie une rafale de dards.
+Peut toucher de deux à cinq fois.",4,26212
+132,WAZAINFO_LPLE_132,E1A9DEFA5DF39E1F,"De longs tentacules ou lianes attaquent l’ennemi.
+Peut aussi baisser sa Vitesse.",0,26336
+133,WAZAINFO_LPLE_133,E1A9DDFA5DF39C6C,"Le lanceur fait le vide dans son esprit pour oublier
+ses soucis. Augmente beaucoup sa Défense Spéciale.",0,26500
+134,WAZAINFO_LPLE_134,E1A9DCFA5DF39AB9,"Le lanceur distrait l’ennemi en pliant une cuiller,
+ce qui baisse sa Précision.",0,26708
+135,WAZAINFO_LPLE_135,E1A9DBFA5DF39906,Le lanceur récupère jusqu’à la moitié de ses PV max.,0,26868
+136,WAZAINFO_LPLE_136,E1A9DAFA5DF39753,"Le lanceur s’élance pour effectuer un coup de
+genou sauté. S’il échoue, le lanceur se blesse.",0,26976
+137,WAZAINFO_LPLE_137,E1A9D9FA5DF395A0,"Le lanceur intimide l’ennemi grâce à son regard terrifiant
+pour le paralyser.",0,27164
+138,WAZAINFO_LPLE_138,E1A9E8FA5DF3AF1D,"Le lanceur mange le rêve de l’ennemi endormi
+et récupère en PV la moitié des dégâts infligés.",0,27320
+139,WAZAINFO_LPLE_139,E1A9E7FA5DF3AD6A,"Un nuage de gaz toxique est projeté au visage
+de l’ennemi pour l’empoisonner.",4,27508
+140,WAZAINFO_LPLE_140,E19F6EFA5DEA8B4A,Projette de deux à cinq grosses boules sur l’ennemi.,0,27664
+141,WAZAINFO_LPLE_141,E19F6FFA5DEA8CFD,"Une attaque qui aspire le sang de l’ennemi.
+La moitié des dégâts sont convertis en PV
+pour le lanceur.",4,27772
+142,WAZAINFO_LPLE_142,E19F6CFA5DEA87E4,"Le lanceur fait un bisou à l’ennemi en prenant
+une mine effrayante. Endort l’ennemi.",0,27980
+143,WAZAINFO_LPLE_143,E19F6DFA5DEA8997,"Une attaque en deux tours au taux de critique élevé.
+Peut aussi apeurer l’ennemi.",4,28152
+144,WAZAINFO_LPLE_144,E19F6AFA5DEA847E,"Le lanceur devient une copie de sa cible
+et obtient la même palette de capacités.",0,28316
+145,WAZAINFO_LPLE_145,E19F6BFA5DEA8631,"Des bulles frappent l’ennemi.
+Peut réduire sa Vitesse.",0,28480
+146,WAZAINFO_LPLE_146,E19F68FA5DEA8118,"Un enchaînement de coups de poing cadencés
+frappe l’ennemi. Peut aussi le rendre confus.",4,28592
+147,WAZAINFO_LPLE_147,E19F69FA5DEA82CB,Le lanceur répand un nuage de spores qui endort.,0,28772
+148,WAZAINFO_LPLE_148,E19F66FA5DEA7DB2,"Explosion lumineuse qui fait baisser la Précision
+de l’ennemi.",4,28872
+149,WAZAINFO_LPLE_149,E19F67FA5DEA7F65,"Une étrange onde d’énergie chaude frappe l’ennemi.
+Cette attaque est d’intensité variable.",4,29000
+150,WAZAINFO_LPLE_150,E1A2D4FA5DED6E73,"Le lanceur barbote et éclabousse les environs.
+Cette capacité n’a aucun effet.",0,29184
+151,WAZAINFO_LPLE_151,E1A2D3FA5DED6CC0,"Le lanceur modifie sa structure moléculaire pour
+se liquéfier et beaucoup augmenter sa Défense.",0,29344
+152,WAZAINFO_LPLE_152,E1A2D6FA5DED71D9,"Une grande pince martèle l’ennemi.
+Taux de critique élevé.",4,29536
+153,WAZAINFO_LPLE_153,E1A2D5FA5DED7026,"Le lanceur explose et inflige des dégâts à tous
+les Pokémon autour de lui. Met K.O. le lanceur.",0,29656
+154,WAZAINFO_LPLE_154,E1A2D8FA5DED753F,"L’ennemi est lacéré par des faux ou des griffes
+de deux à cinq fois d’affilée.",0,29848
+155,WAZAINFO_LPLE_155,E1A2D7FA5DED738C,"Le lanceur projette son os comme un boomerang.
+Cette attaque frappe à l’aller et au retour.",0,30008
+156,WAZAINFO_LPLE_156,E1A2DAFA5DED78A5,"Le lanceur regagne tous ses PV et soigne ses altérations
+de statut, puis il dort pendant deux tours.",0,30192
+157,WAZAINFO_LPLE_157,E1A2D9FA5DED76F2,"Envoie de gros rochers sur l’ennemi pour infliger
+des dégâts. Peut aussi l’apeurer.",4,30396
+158,WAZAINFO_LPLE_158,E1A2DCFA5DED7C0B,"Le lanceur mord l’ennemi à l’aide de ses incisives
+aiguisées. Peut aussi l’apeurer.",0,30564
+159,WAZAINFO_LPLE_159,E1A2DBFA5DED7A58,"Le lanceur réduit son nombre de polygones pour
+accentuer ses angles et augmenter son Attaque.",0,30732
+160,WAZAINFO_LPLE_160,E198E2FA5DE531B8,"Le lanceur change de type pour prendre celui
+de la première capacité de sa liste.",0,30920
+161,WAZAINFO_LPLE_161,E198E3FA5DE5336B,"Le lanceur envoie trois boules d’énergie simultanément.
+Peut aussi paralyser, brûler ou geler l’ennemi.",0,31084
+162,WAZAINFO_LPLE_162,E198E4FA5DE5351E,"Une vilaine morsure d’incisives qui réduit de moitié
+les PV de l’ennemi.",4,31292
+163,WAZAINFO_LPLE_163,E198E5FA5DE536D1,"Un coup de griffe ou autre tranche l’ennemi.
+Taux de critique élevé.",4,31440
+164,WAZAINFO_LPLE_164,E198E6FA5DE53884,"Le lanceur fait une copie de lui-même en sacrifiant
+quelques PV. La copie sert de leurre.",0,31580
+165,WAZAINFO_LPLE_165,E198E7FA5DE53A37,"Une attaque désespérée, utilisée quand le lanceur
+n’a plus de PP. Le blesse aussi légèrement.",4,31760
+166,WAZAINFO_LPLE_166,E198E8FA5DE53BEA,[REF:166],0,31948
+167,WAZAINFO_LPLE_167,E198E9FA5DE53D9D,[REF:167],0,31960
+168,WAZAINFO_LPLE_168,E198DAFA5DE52420,[REF:168],0,31972
+169,WAZAINFO_LPLE_169,E198DBFA5DE525D3,[REF:169],0,31984
+170,WAZAINFO_LPLE_170,E19C68FA5DE84B41,[REF:170],0,31996
+171,WAZAINFO_LPLE_171,E19C67FA5DE8498E,[REF:171],0,32008
+172,WAZAINFO_LPLE_172,E19C66FA5DE847DB,[REF:172],0,32020
+173,WAZAINFO_LPLE_173,E19C65FA5DE84628,[REF:173],0,32032
+174,WAZAINFO_LPLE_174,E19C6CFA5DE8520D,[REF:174],0,32044
+175,WAZAINFO_LPLE_175,E19C6BFA5DE8505A,[REF:175],0,32056
+176,WAZAINFO_LPLE_176,E19C6AFA5DE84EA7,[REF:176],0,32068
+177,WAZAINFO_LPLE_177,E19C69FA5DE84CF4,[REF:177],0,32080
+178,WAZAINFO_LPLE_178,E19C60FA5DE83DA9,[REF:178],0,32092
+179,WAZAINFO_LPLE_179,E19C5FFA5DE83BF6,[REF:179],0,32104
+180,WAZAINFO_LPLE_180,E191D6FA5DDEFEA6,[REF:180],0,32116
+181,WAZAINFO_LPLE_181,E191D7FA5DDF0059,[REF:181],0,32128
+182,WAZAINFO_LPLE_182,E191D4FA5DDEFB40,"Le lanceur esquive toutes les attaques.
+Le risque d’échec augmente lorsque la capacité
+est utilisée plusieurs fois de suite.",0,32140
+183,WAZAINFO_LPLE_183,E191D5FA5DDEFCF3,[REF:183],0,32392
+184,WAZAINFO_LPLE_184,E191DAFA5DDF0572,[REF:184],0,32404
+185,WAZAINFO_LPLE_185,E191DBFA5DDF0725,[REF:185],0,32416
+186,WAZAINFO_LPLE_186,E191D8FA5DDF020C,[REF:186],0,32428
+187,WAZAINFO_LPLE_187,E191D9FA5DDF03BF,[REF:187],0,32440
+188,WAZAINFO_LPLE_188,E191DEFA5DDF0C3E,"Des détritus toxiques sont projetés sur l’ennemi.
+Peut aussi l’empoisonner.",0,32452
+189,WAZAINFO_LPLE_189,E191DFFA5DDF0DF1,[REF:189],0,32604
+190,WAZAINFO_LPLE_190,E1955CFA5DE2182F,[REF:190],0,32616
+191,WAZAINFO_LPLE_191,E1955BFA5DE2167C,[REF:191],0,32628
+192,WAZAINFO_LPLE_192,E1955EFA5DE21B95,[REF:192],0,32640
+193,WAZAINFO_LPLE_193,E1955DFA5DE219E2,[REF:193],0,32652
+194,WAZAINFO_LPLE_194,E19558FA5DE21163,[REF:194],0,32664
+195,WAZAINFO_LPLE_195,E19557FA5DE20FB0,[REF:195],0,32676
+196,WAZAINFO_LPLE_196,E1955AFA5DE214C9,[REF:196],0,32688
+197,WAZAINFO_LPLE_197,E19559FA5DE21316,[REF:197],0,32700
+198,WAZAINFO_LPLE_198,E19564FA5DE225C7,[REF:198],0,32712
+199,WAZAINFO_LPLE_199,E19563FA5DE22414,[REF:199],0,32724
+200,WAZAINFO_LPLE_200,DA4A2BFA5A23EBC3,"Le lanceur enrage et attaque pendant deux ou trois tours
+avant de devenir confus.",0,32736
+201,WAZAINFO_LPLE_201,DA4A2AFA5A23EA10,[REF:201],0,32900
+202,WAZAINFO_LPLE_202,DA4A2DFA5A23EF29,[REF:202],0,32912
+203,WAZAINFO_LPLE_203,DA4A2CFA5A23ED76,[REF:203],0,32924
+204,WAZAINFO_LPLE_204,DA4A2FFA5A23F28F,[REF:204],0,32936
+205,WAZAINFO_LPLE_205,DA4A2EFA5A23F0DC,[REF:205],0,32948
+206,WAZAINFO_LPLE_206,DA4A31FA5A23F5F5,[REF:206],0,32960
+207,WAZAINFO_LPLE_207,DA4A30FA5A23F442,[REF:207],0,32972
+208,WAZAINFO_LPLE_208,DA4A33FA5A23F95B,[REF:208],0,32984
+209,WAZAINFO_LPLE_209,DA4A32FA5A23F7A8,[REF:209],0,32996
+210,WAZAINFO_LPLE_210,DA46C5FA5A21089A,[REF:210],0,33008
+211,WAZAINFO_LPLE_211,DA46C6FA5A210A4D,[REF:211],0,33020
+212,WAZAINFO_LPLE_212,DA46C3FA5A210534,[REF:212],0,33032
+213,WAZAINFO_LPLE_213,DA46C4FA5A2106E7,[REF:213],0,33044
+214,WAZAINFO_LPLE_214,DA46C1FA5A2101CE,[REF:214],0,33056
+215,WAZAINFO_LPLE_215,DA46C2FA5A210381,[REF:215],0,33068
+216,WAZAINFO_LPLE_216,DA46BFFA5A20FE68,[REF:216],0,33080
+217,WAZAINFO_LPLE_217,DA46C0FA5A21001B,[REF:217],0,33092
+218,WAZAINFO_LPLE_218,DA46BDFA5A20FB02,[REF:218],0,33104
+219,WAZAINFO_LPLE_219,DA46BEFA5A20FCB5,[REF:219],0,33116
+220,WAZAINFO_LPLE_220,DA433FFA5A1DEF11,[REF:220],0,33128
+221,WAZAINFO_LPLE_221,DA433EFA5A1DED5E,[REF:221],0,33140
+222,WAZAINFO_LPLE_222,DA433DFA5A1DEBAB,[REF:222],0,33152
+223,WAZAINFO_LPLE_223,DA433CFA5A1DE9F8,[REF:223],0,33164
+224,WAZAINFO_LPLE_224,DA4343FA5A1DF5DD,"Le lanceur utilise ses gigantesques cornes pour charger
+l’ennemi.",0,33176
+225,WAZAINFO_LPLE_225,DA4342FA5A1DF42A,[REF:225],0,33308
+226,WAZAINFO_LPLE_226,DA4341FA5A1DF277,[REF:226],0,33320
+227,WAZAINFO_LPLE_227,DA4340FA5A1DF0C4,"Oblige l’ennemi à répéter durant trois tours
+la dernière capacité utilisée.",4,33332
+228,WAZAINFO_LPLE_228,DA4337FA5A1DE179,[REF:228],0,33484
+229,WAZAINFO_LPLE_229,DA4336FA5A1DDFC6,[REF:229],0,33496
+230,WAZAINFO_LPLE_230,DA3FB9FA5A1AD588,[REF:230],0,33508
+231,WAZAINFO_LPLE_231,DA3FBAFA5A1AD73B,"Attaque l’ennemi avec une queue de fer.
+Peut aussi baisser sa Défense.",4,33520
+232,WAZAINFO_LPLE_232,DA3FBBFA5A1AD8EE,[REF:232],0,33664
+233,WAZAINFO_LPLE_233,DA3FBCFA5A1ADAA1,[REF:233],0,33676
+234,WAZAINFO_LPLE_234,DA3FBDFA5A1ADC54,[REF:234],0,33688
+235,WAZAINFO_LPLE_235,DA3FBEFA5A1ADE07,[REF:235],0,33700
+236,WAZAINFO_LPLE_236,DA3FBFFA5A1ADFBA,[REF:236],0,33712
+237,WAZAINFO_LPLE_237,DA3FC0FA5A1AE16D,[REF:237],0,33724
+238,WAZAINFO_LPLE_238,DA3FB1FA5A1AC7F0,[REF:238],0,33736
+239,WAZAINFO_LPLE_239,DA3FB2FA5A1AC9A3,[REF:239],0,33748
+240,WAZAINFO_LPLE_240,DA57C3FA5A2F7867,[REF:240],0,33760
+241,WAZAINFO_LPLE_241,DA57C2FA5A2F76B4,[REF:241],0,33772
+242,WAZAINFO_LPLE_242,DA57C5FA5A2F7BCD,"Le lanceur mord l’ennemi de ses crocs pointus.
+Peut aussi baisser sa Défense.",0,33784
+243,WAZAINFO_LPLE_243,DA57C4FA5A2F7A1A,"Une riposte qui contre n’importe quelle capacité spéciale
+en infligeant le double des dégâts subis.",4,33940
+244,WAZAINFO_LPLE_244,DA57BFFA5A2F719B,[REF:244],0,34140
+245,WAZAINFO_LPLE_245,DA57BEFA5A2F6FE8,[REF:245],0,34152
+246,WAZAINFO_LPLE_246,DA57C1FA5A2F7501,[REF:246],0,34164
+247,WAZAINFO_LPLE_247,DA57C0FA5A2F734E,"Projette une grande ombre sur l’ennemi.
+Peut aussi faire baisser sa Défense Spéciale.",0,34176
+248,WAZAINFO_LPLE_248,DA57BBFA5A2F6ACF,[REF:248],0,34348
+249,WAZAINFO_LPLE_249,DA57BAFA5A2F691C,[REF:249],0,34360
+250,WAZAINFO_LPLE_250,DA543DFA5A2C5EDE,[REF:250],0,34372
+251,WAZAINFO_LPLE_251,DA543EFA5A2C6091,[REF:251],0,34384
+252,WAZAINFO_LPLE_252,DA543BFA5A2C5B78,"Permet de frapper en priorité et apeure l’ennemi.
+Ne fonctionne qu’au premier tour.",0,34396
+253,WAZAINFO_LPLE_253,DA543CFA5A2C5D2B,[REF:253],0,34564
+254,WAZAINFO_LPLE_254,DA5441FA5A2C65AA,[REF:254],0,34576
+255,WAZAINFO_LPLE_255,DA5442FA5A2C675D,[REF:255],0,34588
+256,WAZAINFO_LPLE_256,DA543FFA5A2C6244,[REF:256],0,34600
+257,WAZAINFO_LPLE_257,DA5440FA5A2C63F7,"Le lanceur provoque une vague de chaleur.
+Peut aussi brûler l’ennemi.",0,34612
+258,WAZAINFO_LPLE_258,DA5435FA5A2C5146,[REF:258],0,34752
+259,WAZAINFO_LPLE_259,DA5436FA5A2C52F9,[REF:259],0,34764
+260,WAZAINFO_LPLE_260,DA50B7FA5A294555,[REF:260],0,34776
+261,WAZAINFO_LPLE_261,DA50B6FA5A2943A2,"Lance un bouquet de flammes maléfiques à l’ennemi
+pour lui infliger une brûlure.",0,34788
+262,WAZAINFO_LPLE_262,DA50B5FA5A2941EF,[REF:262],0,34952
+263,WAZAINFO_LPLE_263,DA50B4FA5A29403C,"Une attaque dont la puissance double lorsque
+le lanceur est empoisonné, paralysé ou brûlé.",4,34964
+264,WAZAINFO_LPLE_264,DA50B3FA5A293E89,[REF:264],0,35148
+265,WAZAINFO_LPLE_265,DA50B2FA5A293CD6,[REF:265],0,35160
+266,WAZAINFO_LPLE_266,DA50B1FA5A293B23,[REF:266],0,35172
+267,WAZAINFO_LPLE_267,DA50B0FA5A293970,[REF:267],0,35184
+268,WAZAINFO_LPLE_268,DA50BFFA5A2952ED,[REF:268],0,35196
+269,WAZAINFO_LPLE_269,DA50BEFA5A29513A,"Provoque l’ennemi. L’oblige à n’utiliser que des attaques
+pendant trois tours.",0,35208
+270,WAZAINFO_LPLE_270,DA4D31FA5A262BCC,"Une capacité qui augmente la puissance d’attaque
+d’un allié.",4,35368
+271,WAZAINFO_LPLE_271,DA4D32FA5A262D7F,[REF:271],0,35492
+272,WAZAINFO_LPLE_272,DA4D33FA5A262F32,[REF:272],0,35504
+273,WAZAINFO_LPLE_273,DA4D34FA5A2630E5,[REF:273],0,35516
+274,WAZAINFO_LPLE_274,DA4D2DFA5A262500,[REF:274],0,35528
+275,WAZAINFO_LPLE_275,DA4D2EFA5A2626B3,[REF:275],0,35540
+276,WAZAINFO_LPLE_276,DA4D2FFA5A262866,"Une attaque puissante, mais qui baisse l’Attaque
+et la Défense du lanceur.",4,35552
+277,WAZAINFO_LPLE_277,DA4D30FA5A262A19,[REF:277],0,35704
+278,WAZAINFO_LPLE_278,DA4D39FA5A263964,[REF:278],0,35716
+279,WAZAINFO_LPLE_279,DA4D3AFA5A263B17,[REF:279],0,35728
+280,WAZAINFO_LPLE_280,DA2EBBFA5A0C65BB,"Une attaque avec le tranchant de la main.
+Permet aussi de briser les barrières comme
+Mur Lumière et Protection.",4,35740
+281,WAZAINFO_LPLE_281,DA2EBAFA5A0C6408,Fait bâiller l’ennemi qui s’endort au tour suivant.,0,35964
+282,WAZAINFO_LPLE_282,DA2EBDFA5A0C6921,[REF:282],0,36068
+283,WAZAINFO_LPLE_283,DA2EBCFA5A0C676E,[REF:283],0,36080
+284,WAZAINFO_LPLE_284,DA2EBFFA5A0C6C87,[REF:284],0,36092
+285,WAZAINFO_LPLE_285,DA2EBEFA5A0C6AD4,[REF:285],0,36104
+286,WAZAINFO_LPLE_286,DA2EC1FA5A0C6FED,[REF:286],0,36116
+287,WAZAINFO_LPLE_287,DA2EC0FA5A0C6E3A,[REF:287],0,36128
+288,WAZAINFO_LPLE_288,DA2EB3FA5A0C5823,[REF:288],0,36140
+289,WAZAINFO_LPLE_289,DA2EB2FA5A0C5670,[REF:289],0,36152
+290,WAZAINFO_LPLE_290,DA2B35FA5A094C32,[REF:290],0,36164
+291,WAZAINFO_LPLE_291,DA2B36FA5A094DE5,[REF:291],0,36176
+292,WAZAINFO_LPLE_292,DA2B33FA5A0948CC,[REF:292],0,36188
+293,WAZAINFO_LPLE_293,DA2B34FA5A094A7F,[REF:293],0,36200
+294,WAZAINFO_LPLE_294,DA2B31FA5A094566,[REF:294],0,36212
+295,WAZAINFO_LPLE_295,DA2B32FA5A094719,[REF:295],0,36224
+296,WAZAINFO_LPLE_296,DA2B2FFA5A094200,[REF:296],0,36236
+297,WAZAINFO_LPLE_297,DA2B30FA5A0943B3,[REF:297],0,36248
+298,WAZAINFO_LPLE_298,DA2B3DFA5A0959CA,[REF:298],0,36260
+299,WAZAINFO_LPLE_299,DA2B3EFA5A095B7D,[REF:299],0,36272
+300,WAZAINFO_LPLE_300,D13390FA54DEE4D8,[REF:300],0,36284
+301,WAZAINFO_LPLE_301,D13391FA54DEE68B,[REF:301],0,36296
+302,WAZAINFO_LPLE_302,D13392FA54DEE83E,[REF:302],0,36308
+303,WAZAINFO_LPLE_303,D13393FA54DEE9F1,[REF:303],0,36320
+304,WAZAINFO_LPLE_304,D13394FA54DEEBA4,[REF:304],0,36332
+305,WAZAINFO_LPLE_305,D13395FA54DEED57,[REF:305],0,36344
+306,WAZAINFO_LPLE_306,D13396FA54DEEF0A,[REF:306],0,36356
+307,WAZAINFO_LPLE_307,D13397FA54DEF0BD,[REF:307],0,36368
+308,WAZAINFO_LPLE_308,D13388FA54DED740,[REF:308],0,36380
+309,WAZAINFO_LPLE_309,D13389FA54DED8F3,[REF:309],0,36392
+310,WAZAINFO_LPLE_310,D13716FA54E1FE61,[REF:310],0,36404
+311,WAZAINFO_LPLE_311,D13715FA54E1FCAE,[REF:311],0,36416
+312,WAZAINFO_LPLE_312,D13714FA54E1FAFB,[REF:312],0,36428
+313,WAZAINFO_LPLE_313,D13713FA54E1F948,[REF:313],0,36440
+314,WAZAINFO_LPLE_314,D1371AFA54E2052D,[REF:314],0,36452
+315,WAZAINFO_LPLE_315,D13719FA54E2037A,[REF:315],0,36464
+316,WAZAINFO_LPLE_316,D13718FA54E201C7,[REF:316],0,36476
+317,WAZAINFO_LPLE_317,D13717FA54E20014,[REF:317],0,36488
+318,WAZAINFO_LPLE_318,D1370EFA54E1F0C9,[REF:318],0,36500
+319,WAZAINFO_LPLE_319,D1370DFA54E1EF16,[REF:319],0,36512
+320,WAZAINFO_LPLE_320,D13A9CFA54E517EA,[REF:320],0,36524
+321,WAZAINFO_LPLE_321,D13A9DFA54E5199D,[REF:321],0,36536
+322,WAZAINFO_LPLE_322,D13A9AFA54E51484,[REF:322],0,36548
+323,WAZAINFO_LPLE_323,D13A9BFA54E51637,[REF:323],0,36560
+324,WAZAINFO_LPLE_324,D13A98FA54E5111E,[REF:324],0,36572
+325,WAZAINFO_LPLE_325,D13A99FA54E512D1,[REF:325],0,36584
+326,WAZAINFO_LPLE_326,D13A96FA54E50DB8,[REF:326],0,36596
+327,WAZAINFO_LPLE_327,D13A97FA54E50F6B,[REF:327],0,36608
+328,WAZAINFO_LPLE_328,D13A94FA54E50A52,[REF:328],0,36620
+329,WAZAINFO_LPLE_329,D13A95FA54E50C05,[REF:329],0,36632
+330,WAZAINFO_LPLE_330,D13E02FA54E7FB13,[REF:330],0,36644
+331,WAZAINFO_LPLE_331,D13E01FA54E7F960,[REF:331],0,36656
+332,WAZAINFO_LPLE_332,D13E04FA54E7FE79,[REF:332],0,36668
+333,WAZAINFO_LPLE_333,D13E03FA54E7FCC6,[REF:333],0,36680
+334,WAZAINFO_LPLE_334,D13E06FA54E801DF,[REF:334],0,36692
+335,WAZAINFO_LPLE_335,D13E05FA54E8002C,[REF:335],0,36704
+336,WAZAINFO_LPLE_336,D13E08FA54E80545,[REF:336],0,36716
+337,WAZAINFO_LPLE_337,D13E07FA54E80392,[REF:337],0,36728
+338,WAZAINFO_LPLE_338,D13E0AFA54E808AB,[REF:338],0,36740
+339,WAZAINFO_LPLE_339,D13E09FA54E806F8,"Le lanceur tend ses muscles pour se gonfler,
+ce qui booste son Attaque et sa Défense.",0,36752
+340,WAZAINFO_LPLE_340,D14188FA54EB149C,[REF:340],0,36924
+341,WAZAINFO_LPLE_341,D14189FA54EB164F,[REF:341],0,36936
+342,WAZAINFO_LPLE_342,D1418AFA54EB1802,[REF:342],0,36948
+343,WAZAINFO_LPLE_343,D1418BFA54EB19B5,[REF:343],0,36960
+344,WAZAINFO_LPLE_344,D14184FA54EB0DD0,[REF:344],0,36972
+345,WAZAINFO_LPLE_345,D14185FA54EB0F83,[REF:345],0,36984
+346,WAZAINFO_LPLE_346,D14186FA54EB1136,[REF:346],0,36996
+347,WAZAINFO_LPLE_347,D14187FA54EB12E9,"Le lanceur se concentre et fait le vide dans son esprit
+pour augmenter son Attaque Spéciale et sa Défense
+Spéciale.",0,37008
+348,WAZAINFO_LPLE_348,D14190FA54EB2234,[REF:348],0,37240
+349,WAZAINFO_LPLE_349,D14191FA54EB23E7,[REF:349],0,37252
+350,WAZAINFO_LPLE_350,D1448EFA54ED54A5,[REF:350],0,37264
+351,WAZAINFO_LPLE_351,D1448DFA54ED52F2,[REF:351],0,37276
+352,WAZAINFO_LPLE_352,D1448CFA54ED513F,[REF:352],0,37288
+353,WAZAINFO_LPLE_353,D1448BFA54ED4F8C,[REF:353],0,37300
+354,WAZAINFO_LPLE_354,D1448AFA54ED4DD9,[REF:354],0,37312
+355,WAZAINFO_LPLE_355,D14489FA54ED4C26,"Le lanceur atterrit et se repose.
+Restaure jusqu’à la moitié de ses PV max.",0,37324
+356,WAZAINFO_LPLE_356,D14488FA54ED4A73,[REF:356],0,37476
+357,WAZAINFO_LPLE_357,D14487FA54ED48C0,[REF:357],0,37488
+358,WAZAINFO_LPLE_358,D14496FA54ED623D,[REF:358],0,37500
+359,WAZAINFO_LPLE_359,D14495FA54ED608A,[REF:359],0,37512
+360,WAZAINFO_LPLE_360,D14814FA54F06E2E,[REF:360],0,37524
+361,WAZAINFO_LPLE_361,D14815FA54F06FE1,[REF:361],0,37536
+362,WAZAINFO_LPLE_362,D14812FA54F06AC8,[REF:362],0,37548
+363,WAZAINFO_LPLE_363,D14813FA54F06C7B,[REF:363],0,37560
+364,WAZAINFO_LPLE_364,D14818FA54F074FA,"Une attaque capable de toucher un ennemi qui utilise
+Abri. Annule l’effet de cette capacité.",4,37572
+365,WAZAINFO_LPLE_365,D14819FA54F076AD,[REF:365],0,37760
+366,WAZAINFO_LPLE_366,D14816FA54F07194,[REF:366],0,37772
+367,WAZAINFO_LPLE_367,D14817FA54F07347,[REF:367],0,37784
+368,WAZAINFO_LPLE_368,D1480CFA54F06096,[REF:368],0,37796
+369,WAZAINFO_LPLE_369,D1480DFA54F06249,"Après son attaque, le lanceur revient à toute vitesse
+et change de place avec un Pokémon de l’équipe
+prêt au combat.",4,37808
+370,WAZAINFO_LPLE_370,D14B9AFA54F387B7,[REF:370],0,38044
+371,WAZAINFO_LPLE_371,D14B99FA54F38604,[REF:371],0,38056
+372,WAZAINFO_LPLE_372,D14B9CFA54F38B1D,[REF:372],0,38068
+373,WAZAINFO_LPLE_373,D14B9BFA54F3896A,[REF:373],0,38080
+374,WAZAINFO_LPLE_374,D14B96FA54F380EB,[REF:374],0,38092
+375,WAZAINFO_LPLE_375,D14B95FA54F37F38,[REF:375],0,38104
+376,WAZAINFO_LPLE_376,D14B98FA54F38451,[REF:376],0,38116
+377,WAZAINFO_LPLE_377,D14B97FA54F3829E,[REF:377],0,38128
+378,WAZAINFO_LPLE_378,D14B92FA54F37A1F,[REF:378],0,38140
+379,WAZAINFO_LPLE_379,D14B91FA54F3786C,[REF:379],0,38152
+380,WAZAINFO_LPLE_380,D11880FA54C801F0,[REF:380],0,38164
+381,WAZAINFO_LPLE_381,D11881FA54C803A3,[REF:381],0,38176
+382,WAZAINFO_LPLE_382,D11882FA54C80556,[REF:382],0,38188
+383,WAZAINFO_LPLE_383,D11883FA54C80709,[REF:383],0,38200
+384,WAZAINFO_LPLE_384,D11884FA54C808BC,[REF:384],0,38212
+385,WAZAINFO_LPLE_385,D11885FA54C80A6F,[REF:385],0,38224
+386,WAZAINFO_LPLE_386,D11886FA54C80C22,[REF:386],0,38236
+387,WAZAINFO_LPLE_387,D11887FA54C80DD5,[REF:387],0,38248
+388,WAZAINFO_LPLE_388,D11888FA54C80F88,[REF:388],0,38260
+389,WAZAINFO_LPLE_389,D11889FA54C8113B,"Permet au lanceur de frapper en priorité.
+Échoue si l’ennemi ne prépare pas une attaque.",0,38272
+390,WAZAINFO_LPLE_390,D11C06FA54CB1B79,[REF:390],0,38452
+391,WAZAINFO_LPLE_391,D11C05FA54CB19C6,[REF:391],0,38464
+392,WAZAINFO_LPLE_392,D11C04FA54CB1813,[REF:392],0,38476
+393,WAZAINFO_LPLE_393,D11C03FA54CB1660,[REF:393],0,38488
+394,WAZAINFO_LPLE_394,D11C0AFA54CB2245,"Le lanceur s’embrase avant de charger l’ennemi.
+Le choc blesse aussi gravement le lanceur.
+Peut brûler l’ennemi.",0,38500
+395,WAZAINFO_LPLE_395,D11C09FA54CB2092,[REF:395],0,38728
+396,WAZAINFO_LPLE_396,D11C08FA54CB1EDF,[REF:396],0,38740
+397,WAZAINFO_LPLE_397,D11C07FA54CB1D2C,[REF:397],0,38752
+398,WAZAINFO_LPLE_398,D11C0EFA54CB2911,"Attaque l’ennemi avec un tentacule, un bras,
+ou un autre membre plein de poison.
+Peut aussi l’empoisonner.",4,38764
+399,WAZAINFO_LPLE_399,D11C0DFA54CB275E,"Le lanceur dégage une horrible aura chargée
+d’idées noires. Peut aussi apeurer l’ennemi.",0,38980
+400,WAZAINFO_LPLE_400,0CFCADFA767E7E05,[REF:400],0,39160
+401,WAZAINFO_LPLE_401,0CFCACFA767E7C52,[REF:401],0,39172
+402,WAZAINFO_LPLE_402,0CFCABFA767E7A9F,[REF:402],0,39184
+403,WAZAINFO_LPLE_403,0CFCAAFA767E78EC,"Le lanceur attaque avec une lame d’air qui fend tout.
+Peut aussi apeurer l’ennemi.",0,39196
+404,WAZAINFO_LPLE_404,0CFCA9FA767E7739,"Le lanceur taillade l’ennemi en utilisant ses faux
+ou ses griffes comme une paire de ciseaux.",0,39364
+405,WAZAINFO_LPLE_405,0CFCA8FA767E7586,"Le lanceur fait vibrer son corps pour lancer une vague
+sonique. Peut aussi baisser la Défense Spéciale de
+l’ennemi.",0,39552
+406,WAZAINFO_LPLE_406,0CFCA7FA767E73D3,"Le lanceur ouvre la bouche pour envoyer une onde
+de choc qui frappe l’ennemi.",0,39784
+407,WAZAINFO_LPLE_407,0CFCA6FA767E7220,[REF:407],0,39940
+408,WAZAINFO_LPLE_408,0CFCB5FA767E8B9D,[REF:408],0,39952
+409,WAZAINFO_LPLE_409,0CFCB4FA767E89EA,[REF:409],0,39964
+410,WAZAINFO_LPLE_410,0CF927FA767B647C,[REF:410],0,39976
+411,WAZAINFO_LPLE_411,0CF928FA767B662F,[REF:411],0,39988
+412,WAZAINFO_LPLE_412,0CF929FA767B67E2,[REF:412],0,40000
+413,WAZAINFO_LPLE_413,0CF92AFA767B6995,[REF:413],0,40012
+414,WAZAINFO_LPLE_414,0CF923FA767B5DB0,[REF:414],0,40024
+415,WAZAINFO_LPLE_415,0CF924FA767B5F63,[REF:415],0,40036
+416,WAZAINFO_LPLE_416,0CF925FA767B6116,[REF:416],0,40048
+417,WAZAINFO_LPLE_417,0CF926FA767B62C9,"Stimule l’esprit par de mauvaises pensées.
+Augmente beaucoup l’Attaque Spéciale du lanceur.",0,40060
+418,WAZAINFO_LPLE_418,0CF92FFA767B7214,[REF:418],0,40244
+419,WAZAINFO_LPLE_419,0CF930FA767B73C7,[REF:419],0,40256
+420,WAZAINFO_LPLE_420,0D0339FA7683D797,"Le lanceur crée des éclats de glace qu’il envoie
+sur l’ennemi. Frappe en priorité.",0,40268
+421,WAZAINFO_LPLE_421,0D0338FA7683D5E4,[REF:421],0,40436
+422,WAZAINFO_LPLE_422,0D033BFA7683DAFD,[REF:422],0,40448
+423,WAZAINFO_LPLE_423,0D033AFA7683D94A,[REF:423],0,40460
+424,WAZAINFO_LPLE_424,0D0335FA7683D0CB,[REF:424],0,40472
+425,WAZAINFO_LPLE_425,0D0334FA7683CF18,[REF:425],0,40484
+426,WAZAINFO_LPLE_426,0D0337FA7683D431,[REF:426],0,40496
+427,WAZAINFO_LPLE_427,0D0336FA7683D27E,[REF:427],0,40508
+428,WAZAINFO_LPLE_428,0D0331FA7683C9FF,[REF:428],0,40520
+429,WAZAINFO_LPLE_429,0D0330FA7683C84C,[REF:429],0,40532
+430,WAZAINFO_LPLE_430,0D0033FA7681978E,"Le lanceur concentre son énergie lumineuse et la fait
+exploser. Peut aussi baisser la Défense Spéciale de
+l’ennemi.",0,40544
+431,WAZAINFO_LPLE_431,0D0034FA76819941,[REF:431],0,40776
+432,WAZAINFO_LPLE_432,0D0031FA76819428,[REF:432],0,40788
+433,WAZAINFO_LPLE_433,0D0032FA768195DB,[REF:433],0,40800
+434,WAZAINFO_LPLE_434,0D0037FA76819E5A,[REF:434],0,40812
+435,WAZAINFO_LPLE_435,0D0038FA7681A00D,[REF:435],0,40824
+436,WAZAINFO_LPLE_436,0D0035FA76819AF4,[REF:436],0,40836
+437,WAZAINFO_LPLE_437,0D0036FA76819CA7,[REF:437],0,40848
+438,WAZAINFO_LPLE_438,0D002BFA768189F6,"Le lanceur fait virevolter violemment ses lianes
+ou ses tentacules pour fouetter l’ennemi.",0,40860
+439,WAZAINFO_LPLE_439,0D002CFA76818BA9,[REF:439],0,41044
+440,WAZAINFO_LPLE_440,0CEF35FA767327C1,[REF:440],0,41056
+441,WAZAINFO_LPLE_441,0CEF34FA7673260E,[REF:441],0,41068
+442,WAZAINFO_LPLE_442,0CEF33FA7673245B,[REF:442],0,41080
+443,WAZAINFO_LPLE_443,0CEF32FA767322A8,[REF:443],0,41092
+444,WAZAINFO_LPLE_444,0CEF39FA76732E8D,[REF:444],0,41104
+445,WAZAINFO_LPLE_445,0CEF38FA76732CDA,[REF:445],0,41116
+446,WAZAINFO_LPLE_446,0CEF37FA76732B27,"Lance des pierres flottantes autour de l’ennemi,
+qui blessent tout adversaire entrant au combat.",0,41128
+447,WAZAINFO_LPLE_447,0CEF36FA76732974,[REF:447],0,41324
+448,WAZAINFO_LPLE_448,0CEF2DFA76731A29,[REF:448],0,41336
+449,WAZAINFO_LPLE_449,0CEF2CFA76731876,[REF:449],0,41348
+450,WAZAINFO_LPLE_450,0CEBAFFA76700E38,[REF:450],0,41360
+451,WAZAINFO_LPLE_451,0CEBB0FA76700FEB,[REF:451],0,41372
+452,WAZAINFO_LPLE_452,0CEBB1FA7670119E,[REF:452],0,41384
+453,WAZAINFO_LPLE_453,0CEBB2FA76701351,"Le lanceur fonce sur l’ennemi si rapidement qu’on parvient
+à peine à le discerner. Frappe en priorité.",0,41396
+454,WAZAINFO_LPLE_454,0CEBB3FA76701504,[REF:454],0,41604
+455,WAZAINFO_LPLE_455,0CEBB4FA767016B7,[REF:455],0,41616
+456,WAZAINFO_LPLE_456,0CEBB5FA7670186A,[REF:456],0,41628
+457,WAZAINFO_LPLE_457,0CEBB6FA76701A1D,[REF:457],0,41640
+458,WAZAINFO_LPLE_458,0CEBA7FA767000A0,[REF:458],0,41652
+459,WAZAINFO_LPLE_459,0CEBA8FA76700253,[REF:459],0,41664
+460,WAZAINFO_LPLE_460,0CF5A1FA76784AF3,[REF:460],0,41676
+461,WAZAINFO_LPLE_461,0CF5A0FA76784940,[REF:461],0,41688
+462,WAZAINFO_LPLE_462,0CF5A3FA76784E59,[REF:462],0,41700
+463,WAZAINFO_LPLE_463,0CF5A2FA76784CA6,[REF:463],0,41712
+464,WAZAINFO_LPLE_464,0CF5A5FA767851BF,[REF:464],0,41724
+465,WAZAINFO_LPLE_465,0CF5A4FA7678500C,[REF:465],0,41736
+466,WAZAINFO_LPLE_466,0CF5A7FA76785525,[REF:466],0,41748
+467,WAZAINFO_LPLE_467,0CF5A6FA76785372,[REF:467],0,41760
+468,WAZAINFO_LPLE_468,0CF5A9FA7678588B,[REF:468],0,41772
+469,WAZAINFO_LPLE_469,0CF5A8FA767856D8,[REF:469],0,41784
+470,WAZAINFO_LPLE_470,0CF23BFA767567CA,[REF:470],0,41796
+471,WAZAINFO_LPLE_471,0CF23CFA7675697D,[REF:471],0,41808
+472,WAZAINFO_LPLE_472,0CF239FA76756464,[REF:472],0,41820
+473,WAZAINFO_LPLE_473,0CF23AFA76756617,[REF:473],0,41832
+474,WAZAINFO_LPLE_474,0CF237FA767560FE,[REF:474],0,41844
+475,WAZAINFO_LPLE_475,0CF238FA767562B1,[REF:475],0,41856
+476,WAZAINFO_LPLE_476,0CF235FA76755D98,[REF:476],0,41868
+477,WAZAINFO_LPLE_477,0CF236FA76755F4B,[REF:477],0,41880
+478,WAZAINFO_LPLE_478,0CF233FA76755A32,[REF:478],0,41892
+479,WAZAINFO_LPLE_479,0CF234FA76755BE5,[REF:479],0,41904
+480,WAZAINFO_LPLE_480,0CE13DFA7666F7FD,[REF:480],0,41916
+481,WAZAINFO_LPLE_481,0CE13CFA7666F64A,[REF:481],0,41928
+482,WAZAINFO_LPLE_482,0CE13BFA7666F497,[REF:482],0,41940
+483,WAZAINFO_LPLE_483,0CE13AFA7666F2E4,"Une danse mystique dont le rythme parfait augmente
+l’Attaque Spéciale, la Défense Spéciale et la Vitesse
+du lanceur.",4,41952
+484,WAZAINFO_LPLE_484,0CE139FA7666F131,[REF:484],0,42188
+485,WAZAINFO_LPLE_485,0CE138FA7666EF7E,[REF:485],0,42200
+486,WAZAINFO_LPLE_486,0CE137FA7666EDCB,[REF:486],0,42212
+487,WAZAINFO_LPLE_487,0CE136FA7666EC18,[REF:487],0,42224
+488,WAZAINFO_LPLE_488,0CE135FA7666EA65,[REF:488],0,42236
+489,WAZAINFO_LPLE_489,0CE134FA7666E8B2,[REF:489],0,42248
+490,WAZAINFO_LPLE_490,0CDE37FA7664B7F4,[REF:490],0,42260
+491,WAZAINFO_LPLE_491,0CDE38FA7664B9A7,[REF:491],0,42272
+492,WAZAINFO_LPLE_492,0CDE39FA7664BB5A,"Le lanceur utilise la force de l’ennemi.
+Plus l’Attaque de l’ennemi est élevée, plus le lanceur
+inflige de dégâts.",0,42284
+493,WAZAINFO_LPLE_493,0CDE3AFA7664BD0D,[REF:493],0,42516
+494,WAZAINFO_LPLE_494,0CDE33FA7664B128,[REF:494],0,42528
+495,WAZAINFO_LPLE_495,0CDE34FA7664B2DB,[REF:495],0,42540
+496,WAZAINFO_LPLE_496,0CDE35FA7664B48E,[REF:496],0,42552
+497,WAZAINFO_LPLE_497,0CDE36FA7664B641,[REF:497],0,42564
+498,WAZAINFO_LPLE_498,0CDE2FFA7664AA5C,[REF:498],0,42576
+499,WAZAINFO_LPLE_499,0CDE30FA7664AC0F,"Le lanceur jette un tas de détritus spéciaux sur la cible.
+Les changements de stats de la cible sont annulés.",0,42588
+500,WAZAINFO_LPLE_500,059992FA72ABE51A,[REF:500],0,42808
+501,WAZAINFO_LPLE_501,059993FA72ABE6CD,[REF:501],0,42820
+502,WAZAINFO_LPLE_502,059990FA72ABE1B4,[REF:502],0,42832
+503,WAZAINFO_LPLE_503,059991FA72ABE367,"L’ennemi est attaqué par un jet d’eau bouillante.
+Peut aussi le brûler.",0,42844
+504,WAZAINFO_LPLE_504,05998EFA72ABDE4E,"Le lanceur brise sa coquille. Il baisse sa Défense
+et sa Défense Spéciale, mais augmente beaucoup
+son Attaque, son Attaque Spéciale et sa Vitesse.",0,42988
+505,WAZAINFO_LPLE_505,05998FFA72ABE001,[REF:505],0,43284
+506,WAZAINFO_LPLE_506,05998CFA72ABDAE8,[REF:506],0,43296
+507,WAZAINFO_LPLE_507,05998DFA72ABDC9B,[REF:507],0,43308
+508,WAZAINFO_LPLE_508,05998AFA72ABD782,[REF:508],0,43320
+509,WAZAINFO_LPLE_509,05998BFA72ABD935,[REF:509],0,43332
+510,WAZAINFO_LPLE_510,059CF8FA72AEC843,[REF:510],0,43344
+511,WAZAINFO_LPLE_511,059CF7FA72AEC690,[REF:511],0,43356
+512,WAZAINFO_LPLE_512,059CFAFA72AECBA9,[REF:512],0,43368
+513,WAZAINFO_LPLE_513,059CF9FA72AEC9F6,[REF:513],0,43380
+514,WAZAINFO_LPLE_514,059CFCFA72AECF0F,[REF:514],0,43392
+515,WAZAINFO_LPLE_515,059CFBFA72AECD5C,[REF:515],0,43404
+516,WAZAINFO_LPLE_516,059CFEFA72AED275,[REF:516],0,43416
+517,WAZAINFO_LPLE_517,059CFDFA72AED0C2,[REF:517],0,43428
+518,WAZAINFO_LPLE_518,059D00FA72AED5DB,[REF:518],0,43440
+519,WAZAINFO_LPLE_519,059CFFFA72AED428,[REF:519],0,43452
+520,WAZAINFO_LPLE_520,059286FA72A5B208,[REF:520],0,43464
+521,WAZAINFO_LPLE_521,059287FA72A5B3BB,[REF:521],0,43476
+522,WAZAINFO_LPLE_522,059288FA72A5B56E,[REF:522],0,43488
+523,WAZAINFO_LPLE_523,059289FA72A5B721,[REF:523],0,43500
+524,WAZAINFO_LPLE_524,05928AFA72A5B8D4,[REF:524],0,43512
+525,WAZAINFO_LPLE_525,05928BFA72A5BA87,"Un coup puissant qui blesse la cible et l’envoie au loin
+pour forcer un autre membre de l’équipe adverse à venir
+au combat.",4,43524
+526,WAZAINFO_LPLE_526,05928CFA72A5BC3A,[REF:526],0,43772
+527,WAZAINFO_LPLE_527,05928DFA72A5BDED,[REF:527],0,43784
+528,WAZAINFO_LPLE_528,05927EFA72A5A470,[REF:528],0,43796
+529,WAZAINFO_LPLE_529,05927FFA72A5A623,"Le lanceur tourne sur lui-même comme une perceuse
+et se jette sur l’ennemi. Taux de critique élevé.",0,43808
+530,WAZAINFO_LPLE_530,05960CFA72A8CB91,[REF:530],0,44008
+531,WAZAINFO_LPLE_531,05960BFA72A8C9DE,[REF:531],0,44020
+532,WAZAINFO_LPLE_532,05960AFA72A8C82B,[REF:532],0,44032
+533,WAZAINFO_LPLE_533,059609FA72A8C678,[REF:533],0,44044
+534,WAZAINFO_LPLE_534,059610FA72A8D25D,[REF:534],0,44056
+535,WAZAINFO_LPLE_535,05960FFA72A8D0AA,[REF:535],0,44068
+536,WAZAINFO_LPLE_536,05960EFA72A8CEF7,[REF:536],0,44080
+537,WAZAINFO_LPLE_537,05960DFA72A8CD44,[REF:537],0,44092
+538,WAZAINFO_LPLE_538,059604FA72A8BDF9,[REF:538],0,44104
+539,WAZAINFO_LPLE_539,059603FA72A8BC46,[REF:539],0,44116
+540,WAZAINFO_LPLE_540,05A70AFA72B73B5E,[REF:540],0,44128
+541,WAZAINFO_LPLE_541,05A70BFA72B73D11,[REF:541],0,44140
+542,WAZAINFO_LPLE_542,05A708FA72B737F8,[REF:542],0,44152
+543,WAZAINFO_LPLE_543,05A709FA72B739AB,[REF:543],0,44164
+544,WAZAINFO_LPLE_544,05A70EFA72B7422A,[REF:544],0,44176
+545,WAZAINFO_LPLE_545,05A70FFA72B743DD,[REF:545],0,44188
+546,WAZAINFO_LPLE_546,05A70CFA72B73EC4,[REF:546],0,44200
+547,WAZAINFO_LPLE_547,05A70DFA72B74077,[REF:547],0,44212
+548,WAZAINFO_LPLE_548,05A702FA72B72DC6,[REF:548],0,44224
+549,WAZAINFO_LPLE_549,05A703FA72B72F79,[REF:549],0,44236
+550,WAZAINFO_LPLE_550,05AA90FA72BA54E7,[REF:550],0,44248
+551,WAZAINFO_LPLE_551,05AA8FFA72BA5334,[REF:551],0,44260
+552,WAZAINFO_LPLE_552,05AA92FA72BA584D,[REF:552],0,44272
+553,WAZAINFO_LPLE_553,05AA91FA72BA569A,[REF:553],0,44284
+554,WAZAINFO_LPLE_554,05AA8CFA72BA4E1B,[REF:554],0,44296
+555,WAZAINFO_LPLE_555,05AA8BFA72BA4C68,[REF:555],0,44308
+556,WAZAINFO_LPLE_556,05AA8EFA72BA5181,[REF:556],0,44320
+557,WAZAINFO_LPLE_557,05AA8DFA72BA4FCE,[REF:557],0,44332
+558,WAZAINFO_LPLE_558,05AA88FA72BA474F,[REF:558],0,44344
+559,WAZAINFO_LPLE_559,05AA87FA72BA459C,[REF:559],0,44356
+560,WAZAINFO_LPLE_560,059FFEFA72B1084C,[REF:560],0,44368
+561,WAZAINFO_LPLE_561,059FFFFA72B109FF,[REF:561],0,44380
+562,WAZAINFO_LPLE_562,05A000FA72B10BB2,[REF:562],0,44392
+563,WAZAINFO_LPLE_563,05A001FA72B10D65,[REF:563],0,44404
+564,WAZAINFO_LPLE_564,059FFAFA72B10180,[REF:564],0,44416
+565,WAZAINFO_LPLE_565,059FFBFA72B10333,[REF:565],0,44428
+566,WAZAINFO_LPLE_566,059FFCFA72B104E6,[REF:566],0,44440
+567,WAZAINFO_LPLE_567,059FFDFA72B10699,[REF:567],0,44452
+568,WAZAINFO_LPLE_568,05A006FA72B115E4,[REF:568],0,44464
+569,WAZAINFO_LPLE_569,05A007FA72B11797,[REF:569],0,44476
+570,WAZAINFO_LPLE_570,05A384FA72B421D5,[REF:570],0,44488
+571,WAZAINFO_LPLE_571,05A383FA72B42022,[REF:571],0,44500
+572,WAZAINFO_LPLE_572,05A382FA72B41E6F,[REF:572],0,44512
+573,WAZAINFO_LPLE_573,05A381FA72B41CBC,[REF:573],0,44524
+574,WAZAINFO_LPLE_574,05A380FA72B41B09,[REF:574],0,44536
+575,WAZAINFO_LPLE_575,05A37FFA72B41956,[REF:575],0,44548
+576,WAZAINFO_LPLE_576,05A37EFA72B417A3,[REF:576],0,44560
+577,WAZAINFO_LPLE_577,05A37DFA72B415F0,[REF:577],0,44572
+578,WAZAINFO_LPLE_578,05A38CFA72B42F6D,[REF:578],0,44584
+579,WAZAINFO_LPLE_579,05A38BFA72B42DBA,[REF:579],0,44596
+580,WAZAINFO_LPLE_580,057E02FA729428B2,[REF:580],0,44608
+581,WAZAINFO_LPLE_581,057E03FA72942A65,[REF:581],0,44620
+582,WAZAINFO_LPLE_582,057E00FA7294254C,[REF:582],0,44632
+583,WAZAINFO_LPLE_583,057E01FA729426FF,"Attaque l’ennemi avec un câlin.
+Peut diminuer son Attaque.",4,44644
+584,WAZAINFO_LPLE_584,057DFEFA729421E6,[REF:584],0,44764
+585,WAZAINFO_LPLE_585,057DFFFA72942399,"Attaque l’ennemi grâce au pouvoir de la lune.
+Peut diminuer son Attaque Spéciale.",4,44776
+586,WAZAINFO_LPLE_586,057DFCFA72941E80,[REF:586],0,44940
+587,WAZAINFO_LPLE_587,057DFDFA72942033,[REF:587],0,44952
+588,WAZAINFO_LPLE_588,057E0AFA7294364A,[REF:588],0,44964
+589,WAZAINFO_LPLE_589,057E0BFA729437FD,[REF:589],0,44976
+590,WAZAINFO_LPLE_590,058188FA7297423B,[REF:590],0,44988
+591,WAZAINFO_LPLE_591,058187FA72974088,[REF:591],0,45000
+592,WAZAINFO_LPLE_592,05818AFA729745A1,[REF:592],0,45012
+593,WAZAINFO_LPLE_593,058189FA729743EE,[REF:593],0,45024
+594,WAZAINFO_LPLE_594,05818CFA72974907,[REF:594],0,45036
+595,WAZAINFO_LPLE_595,05818BFA72974754,[REF:595],0,45048
+596,WAZAINFO_LPLE_596,05818EFA72974C6D,[REF:596],0,45060
+597,WAZAINFO_LPLE_597,05818DFA72974ABA,[REF:597],0,45072
+598,WAZAINFO_LPLE_598,058180FA729734A3,[REF:598],0,45084
+599,WAZAINFO_LPLE_599,05817FFA729732F0,[REF:599],0,45096
+600,WAZAINFO_LPLE_600,FC8357FA6D67814F,[REF:600],0,45108
+601,WAZAINFO_LPLE_601,FC8356FA6D677F9C,[REF:601],0,45120
+602,WAZAINFO_LPLE_602,FC8359FA6D6784B5,[REF:602],0,45132
+603,WAZAINFO_LPLE_603,FC8358FA6D678302,"Utilisé pendant un combat, multiplie par deux
+l’argent gagné à la fin.",4,45144
+604,WAZAINFO_LPLE_604,FC8353FA6D677A83,[REF:604],0,45288
+605,WAZAINFO_LPLE_605,FC8352FA6D6778D0,"Libère une puissante décharge lumineuse qui inflige
+des dégâts à l’ennemi.",0,45300
+606,WAZAINFO_LPLE_606,FC8355FA6D677DE9,"Le Pokémon vous souhaite plein de bonnes choses
+pour cet évènement spécial.",0,45452
+607,WAZAINFO_LPLE_607,FC8354FA6D677C36,"Le lanceur et un allié se prennent la main,
+ce qui les rend heureux.",0,45604
+608,WAZAINFO_LPLE_608,FC835FFA6D678EE7,[REF:608],0,45744
+609,WAZAINFO_LPLE_609,FC835EFA6D678D34,[REF:609],0,45756
+610,WAZAINFO_LPLE_610,FC7FD1FA6D6467C6,[REF:610],0,45768
+611,WAZAINFO_LPLE_611,FC7FD2FA6D646979,[REF:611],0,45780
+612,WAZAINFO_LPLE_612,FC7FCFFA6D646460,[REF:612],0,45792
+613,WAZAINFO_LPLE_613,FC7FD0FA6D646613,[REF:613],0,45804
+614,WAZAINFO_LPLE_614,FC7FD5FA6D646E92,[REF:614],0,45816
+615,WAZAINFO_LPLE_615,FC7FD6FA6D647045,[REF:615],0,45828
+616,WAZAINFO_LPLE_616,FC7FD3FA6D646B2C,[REF:616],0,45840
+617,WAZAINFO_LPLE_617,FC7FD4FA6D646CDF,[REF:617],0,45852
+618,WAZAINFO_LPLE_618,FC7FD9FA6D64755E,[REF:618],0,45864
+619,WAZAINFO_LPLE_619,FC7FDAFA6D647711,[REF:619],0,45876
+620,WAZAINFO_LPLE_620,FC7C6BFA6D61849D,[REF:620],0,45888
+621,WAZAINFO_LPLE_621,FC7C6AFA6D6182EA,[REF:621],0,45900
+622,WAZAINFO_LPLE_622,FC7C69FA6D618137,[REF:622],0,45912
+623,WAZAINFO_LPLE_623,FC7C68FA6D617F84,[REF:623],0,45924
+624,WAZAINFO_LPLE_624,FC7C67FA6D617DD1,[REF:624],0,45936
+625,WAZAINFO_LPLE_625,FC7C66FA6D617C1E,[REF:625],0,45948
+626,WAZAINFO_LPLE_626,FC7C65FA6D617A6B,[REF:626],0,45960
+627,WAZAINFO_LPLE_627,FC7C64FA6D6178B8,[REF:627],0,45972
+628,WAZAINFO_LPLE_628,FC7C63FA6D617705,[REF:628],0,45984
+629,WAZAINFO_LPLE_629,FC7C62FA6D617552,[REF:629],0,45996
+630,WAZAINFO_LPLE_630,FC78E5FA6D5E6B14,[REF:630],0,46008
+631,WAZAINFO_LPLE_631,FC78E6FA6D5E6CC7,[REF:631],0,46020
+632,WAZAINFO_LPLE_632,FC78E7FA6D5E6E7A,[REF:632],0,46032
+633,WAZAINFO_LPLE_633,FC78E8FA6D5E702D,[REF:633],0,46044
+634,WAZAINFO_LPLE_634,FC78E1FA6D5E6448,[REF:634],0,46056
+635,WAZAINFO_LPLE_635,FC78E2FA6D5E65FB,[REF:635],0,46068
+636,WAZAINFO_LPLE_636,FC78E3FA6D5E67AE,[REF:636],0,46080
+637,WAZAINFO_LPLE_637,FC78E4FA6D5E6961,[REF:637],0,46092
+638,WAZAINFO_LPLE_638,FC78DDFA6D5E5D7C,[REF:638],0,46104
+639,WAZAINFO_LPLE_639,FC78DEFA6D5E5F2F,[REF:639],0,46116
+640,WAZAINFO_LPLE_640,FC755FFA6D5B518B,[REF:640],0,46128
+641,WAZAINFO_LPLE_641,FC755EFA6D5B4FD8,[REF:641],0,46140
+642,WAZAINFO_LPLE_642,FC7561FA6D5B54F1,[REF:642],0,46152
+643,WAZAINFO_LPLE_643,FC7560FA6D5B533E,[REF:643],0,46164
+644,WAZAINFO_LPLE_644,FC7563FA6D5B5857,[REF:644],0,46176
+645,WAZAINFO_LPLE_645,FC7562FA6D5B56A4,[REF:645],0,46188
+646,WAZAINFO_LPLE_646,FC7565FA6D5B5BBD,[REF:646],0,46200
+647,WAZAINFO_LPLE_647,FC7564FA6D5B5A0A,[REF:647],0,46212
+648,WAZAINFO_LPLE_648,FC7557FA6D5B43F3,[REF:648],0,46224
+649,WAZAINFO_LPLE_649,FC7556FA6D5B4240,[REF:649],0,46236
+650,WAZAINFO_LPLE_650,FC7259FA6D591182,[REF:650],0,46248
+651,WAZAINFO_LPLE_651,FC725AFA6D591335,[REF:651],0,46260
+652,WAZAINFO_LPLE_652,FC7257FA6D590E1C,[REF:652],0,46272
+653,WAZAINFO_LPLE_653,FC7258FA6D590FCF,[REF:653],0,46284
+654,WAZAINFO_LPLE_654,FC7255FA6D590AB6,[REF:654],0,46296
+655,WAZAINFO_LPLE_655,FC7256FA6D590C69,[REF:655],0,46308
+656,WAZAINFO_LPLE_656,FC7253FA6D590750,[REF:656],0,46320
+657,WAZAINFO_LPLE_657,FC7254FA6D590903,[REF:657],0,46332
+658,WAZAINFO_LPLE_658,FC7261FA6D591F1A,[REF:658],0,46344
+659,WAZAINFO_LPLE_659,FC7262FA6D5920CD,[REF:659],0,46356
+660,WAZAINFO_LPLE_660,FC6ED3FA6D55F7F9,[REF:660],0,46368
+661,WAZAINFO_LPLE_661,FC6ED2FA6D55F646,[REF:661],0,46380
+662,WAZAINFO_LPLE_662,FC6ED1FA6D55F493,[REF:662],0,46392
+663,WAZAINFO_LPLE_663,FC6ED0FA6D55F2E0,[REF:663],0,46404
+664,WAZAINFO_LPLE_664,FC6ED7FA6D55FEC5,[REF:664],0,46416
+665,WAZAINFO_LPLE_665,FC6ED6FA6D55FD12,[REF:665],0,46428
+666,WAZAINFO_LPLE_666,FC6ED5FA6D55FB5F,[REF:666],0,46440
+667,WAZAINFO_LPLE_667,FC6ED4FA6D55F9AC,[REF:667],0,46452
+668,WAZAINFO_LPLE_668,FC6EDBFA6D560591,[REF:668],0,46464
+669,WAZAINFO_LPLE_669,FC6EDAFA6D5603DE,[REF:669],0,46476
+670,WAZAINFO_LPLE_670,FC6B4DFA6D52DE70,[REF:670],0,46488
+671,WAZAINFO_LPLE_671,FC6B4EFA6D52E023,[REF:671],0,46500
+672,WAZAINFO_LPLE_672,FC6B4FFA6D52E1D6,[REF:672],0,46512
+673,WAZAINFO_LPLE_673,FC6B50FA6D52E389,[REF:673],0,46524
+674,WAZAINFO_LPLE_674,FC6B51FA6D52E53C,[REF:674],0,46536
+675,WAZAINFO_LPLE_675,FC6B52FA6D52E6EF,[REF:675],0,46548
+676,WAZAINFO_LPLE_676,FC6B53FA6D52E8A2,[REF:676],0,46560
+677,WAZAINFO_LPLE_677,FC6B54FA6D52EA55,[REF:677],0,46572
+678,WAZAINFO_LPLE_678,FC6B55FA6D52EC08,[REF:678],0,46584
+679,WAZAINFO_LPLE_679,FC6B56FA6D52EDBB,[REF:679],0,46596
+680,WAZAINFO_LPLE_680,FC9E67FA6D7E6437,[REF:680],0,46608
+681,WAZAINFO_LPLE_681,FC9E66FA6D7E6284,[REF:681],0,46620
+682,WAZAINFO_LPLE_682,FC9E69FA6D7E679D,[REF:682],0,46632
+683,WAZAINFO_LPLE_683,FC9E68FA6D7E65EA,[REF:683],0,46644
+684,WAZAINFO_LPLE_684,FC9E63FA6D7E5D6B,[REF:684],0,46656
+685,WAZAINFO_LPLE_685,FC9E62FA6D7E5BB8,[REF:685],0,46668
+686,WAZAINFO_LPLE_686,FC9E65FA6D7E60D1,[REF:686],0,46680
+687,WAZAINFO_LPLE_687,FC9E64FA6D7E5F1E,[REF:687],0,46692
+688,WAZAINFO_LPLE_688,FC9E5FFA6D7E569F,[REF:688],0,46704
+689,WAZAINFO_LPLE_689,FC9E5EFA6D7E54EC,[REF:689],0,46716
+690,WAZAINFO_LPLE_690,FC9AE1FA6D7B4AAE,[REF:690],0,46728
+691,WAZAINFO_LPLE_691,FC9AE2FA6D7B4C61,[REF:691],0,46740
+692,WAZAINFO_LPLE_692,FC9ADFFA6D7B4748,[REF:692],0,46752
+693,WAZAINFO_LPLE_693,FC9AE0FA6D7B48FB,[REF:693],0,46764
+694,WAZAINFO_LPLE_694,FC9AE5FA6D7B517A,[REF:694],0,46776
+695,WAZAINFO_LPLE_695,FC9AE6FA6D7B532D,[REF:695],0,46788
+696,WAZAINFO_LPLE_696,FC9AE3FA6D7B4E14,[REF:696],0,46800
+697,WAZAINFO_LPLE_697,FC9AE4FA6D7B4FC7,[REF:697],0,46812
+698,WAZAINFO_LPLE_698,FC9AD9FA6D7B3D16,[REF:698],0,46824
+699,WAZAINFO_LPLE_699,FC9ADAFA6D7B3EC9,[REF:699],0,46836
+700,WAZAINFO_LPLE_700,F36CBCFA68227A64,[REF:700],0,46848
+701,WAZAINFO_LPLE_701,F36CBDFA68227C17,[REF:701],0,46860
+702,WAZAINFO_LPLE_702,F36CBEFA68227DCA,[REF:702],0,46872
+703,WAZAINFO_LPLE_703,F36CBFFA68227F7D,[REF:703],0,46884
+704,WAZAINFO_LPLE_704,F36CB8FA68227398,[REF:704],0,46896
+705,WAZAINFO_LPLE_705,F36CB9FA6822754B,[REF:705],0,46908
+706,WAZAINFO_LPLE_706,F36CBAFA682276FE,[REF:706],0,46920
+707,WAZAINFO_LPLE_707,F36CBBFA682278B1,[REF:707],0,46932
+708,WAZAINFO_LPLE_708,F36CB4FA68226CCC,[REF:708],0,46944
+709,WAZAINFO_LPLE_709,F36CB5FA68226E7F,[REF:709],0,46956
+710,WAZAINFO_LPLE_710,F37042FA682593ED,[REF:710],0,46968
+711,WAZAINFO_LPLE_711,F37041FA6825923A,[REF:711],0,46980
+712,WAZAINFO_LPLE_712,F37040FA68259087,[REF:712],0,46992
+713,WAZAINFO_LPLE_713,F3703FFA68258ED4,[REF:713],0,47004
+714,WAZAINFO_LPLE_714,F3703EFA68258D21,[REF:714],0,47016
+715,WAZAINFO_LPLE_715,F3703DFA68258B6E,[REF:715],0,47028
+716,WAZAINFO_LPLE_716,F3703CFA682589BB,[REF:716],0,47040
+717,WAZAINFO_LPLE_717,F3703BFA68258808,[REF:717],0,47052
+718,WAZAINFO_LPLE_718,F3703AFA68258655,[REF:718],0,47064
+719,WAZAINFO_LPLE_719,F37039FA682584A2,[REF:719],0,47076
+720,WAZAINFO_LPLE_720,F373A8FA68287716,[REF:720],0,47088
+721,WAZAINFO_LPLE_721,F373A9FA682878C9,[REF:721],0,47100
+722,WAZAINFO_LPLE_722,F373A6FA682873B0,[REF:722],0,47112
+723,WAZAINFO_LPLE_723,F373A7FA68287563,[REF:723],0,47124
+724,WAZAINFO_LPLE_724,F373ACFA68287DE2,[REF:724],0,47136
+725,WAZAINFO_LPLE_725,F373ADFA68287F95,[REF:725],0,47148
+726,WAZAINFO_LPLE_726,F373AAFA68287A7C,[REF:726],0,47160
+727,WAZAINFO_LPLE_727,F373ABFA68287C2F,[REF:727],0,47172
+728,WAZAINFO_LPLE_728,F373B0FA682884AE,[REF:728],0,47184
+729,WAZAINFO_LPLE_729,F373B1FA68288661,"Une attaque électrique rapide comme l’éclair qui inflige
+un coup critique à coup sûr. Frappe en priorité.",4,47196
+730,WAZAINFO_LPLE_730,F3772EFA682B909F,"Pikachu frappe l’adversaire avec une vague géante
+chargée d’électricité. Peut aussi paralyser l’ennemi.",0,47408
+731,WAZAINFO_LPLE_731,F3772DFA682B8EEC,"Pikachu prend de la hauteur avant de fondre sur
+son adversaire. Peut aussi apeurer l’ennemi.",0,47616
+732,WAZAINFO_LPLE_732,F37730FA682B9405,"Une attaque électrique dont la puissance est
+proportionnelle à l’amour que Pikachu vous porte.
+Touche à coup sûr.",4,47804
+733,WAZAINFO_LPLE_733,F3772FFA682B9252,"Évoli frappe l’adversaire avec des bulles d’eau qu’il
+absorbe ensuite pour récupérer un nombre de PV égal
+à la moitié des dégâts infligés à l’ennemi.",4,48032
+734,WAZAINFO_LPLE_734,F3772AFA682B89D3,Une attaque qui foudroie et paralyse l’adversaire.,4,48332
+735,WAZAINFO_LPLE_735,F37729FA682B8820,"Évoli s’embrase et percute violemment l’adversaire.
+Brûle aussi l’ennemi.",4,48436
+736,WAZAINFO_LPLE_736,F3772CFA682B8D39,"Évoli submerge l’adversaire sous un flot d’ondes
+psychiques et crée un mur fabuleux qui réduit les
+dégâts causés par les attaques spéciales de l’ennemi.",4,48584
+737,WAZAINFO_LPLE_737,F3772BFA682B8B86,"Évoli fait appel à son côté sombre pour attaquer
+l’adversaire et créer un mur fabuleux qui réduit les
+dégâts causés par les attaques physiques de l’ennemi.",4,48892
+738,WAZAINFO_LPLE_738,F37736FA682B9E37,"Une liane géante surgit du sol et bombarde l’adversaire
+de graines qui lui dérobent des PV à chaque tour.
+Ces PV sont ensuite absorbés par Évoli.",4,49204
+739,WAZAINFO_LPLE_739,F37735FA682B9C84,"Évoli frappe l’adversaire avec un cristal de buée noire
+gelée. Annule les changements de stats de tous les
+Pokémon au combat.",4,49496
+740,WAZAINFO_LPLE_740,F35F24FA6816EDC0,"Une attaque qui enserre l’adversaire dans un tourbillon
+de senteurs oppressantes. Guérit toutes les altérations
+de statut de l’équipe.",4,49748
+741,WAZAINFO_LPLE_741,F35F25FA6816EF73,"Une charge dont la puissance est proportionnelle
+à l’amour qu’Évoli vous porte. Touche à coup sûr.",4,50020
+742,WAZAINFO_LPLE_742,F35F26FA6816F126,"Le lanceur fait pivoter l’écrou de sa poitrine deux fois
+d’affilée pour frapper l’adversaire avec ses bras.
+Peut apeurer l’ennemi.",0,50220

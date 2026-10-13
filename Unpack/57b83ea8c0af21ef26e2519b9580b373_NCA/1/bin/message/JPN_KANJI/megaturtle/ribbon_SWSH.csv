@@ -1,0 +1,343 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,mes_ribbon_name_000,EFD55246391A3E8A,カロス　チャンプリボン,0,2380
+1,mes_ribbon_name_001,EFD55346391A403D,チャンプリボン,0,2428
+2,mes_ribbon_name_002,EFD55046391A3B24,シンオウ　チャンプリボン,0,2460
+3,mes_ribbon_name_003,EFD55146391A3CD7,なかよしリボン,0,2512
+4,mes_ribbon_name_004,EFD54E46391A37BE,しゅぎょうリボン,0,2544
+5,mes_ribbon_name_005,EFD54F46391A3971,グレートバトルリボン,0,2580
+6,mes_ribbon_name_006,EFD54C46391A3458,マスターバトルリボン,0,2624
+7,mes_ribbon_name_007,EFD54D46391A360B,がんばリボン,0,2668
+8,mes_ribbon_name_008,EFD54A46391A30F2,しゃっきリボン,0,2696
+9,mes_ribbon_name_009,EFD54B46391A32A5,どっきリボン,0,2728
+10,mes_ribbon_name_010,EFD8B846391D21B3,しょんぼリボン,0,2756
+11,mes_ribbon_name_011,EFD8B746391D2000,うっかリボン,0,2788
+12,mes_ribbon_name_012,EFD8BA46391D2519,すっきリボン,0,2816
+13,mes_ribbon_name_013,EFD8B946391D2366,ぐっすリボン,0,2844
+14,mes_ribbon_name_014,EFD8BC46391D287F,にっこリボン,0,2872
+15,mes_ribbon_name_015,EFD8BB46391D26CC,ゴージャスリボン,0,2900
+16,mes_ribbon_name_016,EFD8BE46391D2BE5,ロイヤルリボン,0,2936
+17,mes_ribbon_name_017,EFD8BD46391D2A32,ゴージャスロイヤルリボン,0,2968
+18,mes_ribbon_name_018,EFD8C046391D2F4B,ブロマイドリボン,0,3020
+19,mes_ribbon_name_019,EFD8BF46391D2D98,あしあとリボン,0,3056
+20,mes_ribbon_name_020,EFCEC6463914E4F8,レコードリボン,0,3088
+21,mes_ribbon_name_021,EFCEC7463914E6AB,レジェンドリボン,0,3120
+22,mes_ribbon_name_022,EFCEC8463914E85E,カントリーリボン,0,3156
+23,mes_ribbon_name_023,EFCEC9463914EA11,ナショナルリボン,0,3192
+24,mes_ribbon_name_024,EFCECA463914EBC4,アースリボン,0,3228
+25,mes_ribbon_name_025,EFCECB463914ED77,ワールドリボン,0,3256
+26,mes_ribbon_name_026,EFCECC463914EF2A,クラシックリボン,0,3288
+27,mes_ribbon_name_027,EFCECD463914F0DD,プレミアリボン,0,3324
+28,mes_ribbon_name_028,EFCEBE463914D760,イベントリボン,0,3356
+29,mes_ribbon_name_029,EFCEBF463914D913,バースデーリボン,0,3388
+30,mes_ribbon_name_030,EFD24C463917FE81,スペシャルリボン,0,3424
+31,mes_ribbon_name_031,EFD24B463917FCCE,メモリアルリボン,0,3460
+32,mes_ribbon_name_032,EFD24A463917FB1B,ウィッシュリボン,0,3496
+33,mes_ribbon_name_033,EFD249463917F968,バトルチャンプリボン,0,3532
+34,mes_ribbon_name_034,EFD250463918054D,エリアチャンプリボン,0,3576
+35,mes_ribbon_name_035,EFD24F463918039A,ナショナルチャンプリボン,0,3620
+36,mes_ribbon_name_036,EFD24E46391801E7,ワールドチャンプリボン,0,3672
+37,mes_ribbon_name_037,EFD24D4639180034,おもいでコンテストリボン,0,3720
+38,mes_ribbon_name_038,EFD244463917F0E9,おもいでバトルリボン,0,3772
+39,mes_ribbon_name_039,EFD243463917EF36,ホウエン　チャンプリボン,0,3816
+40,mes_ribbon_name_040,EFE34A4639266E4E,コンテストスターリボン,0,3868
+41,mes_ribbon_name_041,EFE34B4639267001,かっこよさマスターリボン,0,3916
+42,mes_ribbon_name_042,EFE3484639266AE8,うつくしさマスターリボン,0,3968
+43,mes_ribbon_name_043,EFE3494639266C9B,かわいさマスターリボン,0,4020
+44,mes_ribbon_name_044,EFE34E463926751A,かしこさマスターリボン,0,4068
+45,mes_ribbon_name_045,EFE34F46392676CD,たくましさマスターリボン,0,4116
+46,mes_ribbon_name_046,EFE34C46392671B4,アローラ　チャンプリボン,0,4168
+47,mes_ribbon_name_047,EFE34D4639267367,ロイヤルマスターリボン,0,4220
+48,mes_ribbon_name_048,EFE34246392660B6,グレートツリーリボン,0,4268
+49,mes_ribbon_name_049,EFE3434639266269,マスターツリーリボン,0,4312
+50,mes_ribbon_info_000,20F93C62D8DCE9C9,"カロスで　チャンピオンに　勝利し
+殿堂入りした　記念リボン",0,4356
+51,mes_ribbon_info_001,20F93B62D8DCE816,"昔　どこかの　リーグで　勝ち抜き
+殿堂入りした　記念リボン",0,4476
+52,mes_ribbon_info_002,20F93A62D8DCE663,"シンオウで　チャンピオンに　勝利し
+殿堂入りした　記念リボン",0,4596
+53,mes_ribbon_info_003,20F93962D8DCE4B0,"深い　絆で　結ばれた
+ポケモンに　贈られる　リボン",0,4720
+54,mes_ribbon_info_004,20F94062D8DCF095,"過酷な　試練を　乗り越えた
+ポケモンに　贈られる　リボン",0,4824
+55,mes_ribbon_info_005,20F93F62D8DCEEE2,"厳しい　戦いを　勝ち抜いた
+ポケモンに　贈られる　リボン",0,4940
+56,mes_ribbon_info_006,20F93E62D8DCED2F,"戦いを　極めた　つわものの
+ポケモンに　贈られる　リボン",0,5056
+57,mes_ribbon_info_007,20F93D62D8DCEB7C,"たくさん　努力している
+ポケモンに　贈られる　リボン",0,5172
+58,mes_ribbon_info_008,20F94462D8DCF761,"しゃっきりする　できごとを　思い出して
+人生の　エネルギーとなる　リボン",0,5280
+59,mes_ribbon_info_009,20F94362D8DCF5AE,"どきどきした　事柄を　思い出して
+人生を　わくわくさせてくれる　リボン",0,5428
+60,mes_ribbon_info_010,20F5B662D8D9D040,"しょんぼりした　気持ちを　思い出して
+人生の　スパイスとなる　リボン",0,5572
+61,mes_ribbon_info_011,20F5B762D8D9D1F3,"うっかりした　失敗を　思い出して
+人生の　エッセンスとなる　リボン",0,5712
+62,mes_ribbon_info_012,20F5B862D8D9D3A6,"すっきりした　経験を　思い出して
+人生を　リフレッシュさせる　リボン",0,5848
+63,mes_ribbon_info_013,20F5B962D8D9D559,"ぐっすり　眠ったことを　思い出して
+人生の　安らぎとなる　リボン",0,5988
+64,mes_ribbon_info_014,20F5BA62D8D9D70C,"にっこり　ほほえむことを　思い出して
+人生を　ゆたかにしてくれる　リボン",0,6120
+65,mes_ribbon_info_015,20F5BB62D8D9D8BF,"このうえなく　ゴージャスで
+きらびやかな　感じの　リボン",0,6268
+66,mes_ribbon_info_016,20F5BC62D8D9DA72,"とてつもなく　ロイヤルで
+気高い　感じのする　リボン",0,6384
+67,mes_ribbon_info_017,20F5BD62D8D9DC25,"これ以上　素晴らしいものは　ない
+ゴージャスで　ロイヤルな　リボン",0,6492
+68,mes_ribbon_info_018,20F5BE62D8D9DDD8,"ホウエンで　豪華な　似顔絵の
+モデルになった　記念の　リボン",0,6628
+69,mes_ribbon_info_019,20F5BF62D8D9DF8B,"最高の　あしあとを　持つ
+ポケモンが　もらえる　リボン",0,6752
+70,mes_ribbon_info_020,21004862D8E31CDB,"ものすごい　記録を　残した
+記念の　リボン",0,6864
+71,mes_ribbon_info_021,21004762D8E31B28,"伝説的　記録を　残した
+記念の　リボン",0,6952
+72,mes_ribbon_info_022,21004A62D8E32041,"ポケモンリーグ
+優勝　記念リボン",0,7032
+73,mes_ribbon_info_023,21004962D8E31E8E,"すべての　困難を
+乗り越えた　記念リボン",0,7100
+74,mes_ribbon_info_024,21004C62D8E323A7,"１００人抜き　達成
+記念リボン",0,7184
+75,mes_ribbon_info_025,21004B62D8E321F4,"ポケモンリーグ
+優勝　記念リボン",0,7248
+76,mes_ribbon_info_026,21004E62D8E3270D,"ポケモンが　大好きな　ことを
+証明する　記念リボン",0,7316
+77,mes_ribbon_info_027,21004D62D8E3255A,記念日　記念リボン,0,7420
+78,mes_ribbon_info_028,21004062D8E30F43,"ポケモンの　イベントに
+参加した　記念リボン",0,7460
+79,mes_ribbon_info_029,21003F62D8E30D90,お誕生日　記念リボン,0,7552
+80,mes_ribbon_info_030,20FCC262D8E00352,特別な　日の　特別な　リボン,0,7596
+81,mes_ribbon_info_031,20FCC362D8E00505,特別な　思い出を　記念する　リボン,0,7656
+82,mes_ribbon_info_032,20FCC062D8DFFFEC,願いが　かなうと　いわれている　リボン,0,7728
+83,mes_ribbon_info_033,20FCC162D8E0019F,バトル大会　優勝記念リボン,0,7808
+84,mes_ribbon_info_034,20FCBE62D8DFFC86,"ポケモンワールドチャンピオンシップス
+エリア大会　優勝記念リボン",0,7864
+85,mes_ribbon_info_035,20FCBF62D8DFFE39,"ポケモンワールドチャンピオンシップス
+国内大会　優勝記念リボン",0,7996
+86,mes_ribbon_info_036,20FCBC62D8DFF920,"ポケモンワールドチャンピオンシップス
+世界大会　優勝記念リボン",0,8124
+87,mes_ribbon_info_037,20FCBD62D8DFFAD3,"昔　どこかで　集めた　リボン
+コンテストの　思い出が　つまっている！",0,8252
+88,mes_ribbon_info_038,20FCCA62D8E010EA,"昔　どこかで　集めた　リボン
+戦いの　思い出が　つまっている！",0,8392
+89,mes_ribbon_info_039,20FCCB62D8E0129D,"ホウエンで　チャンピオンに　勝利し
+殿堂入りした　記念リボン",0,8520
+90,mes_ribbon_info_040,2106D462D8E8766D,"あらゆる　コンテストで　大活躍した
+ポケモンに　贈られる　記念リボン",0,8644
+91,mes_ribbon_info_041,2106D362D8E874BA,"コンテストで　かっこよさを　発揮した
+ポケモンに　贈られる　記念リボン",0,8784
+92,mes_ribbon_info_042,2106D262D8E87307,"コンテストで　うつくしさを　発揮した
+ポケモンに　贈られる　記念リボン",0,8928
+93,mes_ribbon_info_043,2106D162D8E87154,"コンテストで　かわいさを　発揮した
+ポケモンに　贈られる　記念リボン",0,9072
+94,mes_ribbon_info_044,2106D062D8E86FA1,"コンテストで　かしこさを　発揮した
+ポケモンに　贈られる　記念リボン",0,9212
+95,mes_ribbon_info_045,2106CF62D8E86DEE,"コンテストで　たくましさを　発揮した
+ポケモンに　贈られる　記念リボン",0,9352
+96,mes_ribbon_info_046,2106CE62D8E86C3B,"アローラで　チャンピオンに　なって
+殿堂入りした　記念リボン",0,9496
+97,mes_ribbon_info_047,2106CD62D8E86A88,"バトルロイヤルで　勝ち抜いた
+ポケモンに　贈られる　記念リボン",0,9620
+98,mes_ribbon_info_048,2106CC62D8E868D5,"バトルツリーの　バトルレジェンドに
+勝利した　記念リボン",0,9748
+99,mes_ribbon_info_049,2106CB62D8E86722,"バトルツリーの　バトルレジェンドに
+スーパーで　勝利した　記念リボン",0,9864
+100,mes_ribbon_info_050,21034E62D8E55CE4,"ガラルで　チャンピオンに　なって
+殿堂入りした　記念リボン",0,10004
+101,mes_ribbon_info_051,21034F62D8E55E97,"バトルタワーの　チャンピオンに
+勝利した　記念リボン",0,10124
+102,mes_ribbon_info_052,21035062D8E5604A,"ランクバトルの　マスターボール級で
+トレーナーに　勝利した　記念リボン",0,10232
+103,mes_ribbon_info_053,21035162D8E561FD,はらペコの　ポケモンである　あかし,0,10376
+104,mes_ribbon_info_054,21034A62D8E55618,おねむな　ポケモンである　あかし,0,10448
+105,mes_ribbon_info_055,21034B62D8E557CB,そろそろねむい　ポケモンである　あかし,0,10516
+106,mes_ribbon_info_056,21034C62D8E5597E,はやくにめざめた　ポケモンである　あかし,0,10596
+107,mes_ribbon_info_057,21034D62D8E55B31,くもをみつめる　ポケモンである　あかし,0,10680
+108,mes_ribbon_info_058,21034662D8E54F4C,あめにむせぶ　ポケモンである　あかし,0,10760
+109,mes_ribbon_info_059,21034762D8E550FF,かみなりにさわぐ　ポケモンである　あかし,0,10836
+110,mes_ribbon_info_060,210DC062D8EE731F,ゆきにころがる　ポケモンである　あかし,0,10920
+111,mes_ribbon_info_061,210DBF62D8EE716C,こごえふるえる　ポケモンである　あかし,0,11000
+112,mes_ribbon_info_062,210DC262D8EE7685,のどカラカラの　ポケモンである　あかし,0,11080
+113,mes_ribbon_info_063,210DC162D8EE74D2,すなにまみれる　ポケモンである　あかし,0,11160
+114,mes_ribbon_info_064,210DBC62D8EE6C53,きりにとまどう　ポケモンである　あかし,0,11240
+115,mes_ribbon_info_065,210DBB62D8EE6AA0,うんめいかんじる　ポケモンである　あかし,0,11320
+116,mes_ribbon_info_066,210DBE62D8EE6FB9,つりたてピチピチの　ポケモンである　あかし,0,11404
+117,mes_ribbon_info_067,210DBD62D8EE6E06,カレーずきな　ポケモンである　あかし,0,11492
+118,mes_ribbon_info_068,210DC862D8EE80B7,ひとになれてる　ポケモンである　あかし,0,11568
+119,mes_ribbon_info_069,210DC762D8EE7F04,ひとをしらない　ポケモンである　あかし,0,11648
+120,mes_ribbon_info_070,210A3A62D8EB5996,あばれんぼうの　ポケモンである　あかし,0,11728
+121,mes_ribbon_info_071,210A3B62D8EB5B49,なにもかんがえてない　ポケモンである　あかし,0,11808
+122,mes_ribbon_info_072,210A3862D8EB5630,ドキドキしてる　ポケモンである　あかし,0,11900
+123,mes_ribbon_info_073,210A3962D8EB57E3,ワクワクしてる　ポケモンである　あかし,0,11980
+124,mes_ribbon_info_074,210A3E62D8EB6062,オーラをかんじる　ポケモンである　あかし,0,12060
+125,mes_ribbon_info_075,210A3F62D8EB6215,クールな　ポケモンである　あかし,0,12144
+126,mes_ribbon_info_076,210A3C62D8EB5CFC,アグレッシブな　ポケモンである　あかし,0,12212
+127,mes_ribbon_info_077,210A3D62D8EB5EAF,ボーっとしてる　ポケモンである　あかし,0,12292
+128,mes_ribbon_info_078,210A4262D8EB672E,しあわせそうな　ポケモンである　あかし,0,12372
+129,mes_ribbon_info_079,210A4362D8EB68E1,プンプンおこる　ポケモンである　あかし,0,12452
+130,mes_ribbon_info_080,21144C62D8F3CCB1,ニコニコわらう　ポケモンである　あかし,0,12532
+131,mes_ribbon_info_081,21144B62D8F3CAFE,メソメソなく　ポケモンである　あかし,0,12612
+132,mes_ribbon_info_082,21144A62D8F3C94B,ごきげんな　ポケモンである　あかし,0,12688
+133,mes_ribbon_info_083,21144962D8F3C798,ふきげんな　ポケモンである　あかし,0,12760
+134,mes_ribbon_info_084,21145062D8F3D37D,ちてきな　ポケモンである　あかし,0,12832
+135,mes_ribbon_info_085,21144F62D8F3D1CA,あれくるう　ポケモンである　あかし,0,12900
+136,mes_ribbon_info_086,21144E62D8F3D017,スキをねらう　ポケモンである　あかし,0,12972
+137,mes_ribbon_info_087,21144D62D8F3CE64,いかつい　ポケモンである　あかし,0,13048
+138,mes_ribbon_info_088,21144462D8F3BF19,やさしげな　ポケモンである　あかし,0,13116
+139,mes_ribbon_info_089,21144362D8F3BD66,あわてんぼうの　ポケモンである　あかし,0,13188
+140,mes_ribbon_info_090,21114662D8F18CA8,やるきまんまんの　ポケモンである　あかし,0,13268
+141,mes_ribbon_info_091,21114762D8F18E5B,やるきゼロの　ポケモンである　あかし,0,13352
+142,mes_ribbon_info_092,21114862D8F1900E,ふんぞりかえった　ポケモンである　あかし,0,13428
+143,mes_ribbon_info_093,21114962D8F191C1,じしんのない　ポケモンである　あかし,0,13512
+144,mes_ribbon_info_094,21114A62D8F19374,そぼくな　ポケモンである　あかし,0,13588
+145,mes_ribbon_info_095,21114B62D8F19527,きどっている　ポケモンである　あかし,0,13656
+146,mes_ribbon_info_096,21114C62D8F196DA,げんきいっぱいの　ポケモンである　あかし,0,13732
+147,mes_ribbon_info_097,21114D62D8F1988D,どこかくたびれた　ポケモンである　あかし,0,13816
+148,mes_ribbon_name_050,EFE650463928AE57,ガラル　チャンプリボン,0,13900
+149,mes_ribbon_name_051,EFE64F463928ACA4,マスタータワーリボン,0,13948
+150,mes_ribbon_name_052,EFE652463928B1BD,マスターランクリボン,0,13992
+151,mes_ribbon_name_053,EFE651463928B00A,しょうごのあかし,0,14036
+152,mes_ribbon_name_054,EFE64C463928A78B,しょうしのあかし,0,14072
+153,mes_ribbon_name_055,EFE64B463928A5D8,たそがれのあかし,0,14108
+154,mes_ribbon_name_056,EFE64E463928AAF1,あかつきのあかし,0,14144
+155,mes_ribbon_name_057,EFE64D463928A93E,どんてんのあかし,0,14180
+156,mes_ribbon_name_058,EFE648463928A0BF,あめふりのあかし,0,14216
+157,mes_ribbon_name_059,EFE6474639289F0C,いかづちのあかし,0,14252
+158,mes_ribbon_name_060,EFDC3E4639203B3C,こうせつのあかし,0,14288
+159,mes_ribbon_name_061,EFDC3F4639203CEF,ごうせつのあかし,0,14324
+160,mes_ribbon_name_062,EFDC404639203EA2,かんそうのあかし,0,14360
+161,mes_ribbon_name_063,EFDC414639204055,さじんのあかし,0,14396
+162,mes_ribbon_name_064,EFDC3A4639203470,のうむのあかし,0,14428
+163,mes_ribbon_name_065,EFDC3B4639203623,うんめいのあかし,0,14460
+164,mes_ribbon_name_066,EFDC3C46392037D6,つりあげられたあかし,0,14496
+165,mes_ribbon_name_067,EFDC3D4639203989,カレーのあかし,0,14540
+166,mes_ribbon_name_068,EFDC4646392048D4,ときどきみるあかし,0,14572
+167,mes_ribbon_name_069,EFDC474639204A87,みたことのないあかし,0,14612
+168,mes_ribbon_name_070,EFDFC446392354C5,わんぱくなあかし,0,14656
+169,mes_ribbon_name_071,EFDFC34639235312,のうてんきなあかし,0,14692
+170,mes_ribbon_name_072,EFDFC2463923515F,きんちょうのあかし,0,14732
+171,mes_ribbon_name_073,EFDFC14639234FAC,きたいのあかし,0,14772
+172,mes_ribbon_name_074,EFDFC04639234DF9,カリスマのあかし,0,14804
+173,mes_ribbon_name_075,EFDFBF4639234C46,れいせいのあかし,0,14840
+174,mes_ribbon_name_076,EFDFBE4639234A93,じょうねつのあかし,0,14876
+175,mes_ribbon_name_077,EFDFBD46392348E0,ゆだんのあかし,0,14916
+176,mes_ribbon_name_078,EFDFCC463923625D,たこうのあかし,0,14948
+177,mes_ribbon_name_079,EFDFCB46392360AA,ふんぬのあかし,0,14980
+178,mes_ribbon_name_080,EFBA424639035BA2,びしょうのあかし,0,15012
+179,mes_ribbon_name_081,EFBA434639035D55,ひそうのあかし,0,15048
+180,mes_ribbon_name_082,EFBA40463903583C,かいちょうのあかし,0,15080
+181,mes_ribbon_name_083,EFBA4146390359EF,げきはつのあかし,0,15120
+182,mes_ribbon_name_084,EFBA3E46390354D6,りせいのあかし,0,15156
+183,mes_ribbon_name_085,EFBA3F4639035689,ほんのうのあかし,0,15188
+184,mes_ribbon_name_086,EFBA3C4639035170,こうかつのあかし,0,15224
+185,mes_ribbon_name_087,EFBA3D4639035323,こわもてのあかし,0,15260
+186,mes_ribbon_name_088,EFBA4A463903693A,やさがたのあかし,0,15296
+187,mes_ribbon_name_089,EFBA4B4639036AED,どうようのあかし,0,15332
+188,mes_ribbon_name_090,EFBDC8463906752B,こうようのあかし,0,15368
+189,mes_ribbon_name_091,EFBDC74639067378,けんたいのあかし,0,15404
+190,mes_ribbon_name_092,EFBDCA4639067891,じしんのあかし,0,15440
+191,mes_ribbon_name_093,EFBDC946390676DE,ふしんのあかし,0,15472
+192,mes_ribbon_name_094,EFBDCC4639067BF7,ぼくとつのあかし,0,15504
+193,mes_ribbon_name_095,EFBDCB4639067A44,ふじゅんのあかし,0,15540
+194,mes_ribbon_name_096,EFBDCE4639067F5D,げんきのあかし,0,15576
+195,mes_ribbon_name_097,EFBDCD4639067DAA,ふちょうのあかし,0,15608
+196,mes_ribbon_name_099,EFBDBF46390665E0,トゥインクルスターリボン,0,15644
+197,mes_another_name_001,173EBACED5F7526E,カロスチャンピオン,0,15696
+198,mes_another_name_002,173EB9CED5F750BB,チャンピオン,0,15736
+199,mes_another_name_003,173EB8CED5F74F08,シンオウチャンピオン,0,15764
+200,mes_another_name_004,173EBFCED5F75AED,しんゆうの,0,15808
+201,mes_another_name_005,173EBECED5F7593A,しれんをともにした,0,15832
+202,mes_another_name_006,173EBDCED5F75787,べテランの,0,15872
+203,mes_another_name_007,173EBCCED5F755D4,たつじんの,0,15896
+204,mes_another_name_008,173EB3CED5F74689,あのころがんばった,0,15920
+205,mes_another_name_009,173EB2CED5F744D6,あのひしゃきっとした,0,15960
+206,mes_another_name_010,173B35CED5F43A98,むかしビビりだった,0,16004
+207,mes_another_name_011,173B36CED5F43C4B,かなしいことがあった,0,16044
+208,mes_another_name_012,173B37CED5F43DFE,ミスするひもあった,0,16088
+209,mes_another_name_013,173B38CED5F43FB1,あのひスッキリした,0,16128
+210,mes_another_name_014,173B39CED5F44164,ねてばかりだった,0,16168
+211,mes_another_name_015,173B3ACED5F44317,よくわらっていた,0,16204
+212,mes_another_name_016,173B3BCED5F444CA,ゴージャス,0,16240
+213,mes_another_name_017,173B3CCED5F4467D,ロイヤル,0,16264
+214,mes_another_name_018,173B2DCED5F42D00,ゴージャス＆ロイヤル,0,16284
+215,mes_another_name_019,173B2ECED5F42EB3,えのモデルになった,0,16328
+216,mes_another_name_020,1745A7CED5FD50D3,あしあとがじまんの,0,16368
+217,mes_another_name_021,1745A6CED5FD4F20,きろくをもつ,0,16408
+218,mes_another_name_022,1745A9CED5FD5439,すごいきろくをもつ,0,16436
+219,mes_another_name_023,1745A8CED5FD5286,ゆうしょうしゃの,0,16476
+220,mes_another_name_024,1745ABCED5FD579F,こんなんをのりこえた,0,16512
+221,mes_another_name_025,1745AACED5FD55EC,１００にんぬきの,0,16556
+222,mes_another_name_026,1745ADCED5FD5B05,せかいをせいした,0,16592
+223,mes_another_name_027,1745ACCED5FD5952,ポケモンずきの,0,16628
+224,mes_another_name_028,1745AFCED5FD5E6B,きねんびをすごした,0,16660
+225,mes_another_name_029,1745AECED5FD5CB8,イベントにさんかした,0,16700
+226,mes_another_name_030,174241CED5FA6DAA,いつもいっしょの,0,16744
+227,mes_another_name_031,174242CED5FA6F5D,プレミアムなひの,0,16780
+228,mes_another_name_032,17423FCED5FA6A44,さいこうのおもいでの,0,16816
+229,mes_another_name_033,174240CED5FA6BF7,ゆめかなえし,0,16860
+230,mes_another_name_034,17423DCED5FA66DE,バトルチャンピオン,0,16888
+231,mes_another_name_035,17423ECED5FA6891,エリアチャンピオン,0,16928
+232,mes_another_name_036,17423BCED5FA6378,ナショナルチャンピオン,0,16968
+233,mes_another_name_037,17423CCED5FA652B,ワールドチャンピオン,0,17016
+234,mes_another_name_038,174239CED5FA6012,きらめくおもいでの,0,17060
+235,mes_another_name_039,17423ACED5FA61C5,あついおもいでの,0,17100
+236,mes_another_name_040,174C33CED602AA65,ホウエンチャンピオン,0,17136
+237,mes_another_name_041,174C32CED602A8B2,でんせつてきスターの,0,17180
+238,mes_another_name_042,174C31CED602A6FF,かつてスターの,0,17224
+239,mes_another_name_043,174C30CED602A54C,とうじきれいだった,0,17256
+240,mes_another_name_044,174C2FCED602A399,かつてアイドルの,0,17296
+241,mes_another_name_045,174C2ECED602A1E6,てんさいとよばれた,0,17332
+242,mes_another_name_046,174C2DCED602A033,むかしはムキムキの,0,17372
+243,mes_another_name_047,174C2CCED6029E80,アローラチャンピオン,0,17412
+244,mes_another_name_048,174C3BCED602B7FD,ロイヤルマスター,0,17456
+245,mes_another_name_049,174C3ACED602B64A,ツリーウィナー,0,17492
+246,mes_another_name_050,17492DCED6006A5C,ツリーマスター,0,17524
+247,mes_another_name_051,17492ECED6006C0F,ガラルチャンピオン,0,17556
+248,mes_another_name_052,17492FCED6006DC2,タワーマスター,0,17596
+249,mes_another_name_053,174930CED6006F75,ランクマスター,0,17628
+250,mes_another_name_054,174929CED6006390,はらペコの,0,17660
+251,mes_another_name_055,17492ACED6006543,おねむな,0,17684
+252,mes_another_name_056,17492BCED60066F6,そろそろねむい,0,17704
+253,mes_another_name_057,17492CCED60068A9,はやくにめざめた,0,17736
+254,mes_another_name_058,174935CED60077F4,くもをみつめる,0,17772
+255,mes_another_name_059,174936CED60079A7,あめにむせぶ,0,17804
+256,mes_another_name_060,17533FCED608DD77,かみなりにさわぐ,0,17832
+257,mes_another_name_061,17533ECED608DBC4,ゆきにころがる,0,17868
+258,mes_another_name_062,175341CED608E0DD,こごえふるえる,0,17900
+259,mes_another_name_063,175340CED608DF2A,のどカラカラの,0,17932
+260,mes_another_name_064,17533BCED608D6AB,すなにまみれる,0,17964
+261,mes_another_name_065,17533ACED608D4F8,きりにとまどう,0,17996
+262,mes_another_name_066,17533DCED608DA11,うんめいかんじる,0,18028
+263,mes_another_name_067,17533CCED608D85E,つりたてピチピチの,0,18064
+264,mes_another_name_068,175337CED608CFDF,カレーずきな,0,18104
+265,mes_another_name_069,175336CED608CE2C,ひとになれてる,0,18132
+266,mes_another_name_070,174FB9CED605C3EE,ひとをしらない,0,18164
+267,mes_another_name_071,174FBACED605C5A1,あばれんぼうの,0,18196
+268,mes_another_name_072,174FB7CED605C088,なにもかんがえてない,0,18228
+269,mes_another_name_075,174FBECED605CC6D,ドキドキしてる,0,18272
+270,mes_another_name_076,174FBBCED605C754,ワクワクしてる,0,18304
+271,mes_another_name_077,174FBCCED605C907,オーラをかんじる,0,18336
+272,mes_another_name_078,174FB1CED605B656,クールな,0,18372
+273,mes_another_name_079,174FB2CED605B809,アグレッシブな,0,18392
+274,mes_another_name_080,1723ABCED5E07139,ボーっとしてる,0,18424
+275,mes_another_name_081,1723AACED5E06F86,しあわせそうな,0,18456
+276,mes_another_name_082,1723A9CED5E06DD3,プンプンおこる,0,18488
+277,mes_another_name_083,1723A8CED5E06C20,ニコニコわらう,0,18520
+278,mes_another_name_084,1723AFCED5E07805,メソメソなく,0,18552
+279,mes_another_name_085,1723AECED5E07652,ごきげんな,0,18580
+280,mes_another_name_086,1723ADCED5E0749F,ふきげんな,0,18604
+281,mes_another_name_087,1723ACCED5E072EC,ちてきな,0,18628
+282,mes_another_name_088,1723B3CED5E07ED1,あれくるう,0,18648
+283,mes_another_name_089,1723B2CED5E07D1E,スキをねらう,0,18672
+284,mes_another_name_090,172025CED5DD57B0,いかつい,0,18700
+285,mes_another_name_091,172026CED5DD5963,やさしげな,0,18720
+286,mes_another_name_092,172027CED5DD5B16,あわてんぼうの,0,18744
+287,mes_another_name_093,172028CED5DD5CC9,やるきまんまんの,0,18776
+288,mes_another_name_094,172029CED5DD5E7C,やるきゼロの,0,18812
+289,mes_another_name_095,17202ACED5DD602F,ふんぞりかえった,0,18840
+290,mes_another_name_096,17202BCED5DD61E2,じしんのない,0,18876
+291,mes_another_name_097,17202CCED5DD6395,そぼくな,0,18904
+292,mes_another_name_098,17202DCED5DD6548,きどっている,0,18924
+293,mes_another_name_099,17202ECED5DD66FB,げんきいっぱいの,0,18952
+294,mes_another_name_100,0E2880CED0B2F056,どこかくたびれた,0,18988

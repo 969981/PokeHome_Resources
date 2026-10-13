@@ -1,0 +1,84 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,GBA 시리즈 연동,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,박스 선택,0,320
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,맡길 수 있는 포켓몬 수,0,332
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,0000]",0,360
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"도구를 지니고 있는 포켓몬이나 비전기술을 배운 포켓몬, 알은
+“Pokémon HOME”으로 전송할 수 없습니다",0,372
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"GBA 시리즈 연동을 중지하고
+메인 메뉴로 돌아가겠습니까?",0,496
+7,nx_gbasoft_msg_020,22A650A5467D0077,"“Pokémon HOME”으로 전송한 포켓몬은
+원래 소프트웨어로 돌려보낼 수 없으며[RETURN]
+배운 기술이 변경됩니다[CLEAR]
+정말 전송하겠습니까?",0,564
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"선택한 박스 안의 포켓몬을
+“Pokémon HOME”으로 전송하고 있습니다...",0,720
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"GBA 시리즈에서 “Pokémon HOME”으로
+포켓몬을 전송했습니다!",0,812
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,예,0,892
+11,nx_gbasoft_msg_no,FA151C506B6DA084,아니요,0,896
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,도움말,0,904
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,끝낸다,0,912
+14,	,AF66E44C86071324,[REF:14],0,920
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"여기는 GBA 시리즈의 연동 화면!
+GBA 시리즈에서 잡은 포켓몬을
+“Pokémon HOME”으로 전송할 수 있다몬!",0,932
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"전송할 포켓몬은 박스 단위로 선택할 수 있다몬!
+선택한 박스 안에 있는 모든 포켓몬이
+“Pokémon HOME”으로 전송된다몬!",0,1064
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"전송된 포켓몬은 “Pokémon HOME”의
+박스 중에 빈 공간을 찾아서
+순서대로 들어간다몬!",0,1208
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"서로 다른 박스에 들어갈 때도 있으니까
+주의해라몬!",0,1316
+19,	,AF66E44C86071324,[REF:19],0,1376
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"[CTRL:0101:0000][CTRL:1900:0001]
+이미 이 리포트에서 전송한 적이 있습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 전송할 수 있습니다!",0,1388
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+이미 이 리포트에서 전송한 적이 있습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 전송할 수 있습니다!",0,1536
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"[CTRL:0101:0000] 등[CLEAR]
+이미 이 리포트에서 전송한 적이 있는
+포켓몬이 포함되어 있습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 전송할 수 있습니다!",0,1708
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"색이 다른 [CTRL:0101:0000] 등[CLEAR]
+이미 이 리포트에서 전송한 적이 있는
+포켓몬이 포함되어 있습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 전송할 수 있습니다!",0,1884
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"[CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 전송할 수 있습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0003] 2마리 이상 있어서
+이 박스의 포켓몬을 전송할 수 없습니다!",0,2084
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 전송할 수 있습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0003] 2마리 이상 있어서
+이 박스의 포켓몬을 전송할 수 없습니다!",0,2252
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"[CTRL:0101:0000][CTRL:1900:0001]
+이 리포트에서 1마리까지만 전송할 수 있습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0003] 포함된 박스를
+전송해도 괜찮겠습니까?",0,2444
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+이 리포트에서 1마리까지만 전송할 수 있습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0003] 포함된 박스를
+전송해도 괜찮겠습니까?",0,2584
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"[CTRL:0101:0000] 등[CLEAR]
+이 리포트에서 1마리까지만 전송할 수 있는
+포켓몬이 포함되어 있습니다![CLEAR]
+이 박스를 “Pokémon HOME”에
+전송해도 괜찮겠습니까?",0,2748
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"색이 다른 [CTRL:0101:0000] 등[CLEAR]
+이 리포트에서 1마리까지만 전송할 수 있는
+포켓몬이 포함되어 있습니다![CLEAR]
+이 박스를 “Pokémon HOME”에
+전송해도 괜찮겠습니까?",0,2924
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"이 박스에는 “Pokémon HOME”에
+전송할 수 없는 포켓몬이 포함되어 있습니다",0,3112
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,이 박스에는 포켓몬이 없습니다,0,3208
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"이 박스에는 “Pokémon HOME”에
+맡길 수 있는 포켓몬 수보다 많은 포켓몬이 있습니다",0,3244

@@ -1,0 +1,81 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,Collegamento giochi per GBA,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,Seleziona box,0,352
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,Pokémon depositabili,0,380
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,002E]",0,424
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"I Pokémon con strumenti, i Pokémon che conoscono mosse MN e le Uova non possono essere
+inviati a Pokémon HOME.",4,436
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"Vuoi tornare al menu principale senza effettuare
+il collegamento al gioco per GBA?",0,660
+7,nx_gbasoft_msg_020,22A650A5467D0077,"I Pokémon trasferiti in Pokémon HOME non potranno
+tornare nel gioco di provenienza.[RETURN]
+Inoltre le mosse che conoscono cambieranno.[CLEAR]
+Vuoi davvero procedere?",4,828
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"È in corso il trasferimento a Pokémon HOME dei Pokémon
+nel box selezionato...",4,1144
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"I Pokémon sono stati trasferiti dal gioco per GBA
+a Pokémon HOME.",4,1300
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,Sì,0,1432
+11,nx_gbasoft_msg_no,FA151C506B6DA084,No,0,1440
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,Aiuto,4,1448
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,Esci,4,1460
+14,	,AF66E44C86071324,[REF:14],0,1472
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"Questa è la schermata di collegamento ai giochi per
+Game Boy Advance (GBA)!
+Qui puoi trasferire in Pokémon HOME i Pokémon catturati nei giochi
+per Game Boy Advance (GBA).",0,1484
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"Per trasferire i Pokémon devi scegliere un box. I Pokémon che si trovano
+nel box scelto verranno trasferiti in Pokémon HOME tutti insieme.",0,1828
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"I Pokémon verranno depositati negli spazi liberi dei box di
+Pokémon HOME nell’ordine in cui vengono trasferiti.",4,2108
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"Ciò significa che potrebbero anche finire in box diversi, quindi
+fai attenzione!",0,2332
+19,	,AF66E44C86071324,[REF:19],0,2496
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"[CTRL:1002:][CTRL:1503:0000,0001][CTRL:0101:0000] è già stato trasferito da questi
+dati di salvataggio a Pokémon HOME![CLEAR]
+Un solo [CTRL:0101:0000] può essere trasferito
+dallo stesso salvataggio.",0,2508
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"[CTRL:1002:][CTRL:1503:0000,0001][CTRL:0101:0000] cromatico è già stato trasferito
+da questi dati di salvataggio a Pokémon HOME![CLEAR]
+Un solo [CTRL:0101:0000] cromatico può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",0,2800
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"La tua selezione include uno o più Pokémon, tra cui
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000], che sono già stati trasferiti[RETURN]
+in Pokémon HOME da questi dati di salvataggio.[CLEAR]
+Un solo [CTRL:0101:0000] può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",0,3164
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"La tua selezione include uno o più Pokémon, tra cui
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000] cromatico, che sono già stati[RETURN]
+trasferiti in Pokémon HOME da questi dati di salvataggio.[CLEAR]
+Un solo [CTRL:0101:0000] cromatico può essere trasferito
+in Pokémon HOME dallo stesso salvataggio.",0,3616
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"Un solo [CTRL:0101:0000] può essere trasferito
+dallo stesso salvataggio.[CLEAR]
+Non è possibile trasferire i Pokémon di questo box,
+perché nel box è presente più di [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000].",4,4108
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"Un solo [CTRL:0101:0000] cromatico può essere trasferito
+dallo stesso salvataggio.[CLEAR]
+Non è possibile trasferire i Pokémon di questo box, perché
+nel box è presente più di [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000] cromatico.",4,4436
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"Un solo [CTRL:0101:0000] può essere trasferito
+da questo salvataggio.[CLEAR]
+Vuoi comunque trasferire un box che contiene
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]?",4,4804
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"Un solo [CTRL:0101:0000] cromatico può essere trasferito
+da questo salvataggio.[CLEAR]
+Vuoi comunque trasferire un box che contiene
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000] cromatico?",4,5044
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"Il box selezionato contiene uno o più Pokémon, tra cui
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000], che è possibile trasferire una sola[RETURN]
+volta dallo stesso salvataggio.[CLEAR]
+Vuoi comunque trasferire questo box in Pokémon HOME?",4,5324
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"Il box selezionato contiene uno o più Pokémon, tra cui
+[CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000] cromatico, che è possibile trasferire[RETURN]
+una sola volta dallo stesso salvataggio.[CLEAR]
+Vuoi comunque trasferire questo box in Pokémon HOME?",4,5716
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"In questo box ci sono Pokémon che non possono essere
+trasferiti in Pokémon HOME.",4,6128
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,In questo box non ci sono Pokémon.,4,6292
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"In questo box ci sono più Pokémon di quanti sia possibile
+depositare in Pokémon HOME.",4,6364

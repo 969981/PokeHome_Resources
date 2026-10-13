@@ -1,0 +1,652 @@
+[
+  {
+    "hash_fnv64": "7D0B1CED4DBE8A87",
+    "index": 0,
+    "label": "FSYS_GAME_CLEAR"
+  },
+  {
+    "hash_fnv64": "7C96540F13B336EF",
+    "index": 1,
+    "label": "FSYS_HIDEN_OPEN_IAIGIRI"
+  },
+  {
+    "hash_fnv64": "15C149D11F0E8188",
+    "index": 2,
+    "label": "FSYS_HIDEN_OPEN_SORAWOTOBU"
+  },
+  {
+    "hash_fnv64": "65544A3F46AEB1E5",
+    "index": 3,
+    "label": "FSYS_HIDEN_OPEN_KAIRIKI"
+  },
+  {
+    "hash_fnv64": "FDAD2418042EBA9C",
+    "index": 4,
+    "label": "FSYS_HIDEN_OPEN_NAMINORI"
+  },
+  {
+    "hash_fnv64": "1629C79BE9D9277F",
+    "index": 5,
+    "label": "FSYS_HIDEN_OPEN_HURASSYU"
+  },
+  {
+    "hash_fnv64": "711644F9ED6E814D",
+    "index": 6,
+    "label": "FSYS_XMENU_OPEN_ZUKAN"
+  },
+  {
+    "hash_fnv64": "6E7137BDE4EB839D",
+    "index": 7,
+    "label": "FSYS_XMENU_OPEN_POKEMON"
+  },
+  {
+    "hash_fnv64": "B0C294D6B1C29772",
+    "index": 8,
+    "label": "FSYS_XMENU_OPEN_BAG"
+  },
+  {
+    "hash_fnv64": "5A7C7F4806373534",
+    "index": 9,
+    "label": "FSYS_XMENU_OPEN_TUUSIN"
+  },
+  {
+    "hash_fnv64": "FAA5B16083F6F3AC",
+    "index": 10,
+    "label": "FSYS_XMENU_OPEN_GOKIGEN"
+  },
+  {
+    "hash_fnv64": "4F5F068981386C6E",
+    "index": 11,
+    "label": "FSYS_XMENU_OPEN_REPORT"
+  },
+  {
+    "hash_fnv64": "738FA9D7FFF34DF4",
+    "index": 12,
+    "label": "FSYS_GYM_CLEAR_ROCK"
+  },
+  {
+    "hash_fnv64": "D4856B2EAE4A80C1",
+    "index": 13,
+    "label": "FSYS_GYM_CLEAR_WATAER"
+  },
+  {
+    "hash_fnv64": "5B7B3EB40D74EB0A",
+    "index": 14,
+    "label": "FSYS_GYM_CLEAR_VOLT"
+  },
+  {
+    "hash_fnv64": "F9FACCAB99D5A7DD",
+    "index": 15,
+    "label": "FSYS_GYM_CLEAR_GRASS"
+  },
+  {
+    "hash_fnv64": "E0A4603A52D4F571",
+    "index": 16,
+    "label": "FSYS_GYM_CLEAR_POISON"
+  },
+  {
+    "hash_fnv64": "D6159AAE280E91D8",
+    "index": 17,
+    "label": "FSYS_GYM_CLEAR_ESPER"
+  },
+  {
+    "hash_fnv64": "7A894930FEEB0E99",
+    "index": 18,
+    "label": "FSYS_GYM_CLEAR_FIRE"
+  },
+  {
+    "hash_fnv64": "90F31C43270AD3DE",
+    "index": 19,
+    "label": "FSYS_GYM_CLEAR_GROUND"
+  },
+  {
+    "hash_fnv64": "5C23FEDB284C47EE",
+    "index": 20,
+    "label": "FSYS_ZUKAN_COMPLETE"
+  },
+  {
+    "hash_fnv64": "D618FE95D0E267EB",
+    "index": 21,
+    "label": "FSYS_JUDGE_OPEN"
+  },
+  {
+    "hash_fnv64": "EB5178B9A0F65ED4",
+    "index": 22,
+    "label": "FSYS_FLAG_CAN_NOT_FLY"
+  },
+  {
+    "hash_fnv64": "AFEFD2F29686664A",
+    "index": 23,
+    "label": "FSYS_FLAG_WILD_SPAWN"
+  },
+  {
+    "hash_fnv64": "C1636626BB391469",
+    "index": 24,
+    "label": "FSYS_FLAG_BIG_WILD_SPAWN"
+  },
+  {
+    "hash_fnv64": "E0F746387F8191B0",
+    "index": 25,
+    "label": "FSYS_FLAG_RESPAWN_HOME_FORCE"
+  },
+  {
+    "hash_fnv64": "696A6F94BA19DD02",
+    "index": 26,
+    "label": "FSYS_ARRIVE_ROAD001"
+  },
+  {
+    "hash_fnv64": "696A6E94BA19DB4F",
+    "index": 27,
+    "label": "FSYS_ARRIVE_ROAD002"
+  },
+  {
+    "hash_fnv64": "696A6D94BA19D99C",
+    "index": 28,
+    "label": "FSYS_ARRIVE_ROAD003"
+  },
+  {
+    "hash_fnv64": "696A6C94BA19D7E9",
+    "index": 29,
+    "label": "FSYS_ARRIVE_ROAD004"
+  },
+  {
+    "hash_fnv64": "696A6B94BA19D636",
+    "index": 30,
+    "label": "FSYS_ARRIVE_ROAD005"
+  },
+  {
+    "hash_fnv64": "696A6A94BA19D483",
+    "index": 31,
+    "label": "FSYS_ARRIVE_ROAD006"
+  },
+  {
+    "hash_fnv64": "696A6994BA19D2D0",
+    "index": 32,
+    "label": "FSYS_ARRIVE_ROAD007"
+  },
+  {
+    "hash_fnv64": "696A7894BA19EC4D",
+    "index": 33,
+    "label": "FSYS_ARRIVE_ROAD008"
+  },
+  {
+    "hash_fnv64": "696A7794BA19EA9A",
+    "index": 34,
+    "label": "FSYS_ARRIVE_ROAD009"
+  },
+  {
+    "hash_fnv64": "6966EA94BA16C52C",
+    "index": 35,
+    "label": "FSYS_ARRIVE_ROAD010"
+  },
+  {
+    "hash_fnv64": "6966EB94BA16C6DF",
+    "index": 36,
+    "label": "FSYS_ARRIVE_ROAD011"
+  },
+  {
+    "hash_fnv64": "6966EC94BA16C892",
+    "index": 37,
+    "label": "FSYS_ARRIVE_ROAD012"
+  },
+  {
+    "hash_fnv64": "6966ED94BA16CA45",
+    "index": 38,
+    "label": "FSYS_ARRIVE_ROAD013"
+  },
+  {
+    "hash_fnv64": "6966E694BA16BE60",
+    "index": 39,
+    "label": "FSYS_ARRIVE_ROAD014"
+  },
+  {
+    "hash_fnv64": "6966E794BA16C013",
+    "index": 40,
+    "label": "FSYS_ARRIVE_ROAD015"
+  },
+  {
+    "hash_fnv64": "6966E894BA16C1C6",
+    "index": 41,
+    "label": "FSYS_ARRIVE_ROAD016"
+  },
+  {
+    "hash_fnv64": "6966E994BA16C379",
+    "index": 42,
+    "label": "FSYS_ARRIVE_ROAD017"
+  },
+  {
+    "hash_fnv64": "6966F294BA16D2C4",
+    "index": 43,
+    "label": "FSYS_ARRIVE_ROAD018"
+  },
+  {
+    "hash_fnv64": "6966F394BA16D477",
+    "index": 44,
+    "label": "FSYS_ARRIVE_ROAD019"
+  },
+  {
+    "hash_fnv64": "6970FC94BA1F3847",
+    "index": 45,
+    "label": "FSYS_ARRIVE_ROAD020"
+  },
+  {
+    "hash_fnv64": "6970FB94BA1F3694",
+    "index": 46,
+    "label": "FSYS_ARRIVE_ROAD021"
+  },
+  {
+    "hash_fnv64": "6970FE94BA1F3BAD",
+    "index": 47,
+    "label": "FSYS_ARRIVE_ROAD022"
+  },
+  {
+    "hash_fnv64": "6970FD94BA1F39FA",
+    "index": 48,
+    "label": "FSYS_ARRIVE_ROAD023"
+  },
+  {
+    "hash_fnv64": "6970F894BA1F317B",
+    "index": 49,
+    "label": "FSYS_ARRIVE_ROAD024"
+  },
+  {
+    "hash_fnv64": "6970F794BA1F2FC8",
+    "index": 50,
+    "label": "FSYS_ARRIVE_ROAD025"
+  },
+  {
+    "hash_fnv64": "5B615053B4E30080",
+    "index": 51,
+    "label": "FSYS_ARRIVE_TOWN001"
+  },
+  {
+    "hash_fnv64": "5B615353B4E30599",
+    "index": 52,
+    "label": "FSYS_ARRIVE_TOWN002"
+  },
+  {
+    "hash_fnv64": "5B615253B4E303E6",
+    "index": 53,
+    "label": "FSYS_ARRIVE_TOWN003"
+  },
+  {
+    "hash_fnv64": "5B615553B4E308FF",
+    "index": 54,
+    "label": "FSYS_ARRIVE_TOWN004"
+  },
+  {
+    "hash_fnv64": "5B615453B4E3074C",
+    "index": 55,
+    "label": "FSYS_ARRIVE_TOWN005"
+  },
+  {
+    "hash_fnv64": "5B615753B4E30C65",
+    "index": 56,
+    "label": "FSYS_ARRIVE_TOWN006"
+  },
+  {
+    "hash_fnv64": "5B615653B4E30AB2",
+    "index": 57,
+    "label": "FSYS_ARRIVE_TOWN007"
+  },
+  {
+    "hash_fnv64": "5B615953B4E30FCB",
+    "index": 58,
+    "label": "FSYS_ARRIVE_TOWN008"
+  },
+  {
+    "hash_fnv64": "5B615853B4E30E18",
+    "index": 59,
+    "label": "FSYS_ARRIVE_TOWN009"
+  },
+  {
+    "hash_fnv64": "5B5DEB53B4E01F0A",
+    "index": 60,
+    "label": "FSYS_ARRIVE_TOWN010"
+  },
+  {
+    "hash_fnv64": "5B5DEC53B4E020BD",
+    "index": 61,
+    "label": "FSYS_ARRIVE_TOWN011"
+  },
+  {
+    "hash_fnv64": "36E2C7F9EDDE52FE",
+    "index": 62,
+    "label": "FSYS_ARRIVE_R002_DUN01"
+  },
+  {
+    "hash_fnv64": "CB9A0FFCE81AF5BC",
+    "index": 63,
+    "label": "FSYS_ARRIVE_R004_DUN01"
+  },
+  {
+    "hash_fnv64": "26B3720B266DEE31",
+    "index": 64,
+    "label": "FSYS_ARRIVE_R010_DUN01"
+  },
+  {
+    "hash_fnv64": "26B36F0B266DE918",
+    "index": 65,
+    "label": "FSYS_ARRIVE_R010_DUN02"
+  },
+  {
+    "hash_fnv64": "8F140775547FDFE2",
+    "index": 66,
+    "label": "FSYS_ARRIVE_R011_DUN01"
+  },
+  {
+    "hash_fnv64": "893448E2A0461D46",
+    "index": 67,
+    "label": "FSYS_ARRIVE_R020_DUN01"
+  },
+  {
+    "hash_fnv64": "CD523962A8D5B71F",
+    "index": 68,
+    "label": "FSYS_ARRIVE_R023_DUN01"
+  },
+  {
+    "hash_fnv64": "E8FA04331806D66E",
+    "index": 69,
+    "label": "FSYS_ARRIVE_T004_DUN01"
+  },
+  {
+    "hash_fnv64": "E9EAB47FE4FD854D",
+    "index": 70,
+    "label": "FSYS_ARRIVE_T005_DUN01"
+  },
+  {
+    "hash_fnv64": "02A1C3A4E49FCFB0",
+    "index": 71,
+    "label": "FSYS_ARRIVE_T006_DUN01"
+  },
+  {
+    "hash_fnv64": "E192714622457527",
+    "index": 72,
+    "label": "FSYS_ARRIVE_T007_DUN01"
+  },
+  {
+    "hash_fnv64": "E05F0C6783132942",
+    "index": 73,
+    "label": "FSYS_ARRIVE_T008_DUN01"
+  },
+  {
+    "hash_fnv64": "E0AD61A1CE1F0011",
+    "index": 74,
+    "label": "FSYS_ARRIVE_T009_DUN01"
+  },
+  {
+    "hash_fnv64": "892E8E9FB724B83C",
+    "index": 75,
+    "label": "FSYS_ARRIVE_T011_DUN01"
+  },
+  {
+    "hash_fnv64": "67E687DA6C3151B7",
+    "index": 76,
+    "label": "FSYS_ARRIVE_CHAMP01"
+  },
+  {
+    "hash_fnv64": "ECDFBD9A4B0577F5",
+    "index": 77,
+    "label": "FSYS_FLAG_CAN_USE_CAIRIKI"
+  },
+  {
+    "hash_fnv64": "923DECA59B76B99C",
+    "index": 78,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0101_A"
+  },
+  {
+    "hash_fnv64": "923DEFA59B76BEB5",
+    "index": 79,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0101_B"
+  },
+  {
+    "hash_fnv64": "AAB673A5A8E4B741",
+    "index": 80,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0102_A"
+  },
+  {
+    "hash_fnv64": "AAB670A5A8E4B228",
+    "index": 81,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0102_B"
+  },
+  {
+    "hash_fnv64": "A3681AA5A5241106",
+    "index": 82,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0103_A"
+  },
+  {
+    "hash_fnv64": "A36819A5A5240F53",
+    "index": 83,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0103_B"
+  },
+  {
+    "hash_fnv64": "BD93A1A5B403A32B",
+    "index": 84,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0104_A"
+  },
+  {
+    "hash_fnv64": "BD93A2A5B403A4DE",
+    "index": 85,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R020D0104_B"
+  },
+  {
+    "hash_fnv64": "492AC735DD3DB289",
+    "index": 86,
+    "label": "FSYS_KAIRIKI_ROCK_FALL_R023D0103"
+  },
+  {
+    "hash_fnv64": "DAE5E5C1A482BF53",
+    "index": 87,
+    "label": "FSYS_SPECIAL_BGM_DUMMY01"
+  },
+  {
+    "hash_fnv64": "41E27C5EEB2F45DD",
+    "index": 88,
+    "label": "FSYS_START_EVENT_SIRUHU_COMPANY"
+  },
+  {
+    "hash_fnv64": "CD1380F060DE5F1D",
+    "index": 89,
+    "label": "FSYS_SODATEYA_FIRST_FLAG"
+  },
+  {
+    "hash_fnv64": "A86EE53A927D1124",
+    "index": 90,
+    "label": "FSYS_SPCIAL_TRAINING_FIRST_FLAG"
+  },
+  {
+    "hash_fnv64": "D2CE7A764469C673",
+    "index": 91,
+    "label": "FSYS_BUDDY_MODE_TSUREARUKI"
+  },
+  {
+    "hash_fnv64": "1A53D68F5888980D",
+    "index": 92,
+    "label": "FSYS_CAPTURE_FOLLOW"
+  },
+  {
+    "hash_fnv64": "95C8AA178138010E",
+    "index": 93,
+    "label": "FSYS_KAIRIKI_ROCK_SWITCH_R023D0101"
+  },
+  {
+    "hash_fnv64": "89E947C8571FF897",
+    "index": 94,
+    "label": "FSYS_KAIRIKI_ROCK_SWITCH_R023D0102_A"
+  },
+  {
+    "hash_fnv64": "89E948C8571FFA4A",
+    "index": 95,
+    "label": "FSYS_KAIRIKI_ROCK_SWITCH_R023D0102_B"
+  },
+  {
+    "hash_fnv64": "95C8A8178137FDA8",
+    "index": 96,
+    "label": "FSYS_KAIRIKI_ROCK_SWITCH_R023D0103"
+  },
+  {
+    "hash_fnv64": "851167DB0B43E508",
+    "index": 97,
+    "label": "FSYS_DEBUG_EVENT_JUMP_MODE"
+  },
+  {
+    "hash_fnv64": "2A9B1DAF6EA5747C",
+    "index": 98,
+    "label": "FSYS_PLAYABLE_BUDDY_ENABLE"
+  },
+  {
+    "hash_fnv64": "593DD3DC68E21FE7",
+    "index": 99,
+    "label": "FSYS_FIELD_FLYHIGH_ENABLE"
+  },
+  {
+    "hash_fnv64": "F19ADE593094B8C9",
+    "index": 100,
+    "label": "FSYS_GOKIGEN_EV0716_CLEAR"
+  },
+  {
+    "hash_fnv64": "68EEE8E64805DB2B",
+    "index": 101,
+    "label": "FSYS_GOKIGEN_EV8000_CLEAR"
+  },
+  {
+    "hash_fnv64": "3CC4B2B8DFA6A10A",
+    "index": 102,
+    "label": "FSYS_GOKIGEN_EV8010_CLEAR"
+  },
+  {
+    "hash_fnv64": "1C06F22D6AC2608B",
+    "index": 103,
+    "label": "FSYS_GOKIGEN_EV0440_CLEAR"
+  },
+  {
+    "hash_fnv64": "529BF82FB16D55E2",
+    "index": 104,
+    "label": "FSYS_GOKIGEN_EV0960_CLEAR"
+  },
+  {
+    "hash_fnv64": "6CE63FA18A9EABF7",
+    "index": 105,
+    "label": "FSYS_GOKIGEN_EV1230_CLEAR"
+  },
+  {
+    "hash_fnv64": "1064191FE5A2DE12",
+    "index": 106,
+    "label": "FSYS_GOKIGEN_GAME_CLEAR"
+  },
+  {
+    "hash_fnv64": "88CD2F300D35647B",
+    "index": 107,
+    "label": "FSYS_BUDDY_POKEMON_ENABLE"
+  },
+  {
+    "hash_fnv64": "BFE3A7685F99214E",
+    "index": 108,
+    "label": "FSYS_SPECIAL_BGM_SIRUHU"
+  },
+  {
+    "hash_fnv64": "E1775371092C9955",
+    "index": 109,
+    "label": "FSYS_SPECIAL_BGM_SILENT"
+  },
+  {
+    "hash_fnv64": "77BD3CE322266E18",
+    "index": 110,
+    "label": "FSYS_COMMON_01"
+  },
+  {
+    "hash_fnv64": "77BD3FE322267331",
+    "index": 111,
+    "label": "FSYS_COMMON_02"
+  },
+  {
+    "hash_fnv64": "77BD3EE32226717E",
+    "index": 112,
+    "label": "FSYS_COMMON_03"
+  },
+  {
+    "hash_fnv64": "77BD41E322267697",
+    "index": 113,
+    "label": "FSYS_COMMON_04"
+  },
+  {
+    "hash_fnv64": "77BD40E3222674E4",
+    "index": 114,
+    "label": "FSYS_COMMON_05"
+  },
+  {
+    "hash_fnv64": "77BD43E3222679FD",
+    "index": 115,
+    "label": "FSYS_COMMON_06"
+  },
+  {
+    "hash_fnv64": "77BD42E32226784A",
+    "index": 116,
+    "label": "FSYS_COMMON_07"
+  },
+  {
+    "hash_fnv64": "77BD35E322266233",
+    "index": 117,
+    "label": "FSYS_COMMON_08"
+  },
+  {
+    "hash_fnv64": "77BD34E322266080",
+    "index": 118,
+    "label": "FSYS_COMMON_09"
+  },
+  {
+    "hash_fnv64": "77BA37E322242FC2",
+    "index": 119,
+    "label": "FSYS_COMMON_10"
+  },
+  {
+    "hash_fnv64": "77BA38E322243175",
+    "index": 120,
+    "label": "FSYS_COMMON_11"
+  },
+  {
+    "hash_fnv64": "77BA35E322242C5C",
+    "index": 121,
+    "label": "FSYS_COMMON_12"
+  },
+  {
+    "hash_fnv64": "77BA36E322242E0F",
+    "index": 122,
+    "label": "FSYS_COMMON_13"
+  },
+  {
+    "hash_fnv64": "77BA33E3222428F6",
+    "index": 123,
+    "label": "FSYS_COMMON_14"
+  },
+  {
+    "hash_fnv64": "77BA34E322242AA9",
+    "index": 124,
+    "label": "FSYS_COMMON_15"
+  },
+  {
+    "hash_fnv64": "77BA31E322242590",
+    "index": 125,
+    "label": "FSYS_COMMON_16"
+  },
+  {
+    "hash_fnv64": "77BA32E322242743",
+    "index": 126,
+    "label": "FSYS_COMMON_17"
+  },
+  {
+    "hash_fnv64": "77BA3FE322243D5A",
+    "index": 127,
+    "label": "FSYS_COMMON_18"
+  },
+  {
+    "hash_fnv64": "77BA40E322243F0D",
+    "index": 128,
+    "label": "FSYS_COMMON_19"
+  },
+  {
+    "hash_fnv64": "77B6B1E322211639",
+    "index": 129,
+    "label": "FSYS_COMMON_20"
+  }
+]

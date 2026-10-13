@@ -1,0 +1,131 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_status_index_010,B106453C961866E7,Info,4,924
+1,NewText,8DE439F775E32B02,[REF:1],0,936
+2,nx_status_button_000,55042F28F8A349EC,Indietro,4,948
+3,nx_status_button_001,55043028F8A34B9F,Aiuto,4,968
+4,nx_status_button_010,5507B528F8A66375,Segna,0,980
+5,nx_status_button_020,550ABB28F8A8A37E,Punti base,0,992
+6,nx_status_button_030,550E4128F8ABBD07,Giochi collegati,0,1016
+7,nx_status_button_040,54F6B728F897F3A8,Giudice,0,1052
+8,nx_status_button_050,54F9BD28F89A33B1,Statistiche,8,1068
+9,nx_status_button_060,54FD4328F89D4D3A,Ok,4,1092
+10,nx_status_button_070,5500A928F8A03063,[REF:10],0,1100
+11,NewText,8DE439F775E32B02,[REF:11],0,1112
+12,nx_status_detailed_010,F256E4202E0468FD,[CTRL:0102:0000],0,1124
+13,nx_status_detailed_020,F25A4A202E074C26,L. [CTRL:0202:0000],0,1136
+14,	,AF66E44C86071324,[REF:14],0,1152
+15,nx_status_detailed_030,F25DD0202E0A65AF,PS,64,1164
+16,nx_status_detailed_040,F24646202DF69C50,"[CTRL:0203:0000,0000]",0,1172
+17,nx_status_detailed_050,F2494C202DF8DC59,Attacco,4,1184
+18,nx_status_detailed_060,F24CD2202DFBF5E2,[CTRL:0202:0000],0,1200
+19,nx_status_detailed_070,F25058202DFF0F6B,Difesa,1,1212
+20,nx_status_detailed_080,F26ECE202E18D57C,[CTRL:0202:0000],0,1228
+21,nx_status_detailed_090,F27254202E1BEF05,Velocità,1,1240
+22,nx_status_detailed_100,FB69F9203346565F,[CTRL:0202:0000],0,1260
+23,nx_status_detailed_110,FB66732033433CD6,Dif. Sp.,1,1272
+24,nx_status_detailed_120,FB630D20334059AD,[CTRL:0202:0000],0,1292
+25,nx_status_detailed_130,FB5F8720333D4024,Att. Sp.,4,1304
+26,nx_status_detailed_140,FB5C8120333B001B,[CTRL:0202:0000],0,1324
+27,	,AF66E44C86071324,[REF:27],0,1336
+28,nx_status_detailed_150,FB58FB203337E692,Nº,0,1348
+29,nx_status_detailed_151,FB58FC203337E845,"[CTRL:0203:0000,0000]",0,1356
+30,nx_status_detailed_152,FB58F9203337E32C,???,0,1368
+31,nx_status_detailed_160,FB5575203334CD09,[CTRL:0101:0000],0,1376
+32,nx_status_detailed_170,FB51EF203331B380,[CTRL:0107:0000],0,1388
+33,	,AF66E44C86071324,[REF:33],0,1400
+34,nx_status_detailed_180,FB850920335D3947,Natura,1,1412
+35,nx_status_detailed_190,FB818320335A1FBE,[CTRL:0108:0000],0,1428
+36,nx_status_detailed_200,04803420388ABA2A,Abilità,4,1440
+37,nx_status_detailed_210,04839A20388D9D53,[CTRL:0106:0000],0,1456
+38,nx_status_detailed_220,0479282038848718,Strumenti,8,1468
+39,nx_status_detailed_230,047CAE203887A0A1,[CTRL:0109:0000],0,1488
+40,nx_status_detailed_231,047CAD2038879EEE,-----,0,1500
+41,	,AF66E44C86071324,[REF:41],0,1512
+42,nx_status_detailed_240,048DAC203896106E,AO,4,1524
+43,nx_status_detailed_241,048DAD2038961221,[CTRL:0100:0000],0,1532
+44,nx_status_detailed_250,04913220389929F7,ID,4,1544
+45,nx_status_detailed_251,0491312038992844,"[CTRL:0206:0000,0000]",0,1552
+46,nx_status_detailed_252,0491342038992D5D,-----,0,1564
+47,nx_status_detailed_270,048A26203892F6E5,[REF:47],0,1576
+48,nx_status_detailed_280,046524203873D742,"Incontrato nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,1588
+49,nx_status_detailed_281,046525203873D8F5,"Probabilmente incontrato nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",0,1680
+50,nx_status_detailed_282,046522203873D3DC,"Ottenuto durante un evento speciale nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,1800
+51,nx_status_detailed_283,046523203873D58F,"Probabilmente ottenuto durante un evento speciale nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",0,1940
+52,nx_status_detailed_284,046520203873D076,"Incontrato dopo un viaggio intriso di ricordi nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,2108
+53,nx_status_detailed_285,046521203873D229,"Probabilmente incontrato dopo un viaggio intriso di ricordi nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",0,2268
+54,nx_status_detailed_286,04651E203873CD10,"Ottenuto durante un evento speciale, dopo un viaggio intriso di ricordi,
+nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,2456
+55,nx_status_detailed_287,04651F203873CEC3,"Probabilmente ottenuto durante un evento speciale, dopo un viaggio intriso
+di ricordi, nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",0,2672
+56,nx_status_detailed_290,04682A203876174B,[CTRL:0108:0000],0,2916
+57,	,AF66E44C86071324,[REF:57],0,2928
+58,nx_status_detailed_300,0D964F203DCEE795,Gioco di provenienza,0,2940
+59,nx_status_detailed_310,0D92C9203DCBCE0C,Gioco attuale,0,2984
+60,nx_status_detailed_320,0D9D5B203DD51AA7,Giochi compatibili,0,3012
+61,nx_status_detailed_330,0D99D5203DD2011E,Il trasferimento non è possibile.,4,3052
+62,nx_status_detailed_331,0D99D6203DD202D1,Non sono presenti giochi compatibili.,0,3120
+63,	,AF66E44C86071324,[REF:63],0,3196
+64,nx_status_detailed_340,0D88D7203DC39151,Segna,0,3208
+65,	,AF66E44C86071324,[REF:65],0,3220
+66,nx_status_detailed_350,0D8551203DC077C8,Giudice,0,3232
+67,nx_status_detailed_360,0D8FC3203DC98E03,Punti base statistiche,0,3248
+68,nx_status_detailed_370,0D8C5D203DC6AADA,Potenziale sopra la media,0,3296
+69,nx_status_detailed_371,0D8C5E203DC6AC8D,Potenziale eccellente!,0,3348
+70,nx_status_detailed_372,0D8C5B203DC6A774,Potenziale ottimo,0,3396
+71,nx_status_detailed_373,0D8C5C203DC6A927,Potenziale discreto,0,3432
+72,nx_status_detailed_374,0D8C59203DC6A40E,Stellare,8,3472
+73,nx_status_detailed_375,0D8C5A203DC6A5C1,Eccellente,4,3492
+74,nx_status_detailed_376,0D8C57203DC6A0A8,Notevole,0,3516
+75,nx_status_detailed_377,0D8C58203DC6A25B,Normale,0,3536
+76,nx_status_detailed_378,0D8C55203DC69D42,Sufficiente,0,3552
+77,nx_status_detailed_379,0D8C56203DC69EF5,Mediocre,0,3576
+78,nx_status_detailed_380,0D7B5F203DB83B0D,Questo Pokémon non può essere trasferito.,0,3596
+79,nx_status_detailed_381,0D7B5E203DB8395A,Al top,4,3680
+80,nx_status_detailed_390,0D77D9203DB52184,---,0,3696
+81,	,AF66E44C86071324,[REF:81],0,3704
+82,nx_status_detailed_400,D01AB2201ABE9368,"Pokémon: Let’s Go, Pikachu!",0,3716
+83,nx_status_detailed_410,D01DB8201AC0D371,"Pokémon: Let’s Go, Eevee!",0,3772
+84,nx_status_detailed_420,D0213E201AC3ECFA,Pokémon Spada,0,3824
+85,nx_status_detailed_430,D024A4201AC6D023,Pokémon Scudo,0,3852
+86,NewText,8DE439F775E32B02,[REF:86],0,3880
+87,nx_status_help1_010,8E3F1B4C45BEAB6D,"Qui puoi vedere tutti i dettagli di un Pokémon, come la sua natura,
+le sue statistiche e le mosse che conosce!",0,3892
+88,nx_status_help1_011,8E3F1A4C45BEA9BA,"E non solo! Se premi il pulsante + potrai vedere il gioco di provenienza
+e quelli in cui puoi trasferirlo! Tienilo a mente, potrebbe tornarti utile!",4,4116
+89,nx_status_detailed_291,0468292038761598,"Incontrato in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000] nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000]",4,4416
+90,nx_status_detailed_292,04682C2038761AB1,"Incontrato in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000], probabilmente nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000]",4,4552
+91,nx_status_detailed_293,04682B20387618FE,"Ottenuto durante un evento speciale in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000] nel seguente luogo:
+[CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000]",4,4720
+92,nx_status_detailed_294,04682E2038761E17,"Ottenuto durante un evento speciale in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000], probabilmente
+nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000]",4,4908
+93,hayabusa_delphis,F5928BAB43DE7423,[REF:93],0,5124
+94,nx_status_detailed_440,D0282A201AC9E9AC,Pokémon Diamante Lucente,0,5136
+95,nx_status_detailed_450,D02BB0201ACD0335,Pokémon Perla Splendente,0,5188
+96,nx_status_detailed_460,D02EB6201ACF433E,Leggende Pokémon: Arceus,0,5240
+97,nx_status_detailed_510,D92D67201FFFDDAA,[CTRL:0201:0000],0,5292
+98,nx_status_detailed_521,D929E0201FFCC26E,Classe,0,5304
+99,nx_status_detailed_522,D929DF201FFCC0BB,Bellezza,0,5320
+100,nx_status_detailed_523,D929DE201FFCBF08,Grazia,0,5340
+101,nx_status_detailed_524,D929E5201FFCCAED,Acume,4,5356
+102,nx_status_detailed_525,D929E4201FFCC93A,Grinta,0,5368
+103,nx_status_detailed_526,D929E3201FFCC787,Lucentezza,0,5384
+104,nx_status_button_080,54E8BF28F88BC3E4,Virtù,0,5408
+105,nx_status_detailed_298,04682220387609B3,"Incontrato in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000], dopo un viaggio intriso di ricordi nel seguente
+luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,5420
+106,nx_status_detailed_295,04682D2038761C64,"Incontrato in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000], probabilmente dopo un viaggio intriso di ricordi
+nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,5632
+107,nx_status_detailed_296,046830203876217D,"Ottenuto durante un evento speciale in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000], dopo un viaggio intriso
+di ricordi nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,5872
+108,nx_status_detailed_297,04682F2038761FCA,"Ottenuto durante un evento speciale in data [CTRL:0201:0003]/[CTRL:0201:0002]/[CTRL:0203:0001,0000], probabilmente dopo
+un viaggio intriso di ricordi nel seguente luogo: [CTRL:FF00:0002][CTRL:0105:0000][CTRL:FF00:0000].",4,6132
+109,nx_status_detailed_299,0468212038760800,[REF:109],0,6420
+110,nx_status_detailed_470,D0323C201AD25CC7,Pokémon Scarlatto,0,6432
+111,nx_status_detailed_480,CFFF22201AA6D700,Pokémon Violetto,0,6468
+112,nx_status_detailed_490,D002A8201AA9F089,Leggende Pokémon: Z-A,0,6504

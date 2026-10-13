@@ -1,0 +1,81 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_option_index_010,D3D5D6955965FC64,Opzioni,4,580
+1,	,AF66E44C86071324,[REF:1],0,596
+2,nx_option_button_000,020C276686A840F1,Indietro,4,608
+3,nx_option_button_001,020C266686A83F3E,Aiuto,4,628
+4,nx_option_button_010,0209216686A600E8,Ripristina,0,640
+5,	,AF66E44C86071324,[REF:5],0,664
+6,nx_option_data_account,1A7C63DB4FCD3986,[CTRL:01D9:0000],0,676
+7,nx_option_data_support_010,1B3B3B781028F808,ID cliente,4,688
+8,nx_option_data_support_020,1B45AD7810320E43,XXXX-XXXX-XXXX-XXXX,8,712
+9,nx_option_data_ticket_010,84DE9A90FF88DC9D,Servizio corrente,0,752
+10,nx_option_data_ticket_040,84CD7C90FF7A3670,[REF:10],0,788
+11,nx_option_data_ticket_050,84D10290FF7D4FF9,Servizio base,0,800
+12,nx_option_data_ticket_060,84D48890FF806982,Servizio premium,0,828
+13,nx_option_data_language_010,A2AB1A90E943EFE3,Lingua,0,864
+14,nx_option_data_language_020,A2A12890E93BB328,,0,880
+15,	,AF66E44C86071324,[REF:15],0,884
+16,nx_option_bgm_010,C63A296F68446F3A,Volume musica,0,896
+17,nx_option_bgm_020,C636A36F684155B1,[CTRL:0200:0000],0,924
+18,nx_option_se_010,6ABDB5A028E653D0,Volume effetti sonori,0,936
+19,nx_option_se_020,6AC7C7A028EEC6EB,[CTRL:0200:0000],0,980
+20,nx_option_language_010,2404027014F8120A,Cambia lingua,0,992
+21,	,AF66E44C86071324,[REF:21],0,1020
+22,nx_option_comment_01,A01FCE44CB875827,Regola il volume della musica di sottofondo.,0,1032
+23,nx_option_comment_02,A01FCF44CB8759DA,Regola il volume degli effetti sonori.,0,1124
+24,nx_option_comment_03,A01FD044CB875B8D,Cambia la lingua dell’applicazione.,0,1204
+25,	,AF66E44C86071324,[REF:25],0,1276
+26,nx_option_item_volume_00,9C85FA43A4893D7D,0,0,1288
+27,nx_option_item_volume_01,9C85F943A4893BCA,1,0,1292
+28,nx_option_item_volume_02,9C85F843A4893A17,2,0,1296
+29,nx_option_item_volume_03,9C85F743A4893864,3,0,1300
+30,nx_option_item_volume_04,9C85F643A48936B1,4,0,1304
+31,nx_option_item_volume_05,9C85F543A48934FE,5,0,1308
+32,	,AF66E44C86071324,[REF:32],0,1312
+33,nx_option_item_language_title,CF260B0E11C2DF7D,Cambia lingua,0,1324
+34,nx_option_item_language_01,BC4C6250CB27F4C6,Giapponese (hiragana),0,1352
+35,nx_option_item_language_02,BC4C6150CB27F313,Giapponese (kanji),0,1396
+36,nx_option_item_language_03,BC4C6050CB27F160,Inglese,4,1436
+37,nx_option_item_language_04,BC4C6750CB27FD45,Francese,0,1452
+38,nx_option_item_language_05,BC4C6650CB27FB92,Tedesco,0,1472
+39,nx_option_item_language_06,BC4C6550CB27F9DF,Italiano,4,1488
+40,nx_option_item_language_07,BC4C6450CB27F82C,Coreano,0,1508
+41,nx_option_item_language_08,BC4C6B50CB280411,Spagnolo (Spagna),8,1524
+42,nx_option_item_language_09,BC4C6A50CB28025E,Cinese (semplificato),0,1560
+43,nx_option_item_language_10,BC48DD50CB24DCF0,Cinese (tradizionale),0,1604
+44,nx_option_item_language_11,BC48DE50CB24DEA3,Spagnolo (America Latina),8,1648
+45,	,AF66E44C86071324,[REF:45],0,1700
+46,nx_option_msg_yes,79827F0E5AC6E477,Sì,0,1712
+47,nx_option_msg_no,DDF6627943AD136B,No,0,1720
+48,nx_option_msg_010,8BA4210D4302527D,"Hai cambiato la lingua dell’applicazione.[CLEAR]
+Le impostazioni verranno salvate e tornerai allo schermo
+del titolo. Vuoi continuare?",4,1728
+49,nx_option_msg_020,8BA7870D430535A6,"Vuoi ripristinare le impostazioni predefinite del volume
+e della lingua?",0,1992
+50,nx_option_msg_030,8BAB0D0D43084F2F,"La lingua dell’applicazione è stata cambiata.[CLEAR]
+Le impostazioni verranno salvate e tornerai allo schermo
+del titolo.",0,2140
+51,nx_option_msg_040,8B93830D42F485D0,"Salvataggio delle impostazioni in corso.
+Non chiudere Pokémon HOME.",0,2376
+52,	,AF66E44C86071324,[REF:52],0,2512
+53,nx_option_help_010,222D69D9F5432327,"Questo è il menu delle impostazioni.
+Qui puoi regolare il volume di Pokémon HOME, cambiare
+la lingua e controllare il tipo di servizio che hai.",0,2524
+54,nx_option_help_015,222D64D9F5431AA8,"Non troverai però la data di scadenza del servizio premium...
+Per conoscerla, visita il negozio in cui hai acquistato il servizio!",0,2812
+55,nx_option_help_020,2222D7D9F539D68C,"Se dovessi avere dei problemi e avessi bisogno di contattare
+il servizio clienti, ti servirà l’ID cliente che trovi in questa schermata!",0,3076
+56,	,AF66E44C86071324,[REF:56],0,3352
+57,nx_option_comment_04,A01FC944CB874FA8,Controlla i termini di utilizzo e l’informativa sulla privacy.,0,3364
+58,nx_option_policy_010,6657138BEFA39CA6,Termini di utilizzo e informativa sulla privacy,0,3492
+59,nx_option_policy_msg_010,D8BE5005D9C7FB1C,Vuoi controllare i termini di utilizzo e l’informativa sulla privacy?,0,3588
+60,nx_option_policy_msg_020,D8C86205D9D06E37,Termini di utilizzo,0,3728
+61,nx_option_policy_msg_030,D8C4DC05D9CD54AE,Informativa sulla privacy,4,3768
+62,nx_option_policy_msg_040,D8B3DE05D9BEE4E1,Annulla,4,3820
+63,nx_option_policy_link_msg_010,CE65E5AB6FF38E29,Per gli utenti residenti in Giappone,0,3836
+64,nx_option_policy_link_msg_020,CE68EBAB6FF5CE32,Per gli utenti residenti in Corea,0,3912
+65,nx_option_policy_link_msg_030,CE6C71AB6FF8E7BB,Per gli utenti residenti in Asia (tranne Giappone e Corea),0,3980
+66,nx_option_policy_link_msg_040,CE6FF7AB6FFC0144,Per tutti gli altri utenti,0,4100
+67,	,AF66E44C86071324,[REF:67],0,4156
+68,nx_option_companyinfo_010,1FE7B8AFB5ED75C3,Informazioni sull’azienda,4,4168
+69,nx_option_companyinfo_msg_010,21D4273A24E5744D,Vedi le informazioni sull’azienda.,0,4220

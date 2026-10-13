@@ -1,0 +1,87 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,GBAシリーズれんどう,0,304
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,ボックスせんたく,0,352
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,あずけられるポケモンのかず,0,388
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,0000]",0,444
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"どうぐを　もっているポケモン・ひでんわざを　おぼえているポケモン・タマゴは
+『Pokémon HOME』に　おくれません",0,468
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"GBAシリーズれんどうを　おこなわず
+メインメニューにもどりますか？",0,712
+7,nx_gbasoft_msg_020,22A650A5467D0077,"『Pokémon HOME』へ　おくったポケモンは
+もとのソフトに　もどせなくなります[RETURN]
+また　おぼえている　わざが　かわります[CLEAR]
+ほんとうに　おくりますか？",0,852
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"えらんだボックスのなかの　ポケモンを
+『Pokémon HOME』に　おくっています…",0,1188
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"GBAシリーズから『Pokémon HOME』に
+ポケモンを　おくりました！",0,1364
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,はい,0,1520
+11,nx_gbasoft_msg_no,FA151C506B6DA084,いいえ,0,1532
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,ヘルプ,0,1548
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,おわる,0,1564
+14,	,AF66E44C86071324,[REF:14],0,1580
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"ここは　GBAシリーズの　れんどうがめん！
+GBAシリーズでつかまえた　ポケモンを
+『Pokémon HOME』におくることが　できるモン！",0,1600
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"おくる ポケモンは　ボックスごと　えらぶモン！
+えらんだ　ボックスの　なかにいる　すべての　ポケモンが
+『Pokémon HOME』に　おくられるモン！",0,1884
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"おくられた　ポケモンは　『Pokémon HOME』の
+ボックスの　あいている　ところを　みつけて
+じゅんばんに　はいるモン！",0,2192
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"べつべつの　ボックスに　はいることもあるから
+ちゅういするモン！",0,2448
+19,	,AF66E44C86071324,[REF:19],0,2580
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"[CTRL:0101:0000]は　この　レポートから
+すでに　おくったことが　あります！[CLEAR]
+[CTRL:0101:0000]は　おなじ　レポートから
+１ひきまで　おくることが　できます！",0,2600
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"いろちがい　[CTRL:0101:0000]は　この　レポートから
+すでに　おくったことが　あります！[CLEAR]
+いろちがい　[CTRL:0101:0000]は　おなじ
+レポートから　１ひきまで　おくれます！",0,2892
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　おくったことが　ある
+ポケモンが　ふくまれて　います！[CLEAR]
+[CTRL:0101:0000]は　おなじ　レポートから
+１ひきまで　おくることが　できます！",0,3208
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"いろちがい　[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　おくったことが　ある
+ポケモンが　ふくまれて　います！[CLEAR]
+いろちがい　[CTRL:0101:0000]は　おなじ
+レポートから　１ひきまで　おくれます！",0,3560
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"[CTRL:0101:0000]は　おなじ　レポートから
+１ひきまでしか　おくれません！[CLEAR]
+[CTRL:0101:0000]が　２ひきいじょういるので
+このボックスの　ポケモンを　おくれません！",0,3936
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"いろちがい　[CTRL:0101:0000]は
+おなじ　レポートから[RETURN]
+１ひきまでしか　おくれません！[CLEAR]
+いろちがい　[CTRL:0101:0000]が
+２ひきいじょういるので[RETURN]
+このボックスの　ポケモンを　おくれません！",0,4240
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"[CTRL:0101:0000]は　この　レポートから
+１ひきまでしか　おくれません！[CLEAR]
+[CTRL:0101:0000]が　えらばれていますが
+おくっても　よろしいですか？",0,4616
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"いろちがい　[CTRL:0101:0000]は　この　レポートから
+１ひきまでしか　おくれません！[CLEAR]
+いろちがい　[CTRL:0101:0000]が　えらばれていますが
+おくっても　よろしいですか？",0,4880
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　１ひきしか　おくれない
+ポケモンが　ふくまれて　います！[CLEAR]
+このボックスを『Pokémon HOME』に
+おくっても　よろしいですか？　",0,5192
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"いろちがい　[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　１ひきしか　おくれない
+ポケモンが　ふくまれて　います！[CLEAR]
+このボックスを『Pokémon HOME』に
+おくっても　よろしいですか？　",0,5560
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"このボックスには『Pokémon HOME』に
+おくれないポケモンが　ふくまれています",0,5952
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,このボックスには　ポケモンがいません,0,6128
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"このボックスには　『Pokémon HOME』に
+あずけることができる　ポケモンのかずよりも[RETURN]
+おおくのポケモンがいます",0,6204

@@ -1,0 +1,132 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_moving_index_010,CB86EFAD618F68B3,转移,0,604
+1,	,AF66E44C86071324,[REF:1],0,612
+2,nx_moving_button_000,14CC139DFB8CF9E0,返回,0,624
+3,nx_moving_button_001,14CC149DFB8CFB93,帮助,0,632
+4,	,AF66E44C86071324,[REF:4],0,640
+5,nx_moving_guide_010,68FAD02E6B8472FB,"可以从Nintendo 3DS的《宝可梦虚拟银行》
+带宝可梦过来。",0,652
+6,nx_moving_guide_011,68FACF2E6B847148,宝可梦一旦转移，将无法返回Nintendo 3DS！,0,720
+7,nx_moving_guide_012,68FAD22E6B847661,"转移前请先在智能手机版《Pokémon HOME》
+确认宝可梦能送到哪款游戏软件去。",0,776
+8,nx_moving_guide_020,68F0BE2E6B7BFFE0,"在Nintendo 3DS的《宝可梦虚拟银行》
+选择“转移至Pokémon HOME”，
+然后输入转移密码。",0,864
+9,nx_moving_guide_021,68F0BF2E6B7C0193,"在密码的有效时间结束前
+无法进行任何操作。",0,976
+10,	,AF66E44C86071324,[REF:10],0,1020
+11,nx_moving_opt_010,68C8516A21551BFA,开始转移,0,1032
+12,nx_moving_opt_020,68C4CB6A21520271,没有Nintendo 3DS,0,1044
+13,	,AF66E44C86071324,[REF:13],0,1076
+14,nx_moving_comment_010,BC0EB6EB7431CC2E,[REF:14],0,1088
+15,nx_moving_comment_020,BC0B30EB742EB2A5,[REF:15],0,1100
+16,nx_moving_comment_030,BC082AEB742C729C,[REF:16],0,1112
+17,nx_moving_comment_040,BC04A4EB74295913,[REF:17],0,1124
+18,	,AF66E44C86071324,[REF:18],0,1136
+19,nx_moving_boxdata_010,3B867679FE0CD7AE,可寄放的数量,0,1148
+20,nx_moving_boxdata_011,3B867779FE0CD961,"[CTRL:0203:0000,0000]只",0,1164
+21,nx_moving_boxdata_020,3B82F079FE09BE25,空盒子,0,1180
+22,nx_moving_boxdata_021,3B82EF79FE09BC72,[CTRL:0202:0000]个,0,1188
+23,	,AF66E44C86071324,[REF:23],0,1200
+24,nx_moving_pass_010,17F21C1F27D89F74,当前转移密码,0,1212
+25,nx_moving_pass_020,17FC0E1F27E0DC2F,还剩,0,1228
+26,nx_moving_pass_021,17FC0D1F27E0DA7C,[CTRL:0201:0000]：[CTRL:0201:0001],0,1236
+27,nx_moving_pass_030,17F8881F27DDC2A6,,0,1256
+28,	,AF66E44C86071324,[REF:28],0,1260
+29,nx_moving_msg_010,11CF321701DB564E,"请注意！在转移完成之前，
+《Pokémon HOME》将无法使用！[RETURN]
+确定要开始准备转移吗？",0,1272
+30,nx_moving_msg_020,11CBAC1701D83CC5,"请在Nintendo 3DS的《宝可梦虚拟银行》
+内的“转移至Pokémon HOME”选择盒子，[RETURN]
+并操作至这个画面。",0,1372
+31,nx_moving_msg_025,11CBA71701D83446,"《宝可梦虚拟银行》的版本可能过低，
+请更新至最新版的《宝可梦虚拟银行》。[CLEAR]
+如有不明之处，请参考
+《Pokémon HOME》的官方网站。",0,1500
+32,nx_moving_msg_030,11C8261701D5233C,"转移密码的有效时间只有3分钟，
+请尽早在宝可梦虚拟银行输入密码。[CLEAR]
+另外，一旦显示转移密码，
+就无法在有效时间结束前回到之前的画面！[CLEAR]
+确定要显示转移密码吗？",0,1644
+33,nx_moving_msg_040,11C4A01701D209B3,"《Pokémon HOME》的盒子已满！
+请整理盒子。",0,1812
+34,nx_moving_msg_050,11C13A1701CF268A,"找到《宝可梦虚拟银行》的数据了！
+开始准备转移。[CLEAR]
+在转移完成之前将无法使用《Pokémon HOME》。",0,1868
+35,nx_moving_msg_060,11BE341701CCE681,"如有不明之处，请参考
+《Pokémon HOME》的官方网站。",0,1980
+36,nx_moving_msg_070,11BAAE1701C9CCF8,"输入宝可梦虚拟银行的密码已确认！
+开始准备转移。[CLEAR]
+在转移完成之前将无法使用《Pokémon HOME》。",0,2044
+37,nx_moving_msg_075,11BAB31701C9D577,"正在确认转移密码，
+请稍候……",0,2156
+38,nx_moving_msg_080,11B7281701C6B36F,转移密码已失效！,0,2188
+39,nx_moving_msg_090,11B3A21701C399E6,"要确认在《宝可梦虚拟银行》
+使用的Nintendo Network ID[CLEAR]
+是否登录于此用户的Nintendo Account吗？",0,2208
+40,nx_moving_msg_100,0A6EFD16FE0AC70C,"一旦得到确认，将自动开始转移！
+《宝可梦虚拟银行》中所有的宝可梦[RETURN]
+都将转移至《Pokémon HOME》。[CLEAR]
+在转移完成之前将无法使用《Pokémon HOME》。
+确定要确认Nintendo Network ID并开始转移吗？",0,2344
+41,nx_moving_msg_0110,1E6C011827B6DB43,"正在确认《宝可梦虚拟银行》的数据，
+请留在此画面稍等片刻……",0,2584
+42,nx_moving_msg_0120,1E618F1827ADC508,[REF:42],0,2648
+43,nx_moving_msg_0130,1E65151827B0DE91,"没有找到能够转移的
+《宝可梦虚拟银行》数据。[CLEAR]
+请确认是否已成功关联
+Nintendo Network ID。[CLEAR]
+另外，在执行完与Nintendo Network ID的
+关联操作之后，需要稍等片刻才会生效。",0,2660
+44,nx_moving_msg_pot_010,59DE40FD3D2345AA,开始,0,2880
+45,nx_moving_msg_pot_020,59DABAFD3D202C21,准备就绪,0,2888
+46,nx_moving_msg_pot_025,59DABDFD3D20313A,没有“转移”,0,2900
+47,nx_moving_msg_pot_030,59D734FD3D1D1298,显示,0,2916
+48,nx_moving_msg_pot_040,59EF3EFD3D31B577,退出,0,2924
+49,nx_moving_msg_pot_050,59EBB8FD3D2E9BEE,确认,0,2932
+50,	,AF66E44C86071324,[REF:50],0,2940
+51,nx_moving_immigrate_010,0B2ECD65BE4BC5D0,是,0,2952
+52,nx_moving_immigrate_020,0B38DF65BE5438EB,否,0,2956
+53,nx_moving_immigrate_030,0B355965BE511F62,保持盒子原状,0,2960
+54,nx_moving_immigrate_040,0B3F6B65BE59927D,一只只地转移,0,2976
+55,nx_moving_immigrate_045,0B3F6665BE5989FE,整理盒子,0,2992
+56,nx_moving_immigrate_050,0B3C6565BE575274,退出,0,3004
+57,nx_moving_immigrate_msg_010,1F55A46D4D841D6A,"准备好转移的宝可梦有[CTRL:0203:0000,0000]只！[CLEAR]
+你想要如何接收至
+《Pokémon HOME》的盒子里呢？",0,3012
+58,nx_moving_immigrate_msg_020,1F521E6D4D8103E1,"保持宝可梦虚拟银行的
+盒子配置方式接收。[CLEAR]
+你确定要这样接收，并保存记录吗？",0,3116
+59,nx_moving_immigrate_msg_025,1F52216D4D8108FA,"无视宝可梦虚拟银行内盒子的配置方式，
+一只只地接收至空位当中。[CLEAR]
+你确定要这样接收，并保存记录吗？",0,3200
+60,nx_moving_immigrate_msg_030,1F4E986D4D7DEA58,"正在保存记录……
+请不要关闭《Pokémon HOME》。",0,3304
+61,nx_moving_immigrate_msg_040,1F66A26D4D928D37,"完好地保存了记录！[CLEAR]
+将宝可梦虚拟银行的宝可梦
+接收到《Pokémon HOME》了！",0,3364
+62,nx_moving_immigrate_msg_045,1F669D6D4D9284B8,"作为初次转移点数，
+你获得了[CTRL:0203:0000,0000]P[RETURN]
+《Pokémon HOME》点数！",0,3456
+63,nx_moving_immigrate_msg_050,1F631C6D4D8F73AE,"还需要[CTRL:0202:0000]个盒子空间！
+要整理盒子吗？",0,3540
+64,nx_moving_immigrate_msg_060,1F5F966D4D8C5A25,[REF:64],0,3584
+65,nx_moving_immigrate_msg_070,1F5C906D4D8A1A1C,[REF:65],0,3596
+66,nx_moving_immigrate_msg_080,1F3D9A6D4D6F7A8B,[REF:66],0,3608
+67,	,AF66E44C86071324,[REF:67],0,3620
+68,nx_moving_help_010,96110053E176176A,"把宝可梦从Nintendo 3DS的
+《宝可梦虚拟银行》中接过来，
+这就是所谓的“转移”哦萌！",0,3632
+69,nx_moving_help_020,960D7A53E172FDE1,"选择“开始转移”后就会显示转移密码。
+只要你在《宝可梦虚拟银行》输入这个密码，
+就可以开始转移了萌！",0,3728
+70,nx_moving_help_030,9609F453E16FE458,"转移密码存在有效时间，
+你要在失效之前输入密码哦萌！
+另外，在显示密码的这段时间内，
+你将无法操作《Pokémon HOME》哦萌！",0,3832
+71,nx_moving_help_035,9609F953E16FECD7,"对了！告诉你一个好消息！
+连动《宝可梦虚拟银行》转移宝可梦时，
+连图鉴数据也会一并继承过来哦萌！",0,3968
+72,nx_moving_help_040,9621FE53E1848737,"要是你在转移的时候遇到了问题，
+或者手边没有Nintendo 3DS的话，
+就上《Pokémon HOME》官方网站看看吧！",0,4068

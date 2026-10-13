@@ -1,0 +1,336 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,mes_ribbon_name_000,EFD55246391A3E8A,Kalos Champion Ribbon,0,2380
+1,mes_ribbon_name_001,EFD55346391A403D,Champion Ribbon,0,2424
+2,mes_ribbon_name_002,EFD55046391A3B24,Sinnoh Champion Ribbon,0,2456
+3,mes_ribbon_name_003,EFD55146391A3CD7,Best Friends Ribbon,0,2504
+4,mes_ribbon_name_004,EFD54E46391A37BE,Training Ribbon,0,2544
+5,mes_ribbon_name_005,EFD54F46391A3971,Skillful Battler Ribbon,0,2576
+6,mes_ribbon_name_006,EFD54C46391A3458,Expert Battler Ribbon,4,2624
+7,mes_ribbon_name_007,EFD54D46391A360B,Effort Ribbon,4,2668
+8,mes_ribbon_name_008,EFD54A46391A30F2,Alert Ribbon,4,2696
+9,mes_ribbon_name_009,EFD54B46391A32A5,Shock Ribbon,0,2724
+10,mes_ribbon_name_010,EFD8B846391D21B3,Downcast Ribbon,0,2752
+11,mes_ribbon_name_011,EFD8B746391D2000,Careless Ribbon,0,2784
+12,mes_ribbon_name_012,EFD8BA46391D2519,Relax Ribbon,0,2816
+13,mes_ribbon_name_013,EFD8B946391D2366,Snooze Ribbon,0,2844
+14,mes_ribbon_name_014,EFD8BC46391D287F,Smile Ribbon,0,2872
+15,mes_ribbon_name_015,EFD8BB46391D26CC,Gorgeous Ribbon,0,2900
+16,mes_ribbon_name_016,EFD8BE46391D2BE5,Royal Ribbon,0,2932
+17,mes_ribbon_name_017,EFD8BD46391D2A32,Gorgeous Royal Ribbon,0,2960
+18,mes_ribbon_name_018,EFD8C046391D2F4B,Artist Ribbon,4,3004
+19,mes_ribbon_name_019,EFD8BF46391D2D98,Footprint Ribbon,0,3032
+20,mes_ribbon_name_020,EFCEC6463914E4F8,Record Ribbon,0,3068
+21,mes_ribbon_name_021,EFCEC7463914E6AB,Legend Ribbon,0,3096
+22,mes_ribbon_name_022,EFCEC8463914E85E,Country Ribbon,0,3124
+23,mes_ribbon_name_023,EFCEC9463914EA11,National Ribbon,0,3156
+24,mes_ribbon_name_024,EFCECA463914EBC4,Earth Ribbon,4,3188
+25,mes_ribbon_name_025,EFCECB463914ED77,World Ribbon,0,3216
+26,mes_ribbon_name_026,EFCECC463914EF2A,Classic Ribbon,0,3244
+27,mes_ribbon_name_027,EFCECD463914F0DD,Premier Ribbon,0,3276
+28,mes_ribbon_name_028,EFCEBE463914D760,Event Ribbon,4,3308
+29,mes_ribbon_name_029,EFCEBF463914D913,Birthday Ribbon,0,3336
+30,mes_ribbon_name_030,EFD24C463917FE81,Special Ribbon,0,3368
+31,mes_ribbon_name_031,EFD24B463917FCCE,Souvenir Ribbon,0,3400
+32,mes_ribbon_name_032,EFD24A463917FB1B,Wishing Ribbon,0,3432
+33,mes_ribbon_name_033,EFD249463917F968,Battle Champion Ribbon,0,3464
+34,mes_ribbon_name_034,EFD250463918054D,Regional Champion Ribbon,0,3512
+35,mes_ribbon_name_035,EFD24F463918039A,National Champion Ribbon,0,3564
+36,mes_ribbon_name_036,EFD24E46391801E7,World Champion Ribbon,0,3616
+37,mes_ribbon_name_037,EFD24D4639180034,Contest Memory Ribbon,0,3660
+38,mes_ribbon_name_038,EFD244463917F0E9,Battle Memory Ribbon,0,3704
+39,mes_ribbon_name_039,EFD243463917EF36,Hoenn Champion Ribbon,0,3748
+40,mes_ribbon_name_040,EFE34A4639266E4E,Contest Star Ribbon,0,3792
+41,mes_ribbon_name_041,EFE34B4639267001,Coolness Master Ribbon,0,3832
+42,mes_ribbon_name_042,EFE3484639266AE8,Beauty Master Ribbon,0,3880
+43,mes_ribbon_name_043,EFE3494639266C9B,Cuteness Master Ribbon,0,3924
+44,mes_ribbon_name_044,EFE34E463926751A,Cleverness Master Ribbon,0,3972
+45,mes_ribbon_name_045,EFE34F46392676CD,Toughness Master Ribbon,0,4024
+46,mes_ribbon_name_046,EFE34C46392671B4,Alola Champion Ribbon,4,4072
+47,mes_ribbon_name_047,EFE34D4639267367,Battle Royal Master Ribbon,0,4116
+48,mes_ribbon_name_048,EFE34246392660B6,Battle Tree Great Ribbon,0,4172
+49,mes_ribbon_name_049,EFE3434639266269,Battle Tree Master Ribbon,0,4224
+50,mes_ribbon_info_000,20F93C62D8DCE9C9,"A Ribbon awarded for beating the Kalos Champion
+and entering the Kalos Hall of Fame.",4,4276
+51,mes_ribbon_info_001,20F93B62D8DCE816,"A Ribbon awarded for clearing the Pokémon League
+and entering the Hall of Fame somewhere long ago.",4,4448
+52,mes_ribbon_info_002,20F93A62D8DCE663,"A Ribbon awarded for beating the Sinnoh Champion
+and entering the Sinnoh Hall of Fame.",4,4648
+53,mes_ribbon_info_003,20F93962D8DCE4B0,"A Ribbon that can be given to a Pokémon with which
+you share a close and meaningful bond.",4,4824
+54,mes_ribbon_info_004,20F94062D8DCF095,"A Ribbon that can be given to a Pokémon that has
+overcome rigorous trials and training.",4,5004
+55,mes_ribbon_info_005,20F93F62D8DCEEE2,"A Ribbon that can be given to a Pokémon that has
+achieved victory in difficult battles.",4,5180
+56,mes_ribbon_info_006,20F93E62D8DCED2F,"A Ribbon that can be given to a brave Pokémon
+that has honed its battle skills to an art.",4,5356
+57,mes_ribbon_info_007,20F93D62D8DCEB7C,"A Ribbon awarded for being an exceptionally
+hard worker.",4,5536
+58,mes_ribbon_info_008,20F94462D8DCF761,"A Ribbon for recalling an invigorating
+event that created life energy.",4,5652
+59,mes_ribbon_info_009,20F94362D8DCF5AE,"A Ribbon for recalling a thrilling
+event that made life more exciting.",4,5796
+60,mes_ribbon_info_010,20F5B662D8D9D040,"A Ribbon for recalling feelings of
+sadness that added spice to life.",4,5940
+61,mes_ribbon_info_011,20F5B762D8D9D1F3,"A Ribbon for recalling a careless error
+that helped steer life decisions.",4,6080
+62,mes_ribbon_info_012,20F5B862D8D9D3A6,"A Ribbon for recalling a refreshing
+event that added sparkle to life.",4,6228
+63,mes_ribbon_info_013,20F5B962D8D9D559,"A Ribbon for recalling a deep
+slumber that made life soothing.",4,6368
+64,mes_ribbon_info_014,20F5BA62D8D9D70C,"A Ribbon for recalling that smiles
+enrich the quality of life.",4,6496
+65,mes_ribbon_info_015,20F5BB62D8D9D8BF,An extraordinarily gorgeous and extravagant Ribbon.,4,6624
+66,mes_ribbon_info_016,20F5BC62D8D9DA72,An incredibly regal Ribbon with an air of nobility.,4,6728
+67,mes_ribbon_info_017,20F5BD62D8D9DC25,"A gorgeous and regal Ribbon
+that is the peak of fabulous.",4,6832
+68,mes_ribbon_info_018,20F5BE62D8D9DDD8,"A Ribbon awarded for being chosen as a super
+sketch model in the Hoenn region.",4,6948
+69,mes_ribbon_info_019,20F5BF62D8D9DF8B,"A Ribbon awarded to a Pokémon deemed
+to have a top-quality footprint.",4,7108
+70,mes_ribbon_info_020,21004862D8E31CDB,A Ribbon awarded for setting an incredible record.,4,7248
+71,mes_ribbon_info_021,21004762D8E31B28,A Ribbon awarded for setting a legendary record.,4,7352
+72,mes_ribbon_info_022,21004A62D8E32041,A Ribbon awarded to a Pokémon League Champion.,4,7452
+73,mes_ribbon_info_023,21004962D8E31E8E,"A Ribbon awarded for overcoming
+all difficult challenges.",4,7548
+74,mes_ribbon_info_024,21004C62D8E323A7,A Ribbon awarded for winning one hundred battles in a row.,4,7664
+75,mes_ribbon_info_025,21004B62D8E321F4,A Ribbon awarded to a Pokémon League Champion.,4,7784
+76,mes_ribbon_info_026,21004E62D8E3270D,A Ribbon that proclaims love for Pokémon.,4,7880
+77,mes_ribbon_info_027,21004D62D8E3255A,A Ribbon awarded for a special holiday.,4,7964
+78,mes_ribbon_info_028,21004062D8E30F43,"A Ribbon awarded for participating in a special
+Pokémon event.",4,8044
+79,mes_ribbon_info_029,21003F62D8E30D90,A Ribbon that commemorates a birthday.,4,8172
+80,mes_ribbon_info_030,20FCC262D8E00352,A special Ribbon for a special day.,4,8252
+81,mes_ribbon_info_031,20FCC362D8E00505,A Ribbon for cherishing a special memory.,4,8324
+82,mes_ribbon_info_032,20FCC062D8DFFFEC,A Ribbon said to make your wish come true.,4,8408
+83,mes_ribbon_info_033,20FCC162D8E0019F,A Ribbon awarded to a Battle Competition Champion.,4,8496
+84,mes_ribbon_info_034,20FCBE62D8DFFC86,"A Ribbon awarded to a Regional Champion in the
+Pokémon World Championships.",4,8600
+85,mes_ribbon_info_035,20FCBF62D8DFFE39,"A Ribbon awarded to a National Champion in the
+Pokémon World Championships.",4,8752
+86,mes_ribbon_info_036,20FCBC62D8DFF920,"A Ribbon awarded to a World Champion in the
+Pokémon World Championships.",4,8904
+87,mes_ribbon_info_037,20FCBD62D8DFFAD3,"A commemorative Ribbon representing all of the Ribbons
+you collected for contests somewhere long ago.",4,9052
+88,mes_ribbon_info_038,20FCCA62D8E010EA,"A commemorative Ribbon representing all of the Ribbons
+you collected for battling somewhere long ago.",4,9256
+89,mes_ribbon_info_039,20FCCB62D8E0129D,"A Ribbon awarded for beating the Hoenn Champion
+and entering the Hoenn Hall of Fame.",4,9460
+90,mes_ribbon_info_040,2106D462D8E8766D,"A Ribbon awarded to a Pokémon that has
+performed superbly in every kind of contest.",4,9632
+91,mes_ribbon_info_041,2106D362D8E874BA,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Coolness in Pokémon Contests.",4,9800
+92,mes_ribbon_info_042,2106D262D8E87307,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Beauty in Pokémon Contests.",4,9976
+93,mes_ribbon_info_043,2106D162D8E87154,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Cuteness in Pokémon Contests.",4,10148
+94,mes_ribbon_info_044,2106D062D8E86FA1,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Cleverness in Pokémon Contests.",4,10324
+95,mes_ribbon_info_045,2106CF62D8E86DEE,"A Ribbon awarded to a Pokémon that has perfectly
+embodied Toughness in Pokémon Contests.",4,10504
+96,mes_ribbon_info_046,2106CE62D8E86C3B,"A Ribbon awarded for becoming the Alola Champion
+and entering the Alola Hall of Fame.",4,10684
+97,mes_ribbon_info_047,2106CD62D8E86A88,"A Ribbon that can be given to a Pokémon that has
+achieved victory in the Battle Royal.",4,10856
+98,mes_ribbon_info_048,2106CC62D8E868D5,"A Ribbon awarded for winning against a
+Battle Legend in the Battle Tree.",4,11032
+99,mes_ribbon_info_049,2106CB62D8E86722,"A Ribbon awarded for winning against a Battle Legend in
+super battles in the Battle Tree.",4,11180
+100,mes_ribbon_info_050,21034E62D8E55CE4,"A Ribbon awarded for becoming the Galar Champion
+and entering the Galar Hall of Fame.",4,11360
+101,mes_ribbon_info_051,21034F62D8E55E97,"A Ribbon awarded for winning against a champion
+in the Battle Tower.",4,11532
+102,mes_ribbon_info_052,21035062D8E5604A,"A Ribbon awarded for winning against a Trainer in the
+Master Ball Tier of Ranked Battles.",4,11672
+103,mes_ribbon_info_053,21035162D8E561FD,A mark for a peckish Pokémon.,4,11852
+104,mes_ribbon_info_054,21034A62D8E55618,A mark for a sleepy Pokémon.,4,11912
+105,mes_ribbon_info_055,21034B62D8E557CB,A mark for a dozy Pokémon.,4,11972
+106,mes_ribbon_info_056,21034C62D8E5597E,"A mark for an early-riser Pokémon.
+",4,12028
+107,mes_ribbon_info_057,21034D62D8E55B31,A mark for a cloud-watching Pokémon.,4,12100
+108,mes_ribbon_info_058,21034662D8E54F4C,A mark for a sodden Pokémon.,4,12176
+109,mes_ribbon_info_059,21034762D8E550FF,A mark for a thunderstruck Pokémon.,4,12236
+110,mes_ribbon_info_060,210DC062D8EE731F,A mark for a snow-frolicking Pokémon.,4,12308
+111,mes_ribbon_info_061,210DBF62D8EE716C,A mark for a shivering Pokémon.,4,12384
+112,mes_ribbon_info_062,210DC262D8EE7685,A mark for a parched Pokémon.,4,12448
+113,mes_ribbon_info_063,210DC162D8EE74D2,A mark for a sandswept Pokémon.,4,12508
+114,mes_ribbon_info_064,210DBC62D8EE6C53,A mark for a mist-drifter Pokémon.,4,12572
+115,mes_ribbon_info_065,210DBB62D8EE6AA0,A mark of a chosen Pokémon.,4,12644
+116,mes_ribbon_info_066,210DBE62D8EE6FB9,A mark for a catch-of-the-day Pokémon.,4,12700
+117,mes_ribbon_info_067,210DBD62D8EE6E06,A mark for a curry-connoisseur Pokémon.,4,12780
+118,mes_ribbon_info_068,210DC862D8EE80B7,A mark for a sociable Pokémon.,4,12860
+119,mes_ribbon_info_069,210DC762D8EE7F04,A mark for a reclusive Pokémon.,4,12924
+120,mes_ribbon_info_070,210A3A62D8EB5996,A mark for a rowdy Pokémon.,4,12988
+121,mes_ribbon_info_071,210A3B62D8EB5B49,A mark for a spacey Pokémon.,4,13044
+122,mes_ribbon_info_072,210A3862D8EB5630,A mark for an anxious Pokémon.,4,13104
+123,mes_ribbon_info_073,210A3962D8EB57E3,A mark for a giddy Pokémon.,4,13168
+124,mes_ribbon_info_074,210A3E62D8EB6062,A mark for a radiant Pokémon.,4,13224
+125,mes_ribbon_info_075,210A3F62D8EB6215,A mark for a serene Pokémon.,4,13284
+126,mes_ribbon_info_076,210A3C62D8EB5CFC,A mark for a feisty Pokémon.,4,13344
+127,mes_ribbon_info_077,210A3D62D8EB5EAF,A mark for a daydreaming Pokémon.,4,13404
+128,mes_ribbon_info_078,210A4262D8EB672E,A mark for a joyful Pokémon.,4,13472
+129,mes_ribbon_info_079,210A4362D8EB68E1,A mark for a furious Pokémon.,4,13532
+130,mes_ribbon_info_080,21144C62D8F3CCB1,A mark for a beaming Pokémon.,4,13592
+131,mes_ribbon_info_081,21144B62D8F3CAFE,A mark for a teary-eyed Pokémon.,4,13652
+132,mes_ribbon_info_082,21144A62D8F3C94B,A mark for a chipper Pokémon.,4,13720
+133,mes_ribbon_info_083,21144962D8F3C798,A mark for a grumpy Pokémon.,4,13780
+134,mes_ribbon_info_084,21145062D8F3D37D,A mark for a scholarly Pokémon.,4,13840
+135,mes_ribbon_info_085,21144F62D8F3D1CA,A mark for a rampaging Pokémon.,4,13904
+136,mes_ribbon_info_086,21144E62D8F3D017,A mark for an opportunistic Pokémon.,4,13968
+137,mes_ribbon_info_087,21144D62D8F3CE64,A mark for a stern Pokémon.,4,14044
+138,mes_ribbon_info_088,21144462D8F3BF19,A mark for a kindhearted Pokémon.,4,14100
+139,mes_ribbon_info_089,21144362D8F3BD66,A mark for an easily flustered Pokémon.,4,14168
+140,mes_ribbon_info_090,21114662D8F18CA8,A mark for a driven Pokémon.,4,14248
+141,mes_ribbon_info_091,21114762D8F18E5B,A mark for an apathetic Pokémon.,4,14308
+142,mes_ribbon_info_092,21114862D8F1900E,A mark for an arrogant Pokémon.,4,14376
+143,mes_ribbon_info_093,21114962D8F191C1,A mark for an unsure Pokémon.,4,14440
+144,mes_ribbon_info_094,21114A62D8F19374,A mark for a humble Pokémon.,4,14500
+145,mes_ribbon_info_095,21114B62D8F19527,A mark for a pompous Pokémon.,4,14560
+146,mes_ribbon_info_096,21114C62D8F196DA,A mark for a lively Pokémon.,4,14620
+147,mes_ribbon_info_097,21114D62D8F1988D,A mark for a worn-out Pokémon.,4,14680
+148,mes_ribbon_name_050,EFE650463928AE57,Galar Champion Ribbon,0,14744
+149,mes_ribbon_name_051,EFE64F463928ACA4,Tower Master Ribbon,0,14788
+150,mes_ribbon_name_052,EFE652463928B1BD,Master Rank Ribbon,0,14828
+151,mes_ribbon_name_053,EFE651463928B00A,Lunchtime Mark,0,14868
+152,mes_ribbon_name_054,EFE64C463928A78B,Sleepy-Time Mark,0,14900
+153,mes_ribbon_name_055,EFE64B463928A5D8,Dusk Mark,0,14936
+154,mes_ribbon_name_056,EFE64E463928AAF1,Dawn Mark,0,14956
+155,mes_ribbon_name_057,EFE64D463928A93E,Cloudy Mark,0,14976
+156,mes_ribbon_name_058,EFE648463928A0BF,Rainy Mark,0,15000
+157,mes_ribbon_name_059,EFE6474639289F0C,Stormy Mark,0,15024
+158,mes_ribbon_name_060,EFDC3E4639203B3C,Snowy Mark,0,15048
+159,mes_ribbon_name_061,EFDC3F4639203CEF,Blizzard Mark,0,15072
+160,mes_ribbon_name_062,EFDC404639203EA2,Dry Mark,0,15100
+161,mes_ribbon_name_063,EFDC414639204055,Sandstorm Mark,0,15120
+162,mes_ribbon_name_064,EFDC3A4639203470,Misty Mark,0,15152
+163,mes_ribbon_name_065,EFDC3B4639203623,Destiny Mark,0,15176
+164,mes_ribbon_name_066,EFDC3C46392037D6,Fishing Mark,0,15204
+165,mes_ribbon_name_067,EFDC3D4639203989,Curry Mark,0,15232
+166,mes_ribbon_name_068,EFDC4646392048D4,Uncommon Mark,4,15256
+167,mes_ribbon_name_069,EFDC474639204A87,Rare Mark,0,15284
+168,mes_ribbon_name_070,EFDFC446392354C5,Rowdy Mark,0,15304
+169,mes_ribbon_name_071,EFDFC34639235312,Absent-Minded Mark,4,15328
+170,mes_ribbon_name_072,EFDFC2463923515F,Jittery Mark,0,15368
+171,mes_ribbon_name_073,EFDFC14639234FAC,Excited Mark,4,15396
+172,mes_ribbon_name_074,EFDFC04639234DF9,Charismatic Mark,0,15424
+173,mes_ribbon_name_075,EFDFBF4639234C46,Calmness Mark,0,15460
+174,mes_ribbon_name_076,EFDFBE4639234A93,Intense Mark,4,15488
+175,mes_ribbon_name_077,EFDFBD46392348E0,Zoned-Out Mark,0,15516
+176,mes_ribbon_name_078,EFDFCC463923625D,Joyful Mark,0,15548
+177,mes_ribbon_name_079,EFDFCB46392360AA,Angry Mark,4,15572
+178,mes_ribbon_name_080,EFBA424639035BA2,Smiley Mark,0,15596
+179,mes_ribbon_name_081,EFBA434639035D55,Teary Mark,0,15620
+180,mes_ribbon_name_082,EFBA40463903583C,Upbeat Mark,4,15644
+181,mes_ribbon_name_083,EFBA4146390359EF,Peeved Mark,0,15668
+182,mes_ribbon_name_084,EFBA3E46390354D6,Intellectual Mark,4,15692
+183,mes_ribbon_name_085,EFBA3F4639035689,Ferocious Mark,0,15728
+184,mes_ribbon_name_086,EFBA3C4639035170,Crafty Mark,0,15760
+185,mes_ribbon_name_087,EFBA3D4639035323,Scowling Mark,0,15784
+186,mes_ribbon_name_088,EFBA4A463903693A,Kindly Mark,0,15812
+187,mes_ribbon_name_089,EFBA4B4639036AED,Flustered Mark,0,15836
+188,mes_ribbon_name_090,EFBDC8463906752B,Pumped-Up Mark,0,15868
+189,mes_ribbon_name_091,EFBDC74639067378,Zero Energy Mark,0,15900
+190,mes_ribbon_name_092,EFBDCA4639067891,Prideful Mark,0,15936
+191,mes_ribbon_name_093,EFBDC946390676DE,Unsure Mark,4,15964
+192,mes_ribbon_name_094,EFBDCC4639067BF7,Humble Mark,0,15988
+193,mes_ribbon_name_095,EFBDCB4639067A44,Thorny Mark,0,16012
+194,mes_ribbon_name_096,EFBDCE4639067F5D,Vigor Mark,0,16036
+195,mes_ribbon_name_097,EFBDCD4639067DAA,Slump Mark,0,16060
+196,mes_ribbon_name_099,EFBDBF46390665E0,Twinkling Star Ribbon,0,16084
+197,mes_another_name_001,173EBACED5F7526E,the Kalos Champion,0,16128
+198,mes_another_name_002,173EB9CED5F750BB,the Champion,0,16168
+199,mes_another_name_003,173EB8CED5F74F08,the Sinnoh Champion,0,16196
+200,mes_another_name_004,173EBFCED5F75AED,the Great Friend,0,16236
+201,mes_another_name_005,173EBECED5F7593A,the Tried and True,0,16272
+202,mes_another_name_006,173EBDCED5F75787,the Veteran,0,16312
+203,mes_another_name_007,173EBCCED5F755D4,the Master,0,16336
+204,mes_another_name_008,173EB3CED5F74689,the Once Well-Trained,0,16360
+205,mes_another_name_009,173EB2CED5F744D6,the Once Vigilant,0,16404
+206,mes_another_name_010,173B35CED5F43A98,the Once Cowardly,0,16440
+207,mes_another_name_011,173B36CED5F43C4B,the Once Shaken,0,16476
+208,mes_another_name_012,173B37CED5F43DFE,the Once Imperfect,0,16508
+209,mes_another_name_013,173B38CED5F43FB1,the Once Well-Rested,0,16548
+210,mes_another_name_014,173B39CED5F44164,the Once Sleepy,0,16592
+211,mes_another_name_015,173B3ACED5F44317,the Once Cheery,0,16624
+212,mes_another_name_016,173B3BCED5F444CA,the Gorgeous,0,16656
+213,mes_another_name_017,173B3CCED5F4467D,the Royal,0,16684
+214,mes_another_name_018,173B2DCED5F42D00,the Gorgeous Royal,0,16704
+215,mes_another_name_019,173B2ECED5F42EB3,the Model for Paintings,0,16744
+216,mes_another_name_020,1745A7CED5FD50D3,the Strutter,0,16792
+217,mes_another_name_021,1745A6CED5FD4F20,the Record Holder,0,16820
+218,mes_another_name_022,1745A9CED5FD5439,the Living Legend,0,16856
+219,mes_another_name_023,1745A8CED5FD5286,the Victor,0,16892
+220,mes_another_name_024,1745ABCED5FD579F,the Triumphant,0,16916
+221,mes_another_name_025,1745AACED5FD55EC,the 100× Victorious,0,16948
+222,mes_another_name_026,1745ADCED5FD5B05,the World Conqueror,0,16988
+223,mes_another_name_027,1745ACCED5FD5952,the Pokémon Fan,0,17028
+224,mes_another_name_028,1745AFCED5FD5E6B,the Celebratory,0,17060
+225,mes_another_name_029,1745AECED5FD5CB8,the Festive,0,17092
+226,mes_another_name_030,174241CED5FA6DAA,the Best Buddy,0,17116
+227,mes_another_name_031,174242CED5FA6F5D,the Premium,0,17148
+228,mes_another_name_032,17423FCED5FA6A44,the Cherished,0,17172
+229,mes_another_name_033,174240CED5FA6BF7,the Wish Granter,0,17200
+230,mes_another_name_034,17423DCED5FA66DE,the Battle Champion,0,17236
+231,mes_another_name_035,17423ECED5FA6891,the Regional Champion,0,17276
+232,mes_another_name_036,17423BCED5FA6378,the National Champion,0,17320
+233,mes_another_name_037,17423CCED5FA652B,the World Champion,0,17364
+234,mes_another_name_038,174239CED5FA6012,the Treasured Memory,0,17404
+235,mes_another_name_039,17423ACED5FA61C5,the Exciting Memory,0,17448
+236,mes_another_name_040,174C33CED602AA65,the Hoenn Champion,0,17488
+237,mes_another_name_041,174C32CED602A8B2,the Shining Star,0,17528
+238,mes_another_name_042,174C31CED602A6FF,the Former Star,0,17564
+239,mes_another_name_043,174C30CED602A54C,the Vintage Beauty,0,17596
+240,mes_another_name_044,174C2FCED602A399,the Former Idol,0,17636
+241,mes_another_name_045,174C2ECED602A1E6,the Historic Genius,0,17668
+242,mes_another_name_046,174C2DCED602A033,the Formerly Buff,0,17708
+243,mes_another_name_047,174C2CCED6029E80,the Alola Champion,0,17744
+244,mes_another_name_048,174C3BCED602B7FD,the Royal Master,0,17784
+245,mes_another_name_049,174C3ACED602B64A,the Tree Victor,0,17820
+246,mes_another_name_050,17492DCED6006A5C,the Tree Master,0,17852
+247,mes_another_name_051,17492ECED6006C0F,the Galar Champion,0,17884
+248,mes_another_name_052,17492FCED6006DC2,the Tower Master,0,17924
+249,mes_another_name_053,174930CED6006F75,the Rank Master,0,17960
+250,mes_another_name_054,174929CED6006390,the Peckish,0,17992
+251,mes_another_name_055,17492ACED6006543,the Sleepy,0,18016
+252,mes_another_name_056,17492BCED60066F6,the Dozy,0,18040
+253,mes_another_name_057,17492CCED60068A9,the Early Riser,0,18060
+254,mes_another_name_058,174935CED60077F4,the Cloud Watcher,0,18092
+255,mes_another_name_059,174936CED60079A7,the Sodden,0,18128
+256,mes_another_name_060,17533FCED608DD77,the Thunderstruck,0,18152
+257,mes_another_name_061,17533ECED608DBC4,the Snow Frolicker,0,18188
+258,mes_another_name_062,175341CED608E0DD,the Shivering,0,18228
+259,mes_another_name_063,175340CED608DF2A,the Parched,0,18256
+260,mes_another_name_064,17533BCED608D6AB,the Sandswept,0,18280
+261,mes_another_name_065,17533ACED608D4F8,the Mist Drifter,0,18308
+262,mes_another_name_066,17533DCED608DA11,the Chosen One,0,18344
+263,mes_another_name_067,17533CCED608D85E,the Catch of the Day,0,18376
+264,mes_another_name_068,175337CED608CFDF,the Curry Connoisseur,0,18420
+265,mes_another_name_069,175336CED608CE2C,the Sociable,0,18464
+266,mes_another_name_070,174FB9CED605C3EE,the Recluse,0,18492
+267,mes_another_name_071,174FBACED605C5A1,the Rowdy,0,18516
+268,mes_another_name_072,174FB7CED605C088,the Spacey,0,18536
+269,mes_another_name_075,174FBECED605CC6D,the Anxious,0,18560
+270,mes_another_name_076,174FBBCED605C754,the Giddy,0,18584
+271,mes_another_name_077,174FBCCED605C907,the Radiant,0,18604
+272,mes_another_name_078,174FB1CED605B656,the Serene,0,18628
+273,mes_another_name_079,174FB2CED605B809,the Feisty,0,18652
+274,mes_another_name_080,1723ABCED5E07139,the Daydreamer,0,18676
+275,mes_another_name_081,1723AACED5E06F86,the Joyful,0,18708
+276,mes_another_name_082,1723A9CED5E06DD3,the Furious,0,18732
+277,mes_another_name_083,1723A8CED5E06C20,the Beaming,0,18756
+278,mes_another_name_084,1723AFCED5E07805,the Teary-Eyed,0,18780
+279,mes_another_name_085,1723AECED5E07652,the Chipper,0,18812
+280,mes_another_name_086,1723ADCED5E0749F,the Grumpy,0,18836
+281,mes_another_name_087,1723ACCED5E072EC,the Scholar,0,18860
+282,mes_another_name_088,1723B3CED5E07ED1,the Rampaging,0,18884
+283,mes_another_name_089,1723B2CED5E07D1E,the Opportunist,0,18912
+284,mes_another_name_090,172025CED5DD57B0,the Stern,0,18944
+285,mes_another_name_091,172026CED5DD5963,the Kindhearted,0,18964
+286,mes_another_name_092,172027CED5DD5B16,the Easily Flustered,0,18996
+287,mes_another_name_093,172028CED5DD5CC9,the Driven,0,19040
+288,mes_another_name_094,172029CED5DD5E7C,the Apathetic,0,19064
+289,mes_another_name_095,17202ACED5DD602F,the Arrogant,0,19092
+290,mes_another_name_096,17202BCED5DD61E2,the Reluctant,0,19120
+291,mes_another_name_097,17202CCED5DD6395,the Humble,0,19148
+292,mes_another_name_098,17202DCED5DD6548,the Pompous,0,19172
+293,mes_another_name_099,17202ECED5DD66FB,the Lively,0,19196
+294,mes_another_name_100,0E2880CED0B2F056,the Worn-Out,0,19220

@@ -1,0 +1,131 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_tuucyou_index_010,EFA9AF3486E7F097,手帳,0,908
+1,nx_tuucyou_index_020,EF9F9D3486DF7D7C,明細,0,916
+2,NewText,8DE439F775E32B02,[REF:2],0,924
+3,nx_tuucyou_button_000,88E616ECF0AED77C,返回,0,936
+4,nx_tuucyou_button_001,88E617ECF0AED92F,說明,0,944
+5,nx_tuucyou_button_010,88E99CECF0B1F105,目前為止的紀錄,0,952
+6,nx_tuucyou_button_020,88ED22ECF0B50A8E,明細,0,968
+7,nx_tuucyou_button_030,88F028ECF0B74A97,切換,0,976
+8,NewText,8DE439F775E32B02,[REF:8],0,984
+9,nx_tuucyou_detailed_010,FCA759CB436AA60D,目前為止的紀錄,0,996
+10,nx_tuucyou_detailed_020,FCAABFCB436D8936,以數字回顧目前為止的紀錄。,0,1012
+11,nx_tuucyou_detailed_021,FCAAC0CB436D8AE9,寶可夢盒與點數使用明細。,0,1040
+12,nx_tuucyou_detailed_030,FCADC5CB436FC93F,[REF:12],0,1068
+13,nx_tuucyou_detailed_040,FC963BCB435BFFE0,明細,0,1080
+14,nx_tuucyou_detailed_050,FC99C1CB435F1969,目前為止的紀錄,0,1088
+15,nx_tuucyou_detailed_060,FC9CC7CB43615972,寄放過的寶可夢數量,0,1104
+16,nx_tuucyou_detailed_080,FCBEC3CB437E390C,"[CTRL:0208:0000,0000]隻",0,1124
+17,nx_tuucyou_detailed_090,FCC249CB43815295,領取出的寶可夢數量,0,1140
+18,nx_tuucyou_detailed_110,040368CB47370BE6,"[CTRL:0208:0000,0000]隻",0,1160
+19,nx_tuucyou_detailed_120,040002CB473428BD,以智慧型手機交換的數量,0,1176
+20,nx_tuucyou_detailed_140,03F976CB472ECF2B,"[CTRL:0208:0000,0000]隻",0,1200
+21,nx_tuucyou_detailed_150,03F5F0CB472BB5A2,完成的委託數量,0,1216
+22,nx_tuucyou_detailed_170,03EF64CB47265C10,"[CTRL:0208:0000,0000]件",0,1232
+23,NewText,8DE439F775E32B02,[REF:23],0,1248
+24,nx_tuucyou_detailed_180,0421FECB47510857,"[CTRL:0203:0000,0000] / [CTRL:0203:0001,0000]",0,1260
+25,nx_tuucyou_detailed_220,0D169DCB4C792FA8,日期,0,1288
+26,nx_tuucyou_detailed_230,0D19A3CB4C7B6FB1,寄放,0,1296
+27,nx_tuucyou_detailed_240,0D2AA1CB4C89DF7E,領取,0,1304
+28,nx_tuucyou_detailed_250,0D2E27CB4C8CF907,放生,0,1312
+29,nx_tuucyou_detailed_260,0D2415CB4C8485EC,總數,0,1320
+30,nx_tuucyou_detailed_270,0D279BCB4C879F75,訓練家,0,1328
+31,nx_tuucyou_detailed_280,0D0219CB4C67A652,"[CTRL:0203:0000,0000]/[CTRL:0201:0001]/[CTRL:0201:0002]　[CTRL:0201:0003]:[CTRL:0201:0004]",0,1336
+32,nx_tuucyou_detailed_320,163A50CB51C8E9B7,"[CTRL:0205:0000,0000]",0,1388
+33,nx_tuucyou_detailed_330,1636CACB51C5D02E,"[CTRL:0205:0000,0000]",0,1400
+34,nx_tuucyou_detailed_340,1625CCCB51B76061,"[CTRL:0205:0000,0000]",0,1412
+35,nx_tuucyou_detailed_350,162246CB51B446D8,"[CTRL:0205:0000,0000]",0,1424
+36,nx_tuucyou_detailed_360,162CB8CB51BD5D13,[CTRL:0189:0000],0,1436
+37,nx_tuucyou_detailed_369,162CBFCB51BD68F8,[REF:37],0,1448
+38,nx_tuucyou_detailed_370,162952CB51BA79EA,[REF:38],0,1460
+39,nx_tuucyou_detailed_371,162953CB51BA7B9D,[REF:39],0,1472
+40,nx_tuucyou_detailed_372,162950CB51BA7684,[REF:40],0,1484
+41,nx_tuucyou_detailed_373,162951CB51BA7837,[REF:41],0,1496
+42,nx_tuucyou_detailed_380,161854CB51AC0A1D,透過神秘禮物獲得了[CTRL:0101:0000],0,1508
+43,nx_tuucyou_detailed_381,161853CB51AC086A,透過交換獲得了[CTRL:0101:0000],0,1536
+44,nx_tuucyou_detailed_382,161852CB51AC06B7,來自寶可夢虛擬銀行的轉移,0,1560
+45,nx_tuucyou_detailed_383,161851CB51AC0504,使用了「Pokémon HOME點數」,0,1588
+46,nx_tuucyou_detailed_384,161850CB51AC0351,透過初次特典獲得了[CTRL:0101:0000],0,1628
+47,nx_tuucyou_detailed_385,16184FCB51AC019E,從巨木博士那裡獲得了[CTRL:0101:0000],0,1656
+48,	,AF66E44C86071324,[REF:48],0,1688
+49,nx_tuucyou_detailed_390,1614CECB51A8F094,Pokémon HOME,0,1700
+50,nx_tuucyou_detailed_400,D8B7A7CB2EB26278,"IDNo.[CTRL:0205:0000,0000]",0,1728
+51,nx_tuucyou_detailed_420,D8BE33CB2EB7BC0A,[CTRL:0100:0000],0,1752
+52,nx_tuucyou_detailed_440,D8C51FCB2EBDB8BC,[CTRL:01D9:0000],0,1764
+53,nx_tuucyou_detailed_450,D8C8A5CB2EC0D245,透過奇蹟盒子獲得了[CTRL:0101:0000],0,1776
+54,nx_tuucyou_detailed_460,D8CC2BCB2EC3EBCE,透過GTS獲得了[CTRL:0101:0000],0,1804
+55,nx_tuucyou_detailed_470,D8CF31CB2EC62BD7,透過朋友交換獲得了[CTRL:0101:0000],0,1832
+56,nx_tuucyou_detailed_471,D8CF30CB2EC62A24,透過群組交換獲得了[CTRL:0101:0000],0,1860
+57,nx_tuucyou_detailed_480,D89C97CB2E9B7F90,神秘禮物,0,1888
+58,nx_tuucyou_detailed_481,D89C98CB2E9B8143,『Pokémon HOME』初次特典,0,1900
+59,nx_tuucyou_detailed_482,D89C99CB2E9B82F6,最初選擇的寶可夢,0,1940
+60,nx_tuucyou_detailed_490,D89F9DCB2E9DBF99,[REF:60],0,1960
+61,nx_tuucyou_detailed_500,E1CDC2CB33F68FE3,[REF:61],0,1972
+62,nx_tuucyou_detailed_501,E1CDC1CB33F68E30,"已將[CTRL:0205:0000,0000]點數兌換為[CTRL:0205:0001,0000]BP",0,1984
+63,nx_tuucyou_detailed_508,E1CDCACB33F69D7B,"已將[CTRL:0205:0000,0000]點數兌換為[CTRL:0206:0000,0000]FP",0,2024
+64,nx_tuucyou_detailed_509,E1CDC9CB33F69BC8,"已將[CTRL:0205:0000,0000]點數兌換為[CTRL:0206:0001,0000]LP",0,2064
+65,nx_tuucyou_detailed_502,E1CDC4CB33F69349,"接收了[CTRL:0203:0000,0000]隻寶可夢",0,2104
+66,nx_tuucyou_detailed_503,E1CDC3CB33F69196,使用了「Pokémon HOME點數」,0,2132
+67,nx_tuucyou_detailed_504,E1CDC6CB33F696AF,來自寶可夢虛擬銀行的轉移,0,2172
+68,nx_tuucyou_detailed_505,E1CDC5CB33F694FC,寶可夢虛擬銀行裡面是空的。,0,2200
+69,nx_tuucyou_detailed_510,E1CA5CCB33F3ACBA,[CTRL:0102:0000] ([CTRL:0101:0001]),0,2228
+70,nx_tuucyou_detailed_520,E1C6D6CB33F09331,[CTRL:0102:0000],0,2252
+71,nx_tuucyou_detailed_530,E1C3D0CB33EE5328,Lv.[CTRL:0202:0000],0,2264
+72,nx_tuucyou_detailed_540,E1DB5ACB34021C87,"No.[CTRL:0203:0000,0000]",0,2280
+73,nx_tuucyou_detailed_550,E1D7D4CB33FF02FE,[CTRL:0101:0000],0,2300
+74,nx_tuucyou_detailed_560,E1D4CECB33FCC2F5,沒有明細,0,2312
+75,nx_tuucyou_detailed_570,E1D148CB33F9A96C,正在取得資料……,0,2324
+76,nx_tuucyou_detailed_580,E1B2D2CB33DFE35B,寄放,0,2344
+77,nx_tuucyou_detailed_590,E1AF4CCB33DCC9D2,領取,0,2352
+78,nx_tuucyou_detailed_600,EAE3FDCB393AF3AE,放生,0,2360
+79,	,AF66E44C86071324,[REF:79],0,2368
+80,nx_tuucyou_detailed_610,EAE783CB393E0D37,啟動天數,0,2380
+81,nx_tuucyou_detailed_612,EAE785CB393E109D,"[CTRL:0208:0000,0000]天",0,2392
+82,nx_tuucyou_detailed_613,EAE784CB393E0EEA,累計獲得點數,0,2408
+83,nx_tuucyou_detailed_615,EAE77ECB393E04B8,"[CTRL:0208:0000,0000]點數",0,2424
+84,	,AF66E44C86071324,[REF:84],0,2440
+85,nx_tuucyou_help1_010,0BBA28329029897D,"這裡是手帳選單！
+在這個畫面，你可以回顧
+『Pokémon HOME』的使用狀況喔萌！
+詳細資訊請到各個畫面確認！",0,2452
+86,NewText,8DE439F775E32B02,[REF:86],0,2568
+87,nx_tuucyou_help2_010,316954097B1FC6C8,"在「目前為止的紀錄」中，
+可以看到『Pokémon HOME』裡
+各項紀錄的統計數字喔萌！",0,2580
+88,nx_tuucyou_help2_020,3173C6097B28DD03,"用數字回顧紀錄，
+說不定會發現意外的結果喔萌！",0,2672
+89,NewText,8DE439F775E32B02,[REF:89],0,2720
+90,nx_tuucyou_help3_010,6474C03736B32B97,"在這個明細選單中，
+可以查看過去『Pokémon HOME』
+盒子的連動結果喔萌！",0,2732
+91,nx_tuucyou_help3_020,646AAE3736AAB87C,"按下A鍵選擇想詳細查看的明細，
+就能在個別頁面中確認
+寄放或領取過的寶可夢喔萌！",0,2816
+92,nx_tuucyou_help3_030,646E343736ADD205,"不過呢，即使在一次的連動中，
+一口氣寄放或領取許～多寶可夢，
+個別頁面上最多只能顯示３００隻！
+明細會從舊的部分開始移除喔萌！",0,2900
+93,nx_tuucyou_help3_031,646E333736ADD052,"對了，你也能在這裡確認轉移明細，
+以及用智慧型手機版接收的寶可夢。
+更厲害的是！還能在這個選單確認
+使用了多少「Pokémon HOME點數」喔萌！",0,3028
+94,	,AF66E44C86071324,[REF:94],0,3180
+95,nx_tuucyou_help4_010,DD1FEE2622BBEA42,"這裡是明細的詳細資訊畫面！
+在各個使用明細上可以查看
+有哪些寶可夢進出『Pokémon HOME』！
+按L鍵或R鍵就能翻頁喔萌！",0,3192
+96,nx_tuucyou_detailed_386,16184ECB51ABFFEB,來自『Pokémon GO』的傳送,0,3324
+97,nx_tuucyou_detailed_506,E1CDC8CB33F69A15,來自『Pokémon GO』的傳送,0,3360
+98,nx_tuucyou_detailed_507,E1CDC7CB33F69862,"已傳送[CTRL:0203:0000,0000]隻寶可夢。",0,3396
+99,nx_tuucyou_synapse_01,97D8813347E58E48,去『Pokémon Champions』遠征,0,3424
+100,nx_tuucyou_synapse_02,97D8843347E59361,從『Pokémon Champions』回來了,0,3472
+101,nx_tuucyou_synapse_03,97D8833347E591AE,去『Pokémon Champions』遠征,0,3520
+102,nx_tuucyou_synapse_04,97D8863347E596C7,"已派[CTRL:0203:0000,0000]隻寶可夢去遠征。",0,3568
+103,nx_tuucyou_synapse_05,97D8853347E59514,從『Pokémon Champions』回來了,0,3600
+104,nx_tuucyou_synapse_06,97D8883347E59A2D,"有[CTRL:0203:0000,0000]隻寶可夢回來了。",0,3648
+105,	,AF66E44C86071324,[REF:105],0,3680
+106,nx_tuucyou_gbasoft_01,57FBB802B7193C9D,從『寶可夢 火紅』傳送過來了,0,3692
+107,nx_tuucyou_gbasoft_02,57FBB502B7193784,從『寶可夢 葉綠』傳送過來了,0,3724
+108,nx_tuucyou_gbasoft_03,57FBB602B7193937,從『寶可夢 火紅』傳送過來了,0,3756
+109,nx_tuucyou_gbasoft_04,57FBB302B719341E,從『寶可夢 葉綠』傳送過來了,0,3788
+110,nx_tuucyou_gbasoft_05,57FBB402B71935D1,"接收了[CTRL:0203:0000,0000]隻寶可夢",0,3820

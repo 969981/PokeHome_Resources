@@ -1,0 +1,605 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,TOKUSEIINFO_SV_000,B14E7FE23B199A4E,-,0,2508
+1,TOKUSEIINFO_SV_001,B14E80E23B199C01,"By releasing a stench when attacking, the Pokémon may
+cause the target to flinch.",0,2512
+2,TOKUSEIINFO_SV_002,B14E7DE23B1996E8,The Pokémon makes it rain when it enters a battle.,0,2676
+3,TOKUSEIINFO_SV_003,B14E7EE23B19989B,The Pokémon’s Speed stat is boosted every turn.,0,2780
+4,TOKUSEIINFO_SV_004,B14E83E23B19A11A,Hard armor protects the Pokémon from critical hits.,0,2876
+5,TOKUSEIINFO_SV_005,B14E84E23B19A2CD,"The Pokémon cannot be knocked out by a single hit
+as long as its HP is full. One-hit KO moves will also
+fail to knock it out.",0,2980
+6,TOKUSEIINFO_SV_006,B14E81E23B199DB4,"The Pokémon dampens its surroundings, preventing
+all Pokémon from using explosive moves such as
+Self-Destruct.",0,3232
+7,TOKUSEIINFO_SV_007,B14E82E23B199F67,"The Pokémon’s limber body prevents it from being
+paralyzed.",0,3456
+8,TOKUSEIINFO_SV_008,B14E77E23B198CB6,Boosts the Pokémon’s evasiveness in a sandstorm.,0,3576
+9,TOKUSEIINFO_SV_009,B14E78E23B198E69,"The Pokémon is charged with static electricity and may
+paralyze attackers that make direct contact with it.",0,3676
+10,TOKUSEIINFO_SV_010,B15185E23B1BDA57,"If hit by an Electric-type move, the Pokémon has its HP
+restored instead of taking damage.",4,3892
+11,TOKUSEIINFO_SV_011,B15184E23B1BD8A4,"If hit by a Water-type move, the Pokémon has its HP
+restored instead of taking damage.",4,4076
+12,TOKUSEIINFO_SV_012,B15187E23B1BDDBD,"The Pokémon is oblivious, keeping it from being
+infatuated, falling for taunts, or being affected by
+Intimidate.",0,4252
+13,TOKUSEIINFO_SV_013,B15186E23B1BDC0A,Eliminates the effects of weather.,4,4480
+14,TOKUSEIINFO_SV_014,B15181E23B1BD38B,The Pokémon’s compound eyes boost its accuracy.,0,4552
+15,TOKUSEIINFO_SV_015,B15180E23B1BD1D8,The Pokémon’s insomnia prevents it from falling asleep.,0,4648
+16,TOKUSEIINFO_SV_016,B15183E23B1BD6F1,"The Pokémon’s type becomes the type of the move
+used on it.",0,4760
+17,TOKUSEIINFO_SV_017,B15182E23B1BD53E,"The Pokémon’s immune system prevents it from being
+poisoned.",0,4880
+18,TOKUSEIINFO_SV_018,B1517DE23B1BCCBF,"If hit by a Fire-type move, the Pokémon absorbs
+the flames and uses them to power up its own
+Fire-type moves.",4,5004
+19,TOKUSEIINFO_SV_019,B1517CE23B1BCB0C,"Protective dust shields the Pokémon from the additional
+effects of moves.",0,5224
+20,TOKUSEIINFO_SV_020,B14773E23B13673C,"The Pokémon sticks to its own tempo, preventing it from
+becoming confused or being affected by Intimidate.",0,5372
+21,TOKUSEIINFO_SV_021,B14774E23B1368EF,"The Pokémon uses suction cups to stay in one spot.
+This protects it from moves and items that would
+force it to switch out.",0,5588
+22,TOKUSEIINFO_SV_022,B14775E23B136AA2,"When the Pokémon enters a battle, it intimidates
+opposing Pokémon and makes them cower,
+lowering their Attack stats.",0,5836
+23,TOKUSEIINFO_SV_023,B14776E23B136C55,"The Pokémon steps on the opposing Pokémon’s shadows
+to prevent them from fleeing or switching out.",0,6072
+24,TOKUSEIINFO_SV_024,B1476FE23B136070,"The Pokémon’s rough skin damages attackers that make
+direct contact with it.",0,6272
+25,TOKUSEIINFO_SV_025,B14770E23B136223,"Its mysterious power only lets supereffective moves
+hit the Pokémon.",4,6428
+26,TOKUSEIINFO_SV_026,B14771E23B1363D6,"By floating in the air, the Pokémon receives full immunity
+to all Ground-type moves.",0,6568
+27,TOKUSEIINFO_SV_027,B14772E23B136589,"Contact with the Pokémon may inflict poison, sleep,
+or paralysis on the attacker.",0,6740
+28,TOKUSEIINFO_SV_028,B1477BE23B1374D4,"If the Pokémon is burned, paralyzed, or poisoned by
+another Pokémon, that Pokémon will be inflicted with
+the same status condition.",4,6904
+29,TOKUSEIINFO_SV_029,B1477CE23B137687,"Prevents other Pokémon’s moves or Abilities from
+lowering the Pokémon’s stats.",0,7168
+30,TOKUSEIINFO_SV_030,B14AF9E23B1680C5,"The Pokémon’s status conditions are cured when it
+switches out.",0,7328
+31,TOKUSEIINFO_SV_031,B14AF8E23B167F12,"The Pokémon draws in all Electric-type moves. Instead
+of taking damage from them, its Sp. Atk stat is boosted.",0,7456
+32,TOKUSEIINFO_SV_032,B14AF7E23B167D5F,"Raises the likelihood of additional effects occurring
+when the Pokémon uses its moves.",0,7680
+33,TOKUSEIINFO_SV_033,B14AF6E23B167BAC,Boosts the Pokémon’s Speed stat in rain.,0,7856
+34,TOKUSEIINFO_SV_034,B14AF5E23B1679F9,Boosts the Pokémon’s Speed stat in harsh sunlight.,0,7940
+35,TOKUSEIINFO_SV_035,B14AF4E23B167846,"By illuminating its surroundings, the Pokémon prevents
+its accuracy from being lowered.",0,8044
+36,TOKUSEIINFO_SV_036,B14AF3E23B167693,"When it enters a battle, the Pokémon copies an
+opposing Pokémon’s Ability.",0,8220
+37,TOKUSEIINFO_SV_037,B14AF2E23B1674E0,Doubles the Pokémon’s Attack stat.,0,8372
+38,TOKUSEIINFO_SV_038,B14B01E23B168E5D,Contact with the Pokémon may poison the attacker.,0,8444
+39,TOKUSEIINFO_SV_039,B14B00E23B168CAA,"The Pokémon’s intense focus prevents it from flinching
+or being affected by Intimidate.",0,8544
+40,TOKUSEIINFO_SV_040,B14087E23B0D6A8A,"The Pokémon’s hot magma coating prevents it from
+being frozen.",0,8720
+41,TOKUSEIINFO_SV_041,B14088E23B0D6C3D,The Pokémon’s water veil prevents it from being burned.,0,8848
+42,TOKUSEIINFO_SV_042,B14085E23B0D6724,"Prevents Steel-type Pokémon from fleeing by pulling
+them in with magnetism.",0,8960
+43,TOKUSEIINFO_SV_043,B14086E23B0D68D7,"Soundproofing gives the Pokémon full immunity to all
+sound-based moves.",0,9112
+44,TOKUSEIINFO_SV_044,B14083E23B0D63BE,The Pokémon gradually regains HP in rain.,0,9256
+45,TOKUSEIINFO_SV_045,B14084E23B0D6571,"The Pokémon summons a sandstorm when it enters
+a battle.",0,9340
+46,TOKUSEIINFO_SV_046,B14081E23B0D6058,"Puts other Pokémon under pressure, causing them to
+expend more PP to use their moves.",0,9456
+47,TOKUSEIINFO_SV_047,B14082E23B0D620B,"The Pokémon is protected by a layer of thick fat, which
+halves the damage taken from Fire- and Ice-type moves.",0,9628
+48,TOKUSEIINFO_SV_048,B1407FE23B0D5CF2,"The Pokémon awakens from sleep twice as fast
+as other Pokémon.",0,9852
+49,TOKUSEIINFO_SV_049,B14080E23B0D5EA5,Contact with the Pokémon may burn the attacker.,0,9980
+50,TOKUSEIINFO_SV_050,B143EDE23B104DB3,Enables a sure getaway from wild Pokémon.,4,10076
+51,TOKUSEIINFO_SV_051,B143ECE23B104C00,"The Pokémon’s keen eyes prevent its accuracy from
+being lowered.",0,10160
+52,TOKUSEIINFO_SV_052,B143EFE23B105119,"The Pokémon’s prized, mighty pincers prevent other
+Pokémon from lowering its Attack stat.",0,10292
+53,TOKUSEIINFO_SV_053,B143EEE23B104F66,"The Pokémon may pick up an item another Pokémon
+used during a battle. It may pick up items outside of
+battle, too.",0,10472
+54,TOKUSEIINFO_SV_054,B143F1E23B10547F,"Each time the Pokémon uses a move, it spends the next
+turn loafing around.",4,10704
+55,TOKUSEIINFO_SV_055,B143F0E23B1052CC,Boosts the Pokémon’s Attack stat but lowers its accuracy.,0,10856
+56,TOKUSEIINFO_SV_056,B143F3E23B1057E5,"The Pokémon may infatuate attackers that make direct
+contact with it.",0,10972
+57,TOKUSEIINFO_SV_057,B143F2E23B105632,"Boosts the Sp. Atk stat of the Pokémon if an ally with
+the Plus or Minus Ability is also in battle.",0,11112
+58,TOKUSEIINFO_SV_058,B143F5E23B105B4B,"Boosts the Sp. Atk stat of the Pokémon if an ally
+with the Plus or Minus Ability is also in battle.",0,11312
+59,TOKUSEIINFO_SV_059,B143F4E23B105998,"The Pokémon transforms with the weather to change
+its type to Water, Fire, or Ice.",0,11512
+60,TOKUSEIINFO_SV_060,B139FBE23B0810F8,"The Pokémon’s held items cling to its sticky body and
+cannot be removed by other Pokémon.",0,11680
+61,TOKUSEIINFO_SV_061,B139FCE23B0812AB,"The Pokémon may cure its own status conditions by
+shedding its skin.",0,11860
+62,TOKUSEIINFO_SV_062,B139FDE23B08145E,"It’s so gutsy that having a status condition boosts
+the Pokémon’s Attack stat.",4,12000
+63,TOKUSEIINFO_SV_063,B139FEE23B081611,"The Pokémon’s marvelous scales boost its Defense stat
+if it has a status condition.",0,12160
+64,TOKUSEIINFO_SV_064,B139FFE23B0817C4,"The strong stench of the Pokémon’s oozed liquid
+damages attackers that use HP-draining moves.",0,12328
+65,TOKUSEIINFO_SV_065,B13A00E23B081977,"Powers up Grass-type moves when the Pokémon’s HP
+is low.",0,12516
+66,TOKUSEIINFO_SV_066,B13A01E23B081B2A,"Powers up Fire-type moves when the Pokémon’s HP
+is low.",0,12632
+67,TOKUSEIINFO_SV_067,B13A02E23B081CDD,"Powers up Water-type moves when the Pokémon’s HP
+is low.",0,12744
+68,TOKUSEIINFO_SV_068,B139F3E23B080360,"Powers up Bug-type moves when the Pokémon’s HP
+is low.",0,12860
+69,TOKUSEIINFO_SV_069,B139F4E23B080513,Protects the Pokémon from recoil damage.,0,12972
+70,TOKUSEIINFO_SV_070,B13D81E23B0B2A81,"Turns the sunlight harsh when the Pokémon enters
+a battle.",0,13056
+71,TOKUSEIINFO_SV_071,B13D80E23B0B28CE,Prevents opposing Pokémon from fleeing from battle.,0,13176
+72,TOKUSEIINFO_SV_072,B13D7FE23B0B271B,"The Pokémon is full of vitality, and that prevents it from
+falling asleep.",0,13280
+73,TOKUSEIINFO_SV_073,B13D7EE23B0B2568,"The Pokémon is protected by its white smoke, which
+prevents other Pokémon from lowering its stats.",0,13432
+74,TOKUSEIINFO_SV_074,B13D85E23B0B314D,"Using its pure power, the Pokémon doubles its
+Attack stat.",4,13632
+75,TOKUSEIINFO_SV_075,B13D84E23B0B2F9A,A hard shell protects the Pokémon from critical hits.,4,13752
+76,TOKUSEIINFO_SV_076,B13D83E23B0B2DE7,Eliminates the effects of weather.,4,13860
+77,TOKUSEIINFO_SV_077,B13D82E23B0B2C34,Boosts the Pokémon’s evasiveness if it is confused.,0,13932
+78,TOKUSEIINFO_SV_078,B13D79E23B0B1CE9,"The Pokémon takes no damage when hit by Electric-type
+moves. Instead, its Speed stat is boosted.",0,14036
+79,TOKUSEIINFO_SV_079,B13D78E23B0B1B36,"The Pokémon’s competitive spirit makes it deal more
+damage to Pokémon of the same gender, but less
+damage to Pokémon of the opposite gender.",0,14232
+80,TOKUSEIINFO_SV_080,B132EFE23B01DDE6,"The Pokémon’s determination boosts its Speed stat
+every time it flinches.",0,14516
+81,TOKUSEIINFO_SV_081,B132F0E23B01DF99,Boosts the Pokémon’s evasiveness in snow.,0,14664
+82,TOKUSEIINFO_SV_082,B132EDE23B01DA80,"If the Pokémon is holding a Berry to be eaten when its
+HP is low, it will instead eat the Berry when its HP drops
+to half or less.",4,14748
+83,TOKUSEIINFO_SV_083,B132EEE23B01DC33,"The Pokémon is angered when it takes a critical hit,
+and that maxes its Attack stat.",0,15012
+84,TOKUSEIINFO_SV_084,B132F3E23B01E4B2,"Boosts the Speed stat if the Pokémon’s held item is
+used or lost.",0,15184
+85,TOKUSEIINFO_SV_085,B132F4E23B01E665,"The Pokémon’s heatproof body halves the damage
+taken from Fire-type moves.",0,15316
+86,TOKUSEIINFO_SV_086,B132F1E23B01E14C,Doubles the effects of the Pokémon’s stat changes.,0,15468
+87,TOKUSEIINFO_SV_087,B132F2E23B01E2FF,"Restores the Pokémon’s HP in rain or when it is hit by
+Water-type moves. Reduces HP in harsh sunlight, and
+increases the damage received from Fire-type moves.",0,15572
+88,TOKUSEIINFO_SV_088,B132F7E23B01EB7E,"The Pokémon compares an opposing Pokémon’s
+Defense and Sp. Def stats before raising its own
+Attack or Sp. Atk stat—whichever will be more effective.",0,15892
+89,TOKUSEIINFO_SV_089,B132F8E23B01ED31,Powers up punching moves.,0,16192
+90,TOKUSEIINFO_SV_090,B13675E23B04F76F,"If poisoned, the Pokémon has its HP restored instead of
+taking damage.",4,16244
+91,TOKUSEIINFO_SV_091,B13674E23B04F5BC,Powers up moves of the same type as the Pokémon.,0,16388
+92,TOKUSEIINFO_SV_092,B13677E23B04FAD5,Maximizes the number of times multistrike moves hit.,0,16488
+93,TOKUSEIINFO_SV_093,B13676E23B04F922,Cures the Pokémon’s status conditions in rain.,0,16596
+94,TOKUSEIINFO_SV_094,B13671E23B04F0A3,"In harsh sunlight, the Pokémon’s Sp. Atk stat is boosted,
+but its HP decreases every turn.",4,16692
+95,TOKUSEIINFO_SV_095,B13670E23B04EEF0,"Boosts the Speed stat if the Pokémon has a status
+condition.",0,16876
+96,TOKUSEIINFO_SV_096,B13673E23B04F409,"All the Pokémon’s moves become Normal type.
+The power of those moves is boosted a little.",4,17000
+97,TOKUSEIINFO_SV_097,B13672E23B04F256,"If the Pokémon’s attack lands a critical hit, the attack is
+powered up even further.",4,17180
+98,TOKUSEIINFO_SV_098,B1367DE23B050507,The Pokémon only takes damage from attacks.,0,17352
+99,TOKUSEIINFO_SV_099,B1367CE23B050354,"The Pokémon employs no-guard tactics to ensure
+incoming and outgoing attacks always land.",0,17440
+100,TOKUSEIINFO_SV_100,B9F79AE24000F5D9,The Pokémon is always the last to use its moves.,0,17620
+101,TOKUSEIINFO_SV_101,B9F799E24000F426,"Powers up weak moves so the Pokémon can deal more
+damage with them.",0,17720
+102,TOKUSEIINFO_SV_102,B9F798E24000F273,Prevents status conditions in harsh sunlight.,0,17856
+103,TOKUSEIINFO_SV_103,B9F797E24000F0C0,The Pokémon can’t use any held items.,0,17948
+104,TOKUSEIINFO_SV_104,B9F79EE24000FCA5,"The Pokémon’s moves are unimpeded by the Ability
+of the target.",0,18024
+105,TOKUSEIINFO_SV_105,B9F79DE24000FAF2,"The Pokémon is so lucky that the critical-hit ratios
+of its moves are boosted.",0,18152
+106,TOKUSEIINFO_SV_106,B9F79CE24000F93F,"Damages the attacker if it knocks out the Pokémon with
+a move that makes direct contact.",0,18312
+107,TOKUSEIINFO_SV_107,B9F79BE24000F78C,"The Pokémon can sense an opposing Pokémon’s
+dangerous moves.",0,18492
+108,TOKUSEIINFO_SV_108,B9F7A2E240010371,"When it enters a battle, the Pokémon can tell one of
+the moves an opposing Pokémon has.",0,18616
+109,TOKUSEIINFO_SV_109,B9F7A1E2400101BE,"When attacking, the Pokémon ignores the target’s
+stat changes.",0,18792
+110,TOKUSEIINFO_SV_110,B9F494E23FFEB5D0,"The Pokémon can use “not very effective” moves
+to deal regular damage.",0,18920
+111,TOKUSEIINFO_SV_111,B9F495E23FFEB783,"Reduces the power of supereffective attacks that hit
+the Pokémon.",0,19064
+112,TOKUSEIINFO_SV_112,B9F496E23FFEB936,"For five turns, the Pokémon’s Attack and Speed stats
+are halved.",0,19196
+113,TOKUSEIINFO_SV_113,B9F497E23FFEBAE9,"The Pokémon can hit Ghost-type Pokémon with Normal-
+and Fighting-type moves. It is also unaffected by
+Intimidate.",0,19328
+114,TOKUSEIINFO_SV_114,B9F498E23FFEBC9C,"The Pokémon draws in all Water-type moves. Instead of
+taking damage from them, its Sp. Atk stat is boosted.",0,19556
+115,TOKUSEIINFO_SV_115,B9F499E23FFEBE4F,The Pokémon gradually regains HP in snow.,0,19772
+116,TOKUSEIINFO_SV_116,B9F49AE23FFEC002,"Reduces the power of supereffective attacks that hit
+the Pokémon.",0,19856
+117,TOKUSEIINFO_SV_117,B9F49BE23FFEC1B5,The Pokémon makes it snow when it enters a battle.,0,19988
+118,TOKUSEIINFO_SV_118,B9F49CE23FFEC368,The Pokémon may gather Honey after a battle.,0,20092
+119,TOKUSEIINFO_SV_119,B9F49DE23FFEC51B,"When it enters a battle, the Pokémon can check an
+opposing Pokémon’s held item.",0,20184
+120,TOKUSEIINFO_SV_120,B9FEA6E2400728EB,Powers up moves that have recoil damage.,0,20344
+121,TOKUSEIINFO_SV_121,B9FEA5E240072738,Changes the Pokémon’s type to match the plate it holds.,0,20428
+122,TOKUSEIINFO_SV_122,B9FEA8E240072C51,"Boosts the Attack and Sp. Def stats of the Pokémon and
+its allies in harsh sunlight.",0,20540
+123,TOKUSEIINFO_SV_123,B9FEA7E240072A9E,Damages opposing Pokémon that are asleep.,0,20712
+124,TOKUSEIINFO_SV_124,B9FEAAE240072FB7,"The Pokémon steals the held item from attackers that
+make direct contact with it.",0,20796
+125,TOKUSEIINFO_SV_125,B9FEA9E240072E04,"Removes any additional effects from the Pokémon’s
+moves, but increases the moves’ power.",0,20960
+126,TOKUSEIINFO_SV_126,B9FEACE24007331D,"Reverses any stat changes affecting the Pokémon
+so that attempts to boost its stats instead lower them—
+and attempts to lower its stats will boost them.",0,21140
+127,TOKUSEIINFO_SV_127,B9FEABE24007316A,"Unnerves opposing Pokémon and makes them unable
+to eat Berries.",4,21448
+128,TOKUSEIINFO_SV_128,B9FE9EE240071B53,"If the Pokémon has any stat lowered by an opposing
+Pokémon, its Attack stat will be boosted sharply.",4,21576
+129,TOKUSEIINFO_SV_129,B9FE9DE2400719A0,"Halves the Pokémon’s Attack and Sp. Atk stats when its
+HP drops to half or less.",0,21780
+130,TOKUSEIINFO_SV_130,B9FB20E240040F62,"May disable a move that has dealt damage to
+the Pokémon.",0,21944
+131,TOKUSEIINFO_SV_131,B9FB21E240041115,"Sometimes cures the status conditions of the
+Pokémon’s allies.",0,22060
+132,TOKUSEIINFO_SV_132,B9FB1EE240040BFC,Reduces damage dealt to allies.,0,22188
+133,TOKUSEIINFO_SV_133,B9FB1FE240040DAF,"The Pokémon’s Defense stat is lowered when it takes
+damage from physical moves, but its Speed stat is
+sharply boosted.",0,22252
+134,TOKUSEIINFO_SV_134,B9FB1CE240040896,Doubles the Pokémon’s weight.,0,22492
+135,TOKUSEIINFO_SV_135,B9FB1DE240040A49,Halves the Pokémon’s weight.,0,22552
+136,TOKUSEIINFO_SV_136,B9FB1AE240040530,"Reduces the amount of damage the Pokémon takes
+while its HP is full.",0,22612
+137,TOKUSEIINFO_SV_137,B9FB1BE2400406E3,"Powers up physical moves when the Pokémon
+is poisoned.",0,22752
+138,TOKUSEIINFO_SV_138,B9FB28E240041CFA,Powers up special moves when the Pokémon is burned.,0,22864
+139,TOKUSEIINFO_SV_139,B9FB29E240041EAD,May create another Berry after one is used.,0,22968
+140,TOKUSEIINFO_SV_140,BA0532E2400C827D,"The Pokémon anticipates and dodges the attacks
+of its allies.",0,23056
+141,TOKUSEIINFO_SV_141,BA0531E2400C80CA,"Every turn, one of the Pokémon’s stats will be boosted
+sharply but another stat will be lowered.",4,23180
+142,TOKUSEIINFO_SV_142,BA0530E2400C7F17,"The Pokémon takes no damage from sandstorms. It is
+also protected from the effects of powders and spores.",0,23376
+143,TOKUSEIINFO_SV_143,BA052FE2400C7D64,May poison a target when the Pokémon makes contact.,0,23588
+144,TOKUSEIINFO_SV_144,BA052EE2400C7BB1,"The Pokémon has a little of its HP restored when
+withdrawn from battle.",0,23692
+145,TOKUSEIINFO_SV_145,BA052DE2400C79FE,"Prevents the Pokémon from having its Defense
+stat lowered.",0,23836
+146,TOKUSEIINFO_SV_146,BA052CE2400C784B,Boosts the Pokémon’s Speed stat in a sandstorm.,0,23956
+147,TOKUSEIINFO_SV_147,BA052BE2400C7698,Makes status moves more likely to miss the Pokémon.,0,24052
+148,TOKUSEIINFO_SV_148,BA052AE2400C74E5,"Boosts the power of the Pokémon’s move if it is the last
+to act that turn.",0,24156
+149,TOKUSEIINFO_SV_149,BA0529E2400C7332,"The Pokémon fools opponents by entering battle
+disguised as the last Pokémon in its Trainer’s party.",0,24308
+150,TOKUSEIINFO_SV_150,BA022CE2400A4274,"The Pokémon transforms itself into the Pokémon
+it’s facing.",0,24512
+151,TOKUSEIINFO_SV_151,BA022DE2400A4427,"The Pokémon’s moves are unaffected by the target’s
+barriers, substitutes, and the like.",0,24632
+152,TOKUSEIINFO_SV_152,BA022EE2400A45DA,"Contact with the Pokémon changes the attacker’s
+Ability to Mummy.",0,24808
+153,TOKUSEIINFO_SV_153,BA022FE2400A478D,"When the Pokémon knocks out a target, it shows moxie,
+which boosts its Attack stat.",0,24940
+154,TOKUSEIINFO_SV_154,BA0228E2400A3BA8,"When the Pokémon is hit by a Dark-type attack,
+its Attack stat is boosted by its sense of justice.",0,25108
+155,TOKUSEIINFO_SV_155,BA0229E2400A3D5B,"The Pokémon gets scared when hit by a Dark-, Ghost-,
+or Bug-type attack or if intimidated, which boosts its
+Speed stat.",0,25308
+156,TOKUSEIINFO_SV_156,BA022AE2400A3F0E,"The Pokémon reflects status moves instead of getting
+hit by them.",0,25548
+157,TOKUSEIINFO_SV_157,BA022BE2400A40C1,"The Pokémon takes no damage when hit by Grass-type
+moves. Instead, its Attack stat is boosted.",0,25680
+158,TOKUSEIINFO_SV_158,BA0224E2400A34DC,Gives priority to the Pokémon’s status moves.,0,25872
+159,TOKUSEIINFO_SV_159,BA0225E2400A368F,"Boosts the power of Rock-, Ground-, and Steel-type
+moves in a sandstorm.",0,25964
+160,TOKUSEIINFO_SV_160,BA0C1EE240127F2F,"The Pokémon’s iron barbs damage the attacker if it
+makes direct contact.",0,26112
+161,TOKUSEIINFO_SV_161,BA0C1DE240127D7C,"Changes the Pokémon’s shape when its HP drops
+to half or less.",0,26260
+162,TOKUSEIINFO_SV_162,BA0C20E240128295,Boosts the accuracy of the Pokémon and its allies.,0,26388
+163,TOKUSEIINFO_SV_163,BA0C1FE2401280E2,"The Pokémon’s moves are unimpeded by the Ability
+of the target.",0,26492
+164,TOKUSEIINFO_SV_164,BA0C1AE240127863,"The Pokémon’s moves are unimpeded by the Ability
+of the target.",0,26620
+165,TOKUSEIINFO_SV_165,BA0C19E2401276B0,"Protects the Pokémon and its allies from effects that
+prevent the use of moves.",0,26748
+166,TOKUSEIINFO_SV_166,BA0C1CE240127BC9,"Ally Grass-type Pokémon are protected from status
+conditions and the lowering of their stats.",4,26908
+167,TOKUSEIINFO_SV_167,BA0C1BE240127A16,"The Pokémon’s HP is restored when it eats any Berry,
+in addition to the Berry’s usual effect.",0,27096
+168,TOKUSEIINFO_SV_168,BA0C26E240128CC7,"Changes the Pokémon’s type to the type of the move
+it’s about to use. This works only once each time the
+Pokémon enters battle.",0,27284
+169,TOKUSEIINFO_SV_169,BA0C25E240128B14,Halves the damage from physical moves.,0,27540
+170,TOKUSEIINFO_SV_170,BA0898E2400F65A6,"The Pokémon steals the held item from any target it hits
+with a move.",0,27620
+171,TOKUSEIINFO_SV_171,BA0899E2400F6759,Protects the Pokémon from ball and bomb moves.,0,27760
+172,TOKUSEIINFO_SV_172,BA0896E2400F6240,"Boosts the Pokémon’s Sp. Atk stat sharply when its stats
+are lowered by an opposing Pokémon.",0,27856
+173,TOKUSEIINFO_SV_173,BA0897E2400F63F3,"The Pokémon’s strong jaw boosts the power of its
+biting moves.",0,28044
+174,TOKUSEIINFO_SV_174,BA089CE2400F6C72,"Normal-type moves become Ice-type moves.
+The power of those moves is boosted a little.",0,28172
+175,TOKUSEIINFO_SV_175,BA089DE2400F6E25,Prevents the Pokémon and its allies from falling asleep.,0,28348
+176,TOKUSEIINFO_SV_176,BA089AE2400F690C,"The Pokémon changes its form to Blade Forme when
+it uses an attack move and changes to Shield Forme
+when it uses King’s Shield.",0,28464
+177,TOKUSEIINFO_SV_177,BA089BE2400F6ABF,"Gives priority to the Pokémon’s Flying-type moves
+while its HP is full.",0,28720
+178,TOKUSEIINFO_SV_178,BA08A0E2400F733E,Powers up pulse moves.,0,28864
+179,TOKUSEIINFO_SV_179,BA08A1E2400F74F1,Boosts the Pokémon’s Defense stat on Grassy Terrain.,0,28912
+180,TOKUSEIINFO_SV_180,BA132AE24018B241,"The Pokémon passes its held item to an ally that has
+used up an item.",0,29020
+181,TOKUSEIINFO_SV_181,BA1329E24018B08E,Powers up moves that make direct contact.,0,29160
+182,TOKUSEIINFO_SV_182,BA1328E24018AEDB,"Normal-type moves become Fairy-type moves.
+The power of those moves is boosted a little.",0,29244
+183,TOKUSEIINFO_SV_183,BA1327E24018AD28,"Contact with the Pokémon lowers the attacker’s
+Speed stat.",0,29424
+184,TOKUSEIINFO_SV_184,BA132EE24018B90D,"Normal-type moves become Flying-type moves.
+The power of those moves is boosted a little.",0,29544
+185,TOKUSEIINFO_SV_185,BA132DE24018B75A,The parent and child attack one after the other.,0,29724
+186,TOKUSEIINFO_SV_186,BA132CE24018B5A7,"Powers up the Dark-type moves of all Pokémon
+on the field.",0,29824
+187,TOKUSEIINFO_SV_187,BA132BE24018B3F4,"Powers up the Fairy-type moves of all Pokémon
+on the field.",0,29944
+188,TOKUSEIINFO_SV_188,BA1322E24018A4A9,"The effects of “Aura” Abilities are reversed to lower the
+power of affected moves.",0,30064
+189,TOKUSEIINFO_SV_189,BA1321E24018A2F6,"The Pokémon changes the weather to nullify
+Fire-type attacks.",0,30232
+190,TOKUSEIINFO_SV_190,BA0FA4E2401598B8,"The Pokémon changes the weather to nullify
+Water-type attacks.",0,30356
+191,TOKUSEIINFO_SV_191,BA0FA5E240159A6B,"The Pokémon changes the weather so that no moves are
+super effective against the Flying type.",0,30484
+192,TOKUSEIINFO_SV_192,BA0FA6E240159C1E,"Boosts the Defense stat when the Pokémon is hit
+by an attack.",0,30672
+193,TOKUSEIINFO_SV_193,BA0FA7E240159DD1,"The Pokémon cowardly switches out when its HP drops
+to half or less.",0,30796
+194,TOKUSEIINFO_SV_194,BA0FA8E240159F84,"The Pokémon, sensing danger, switches out when its HP
+drops to half or less.",0,30936
+195,TOKUSEIINFO_SV_195,BA0FA9E24015A137,"Boosts the Defense stat sharply when the Pokémon is hit
+by a Water-type move.",0,31092
+196,TOKUSEIINFO_SV_196,BA0FAAE24015A2EA,"The Pokémon’s attacks become critical hits if the target
+is poisoned.",0,31248
+197,TOKUSEIINFO_SV_197,BA0FABE24015A49D,"When its HP drops to half or less, the Pokémon’s shell
+breaks and it becomes aggressive.",0,31388
+198,TOKUSEIINFO_SV_198,BA0F9CE240158B20,"Doubles the damage dealt to a target that has just
+switched into battle.",0,31568
+199,TOKUSEIINFO_SV_199,BA0F9DE240158CD3,"Lowers the power of Fire-type moves that hit the
+Pokémon and prevents it from being burned.",0,31716
+200,TOKUSEIINFO_SV_200,A0D4A9E23201C418,Powers up Steel-type moves.,0,31900
+201,TOKUSEIINFO_SV_201,A0D4AAE23201C5CB,"Boosts the Pokémon’s Sp. Atk stat when it takes a hit
+that causes its HP to drop to half or less.",0,31956
+202,TOKUSEIINFO_SV_202,A0D4ABE23201C77E,Boosts the Pokémon’s Speed stat in snow.,0,32152
+203,TOKUSEIINFO_SV_203,A0D4ACE23201C931,"The Pokémon uses its moves without making contact
+with the target.",0,32236
+204,TOKUSEIINFO_SV_204,A0D4ADE23201CAE4,Sound-based moves become Water-type moves.,0,32372
+205,TOKUSEIINFO_SV_205,A0D4AEE23201CC97,Gives priority to the Pokémon’s healing moves.,0,32460
+206,TOKUSEIINFO_SV_206,A0D4AFE23201CE4A,"Normal-type moves become Electric-type moves.
+The power of those moves is boosted a little.",0,32556
+207,TOKUSEIINFO_SV_207,A0D4B0E23201CFFD,Doubles the Pokémon’s Speed stat on Electric Terrain.,0,32740
+208,TOKUSEIINFO_SV_208,A0D4A1E23201B680,"When it has a lot of HP, the Pokémon forms a powerful
+school. It stops schooling when its HP is low.",0,32848
+209,TOKUSEIINFO_SV_209,A0D4A2E23201B833,"Once per battle, the shroud that covers the Pokémon
+can protect it from an attack.",4,33052
+210,TOKUSEIINFO_SV_210,A0D82FE23204DDA1,"When the Pokémon knocks out a target, its bond with its
+Trainer is strengthened, and its Attack, Sp. Atk, and
+Speed stats are boosted.",0,33220
+211,TOKUSEIINFO_SV_211,A0D82EE23204DBEE,"Cells gather to aid the Pokémon when its HP
+drops to half or less, causing it to change into
+its Complete Forme.",0,33492
+212,TOKUSEIINFO_SV_212,A0D82DE23204DA3B,"The Pokémon can poison the target even if it’s a Steel
+or Poison type.",0,33720
+213,TOKUSEIINFO_SV_213,A0D82CE23204D888,"The Pokémon is always drowsing and will never wake up.
+It can attack while in its sleeping state.",0,33864
+214,TOKUSEIINFO_SV_214,A0D833E23204E46D,"The Pokémon’s majesty pressures opponents and makes
+them unable to use priority moves against the Pokémon
+or its allies.",0,34060
+215,TOKUSEIINFO_SV_215,A0D832E23204E2BA,"When the Pokémon is knocked out, it damages its
+attacker by the amount equal to the HP it had left
+before it was hit.",0,34304
+216,TOKUSEIINFO_SV_216,A0D831E23204E107,"Whenever a dance move is used in battle, the Pokémon
+will copy the user to immediately perform that dance
+move itself.",0,34540
+217,TOKUSEIINFO_SV_217,A0D830E23204DF54,Powers up ally Pokémon’s special moves.,0,34780
+218,TOKUSEIINFO_SV_218,A0D827E23204D009,"Halves the damage taken from moves that make direct
+contact, but doubles that of Fire-type moves.",0,34860
+219,TOKUSEIINFO_SV_219,A0D826E23204CE56,"The Pokémon dazzles its opponents, making them
+unable to use priority moves against the Pokémon
+or its allies.",0,35056
+220,TOKUSEIINFO_SV_220,A0DBB5E23207F72A,"Boosts the Pokémon’s Sp. Atk stat every time another
+Pokémon faints.",0,35280
+221,TOKUSEIINFO_SV_221,A0DBB6E23207F8DD,"Contact with the Pokémon lowers the attacker’s
+Speed stat.",0,35420
+222,TOKUSEIINFO_SV_222,A0DBB3E23207F3C4,The Pokémon copies the Ability of a defeated ally.,0,35540
+223,TOKUSEIINFO_SV_223,A0DBB4E23207F577,The Pokémon copies the Ability of a defeated ally.,0,35644
+224,TOKUSEIINFO_SV_224,A0DBB1E23207F05E,"Boosts the Pokémon’s most proficient stat every time it
+knocks out a target.",0,35748
+225,TOKUSEIINFO_SV_225,A0DBB2E23207F211,"Changes the Pokémon’s type to match the memory disc
+it holds.",0,35904
+226,TOKUSEIINFO_SV_226,A0DBAFE23207ECF8,"Turns the ground into Electric Terrain when the Pokémon
+enters a battle.",0,36028
+227,TOKUSEIINFO_SV_227,A0DBB0E23207EEAB,"Turns the ground into Psychic Terrain when the Pokémon
+enters a battle.",0,36176
+228,TOKUSEIINFO_SV_228,A0DBADE23207E992,"Turns the ground into Misty Terrain when the Pokémon
+enters a battle.",0,36320
+229,TOKUSEIINFO_SV_229,A0DBAEE23207EB45,"Turns the ground into Grassy Terrain when the Pokémon
+enters a battle.",0,36460
+230,TOKUSEIINFO_SV_230,A0DF1BE2320ADA53,"Prevents other Pokémon’s moves or Abilities from
+lowering the Pokémon’s stats.",0,36604
+231,TOKUSEIINFO_SV_231,A0DF1AE2320AD8A0,"Reduces the amount of damage the Pokémon takes
+while its HP is full.",0,36764
+232,TOKUSEIINFO_SV_232,A0DF1DE2320ADDB9,"Reduces the power of supereffective attacks that hit
+the Pokémon.",0,36904
+233,TOKUSEIINFO_SV_233,A0DF1CE2320ADC06,"Powers up the Pokémon’s supereffective attacks even
+further.",0,37036
+234,TOKUSEIINFO_SV_234,A0DF1FE2320AE11F,"Boosts the Pokémon’s Attack stat the first time the
+Pokémon enters a battle.",0,37160
+235,TOKUSEIINFO_SV_235,A0DF1EE2320ADF6C,"Boosts the Pokémon’s Defense stat the first time the
+Pokémon enters a battle.",0,37316
+236,TOKUSEIINFO_SV_236,A0DF21E2320AE485,"Changes the Pokémon’s type to the type of the move
+it’s about to use. This works only once each time the
+Pokémon enters battle.",0,37472
+237,TOKUSEIINFO_SV_237,A0DF20E2320AE2D2,"If the Pokémon is not holding an item, it will fetch the
+Poké Ball from the first failed throw of the battle.",4,37728
+238,TOKUSEIINFO_SV_238,A0DF23E2320AE7EB,"When the Pokémon is hit by an attack, it scatters cotton
+fluff around and lowers the Speed stats of all Pokémon
+except itself.",0,37948
+239,TOKUSEIINFO_SV_239,A0DF22E2320AE638,"Ignores the effects of opposing Pokémon’s Abilities and
+moves that draw in moves.",4,38204
+240,TOKUSEIINFO_SV_240,A0E2A1E2320DF3DC,"Bounces back only the stat-lowering effects that the
+Pokémon receives.",0,38368
+241,TOKUSEIINFO_SV_241,A0E2A2E2320DF58F,"When the Pokémon uses Surf or Dive, it will come back
+with prey. When it takes damage, it will spit out the prey
+to attack.",0,38512
+242,TOKUSEIINFO_SV_242,A0E2A3E2320DF742,"Ignores the effects of opposing Pokémon’s Abilities and
+moves that draw in moves.",4,38760
+243,TOKUSEIINFO_SV_243,A0E2A4E2320DF8F5,"Boosts the Speed stat drastically when the Pokémon is
+hit by a Fire- or Water-type move.",0,38924
+244,TOKUSEIINFO_SV_244,A0E29DE2320DED10,"Boosts the power of sound-based moves. The Pokémon
+also takes half the damage from these kinds of moves.",0,39104
+245,TOKUSEIINFO_SV_245,A0E29EE2320DEEC3,"The Pokémon creates a sandstorm when it’s hit by
+an attack.",0,39316
+246,TOKUSEIINFO_SV_246,A0E29FE2320DF076,"The Pokémon is protected by ice scales, which halve
+the damage taken from special moves.",0,39436
+247,TOKUSEIINFO_SV_247,A0E2A0E2320DF229,Ripens Berries and doubles their effect.,0,39616
+248,TOKUSEIINFO_SV_248,A0E2A9E2320E0174,"The Pokémon’s ice head can take a physical attack as
+a substitute, but the attack also changes the Pokémon’s
+appearance. The ice will be restored when it snows.",0,39700
+249,TOKUSEIINFO_SV_249,A0E2AAE2320E0327,Just being next to the Pokémon powers up moves.,0,40024
+250,TOKUSEIINFO_SV_250,A0E5A7E2321033E5,Changes the Pokémon’s type depending on the terrain.,0,40120
+251,TOKUSEIINFO_SV_251,A0E5A6E232103232,"When the Pokémon enters a battle, the effects of
+Light Screen, Reflect, and Aurora Veil are nullified for
+both opposing and ally Pokémon.",0,40228
+252,TOKUSEIINFO_SV_252,A0E5A5E23210307F,"Powers up the Steel-type moves of the Pokémon
+and its allies.",0,40504
+253,TOKUSEIINFO_SV_253,A0E5A4E232102ECC,"When hit by a move that makes direct contact, the
+Pokémon and the attacker will faint after three turns
+unless they switch out of battle.",0,40628
+254,TOKUSEIINFO_SV_254,A0E5A3E232102D19,"The Pokémon exchanges Abilities with a Pokémon that
+hits it with a move that makes direct contact.",0,40904
+255,TOKUSEIINFO_SV_255,A0E5A2E232102B66,"Boosts the Pokémon’s Attack stat but only allows the
+use of the first selected move.",0,41104
+256,TOKUSEIINFO_SV_256,A0E5A1E2321029B3,"While the Pokémon is in the battle, the effects of all
+other Pokémon’s Abilities will be nullified or will not
+be triggered.",0,41276
+257,TOKUSEIINFO_SV_257,A0E5A0E232102800,"Prevents the Pokémon and its allies from being
+poisoned.",0,41528
+258,TOKUSEIINFO_SV_258,A0E5AFE23210417D,"The Pokémon changes its form, alternating between
+its Full Belly Mode and Hangry Mode after the end of
+every turn.",0,41644
+259,TOKUSEIINFO_SV_259,A0E5AEE232103FCA,Enables the Pokémon to move first occasionally.,4,41876
+260,TOKUSEIINFO_SV_260,A0E92DE232134D6E,"If the Pokémon uses moves that make direct contact,
+it can attack the target even if the target protects itself.",4,41972
+261,TOKUSEIINFO_SV_261,A0E92EE232134F21,"When the Pokémon enters a battle, it scatters medicine
+from its shell, which removes all stat changes from allies.",0,42200
+262,TOKUSEIINFO_SV_262,A0E92BE232134A08,Powers up Electric-type moves.,0,42432
+263,TOKUSEIINFO_SV_263,A0E92CE232134BBB,Powers up Dragon-type moves.,0,42496
+264,TOKUSEIINFO_SV_264,A0E931E23213543A,"When the Pokémon knocks out a target, it utters a
+chilling neigh, which boosts its Attack stat.",0,42556
+265,TOKUSEIINFO_SV_265,A0E932E2321355ED,"When the Pokémon knocks out a target, it utters a
+terrifying neigh, which boosts its Sp. Atk stat.",0,42748
+266,TOKUSEIINFO_SV_266,A0E92FE2321350D4,"This Ability combines the effects of both Calyrex’s
+Unnerve Ability and Glastrier’s Chilling Neigh Ability.",0,42948
+267,TOKUSEIINFO_SV_267,A0E930E232135287,"This Ability combines the effects of both Calyrex’s
+Unnerve Ability and Spectrier’s Grim Neigh Ability.",0,43164
+268,TOKUSEIINFO_SV_268,A0E925E232133FD6,"Contact with the Pokémon changes the attacker’s
+Ability to Lingering Aroma.",0,43372
+269,TOKUSEIINFO_SV_269,A0E926E232134189,"Turns the ground into Grassy Terrain when the Pokémon
+is hit by an attack.",0,43524
+270,TOKUSEIINFO_SV_270,A0ECB3E2321666F7,"Boosts the Attack stat when the Pokémon is hit by a
+Fire-type move. The Pokémon also cannot be burned.",0,43676
+271,TOKUSEIINFO_SV_271,A0ECB2E232166544,"When an attack causes its HP to drop to half or less, the
+Pokémon gets angry. This lowers its Defense and Sp. Def
+stats but boosts its Attack, Sp. Atk, and Speed stats.",0,43884
+272,TOKUSEIINFO_SV_272,A0ECB5E232166A5D,"The Pokémon’s pure salt protects it from status
+conditions and halves the damage taken from
+Ghost-type moves.",0,44224
+273,TOKUSEIINFO_SV_273,A0ECB4E2321668AA,"The Pokémon takes no damage when hit by Fire-type
+moves. Instead, its Defense stat is sharply boosted.",0,44444
+274,TOKUSEIINFO_SV_274,A0ECAFE23216602B,"Boosts the Pokémon’s Attack stat if Tailwind takes effect
+or if the Pokémon is hit by a wind move. The Pokémon
+also takes no damage from wind moves.",0,44652
+275,TOKUSEIINFO_SV_275,A0ECAEE232165E78,"Boosts the Pokémon’s Attack stat if intimidated.
+Moves and items that would force the Pokémon
+to switch out also fail to work.",0,44952
+276,TOKUSEIINFO_SV_276,A0ECB1E232166391,Powers up Rock-type moves.,0,45208
+277,TOKUSEIINFO_SV_277,A0ECB0E2321661DE,"The Pokémon becomes charged when it is hit by a wind
+move, boosting the power of the next Electric-type
+move the Pokémon uses.",0,45264
+278,TOKUSEIINFO_SV_278,A0ECABE23216595F,"The Pokémon transforms into its Hero Form when it
+switches out.",0,45520
+279,TOKUSEIINFO_SV_279,A0ECAAE2321657AC,"When the Pokémon enters a battle, it goes inside the
+mouth of an ally Dondozo if one is on the field.
+The Pokémon then issues commands from there.",0,45648
+280,TOKUSEIINFO_SV_280,A0B999E231EAE130,"The Pokémon becomes charged when it takes damage,
+boosting the power of the next Electric-type move the
+Pokémon uses.",0,45944
+281,TOKUSEIINFO_SV_281,A0B99AE231EAE2E3,"Boosts the Pokémon’s most proficient stat in harsh
+sunlight or if the Pokémon is holding Booster Energy.",0,46180
+282,TOKUSEIINFO_SV_282,A0B99BE231EAE496,"Boosts the Pokémon’s most proficient stat on Electric
+Terrain or if the Pokémon is holding Booster Energy.",0,46392
+283,TOKUSEIINFO_SV_283,A0B99CE231EAE649,"A body of pure, solid gold gives the Pokémon full
+immunity to other Pokémon’s status moves.",4,46608
+284,TOKUSEIINFO_SV_284,A0B99DE231EAE7FC,"The power of the Pokémon’s ruinous vessel lowers the
+Sp. Atk stats of all Pokémon except itself.",0,46792
+285,TOKUSEIINFO_SV_285,A0B99EE231EAE9AF,"The power of the Pokémon’s ruinous sword lowers the
+Defense stats of all Pokémon except itself.",0,46988
+286,TOKUSEIINFO_SV_286,A0B99FE231EAEB62,"The power of the Pokémon’s ruinous wooden tablets
+lowers the Attack stats of all Pokémon except itself.",0,47180
+287,TOKUSEIINFO_SV_287,A0B9A0E231EAED15,"The power of the Pokémon’s ruinous beads lowers the
+Sp. Def stats of all Pokémon except itself.",0,47388
+288,TOKUSEIINFO_SV_288,A0B9A1E231EAEEC8,"Turns the sunlight harsh when the Pokémon enters a
+battle. The ancient pulse thrumming through the
+Pokémon also boosts its Attack stat in harsh sunlight.",0,47580
+289,TOKUSEIINFO_SV_289,A0B9A2E231EAF07B,"Turns the ground into Electric Terrain when the Pokémon
+enters a battle. The futuristic engine within the Pokémon
+also boosts its Sp. Atk stat on Electric Terrain.",0,47888
+290,TOKUSEIINFO_SV_290,A0BD1FE231EDFAB9,"If an opponent’s stat is boosted, the Pokémon seizes the
+opportunity to boost the same stat for itself.",4,48216
+291,TOKUSEIINFO_SV_291,A0BD1EE231EDF906,"When the Pokémon eats a Berry, it will regurgitate
+that Berry at the end of the next turn and eat it one
+more time.",0,48424
+292,TOKUSEIINFO_SV_292,A0BD1DE231EDF753,Powers up slicing moves.,0,48656
+293,TOKUSEIINFO_SV_293,A0BD1CE231EDF5A0,"When the Pokémon enters a battle, its Attack and
+Sp. Atk stats are slightly boosted for each of the allies
+in its party that have already been defeated.",0,48708
+294,TOKUSEIINFO_SV_294,A0BD23E231EE0185,"When the Pokémon enters a battle, it copies an ally’s
+stat changes.",0,49016
+295,TOKUSEIINFO_SV_295,A0BD22E231EDFFD2,"Scatters poison spikes at the feet of the opposing team
+when the Pokémon takes damage from physical moves.",0,49152
+296,TOKUSEIINFO_SV_296,A0BD21E231EDFE1F,"The mysterious tail covering the Pokémon’s head makes
+opponents unable to use priority moves against the
+Pokémon or its allies.",0,49368
+297,TOKUSEIINFO_SV_297,A0BD20E231EDFC6C,"If hit by a Ground-type move, the Pokémon has its HP
+restored instead of taking damage.",4,49624
+298,TOKUSEIINFO_SV_298,A0BD27E231EE0851,"The Pokémon will always act more slowly when using
+status moves, but these moves will be unimpeded by
+the Ability of the target.",0,49800
+299,TOKUSEIINFO_SV_299,A0BD26E231EE069E,"When the Pokémon enters a battle, it showers its ally
+with hospitality, restoring a small amount of the ally’s HP.",0,50060
+300,TOKUSEIINFO_SV_300,A9EB44E23746CB03,"The Pokémon ignores changes to opponents’
+evasiveness, its accuracy can’t be lowered, and it can
+hit Ghost types with Normal- and Fighting-type moves.",0,50292
+301,TOKUSEIINFO_SV_301,A9EB43E23746C950,"The Pokémon’s heart fills with memories, causing the
+Teal Mask to shine and the Pokémon’s Speed stat to
+be boosted.",0,50596
+302,TOKUSEIINFO_SV_302,A9EB46E23746CE69,"The Pokémon’s heart fills with memories, causing the
+Hearthflame Mask to shine and the Pokémon’s Attack
+stat to be boosted.",0,50828
+303,TOKUSEIINFO_SV_303,A9EB45E23746CCB6,"The Pokémon’s heart fills with memories, causing the
+Wellspring Mask to shine and the Pokémon’s Sp. Def
+stat to be boosted.",0,51076
+304,TOKUSEIINFO_SV_304,A9EB48E23746D1CF,"The Pokémon’s heart fills with memories, causing the
+Cornerstone Mask to shine and the Pokémon’s Defense
+stat to be boosted.",0,51324
+305,TOKUSEIINFO_SV_305,A9EB47E23746D01C,"The power of the Pokémon’s toxic chain may badly
+poison any target the Pokémon hits with a move.",0,51576
+306,TOKUSEIINFO_SV_306,A9EB4AE23746D535,"A sickly sweet scent spreads across the field the
+first time the Pokémon enters a battle, lowering
+the evasiveness of opposing Pokémon.",4,51772
+307,TOKUSEIINFO_SV_307,A9EB49E23746D382,"When the Pokémon enters a battle, it absorbs the energy
+around itself and transforms into its Terastal Form.",0,52044
+308,TOKUSEIINFO_SV_308,A9EB4CE23746D89B,"The Pokémon’s shell contains the powers of each type.
+All damage-dealing moves that hit the Pokémon when its
+HP is full will not be very effective.",0,52264
+309,TOKUSEIINFO_SV_309,A9EB4BE23746D6E8,"When Terapagos changes into its Stellar Form, it uses
+its hidden powers to eliminate all effects of weather and
+terrain, reducing them to zero.",0,52560
+310,TOKUSEIINFO_SV_310,A9E7DEE23743E7DA,"Pokémon poisoned by Pecharunt’s moves will also
+become confused.",0,52848

@@ -1,0 +1,63 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,error_maintenance_010,DEFD4837D0B0BA8B,"L’application est en cours de maintenance.
+Elle sera de nouveau disponible
+le [CTRL:0201:0002]/[CTRL:0201:0001]/[CTRL:0203:0000,0000] à [CTRL:0201:0003]:[CTRL:0201:0004].",0,180
+1,error_maintenance_020,DEF33637D0A84770,"L’application est en cours de maintenance.
+Veuillez patienter jusqu’à la fin de la maintenance.",0,396
+2,error_maintenance_030,DEF6BC37D0AB60F9,"Une maintenance d’urgence est en cours.
+Veuillez patienter jusqu’à la fin de la maintenance.
+Nous vous prions de nous excuser pour la gêne
+occasionnée.",4,588
+3,error_maintenance_040,DF07BA37D0B9D0C6,[REF:3],0,892
+4,error_maintenance_050,DF0B4037D0BCEA4F,[REF:4],0,904
+5,error_maintenance_060,DF00CE37D0B3D414,"Une erreur est survenue.
+Retour à l’écran titre.
+Code d’erreur : [CTRL:0204:0000,0000]",4,916
+6,error_maintenance_061,DF00CF37D0B3D5C7,"Une erreur est survenue.
+Retour à l’écran titre.",4,1060
+7,error_maintenance_070,DF045437D0B6ED9D,"Une erreur est survenue.
+Veuillez recommencer l’opération.
+Code d’erreur : [CTRL:0204:0000,0000]",4,1160
+8,error_maintenance_080,DF155237D0C55D6A,"Votre session a expiré.
+Retour à l’écran titre.",0,1324
+9,error_maintenance_090,DF18B837D0C84093,"Votre compte est actif sur un autre appareil.
+Retour à l’écran titre.",0,1420
+10,error_maintenance_100,E8107D37D5F2DE4D,"Vous avez effectué trop d’opérations
+à la suite dans vos Boîtes.
+Veuillez réessayer ultérieurement.",0,1560
+11,error_maintenance_990,2CD0BF37FCBC0554,"Impossible d’utiliser Pokémon HOME
+avec ce compte.",4,1760
+12,error_maintenance_999,2CD0B837FCBBF96F,Pokémon HOME n’est plus en service.,0,1864
+13,error_maintenance_200,CD3A6C37C681E1AC,"L’accès au compte premium que vous utilisiez
+sur votre appareil mobile est actuellement
+interrompu.
+Veuillez vous rendre dans le menu « Gérer
+le renouvellement » pour vérifier le statut
+de votre compte.",0,1936
+14,error_save_sv_001,5078FA5A8DC16A3D,"Une erreur est survenue lors de la sauvegarde
+avec le jeu synchronisé.
+Si vous avez uniquement effectué des modifications
+dans les Boîtes de Pokémon HOME, celles-ci ont été
+sauvegardées. Si vous avez effectué des modifications
+dans les Boîtes du jeu synchronisé, celles-ci n’ont
+été sauvegardées ni dans les Boîtes du jeu
+en question, ni dans celles de Pokémon HOME.
+Retour à l’écran titre.",4,2344
+15,error_maintenance_300,D650A737CBC64577,"Les transferts provenant de cet identifiant
+Nintendo Network ont été restreints.",0,3128
+16,error_maintenance_110,E80CF737D5EFC4C4,"La maintenance est terminée. L’accès à
+Pokémon HOME est actuellement limité afin
+de stabiliser la charge subie par les serveurs
+et redeviendra possible progressivement.
+Merci de votre patience.",0,3292
+17,	,AF66E44C86071324,[REF:17],0,3680
+18,error_save_gba_001,49093D0A743FFC18,"Une erreur est survenue lors de la sauvegarde
+avec le jeu synchronisé.
+Aucun envoi de Pokémon entre ce jeu
+et Pokémon HOME n’a donc été effectué.
+
+Retour à l’écran titre.",4,3692
+19,error_account_gba_001,C0F989DC026CCB4E,"Votre compte est actuellement soumis à des restrictions
+empêchant l’utilisation de cette fonctionnalité.[CLEAR]
+La synchronisation avec le jeu Game Boy Advance (GBA)
+a donc été interrompue.",0,4036

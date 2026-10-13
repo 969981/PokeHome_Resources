@@ -2,11 +2,13 @@
   "parser_version": "mirror-0.1.1",
   "primary_collision_count": 0,
   "romfs_bytes": 1054426820,
-  "selected": 5096,
+  "selected": 3062,
   "source_files": 12074,
   "status_counts": {
-    "not_run": 6978,
-    "partial": 5096
+    "converted": 2931,
+    "not_run": 3916,
+    "partial": 5216,
+    "unsupported": 11
   },
-  "total_outputs": 5096
+  "total_outputs": 8147
 }

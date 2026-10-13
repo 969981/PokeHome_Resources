@@ -1,0 +1,477 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,TOKUSEIINFO_LPLE_000,60D50874BC6FC7EC,-,0,1892
+1,TOKUSEIINFO_LPLE_001,60D50974BC6FC99F,"Le Pokémon émet une odeur si nauséabonde
+qu’il peut effrayer sa cible.",0,1896
+2,TOKUSEIINFO_LPLE_002,60D50A74BC6FCB52,"Le Pokémon invoque la pluie quand il entre
+au combat.",0,2040
+3,TOKUSEIINFO_LPLE_003,60D50B74BC6FCD05,La Vitesse du Pokémon augmente à chaque tour.,0,2148
+4,TOKUSEIINFO_LPLE_004,60D50474BC6FC120,"Le Pokémon est protégé des coups critiques
+par une solide carapace.",0,2240
+5,TOKUSEIINFO_LPLE_005,60D50574BC6FC2D3,"Le Pokémon encaisse toujours au moins une attaque
+s’il a tous ses PV. Il est également immunisé contre
+les capacités pouvant mettre K.O. en un coup.",0,2376
+6,TOKUSEIINFO_LPLE_006,60D50674BC6FC486,"Le Pokémon augmente l’humidité de l’air,
+ce qui empêche tous les Pokémon d’utiliser
+des capacités explosives telles que Destruction.",0,2676
+7,TOKUSEIINFO_LPLE_007,60D50774BC6FC639,"Le Pokémon s’est suffisamment échauffé,
+ce qui l’immunise contre la paralysie.",0,2944
+8,TOKUSEIINFO_LPLE_008,60D51074BC6FD584,"Augmente l’Esquive du Pokémon lors des tempêtes
+de sable.",4,3104
+9,TOKUSEIINFO_LPLE_009,60D51174BC6FD737,"Le Pokémon charge son corps en électricité statique,
+et tout contact avec lui peut paralyser.",0,3220
+10,TOKUSEIINFO_LPLE_010,60D88E74BC72E175,"Si le Pokémon est touché par une capacité Électrik,
+il ne subit aucun dégât et regagne des PV à la place.",0,3408
+11,TOKUSEIINFO_LPLE_011,60D88D74BC72DFC2,"Si le Pokémon est touché par une capacité Eau,
+il ne subit aucun dégât et regagne des PV à la place.",0,3620
+12,TOKUSEIINFO_LPLE_012,60D88C74BC72DE0F,"Le Pokémon est un grand benêt, ce qui l’immunise
+contre l’attraction ou la provocation.",0,3824
+13,TOKUSEIINFO_LPLE_013,60D88B74BC72DC5C,Annule tous les effets liés à la météo.,4,4000
+14,TOKUSEIINFO_LPLE_014,60D88A74BC72DAA9,"Les yeux à facettes du Pokémon augmentent
+sa Précision.",0,4080
+15,TOKUSEIINFO_LPLE_015,60D88974BC72D8F6,Le Pokémon est incapable de dormir.,0,4192
+16,TOKUSEIINFO_LPLE_016,60D88874BC72D743,"Lorsque le Pokémon est touché par une capacité,
+il prend le type de celle-ci.",0,4264
+17,TOKUSEIINFO_LPLE_017,60D88774BC72D590,"Le Pokémon est naturellement immunisé
+contre toute forme de poison.",0,4420
+18,TOKUSEIINFO_LPLE_018,60D89674BC72EF0D,"Lorsque le Pokémon est touché par une capacité
+de type Feu, il absorbe la chaleur pour renforcer
+ses propres capacités Feu.",0,4556
+19,TOKUSEIINFO_LPLE_019,60D89574BC72ED5A,"Le Pokémon dispose d’un écran naturel qui le
+protège des effets additionnels des attaques
+ennemies.",0,4804
+20,TOKUSEIINFO_LPLE_020,60DB9474BC75217E,"Le Pokémon vit sa vie à son propre rythme,
+ce qui l’immunise contre la confusion.",0,5004
+21,TOKUSEIINFO_LPLE_021,60DB9574BC752331,"Le Pokémon est solidement fixé au sol, ce qui
+le protège des capacités ou objets qui font changer
+de Pokémon.",0,5168
+22,TOKUSEIINFO_LPLE_022,60DB9274BC751E18,"Le Pokémon rugit lorsqu’il arrive au combat,
+ce qui intimide l’ennemi et baisse son Attaque.",0,5388
+23,TOKUSEIINFO_LPLE_023,60DB9374BC751FCB,Empêche le Pokémon ennemi de quitter le combat.,4,5576
+24,TOKUSEIINFO_LPLE_024,60DB9874BC75284A,"Blesse l’attaquant lorsque le Pokémon subit
+une attaque directe.",0,5672
+25,TOKUSEIINFO_LPLE_025,60DB9974BC7529FD,"Une puissance mystérieuse protège le Pokémon
+contre toutes les capacités, sauf celles « super
+efficaces ».",4,5804
+26,TOKUSEIINFO_LPLE_026,60DB9674BC7524E4,"Le Pokémon flotte, ce qui l’immunise contre
+les capacités de type Sol.",0,6020
+27,TOKUSEIINFO_LPLE_027,60DB9774BC752697,"Peut paralyser, empoisonner ou endormir l’attaquant
+lorsque le Pokémon subit une attaque directe.",0,6164
+28,TOKUSEIINFO_LPLE_028,60DB8C74BC7513E6,"Quand le Pokémon est brûlé, paralysé ou empoisonné
+par un autre Pokémon, il partage ce statut avec
+celui-ci.",0,6360
+29,TOKUSEIINFO_LPLE_029,60DB8D74BC751599,"Empêche les stats du Pokémon de baisser à cause
+d’une capacité ou d’un talent.",4,6580
+30,TOKUSEIINFO_LPLE_030,60DF1A74BC783B07,"Le Pokémon soigne ses altérations de statut
+en quittant le combat.",0,6740
+31,TOKUSEIINFO_LPLE_031,60DF1974BC783954,"Le Pokémon détourne sur lui les capacités de
+type Électrik et les neutralise, tout en montant
+son Attaque Spéciale.",0,6876
+32,TOKUSEIINFO_LPLE_032,60DF1C74BC783E6D,"Augmente les chances d’infliger des effets
+additionnels.",4,7108
+33,TOKUSEIINFO_LPLE_033,60DF1B74BC783CBA,Augmente la Vitesse du Pokémon s’il pleut.,4,7224
+34,TOKUSEIINFO_LPLE_034,60DF1674BC78343B,Augmente la Vitesse du Pokémon s’il y a du soleil.,4,7312
+35,TOKUSEIINFO_LPLE_035,60DF1574BC783288,"Émet une lumière spécifique qui facilite les
+rencontres avec les Pokémon sauvages.",4,7416
+36,TOKUSEIINFO_LPLE_036,60DF1874BC7837A1,"Lorsque le Pokémon entre au combat, il calque
+le talent d’un ennemi pour remplacer le sien.",0,7584
+37,TOKUSEIINFO_LPLE_037,60DF1774BC7835EE,Double l’Attaque du Pokémon.,0,7768
+38,TOKUSEIINFO_LPLE_038,60DF1274BC782D6F,"Peut empoisonner l’attaquant lorsque le Pokémon
+subit une attaque directe.",0,7828
+39,TOKUSEIINFO_LPLE_039,60DF1174BC782BBC,"Le Pokémon a un mental à toute épreuve qui
+empêche les capacités ennemies de lui faire peur.",0,7980
+40,TOKUSEIINFO_LPLE_040,60C79074BC6471A8,"Le magma qui recouvre le corps du Pokémon
+le protège contre le gel.",0,8168
+41,TOKUSEIINFO_LPLE_041,60C79174BC64735B,"Le voile qui recouvre le Pokémon le protège
+des brûlures.",0,8304
+42,TOKUSEIINFO_LPLE_042,60C79274BC64750E,"Attire les Pokémon Acier grâce à un champ
+magnétique, ce qui les empêche de fuir.",4,8420
+43,TOKUSEIINFO_LPLE_043,60C79374BC6476C1,Protège le Pokémon de toutes les capacités sonores.,0,8584
+44,TOKUSEIINFO_LPLE_044,60C79474BC647874,"Le Pokémon récupère progressivement des PV
+lorsqu’il pleut.",0,8688
+45,TOKUSEIINFO_LPLE_045,60C79574BC647A27,"Le Pokémon invoque une tempête de sable
+quand il entre au combat.",0,8808
+46,TOKUSEIINFO_LPLE_046,60C79674BC647BDA,Force l’ennemi à dépenser plus de PP.,0,8940
+47,TOKUSEIINFO_LPLE_047,60C79774BC647D8D,"Le Pokémon est protégé par une épaisse couche
+de graisse qui diminue de moitié les dégâts qu’il
+subit des capacités de types Feu et Glace.",0,9016
+48,TOKUSEIINFO_LPLE_048,60C78874BC646410,"Le Pokémon se réveille deux fois plus rapidement
+que les autres.",0,9296
+49,TOKUSEIINFO_LPLE_049,60C78974BC6465C3,"Peut brûler l’attaquant lorsque le Pokémon subit
+une attaque directe.",0,9428
+50,TOKUSEIINFO_LPLE_050,60CA9674BC66B1B1,Permet de fuir n’importe quel Pokémon sauvage.,0,9568
+51,TOKUSEIINFO_LPLE_051,60CA9574BC66AFFE,"Les yeux perçants du Pokémon empêchent
+sa Précision de baisser.",0,9664
+52,TOKUSEIINFO_LPLE_052,60CA9474BC66AE4B,"Le Pokémon est armé de lames tranchantes qui font
+sa fierté et empêchent son Attaque de baisser.",0,9792
+53,TOKUSEIINFO_LPLE_053,60CA9374BC66AC98,"Permet parfois au Pokémon de ramasser les objets
+que ses ennemis ont utilisés. Il lui arrive aussi d’en
+trouver hors des combats.",0,9988
+54,TOKUSEIINFO_LPLE_054,60CA9A74BC66B87D,"Lorsque le Pokémon utilise une capacité, il passe
+le tour suivant à paresser.",0,10248
+55,TOKUSEIINFO_LPLE_055,60CA9974BC66B6CA,"Améliore l’Attaque du Pokémon mais diminue
+la Précision.",4,10404
+56,TOKUSEIINFO_LPLE_056,60CA9874BC66B517,"Peut séduire l’attaquant lorsque le Pokémon subit
+une attaque directe.",0,10520
+57,TOKUSEIINFO_LPLE_057,60CA9774BC66B364,"L’Attaque Spéciale du Pokémon augmente
+si un Pokémon allié a le talent Minus ou Plus.",0,10664
+58,TOKUSEIINFO_LPLE_058,60CA8E74BC66A419,"L’Attaque Spéciale du Pokémon augmente
+si un Pokémon allié a le talent Minus ou Plus.",0,10836
+59,TOKUSEIINFO_LPLE_059,60CA8D74BC66A266,"Le Pokémon prend le type Eau, Feu ou Glace
+en fonction de la météo.",0,11008
+60,TOKUSEIINFO_LPLE_060,60CE1C74BC69CB3A,"Les objets sont collés au corps gluant du Pokémon,
+ce qui empêche ses adversaires de les dérober.",0,11144
+61,TOKUSEIINFO_LPLE_061,60CE1D74BC69CCED,"Le Pokémon soigne parfois ses altérations de statut
+en muant.",0,11340
+62,TOKUSEIINFO_LPLE_062,60CE1A74BC69C7D4,"Augmente l’Attaque du Pokémon s’il est affecté
+par une altération de statut.",4,11464
+63,TOKUSEIINFO_LPLE_063,60CE1B74BC69C987,"Les écailles mystérieuses du Pokémon réagissent
+aux altérations de statut en augmentant sa Défense.",0,11620
+64,TOKUSEIINFO_LPLE_064,60CE1874BC69C46E,"Le Pokémon suinte un liquide toxique qui blesse
+tous ceux qui tentent de voler ses PV.",0,11820
+65,TOKUSEIINFO_LPLE_065,60CE1974BC69C621,"Augmente la puissance des capacités de type Plante
+du Pokémon quand il a perdu une certaine quantité
+de PV.",4,11996
+66,TOKUSEIINFO_LPLE_066,60CE1674BC69C108,"Augmente la puissance des capacités de type Feu
+du Pokémon quand il a perdu une certaine quantité
+de PV.",4,12212
+67,TOKUSEIINFO_LPLE_067,60CE1774BC69C2BB,"Augmente la puissance des capacités de type Eau
+du Pokémon quand il a perdu une certaine quantité
+de PV.",4,12424
+68,TOKUSEIINFO_LPLE_068,60CE1474BC69BDA2,"Augmente la puissance des capacités de type
+Insecte du Pokémon quand il a perdu une certaine
+quantité de PV.",4,12636
+69,TOKUSEIINFO_LPLE_069,60CE1574BC69BF55,"Le Pokémon peut utiliser des capacités occasionnant
+un contrecoup sans perdre de PV.",0,12856
+70,TOKUSEIINFO_LPLE_070,60D18274BC6CAE63,"Le soleil se met à briller quand le Pokémon
+entre au combat.",0,13028
+71,TOKUSEIINFO_LPLE_071,60D18174BC6CACB0,Empêche l’ennemi de s’enfuir.,4,13152
+72,TOKUSEIINFO_LPLE_072,60D18474BC6CB1C9,Empêche le Pokémon de s’endormir.,4,13212
+73,TOKUSEIINFO_LPLE_073,60D18374BC6CB016,"Un écran de fumée empêche l’ennemi de baisser
+les stats du Pokémon.",4,13280
+74,TOKUSEIINFO_LPLE_074,60D18674BC6CB52F,"Le Pokémon utilise sa maîtrise du yoga pour doubler
+la puissance de ses capacités physiques.",0,13416
+75,TOKUSEIINFO_LPLE_075,60D18574BC6CB37C,"Le Pokémon est protégé des coups critiques
+par sa carapace.",0,13604
+76,TOKUSEIINFO_LPLE_076,60D18874BC6CB895,Annule tous les effets de la météo.,4,13724
+77,TOKUSEIINFO_LPLE_077,60D18774BC6CB6E2,Augmente l’Esquive du Pokémon s’il est confus.,4,13796
+78,TOKUSEIINFO_LPLE_078,60D18A74BC6CBBFB,"Si le Pokémon est touché par une capacité Électrik,
+il ne subit aucun dégât et sa Vitesse augmente.",0,13892
+79,TOKUSEIINFO_LPLE_079,60D18974BC6CBA48,"Le Pokémon déteste la concurrence et inflige plus
+de dégâts si l’ennemi est du même sexe. Par contre,
+il en inflige moins si l’ennemi est du sexe opposé.",0,14092
+80,TOKUSEIINFO_LPLE_080,60B99874BC5841E4,Augmente la Vitesse du Pokémon quand il a peur.,4,14400
+81,TOKUSEIINFO_LPLE_081,60B99974BC584397,"Augmente l’Esquive du Pokémon durant les tempêtes
+de grêle.",4,14496
+82,TOKUSEIINFO_LPLE_082,60B99A74BC58454A,"Si le Pokémon tient une Baie à manger en cas de PV
+bas, il la mange dès qu’il a perdu la moitié de ses PV.",0,14616
+83,TOKUSEIINFO_LPLE_083,60B99B74BC5846FD,"Si le Pokémon subit un coup critique, il entre
+dans une colère noire qui augmente son Attaque
+au maximum.",0,14832
+84,TOKUSEIINFO_LPLE_084,60B99474BC583B18,"Augmente la Vitesse du Pokémon s’il perd ou utilise
+l’objet qu’il tenait au début du combat.",4,15044
+85,TOKUSEIINFO_LPLE_085,60B99574BC583CCB,"Diminue de moitié les dégâts infligés au Pokémon
+par les capacités de type Feu.",0,15232
+86,TOKUSEIINFO_LPLE_086,60B99674BC583E7E,"Les variations de stats sont deux fois plus
+importantes pour le Pokémon.",0,15392
+87,TOKUSEIINFO_LPLE_087,60B99774BC584031,"Le Pokémon regagne des PV sous la pluie ou s’il
+est touché par une capacité Eau, mais il déteste
+les capacités Feu ou quand le soleil brille.",0,15540
+88,TOKUSEIINFO_LPLE_088,60B99074BC58344C,"Le Pokémon compare la Défense et la Défense
+Spéciale de l’adversaire et augmente son Attaque
+ou son Attaque Spéciale en conséquence.",0,15824
+89,TOKUSEIINFO_LPLE_089,60B99174BC5835FF,"Augmente la puissance des capacités
+coups de poing.",4,16092
+90,TOKUSEIINFO_LPLE_090,60BD1E74BC5B5B6D,"Quand le Pokémon est empoisonné, il regagne des PV
+au lieu d’en perdre.",0,16196
+91,TOKUSEIINFO_LPLE_091,60BD1D74BC5B59BA,"Quand le Pokémon utilise une capacité du même type
+que lui, le bonus de puissance qu’elle reçoit
+est encore plus important que normalement.",0,16340
+92,TOKUSEIINFO_LPLE_092,60BD1C74BC5B5807,"Les capacités pouvant frapper plusieurs fois
+frappent toujours le nombre maximum de coups.",0,16620
+93,TOKUSEIINFO_LPLE_093,60BD1B74BC5B5654,"Soigne les altérations de statut du Pokémon
+quand il pleut.",0,16804
+94,TOKUSEIINFO_LPLE_094,60BD1A74BC5B54A1,"Quand le soleil brille, l’Attaque Spéciale du Pokémon
+augmente mais il perd des PV à chaque tour.",0,16924
+95,TOKUSEIINFO_LPLE_095,60BD1974BC5B52EE,"Augmente la Vitesse du Pokémon en cas d’altération
+de statut.",4,17120
+96,TOKUSEIINFO_LPLE_096,60BD1874BC5B513B,"Toutes les capacités du Pokémon deviennent de
+type Normal, quel que soit leur type original.
+Leur puissance augmente légèrement.",0,17244
+97,TOKUSEIINFO_LPLE_097,60BD1774BC5B4F88,"Lorsque le Pokémon porte un coup critique,
+les dégâts infligés augmentent encore plus
+que d’habitude.",0,17504
+98,TOKUSEIINFO_LPLE_098,60BD1674BC5B4DD5,Seules les attaques peuvent blesser le Pokémon.,0,17708
+99,TOKUSEIINFO_LPLE_099,60BD1574BC5B4C22,"Les capacités du Pokémon touchent l’ennemi
+à coup sûr, et vice-versa.",0,17804
+100,TOKUSEIINFO_LPLE_100,69EB4374C1B42BB7,Le Pokémon utilise toujours sa capacité en dernier.,0,17944
+101,TOKUSEIINFO_LPLE_101,69EB4274C1B42A04,"Augmente la puissance des capacités
+les plus faibles.",4,18048
+102,TOKUSEIINFO_LPLE_102,69EB4574C1B42F1D,"Protège le Pokémon contre les altérations de statut
+quand le soleil brille.",0,18156
+103,TOKUSEIINFO_LPLE_103,69EB4474C1B42D6A,Le Pokémon ne peut utiliser aucun objet tenu.,0,18308
+104,TOKUSEIINFO_LPLE_104,69EB3F74C1B424EB,"Le Pokémon ignore les talents adverses qui auraient
+un effet sur ses capacités.",0,18400
+105,TOKUSEIINFO_LPLE_105,69EB3E74C1B42338,"Le Pokémon est tellement chanceux qu’il inflige
+plus fréquemment des coups critiques.",0,18560
+106,TOKUSEIINFO_LPLE_106,69EB4174C1B42851,"Si le Pokémon est mis K.O. par une attaque directe,
+il inflige des dégâts à l’attaquant avant de s’évanouir.",0,18732
+107,TOKUSEIINFO_LPLE_107,69EB4074C1B4269E,"Le Pokémon devine si l’adversaire connaît
+une capacité dangereuse pour lui.",0,18952
+108,TOKUSEIINFO_LPLE_108,69EB3B74C1B41E1F,"Révèle l’une des capacités de l’ennemi quand
+le combat commence.",0,19104
+109,TOKUSEIINFO_LPLE_109,69EB3A74C1B41C6C,"Quand il attaque, le Pokémon ignore les changements
+de stats de l’ennemi.",0,19236
+110,TOKUSEIINFO_LPLE_110,69E7BD74C1B1122E,"Permet à une capacité « pas très efficace »
+d’infliger des dégâts comme si elle était efficace
+normalement.",0,19384
+111,TOKUSEIINFO_LPLE_111,69E7BE74C1B113E1,"Réduit les dégâts subis lorsque le Pokémon
+est touché par une capacité super efficace.",0,19600
+112,TOKUSEIINFO_LPLE_112,69E7BB74C1B10EC8,"Divise la Vitesse et l’Attaque du Pokémon par deux
+pendant les cinq premiers tours du combat.",0,19776
+113,TOKUSEIINFO_LPLE_113,69E7BC74C1B1107B,"Permet aux capacités de type Normal ou Combat
+du Pokémon de toucher les Pokémon de type
+Spectre.",0,19964
+114,TOKUSEIINFO_LPLE_114,69E7C174C1B118FA,"Le Pokémon détourne sur lui les capacités de
+type Eau et les neutralise, tout en montant
+son Attaque Spéciale.",0,20160
+115,TOKUSEIINFO_LPLE_115,69E7C274C1B11AAD,"Régénère les PV du Pokémon lors des tempêtes
+de grêle.",0,20384
+116,TOKUSEIINFO_LPLE_116,69E7BF74C1B11594,"Réduit les dégâts subis lorsque le Pokémon
+est touché par une capacité super efficace.",0,20496
+117,TOKUSEIINFO_LPLE_117,69E7C074C1B11747,"Déclenche une tempête de grêle quand le Pokémon
+entre au combat.",0,20672
+118,TOKUSEIINFO_LPLE_118,69E7B574C1B10496,"Le Pokémon peut parfois trouver du Miel
+après un combat.",0,20804
+119,TOKUSEIINFO_LPLE_119,69E7B674C1B10649,"Permet de connaître l’objet tenu par l’ennemi
+quand le combat commence.",0,20920
+120,TOKUSEIINFO_LPLE_120,69E43774C1ADF8A5,"Augmente la puissance des capacités occasionnant
+un contrecoup.",4,21064
+121,TOKUSEIINFO_LPLE_121,69E43674C1ADF6F2,"Modifie le type du Pokémon en fonction de la plaque
+ou du Cristal Z qu’il tient.",0,21192
+122,TOKUSEIINFO_LPLE_122,69E43574C1ADF53F,"Augmente l’Attaque et la Défense Spéciale
+du Pokémon et de ses alliés lorsque le soleil brille.",4,21356
+123,TOKUSEIINFO_LPLE_123,69E43474C1ADF38C,Inflige des dégâts aux ennemis endormis.,4,21548
+124,TOKUSEIINFO_LPLE_124,69E43374C1ADF1D9,"Vole l’objet que tient l’attaquant quand le Pokémon
+subit une attaque directe.",0,21632
+125,TOKUSEIINFO_LPLE_125,69E43274C1ADF026,"Les capacités ayant un effet additionnel perdent
+celui-ci, mais leur puissance augmente.",0,21792
+126,TOKUSEIINFO_LPLE_126,69E43174C1ADEE73,"Inverse les changements de stats :
+les augmentations de stats se transforment
+en baisses, et vice-versa.",4,21972
+127,TOKUSEIINFO_LPLE_127,69E43074C1ADECC0,"Fait stresser l’ennemi, ce qui l’empêche de manger
+des Baies.",0,22184
+128,TOKUSEIINFO_LPLE_128,69E43F74C1AE063D,"Augmente beaucoup l’Attaque du Pokémon
+quand ses stats baissent.",4,22308
+129,TOKUSEIINFO_LPLE_129,69E43E74C1AE048A,"Le Pokémon devient défaitiste quand ses PV
+tombent à la moitié, et son Attaque et son Attaque
+Spéciale sont divisées par deux.",0,22440
+130,TOKUSEIINFO_LPLE_130,69E13174C1ABB89C,"Quand le Pokémon est touché par une capacité,
+il inflige parfois Entrave sur celle-ci.",0,22696
+131,TOKUSEIINFO_LPLE_131,69E13274C1ABBA4F,"Soigne parfois une altération de statut d’un allié
+proche.",0,22872
+132,TOKUSEIINFO_LPLE_132,69E13374C1ABBC02,Diminue les dégâts subis par les alliés.,0,22992
+133,TOKUSEIINFO_LPLE_133,69E13474C1ABBDB5,"Quand le Pokémon est touché par une capacité
+physique, sa Défense baisse mais sa Vitesse
+augmente beaucoup.",0,23076
+134,TOKUSEIINFO_LPLE_134,69E12D74C1ABB1D0,Double le poids du Pokémon.,0,23292
+135,TOKUSEIINFO_LPLE_135,69E12E74C1ABB383,Divise par deux le poids du Pokémon.,0,23348
+136,TOKUSEIINFO_LPLE_136,69E12F74C1ABB536,"Le Pokémon reçoit moins de dégâts quand ses PV
+sont au maximum.",0,23424
+137,TOKUSEIINFO_LPLE_137,69E13074C1ABB6E9,"Augmente la puissance des capacités physiques
+quand le Pokémon est empoisonné.",4,23552
+138,TOKUSEIINFO_LPLE_138,69E13974C1ABC634,"Augmente la puissance des capacités spéciales
+quand le Pokémon est brûlé.",4,23712
+139,TOKUSEIINFO_LPLE_139,69E13A74C1ABC7E7,Permet de réutiliser une même Baie plusieurs fois.,0,23860
+140,TOKUSEIINFO_LPLE_140,69DDAB74C1A89F13,"Le Pokémon anticipe et évite les attaques de
+ses alliés.",0,23964
+141,TOKUSEIINFO_LPLE_141,69DDAA74C1A89D60,"Augmente beaucoup une stat du Pokémon
+et en baisse une autre au hasard à chaque tour.",4,24080
+142,TOKUSEIINFO_LPLE_142,69DDAD74C1A8A279,"Protège des dégâts occasionnés par les tempêtes
+de sable ou la grêle, et neutralise les attaques
+à base de poudre.",0,24252
+143,TOKUSEIINFO_LPLE_143,69DDAC74C1A8A0C6,Peut empoisonner l’ennemi par simple contact.,0,24484
+144,TOKUSEIINFO_LPLE_144,69DDAF74C1A8A5DF,"Restaure un peu de PV si le Pokémon est retiré
+du combat.",0,24576
+145,TOKUSEIINFO_LPLE_145,69DDAE74C1A8A42C,"Empêche les capacités adverses de baisser
+la Défense.",4,24692
+146,TOKUSEIINFO_LPLE_146,69DDB174C1A8A945,Augmente la Vitesse lors des tempêtes de sable.,4,24800
+147,TOKUSEIINFO_LPLE_147,69DDB074C1A8A792,Le Pokémon résiste mieux aux capacités de statut.,0,24896
+148,TOKUSEIINFO_LPLE_148,69DDB374C1A8ACAB,"Augmente la puissance des capacités du Pokémon
+s’il attaque en dernier.",4,24996
+149,TOKUSEIINFO_LPLE_149,69DDB274C1A8AAF8,"Donne au Pokémon l’apparence du dernier membre
+de l’équipe pour tromper l’adversaire.",0,25140
+150,TOKUSEIINFO_LPLE_150,69DA4574C1A5BBEA,Donne l’apparence du Pokémon adverse.,0,25312
+151,TOKUSEIINFO_LPLE_151,69DA4674C1A5BD9D,"Traverse les barrières et les clones de l’ennemi
+pour attaquer directement.",0,25388
+152,TOKUSEIINFO_LPLE_152,69DA4374C1A5B884,"Remplace le talent de l’attaquant par « Momie »
+lorsque le Pokémon subit une attaque directe.",0,25540
+153,TOKUSEIINFO_LPLE_153,69DA4474C1A5BA37,"Quand le Pokémon met un ennemi K.O., sa confiance
+en lui ne connaît plus de limite et son Attaque
+augmente.",0,25728
+154,TOKUSEIINFO_LPLE_154,69DA4174C1A5B51E,"Réveille la noblesse du Pokémon lorsqu’il subit
+une capacité de type Ténèbres, ce qui augmente
+son Attaque.",0,25944
+155,TOKUSEIINFO_LPLE_155,69DA4274C1A5B6D1,"Si le Pokémon est touché par une capacité de type
+Ténèbres, Spectre ou Insecte, sa phobie se révèle
+et sa Vitesse augmente.",0,26160
+156,TOKUSEIINFO_LPLE_156,69DA3F74C1A5B1B8,"Annule les effets des capacités de statut subies
+par le Pokémon et les retourne à l’envoyeur.",4,26408
+157,TOKUSEIINFO_LPLE_157,69DA4074C1A5B36B,"Annule les attaques de type Plante subies par
+le Pokémon et augmente son Attaque.",4,26596
+158,TOKUSEIINFO_LPLE_158,69DA3D74C1A5AE52,Rend les capacités de statut prioritaires.,0,26760
+159,TOKUSEIINFO_LPLE_159,69DA3E74C1A5B005,"Augmente la puissance des capacités de type
+Roche, Sol et Acier en cas de tempête de sable.",4,26848
+160,TOKUSEIINFO_LPLE_160,69D6BF74C1A2A261,"Inflige des dégâts à l’attaquant lorsque le Pokémon
+subit une attaque directe.",4,27032
+161,TOKUSEIINFO_LPLE_161,69D6BE74C1A2A0AE,"Quand le Pokémon perd la moitié de ses PV,
+il se transforme.",0,27192
+162,TOKUSEIINFO_LPLE_162,69D6BD74C1A29EFB,Augmente la Précision des Pokémon de l’équipe.,4,27316
+163,TOKUSEIINFO_LPLE_163,69D6BC74C1A29D48,"Le Pokémon ignore les talents adverses qui auraient
+un effet sur ses capacités.",0,27412
+164,TOKUSEIINFO_LPLE_164,69D6C374C1A2A92D,"Le Pokémon ignore les talents adverses qui auraient
+un effet sur ses capacités.",0,27572
+165,TOKUSEIINFO_LPLE_165,69D6C274C1A2A77A,Protège l’équipe des effets limitant le libre arbitre.,0,27732
+166,TOKUSEIINFO_LPLE_166,69D6C174C1A2A5C7,"Empêche les alliés de type Plante de subir
+des baisses de stats et des altérations de statut.",4,27844
+167,TOKUSEIINFO_LPLE_167,69D6C074C1A2A414,"Restaure des PV lorsque le Pokémon consomme
+une Baie, quelle qu’elle soit.",0,28032
+168,TOKUSEIINFO_LPLE_168,69D6B774C1A294C9,Le Pokémon prend le type de la capacité qu’il utilise.,0,28184
+169,TOKUSEIINFO_LPLE_169,69D6B674C1A29316,"Divise par deux les dégâts des capacités physiques
+subies par le Pokémon.",0,28296
+170,TOKUSEIINFO_LPLE_170,69D33974C19F88D8,Les capacités volent aussi l’objet tenu par la cible.,0,28444
+171,TOKUSEIINFO_LPLE_171,69D33A74C19F8A8B,"Protège de certaines capacités projetant
+des bombes, balles...",0,28552
+172,TOKUSEIINFO_LPLE_172,69D33B74C19F8C3E,"Augmente beaucoup l’Attaque Spéciale
+du Pokémon quand ses stats baissent.",4,28680
+173,TOKUSEIINFO_LPLE_173,69D33C74C19F8DF1,"Le Pokémon a une mâchoire robuste qui augmente
+la puissance de ses capacités à base de morsures.",0,28828
+174,TOKUSEIINFO_LPLE_174,69D33D74C19F8FA4,"Les capacités de type Normal deviennent de type
+Glace. Leur puissance augmente légèrement.",0,29024
+175,TOKUSEIINFO_LPLE_175,69D33E74C19F9157,Les Pokémon de l’équipe ne peuvent pas s’endormir.,0,29208
+176,TOKUSEIINFO_LPLE_176,69D33F74C19F930A,"Le Pokémon prend la Forme Assaut lorsqu’il utilise
+une attaque, et la Forme Parade lorsqu’il utilise
+Bouclier Royal.",0,29312
+177,TOKUSEIINFO_LPLE_177,69D34074C19F94BD,"Quand les PV du Pokémon sont au maximum,
+ses capacités de type Vol sont prioritaires.",0,29548
+178,TOKUSEIINFO_LPLE_178,69D33174C19F7B40,"Augmente la puissance de certaines capacités
+de type aura.",4,29720
+179,TOKUSEIINFO_LPLE_179,69D33274C19F7CF3,"Augmente la Défense du Pokémon si Champ Herbu
+est actif.",4,29840
+180,TOKUSEIINFO_LPLE_180,69D03374C19D48CF,"Quand les alliés utilisent l’objet qu’ils tiennent,
+le Pokémon leur donne l’objet qu’il tient en
+remplacement.",0,29956
+181,TOKUSEIINFO_LPLE_181,69D03274C19D471C,"Augmente la puissance des attaques directes
+du Pokémon.",4,30180
+182,TOKUSEIINFO_LPLE_182,69D03574C19D4C35,"Les capacités de type Normal deviennent de type
+Fée. Leur puissance augmente légèrement.",0,30292
+183,TOKUSEIINFO_LPLE_183,69D03474C19D4A82,"Baisse la Vitesse de l’attaquant lorsque le Pokémon
+subit une attaque directe.",0,30472
+184,TOKUSEIINFO_LPLE_184,69D02F74C19D4203,"Les capacités de type Normal deviennent de type
+Vol. Leur puissance augmente légèrement.",0,30632
+185,TOKUSEIINFO_LPLE_185,69D02E74C19D4050,"Permet à la mère et à son petit d’attaquer
+tous les deux en même temps.",0,30812
+186,TOKUSEIINFO_LPLE_186,69D03174C19D4569,"Augmente la puissance des attaques de type
+Ténèbres de tous les Pokémon.",4,30956
+187,TOKUSEIINFO_LPLE_187,69D03074C19D43B6,"Augmente la puissance des attaques de type Fée
+de tous les Pokémon.",4,31104
+188,TOKUSEIINFO_LPLE_188,69D03B74C19D5667,Inverse l’effet des auras en baissant leur puissance.,4,31240
+189,TOKUSEIINFO_LPLE_189,69D03A74C19D54B4,"Altère les conditions météo et rend inefficaces
+les attaques de type Feu.",4,31348
+190,TOKUSEIINFO_LPLE_190,69CCAD74C19A2F46,"Altère les conditions météo et rend inefficaces
+les attaques de type Eau.",4,31496
+191,TOKUSEIINFO_LPLE_191,69CCAE74C19A30F9,"Altère les conditions météo et annule les faiblesses
+du type Vol.",4,31644
+192,TOKUSEIINFO_LPLE_192,69CCAB74C19A2BE0,"Augmente la Défense du Pokémon lorsqu’il subit
+une attaque.",4,31776
+193,TOKUSEIINFO_LPLE_193,69CCAC74C19A2D93,"Le Pokémon perd confiance quand ses PV tombent
+à la moitié et s’enfuit dans sa Poké Ball.",0,31896
+194,TOKUSEIINFO_LPLE_194,69CCB174C19A3612,"Le Pokémon évite les situations inutilement
+dangereuses. Quand ses PV tombent à la moitié,
+il se réfugie dans sa Poké Ball.",0,32076
+195,TOKUSEIINFO_LPLE_195,69CCB274C19A37C5,"Augmente beaucoup la Défense du Pokémon
+quand il subit une capacité de type Eau.",4,32324
+196,TOKUSEIINFO_LPLE_196,69CCAF74C19A32AC,"Lorsque le Pokémon attaque un adversaire
+empoisonné, le coup sera forcément critique.",0,32488
+197,TOKUSEIINFO_LPLE_197,69CCB074C19A345F,"Lorsque le Pokémon perd la moitié de ses PV,
+son enveloppe se brise, mais son Attaque et
+son Attaque Spéciale augmentent.",0,32660
+198,TOKUSEIINFO_LPLE_198,69CCB574C19A3CDE,"Lorsque le Pokémon attaque une cible qui vient
+d’entrer sur le terrain en remplacement d’un autre
+Pokémon, les dégâts infligés sont doublés.",0,32904
+199,TOKUSEIINFO_LPLE_199,69CCB674C19A3E91,"Réduit les dégâts des capacités de type Feu
+subies par le Pokémon. Il est également immunisé
+contre les brûlures.",0,33188
+200,TOKUSEIINFO_LPLE_200,7294DE74C69C60C2,Augmente la puissance des attaques de type Acier.,4,33416
+201,TOKUSEIINFO_LPLE_201,7294DF74C69C6275,"Augmente l’Attaque Spéciale du Pokémon
+lorsqu’il tombe à la moitié de ses PV
+à cause d’une attaque.",4,33516
+202,TOKUSEIINFO_LPLE_202,7294DC74C69C5D5C,Augmente la Vitesse du Pokémon quand il grêle.,4,33716
+203,TOKUSEIINFO_LPLE_203,7294DD74C69C5F0F,"Le Pokémon est capable d’utiliser toutes
+ses capacités sans entrer en contact direct
+avec sa cible.",0,33812
+204,TOKUSEIINFO_LPLE_204,7294DA74C69C59F6,"Toutes les attaques sonores du Pokémon prennent
+le type Eau.",0,34012
+205,TOKUSEIINFO_LPLE_205,7294DB74C69C5BA9,"Toutes les capacités qui soignent le Pokémon
+directement deviennent prioritaires.",0,34136
+206,TOKUSEIINFO_LPLE_206,7294D874C69C5690,"Les capacités de type Normal deviennent de type
+Électrik. Leur puissance augmente légèrement.",0,34300
+207,TOKUSEIINFO_LPLE_207,7294D974C69C5843,"La Vitesse du Pokémon est doublée sur
+un Champ Électrifié.",0,34488
+208,TOKUSEIINFO_LPLE_208,7294E674C69C6E5A,"Le Pokémon se rassemble avec ses congénères
+quand ses PV sont élevés. Plus ses PV baissent,
+plus le banc s’amenuise.",0,34608
+209,TOKUSEIINFO_LPLE_209,7294E774C69C700D,"Le déguisement qui recouvre le corps du Pokémon
+est capable de le protéger d’une attaque.",0,34844
+210,TOKUSEIINFO_LPLE_210,7297E474C69EA0CB,"En battant un ennemi, ce Pokémon renforce ses liens
+avec son Dresseur. Il prend alors sa Forme Sacha
+et ses Sheauriken gagnent en puissance.",4,35024
+211,TOKUSEIINFO_LPLE_211,7297E374C69E9F18,"Lorsque le Pokémon perd la moitié de ses PV,
+ses Cellules se rassemblent pour l’encourager,
+ce qui lui permet de prendre sa Forme Parfaite.",0,35308
+212,TOKUSEIINFO_LPLE_212,7297E674C69EA431,"Permet d’empoisonner les Pokémon de type Acier
+ou Poison.",0,35588
+213,TOKUSEIINFO_LPLE_213,7297E574C69EA27E,"Le Pokémon rêve en permanence et ne se réveille
+jamais. Il est capable d’attaquer normalement
+tout en dormant.",0,35704
+214,TOKUSEIINFO_LPLE_214,7297E874C69EA797,"L’adversaire est impressionné par la majesté
+du Pokémon et ne peut pas le viser avec
+une attaque prioritaire.",0,35928
+215,TOKUSEIINFO_LPLE_215,7297E774C69EA5E4,"Le Pokémon inflige à l’adversaire l’ayant mis K.O.
+des dégâts égaux au nombre de PV qu’il lui restait
+avant le coup de grâce.",0,36148
+216,TOKUSEIINFO_LPLE_216,7297EA74C69EAAFD,"Si n’importe quel Pokémon utilise une capacité
+dansante, ce Pokémon peut se mettre aussi
+à danser.",0,36400
+217,TOKUSEIINFO_LPLE_217,7297E974C69EA94A,"Augmente la puissance des capacités spéciales
+des alliés.",4,36600
+218,TOKUSEIINFO_LPLE_218,7297DC74C69E9333,"Divise par deux les dégâts des attaques directes
+subies par le Pokémon, mais double les dégâts
+des capacités de type Feu.",0,36716
+219,TOKUSEIINFO_LPLE_219,7297DB74C69E9180,"L’adversaire est abasourdi par le Pokémon et
+ne peut pas le viser avec une capacité prioritaire.",0,36960
+220,TOKUSEIINFO_LPLE_220,728DD274C6962DB0,"Augmente l’Attaque Spéciale du Pokémon
+lorsqu’un autre Pokémon est mis K.O.",4,37156
+221,TOKUSEIINFO_LPLE_221,728DD374C6962F63,"Baisse la Vitesse de l’attaquant lorsque le Pokémon
+subit une attaque directe.",0,37308
+222,TOKUSEIINFO_LPLE_222,728DD474C6963116,Le Pokémon reçoit le talent d’un allié mis K.O.,0,37468
+223,TOKUSEIINFO_LPLE_223,728DD574C69632C9,Le Pokémon acquiert le talent d’un allié mis K.O.,0,37564
+224,TOKUSEIINFO_LPLE_224,728DD674C696347C,"Augmente la stat la plus élevée du Pokémon
+s’il met K.O. un autre Pokémon pendant son tour.",4,37664
+225,TOKUSEIINFO_LPLE_225,728DD774C696362F,"Change le type du Pokémon en fonction
+de la ROM équipée.",0,37848
+226,TOKUSEIINFO_LPLE_226,728DD874C69637E2,"Le Pokémon crée un Champ Électrifié au moment
+où il entre au combat.",0,37964
+227,TOKUSEIINFO_LPLE_227,728DD974C6963995,"Le Pokémon crée un Champ Psychique au moment
+où il entre au combat.",0,38104
+228,TOKUSEIINFO_LPLE_228,728DDA74C6963B48,"Le Pokémon crée un Champ Brumeux au moment
+où il entre au combat.",0,38240
+229,TOKUSEIINFO_LPLE_229,728DDB74C6963CFB,"Le Pokémon crée un Champ Herbu au moment
+où il entre au combat.",0,38372
+230,TOKUSEIINFO_LPLE_230,72915874C6994739,"Empêche les stats du Pokémon de baisser à cause
+d’une capacité ou d’un talent.",4,38500
+231,TOKUSEIINFO_LPLE_231,72915774C6994586,"Le Pokémon reçoit moins de dégâts quand ses PV
+sont au maximum.",0,38660
+232,TOKUSEIINFO_LPLE_232,72915674C69943D3,"Réduit les dégâts subis lorsque le Pokémon
+est touché par une capacité super efficace.",0,38788
+233,TOKUSEIINFO_LPLE_233,72915574C6994220,"Augmente encore plus les dégâts infligés par
+les attaques super efficaces.",4,38964

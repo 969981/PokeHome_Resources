@@ -1,0 +1,92 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_first_language_010,CF9AFAE832358AFF,要使用哪种语言？,0,484
+1,nx_first_language_020,CF9108E8322D4E44,确定用该语言开始吗？,0,504
+2,nx_first_language_030,CF948EE8323067CD,"可从“设定”选项
+随时更改所选语言。",0,528
+3,nx_first_language_040,CF89FCE832271B32,开始,0,568
+4,nx_first_language_050,CF8D82E8322A34BB,重新选择,0,576
+5,nx_first_language_060,CF8370E83221C1A0,所选语言,0,588
+6,	,AF66E44C86071324,[REF:6],0,600
+7,nx_first_button_000,49B92A8E35961C28,返回,0,612
+8,	,AF66E44C86071324,[REF:8],0,620
+9,nx_first_msg_yes,40C7F89C556E59B8,是,0,632
+10,nx_first_msg_no,6E87EFBD44DBB0A2,否,0,636
+11,nx_first_msg_back,7303F07B84CC565A,返回,0,640
+12,nx_first_msg_next,EA8C2D16530F4790,下一步,0,648
+13,nx_first_msg_010,62E85A9B46586956,[REF:13],0,656
+14,nx_first_msg_020,62E4F49B4655862D,"你是否已经在使用
+智能手机版《Pokémon HOME》？",0,668
+15,nx_first_msg_021,62E4F39B4655847A,[REF:15],0,728
+16,nx_first_msg_022,62E4F29B465582C7,"只要关联Nintendo Account，
+就能与智能手机版共享使用状况。[CLEAR]
+你已经在智能手机版上
+关联Nintendo Account了吗？",0,740
+17,nx_first_msg_025,62E4EF9B46557DAE,[REF:17],0,888
+18,nx_first_msg_026,62E4EE9B46557BFB,"今后只要在开始使用智能手机版时
+关联Nintendo Account，[RETURN]
+就能共享使用状况。",0,900
+19,nx_first_msg_027,62E4ED9B46557A48,"如果智能手机版没有
+事先关联Nintendo Account，[RETURN]
+将无法共享使用状况！[CLEAR]
+建议你在继续下一步前
+完成智能手机版的关联。",0,1000
+20,nx_first_msg_028,62E4EC9B46557895,……开始使用《Pokémon HOME》！,0,1144
+21,nx_first_msg_030,62E16E9B46526CA4,[REF:21],0,1188
+22,nx_first_msg_031,62E16F9B46526E57,"用户协议与隐私权政策已更新！[CLEAR]
+若要使用《Pokémon HOME》，
+必须同意更新后的用户协议与隐私权政策。[CLEAR]
+请仔细阅读内容并同意。",0,1200
+23,nx_first_msg_032,62E1709B4652700A,"若要使用《Pokémon HOME》，
+请先确认用户协议及隐私权政策。[CLEAR]",0,1348
+24,nx_first_msg_033,62E1719B465271BD,"将会显示用户协议。
+请仔细阅读内容并同意。[CLEAR]",0,1428
+25,nx_first_msg_034,62E16A9B465265D8,确定同意用户协议吗？,0,1480
+26,nx_first_msg_035,62E16B9B4652678B,"将会显示隐私权政策。
+请仔细阅读内容。[CLEAR]",0,1504
+27,nx_first_msg_036,62E16C9B4652693E,是否已确认隐私权政策？,0,1552
+28,nx_first_msg_040,62DE689B46502C9B,"正在确认信息，
+请稍等……",0,1576
+29,nx_first_msg_050,62DAE29B464D1312,要回到标题画面吗？,0,1604
+30,	,AF66E44C86071324,[REF:30],0,1624
+31,nx_first_terms_region_head,C98D2569F8DD4B6A,[REF:31],0,1636
+32,nx_first_terms_region_010,2B3214FBED0BD2E1,[REF:32],0,1648
+33,nx_first_terms_region_020,2B359AFBED0EEC6A,[REF:33],0,1660
+34,nx_first_terms_region_030,2B3900FBED11CF93,[REF:34],0,1672
+35,nx_first_terms_region_040,2B3C86FBED14E91C,[REF:35],0,1684
+36,nx_first_terms_region_050,2B3F8CFBED172925,[REF:36],0,1696
+37,nx_first_terms_region_060,2B4312FBED1A42AE,[REF:37],0,1708
+38,nx_first_terms_region_070,2B4698FBED1D5C37,[REF:38],0,1720
+39,nx_first_terms_region_080,2B137EFBECF1D670,[REF:39],0,1732
+40,nx_first_terms_title,2CA7E66F180C5D97,用户协议 ／ 隐私权政策,0,1744
+41,nx_first_terms_guide_010,9741787758FE581B,"滚动到底部后会前进至下一步。
+小孩子请和家长或监护人一起阅读。",0,1772
+42,nx_first_terms_guide_020,9736E67758F50B80,[REF:42],0,1836
+43,nx_first_terms_guide_021,9736E77758F50D33,是,0,1848
+44,nx_first_terms_guide_022,9736E87758F50EE6,否,0,1852
+45,	,AF66E44C86071324,[REF:45],0,1856
+46,nx_first_msg_100,59D5C59B41175574,"很好！连接成功了！[CLEAR]
+对于《Pokémon HOME》来说，
+这可是迈出了一大步啊！",0,1868
+47,nx_first_msg_101,59D5C69B41175727,"咦……？[CLEAR]
+哦，抱歉！
+我自己没拍进去！",0,1960
+48,nx_first_msg_110,59D8CB9B4119957D,现在好了！,0,2008
+49,nx_first_msg_120,59DC319B411C78A6,我是伟大的宝可梦研究家……,0,2020
+50,nx_first_msg_121,59DC329B411C7A59,"人称巨木博士！[CLEAR]
+你好，请多指教啊！",0,2048
+51,nx_first_msg_122,59DC2F9B411C7540,"首先，让我开门见山地
+告诉你我的梦想是什么吧。[CLEAR]
+那就是把全世界所有的宝可梦
+都添加到宝可梦图鉴里！",0,2092
+52,nx_first_msg_123,59DC309B411C76F3,"坦白地说，这件事光靠我
+一个人的力量很难完成……",0,2200
+53,nx_first_msg_124,59DC359B411C7F72,"但是就在现在！
+我有了一个靠得住的伙伴！",0,2252
+54,nx_first_msg_130,59DFB79B411F922F,"……没错，就是你！[CLEAR]
+我要拜托的就是你！",0,2296
+55,nx_first_msg_131,59DFB69B411F907C,"请把宝可梦寄放到我开发的
+《Pokémon HOME》里，多多益善！",0,2344
+56,nx_first_msg_140,59C82D9B410BC8D0,"不过，你一定对
+《Pokémon HOME》还不太了解吧！",0,2416
+57,nx_first_msg_141,59C82E9B410BCA83,"不用担心！
+遇到不懂的事问萌宝就对了！",0,2476

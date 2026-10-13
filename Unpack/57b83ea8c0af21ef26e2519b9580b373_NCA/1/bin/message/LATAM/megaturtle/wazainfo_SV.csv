@@ -1,0 +1,2157 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,WAZAINFO_SV_000,E672760ED12F4313,"-
+-
+-",0,7388
+1,WAZAINFO_SV_001,E672750ED12F4160,"Golpea al objetivo con las extremidades, la cola
+o similares.",0,7400
+2,WAZAINFO_SV_002,E672780ED12F4679,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,7524
+3,WAZAINFO_SV_003,E672770ED12F44C6,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,7784
+4,WAZAINFO_SV_004,E6727A0ED12F49DF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,8044
+5,WAZAINFO_SV_005,E672790ED12F482C,Puñetazo de gran potencia.,0,8304
+6,WAZAINFO_SV_006,E6727C0ED12F4D45,"Ataca al objetivo arrojándole monedas. Al finalizar
+el combate, las recupera en forma de ganancias.",4,8360
+7,WAZAINFO_SV_007,E6727B0ED12F4B92,"Puñetazo ardiente que puede causar quemaduras
+al objetivo.",0,8560
+8,WAZAINFO_SV_008,E6727E0ED12F50AB,Puñetazo helado que puede congelar al objetivo.,0,8680
+9,WAZAINFO_SV_009,E6727D0ED12F4EF8,Puñetazo eléctrico que puede paralizar al objetivo.,0,8776
+10,WAZAINFO_SV_010,E66F100ED12C5FEA,Araña al objetivo con garras afiladas.,4,8880
+11,WAZAINFO_SV_011,E66F110ED12C619D,Sujeta al objetivo y le causa daño.,0,8960
+12,WAZAINFO_SV_012,E66F0E0ED12C5C84,"Ataque cortante con grandes pinzas que fulmina
+al objetivo de un solo golpe si acierta.",4,9032
+13,WAZAINFO_SV_013,E66F0F0ED12C5E37,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,9208
+14,WAZAINFO_SV_014,E66F0C0ED12C591E,"Este frenético baile de combate eleva el espíritu
+y aumenta mucho el Ataque.",4,9468
+15,WAZAINFO_SV_015,E66F0D0ED12C5AD1,"Corta al objetivo con garras, guadañas o similares.",0,9624
+16,WAZAINFO_SV_016,E66F0A0ED12C55B8,"Crea un tornado con las alas y lo lanza contra
+el objetivo.",0,9728
+17,WAZAINFO_SV_017,E66F0B0ED12C576B,"Extiende totalmente sus majestuosas alas para golpear
+al objetivo con ellas.",4,9848
+18,WAZAINFO_SV_018,E66F080ED12C5252,"Se lleva al objetivo y lo cambia por otro Pokémon.
+Si es un Pokémon salvaje, acaba el combate.",0,10004
+19,WAZAINFO_SV_019,E66F090ED12C5405,"El usuario vuela en el primer turno y ataca en el
+segundo.",4,10196
+20,WAZAINFO_SV_020,E66B8A0ED1294661,"Usa el cuerpo o las extremidades para atar y oprimir
+al objetivo y causarle daño de cuatro a cinco turnos.",4,10316
+21,WAZAINFO_SV_021,E66B890ED12944AE,"Golpea con la cola o con lianas para causarle daño
+al objetivo.",0,10532
+22,WAZAINFO_SV_022,E66B880ED12942FB,"Azota al objetivo con lianas delgadas y largas,
+tan flexibles como látigos.",4,10660
+23,WAZAINFO_SV_023,E66B870ED1294148,Un tremendo pisotón que puede atemorizar al objetivo.,4,10812
+24,WAZAINFO_SV_024,E66B8E0ED1294D2D,"Da dos patadas seguidas, una con cada pie.",0,10920
+25,WAZAINFO_SV_025,E66B8D0ED1294B7A,Patada de fuerza extrema.,0,11008
+26,WAZAINFO_SV_026,E66B8C0ED12949C7,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,11060
+27,WAZAINFO_SV_027,E66B8B0ED1294814,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,11320
+28,WAZAINFO_SV_028,E66B820ED12938C9,Lanza arena a la cara del objetivo y reduce su Precisión.,0,11580
+29,WAZAINFO_SV_029,E66B810ED1293716,Poderoso cabezazo que puede atemorizar al objetivo.,0,11696
+30,WAZAINFO_SV_030,E668040ED1262CD8,Ataca al objetivo con un cuerno filoso.,4,11800
+31,WAZAINFO_SV_031,E668050ED1262E8B,"Ataca con el cuerno o el pico al objetivo de dos
+a cinco veces seguidas.",4,11880
+32,WAZAINFO_SV_032,E668060ED126303E,"Ataque con un cuerno giratorio que fulmina al objetivo
+de un solo golpe si acierta.",4,12028
+33,WAZAINFO_SV_033,E668070ED12631F1,Embiste al objetivo con todo el cuerpo.,4,12196
+34,WAZAINFO_SV_034,E668080ED12633A4,"Salta sobre el objetivo con todo su peso y puede
+paralizarlo.",0,12276
+35,WAZAINFO_SV_035,E668090ED1263557,"Aprieta al objetivo de cuatro a cinco turnos con lianas
+o con su cuerpo.",4,12400
+36,WAZAINFO_SV_036,E6680A0ED126370A,"Ataque desmedido que también hiere ligeramente al
+usuario.",4,12548
+37,WAZAINFO_SV_037,E6680B0ED12638BD,"El usuario ataca enfurecido durante dos o tres turnos
+y, después, se queda confundido.",4,12668
+38,WAZAINFO_SV_038,E667FC0ED1261F40,"Ataque arriesgado que también hiere gravemente
+al usuario.",4,12844
+39,WAZAINFO_SV_039,E667FD0ED12620F3,"Agita la cola para despistar al objetivo y reducir
+su Defensa.",4,12964
+40,WAZAINFO_SV_040,E6800E0ED13ACFB7,"Lanza un aguijón tóxico que puede envenenar al
+objetivo.",0,13092
+41,WAZAINFO_SV_041,E6800D0ED13ACE04,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,13208
+42,WAZAINFO_SV_042,E680100ED13AD31D,"Lanza púas afiladas que hieren al objetivo de dos a
+cinco veces seguidas.",0,13468
+43,WAZAINFO_SV_043,E6800F0ED13AD16A,"Intimida al objetivo con una mirada amenazadora
+para reducir su Defensa.",4,13616
+44,WAZAINFO_SV_044,E6800A0ED13AC8EB,"Una voraz mordida con dientes afilados que puede
+atemorizar al objetivo.",4,13764
+45,WAZAINFO_SV_045,E680090ED13AC738,"Dulce gruñido que distrae al objetivo para que baje
+la guardia y que reduce su Ataque.",0,13912
+46,WAZAINFO_SV_046,E6800C0ED13ACC51,"Se lleva al objetivo y lo cambia por otro Pokémon.
+Si es un Pokémon salvaje, acaba el combate.",0,14088
+47,WAZAINFO_SV_047,E6800B0ED13ACA9E,"Cancioncita que hace dormir profundamente al
+objetivo.",0,14280
+48,WAZAINFO_SV_048,E680060ED13AC21F,"El cuerpo del usuario emite unas ondas sónicas extrañas
+que confunden al objetivo.",4,14392
+49,WAZAINFO_SV_049,E680050ED13AC06C,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,14560
+50,WAZAINFO_SV_050,E67C880ED137B62E,"Anula el último movimiento que usó el objetivo
+durante cuatro turnos.",4,14820
+51,WAZAINFO_SV_051,E67C890ED137B7E1,"Rocía al objetivo con un ácido corrosivo. Puede reducir
+la Defensa Especial.",0,14960
+52,WAZAINFO_SV_052,E67C860ED137B2C8,"Ataca con llamas pequeñas que pueden causar
+quemaduras.",4,15116
+53,WAZAINFO_SV_053,E67C870ED137B47B,"Ataca con una gran ráfaga de fuego que puede causar
+quemaduras.",4,15228
+54,WAZAINFO_SV_054,E67C8C0ED137BCFA,"Rodea al bando aliado con una neblina blanquecina
+e impide que el rival le reduzca sus características
+durante cinco turnos.",0,15356
+55,WAZAINFO_SV_055,E67C8D0ED137BEAD,Ataca disparando agua con gran potencia.,4,15608
+56,WAZAINFO_SV_056,E67C8A0ED137B994,Lanza una gran masa de agua a presión para atacar.,0,15692
+57,WAZAINFO_SV_057,E67C8B0ED137BB47,"Inunda el terreno de combate con una ola gigante
+que golpea a los Pokémon adyacentes.",4,15796
+58,WAZAINFO_SV_058,E67C800ED137A896,Rayo de hielo que puede congelar al objetivo.,0,15968
+59,WAZAINFO_SV_059,E67C810ED137AA49,Tormenta de hielo que puede congelar al objetivo.,0,16060
+60,WAZAINFO_SV_060,E679020ED1349CA5,Extraño rayo que puede causar confusión.,4,16160
+61,WAZAINFO_SV_061,E679010ED1349AF2,"Ráfaga de burbujas que puede reducir la Velocidad
+del objetivo.",0,16244
+62,WAZAINFO_SV_062,E679000ED134993F,"Rayo multicolor que puede reducir el Ataque
+del objetivo.",0,16372
+63,WAZAINFO_SV_063,E678FF0ED134978C,"El usuario ataca al objetivo con una poderosa descarga,
+pero deberá descansar en el siguiente turno.",4,16488
+64,WAZAINFO_SV_064,E678FE0ED13495D9,Ensarta al objetivo con un cuerno o pico punzante.,4,16692
+65,WAZAINFO_SV_065,E678FD0ED1349426,Picotazo giratorio y perforador muy poderoso.,0,16796
+66,WAZAINFO_SV_066,E678FC0ED1349273,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,16888
+67,WAZAINFO_SV_067,E678FB0ED13490C0,"Patada baja que derriba al objetivo. Cuanto más pese
+este, más daño le causará.",0,17148
+68,WAZAINFO_SV_068,E6790A0ED134AA3D,Devuelve un ataque físico con el doble de poder.,0,17308
+69,WAZAINFO_SV_069,E679090ED134A88A,"Aprovecha la gravedad para derribar al objetivo.
+Le resta tantos PS como nivel tenga el usuario.",4,17408
+70,WAZAINFO_SV_070,E675FC0ED1325C9C,Ataca al objetivo golpeándolo con todas sus fuerzas.,4,17604
+71,WAZAINFO_SV_071,E675FD0ED1325E4F,"Un ataque que absorbe nutrientes. El usuario recupera
+algunos PS según el daño que produzca.",4,17712
+72,WAZAINFO_SV_072,E675FE0ED1326002,"Un ataque que absorbe nutrientes. El usuario recupera
+la mitad de los PS del daño que produce.",4,17900
+73,WAZAINFO_SV_073,E675FF0ED13261B5,"Planta semillas que absorben PS del objetivo en cada
+turno y que le sirven para recuperarse.",0,18092
+74,WAZAINFO_SV_074,E675F80ED13255D0,"Hace que su cuerpo crezca de una sola vez, con lo
+que aumenta su Ataque y su Ataque Especial.",0,18280
+75,WAZAINFO_SV_075,E675F90ED1325783,Corta con hojas afiladas. Suele lanzar un golpe crítico.,0,18468
+76,WAZAINFO_SV_076,E675FA0ED1325936,"El usuario absorbe luz en el primer turno y, en el
+segundo, lanza un poderoso rayo de energía.",4,18584
+77,WAZAINFO_SV_077,E675FB0ED1325AE9,Esparce polvo tóxico que envenena al objetivo.,4,18776
+78,WAZAINFO_SV_078,E676040ED1326A34,Esparce polvo que paraliza al objetivo.,4,18872
+79,WAZAINFO_SV_079,E676050ED1326BE7,Esparce polvo que duerme al objetivo.,4,18952
+80,WAZAINFO_SV_080,E657060ED117BD0B,"Ataca al objetivo lanzando pétalos de dos a tres turnos
+y, al finalizar, el usuario se queda confundido.",4,19028
+81,WAZAINFO_SV_081,E657050ED117BB58,"Lanza seda por la boca y reduce mucho la Velocidad
+del objetivo.",0,19240
+82,WAZAINFO_SV_082,E657080ED117C071,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,19372
+83,WAZAINFO_SV_083,E657070ED117BEBE,"Un aro de fuego que atrapa y le causa daño al objetivo
+durante cuatro o cinco turnos.",4,19632
+84,WAZAINFO_SV_084,E6570A0ED117C3D7,Ataque eléctrico que puede paralizar al objetivo.,4,19804
+85,WAZAINFO_SV_085,E657090ED117C224,"Poderoso ataque eléctrico que puede paralizar al
+objetivo.",0,19904
+86,WAZAINFO_SV_086,E6570C0ED117C73D,Una ligera descarga que paraliza al objetivo.,4,20024
+87,WAZAINFO_SV_087,E6570B0ED117C58A,"Un poderoso rayo que le causa daño al objetivo
+y puede paralizarlo.",4,20116
+88,WAZAINFO_SV_088,E656FE0ED117AF73,Le lanza una pequeña roca al objetivo.,0,20252
+89,WAZAINFO_SV_089,E656FD0ED117ADC0,Un terremoto que afecta a los Pokémon adyacentes.,4,20332
+90,WAZAINFO_SV_090,E654000ED1157D02,"Abre una grieta en el suelo y mete al objetivo en ella.
+Fulmina al objetivo de un solo golpe si acierta.",4,20432
+91,WAZAINFO_SV_091,E654010ED1157EB5,"El usuario cava durante el primer turno y ataca en el
+segundo.",4,20644
+92,WAZAINFO_SV_092,E653FE0ED115799C,"Envenena gravemente al objetivo y causa un daño
+mayor en cada turno.",4,20772
+93,WAZAINFO_SV_093,E653FF0ED1157B4F,Débil ataque telequinético que puede causar confusión.,0,20912
+94,WAZAINFO_SV_094,E653FC0ED1157636,"Fuerte ataque telequinético que puede reducir
+la Defensa Especial del objetivo.",0,21024
+95,WAZAINFO_SV_095,E653FD0ED11577E9,"Ataque hipnótico que hace dormir profundamente al
+objetivo.",4,21184
+96,WAZAINFO_SV_096,E653FA0ED11572D0,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,21304
+97,WAZAINFO_SV_097,E653FB0ED1157483,"Relaja y aligera el cuerpo para aumentar mucho
+la Velocidad.",0,21564
+98,WAZAINFO_SV_098,E654080ED1158A9A,"Ataca al objetivo a tal velocidad que es casi
+imperceptible. Este movimiento tiene prioridad alta.",4,21688
+99,WAZAINFO_SV_099,E654090ED1158C4D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,21888
+100,WAZAINFO_SV_100,DD5C5B0ECBEB15A8,"Le permite al usuario cambiarse por otro Pokémon
+del equipo, si es que hay. Si un Pokémon salvaje usa
+este movimiento, huye del combate.",0,22148
+101,WAZAINFO_SV_101,DD5C5C0ECBEB175B,"Produce un espejismo ante el objetivo, que pierde
+tantos PS como nivel tenga el usuario.",0,22424
+102,WAZAINFO_SV_102,DD5C5D0ECBEB190E,"Copia el último movimiento que usó el objetivo,
+y puede utilizarlo mientras esté en el combate.",0,22604
+103,WAZAINFO_SV_103,DD5C5E0ECBEB1AC1,"Alarido agudo que reduce mucho la Defensa del
+objetivo.",4,22796
+104,WAZAINFO_SV_104,DD5C5F0ECBEB1C74,"El usuario se mueve a velocidad vertiginosa y crea
+copias ilusorias de sí mismo, con lo que aumenta su
+Evasión al desconcertar al rival.",4,22908
+105,WAZAINFO_SV_105,DD5C600ECBEB1E27,"El usuario regenera sus células y recupera una cantidad
+de PS equivalente a la mitad de sus PS máximos.",4,23184
+106,WAZAINFO_SV_106,DD5C610ECBEB1FDA,"El usuario tensa su musculatura para aumentar su
+Defensa.",4,23392
+107,WAZAINFO_SV_107,DD5C620ECBEB218D,"El usuario reduce su tamaño para aumentar mucho
+la Evasión.",4,23508
+108,WAZAINFO_SV_108,DD5C530ECBEB0810,"Reduce la Precisión del objetivo con una nube de humo
+o tinta.",0,23628
+109,WAZAINFO_SV_109,DD5C540ECBEB09C3,Rayo siniestro que confunde al objetivo.,0,23756
+110,WAZAINFO_SV_110,DD5F610ECBED55B1,"El usuario se resguarda en su coraza, por lo que le
+aumenta la Defensa.",4,23840
+111,WAZAINFO_SV_111,DD5F600ECBED53FE,"Se enrolla sobre sí mismo para ocultar sus puntos débiles
+y aumentar su Defensa.",0,23984
+112,WAZAINFO_SV_112,DD5F5F0ECBED524B,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,24148
+113,WAZAINFO_SV_113,DD5F5E0ECBED5098,"Barrera misteriosa que reduce durante cinco turnos el
+daño producido por los ataques especiales del rival.",0,24408
+114,WAZAINFO_SV_114,DD5F650ECBED5C7D,"Neblina oscura que elimina los cambios en las
+características de todos los Pokémon en combate.",0,24624
+115,WAZAINFO_SV_115,DD5F640ECBED5ACA,"Barrera misteriosa que reduce durante cinco turnos el
+daño producido por los ataques físicos del rival.",0,24816
+116,WAZAINFO_SV_116,DD5F630ECBED5917,"Concentra energía para aumentar la probabilidad
+de lanzar un golpe crítico.",0,25024
+117,WAZAINFO_SV_117,DD5F620ECBED5764,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,25176
+118,WAZAINFO_SV_118,DD5F590ECBED4819,"Mueve un dedo y estimula su cerebro para usar al azar
+casi cualquier movimiento.",0,25436
+119,WAZAINFO_SV_119,DD5F580ECBED4666,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,25600
+120,WAZAINFO_SV_120,DD62E70ECBF06F3A,"El atacante explota y hiere a los Pokémon adyacentes.
+El usuario se debilita de inmediato.",4,25860
+121,WAZAINFO_SV_121,DD62E80ECBF070ED,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,26044
+122,WAZAINFO_SV_122,DD62E50ECBF06BD4,"El usuario ataca al objetivo lamiéndolo con su larga
+lengua. Puede paralizarlo.",4,26304
+123,WAZAINFO_SV_123,DD62E60ECBF06D87,"Lanza un ataque con gases tóxicos que pueden
+envenenar al objetivo.",0,26464
+124,WAZAINFO_SV_124,DD62E30ECBF0686E,Arroja residuos al objetivo y puede envenenarlo.,4,26600
+125,WAZAINFO_SV_125,DD62E40ECBF06A21,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,26700
+126,WAZAINFO_SV_126,DD62E10ECBF06508,"Una llama intensa que chamusca y puede causarle
+quemaduras al objetivo.",4,26960
+127,WAZAINFO_SV_127,DD62E20ECBF066BB,"Embiste con un gran impulso y puede atemorizar
+al objetivo.",4,27104
+128,WAZAINFO_SV_128,DD62DF0ECBF061A2,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,27224
+129,WAZAINFO_SV_129,DD62E00ECBF06355,Lanza rayos en forma de estrella que no fallan nunca.,0,27484
+130,WAZAINFO_SV_130,DD664D0ECBF35263,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,27592
+131,WAZAINFO_SV_131,DD664C0ECBF350B0,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,27852
+132,WAZAINFO_SV_132,DD664F0ECBF355C9,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,28112
+133,WAZAINFO_SV_133,DD664E0ECBF35416,"El usuario olvida sus preocupaciones y aumenta mucho
+su Defensa Especial.",4,28372
+134,WAZAINFO_SV_134,DD66510ECBF3592F,"Dobla una cuchara para distraer al objetivo y reducir
+su Precisión.",0,28520
+135,WAZAINFO_SV_135,DD66500ECBF3577C,Restaura la mitad de los PS máximos del usuario.,0,28656
+136,WAZAINFO_SV_136,DD66530ECBF35C95,"El usuario salta muy alto y le lanza un rodillazo al
+objetivo. Si falla, se hiere a sí mismo.",4,28756
+137,WAZAINFO_SV_137,DD66520ECBF35AE2,"Intimida y asusta al objetivo con la mirada para causarle
+parálisis.",4,28944
+138,WAZAINFO_SV_138,DD66550ECBF35FFB,"Engulle los sueños de un objetivo dormido. El usuario
+recupera la mitad de los PS del daño que produce.",4,29084
+139,WAZAINFO_SV_139,DD66540ECBF35E48,"Lanza una nube de gas tóxico al rostro del objetivo.
+Produce envenenamiento.",0,29292
+140,WAZAINFO_SV_140,DD69D30ECBF66BEC,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,29448
+141,WAZAINFO_SV_141,DD69D40ECBF66D9F,"Le chupa la sangre al objetivo. El usuario recupera la
+mitad de los PS del daño que produce.",0,29708
+142,WAZAINFO_SV_142,DD69D50ECBF66F52,"Intimida al objetivo con una cara que asusta y le da
+un beso que lo deja dormido.",4,29896
+143,WAZAINFO_SV_143,DD69D60ECBF67105,"Ataca en el segundo turno y suele lanzar un golpe
+crítico. También puede atemorizar al objetivo.",4,30060
+144,WAZAINFO_SV_144,DD69CF0ECBF66520,"El usuario se transforma en una copia del objetivo,
+con los mismos movimientos.",4,30256
+145,WAZAINFO_SV_145,DD69D00ECBF666D3,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,30416
+146,WAZAINFO_SV_146,DD69D10ECBF66886,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,30676
+147,WAZAINFO_SV_147,DD69D20ECBF66A39,Esparce esporas que inducen el sueño.,4,30936
+148,WAZAINFO_SV_148,DD69DB0ECBF67984,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,31012
+149,WAZAINFO_SV_149,DD69DC0ECBF67B37,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,31272
+150,WAZAINFO_SV_150,DD6D590ECBF98575,No tiene ningún efecto. Solo salpica.,0,31532
+151,WAZAINFO_SV_151,DD6D580ECBF983C2,"Transforma su estructura celular para hacerse líquido y
+aumentar mucho su Defensa.",0,31608
+152,WAZAINFO_SV_152,DD6D570ECBF9820F,"Golpea con fuerza con una pinza enorme. Suele lanzar
+un golpe crítico.",0,31776
+153,WAZAINFO_SV_153,DD6D560ECBF9805C,"El atacante causa una enorme explosión y hiere
+a los Pokémon adyacentes. El usuario se debilita de
+inmediato.",4,31920
+154,WAZAINFO_SV_154,DD6D550ECBF97EA9,"Araña al objetivo con uñas, cuchillas o similares de dos
+a cinco veces seguidas.",4,32140
+155,WAZAINFO_SV_155,DD6D540ECBF97CF6,"Le lanza al objetivo el hueso que lleva a modo de
+búmeran y le causa daño dos veces seguidas.",0,32304
+156,WAZAINFO_SV_156,DD6D530ECBF97B43,"Restaura todos los PS y cura todos los problemas
+de estado del usuario, que se duerme los dos turnos
+siguientes.",0,32492
+157,WAZAINFO_SV_157,DD6D520ECBF97990,Lanza grandes rocas. Puede atemorizar al objetivo.,0,32720
+158,WAZAINFO_SV_158,DD6D610ECBF9930D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,32824
+159,WAZAINFO_SV_159,DD6D600ECBF9915A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,33084
+160,WAZAINFO_SV_160,DD705F0ECBFBC57E,"Cambia el tipo del usuario por el del primer movimiento
+en su lista.",0,33344
+161,WAZAINFO_SV_161,DD70600ECBFBC731,"Ataque con tres rayos de luz que puede paralizar,
+quemar o congelar al objetivo.",4,33484
+162,WAZAINFO_SV_162,DD705D0ECBFBC218,"Lanza un mordisco con sus afilados incisivos que
+reduce los PS del objetivo a la mitad.",0,33648
+163,WAZAINFO_SV_163,DD705E0ECBFBC3CB,"Ataca con cuchillas o con pinzas. Suele lanzar un
+golpe crítico.",4,33824
+164,WAZAINFO_SV_164,DD70630ECBFBCC4A,"Utiliza parte de sus PS para crear un sustituto
+que actúa como señuelo.",4,33956
+165,WAZAINFO_SV_165,DD70640ECBFBCDFD,"Solo se usa como último recurso al acabarse los PP.
+El usuario se hiere ligeramente a sí mismo.",0,34100
+166,WAZAINFO_SV_166,DD70610ECBFBC8E4,"Aprende de forma permanente el último movimiento
+que utilizó el objetivo. Es de un solo uso.",4,34292
+167,WAZAINFO_SV_167,DD70620ECBFBCA97,"Lanza hasta tres patadas seguidas, cuya potencia
+aumenta cada vez que acierta.",0,34480
+168,WAZAINFO_SV_168,DD70570ECBFBB7E6,"El usuario ataca y le roba el objeto al objetivo. Si ya
+lleva uno, el robo no se produce.",4,34640
+169,WAZAINFO_SV_169,DD70580ECBFBB999,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,34820
+170,WAZAINFO_SV_170,DD73E50ECBFEDF07,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,35080
+171,WAZAINFO_SV_171,DD73E40ECBFEDD54,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,35340
+172,WAZAINFO_SV_172,DD73E70ECBFEE26D,"Ataca al objetivo envuelto en fuego. Puede causarle
+quemaduras.",4,35600
+173,WAZAINFO_SV_173,DD73E60ECBFEE0BA,"Fuerte ronquido que solo puede usarse dormido.
+Puede atemorizar al objetivo.",0,35728
+174,WAZAINFO_SV_174,DD73E10ECBFED83B,"Un movimiento que tiene efectos distintos si el usuario
+es de tipo Fantasma o no.",4,35884
+175,WAZAINFO_SV_175,DD73E00ECBFED688,"Ataque frenético. Cuantos menos PS tenga el usuario,
+más daño producirá.",4,36048
+176,WAZAINFO_SV_176,DD73E30ECBFEDBA1,"El usuario cambia de tipo para hacerse resistente
+al tipo del último movimiento que usó el objetivo.",4,36196
+177,WAZAINFO_SV_177,DD73E20ECBFED9EE,"Lanza un chorro de aire que suele provocar un golpe
+crítico.",0,36400
+178,WAZAINFO_SV_178,DD73DD0ECBFED16F,"Adhiere esporas al objetivo para reducir mucho
+su Velocidad.",4,36524
+179,WAZAINFO_SV_179,DD73DC0ECBFECFBC,"Ataque desesperado que causa más daño cuantos
+menos PS tenga el usuario.",4,36648
+180,WAZAINFO_SV_180,DD40CB0ECBD35940,"Da rienda suelta a su rencor para reducir 4 PP del último
+movimiento que usó el objetivo.",0,36796
+181,WAZAINFO_SV_181,DD40CC0ECBD35AF3,Lanza nieve que puede congelar al objetivo.,0,36976
+182,WAZAINFO_SV_182,DD40CD0ECBD35CA6,"Frena todos los ataques, pero puede fallar si se usa
+repetidamente.",0,37064
+183,WAZAINFO_SV_183,DD40CE0ECBD35E59,"Puñetazo de velocidad fulminante. Este movimiento
+tiene prioridad alta.",0,37200
+184,WAZAINFO_SV_184,DD40CF0ECBD3600C,Asusta al objetivo para reducir mucho su Velocidad.,4,37344
+185,WAZAINFO_SV_185,DD40D00ECBD361BF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,37448
+186,WAZAINFO_SV_186,DD40D10ECBD36372,Da un beso con tanta dulzura que causa confusión.,0,37708
+187,WAZAINFO_SV_187,DD40D20ECBD36525,"Sacrifica la mitad de sus PS máximos para aumentar al
+máximo el Ataque.",0,37808
+188,WAZAINFO_SV_188,DD40D30ECBD366D8,Arroja residuos al objetivo y puede envenenarlo.,4,37952
+189,WAZAINFO_SV_189,DD40D40ECBD3688B,"Echa lodo en la cara del objetivo para causarle daño
+y reducir su Precisión.",4,38052
+190,WAZAINFO_SV_190,DD44510ECBD672C9,"Le dispara tinta a la cara del objetivo y le causa daño.
+Puede reducir la Precisión.",0,38208
+191,WAZAINFO_SV_191,DD44500ECBD67116,"Lanza una trampa de púas a los pies del objetivo que
+hiere a los rivales que entran en combate.",0,38380
+192,WAZAINFO_SV_192,DD444F0ECBD66F63,"Dispara una descarga eléctrica que causa daño y
+parálisis.",0,38572
+193,WAZAINFO_SV_193,DD444E0ECBD66DB0,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,38692
+194,WAZAINFO_SV_194,DD44550ECBD67995,"Si el usuario se debilita por un ataque rival antes
+de usar otro movimiento, el Pokémon rival también
+se debilitará. Puede fallar si se usa repetidamente.",0,38952
+195,WAZAINFO_SV_195,DD44540ECBD677E2,"Si un Pokémon escucha este canto y no se lo cambia
+por otro en tres turnos, termina debilitándose.",0,39264
+196,WAZAINFO_SV_196,DD44530ECBD6762F,"Ataque con aire helado que reduce la Velocidad del
+objetivo.",4,39464
+197,WAZAINFO_SV_197,DD44520ECBD6747C,"Frena todos los ataques, pero puede fallar si se usa
+repetidamente.",0,39588
+198,WAZAINFO_SV_198,DD44590ECBD68061,"Golpea al objetivo de dos a cinco veces seguidas
+con un hueso duro.",0,39724
+199,WAZAINFO_SV_199,DD44580ECBD67EAE,Fija el blanco para que el siguiente movimiento no falle.,0,39860
+200,WAZAINFO_SV_200,F8324C0EDB5BDBE9,"El usuario ataca enfurecido durante dos o tres turnos
+y, después, se queda confundido.",4,39976
+201,WAZAINFO_SV_201,F8324B0EDB5BDA36,"Tormenta de arena que dura cinco turnos y hiere a
+todos, excepto a los de tipo Roca, Tierra y Acero,
+y aumenta la Defensa Especial de los de tipo Roca.",0,40152
+202,WAZAINFO_SV_202,F8324A0EDB5BD883,"Un ataque que absorbe nutrientes. El usuario recupera
+la mitad de los PS del daño que produce.",4,40456
+203,WAZAINFO_SV_203,F832490EDB5BD6D0,"Resiste cualquier ataque y deja al menos 1 PS.
+Puede fallar si se usa repetidamente.",0,40648
+204,WAZAINFO_SV_204,F832500EDB5BE2B5,Engatusa al objetivo y reduce mucho su Ataque.,4,40820
+205,WAZAINFO_SV_205,F8324F0EDB5BE102,"El usuario rueda contra el objetivo durante cinco
+turnos y, cada vez que acierta, aumenta la potencia
+del movimiento.",4,40916
+206,WAZAINFO_SV_206,F8324E0EDB5BDF4F,"Ataque moderado que no debilita al objetivo y le deja
+al menos 1 PS.",4,41152
+207,WAZAINFO_SV_207,F8324D0EDB5BDD9C,"Hace enfurecer y confunde al objetivo, pero también
+aumenta mucho su Ataque.",0,41292
+208,WAZAINFO_SV_208,F832540EDB5BE981,Restaura la mitad de los PS máximos del usuario.,0,41448
+209,WAZAINFO_SV_209,F832530EDB5BE7CE,"Se envuelve de electricidad y embiste al objetivo.
+Puede causar parálisis.",0,41548
+210,WAZAINFO_SV_210,F82EC60EDB58C260,"Ataque lacerante con garras, cuchillas o similares cuya
+potencia aumenta si se usa varias veces seguidas.",4,41700
+211,WAZAINFO_SV_211,F82EC70EDB58C413,"Golpea al objetivo con unas alas robustas y macizas.
+Puede aumentar la Defensa del usuario.",0,41912
+212,WAZAINFO_SV_212,F82EC80EDB58C5C6,"Mal de ojo que le impide al objetivo huir del combate
+o que se le cambie por otro.",0,42096
+213,WAZAINFO_SV_213,F82EC90EDB58C779,"Si el objetivo es del sexo opuesto, se enamorará y
+bajará la posibilidad de que ataque.",0,42264
+214,WAZAINFO_SV_214,F82ECA0EDB58C92C,"Mientras duerme, usa uno de sus movimientos elegido
+al azar.",0,42440
+215,WAZAINFO_SV_215,F82ECB0EDB58CADF,"Tañido que cura los problemas de estado del bando
+del usuario.",0,42564
+216,WAZAINFO_SV_216,F82ECC0EDB58CC92,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,42692
+217,WAZAINFO_SV_217,F82ECD0EDB58CE45,"El usuario ataca al objetivo dándole un regalo
+con una bomba escondida. Sin embargo, a veces
+restaura sus PS.",4,42952
+218,WAZAINFO_SV_218,F82ECE0EDB58CFF8,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,43172
+219,WAZAINFO_SV_219,F82ECF0EDB58D1AB,"Un poder misterioso que protege de problemas de
+estado durante cinco turnos.",4,43432
+220,WAZAINFO_SV_220,F838D80EDB61357B,"Suma los PS del usuario a los del objetivo y los reparte
+a partes iguales.",0,43588
+221,WAZAINFO_SV_221,F838D70EDB6133C8,"Fuego místico de gran intensidad que puede causarle
+quemaduras al objetivo.",0,43740
+222,WAZAINFO_SV_222,F838DA0EDB6138E1,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,43892
+223,WAZAINFO_SV_223,F838D90EDB61372E,"Puñetazo con toda la fuerza concentrada que causa
+confusión.",0,44152
+224,WAZAINFO_SV_224,F838DC0EDB613C47,"Ensarta al objetivo con su imponente cuerno
+o cornamenta.",4,44276
+225,WAZAINFO_SV_225,F838DB0EDB613A94,"Poderosa ráfaga de aliento que golpea al objetivo y
+puede paralizarlo.",0,44392
+226,WAZAINFO_SV_226,F838DE0EDB613FAD,"Cambia el puesto con otro miembro del equipo y le
+pasa los cambios en las características.",0,44536
+227,WAZAINFO_SV_227,F838DD0EDB613DFA,"El objetivo repite su último movimiento durante tres
+turnos.",4,44720
+228,WAZAINFO_SV_228,F838D00EDB6127E3,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,44844
+229,WAZAINFO_SV_229,F838CF0EDB612630,"Ataque giratorio que anula los efectos de movimientos
+como Atadura, Constricción y Drenadoras. También
+aumenta la Velocidad del usuario.",4,45104
+230,WAZAINFO_SV_230,F835520EDB5E1BF2,"Un dulce aroma que engatusa al objetivo y le reduce
+mucho su Evasión.",4,45380
+231,WAZAINFO_SV_231,F835530EDB5E1DA5,"Ataca con una cola de hierro y puede reducir la Defensa
+del objetivo.",4,45520
+232,WAZAINFO_SV_232,F835500EDB5E188C,"Ataque con garras de acero que puede aumentar el
+Ataque del usuario.",4,45660
+233,WAZAINFO_SV_233,F835510EDB5E1A3F,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,45800
+234,WAZAINFO_SV_234,F8354E0EDB5E1526,"Restaura PS del usuario. La cantidad varía según
+el tiempo atmosférico.",0,46060
+235,WAZAINFO_SV_235,F8354F0EDB5E16D9,"Restaura PS del usuario. La cantidad varía según
+el tiempo atmosférico.",0,46204
+236,WAZAINFO_SV_236,F8354C0EDB5E11C0,"Restaura PS del usuario. La cantidad varía según
+el tiempo atmosférico.",0,46348
+237,WAZAINFO_SV_237,F8354D0EDB5E1373,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,46492
+238,WAZAINFO_SV_238,F8355A0EDB5E298A,"Un golpe doble con las manos que suele lanzar
+un golpe crítico.",4,46752
+239,WAZAINFO_SV_239,F8355B0EDB5E2B3D,"Crea un violento tornado para hacer trizas al objetivo.
+Puede atemorizarlo.",0,46880
+240,WAZAINFO_SV_240,F83FE40EDB67688D,"Genera una fuerte lluvia que dura cinco turnos, lo que
+potencia los movimientos de tipo Agua y debilita los de
+tipo Fuego.",0,47032
+241,WAZAINFO_SV_241,F83FE30EDB6766DA,"Hace que se intensifique el efecto del sol durante
+cinco turnos, lo que potencia los movimientos de tipo
+Fuego y debilita los de tipo Agua.",0,47280
+242,WAZAINFO_SV_242,F83FE20EDB676527,"Tritura con afilados colmillos y puede reducir la Defensa
+del objetivo.",0,47560
+243,WAZAINFO_SV_243,F83FE10EDB676374,"Responde a un ataque especial ocasionando el doble
+del daño recibido.",0,47704
+244,WAZAINFO_SV_244,F83FE00EDB6761C1,"El usuario entra en trance y copia cualquier cambio
+que haya en las características de su objetivo.",4,47844
+245,WAZAINFO_SV_245,F83FDF0EDB67600E,"Ataque de una velocidad extrema. Este movimiento
+tiene prioridad alta.",4,48044
+246,WAZAINFO_SV_246,F83FDE0EDB675E5B,"Canaliza un poder prehistórico con el que ataca al
+objetivo. Puede aumentar todas las características
+del usuario.",0,48188
+247,WAZAINFO_SV_247,F83FDD0EDB675CA8,"Lanza una bola oscura que puede reducir la Defensa
+Especial del objetivo.",0,48420
+248,WAZAINFO_SV_248,F83FDC0EDB675AF5,"Concentra energía psíquica para golpear al objetivo dos
+turnos después.",0,48568
+249,WAZAINFO_SV_249,F83FDB0EDB675942,"Lanza un gran puñetazo que puede reducir la Defensa
+del objetivo.",0,48712
+250,WAZAINFO_SV_250,F83C5E0EDB644F04,"Una columna de agua atrapa y daña al objetivo durante
+cuatro o cinco turnos.",4,48844
+251,WAZAINFO_SV_251,F83C5F0EDB6450B7,"Ataque de todo el equipo Pokémon. Cuantos más haya,
+más ataques lanzarán.",4,49000
+252,WAZAINFO_SV_252,F83C600EDB64526A,"Atemoriza al objetivo con este movimiento de prioridad
+alta. Solo tiene efecto si el usuario lo usa justo al
+entrar en combate.",4,49148
+253,WAZAINFO_SV_253,F83C610EDB64541D,"Ataca de forma alborotada durante tres turnos.
+Mantiene despiertos a todos.",4,49404
+254,WAZAINFO_SV_254,F83C5A0EDB644838,"Acumula energía hasta un máximo de tres veces para
+aumentar la Defensa y la Defensa Especial.",4,49556
+255,WAZAINFO_SV_255,F83C5B0EDB6449EB,"Libera de una vez la energía acumulada con Reserva.
+La potencia del movimiento será proporcional a la
+cantidad de energía acumulada.",0,49744
+256,WAZAINFO_SV_256,F83C5C0EDB644B9E,"Absorbe la energía acumulada con Reserva para
+recobrar salud. Cuanta más se haya acumulado,
+mayor será el número de PS que se recuperen.",4,50012
+257,WAZAINFO_SV_257,F83C5D0EDB644D51,"Provoca un viento abrasador que daña al objetivo y
+puede causar quemaduras.",0,50288
+258,WAZAINFO_SV_258,F83C560EDB64416C,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,50440
+259,WAZAINFO_SV_259,F83C570EDB64431F,"Atormenta y enfurece al objetivo, que no puede usar
+dos veces seguidas el mismo movimiento.",4,50700
+260,WAZAINFO_SV_260,F846500EDB6C8BBF,"Halaga al objetivo y lo confunde, pero también aumenta
+su Ataque Especial.",0,50884
+261,WAZAINFO_SV_261,F8464F0EDB6C8A0C,Siniestras llamas moradas que producen quemaduras.,0,51036
+262,WAZAINFO_SV_262,F846520EDB6C8F25,"El usuario se debilita, pero reduce mucho tanto el
+Ataque como el Ataque Especial del objetivo.",4,51140
+263,WAZAINFO_SV_263,F846510EDB6C8D72,"Si el usuario está quemado, paralizado o envenenado,
+se duplica la potencia del movimiento.",0,51332
+264,WAZAINFO_SV_264,F8464C0EDB6C84F3,"Se concentra para dar un puñetazo. Falla si se sufre un
+golpe antes de su uso.",0,51516
+265,WAZAINFO_SV_265,F8464B0EDB6C8340,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,51676
+266,WAZAINFO_SV_266,F8464E0EDB6C8859,"Llama la atención para centrar sobre sí todos los
+movimientos de los rivales.",0,51936
+267,WAZAINFO_SV_267,F8464D0EDB6C86A6,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,52092
+268,WAZAINFO_SV_268,F846580EDB6C9957,"Recarga energía para potenciar su siguiente movimiento
+de tipo Eléctrico. También aumenta la Defensa Especial.",0,52352
+269,WAZAINFO_SV_269,F846570EDB6C97A4,"Enfurece al objetivo para que solo use movimientos de
+ataque durante tres turnos.",4,52576
+270,WAZAINFO_SV_270,F8434A0EDB6A4BB6,"El usuario ayuda a un aliado reforzando la potencia de
+su ataque.",4,52740
+271,WAZAINFO_SV_271,F8434B0EDB6A4D69,"Engaña al objetivo desprevenido e intercambia su
+objeto con él.",4,52872
+272,WAZAINFO_SV_272,F843480EDB6A4850,Imita al objetivo por completo y copia su habilidad.,4,53000
+273,WAZAINFO_SV_273,F843490EDB6A4A03,"Restaura en el siguiente turno la mitad de los PS
+máximos del usuario o se los pasa al Pokémon que lo
+sustituye.",0,53108
+274,WAZAINFO_SV_274,F8434E0EDB6A5282,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,53336
+275,WAZAINFO_SV_275,F8434F0EDB6A5435,"Echa raíces para recuperar PS en cada turno,
+pero impide que pueda huir o sea cambiado por otro.",4,53596
+276,WAZAINFO_SV_276,F8434C0EDB6A4F1C,"Ataque de gran potencia, pero que reduce el Ataque y
+la Defensa del usuario.",4,53792
+277,WAZAINFO_SV_277,F8434D0EDB6A50CF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,53948
+278,WAZAINFO_SV_278,F843520EDB6A594E,"Recicla y así recupera un objeto equipado de un solo
+uso que ya haya sido empleado durante el combate.",0,54208
+279,WAZAINFO_SV_279,F843530EDB6A5B01,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,54416
+280,WAZAINFO_SV_280,F84D5C0EDB72BED1,"Ataca al objetivo con un poderoso golpe con el filo
+de la mano capaz de destruir barreras como Pantalla
+de Luz y Reflejo.",4,54676
+281,WAZAINFO_SV_281,F84D5B0EDB72BD1E,"Gran bostezo que induce el sueño en el objetivo en el
+siguiente turno.",0,54920
+282,WAZAINFO_SV_282,F84D5A0EDB72BB6B,"Hace que el objetivo suelte el objeto que lleva y le
+impide usarlo hasta que concluye el combate. Causa
+más daño si el objetivo lleva un objeto.",0,55064
+283,WAZAINFO_SV_283,F84D590EDB72B9B8,"Reduce los PS del objetivo para que igualen a los del
+usuario.",0,55356
+284,WAZAINFO_SV_284,F84D600EDB72C59D,"Furia explosiva. Cuanto menor sea el número de PS
+del usuario, menos potencia tendrá el movimiento.",0,55484
+285,WAZAINFO_SV_285,F84D5F0EDB72C3EA,"Usa su poder psíquico para intercambiar habilidades
+con el objetivo.",4,55684
+286,WAZAINFO_SV_286,F84D5E0EDB72C237,"Les impide a los rivales usar movimientos conocidos
+por el usuario durante el combate.",0,55824
+287,WAZAINFO_SV_287,F84D5D0EDB72C084,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,56000
+288,WAZAINFO_SV_288,F84D540EDB72B139,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,56260
+289,WAZAINFO_SV_289,F84D530EDB72AF86,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,56520
+290,WAZAINFO_SV_290,F849D60EDB6FA548,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,56780
+291,WAZAINFO_SV_291,F849D70EDB6FA6FB,"El usuario se sumerge en el primer turno y ataca en el
+segundo.",4,57040
+292,WAZAINFO_SV_292,F849D80EDB6FA8AE,"Golpea fuertemente al objetivo con la palma de las
+manos de dos a cinco veces seguidas.",0,57168
+293,WAZAINFO_SV_293,F849D90EDB6FAA61,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,57344
+294,WAZAINFO_SV_294,F849DA0EDB6FAC14,"Mira fijamente los parpadeos de la luz para concentrarse
+y aumenta muchísimo su Ataque Especial.",0,57604
+295,WAZAINFO_SV_295,F849DB0EDB6FADC7,"Fogonazo de luz que le causa daño al objetivo y puede
+reducir su Defensa Especial.",0,57800
+296,WAZAINFO_SV_296,F849DC0EDB6FAF7A,"Bola de plumas neblinosas que le causa daño al objetivo
+y puede reducir su Ataque Especial.",0,57968
+297,WAZAINFO_SV_297,F849DD0EDB6FB12D,"Envuelve al objetivo con un manto de plumas para
+reducir mucho su Ataque.",4,58152
+298,WAZAINFO_SV_298,F849CE0EDB6F97B0,"Danza histérica que confunde a los Pokémon
+adyacentes.",0,58300
+299,WAZAINFO_SV_299,F849CF0EDB6F9963,"Patada que suele lanzar un golpe crítico y puede causar
+quemaduras.",0,58412
+300,WAZAINFO_SV_300,EF88B10ED673A6DE,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,58548
+301,WAZAINFO_SV_301,EF88B20ED673A891,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,58808
+302,WAZAINFO_SV_302,EF88AF0ED673A378,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,59068
+303,WAZAINFO_SV_303,EF88B00ED673A52B,"El usuario se relaja y restaura la mitad de sus PS
+máximos.",4,59328
+304,WAZAINFO_SV_304,EF88B50ED673ADAA,Grito desgarrador que le causa daño al objetivo.,0,59448
+305,WAZAINFO_SV_305,EF88B60ED673AF5D,"Mordedura con colmillos venenosos que le causa daño
+al objetivo y puede envenenarlo gravemente.",0,59548
+306,WAZAINFO_SV_306,EF88B30ED673AA44,"Hace trizas al objetivo con garras afiladas y puede
+reducir su Defensa.",0,59740
+307,WAZAINFO_SV_307,EF88B40ED673ABF7,"Calcina al objetivo con una explosión de fuego.
+El usuario deberá descansar en el siguiente turno.",0,59884
+308,WAZAINFO_SV_308,EF88A90ED6739946,"Ataca al objetivo con un cañonazo de agua. El usuario
+deberá descansar en el siguiente turno.",4,60084
+309,WAZAINFO_SV_309,EF88AA0ED6739AF9,"Puñetazo que impacta como un meteorito y puede
+aumentar el Ataque del usuario.",0,60272
+310,WAZAINFO_SV_310,EF8C370ED676C067,"Asusta al objetivo con, por ejemplo, un grito y le
+lanza un ataque que puede atemorizarlo.",4,60432
+311,WAZAINFO_SV_311,EF8C360ED676BEB4,"El tipo y la potencia del movimiento varían según el
+tiempo atmosférico.",4,60616
+312,WAZAINFO_SV_312,EF8C390ED676C3CD,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,60764
+313,WAZAINFO_SV_313,EF8C380ED676C21A,"Lágrimas de cocodrilo que reducen mucho la Defensa
+Especial del objetivo.",0,61024
+314,WAZAINFO_SV_314,EF8C330ED676B99B,"Viento cortante que azota. Suele lanzar un golpe
+crítico.",0,61172
+315,WAZAINFO_SV_315,EF8C320ED676B7E8,"Ataca al objetivo con toda su fuerza, pero reduce mucho
+el Ataque Especial del usuario.",4,61288
+316,WAZAINFO_SV_316,EF8C350ED676BD01,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,61464
+317,WAZAINFO_SV_317,EF8C340ED676BB4E,"Lanza rocas que le causan daño al objetivo y reducen su
+Velocidad al dificultar sus movimientos.",0,61724
+318,WAZAINFO_SV_318,EF8C2F0ED676B2CF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,61920
+319,WAZAINFO_SV_319,EF8C2E0ED676B11C,"Horrible chirrido metálico que reduce mucho la Defensa
+Especial del objetivo.",0,62180
+320,WAZAINFO_SV_320,EF81A50ED66D73CC,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,62336
+321,WAZAINFO_SV_321,EF81A60ED66D757F,"Hace reír al objetivo para reducir su Ataque y su
+Defensa.",0,62596
+322,WAZAINFO_SV_322,EF81A70ED66D7732,"Absorbe una energía mística proveniente del espacio
+que aumenta su Defensa y su Defensa Especial.",4,62716
+323,WAZAINFO_SV_323,EF81A80ED66D78E5,"Chorro de agua. Cuantos menos PS tenga el usuario,
+menos potencia tendrá el movimiento.",0,62912
+324,WAZAINFO_SV_324,EF81A10ED66D6D00,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,63088
+325,WAZAINFO_SV_325,EF81A20ED66D6EB3,Puñetazo procedente de las sombras que no falla nunca.,0,63348
+326,WAZAINFO_SV_326,EF81A30ED66D7066,"Emite una energía muy extraña que puede atemorizar
+al objetivo.",4,63460
+327,WAZAINFO_SV_327,EF81A40ED66D7219,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,63588
+328,WAZAINFO_SV_328,EF81AD0ED66D8164,"Envuelve al objetivo en un violento remolino de arena
+que le causa daño de cuatro a cinco turnos.",4,63848
+329,WAZAINFO_SV_329,EF81AE0ED66D8317,"Fulmina al objetivo de un solo golpe. Si lo usa un
+Pokémon que no sea de tipo Hielo, es difícil que
+acierte.",0,64044
+330,WAZAINFO_SV_330,EF852B0ED6708D55,"Ataque con agua lodosa que puede reducir la Precisión
+del objetivo.",4,64264
+331,WAZAINFO_SV_331,EF852A0ED6708BA2,"Dispara rápido ráfagas de semillas de dos a cinco veces
+seguidas.",0,64400
+332,WAZAINFO_SV_332,EF85290ED67089EF,"Desconcierta al objetivo con movimientos muy rápidos
+antes de cercenarlo. No falla nunca.",0,64532
+333,WAZAINFO_SV_333,EF85280ED670883C,"Lanza carámbanos afilados al objetivo de dos a cinco
+veces seguidas.",0,64712
+334,WAZAINFO_SV_334,EF85270ED6708689,"Fortalece el cuerpo como si fuera de hierro y aumenta
+mucho la Defensa.",0,64852
+335,WAZAINFO_SV_335,EF85260ED67084D6,"Le corta el paso al objetivo para que no pueda huir
+ni lo puedan cambiar por otro.",0,64996
+336,WAZAINFO_SV_336,EF85250ED6708323,"Aullido que sube el ánimo y aumenta el Ataque del
+bando del usuario.",4,65164
+337,WAZAINFO_SV_337,EF85240ED6708170,Araña al objetivo con unas enormes garras afiladas.,4,65304
+338,WAZAINFO_SV_338,EF85330ED6709AED,"Golpea con una enorme planta. El usuario deberá
+descansar en el siguiente turno.",0,65408
+339,WAZAINFO_SV_339,EF85320ED670993A,"Robustece el cuerpo para aumentar el Ataque y la
+Defensa.",0,65572
+340,WAZAINFO_SV_340,EF7B390ED668509A,"El usuario rebota en el primer turno y golpea en el
+segundo. Puede paralizar al objetivo.",4,65688
+341,WAZAINFO_SV_341,EF7B3A0ED668524D,"El usuario ataca lanzando una bola de lodo al objetivo
+que también reduce su Velocidad.",4,65868
+342,WAZAINFO_SV_342,EF7B370ED6684D34,"Da un golpe con la cola que puede envenenar al
+objetivo. Suele lanzar un golpe crítico.",0,66044
+343,WAZAINFO_SV_343,EF7B380ED6684EE7,"Se acerca con ternura al objetivo y le roba el objeto
+que lleve.",0,66220
+344,WAZAINFO_SV_344,EF7B350ED66849CE,"El usuario electrifica su cuerpo para luego atacar, pero
+también se hiere gravemente a sí mismo. Puede paralizar
+al objetivo.",4,66352
+345,WAZAINFO_SV_345,EF7B360ED6684B81,"Esparce extrañas hojas que persiguen al objetivo.
+No falla nunca.",4,66604
+346,WAZAINFO_SV_346,EF7B330ED6684668,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,66736
+347,WAZAINFO_SV_347,EF7B340ED668481B,"Mejora la concentración y calma el espíritu para
+aumentar el Ataque Especial y la Defensa Especial.",0,66996
+348,WAZAINFO_SV_348,EF7B310ED6684302,"Acuchilla con una hoja fina. Suele lanzar un golpe
+crítico.",4,67196
+349,WAZAINFO_SV_349,EF7B320ED66844B5,"Frenética danza mística que aumenta el Ataque y la
+Velocidad.",0,67316
+350,WAZAINFO_SV_350,EF7E9F0ED66B33C3,"Lanza pedruscos al objetivo de dos a cinco veces
+seguidas.",0,67440
+351,WAZAINFO_SV_351,EF7E9E0ED66B3210,Ataque eléctrico muy rápido que no falla nunca.,4,67560
+352,WAZAINFO_SV_352,EF7EA10ED66B3729,"Ataca con una potente onda de agua. Puede confundir
+al objetivo.",4,67656
+353,WAZAINFO_SV_353,EF7EA00ED66B3576,"Ataca al objetivo con innumerables rayos de luz
+dos turnos después de haber usado el movimiento.",4,67788
+354,WAZAINFO_SV_354,EF7EA30ED66B3A8F,"Ataca al objetivo con toda su fuerza, pero reduce mucho
+el Ataque Especial del usuario.",4,67984
+355,WAZAINFO_SV_355,EF7EA20ED66B38DC,"Aterriza sobre la superficie para descansar.
+Restaura hasta la mitad de sus PS máximos.",4,68160
+356,WAZAINFO_SV_356,EF7EA50ED66B3DF5,"Durante cinco turnos, se anulan los movimientos que
+alzan el vuelo y los Pokémon de tipo Volador o que
+levitan son vulnerables a movimientos de tipo Tierra.",0,68336
+357,WAZAINFO_SV_357,EF7EA40ED66B3C42,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,68652
+358,WAZAINFO_SV_358,EF7EA70ED66B415B,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,68912
+359,WAZAINFO_SV_359,EF7EA60ED66B3FA8,"Lanza un golpe devastador con el puño, pero reduce
+la Velocidad del usuario.",0,69172
+360,WAZAINFO_SV_360,EF742D0ED6621D88,"Embiste al objetivo con un potente ataque giratorio.
+Cuanto menor es la Velocidad del usuario respecto
+a la del objetivo, más daño causa.",4,69328
+361,WAZAINFO_SV_361,EF742E0ED6621F3B,"El usuario se debilita, pero cura los problemas de
+estado del Pokémon que lo sustituye y restaura sus PS.",4,69604
+362,WAZAINFO_SV_362,EF742F0ED66220EE,"Si al objetivo le quedan la mitad o menos de sus PS,
+la potencia del movimiento se duplica.",0,69816
+363,WAZAINFO_SV_363,EF74300ED66222A1,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,70000
+364,WAZAINFO_SV_364,EF74310ED6622454,"Permite golpear a objetivos que utilizaron
+movimientos como Protección o Detección y anula
+sus efectos.",0,70260
+365,WAZAINFO_SV_365,EF74320ED6622607,"Picotea al objetivo. Si este sostiene una baya, la picotea
+también y obtiene sus efectos.",0,70468
+366,WAZAINFO_SV_366,EF74330ED66227BA,"Crea un fuerte remolino que aumenta la Velocidad del
+bando del usuario durante cuatro turnos.",0,70648
+367,WAZAINFO_SV_367,EF74340ED662296D,"Aplica presión en puntos clave del cuerpo para
+aumentar mucho una característica al azar.",4,70836
+368,WAZAINFO_SV_368,EF74250ED6620FF0,"Le devuelve al rival el último ataque recibido, pero con
+mucha más fuerza.",0,71016
+369,WAZAINFO_SV_369,EF74260ED66211A3,"Tras atacar, el usuario vuelve a toda prisa para dar paso
+a otro Pokémon del equipo.",0,71168
+370,WAZAINFO_SV_370,EF77B30ED6653711,"Ataca ferozmente al objetivo sin protegerse, lo cual
+reduce la Defensa y la Defensa Especial del usuario.",4,71340
+371,WAZAINFO_SV_371,EF77B20ED665355E,"El usuario contraataca con el doble de potencia si el
+objetivo usa un movimiento antes.",4,71552
+372,WAZAINFO_SV_372,EF77B10ED66533AB,"Si el objetivo ya sufrió daño en ese turno,
+la potencia del movimiento se duplica.",0,71728
+373,WAZAINFO_SV_373,EF77B00ED66531F8,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,71896
+374,WAZAINFO_SV_374,EF77B70ED6653DDD,"El usuario lanza contra el objetivo el objeto que lleva.
+La potencia del movimiento y su efecto varían según el
+objeto.",4,72156
+375,WAZAINFO_SV_375,EF77B60ED6653C2A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,72396
+376,WAZAINFO_SV_376,EF77B50ED6653A77,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,72656
+377,WAZAINFO_SV_377,EF77B40ED66538C4,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,72916
+378,WAZAINFO_SV_378,EF77AB0ED6652979,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,73176
+379,WAZAINFO_SV_379,EF77AA0ED66527C6,"El usuario emplea su poder mental para intercambiar
+su Ataque y su Defensa.",4,73436
+380,WAZAINFO_SV_380,EF6DA10ED65CC3F6,"El usuario arroja sus jugos biliares al objetivo, lo que
+anula el efecto de la habilidad en uso.",4,73588
+381,WAZAINFO_SV_381,EF6DA20ED65CC5A9,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,73784
+382,WAZAINFO_SV_382,EF6D9F0ED65CC090,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,74044
+383,WAZAINFO_SV_383,EF6DA00ED65CC243,"Imita el movimiento que se usó justo antes.
+El movimiento falla si no se usó ninguno aún.",4,74304
+384,WAZAINFO_SV_384,EF6DA50ED65CCAC2,"El usuario emplea su poder mental para intercambiar
+los cambios en el Ataque y el Ataque Especial con el
+objetivo.",4,74484
+385,WAZAINFO_SV_385,EF6DA60ED65CCC75,"El usuario emplea su poder mental para intercambiar
+los cambios en la Defensa y la Defensa Especial con
+el objetivo.",4,74716
+386,WAZAINFO_SV_386,EF6DA30ED65CC75C,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,74952
+387,WAZAINFO_SV_387,EF6DA40ED65CC90F,"Este movimiento solo puede utilizarse cuando se hayan
+usado al menos una vez todos los demás movimientos
+que conoce el Pokémon.",4,75212
+388,WAZAINFO_SV_388,EF6DA90ED65CD18E,"Planta una semilla en el objetivo que le causa pesar.
+Sustituye la habilidad del objetivo por Insomnio y le
+impide dormirse.",0,75468
+389,WAZAINFO_SV_389,EF6DAA0ED65CD341,"Permite atacar con prioridad. Falla si el objetivo no está
+preparando ningún ataque.",0,75720
+390,WAZAINFO_SV_390,EF70A70ED65F03FF,"Lanza una trampa de púas tóxicas a los pies del objetivo
+que envenena a los rivales que entran en combate.",0,75892
+391,WAZAINFO_SV_391,EF70A60ED65F024C,"Usa la fuerza mental para intercambiar con el objetivo
+los cambios en las características.",4,76108
+392,WAZAINFO_SV_392,EF70A90ED65F0765,"El usuario se cubre con un manto de agua. Recupera
+algunos PS en cada turno.",4,76292
+393,WAZAINFO_SV_393,EF70A80ED65F05B2,"Levita durante cinco turnos gracias a un campo
+magnético generado por electricidad.",0,76448
+394,WAZAINFO_SV_394,EF70A30ED65EFD33,"El usuario se cubre con llamas y embiste al objetivo,
+aunque se hiere gravemente a sí mismo. Puede causar
+quemaduras.",4,76616
+395,WAZAINFO_SV_395,EF70A20ED65EFB80,"Ataca al objetivo con una onda de choque y puede
+paralizarlo.",4,76852
+396,WAZAINFO_SV_396,EF70A50ED65F0099,"Libera una inmensa descarga de aura desde su interior.
+No falla nunca.",0,76976
+397,WAZAINFO_SV_397,EF70A40ED65EFEE6,"Pule su cuerpo para reducir la resistencia al aire y
+aumentar mucho su Velocidad.",0,77120
+398,WAZAINFO_SV_398,EF70AF0ED65F1197,"Pincha al objetivo con un tentáculo o brazo envenenado.
+Puede envenenar al objetivo.",0,77284
+399,WAZAINFO_SV_399,EF70AE0ED65F0FE4,"Libera una horrible aura llena de malos pensamientos
+que puede atemorizar al objetivo.",0,77456
+400,WAZAINFO_SV_400,08ABA20EE472D89F,"Ataca al objetivo a la primera oportunidad. Suele lanzar
+un golpe crítico.",4,77632
+401,WAZAINFO_SV_401,08ABA10EE472D6EC,"Ataca agitando la cola como si fuera una ola rabiosa en
+una tormenta devastadora.",4,77784
+402,WAZAINFO_SV_402,08ABA40EE472DC05,"Le lanza al objetivo una descarga de enormes semillas
+de cáscara muy dura desde arriba.",0,77948
+403,WAZAINFO_SV_403,08ABA30EE472DA52,"Ataca con un viento afilado que incluso corta el aire.
+También puede atemorizar al objetivo.",4,78124
+404,WAZAINFO_SV_404,08AB9E0EE472D1D3,"Cruza las guadañas o las garras para atacar al objetivo
+como si fueran unas tijeras.",0,78312
+405,WAZAINFO_SV_405,08AB9D0EE472D020,"El usuario crea una onda sónica dañina moviendo
+su cuerpo que también puede reducir la Defensa
+Especial del objetivo.",4,78484
+406,WAZAINFO_SV_406,08ABA00EE472D539,"Abre mucho la boca y libera una onda de choque con
+la que ataca al objetivo.",4,78720
+407,WAZAINFO_SV_407,08AB9F0EE472D386,"Ataca de forma brutal mientras intimida al objetivo.
+Puede atemorizarlo.",4,78876
+408,WAZAINFO_SV_408,08ABAA0EE472E637,"Ataca con un rayo de luz que centellea como si estuviera
+formado por miles de joyas.",4,79024
+409,WAZAINFO_SV_409,08ABA90EE472E484,"Un golpe que drena energía. El usuario recupera la
+mitad de los PS que le arrebata al objetivo.",4,79196
+410,WAZAINFO_SV_410,08A81C0EE46FBF16,"Gira los puños y libera una onda de vacío contra el
+objetivo. Este movimiento tiene prioridad alta.",0,79388
+411,WAZAINFO_SV_411,08A81D0EE46FC0C9,"Agudiza la concentración mental y libera su poder.
+Puede reducir la Defensa Especial del objetivo.",4,79588
+412,WAZAINFO_SV_412,08A81A0EE46FBBB0,"Acumula fuerzas de la naturaleza y libera su ataque.
+Puede reducir la Defensa Especial del objetivo.",4,79788
+413,WAZAINFO_SV_413,08A81B0EE46FBD63,"Pliega las alas y ataca con un vuelo de poca altitud.
+El usuario se hiere gravemente a sí mismo.",0,79992
+414,WAZAINFO_SV_414,08A8200EE46FC5E2,"La tierra a los pies del objetivo hace erupción
+violentamente. Puede reducir la Defensa Especial
+del objetivo.",0,80188
+415,WAZAINFO_SV_415,08A8210EE46FC795,"Intercambia con el objetivo los objetos que llevan
+tan rápido que es imposible verlo a simple vista.",4,80412
+416,WAZAINFO_SV_416,08A81E0EE46FC27C,"El usuario embiste al objetivo con toda la fuerza
+que tiene y descansa en el siguiente turno.",4,80616
+417,WAZAINFO_SV_417,08A81F0EE46FC42F,"Estimula su cerebro pensando en cosas malas.
+Aumenta mucho su Ataque Especial.",4,80804
+418,WAZAINFO_SV_418,08A8240EE46FCCAE,"Ataca con fuertes puñetazos tan rápidos como
+proyectiles. Este movimiento tiene prioridad alta.",4,80964
+419,WAZAINFO_SV_419,08A8250EE46FCE61,"La potencia de este movimiento se duplica si el usuario
+fue golpeado por el objetivo en ese mismo turno.",0,81156
+420,WAZAINFO_SV_420,08A4B60EE46CDBED,"Crea esquirlas de hielo y las lanza a gran velocidad.
+Este movimiento tiene prioridad alta.",0,81368
+421,WAZAINFO_SV_421,08A4B50EE46CDA3A,"Ataca con una garra afilada hecha de sombras. Suele
+lanzar un golpe crítico.",4,81552
+422,WAZAINFO_SV_422,08A4B40EE46CD887,"El usuario muerde al objetivo con colmillos
+electrificados y puede atemorizarlo o paralizarlo.",4,81708
+423,WAZAINFO_SV_423,08A4B30EE46CD6D4,"El usuario muerde al objetivo con colmillos helados y
+puede atemorizarlo o congelarlo.",4,81900
+424,WAZAINFO_SV_424,08A4B20EE46CD521,"El usuario muerde al objetivo con colmillos en llamas y
+puede atemorizarlo o causarle quemaduras.",4,82076
+425,WAZAINFO_SV_425,08A4B10EE46CD36E,"Extiende su sombra y ataca al objetivo por la espalda.
+Este movimiento tiene prioridad alta.",4,82272
+426,WAZAINFO_SV_426,08A4B00EE46CD1BB,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,82460
+427,WAZAINFO_SV_427,08A4AF0EE46CD008,"Ataca al objetivo con cuchillas formadas por energía
+psíquica. Suele lanzar un golpe crítico.",4,82720
+428,WAZAINFO_SV_428,08A4AE0EE46CCE55,"Concentra su energía psíquica en la cabeza para
+golpear. Puede atemorizar al objetivo.",0,82908
+429,WAZAINFO_SV_429,08A4AD0EE46CCCA2,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,83084
+430,WAZAINFO_SV_430,08A1300EE469C264,"El usuario concentra toda la luz de su cuerpo y la libera.
+Puede reducir la Defensa Especial del objetivo.",4,83344
+431,WAZAINFO_SV_431,08A1310EE469C417,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,83560
+432,WAZAINFO_SV_432,08A1320EE469C5CA,"Potente viento que barre los efectos de movimientos
+como Reflejo o Pantalla de Luz que use el objetivo.
+También reduce su Evasión.",0,83820
+433,WAZAINFO_SV_433,08A1330EE469C77D,"Crea un espacio misterioso en el que los Pokémon lentos
+se mueven primero durante cinco turnos.",0,84084
+434,WAZAINFO_SV_434,08A12C0EE469BB98,"Hace que grandes cometas caigan del cielo sobre el
+objetivo. Reduce mucho el Ataque Especial del usuario.",0,84276
+435,WAZAINFO_SV_435,08A12D0EE469BD4B,"Una deslumbrante onda eléctrica que afecta a
+los Pokémon adyacentes. Puede causar parálisis.",4,84488
+436,WAZAINFO_SV_436,08A12E0EE469BEFE,"Un infierno de llamas que daña a los Pokémon
+adyacentes en combate. Puede causar quemaduras.",4,84676
+437,WAZAINFO_SV_437,08A12F0EE469C0B1,"Envuelve al objetivo con una lluvia de hojas afiladas,
+pero reduce mucho el Ataque Especial del usuario.",4,84864
+438,WAZAINFO_SV_438,08A1280EE469B4CC,"El usuario agita violentamente sus lianas o tentáculos
+para golpear al objetivo.",4,85076
+439,WAZAINFO_SV_439,08A1290EE469B67F,"Lanza una piedra enorme contra el objetivo. El usuario
+deberá descansar en el siguiente turno.",0,85240
+440,WAZAINFO_SV_440,089E2A0EE467825B,"Un corte que puede envenenar al objetivo. Suele lanzar
+un golpe crítico.",4,85432
+441,WAZAINFO_SV_441,089E290EE46780A8,"Lanza basura asquerosa contra el objetivo y puede
+envenenarlo.",0,85580
+442,WAZAINFO_SV_442,089E2C0EE46785C1,"Ataca con su cabeza dura como el hierro.
+Puede atemorizar al objetivo.",4,85708
+443,WAZAINFO_SV_443,089E2B0EE467840E,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,85852
+444,WAZAINFO_SV_444,089E2E0EE4678927,"Le clava piedras muy afiladas al objetivo. Suele lanzar
+un golpe crítico.",0,86112
+445,WAZAINFO_SV_445,089E2D0EE4678774,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,86260
+446,WAZAINFO_SV_446,089E300EE4678C8D,"Hace flotar innumerables rocas alrededor del objetivo,
+hiriendo a los rivales que entran en combate.",0,86520
+447,WAZAINFO_SV_447,089E2F0EE4678ADA,"Enreda al objetivo con el pasto y lo derriba.
+Cuanto más pesado es el objetivo, más potencia
+tiene el movimiento.",4,86724
+448,WAZAINFO_SV_448,089E220EE46774C3,"Ataca con una onda de sonido muy ruidosa compuesta
+por palabras y confunde al objetivo.",4,86952
+449,WAZAINFO_SV_449,089E210EE4677310,"Emite incontables rayos de luz. El tipo del movimiento
+varía según la placa que tenga el usuario.",4,87128
+450,WAZAINFO_SV_450,089AA40EE46468D2,"Pica al objetivo. Si el objetivo lleva una baya, el usuario
+se la come y se beneficia de su efecto.",0,87324
+451,WAZAINFO_SV_451,089AA50EE4646A85,"Lanza un rayo eléctrico contra el objetivo. Puede
+aumentar el Ataque Especial del usuario.",0,87524
+452,WAZAINFO_SV_452,089AA20EE464656C,"Embiste al objetivo con su robusto cuerpo.
+El usuario se hiere gravemente a sí mismo.",4,87708
+453,WAZAINFO_SV_453,089AA30EE464671F,"Ataca al objetivo a tal velocidad que es casi
+imperceptible. Este movimiento tiene prioridad alta.",4,87880
+454,WAZAINFO_SV_454,089AA00EE4646206,"El usuario llama a sus súbditos para que ataquen al
+objetivo. Suele lanzar un golpe crítico.",4,88080
+455,WAZAINFO_SV_455,089AA10EE46463B9,"El usuario llama a sus súbditos para que formen un
+escudo viviente. Aumenta la Defensa y la Defensa
+Especial.",4,88268
+456,WAZAINFO_SV_456,089A9E0EE4645EA0,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,88488
+457,WAZAINFO_SV_457,089A9F0EE4646053,"El usuario arriesga su vida y lanza un cabezazo con toda
+su fuerza, pero también se hiere gravemente a sí mismo.",4,88748
+458,WAZAINFO_SV_458,089AAC0EE464766A,"Golpea al objetivo dos veces seguidas con la cola u
+otras partes de su cuerpo.",0,88976
+459,WAZAINFO_SV_459,089AAD0EE464781D,"Ataca al objetivo usando tanta energía que el tiempo se
+distorsiona. El usuario deberá descansar en el siguiente
+turno.",4,89136
+460,WAZAINFO_SV_460,08971E0EE4614F49,"Desgarra al objetivo y el espacio a su alrededor.
+Suele lanzar un golpe crítico.",0,89376
+461,WAZAINFO_SV_461,08971D0EE4614D96,"El usuario se debilita, pero cura los problemas de
+estado del Pokémon que lo sustituye y restaura sus PS
+y sus PP.",4,89540
+462,WAZAINFO_SV_462,08971C0EE4614BE3,"Estruja al objetivo con gran fuerza. Cuantos más PS
+le queden al objetivo, mayor potencia tendrá
+el movimiento.",4,89772
+463,WAZAINFO_SV_463,08971B0EE4614A30,"El objetivo queda atrapado en una tormenta de fuego
+que dura de cuatro a cinco turnos.",4,89996
+464,WAZAINFO_SV_464,0897220EE4615615,"Envía al objetivo a un mundo de tinieblas
+que lo hace dormir.",4,90172
+465,WAZAINFO_SV_465,0897210EE4615462,"El usuario libera una onda de choque de su cuerpo.
+Puede reducir mucho la Defensa Especial del objetivo.",4,90296
+466,WAZAINFO_SV_466,0897200EE46152AF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,90508
+467,WAZAINFO_SV_467,08971F0EE46150FC,"En el primer turno, desaparece. En el segundo, golpea
+al objetivo aunque se esté protegiendo.",4,90768
+468,WAZAINFO_SV_468,0897260EE4615CE1,"El usuario se afila las garras para aumentar su Ataque y
+su Precisión.",4,90956
+469,WAZAINFO_SV_469,0897250EE4615B2E,"Bloquea los ataques de objetivo múltiple que se lancen
+contra el bando del usuario durante un turno.",0,91100
+470,WAZAINFO_SV_470,0893980EE45E35C0,"El usuario emplea sus poderes para promediar
+su Defensa y su Defensa Especial con las del objetivo
+y compartirlas.",4,91304
+471,WAZAINFO_SV_471,0893990EE45E3773,"El usuario emplea sus poderes para promediar su Ataque
+y su Ataque Especial con los del objetivo y compartirlos.",4,91536
+472,WAZAINFO_SV_472,08939A0EE45E3926,"Crea un espacio misterioso donde se intercambian la
+Defensa y la Defensa Especial de todos los Pokémon
+durante cinco turnos.",0,91764
+473,WAZAINFO_SV_473,08939B0EE45E3AD9,"Crea una onda psíquica que causa daño físico al
+objetivo.",0,92016
+474,WAZAINFO_SV_474,08939C0EE45E3C8C,"Cubre al objetivo con un líquido venenoso. La potencia
+del movimiento se duplica si este ya está envenenado.",0,92132
+475,WAZAINFO_SV_475,08939D0EE45E3E3F,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,92352
+476,WAZAINFO_SV_476,08939E0EE45E3FF2,"Usa un polvo que enerva a los rivales y hace que centren
+su atención y sus movimientos en el usuario.",4,92612
+477,WAZAINFO_SV_477,08939F0EE45E41A5,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,92816
+478,WAZAINFO_SV_478,0893A00EE45E4358,"Crea un espacio misterioso que inutiliza todos los
+objetos de los Pokémon durante cinco turnos.",0,93076
+479,WAZAINFO_SV_479,0893A10EE45E450B,"Ataca lanzando una piedra o un proyectil. Si el objetivo
+está en el aire, lo estrella contra el suelo.",4,93268
+480,WAZAINFO_SV_480,08C6B20EE489BB87,"Lanza un golpe devastador. Siempre provoca un golpe
+crítico.",0,93476
+481,WAZAINFO_SV_481,08C6B10EE489B9D4,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,93600
+482,WAZAINFO_SV_482,08C6B40EE489BEED,"Una ola de lodo que daña a los Pokémon adyacentes.
+Puede envenenar.",4,93860
+483,WAZAINFO_SV_483,08C6B30EE489BD3A,"Danza mística que aumenta el Ataque Especial,
+la Defensa Especial y la Velocidad.",0,93996
+484,WAZAINFO_SV_484,08C6AE0EE489B4BB,"El usuario golpea con todo su cuerpo. Cuanto mayor
+sea su peso comparado con el del objetivo, mayor será
+la potencia del movimiento.",4,94160
+485,WAZAINFO_SV_485,08C6AD0EE489B308,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,94428
+486,WAZAINFO_SV_486,08C6B00EE489B821,"Lanza una bola eléctrica. Cuanto mayor sea la Velocidad
+del usuario en comparación con la del objetivo,
+mayor será la potencia del movimiento.",0,94688
+487,WAZAINFO_SV_487,08C6AF0EE489B66E,"Lanza un potente aguacero que transforma al objetivo
+en un Pokémon de tipo Agua.",0,94976
+488,WAZAINFO_SV_488,08C6AA0EE489ADEF,"Llamas que golpean al objetivo y aumentan la Velocidad
+del usuario.",0,95140
+489,WAZAINFO_SV_489,08C6A90EE489AC3C,"El usuario se concentra, lo que le permite aumentar
+su Ataque, su Defensa y su Precisión.",4,95276
+490,WAZAINFO_SV_490,08C32C0EE486A1FE,"Ataque rápido dirigido a los pies del objetivo que le
+hace perder Velocidad.",4,95456
+491,WAZAINFO_SV_491,08C32D0EE486A3B1,"Ataca con un líquido corrosivo que reduce mucho la
+Defensa Especial del objetivo.",4,95612
+492,WAZAINFO_SV_492,08C32A0EE4869E98,"El usuario emplea la fuerza del objetivo para atacarlo.
+Cuanto mayor es el Ataque del objetivo, más daño
+provoca.",4,95776
+493,WAZAINFO_SV_493,08C32B0EE486A04B,"Lanza una onda psíquica que hace que la habilidad del
+objetivo pase a ser Simple.",0,96004
+494,WAZAINFO_SV_494,08C3300EE486A8CA,"Una extraña danza que induce al objetivo a imitarla y
+cambia su habilidad por la misma que la del usuario.",4,96168
+495,WAZAINFO_SV_495,08C3310EE486AA7D,"Si el usuario es el más rápido, le permite al objetivo usar
+un movimiento justo tras él, adelantándose a Pokémon
+más rápidos.",0,96384
+496,WAZAINFO_SV_496,08C32E0EE486A564,"Entona una canción que le causa daño al objetivo. Si
+otro Pokémon lo usa en el mismo turno, ataca justo a
+continuación y la potencia del movimiento aumenta.",4,96636
+497,WAZAINFO_SV_497,08C32F0EE486A717,"Un susurro que aumenta de potencia a medida
+que el usuario y otros Pokémon lo van utilizando.",4,96952
+498,WAZAINFO_SV_498,08C3240EE4869466,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,97140
+499,WAZAINFO_SV_499,08C3250EE4869619,"Ataca al objetivo con una singular bola de lodo que
+elimina cualquier cambio en sus características.",4,97400
+500,WAZAINFO_SV_500,FF95870EDF2EAB34,"Acumula poder para golpear. Cuanto más suban
+las características del usuario, mayor será la potencia
+del movimiento.",4,97604
+501,WAZAINFO_SV_501,FF95880EDF2EACE7,"Se protege a sí mismo y a sus aliados de movimientos
+con prioridad.",0,97840
+502,WAZAINFO_SV_502,FF95890EDF2EAE9A,"Extraño poder que intercambia la posición del usuario
+con la de un aliado sobre el terreno de combate. Puede
+fallar si se usa repetidamente.",4,97976
+503,WAZAINFO_SV_503,FF958A0EDF2EB04D,"Ataca arrojando agua hirviendo al objetivo. Puede
+causar quemaduras.",4,98260
+504,WAZAINFO_SV_504,FF95830EDF2EA468,"El usuario rompe su coraza y reduce su Defensa y su
+Defensa Especial, pero aumenta mucho su Ataque,
+su Ataque Especial y su Velocidad.",4,98400
+505,WAZAINFO_SV_505,FF95840EDF2EA61B,"Una onda curativa que restaura la mitad de los PS
+máximos del objetivo.",4,98672
+506,WAZAINFO_SV_506,FF95850EDF2EA7CE,"Ataque que causa un gran daño a los objetivos que
+sufren problemas de estado.",4,98816
+507,WAZAINFO_SV_507,FF95860EDF2EA981,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,98972
+508,WAZAINFO_SV_508,FF957F0EDF2E9D9C,"Al hacer girar los engranajes, el usuario aumenta su
+Ataque y aumenta mucho su Velocidad.",4,99232
+509,WAZAINFO_SV_509,FF95800EDF2E9F4F,"Lanza por los aires al objetivo y hace que salga otro
+Pokémon. Si es uno salvaje, acaba el combate.",0,99412
+510,WAZAINFO_SV_510,FF988D0EDF30EB3D,"Llamas que golpean al objetivo. Si este lleva una baya
+o ciertos objetos, se quemarán y ya no se podrán usar.",0,99612
+511,WAZAINFO_SV_511,FF988C0EDF30E98A,Provoca que el objetivo sea el último en moverse.,0,99832
+512,WAZAINFO_SV_512,FF988B0EDF30E7D7,"Golpea ágilmente. Si el usuario no lleva ningún objeto,
+daña gravemente al objetivo.",0,99932
+513,WAZAINFO_SV_513,FF988A0EDF30E624,"Cambia el tipo del usuario al mismo tipo que el del
+objetivo.",0,100104
+514,WAZAINFO_SV_514,FF98890EDF30E471,"Venga a los aliados caídos. Si en el turno anterior
+derrotaron a alguno, la potencia del movimiento
+aumentará.",0,100228
+515,WAZAINFO_SV_515,FF98880EDF30E2BE,"El usuario se sacrifica y le causa daño al objetivo
+equivalente a sus propios PS perdidos.",4,100452
+516,WAZAINFO_SV_516,FF98870EDF30E10B,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,100636
+517,WAZAINFO_SV_517,FF98860EDF30DF58,"Ataca con una gran ráfaga de fuego que causa
+quemaduras.",4,100896
+518,WAZAINFO_SV_518,FF98850EDF30DDA5,"Ataca con columnas de agua. Al combinarlo
+con Voto Fuego, crea un arcoíris y aumenta su potencia.",4,101012
+519,WAZAINFO_SV_519,FF98840EDF30DBF2,"Ataca con columnas de fuego. Al combinarlo
+con Voto Planta, crea un mar de llamas y aumenta
+su potencia.",4,101208
+520,WAZAINFO_SV_520,FF9BF30EDF33CE66,"Ataca con columnas de hojas. Al combinarlo
+con Voto Agua, crea un pantano y aumenta su potencia.",4,101420
+521,WAZAINFO_SV_521,FF9BF40EDF33D019,"Luego de atacar, el usuario vuelve rápidamente
+para dar paso a otro Pokémon del equipo.",0,101616
+522,WAZAINFO_SV_522,FF9BF10EDF33CB00,"El usuario opone resistencia y ataca al objetivo.
+También reduce su Ataque Especial.",4,101792
+523,WAZAINFO_SV_523,FF9BF20EDF33CCB3,"Sacudida sísmica que afecta a los Pokémon adyacentes
+y también reduce su Velocidad.",0,101964
+524,WAZAINFO_SV_524,FF9BF70EDF33D532,"El usuario ataca expulsando un aliento gélido. Siempre
+lanza un golpe crítico.",4,102132
+525,WAZAINFO_SV_525,FF9BF80EDF33D6E5,"Ataca al objetivo y lo obliga a cambiarse por otro
+Pokémon. Si es uno salvaje, acaba el combate.",4,102292
+526,WAZAINFO_SV_526,FF9BF50EDF33D1CC,"El usuario se concentra y aumenta su Ataque y su Ataque
+Especial.",4,102488
+527,WAZAINFO_SV_527,FF9BF60EDF33D37F,"Atrapa y ataca al objetivo con una telaraña eléctrica.
+También reduce su Velocidad.",4,102620
+528,WAZAINFO_SV_528,FF9BFB0EDF33DBFE,"El usuario se envuelve de electricidad y embiste al
+objetivo, pero también se hiere ligeramente a sí mismo.",4,102788
+529,WAZAINFO_SV_529,FF9BFC0EDF33DDB1,"El usuario golpea usando su cuerpo como un taladro.
+Suele lanzar un golpe crítico.",4,103004
+530,WAZAINFO_SV_530,FF9F790EDF36E7EF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,103172
+531,WAZAINFO_SV_531,FF9F780EDF36E63C,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,103432
+532,WAZAINFO_SV_532,FF9F7B0EDF36EB55,"El usuario ensarta al objetivo con su cornamenta y
+absorbe su energía. El Pokémon recupera la mitad
+de los PS arrebatados al objetivo.",4,103692
+533,WAZAINFO_SV_533,FF9F7A0EDF36E9A2,"El usuario ataca con una espada e ignora cualquier
+cambio en las características del objetivo.",4,103964
+534,WAZAINFO_SV_534,FF9F750EDF36E123,"Ataca al objetivo con una afilada vieira
+y le puede reducir su Defensa.",4,104156
+535,WAZAINFO_SV_535,FF9F740EDF36DF70,"El usuario ataca con su cuerpo ardiente. Cuanto mayor
+sea su peso comparado con el del objetivo, mayor será
+la potencia del movimiento.",4,104300
+536,WAZAINFO_SV_536,FF9F770EDF36E489,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,104572
+537,WAZAINFO_SV_537,FF9F760EDF36E2D6,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,104832
+538,WAZAINFO_SV_538,FF9F810EDF36F587,"Cubre al Pokémon con una madeja protectora.
+Aumenta muchísimo su Defensa.",0,105092
+539,WAZAINFO_SV_539,FF9F800EDF36F3D4,"Ataca al objetivo con una onda siniestra. Puede reducir
+su Precisión.",4,105240
+540,WAZAINFO_SV_540,FF87EF0EDF231E90,"Crea una onda psíquica que causa daño físico al
+objetivo.",0,105380
+541,WAZAINFO_SV_541,FF87F00EDF232043,Golpea con la cola de dos a cinco veces seguidas.,0,105496
+542,WAZAINFO_SV_542,FF87F10EDF2321F6,"Golpea al objetivo con un fuerte torbellino que
+lo envuelve y puede confundirlo.",0,105596
+543,WAZAINFO_SV_543,FF87F20EDF2323A9,"Lanza un tremendo cabezazo. El usuario se hiere
+ligeramente a sí mismo.",0,105760
+544,WAZAINFO_SV_544,FF87F30EDF23255C,"Arroja dos engranajes de hierro sobre el objetivo.
+Golpea dos veces seguidas.",4,105904
+545,WAZAINFO_SV_545,FF87F40EDF23270F,"Un infierno de llamas que daña a los Pokémon
+adyacentes en combate. Puede causar quemaduras.",4,106060
+546,WAZAINFO_SV_546,FF87F50EDF2328C2,"Ataca al objetivo con un gran láser. El tipo del ataque
+lo determina el cartucho que porta el usuario.",4,106248
+547,WAZAINFO_SV_547,FF87F60EDF232A75,"Ataca conmoviendo al objetivo con un antiguo canto.
+Puede dormirlo.",4,106456
+548,WAZAINFO_SV_548,FF87F70EDF232C28,"Ensarta al objetivo con un largo cuerno dotado de un
+poder místico que causa daño físico.",4,106592
+549,WAZAINFO_SV_549,FF87F80EDF232DDB,"Ataque con aire helado que reduce la Velocidad del
+objetivo.",4,106772
+550,WAZAINFO_SV_550,FF8AF50EDF255E99,"Se envuelve con una gran carga eléctrica y embiste
+al objetivo con ella. Puede causar parálisis.",0,106896
+551,WAZAINFO_SV_551,FF8AF40EDF255CE6,"Ataca con una bella pero potente llama azul que rodea
+al objetivo. Puede causar quemaduras.",4,107092
+552,WAZAINFO_SV_552,FF8AF30EDF255B33,"Se envuelve en llamas y agita las alas para dañar al
+objetivo. Puede aumentar el Ataque Especial del usuario.",0,107276
+553,WAZAINFO_SV_553,FF8AF20EDF255980,"El usuario carga un bloque de hielo con electricidad
+en el primer turno y ataca con él en el segundo.
+Puede causar parálisis.",4,107496
+554,WAZAINFO_SV_554,FF8AF90EDF256565,"Ataca al objetivo en el segundo turno al rodearlo
+con un aire gélido. Puede causar quemaduras.",4,107748
+555,WAZAINFO_SV_555,FF8AF80EDF2563B2,"Chillido desagradable que reduce el Ataque Especial del
+objetivo.",0,107940
+556,WAZAINFO_SV_556,FF8AF70EDF2561FF,"Lanza grandes carámbanos. Puede atemorizar
+al objetivo.",0,108072
+557,WAZAINFO_SV_557,FF8AF60EDF25604C,"De su frente emana una ardiente llama con la que se
+arroja contra el objetivo. Reduce la Defensa, la Defensa
+Especial y la Velocidad del usuario.",0,108184
+558,WAZAINFO_SV_558,FF8AFD0EDF256C31,"Ataca con una llamarada gigantesca. Aumenta su
+potencia si es influenciada por una gran energía
+eléctrica.",4,108476
+559,WAZAINFO_SV_559,FF8AFC0EDF256A7E,"Ataca con una enorme descarga eléctrica. Aumenta
+su potencia si es influenciada por una gigantesca
+llamarada.",4,108692
+560,WAZAINFO_SV_560,FF8E7B0EDF287822,"El usuario se lanza sobre su objetivo. Este movimiento
+es de tipo Pelea y tipo Volador al mismo tiempo.",4,108912
+561,WAZAINFO_SV_561,FF8E7C0EDF2879D5,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,109120
+562,WAZAINFO_SV_562,FF8E790EDF2874BC,"El usuario le causa daño a su objetivo al lanzarle
+un eructo. Para poder usar este movimiento,
+tiene que haberse comido una baya equipada.",4,109380
+563,WAZAINFO_SV_563,FF8E7A0EDF28766F,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,109660
+564,WAZAINFO_SV_564,FF8E770EDF287156,"Coloca una red pegajosa alrededor del objetivo
+que reduce la Velocidad de los rivales que entran
+en combate.",0,109920
+565,WAZAINFO_SV_565,FF8E780EDF287309,"Si se derrota al objetivo utilizando este movimiento,
+aumenta muchísimo el Ataque del usuario.",0,110140
+566,WAZAINFO_SV_566,FF8E750EDF286DF0,"El usuario desaparece en el primer turno y ataca a su
+objetivo en el segundo. Permite acertar aunque el
+objetivo esté protegiéndose.",4,110332
+567,WAZAINFO_SV_567,FF8E760EDF286FA3,"Invita al objetivo a celebrar Halloween, lo que añade
+el tipo Fantasma a los tipos de este.",4,110600
+568,WAZAINFO_SV_568,FF8E830EDF2885BA,"Intimida a su objetivo con un rugido de guerra, lo que
+reduce tanto su Ataque como su Ataque Especial.",4,110784
+569,WAZAINFO_SV_569,FF8E840EDF28876D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,110992
+570,WAZAINFO_SV_570,FF92010EDF2B91AB,"Les causa daño a los Pokémon adyacentes. El usuario
+absorbe la mitad del daño producido para restaurar
+sus propios PS.",0,111252
+571,WAZAINFO_SV_571,FF92000EDF2B8FF8,"El objetivo es presa de la maldición del bosque, por lo
+que pasa a ser un Pokémon de tipo Planta, además de
+conservar sus tipos habituales.",4,111492
+572,WAZAINFO_SV_572,FF92030EDF2B9511,"El usuario desata un intenso ventarrón de pétalos
+que causa daño a los Pokémon adyacentes.",4,111772
+573,WAZAINFO_SV_573,FF92020EDF2B935E,"Enfría súbitamente al objetivo e incluso puede
+congelarlo. Es supereficaz contra Pokémon de tipo
+Agua.",4,111956
+574,WAZAINFO_SV_574,FF92050EDF2B9877,"Obnubila al objetivo con su fascinante voz y le provoca
+daños emocionales. No falla nunca.",4,112164
+575,WAZAINFO_SV_575,FF92040EDF2B96C4,"El usuario se cambia por otro Pokémon del equipo,
+pero antes intimida al objetivo y reduce su Ataque y
+su Ataque Especial.",4,112348
+576,WAZAINFO_SV_576,FF92070EDF2B9BDD,"Invierte por completo los cambios en las características
+del objetivo.",4,112596
+577,WAZAINFO_SV_577,FF92060EDF2B9A2A,"El usuario absorbe energía del objetivo con un beso y
+restaura sus propios PS en una cantidad igual o superior
+a la mitad del daño infligido.",4,112740
+578,WAZAINFO_SV_578,FF91F90EDF2B8413,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,113024
+579,WAZAINFO_SV_579,FF91F80EDF2B8260,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,113284
+580,WAZAINFO_SV_580,FFB0770EDF4557BC,"Durante cinco turnos, se potencian los movimientos de
+tipo Planta y los Pokémon que están en contacto con el
+suelo recuperan PS en cada turno.",0,113544
+581,WAZAINFO_SV_581,FFB0780EDF45596F,"Durante cinco turnos, los Pokémon que están en el
+suelo no sufren problemas de estado y se reduce a la
+mitad el daño de los movimientos de tipo Dragón.",0,113832
+582,WAZAINFO_SV_582,FFB0790EDF455B22,"Si el objetivo queda electrificado antes de usar un
+movimiento, este será de tipo Eléctrico.",0,114136
+583,WAZAINFO_SV_583,FFB07A0EDF455CD5,"El usuario apapacha al objetivo y lo ataca.
+Puede reducir el Ataque del objetivo.",4,114324
+584,WAZAINFO_SV_584,FFB0730EDF4550F0,"El usuario desata un ventarrón feérico que embiste
+al objetivo.",4,114488
+585,WAZAINFO_SV_585,FFB0740EDF4552A3,"Invoca el poder de la luna para atacar al objetivo.
+Puede reducir su Ataque Especial.",4,114616
+586,WAZAINFO_SV_586,FFB0750EDF455456,"Ataca a los Pokémon adyacentes con una poderosísima
+onda sonora.",4,114788
+587,WAZAINFO_SV_587,FFB0760EDF455609,"Cierra con llave y hace que ningún Pokémon pueda huir
+ni ser cambiado por otro en el siguiente turno.",0,114920
+588,WAZAINFO_SV_588,FFB07F0EDF456554,"El usuario adopta una postura defensiva y se protege de
+cualquier daño. Reduce el Ataque de cualquier Pokémon
+con el que entre en contacto.",4,115124
+589,WAZAINFO_SV_589,FFB0800EDF456707,"Se hace amigo de su objetivo y hace que a este
+se le quiten las ganas de combatir, lo que reduce su
+Ataque.",0,115404
+590,WAZAINFO_SV_590,FFB3FD0EDF487145,"Hace que el objetivo pierda la concentración
+al contarle un secreto y reduce su Ataque Especial.",0,115620
+591,WAZAINFO_SV_591,FFB3FC0EDF486F92,"Desata un devastador ventarrón de diamantes para
+dañar al objetivo. Puede aumentar mucho la Defensa
+del usuario.",0,115816
+592,WAZAINFO_SV_592,FFB3FB0EDF486DDF,"Envuelve al objetivo con vapor extremadamente caliente
+que puede causar quemaduras.",4,116044
+593,WAZAINFO_SV_593,FFB3FA0EDF486C2C,"El usuario aparece junto al objetivo usando un agujero
+dimensional y le lanza un golpe que movimientos
+como Protección o Detección no pueden evitar.",4,116212
+594,WAZAINFO_SV_594,FFB3F90EDF486A79,"Golpea al objetivo de dos a cinco veces seguidas
+con estrellas arrojadizas hechas de mucosidad. Este
+movimiento tiene prioridad alta.",0,116512
+595,WAZAINFO_SV_595,FFB3F80EDF4868C6,"El usuario lanza por la boca una singular llama a gran
+temperatura con la que ataca a su objetivo y reduce
+su Ataque Especial.",4,116780
+596,WAZAINFO_SV_596,FFB3F70EDF486713,"Protege al usuario de ataques y le causa daño a quien se
+los lance si entra en contacto con él.",0,117036
+597,WAZAINFO_SV_597,FFB3F60EDF486560,"Logra aumentar la Defensa Especial de un aliado con
+una fragancia misteriosa.",0,117228
+598,WAZAINFO_SV_598,FFB4050EDF487EDD,"El usuario irradia unas raras ondas que, al alcanzar al
+objetivo, reducen mucho su Ataque Especial.",4,117384
+599,WAZAINFO_SV_599,FFB4040EDF487D2A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,117584
+600,WAZAINFO_SV_600,1AD7F80EEEFB69D5,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,117844
+601,WAZAINFO_SV_601,1AD7F70EEEFB6822,"Concentra energía durante el primer turno, de forma
+que su Velocidad, su Ataque Especial y su Defensa
+Especial aumenten mucho en el segundo.",0,118104
+602,WAZAINFO_SV_602,1AD7F60EEEFB666F,"Manipula el campo magnético y logra aumentar la
+Defensa y la Defensa Especial de los Pokémon aliados
+que cuenten con las habilidades Más o Menos.",0,118388
+603,WAZAINFO_SV_603,1AD7F50EEEFB64BC,"Al usar este movimiento, se duplica el dinero
+que se recibe luego del combate.",4,118680
+604,WAZAINFO_SV_604,1AD7F40EEEFB6309,"Durante cinco turnos, se potencian los movimientos de
+tipo Eléctrico y los Pokémon que están en contacto con
+el suelo no pueden quedarse dormidos.",0,118840
+605,WAZAINFO_SV_605,1AD7F30EEEFB6156,Le causa daño al objetivo con una potente luz.,0,119136
+606,WAZAINFO_SV_606,1AD7F20EEEFB5FA3,El Pokémon te felicita en un día muy especial para ti.,4,119232
+607,WAZAINFO_SV_607,1AD7F10EEEFB5DF0,"El usuario le da la mano a un aliado y ambos se sienten
+muy felices.",4,119344
+608,WAZAINFO_SV_608,1AD8000EEEFB776D,"Le lanza una mirada al objetivo con ojos acaramelados,
+con lo que logra que su Ataque se reduzca. Este
+movimiento tiene prioridad alta.",0,119484
+609,WAZAINFO_SV_609,1AD7FF0EEEFB75BA,"El usuario frota sus mejillas cargadas de electricidad
+contra el objetivo y lo paraliza.",4,119756
+610,WAZAINFO_SV_610,1AD4720EEEF8504C,"El usuario se contiene a la hora de atacar y deja al
+objetivo con al menos 1 PS.",4,119936
+611,WAZAINFO_SV_611,1AD4730EEEF851FF,"Hostiga al objetivo durante cuatro o cinco turnos e
+impide que se le pueda cambiar por otro mientras tanto.",0,120100
+612,WAZAINFO_SV_612,1AD4740EEEF853B2,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,120316
+613,WAZAINFO_SV_613,1AD4750EEEF85565,"El usuario absorbe energía del objetivo y recupera PS
+en una cantidad igual o superior a la mitad del daño
+causado.",4,120576
+614,WAZAINFO_SV_614,1AD46E0EEEF84980,"Acierta incluso a Pokémon que estén en el aire y los
+hace caer al suelo.",4,120808
+615,WAZAINFO_SV_615,1AD46F0EEEF84B33,"El usuario genera ondas sísmicas que se propagan por
+el suelo y sacuden al objetivo. Los Pokémon alcanzados
+no podrán huir del combate ni ser cambiados por otros.",4,120956
+616,WAZAINFO_SV_616,1AD4700EEEF84CE6,"Acumula energía de la corteza terrestre y la concentra
+contra el objetivo para causarle daño.",4,121284
+617,WAZAINFO_SV_617,1AD4710EEEF84E99,"El usuario emplea el poder de la Flor Eterna para
+lanzar un poderoso rayo de luz, pero también se hiere
+gravemente a sí mismo.",4,121472
+618,WAZAINFO_SV_618,1AD47A0EEEF85DE4,"Ataca al objetivo con una infinidad de rayos de luz
+azulada.",4,121728
+619,WAZAINFO_SV_619,1AD47B0EEEF85F97,"Hace que el poder latente de la tierra se manifieste en
+forma de hojas afiladas y ataca al objetivo con ellas.",0,121852
+620,WAZAINFO_SV_620,1ADF040EEF019CE7,"El usuario se precipita desde el cielo a una velocidad
+vertiginosa para atacar al objetivo, pero reduce
+su Defensa y su Defensa Especial.",4,122076
+621,WAZAINFO_SV_621,1ADF030EEF019B34,"Ataca al objetivo con una ráfaga de golpes que ignoran
+los efectos de movimientos como Protección o
+Detección. Reduce la Defensa del usuario.",4,122352
+622,WAZAINFO_SV_622,1ADF060EEF01A04D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,122636
+623,WAZAINFO_SV_623,1ADF050EEF019E9A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,122896
+624,WAZAINFO_SV_624,1ADF000EEF01961B,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,123156
+625,WAZAINFO_SV_625,1ADEFF0EEF019468,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,123416
+626,WAZAINFO_SV_626,1ADF020EEF019981,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,123676
+627,WAZAINFO_SV_627,1ADF010EEF0197CE,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,123936
+628,WAZAINFO_SV_628,1ADEFC0EEF018F4F,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,124196
+629,WAZAINFO_SV_629,1ADEFB0EEF018D9C,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,124456
+630,WAZAINFO_SV_630,1ADB7E0EEEFE835E,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,124716
+631,WAZAINFO_SV_631,1ADB7F0EEEFE8511,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,124976
+632,WAZAINFO_SV_632,1ADB7C0EEEFE7FF8,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,125236
+633,WAZAINFO_SV_633,1ADB7D0EEEFE81AB,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,125496
+634,WAZAINFO_SV_634,1ADB820EEEFE8A2A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,125756
+635,WAZAINFO_SV_635,1ADB830EEEFE8BDD,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,126016
+636,WAZAINFO_SV_636,1ADB800EEEFE86C4,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,126276
+637,WAZAINFO_SV_637,1ADB810EEEFE8877,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,126536
+638,WAZAINFO_SV_638,1ADB760EEEFE75C6,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,126796
+639,WAZAINFO_SV_639,1ADB770EEEFE7779,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,127056
+640,WAZAINFO_SV_640,1ACA800EEEF01391,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,127316
+641,WAZAINFO_SV_641,1ACA7F0EEEF011DE,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,127576
+642,WAZAINFO_SV_642,1ACA7E0EEEF0102B,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,127836
+643,WAZAINFO_SV_643,1ACA7D0EEEF00E78,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,128096
+644,WAZAINFO_SV_644,1ACA840EEEF01A5D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,128356
+645,WAZAINFO_SV_645,1ACA830EEEF018AA,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,128616
+646,WAZAINFO_SV_646,1ACA820EEEF016F7,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,128876
+647,WAZAINFO_SV_647,1ACA810EEEF01544,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,129136
+648,WAZAINFO_SV_648,1ACA780EEEF005F9,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,129396
+649,WAZAINFO_SV_649,1ACA770EEEF00446,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,129656
+650,WAZAINFO_SV_650,1AC6FA0EEEECFA08,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,129916
+651,WAZAINFO_SV_651,1AC6FB0EEEECFBBB,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,130176
+652,WAZAINFO_SV_652,1AC6FC0EEEECFD6E,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,130436
+653,WAZAINFO_SV_653,1AC6FD0EEEECFF21,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,130696
+654,WAZAINFO_SV_654,1AC6FE0EEEED00D4,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,130956
+655,WAZAINFO_SV_655,1AC6FF0EEEED0287,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,131216
+656,WAZAINFO_SV_656,1AC7000EEEED043A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,131476
+657,WAZAINFO_SV_657,1AC7010EEEED05ED,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,131736
+658,WAZAINFO_SV_658,1AC6F20EEEECEC70,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,131996
+659,WAZAINFO_SV_659,1AC6F30EEEECEE23,"Restaura la mitad de los PS máximos del usuario.
+Durante las tormentas de arena, restaura aún más PS.",0,132256
+660,WAZAINFO_SV_660,1AD16C0EEEF61043,"Movimiento de gran potencia que solo puede usarse en
+el turno en que el usuario entra en combate.",0,132460
+661,WAZAINFO_SV_661,1AD16B0EEEF60E90,"Protege de los ataques y, al mismo tiempo, envenena
+al Pokémon que use un movimiento de contacto contra
+el usuario.",0,132656
+662,WAZAINFO_SV_662,1AD16E0EEEF613A9,"Ataca al objetivo y, al mismo tiempo, fija su sombra
+al terreno para impedir su huida o que se le pueda
+cambiar por otro.",4,132888
+663,WAZAINFO_SV_663,1AD16D0EEEF611F6,"Gira sobre sí mismo y golpea al objetivo con ambos
+brazos. Ignora los cambios en las características del
+objetivo.",0,133132
+664,WAZAINFO_SV_664,1AD1700EEEF6170F,"Libera burbujas al cantar. Este movimiento cura las
+quemaduras de los Pokémon que reciban daño.",0,133364
+665,WAZAINFO_SV_665,1AD16F0EEEF6155C,"Lanza un golpe devastador con el puño, pero reduce
+la Velocidad del usuario.",0,133556
+666,WAZAINFO_SV_666,1AD1720EEEF61A75,"Restaura la mitad de los PS máximos del objetivo.
+Es más efectivo cuando se usa en conjunto con
+Campo de Césped.",0,133712
+667,WAZAINFO_SV_667,1AD1710EEEF618C2,Lanza un golpe devastador usando todo su cuerpo.,0,133940
+668,WAZAINFO_SV_668,1AD1740EEEF61DDB,"Restaura una cantidad de PS equivalente al valor
+del Ataque del objetivo, el cual recibirá una reducción
+de esta característica.",0,134040
+669,WAZAINFO_SV_669,1AD1730EEEF61C28,"El usuario dedica un turno a absorber energía lumínica
+y concentrarla en forma de cuchilla, con la que ataca al
+objetivo en el siguiente turno.",4,134300
+670,WAZAINFO_SV_670,1ACE060EEEF32D1A,Ataca al objetivo lanzando hojas.,4,134588
+671,WAZAINFO_SV_671,1ACE070EEEF32ECD,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,134656
+672,WAZAINFO_SV_672,1ACE040EEEF329B4,"Ataca al objetivo con hilos venenosos que reducen
+su Velocidad y lo envenenan.",4,134916
+673,WAZAINFO_SV_673,1ACE050EEEF32B67,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,135076
+674,WAZAINFO_SV_674,1ACE020EEEF3264E,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,135336
+675,WAZAINFO_SV_675,1ACE030EEEF32801,"Inflige al objetivo un dolor tan abrumador que le impide
+utilizar movimientos que usan sonido durante dos turnos.",4,135596
+676,WAZAINFO_SV_676,1ACE000EEEF322E8,"Ataca al objetivo con una bola explosiva. Si esta alcanza
+a un aliado, le hará recuperar PS.",4,135824
+677,WAZAINFO_SV_677,1ACE010EEEF3249B,"Ataca lanzando un ancla al objetivo, que queda
+atrapado y no puede huir ni ser cambiado por otro.",4,136012
+678,WAZAINFO_SV_678,1ACDFE0EEEF31F82,"Durante cinco turnos, se potencian los movimientos
+de tipo Psíquico y los Pokémon que están en el suelo
+quedan protegidos contra movimientos con prioridad.",0,136208
+679,WAZAINFO_SV_679,1ACDFF0EEEF32135,"Ataca al objetivo abalanzándose sobre él con todas
+sus fuerzas y reduce su Ataque.",4,136520
+680,WAZAINFO_SV_680,1ABD080EEEE4BD4D,"Golpea al objetivo con un látigo incandescente y
+reduce su Defensa.",0,136688
+681,WAZAINFO_SV_681,1ABD070EEEE4BB9A,"Ataca al objetivo presumiendo de su fuerza. Cuanto
+más hayan aumentado las características del usuario,
+mayor será la potencia del movimiento.",4,136824
+682,WAZAINFO_SV_682,1ABD060EEEE4B9E7,"Utiliza hasta el último resquicio de llamas de su cuerpo
+para causar un grave daño al objetivo. Tras el ataque,
+el usuario deja de ser de tipo Fuego.",4,137112
+683,WAZAINFO_SV_683,1ABD050EEEE4B834,Intercambia su Velocidad por la del objetivo.,4,137412
+684,WAZAINFO_SV_684,1ABD040EEEE4B681,"El usuario ensarta al objetivo con su afilada cornamenta.
+No falla nunca.",4,137504
+685,WAZAINFO_SV_685,1ABD030EEEE4B4CE,"Cura los problemas de estado del objetivo y, a cambio,
+recupera PS propios.",0,137652
+686,WAZAINFO_SV_686,1ABD020EEEE4B31B,"Ataque que consiste en un baile muy enérgico. El tipo
+de este ataque se corresponde con el del usuario.",4,137804
+687,WAZAINFO_SV_687,1ABD010EEEE4B168,"Causa daño al objetivo y, si este ya hizo uso de
+algún movimiento, pierde su habilidad.",0,138012
+688,WAZAINFO_SV_688,1ABD000EEEE4AFB5,"Lanza una patada con la fuerza del trópico que golpea
+al objetivo y reduce su Ataque.",0,138188
+689,WAZAINFO_SV_689,1ABCFF0EEEE4AE02,"Fuerza al objetivo a repetir inmediatamente su último
+movimiento.",0,138360
+690,WAZAINFO_SV_690,1AB9820EEEE1A3C4,"Primero aumenta la temperatura de su pico y, luego,
+ejecuta un ataque. Quema a quien use un movimiento
+de contacto contra él mientras está calentando el pico.",0,138492
+691,WAZAINFO_SV_691,1AB9830EEEE1A577,"Frota todas las escamas de su cuerpo para crear un
+fuerte sonido con el que ataca. Cuando el ataque
+termina, su Defensa se ve reducida.",0,138812
+692,WAZAINFO_SV_692,1AB9840EEEE1A72A,"Usa el cuerpo como un martillo para abalanzarse sobre
+su objetivo y causarle daño.",4,139084
+693,WAZAINFO_SV_693,1AB9850EEEE1A8DD,"Hace girar su cuerpo para causar daño a los Pokémon
+adyacentes.",0,139252
+694,WAZAINFO_SV_694,1AB97E0EEEE19CF8,"Reduce el daño de los ataques físicos y especiales
+durante cinco turnos. Solo puede usarse cuando está
+nevando.",0,139380
+695,WAZAINFO_SV_695,1AB97F0EEEE19EAB,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,139604
+696,WAZAINFO_SV_696,1AB9800EEEE1A05E,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,139864
+697,WAZAINFO_SV_697,1AB9810EEEE1A211,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,140124
+698,WAZAINFO_SV_698,1AB97A0EEEE1962C,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,140384
+699,WAZAINFO_SV_699,1AB97B0EEEE197DF,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,140644
+700,WAZAINFO_SV_700,11C1DD0EE9B73C6A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,140904
+701,WAZAINFO_SV_701,11C1DE0EE9B73E1D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,141164
+702,WAZAINFO_SV_702,11C1DB0EE9B73904,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,141424
+703,WAZAINFO_SV_703,11C1DC0EE9B73AB7,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,141684
+704,WAZAINFO_SV_704,11C1D90EE9B7359E,"El caparazón del Pokémon se convierte en una trampa.
+Si lo alcanza un ataque físico, la trampa estalla y los
+rivales sufren daño.",4,141944
+705,WAZAINFO_SV_705,11C1DA0EE9B73751,"El usuario emite un poderoso rayo, pero su Ataque
+Especial se reduce mucho.",4,142204
+706,WAZAINFO_SV_706,11C1D70EE9B73238,"Ataca a su objetivo con poderes psíquicos que además
+destruyen barreras como Pantalla de Luz y Reflejo.",4,142356
+707,WAZAINFO_SV_707,11C1D80EE9B733EB,"Usa la frustración como revulsivo para atacar.
+La potencia de Pataleta se duplica si el usuario
+falló el último movimiento que usó.",4,142564
+708,WAZAINFO_SV_708,11C1D50EE9B72ED2,"Ataca golpeando con un hueso que está poseído
+por un espíritu. Puede reducir la Defensa del objetivo.",4,142828
+709,WAZAINFO_SV_709,11C1D60EE9B73085,"El usuario se lanza contra el objetivo a gran velocidad.
+Este movimiento tiene prioridad alta.",4,143032
+710,WAZAINFO_SV_710,11C5430EE9BA1F93,"Ataca golpeando gracias a la fuerza del agua.
+También puede reducir la Defensa del objetivo.",4,143224
+711,WAZAINFO_SV_711,11C5420EE9BA1DE0,"El usuario utiliza un prisma para emitir un rayo de
+gran potencia, pero deberá descansar en el siguiente
+turno.",4,143412
+712,WAZAINFO_SV_712,11C5450EE9BA22F9,"El usuario se esconde en la sombra del objetivo y lo
+ataca tras robarle las mejoras en sus características.",4,143636
+713,WAZAINFO_SV_713,11C5440EE9BA2146,"Ataca al objetivo con la potencia de un meteoro,
+ignorando su habilidad.",4,143852
+714,WAZAINFO_SV_714,11C5470EE9BA265F,"Ataca con un rayo misterioso que ignora la habilidad
+del objetivo.",4,144000
+715,WAZAINFO_SV_715,11C5460EE9BA24AC,"Mira al objetivo con ojos llorosos para hacerle perder
+su espíritu combativo y reduce su Ataque y su Ataque
+Especial.",0,144136
+716,WAZAINFO_SV_716,11C5490EE9BA29C5,"Se lanza contra el objetivo y le da una potente
+descarga eléctrica que puede atemorizarlo.",0,144372
+717,WAZAINFO_SV_717,11C5480EE9BA2812,"Golpea al objetivo con la furia de la naturaleza y
+reduce sus PS a la mitad.",0,144556
+718,WAZAINFO_SV_718,11C54B0EE9BA2D2B,"El Pokémon se rodea de una potente energía con la que
+golpea al objetivo. El tipo del movimiento depende del
+disco que lleva el usuario.",4,144712
+719,WAZAINFO_SV_719,11C54A0EE9BA2B78,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,144988
+720,WAZAINFO_SV_720,11BAD10EE9B10958,"El usuario hace explotar su cabeza para atacar a los
+Pokémon adyacentes, aunque también se hiere a sí
+mismo.",4,145248
+721,WAZAINFO_SV_721,11BAD20EE9B10B0B,"El usuario ataca con puños cargados de electricidad.
+Convierte los movimientos de tipo Normal en
+movimientos de tipo Eléctrico.",4,145468
+722,WAZAINFO_SV_722,11BAD30EE9B10CBE,"El usuario ataca con una gran columna de luz. Compara
+sus valores de Ataque y Ataque Especial para causar
+daño con el más alto de los dos.",4,145724
+723,WAZAINFO_SV_723,11BAD40EE9B10E71,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,146004
+724,WAZAINFO_SV_724,11BAD50EE9B11024,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,146264
+725,WAZAINFO_SV_725,11BAD60EE9B111D7,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,146524
+726,WAZAINFO_SV_726,11BAD70EE9B1138A,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,146784
+727,WAZAINFO_SV_727,11BAD80EE9B1153D,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,147044
+728,WAZAINFO_SV_728,11BAC90EE9B0FBC0,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,147304
+729,WAZAINFO_SV_729,11BACA0EE9B0FD73,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,147564
+730,WAZAINFO_SV_730,11BE570EE9B422E1,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,147824
+731,WAZAINFO_SV_731,11BE560EE9B4212E,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,148084
+732,WAZAINFO_SV_732,11BE550EE9B41F7B,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,148344
+733,WAZAINFO_SV_733,11BE540EE9B41DC8,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,148604
+734,WAZAINFO_SV_734,11BE5B0EE9B429AD,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,148864
+735,WAZAINFO_SV_735,11BE5A0EE9B427FA,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,149124
+736,WAZAINFO_SV_736,11BE590EE9B42647,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,149384
+737,WAZAINFO_SV_737,11BE580EE9B42494,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,149644
+738,WAZAINFO_SV_738,11BE4F0EE9B41549,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,149904
+739,WAZAINFO_SV_739,11BE4E0EE9B41396,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,150164
+740,WAZAINFO_SV_740,11CF550EE9C292AE,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,150424
+741,WAZAINFO_SV_741,11CF560EE9C29461,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,150684
+742,WAZAINFO_SV_742,11CF530EE9C28F48,"Usando la tuerca del pecho como eje, gira sobre sí
+mismo y golpea con los brazos dos veces seguidas.
+Puede atemorizar al objetivo.",4,150944
+743,WAZAINFO_SV_743,11CF540EE9C290FB,"Frena todos los ataques, pero puede fallar si se usa
+repetidamente.",0,151208
+744,WAZAINFO_SV_744,11CF590EE9C2997A,"Ataca liberando desde su núcleo la energía concentrada
+en el interior del cuerpo.",4,151344
+745,WAZAINFO_SV_745,11CF5A0EE9C29B2D,"Puede ignorar las habilidades o movimientos
+que le permiten a un Pokémon centrar la atención
+sobre sí y así poder atacar al objetivo seleccionado.",0,151508
+746,WAZAINFO_SV_746,11CF570EE9C29614,"Impide que tanto el atacante como el defensor puedan
+huir o ser cambiados por otros hasta que uno de ellos se
+debilite o abandone el terreno de combate.",4,151804
+747,WAZAINFO_SV_747,11CF580EE9C297C7,"El usuario ingiere la baya que lleva equipada para
+aumentar mucho su Defensa.",4,152112
+748,WAZAINFO_SV_748,11CF4D0EE9C28516,"El usuario aumenta todas sus características, pero ya no
+puede huir ni ser cambiado por otro.",4,152268
+749,WAZAINFO_SV_749,11CF4E0EE9C286C9,"Cubre al objetivo con un alquitrán pegajoso que reduce
+su Velocidad y lo vuelve débil contra el fuego.",0,152456
+750,WAZAINFO_SV_750,11D2DB0EE9C5AC37,"Cubre al objetivo con unos polvos mágicos que le
+hacen adquirir el tipo Psíquico.",0,152664
+751,WAZAINFO_SV_751,11D2DA0EE9C5AA84,"El usuario ataca propulsando a ambos Dreepy. En caso
+de haber dos rivales, cada Dreepy golpea a cada uno
+por separado.",4,152828
+752,WAZAINFO_SV_752,11D2DD0EE9C5AF9D,"El usuario invita a tomar el té a todos los presentes en
+el terreno de combate, lo que hace que ingieran las
+bayas que lleven equipadas.",4,153068
+753,WAZAINFO_SV_753,11D2DC0EE9C5ADEA,"Retiene al objetivo e impide que pueda huir o ser
+cambiado por otro, a la vez que reduce su Defensa
+y su Defensa Especial cada turno.",0,153344
+754,WAZAINFO_SV_754,11D2D70EE9C5A56B,"El usuario ensarta al objetivo con su pico cargado de
+electricidad. En caso de atacar antes que este último,
+la potencia del movimiento se duplica.",4,153612
+755,WAZAINFO_SV_755,11D2D60EE9C5A3B8,"El usuario agarra al objetivo con sus duras branquias.
+En caso de atacar antes que este último, la potencia del
+movimiento se duplica.",4,153908
+756,WAZAINFO_SV_756,11D2D90EE9C5A8D1,"Extraño poder que intercambia los efectos en el terreno
+de combate de ambos bandos.",4,154180
+757,WAZAINFO_SV_757,11D2D80EE9C5A71E,"Ataque de tipo Fuego ejecutado por un Pokémon
+Dinamax. Hace que se intensifique el efecto del sol
+durante cinco turnos.",4,154348
+758,WAZAINFO_SV_758,11D2D30EE9C59E9F,"Ataque de tipo Insecto ejecutado por un Pokémon
+Dinamax. Reduce el Ataque Especial del objetivo.",4,154588
+759,WAZAINFO_SV_759,11D2D20EE9C59CEC,"Ataque de tipo Eléctrico ejecutado por un Pokémon
+Dinamax. Crea un campo eléctrico durante cinco turnos.",4,154784
+760,WAZAINFO_SV_760,11C8C90EE9BD391C,"Ataque de tipo Normal ejecutado por un Pokémon
+Dinamax. Reduce la Velocidad del objetivo.",4,154996
+761,WAZAINFO_SV_761,11C8CA0EE9BD3ACF,"Ataque de tipo Pelea ejecutado por un Pokémon
+Dinamax. Aumenta el Ataque de tu bando.",4,155176
+762,WAZAINFO_SV_762,11C8CB0EE9BD3C82,"Ataque de tipo Fantasma ejecutado por un Pokémon
+Dinamax. Reduce la Defensa del objetivo.",4,155348
+763,WAZAINFO_SV_763,11C8CC0EE9BD3E35,"Ataque de tipo Hielo ejecutado por un Pokémon
+Dinamax. Crea una tormenta de nieve que dura cinco
+turnos.",4,155528
+764,WAZAINFO_SV_764,11C8C50EE9BD3250,"Ataque de tipo Veneno ejecutado por un Pokémon
+Dinamax. Aumenta el Ataque Especial de tu bando.",4,155740
+765,WAZAINFO_SV_765,11C8C60EE9BD3403,"Ataque de tipo Agua ejecutado por un Pokémon
+Dinamax. Desata un aguacero que dura cinco turnos.",4,155932
+766,WAZAINFO_SV_766,11C8C70EE9BD35B6,"Ataque de tipo Volador ejecutado por un Pokémon
+Dinamax. Aumenta la Velocidad de tu bando.",4,156124
+767,WAZAINFO_SV_767,11C8C80EE9BD3769,"Ataque de tipo Hada ejecutado por un Pokémon
+Dinamax. Crea un campo de niebla durante cinco
+turnos.",4,156308
+768,WAZAINFO_SV_768,11C8D10EE9BD46B4,"Ataque de tipo Dragón ejecutado por un Pokémon
+Dinamax. Reduce el Ataque del objetivo.",4,156508
+769,WAZAINFO_SV_769,11C8D20EE9BD4867,"Ataque de tipo Psíquico ejecutado por un Pokémon
+Dinamax. Crea un campo psíquico durante cinco turnos.",4,156684
+770,WAZAINFO_SV_770,11CBCF0EE9BF7925,"Ataque de tipo Roca ejecutado por un Pokémon
+Dinamax. Levanta una tormenta de arena que dura
+cinco turnos.",4,156892
+771,WAZAINFO_SV_771,11CBCE0EE9BF7772,"Ataque de tipo Tierra ejecutado por un Pokémon
+Dinamax. Aumenta la Defensa Especial de tu bando.",4,157108
+772,WAZAINFO_SV_772,11CBCD0EE9BF75BF,"Ataque de tipo Siniestro ejecutado por un Pokémon
+Dinamax. Reduce la Defensa Especial del objetivo.",4,157304
+773,WAZAINFO_SV_773,11CBCC0EE9BF740C,"Ataque de tipo Planta ejecutado por un Pokémon
+Dinamax. Crea un campo de césped durante cinco
+turnos.",4,157504
+774,WAZAINFO_SV_774,11CBCB0EE9BF7259,"Ataque de tipo Acero ejecutado por un Pokémon
+Dinamax. Aumenta la Defensa de tu bando.",4,157708
+775,WAZAINFO_SV_775,11CBCA0EE9BF70A6,"Utiliza parte de sus PS para aumentar sus
+características.",4,157884
+776,WAZAINFO_SV_776,11CBC90EE9BF6EF3,"El usuario usa el cuerpo para lanzar su ataque. Cuanto
+mayor es la Defensa del usuario, más daño provoca.",4,158004
+777,WAZAINFO_SV_777,11CBC80EE9BF6D40,"Aumenta mucho el Ataque y el Ataque Especial del
+objetivo al decorarlo.",4,158216
+778,WAZAINFO_SV_778,11CBD70EE9BF86BD,"El usuario usa un tronco como instrumento de percusión
+y, al atacar, reduce la Velocidad del objetivo.",4,158360
+779,WAZAINFO_SV_779,11CBD60EE9BF850A,"Trampa que atrapa al objetivo durante cuatro o cinco
+turnos y le causa daño mientras se encuentra preso.",0,158568
+780,WAZAINFO_SV_780,11A6CD0EE9A05982,"El usuario prende una pequeña piedra para crear una
+bola de fuego con la que ataca al objetivo. Puede causar
+quemaduras.",4,158780
+781,WAZAINFO_SV_781,11A6CE0EE9A05B35,"El usuario se convierte en una espada gigante para
+rebanar con vigor al objetivo.",4,159024
+782,WAZAINFO_SV_782,11A6CB0EE9A0561C,"El usuario se convierte en un escudo gigante para
+golpear con vigor al objetivo.",4,159188
+783,WAZAINFO_SV_783,11A6CC0EE9A057CF,"La energía que acumula en las mejillas le sirve para
+atacar y aumentar su Velocidad. Este movimiento
+cambia de tipo según la forma que adopte Morpeko.",0,159352
+784,WAZAINFO_SV_784,11A6C90EE9A052B6,"El usuario sacude violentamente su enorme cola para
+golpear al objetivo y reducir su Ataque al mismo tiempo.",4,159656
+785,WAZAINFO_SV_785,11A6CA0EE9A05469,Ataca pinchando al objetivo con una rama afilada.,4,159876
+786,WAZAINFO_SV_786,11A6C70EE9A04F50,"El usuario rasguea la guitarra o el bajo para generar
+enormes vibraciones de intensa reverberación con las
+que ataca al objetivo.",4,159976
+787,WAZAINFO_SV_787,11A6C80EE9A05103,"Ataca al objetivo con el líquido corrosivo que desprende
+una manzana ácida, lo que también reduce la Defensa
+Especial de este.",4,160236
+788,WAZAINFO_SV_788,11A6D50EE9A0671A,"El usuario ataca haciendo caer una manzana desde gran
+altura. Reduce la Defensa del objetivo.",4,160492
+789,WAZAINFO_SV_789,11A6D60EE9A068CD,"El usuario ataca al objetivo con tanto ímpetu que acaba
+bajando su moral y, en consecuencia, reduce su Ataque
+Especial.",4,160680
+790,WAZAINFO_SV_790,11A9D30EE9A2998B,"Desprende un humo con el que ataca al objetivo, que
+puede quedar confundido.",0,160920
+791,WAZAINFO_SV_791,11A9D20EE9A297D8,"Vierte un agua misteriosa y balsámica que restaura
+tanto sus propios PS como los de aquellos aliados
+presentes en el terreno de combate.",0,161076
+792,WAZAINFO_SV_792,11A9D50EE9A29CF1,"Frena todos los ataques, pero puede fallar si se usa
+repetidamente. Reduce mucho la Defensa de quien
+ejecute un movimiento de contacto contra el usuario.",0,161352
+793,WAZAINFO_SV_793,11A9D40EE9A29B3E,"El usuario finge hacer una reverencia y aprovecha
+la ocasión para ensartar al objetivo con su cabello
+alborotado. No falla nunca.",4,161660
+794,WAZAINFO_SV_794,11A9D70EE9A2A057,"El usuario agita violentamente su grueso puerro para
+atacar, pero el mareo que le provocan las sacudidas lo
+obliga a descansar en el siguiente turno.",4,161920
+795,WAZAINFO_SV_795,11A9D60EE9A29EA4,"Este movimiento no se puede usar, por lo que sería
+mejor olvidarlo, aunque eso implique que no se pueda
+recordar posteriormente.",4,162220
+796,WAZAINFO_SV_796,11A9D90EE9A2A3BD,"Utiliza el acero de su cuerpo para disparar un potente
+rayo. El usuario se hiere a sí mismo.",4,162480
+797,WAZAINFO_SV_797,11A9D80EE9A2A20A,"El usuario ataca al objetivo con sus poderes psíquicos.
+Cuando se usa en conjunción con un campo psíquico,
+aumenta su potencia y daña a los rivales adyacentes.",4,162668
+798,WAZAINFO_SV_798,11A9CB0EE9A28BF3,"El usuario lanza su ataque y destruye el campo activo
+en el terreno de combate. Si no hay ninguno en ese
+momento, el movimiento falla.",4,162988
+799,WAZAINFO_SV_799,11A9CA0EE9A28A40,"Lanza escamas al objetivo de dos a cinco veces
+seguidas. Aumenta la Velocidad del usuario, pero
+reduce su Defensa.",0,163260
+800,WAZAINFO_SV_800,A1933E0EAA4B7C7B,"El usuario dedica el primer turno a aumentar su
+Ataque Especial acumulando energía cósmica y lanza
+su ofensiva contra el objetivo en el segundo.",4,163492
+801,WAZAINFO_SV_801,A1933D0EAA4B7AC8,"El usuario lanza un ataque físico o especial en función
+de cuál cause más daño. Puede envenenar al objetivo.",4,163784
+802,WAZAINFO_SV_802,A193400EAA4B7FE1,"Ataca a los Pokémon adyacentes, pero se debilita de
+inmediato. La potencia del movimiento aumenta si el
+terreno está cubierto por un campo de niebla.",4,164004
+803,WAZAINFO_SV_803,A1933F0EAA4B7E2E,"Ataca al objetivo deslizándose sobre el terreno de
+combate. Este movimiento tiene prioridad alta cuando
+el terreno está cubierto por un campo de césped.",4,164304
+804,WAZAINFO_SV_804,A193420EAA4B8347,"Ataca con una descarga eléctrica que surge del terreno
+de combate. La potencia del movimiento se duplica si
+el objetivo se ve afectado por un campo eléctrico.",4,164612
+805,WAZAINFO_SV_805,A193410EAA4B8194,"El usuario ataca aprovechando la energía del campo
+activo, que determina tanto el tipo como la potencia
+del movimiento.",4,164932
+806,WAZAINFO_SV_806,A193440EAA4B86AD,"Ataca al objetivo por la espalda de forma sigilosa
+y, además, reduce su Ataque Especial.",4,165172
+807,WAZAINFO_SV_807,A193430EAA4B84FA,"Ataca al objetivo con la energía generada por la envidia
+y causa quemaduras a los Pokémon cuyas características
+hayan aumentado en ese turno.",4,165352
+808,WAZAINFO_SV_808,A193360EAA4B6EE3,"Ataca al objetivo presa de la rabia. Si el usuario
+sufrió una reducción de características en ese turno,
+la potencia del movimiento se duplica.",4,165636
+809,WAZAINFO_SV_809,A193350EAA4B6D30,"El usuario ataca utilizando el objeto que lleva el
+objetivo. Si no tiene ninguno equipado, el movimiento
+falla.",4,165924
+810,WAZAINFO_SV_810,A18FB80EAA4862F2,"El usuario libera un gas cáustico que envuelve a los
+Pokémon adyacentes y derrite por completo los objetos
+que lleven equipados.",4,166148
+811,WAZAINFO_SV_811,A18FB90EAA4864A5,"El usuario imparte indicaciones precisas a sus aliados,
+que reciben un aumento en su Ataque y su Defensa.",4,166408
+812,WAZAINFO_SV_812,A18FB60EAA485F8C,"Luego de atacar, el usuario vuelve rápidamente
+con su Entrenador.",0,166620
+813,WAZAINFO_SV_813,A18FB70EAA48613F,"Lanza hasta tres patadas seguidas, cuya potencia
+aumenta cada vez que acierta.",0,166752
+814,WAZAINFO_SV_814,A18FB40EAA485C26,"Ataca al objetivo golpeándolo dos veces seguidas con
+las alas.",4,166912
+815,WAZAINFO_SV_815,A18FB50EAA485DD9,"Ataca al objetivo arrojándole arena a temperaturas muy
+elevadas. Puede causar quemaduras.",4,167040
+816,WAZAINFO_SV_816,A18FB20EAA4858C0,"Al entrar en plena armonía con la selva, el usuario cura
+problemas de estado y restaura PS no solo de sí mismo,
+sino también de los aliados presentes en el terreno.",4,167220
+817,WAZAINFO_SV_817,A18FB30EAA485A73,"Golpe devastador que requiere un absoluto dominio
+de las artes siniestras. Siempre lanza un golpe crítico.",0,167552
+818,WAZAINFO_SV_818,A18FC00EAA48708A,"El usuario, gran especialista de las artes acuáticas,
+golpea tres veces seguidas con movimientos fluidos.
+Siempre lanza un golpe crítico.",4,167768
+819,WAZAINFO_SV_819,A18FC10EAA48723D,"El objetivo queda atrapado en una jaula electrificada
+que permanece en el terreno de cuatro a cinco turnos.",4,168044
+820,WAZAINFO_SV_820,A18CB20EAA4622E9,"El usuario convierte su fuerza vital en una energía con
+la que ataca al objetivo. Cuantos menos PS tenga el
+usuario, menor será la potencia del movimiento.",4,168260
+821,WAZAINFO_SV_821,A18CB10EAA462136,"A través de sus ojos emite poderes psíquicos con los
+que ataca al objetivo, al que puede congelar.",4,168572
+822,WAZAINFO_SV_822,A18CB00EAA461F83,"El usuario convierte su ira en un aura flamígera para
+lanzar su ataque. Puede atemorizar al objetivo.",4,168772
+823,WAZAINFO_SV_823,A18CAF0EAA461DD0,"El usuario desconcierta al objetivo con movimientos
+centelleantes y le lanza una patada que, además,
+reduce su Defensa.",4,168976
+824,WAZAINFO_SV_824,A18CB60EAA4629B5,"El usuario ataca al objetivo lanzándole un carámbano de
+hielo envuelto en una ventisca.",4,169216
+825,WAZAINFO_SV_825,A18CB50EAA462802,"El usuario ataca al objetivo lanzándole una gran
+cantidad de pequeños fantasmas.",4,169392
+826,WAZAINFO_SV_826,A18CB40EAA46264F,"El usuario ataca con un poder psíquico de inmensa
+potencia y elimina 3 PP del último movimiento que
+haya usado el objetivo.",4,169556
+827,WAZAINFO_SV_827,A18CB30EAA46249C,"Ataca al punto débil del objetivo con unas garras
+letales que pueden envenenarlo, paralizarlo o dormirlo.",4,169804
+828,WAZAINFO_SV_828,A18CBA0EAA463081,"El usuario ataca envuelto en una energía psíquica que
+además aumenta su Defensa.",4,170016
+829,WAZAINFO_SV_829,A18CB90EAA462ECE,Intercambia su Ataque por su Defensa.,4,170180
+830,WAZAINFO_SV_830,A1892C0EAA430960,"Ataca con un hacha de piedra con la intención de lanzar
+un golpe crítico y, al hacerlo, se deprenden fragmentos
+que rodean al objetivo.",4,170256
+831,WAZAINFO_SV_831,A1892D0EAA430B13,"Desata una tormenta de amor y odio con la que
+envuelve y ataca al objetivo. También puede reducir
+su Ataque.",0,170528
+832,WAZAINFO_SV_832,A1892E0EAA430CC6,"Ataca desatando un misterioso poder que también
+aumenta su Ataque Especial.",4,170748
+833,WAZAINFO_SV_833,A1892F0EAA430E79,"El usuario ataca con unas violentas llamas de dos a tres
+turnos seguidos y, después, se queda confundido.",4,170900
+834,WAZAINFO_SV_834,A189300EAA43102C,"El usuario se envuelve en agua y embiste al objetivo,
+pero también se hiere gravemente a sí mismo.",4,171112
+835,WAZAINFO_SV_835,A189310EAA4311DF,"El usuario concentra clorofila y la dispara en forma de
+rayo, pero también se hiere a sí mismo.",4,171312
+836,WAZAINFO_SV_836,A189320EAA431392,"Ataca con unos carámbanos grandes como icebergs que
+pueden atemorizar al objetivo.",4,171504
+837,WAZAINFO_SV_837,A189330EAA431545,"Ejecuta una danza frenética que invoca la victoria y
+aumenta el Ataque, la Defensa y la Velocidad.",4,171672
+838,WAZAINFO_SV_838,A189340EAA4316F8,"El usuario arremete con todas sus fuerzas, pero se
+reducen su Defensa y su Defensa Especial.",4,171872
+839,WAZAINFO_SV_839,A189350EAA4318AB,"Dispara un sinfín de púas tóxicas que pueden envenenar
+al objetivo. La potencia del movimiento se duplica si
+este ya está envenenado.",0,172060
+840,WAZAINFO_SV_840,A1A0B60EAA56D2BF,"Corta con unas alas impregnadas de aura. Suele lanzar
+un golpe crítico y aumenta la Velocidad del usuario.",0,172328
+841,WAZAINFO_SV_841,A1A0B50EAA56D10C,"Ataca al objetivo sometiéndolo a su frío rencor y reduce
+su Ataque.",4,172544
+842,WAZAINFO_SV_842,A1A0B80EAA56D625,"La piel del usuario se vuelve dura como un escudo de
+acero, lo que aumenta mucho su Defensa.",0,172680
+843,WAZAINFO_SV_843,A1A0B70EAA56D472,"Propina un talonazo y lanza tres flechas. Suele lanzar
+un golpe crítico y puede reducir la Defensa del objetivo
+o atemorizarlo.",0,172868
+844,WAZAINFO_SV_844,A1A0B20EAA56CBF3,"Lanza innumerables bolas de fuego al objetivo que
+pueden causar quemaduras. La potencia del movimiento
+se duplica si este ya sufre un problema de estado.",0,173124
+845,WAZAINFO_SV_845,A1A0B10EAA56CA40,"Ataca con una espada de caracolas con la intención de
+lanzar un golpe crítico y, al hacerlo, se esparcen
+fragmentos a modo de metralla a los pies del objetivo.",4,173432
+846,WAZAINFO_SV_846,A1A0B40EAA56CF59,"Ataca con un viento muy frío que estremece el cuerpo y
+la mente y que, además, puede reducir la Velocidad del
+objetivo.",4,173752
+847,WAZAINFO_SV_847,A1A0B30EAA56CDA6,"Invoca una tormenta eléctrica que ataca al objetivo con
+fuertes vientos y relámpagos y puede paralizarlo.",4,173992
+848,WAZAINFO_SV_848,A1A0BE0EAA56E057,"Ataca al objetivo envolviéndolo en unas arenas tórridas
+y un fuerte ventarrón que pueden causar quemaduras.",4,174204
+849,WAZAINFO_SV_849,A1A0BD0EAA56DEA4,"Dedica una oración a la luna creciente que restaura
+los PS y cura los problemas de estado del bando del
+usuario.",0,174420
+850,WAZAINFO_SV_850,A19DB00EAA5492B6,"El usuario se envalentona y se cura de los problemas
+de estado. Además, aumenta su Ataque Especial y su
+Defensa Especial.",4,174648
+851,WAZAINFO_SV_851,A19DB10EAA549469,"Si el usuario se teracristalizó, ataca con la energía
+de su teratipo. Compara sus valores de Ataque y Ataque
+Especial para causar daño con el más alto de los dos.",0,174892
+852,WAZAINFO_SV_852,A19DAE0EAA548F50,"Tiende una trampa sedosa que protege al usuario de los
+ataques y que reduce la Velocidad de cualquier
+Pokémon con el que entre en contacto.",0,175220
+853,WAZAINFO_SV_853,A19DAF0EAA549103,"Lanza una patada al aire para, acto seguido, golpear con
+el talón. Si falla, se hiere a sí mismo. Puede confundir al
+objetivo.",0,175500
+854,WAZAINFO_SV_854,A19DB40EAA549982,"Ataca para vengar a sus compañeros caídos y aplacar
+su desazón. Cuantos más miembros del equipo se hayan
+debilitado, mayor será la potencia del movimiento.",4,175756
+855,WAZAINFO_SV_855,A19DB50EAA549B35,"Ataca proyectando una extraña luz que afecta a
+la mente. Reduce mucho la Defensa Especial del
+objetivo.",4,176068
+856,WAZAINFO_SV_856,A19DB20EAA54961C,"Ataca con aplomo y elegancia. Si lleva un Tatsugiri en la
+boca, aumenta una de sus características dependiendo
+de la forma de este último.",4,176276
+857,WAZAINFO_SV_857,A19DB30EAA5497CF,"Se envuelve el puño con un torrente y le lanza un
+golpe a tanta velocidad que resulta casi imperceptible.
+Este movimiento tiene prioridad alta.",0,176556
+858,WAZAINFO_SV_858,A19DB80EAA54A04E,"Libera un extracto extraordinariamente picante que
+aumenta mucho el Ataque del objetivo, pero también
+reduce mucho su Defensa.",0,176844
+859,WAZAINFO_SV_859,A19DB90EAA54A201,"Causa daño al objetivo ejerciendo presión sobre sus
+extremidades y girando violentamente sobre sí. Reduce
+mucho la Velocidad del usuario.",0,177100
+860,WAZAINFO_SV_860,A19A4A0EAA51AF8D,"Los congéneres del usuario se agrupan y ejecutan un
+ataque en conjunto que golpea al objetivo de una a diez
+veces seguidas.",0,177376
+861,WAZAINFO_SV_861,A19A490EAA51ADDA,"Se recubre las extremidades con una fina capa de hielo
+y se abalanza sobre el objetivo girando sobre sí.
+Destruye el campo activo en el terreno de combate.",0,177624
+862,WAZAINFO_SV_862,A19A480EAA51AC27,"Embiste de forma temeraria con todo el cuerpo. En el
+turno siguiente, los ataques que lance el rival no fallarán
+y causarán el doble de daño.",4,177936
+863,WAZAINFO_SV_863,A19A470EAA51AA74,"Pronuncia una benévola oración que revive a un
+Pokémon del equipo que se haya debilitado y
+restaura la mitad de sus PS máximos.",0,178220
+864,WAZAINFO_SV_864,A19A460EAA51A8C1,"Sala al objetivo, que pierde PS cada turno.
+Afecta especialmente a Pokémon de tipo Acero y tipo
+Agua.",0,178476
+865,WAZAINFO_SV_865,A19A450EAA51A70E,"Ejecuta una triple inmersión en perfecta sincronía que
+golpea al objetivo con salpicaduras de agua tres veces
+seguidas.",4,178680
+866,WAZAINFO_SV_866,A19A440EAA51A55B,"Ataque giratorio que envenena al objetivo y anula los
+efectos de movimientos como Atadura, Constricción y
+Drenadoras.",4,178920
+867,WAZAINFO_SV_867,A19A430EAA51A3A8,"Calca la esencia misma del objetivo para atribuir su
+habilidad a sí mismo y a sus aliados.",0,179156
+868,WAZAINFO_SV_868,A19A420EAA51A1F5,"Aumenta mucho el Ataque, el Ataque Especial y la
+Velocidad del usuario a costa de parte de sus PS.",4,179340
+869,WAZAINFO_SV_869,A19A410EAA51A042,"Se postra en ademán de reverencia para hacer que el
+objetivo baje la guardia y aprovecha el descuido para
+atacar. No falla nunca.",0,179540
+870,WAZAINFO_SV_870,A196C40EAA4E9604,"Ataca al objetivo lanzándole un ramo de flores trucado.
+No falla nunca y siempre lanza un golpe crítico.",4,179800
+871,WAZAINFO_SV_871,A196C50EAA4E97B7,"Expele tórridas llamaradas como si entonara una canción
+y abrasa al objetivo con ellas. Aumenta el Ataque
+Especial del usuario.",4,180012
+872,WAZAINFO_SV_872,A196C60EAA4E996A,"Juguetea con el objetivo mientras ejecuta una elegante
+y fluida danza y le causa daño. Aumenta la Velocidad
+del usuario.",0,180268
+873,WAZAINFO_SV_873,A196C70EAA4E9B1D,"Embiste con tremenda fiereza. Este movimiento cambia
+de tipo en función de la variedad del usuario y es capaz
+de destruir barreras como Pantalla de Luz y Reflejo.",4,180512
+874,WAZAINFO_SV_874,A196C00EAA4E8F38,"El usuario ataca arrojando una generosa cantidad de
+monedas, pero su Ataque Especial se reduce. Al
+finalizar el combate, las recupera en forma de ganancias.",4,180840
+875,WAZAINFO_SV_875,A196C10EAA4E90EB,"El usuario rebana al objetivo con una espada inmaterial.
+Cuando se usa junto a un campo eléctrico, la potencia
+del movimiento aumenta un 50%.",4,181156
+876,WAZAINFO_SV_876,A196C20EAA4E929E,"Vierte agua hirviendo sobre el objetivo. Cuando hace
+sol, la potencia del movimiento aumenta un 50% en
+lugar de reducirse.",0,181440
+877,WAZAINFO_SV_877,A196C30EAA4E9451,"Provoca una catástrofe devastadora que reduce a la
+mitad los PS del objetivo.",0,181688
+878,WAZAINFO_SV_878,A196BC0EAA4E886C,"El usuario choca contra el suelo mientras se transforma
+y provoca una explosión primigenia. La potencia del
+movimiento aumenta si el ataque es supereficaz.",4,181844
+879,WAZAINFO_SV_879,A196BD0EAA4E8A1F,"Se abalanza sobre el objetivo mientras se transforma y
+lo atraviesa con electricidad futurista. La potencia del
+movimiento aumenta si el ataque es supereficaz.",0,182156
+880,WAZAINFO_SV_880,A1AEAE0EAA630283,"El usuario se cambia por otro Pokémon del equipo,
+pero antes utiliza parte de los PS propios para crear
+un sustituto para su relevo.",4,182476
+881,WAZAINFO_SV_881,A1AEAD0EAA6300D0,"El usuario se cambia por otro Pokémon del equipo,
+pero antes cuenta un chiste que tiene una respuesta tan
+fría que hace que nieve durante cinco turnos.",4,182744
+882,WAZAINFO_SV_882,A1AEB00EAA6305E9,"Efectúa una limpieza a fondo que anula los efectos
+de Púas, Trampa de Rocas, Red Pegajosa, Púas Tóxicas y
+Sustituto. Aumenta el Ataque y la Velocidad del usuario.",4,183048
+883,WAZAINFO_SV_883,A1AEAF0EAA630436,"Desata una nevada que dura cinco turnos y aumenta la
+Defensa de los Pokémon de tipo Hielo.",0,183376
+884,WAZAINFO_SV_884,A1AEB20EAA63094F,"Ataca abalanzándose sobre el objetivo y le reduce la
+Velocidad.",4,183560
+885,WAZAINFO_SV_885,A1AEB10EAA63079C,"Ataca de pronto como si saltara desde el césped.
+El usuario se mueve con gran agilidad y aumenta su
+Velocidad.",4,183688
+886,WAZAINFO_SV_886,A1AEB40EAA630CB5,"Ataca al objetivo rociándolo con un agua gélida y
+desalentadora que reduce su Ataque.",4,183912
+887,WAZAINFO_SV_887,A1AEB30EAA630B02,"El usuario hace rotar la parte puntiaguda de su cuerpo a
+gran velocidad para atacar al objetivo. Pasa por alto los
+efectos de movimientos como Protección o Detección.",4,184084
+888,WAZAINFO_SV_888,A1AEB60EAA63101B,"Ataca emitiendo dos extraños rayos luminosos
+por los ojos que causan daño dos veces seguidas.",4,184420
+889,WAZAINFO_SV_889,A1AEB50EAA630E68,"Convierte su rabia en energía para atacar. Cuantos más
+golpes haya recibido el usuario, mayor será la potencia
+del movimiento.",0,184608
+890,WAZAINFO_SV_890,A1AB480EAA601F5A,"Se deshace de su armadura y arroja las partes al objetivo
+como proyectiles ardientes. Reduce la Defensa
+y la Defensa Especial del usuario.",0,184864
+891,WAZAINFO_SV_891,A1AB490EAA60210D,"Impregna la punta de su espada con su desazón por el
+mundo y lanza una estocada llena de rencor. El usuario
+recupera la mitad de los PS del daño que produce.",4,185144
+892,WAZAINFO_SV_892,A1AB460EAA601BF4,"Libera toda la electricidad de su cuerpo para lanzar
+un ataque devastador. Tras ejecutar el movimiento,
+el usuario deja de ser de tipo Eléctrico.",0,185460
+893,WAZAINFO_SV_893,A1AB470EAA601DA7,"El usuario aprovecha su propio peso corporal para
+lanzar un golpe con un enorme martillo. Este
+movimiento no puede usarse dos veces seguidas.",4,185752
+894,WAZAINFO_SV_894,A1AB440EAA60188E,"Le devuelve al rival el último ataque recibido, pero con
+mucha más fuerza.",0,186036
+895,WAZAINFO_SV_895,A1AB450EAA601A41,"Expele agua a presión con la que corta al objetivo como
+si fuera una hoja. Suele lanzar un golpe crítico.",4,186188
+896,WAZAINFO_SV_896,A1AB420EAA601528,"-
+-
+-",0,186400
+897,WAZAINFO_SV_897,A1AB430EAA6016DB,"-
+-
+-",0,186412
+898,WAZAINFO_SV_898,A1AB400EAA6011C2,"-
+-
+-",0,186424
+899,WAZAINFO_SV_899,A1AB410EAA601375,"-
+-
+-",0,186436
+900,WAZAINFO_SV_900,987D030EA50718B0,"-
+-
+-",0,186448
+901,WAZAINFO_SV_901,987D040EA5071A63,"Ataca canalizando toda su fuerza y proyectándola
+a través de una luna llena de color rojo intenso.
+Este movimiento no puede usarse dos veces seguidas.",4,186460
+902,WAZAINFO_SV_902,987D050EA5071C16,"Rocía al objetivo con té recién batido y recupera
+la mitad de los PS del daño que produce. Puede
+causar quemaduras.",0,186764
+903,WAZAINFO_SV_903,987D060EA5071DC9,"Impregna al objetivo con una explosión de su néctar
+pegajoso y lo carameliza, lo que hace que su Velocidad
+se reduzca progresivamente durante tres turnos.",4,186996
+904,WAZAINFO_SV_904,987D070EA5071F7C,"Golpea con un garrote que forma enrollando su liana.
+El tipo del movimiento varía según la máscara que lleve
+puesta el usuario. Suele lanzar un golpe crítico.",0,187308
+905,WAZAINFO_SV_905,987D080EA507212F,"Acumula electricidad y aumenta su Ataque Especial en el
+primer turno y dispara una descarga de alto voltaje en el
+segundo. Si llueve, puede atacar en el primer turno.",4,187628
+906,WAZAINFO_SV_906,987D090EA50722E2,"Ataca al objetivo irradiando el poder de sus cristales.
+Si Terapagos usa este movimiento en su Forma Astral,
+les causa daño a todos los rivales.",4,187964
+907,WAZAINFO_SV_907,987D0A0EA5072495,"Ataca disparando un haz de luz. En ocasiones, el resto
+de sus cabezas se unen al ataque. Cuando esto sucede,
+la potencia del movimiento se duplica.",4,188256
+908,WAZAINFO_SV_908,987D0B0EA5072648,"Emplea su ardiente pelaje para protegerse de los
+ataques y causarle quemaduras al atacante si este
+usa un movimiento de contacto.",4,188552
+909,WAZAINFO_SV_909,987D0C0EA50727FB,"Invoca un rayo que cae sobre el objetivo antes de que
+este pueda realizar cualquier acción. Falla si el objetivo
+no está preparando ningún ataque.",4,188812
+910,WAZAINFO_SV_910,9880890EA50A3239,"Rebana al objetivo con la luz que acumuló en la cabeza.
+Permite acertar aunque el objetivo esté protegiéndose.",0,189108
+911,WAZAINFO_SV_911,9880880EA50A3086,"Lanza una ráfaga de cuchillas formadas por partículas
+contra el objetivo y le causa daño dos veces seguidas.
+No falla nunca.",0,189332
+912,WAZAINFO_SV_912,9880870EA50A2ED3,"Aprieta con los brazos o las pinzas. Cuantos más PS
+le queden al objetivo, mayor será la potencia del
+movimiento.",4,189584
+913,WAZAINFO_SV_913,9880860EA50A2D20,"Bramido de dragón que sube la moral de los aliados y
+aumenta sus probabilidades de lanzar un golpe crítico.
+Es especialmente efectivo con aliados de tipo Dragón.",0,189812
+914,WAZAINFO_SV_914,98808D0EA50A3905,"Ataca con un canto angelical y, si las características
+del objetivo aumentaron en ese turno, lo confunde.",4,190136
+915,WAZAINFO_SV_915,98808C0EA50A3752,"Se dejar llevar por la ira y embiste al objetivo.
+Su potencia se duplica si el movimiento del usuario falló
+en el turno anterior.",0,190348
+916,WAZAINFO_SV_916,98808B0EA50A359F,"El usuario electrifica su cuerpo y salta en plancha sobre
+el objetivo. Si falla, se hiere a sí mismo.",4,190608
+917,WAZAINFO_SV_917,98808A0EA50A33EC,"Ataca emitiendo una onda sonora desagradable que
+le impide al objetivo usar movimientos, habilidades y
+objetos equipados que recuperan PS durante dos turnos.",4,190812
+918,WAZAINFO_SV_918,9880910EA50A3FD1,"Se anticipa al objetivo golpeándolo rápidamente con
+la palma y lo atemoriza. Falla si el objetivo no está
+preparando un movimiento de prioridad alta.",0,191128
+919,WAZAINFO_SV_919,9880900EA50A3E1E,"Apresa al objetivo con una cadena hecha de ponzoña
+que le inocula toxinas para minarle las fuerzas. Puede
+envenenar gravemente.",4,191428
+920,WAZAINFO_SV_851_01,9465B96E46D0DBE5,"Causa daño con el valor más alto entre Ataque y Ataque
+Especial, pero reduce ambas características del usuario.
+Si el objetivo se teracristalizó, es supereficaz.",0,191684

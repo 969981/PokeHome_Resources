@@ -1,0 +1,58 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,error_maintenance_010,DEFD4837D0B0BA8B,"目前正在進行維護作業……
+維護作業預定於以下時間結束。
+[CTRL:0203:0000,0000]/[CTRL:0201:0001]/[CTRL:0201:0002]　[CTRL:0201:0003]:[CTRL:0201:0004]",0,180
+1,error_maintenance_020,DEF33637D0A84770,"目前正在進行維護作業……
+在維護作業結束前，請稍候片刻。",0,288
+2,error_maintenance_030,DEF6BC37D0AB60F9,"目前正在進行緊急維護作業……
+在維護作業結束前，請稍候片刻。
+造成您的不便，敬請見諒。",0,348
+3,error_maintenance_040,DF07BA37D0B9D0C6,[REF:3],0,436
+4,error_maintenance_050,DF0B4037D0BCEA4F,[REF:4],0,448
+5,error_maintenance_060,DF00CE37D0B3D414,"發生錯誤。
+將返回標題畫面。
+錯誤代碼：[CTRL:0204:0000,0000]",0,460
+6,error_maintenance_061,DF00CF37D0B3D5C7,"發生錯誤。
+將返回標題畫面。",0,512
+7,error_maintenance_070,DF045437D0B6ED9D,"發生錯誤。
+請重新操作。
+錯誤代碼：[CTRL:0204:0000,0000]",0,544
+8,error_maintenance_080,DF155237D0C55D6A,"由於長時間沒有操作，
+將返回標題畫面。",0,592
+9,error_maintenance_090,DF18B837D0C84093,"由於已在其他裝置上登入，
+將返回標題畫面。",0,632
+10,error_maintenance_100,E8107D37D5F2DE4D,"由於你連續且大量進行了盒子的操作，
+操作無法執行。
+請稍後再重新操作。",0,676
+11,error_maintenance_990,2CD0BF37FCBC0554,"此帳號無法使用
+『Pokémon HOME』。",0,748
+12,error_maintenance_999,2CD0B837FCBBF96F,『Pokémon HOME』的服務已結束。,0,796
+13,error_maintenance_200,CD3A6C37C681E1AC,"你在智慧型手機版使用的進階方案
+目前暫時停止使用中。
+請從智慧型手機版的「管理定期購買內容」
+確認目前方案的狀態。",0,840
+14,error_save_sv_001,5078FA5A8DC16A3D,"連動軟體儲存紀錄失敗。
+
+若連動軟體的盒子有所變更，
+則這次進行的變更將被全部捨棄。
+若連動軟體的盒子沒有變更，
+則只有『Pokémon HOME』盒子的
+變更內容會被儲存。
+
+將返回標題頁面。",0,956
+15,error_maintenance_300,D650A737CBC64577,"你使用的『寶可夢虛擬銀行』已被限制，
+無法轉移至『Pokémon HOME』。",0,1152
+16,error_maintenance_110,E80CF737D5EFC4C4,"維護作業已結束。
+為分散連線負荷，
+目前正實施登入限制。
+登入限制將會陸續解除，
+請稍候片刻。",0,1232
+17,	,AF66E44C86071324,[REF:17],0,1328
+18,error_save_gba_001,49093D0A743FFC18,"連動軟體儲存紀錄失敗。
+寶可夢未從連動軟體
+傳送到『Pokémon HOME』。
+
+將返回標題畫面。",0,1340
+19,error_account_gba_001,C0F989DC026CCB4E,"你的帳號目前受到限制，
+無法正常進行GBA系列連動。[CLEAR]
+已中止GBA系列連動。",0,1444

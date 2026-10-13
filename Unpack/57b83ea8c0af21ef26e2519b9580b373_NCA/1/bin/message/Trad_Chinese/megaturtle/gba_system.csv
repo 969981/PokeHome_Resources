@@ -1,0 +1,80 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,GBA系列連動,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,選擇盒子,0,312
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,可寄放的寶可夢數量,0,324
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,0000]",0,344
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"攜帶道具的寶可夢、已學會秘傳招式的寶可夢和蛋
+無法傳送到『Pokémon HOME』。",0,356
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"確定不與GBA系列連動，
+並返回主選單嗎？",0,444
+7,nx_gbasoft_msg_020,22A650A5467D0077,"傳送到『Pokémon HOME』的寶可夢
+將無法傳送回原本的軟體。[RETURN]
+此外，已學會的招式將會改變。[CLEAR]
+確定要傳送嗎？",0,488
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"正在將所選盒子裡的寶可夢
+傳送到『Pokémon HOME』……",0,616
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"已將寶可夢從GBA系列
+傳送到『Pokémon HOME』了！",0,684
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,是,0,748
+11,nx_gbasoft_msg_no,FA151C506B6DA084,否,0,752
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,說明,0,756
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,結束,0,764
+14,	,AF66E44C86071324,[REF:14],0,772
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"這裡是GBA系列的連動畫面！
+可以將在GBA系列中捉到的寶可夢
+傳送到『Pokémon HOME』喔萌！",0,784
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"傳送寶可夢時會是一口氣選擇整個盒子喔萌！
+所選盒子裡的所有寶可夢
+全都會被傳送到『Pokémon HOME』喔萌！",0,892
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"傳送過來的寶可夢會自己找到
+『Pokémon HOME』的盒子空位，
+並按照順序進到空位裡喔萌！",0,1008
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"寶可夢們也有可能會各自進到不同的盒子裡，
+所以要多注意喔萌！",0,1108
+19,	,AF66E44C86071324,[REF:19],0,1172
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"已從此紀錄傳送過
+[CTRL:0101:0000]！[CLEAR]
+從相同的紀錄最多只能傳送１隻
+[CTRL:0101:0000]！",0,1184
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"已從此紀錄傳送過
+異色的[CTRL:0101:0000]！[CLEAR]
+從相同的紀錄最多只能傳送１隻
+異色的[CTRL:0101:0000]！",0,1264
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"含有[CTRL:0101:0000]等
+已從此紀錄傳送過的寶可夢！[CLEAR]
+從相同的紀錄最多只能傳送１隻
+[CTRL:0101:0000]！",0,1356
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"含有異色的[CTRL:0101:0000]等
+已從此紀錄傳送過的寶可夢！[CLEAR]
+從相同的紀錄最多只能傳送１隻
+異色的[CTRL:0101:0000]！",0,1448
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"從相同的紀錄最多只能傳送１隻
+[CTRL:0101:0000]！[CLEAR]
+盒子裡有２隻以上的[CTRL:0101:0000]，
+因此無法傳送此盒子的寶可夢！",0,1552
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"從相同的紀錄最多只能傳送１隻
+異色的[CTRL:0101:0000]！[CLEAR]
+盒子裡有２隻以上異色的[CTRL:0101:0000]，
+因此無法傳送此盒子的寶可夢！",0,1660
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"從此紀錄最多只能傳送１隻
+[CTRL:0101:0000]！[CLEAR]
+目前已選擇[CTRL:0101:0000]，
+確定要傳送嗎？",0,1780
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"從此紀錄最多只能傳送１隻
+異色的[CTRL:0101:0000]！[CLEAR]
+目前已選擇異色的[CTRL:0101:0000]，
+確定要傳送嗎？",0,1864
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"含有[CTRL:0101:0000]等
+從此紀錄最多只能傳送１隻的寶可夢！[CLEAR]
+確定要將此盒子
+傳送到『Pokémon HOME』嗎？",0,1960
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"含有異色的[CTRL:0101:0000]等
+從此紀錄最多只能傳送１隻的寶可夢！[CLEAR]
+確定要將此盒子
+傳送到『Pokémon HOME』嗎？",0,2076
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"此盒子裡含有無法傳送到
+『Pokémon HOME』的寶可夢。",0,2196
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,此盒子裡沒有寶可夢。,0,2260
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"此盒子裡的寶可夢數量多於
+可寄放到『Pokémon HOME』的寶可夢數量。",0,2284

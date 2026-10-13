@@ -1,0 +1,82 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_stationed_time,163732EE7FD7089B,[REF:0],0,364
+1,nx_stationed_login,F9D68A6C971B932F,"Iniciando sesión en Pokémon HOME...
+Espera un momento.",4,376
+2,nx_stationed_login_moving,2654C1EFAC981C96,"Traslado en curso...[CLEAR]
+No puedes utilizar Pokémon HOME hasta que se complete
+el traslado.[CLEAR]
+Espera a que haya finalizado y vuelve a iniciar la sesión.",0,488
+3,nx_stationed_login_moving_ng,D0B83E0C548E1BE8,"Se ha producido un error al intentar el traslado desde el
+Banco de Pokémon.[CLEAR]
+Debido a este error, se ha limitado el acceso al Banco de
+Pokémon. Contacta con el servicio de atención al cliente.",0,796
+4,nx_stationed_login_moving_retry1,6CDFF67E2B1206B6,"Se ha producido un error al intentar el traslado desde el
+Banco de Pokémon.[CLEAR]
+No hay espacio suficiente en las cajas de Pokémon HOME.
+Haz sitio en las cajas antes de intentarlo de nuevo.",0,1188
+5,nx_stationed_login_moving_retry2,6CDFF57E2B120503,"Se ha producido un error al intentar el traslado desde el
+Banco de Pokémon.[CLEAR]
+Inténtalo de nuevo.",0,1564
+6,nx_stationed_login_lock_10,C7CB49F1D293AEA1,"Actualmente estás utilizando Pokémon HOME en otro
+dispositivo.[CLEAR]
+Si accedes desde este, es posible que se pierdan los datos
+que se están procesando en estos momentos.[CLEAR]
+¿Quieres iniciar sesión en Pokémon HOME de todos modos?",4,1764
+7,nx_stationed_login_lock_11,C7CB48F1D293ACEE,Iniciar sesión,4,2220
+8,nx_stationed_login_lock_12,C7CB47F1D293AB3B,Cancelar,0,2252
+9,nx_stationed_login_lock_20,C7CECFF1D296C82A,"Actualmente estás utilizando Pokémon HOME en otro
+dispositivo.[CLEAR]
+Hay importantes operaciones en curso, por lo que no es
+posible acceder desde este dispositivo en este momento.",4,2272
+10,nx_stationed_login_none,65EDC6D945E3E542,"Actualmente no puedes acceder a las cajas con esta
+cuenta Nintendo.[CLEAR]
+Comprueba qué cuenta Nintendo has vinculado en la versión
+de Pokémon HOME para dispositivos móviles.[CLEAR]
+Si no logras solucionar el problema, puedes borrar los datos
+de guardado del programa en la configuración de la consola[RETURN]
+para restaurar Pokémon HOME de cero.",4,2628
+11,nx_stationed_message,F5B60E778F34DCC1,,0,3300
+12,nx_stationed_10_N,3DF0B6C2373BBD9E,,0,3304
+13,nx_stationed_01_N_small,3C08F3C0BECFDD6C,,0,3308
+14,nx_stationed_02_N_small,40B8D9D9505A27C5,,0,3312
+15,nx_stationed_03_N_small,2C22B297AD8196B6,,0,3316
+16,nx_stationed_04_N_small,D4D8FEEA054278DF,,0,3320
+17,nx_stationed_05_N_small,67017E69E24F2F80,,0,3324
+18,nx_stationed_06_N_small,A6DB866650E19BB9,,0,3328
+19,nx_stationed_07_N_small,7F56FA029CAF85CA,,0,3332
+20,nx_stationed_08_N_small,238BBA0CB1684393,,0,3336
+21,nx_stationed_09_N_small,58163C472696B494,,0,3340
+22,nx_stationed_10_N_small,7512A608D38D8352,,0,3344
+23,nx_stationed_11_N_small,EABFEA9E7E1E3301,,0,3348
+24,nx_stationed_12_N_small,E788E80CD10C41A8,,0,3352
+25,nx_stationed_13_N_small,E7726C8951AAC007,,0,3356
+26,nx_stationed_14_N_small,BF238F76958B185E,,0,3360
+27,nx_stationed_15_N_small,D8CC1E31633BABCD,,0,3364
+28,nx_stationed_16_N_small,B8F673B968E944D4,,0,3368
+29,nx_stationed_35_N_small,D71C211FFE1AA1BB,,0,3372
+30,nx_stationed_login_none_2,34BAC98D0FE2B6CF,"¿Quieres borrar los datos de guardado de Pokémon HOME
+de esta consola?",0,3376
+31,nx_stationed_login_none_3,34BAC88D0FE2B51C,Borrando los datos de guardado de Pokémon HOME...,0,3520
+32,nx_stationed_login_none_4,34BAC78D0FE2B369,"Se han borrado los datos de guardado.[CLEAR]
+Cierra Pokémon HOME desde el menú HOME de la consola
+y reinicia el programa.",0,3620
+33,nx_stationed_login_none_5,34BAC68D0FE2B1B6,Sí,0,3856
+34,nx_stationed_login_none_6,34BAC58D0FE2B003,No,0,3864
+35,nx_stationed_login_go_1,3220729DE15136F6,"Se han encontrado uno o más Pokémon transferidos desde
+Pokémon GO.[CLEAR]
+Selecciona ""Pokémon GO"" en el menú principal para
+recibirlos en Pokémon HOME.",0,3872
+36,nx_stationed_message_010,F96079E0C3A33757,"Se ha detectado un error en los datos de guardado.[CLEAR]
+Dicho error no afecta a los Pokémon depositados, pero no es
+posible iniciar Pokémon HOME.",0,4168
+37,nx_stationed_message_011,F96078E0C3A335A4,"¿Quieres reiniciar la configuración de los datos de guardado
+de Pokémon HOME en esta consola?",0,4456
+38,nx_stationed_message_012,F9607BE0C3A33ABD,"Reiniciando la configuración de los datos de guardado
+de Pokémon HOME...",0,4644
+39,nx_stationed_message_013,F9607AE0C3A3390A,"Se han reiniciado los datos de guardado.[CLEAR]
+Cierra Pokémon HOME desde el menú HOME de la consola
+y reinicia la aplicación.",0,4792
+40,nx_stationed_message_020,F95667E0C39AC43C,"No es posible iniciar Pokémon HOME.
+Cierra Pokémon HOME desde el menú HOME de la consola.",0,5040
+41,nx_stationed_login_none_7,34BAC48D0FE2AE50,Sí,0,5220
+42,nx_stationed_login_none_8,34BAD38D0FE2C7CD,No,0,5228

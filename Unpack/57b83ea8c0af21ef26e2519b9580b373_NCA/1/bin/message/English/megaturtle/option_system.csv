@@ -1,0 +1,84 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_option_index_010,D3D5D6955965FC64,OPTIONS,4,580
+1,	,AF66E44C86071324,[REF:1],0,596
+2,nx_option_button_000,020C276686A840F1,Back,0,608
+3,nx_option_button_001,020C266686A83F3E,Help,0,620
+4,nx_option_button_010,0209216686A600E8,Reset Settings,0,632
+5,	,AF66E44C86071324,[REF:5],0,664
+6,nx_option_data_account,1A7C63DB4FCD3986,[CTRL:01D9:0000],0,676
+7,nx_option_data_support_010,1B3B3B781028F808,Support ID,0,688
+8,nx_option_data_support_020,1B45AD7810320E43,XXXX-XXXX-XXXX-XXXX,0,712
+9,nx_option_data_ticket_010,84DE9A90FF88DC9D,Current Plan,0,752
+10,nx_option_data_ticket_040,84CD7C90FF7A3670,[REF:10],0,780
+11,nx_option_data_ticket_050,84D10290FF7D4FF9,Basic Plan,0,792
+12,nx_option_data_ticket_060,84D48890FF806982,Premium Plan,0,816
+13,nx_option_data_language_010,A2AB1A90E943EFE3,Language,0,844
+14,nx_option_data_language_020,A2A12890E93BB328,,0,864
+15,	,AF66E44C86071324,[REF:15],0,868
+16,nx_option_bgm_010,C63A296F68446F3A,Music Volume,0,880
+17,nx_option_bgm_020,C636A36F684155B1,[CTRL:0200:0000],0,908
+18,nx_option_se_010,6ABDB5A028E653D0,Sound Effect Volume,0,920
+19,nx_option_se_020,6AC7C7A028EEC6EB,[CTRL:0200:0000],0,960
+20,nx_option_language_010,2404027014F8120A,Change Language,0,972
+21,	,AF66E44C86071324,[REF:21],0,1004
+22,nx_option_comment_01,A01FCE44CB875827,Adjust the volume of the background music,4,1016
+23,nx_option_comment_02,A01FCF44CB8759DA,Adjust the volume of the sound effects,4,1100
+24,nx_option_comment_03,A01FD044CB875B8D,Change the language,0,1180
+25,	,AF66E44C86071324,[REF:25],0,1220
+26,nx_option_item_volume_00,9C85FA43A4893D7D,0,0,1232
+27,nx_option_item_volume_01,9C85F943A4893BCA,1,0,1236
+28,nx_option_item_volume_02,9C85F843A4893A17,2,0,1240
+29,nx_option_item_volume_03,9C85F743A4893864,3,0,1244
+30,nx_option_item_volume_04,9C85F643A48936B1,4,0,1248
+31,nx_option_item_volume_05,9C85F543A48934FE,5,0,1252
+32,	,AF66E44C86071324,[REF:32],0,1256
+33,nx_option_item_language_title,CF260B0E11C2DF7D,Change Language,0,1268
+34,nx_option_item_language_01,BC4C6250CB27F4C6,Japanese (Kana),0,1300
+35,nx_option_item_language_02,BC4C6150CB27F313,Japanese (Kanji),0,1332
+36,nx_option_item_language_03,BC4C6050CB27F160,English,4,1368
+37,nx_option_item_language_04,BC4C6750CB27FD45,French,0,1384
+38,nx_option_item_language_05,BC4C6650CB27FB92,German,0,1400
+39,nx_option_item_language_06,BC4C6550CB27F9DF,Italian,4,1416
+40,nx_option_item_language_07,BC4C6450CB27F82C,Korean,0,1432
+41,nx_option_item_language_08,BC4C6B50CB280411,Spanish (Spain),0,1448
+42,nx_option_item_language_09,BC4C6A50CB28025E,Chinese (Simplified),0,1480
+43,nx_option_item_language_10,BC48DD50CB24DCF0,Chinese (Traditional),0,1524
+44,nx_option_item_language_11,BC48DE50CB24DEA3,Spanish (Latin America),0,1568
+45,	,AF66E44C86071324,[REF:45],0,1616
+46,nx_option_msg_yes,79827F0E5AC6E477,Yes,0,1628
+47,nx_option_msg_no,DDF6627943AD136B,No,0,1636
+48,nx_option_msg_010,8BA4210D4302527D,"The language will now be changed.[CLEAR]
+Is it OK to save the settings and return to the
+title screen?",0,1644
+49,nx_option_msg_020,8BA7870D430535A6,"Would you like to reset sound volume and
+language settings to default?",0,1844
+50,nx_option_msg_030,8BAB0D0D43084F2F,"The display language will now be changed![CLEAR]
+The settings will be saved, and you will be
+returned to the title screen.",0,1988
+51,nx_option_msg_040,8B93830D42F485D0,"Saving settings...
+Please do not close Pokémon HOME.",0,2228
+52,	,AF66E44C86071324,[REF:52],0,2336
+53,nx_option_help_010,222D69D9F5432327,"Welcome to the Options menu!
+You can change the language Pokémon HOME uses, as well as the volume
+of its music and sound effects here. This is also where you can check what plan
+you have!",0,2348
+54,nx_option_help_015,222D64D9F5431AA8,"But if you want to see how long your Premium Plan
+is valid for, you can’t do that here...
+You’ll need to check the store where you
+signed up!",0,2724
+55,nx_option_help_020,2222D7D9F539D68C,"Also, if you ever run into trouble and need to contact
+customer support, you’ll need the Support ID shown here!",4,3008
+56,	,AF66E44C86071324,[REF:56],0,3232
+57,nx_option_comment_04,A01FC944CB874FA8,Confirm Terms of Use and Privacy Notice,0,3244
+58,nx_option_policy_010,6657138BEFA39CA6,Terms of Use and Privacy Notice,0,3324
+59,nx_option_policy_msg_010,D8BE5005D9C7FB1C,Check the Terms of Use and Privacy Notice?,0,3388
+60,nx_option_policy_msg_020,D8C86205D9D06E37,Terms of Use,0,3476
+61,nx_option_policy_msg_030,D8C4DC05D9CD54AE,Privacy Notice,0,3504
+62,nx_option_policy_msg_040,D8B3DE05D9BEE4E1,Cancel,0,3536
+63,nx_option_policy_link_msg_010,CE65E5AB6FF38E29,For Users Living in Japan,0,3552
+64,nx_option_policy_link_msg_020,CE68EBAB6FF5CE32,For Users Living in South Korea,0,3604
+65,nx_option_policy_link_msg_030,CE6C71AB6FF8E7BB,For Users Living in Asia (Outside of Japan and South Korea),0,3668
+66,nx_option_policy_link_msg_040,CE6FF7AB6FFC0144,For Users Worldwide (Except Regions Listed Above),0,3788
+67,	,AF66E44C86071324,[REF:67],0,3888
+68,nx_option_companyinfo_010,1FE7B8AFB5ED75C3,Company Information,0,3900
+69,nx_option_companyinfo_msg_010,21D4273A24E5744D,View Company Information,0,3940

@@ -1,0 +1,87 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,GBAシリーズ連動,0,304
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,ボックス選択,0,344
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,預けられるポケモンの数,0,372
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,0000]",0,420
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"どうぐを　持っているポケモン・ひでんわざを　覚えているポケモン・タマゴは
+『Pokémon HOME』に　送れません",0,444
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"GBAシリーズ連動を　行わず
+メインメニューにもどりますか？",0,680
+7,nx_gbasoft_msg_020,22A650A5467D0077,"『Pokémon HOME』へ　送ったポケモンは
+元のソフトに　戻せなくなります[RETURN]
+また　覚えている　わざが　変わります[CLEAR]
+本当に　送りますか？",0,804
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"選んだボックスの中の　ポケモンを
+『Pokémon HOME』に　送っています…",0,1112
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"GBAシリーズから『Pokémon HOME』に
+ポケモンを　送りました！",0,1276
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,はい,0,1428
+11,nx_gbasoft_msg_no,FA151C506B6DA084,いいえ,0,1440
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,ヘルプ,0,1456
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,おわる,0,1472
+14,	,AF66E44C86071324,[REF:14],0,1488
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"ここは　GBAシリーズの　連動画面！
+GBAシリーズで捕まえた　ポケモンを
+『Pokémon HOME』に送ることが　できるモン！",0,1508
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"送る　ポケモンは　ボックスごと　選ぶモン！
+選んだ　ボックスの　中にいる　すべての　ポケモンが
+『Pokémon HOME』に　送られるモン！",0,1772
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"送られた　ポケモンは　『Pokémon HOME』の
+ボックスの　空いている　ところを　みつけて
+順番に　はいるモン！",0,2060
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"別々の　ボックスに　入ることもあるから
+注意するモン！",0,2300
+19,	,AF66E44C86071324,[REF:19],0,2412
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"[CTRL:0101:0000]は　この　レポートから
+すでに　送ったことが　あります！[CLEAR]
+[CTRL:0101:0000]は　同じ　レポートから
+１匹まで　送ることが　できます！",0,2432
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"色違い　[CTRL:0101:0000]は　この　レポートから
+すでに　送ったことが　あります！[CLEAR]
+色違い　[CTRL:0101:0000]は　同じ
+レポートから　１匹まで　送れます！",0,2708
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　送ったことが　ある
+ポケモンが　含まれて　います！[CLEAR]
+[CTRL:0101:0000]は　同じ　レポートから
+１匹まで　送ることが　できます！",0,2992
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"色違い　[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　送ったことが　ある
+ポケモンが　含まれて　います！[CLEAR]
+色違い　[CTRL:0101:0000]は　同じ
+レポートから　１匹まで　送れます！",0,3324
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"[CTRL:0101:0000]は　同じ　レポートから
+１匹までしか　送れません！[CLEAR]
+[CTRL:0101:0000]が　２匹以上いるので
+このボックスの　ポケモンを　送れません！",0,3664
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"色違い　[CTRL:0101:0000]は
+同じ　レポートから[RETURN]
+１匹までしか　送れません！[CLEAR]
+色違い　[CTRL:0101:0000]が
+２匹以上いるので[RETURN]
+このボックスの　ポケモンを　送れません！",0,3940
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"[CTRL:0101:0000]は　この　レポートから
+１匹までしか　送れません！[CLEAR]
+[CTRL:0101:0000]が　選ばれていますが
+送っても　よろしいですか？",0,4272
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"色違い　[CTRL:0101:0000]は　この　レポートから
+１匹までしか　送れません！[CLEAR]
+色違い　[CTRL:0101:0000]が　選ばれていますが
+送っても　よろしいですか？",0,4520
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　１匹しか　送れない
+ポケモンが　含まれて　います！[CLEAR]
+このボックスを『Pokémon HOME』に
+送っても　よろしいですか？　",0,4800
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"色違い　[CTRL:0101:0000]　など[CLEAR]
+この　レポートから　１匹しか　送れない
+ポケモンが　含まれて　います！[CLEAR]
+このボックスを『Pokémon HOME』に
+送っても　よろしいですか？　",0,5152
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"このボックスには『Pokémon HOME』に
+送れないポケモンが　含まれています",0,5520
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,このボックスには　ポケモンがいません,0,5688
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"このボックスには　『Pokémon HOME』に
+預けることができる　ポケモンの数よりも[RETURN]
+多くのポケモンがいます",0,5764

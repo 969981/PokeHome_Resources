@@ -1,0 +1,83 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_option_index_010,D3D5D6955965FC64,设置,0,580
+1,	,AF66E44C86071324,[REF:1],0,588
+2,nx_option_button_000,020C276686A840F1,返回,0,600
+3,nx_option_button_001,020C266686A83F3E,帮助,0,608
+4,nx_option_button_010,0209216686A600E8,重置设置,0,616
+5,	,AF66E44C86071324,[REF:5],0,628
+6,nx_option_data_account,1A7C63DB4FCD3986,[CTRL:01D9:0000],0,640
+7,nx_option_data_support_010,1B3B3B781028F808,客服编码,0,652
+8,nx_option_data_support_020,1B45AD7810320E43,XXXX-XXXX-XXXX-XXXX,0,664
+9,nx_option_data_ticket_010,84DE9A90FF88DC9D,当前方案,0,704
+10,nx_option_data_ticket_040,84CD7C90FF7A3670,[REF:10],0,716
+11,nx_option_data_ticket_050,84D10290FF7D4FF9,免费方案,0,728
+12,nx_option_data_ticket_060,84D48890FF806982,进阶方案,0,740
+13,nx_option_data_language_010,A2AB1A90E943EFE3,显示语言,0,752
+14,nx_option_data_language_020,A2A12890E93BB328,,0,764
+15,	,AF66E44C86071324,[REF:15],0,768
+16,nx_option_bgm_010,C63A296F68446F3A,音乐音量,0,780
+17,nx_option_bgm_020,C636A36F684155B1,[CTRL:0200:0000],0,792
+18,nx_option_se_010,6ABDB5A028E653D0,音效音量,0,804
+19,nx_option_se_020,6AC7C7A028EEC6EB,[CTRL:0200:0000],0,816
+20,nx_option_language_010,2404027014F8120A,更改语言,0,828
+21,	,AF66E44C86071324,[REF:21],0,840
+22,nx_option_comment_01,A01FCE44CB875827,调节音乐的音量。,0,852
+23,nx_option_comment_02,A01FCF44CB8759DA,调节音效的音量。,0,872
+24,nx_option_comment_03,A01FD044CB875B8D,更改系统语言。,0,892
+25,	,AF66E44C86071324,[REF:25],0,908
+26,nx_option_item_volume_00,9C85FA43A4893D7D,0,0,920
+27,nx_option_item_volume_01,9C85F943A4893BCA,1,0,924
+28,nx_option_item_volume_02,9C85F843A4893A17,2,0,928
+29,nx_option_item_volume_03,9C85F743A4893864,3,0,932
+30,nx_option_item_volume_04,9C85F643A48936B1,4,0,936
+31,nx_option_item_volume_05,9C85F543A48934FE,5,0,940
+32,	,AF66E44C86071324,[REF:32],0,944
+33,nx_option_item_language_title,CF260B0E11C2DF7D,更改语言,0,956
+34,nx_option_item_language_01,BC4C6250CB27F4C6,日文（平假名）,0,968
+35,nx_option_item_language_02,BC4C6150CB27F313,日语（汉字）,0,984
+36,nx_option_item_language_03,BC4C6050CB27F160,英语,0,1000
+37,nx_option_item_language_04,BC4C6750CB27FD45,法语,0,1008
+38,nx_option_item_language_05,BC4C6650CB27FB92,德语,0,1016
+39,nx_option_item_language_06,BC4C6550CB27F9DF,意大利语,0,1024
+40,nx_option_item_language_07,BC4C6450CB27F82C,韩语,0,1036
+41,nx_option_item_language_08,BC4C6B50CB280411,欧洲西班牙语,0,1044
+42,nx_option_item_language_09,BC4C6A50CB28025E,简体中文,0,1060
+43,nx_option_item_language_10,BC48DD50CB24DCF0,繁体中文,0,1072
+44,nx_option_item_language_11,BC48DE50CB24DEA3,拉丁美洲西班牙语,0,1084
+45,	,AF66E44C86071324,[REF:45],0,1104
+46,nx_option_msg_yes,79827F0E5AC6E477,是,0,1116
+47,nx_option_msg_no,DDF6627943AD136B,否,0,1120
+48,nx_option_msg_010,8BA4210D4302527D,"即将更改显示语言。[CLEAR]
+确定要保存设置并返回标题画面吗？",0,1124
+49,nx_option_msg_020,8BA7870D430535A6,"确定要将音量及显示语言
+恢复为默认设置吗？",0,1184
+50,nx_option_msg_030,8BAB0D0D43084F2F,"即将改变显示语言！[CLEAR]
+接下来将保存设置，
+并返回标题画面。",0,1228
+51,nx_option_msg_040,8B93830D42F485D0,"正在保存设置……
+请不要关闭《Pokémon HOME》。",0,1292
+52,	,AF66E44C86071324,[REF:52],0,1352
+53,nx_option_help_010,222D69D9F5432327,"这里是设置菜单！
+你不仅可以在这里调整
+《Pokémon HOME》的音量和显示语言，
+还可以确认现在所使用的方案哦萌！",0,1364
+54,nx_option_help_015,222D64D9F5431AA8,"但进阶方案的有效期
+是没法在这个画面确认的，
+去购买使用券的商店看看吧萌！",0,1488
+55,nx_option_help_020,2222D7D9F539D68C,"还有，在使用过程中遇到问题时，
+会需要用到这个画面上显示的
+“客服编码”哦萌！",0,1564
+56,	,AF66E44C86071324,[REF:56],0,1644
+57,nx_option_comment_04,A01FC944CB874FA8,确认用户协议／隐私权政策。,0,1656
+58,nx_option_policy_010,6657138BEFA39CA6,用户协议／隐私权政策,0,1684
+59,nx_option_policy_msg_010,D8BE5005D9C7FB1C,要确认用户协议／隐私权政策吗？,0,1708
+60,nx_option_policy_msg_020,D8C86205D9D06E37,用户协议,0,1740
+61,nx_option_policy_msg_030,D8C4DC05D9CD54AE,隐私权政策,0,1752
+62,nx_option_policy_msg_040,D8B3DE05D9BEE4E1,取消,0,1764
+63,nx_option_policy_link_msg_010,CE65E5AB6FF38E29,居住在日本的用户由此查看,0,1772
+64,nx_option_policy_link_msg_020,CE68EBAB6FF5CE32,居住在韩国的用户由此查看,0,1800
+65,nx_option_policy_link_msg_030,CE6C71AB6FF8E7BB,居住在日本及韩国以外的亚洲地区的用户由此查看,0,1828
+66,nx_option_policy_link_msg_040,CE6FF7AB6FFC0144,居住在上述之外地区的用户由此查看,0,1876
+67,	,AF66E44C86071324,[REF:67],0,1912
+68,nx_option_companyinfo_010,1FE7B8AFB5ED75C3,公司信息,0,1924
+69,nx_option_companyinfo_msg_010,21D4273A24E5744D,确认公司信息。,0,1936

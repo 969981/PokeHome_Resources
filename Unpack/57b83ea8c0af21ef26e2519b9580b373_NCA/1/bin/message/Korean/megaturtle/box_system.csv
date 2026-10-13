@@ -1,0 +1,633 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_box_index_010,1F1DBF6C8CE43914,포켓몬,0,3388
+1,nx_box_index_020,1F28316C8CED4F4F,포켓몬 일람,0,3396
+2,	,AF66E44C86071324,[REF:2],0,3412
+3,nx_box_guide_010,EB995BBF9C61C030,[CTRL:01DA:0000] (추려내기 없음),0,3424
+4,nx_box_guide_020,EBA36DBF9C6A334B,"[CTRL:01DA:0000] (추려내기[CTRL:0204:0001,0000]/[CTRL:0204:0002,0000])",0,3456
+5,nx_box_guide_030,EBA067BF9C67F342,[CTRL:01DA:0000] (추려내기 중...),0,3504
+6,	,AF66E44C86071324,[REF:6],0,3540
+7,nx_box_nameframe_010,D9A81028346DA738,[CTRL:0102:0000](Lv.[CTRL:0202:0001]),0,3552
+8,nx_box_nameframe_011,D9A81128346DA8EB,[CTRL:0102:0000],0,3580
+9,nx_box_nameframe_015,D9A81528346DAFB7,알,0,3592
+10,nx_box_nameframe_020,D9B202283475E3F3,[REF:10],0,3596
+11,	,AF66E44C86071324,[REF:11],0,3608
+12,nx_box_catch_multiple,5CEE54657E408716,[CTRL:0201:0000],0,3620
+13,	,AF66E44C86071324,[REF:13],0,3632
+14,nx_box_button_000,0401AB36E6AC7441,돌아간다,0,3644
+15,nx_box_button_001,0401AA36E6AC728E,도움말,0,3656
+16,nx_box_button_010,03FE2536E6A95AB8,끝낸다,0,3664
+17,nx_box_button_020,04081736E6B19773,일람,0,3672
+18,nx_box_button_030,0404B136E6AEB44A,교체,0,3680
+19,nx_box_button_040,040F2336E6B7CA85,표시 전환,0,3688
+20,nx_box_button_031,0404B236E6AEB5FD,[REF:20],0,3700
+21,nx_box_button_050,040B9D36E6B4B0FC,전체 리셋,0,3712
+22,nx_box_button_060,0415AF36E6BD2417,함께 놓아주기,0,3724
+23,nx_box_button_065,0415AA36E6BD1B98,취소,0,3740
+24,nx_box_button_070,0412A936E6BAE40E,추려내기,0,3748
+25,nx_box_button_080,03E61B36E694B7D9,순서바꾸기,0,3760
+26,nx_box_button_090,03E31536E69277D0,전체 리셋,0,3772
+27,nx_box_button_100,FC9E7036E2D9A4F6,하나만 리셋,0,3784
+28,	,AF66E44C86071324,[REF:28],0,3800
+29,nx_box_context_010,506E965A3BE1E68F,이동한다,0,3812
+30,nx_box_context_020,5064245A3BD8D054,상태를 본다,0,3824
+31,nx_box_context_030,5067AA5A3BDBE9DD,마킹,0,3840
+32,nx_box_context_040,505D985A3BD376C2,놓아준다,0,3848
+33,nx_box_context_050,50609E5A3BD5B6CB,박스로 이동,0,3860
+34,nx_box_context_999,9E0B865A67BEBC83,취소,0,3876
+35,	,AF66E44C86071324,[REF:35],0,3884
+36,nx_box_marking_010,F86E02F7B40F654F,마킹,0,3896
+37,nx_box_marking_020,F86390F7B4064F14,결정,0,3904
+38,nx_box_marking_030,F86716F7B409689D,[REF:38],0,3912
+39,	,AF66E44C86071324,[REF:39],0,3924
+40,nx_box_release_010,356516A162FB1D51,1마리만 놓아준다,0,3936
+41,nx_box_release_020,35689CA162FE36DA,함께 놓아준다,0,3956
+42,nx_box_release_030,356C02A163011A03,놓아준다,0,3972
+43,nx_box_release_040,356F08A163035A0C,취소,0,3984
+44,nx_box_release_050,35728EA163067395,계속한다,0,3992
+45,nx_box_release_060,357614A163098D1E,끝낸다,0,4004
+46,nx_box_release_msg_010,BCFD45B3B6B0F8DF,"[CTRL:0102:0000]만을 놓아주겠습니까?
+다른 포켓몬도 함께 놓아주겠습니까?",0,4012
+47,nx_box_release_msg_020,BCF2D3B3B6A7E2A4,"정말 [CTRL:0102:0000][CTRL:1900:0002] 놓아주겠습니까?
+놓아준 포켓몬은 돌아오지 않습니다!",0,4084
+48,nx_box_release_msg_030,BCF659B3B6AAFC2D,"정말 이 [CTRL:0202:0000]마리를 놓아주겠습니까?
+놓아준 포켓몬은 돌아오지 않습니다!",0,4168
+49,nx_box_release_msg_040,BCEC47B3B6A28912,"[CTRL:0102:0000][CTRL:1900:0002] 놓아주었다
+바이바이, [CTRL:0102:0000]!",0,4252
+50,nx_box_release_msg_050,BCEFCDB3B6A5A29B,"포켓몬들을 놓아주었다
+바이바이!",0,4308
+51,nx_box_release_msg_060,BCE53BB3B69C5600,"이 이상 포켓몬을 놓아줄 수 없습니다![CLEAR]
+한 번에 [CTRL:0203:0000,0000]마리까지만
+놓아줄 수 있습니다[CLEAR]
+추가로 포켓몬을 놓아주고 싶은 경우
+먼저 리포트를 기록해 주십시오",0,4344
+52,nx_box_release_msg_070,BCE8C1B3B69F6F89,포켓몬을 놓아주지 않고 끝내겠습니까?,0,4528
+53,nx_box_release_msg_080,BD14CFB3B6C4C23E,이 포켓몬은 놓아줄 수 없습니다!,0,4572
+54,nx_box_release_msg_081,BD14D0B3B6C4C3F1,"스마트폰 버전에서 즐겨찾기에 추가한
+포켓몬은 놓아줄 수 없습니다",0,4612
+55,nx_box_release_msg_090,BD1855B3B6C7DBC7,알은 놓아줄 수 없습니다!,0,4684
+56,	,AF66E44C86071324,[REF:56],0,4716
+57,nx_box_operation_010,43F3BD16C47B6A65,[REF:57],0,4728
+58,nx_box_operation_020,43F74316C47E83EE,[REF:58],0,4740
+59,nx_box_operation_030,43FAC916C4819D77,[REF:59],0,4752
+60,nx_box_operation_040,43E2BF16C46CFA98,[REF:60],0,4764
+61,	,AF66E44C86071324,[REF:61],0,4776
+62,nx_box_pokedata_010,786A1E4480312115,[CTRL:0102:0000],0,4788
+63,nx_box_pokedata_020,786DA44480343A9E,Lv.[CTRL:0202:0000],0,4800
+64,nx_box_pokedata_030,78712A4480375427,[REF:64],0,4816
+65,nx_box_pokedata_031,7871294480375274,[CTRL:0189:0000],0,4828
+66,nx_box_pokedata_040,785920448022B148,성격,0,4840
+67,nx_box_pokedata_041,785921448022B2FB,[CTRL:0108:0000],0,4848
+68,nx_box_pokedata_050,785CA6448025CAD1,특성,0,4860
+69,nx_box_pokedata_051,785CA5448025C91E,[CTRL:0106:0000],0,4868
+70,nx_box_pokedata_060,78602C448028E45A,HP,0,4880
+71,nx_box_pokedata_061,78602D448028E60D,[CTRL:0202:0000],0,4888
+72,nx_box_pokedata_070,78639244802BC783,공격,0,4900
+73,nx_box_pokedata_071,78639144802BC5D0,[CTRL:0202:0000],0,4908
+74,nx_box_pokedata_080,784BA84480175B04,방어,0,4920
+75,nx_box_pokedata_081,784BA94480175CB7,[CTRL:0202:0000],0,4928
+76,nx_box_pokedata_090,784F2E44801A748D,특수공격,0,4940
+77,nx_box_pokedata_091,784F2D44801A72DA,[CTRL:0202:0000],0,4952
+78,nx_box_pokedata_100,7FC9D3448400D6D7,특수방어,0,4964
+79,nx_box_pokedata_101,7FC9D2448400D524,[CTRL:0202:0000],0,4976
+80,nx_box_pokedata_110,7FC6CD4483FE96CE,스피드,0,4988
+81,nx_box_pokedata_111,7FC6CE4483FE9881,[CTRL:0202:0000],0,4996
+82,nx_box_pokedata_120,7FC3474483FB7D45,[CTRL:0107:0000],0,5008
+83,nx_box_pokedata_none_1,87AEB72D8BE2523E,－,0,5020
+84,nx_box_pokedata_none_2,87AEB62D8BE2508B,－－－－－,0,5024
+85,	,AF66E44C86071324,[REF:85],0,5036
+86,nx_box_boxname_default_010,36A3274EA11CD2B0,HOME[CTRL:0202:0000],0,5048
+87,nx_box_boxname_default_020,36AD394EA12545CB,박스[CTRL:0202:0000],0,5068
+88,nx_box_boxname_010,D0FE60B9DF49C356,[CTRL:01C0:0000],0,5084
+89,nx_box_boxname_030,D0F774B9DF43C6A4,박스 스페이스 [CTRL:0201:0000]/[CTRL:0201:0001],0,5096
+90,nx_box_boxname_040,D0F46EB9DF41869B,최근 30,0,5132
+91,nx_box_boxname_050,D0F0E8B9DF3E6D12,프리 박스,0,5144
+92,nx_box_boxpage_010,1D8AD436B757FC46,[CTRL:0202:0000]/[CTRL:0202:0001],0,5156
+93,nx_box_boxpage_030,1D83E836B751FF94,[REF:93],0,5176
+94,nx_box_switching_010,49CF13AA54B9496C,박스,0,5188
+95,nx_box_switching_020,49D925AA54C1BC87,돌아간다,0,5196
+96,nx_box_switching_030,49D59FAA54BEA2FE,최근 30,0,5208
+97,	,AF66E44C86071324,[REF:97],0,5220
+98,nx_box_boxshumbnail_010,6EDC950F42D305CE,[CTRL:0201:0000]/[CTRL:0201:0001],0,5232
+99,	,AF66E44C86071324,[REF:99],0,5252
+100,nx_box_save_010,09A43B773847465D,예,0,5264
+101,nx_box_save_020,09A7A177384A2986,아니요,0,5268
+102,nx_box_save_030,09AB2777384D430F,기록하고 끝낸다,0,5276
+103,nx_box_save_040,09931D773838A030,기록하지 않고 끝낸다,0,5296
+104,nx_box_save_050,0996A377383BB9B9,조작을 계속한다,0,5320
+105,nx_box_save_msg_010,849A26FC5D7272F3,"현재 박스 상태를
+리포트에 기록하고 끝내겠습니까?",0,5340
+106,nx_box_save_msg_011,849A25FC5D727140,"“?” 아이콘이 붙은 포켓몬이 있습니다![CLEAR]
+이대로 리포트를 기록하면 그 포켓몬을
+찾을 수 있는 소프트웨어가 적어집니다...[CLEAR]
+현재 박스의 상태를
+리포트에 기록하고 끝내겠습니까?",0,5396
+107,nx_box_save_msg_012,849A28FC5D727659,"포켓몬이 배울 수 있는 기술이
+소프트웨어마다 다르기 때문에,[CLEAR]
+소프트웨어별로 기술과 PP를 기억해 둔 뒤,
+찾아가는 소프트웨어에 맞춰 기술을 다시 배우게 됩니다[CLEAR]
+현재 박스의 상태를
+리포트에 기록하고 끝내겠습니까?",0,5604
+108,nx_box_save_msg_013,849A27FC5D7274A6,"“?” 아이콘이 붙은 포켓몬이 있습니다![CLEAR]
+이대로 리포트를 기록하면 그 포켓몬을
+찾을 수 있는 소프트웨어가 적어집니다[CLEAR]
+또한, 포켓몬이 배울 수 있는 기술이
+소프트웨어마다 다르기 때문에,[CLEAR]
+소프트웨어별로 기술과 PP를 기억해 둔 뒤,
+찾아가는 소프트웨어에 맞춰 기술을 다시 배우게 됩니다[CLEAR]
+현재 박스의 상태를
+리포트에 기록하고 끝내겠습니까?",0,5852
+109,nx_box_save_msg_020,849034FC5D6A3638,"리포트에 기록하고 있습니다...
+“Pokémon HOME”을 종료하지 않도록 주의해 주십시오",0,6252
+110,nx_box_save_msg_030,8493BAFC5D6D4FC1,리포트를 꼼꼼히 기록했다!,0,6356
+111,nx_box_save_msg_040,84A4B8FC5D7BBF8E,"게임 소프트웨어의 언어와 맞지 않는
+박스 이름이 변경되었습니다!",0,6388
+112,nx_box_save_msg_040,84A4B8FC5D7BBF8E,[REF:112],0,6460
+113,nx_box_save_msg_050,84A7BEFC5D7DFF97,[REF:113],0,6472
+114,nx_box_save_msg_055,84A7B9FC5D7DF718,"박스의 상태가 기록되지 않습니다!
+정말 괜찮겠습니까?",0,6484
+115,nx_box_save_msg_060,849DACFC5D758C7C,"리포트를 기록하지 않고 돌아갑니다
+“Pokémon HOME”을 종료하지 않도록 주의해 주십시오",0,6544
+116,nx_box_save_msg_070,84A132FC5D78A605,"“?” 아이콘이 붙은 포켓몬이 있습니다!
+
+“포켓몬스터 레츠고! 피카츄”
+“포켓몬스터 레츠고! 이브이”에서 맡긴 포켓몬을
+다른 소프트웨어로 찾아가면
+“포켓몬스터 레츠고! 피카츄”
+“포켓몬스터 레츠고! 이브이”로는
+찾을 수 없게 됩니다",0,6652
+117,nx_box_save_msg_080,847BB0FC5D58ACE2,"포켓몬이 배울 수 있는 기술이나 특성은
+소프트웨어마다 다르기 때문에,
+기술, PP, 특성은 소프트웨어별로 기억되며,
+찾아가는 소프트웨어에 맞는 내용으로 변경됩니다
+
+다른 소프트웨어에서 배웠던 기술은
+“Pokémon HOME”에서 포켓몬을 찾아갈 때
+떠올릴 수 있습니다",0,6916
+118,nx_box_save_msg_085,847BADFC5D58A7C9,"“포켓몬스터스칼렛”
+“포켓몬스터바이올렛”에서
+손에 넣은 포켓몬을
+“Pokémon LEGENDS 아르세우스”로 찾아가면
+해당 포켓몬의 IDNo.가 변경됩니다
+
+“Pokémon HOME”에 맡기면
+해당 포켓몬의 원래 IDNo.로 돌아옵니다",0,7216
+119,nx_box_save_msg_090,847F36FC5D5BC66B,[CTRL:0200:0000]/[CTRL:0200:0001],0,7480
+120,nx_box_save_msg_095,847F39FC5D5BCB84,주의!,0,7500
+121,nx_box_save_msg_100,8DAD5BFC62B496B5,"“포켓몬스터 브릴리언트 다이아몬드”
+“포켓몬스터 샤이닝 펄”에서 손에 넣은 포켓몬을
+“포켓몬스터스칼렛”
+“포켓몬스터바이올렛”에서 대단한 특훈을 시킨 경우,
+레벨 100이 되지 않으면
+“포켓몬스터 브릴리언트 다이아몬드”
+“포켓몬스터 샤이닝 펄”에서 찾을 수 없습니다",0,7508
+122,	,AF66E44C86071324,[REF:122],0,7804
+123,nx_box_msg_010,83083F333E19AFED,"이 소프트웨어로는
+찾을 수 없는 포켓몬입니다!",0,7816
+124,nx_box_msg_011,83083E333E19AE3A,"이 소프트웨어로는 찾을 수 없는
+포켓몬이 포함되어 있습니다!",0,7868
+125,nx_box_msg_012,83083D333E19AC87,"교체할 포켓몬 중, 연동 중인 소프트웨어로
+찾을 수 없는 포켓몬이 있습니다!",0,7936
+126,nx_box_msg_015,83083A333E19A76E,"“Pokémon HOME”에
+맡길 수 없는 포켓몬입니다!",0,8024
+127,nx_box_msg_016,830839333E19A5BB,"“Pokémon HOME”에 맡길 수 없는
+포켓몬이 포함되어 있습니다!",0,8088
+128,nx_box_msg_017,830838333E19A408,"교체할 포켓몬 중, “Pokémon HOME”에
+맡길 수 없는 포켓몬이 있습니다!",0,8168
+129,nx_box_msg_020,830BA5333E1C9316,"배틀팀에 포함된 포켓몬은
+맡기거나 찾을 수 없습니다!",0,8260
+130,nx_box_msg_021,830BA6333E1C94C9,"지닌 포켓몬은
+맡기거나 찾을 수 없습니다!",0,8320
+131,nx_box_msg_030,830F2B333E1FAC9F,"교환에 내보낸 포켓몬은
+맡기거나 찾을 수 없습니다!",0,8368
+132,nx_box_msg_035,830F26333E1FA420,"“Pokémon HOME”에는
+알을 맡길 수 없습니다!",0,8428
+133,nx_box_msg_036,830F29333E1FA939,"“Pokémon HOME”에서는
+알을 찾아갈 수 없습니다!",0,8492
+134,nx_box_msg_040,82F721333E0B09C0,"“?” 아이콘이 붙어 있는 포켓몬은 리포트를 기록하면
+찾을 수 있는 소프트웨어가 적어집니다!",0,8560
+135,nx_box_msg_050,82FAA7333E0E2349,교체할 수 없는 박스입니다!,0,8664
+136,nx_box_msg_060,82FE2D333E113CD2,"이 게임 소프트웨어의 박스는
+이름을 바꿀 수 없습니다!",0,8696
+137,nx_box_msg_061,82FE2E333E113E85,"표시 언어가 게임 소프트웨어와 다르기 때문에
+이름을 바꿀 수 없습니다!",0,8760
+138,nx_box_msg_070,8301B3333E14565B,"박스 일람을 표시하는 모드로
+Y 버튼으로 교체할 수도 있습니다",0,8840
+139,nx_box_msg_080,832029333E2E1C6C,"지금까지 연동으로 “Pokémon HOME”에
+맡긴 포켓몬 중 최근 30마리를[RETURN]
+간편하게 확인할 수 있는 모드입니다",0,8912
+140,nx_box_msg_090,8323AF333E3135F5,"프리 박스에 맡길 수 있는
+포켓몬은 30마리까지입니다",0,9048
+141,nx_box_msg_100,8C1B5433435B9D4F,[REF:141],0,9108
+142,nx_box_msg_110,8C17CE33435883C6,[REF:142],0,9120
+143,nx_box_msg_120,8C1468334355A09D,"이 포켓몬은
+맡기거나 찾을 수 없습니다!",0,9132
+144,nx_box_msg_150,8C0A5633434D2D82,"“Pokémon HOME”의 박스에
+기술을 변경한 포켓몬이 있습니다![CLEAR]
+“Pokémon HOME”에 맡긴 포켓몬은
+기술의 변경이 기록되지 않습니다!",0,9180
+145,nx_box_msg_140,8C0D5C33434F6D8B,"“Pokémon HOME”의 박스에
+기술을 변경한 포켓몬이 포함되어 있습니다![CLEAR]
+“Pokémon HOME”에 맡긴 포켓몬은
+기술의 변경이 기록되지 않습니다!",0,9352
+146,	,AF66E44C86071324,[REF:146],0,9532
+147,nx_box_alone_010,29DA684996638307,“Pokémon HOME”의 박스 데이터,0,9544
+148,nx_box_alone_020,29D05649965B0FEC,맡긴 수,0,9592
+149,nx_box_alone_021,29D05749965B119F,"[CTRL:0203:0000,0000]/[CTRL:0203:0001,0000]",0,9604
+150,nx_box_alone_030,29D3DC49965E2975,빈 박스,0,9628
+151,nx_box_alone_031,29D3DB49965E27C2,"[CTRL:0203:0000,0000]",0,9640
+152,nx_box_alone_040,29C96A499655133A,이사 박스,0,9652
+153,nx_box_alone_041,29C96B49965514ED,[CTRL:0202:0000],0,9664
+154,nx_box_alone_none,E11FA23D148E4650,---,0,9676
+155,	,AF66E44C86071324,[REF:155],0,9684
+156,nx_box_alone_msg_yes,8FD29780ACB18ECB,[REF:156],0,9696
+157,nx_box_alone_msg_no,69D3CF8F4D5E5F5F,[REF:157],0,9708
+158,	,AF66E44C86071324,[REF:158],0,9720
+159,nx_box_applet_010,FA33F711C9978B4C,[REF:159],0,9732
+160,nx_box_applet_020,FA3E8911C9A0D7E7,[REF:160],0,9744
+161,	,AF66E44C86071324,[REF:161],0,9756
+162,nx_box_adddata_010,8C22C8AC79DB8CBB,라벨,0,9768
+163,nx_box_adddata_020,8C18B6AC79D319A0,박스,0,9776
+164,nx_box_adddata_021,8C18B7AC79D31B53,[REF:164],0,9784
+165,	,AF66E44C86071324,[REF:165],0,9796
+166,nx_box_list_search_title,B4D5556B85248BD6,추려내기 조건,0,9808
+167,nx_box_list_search_race,4BE24885284BC085,포켓몬,0,9824
+168,nx_box_list_search_mf,AB902AE45B60E463,성별,0,9832
+169,nx_box_list_search_type1,6BF6B0E322C6A0FB,타입1,0,9840
+170,nx_box_list_search_type2,6BF6B1E322C6A2AE,타입2,0,9848
+171,nx_box_list_search_personal,328467F0CE3B4A00,성격,0,9856
+172,nx_box_list_search_marking,FEB1129802DB375F,마킹,0,9864
+173,nx_box_list_search_graduate,D27CE397978EA655,출신지 마크,0,9872
+174,nx_box_list_search_skill1,E18AA8EF63634CE4,기술1,0,9888
+175,nx_box_list_search_skill2,E18AABEF636351FD,기술2,0,9896
+176,nx_box_list_search_skill3,E18AAAEF6363504A,기술3,0,9904
+177,nx_box_list_search_skill4,E18AA5EF636347CB,기술4,0,9912
+178,nx_box_list_search_chara,4C54E4775F4D43C7,특성,0,9920
+179,nx_box_list_search_parent,A6F4248A97384D80,어버이,0,9928
+180,nx_box_list_search_color,DD6E9AA14EA41BF7,색이 다른 모습,0,9936
+181,nx_box_list_search_pokerus,3423579E7B213D19,포켓러스,0,9956
+182,nx_box_list_search_pokedex,8AA6FA9EAC1A1EFE,도감 픽업,0,9968
+183,nx_box_list_search_moving,E5DAEF28C42A9F26,찾을 수 있는 소프트웨어,0,9980
+184,nx_box_list_search_label,801E255792BE09BE,라벨,0,10008
+185,	,AF66E44C86071324,[REF:185],0,10016
+186,nx_box_skill_set_010,E6C0730ACF4F10AE,기술을 떠올린다,0,10028
+187,nx_box_skill_set_020,E6BCED0ACF4BF725,타입,0,10048
+188,nx_box_skill_set_030,E6B9E70ACF49B71C,PP,0,10056
+189,nx_box_skill_set_040,E6B6610ACF469D93,[CTRL:0201:0000],0,10064
+190,nx_box_skill_set_050,E6B2FB0ACF43BA6A,분류,0,10076
+191,nx_box_skill_set_060,E6AF750ACF40A0E1,위력,0,10084
+192,nx_box_skill_set_070,E6ABEF0ACF3D8758,[CTRL:0202:0000],0,10092
+193,nx_box_skill_set_080,E6A8E90ACF3B474F,명중,0,10104
+194,nx_box_skill_set_090,E6A5630ACF382DC6,[CTRL:0202:0000],0,10112
+195,nx_box_skill_set_100,DDADBE0ACA0DC66C,기술을 잊는다,0,10124
+196,nx_box_skill_set_110,DDB1440ACA10DFF5,"[CTRL:0107:0000][CTRL:1900:0002]
+잊게 하겠습니까?",0,10140
+197,nx_box_skill_set_120,DDB44A0ACA131FFE,"[CTRL:0107:0000][CTRL:1900:0002]
+잊었습니다!",0,10180
+198,nx_box_skill_set_130,DDB7D00ACA163987,"사용할 수 있는 기술이 없어지므로
+기술을 잊게 할 수 없습니다!",0,10212
+199,nx_box_skill_set_140,DDA0460ACA027028,가나다순,0,10284
+200,nx_box_skill_set_150,DDA34C0ACA04B031,재사용 시간,0,10296
+201,nx_box_skill_set_160,DDA6D20ACA07C9BA,[REF:201],0,10312
+202,	,AF66E44C86071324,[REF:202],0,10324
+203,nx_box_list_search_nil,F13636074BFA870F,조건에 맞는 포켓몬이 없습니다!,0,10336
+204,	,AF66E44C86071324,[REF:204],0,10372
+205,nx_box_list_search_head_race,1A93531C23FE656A,포켓몬으로 찾기,0,10384
+206,nx_box_list_search_head_mf,20163C142C2DA0E8,성별로 찾기,0,10404
+207,nx_box_list_search_head_type,F5579B0A64A7115F,타입으로 찾기,0,10420
+208,nx_box_list_search_head_personal,EAA83B894BA6A4C7,성격으로 찾기,0,10436
+209,nx_box_list_search_head_marking,215A61C518C45C8E,마킹으로 찾기,0,10452
+210,nx_box_list_search_head_graduate,A5A019A5A9F75AD6,출신지 마크로 찾기,0,10468
+211,nx_box_list_search_head_skill,DB146DB093CFB28C,배운 기술로 찾기,0,10492
+212,nx_box_list_search_head_chara,D4B8CDADBB81A2FA,특성으로 찾기,0,10512
+213,nx_box_list_search_head_parent,EECA8C01FC4A99C7,어버이 이름으로 찾기,0,10528
+214,nx_box_list_search_head_color,5F0FFFA7C184D696,색이 다른 모습으로 찾기,0,10552
+215,nx_box_list_search_head_pokerus,8A532E9246E7F1A0,포켓러스로 찾기,0,10580
+216,nx_box_list_search_head_pokedex,EF785391EF7EE2BB,도감 픽업으로 찾기,0,10600
+217,nx_box_list_search_head_moving,7EF0462AF6D70D89,찾을 수 있는 소프트웨어로 찾기,0,10624
+218,nx_box_list_search_head_label,EB546C298C1A511F,라벨로 찾기,0,10660
+219,	,AF66E44C86071324,[REF:219],0,10676
+220,nx_box_list_mf_01,97CEE218AF999482,♂,0,10688
+221,nx_box_list_mf_02,97CEE118AF9992CF,♀,0,10692
+222,nx_box_list_mf_03,97CEE018AF99911C,성별 없음,0,10696
+223,	,AF66E44C86071324,[REF:223],0,10708
+224,nx_box_list_type_01,19C01AC32B99FE4B,노말,0,10720
+225,nx_box_list_type_02,19C01BC32B99FFFE,격투,0,10728
+226,nx_box_list_type_03,19C01CC32B9A01B1,비행,0,10736
+227,nx_box_list_type_04,19C01DC32B9A0364,독,0,10744
+228,nx_box_list_type_05,19C01EC32B9A0517,땅,0,10748
+229,nx_box_list_type_06,19C01FC32B9A06CA,바위,0,10752
+230,nx_box_list_type_07,19C020C32B9A087D,벌레,0,10760
+231,nx_box_list_type_08,19C011C32B99EF00,고스트,0,10768
+232,nx_box_list_type_09,19C012C32B99F0B3,강철,0,10776
+233,nx_box_list_type_10,19C39FC32B9D1621,불꽃,0,10784
+234,nx_box_list_type_11,19C39EC32B9D146E,물,0,10792
+235,nx_box_list_type_12,19C39DC32B9D12BB,풀,0,10796
+236,nx_box_list_type_13,19C39CC32B9D1108,전기,0,10800
+237,nx_box_list_type_14,19C3A3C32B9D1CED,에스퍼,0,10808
+238,nx_box_list_type_15,19C3A2C32B9D1B3A,얼음,0,10816
+239,nx_box_list_type_16,19C3A1C32B9D1987,드래곤,0,10824
+240,nx_box_list_type_17,19C3A0C32B9D17D4,악,0,10832
+241,nx_box_list_type_18,19C397C32B9D0889,페어리,0,10836
+242,nx_box_list_type_19,19C396C32B9D06D6,[REF:242],0,10844
+243,	,AF66E44C86071324,[REF:243],0,10856
+244,nx_box_list_seikaku_1,136CEBEEF7FB1972,[REF:244],0,10868
+245,nx_box_list_seikaku_2,136CEAEEF7FB17BF,[REF:245],0,10880
+246,nx_box_list_seikaku_3,136CE9EEF7FB160C,[REF:246],0,10892
+247,nx_box_list_seikaku_4,136CE8EEF7FB1459,[REF:247],0,10904
+248,nx_box_list_seikaku_5,136CE7EEF7FB12A6,[REF:248],0,10916
+249,nx_box_list_seikaku_6,136CE6EEF7FB10F3,[REF:249],0,10928
+250,nx_box_list_seikaku_7,136CE5EEF7FB0F40,[REF:250],0,10940
+251,nx_box_list_seikaku_8,136CF4EEF7FB28BD,[REF:251],0,10952
+252,nx_box_list_seikaku_9,136CF3EEF7FB270A,[REF:252],0,10964
+253,nx_box_list_seikaku_10,FD2E290F5FABEB26,[REF:253],0,10976
+254,nx_box_list_seikaku_11,FD2E2A0F5FABECD9,[REF:254],0,10988
+255,nx_box_list_seikaku_12,FD2E270F5FABE7C0,[REF:255],0,11000
+256,nx_box_list_seikaku_13,FD2E280F5FABE973,[REF:256],0,11012
+257,nx_box_list_seikaku_14,FD2E2D0F5FABF1F2,[REF:257],0,11024
+258,nx_box_list_seikaku_15,FD2E2E0F5FABF3A5,[REF:258],0,11036
+259,nx_box_list_seikaku_16,FD2E2B0F5FABEE8C,[REF:259],0,11048
+260,nx_box_list_seikaku_17,FD2E2C0F5FABF03F,[REF:260],0,11060
+261,nx_box_list_seikaku_18,FD2E310F5FABF8BE,[REF:261],0,11072
+262,nx_box_list_seikaku_19,FD2E320F5FABFA71,[REF:262],0,11084
+263,nx_box_list_seikaku_20,FD2AC30F5FA907FD,[REF:263],0,11096
+264,nx_box_list_seikaku_21,FD2AC20F5FA9064A,[REF:264],0,11108
+265,nx_box_list_seikaku_22,FD2AC10F5FA90497,[REF:265],0,11120
+266,nx_box_list_seikaku_23,FD2AC00F5FA902E4,[REF:266],0,11132
+267,nx_box_list_seikaku_24,FD2ABF0F5FA90131,[REF:267],0,11144
+268,nx_box_list_seikaku_25,FD2ABE0F5FA8FF7E,[REF:268],0,11156
+269,nx_box_list_seikaku_1_m,E113301F90E3512E,노력+민트,0,11168
+270,nx_box_list_seikaku_2_m,D9C4E31F8D22BF57,외로움+민트,0,11180
+271,nx_box_list_seikaku_3_m,D19CBA1F88A8C6EC,용감+민트,0,11196
+272,nx_box_list_seikaku_4_m,C6E7B51F8203D36D,고집+민트,0,11208
+273,nx_box_list_seikaku_5_m,C0728C1F7EFB6F82,개구쟁이+민트,0,11220
+274,nx_box_list_seikaku_6_m,B5BD3F1F785601AB,대담+민트,0,11236
+275,nx_box_list_seikaku_7_m,AD95161F73DC0940,온순+민트,0,11248
+276,nx_box_list_seikaku_8_m,3071811FBE3E9DD1,무사태평+민트,0,11260
+277,nx_box_list_seikaku_9_m,2848581FB9C2F266,장난꾸러기+민트,0,11276
+278,nx_box_list_seikaku_10_m,0F2985A39B479C02,촐랑+민트,0,11296
+279,nx_box_list_seikaku_11_m,159EAEA39E4FFFED,겁쟁이+민트,0,11308
+280,nx_box_list_seikaku_12_m,FC4C0FA3902835C0,성급+민트,0,11324
+281,nx_box_list_seikaku_13_m,047438A394A22E2B,성실+민트,0,11336
+282,nx_box_list_seikaku_14_m,2FCA29A3AD2F7DAE,명랑+민트,0,11348
+283,nx_box_list_seikaku_15_m,3A7F32A3B3D477F9,천진난만+민트,0,11360
+284,nx_box_list_seikaku_16_m,2053B3A3A4F4F36C,조심+민트,0,11376
+285,nx_box_list_seikaku_17_m,287BDCA3A96EEBD7,의젓+민트,0,11388
+286,nx_box_list_seikaku_18_m,53D1CDA3C1FC3B5A,냉정+민트,0,11400
+287,nx_box_list_seikaku_19_m,5B20D6A3C5BE0CA5,수줍음+민트,0,11412
+288,nx_box_list_seikaku_20_m,6CDF0F9B431AB111,덜렁+민트,0,11428
+289,nx_box_list_seikaku_21_m,64B6E69B3EA0B8A6,차분+민트,0,11440
+290,nx_box_list_seikaku_22_m,5D67D99B3ADEE08F,얌전+민트,0,11452
+291,nx_box_list_seikaku_23_m,538C909B34F31D44,건방+민트,0,11464
+292,nx_box_list_seikaku_24_m,4C3D6B9B31311C65,신중+민트,0,11476
+293,nx_box_list_seikaku_25_m,4189629B2A8DD51A,변덕+민트,0,11488
+294,	,AF66E44C86071324,[REF:294],0,11500
+295,nx_box_list_graduate_01,D3970A8349B80418,마크 없음,0,11512
+296,	,AF66E44C86071324,[REF:296],0,11524
+297,nx_box_list_color_01,3F669A3DE577C658,색이 다른 모습,0,11536
+298,nx_box_list_color_02,3F669D3DE577CB71,일반적인 모습,0,11556
+299,	,AF66E44C86071324,[REF:299],0,11572
+300,nx_box_list_pokerus_01,CC886724CCB5565A,포켓러스 없음,0,11584
+301,	,AF66E44C86071324,[REF:301],0,11600
+302,nx_box_list_pokedex_01,05AF2CD3AA78B0E7,관동지방,0,11612
+303,nx_box_list_pokedex_02,05AF2DD3AA78B29A,성도지방,0,11624
+304,nx_box_list_pokedex_03,05AF2ED3AA78B44D,호연지방,0,11636
+305,nx_box_list_pokedex_04,05AF27D3AA78A868,신오지방,0,11648
+306,nx_box_list_pokedex_05,05AF28D3AA78AA1B,하나지방,0,11660
+307,nx_box_list_pokedex_06,05AF29D3AA78ABCE,칼로스지방,0,11672
+308,nx_box_list_pokedex_07,05AF2AD3AA78AD81,알로라지방,0,11684
+309,nx_box_list_pokedex_08,05AF23D3AA78A19C,가라르지방,0,11696
+310,nx_box_list_pokedex_09,05AF24D3AA78A34F,히스이지방,0,11708
+311,nx_box_list_pokedex_10,05B231D3AA7AEF3D,팔데아지방,0,11720
+312,nx_box_list_pokedex_unkown,0E311B8F76767D74,불명,0,11732
+313,	,AF66E44C86071324,[REF:313],0,11740
+314,nx_box_list_moving_01,D8DD44CDBB4E4E2D,없음,0,11752
+315,	,AF66E44C86071324,[REF:315],0,11760
+316,nx_box_list_label_01,05C28278AC8C8B0B,(라벨 표시 칸),0,11772
+317,	,AF66E44C86071324,[REF:317],0,11792
+318,nx_box_list_none_3,D12262633D3EE2DB,－－－,0,11804
+319,nx_box_list_none_5,D12268633D3EED0D,－－－－－,0,11812
+320,nx_box_list_none_8,D1225B633D3ED6F6,－－－－－－－－,0,11824
+321,	,AF66E44C86071324,[REF:321],0,11844
+322,nx_box_list_head_sort,BE838C473EC4AF0E,순서바꾸기,0,11856
+323,	,AF66E44C86071324,[REF:323],0,11868
+324,nx_box_list_sort_01,24A1D0223A2A487B,박스순,0,11880
+325,nx_box_list_sort_02,24A1D1223A2A4A2E,최근에 맡긴 순,0,11888
+326,nx_box_list_sort_03,24A1D2223A2A4BE1,오래전에 맡긴 순,0,11908
+327,nx_box_list_sort_04,24A1D3223A2A4D94,레벨 높은 순,0,11928
+328,nx_box_list_sort_05,24A1D4223A2A4F47,레벨 낮은 순,0,11944
+329,nx_box_list_sort_06,24A1D5223A2A50FA,HP 높은 순,0,11960
+330,nx_box_list_sort_07,24A1D6223A2A52AD,HP 낮은 순,0,11976
+331,nx_box_list_sort_08,24A1C7223A2A3930,공격 높은 순,0,11992
+332,nx_box_list_sort_09,24A1C8223A2A3AE3,공격 낮은 순,0,12008
+333,nx_box_list_sort_10,24A555223A2D6051,방어 높은 순,0,12024
+334,nx_box_list_sort_11,24A554223A2D5E9E,방어 낮은 순,0,12040
+335,nx_box_list_sort_12,24A553223A2D5CEB,특수공격 높은 순,0,12056
+336,nx_box_list_sort_13,24A552223A2D5B38,특수공격 낮은 순,0,12076
+337,nx_box_list_sort_14,24A559223A2D671D,특수방어 높은 순,0,12096
+338,nx_box_list_sort_15,24A558223A2D656A,특수방어 낮은 순,0,12116
+339,nx_box_list_sort_16,24A557223A2D63B7,스피드 높은 순,0,12136
+340,nx_box_list_sort_17,24A556223A2D6204,스피드 낮은 순,0,12156
+341,nx_box_list_sort_18,24A54D223A2D52B9,전국도감순,0,12176
+342,nx_box_list_sort_19,24A54C223A2D5106,종족명순,0,12188
+343,	,AF66E44C86071324,[REF:343],0,12200
+344,nx_box_help1_010,6699567399801466,"여기는 포켓몬 박스 화면!
+연동한 저장 데이터에서 포켓몬을
+맡기거나 찾을 수 있는 곳이다몬!",0,12212
+345,nx_box_help1_020,6695F073997D313D,"ZL・ZR 버튼으로 조작 모드를 바꿀 수 있다몬!
+빨간 커서는 “일반 모드”
+파란 커서는 “교체 모드”
+초록 커서는 “범위 모드”다몬!",0,12316
+346,nx_box_help1_025,6695EB73997D28BE,"박스 버튼을 선택하면 박스 일람을
+볼 수 있는 박스 스페이스로 전환!
+박스끼리 교체하는 것도 할 수 있다몬!",0,12468
+347,nx_box_help1_030,6692EA73997AF134,"그리고 이건 최근 30 버튼!
+“Pokémon HOME”에 최근에 맡긴
+30마리가 들어 있는 박스에 접속할 수 있다몬!",0,12592
+348,nx_box_help1_040,668F64739977D7AB,"박스 정리가 끝났다면 + 버튼을 눌러서
+리포트를 기록하고 끝내면 된다몬!
+기록하지 않으면 네가 한 조작이
+전부 없던 일이 되어버린다몬!",0,12728
+349,nx_box_help2_010,3562B89246FC4A4F,[REF:349],0,12880
+350,nx_box_help2_020,3558469246F33414,"지금 너의 플랜인 프리 플랜으로는
+30마리까지 포켓몬을 맡길 수 있는
+“프리 박스”를 사용할 수 있다몬!",0,12892
+351,nx_box_help2_030,355BCC9246F64D9D,"프리미엄 플랜으로 “Pokémon HOME”에
+많은 포켓몬을 맡긴 경우에는
+마지막으로 맡긴 30마리를 찾을 수 있다몬!",0,13012
+352,nx_box_help2_040,3551BA9246EDDA82,[REF:352],0,13148
+353,nx_box_help2_050,3554C09246F01A8B,[REF:353],0,13160
+354,nx_box_help3_010,16ACEC6527AF83E0,"포켓몬을 박스째로 받으려면
+“이사 박스”가 들어갈 만큼의
+“빈 박스”가 필요하다몬!",0,13172
+355,nx_box_help4_010,E66CCA58B8DB0349,"“Pokémon HOME”과 저장 데이터 박스의
+양쪽 포켓몬을 죽 늘어놓고
+확인할 수 있는 화면이다몬!",0,13268
+356,nx_box_help4_020,E6705058B8DE1CD2,"Y 버튼으로 순서를 바꿀 수 있다몬!
+포켓몬의 공격이나 방어가 높은 순, 낮은 순 등등
+원하는 순서대로 정렬할 수 있다몬!",0,13384
+357,nx_box_help4_030,E673D658B8E1365B,"X 버튼을 누르면 다양한 조건을 입력해서
+취향에 맞는 포켓몬을 빠르게 확인할 수 있다몬!
+기술이나 특성 등 여러 조건으로 추려낼 수 있다몬!",0,13524
+358,nx_box_msg_130,8C10E23343528714,"“Pokémon GO”에서 데려온 해당 포켓몬은[CLEAR]
+이 리포트에서 손에 넣은 적이 없기 때문에
+찾아갈 수 없습니다",0,13684
+359,hade,F38ED1C313C0C8D5,[REF:359],0,13816
+360,nx_box_msg_018,830837333E19A255,"현재 “Pokémon HOME”에
+맡길 수 없는 포켓몬입니다!",0,13828
+361,nx_box_msg_019,830836333E19A0A2,"현재 “Pokémon HOME”에 맡길 수 없는
+포켓몬이 포함되어 있습니다!",0,13900
+362,nx_box_msg_022,830BA3333E1C8FB0,"교체할 포켓몬 중, 현재 “Pokémon HOME”에
+맡길 수 없는 포켓몬이 있습니다!",0,13988
+363,nx_box_msg_023,830BA4333E1C9163,"교체할 포켓몬 중, 현재 “Pokémon HOME”에
+맡길 수 없는 포켓몬이 있습니다!",0,14088
+364,nx_box_msg_024,830BA9333E1C99E2,"색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+이미 이 리포트에서 맡긴 적이 있습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 맡길 수 있습니다!",0,14188
+365,nx_box_msg_025,830BAA333E1C9B95,"[CTRL:0101:0000][CTRL:1900:0001]
+이미 이 리포트에서 맡긴 적이 있습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 맡길 수 있습니다!",0,14356
+366,nx_box_msg_026,830BA7333E1C967C,"[CTRL:0102:0000]에 문제가 있으므로
+맡길 수 없습니다!",0,14500
+367,nx_box_msg_032,830F2D333E1FB005,"[CTRL:0102:0000]에 문제가 있으므로
+맡길 수 없습니다!",0,14552
+368,nx_box_msg_027,830BA8333E1C982F,"색이 다른 [CTRL:0101:0000] 등[CLEAR]
+이미 이 리포트에서 맡긴 적이 있는
+포켓몬이 포함되어 있습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 맡길 수 있습니다!",0,14604
+369,nx_box_msg_028,830BAD333E1CA0AE,"[CTRL:0101:0000] 등[CLEAR]
+이미 이 리포트에서 맡긴 적이 있는
+포켓몬이 포함되어 있습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 맡길 수 있습니다!",0,14800
+370,nx_box_msg_029,830BAE333E1CA261,"[CTRL:0101:0000][CTRL:1900:0002]
+2마리 이상 선택했습니다![CLEAR]
+[CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 맡길 수 있습니다!",0,14972
+371,nx_box_msg_031,830F2A333E1FAAEC,"색이 다른 [CTRL:0101:0000][CTRL:1900:0002]
+2마리 이상 선택했습니다![CLEAR]
+색이 다른 [CTRL:0101:0000][CTRL:1900:0001]
+같은 리포트에서 1마리까지만 맡길 수 있습니다!",0,15100
+372,nx_box_msg_033,830F2C333E1FAE52,"[CTRL:0102:0000][CTRL:1900:0001] 대단한 특훈을 했으나
+레벨 100이 아닙니다![CLEAR]
+레벨 100이 되지 않으면
+찾아갈 수 없습니다!",0,15252
+373,nx_box_msg_034,830F27333E1FA5D3,"[CTRL:0102:0000] 등은 대단한 특훈을 했으나
+레벨 100이 아닙니다![CLEAR]
+레벨 100이 되지 않으면
+찾아갈 수 없습니다!",0,15384
+374,nx_box_boxflame_syn,905496878E46A587,“Pokémon Champions” 원정 박스,0,15512
+375,nx_box_boxtitle_syn_01,1022B9BCBF893AB0,원정 경험 있음,0,15564
+376,nx_box_boxtitle_syn_02,1022BCBCBF893FC9,원정 중,0,15584
+377,nx_box_boxdata_syn_01,0BFE9757FB6FE868,"[CTRL:0203:0000,0000]",0,15596
+378,nx_box_boxdata_syn_02,0BFE9A57FB6FED81,"[CTRL:0203:0000,0000]",0,15608
+379,nx_box_button_syn_02,346E39D095D83DD6,상태를 본다,0,15620
+380,nx_box_button_syn_03,346E3AD095D83F89,원정을 보낸다,0,15636
+381,nx_box_msg_syn_01,CAFC381465C07700,"현재 선택 중인 포켓몬을
+“Pokémon Champions”로 원정을 보내겠습니까?",0,15652
+382,nx_box_msg_syn_02,CAFC3B1465C07C19,"원정을 보내는 중입니다...
+“Pokémon HOME”을 종료하지 않도록 주의해 주십시오",0,15748
+383,nx_box_msg_syn_03,CAFC3A1465C07A66,[CTRL:0102:0000][CTRL:1900:0002] 원정 보냈습니다!,0,15848
+384,nx_box_msg_syn_04,CAFC3D1465C07F7F,포켓몬들을 원정 보냈습니다!,0,15888
+385,nx_box_msg_syn_05,CAFC3C1465C07DCC,"더 이상 선택할 수 없습니다![CLEAR]
+원정은 한 번에
+[CTRL:0201:0000]마리까지 보낼 수 있습니다",0,15920
+386,nx_box_msg_syn_07,CAFC3E1465C08132,"선택 중인 포켓몬이 남아 있습니다[CLEAR]
+메인 메뉴로 돌아가겠습니까?",0,16016
+387,nx_box_msg_syn_08,CAFC411465C0864B,[REF:387],0,16092
+388,nx_box_msg_syn_09,CAFC401465C08498,"“Pokémon Champions”의 박스가 가득 찼습니다[CLEAR]
+추가로 원정을 보내려면 “Pokémon Champions”의
+박스에 빈 공간을 마련해 주십시오",0,16104
+389,nx_box_msg_syn_10,CAF8D31465BD958A,"원정을 중지하고
+메인 메뉴로 돌아가겠습니까?",0,16284
+390,nx_box_msg_syn_11,CAF8D41465BD973D,[REF:390],0,16336
+391,nx_box_msg_syn_12,CAF8D11465BD9224,"이 포켓몬은
+원정을 보낼 수 없습니다",0,16348
+392,nx_box_msg_syn_13,CAF8D21465BD93D7,"교환에 내보낸 포켓몬은
+원정을 보낼 수 없습니다",0,16392
+393,nx_box_msg_syn_14,CAF8CF1465BD8EBE,이 포켓몬은 이미 원정 중입니다,0,16448
+394,nx_box_msg_syn_15,CAF8D01465BD9071,알은 원정을 보낼 수 없습니다,0,16484
+395,nx_box_list_sort_20,24A8DB223A3079DA,원정 중인 포켓몬,0,16520
+396,nx_box_save_msg_110,8DA9D5FC62B17D2C,"“?” 아이콘이 붙은 포켓몬이 있습니다!
+
+“Pokémon LEGENDS Z-A”로 찾아가면
+다른 소프트웨어에서는 찾을 수 없게 됩니다",0,16540
+397,nx_box_help_syn1_010,F8E9C69849585A1D,"여기에서는 “Pokémon Champions”와
+연동을 할 수 있다몬!",0,16692
+398,nx_box_help_syn1_020,F8ED2C98495B3D46,"“Pokémon HOME”에 맡긴 포켓몬을
+“Pokémon Champions”로 원정을 보내거나
+“Pokémon Champions”에서 돌아온 포켓몬을
+확인할 수 있다몬!",0,16772
+399,nx_box_help_syn1_030,F8F0B298495E56CF,"원정 중인 포켓몬은
+다른 “포켓몬스터” 시리즈로
+데려갈 수 없게 된다몬!",0,16964
+400,nx_box_help_syn1_040,F8D8A8984949B3F0,"원정 중인 포켓몬을
+다른 “포켓몬스터” 시리즈로 데려가고 싶을 때는
+“Pokémon Champions”에서 포켓몬을
+돌려보내야 하니까 주의해몬!",0,17048
+401,nx_box_help_syn1_050,F8DC2E98494CCD79,"“Pokémon Champions”로 원정을 보낼 수 있는
+포켓몬의 수는 한 번에 30마리까지!
+최대 1000마리까지 원정을 보낼 수 있다몬!",0,17212
+402,nx_box_help_syn2_010,6C4F7AC7DC98E968,"“Pokémon HOME”의 포켓몬을
+죽 늘어놓고 확인할 수 있는 화면이다몬!",0,17372
+403,nx_box_help_syn2_020,6C596CC7DCA12623,"L 버튼으로 순서를 바꿀 수 있다몬!
+포켓몬의 공격이나 방어가 높은 순, 낮은 순 등등
+원하는 순서대로 정렬할 수 있다몬!",0,17460
+404,nx_box_help_syn2_030,6C5606C7DC9E42FA,"R 버튼을 누르면 다양한 조건을 입력해서
+취향에 맞는 포켓몬을 빠르게 확인할 수 있다몬!
+기술이나 특성 등 여러 조건으로 추려낼 수 있다몬!",0,17600
+405,nx_box_syn_save_01,2A084AD8D8D33D4E,"“Pokémon Champions”에 원정 중인 포켓몬은
+“Pokémon HOME”에서
+아래 조작을 할 수 없게 됩니다
+
+・포켓몬 박스에서 다른 소프트웨어로 데려가기
+・포켓몬 박스에서 놓아주기
+・마킹 추가/해제",0,17760
+406,nx_box_syn_save_02,2A0849D8D8D33B9B,주의!,0,17996
+407,nx_box_msg_syn_06,CAFC3F1465C082E5,"이미 “Pokémon Champions”에
+[CTRL:0203:0000,0000]마리의 포켓몬이 원정 중입니다[CLEAR]
+더 이상 원정을 보낼 수 없습니다",0,18004
+408,nx_box_msg_syn_16,CAF8CD1465BD8B58,"“Pokémon Champions”로
+원정을 보낼 수 없는 포켓몬이 포함되어 있습니다",0,18140
+409,nx_box_msg_syn_17,CAF8CE1465BD8D0B,"원정을 보내려는 포켓몬 중에
+지난 “Pokémon Champions” 원정 당시와
+모습이 다른 포켓몬이 있습니다
+
+이대로 원정을 보내면
+“Pokémon Champions”에서의
+트레이닝 내용이 초기화되므로
+주의해 주십시오",0,18236
+410,nx_box_msg_syn_18,CAF8CB1465BD87F2,"이대로 “Pokémon Champions”로
+포켓몬을 원정 보내겠습니까?",0,18484
+411,nx_box_msg_037,830F28333E1FA786,"이 소프트웨어로는 찾을 수 없는 언어의
+포켓몬입니다!",0,18568
+412,nx_box_msg_038,830F33333E1FBA37,"이 소프트웨어로는 찾을 수 없는 언어의
+포켓몬이 포함되어 있습니다!",0,18628
+413,nx_box_syn_save_03,2A0848D8D8D339E8,"“포켓몬스터 레츠고! 피카츄”
+“포켓몬스터 레츠고! 이브이”에서
+맡긴 포켓몬을 원정 보내면
+
+“포켓몬스터 레츠고! 피카츄”
+“포켓몬스터 레츠고! 이브이”로는
+찾을 수 없게 됩니다
+
+다른 소프트웨어에서는 찾을 수 있습니다",0,18704
+414,nx_box_help_syn3_010,A661DE9F63E151B7,"“Pokémon Champions” 원정 경험이 있는 포켓몬은
+포켓몬 선택 화면이나 일람 화면에서
+원정 아이콘이 표시된다몬!",0,18952
+415,nx_box_help_syn3_020,A657CC9F63D8DE9C,"현재 원정 중인 포켓몬은
+원정 아이콘과 함께
+회색으로 표시되어서 선택할 수 없다몬!",0,19092
+416,nx_box_help_msg_syn_01,8EEA3656F34221B4,"“Pokémon Champions 연동”에 대한
+설명을 듣겠습니까?",0,19188
+417,nx_box_help_syn_select_01,7DDA40CE79383089,연동에 대하여,0,19264
+418,nx_box_help_syn_select_02,7DDA3DCE79382B70,원정 아이콘에 대하여,0,19280
+419,nx_box_help_syn_select_03,7DDA3ECE79382D23,그만둔다,0,19304
+420,nx_box_save_msg_121,8DB3E6FC62B9EE94,"GBA 시리즈 연동으로 손에 넣은 포켓몬을
+연동 중인 소프트웨어로 찾아가면
+해당 포켓몬의 IDNo.가 변경됩니다
+
+“Pokémon HOME”에 맡기면
+해당 포켓몬의 원래 IDNo.로 돌아옵니다",0,19316

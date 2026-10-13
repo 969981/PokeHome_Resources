@@ -1,0 +1,323 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_zukan_index_010,53108D8DFB3981DC,Pokédex,0,1884
+1,nx_zukan_index_011,53108E8DFB39838F,"[CTRL:0203:0000,002E]",0,1900
+2,nx_zukan_index_012,53108F8DFB398542,Pokémon registrati:,0,1912
+3,nx_zukan_index_020,531A9F8DFB41F4F7,Missioni,0,1952
+4,nx_zukan_index_030,5317198DFB3EDB6E,[REF:4],0,1972
+5,nx_zukan_index_picup_0000,9AACD375CCD66365,Tutti,0,1984
+6,nx_zukan_index_picup_0010,9AA9CD75CCD4235C,Kanto,0,1996
+7,nx_zukan_index_picup_0020,9AB3DF75CCDC9677,Johto,0,2008
+8,nx_zukan_index_picup_0030,9AB05975CCD97CEE,Hoenn,4,2020
+9,nx_zukan_index_picup_0040,9A9F5B75CCCB0D21,Sinnoh,0,2032
+10,nx_zukan_index_picup_0050,9A9BD575CCC7F398,Unima,4,2048
+11,nx_zukan_index_picup_0060,9AA64775CCD109D3,Kalos,0,2060
+12,nx_zukan_index_picup_0070,9AA2E175CCCE26AA,Alola,4,2072
+13,nx_zukan_index_picup_0080,9A91E375CCBFB6DD,Galar,0,2084
+14,nx_zukan_index_picup_0090,9A8E5D75CCBC9D54,Hisui,4,2096
+15,nx_zukan_index_picup_0100,9196B875C79235FA,Paldea,0,2108
+16,nx_zukan_index_picup_9999,5D573DB0F12E19D9,Origine sconosciuta,4,2124
+17,	,AF66E44C86071324,[REF:17],0,2164
+18,nx_zukan_button_000,2D10F432335C5089,Indietro,4,2176
+19,nx_zukan_button_001,2D10F332335C4ED6,Aiuto,4,2196
+20,nx_zukan_button_010,2D0D6E3233593700,Verso,0,2208
+21,nx_zukan_button_020,2D1800323362839B,Colore,0,2220
+22,nx_zukan_button_030,2D147A32335F6A12,Gioco,0,2236
+23,nx_zukan_button_040,2D1E8C323367DD2D,Descrizione,0,2248
+24,nx_zukan_button_050,2D1B06323364C3A4,Dietro,0,2272
+25,nx_zukan_button_060,2D257832336DD9DF,Davanti,0,2288
+26,nx_zukan_button_065,2D257332336DD160,Lingua,0,2304
+27,nx_zukan_button_070,2D21F232336AC056,Rimuovi filtro,0,2320
+28,nx_zukan_button_080,2D2C043233733371,Ripristina,0,2352
+29,nx_zukan_button_081,2D2C0332337331BE,Filtra,0,2376
+30,nx_zukan_button_082,2D2C02323373300B,Ordina,4,2392
+31,nx_zukan_button_090,2D28FE323370F368,[REF:31],0,2408
+32,	,AF66E44C86071324,[REF:32],0,2420
+33,nx_zukan_menu_040,EAE4A6390F678062,[REF:33],0,2432
+34,nx_zukan_menu_050,EAE82C390F6A99EB,[REF:34],0,2444
+35,	,AF66E44C86071324,[REF:35],0,2456
+36,nx_zukan_top_010,1FB53F2EF34B87D7,Pokédex Nazionale,0,2468
+37,nx_zukan_top_020,1FAB2D2EF34314BC,Missioni,0,2504
+38,nx_zukan_top_030,1FAEB32EF3462E45,Pokémon registrati:,0,2524
+39,nx_zukan_top_031,1FAEB22EF3462C92,"[CTRL:0203:0000,002E]",0,2564
+40,nx_zukan_top_040,1FA4412EF33D180A,[REF:40],0,2576
+41,nx_zukan_top_041,1FA4422EF33D19BD,[REF:41],0,2588
+42,nx_zukan_top_050,1FA7A72EF33FFB33,"Qui puoi vedere tutti i Pokémon. Puoi anche filtrarli
+in base alla regione in cui sono stati originariamente
+scoperti.",0,2600
+43,nx_zukan_top_060,1F9DB52EF337BE78,Giochi richiesti,0,2840
+44,nx_zukan_top_070,1FA13B2EF33AD801,"Aiuta Maxi Oak nella sua ricerca ottenendo
+determinati Pokémon in base a un certo tema.
+Assicurati di catturare i Pokémon nel gioco indicato.",4,2876
+45,nx_zukan_top_080,1F96A92EF3318B66,"Non hai ancora nessuna missione!
+Se effettui il collegamento a un gioco dal menu “Pokémon”,
+vedrai apparire delle missioni in questa schermata.",0,3160
+46,nx_zukan_top_list_010,99EFA016330102E0,,0,3448
+47,nx_zukan_top_list_020,99F9B216330975FB,[REF:47],0,3452
+48,nx_zukan_top_list_030,99F62C1633065C72,[CTRL:0201:0000],0,3464
+49,	,AF66E44C86071324,[REF:49],0,3476
+50,nx_zukan_top_announce_010,49EC2E3FDB583C8F,"[CTRL:0101:0000] è stato
+registrato!",0,3488
+51,nx_zukan_top_announce_020,49E1BC3FDB4F2654,"Sono state registrate [CTRL:0203:0000,002E] nuove
+specie di Pokémon!",0,3540
+52,	,AF66E44C86071324,[REF:52],0,3648
+53,nx_zukan_top_msg_010,615D626D9054C229,"Non è stato ancora registrato alcun Pokémon![CLEAR]
+Invia dei Pokémon ai box di Pokémon HOME
+per registrarli nel Pokédex.",0,3660
+54,	,AF66E44C86071324,[REF:54],0,3896
+55,nx_zukan_top_picup_0000,42BDB5000DB2CB60,Tutti,0,3908
+56,nx_zukan_top_picup_0010,42C13B000DB5E4E9,Kanto,0,3920
+57,nx_zukan_top_picup_0020,42C441000DB824F2,Johto,0,3932
+58,nx_zukan_top_picup_0030,42C7C7000DBB3E7B,Hoenn,4,3944
+59,nx_zukan_top_picup_0040,42CB4D000DBE5804,Sinnoh,0,3956
+60,nx_zukan_top_picup_0050,42CED3000DC1718D,Unima,4,3972
+61,nx_zukan_top_picup_0060,42D239000DC454B6,Kalos,0,3984
+62,nx_zukan_top_picup_0070,42D53F000DC694BF,Alola,4,3996
+63,nx_zukan_top_picup_0080,42D8C5000DC9AE48,Galar,0,4008
+64,nx_zukan_top_picup_0090,42DC4B000DCCC7D1,Hisui,4,4020
+65,nx_zukan_top_picup_0100,4A20F00011859AAB,Paldea,0,4032
+66,nx_zukan_top_picup_9999,93DD5B4AE8CF64FC,Origine sconosciuta,4,4048
+67,	,AF66E44C86071324,[REF:67],0,4088
+68,nx_zukan_top_topics_0010,86D945ACBE497006,Missioni di Kanto,0,4100
+69,nx_zukan_top_topics_0020,86D5DFACBE468CDD,Missioni di Galar,0,4136
+70,nx_zukan_top_topics_0030,86D259ACBE437354,Missioni di Sinnoh,0,4172
+71,nx_zukan_top_topics_0040,86CED3ACBE4059CB,Missioni di Hisui,0,4212
+72,nx_zukan_top_topics_0041,86CED2ACBE405818,Missioni di Paldea,0,4248
+73,nx_zukan_top_topics_0060,86C847ACBE3B0039,Missioni di Kalos,0,4288
+74,nx_zukan_top_topics_0070,86C4C1ACBE37E6B0,Missioni di Kanto (GBA),0,4324
+75,	,AF66E44C86071324,[REF:75],0,4372
+76,nx_zukan_topics_filenumber_0010,E4D9F09C2A967D14,Missione di Kanto Nº [CTRL:0201:0000],0,4384
+77,nx_zukan_topics_filenumber_0020,E4E4629C2A9F934F,Missione di Galar Nº [CTRL:0201:0000],0,4436
+78,nx_zukan_topics_filenumber_0030,E4E0DC9C2A9C79C6,Missione di Sinnoh Nº [CTRL:0201:0000],0,4488
+79,nx_zukan_topics_filenumber_0040,E4CFDE9C2A8E09F9,Missione di Hisui Nº [CTRL:0201:0000],0,4544
+80,nx_zukan_topics_filenumber_0050,E4CC589C2A8AF070,Missione di Paldea Nº [CTRL:0201:0000],0,4596
+81,nx_zukan_topics_filenumber_0060,E4D66A9C2A93638B,Missione di Kalos Nº [CTRL:0201:0000],0,4652
+82,nx_zukan_topics_filenumber_0070,E4D3649C2A912382,Missione di Kanto (GBA) Nº [CTRL:0201:0000],0,4704
+83,	,AF66E44C86071324,[REF:83],0,4768
+84,nx_zukan_detailed_000,4DA3659B58E91D49,"Nº [CTRL:0203:0000,0000]",0,4780
+85,nx_zukan_detailed_001,4DA3649B58E91B96,[CTRL:0101:0000],0,4800
+86,nx_zukan_detailed_010,4D9FDF9B58E603C0,Altezza,4,4812
+87,nx_zukan_detailed_011,4D9FE09B58E60573,,0,4828
+88,nx_zukan_detailed_020,4DAA719B58EF505B,Peso,0,4832
+89,nx_zukan_detailed_021,4DAA709B58EF4EA8,,0,4844
+90,nx_zukan_detailed_030,4DA6EB9B58EC36D2,[CTRL:0104:0000],0,4848
+91,nx_zukan_detailed_040,4DB0FD9B58F4A9ED,,0,4860
+92,nx_zukan_detailed_041,4DB0FC9B58F4A83A,Forma [CTRL:0201:0000]/[CTRL:0201:0001],0,4864
+93,nx_zukan_detailed_050,4DAD779B58F19064,,0,4896
+94,nx_zukan_detailed_051,4DAD789B58F19217,[REF:94],0,4900
+95,nx_zukan_detailed_060,4DB7E99B58FAA69F,Giochi in cui appare [CTRL:0200:0000]/[CTRL:0200:0001],0,4912
+96,nx_zukan_detailed_061,4DB7E89B58FAA4EC,Giochi in cui appare,0,4976
+97,nx_zukan_detailed_070_jpn,9E9E5B539B79F195,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in giapponese, potrai leggerne
+la descrizione in quella lingua.",0,5020
+98,nx_zukan_detailed_070_eng,0E825753DAA66411,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in inglese, potrai leggerne
+la descrizione in quella lingua.",0,5280
+99,nx_zukan_detailed_070_spa,656BEB540BF5DFAB,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in spagnolo (Spagna),
+potrai leggerne la descrizione in quella lingua.",0,5532
+100,nx_zukan_detailed_070_fra,07635453D70DC0BA,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in francese, potrai leggerne
+la descrizione in quella lingua.",0,5804
+101,nx_zukan_detailed_070_ger,FFC60253D3095213,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in tedesco, potrai leggerne
+la descrizione in quella lingua.",0,6060
+102,nx_zukan_detailed_070_ita,A95A8153A2253BD5,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in italiano, potrai leggerne
+la descrizione in quella lingua.",0,6312
+103,nx_zukan_detailed_070_kor,97382E5397A5043D,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in coreano, potrai leggerne
+la descrizione in quella lingua.",0,6568
+104,nx_zukan_detailed_070_chs,DC355D53BEA1B919,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in cinese semplificato, potrai leggerne
+la descrizione in quella lingua.",0,6820
+105,nx_zukan_detailed_070_cht,DC355E53BEA1BACC,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in cinese tradizionale, potrai leggerne
+la descrizione in quella lingua.",0,7096
+106,nx_zukan_detailed_070_latam,15FA3EDC47203C72,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in spagnolo (America Latina),
+potrai leggerne la descrizione in quella lingua.",0,7372
+107,nx_zukan_detailed_gba,F6BD8D9C49E0B3C9,"Descrizione del Pokédex non disponibile.
+Prova a cambiare lingua o gioco.",0,7660
+108,nx_zukan_detailed_070_jpn_small,5959B58400BEB11D,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in giapponese, potrai leggerne
+la descrizione in quella lingua.",0,7808
+109,nx_zukan_detailed_070_eng_small,09D53AE9DACF7199,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in inglese, potrai leggerne
+la descrizione in quella lingua.",0,8068
+110,nx_zukan_detailed_070_spa_small,9EE4BBE5898355C3,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in spagnolo (Spagna),
+potrai leggerne la descrizione in quella lingua.",0,8320
+111,nx_zukan_detailed_070_fra_small,506CE34FF4CDCBCE,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in francese, potrai leggerne
+la descrizione in quella lingua.",0,8592
+112,nx_zukan_detailed_070_ger_small,CF301537DDF410EB,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in tedesco, potrai leggerne
+la descrizione in quella lingua.",0,8848
+113,nx_zukan_detailed_070_ita_small,CB0BE19F2363F05D,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in italiano, potrai leggerne
+la descrizione in quella lingua.",0,9100
+114,nx_zukan_detailed_070_kor_small,50A8F366D4F841A5,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in coreano, potrai leggerne
+la descrizione in quella lingua.",0,9356
+115,nx_zukan_detailed_070_chs_small,34B32A2D8D93CAC1,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in cinese semplificato, potrai leggerne
+la descrizione in quella lingua.",0,9608
+116,nx_zukan_detailed_070_cht_small,1F7CC30F25045F00,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in cinese tradizionale, potrai leggerne
+la descrizione in quella lingua.",0,9884
+117,nx_zukan_detailed_070_latam_small,9C6D1F6C20E078E6,"Se depositi in Pokémon HOME [CTRL:1002:][CTRL:1502:0000,0001][CTRL:0101:0000]
+proveniente da un gioco in spagnolo (America Latina),
+potrai leggerne la descrizione in quella lingua.",0,10160
+118,nx_zukan_detailed_gba_small,B5876ED04F4B1D31,"Descrizione del Pokédex non disponibile.
+Prova a cambiare lingua o gioco.",0,10448
+119,	,AF66E44C86071324,[REF:119],0,10596
+120,nx_zukan_list_010,441FCA488FC577D4,,0,10608
+121,nx_zukan_list_020,442A3C488FCE8E0F,"Nº [CTRL:0203:0000,0000]",0,10612
+122,nx_zukan_list_021,442A3B488FCE8C5C,,0,10632
+123,nx_zukan_list_022,442A3E488FCE9175,,0,10636
+124,nx_zukan_list_030,4426B6488FCB7486,[CTRL:0101:0000],0,10640
+125,nx_zukan_list_040,4415B8488FBD04B9,???,0,10652
+126,	,AF66E44C86071324,[REF:126],0,10660
+127,nx_zukan_language_01,375806079A591BC6,Giapponese (hiragana),0,10672
+128,nx_zukan_language_02,375805079A591A13,Giapponese (kanji),0,10716
+129,nx_zukan_language_03,375804079A591860,Inglese,4,10756
+130,nx_zukan_language_04,37580B079A592445,Francese,0,10772
+131,nx_zukan_language_05,37580A079A592292,Tedesco,0,10792
+132,nx_zukan_language_06,375809079A5920DF,Italiano,4,10808
+133,nx_zukan_language_07,375808079A591F2C,Coreano,0,10828
+134,nx_zukan_language_08,37580F079A592B11,Spagnolo (Spagna),8,10844
+135,nx_zukan_language_09,37580E079A59295E,Cinese (semplificato),0,10880
+136,nx_zukan_language_10,375481079A5603F0,Cinese (tradizionale),0,10924
+137,nx_zukan_language_11,375482079A5605A3,Spagnolo (America Latina),8,10968
+138,	,AF66E44C86071324,[REF:138],0,11020
+139,nx_zukan_search_data_010,C437552C67A3C3C5,"Nº [CTRL:0203:0000,0000]",0,11032
+140,nx_zukan_search_data_020,C43ADB2C67A6DD4E,[CTRL:0101:0000],0,11052
+141,nx_zukan_search_guide_010,07DF7A205ADD7D67,[CTRL:01DA:0000] (nessun filtro),0,11064
+142,nx_zukan_search_guide_020,07D4E8205AD430CC,"[CTRL:01DA:0000] (trovati: [CTRL:0203:0001,0000]/[CTRL:0203:0002,0000])",0,11108
+143,nx_zukan_search_guide_030,07D86E205AD74A55,"[CTRL:01DA:0000] (trovate: [CTRL:0203:0001,0000] specie e forme)",0,11164
+144,	,AF66E44C86071324,[REF:144],0,11240
+145,nx_zukan_search_title,16395A443366EC8B,Filtri,0,11252
+146,nx_zukan_search_sort,3DF65C4B7FFD7C93,Mostra per,0,11268
+147,nx_zukan_search_name,32DBC8ABDF0B1330,Nome,0,11292
+148,nx_zukan_search_type1,A42D3ECCBCD63B06,Tipo 1,0,11304
+149,nx_zukan_search_type2,A42D3DCCBCD63953,Tipo 2,0,11320
+150,nx_zukan_search_color,31D0B67882CD256A,Colore,0,11336
+151,nx_zukan_search_shape,2B61830E94584E54,Sagoma,0,11352
+152,nx_zukan_search_form,19ED76ED60C728B9,Aspetto o forma,4,11368
+153,nx_zukan_search_version,44BE3BA7FAB1A205,Gioco,0,11400
+154,nx_zukan_search_register,4708974DCBD995AE,Stato nel Pokédex,8,11412
+155,	,AF66E44C86071324,[REF:155],0,11448
+156,nx_zukan_search_head_name,9ED0D0EE6F31CD91,Cerca per nome,0,11460
+157,nx_zukan_search_head_type,8C6575CA67F751EA,Cerca per tipo,0,11492
+158,nx_zukan_search_head_color,76ED2EB5F462AEFD,Cerca per colore,0,11524
+159,nx_zukan_search_head_shape,D4EEFD95193B2287,Cerca per sagoma,0,11560
+160,nx_zukan_search_head_form,4FCE4B34EAAB8FFC,Cerca per aspetto o forma,0,11596
+161,nx_zukan_search_head_version,73E6812EB2613716,Cerca per gioco in cui appare,0,11648
+162,nx_zukan_search_head_register,5A26B2CF49C77D73,Cerca per stato nel Pokédex,0,11708
+163,nx_zukan_search_nil,CECDBE77DC8628AA,Nessun risultato!,0,11764
+164,	,AF66E44C86071324,[REF:164],0,11800
+165,nx_zukan_sort_01,00BF326FDFB37690,Numero,0,11812
+166,nx_zukan_sort_02,00BF356FDFB37BA9,Ordine alfabetico,4,11828
+167,nx_zukan_sort_03,00BF346FDFB379F6,Peso (ordine decrescente),0,11864
+168,nx_zukan_sort_04,00BF376FDFB37F0F,Peso (ordine crescente),0,11916
+169,nx_zukan_sort_05,00BF366FDFB37D5C,Altezza (ordine decrescente),4,11964
+170,nx_zukan_sort_06,00BF396FDFB38275,Altezza (ordine crescente),4,12024
+171,	,AF66E44C86071324,[REF:171],0,12080
+172,nx_zukan_color_01,AA189EFD1AD46075,Rosso,0,12092
+173,nx_zukan_color_02,AA189BFD1AD45B5C,Blu,0,12104
+174,nx_zukan_color_03,AA189CFD1AD45D0F,Verde,0,12112
+175,nx_zukan_color_04,AA1899FD1AD457F6,Giallo,0,12124
+176,nx_zukan_color_05,AA189AFD1AD459A9,Rosa,0,12140
+177,nx_zukan_color_06,AA1897FD1AD45490,Viola,0,12152
+178,nx_zukan_color_07,AA1898FD1AD45643,Marrone,0,12164
+179,nx_zukan_color_08,AA18A5FD1AD46C5A,Grigio,0,12180
+180,nx_zukan_color_09,AA18A6FD1AD46E0D,Bianco,0,12196
+181,nx_zukan_color_10,AA1BA3FD1AD69ECB,Nero,0,12212
+182,	,AF66E44C86071324,[REF:182],0,12224
+183,nx_zukan_form_0010,1446FAA819DE8CB4,Tutte le forme,0,12236
+184,nx_zukan_form_0020,1450ECA819E6C96F,Cromatico,0,12268
+185,nx_zukan_form_0030,144D66A819E3AFE6,Maschio,0,12288
+186,nx_zukan_form_0040,143C68A819D54019,Femmina,0,12304
+187,nx_zukan_form_0050,143962A819D30010,Sesso sconosciuto,0,12320
+188,nx_zukan_form_1010,5F907A9F270B2635,Megaevoluzione,0,12356
+189,nx_zukan_form_1020,5F93809F270D663E,Archeorisveglio,4,12388
+190,nx_zukan_form_1030,5F97069F27107FC7,Gigamax,0,12420
+191,nx_zukan_form_2010,2B23D2B78D5F8A76,Forma di Alola,0,12436
+192,nx_zukan_form_2020,2B206CB78D5CA74D,Forma di Galar,0,12468
+193,nx_zukan_form_2030,2B1CE6B78D598DC4,Forma di Hisui,0,12500
+194,nx_zukan_form_2040,2B1960B78D56743B,Forma di Paldea,0,12532
+195,	,AF66E44C86071324,[REF:195],0,12564
+196,nx_zukan_register_01,2E6379413994C3B3,Registrato,0,12576
+197,nx_zukan_register_02,2E637A413994C566,Non registrato,0,12600
+198,	,AF66E44C86071324,[REF:198],0,12632
+199,nx_zukan_none_3,A45FE3B062A9EF1E,———,0,12644
+200,nx_zukan_none_5,A45FE5B062A9F284,——————,0,12652
+201,nx_zukan_none_8,A45FDAB062A9DFD3,—————————,0,12668
+202,	,AF66E44C86071324,[REF:202],0,12688
+203,nx_zukan_topics_name1,F4DE6150C341F9F3,[CTRL:0101:0000],0,12700
+204,nx_zukan_topics_name2,F4DE6250C341FBA6,???,0,12712
+205,nx_zukan_topics_conditions,9766CE8A635DF69D,,0,12720
+206,nx_zukan_topics_conditions_inactive_01,122F97415D3C578F,"Perché diventi disponibile, devi completare [CTRL:0201:0000] mission[CTRL:1101:0000,0101]ei
+di questa cartella.",0,12724
+207,nx_zukan_topics_list_title,BF4A734F4DDC7452,,0,12892
+208,nx_zukan_topics_list_inactive,F4430E9C35355895,???,0,12896
+209,nx_zukan_topics_list_progress,75015AE069AB084F,[CTRL:0200:0000]/[CTRL:0200:0001],0,12904
+210,nx_zukan_topics_guide_010,836CFEBA09CCD7A7,[CTRL:01DA:0000] (completate: [CTRL:0201:0001]),0,12924
+211,	,AF66E44C86071324,[REF:211],0,12972
+212,nx_zukan_help1_010,DCF169A3820C5F5E,"Questa è una creazione del Professor Maxi Oak!
+Un Pokédex davvero max in tutto e per tutto!
+Qui saranno registrati automaticamente tutti i Pokémon
+depositati nei box di Pokémon HOME!",0,12984
+213,nx_zukan_help1_020,DCEDE3A3820945D5,"Troverai tutti i dettagli sui Pokémon registrati e potrai anche filtrarli
+in base alla regione in cui sono stati originariamente scoperti grazie
+alla funzione di filtro rapido!",0,13352
+214,nx_zukan_help1_030,DCEA5DA382062C4C,"E non finisce qui! Con i pulsanti L ed R potrai passare facilmente alla
+schermata delle missioni! Ricorda che Maxi Oak ha bisogno di te
+per portare a termine le sue minuziose ricerche sui Pokémon!",4,13708
+215,	,AF66E44C86071324,[REF:215],0,14104
+216,nx_zukan_help2_010,C0106BC2CBCF33A7,"In questa schermata puoi trovare informazioni dettagliate su un Pokémon.
+Basta scegliere quello che ti interessa dalla lista qui a destra! È facile!",4,14116
+217,nx_zukan_help2_020,C005D9C2CBC5E70C,"Con i pulsanti ZL e ZR puoi scorrere le icone dei giochi per
+leggere le descrizioni dei vari Pokédex! Sarà interessante
+vedere come cambiano da un gioco all’altro!",0,14416
+218,nx_zukan_help2_030,C0095FC2CBC90095,"E se hai registrato più forme di uno stesso Pokémon, potrai
+visualizzarle con i pulsanti L ed R!
+Sapevi che ogni forma ha una descrizione diversa?",4,14744
+219,nx_zukan_help2_040,BFFF6DC2CBC0C3DA,"Con il pulsante Y, invece, puoi controllare facilmente in che giochi
+appare il Pokémon selezionato o, in altre parole, in che giochi
+puoi ottenerlo!",0,15040
+220,	,AF66E44C86071324,[REF:220],0,15340
+221,nx_zukan_help3_010,3693FF929ACA0B58,"In questa schermata puoi vedere tutti i Pokémon che hai registrato
+nel Pokédex! Seleziona il Pokémon che ti interessa e premi
+il pulsante A per visualizzarne tutte le informazioni!",4,15352
+222,nx_zukan_help3_020,369E71929AD32193,"Con il pulsante X puoi aprire il menu dei filtri.
+Puoi impostare vari criteri di ricerca, come il tipo, il colore o l’aspetto
+dei Pokémon.",0,15716
+223,nx_zukan_help3_030,369B0B929AD03E6A,"Premendo il pulsante Y puoi ordinare i tuoi Pokémon secondo
+un diverso criterio. Potrai, naturalmente, visualizzarli per numero
+del Pokédex, ma anche per altezza o peso!",0,15996
+224,	,AF66E44C86071324,[REF:224],0,16336
+225,nx_zukan_help4_010,1C5CFD86C9AE9721,"Le missioni possono sembrare impegnative, ma permettono di guadagnare
+ottime ricompense!
+Si tratta di richieste di collaborazione che ti arrivano direttamente
+da Maxi Oak. Potrai aiutarlo catturando i Pokémon di cui ha bisogno!",0,16348
+226,nx_zukan_help4_020,1C608386C9B1B0AA,"Se nella tua console Nintendo Switch sono presenti dati di salvataggio
+di regioni sulle quali Maxi Oak sta facendo delle ricerche, in questa
+schermata troverai una lista di missioni specifiche per ognuna
+di quelle regioni!",0,16804
+227,nx_zukan_help4_030,1C63E986C9B493D3,"Fai attenzione, però! Per completare le missioni devi assicurarti
+di ottenere i Pokémon richiesti da Maxi Oak proprio nella
+regione indicata nella missione! Altrimenti non conta!",0,17252
+228,	,AF66E44C86071324,[REF:228],0,17612
+229,nx_zukan_help5_010,E39F9799B4F70A92,"Qui a destra puoi vedere la lista delle missioni.
+Per completare una missione, dovrai ottenere tutti i Pokémon richiesti!",0,17624
+230,nx_zukan_help5_020,E39C1199B4F3F109,"Attenzione, però: non basta che i Pokémon siano della specie giusta.
+Per completare la missione, il gioco di provenienza e la forma devono
+corrispondere a quanto richiesto!
+Controlla bene dove sono stati catturati i tuoi Pokémon!",4,17868
+231,nx_zukan_help5_030,E3988B99B4F0D780,"Se hai ottenuto i Pokémon giusti rispettando tutti i requisiti,
+devi semplicemente trasferirli nei box di Pokémon HOME:
+la missione verrà automaticamente segnata come completata!",0,18328
+232,nx_zukan_help5_031,E3988C99B4F0D933,"A questo punto potrai ritirare i Pokémon dai box di Pokémon HOME
+o liberarli, se preferisci. Qualunque sia la tua decisione, non avrà
+nessuna conseguenza sulla missione che hai portato a termine!",4,18688

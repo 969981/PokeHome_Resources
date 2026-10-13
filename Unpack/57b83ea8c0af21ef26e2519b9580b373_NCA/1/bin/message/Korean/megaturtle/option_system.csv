@@ -1,0 +1,85 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_option_index_010,D3D5D6955965FC64,설정,0,580
+1,	,AF66E44C86071324,[REF:1],0,588
+2,nx_option_button_000,020C276686A840F1,돌아간다,0,600
+3,nx_option_button_001,020C266686A83F3E,도움말,0,612
+4,nx_option_button_010,0209216686A600E8,설정 리셋,0,620
+5,	,AF66E44C86071324,[REF:5],0,632
+6,nx_option_data_account,1A7C63DB4FCD3986,[CTRL:01D9:0000],0,644
+7,nx_option_data_support_010,1B3B3B781028F808,서포트 ID,0,656
+8,nx_option_data_support_020,1B45AD7810320E43,XXXX-XXXX-XXXX-XXXX,0,672
+9,nx_option_data_ticket_010,84DE9A90FF88DC9D,현재 플랜,0,712
+10,nx_option_data_ticket_040,84CD7C90FF7A3670,[REF:10],0,724
+11,nx_option_data_ticket_050,84D10290FF7D4FF9,프리 플랜,0,736
+12,nx_option_data_ticket_060,84D48890FF806982,프리미엄 플랜,0,748
+13,nx_option_data_language_010,A2AB1A90E943EFE3,표시 언어,0,764
+14,nx_option_data_language_020,A2A12890E93BB328,,0,776
+15,	,AF66E44C86071324,[REF:15],0,780
+16,nx_option_bgm_010,C63A296F68446F3A,BGM 볼륨,0,792
+17,nx_option_bgm_020,C636A36F684155B1,[CTRL:0200:0000],0,808
+18,nx_option_se_010,6ABDB5A028E653D0,SE 볼륨,0,820
+19,nx_option_se_020,6AC7C7A028EEC6EB,[CTRL:0200:0000],0,832
+20,nx_option_language_010,2404027014F8120A,언어 전환,0,844
+21,	,AF66E44C86071324,[REF:21],0,856
+22,nx_option_comment_01,A01FCE44CB875827,음악의 음량을 조절한다,0,868
+23,nx_option_comment_02,A01FCF44CB8759DA,효과음의 음량을 조절한다,0,896
+24,nx_option_comment_03,A01FD044CB875B8D,표시 언어를 변경한다,0,924
+25,	,AF66E44C86071324,[REF:25],0,948
+26,nx_option_item_volume_00,9C85FA43A4893D7D,0,0,960
+27,nx_option_item_volume_01,9C85F943A4893BCA,1,0,964
+28,nx_option_item_volume_02,9C85F843A4893A17,2,0,968
+29,nx_option_item_volume_03,9C85F743A4893864,3,0,972
+30,nx_option_item_volume_04,9C85F643A48936B1,4,0,976
+31,nx_option_item_volume_05,9C85F543A48934FE,5,0,980
+32,	,AF66E44C86071324,[REF:32],0,984
+33,nx_option_item_language_title,CF260B0E11C2DF7D,언어 전환,0,996
+34,nx_option_item_language_01,BC4C6250CB27F4C6,일본어(가나),0,1008
+35,nx_option_item_language_02,BC4C6150CB27F313,일본어(한자),0,1024
+36,nx_option_item_language_03,BC4C6050CB27F160,영어,0,1040
+37,nx_option_item_language_04,BC4C6750CB27FD45,프랑스어,0,1048
+38,nx_option_item_language_05,BC4C6650CB27FB92,독일어,0,1060
+39,nx_option_item_language_06,BC4C6550CB27F9DF,이탈리아어,0,1068
+40,nx_option_item_language_07,BC4C6450CB27F82C,한국어,0,1080
+41,nx_option_item_language_08,BC4C6B50CB280411,유럽 스페인어,0,1088
+42,nx_option_item_language_09,BC4C6A50CB28025E,중국어(간체자),0,1104
+43,nx_option_item_language_10,BC48DD50CB24DCF0,중국어(번체자),0,1124
+44,nx_option_item_language_11,BC48DE50CB24DEA3,라틴 아메리카 스페인어,0,1144
+45,	,AF66E44C86071324,[REF:45],0,1172
+46,nx_option_msg_yes,79827F0E5AC6E477,예,0,1184
+47,nx_option_msg_no,DDF6627943AD136B,아니요,0,1188
+48,nx_option_msg_010,8BA4210D4302527D,"표시 언어를 변경합니다[CLEAR]
+설정을 저장하고
+타이틀 화면으로 돌아가겠습니까?",0,1196
+49,nx_option_msg_020,8BA7870D430535A6,"음량과 표시 언어를
+초기 설정으로 되돌리겠습니까?",0,1284
+50,nx_option_msg_030,8BAB0D0D43084F2F,"표시 언어가 변경됩니다![CLEAR]
+설정을 저장하고
+타이틀 화면으로 돌아갑니다",0,1340
+51,nx_option_msg_040,8B93830D42F485D0,"설정을 저장하고 있습니다...
+“Pokémon HOME”을 종료하지 않도록 주의해 주십시오",0,1424
+52,	,AF66E44C86071324,[REF:52],0,1528
+53,nx_option_help_010,222D69D9F5432327,"여기는 설정 메뉴!
+“Pokémon HOME”의 음량을 조절하거나
+표시 언어를 변경할 수 있고
+현재 플랜을 확인할 수도 있다몬!",0,1540
+54,nx_option_help_015,222D64D9F5431AA8,"프리미엄 플랜의 유효 기간은
+이 화면에서 알 수 없으니까
+이용권을 구입한 스토어를 확인해봐라몬!",0,1684
+55,nx_option_help_020,2222D7D9F539D68C,"그리고 문제가 있어 문의하고 싶을 때는
+이 화면에 표시되는
+“서포트 ID”가 필요하다몬!",0,1792
+56,	,AF66E44C86071324,[REF:56],0,1892
+57,nx_option_comment_04,A01FC944CB874FA8,이용 약관/개인정보 처리방침을 확인한다,0,1904
+58,nx_option_policy_010,6657138BEFA39CA6,이용 약관/개인정보 처리방침,0,1948
+59,nx_option_policy_msg_010,D8BE5005D9C7FB1C,"이용 약관/개인정보 처리방침을
+확인하겠습니까?",0,1980
+60,nx_option_policy_msg_020,D8C86205D9D06E37,이용 약관,0,2032
+61,nx_option_policy_msg_030,D8C4DC05D9CD54AE,개인정보 처리방침,0,2044
+62,nx_option_policy_msg_040,D8B3DE05D9BEE4E1,그만둔다,0,2064
+63,nx_option_policy_link_msg_010,CE65E5AB6FF38E29,일본에 거주하는 유저는 여기,0,2076
+64,nx_option_policy_link_msg_020,CE68EBAB6FF5CE32,한국에 거주하는 유저는 여기,0,2108
+65,nx_option_policy_link_msg_030,CE6C71AB6FF8E7BB,"한국, 일본 이외의 아시아 지역에 거주하는 유저는 여기",0,2140
+66,nx_option_policy_link_msg_040,CE6FF7AB6FFC0144,상기 이외의 지역에 거주하는 유저는 여기,0,2204
+67,	,AF66E44C86071324,[REF:67],0,2252
+68,nx_option_companyinfo_010,1FE7B8AFB5ED75C3,회사 정보,0,2264
+69,nx_option_companyinfo_msg_010,21D4273A24E5744D,회사 정보를 확인한다,0,2276

@@ -1,0 +1,326 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_zukan_index_010,53108D8DFB3981DC,도감,0,1884
+1,nx_zukan_index_011,53108E8DFB39838F,"[CTRL:0203:0000,0000]",0,1892
+2,nx_zukan_index_012,53108F8DFB398542,등록한 수,0,1904
+3,nx_zukan_index_020,531A9F8DFB41F4F7,조사 리퀘스트,0,1916
+4,nx_zukan_index_030,5317198DFB3EDB6E,[REF:4],0,1932
+5,nx_zukan_index_picup_0000,9AACD375CCD66365,모든 포켓몬,0,1944
+6,nx_zukan_index_picup_0010,9AA9CD75CCD4235C,관동지방,0,1960
+7,nx_zukan_index_picup_0020,9AB3DF75CCDC9677,성도지방,0,1972
+8,nx_zukan_index_picup_0030,9AB05975CCD97CEE,호연지방,0,1984
+9,nx_zukan_index_picup_0040,9A9F5B75CCCB0D21,신오지방,0,1996
+10,nx_zukan_index_picup_0050,9A9BD575CCC7F398,하나지방,0,2008
+11,nx_zukan_index_picup_0060,9AA64775CCD109D3,칼로스지방,0,2020
+12,nx_zukan_index_picup_0070,9AA2E175CCCE26AA,알로라지방,0,2032
+13,nx_zukan_index_picup_0080,9A91E375CCBFB6DD,가라르지방,0,2044
+14,nx_zukan_index_picup_0090,9A8E5D75CCBC9D54,히스이지방,0,2056
+15,nx_zukan_index_picup_0100,9196B875C79235FA,팔데아지방,0,2068
+16,nx_zukan_index_picup_9999,5D573DB0F12E19D9,불명,0,2080
+17,	,AF66E44C86071324,[REF:17],0,2088
+18,nx_zukan_button_000,2D10F432335C5089,돌아간다,0,2100
+19,nx_zukan_button_001,2D10F332335C4ED6,도움말,0,2112
+20,nx_zukan_button_010,2D0D6E3233593700,울음소리,0,2120
+21,nx_zukan_button_020,2D1800323362839B,색,0,2132
+22,nx_zukan_button_030,2D147A32335F6A12,출현,0,2136
+23,nx_zukan_button_040,2D1E8C323367DD2D,설명,0,2144
+24,nx_zukan_button_050,2D1B06323364C3A4,뒤,0,2152
+25,nx_zukan_button_060,2D257832336DD9DF,앞,0,2156
+26,nx_zukan_button_065,2D257332336DD160,언어,0,2160
+27,nx_zukan_button_070,2D21F232336AC056,하나만 리셋,0,2168
+28,nx_zukan_button_080,2D2C043233733371,전체 리셋,0,2184
+29,nx_zukan_button_081,2D2C0332337331BE,추려내기,0,2196
+30,nx_zukan_button_082,2D2C02323373300B,순서바꾸기,0,2208
+31,nx_zukan_button_090,2D28FE323370F368,[REF:31],0,2220
+32,	,AF66E44C86071324,[REF:32],0,2232
+33,nx_zukan_menu_040,EAE4A6390F678062,[REF:33],0,2244
+34,nx_zukan_menu_050,EAE82C390F6A99EB,[REF:34],0,2256
+35,	,AF66E44C86071324,[REF:35],0,2268
+36,nx_zukan_top_010,1FB53F2EF34B87D7,전국도감,0,2280
+37,nx_zukan_top_020,1FAB2D2EF34314BC,조사 리퀘스트,0,2292
+38,nx_zukan_top_030,1FAEB32EF3462E45,등록한 수,0,2308
+39,nx_zukan_top_031,1FAEB22EF3462C92,"[CTRL:0203:0000,0000]",0,2320
+40,nx_zukan_top_040,1FA4412EF33D180A,[REF:40],0,2332
+41,nx_zukan_top_041,1FA4422EF33D19BD,[REF:41],0,2344
+42,nx_zukan_top_050,1FA7A72EF33FFB33,"모든 포켓몬에 대응하는 도감
+각 지방의 포켓몬만을 추려내는
+픽업 모드를 선택할 수도 있다",0,2356
+43,nx_zukan_top_060,1F9DB52EF337BE78,조사 소프트웨어,0,2456
+44,nx_zukan_top_070,1FA13B2EF33AD801,"테마에 맞는 포켓몬을 모아서
+오대호를 도와주자
+어느 소프트웨어에서 잡았는지가 중요하다",0,2476
+45,nx_zukan_top_080,1F96A92EF3318B66,"리퀘스트 파일을 가지고 있지 않습니다!
+포켓몬 메뉴에서 소프트웨어와 연동하면
+리퀘스트 파일이 추가됩니다",0,2572
+46,nx_zukan_top_list_010,99EFA016330102E0,,0,2688
+47,nx_zukan_top_list_020,99F9B216330975FB,[REF:47],0,2692
+48,nx_zukan_top_list_030,99F62C1633065C72,[CTRL:0201:0000],0,2704
+49,	,AF66E44C86071324,[REF:49],0,2716
+50,nx_zukan_top_announce_010,49EC2E3FDB583C8F,"[CTRL:0101:0000][CTRL:1900:0003]
+도감에 새로 등록되었다!",0,2728
+51,nx_zukan_top_announce_020,49E1BC3FDB4F2654,"[CTRL:0203:0000,0000]종류의 포켓몬이
+도감에 새로 등록되었다!",0,2776
+52,	,AF66E44C86071324,[REF:52],0,2832
+53,nx_zukan_top_msg_010,615D626D9054C229,"포켓몬이 등록되어 있지 않습니다![CLEAR]
+“Pokémon HOME”의 박스에 포켓몬을 맡겨서
+데이터를 등록해 주십시오",0,2844
+54,	,AF66E44C86071324,[REF:54],0,2976
+55,nx_zukan_top_picup_0000,42BDB5000DB2CB60,모든 포켓몬,0,2988
+56,nx_zukan_top_picup_0010,42C13B000DB5E4E9,관동지방,0,3004
+57,nx_zukan_top_picup_0020,42C441000DB824F2,성도지방,0,3016
+58,nx_zukan_top_picup_0030,42C7C7000DBB3E7B,호연지방,0,3028
+59,nx_zukan_top_picup_0040,42CB4D000DBE5804,신오지방,0,3040
+60,nx_zukan_top_picup_0050,42CED3000DC1718D,하나지방,0,3052
+61,nx_zukan_top_picup_0060,42D239000DC454B6,칼로스지방,0,3064
+62,nx_zukan_top_picup_0070,42D53F000DC694BF,알로라지방,0,3076
+63,nx_zukan_top_picup_0080,42D8C5000DC9AE48,가라르지방,0,3088
+64,nx_zukan_top_picup_0090,42DC4B000DCCC7D1,히스이지방,0,3100
+65,nx_zukan_top_picup_0100,4A20F00011859AAB,팔데아지방,0,3112
+66,nx_zukan_top_picup_9999,93DD5B4AE8CF64FC,불명,0,3124
+67,	,AF66E44C86071324,[REF:67],0,3132
+68,nx_zukan_top_topics_0010,86D945ACBE497006,관동 파일,0,3144
+69,nx_zukan_top_topics_0020,86D5DFACBE468CDD,가라르 파일,0,3156
+70,nx_zukan_top_topics_0030,86D259ACBE437354,신오 파일,0,3172
+71,nx_zukan_top_topics_0040,86CED3ACBE4059CB,히스이 파일,0,3184
+72,nx_zukan_top_topics_0041,86CED2ACBE405818,팔데아 파일,0,3200
+73,nx_zukan_top_topics_0060,86C847ACBE3B0039,칼로스 파일,0,3216
+74,nx_zukan_top_topics_0070,86C4C1ACBE37E6B0,관동 파일(GBA),0,3232
+75,	,AF66E44C86071324,[REF:75],0,3256
+76,nx_zukan_topics_filenumber_0010,E4D9F09C2A967D14,관동 파일 #[CTRL:0201:0000],0,3268
+77,nx_zukan_topics_filenumber_0020,E4E4629C2A9F934F,가라르 파일 #[CTRL:0201:0000],0,3292
+78,nx_zukan_topics_filenumber_0030,E4E0DC9C2A9C79C6,신오 파일 #[CTRL:0201:0000],0,3320
+79,nx_zukan_topics_filenumber_0040,E4CFDE9C2A8E09F9,히스이 파일 #[CTRL:0201:0000],0,3344
+80,nx_zukan_topics_filenumber_0050,E4CC589C2A8AF070,팔데아 파일 #[CTRL:0201:0000],0,3372
+81,nx_zukan_topics_filenumber_0060,E4D66A9C2A93638B,칼로스 파일 #[CTRL:0201:0000],0,3400
+82,nx_zukan_topics_filenumber_0070,E4D3649C2A912382,관동 파일(GBA) #[CTRL:0201:0000],0,3428
+83,	,AF66E44C86071324,[REF:83],0,3464
+84,nx_zukan_detailed_000,4DA3659B58E91D49,"No.[CTRL:0203:0000,0000]",0,3476
+85,nx_zukan_detailed_001,4DA3649B58E91B96,[CTRL:0101:0000],0,3496
+86,nx_zukan_detailed_010,4D9FDF9B58E603C0,키,0,3508
+87,nx_zukan_detailed_011,4D9FE09B58E60573,,0,3512
+88,nx_zukan_detailed_020,4DAA719B58EF505B,몸무게,0,3516
+89,nx_zukan_detailed_021,4DAA709B58EF4EA8,,0,3524
+90,nx_zukan_detailed_030,4DA6EB9B58EC36D2,[CTRL:0104:0000],0,3528
+91,nx_zukan_detailed_040,4DB0FD9B58F4A9ED,,0,3540
+92,nx_zukan_detailed_041,4DB0FC9B58F4A83A,모습 [CTRL:0201:0000]/[CTRL:0201:0001],0,3544
+93,nx_zukan_detailed_050,4DAD779B58F19064,,0,3572
+94,nx_zukan_detailed_051,4DAD789B58F19217,[REF:94],0,3576
+95,nx_zukan_detailed_060,4DB7E99B58FAA69F,출현 소프트웨어 [CTRL:0200:0000]/[CTRL:0200:0001],0,3588
+96,nx_zukan_detailed_061,4DB7E89B58FAA4EC,출현 소프트웨어,0,3628
+97,nx_zukan_detailed_070_jpn,9E9E5B539B79F195,"JPN 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,3648
+98,nx_zukan_detailed_070_eng,0E825753DAA66411,"ENG 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,3764
+99,nx_zukan_detailed_070_spa,656BEB540BF5DFAB,"ES-ES 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,3880
+100,nx_zukan_detailed_070_fra,07635453D70DC0BA,"FRE 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4000
+101,nx_zukan_detailed_070_ger,FFC60253D3095213,"DEU 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4116
+102,nx_zukan_detailed_070_ita,A95A8153A2253BD5,"ITA 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4232
+103,nx_zukan_detailed_070_kor,97382E5397A5043D,"KOR 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4348
+104,nx_zukan_detailed_070_chs,DC355D53BEA1B919,"CHS 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4464
+105,nx_zukan_detailed_070_cht,DC355E53BEA1BACC,"CHT 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4580
+106,nx_zukan_detailed_070_latam,15FA3EDC47203C72,"ES-LA 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4696
+107,nx_zukan_detailed_gba,F6BD8D9C49E0B3C9,"이 언어로 된 설명문은 존재하지 않습니다
+언어 또는 소프트웨어를 전환해 주십시오",0,4816
+108,nx_zukan_detailed_070_jpn_small,5959B58400BEB11D,"JPN 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,4908
+109,nx_zukan_detailed_070_eng_small,09D53AE9DACF7199,"ENG 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5024
+110,nx_zukan_detailed_070_spa_small,9EE4BBE5898355C3,"ES-ES 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5140
+111,nx_zukan_detailed_070_fra_small,506CE34FF4CDCBCE,"FRE 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5260
+112,nx_zukan_detailed_070_ger_small,CF301537DDF410EB,"GER 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5376
+113,nx_zukan_detailed_070_ita_small,CB0BE19F2363F05D,"ITA 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5492
+114,nx_zukan_detailed_070_kor_small,50A8F366D4F841A5,"KOR 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5608
+115,nx_zukan_detailed_070_chs_small,34B32A2D8D93CAC1,"CHS 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5724
+116,nx_zukan_detailed_070_cht_small,1F7CC30F25045F00,"CHT 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5840
+117,nx_zukan_detailed_070_latam_small,9C6D1F6C20E078E6,"ES-LA 언어의 [CTRL:0101:0000][CTRL:1900:0002]
+“Pokémon HOME”에 맡기면
+이 언어로 된 설명을 볼 수 있습니다",0,5956
+118,nx_zukan_detailed_gba_small,B5876ED04F4B1D31,"이 언어로 된 설명문은 존재하지 않습니다
+언어 또는 소프트웨어를 전환해 주십시오",0,6076
+119,	,AF66E44C86071324,[REF:119],0,6168
+120,nx_zukan_list_010,441FCA488FC577D4,,0,6180
+121,nx_zukan_list_020,442A3C488FCE8E0F,"No.[CTRL:0203:0000,0000]",0,6184
+122,nx_zukan_list_021,442A3B488FCE8C5C,,0,6204
+123,nx_zukan_list_022,442A3E488FCE9175,,0,6208
+124,nx_zukan_list_030,4426B6488FCB7486,[CTRL:0101:0000],0,6212
+125,nx_zukan_list_040,4415B8488FBD04B9,??????,0,6224
+126,	,AF66E44C86071324,[REF:126],0,6240
+127,nx_zukan_language_01,375806079A591BC6,일본어(가나),0,6252
+128,nx_zukan_language_02,375805079A591A13,일본어(한자),0,6268
+129,nx_zukan_language_03,375804079A591860,영어,0,6284
+130,nx_zukan_language_04,37580B079A592445,프랑스어,0,6292
+131,nx_zukan_language_05,37580A079A592292,독일어,0,6304
+132,nx_zukan_language_06,375809079A5920DF,이탈리아어,0,6312
+133,nx_zukan_language_07,375808079A591F2C,한국어,0,6324
+134,nx_zukan_language_08,37580F079A592B11,유럽 스페인어,0,6332
+135,nx_zukan_language_09,37580E079A59295E,중국어(간체자),0,6348
+136,nx_zukan_language_10,375481079A5603F0,중국어(번체자),0,6368
+137,nx_zukan_language_11,375482079A5605A3,라틴 아메리카 스페인어,0,6388
+138,	,AF66E44C86071324,[REF:138],0,6416
+139,nx_zukan_search_data_010,C437552C67A3C3C5,"No.[CTRL:0203:0000,0000]",0,6428
+140,nx_zukan_search_data_020,C43ADB2C67A6DD4E,[CTRL:0101:0000],0,6448
+141,nx_zukan_search_guide_010,07DF7A205ADD7D67,[CTRL:01DA:0000] (추려내기 없음),0,6460
+142,nx_zukan_search_guide_020,07D4E8205AD430CC,"[CTRL:01DA:0000] (추려내기 [CTRL:0203:0001,0000]/[CTRL:0203:0002,0000])",0,6492
+143,nx_zukan_search_guide_030,07D86E205AD74A55,"[CTRL:01DA:0000] (추려내기 [CTRL:0203:0001,0000]종류)",0,6540
+144,	,AF66E44C86071324,[REF:144],0,6580
+145,nx_zukan_search_title,16395A443366EC8B,추려내기 조건,0,6592
+146,nx_zukan_search_sort,3DF65C4B7FFD7C93,순서바꾸기,0,6608
+147,nx_zukan_search_name,32DBC8ABDF0B1330,이름,0,6620
+148,nx_zukan_search_type1,A42D3ECCBCD63B06,타입1,0,6628
+149,nx_zukan_search_type2,A42D3DCCBCD63953,타입2,0,6636
+150,nx_zukan_search_color,31D0B67882CD256A,색,0,6644
+151,nx_zukan_search_shape,2B61830E94584E54,형태,0,6648
+152,nx_zukan_search_form,19ED76ED60C728B9,모습,0,6656
+153,nx_zukan_search_version,44BE3BA7FAB1A205,출현 소프트웨어,0,6664
+154,nx_zukan_search_register,4708974DCBD995AE,등록 여부,0,6684
+155,	,AF66E44C86071324,[REF:155],0,6696
+156,nx_zukan_search_head_name,9ED0D0EE6F31CD91,이름으로 찾기,0,6708
+157,nx_zukan_search_head_type,8C6575CA67F751EA,타입으로 찾기,0,6724
+158,nx_zukan_search_head_color,76ED2EB5F462AEFD,색으로 찾기,0,6740
+159,nx_zukan_search_head_shape,D4EEFD95193B2287,형태로 찾기,0,6756
+160,nx_zukan_search_head_form,4FCE4B34EAAB8FFC,모습으로 찾기,0,6772
+161,nx_zukan_search_head_version,73E6812EB2613716,출현 소프트웨어로 찾기,0,6788
+162,nx_zukan_search_head_register,5A26B2CF49C77D73,도감 등록 여부로 찾기,0,6816
+163,nx_zukan_search_nil,CECDBE77DC8628AA,조건에 맞는 포켓몬이 없습니다!,0,6844
+164,	,AF66E44C86071324,[REF:164],0,6880
+165,nx_zukan_sort_01,00BF326FDFB37690,번호순,0,6892
+166,nx_zukan_sort_02,00BF356FDFB37BA9,가나다순,0,6900
+167,nx_zukan_sort_03,00BF346FDFB379F6,무거운 순서,0,6912
+168,nx_zukan_sort_04,00BF376FDFB37F0F,가벼운 순서,0,6928
+169,nx_zukan_sort_05,00BF366FDFB37D5C,큰 순서,0,6944
+170,nx_zukan_sort_06,00BF396FDFB38275,작은 순서,0,6956
+171,	,AF66E44C86071324,[REF:171],0,6968
+172,nx_zukan_color_01,AA189EFD1AD46075,빨강,0,6980
+173,nx_zukan_color_02,AA189BFD1AD45B5C,파랑,0,6988
+174,nx_zukan_color_03,AA189CFD1AD45D0F,초록,0,6996
+175,nx_zukan_color_04,AA1899FD1AD457F6,노랑,0,7004
+176,nx_zukan_color_05,AA189AFD1AD459A9,담홍,0,7012
+177,nx_zukan_color_06,AA1897FD1AD45490,보라,0,7020
+178,nx_zukan_color_07,AA1898FD1AD45643,갈색,0,7028
+179,nx_zukan_color_08,AA18A5FD1AD46C5A,회색,0,7036
+180,nx_zukan_color_09,AA18A6FD1AD46E0D,하양,0,7044
+181,nx_zukan_color_10,AA1BA3FD1AD69ECB,검정,0,7052
+182,	,AF66E44C86071324,[REF:182],0,7060
+183,nx_zukan_form_0010,1446FAA819DE8CB4,모든 모습,0,7072
+184,nx_zukan_form_0020,1450ECA819E6C96F,색이 다른 모습,0,7084
+185,nx_zukan_form_0030,144D66A819E3AFE6,수컷의 모습,0,7104
+186,nx_zukan_form_0040,143C68A819D54019,암컷의 모습,0,7120
+187,nx_zukan_form_0050,143962A819D30010,성별 불명,0,7136
+188,nx_zukan_form_1010,5F907A9F270B2635,메가진화,0,7148
+189,nx_zukan_form_1020,5F93809F270D663E,원시회귀,0,7160
+190,nx_zukan_form_1030,5F97069F27107FC7,거다이맥스,0,7172
+191,nx_zukan_form_2010,2B23D2B78D5F8A76,알로라의 모습,0,7184
+192,nx_zukan_form_2020,2B206CB78D5CA74D,가라르의 모습,0,7200
+193,nx_zukan_form_2030,2B1CE6B78D598DC4,히스이의 모습,0,7216
+194,nx_zukan_form_2040,2B1960B78D56743B,팔데아의 모습,0,7232
+195,	,AF66E44C86071324,[REF:195],0,7248
+196,nx_zukan_register_01,2E6379413994C3B3,등록됨,0,7260
+197,nx_zukan_register_02,2E637A413994C566,미등록,0,7268
+198,	,AF66E44C86071324,[REF:198],0,7276
+199,nx_zukan_none_3,A45FE3B062A9EF1E,－－－,0,7288
+200,nx_zukan_none_5,A45FE5B062A9F284,－－－－－,0,7296
+201,nx_zukan_none_8,A45FDAB062A9DFD3,－－－－－－－－,0,7308
+202,	,AF66E44C86071324,[REF:202],0,7328
+203,nx_zukan_topics_name1,F4DE6150C341F9F3,[CTRL:0101:0000],0,7340
+204,nx_zukan_topics_name2,F4DE6250C341FBA6,??????,0,7352
+205,nx_zukan_topics_conditions,9766CE8A635DF69D,,0,7368
+206,nx_zukan_topics_conditions_inactive_01,122F97415D3C578F,"이 파일의 조사 리퀘스트를
+[CTRL:0201:0000]건 달성하면 해금됩니다",0,7372
+207,nx_zukan_topics_list_title,BF4A734F4DDC7452,,0,7436
+208,nx_zukan_topics_list_inactive,F4430E9C35355895,????????????,0,7440
+209,nx_zukan_topics_list_progress,75015AE069AB084F,[CTRL:0200:0000]/[CTRL:0200:0001],0,7468
+210,nx_zukan_topics_guide_010,836CFEBA09CCD7A7,[CTRL:01DA:0000] (달성 수: [CTRL:0201:0001]),0,7488
+211,	,AF66E44C86071324,[REF:211],0,7524
+212,nx_zukan_help1_010,DCF169A3820C5F5E,"오대호님이 개발한
+아주아주 위~대한 포켓몬 도감이다몬!
+“Pokémon HOME”의 박스에 맡긴
+포켓몬이 자동으로 등록된다몬!",0,7536
+213,nx_zukan_help1_020,DCEDE3A3820945D5,"모든 포켓몬의 정보가
+기록되는 건 물론이고
+각 지방의 “픽업 모드”를 선택하면
+지방별로 포켓몬을 추려낼 수 있다몬!",0,7680
+214,nx_zukan_help1_030,DCEA5DA382062C4C,"게다가! L・R 버튼을 누르면
+“조사 리퀘스트”로 전환된다몬!
+오대호님의 위~대한 연구를 위해
+너의 힘을 빌려줬으면 좋겠다몬!",0,7812
+215,	,AF66E44C86071324,[REF:215],0,7956
+216,nx_zukan_help2_010,C0106BC2CBCF33A7,"여기는 포켓몬의 정보가
+알차게 들어가 있는 상세 화면이다몬!
+오른쪽 리스트에서 포켓몬을 선택할 수 있다몬!",0,7968
+217,nx_zukan_help2_020,C005D9C2CBC5E70C,"ZL・ZR 버튼으로 설명을
+전환할 수 있다몬!
+각 소프트웨어에서 어떻게 설명하고 있는지
+비교해보면 즐거울 거다몬!",0,8088
+218,nx_zukan_help2_030,C0095FC2CBC90095,"여러 가지 모습이 등록된 포켓몬은
+L・R 버튼으로 모습을 전환할 수 있다몬!
+일부 모습은 설명도 같이 바뀐다몬!",0,8216
+219,nx_zukan_help2_040,BFFF6DC2CBC0C3DA,"게다가 Y 버튼을 누르면 그 포켓몬이
+어느 소프트웨어에 출현하는지 확인할 수 있다몬!",0,8344
+220,	,AF66E44C86071324,[REF:220],0,8440
+221,nx_zukan_help3_010,3693FF929ACA0B58,"도감에 등록된 포켓몬을
+죽 늘어놓은 일람 화면이다몬!
+A 버튼으로 보고 싶은 포켓몬을 확인해라몬!",0,8452
+222,nx_zukan_help3_020,369E71929AD32193,"X 버튼을 누르면 추려내기 창이 열린다몬!
+타입이나 색, 모습 등 다양한 조건으로
+포켓몬을 추려낼 수 있다몬!",0,8564
+223,nx_zukan_help3_030,369B0B929AD03E6A,"Y 버튼을 누르면 순서를 바꿀 수 있다몬!
+기본적인 번호순 외에도
+키나 몸무게순으로 정렬할 수 있다몬!",0,8688
+224,	,AF66E44C86071324,[REF:224],0,8804
+225,nx_zukan_help4_010,1C5CFD86C9AE9721,"“조사 리퀘스트”란!
+오대호님이 너에게 요청한
+포켓몬 포획 의뢰를 말하는 거다몬!",0,8816
+226,nx_zukan_help4_020,1C608386C9B1B0AA,"너의 Nintendo Switch 본체에
+대상 소프트웨어의 저장 데이터가 있다면
+각 지방에 맞는 리퀘스트 파일이
+이 화면에 나온다몬!",0,8908
+227,nx_zukan_help4_030,1C63E986C9B493D3,"조사 리퀘스트는 파일별로
+정해진 소프트웨어에서 만난 포켓몬이 아니면
+달성할 수 없으니까 주의해야 한다몬!!",0,9060
+228,	,AF66E44C86071324,[REF:228],0,9180
+229,nx_zukan_help5_010,E39F9799B4F70A92,"오른쪽에 있는 게 조사 리퀘스트 일람이다몬!
+각 리퀘스트에 필요한 포켓몬을 모으면
+달성할 수 있게 된다몬!",0,9192
+230,nx_zukan_help5_020,E39C1199B4F3F109,"단! 포켓몬의 종족이 맞더라도
+만난 소프트웨어나 모습이 맞지 않으면
+리퀘스트를 달성할 수 없다몬!
+어느 소프트웨어에서 잡았는지 확인해야 한다몬!",0,9312
+231,nx_zukan_help5_030,E3988B99B4F0D780,"조건에 맞는 포켓몬을
+“Pokémon HOME”의 박스에 맡기면
+자동으로 항목이 채워진다몬!",0,9476
+232,nx_zukan_help5_031,E3988C99B4F0D933,"“Pokémon HOME”의 박스에서
+포켓몬을 찾거나 놓아주어도
+달성한 리퀘스트에는 영향을 주지 않는다몬!",0,9580

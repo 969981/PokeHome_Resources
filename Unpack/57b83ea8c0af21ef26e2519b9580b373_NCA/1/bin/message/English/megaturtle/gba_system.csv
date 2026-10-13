@@ -1,0 +1,75 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,	,AF66E44C86071324,[REF:0],0,284
+1,nx_gbasoft_index_010,30E128CC79219E95,Connect to GBA Games,0,296
+2,nx_gbasoft_boxselect_010,94684E5C70F9DD54,Select a Box,0,340
+3,nx_gbasoft_boxselect_020,9472C05C7102F38F,Pokémon That Can Be Deposited,0,368
+4,nx_gbasoft_boxselect_021,9472BF5C7102F1DC,"[CTRL:0204:0000,002C]",0,428
+5,nx_gbasoft_boxselect_030,946F3A5C70FFDA06,"Eggs or Pokémon that are holding items or that know hidden moves can’t be transferred
+to Pokémon HOME.",4,440
+6,nx_gbasoft_msg_010,229C3EA546748D5C,"Do you want to return to the main menu without connecting
+to any GBA game?",0,648
+7,nx_gbasoft_msg_020,22A650A5467D0077,"Pokémon sent to Pokémon HOME can’t be returned to their
+original game, and the moves they know will change.[CLEAR]
+Are you sure you want to proceed?",0,800
+8,nx_gbasoft_msg_030,22A2CAA54679E6EE,"Pokémon are being transferred from the selected Box to
+Pokémon HOME...",0,1092
+9,nx_gbasoft_msg_040,2291CCA5466B7721,"Pokémon have been transferred from your GBA games to
+Pokémon HOME!",0,1236
+10,nx_gbasoft_msg_yes,FE7650A653D1F132,Yes,0,1372
+11,nx_gbasoft_msg_no,FA151C506B6DA084,No,0,1380
+12,nx_gbasoft_button_000,1D0104C5BE3EE746,Help,0,1388
+13,nx_gbasoft_button_001,1D0105C5BE3EE8F9,Quit,0,1400
+14,	,AF66E44C86071324,[REF:14],0,1412
+15,nx_gbasoft_help_010,F1E2846F1FAF21A4,"This right here is the screen where you can connect to
+Game Boy Advance games! If you want to transfer Pokémon
+you caught in Game Boy Advance games to Pokémon HOME,
+here’s where to do it!",0,1424
+16,nx_gbasoft_help_020,F1ECF66F1FB837DF,"You’ll need to pick which Box you want to transfer over. Then all
+the Pokémon in that Box will be sent to Pokémon HOME! Isn’t
+that something?",0,1800
+17,nx_gbasoft_help_030,F1E9706F1FB51E56,"The Pokémon sent over will be dropped into your Pokémon HOME
+Boxes in the order that they arrive wherever there’s space!",0,2084
+18,nx_gbasoft_help_040,F1D8726F1FA6AE89,"Just watch out, because that means that sometimes they end up in
+different Boxes from each other!",0,2328
+19,	,AF66E44C86071324,[REF:19],0,2524
+20,nx_gbasoft_error_msg_010,EEB15DA9ECD1B441,"You’ve already moved [CTRL:1302:0000,0000][CTRL:0101:0000] from this save file
+into Pokémon HOME![CLEAR]
+You can send only one [CTRL:0101:0000] per save file.",0,2536
+21,nx_gbasoft_error_msg_011,EEB15CA9ECD1B28E,"You’ve already moved a Shiny [CTRL:0101:0000] from this
+save file into Pokémon HOME![CLEAR]
+Only one Shiny [CTRL:0101:0000] per save file can be moved
+into Pokémon HOME.",0,2768
+22,nx_gbasoft_error_msg_012,EEB15BA9ECD1B0DB,"Your selection includes one or more Pokémon that you’ve
+already moved into Pokémon HOME from this save file,[CLEAR]
+such as [CTRL:1302:0000,0000][CTRL:0101:0000]![CLEAR]
+Only one [CTRL:0101:0000] per save file can be moved into
+Pokémon HOME.",0,3052
+23,nx_gbasoft_error_msg_013,EEB15AA9ECD1AF28,"Your selection includes one or more Pokémon that you’ve
+already moved into Pokémon HOME from this save file,[CLEAR]
+such as a Shiny [CTRL:0101:0000]![CLEAR]
+Only one Shiny [CTRL:0101:0000] per save file can be moved
+into Pokémon HOME.",0,3440
+24,nx_gbasoft_error_msg_014,EEB161A9ECD1BB0D,"You can send only one [CTRL:0101:0000] per save file.[CLEAR]
+The Pokémon in this Box can’t be sent, as the Box includes
+two or more [CTRL:0101:0000].",0,3848
+25,nx_gbasoft_error_msg_015,EEB160A9ECD1B95A,"You can send only one Shiny [CTRL:0101:0000] per save file.[CLEAR]
+The Pokémon in this Box can’t be sent, as the Box includes
+two or more Shiny [CTRL:0101:0000].",0,4092
+26,nx_gbasoft_error_msg_016,EEB15FA9ECD1B7A7,"You can send only one [CTRL:0101:0000] from this save file.[CLEAR]
+Are you sure you want to send a Box containing
+[CTRL:1302:0000,0000][CTRL:0101:0000]?",0,4360
+27,nx_gbasoft_error_msg_017,EEB15EA9ECD1B5F4,"You can send only one Shiny [CTRL:0101:0000] from this
+save file.[CLEAR]
+Are you sure you want to send a Box containing
+a Shiny [CTRL:0101:0000]?",0,4580
+28,nx_gbasoft_error_msg_018,EEB155A9ECD1A6A9,"You’ve selected a Box that contains a Pokémon that can be
+sent only once per save file, such as [CTRL:1302:0000,0000][CTRL:0101:0000].[CLEAR]
+Are you sure you want to send this Box to Pokémon HOME?",0,4816
+29,nx_gbasoft_error_msg_019,EEB154A9ECD1A4F6,"You’ve selected a Box that contains a Pokémon that can be
+sent only once per save file, such as a Shiny [CTRL:0101:0000].[CLEAR]
+Are you sure you want to send this Box to Pokémon HOME?",0,5148
+30,nx_gbasoft_error_msg_020,EEB463A9ECD3F44A,"This Box contains Pokémon that can’t be sent to
+Pokémon HOME.",0,5488
+31,nx_gbasoft_error_msg_021,EEB464A9ECD3F5FD,There are no Pokémon in this Box.,0,5612
+32,nx_gbasoft_error_msg_022,EEB461A9ECD3F0E4,"This Box contains more Pokémon than you can deposit
+in Pokémon HOME.",0,5680

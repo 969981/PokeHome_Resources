@@ -1,0 +1,69 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,error_maintenance_010,DEFD4837D0B0BA8B,"Derzeit werden Wartungsarbeiten durchgeführt,
+die planmäßig zum folgenden Zeitpunkt enden:
+[CTRL:0201:0002].[CTRL:0201:0001].[CTRL:0203:0000,0000] um [CTRL:0201:0003]:[CTRL:0201:0004] Uhr",0,180
+1,error_maintenance_020,DEF33637D0A84770,"Derzeit werden Wartungsarbeiten durchgeführt.
+Bitte warte, bis diese Wartungsarbeiten beendet
+wurden.",0,428
+2,error_maintenance_030,DEF6BC37D0AB60F9,"Derzeit werden Notfall-Wartungsarbeiten
+durchgeführt. Bitte warte, bis diese
+Wartungsarbeiten beendet wurden.
+Etwaige Unannehmlichkeiten bitten wir
+zu entschuldigen.",0,632
+3,error_maintenance_040,DF07BA37D0B9D0C6,[REF:3],0,964
+4,error_maintenance_050,DF0B4037D0BCEA4F,[REF:4],0,976
+5,error_maintenance_060,DF00CE37D0B3D414,"Ein Fehler ist aufgetreten.
+Du kehrst nun zum Titelbildschirm zurück.
+Fehler-Code: [CTRL:0204:0000,0000]",0,988
+6,error_maintenance_061,DF00CF37D0B3D5C7,"Ein Fehler ist aufgetreten.
+Du kehrst nun zum Titelbildschirm zurück.",0,1168
+7,error_maintenance_070,DF045437D0B6ED9D,"Ein Fehler ist aufgetreten.
+Bitte versuche es erneut.
+Fehler-Code: [CTRL:0204:0000,0000]",0,1308
+8,error_maintenance_080,DF155237D0C55D6A,"Es wurde über längere Zeit keine Eingabe
+vorgenommen.
+Du kehrst nun zum Titelbildschirm zurück.",0,1456
+9,error_maintenance_090,DF18B837D0C84093,"Du wurdest auf einem anderen Gerät
+angemeldet. Du kehrst nun zum
+Titelbildschirm zurück.",0,1648
+10,error_maintenance_100,E8107D37D5F2DE4D,"Weil in kurzer Zeit zu viele Eingaben über die
+Boxen erfolgt sind, konnten sie nicht ausgeführt
+werden. Warte eine Weile und versuche es
+später erneut.",0,1828
+11,error_maintenance_990,2CD0BF37FCBC0554,"Mit diesem Konto kannst du Pokémon HOME
+nicht verwenden.",0,2132
+12,error_maintenance_999,2CD0B837FCBBF96F,Der Service von Pokémon HOME wurde beendet.,0,2248
+13,error_maintenance_200,CD3A6C37C681E1AC,"Der Premium-Service, den du auf deinem mobilen
+Gerät verwendet hast, wurde pausiert.
+Bitte überprüfe den Status deines Kontos
+unter „Service-Erneuerung verwalten“.",0,2336
+14,error_save_sv_001,5078FA5A8DC16A3D,"Der Speichervorgang in der verlinkten Software
+ist fehlgeschlagen.
+Falls du nur Änderungen an deinen Boxen in
+Pokémon HOME vorgenommen hast, wurden
+diese gespeichert. Hast du Änderungen an den
+Pokémon-Boxen der verlinkten Software
+vorgenommen, wurden jegliche Änderungen an
+diesen Boxen und deinen Boxen in Pokémon
+HOME verworfen.
+Du kehrst nun zum Titelbildschirm zurück.",0,2664
+15,error_maintenance_300,D650A737CBC64577,"Der Transfer von Pokémon auf Pokémon HOME
+wurde für diese Nintendo Network ID
+eingeschränkt.",0,3412
+16,error_maintenance_110,E80CF737D5EFC4C4,"Die Wartungsarbeiten wurden beendet.
+Anmeldungen werden derzeit eingeschränkt,
+um eine Serverüberlastung zu vermeiden.
+Nutzer werden sich nach und nach anmelden
+können. Bitte warte eine Weile.",0,3600
+17,	,AF66E44C86071324,[REF:17],0,3988
+18,error_save_gba_001,49093D0A743FFC18,"Der Speichervorgang in der verlinkten Software
+ist fehlgeschlagen.
+Es wurden keine Pokémon auf Pokémon HOME
+übertragen.
+
+Du kehrst nun zum Titelbildschirm zurück.",0,4000
+19,error_account_gba_001,C0F989DC026CCB4E,"Die Nutzung dieser Funktion deines Accounts ist derzeit
+eingeschränkt.[CLEAR]
+Der Versuch, die Verlinkung mit einer
+Game Boy Advance (GBA)-Software vorzunehmen,[RETURN]
+wurde abgebrochen.",0,4328

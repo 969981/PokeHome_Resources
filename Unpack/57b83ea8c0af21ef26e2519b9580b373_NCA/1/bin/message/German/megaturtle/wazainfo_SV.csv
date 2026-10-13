@@ -1,0 +1,2277 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,WAZAINFO_SV_000,E672760ED12F4313,ー,0,7388
+1,WAZAINFO_SV_001,E672750ED12F4160,Ein Hieb mit den Vorderbeinen oder dem Schweif.,0,7392
+2,WAZAINFO_SV_002,E672780ED12F4679,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,7488
+3,WAZAINFO_SV_003,E672770ED12F44C6,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,7808
+4,WAZAINFO_SV_004,E6727A0ED12F49DF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,8128
+5,WAZAINFO_SV_005,E672790ED12F482C,Ein unglaublich kräftiger Hieb.,0,8448
+6,WAZAINFO_SV_006,E6727C0ED12F4D45,"Das Ziel wird mit Münzen beworfen. Das Geld wird
+nach dem Kampf aufgesammelt.",0,8512
+7,WAZAINFO_SV_007,E6727B0ED12F4B92,"Ein feuriger Schlag, der dem Ziel eventuell
+Verbrennungen zufügt.",0,8668
+8,WAZAINFO_SV_008,E6727E0ED12F50AB,"Ein eisiger Schlag, der das Ziel eventuell einfriert.",0,8800
+9,WAZAINFO_SV_009,E6727D0ED12F4EF8,"Ein elektrischer Schlag, der das Ziel eventuell
+paralysiert.",0,8908
+10,WAZAINFO_SV_010,E66F100ED12C5FEA,Das Ziel wird mit scharfen Klauen zerkratzt.,0,9032
+11,WAZAINFO_SV_011,E66F110ED12C619D,Das Ziel wird umklammert und zusammengequetscht.,0,9124
+12,WAZAINFO_SV_012,E66F0E0ED12C5C84,"Ein Angriff mit einer großen Schere. Trifft die Attacke,
+führt sie beim Ziel sofort zum K.O.",0,9224
+13,WAZAINFO_SV_013,E66F0F0ED12C5E37,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,9412
+14,WAZAINFO_SV_014,E66F0C0ED12C591E,"Ein wilder Tanz, der den Kampfgeist wecken soll.
+Der Angriffs-Wert des Anwenders wird stark erhöht.",0,9732
+15,WAZAINFO_SV_015,E66F0D0ED12C5AD1,Ein Basisangriff mit Schere oder Klaue.,0,9932
+16,WAZAINFO_SV_016,E66F0A0ED12C55B8,"Trifft das Ziel mit einem Windstoß, den es mit seinen
+Flügeln erzeugt.",0,10012
+17,WAZAINFO_SV_017,E66F0B0ED12C576B,Trifft das Ziel mit ausgebreiteten Flügeln.,0,10156
+18,WAZAINFO_SV_018,E66F080ED12C5252,"Weht das Ziel weg und ersetzt es durch ein anderes
+Pokémon. In der Wildnis endet der Kampf.",0,10244
+19,WAZAINFO_SV_019,E66F090ED12C5405,Steigt in Runde 1 empor und trifft das Ziel in Runde 2.,0,10428
+20,WAZAINFO_SV_020,E66B8A0ED1294661,"Umklammert und quetscht das Ziel über vier bis fünf
+Runden.",0,10540
+21,WAZAINFO_SV_021,E66B890ED12944AE,"Schlag mit einem langen Schweif, einer Ranke oder
+Ähnlichem.",0,10660
+22,WAZAINFO_SV_022,E66B880ED12942FB,Peitschenähnlicher Schlag mit Ranken.,0,10784
+23,WAZAINFO_SV_023,E66B870ED1294148,"Stampfen mit dem Fuß. Das Ziel schreckt eventuell
+zurück.",0,10860
+24,WAZAINFO_SV_024,E66B8E0ED1294D2D,Der Anwender tritt in einer Runde zweimal schnell zu.,0,10976
+25,WAZAINFO_SV_025,E66B8D0ED1294B7A,"Das Ziel wird mit einem extrem heftigen Tritt
+angegriffen.",0,11084
+26,WAZAINFO_SV_026,E66B8C0ED12949C7,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,11204
+27,WAZAINFO_SV_027,E66B8B0ED1294814,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,11524
+28,WAZAINFO_SV_028,E66B820ED12938C9,"Senkt Genauigkeit des Zieles, indem ihm Sand ins
+Gesicht geworfen wird.",0,11844
+29,WAZAINFO_SV_029,E66B810ED1293716,"Rammt das Ziel mit einer Kopfnuss. Ziel schreckt
+eventuell zurück.",0,11988
+30,WAZAINFO_SV_030,E668040ED1262CD8,Spießt das Ziel mit einem spitzen Horn auf.,0,12124
+31,WAZAINFO_SV_031,E668050ED1262E8B,"Spießt das Ziel zwei- bis fünfmal mit spitzem Horn
+oder Schnabel auf.",0,12212
+32,WAZAINFO_SV_032,E668060ED126303E,"Attacke, bei der ein Horn als Bohrer eingesetzt wird.
+Ist sie erfolgreich, führt sie zu einem K.O.",0,12352
+33,WAZAINFO_SV_033,E668070ED12631F1,Trifft das Ziel mit vollem Körpereinsatz.,0,12552
+34,WAZAINFO_SV_034,E668080ED12633A4,"Trifft das Ziel mit vollem Körpereinsatz und paralysiert
+es eventuell.",0,12636
+35,WAZAINFO_SV_035,E668090ED1263557,"Umwickelt das Ziel über vier bis fünf Runden mit
+Ranken oder Ähnlichem und fügt ihm Schaden zu.",0,12780
+36,WAZAINFO_SV_036,E6680A0ED126370A,"Rücksichtslose Attacke, bei der sich der Anwender
+selbst leicht verletzt.",0,12972
+37,WAZAINFO_SV_037,E6680B0ED12638BD,"Attacke über zwei bis drei Runden, die den Anwender
+danach verwirrt.",0,13120
+38,WAZAINFO_SV_038,E667FC0ED1261F40,"Lebensgefährlicher Angriff, bei dem sich der Anwender
+selbst verletzt.",0,13260
+39,WAZAINFO_SV_039,E667FD0ED12620F3,"Der Anwender wedelt niedlich mit dem Schweif und
+veranlasst Gegner dadurch, nachlässig zu werden.
+Senkt die Verteidigung der gegnerischen Pokémon.",0,13404
+40,WAZAINFO_SV_040,E6800E0ED13ACFB7,Angriff mit Giftstachel. Das Ziel wird eventuell vergiftet.,0,13700
+41,WAZAINFO_SV_041,E6800D0ED13ACE04,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,13820
+42,WAZAINFO_SV_042,E680100ED13AD31D,"Spitze Nadeln treffen das Ziel zwei- bis fünfmal
+hintereinander.",0,14140
+43,WAZAINFO_SV_043,E6800F0ED13AD16A,"Der Verteidigungs-Wert gegnerischer Pokémon wird
+durch einen angsteinflößenden Blick gesenkt.",0,14272
+44,WAZAINFO_SV_044,E6800A0ED13AC8EB,Beißt zu und lässt das Ziel eventuell zurückschrecken.,0,14460
+45,WAZAINFO_SV_045,E680090ED13AC738,"Der Anwender heult herzzerreißend, um gegnerische
+Pokémon nachlässig werden zu lassen und deren
+Angriffs-Wert zu senken.",0,14572
+46,WAZAINFO_SV_046,E6800C0ED13ACC51,"Verjagt das Ziel und ersetzt es durch ein anderes
+Pokémon. Beendet den Kampf in der Wildnis.",0,14816
+47,WAZAINFO_SV_047,E6800B0ED13ACA9E,"Ein Lied, das das Ziel in tiefen Schlaf versetzt.",0,15004
+48,WAZAINFO_SV_048,E680060ED13AC21F,Ausstoß bizarrer Schallwellen. Das Ziel wird verwirrt.,0,15104
+49,WAZAINFO_SV_049,E680050ED13AC06C,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,15216
+50,WAZAINFO_SV_050,E67C880ED137B62E,"Die zuletzt eingesetzte Attacke des Zieles wird für
+vier Runden blockiert.",0,15536
+51,WAZAINFO_SV_051,E67C890ED137B7E1,"Versprüht ätzende Flüssigkeit, die eventuell die
+Spezial-Verteidigung der gegnerischen Pokémon senkt.",0,15688
+52,WAZAINFO_SV_052,E67C860ED137B2C8,"Schwache Feuer-Attacke, durch die das Ziel eventuell
+Verbrennungen erleidet.",0,15892
+53,WAZAINFO_SV_053,E67C870ED137B47B,"Starke Feuer-Attacke, durch die das Ziel eventuell
+Verbrennungen erleidet.",0,16048
+54,WAZAINFO_SV_054,E67C8C0ED137BCFA,"Anwender schützt das Team mit einem Nebel.
+Verhindert Statussenkungen für fünf Runden.",0,16200
+55,WAZAINFO_SV_055,E67C8D0ED137BEAD,Das Ziel wird mit Wasser bespritzt.,0,16376
+56,WAZAINFO_SV_056,E67C8A0ED137B994,Spritzt eine Menge Wasser mit Hochdruck auf das Ziel.,0,16448
+57,WAZAINFO_SV_057,E67C8B0ED137BB47,"Anwender greift mit einer gewaltigen Welle
+alle Pokémon im Umkreis an.",0,16556
+58,WAZAINFO_SV_058,E67C800ED137A896,"Das Ziel wird von einem Eisstrahl getroffen und friert
+eventuell ein.",0,16700
+59,WAZAINFO_SV_059,E67C810ED137AA49,"Ein Schneesturm wütet, der gegnerische Pokémon
+einfrieren kann.",0,16840
+60,WAZAINFO_SV_060,E679020ED1349CA5,"Feuert einen Strahl ab, der das Ziel verwirren kann.",0,16968
+61,WAZAINFO_SV_061,E679010ED1349AF2,"Versprüht Blasen, die eventuell den Initiative-Wert
+des Zieles senken.",0,17076
+62,WAZAINFO_SV_062,E679000ED134993F,"Regenbogenfarbener Strahl, der eventuell den
+Angriffs-Wert des Zieles senkt.",0,17220
+63,WAZAINFO_SV_063,E678FF0ED134978C,"Starke Attacke, die den Anwender zwingt, eine Runde
+auszusetzen.",0,17376
+64,WAZAINFO_SV_064,E678FE0ED13495D9,Greift das Ziel mit dem Schnabel oder Horn an.,0,17508
+65,WAZAINFO_SV_065,E678FD0ED1349426,"Korkenzieherangriff, bei dem der Schnabel als
+Bohrer dient.",0,17604
+66,WAZAINFO_SV_066,E678FC0ED1349273,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,17724
+67,WAZAINFO_SV_067,E678FB0ED13490C0,"Ein Tritt, der das Ziel umwirft. Je schwerer das Ziel ist,
+desto mehr Schaden fügt ihm die Attacke zu.",0,18044
+68,WAZAINFO_SV_068,E6790A0ED134AA3D,"Kontert physische Treffer und fügt dem Ziel das
+Doppelte des Schadens zu, den der Anwender
+erlitten hat.",0,18252
+69,WAZAINFO_SV_069,E679090ED134A88A,"Ziel wird mit der Kraft der Gravitation umgeworfen.
+Richtet Schaden gemäß dem Level des Anwenders an.",0,18464
+70,WAZAINFO_SV_070,E675FC0ED1325C9C,Das Ziel wird extrem stark getroffen.,0,18668
+71,WAZAINFO_SV_071,E675FD0ED1325E4F,"Entzieht dem Ziel Nährstoffe. Die Hälfte des
+zugefügten Schadens wird dem Anwender
+als KP gutgeschrieben.",0,18744
+72,WAZAINFO_SV_072,E675FE0ED1326002,"Entzieht dem Ziel Nährstoffe. Die Hälfte des
+zugefügten Schadens wird dem Anwender
+als KP gutgeschrieben.",0,18956
+73,WAZAINFO_SV_073,E675FF0ED13261B5,"Ziel wird bepflanzt und verliert jede Runde KP, die ein
+Pokémon aus dem Team des Anwenders heilen.",0,19168
+74,WAZAINFO_SV_074,E675F80ED13255D0,"Der Körper wächst. Dadurch steigen Angriff und
+Spezial-Angriff.",0,19368
+75,WAZAINFO_SV_075,E675F90ED1325783,"Greift gegnerische Pokémon mithilfe von Blättern an.
+Hohe Volltrefferquote.",0,19496
+76,WAZAINFO_SV_076,E675FA0ED1325936,"Absorbiert Licht in Runde 1. In Runde 2 erfolgt der
+Angriff.",0,19648
+77,WAZAINFO_SV_077,E675FB0ED1325AE9,"Verstreut giftigen Puder, der das Ziel vergiftet.",0,19772
+78,WAZAINFO_SV_078,E676040ED1326A34,"Verstreut lähmenden Puder, der das Ziel paralysiert.",0,19872
+79,WAZAINFO_SV_079,E676050ED1326BE7,"Verstreut Schlafpuder, der das Ziel in Schlaf versetzt.",0,19980
+80,WAZAINFO_SV_080,E657060ED117BD0B,"Angriff mit Blütenblättern für zwei bis drei Runden.
+Danach wird der Angreifer verwirrt.",0,20092
+81,WAZAINFO_SV_081,E657050ED117BB58,"Umwickelt gegnerische Pokémon mit Fäden aus dem
+Mund und senkt ihren Initiative-Wert.",0,20272
+82,WAZAINFO_SV_082,E657080ED117C071,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,20444
+83,WAZAINFO_SV_083,E657070ED117BEBE,"Das Ziel wird für vier bis fünf Runden in einem
+Feuerkreis gefangen.",0,20764
+84,WAZAINFO_SV_084,E6570A0ED117C3D7,"Eine Elektro-Attacke, die das Ziel eventuell paralysiert.",0,20904
+85,WAZAINFO_SV_085,E657090ED117C224,"Eine starke Elektro-Attacke, die das Ziel eventuell
+paralysiert.",0,21020
+86,WAZAINFO_SV_086,E6570C0ED117C73D,"Ein schwacher Stromstoß, der das Ziel paralysiert.",0,21152
+87,WAZAINFO_SV_087,E6570B0ED117C58A,"Eine verheerende Elektro-Attacke, die das Ziel
+eventuell paralysiert.",0,21256
+88,WAZAINFO_SV_088,E656FE0ED117AF73,Das Ziel wird mit einem kleinen Stein beworfen.,0,21396
+89,WAZAINFO_SV_089,E656FD0ED117ADC0,"Ein mächtiges Beben, das alle Pokémon im Umkreis
+trifft.",0,21492
+90,WAZAINFO_SV_090,E654000ED1157D02,"Das Ziel wird in eine Erdspalte geworfen. Ist die Attacke
+erfolgreich, führt sie zu einem K.O.",0,21608
+91,WAZAINFO_SV_091,E654010ED1157EB5,"In Runde 1 gräbt sich der Anwender ein und in Runde 2
+greift er an.",0,21800
+92,WAZAINFO_SV_092,E653FE0ED115799C,"Vergiftet das Ziel mit einem potenten Toxin schwer.
+Die Vergiftung wird von Runde zu Runde stärker.",0,21936
+93,WAZAINFO_SV_093,E653FF0ED1157B4F,"Das Ziel wird von schwacher telekinetischer Energie
+getroffen und eventuell verwirrt.",0,22136
+94,WAZAINFO_SV_094,E653FC0ED1157636,"Starke Psycho-Attacke, die eventuell die
+Spezial-Verteidigung des Zieles senkt.",0,22308
+95,WAZAINFO_SV_095,E653FD0ED11577E9,"Hypnose-Attacke, die das Ziel in Schlaf versetzt.",0,22468
+96,WAZAINFO_SV_096,E653FA0ED11572D0,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,22568
+97,WAZAINFO_SV_097,E653FB0ED1157483,"Entspannt den Körper, um den Initiative-Wert stark
+zu erhöhen.",0,22888
+98,WAZAINFO_SV_098,E654080ED1158A9A,"Bei dieser Erstschlag-Attacke stürzt sich der Anwender
+so schnell auf das Ziel, dass er quasi unsichtbar wird.",0,23016
+99,WAZAINFO_SV_099,E654090ED1158C4D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,23240
+100,WAZAINFO_SV_100,DD5C5B0ECBEB15A8,"Der Anwender tauscht den Platz mit einem anderen
+Team-Mitglied, sofern vorhanden. Setzen wilde
+Pokémon die Attacke ein, ergreifen diese die Flucht.",0,23560
+101,WAZAINFO_SV_101,DD5C5C0ECBEB175B,"Das Ziel sieht eine Illusion. Richtet Schaden gemäß dem
+Level des Anwenders an.",0,23856
+102,WAZAINFO_SV_102,DD5C5D0ECBEB190E,"Kopiert die zuvor ausgeführte Attacke des Zieles.
+Diese kann im Kampf bis zur Auswechslung verwendet
+werden.",0,24016
+103,WAZAINFO_SV_103,DD5C5E0ECBEB1AC1,"Stößt einen Schrei aus, um die Verteidigung des Zieles
+stark zu senken.",0,24236
+104,WAZAINFO_SV_104,DD5C5F0ECBEB1C74,"Erzeugt durch schnelle Bewegungen Ebenbilder,
+um den Ausweichwert zu erhöhen.",0,24380
+105,WAZAINFO_SV_105,DD5C600ECBEB1E27,"Eine Selbstheilung. KP des Anwenders werden um
+50 % des maximalen Wertes aufgefüllt.",0,24536
+106,WAZAINFO_SV_106,DD5C610ECBEB1FDA,"Stärkt die Muskulatur und erhöht den
+Verteidigungs-Wert.",0,24708
+107,WAZAINFO_SV_107,DD5C620ECBEB218D,"Anwender schrumpft, um seinen Ausweichwert stark zu
+erhöhen.",0,24824
+108,WAZAINFO_SV_108,DD5C530ECBEB0810,"Senkt Genauigkeit des Zieles mit Rauch, Tinte oder
+Ähnlichem.",0,24948
+109,WAZAINFO_SV_109,DD5C540ECBEB09C3,"Ein fieser Strahl, der das Ziel verwirrt.",0,25072
+110,WAZAINFO_SV_110,DD5F610ECBED55B1,"Rückzug in den harten Panzer. Erhöht den
+Verteidigungs-Wert.",0,25156
+111,WAZAINFO_SV_111,DD5F600ECBED53FE,"Verbirgt Schwächen durch Einrollen und hebt
+gleichzeitig den Verteidigungs-Wert.",0,25280
+112,WAZAINFO_SV_112,DD5F5F0ECBED524B,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,25444
+113,WAZAINFO_SV_113,DD5F5E0ECBED5098,"Erzeugt eine Lichtwand und senkt den Schaden durch
+Spezial-Attacken für fünf Runden.",0,25764
+114,WAZAINFO_SV_114,DD5F650ECBED5C7D,"Erzeugt einen dunklen Nebel. Alle Veränderungen der
+Statuswerte der Kampfteilnehmer werden annulliert.",0,25936
+115,WAZAINFO_SV_115,DD5F640ECBED5ACA,"Eine mysteriöse Wand, die für fünf Runden den Schaden
+von physischen gegnerischen Treffern reduziert.",0,26144
+116,WAZAINFO_SV_116,DD5F630ECBED5917,"Anwender atmet ein und bündelt Kraft.
+Die Volltrefferquote steigt dadurch.",0,26348
+117,WAZAINFO_SV_117,DD5F620ECBED5764,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,26500
+118,WAZAINFO_SV_118,DD5F590ECBED4819,"Der Anwender wackelt mit dem Finger und stimuliert so
+sein Gehirn, um aus fast allen existierenden Attacken
+eine nach Zufallsprinzip auszuwählen und einzusetzen.",0,26820
+119,WAZAINFO_SV_119,DD5F580ECBED4666,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,27144
+120,WAZAINFO_SV_120,DD62E70ECBF06F3A,"Der Anwender verursacht eine Explosion, mit der er bei
+allen Pokémon im Umkreis Riesenschaden anrichtet und
+selbst kampfunfähig wird.",0,27464
+121,WAZAINFO_SV_121,DD62E80ECBF070ED,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,27732
+122,WAZAINFO_SV_122,DD62E50ECBF06BD4,"Leck-Attacke mit langer Zunge. Das Ziel wird eventuell
+paralysiert.",0,28052
+123,WAZAINFO_SV_123,DD62E60ECBF06D87,"Angriff mit Gas. Das Ziel kann eventuell vergiftet
+werden.",0,28188
+124,WAZAINFO_SV_124,DD62E30ECBF0686E,"Wirft Schlamm auf das Ziel. Dieses wird eventuell
+vergiftet.",0,28308
+125,WAZAINFO_SV_125,DD62E40ECBF06A21,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,28432
+126,WAZAINFO_SV_126,DD62E10ECBF06508,"Feuersbrunst, die das Ziel versengt und ihm eventuell
+Verbrennungen zufügt.",0,28752
+127,WAZAINFO_SV_127,DD62E20ECBF066BB,"Eine mächtige Attacke, durch die das Ziel eventuell
+zurückschreckt.",0,28904
+128,WAZAINFO_SV_128,DD62DF0ECBF061A2,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,29040
+129,WAZAINFO_SV_129,DD62E00ECBF06355,"Verschießt sternförmige Strahlen, die stets treffen,
+auf gegnerische Pokémon.",0,29360
+130,WAZAINFO_SV_130,DD664D0ECBF35263,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,29516
+131,WAZAINFO_SV_131,DD664C0ECBF350B0,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,29836
+132,WAZAINFO_SV_132,DD664F0ECBF355C9,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,30156
+133,WAZAINFO_SV_133,DD664E0ECBF35416,"Gedächtnisverlust, der die Spezial-Verteidigung
+stark erhöht.",0,30476
+134,WAZAINFO_SV_134,DD66510ECBF3592F,"Lenkt das Ziel durch Verbiegen eines Löffels ab
+und senkt so dessen Genauigkeit.",0,30600
+135,WAZAINFO_SV_135,DD66500ECBF3577C,"KP des Anwenders werden um 50 % der maximalen KP
+aufgefüllt.",0,30764
+136,WAZAINFO_SV_136,DD66530ECBF35C95,"Sprungtritt mit Knie. Bei Misserfolg verletzt sich der
+Anwender selbst.",0,30888
+137,WAZAINFO_SV_137,DD66520ECBF35AE2,"Schüchtert Ziel ein, sodass dieses paralysiert wird.",0,31032
+138,WAZAINFO_SV_138,DD66550ECBF35FFB,"Frisst die Träume eines schlafenden Zieles. Anwender
+wird um die Hälfte des zugefügten Schadens geheilt.",0,31140
+139,WAZAINFO_SV_139,DD66540ECBF35E48,"Hüllt gegnerische Pokémon in ein Gas ein, das sie
+vergiftet.",0,31352
+140,WAZAINFO_SV_140,DD69D30ECBF66BEC,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,31476
+141,WAZAINFO_SV_141,DD69D40ECBF66D9F,"Der Anwender saugt dem Ziel Blut ab. Die Hälfte des
+zugefügten Schadens wird dem Anwender als KP
+gutgeschrieben.",0,31796
+142,WAZAINFO_SV_142,DD69D50ECBF66F52,"Anwender zwingt dem Ziel einen Kuss auf, der Schlaf
+verursacht.",0,32024
+143,WAZAINFO_SV_143,DD69D60ECBF67105,"Anwender greift in der zweiten Runde mit hoher
+Volltrefferquote an. Ziel schreckt eventuell zurück.",0,32152
+144,WAZAINFO_SV_144,DD69CF0ECBF66520,"Anwender verwandelt sich in ein Abbild des Zieles und
+kann so auf die gleichen Attacken zugreifen.",0,32352
+145,WAZAINFO_SV_145,DD69D00ECBF666D3,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,32552
+146,WAZAINFO_SV_146,DD69D10ECBF66886,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,32872
+147,WAZAINFO_SV_147,DD69D20ECBF66A39,"Erzeugt eine Sporenwolke, die das Ziel in Schlaf
+versetzt.",0,33192
+148,WAZAINFO_SV_148,DD69DB0ECBF67984,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,33312
+149,WAZAINFO_SV_149,DD69DC0ECBF67B37,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,33632
+150,WAZAINFO_SV_150,DD6D590ECBF98575,"Nur ein Platscher, der überhaupt nichts bewirkt.",0,33952
+151,WAZAINFO_SV_151,DD6D580ECBF983C2,"Verflüssigt Körperzellen des Anwenders. Erhöht den
+Verteidigungs-Wert stark.",0,34052
+152,WAZAINFO_SV_152,DD6D570ECBF9820F,Schlägt mit Schere zu. Hohe Volltrefferquote.,0,34208
+153,WAZAINFO_SV_153,DD6D560ECBF9805C,"Anwender explodiert, richtet bei allen Pokémon
+im Umkreis großen Schaden an und wird selbst
+kampfunfähig.",0,34300
+154,WAZAINFO_SV_154,DD6D550ECBF97EA9,"Beharkt das Ziel zwei- bis fünfmal mit scharfen Klauen
+oder Sicheln.",0,34512
+155,WAZAINFO_SV_155,DD6D540ECBF97CF6,"Ein Bumerang aus Knochen, der zweimal trifft.",0,34652
+156,WAZAINFO_SV_156,DD6D530ECBF97B43,"Anwender wird vollkommen geheilt, von allen
+Statusproblemen befreit und schläft die folgenden
+zwei Runden.",0,34744
+157,WAZAINFO_SV_157,DD6D520ECBF97990,"Schleudert riesige Felsen auf gegnerische Pokémon,
+die eventuell zurückschrecken.",0,34960
+158,WAZAINFO_SV_158,DD6D610ECBF9930D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,35124
+159,WAZAINFO_SV_159,DD6D600ECBF9915A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,35444
+160,WAZAINFO_SV_160,DD705F0ECBFBC57E,"Wandelt den Typ des Anwenders in den Typ seiner
+ersten Attacke um.",0,35764
+161,WAZAINFO_SV_161,DD70600ECBFBC731,"Feuert drei Strahlen ab. Verursacht eventuell Paralyse,
+Verbrennungen oder Einfrieren.",0,35900
+162,WAZAINFO_SV_162,DD705D0ECBFBC218,"Greift mit scharfen Reißzähnen an. KP des Zieles
+werden halbiert.",0,36076
+163,WAZAINFO_SV_163,DD705E0ECBFBC3CB,"Hieb mit Klauen oder Ähnlichem.
+Hohe Volltrefferquote.",0,36208
+164,WAZAINFO_SV_164,DD70630ECBFBCC4A,"Anwender setzt eine kleine Menge an KP ein, um einen
+Doppelgänger zu erzeugen, der für ihn Schläge
+einsteckt.",0,36320
+165,WAZAINFO_SV_165,DD70640ECBFBCDFD,"Angriff nur bei verbrauchten AP. Anwender verletzt
+sich selbst leicht.",0,36540
+166,WAZAINFO_SV_166,DD70610ECBFBC8E4,"Anwender erlernt die letzte Attacke des Zieles
+dauerhaft. Nachahmer verschwindet nach Gebrauch.",0,36684
+167,WAZAINFO_SV_167,DD70620ECBFBCA97,"Tritt das Ziel ein- bis dreimal nacheinander. Die Härte
+der Tritte nimmt von Treffer zu Treffer zu.",0,36876
+168,WAZAINFO_SV_168,DD70570ECBFBB7E6,"Ermöglicht es, das Item des Zieles zu stehlen, solang
+der Anwender selbst keins bei sich trägt.",0,37076
+169,WAZAINFO_SV_169,DD70580ECBFBB999,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,37268
+170,WAZAINFO_SV_170,DD73E50ECBFEDF07,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,37588
+171,WAZAINFO_SV_171,DD73E40ECBFEDD54,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,37908
+172,WAZAINFO_SV_172,DD73E70ECBFEE26D,"Anwender hüllt sich in Flammen und rammt das Ziel.
+Verursacht beim Ziel eventuell Verbrennungen.",0,38228
+173,WAZAINFO_SV_173,DD73E60ECBFEE0BA,"Attacke nur im Schlaf möglich. Ziel schreckt
+eventuell zurück.",0,38424
+174,WAZAINFO_SV_174,DD73E10ECBFED83B,"Attacke, deren Wirkung davon abhängt, ob der
+Anwender ein Geister-Pokémon ist.",0,38552
+175,WAZAINFO_SV_175,DD73E00ECBFED688,"Attacke richtet mehr Schaden an, wenn eigene KP
+niedrig sind.",0,38712
+176,WAZAINFO_SV_176,DD73E30ECBFEDBA1,"Anwender ändert Typ und wird gegen letzten
+Angriffstyp resistent.",0,38836
+177,WAZAINFO_SV_177,DD73E20ECBFED9EE,"Erzeugt Luftstrudel gegen das Ziel.
+Hohe Volltrefferquote.",0,38968
+178,WAZAINFO_SV_178,DD73DD0ECBFED16F,"Wattebäusche heften sich an gegnerische Pokémon,
+deren Initiative-Wert dadurch stark sinkt.",0,39088
+179,WAZAINFO_SV_179,DD73DC0ECBFECFBC,"Richtet mehr Schaden an, wenn eigene KP niedrig sind.",0,39272
+180,WAZAINFO_SV_180,DD40CB0ECBD35940,AP der letzten Attacke des Zieles werden um 4 gesenkt.,0,39380
+181,WAZAINFO_SV_181,DD40CC0ECBD35AF3,"Angriff mit Schnee, durch den gegnerische Pokémon
+eventuell eingefroren werden.",0,39492
+182,WAZAINFO_SV_182,DD40CD0ECBD35CA6,"Anwender wehrt jede Attacke ab. Scheitert eventuell
+bei Wiederholung.",0,39652
+183,WAZAINFO_SV_183,DD40CE0ECBD35E59,"Bei dieser Erstschlag-Attacke greift der Anwender
+mit einem extrem schnellen Hieb an.",0,39792
+184,WAZAINFO_SV_184,DD40CF0ECBD3600C,"Jagt dem Ziel mit einer Grimasse Angst ein.
+Dessen Initiative-Wert sinkt stark.",0,39964
+185,WAZAINFO_SV_185,DD40D00ECBD361BF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,40124
+186,WAZAINFO_SV_186,DD40D10ECBD36372,"Anwender küsst das Ziel, das durch diese Niedlichkeit
+verwirrt wird.",0,40444
+187,WAZAINFO_SV_187,DD40D20ECBD36525,"Der Anwender maximiert den Angriffs-Wert auf Kosten
+der Hälfte seiner maximalen KP.",0,40584
+188,WAZAINFO_SV_188,DD40D30ECBD366D8,"Wirft Schlamm auf das Ziel. Dieses wird eventuell
+vergiftet.",0,40752
+189,WAZAINFO_SV_189,DD40D40ECBD3688B,"Schadet dem Ziel durch Matsch. Dessen Genauigkeit
+sinkt.",0,40876
+190,WAZAINFO_SV_190,DD44510ECBD672C9,"Schießt mit Tinte, um Schaden anzurichten und die
+Genauigkeit zu senken.",0,40992
+191,WAZAINFO_SV_191,DD44500ECBD67116,"Der Anwender legt Stacheln aus, die gegnerische
+Pokémon verletzen, die in den Kampf gerufen
+werden.",0,41140
+192,WAZAINFO_SV_192,DD444F0ECBD66F63,"Kanonenähnlicher Elektro-Schuss, der schadet und
+paralysiert.",0,41340
+193,WAZAINFO_SV_193,DD444E0ECBD66DB0,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,41464
+194,WAZAINFO_SV_194,DD44550ECBD67995,"Wird der Anwender nach Einsatz dieser Attacke
+kampfunfähig, führt dies auch beim Pokémon, das
+ihn besiegt hat, zum K.O. Scheitert bei Wiederholung.",0,41784
+195,WAZAINFO_SV_195,DD44540ECBD677E2,"Wer diese Musik hört, wird nach drei Runden besiegt.
+Rettung ist durch den Eintausch eines neuen Pokémon
+möglich.",0,42080
+196,WAZAINFO_SV_196,DD44530ECBD6762F,"Eis-Attacke, die gegnerischen Pokémon Schaden zufügt
+und ihren Initiative-Wert senkt.",0,42308
+197,WAZAINFO_SV_197,DD44520ECBD6747C,"Anwender wehrt jede Attacke ab. Scheitert eventuell
+bei Wiederholung.",0,42480
+198,WAZAINFO_SV_198,DD44590ECBD68061,"Greift Ziel zwei- bis fünfmal in Folge mit einem harten
+Knochen an.",0,42620
+199,WAZAINFO_SV_199,DD44580ECBD67EAE,"Der Anwender visiert das Ziel an und trifft in der
+nächsten Runde garantiert.",0,42756
+200,WAZAINFO_SV_200,F8324C0EDB5BDBE9,"Attacke über zwei bis drei Runden, die den Anwender
+danach verwirrt.",0,42912
+201,WAZAINFO_SV_201,F8324B0EDB5BDA36,"Sandsturm für fünf Runden. Schadet Pokémon aller
+Typen außer Gestein, Boden und Stahl. Erhöht die
+Spezial-Verteidigung von Gesteins-Pokémon.",0,43052
+202,WAZAINFO_SV_202,F8324A0EDB5BD883,"Das Ziel wird angegriffen und die Hälfte des zugefügten
+Schadens dem Anwender als KP gutgeschrieben.",0,43336
+203,WAZAINFO_SV_203,F832490EDB5BD6D0,"Nach fatalen Attacken bleibt stets 1 KP übrig.
+Misserfolg bei Wiederholung möglich.",0,43540
+204,WAZAINFO_SV_204,F832500EDB5BE2B5,Betört das Ziel und reduziert dessen Angriffs-Wert stark.,0,43708
+205,WAZAINFO_SV_205,F8324F0EDB5BE102,"Attacke, die fünf Runden dauert. Mit jedem Treffer
+steigt die Stärke.",0,43824
+206,WAZAINFO_SV_206,F8324E0EDB5BDF4F,"Ein Angriff, der dem Ziel zumindest 1 KP lässt.",0,43964
+207,WAZAINFO_SV_207,F8324D0EDB5BDD9C,Verwirrt das Ziel und erhöht dessen Angriffs-Wert stark.,0,44060
+208,WAZAINFO_SV_208,F832540EDB5BE981,"KP des Anwenders werden um 50 % der maximalen KP
+aufgefüllt.",0,44176
+209,WAZAINFO_SV_209,F832530EDB5BE7CE,"Eine Elektro-Attacke, die das Ziel paralysieren kann.",0,44300
+210,WAZAINFO_SV_210,F82EC60EDB58C260,"Eine Attacke mit Scheren oder Klauen, deren Härte bei
+aufeinanderfolgenden Treffern zunimmt.",0,44408
+211,WAZAINFO_SV_211,F82EC70EDB58C413,"Trifft das Ziel mit Stahlflügeln. Verteidigungs-Wert des
+Anwenders steigt eventuell.",0,44596
+212,WAZAINFO_SV_212,F82EC80EDB58C5C6,"Der Anwender starrt das Ziel mit einem bösen Blick
+an und hindert es dadurch an der Flucht beziehungsweise
+am Auswechseln.",0,44768
+213,WAZAINFO_SV_213,F82EC90EDB58C779,"Wenn das Ziel nicht dem Geschlecht des Anwenders
+angehört, fühlt es sich zu ihm hingezogen und greift
+eventuell nicht an.",0,45016
+214,WAZAINFO_SV_214,F82ECA0EDB58C92C,"Anwender setzt per Zufall eine ihm bekannte Attacke
+ein. Klappt nur, wenn der Anwender gerade schläft.",0,45260
+215,WAZAINFO_SV_215,F82ECB0EDB58CADF,"Läutet beruhigend und heilt alle Statusprobleme
+im Team.",0,45468
+216,WAZAINFO_SV_216,F82ECC0EDB58CC92,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,45584
+217,WAZAINFO_SV_217,F82ECD0EDB58CE45,"Eine Bombe als Geschenk. Kann auch KP des Zieles
+wiederherstellen.",0,45904
+218,WAZAINFO_SV_218,F82ECE0EDB58CFF8,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,46040
+219,WAZAINFO_SV_219,F82ECF0EDB58D1AB,"Team des Anwenders ist fünf Runden lang vor
+Statusproblemen geschützt.",0,46360
+220,WAZAINFO_SV_220,F838D80EDB61357B,Addiert KP von Anwender und Ziel. Teilt sie gerecht auf.,0,46504
+221,WAZAINFO_SV_221,F838D70EDB6133C8,"Mystische Feuer-Attacke, durch die das Ziel eventuell
+Verbrennungen erleidet.",0,46620
+222,WAZAINFO_SV_222,F838DA0EDB6138E1,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,46776
+223,WAZAINFO_SV_223,F838D90EDB61372E,"Kräftiger Schlag, der das Ziel bei Erfolg verwirrt.",0,47096
+224,WAZAINFO_SV_224,F838DC0EDB613C47,"Brutaler Ramm-Angriff mit spitzem,
+beeindruckendem Horn.",0,47200
+225,WAZAINFO_SV_225,F838DB0EDB613A94,"Fegt das Ziel mit zerstörerisch heißem Atem weg.
+Paralysiert das Ziel eventuell.",0,47316
+226,WAZAINFO_SV_226,F838DE0EDB613FAD,"Tauscht den Anwender aus und überträgt alle
+Statusveränderungen auf das eingewechselte
+Pokémon.",0,47480
+227,WAZAINFO_SV_227,F838DD0EDB613DFA,Das Ziel wiederholt die letzte Attacke drei Runden lang.,0,47672
+228,WAZAINFO_SV_228,F838D00EDB6127E3,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,47788
+229,WAZAINFO_SV_229,F838CF0EDB612630,"Trifft das Ziel mit einer Dreh-Attacke. Befreit den
+Anwender unter anderem von Wickel, Klammergriff
+und Egelsamen. Erhöht die Initiative des Anwenders.",0,48108
+230,WAZAINFO_SV_230,F835520EDB5E1BF2,"Senkt den Ausweichwert der gegnerischen Pokémon
+stark.",0,48412
+231,WAZAINFO_SV_231,F835530EDB5E1DA5,"Attacke mit hartem Eisenschweif. Senkt eventuell den
+Verteidigungs-Wert des Zieles.",0,48524
+232,WAZAINFO_SV_232,F835500EDB5E188C,"Klauen-Attacke, die eventuell den Angriffs-Wert des
+Anwenders erhöht.",0,48692
+233,WAZAINFO_SV_233,F835510EDB5E1A3F,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,48832
+234,WAZAINFO_SV_234,F8354E0EDB5E1526,"Füllt KP des Anwenders auf. Die Menge hängt vom
+Wetter ab.",0,49152
+235,WAZAINFO_SV_235,F8354F0EDB5E16D9,"Füllt KP des Anwenders auf. Die Menge hängt vom
+Wetter ab.",0,49272
+236,WAZAINFO_SV_236,F8354C0EDB5E11C0,"Füllt KP des Anwenders auf. Die Menge hängt vom
+Wetter ab.",0,49392
+237,WAZAINFO_SV_237,F8354D0EDB5E1373,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,49512
+238,WAZAINFO_SV_238,F8355A0EDB5E298A,"Doppelter Hieb mit den Unterarmen.
+Hohe Volltrefferquote.",0,49832
+239,WAZAINFO_SV_239,F8355B0EDB5E2B3D,"Trifft gegnerische Pokémon mit einem heftigen
+Wirbelsturm, was diese eventuell zurückschrecken
+lässt.",0,49948
+240,WAZAINFO_SV_240,F83FE40EDB67688D,"Anwender erzeugt starken Regen. Die Stärke von
+Wasser-Attacken erhöht sich fünf Runden lang,
+während die Stärke von Feuer-Attacken sinkt.",0,50152
+241,WAZAINFO_SV_241,F83FE30EDB6766DA,"Die Sonne brennt unbarmherzig fünf Runden lang.
+Dadurch werden Attacken vom Typ Feuer verstärkt,
+während Wasser-Attacken abgeschwächt werden.",0,50428
+242,WAZAINFO_SV_242,F83FE20EDB676527,"Beißt mit scharfen Reißzähnen zu und senkt eventuell
+die Verteidigung.",0,50712
+243,WAZAINFO_SV_243,F83FE10EDB676374,"Kontert die Spezial-Attacke des Gegners mit doppeltem
+Schaden.",0,50856
+244,WAZAINFO_SV_244,F83FE00EDB6761C1,"Der Anwender hypnotisiert sich selbst, um die
+Statusveränderungen des Zieles zu kopieren.",0,50984
+245,WAZAINFO_SV_245,F83FDF0EDB67600E,Extrem schnelle und kraftvolle Erstschlag-Attacke.,0,51164
+246,WAZAINFO_SV_246,F83FDE0EDB675E5B,"Angriff mit antiker Kraft, der alle Statuswerte
+erhöhen kann.",0,51268
+247,WAZAINFO_SV_247,F83FDD0EDB675CA8,"Bewirft das Ziel mit einem gruseligen Ball und senkt
+eventuell dessen Spezial-Verteidigung.",0,51392
+248,WAZAINFO_SV_248,F83FDC0EDB675AF5,"Zwei Runden, nachdem Seher eingesetzt wurde,
+erfolgt ein Angriff mit Psycho-Energie.",0,51576
+249,WAZAINFO_SV_249,F83FDB0EDB675942,"Der Anwender greift mit einem Hieb an und kann so
+den Verteidigungs-Wert des Zieles senken.",0,51748
+250,WAZAINFO_SV_250,F83C5E0EDB644F04,"Das Ziel wird für vier bis fünf Runden in einer
+Wasserhose gefangen.",0,51932
+251,WAZAINFO_SV_251,F83C5F0EDB6450B7,"Der Anwender greift zusammen mit allen Mitgliedern
+seines Teams das Ziel an. Je mehr Pokémon sich im
+Team befinden, desto höher die Anzahl der Angriffe.",0,52072
+252,WAZAINFO_SV_252,F83C600EDB64526A,"Erstschlag-Attacke, die das Ziel zurückschrecken lässt.
+Gelingt nur, wenn sie sofort eingesetzt wird, nachdem
+der Anwender das Kampffeld betreten hat.",0,52380
+253,WAZAINFO_SV_253,F83C610EDB64541D,"Anwender greift an, indem er über drei Runden hinweg
+einen Aufruhr erzeugt. Verhindert Schlaf.",0,52684
+254,WAZAINFO_SV_254,F83C5A0EDB644838,"Lädt Kraft für später auf. Erhöht Verteidigung und
+Spezial-Verteidigung. Kann bis zu dreimal eingesetzt
+werden.",0,52876
+255,WAZAINFO_SV_255,F83C5B0EDB6449EB,"Entlädt die Kraft, die während des Einsatzes von Horter
+gesammelt wurde. Je mehr Energie gehortet wurde,
+desto stärker der Angriff.",0,53100
+256,WAZAINFO_SV_256,F83C5C0EDB644B9E,"Absorbiert die gehortete Kraft, um KP aufzufüllen.
+Je mehr Energie gehortet wurde, desto mehr KP
+werden aufgefüllt.",0,53364
+257,WAZAINFO_SV_257,F83C5D0EDB644D51,"Gegnerische Pokémon werden von einem Sturm aus
+heißer Luft getroffen und erleiden eventuell
+Verbrennungen.",0,53596
+258,WAZAINFO_SV_258,F83C560EDB64416C,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,53812
+259,WAZAINFO_SV_259,F83C570EDB64431F,"Erzürnt das Ziel, um wiederholten Einsatz derselben
+Attacke zu verhindern.",0,54132
+260,WAZAINFO_SV_260,F846500EDB6C8BBF,"Schmeichelt dem Ziel, um es zu verwirren.
+Erhöht dessen Spezial-Angriff.",0,54284
+261,WAZAINFO_SV_261,F8464F0EDB6C8A0C,"Anwender feuert unheimliche Flammen ab, die beim
+Ziel Verbrennungen verursachen.",0,54432
+262,WAZAINFO_SV_262,F846520EDB6C8F25,"Der Anwender wird besiegt. Gleichzeitig werden der
+Angriff und Spezial-Angriff des Zieles stark gesenkt.",0,54596
+263,WAZAINFO_SV_263,F846510EDB6C8D72,"Ist der Anwender vergiftet, paralysiert oder leidet er
+unter Verbrennungen, verdoppelt sich die Kraft der
+Attacke.",0,54808
+264,WAZAINFO_SV_264,F8464C0EDB6C84F3,"Anwender konzentriert sich, bevor er angreift. Wird er
+vorher getroffen, ist die Attacke erfolglos.",0,55040
+265,WAZAINFO_SV_265,F8464B0EDB6C8340,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,55240
+266,WAZAINFO_SV_266,F8464E0EDB6C8859,"Zieht Aufmerksamkeit auf sich. Gegner greifen nur den
+Anwender an.",0,55560
+267,WAZAINFO_SV_267,F8464D0EDB6C86A6,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,55696
+268,WAZAINFO_SV_268,F846580EDB6C9957,"Der Anwender beginnt einen Ladevorgang, was die
+Stärke seiner nächsten Elektro-Attacke erhöht.
+Außerdem steigt seine Spezial-Verteidigung.",0,56016
+269,WAZAINFO_SV_269,F846570EDB6C97A4,"Bringt das Ziel in Rage. Dieses kann über drei Runden
+hinweg nur noch angreifen.",0,56296
+270,WAZAINFO_SV_270,F8434A0EDB6A4BB6,"Anwender steigert die Stärke der Attacke eines
+Mitstreiters.",0,56460
+271,WAZAINFO_SV_271,F8434B0EDB6A4D69,"Der Anwender überrumpelt das Ziel und tauscht mit
+ihm die getragenen Items.",0,56584
+272,WAZAINFO_SV_272,F843480EDB6A4850,Ahmt das Ziel nach und kopiert seine Fähigkeit.,0,56736
+273,WAZAINFO_SV_273,F843490EDB6A4A03,"Ein Wunsch füllt in der nächsten Runde 50 % der KP
+des Anwenders bei diesem oder einem eingewechselten
+Pokémon auf.",0,56832
+274,WAZAINFO_SV_274,F8434E0EDB6A5282,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,57064
+275,WAZAINFO_SV_275,F8434F0EDB6A5435,"Die Verwurzelung des Anwenders füllt jede Runde
+seine KP auf, aber hindert ihn dafür an der Flucht
+beziehungsweise am Auswechseln.",0,57384
+276,WAZAINFO_SV_276,F8434C0EDB6A4F1C,"Starke Attacke, die jedoch auch den Angriff und die
+Verteidigung des Anwenders senkt.",0,57648
+277,WAZAINFO_SV_277,F8434D0EDB6A50CF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,57820
+278,WAZAINFO_SV_278,F843520EDB6A594E,"Recycling eines getragenen Items, das zuvor im Kampf
+verwendet wurde.",0,58140
+279,WAZAINFO_SV_279,F843530EDB6A5B01,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,58280
+280,WAZAINFO_SV_280,F84D5C0EDB72BED1,"Ein beherzter Handkantenschlag. Durchbricht Barrieren
+wie Lichtschild und Reflektor.",0,58600
+281,WAZAINFO_SV_281,F84D5B0EDB72BD1E,"Anwender gähnt und das Ziel schläft in der nächsten
+Runde ein.",0,58772
+282,WAZAINFO_SV_282,F84D5A0EDB72BB6B,"Schlägt das Item des Zieles weg und vereitelt so dessen
+Gebrauch während des Kampfes. Mehr Schaden gegen
+Ziele, die ein Item bei sich tragen.",0,58900
+283,WAZAINFO_SV_283,F84D590EDB72B9B8,"Trifft nur, wenn KP des Anwenders geringer als KP des
+Zieles sind. Senkt dessen KP auf die Höhe der KP des
+Anwenders.",0,59184
+284,WAZAINFO_SV_284,F84D600EDB72C59D,"Explosiver Angriff gegen gegnerische Pokémon.
+Je höher die KP des Anwenders sind, desto mehr
+Schaden wird angerichtet.",0,59420
+285,WAZAINFO_SV_285,F84D5F0EDB72C3EA,Anwender tauscht seine Fähigkeit mit der des Zieles.,0,59660
+286,WAZAINFO_SV_286,F84D5E0EDB72C237,"Hindert Gegner am Einsatz von Attacken, die der
+Anwender selbst auch kennt.",0,59768
+287,WAZAINFO_SV_287,F84D5D0EDB72C084,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,59920
+288,WAZAINFO_SV_288,F84D540EDB72B139,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,60240
+289,WAZAINFO_SV_289,F84D530EDB72AF86,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,60560
+290,WAZAINFO_SV_290,F849D60EDB6FA548,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,60880
+291,WAZAINFO_SV_291,F849D70EDB6FA6FB,"Anwender taucht in Runde 1 ab und greift in Runde 2
+aus der Tiefe an.",0,61200
+292,WAZAINFO_SV_292,F849D80EDB6FA8AE,"Schläge mit geradem Arm, die das Ziel zwei- bis
+fünfmal treffen.",0,61340
+293,WAZAINFO_SV_293,F849D90EDB6FAA61,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,61472
+294,WAZAINFO_SV_294,F849DA0EDB6FAC14,"Ein blinkendes Licht, das den Spezial-Angriff drastisch
+erhöht.",0,61792
+295,WAZAINFO_SV_295,F849DB0EDB6FADC7,"Angriff mit einem grellen Licht, der die
+Spezial-Verteidigung des Zieles eventuell senkt.",0,61920
+296,WAZAINFO_SV_296,F849DC0EDB6FAF7A,"Angriff mit einer Nebelwolke aus Daunen. Senkt
+eventuell den Spezial-Angriff des Zieles.",0,62100
+297,WAZAINFO_SV_297,F849DD0EDB6FB12D,"Hüllt das Ziel in Daunen und senkt dessen
+Angriffs-Wert stark.",0,62280
+298,WAZAINFO_SV_298,F849CE0EDB6F97B0,"Ein Wackeltanz, der alle Pokémon im Umkreis verwirrt.",0,62408
+299,WAZAINFO_SV_299,F849CF0EDB6F9963,"Starker Tritt mit hoher Volltrefferquote. Verursacht
+eventuell Verbrennungen.",0,62516
+300,WAZAINFO_SV_300,EF88B10ED673A6DE,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,62672
+301,WAZAINFO_SV_301,EF88B20ED673A891,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,62992
+302,WAZAINFO_SV_302,EF88AF0ED673A378,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,63312
+303,WAZAINFO_SV_303,EF88B00ED673A52B,"Durch Müßiggang werden KP des Anwenders um 50 %
+der maximalen KP aufgefüllt.",0,63632
+304,WAZAINFO_SV_304,EF88B50ED673ADAA,"Eine laute Attacke, bei der gegnerische Pokémon mit
+Schallwellen angegriffen werden.",0,63788
+305,WAZAINFO_SV_305,EF88B60ED673AF5D,"Angriff mit giftigen Reißzähnen. Das Ziel wird eventuell
+schwer vergiftet.",0,63960
+306,WAZAINFO_SV_306,EF88B30ED673AA44,"Angriff mit scharfen Klauen. Senkt eventuell den
+Verteidigungs-Wert.",0,64112
+307,WAZAINFO_SV_307,EF88B40ED673ABF7,"Das Ziel wird von einer starken Explosion getroffen.
+Anwender setzt eine Runde aus.",0,64252
+308,WAZAINFO_SV_308,EF88A90ED6739946,"Das Ziel wird von einer Wasserkanone getroffen.
+Anwender setzt eine Runde aus.",0,64420
+309,WAZAINFO_SV_309,EF88AA0ED6739AF9,"Angriff mit einem harten, schnellen Schlag. Erhöht
+eventuell Angriffs-Wert des Anwenders.",0,64580
+310,WAZAINFO_SV_310,EF8C370ED676C067,"Anwender greift mit einem Schrei an. Ein Angriff,
+der das Ziel eventuell zurückschrecken lässt.",0,64760
+311,WAZAINFO_SV_311,EF8C360ED676BEB4,"Typ und Stärke der Attacke sind vom Wetter zum
+Zeitpunkt der Anwendung abhängig.",0,64952
+312,WAZAINFO_SV_312,EF8C390ED676C3CD,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,65116
+313,WAZAINFO_SV_313,EF8C380ED676C21A,"Täuscht Weinen vor, um die Spezial-Verteidigung des
+Zieles stark zu senken.",0,65436
+314,WAZAINFO_SV_314,EF8C330ED676B99B,"Greift gegnerische Pokémon mit rasierklingenartigem
+Wind an. Hohe Volltrefferquote.",0,65588
+315,WAZAINFO_SV_315,EF8C320ED676B7E8,"Angriff mit voller Kraft, der den Spezial-Angriff des
+Anwenders durch den Rückstoß stark senkt.",0,65756
+316,WAZAINFO_SV_316,EF8C350ED676BD01,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,65948
+317,WAZAINFO_SV_317,EF8C340ED676BB4E,"Angriff mit Felsen. Bei Erfolg wird der Initiative-Wert
+des Zieles gesenkt.",0,66268
+318,WAZAINFO_SV_318,EF8C2F0ED676B2CF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,66420
+319,WAZAINFO_SV_319,EF8C2E0ED676B11C,"Stößt einen spitzen Schrei aus, der die
+Spezial-Verteidigung des Zieles stark senkt.",0,66740
+320,WAZAINFO_SV_320,EF81A50ED66D73CC,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,66912
+321,WAZAINFO_SV_321,EF81A60ED66D757F,"Bringt das Ziel zum Lachen und senkt dadurch dessen
+Angriff und Verteidigung.",0,67232
+322,WAZAINFO_SV_322,EF81A70ED66D7732,"Erhöht Verteidigung und Spezial-Verteidigung durch
+eine mystische Kraft.",0,67388
+323,WAZAINFO_SV_323,EF81A80ED66D78E5,"Eine Wasser-Attacke gegen gegnerische Pokémon.
+Je höher die KP des Anwenders sind, desto mehr
+Schaden richtet sie an.",0,67536
+324,WAZAINFO_SV_324,EF81A10ED66D6D00,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,67772
+325,WAZAINFO_SV_325,EF81A20ED66D6EB3,"Angriff mit der Faust aus dem Schattenreich.
+Ausweichen unmöglich.",0,68092
+326,WAZAINFO_SV_326,EF81A30ED66D7066,"Besonderer Angriff mit einer unsichtbaren Kraft,
+die das Ziel eventuell zurückschrecken lässt.",0,68228
+327,WAZAINFO_SV_327,EF81A40ED66D7219,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,68420
+328,WAZAINFO_SV_328,EF81AD0ED66D8164,"Das Ziel leidet für vier bis fünf Runden in einer
+Sandhose.",0,68740
+329,WAZAINFO_SV_329,EF81AE0ED66D8317,"Diese Attacke führt beim Ziel sofort zum K.O. Wird sie
+von einem Pokémon eingesetzt, das nicht dem Typ Eis
+angehört, trifft sie seltener.",0,68860
+330,WAZAINFO_SV_330,EF852B0ED6708D55,"Greift mit Matsch an und senkt eventuell die
+Genauigkeit der gegnerischen Pokémon.",0,69136
+331,WAZAINFO_SV_331,EF852A0ED6708BA2,"Der Anwender wirft zwei- bis fünfmal in rascher Folge
+Samen auf das Ziel.",0,69304
+332,WAZAINFO_SV_332,EF85290ED67089EF,"Eine extrem schnelle Attacke, der das Ziel nicht
+ausweichen kann.",0,69452
+333,WAZAINFO_SV_333,EF85280ED670883C,Feuert zwei bis fünf Eiszapfen auf das Ziel.,0,69584
+334,WAZAINFO_SV_334,EF85270ED6708689,"Anwender stärkt den Körper, um den
+Verteidigungs-Wert stark zu erhöhen.",0,69676
+335,WAZAINFO_SV_335,EF85260ED67084D6,"Der Anwender breitet seine Arme aus, um dem Ziel den
+Fluchtweg zu versperren und es so an der Flucht
+beziehungsweise am Auswechseln zu hindern.",0,69820
+336,WAZAINFO_SV_336,EF85250ED6708323,"Der Kampfgeist sowie der Angriffs-Wert des Anwenders
+und seiner Mitstreiter werden durch lautes Jaulen
+erhöht.",0,70108
+337,WAZAINFO_SV_337,EF85240ED6708170,"Der Anwender greift das Ziel mit riesigen, scharfen
+Klauen an.",0,70332
+338,WAZAINFO_SV_338,EF85330ED6709AED,"Mächtiger Angriff mit Ästen. Der Anwender muss eine
+Runde aussetzen.",0,70460
+339,WAZAINFO_SV_339,EF85320ED670993A,"Der Anwender spannt seine Muskeln an, um den Angriff
+und die Verteidigung zu erhöhen.",0,70600
+340,WAZAINFO_SV_340,EF7B390ED668509A,"Anwender springt und landet in der nächsten Runde
+auf dem Ziel. Das Ziel wird eventuell paralysiert.",0,70772
+341,WAZAINFO_SV_341,EF7B3A0ED668524D,"Angriff mit Lehm, der den Initiative-Wert des Zieles
+senkt.",0,70976
+342,WAZAINFO_SV_342,EF7B370ED6684D34,"Angriff mit hoher Volltrefferquote. Diese Schweifattacke
+vergiftet das Ziel eventuell.",0,71096
+343,WAZAINFO_SV_343,EF7B380ED6684EE7,"Der Anwender schmeichelt sich beim Ziel ein und
+stiehlt dann das von ihm getragene Item.",0,71272
+344,WAZAINFO_SV_344,EF7B350ED66849CE,"Angriff mit Elektro-Tackle. Der Anwender nimmt dabei
+selbst großen Schaden. Das Ziel wird eventuell
+paralysiert.",0,71452
+345,WAZAINFO_SV_345,EF7B360ED6684B81,"Magischer Blattangriff, dem nicht auszuweichen ist.",0,71680
+346,WAZAINFO_SV_346,EF7B330ED6684668,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,71784
+347,WAZAINFO_SV_347,EF7B340ED668481B,"Erhöht Spezial-Angriff und Spezial-Verteidigung durch
+Konzentration.",0,72104
+348,WAZAINFO_SV_348,EF7B310ED6684302,Hieb mit scharfkantigem Blatt. Hohe Volltrefferquote.,0,72244
+349,WAZAINFO_SV_349,EF7B320ED66844B5,"Ein mystischer Tanz, der den Angriffs- und
+Initiative-Wert erhöht.",0,72352
+350,WAZAINFO_SV_350,EF7E9F0ED66B33C3,Wirft zwei- bis fünfmal in Folge Felsblöcke auf das Ziel.,0,72488
+351,WAZAINFO_SV_351,EF7E9E0ED66B3210,"Angriff mit schnellem Elektro-Schlag. Ausweichen nicht
+möglich.",0,72604
+352,WAZAINFO_SV_352,EF7EA10ED66B3729,"Angriff mit Wasserwelle, die das Ziel eventuell
+verwirren kann.",0,72732
+353,WAZAINFO_SV_353,EF7EA00ED66B3576,"Angriff mit gebündeltem Licht erfolgt zwei Runden
+nach Attackeneinsatz.",0,72860
+354,WAZAINFO_SV_354,EF7EA30ED66B3A8F,"Angriff mit voller Kraft, der den Spezial-Angriff des
+Anwenders durch den Rückstoß stark senkt.",0,73004
+355,WAZAINFO_SV_355,EF7EA20ED66B38DC,"Anwender landet und ruht sich aus. KP des Anwenders
+werden um 50 % der maximalen KP aufgefüllt.",0,73196
+356,WAZAINFO_SV_356,EF7EA50ED66B3DF5,"Ermöglicht es, Flug-Pokémon oder Pokémon mit der
+Fähigkeit Schwebe mit Boden-Attacken zu treffen.
+Verhindert Attacken, bei denen der Anwender fliegt.",0,73388
+357,WAZAINFO_SV_357,EF7EA40ED66B3C42,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,73688
+358,WAZAINFO_SV_358,EF7EA70ED66B415B,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,74008
+359,WAZAINFO_SV_359,EF7EA60ED66B3FA8,"Anwender trifft mit einem starken Hieb. Senkt Initiative
+des Anwenders.",0,74328
+360,WAZAINFO_SV_360,EF742D0ED6621D88,"Angriff mit hoher Geschwindigkeit. Je niedriger die
+Initiative des Anwenders im Vergleich zum Ziel ist,
+desto höher der Schaden.",0,74472
+361,WAZAINFO_SV_361,EF742E0ED6621F3B,"Anwender geht K.O. Das an seine Stelle tretende
+Pokémon hat volle KP. Statusprobleme werden
+geheilt.",0,74732
+362,WAZAINFO_SV_362,EF742F0ED66220EE,"Hat das Ziel die Hälfte oder weniger seiner maximalen
+KP, trifft diese Attacke mit doppelter Kraft.",0,74936
+363,WAZAINFO_SV_363,EF74300ED66222A1,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,75136
+364,WAZAINFO_SV_364,EF74310ED6622454,"Ziele, die Attacken wie Schutzschild oder Scanner
+eingesetzt haben, werden getroffen. Entfernt Effekte
+dieser Attacken.",0,75456
+365,WAZAINFO_SV_365,EF74320ED6622607,"Anwender pickt das Ziel, nimmt die Beere, falls das
+Ziel eine trägt, und erhält ihren Effekt.",0,75696
+366,WAZAINFO_SV_366,EF74330ED66227BA,"Anwender erzeugt einen Wirbelwind, der die Initiative
+aller Pokémon im Team für vier Runden erhöht.",0,75884
+367,WAZAINFO_SV_367,EF74340ED662296D,"Anwender übt Druck auf Stresspunkte aus und erhöht
+einen Statuswert stark.",0,76084
+368,WAZAINFO_SV_368,EF74250ED6620FF0,"Der Anwender rächt sich an dem Gegner, der ihm mit
+einer Attacke zuletzt Schaden zugefügt hat, indem
+er ihm den Schaden mit erhöhter Kraft zurückzahlt.",0,76236
+369,WAZAINFO_SV_369,EF74260ED66211A3,"Nach der Attacke eilt der Anwender zurück und
+tauscht den Platz mit einem anderen Pokémon.",0,76540
+370,WAZAINFO_SV_370,EF77B30ED6653711,"Nahkampf-Attacke ohne Rücksicht auf Verluste. Senkt
+Verteidigung und Spezial-Verteidigung des Anwenders.",0,76724
+371,WAZAINFO_SV_371,EF77B20ED665355E,"Der Anwender lädt die Attacke auf. Handelt das Ziel vor
+dem Anwender, verdoppelt sich die Stärke der Attacke.",0,76936
+372,WAZAINFO_SV_372,EF77B10ED66533AB,"Hat das Ziel während der Runde schon Schaden
+genommen, wird die Stärke der Attacke verdoppelt.",0,77156
+373,WAZAINFO_SV_373,EF77B00ED66531F8,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,77348
+374,WAZAINFO_SV_374,EF77B70ED6653DDD,"Anwender schleudert sein Item auf das Ziel. Stärke und
+Effekt der Attacke hängen vom Item ab.",0,77668
+375,WAZAINFO_SV_375,EF77B60ED6653C2A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,77856
+376,WAZAINFO_SV_376,EF77B50ED6653A77,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,78176
+377,WAZAINFO_SV_377,EF77B40ED66538C4,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,78496
+378,WAZAINFO_SV_378,EF77AB0ED6652979,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,78816
+379,WAZAINFO_SV_379,EF77AA0ED66527C6,"Anwender setzt Psycho-Kräfte ein, um eigenen
+Angriffs- mit Verteidigungs-Wert auszutauschen.",0,79136
+380,WAZAINFO_SV_380,EF6DA10ED65CC3F6,"Anwender greift das Ziel mit eigenen Magensäften an.
+Entfernt Effekte von dessen Fähigkeit.",0,79324
+381,WAZAINFO_SV_381,EF6DA20ED65CC5A9,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,79508
+382,WAZAINFO_SV_382,EF6D9F0ED65CC090,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,79828
+383,WAZAINFO_SV_383,EF6DA00ED65CC243,"Anwender imitiert die gerade verwendete Attacke.
+Dies schlägt fehl, falls zuvor keine Attacke
+verwendet wurde.",0,80148
+384,WAZAINFO_SV_384,EF6DA50ED65CCAC2,"Psychische Kräfte tauschen Änderungen an Angriff
+und Spezial-Angriff mit denen des Zieles.",0,80372
+385,WAZAINFO_SV_385,EF6DA60ED65CCC75,"Psychische Kräfte tauschen Änderungen an Verteidigung
+und Spezial-Verteidigung mit denen des Zieles.",0,80556
+386,WAZAINFO_SV_386,EF6DA30ED65CC75C,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,80760
+387,WAZAINFO_SV_387,EF6DA40ED65CC90F,"Diese Attacke kann nur eingesetzt werden, nachdem
+alle verfügbaren Attacken ausgeführt worden sind.",0,81080
+388,WAZAINFO_SV_388,EF6DA90ED65CD18E,"Ziel wird bepflanzt. Seine Fähigkeit wandelt sich zu
+Insomnia und hindert es daran, einzuschlafen.",0,81280
+389,WAZAINFO_SV_389,EF6DAA0ED65CD341,"Erstschlag-Attacke, die aber nur gelingt, wenn das Ziel
+gerade eine Attacke vorbereitet, die KP-Schaden
+zufügen würde.",0,81480
+390,WAZAINFO_SV_390,EF70A70ED65F03FF,"Anwender legt eine Falle mit giftigen Stacheln aus.
+In den Kampf eingewechselte gegnerische Pokémon
+werden vergiftet.",0,81720
+391,WAZAINFO_SV_391,EF70A60ED65F024C,"Anwender setzt Psycho-Kräfte ein, um
+Statusveränderungen des Zieles mit den
+eigenen zu tauschen.",0,81956
+392,WAZAINFO_SV_392,EF70A90ED65F0765,"Anwender umgibt sich mit einem Schleier aus Wasser.
+Dabei regeneriert er einige KP pro Runde.",0,82152
+393,WAZAINFO_SV_393,EF70A80ED65F05B2,"Anwender schwebt für fünf Runden durch elektrisch
+erzeugten Magnetismus.",0,82340
+394,WAZAINFO_SV_394,EF70A30ED65EFD33,"Anwender hüllt sich in Flammen und stürmt auf das
+Ziel zu, das dadurch eventuell Verbrennungen
+erleidet. Anwender nimmt selbst großen Schaden.",0,82488
+395,WAZAINFO_SV_395,EF70A20ED65EFB80,"Das Ziel wird mit einer Schockwelle angegriffen,
+die es eventuell paralysiert.",0,82776
+396,WAZAINFO_SV_396,EF70A50ED65F0099,"Tief aus dem Inneren des Anwenders löst sich ein
+kraftvoller Stoß Aura-Energie. Diese Attacke trifft
+garantiert.",0,82936
+397,WAZAINFO_SV_397,EF70A40ED65EFEE6,"Anwender reduziert so gut wie möglich den
+Luftwiderstand. Erhöht den Initiative-Wert stark.",0,83164
+398,WAZAINFO_SV_398,EF70AF0ED65F1197,"Der Anwender greift mit giftigen Gliedmaßen wie
+Tentakeln oder Armen an. Das Ziel wird dabei
+eventuell vergiftet.",0,83348
+399,WAZAINFO_SV_399,EF70AE0ED65F0FE4,"Anwender greift mit fürchterlicher Aura schlechter
+Gedanken an. Ziel schreckt eventuell zurück.",0,83576
+400,WAZAINFO_SV_400,08ABA20EE472D89F,"Anwender greift bei der ersten Gelegenheit mit
+scharfen Klauen an. Hohe Volltrefferquote.",0,83768
+401,WAZAINFO_SV_401,08ABA10EE472D6EC,"Anwender attackiert mit dem Schweif, als ob dieser
+eine brutale Welle in einem tosenden Sturm sei.",0,83948
+402,WAZAINFO_SV_402,08ABA40EE472DC05,"Anwender lässt eine Menge Samen mit harter Schale
+von oben auf das Ziel fallen.",0,84148
+403,WAZAINFO_SV_403,08ABA30EE472DA52,"Das Ziel wird mit einer Luftklinge angegriffen.
+Ziel schreckt eventuell zurück.",0,84308
+404,WAZAINFO_SV_404,08AB9E0EE472D1D3,"Der Anwender führt eine Attacke aus, die einer
+Scherenbewegung ähnelt.",0,84468
+405,WAZAINFO_SV_405,08AB9D0EE472D020,"Anwender erzeugt Schallwellen, die beim Ziel Schaden
+verursachen und eventuell dessen Spezial-Verteidigung
+senken.",0,84612
+406,WAZAINFO_SV_406,08ABA00EE472D539,"Das Ziel wird mit einer Schockwelle angegriffen,
+die aus dem offenen Maul des Anwenders kommt.",0,84844
+407,WAZAINFO_SV_407,08AB9F0EE472D386,"Anwender führt einen furchteinflößenden Angriff aus.
+Das Ziel schreckt eventuell zurück.",0,85036
+408,WAZAINFO_SV_408,08ABAA0EE472E637,"Anwender attackiert mit einem Lichtstrahl, der funkelt,
+als sei er aus Juwelen.",0,85216
+409,WAZAINFO_SV_409,08ABA90EE472E484,"Entzieht dem Ziel Energie. Die Hälfte des Schadens
+wird den KP des Anwenders zugerechnet.",0,85376
+410,WAZAINFO_SV_410,08A81C0EE46FBF16,"Erstschlag-Attacke, bei der ein Faustwirbel eine
+Vakuumwelle auf das Ziel sendet.",0,85556
+411,WAZAINFO_SV_411,08A81D0EE46FC0C9,"Anwender erhöht seinen mentalen Fokus und greift
+dann an. Senkt eventuell Spezial-Verteidigung des
+Zieles.",0,85720
+412,WAZAINFO_SV_412,08A81A0EE46FBBB0,"Anwender zieht Kraft aus der Natur und feuert sie auf
+das Ziel. Senkt eventuell Spezial-Verteidigung des
+Zieles.",0,85936
+413,WAZAINFO_SV_413,08A81B0EE46FBD63,"Anwender greift aus niedriger Höhe an. Er erleidet
+bei dieser Attacke selbst großen Schaden.",0,86164
+414,WAZAINFO_SV_414,08A8200EE46FC5E2,"Der Boden unter dem Ziel erzittert durch die Kraft
+der Erde. Senkt eventuell Spezial-Verteidigung.",0,86352
+415,WAZAINFO_SV_415,08A8210EE46FC795,"Anwender tauscht in Windeseile sein getragenes Item
+mit dem des Zieles.",0,86552
+416,WAZAINFO_SV_416,08A81E0EE46FC27C,"Anwender rennt mit seiner ganzen Kraft gegen das
+Ziel an und muss dann eine Runde ruhen.",0,86696
+417,WAZAINFO_SV_417,08A81F0EE46FC42F,"Anwender stimuliert sein Gehirn und hat finstere
+Gedanken. Erhöht Spezial-Angriff stark.",0,86876
+418,WAZAINFO_SV_418,08A8240EE46FCCAE,"Erstschlag-Attacke, bei der das Ziel von ultraschnellen
+Hieben getroffen wird.",0,87056
+419,WAZAINFO_SV_419,08A8250EE46FCE61,"Wurde der Anwender in dieser Runde vom Ziel
+getroffen, verdoppelt sich die Stärke der Attacke
+bei Angriffen auf dieses Ziel.",0,87216
+420,WAZAINFO_SV_420,08A4B60EE46CDBED,"Erstschlag-Attacke, bei der das Ziel mit Eisklumpen
+beworfen wird.",0,87468
+421,WAZAINFO_SV_421,08A4B50EE46CDA3A,"Greift das Ziel mit einer scharfen Klaue aus Schatten an.
+Hohe Volltrefferquote.",0,87604
+422,WAZAINFO_SV_422,08A4B40EE46CD887,"Anwender beißt mit elektrifizierten Reißzähnen zu.
+Ziel schreckt eventuell zurück oder wird paralysiert.",0,87768
+423,WAZAINFO_SV_423,08A4B30EE46CD6D4,"Anwender beißt mit eiskalten Reißzähnen zu.
+Ziel schreckt eventuell zurück oder friert ein.",0,87980
+424,WAZAINFO_SV_424,08A4B20EE46CD521,"Anwender beißt mit flammenden Reißzähnen zu.
+Ziel schreckt eventuell zurück oder erleidet
+Verbrennungen.",0,88164
+425,WAZAINFO_SV_425,08A4B10EE46CD36E,"Bei dieser Erstschlag-Attacke erweitert der Anwender
+seinen Schatten und greift das Ziel von hinten an.",0,88376
+426,WAZAINFO_SV_426,08A4B00EE46CD1BB,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,88584
+427,WAZAINFO_SV_427,08A4AF0EE46CD008,"Das Ziel wird mit Klingen attackiert, die aus
+Psycho-Energie bestehen. Hohe Volltrefferquote.",0,88904
+428,WAZAINFO_SV_428,08A4AE0EE46CCE55,"Anwender konzentriert seinen Willen und rammt das
+Ziel. Dieses schreckt eventuell zurück.",0,89092
+429,WAZAINFO_SV_429,08A4AD0EE46CCCA2,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,89272
+430,WAZAINFO_SV_430,08A1300EE469C264,"Anwender sammelt Lichtenergie und feuert sie auf
+einmal ab. Senkt eventuell Spezial-Verteidigung des
+Zieles.",0,89592
+431,WAZAINFO_SV_431,08A1310EE469C417,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,89812
+432,WAZAINFO_SV_432,08A1320EE469C5CA,"Starker Wind hebt Attacken wie Reflektor und
+Lichtschild des Zieles auf. Senkt außerdem den
+Ausweichwert.",0,90132
+433,WAZAINFO_SV_433,08A1330EE469C77D,"Anwender erzeugt einen bizarren Raum, in dem
+langsame Pokémon fünf Runden lang zuerst agieren.",0,90344
+434,WAZAINFO_SV_434,08A12C0EE469BB98,"Kometen werden heraufbeschworen. Der Rückstoß
+reduziert den Spezial-Angriff des Anwenders stark.",0,90536
+435,WAZAINFO_SV_435,08A12D0EE469BD4B,"Anwender greift alle Pokémon im Umkreis mit
+Elektrizität an. Diese werden eventuell auch paralysiert.",0,90732
+436,WAZAINFO_SV_436,08A12E0EE469BEFE,"Anwender greift alle Pokémon im Umkreis mit tiefroten
+Flammen an. Ziele erleiden eventuell Verbrennungen.",0,90936
+437,WAZAINFO_SV_437,08A12F0EE469C0B1,"Anwender erzeugt einen Sturm aus scharfen Blättern.
+Rückstoß senkt Spezial-Angriff des Anwenders stark.",0,91148
+438,WAZAINFO_SV_438,08A1280EE469B4CC,"Anwender wirbelt seine Ranken oder Tentakel
+peitschenartig gegen das Ziel.",0,91356
+439,WAZAINFO_SV_439,08A1290EE469B67F,"Anwender wirft einen riesigen Felsen auf das Ziel.
+In der nächsten Runde muss der Anwender ruhen.",0,91508
+440,WAZAINFO_SV_440,089E2A0EE467825B,"Ein schneidender Hieb, der das Ziel eventuell vergiftet.
+Hat eine hohe Volltrefferquote.",0,91704
+441,WAZAINFO_SV_441,089E290EE46780A8,"Anwender schießt mit Müll auf das Ziel. Vergiftet dieses
+eventuell.",0,91884
+442,WAZAINFO_SV_442,089E2C0EE46785C1,"Ziel wird durch stahlharten Kopf des Anwenders
+getroffen und schreckt eventuell zurück.",0,92020
+443,WAZAINFO_SV_443,089E2B0EE467840E,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,92196
+444,WAZAINFO_SV_444,089E2E0EE4678927,"Anwender schleudert scharfe Steine auf das Ziel.
+Hohe Volltrefferquote.",0,92516
+445,WAZAINFO_SV_445,089E2D0EE4678774,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,92660
+446,WAZAINFO_SV_446,089E300EE4678C8D,"Der Anwender legt eine Falle aus schwebenden Steinen
+aus, die gegnerische Pokémon verletzen, die in den
+Kampf gerufen werden.",0,92980
+447,WAZAINFO_SV_447,089E2F0EE4678ADA,"Ziel wird durch Gras ins Straucheln gebracht.
+Je schwerer das Ziel, desto mehr Schaden.",0,93232
+448,WAZAINFO_SV_448,089E220EE46774C3,"Der Anwender labert das Ziel zu und greift es mit den
+dadurch entstehenden Schallwellen an, wodurch das
+Ziel verwirrt wird.",0,93408
+449,WAZAINFO_SV_449,089E210EE4677310,"Anwender feuert unzählige Lichtstrahlen ab. Deren Typ
+hängt von der getragenen Tafel ab.",0,93656
+450,WAZAINFO_SV_450,089AA40EE46468D2,"Anwender beißt das Ziel. Trägt dieses eine Beere,
+isst der Anwender sie und erhält ihren Effekt.",0,93836
+451,WAZAINFO_SV_451,089AA50EE4646A85,"Ziel wird von einem Elektrostrahl getroffen. Erhöht
+eventuell Spezial-Angriff des Anwenders.",0,94032
+452,WAZAINFO_SV_452,089AA20EE464656C,"Anwender attackiert mit seinem robusten Körper.
+Er erleidet dabei auch selbst großen Schaden.",0,94220
+453,WAZAINFO_SV_453,089AA30EE464671F,"Bei dieser Erstschlag-Attacke stürzt sich der Anwender
+so schnell auf das Ziel, dass er quasi unsichtbar wird.",0,94408
+454,WAZAINFO_SV_454,089AA00EE4646206,"Anwender ruft seine Untergebenen zum Angriff.
+Hat eine hohe Volltrefferquote.",0,94632
+455,WAZAINFO_SV_455,089AA10EE46463B9,"Untergebene bilden einen lebenden Schild um
+den Anwender. Erhöht Verteidigung und
+Spezial-Verteidigung.",0,94788
+456,WAZAINFO_SV_456,089A9E0EE4645EA0,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,94996
+457,WAZAINFO_SV_457,089A9F0EE4646053,"Der Anwender greift unter Einsatz seines Lebens mit
+einem Kopfstoß an. Dabei nimmt er selbst enormen
+Schaden.",0,95316
+458,WAZAINFO_SV_458,089AAC0EE464766A,"Anwender trifft das Ziel mit dem Schweif oder
+Ähnlichem. Ziel wird doppelt getroffen.",0,95536
+459,WAZAINFO_SV_459,089AAD0EE464781D,"Anwender attackiert mit einer Kraft, die selbst die
+Zeit verzerrt. In der nächsten Runde muss er ruhen.",0,95708
+460,WAZAINFO_SV_460,08971E0EE4614F49,"Anwender attackiert mit einer Kraft, die selbst den Raum
+um das Ziel herum zerreißt. Hohe Volltrefferquote.",0,95916
+461,WAZAINFO_SV_461,08971D0EE4614D96,"Anwender geht K.O. Das an seine Stelle tretende
+Pokémon hat dafür volle KP sowie AP und wird von
+Statusproblemen geheilt.",0,96132
+462,WAZAINFO_SV_462,08971C0EE4614BE3,"Ziel wird mit großer Kraft getroffen. Je höher die KP
+des Zieles, desto stärker die Attacke.",0,96376
+463,WAZAINFO_SV_463,08971B0EE4614A30,"Das Ziel wird in einen Feuersog gezogen, der vier bis
+fünf Runden aktiv ist.",0,96564
+464,WAZAINFO_SV_464,0897220EE4615615,"Gegnerische Pokémon werden in eine Welt der
+Dunkelheit gezogen und in Schlaf versetzt.",0,96720
+465,WAZAINFO_SV_465,0897210EE4615462,"Anwender erzeugt eine Schockwelle.
+Spezial-Verteidigung des Zieles wird
+eventuell stark gesenkt.",0,96896
+466,WAZAINFO_SV_466,0897200EE46152AF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,97092
+467,WAZAINFO_SV_467,08971F0EE46150FC,"Anwender verschwindet in Runde 1 und attackiert in
+Runde 2. Trifft auch, wenn sich das Ziel selbst schützt.",0,97412
+468,WAZAINFO_SV_468,0897260EE4615CE1,"Wetzt seine Klauen, um sie zu schärfen. Erhöht Angriff
+und Genauigkeit des Anwenders.",0,97628
+469,WAZAINFO_SV_469,0897250EE4615B2E,"Schützt eine Runde lang vor Angriffen, die alle
+Pokémon auf der Seite des Anwenders treffen.",0,97800
+470,WAZAINFO_SV_470,0893980EE45E35C0,"Durch Psycho-Kräfte werden Verteidigung und
+Spezial-Verteidigung des Anwenders und des
+Zieles addiert und in zwei gleiche Hälften geteilt.",0,97988
+471,WAZAINFO_SV_471,0893990EE45E3773,"Durch Psycho-Kräfte werden Angriff und Spezial-Angriff
+des Anwenders und des Zieles addiert und in zwei
+gleiche Hälften geteilt.",0,98268
+472,WAZAINFO_SV_472,08939A0EE45E3926,"Anwender erzeugt einen bizarren Raum, in dem über
+fünf Runden die Verteidigung aller Pokémon mit ihrer
+Spezial-Verteidigung getauscht wird.",0,98528
+473,WAZAINFO_SV_473,08939B0EE45E3AD9,"Anwender erzeugt eine seltsame Energiewelle, die dem
+Ziel physischen Schaden zufügt.",0,98808
+474,WAZAINFO_SV_474,08939C0EE45E3C8C,"Überschüttet das Ziel mit einer speziellen toxischen
+Flüssigkeit. Doppelt so stark gegen vergiftete Ziele.",0,98980
+475,WAZAINFO_SV_475,08939D0EE45E3E3F,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,99196
+476,WAZAINFO_SV_476,08939E0EE45E3FF2,"Anwender zieht gegnerische Aufmerksamkeit und
+Angriffe auf sich, indem er ein Wut erzeugendes
+Pulver über sich streut.",0,99516
+477,WAZAINFO_SV_477,08939F0EE45E41A5,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,99756
+478,WAZAINFO_SV_478,0893A00EE45E4358,"Anwender erzeugt einen bizarren Raum, in dem über
+fünf Runden die Wirkung aller von Pokémon getragenen
+Items aufgehoben ist.",0,100076
+479,WAZAINFO_SV_479,0893A10EE45E450B,"Greift das Ziel mit Steinen und Wurfgeschossen an.
+Fliegende Ziele fallen dabei vom Himmel und landen
+auf dem Boden.",0,100328
+480,WAZAINFO_SV_480,08C6B20EE489BB87,Ein Angriff mit voller Wucht und Volltreffergarantie.,0,100564
+481,WAZAINFO_SV_481,08C6B10EE489B9D4,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,100672
+482,WAZAINFO_SV_482,08C6B40EE489BEED,"Greift alle Pokémon im Umkreis mit einer Schlammwelle
+an. Diese werden eventuell auch vergiftet.",0,100992
+483,WAZAINFO_SV_483,08C6B30EE489BD3A,"Anwender legt behände einen mystischen,
+formvollendeten Tanz aufs Parkett. Spezial-Angriff,
+Spezial-Verteidigung und Initiative steigen.",0,101188
+484,WAZAINFO_SV_484,08C6AE0EE489B4BB,"Anwender rammt das Ziel mit massivem Körper.
+Je schwerer er im Vergleich zum Ziel ist, desto
+stärker die Attacke.",0,101464
+485,WAZAINFO_SV_485,08C6AD0EE489B308,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,101692
+486,WAZAINFO_SV_486,08C6B00EE489B821,"Je höher die Initiative des Anwenders im Vergleich
+zum Ziel ist, desto stärker trifft dieses eine geballte
+Ladung Strom.",0,102012
+487,WAZAINFO_SV_487,08C6AF0EE489B66E,"Überschüttet das Ziel mit Unmengen an Wasser und
+ändert den Typ damit in Wasser um.",0,102256
+488,WAZAINFO_SV_488,08C6AA0EE489ADEF,"Anwender hüllt sich in Flammen und greift das Ziel an.
+Sammelt seine Energie und erhöht dadurch die eigene
+Initiative.",0,102424
+489,WAZAINFO_SV_489,08C6A90EE489AC3C,"Anwender rollt sich zusammen und sammelt sich. Dabei
+werden Angriff, Verteidigung und Genauigkeit erhöht.",0,102664
+490,WAZAINFO_SV_490,08C32C0EE486A1FE,"Anwender greift mit blitzschnellen Bewegungen die
+Beine des Zieles an und senkt dessen Initiative.",0,102876
+491,WAZAINFO_SV_491,08C32D0EE486A3B1,"Anwender greift an, indem er eine ätzende Flüssigkeit
+auf das Ziel speit. Senkt dessen Spezial-Verteidigung
+stark.",0,103076
+492,WAZAINFO_SV_492,08C32A0EE4869E98,"Anwender macht sich die Kraft des Zieles zunutze.
+Je höher dessen Angriff, desto mehr Schaden richtet
+die Attacke an.",0,103308
+493,WAZAINFO_SV_493,08C32B0EE486A04B,"Bestrahlt das Ziel mit mysteriösen Energiewellen. Bei
+einem Treffer wird dessen Fähigkeit zu Wankelmut.",0,103544
+494,WAZAINFO_SV_494,08C3300EE486A8CA,"Anwender tanzt zu einem seltsamen Rhythmus und
+zwingt das Ziel mitzumachen. Dieses nimmt dabei die
+Fähigkeit des Anwenders an.",0,103752
+495,WAZAINFO_SV_495,08C3310EE486AA7D,"Anwender ermöglicht dem Ziel, direkt nach ihm zu
+handeln, solange der Anwender als Erstes zum Zug
+kommt.",0,104008
+496,WAZAINFO_SV_496,08C32E0EE486A564,"Angriff mit Gesang. Singt der Anwender mit allen im
+Kanon, steigt die Stärke.",0,104220
+497,WAZAINFO_SV_497,08C32F0EE486A717,"Angriff mit widerhallender Stimme. Wenn in jeder
+Runde ein Teilnehmer wiederholt die Attacke einsetzt,
+steigt die Stärke.",0,104376
+498,WAZAINFO_SV_498,08C3240EE4869466,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,104620
+499,WAZAINFO_SV_499,08C3250EE4869619,"Anwender greift das Ziel mit spezialgefertigtem Smog
+an. Setzt dessen Statusveränderungen zurück.",0,104940
+500,WAZAINFO_SV_500,FF95870EDF2EAB34,"Angriff mit angesparter Energie. Je stärker die
+Statuswerte des Anwenders erhöht wurden, desto mehr
+Schaden richtet diese Attacke an.",0,105136
+501,WAZAINFO_SV_501,FF95880EDF2EACE7,"Schützt Anwender und Mitstreiter vor
+Erstschlag-Attacken.",0,105404
+502,WAZAINFO_SV_502,FF95890EDF2EAE9A,"Wundersame Kräfte teleportieren den Anwender an
+den Platz eines Mitstreiters. Scheitert eventuell bei
+Wiederholung.",0,105520
+503,WAZAINFO_SV_503,FF958A0EDF2EB04D,"Heizt dem Ziel mit einem Schwall siedend heißen
+Kochwassers ein. Das Ziel erleidet dabei eventuell
+Verbrennungen.",0,105752
+504,WAZAINFO_SV_504,FF95830EDF2EA468,"Anwender zerbricht seine Schale und senkt seine
+Verteidigung und Spezial-Verteidigung, aber dafür
+steigen Angriff, Spezial-Angriff und Initiative stark.",0,105980
+505,WAZAINFO_SV_505,FF95840EDF2EA61B,"Anwender löst eine Schmerzen lindernde Welle aus
+und heilt dabei das Ziel mit der Hälfte von dessen
+maximalen KP.",0,106288
+506,WAZAINFO_SV_506,FF95850EDF2EA7CE,"Eine Attacke, bei der der Anwender das Ziel bedrängt.
+Fügt Zielen mit Statusproblemen hohen Schaden zu.",0,106516
+507,WAZAINFO_SV_507,FF95860EDF2EA981,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,106724
+508,WAZAINFO_SV_508,FF957F0EDF2E9D9C,"Durch Drehen der Zahnräder erhöht sich nicht nur
+der Angriffs-Wert, sondern auch die Initiative des
+Anwenders stark.",0,107044
+509,WAZAINFO_SV_509,FF95800EDF2E9F4F,"Schleudert das Ziel davon und bewirkt damit, dass ein
+anderes Pokémon eingewechselt wird. Beendet Kämpfe
+gegen wilde Pokémon.",0,107280
+510,WAZAINFO_SV_510,FF988D0EDF30EB3D,"Eine Feuer-Attacke. Trägt ein gegnerisches Pokémon
+eine Beere oder ein ähnliches Item bei sich, wird dieses
+von den Flammen verzehrt und geht verloren.",0,107532
+511,WAZAINFO_SV_511,FF988C0EDF30E98A,"Anwender stemmt sich gegen das Ziel und bewirkt,
+dass dieses erst als Letztes angreift.",0,107836
+512,WAZAINFO_SV_512,FF988B0EDF30E7D7,"Ein graziler Angriff auf das Ziel. Trägt der Anwender
+kein Item bei sich, richtet die Attacke großen
+Schaden an.",0,108012
+513,WAZAINFO_SV_513,FF988A0EDF30E624,"Anwender ahmt das Ziel nach und nimmt dabei
+dessen Typ an.",0,108240
+514,WAZAINFO_SV_514,FF98890EDF30E471,"Anwender nimmt Rache für einen besiegten Mitstreiter.
+Wurde in der vorigen Runde ein Mitstreiter besiegt,
+steigt die Stärke.",0,108360
+515,WAZAINFO_SV_515,FF98880EDF30E2BE,"Ein Angriff, der dem Ziel Schaden in Höhe der aktuellen
+KP des Anwenders zufügt. Letzterer wird dadurch selbst
+besiegt.",0,108612
+516,WAZAINFO_SV_516,FF98870EDF30E10B,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,108852
+517,WAZAINFO_SV_517,FF98860EDF30DF58,"Anwender greift das Ziel an, indem er es mit dichten
+Flammen umhüllt. Ziel erleidet Verbrennungen.",0,109172
+518,WAZAINFO_SV_518,FF98850EDF30DDA5,"Ein Angriff mit Wassersäulen. Mit Feuersäulen
+kombiniert steigt die Wirkung und ein Regenbogen
+erscheint.",0,109372
+519,WAZAINFO_SV_519,FF98840EDF30DBF2,"Ein Angriff mit Feuersäulen. Mit Pflanzensäulen
+kombiniert steigt die Wirkung und die Umgebung
+wird zu einem Meer aus Feuer.",0,109584
+520,WAZAINFO_SV_520,FF9BF30EDF33CE66,"Ein Angriff mit Pflanzensäulen. Mit Wassersäulen
+kombiniert steigt die Wirkung und die Umgebung
+wird zu einem Sumpf.",0,109836
+521,WAZAINFO_SV_521,FF9BF40EDF33D019,"Nach der Attacke eilt der Anwender zurück und
+tauscht den Platz mit einem anderen Pokémon.",0,110072
+522,WAZAINFO_SV_522,FF9BF10EDF33CB00,"Anwender leistet Widerstand und greift an.
+Der Spezial-Angriff der gegnerischen Pokémon sinkt.",0,110256
+523,WAZAINFO_SV_523,FF9BF20EDF33CCB3,"Anwender walzt den Boden platt und greift dabei alle
+Pokémon im Umkreis an. Die Initiative aller betroffenen
+Pokémon sinkt.",0,110448
+524,WAZAINFO_SV_524,FF9BF70EDF33D532,"Anwender greift an, indem er dem Ziel eisigen Atem
+entgegenhaucht. Volltreffergarantie.",0,110696
+525,WAZAINFO_SV_525,FF9BF80EDF33D6E5,"Putzt das Ziel vom Feld und wechselt es mit einem
+anderen Pokémon aus. Beendet Kämpfe gegen wilde
+Pokémon.",0,110872
+526,WAZAINFO_SV_526,FF9BF50EDF33D1CC,"Anwender erhält einen Kraftschub, der seinen Angriff
+und Spezial-Angriff erhöht.",0,111088
+527,WAZAINFO_SV_527,FF9BF60EDF33D37F,"Fängt gegnerische Pokémon mit einem elektrischen
+Netz und senkt deren Initiative.",0,111252
+528,WAZAINFO_SV_528,FF9BFB0EDF33DBFE,"Anwender erzeugt Spannung und greift an, indem er
+auf Kollisionskurs geht. Er erleidet selbst leichten
+Schaden.",0,111416
+529,WAZAINFO_SV_529,FF9BFC0EDF33DDB1,"Anwender rammt das Ziel, während er seinen Körper
+wie einen Bohrer dreht. Hohe Volltrefferquote.",0,111640
+530,WAZAINFO_SV_530,FF9F790EDF36E7EF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,111836
+531,WAZAINFO_SV_531,FF9F780EDF36E63C,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,112156
+532,WAZAINFO_SV_532,FF9F7B0EDF36EB55,"Greift Ziel mit einem Astgeweih an und zapft diesem
+Energie ab. Anwender wird um die Hälfte des
+zugefügten Schadens geheilt.",0,112476
+533,WAZAINFO_SV_533,FF9F7A0EDF36E9A2,"Schneideangriff mit einer Klinge. Richtet unabhängig
+von den Statusveränderungen des Zieles Schaden an.",0,112728
+534,WAZAINFO_SV_534,FF9F750EDF36E123,"Schneideangriff mit einer scharfen Muschelschale.
+Senkt eventuell die Verteidigung des Zieles.",0,112936
+535,WAZAINFO_SV_535,FF9F740EDF36DF70,"Rempelattacke mit brennendem Körper. Je schwerer
+der Anwender im Vergleich zum Ziel ist, desto stärker
+die Attacke.",0,113128
+536,WAZAINFO_SV_536,FF9F770EDF36E489,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,113360
+537,WAZAINFO_SV_537,FF9F760EDF36E2D6,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,113680
+538,WAZAINFO_SV_538,FF9F810EDF36F587,"Anwender schützt sich, indem er sich in einen luftigen
+Flaum hüllt. Erhöht die Verteidigung drastisch.",0,114000
+539,WAZAINFO_SV_539,FF9F800EDF36F3D4,"Anwender greift das Ziel mit finsteren Schockwellen an.
+Senkt eventuell die Genauigkeit des Zieles.",0,114208
+540,WAZAINFO_SV_540,FF87EF0EDF231E90,"Anwender erzeugt eine seltsame Energiewelle, die dem
+Ziel physischen Schaden zufügt.",0,114408
+541,WAZAINFO_SV_541,FF87F00EDF232043,"Anwender greift das Ziel mit seiner schlagfesten Rute
+zwei- bis fünfmal hintereinander an.",0,114580
+542,WAZAINFO_SV_542,FF87F10EDF2321F6,"Anwender greift das Ziel an, indem er es mit heftigen
+Windböen umgibt. Ziel wird eventuell verwirrt.",0,114764
+543,WAZAINFO_SV_543,FF87F20EDF2323A9,"Rempelattacke mit ausgeflippter Retrofrisur. Anwender
+nimmt selbst leichten Schaden.",0,114968
+544,WAZAINFO_SV_544,FF87F30EDF23255C,"Anwender greift an, indem er stählerne Zahnräder
+auf das Ziel schleudert. Angriff erfolgt zweimal
+hintereinander.",0,115140
+545,WAZAINFO_SV_545,FF87F40EDF23270F,"Anwender greift alle Pokémon im Umkreis mit tiefroten
+Flammen an. Ziele erleiden eventuell Verbrennungen.",0,115368
+546,WAZAINFO_SV_546,FF87F50EDF2328C2,"Anwender feuert ein Lichtgeschoss auf das Ziel ab.
+Der Typ der Attacke hängt von dem des Moduls ab.",0,115580
+547,WAZAINFO_SV_547,FF87F60EDF232A75,"Anwender greift mit Urgesang an, der gegnerische
+Pokémon im tiefsten Inneren anspricht. Diese schlafen
+eventuell ein.",0,115780
+548,WAZAINFO_SV_548,FF87F70EDF232C28,"Schneideangriff mit dem langen Horn des Anwenders.
+Die mysteriöse Kraft aus dem Horn erzeugt physischen
+Schaden.",0,116016
+549,WAZAINFO_SV_549,FF87F80EDF232DDB,"Anwender greift an, indem er gegnerischen Pokémon
+klirrend kalte Luft entgegenbläst und dabei ihre
+Initiative senkt.",0,116244
+550,WAZAINFO_SV_550,FF8AF50EDF255E99,"Lädt seinen Körper mit einer gewaltigen Menge an
+Elektrizität auf und rammt damit das Ziel. Ziel wird
+eventuell paralysiert.",0,116480
+551,WAZAINFO_SV_551,FF8AF40EDF255CE6,"Anwender greift an, indem er das Ziel in wunderschöne,
+intensivblaue Flammen hüllt, durch die es eventuell
+Verbrennungen erleidet.",0,116732
+552,WAZAINFO_SV_552,FF8AF30EDF255B33,"Hüllt das Ziel mit einer Feuerhose in Flammen.
+Kann den Spezial-Angriff des Anwenders erhöhen.",0,116996
+553,WAZAINFO_SV_553,FF8AF20EDF255980,"Feuert in der zweiten Runde elektrisch geladene
+Eisklumpen auf das Ziel ab. Paralysiert das Ziel
+eventuell.",0,117188
+554,WAZAINFO_SV_554,FF8AF90EDF256565,"Umgibt das Ziel in der nächsten Runde mit heftigen,
+alles gefrierenden Eisböen. Fügt dem Ziel eventuell
+Verbrennungen zu.",0,117404
+555,WAZAINFO_SV_555,FF8AF80EDF2563B2,"Wäscht gegnerischen Pokémon mit einer ausführlichen
+Standpauke den Kopf und senkt dabei deren
+Spezial-Angriff.",0,117648
+556,WAZAINFO_SV_556,FF8AF70EDF2561FF,"Lässt große, schwere Eiszapfen auf das Ziel
+herabregnen. Ziel schreckt eventuell zurück.",0,117872
+557,WAZAINFO_SV_557,FF8AF60EDF25604C,"Eine Verzweiflungsattacke. Anwender entfacht glühend
+heißes Feuer. Senkt dessen Verteidigung,
+Spezial-Verteidigung und Initiative.",0,118052
+558,WAZAINFO_SV_558,FF8AFD0EDF256C31,"Feuert eine monströse Flamme ab. Wird die Attacke
+durch einen gigantischen Blitz modifiziert, steigt die
+Stärke.",0,118316
+559,WAZAINFO_SV_559,FF8AFC0EDF256A7E,"Feuert einen monströsen Blitz ab. Wird die Attacke
+durch eine gigantische Flamme modifiziert, steigt die
+Stärke.",0,118544
+560,WAZAINFO_SV_560,FF8E7B0EDF287822,"Der Anwender stürzt sich aus der Luft auf das Ziel.
+Die Attacke gehört sowohl dem Typ Kampf als auch
+dem Typ Flug an.",0,118772
+561,WAZAINFO_SV_561,FF8E7C0EDF2879D5,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,119008
+562,WAZAINFO_SV_562,FF8E790EDF2874BC,"Der Anwender fügt dem Ziel Schaden zu, indem er es
+anrülpst. Diese Attacke gelingt nur nach dem Konsum
+einer getragenen Beere.",0,119328
+563,WAZAINFO_SV_563,FF8E7A0EDF28766F,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,119584
+564,WAZAINFO_SV_564,FF8E770EDF287156,"Der Anwender spinnt in der Umgebung des
+gegnerischen Teams ein klebriges Netz und senkt
+so die Initiative neu eingewechselter Pokémon.",0,119904
+565,WAZAINFO_SV_565,FF8E780EDF287309,"Gelingt es dem Anwender, das Ziel mit dieser Attacke
+zu besiegen, steigt sein Angriffs-Wert drastisch.",0,120176
+566,WAZAINFO_SV_566,FF8E750EDF286DF0,"Der Anwender verschwindet in Runde 1, um seine Kraft
+zu sammeln, und attackiert in Runde 2. Trifft auch,
+wenn sich das Ziel selbst schützt.",0,120384
+567,WAZAINFO_SV_567,FF8E760EDF286FA3,"Der Anwender lehrt das Ziel das Fürchten. Dieses
+nimmt dadurch zusätzlich den Typ Geist an.",0,120664
+568,WAZAINFO_SV_568,FF8E830EDF2885BA,"Der Anwender stößt ein Kampfgebrüll aus, das das
+Ziel einschüchtert und zugleich seinen Angriffs- und
+Spezial-Angriffs-Wert senkt.",0,120848
+569,WAZAINFO_SV_569,FF8E840EDF28876D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,121112
+570,WAZAINFO_SV_570,FF92010EDF2B91AB,"Fügt allen Pokémon im Umkreis Schaden zu.
+Der Anwender wird um die Hälfte des insgesamt
+angerichteten Schadens geheilt.",0,121432
+571,WAZAINFO_SV_571,FF92000EDF2B8FF8,"Der Anwender belegt das Ziel mit einem Waldesfluch,
+durch den dieses zusätzlich den Typ Pflanze annimmt.",0,121672
+572,WAZAINFO_SV_572,FF92030EDF2B9511,"Der Anwender erzeugt einen turbulenten Blütenwirbel,
+der alle Pokémon im Umkreis erfasst und ihnen Schaden
+zufügt.",0,121884
+573,WAZAINFO_SV_573,FF92020EDF2B935E,"Das Ziel wird stark abgekühlt und manchmal sogar
+eingefroren. Die Attacke ist sehr effektiv gegen
+Wasser-Pokémon.",0,122116
+574,WAZAINFO_SV_574,FF92050EDF2B9877,"Der Anwender stößt einen bezirzenden Ruf aus, mit
+dem er gegnerische Pokémon in seinen Bann schlägt
+und ihnen mentalen Schaden zufügt. Trifft garantiert.",0,122344
+575,WAZAINFO_SV_575,FF92040EDF2B96C4,"Schüchtert das Ziel mit einer Abgangstirade ein,
+sodass dessen Angriffs- und Spezial-Angriffs-Wert
+sinken. Danach wird der Anwender ausgewechselt.",0,122652
+576,WAZAINFO_SV_576,FF92070EDF2B9BDD,Invertiert alle Statusveränderungen des Zieles.,0,122948
+577,WAZAINFO_SV_577,FF92060EDF2B9A2A,"Der Anwender stiehlt dem Ziel mit einem Kuss KP.
+Die Höhe der Heilung beträgt mehr als die Hälfte des
+beim Ziel angerichteten Schadens.",0,123044
+578,WAZAINFO_SV_578,FF91F90EDF2B8413,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,123316
+579,WAZAINFO_SV_579,FF91F80EDF2B8260,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,123636
+580,WAZAINFO_SV_580,FFB0770EDF4557BC,"Regeneriert fünf Runden lang in jeder neuen Runde
+ein paar KP aller Pokémon, die den Boden berühren.
+Erhöht die Stärke von Pflanzen-Attacken.",0,123956
+581,WAZAINFO_SV_581,FFB0780EDF45596F,"Schützt fünf Runden lang alle Pokémon, die den Boden
+berühren, vor Statusproblemen. Der erlittene Schaden
+durch Drachen-Attacken wird halbiert.",0,124240
+582,WAZAINFO_SV_582,FFB0790EDF455B22,"Kommt die Attacke zum Einsatz, bevor das Ziel seine
+Attacke ausführt, nimmt diese für die Dauer dieser
+Runde den Typ Elektro an.",0,124528
+583,WAZAINFO_SV_583,FFB07A0EDF455CD5,"Der Anwender knuddelt das Ziel und greift es an.
+Senkt eventuell den Angriffs-Wert des Zieles.",0,124788
+584,WAZAINFO_SV_584,FFB0730EDF4550F0,"Lässt eine Feenbrise aufkommen, die das Ziel erfasst
+und ihm Schaden zufügt.",0,124980
+585,WAZAINFO_SV_585,FFB0740EDF4552A3,"Der Anwender macht sich die Kraft des Mondes
+zunutze, um anzugreifen. Gelegentlich wird dabei
+der Spezial-Angriff des Zieles gesenkt.",0,125136
+586,WAZAINFO_SV_586,FFB0750EDF455456,"Der Anwender greift alle Pokémon im Umkreis
+mit einem gewaltigen Knall an.",0,125404
+587,WAZAINFO_SV_587,FFB0760EDF455609,"Der Anwender sperrt alle Pokémon ein und hindert sie
+so in der nächsten Runde an der Flucht beziehungsweise
+am Auswechseln.",0,125556
+588,WAZAINFO_SV_588,FFB07F0EDF456554,"Der Anwender geht in die Defensive und wird vor
+Angriffen geschützt. Berührt ihn nun ein Angreifer,
+sinkt dessen Angriffs-Wert.",0,125804
+589,WAZAINFO_SV_589,FFB0800EDF456707,"Der Anwender schließt mit dem Ziel Freundschaft
+und nimmt ihm seine Angriffslust. Der Angriffs-Wert
+des Zieles sinkt.",0,126060
+590,WAZAINFO_SV_590,FFB3FD0EDF487145,"Der Anwender vertraut dem Ziel ein Geheimnis an
+und stört auf diese Weise dessen Konzentration.
+Der Spezial-Angriff des Zieles sinkt.",0,126296
+591,WAZAINFO_SV_591,FFB3FC0EDF486F92,"Der Anwender beschwört einen zerstörerischen
+Diamantsturm herauf. Kann die Verteidigung des
+Anwenders stark erhöhen.",0,126564
+592,WAZAINFO_SV_592,FFB3FB0EDF486DDF,"Der Anwender feuert einen siedend heißen
+Dampfschwall auf das Ziel ab. Dieses kann
+dabei Verbrennungen erleiden.",0,126800
+593,WAZAINFO_SV_593,FFB3FA0EDF486C2C,"Der Anwender positioniert sich mithilfe eines
+Dimensionslochs direkt neben dem Ziel und
+durchbricht selbst Schutzschild, Scanner etc.",0,127028
+594,WAZAINFO_SV_594,FFB3F90EDF486A79,"Der Anwender schleudert dem Ziel Wurfsterne
+aus einem verdickten Sekret entgegen. Diese
+Erstschlag-Attacke trifft zwei- bis fünfmal.",0,127296
+595,WAZAINFO_SV_595,FFB3F80EDF4868C6,"Der Anwender greift das Ziel an, indem er ihm
+eine besondere, heiße Flamme entgegenbläst.
+Der Spezial-Angriff des Zieles sinkt.",0,127564
+596,WAZAINFO_SV_596,FFB3F70EDF486713,"Der Anwender wird vor Angriffen geschützt.
+Gleichzeitig nehmen alle Pokémon, die mit
+ihm in Berührung kommen, Schaden.",0,127820
+597,WAZAINFO_SV_597,FFB3F60EDF486560,"Der Anwender erhöht mithilfe eines mysteriösen
+Duftes die Spezial-Verteidigung eines Mitstreiters.",0,128060
+598,WAZAINFO_SV_598,FFB4050EDF487EDD,"Der Körper des Anwenders erzeugt mysteriöse Wellen
+und senkt den Spezial-Angriff des Zieles dadurch stark.",0,128260
+599,WAZAINFO_SV_599,FFB4040EDF487D2A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,128476
+600,WAZAINFO_SV_600,1AD7F80EEEFB69D5,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,128796
+601,WAZAINFO_SV_601,1AD7F70EEEFB6822,"Der Anwender saugt in Runde 1 Energie auf. In Runde 2
+steigen der Spezial-Angriff, die Spezial-Verteidigung
+und die Initiative stark.",0,129116
+602,WAZAINFO_SV_602,1AD7F60EEEFB666F,"Das Magnetfeld wird so manipuliert, dass Spezial-
+Verteidigung und Verteidigung von Team-Pokémon
+mit der Fähigkeit Plus oder Minus steigen.",0,129384
+603,WAZAINFO_SV_603,1AD7F50EEEFB64BC,"Nach Einsatz der Attacke Goldene Zeiten verdoppelt
+sich das Preisgeld, das du im Falle eines Sieges
+erhältst.",0,129664
+604,WAZAINFO_SV_604,1AD7F40EEEFB6309,"Hindert fünf Runden lang alle Pokémon, die den Boden
+berühren, am Einschlafen. Erhöht die Stärke von
+Elektro-Attacken.",0,129884
+605,WAZAINFO_SV_605,1AD7F30EEEFB6156,"Der Anwender feuert einen mächtigen Lichtblitz ab,
+der gegnerischen Pokémon Schaden zufügt.",0,130124
+606,WAZAINFO_SV_606,1AD7F20EEEFB5FA3,Das Pokémon gratuliert dir zu deinem Geburtstag!,0,130308
+607,WAZAINFO_SV_607,1AD7F10EEEFB5DF0,"Der Anwender und ein Mitstreiter reichen einander
+die Hände und verfallen in einen Zustand tiefster
+Zufriedenheit.",0,130408
+608,WAZAINFO_SV_608,1AD8000EEEFB776D,"Bei dieser Erstschlag-Attacke erobert der Anwender
+das Herz des Zieles, indem er es mit Kulleraugen
+ansieht, und senkt dabei dessen Angriffs-Wert.",0,130640
+609,WAZAINFO_SV_609,1AD7FF0EEEFB75BA,"Der Anwender lädt seine Wangen elektrisch auf und
+greift an, indem er sich damit am Ziel reibt. Das Ziel
+wird paralysiert.",0,130936
+610,WAZAINFO_SV_610,1AD4720EEEF8504C,"Der Anwender hält sich beim Angriff zurück und sorgt
+auf diese Weise dafür, dass dem Ziel danach mindestens
+1 KP verbleibt.",0,131184
+611,WAZAINFO_SV_611,1AD4730EEEF851FF,"Der Anwender fällt vier bis fünf Runden lang wie eine
+Plage über das Ziel her und greift es an. Dabei wird es an
+der Flucht beziehungsweise am Auswechseln gehindert.",0,131432
+612,WAZAINFO_SV_612,1AD4740EEEF853B2,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,131764
+613,WAZAINFO_SV_613,1AD4750EEEF85565,"Der Anwender raubt dem Ziel KP. Die Höhe der
+Heilung beträgt mehr als die Hälfte des beim Ziel
+angerichteten Schadens.",0,132084
+614,WAZAINFO_SV_614,1AD46E0EEEF84980,"Die Attacke erfasst auch fliegende und schwebende
+Pokémon. Werden sie getroffen, fallen sie zu Boden.",0,132324
+615,WAZAINFO_SV_615,1AD46F0EEEF84B33,"Der Anwender greift mit einer Welle an, die dicht über
+dem Boden verläuft und alle Pokémon, die sie erfasst,
+an der Flucht beziehungsweise am Auswechseln hindert.",0,132528
+616,WAZAINFO_SV_616,1AD4700EEEF84CE6,"Der Anwender sammelt die Kraft des weiten Landes und
+greift an, indem er sie gebündelt auf gegnerische
+Pokémon lenkt.",0,132856
+617,WAZAINFO_SV_617,1AD4710EEEF84E99,"Die Attacke basiert auf der Kraft des Ewigblütlers,
+die als mächtiger Lichtstrahl abgefeuert wird.
+Der Anwender nimmt dabei selbst enormen Schaden.",0,133092
+618,WAZAINFO_SV_618,1AD47A0EEEF85DE4,"Der Anwender greift gegnerische Pokémon mit
+unzähligen blau leuchtenden Strahlen an.",0,133388
+619,WAZAINFO_SV_619,1AD47B0EEEF85F97,"Der Anwender wandelt die Kraft des Erdreichs in
+Klingen um, mit denen er gegnerische Pokémon
+angreift.",0,133560
+620,WAZAINFO_SV_620,1ADF040EEF019CE7,"Der Anwender greift das Ziel aus atemberaubender
+Höhe im Sturzflug an. Senkt Verteidigung und
+Spezial-Verteidigung des Anwenders.",0,133768
+621,WAZAINFO_SV_621,1ADF030EEF019B34,"Eine Angriffsserie mit vielen Armen, die die Wirkung
+von Attacken wie Schutzschild und Scanner durchbricht.
+Dabei sinkt die Verteidigung des Anwenders.",0,134028
+622,WAZAINFO_SV_622,1ADF060EEF01A04D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,134332
+623,WAZAINFO_SV_623,1ADF050EEF019E9A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,134652
+624,WAZAINFO_SV_624,1ADF000EEF01961B,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,134972
+625,WAZAINFO_SV_625,1ADEFF0EEF019468,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,135292
+626,WAZAINFO_SV_626,1ADF020EEF019981,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,135612
+627,WAZAINFO_SV_627,1ADF010EEF0197CE,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,135932
+628,WAZAINFO_SV_628,1ADEFC0EEF018F4F,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,136252
+629,WAZAINFO_SV_629,1ADEFB0EEF018D9C,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,136572
+630,WAZAINFO_SV_630,1ADB7E0EEEFE835E,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,136892
+631,WAZAINFO_SV_631,1ADB7F0EEEFE8511,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,137212
+632,WAZAINFO_SV_632,1ADB7C0EEEFE7FF8,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,137532
+633,WAZAINFO_SV_633,1ADB7D0EEEFE81AB,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,137852
+634,WAZAINFO_SV_634,1ADB820EEEFE8A2A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,138172
+635,WAZAINFO_SV_635,1ADB830EEEFE8BDD,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,138492
+636,WAZAINFO_SV_636,1ADB800EEEFE86C4,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,138812
+637,WAZAINFO_SV_637,1ADB810EEEFE8877,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,139132
+638,WAZAINFO_SV_638,1ADB760EEEFE75C6,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,139452
+639,WAZAINFO_SV_639,1ADB770EEEFE7779,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,139772
+640,WAZAINFO_SV_640,1ACA800EEEF01391,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,140092
+641,WAZAINFO_SV_641,1ACA7F0EEEF011DE,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,140412
+642,WAZAINFO_SV_642,1ACA7E0EEEF0102B,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,140732
+643,WAZAINFO_SV_643,1ACA7D0EEEF00E78,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,141052
+644,WAZAINFO_SV_644,1ACA840EEEF01A5D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,141372
+645,WAZAINFO_SV_645,1ACA830EEEF018AA,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,141692
+646,WAZAINFO_SV_646,1ACA820EEEF016F7,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,142012
+647,WAZAINFO_SV_647,1ACA810EEEF01544,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,142332
+648,WAZAINFO_SV_648,1ACA780EEEF005F9,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,142652
+649,WAZAINFO_SV_649,1ACA770EEEF00446,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,142972
+650,WAZAINFO_SV_650,1AC6FA0EEEECFA08,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,143292
+651,WAZAINFO_SV_651,1AC6FB0EEEECFBBB,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,143612
+652,WAZAINFO_SV_652,1AC6FC0EEEECFD6E,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,143932
+653,WAZAINFO_SV_653,1AC6FD0EEEECFF21,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,144252
+654,WAZAINFO_SV_654,1AC6FE0EEEED00D4,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,144572
+655,WAZAINFO_SV_655,1AC6FF0EEEED0287,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,144892
+656,WAZAINFO_SV_656,1AC7000EEEED043A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,145212
+657,WAZAINFO_SV_657,1AC7010EEEED05ED,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,145532
+658,WAZAINFO_SV_658,1AC6F20EEEECEC70,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,145852
+659,WAZAINFO_SV_659,1AC6F30EEEECEE23,"KP des Anwenders werden um 50 % der maximalen KP
+aufgefüllt. Tobt ein Sandsturm, werden noch mehr KP
+aufgefüllt.",0,146172
+660,WAZAINFO_SV_660,1AD16C0EEEF61043,"Eine sehr starke Attacke, die jedoch nur erfolgreich ist,
+wenn sie sofort eingesetzt wird, nachdem der Anwender
+das Kampffeld betreten hat.",0,146400
+661,WAZAINFO_SV_661,1AD16B0EEEF60E90,"Der Anwender wird vor Angriffen geschützt.
+Gleichzeitig werden alle Pokémon, die mit ihm
+in Berührung kommen, vergiftet.",0,146680
+662,WAZAINFO_SV_662,1AD16E0EEEF613A9,"Der Anwender greift das Ziel an und näht zugleich
+dessen Schatten am Boden fest, um es so an der Flucht
+beziehungsweise am Auswechseln zu hindern.",0,146924
+663,WAZAINFO_SV_663,1AD16D0EEEF611F6,"Der Anwender wirbelt mit beiden Armen und prallt
+so auf das Ziel. Richtet unabhängig von den
+Statusveränderungen des Zieles Schaden an.",0,147220
+664,WAZAINFO_SV_664,1AD1700EEEF6170F,"Durch Gesang erzeugte Blasen werden auf das Ziel
+geschleudert. Alle Pokémon, die dadurch Schaden
+erleiden, werden auch von Verbrennungen geheilt.",0,147492
+665,WAZAINFO_SV_665,1AD16F0EEEF6155C,"Anwender trifft mit einem starken Hieb. Senkt Initiative
+des Anwenders.",0,147784
+666,WAZAINFO_SV_666,1AD1720EEEF61A75,"KP des Zieles werden um 50 % der maximalen KP
+aufgefüllt. Die Wirkung steigt, wenn der Untergrund
+in ein Grasfeld verwandelt wurde.",0,147928
+667,WAZAINFO_SV_667,1AD1710EEEF618C2,"Der Anwender greift das Ziel mit einer heftigen
+Ganzkörper-Attacke an.",0,148192
+668,WAZAINFO_SV_668,1AD1740EEEF61DDB,"Ein Angriff, der die KP des Anwenders um die Höhe des
+Angriffs-Werts des Zieles heilt. Anschließend wird der
+Angriff des Zieles gesenkt.",0,148336
+669,WAZAINFO_SV_669,1AD1730EEEF61C28,"In Runde 1 absorbiert der Anwender Licht, das er in
+Runde 2 zu einem Schwert formt, mit dem er dann
+angreift.",0,148612
+670,WAZAINFO_SV_670,1ACE060EEEF32D1A,Der Anwender greift das Ziel mit Blättern an.,0,148832
+671,WAZAINFO_SV_671,1ACE070EEEF32ECD,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,148924
+672,WAZAINFO_SV_672,1ACE040EEEF329B4,"Der Anwender schießt giftige Fäden auf das Ziel,
+das dadurch vergiftet wird. Außerdem sinkt seine
+Initiative.",0,149244
+673,WAZAINFO_SV_673,1ACE050EEEF32B67,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,149464
+674,WAZAINFO_SV_674,1ACE020EEEF3264E,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,149784
+675,WAZAINFO_SV_675,1ACE030EEEF32801,"Das Pokémon, das von dieser Attacke getroffen wird,
+erleidet starke Schmerzen und kann deswegen zwei
+Runden lang keine Geräusch-Attacken mehr einsetzen.",0,150104
+676,WAZAINFO_SV_676,1ACE000EEEF322E8,"Der Anwender greift mit einem Ball aus Pollen an,
+der beim Ziel explodiert. Mitstreiter werden von
+einem Ball getroffen, der ihre KP auffüllt.",0,150412
+677,WAZAINFO_SV_677,1ACE010EEEF3249B,"Der Anwender greift das Ziel an, indem er es mit einer
+Ankerkette umwickelt. Das Ziel wird dadurch an der
+Flucht beziehungsweise am Auswechseln gehindert.",0,150700
+678,WAZAINFO_SV_678,1ACDFE0EEEF31F82,"Verhindert für fünf Runden, dass Pokémon am Boden
+von Erstschlag-Attacken getroffen werden. Erhöht die
+Stärke von Psycho-Attacken.",0,151012
+679,WAZAINFO_SV_679,1ACDFF0EEEF32135,"Der Anwender greift das Ziel mit ganzer Kraft an,
+wodurch auch der Angriffs-Wert des Zieles sinkt.",0,151276
+680,WAZAINFO_SV_680,1ABD080EEEE4BD4D,"Der Anwender greift das Ziel mit einer brennenden
+Peitsche an und senkt dabei zusätzlich dessen
+Verteidigungs-Wert.",0,151476
+681,WAZAINFO_SV_681,1ABD070EEEE4BB9A,"Der Anwender prahlt mit seiner Stärke und greift das
+Ziel an. Dieser Angriff ist umso stärker, je weiter die
+Statuswerte des Anwenders erhöht sind.",0,151708
+682,WAZAINFO_SV_682,1ABD060EEEE4B9E7,"Der Anwender nutzt das gesamte Feuer in seinem
+Körper, um großen Schaden auszuteilen. Die restliche
+Kampfdauer gehört er nicht mehr dem Typ Feuer an.",0,152004
+683,WAZAINFO_SV_683,1ABD050EEEE4B834,"Der Anwender tauscht seinen Initiative-Wert mit dem
+des Zieles.",0,152304
+684,WAZAINFO_SV_684,1ABD040EEEE4B681,"Der Anwender durchbohrt das Ziel mit seinem
+spitzen Horn. Diese Attacke trifft immer.",0,152432
+685,WAZAINFO_SV_685,1ABD030EEEE4B4CE,"Der Anwender heilt das Statusproblem des Zieles und
+füllt dadurch seine eigenen KP auf.",0,152604
+686,WAZAINFO_SV_686,1ABD020EEEE4B31B,"Der Anwender tanzt und greift dabei das Ziel mit voller
+Kraft an. Die Attacke hat denselben Typ wie das
+Pokémon, das sie einsetzt.",0,152780
+687,WAZAINFO_SV_687,1ABD010EEEE4B168,"Hat das gegnerische Pokémon, das durch diese Attacke
+Schaden genommen hat, in dieser Runde bereits
+gehandelt, verliert es seine Fähigkeit.",0,153044
+688,WAZAINFO_SV_688,1ABD000EEEE4AFB5,"Der Anwender greift das Ziel mit einem heftigen
+Tritt tropischer Herkunft an. Dabei sinkt auch der
+Angriffs-Wert des Zieles.",0,153324
+689,WAZAINFO_SV_689,1ABCFF0EEEE4AE02,"Der Anwender befiehlt dem Ziel, dessen zuletzt
+ausgeführte Attacke sofort wieder einzusetzen.",0,153576
+690,WAZAINFO_SV_690,1AB9820EEEE1A3C4,"Der Anwender erhitzt zuerst seinen Schnabel und greift
+dann an. Pokémon, die ihn während des Erhitzens
+berühren, erleiden Verbrennungen.",0,153764
+691,WAZAINFO_SV_691,1AB9830EEEE1A577,"Der Anwender erzeugt durch das Rasseln mit seinen
+Schuppen ein lautes Geräusch und greift gegnerische
+Pokémon an. Anschließend sinkt seine Verteidigung.",0,154040
+692,WAZAINFO_SV_692,1AB9840EEEE1A72A,"Der Anwender nutzt seinen Körper wie einen Hammer
+und stürzt sich auf das Ziel, wodurch dieses Schaden
+erleidet.",0,154348
+693,WAZAINFO_SV_693,1AB9850EEEE1A8DD,"Der Anwender dreht schwungvoll seinen Körper und
+fügt allen Pokémon im Umkreis dabei Schaden zu.",0,154576
+694,WAZAINFO_SV_694,1AB97E0EEEE19CF8,"Diese Attacke schwächt fünf Runden lang den durch
+physische sowie durch Spezial-Attacken erhaltenen
+Schaden. Kann nur bei Schnee eingesetzt werden.",0,154772
+695,WAZAINFO_SV_695,1AB97F0EEEE19EAB,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,155068
+696,WAZAINFO_SV_696,1AB9800EEEE1A05E,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,155388
+697,WAZAINFO_SV_697,1AB9810EEEE1A211,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,155708
+698,WAZAINFO_SV_698,1AB97A0EEEE1962C,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,156028
+699,WAZAINFO_SV_699,1AB97B0EEEE197DF,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,156348
+700,WAZAINFO_SV_700,11C1DD0EE9B73C6A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,156668
+701,WAZAINFO_SV_701,11C1DE0EE9B73E1D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,156988
+702,WAZAINFO_SV_702,11C1DB0EE9B73904,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,157308
+703,WAZAINFO_SV_703,11C1DC0EE9B73AB7,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,157628
+704,WAZAINFO_SV_704,11C1D90EE9B7359E,"Der Anwender legt eine Panzerfalle. Wird er von einer
+physischen Attacke getroffen, explodiert die Falle und
+fügt gegnerischen Pokémon Schaden zu.",0,157948
+705,WAZAINFO_SV_705,11C1DA0EE9B73751,"Der Anwender greift das Ziel mit einem gewaltigen
+Strahl an. Sein eigener Spezial-Angriff sinkt dadurch
+stark.",0,158244
+706,WAZAINFO_SV_706,11C1D70EE9B73238,"Der Anwender beißt das Ziel mithilfe von
+Psycho-Kräften. Die Attacke durchbricht auch
+Barrieren wie Lichtschild und Reflektor.",0,158468
+707,WAZAINFO_SV_707,11C1D80EE9B733EB,"Von Frust getrieben greift der Anwender an.
+Wenn seine vorige Attacke fehlgeschlagen ist,
+verdoppelt sich die Stärke der Attacke.",0,158724
+708,WAZAINFO_SV_708,11C1D50EE9B72ED2,"Der Anwender greift das Ziel mit einem Knochen an,
+in dem eine Seele haust. Senkt eventuell die
+Verteidigung des Zieles.",0,158984
+709,WAZAINFO_SV_709,11C1D60EE9B73085,"Bei dieser Erstschlag-Attacke prallt der Anwender mit
+großer Geschwindigkeit auf das Ziel.",0,159228
+710,WAZAINFO_SV_710,11C5430EE9BA1F93,"Der Anwender greift das Ziel mit der Kraft des Wassers
+an. Senkt eventuell die Verteidigung des Zieles.",0,159412
+711,WAZAINFO_SV_711,11C5420EE9BA1DE0,"Der Anwender feuert mithilfe von Prisma-Kraft mächtige
+Lichtstrahlen ab. In der nächsten Runde kann er nicht
+handeln.",0,159620
+712,WAZAINFO_SV_712,11C5450EE9BA22F9,"Der Anwender schleicht sich in den Schatten des Zieles,
+stiehlt dessen erhöhte Statuswerte und fügt ihm
+Schaden zu.",0,159856
+713,WAZAINFO_SV_713,11C5440EE9BA2146,"Der Anwender stürzt mit der Gewalt eines Meteors auf
+das Ziel. Die Fähigkeit des Zieles wird dabei ignoriert.",0,160088
+714,WAZAINFO_SV_714,11C5470EE9BA265F,"Der Anwender greift mit einem unheimlichen Lichtstrahl
+an. Diese Attacke ignoriert die Fähigkeit des Zieles.",0,160308
+715,WAZAINFO_SV_715,11C5460EE9BA24AC,"Dem Anwender stehen Tränen in den Augen, wodurch
+das Ziel seinen Kampfeswillen verliert. Angriff und
+Spezial-Angriff des Zieles sinken.",0,160528
+716,WAZAINFO_SV_716,11C5490EE9BA29C5,"Der Anwender rammt das Ziel und schockt es mit
+starkem Strom. Das Ziel schreckt eventuell zurück.",0,160800
+717,WAZAINFO_SV_717,11C5480EE9BA2812,"Das Ziel wird vom Zorn der Natur getroffen und verliert
+dadurch die Hälfte seiner KP.",0,160996
+718,WAZAINFO_SV_718,11C54B0EE9BA2D2B,"Der Anwender sammelt eine große Menge Energie und
+greift das Ziel damit an. Der Typ der Attacke hängt von
+dem der Disc ab.",0,161168
+719,WAZAINFO_SV_719,11C54A0EE9BA2B78,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,161416
+720,WAZAINFO_SV_720,11BAD10EE9B10958,"Der Anwender greift alle Pokémon im Umkreis an,
+indem er seinen Kopf explodieren lässt. Dabei verletzt
+er sich auch selbst.",0,161736
+721,WAZAINFO_SV_721,11BAD20EE9B10B0B,"Ein Angriff mit elektrisch geladenen Fäusten, der
+bewirkt, dass Normal-Attacken den Typ Elektro
+annehmen.",0,161984
+722,WAZAINFO_SV_722,11BAD30EE9B10CBE,"Ein Angriff mit einer Lichtsäule. Ist der Angriff höher
+als der Spezial-Angriff, wird die Höhe des Schadens
+durch den Angriff bestimmt und umgekehrt.",0,162196
+723,WAZAINFO_SV_723,11BAD40EE9B10E71,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,162496
+724,WAZAINFO_SV_724,11BAD50EE9B11024,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,162816
+725,WAZAINFO_SV_725,11BAD60EE9B111D7,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,163136
+726,WAZAINFO_SV_726,11BAD70EE9B1138A,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,163456
+727,WAZAINFO_SV_727,11BAD80EE9B1153D,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,163776
+728,WAZAINFO_SV_728,11BAC90EE9B0FBC0,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,164096
+729,WAZAINFO_SV_729,11BACA0EE9B0FD73,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,164416
+730,WAZAINFO_SV_730,11BE570EE9B422E1,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,164736
+731,WAZAINFO_SV_731,11BE560EE9B4212E,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,165056
+732,WAZAINFO_SV_732,11BE550EE9B41F7B,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,165376
+733,WAZAINFO_SV_733,11BE540EE9B41DC8,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,165696
+734,WAZAINFO_SV_734,11BE5B0EE9B429AD,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,166016
+735,WAZAINFO_SV_735,11BE5A0EE9B427FA,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,166336
+736,WAZAINFO_SV_736,11BE590EE9B42647,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,166656
+737,WAZAINFO_SV_737,11BE580EE9B42494,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,166976
+738,WAZAINFO_SV_738,11BE4F0EE9B41549,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,167296
+739,WAZAINFO_SV_739,11BE4E0EE9B41396,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,167616
+740,WAZAINFO_SV_740,11CF550EE9C292AE,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,167936
+741,WAZAINFO_SV_741,11CF560EE9C29461,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,168256
+742,WAZAINFO_SV_742,11CF530EE9C28F48,"Der Anwender rotiert um die Schraubenmutter in
+seinem Brustkorb und schlägt zweimal hintereinander
+mit den Armen zu. Das Ziel schreckt eventuell zurück.",0,168576
+743,WAZAINFO_SV_743,11CF540EE9C290FB,"Anwender wehrt jede Attacke ab. Scheitert eventuell
+bei Wiederholung.",0,168884
+744,WAZAINFO_SV_744,11CF590EE9C2997A,"Der Anwender greift an, indem er die in seinem Körper
+angesammelte Energie bündelt und aus seinem Kern
+abschießt.",0,169024
+745,WAZAINFO_SV_745,11CF5A0EE9C29B2D,"Die Attacke richtet sich gegen das ausgewählte Ziel,
+unabhängig von Fähigkeiten oder Attacken, die Angriffe
+auf sich ziehen.",0,169252
+746,WAZAINFO_SV_746,11CF570EE9C29614,"Anwender und Ziel können nicht ausgetauscht werden,
+bis einer von ihnen kampfunfähig wird. Der Effekt
+endet, wenn eines der Pokémon das Kampffeld verlässt.",0,169504
+747,WAZAINFO_SV_747,11CF580EE9C297C7,"Der Anwender frisst die Beere, die er trägt,
+wodurch seine Verteidigung stark erhöht wird.",0,169816
+748,WAZAINFO_SV_748,11CF4D0EE9C28516,"Alle Statuswerte des Anwenders werden erhöht,
+aber dafür kann er nicht fliehen oder ausgewechselt
+werden.",0,170000
+749,WAZAINFO_SV_749,11CF4E0EE9C286C9,"Der Anwender übergießt das Ziel mit klebrigem Teer
+und senkt so dessen Initiative. Dadurch wird es schwach
+gegenüber Feuer-Attacken.",0,170212
+750,WAZAINFO_SV_750,11D2DB0EE9C5AC37,"Das Ziel wird mit magischem Puder bestreut und
+nimmt den Typ Psycho an.",0,170480
+751,WAZAINFO_SV_751,11D2DA0EE9C5AA84,"Der Anwender greift zweimal mit Grolldra an. Bei zwei
+Zielen werden beide jeweils einmal angegriffen.",0,170624
+752,WAZAINFO_SV_752,11D2DD0EE9C5AF9D,"Der Anwender lädt alle am Kampf beteiligten Pokémon
+zu einem Teekränzchen ein, woraufhin diese die Beeren
+essen, die sie bei sich tragen.",0,170828
+753,WAZAINFO_SV_753,11D2DC0EE9C5ADEA,"Das Ziel wird an der Flucht beziehungsweise am
+Auswechseln gehindert. Seine Verteidigung und
+Spezial-Verteidigung sinken jede Runde.",0,171104
+754,WAZAINFO_SV_754,11D2D70EE9C5A56B,"Der Anwender sticht mit einem elektrisch aufgeladenen
+Schnabel zu. Kommt er vor dem Ziel zum Zug,
+verdoppelt sich die Stärke der Attacke.",0,171372
+755,WAZAINFO_SV_755,11D2D60EE9C5A3B8,"Der Anwender beißt mit seinen harten Kiemen zu.
+Kommt er vor dem Ziel zum Zug, verdoppelt sich die
+Stärke der Attacke.",0,171648
+756,WAZAINFO_SV_756,11D2D90EE9C5A8D1,"Durch eine mysteriöse Macht werden wirksame Effekte
+auf Mitstreiterseite und gegnerischer Seite getauscht.",0,171888
+757,WAZAINFO_SV_757,11D2D80EE9C5A71E,"Eine Feuer-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Die Sonne brennt unbarmherzig
+fünf Runden lang.",0,172104
+758,WAZAINFO_SV_758,11D2D30EE9C59E9F,"Eine Käfer-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Senkt den Spezial-Angriff der
+Gegnerseite.",0,172324
+759,WAZAINFO_SV_759,11D2D20EE9C59CEC,"Eine Elektro-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erzeugt fünf Runden lang ein
+Elektrofeld.",0,172536
+760,WAZAINFO_SV_760,11C8C90EE9BD391C,"Eine Normal-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Senkt die Initiative der Gegnerseite.",0,172748
+761,WAZAINFO_SV_761,11C8CA0EE9BD3ACF,"Eine Kampf-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erhöht den Angriff der
+Mitstreiterseite.",0,172952
+762,WAZAINFO_SV_762,11C8CB0EE9BD3C82,"Eine Geister-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Senkt die Verteidigung der
+Gegnerseite.",0,173160
+763,WAZAINFO_SV_763,11C8CC0EE9BD3E35,"Eine Eis-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erzeugt fünf Runden lang Schnee.",0,173368
+764,WAZAINFO_SV_764,11C8C50EE9BD3250,"Eine Gift-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erhöht den Spezial-Angriff
+der Mitstreiterseite.",0,173556
+765,WAZAINFO_SV_765,11C8C60EE9BD3403,"Eine Wasser-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Löst fünf Runden lang strömenden
+Regen aus.",0,173776
+766,WAZAINFO_SV_766,11C8C70EE9BD35B6,"Eine Flug-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erhöht die Initiative der
+Mitstreiterseite.",0,173992
+767,WAZAINFO_SV_767,11C8C80EE9BD3769,"Eine Feen-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erzeugt fünf Runden lang ein
+Nebelfeld.",0,174204
+768,WAZAINFO_SV_768,11C8D10EE9BD46B4,"Eine Drachen-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Senkt den Angriff der Gegnerseite.",0,174408
+769,WAZAINFO_SV_769,11C8D20EE9BD4867,"Eine Psycho-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erzeugt fünf Runden lang ein
+Psychofeld.",0,174608
+770,WAZAINFO_SV_770,11CBCF0EE9BF7925,"Eine Gesteins-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Lässt fünf Runden lang einen
+Sandsturm toben.",0,174816
+771,WAZAINFO_SV_771,11CBCE0EE9BF7772,"Eine Boden-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erhöht die Spezial-Verteidigung
+der Mitstreiterseite.",0,175040
+772,WAZAINFO_SV_772,11CBCD0EE9BF75BF,"Eine Unlicht-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Senkt die Spezial-Verteidigung
+der Gegnerseite.",0,175272
+773,WAZAINFO_SV_773,11CBCC0EE9BF740C,"Eine Pflanzen-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erzeugt fünf Runden lang ein
+Grasfeld.",0,175496
+774,WAZAINFO_SV_774,11CBCB0EE9BF7259,"Eine Stahl-Attacke, die nur Dynamax-Pokémon
+einsetzen können. Erhöht die Verteidigung der
+Mitstreiterseite.",0,175704
+775,WAZAINFO_SV_775,11CBCA0EE9BF70A6,"Der Anwender setzt eine kleine Menge an KP ein,
+um alle seine Statuswerte zu erhöhen.",0,175920
+776,WAZAINFO_SV_776,11CBC90EE9BF6EF3,"Der Anwender greift mit seinem ganzen Körper an.
+Je höher seine Verteidigung ist, desto mehr Schaden
+richtet er an.",0,176092
+777,WAZAINFO_SV_777,11CBC80EE9BF6D40,"Durch Verzierungen werden der Angriff und
+Spezial-Angriff des Zieles stark erhöht.",0,176324
+778,WAZAINFO_SV_778,11CBD70EE9BF86BD,"Der Anwender kontrolliert durch Trommeln Wurzeln,
+die das Ziel angreifen und dessen Initiative senken.",0,176492
+779,WAZAINFO_SV_779,11CBD60EE9BF850A,"Das Ziel wird vier bis fünf Runden lang in einem
+Fangeisen festgehalten und angegriffen.",0,176700
+780,WAZAINFO_SV_780,11A6CD0EE9A05982,"Der Anwender greift mit einem Ball aus Feuer an,
+den er durch Anzünden eines kleinen Steins erzeugt.
+Fügt dem Ziel eventuell Verbrennungen zu.",0,176880
+781,WAZAINFO_SV_781,11A6CE0EE9A05B35,"Der Anwender greift an, indem er ein riesiges Schwert
+mit vollem Körpereinsatz schwingt und das Ziel mit
+enormer Wucht trifft.",0,177168
+782,WAZAINFO_SV_782,11A6CB0EE9A0561C,"Der Anwender greift an, indem er seinen Körper in einen
+unverwüstlichen Schild verwandelt und das Ziel mit
+enormer Wucht rammt.",0,177424
+783,WAZAINFO_SV_783,11A6CC0EE9A057CF,"Mithilfe der in den Backentaschen gespeicherten Energie
+greift der Anwender an und erhöht seine Initiative.
+Der Typ der Attacke hängt von Morpekos Form ab.",0,177680
+784,WAZAINFO_SV_784,11A6C90EE9A052B6,"Der Anwender schwingt heftig seinen robusten Schweif,
+um damit gegnerische Pokémon anzugreifen und ihren
+Angriffs-Wert zu senken.",0,177992
+785,WAZAINFO_SV_785,11A6CA0EE9A05469,"Der Anwender attackiert das Ziel mit einem
+spitzen Zweig.",0,178252
+786,WAZAINFO_SV_786,11A6C70EE9A04F50,"Der Anwender haut in die Saiten seiner Gitarre oder
+seines Basses und erzeugt dröhnende, kraftvolle
+Vibrationen, die gegnerischen Pokémon schaden.",0,178368
+787,WAZAINFO_SV_787,11A6C80EE9A05103,"Der Anwender greift mit einer aus einem sauren Apfel
+hergestellten säurehaltigen Flüssigkeit an. Dabei wird
+die Spezial-Verteidigung des Zieles gesenkt.",0,178664
+788,WAZAINFO_SV_788,11A6D50EE9A0671A,"Ein Apfel fällt aus großer Höhe herab und richtet
+Schaden an. Dabei wird die Verteidigung des Zieles
+gesenkt.",0,178972
+789,WAZAINFO_SV_789,11A6D60EE9A068CD,"Die Attacke trifft das Ziel mit so viel Wucht, dass es
+den Mut verliert. Dabei wird sein Spezial-Angriff
+gesenkt.",0,179192
+790,WAZAINFO_SV_790,11A9D30EE9A2998B,"Der Anwender stößt Dampf aus, mit dem er das Ziel
+angreift. Dieses wird eventuell verwirrt.",0,179420
+791,WAZAINFO_SV_791,11A9D20EE9A297D8,"Wundersames Wasser heilt die KP des Anwenders und
+seiner am Kampf beteiligten Mitstreiter.",0,179604
+792,WAZAINFO_SV_792,11A9D50EE9A29CF1,"Der Anwender wehrt jede Attacke ab. Berührt ihn
+währenddessen ein Pokémon, sinkt dessen Verteidigung
+stark. Scheitert eventuell bei Wiederholung.",0,179788
+793,WAZAINFO_SV_793,11A9D40EE9A29B3E,"Der Anwender tut so, als würde er sich verneigen, und
+sticht dann mit seinem zerzausten Fell zu. Diese Attacke
+trifft immer.",0,180080
+794,WAZAINFO_SV_794,11A9D70EE9A2A057,"Der Anwender greift mit seiner Lauchstange an. Von der
+Wucht der Attacke wird ihm jedoch so schwindelig,
+dass er in der nächsten Runde nicht handeln kann.",0,180332
+795,WAZAINFO_SV_795,11A9D60EE9A29EA4,"Diese Attacke kann nicht eingesetzt werden. Du solltest
+dein Pokémon sie vergessen lassen. Beachte aber,
+dass es sich danach nicht wieder an sie erinnern kann.",0,180644
+796,WAZAINFO_SV_796,11A9D90EE9A2A3BD,"Der Anwender schießt Stahl, den er in seinem ganzen
+Körper angesammelt hat, in Form eines mächtigen
+Strahls ab. Dabei verletzt er sich auch selbst.",0,180964
+797,WAZAINFO_SV_797,11A9D80EE9A2A20A,"Der Anwender greift das Ziel mit Psycho-Kräften an.
+Wenn ein Psychofeld aktiv ist, steigt die Stärke und es
+wird allen gegnerischen Pokémon Schaden zugefügt.",0,181260
+798,WAZAINFO_SV_798,11A9CB0EE9A28BF3,"Der Anwender greift an und zerstört dabei etwaige
+Felder. Ist kein Feld aktiv, schlägt die Attacke fehl.",0,181576
+799,WAZAINFO_SV_799,11A9CA0EE9A28A40,"Der Anwender greift das Ziel zwei- bis fünfmal
+hintereinander mit Schuppen-Geschossen an. Erhöht
+die eigene Initiative, aber senkt die Verteidigung.",0,181788
+800,WAZAINFO_SV_800,A1933E0EAA4B7C7B,"Der Anwender sammelt in Runde 1 kosmische Kräfte
+und erhöht damit seinen Spezial-Angriff, bevor er in
+Runde 2 das Ziel angreift.",0,182088
+801,WAZAINFO_SV_801,A1933D0EAA4B7AC8,"Je nachdem, was höher ausfällt, richtet diese Attacke
+entweder physischen oder Spezial-Schaden an.
+Das Ziel wird eventuell vergiftet.",0,182348
+802,WAZAINFO_SV_802,A193400EAA4B7FE1,"Der Anwender greift alle Pokémon im Umkreis an und
+wird danach kampfunfähig. Die Stärke dieser Attacke
+steigt, wenn ein Nebelfeld aktiv ist.",0,182616
+803,WAZAINFO_SV_803,A1933F0EAA4B7E2E,"Der Anwender rutscht über den Boden und greift das
+Ziel an. Ermöglicht den Erstschlag, wenn ein Grasfeld
+aktiv ist.",0,182900
+804,WAZAINFO_SV_804,A193420EAA4B8347,"Der Anwender greift mit aus dem Boden aufsteigender
+Elektrizität an. Die Stärke der Attacke wird verdoppelt,
+wenn beim Gegner ein Elektrofeld aktiv ist.",0,183132
+805,WAZAINFO_SV_805,A193410EAA4B8194,"Der Anwender nutzt die Kraft des aktiven Feldes für
+seinen Angriff. Der Typ und die Stärke der Attacke
+ändern sich je nach Art des aktiven Feldes.",0,183440
+806,WAZAINFO_SV_806,A193440EAA4B86AD,"Der Anwender kriecht hinter das Ziel, greift es an und
+senkt dabei dessen Spezial-Angriff.",0,183736
+807,WAZAINFO_SV_807,A193430EAA4B84FA,"Der Anwender greift mit der Energie seines Neids an
+und fügt allen gegnerischen Pokémon, deren Statuswerte
+in dieser Runde erhöht wurden, Verbrennungen zu.",0,183920
+808,WAZAINFO_SV_808,A193360EAA4B6EE3,"Der Anwender entlädt seinen Frust in einem Angriff.
+Die Stärke der Attacke wird verdoppelt, wenn seine
+Statuswerte in dieser Runde gesenkt wurden.",0,184232
+809,WAZAINFO_SV_809,A193350EAA4B6D30,"Der Anwender greift das Ziel mit dessen getragenem
+Item an. Die Attacke schlägt fehl, wenn das Ziel kein
+Item trägt.",0,184528
+810,WAZAINFO_SV_810,A18FB80EAA4862F2,"Der Anwender greift alle Pokémon im Umkreis mit
+einem ätzenden Gas an. Getragene Items werden
+dadurch zersetzt.",0,184764
+811,WAZAINFO_SV_811,A18FB90EAA4864A5,"Der Anwender sorgt durch geschickte Anweisungen
+dafür, dass der Angriff und die Verteidigung seiner
+Mitstreiter steigen.",0,184988
+812,WAZAINFO_SV_812,A18FB60EAA485F8C,"Nach der Attacke eilt der Anwender zurück und
+tauscht den Platz mit einem anderen Pokémon.",0,185232
+813,WAZAINFO_SV_813,A18FB70EAA48613F,"Tritt das Ziel ein- bis dreimal nacheinander. Die Härte
+der Tritte nimmt von Treffer zu Treffer zu.",0,185416
+814,WAZAINFO_SV_814,A18FB40EAA485C26,"Der Anwender trifft das Ziel zweimal hintereinander mit
+seinen Flügeln und fügt ihm so Schaden zu.",0,185616
+815,WAZAINFO_SV_815,A18FB50EAA485DD9,"Der Anwender greift das Ziel mit brennend heißem
+Sand an und fügt ihm eventuell Verbrennungen zu.",0,185816
+816,WAZAINFO_SV_816,A18FB20EAA4858C0,"Der Anwender wird eins mit dem Dschungel und heilt
+bei sich und seinen am Kampf beteiligten Mitstreitern
+KP und hebt jegliche Statusprobleme auf.",0,186012
+817,WAZAINFO_SV_817,A18FB30EAA485A73,"Der Anwender hat den Stil des Unlichts gemeistert
+und führt einen fokussierten, harten Schlag mit
+Volltreffergarantie aus.",0,186304
+818,WAZAINFO_SV_818,A18FC00EAA48708A,"Der Anwender hat den Stil des Wassers gemeistert und
+führt mit fließenden Bewegungen drei Angriffe in Folge
+mit Volltreffergarantie aus.",0,186552
+819,WAZAINFO_SV_819,A18FC10EAA48723D,"Das Ziel wird für vier bis fünf Runden in einem
+elektrischen Käfig gefangen.",0,186828
+820,WAZAINFO_SV_820,A18CB20EAA4622E9,"Der Anwender wandelt seine Lebenskraft in Energie um
+und greift gegnerische Pokémon an. Je höher seine
+KP sind, desto mehr Schaden wird angerichtet.",0,186984
+821,WAZAINFO_SV_821,A18CB10EAA462136,"Der Anwender greift das Ziel mit Psycho-Kräften an,
+die er aus seinen Augen abschießt. Das Ziel friert
+eventuell ein.",0,187284
+822,WAZAINFO_SV_822,A18CB00EAA461F83,"Der Anwender wandelt seinen Zorn in eine flammende
+Aura um und greift damit gegnerische Pokémon an.
+Diese schrecken eventuell zurück.",0,187520
+823,WAZAINFO_SV_823,A18CAF0EAA461DD0,"Der Anwender bringt das Ziel mit blitzschnellen
+Bewegungen durcheinander und tritt dann zu.
+Senkt die Verteidigung des Zieles.",0,187788
+824,WAZAINFO_SV_824,A18CB60EAA4629B5,"Der Anwender wirft eine in einen Blizzard gehüllte
+Lanze aus Eis auf gegnerische Pokémon.",0,188044
+825,WAZAINFO_SV_825,A18CB50EAA462802,"Der Anwender greift gegnerische Pokémon mit vielen
+kleinen Spukgestalten an.",0,188224
+826,WAZAINFO_SV_826,A18CB40EAA46264F,"Der Anwender greift mit gewaltigen Psycho-Kräften an.
+Die AP der letzten Attacke des Zieles werden um
+3 Punkte gesenkt.",0,188380
+827,WAZAINFO_SV_827,A18CB30EAA46249C,"Der Anwender greift mit zerstörerischen Klauen an.
+Das Ziel wird eventuell vergiftet, paralysiert oder in
+Schlaf versetzt.",0,188620
+828,WAZAINFO_SV_828,A18CBA0EAA463081,"Der Anwender hüllt sich in Psycho-Energie und rammt
+das Ziel. Außerdem steigt seine Verteidigung.",0,188868
+829,WAZAINFO_SV_829,A18CB90EAA462ECE,"Der Anwender tauscht seinen Angriff mit seiner
+Verteidigung.",0,189064
+830,WAZAINFO_SV_830,A1892C0EAA430960,"Der Anwender greift mit seinen Felsäxten an.
+Dadurch verstreut er schwebende Felssplitter
+im Umkreis des Zieles.",0,189188
+831,WAZAINFO_SV_831,A1892D0EAA430B13,"Der Anwender greift gegnerische Pokémon an, indem er
+sie mit heftigen Windböen voller Hassliebe umgibt.
+Eventuell sinkt ihr Angriff.",0,189416
+832,WAZAINFO_SV_832,A1892E0EAA430CC6,"Der Anwender greift mit einer wundersamen Kraft an.
+Außerdem steigt sein Spezial-Angriff.",0,189684
+833,WAZAINFO_SV_833,A1892F0EAA430E79,"Der Anwender wütet zwei bis drei Runden lang und speit
+heftige Flammen aus. Danach wird er verwirrt.",0,189864
+834,WAZAINFO_SV_834,A189300EAA43102C,"Der Anwender hüllt sich in Wasser und stürzt sich mit
+dem ganzen Körper auf das Ziel, wobei er selbst großen
+Schaden erleidet.",0,190068
+835,WAZAINFO_SV_835,A189310EAA4311DF,"Der Anwender greift mit einer hohen Konzentration
+seines Chlorophylls an, wobei er selbst Schaden erleidet.",0,190324
+836,WAZAINFO_SV_836,A189320EAA431392,"Der Anwender wirft gigantische Eisbrocken auf das Ziel.
+Dieses schreckt eventuell zurück.",0,190540
+837,WAZAINFO_SV_837,A189330EAA431545,"Der Anwender führt einen wilden Tanz auf, der den
+Sieg herbeiführen soll. Dies erhöht seinen Angriff,
+seine Verteidigung und seine Initiative.",0,190720
+838,WAZAINFO_SV_838,A189340EAA4316F8,"Der Anwender rammt das Ziel mit dem ganzen Körper.
+Dadurch sinken die Verteidigung und Spezial-
+Verteidigung des Anwenders.",0,191008
+839,WAZAINFO_SV_839,A189350EAA4318AB,"Der Anwender greift mit unzähligen Giftstacheln an und
+vergiftet das Ziel eventuell. Doppelt so stark gegen
+vergiftete Ziele.",0,191256
+840,WAZAINFO_SV_840,A1A0B60EAA56D2BF,"Ein schneidender Angriff mit durch eine Aura verstärkten
+Schwingen, der außerdem die Initiative des Anwenders
+erhöht. Hohe Volltrefferquote.",0,191508
+841,WAZAINFO_SV_841,A1A0B50EAA56D10C,"Der Anwender greift mit eiskaltem, schaudererregendem
+Hass an und senkt dabei den Angriff des Zieles.",0,191792
+842,WAZAINFO_SV_842,A1A0B80EAA56D625,"Der Anwender macht seine Haut so hart wie Eisen und
+erhöht dadurch seine Verteidigung stark.",0,191996
+843,WAZAINFO_SV_843,A1A0B70EAA56D472,"Der Anwender tritt zu und schießt dann drei Pfeile ab.
+Senkt eventuell die Verteidigung des Zieles oder lässt
+es zurückschrecken. Hohe Volltrefferquote.",0,192184
+844,WAZAINFO_SV_844,A1A0B20EAA56CBF3,"Angriff mit unzähligen Feuerkugeln, der dem Ziel
+eventuell Verbrennungen zufügt. Doppelt so stark
+gegen Ziele mit Statusproblemen.",0,192492
+845,WAZAINFO_SV_845,A1A0B10EAA56CA40,"Der Anwender greift mit einer klingengleichen
+Muschelschale an und verstreut Muschelsplitter,
+die Stacheln zu Füßen des Zieles werden.",0,192756
+846,WAZAINFO_SV_846,A1A0B40EAA56CF59,"Der Anwender greift mit starken, kalten Winden an,
+die Körper und Geist erzittern lassen. Senkt eventuell
+die Initiative gegnerischer Pokémon.",0,193028
+847,WAZAINFO_SV_847,A1A0B30EAA56CDA6,"Der Anwender ruft ein heftiges Unwetter herbei, um mit
+Wind und Blitzen anzugreifen. Gegnerische Pokémon
+werden eventuell paralysiert.",0,193316
+848,WAZAINFO_SV_848,A1A0BE0EAA56E057,"Der Anwender greift gegnerische Pokémon an, indem er
+sie mit heftigen Windböen und brennend heißem Sand
+umgibt. Eventuell erleiden sie Verbrennungen.",0,193588
+849,WAZAINFO_SV_849,A1A0BD0EAA56DEA4,"Der Anwender richtet ein Gebet an den Mond und heilt
+bei sich und seinen am Kampf beteiligten Mitstreitern KP
+und hebt jegliche Statusprobleme auf.",0,193888
+850,WAZAINFO_SV_850,A19DB00EAA5492B6,"Der Anwender fasst sich ein Herz, befreit sich von
+Statusproblemen und erhöht außerdem seinen
+Spezial-Angriff und seine Spezial-Verteidigung.",0,194184
+851,WAZAINFO_SV_851,A19DB10EAA549469,"Ist der Anwender terakristallisiert, greift er mit Energie
+seines Tera-Typs an. Der Schaden hängt vom Angriff oder
+Spezial-Angriff ab, je nachdem, welcher Wert höher ist.",0,194468
+852,WAZAINFO_SV_852,A19DAE0EAA548F50,"Der Anwender spannt eine Falle aus Fäden und wird so
+vor Angriffen geschützt. Berührt ihn nun ein Angreifer,
+sinkt dessen Initiative.",0,194812
+853,WAZAINFO_SV_853,A19DAF0EAA549103,"Der Anwender greift an, indem er seine erhobene Ferse
+hinunterschnellen lässt. Das Ziel wird eventuell verwirrt.
+Bei Misserfolg verletzt sich der Anwender selbst.",0,195080
+854,WAZAINFO_SV_854,A19DB40EAA549982,"Der Anwender rächt gefallene Mitstreiter. Je mehr
+kampfunfähige Pokémon sich im Team befinden,
+desto stärker ist die Attacke.",0,195408
+855,WAZAINFO_SV_855,A19DB50EAA549B35,"Der Anwender greift an, indem er ein sonderbares Licht
+freisetzt, das sich auch auf die Psyche auswirkt. Zudem
+wird die Spezial-Verteidigung des Zieles stark gesenkt.",0,195660
+856,WAZAINFO_SV_856,A19DB20EAA54961C,"Eine Attacke mit geübten Bewegungen. Trägt der
+Anwender ein Nigiragi im Maul, erhöht sich je nach
+dessen Form ein Statuswert des Anwenders.",0,195996
+857,WAZAINFO_SV_857,A19DB30EAA5497CF,"Bei dieser Erstschlag-Attacke hüllt der Anwender seine
+Faust in einen Strudel und greift mit einem extrem
+schnellen Hieb an.",0,196276
+858,WAZAINFO_SV_858,A19DB80EAA54A04E,"Der Anwender setzt eine unglaublich scharfe Essenz frei,
+die den Angriff des Zieles stark erhöht, aber seine
+Verteidigung stark senkt.",0,196528
+859,WAZAINFO_SV_859,A19DB90EAA54A201,"Der Anwender wirbelt wild umher, indem er sein Gewicht
+auf seine Extremitäten verlagert, und richtet so Schaden
+an. Seine eigene Initiative sinkt dadurch stark.",0,196800
+860,WAZAINFO_SV_860,A19A4A0EAA51AF8D,"Der Anwender versammelt eine Schar von Artgenossen,
+die dann geschlossen angreift und das Ziel ein- bis
+zehnmal hintereinander trifft.",0,197124
+861,WAZAINFO_SV_861,A19A490EAA51ADDA,"Der Anwender hüllt seine Füße in dünnes Eis, wirbelt
+herum und greift so das Ziel an. Die Drehung zerstört
+etwaige Felder.",0,197396
+862,WAZAINFO_SV_862,A19A480EAA51AC27,"Der Anwender stürzt sich waghalsig auf das Ziel. Bis zum
+nächsten Zug des Anwenders treffen ihn gegnerische
+Angriffe garantiert und richten doppelten Schaden an.",0,197644
+863,WAZAINFO_SV_863,A19A470EAA51AA74,"Der Anwender belebt mit einem Wunsch voller Mitgefühl
+ein kampfunfähiges Team-Mitglied wieder und stellt die
+Hälfte dessen maximaler KP wieder her.",0,197968
+864,WAZAINFO_SV_864,A19A460EAA51A8C1,"Der Anwender pökelt das Ziel mit Salz ein, wodurch
+dieses jede Runde Schaden erleidet. Stahl- und
+Wasser-Pokémon leiden besonders darunter.",0,198264
+865,WAZAINFO_SV_865,A19A450EAA51A70E,"Der Anwender taucht mit perfekt abgestimmtem Timing
+ab und trifft das Ziel mit Wasserspritzern. Dabei richtet
+er dreimal hintereinander Schaden an.",0,198544
+866,WAZAINFO_SV_866,A19A440EAA51A55B,"Der Anwender greift mit einer wirbelnden Attacke an,
+die Gegner auch vergiftet. Befreit den Anwender unter
+anderem von Wickel, Klammergriff und Egelsamen.",0,198840
+867,WAZAINFO_SV_867,A19A430EAA51A3A8,"Der Anwender kopiert die wahre Essenz des Zieles.
+Dadurch erhalten alle Pokémon auf der Mitstreiterseite
+die Fähigkeit des Zieles.",0,199152
+868,WAZAINFO_SV_868,A19A420EAA51A1F5,"Der Anwender setzt seine KP ein, um seinen Angriff,
+seinen Spezial-Angriff und seine Initiative stark zu
+erhöhen.",0,199416
+869,WAZAINFO_SV_869,A19A410EAA51A042,"Der Anwender fällt auf die Knie und verleitet das Ziel zu
+Unachtsamkeit, bevor er mit einer Klinge zuschlägt.
+Diese Attacke trifft garantiert.",0,199644
+870,WAZAINFO_SV_870,A196C40EAA4E9604,"Der Anwender greift an, indem er dem Ziel einen
+Trick-Strauß zuwirft. Diese Attacke trifft immer und
+hat zudem Volltreffergarantie.",0,199932
+871,WAZAINFO_SV_871,A196C50EAA4E97B7,"Der Anwender spuckt inbrünstig lodernde Flammen,
+als würde er singen, und versengt das Ziel. Dadurch
+steigt auch der Spezial-Angriff des Anwenders.",0,200196
+872,WAZAINFO_SV_872,A196C60EAA4E996A,"Der Anwender neckt das Ziel mit flinken, fließenden
+Tanzschritten und greift es dann an. Dadurch steigt
+auch die Initiative des Anwenders.",0,200492
+873,WAZAINFO_SV_873,A196C70EAA4E9B1D,"Ein rasender Angriff eines wilden Stiers, der auch
+Barrieren wie Lichtschild und Reflektor durchbricht.
+Der Attacken-Typ hängt von der Form des Anwenders ab.",0,200772
+874,WAZAINFO_SV_874,A196C00EAA4E8F38,"Der Anwender greift an, indem er Unmengen an Münzen
+ausschüttet, senkt dabei aber seinen Spezial-Angriff.
+Das Geld wird nach dem Kampf aufgesammelt.",0,201088
+875,WAZAINFO_SV_875,A196C10EAA4E90EB,"Das Ziel wird mit einer immateriellen Klinge angegriffen.
+Die Stärke der Attacke steigt um 50 %, wenn beim
+Anwender ein Elektrofeld aktiv ist.",0,201388
+876,WAZAINFO_SV_876,A196C20EAA4E929E,"Das Ziel wird kraftvoll mit brodelndem Wasser
+übergossen. Wider Erwarten sinkt die Stärke der Attacke
+bei starkem Sonnenlicht nicht, sondern steigt um 50 %.",0,201676
+877,WAZAINFO_SV_877,A196C30EAA4E9451,"Der Anwender beschwört Verderben bringendes Unheil
+herauf und halbiert die KP des Zieles.",0,201992
+878,WAZAINFO_SV_878,A196BC0EAA4E886C,"Der Anwender wechselt seine Form, während er sich gen
+Boden stürzt, und verursacht eine riesige Ur-Explosion.
+Ist die Attacke sehr effektiv, steigt ihre Stärke noch mehr.",0,202172
+879,WAZAINFO_SV_879,A196BD0EAA4E8A1F,"Der Anwender wechselt bei rasantem Tempo seine Form
+und trifft das Ziel mit einem futuristischen Elektroschlag.
+Ist die Attacke sehr effektiv, steigt ihre Stärke noch mehr.",0,202516
+880,WAZAINFO_SV_880,A1AEAE0EAA630283,"Der Anwender setzt seine KP ein, um einen
+Doppelgänger zu erzeugen, und tauscht dann
+den Platz mit einem anderen Pokémon.",0,202864
+881,WAZAINFO_SV_881,A1AEAD0EAA6300D0,"Der Anwender sorgt mit einem schlechten Witz für
+eisige Stimmung und tauscht den Platz mit einem
+anderen Pokémon. Erzeugt fünf Runden lang Schnee.",0,203108
+882,WAZAINFO_SV_882,A1AEB00EAA6305E9,"Die Effekte von Stachler, Tarnsteine, Klebenetz,
+Giftspitzen und Delegator werden aufgehoben. Zudem
+steigen der Angriff und die Initiative des Anwenders.",0,203404
+883,WAZAINFO_SV_883,A1AEAF0EAA630436,"Erzeugt fünf Runden lang Schnee. Dadurch wird die
+Verteidigung von Eis-Pokémon erhöht.",0,203712
+884,WAZAINFO_SV_884,A1AEB20EAA63094F,"Der Anwender greift an, indem er das Ziel anspringt.
+Dadurch sinkt auch die Initiative des Zieles.",0,203888
+885,WAZAINFO_SV_885,A1AEB10EAA63079C,"Der Anwender greift an, als würde er aus hohem Gras
+hervorspringen. Mit wendigen Schritten erhöht er seine
+Initiative.",0,204088
+886,WAZAINFO_SV_886,A1AEB40EAA630CB5,"Der Anwender greift an, indem er das Ziel mit eiskaltem
+Wasser überschüttet. Das raubt dem Ziel seinen
+Kampfgeist und senkt so seinen Angriff.",0,204328
+887,WAZAINFO_SV_887,A1AEB30EAA630B02,"Der Anwender lässt einen spitzen Teil seines Körpers
+rasant rotieren, sticht zu und durchbricht dabei auch die
+Wirkung von Attacken wie Schutzschild und Scanner.",0,204616
+888,WAZAINFO_SV_888,A1AEB60EAA63101B,"Der Anwender greift mit übernatürlichen Lichtstrahlen
+an, die er aus seinen Augen abfeuert, und trifft das Ziel
+zweimal hintereinander.",0,204940
+889,WAZAINFO_SV_889,A1AEB50EAA630E68,"Ein Angriff, für den der Anwender seinen Zorn in Energie
+umwandelt. Je häufiger der Anwender getroffen wurde,
+desto stärker wird diese Attacke.",0,205212
+890,WAZAINFO_SV_890,A1AB480EAA601F5A,"Der Anwender schießt die eigene Rüstung als glühendes
+Projektil auf das Ziel. Dadurch sinken die Verteidigung
+und Spezial-Verteidigung des Anwenders.",0,205500
+891,WAZAINFO_SV_891,A1AB490EAA60210D,"Der Anwender tränkt seine Klinge in Bedauern und Reue
+und greift damit an. Die Hälfte des zugefügten Schadens
+wird dem Anwender als KP gutgeschrieben.",0,205800
+892,WAZAINFO_SV_892,A1AB460EAA601BF4,"Der Anwender nutzt die gesamte Elektrizität in seinem
+Körper, um großen Schaden auszuteilen. Die restliche
+Kampfdauer gehört er nicht mehr dem Typ Elektro an.",0,206104
+893,WAZAINFO_SV_893,A1AB470EAA601DA7,"Der Anwender greift mit einem großen Hammer an,
+den er mit vollem Körpereinsatz um sich schwingt. Diese
+Attacke kann nicht zweimal in Folge eingesetzt werden.",0,206424
+894,WAZAINFO_SV_894,A1AB440EAA60188E,"Der Anwender rächt sich an dem Gegner, der ihm zuletzt
+mit einer Attacke Schaden zugefügt hat, indem er ihm
+den Schaden mit erhöhter Kraft zurückzahlt.",0,206744
+895,WAZAINFO_SV_895,A1AB450EAA601A41,"Der Anwender stößt Wasser unter Druck aus,
+um das Ziel wie mit einer Klinge anzugreifen.
+Hohe Volltrefferquote.",0,207048
+896,WAZAINFO_SV_896,A1AB420EAA601528,ー,0,207272
+897,WAZAINFO_SV_897,A1AB430EAA6016DB,ー,0,207276
+898,WAZAINFO_SV_898,A1AB400EAA6011C2,ー,0,207280
+899,WAZAINFO_SV_899,A1AB410EAA601375,ー,0,207284
+900,WAZAINFO_SV_900,987D030EA50718B0,ー,0,207288
+901,WAZAINFO_SV_901,987D040EA5071A63,"Der Anwender entfesselt eine gewaltige Energieladung
+aus einem blutroten Vollmond. Diese Attacke kann nicht
+zweimal in Folge eingesetzt werden.",0,207292
+902,WAZAINFO_SV_902,987D050EA5071C16,"Der Anwender verschießt gequirlten Tee. Die Hälfte des
+zugefügten Schadens wird ihm als KP gutgeschrieben.
+Das Ziel erleidet eventuell Verbrennungen.",0,207580
+903,WAZAINFO_SV_903,987D060EA5071DC9,"Der Anwender feuert eine klebrige Sirupbombe auf das
+Ziel, wodurch es in Sirup gehüllt und seine Initiative drei
+Runden in Folge gesenkt wird.",0,207880
+904,WAZAINFO_SV_904,987D070EA5071F7C,"Der Anwender schlägt mit einer rankenumschlungenen
+Keule zu. Der Typ dieser Attacke hängt von der Maske
+des Anwenders ab. Hohe Volltrefferquote.",0,208168
+905,WAZAINFO_SV_905,987D080EA507212F,"Sammelt in Runde 1 Elektrizität, um den Spezial-Angriff
+zu erhöhen, und greift dann in Runde 2 mit Starkstrom
+an. Bei Regen erfolgt der Angriff sofort in Runde 1.",0,208460
+906,WAZAINFO_SV_906,987D090EA50722E2,"Der Anwender greift das Ziel mit gebündelter Kristall-
+energie an. Wenn Terapagos diese Attacke in seiner
+Stellarform einsetzt, erleiden alle Gegner Schaden.",0,208788
+907,WAZAINFO_SV_907,987D0A0EA5072495,"Der Anwender greift mit einem Laserstrahl an.
+Manchmal feuern mehrere seiner Köpfe Laser ab,
+wodurch sich die Stärke dieser Attacke verdoppelt.",0,209104
+908,WAZAINFO_SV_908,987D0B0EA5072648,"Das brennend heiße Fell des Anwenders schützt ihn vor
+Angriffen. Gleichzeitig erleiden alle Pokémon, die mit
+ihm in Berührung kommen, Verbrennungen.",0,209392
+909,WAZAINFO_SV_909,987D0C0EA50727FB,"Bei dieser Erstschlag-Attacke lässt der Anwender
+einen Blitz auf das Ziel einschlagen. Sie gelingt nur,
+wenn dieses gerade eine Angriffsattacke vorbereitet.",0,209692
+910,WAZAINFO_SV_910,9880890EA50A3239,"Der Anwender führt mit dem in seinem Kopf
+gespeicherten Licht einen Schnitt aus. Diese Attacke
+trifft auch, wenn das Ziel sich selbst schützt.",0,210008
+911,WAZAINFO_SV_911,9880880EA50A3086,"Der Anwender greift das Ziel zweimal hintereinander
+mit Partikelklingen an. Der Angriff trifft garantiert.",0,210296
+912,WAZAINFO_SV_912,9880870EA50A2ED3,"Der Anwender nimmt das Ziel mit Armen oder Scheren
+in die Mangel. Je höher die KP des Zieles, desto stärker
+die Attacke.",0,210512
+913,WAZAINFO_SV_913,9880860EA50A2D20,"Das anspornende Drachengebrüll hebt die Moral aller
+Mitstreiter und erhöht ihre Volltrefferquote. Der Effekt
+ist stärker, wenn sie dem Typ Drache angehören.",0,210756
+914,WAZAINFO_SV_914,98808D0EA50A3905,"Der Anwender greift mit engelsgleichem Gesang an.
+Falls die Statuswerte des Zieles in dieser Runde erhöht
+wurden, wird es zusätzlich verwirrt.",0,211072
+915,WAZAINFO_SV_915,98808C0EA50A3752,"Der Anwender greift das Ziel voller Verzweiflung an.
+Wenn seine vorige Attacke fehlgeschlagen ist,
+verdoppelt sich die Stärke der Attacke.",0,211360
+916,WAZAINFO_SV_916,98808B0EA50A359F,"Der Anwender lädt seinen Körper mit elektrischer
+Energie auf und stürzt sich auf das Ziel. Bei Misserfolg
+verletzt sich der Anwender selbst.",0,211640
+917,WAZAINFO_SV_917,98808A0EA50A33EC,"Der Anwender greift mit unerträglichen Schallwellen an,
+wodurch das Ziel zwei Runden lang nicht durch Attacken,
+Fähigkeiten oder getragene Items geheilt werden kann.",0,211924
+918,WAZAINFO_SV_918,9880910EA50A3FD1,"Der Anwender reagiert auf Bewegungen des Zieles und
+lässt es durch einen Schlag zurückschrecken. Gelingt nur,
+wenn das Ziel gerade eine Erstschlag-Attacke vorbereitet.",0,212256
+919,WAZAINFO_SV_919,9880900EA50A3E1E,"Der Anwender umwickelt das Ziel mit einer Kette aus
+Toxinen, die in dessen Körper eindringen und ihm
+schaden. Das Ziel wird eventuell schwer vergiftet.",0,212592
+920,WAZAINFO_SV_851_01,9465B96E46D0DBE5,"Verursacht Schaden mit Angriffs- oder Sp.-Ang.-Wert,
+je nachdem, welcher höher ist. Ang. und Sp.-Ang. des
+Anw. sinken. Sehr effektiv gegen terakristallisierte Ziele.",0,212896

@@ -1,0 +1,200 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_load_index_010,9B5D4D6BD3CC5B45,Pokémon,0,860
+1,nx_load_index_020,9B60D36BD3CF74CE,Points,0,876
+2,	,AF66E44C86071324,[REF:2],0,892
+3,nx_load_button_000,B1C23ADB2AC36796,Retour,0,904
+4,nx_load_button_001,B1C23BDB2AC36949,Aide,4,920
+5,	,AF66E44C86071324,[REF:5],0,932
+6,nx_load_guide_010,61707553C26B9525,Choisissez un jeu à synchroniser avec Pokémon HOME.,0,944
+7,nx_load_guide_020,6173FB53C26EAEAE,Choisissez un jeu vers lequel envoyer des PCo.,0,1048
+8,	,AF66E44C86071324,[REF:8],0,1144
+9,nx_load_mile,968D0E49A0115FA0,"Points Pokémon HOME : [CTRL:0204:0000,202F]",0,1156
+10,nx_load_accountname,105B61787869E78F,[CTRL:01D9:0000],0,1212
+11,	,AF66E44C86071324,[REF:11],0,1224
+12,nx_load_none,0DE124626741DDF3,Données de sauvegarde introuvables.,0,1236
+13,	,AF66E44C86071324,[REF:13],0,1308
+14,nx_load_savedata_010,7EB61251F77F27FE,,0,1320
+15,nx_load_savedata_020,7EB30C51F77CE7F5,Nom,0,1324
+16,nx_load_savedata_021,7EB30B51F77CE642,[CTRL:0189:0000],0,1332
+17,nx_load_savedata_030,7EAF8651F779CE6C,Nº ID,0,1344
+18,nx_load_savedata_031,7EAF8751F779D01F,"[CTRL:0205:0000,0000]",0,1356
+19,nx_load_savedata_040,7EAC0051F776B4E3,Pokédex,0,1368
+20,nx_load_savedata_041,7EABFF51F776B330,"[CTRL:0203:0000,202F]",0,1384
+21,nx_load_savedata_050,7EA89A51F773D1BA,Temps de jeu,0,1396
+22,nx_load_savedata_051,7EA89B51F773D36D,[CTRL:0202:0000]:[CTRL:0201:0001],0,1424
+23,nx_load_savedata_060,7EA51451F770B831,Dernière sauvegarde,0,1444
+24,nx_load_savedata_061,7EA51351F770B67E,"[CTRL:0201:0002]/[CTRL:0201:0001]/[CTRL:0203:0000,0000] à [CTRL:0201:0003]:[CTRL:0201:0004]",0,1484
+25,nx_load_savedata_070,7EA20E51F76E7828,Commencer sans synchroniser,0,1540
+26,nx_load_savedata_071,7EA20F51F76E79DB,"Sélectionnez cette option pour organiser vos Boîtes dans
+Pokémon HOME sans synchroniser le logiciel avec un jeu.",0,1596
+27,nx_load_savedata_080,7E9E8851F76B5E9F,Utilisateur du jeu,4,1824
+28,nx_load_savedata_081,7E9E8751F76B5CEC,"Les données de sauvegarde de l’utilisateur suivant sont
+actuellement affichées : [CTRL:01D9:0000].",0,1864
+29,nx_load_savedata_090,7E9B0251F7684516,"Cette sauvegarde provient d’une version obsolète
+du logiciel et n’est pas compatible avec la dernière
+version de Pokémon HOME.",0,2040
+30,nx_load_savedata_100,75A35D51F23DDDBC,"Cette sauvegarde provient d’une version obsolète
+du logiciel. Vous devez mettre à jour Pokémon HOME
+pour qu’elle puisse être lue.",0,2296
+31,nx_load_savedata_110,75A6E351F240F745,"Cette sauvegarde est illisible.
+Il se peut qu’elle soit corrompue.",0,2556
+32,nx_load_savedata_error,C55CE1BE671BCBF1,???,0,2692
+33,	,AF66E44C86071324,[REF:33],0,2700
+34,nx_load_msg_yes,99747AF82159E002,Oui,4,2712
+35,nx_load_msg_no,9835E3CDF53E5574,Non,0,2720
+36,nx_load_msg_010,BC52E8F712E52D0C,Voulez-vous synchroniser Pokémon HOME avec ce jeu ?,0,2728
+37,nx_load_msg_011,BC52E9F712E52EBF,Voulez-vous voir vos Boîtes sur Pokémon HOME ?,0,2832
+38,nx_load_msg_020,BC5D7AF712EE79A7,"Synchronisation du jeu en cours...
+Veuillez patienter.",0,2928
+39,nx_load_msg_021,BC5D79F712EE77F4,"Accès à vos Boîtes en cours...
+Veuillez patienter.",4,3040
+40,nx_load_msg_030,BC59F4F712EB601E,Voulez-vous voir la sauvegarde d’un autre utilisateur ?,0,3144
+41,nx_load_msg_040,BC48F6F712DCF051,"Vous ne pouvez pas encore synchroniser Pokémon HOME
+avec la sauvegarde de ce jeu.[CLEAR]
+Veuillez sauvegarder votre partie après avoir reçu
+votre Pokédex.",0,3256
+42,nx_load_msg_041,BC48F5F712DCEE9E,[REF:42],0,3560
+43,nx_load_msg_050,BC4570F712D9D6C8,"La sauvegarde de ce jeu a atteint la limite maximale de PCo.
+Vous ne pouvez plus y envoyer de PCo pour le moment.",0,3572
+44,nx_load_msg_060,BC4FE2F712E2ED03,Ce jeu est incompatible avec l’envoi de points.,0,3800
+45,nx_load_msg_070,BC4C7CF712E009DA,"La lecture de la sauvegarde de ce jeu a échoué.
+Il se peut qu’elle soit corrompue.",0,3896
+46,nx_load_msg_080,BC3B7EF712D19A0D,"Cette sauvegarde ne provient pas de la version du jeu la plus
+à jour. Veuillez mettre votre jeu à jour avant de le lancer, puis[RETURN]
+sauvegarder votre partie.",0,4064
+47,nx_load_msg_080_1_1,391B8F906963DCED,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon : Let’s Go, Pikachu.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,4380
+48,nx_load_msg_080_1_2,391B8C906963D7D4,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon : Let’s Go, Évoli.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,4740
+49,nx_load_msg_080_2_1,1D3C88905911DCC8,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon Épée.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,5096
+50,nx_load_msg_080_2_2,1D3C8B905911E1E1,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon Bouclier.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,5424
+51,nx_load_msg_090,BC37F8F712CE8084,"Vous devez mettre à jour Pokémon HOME pour pouvoir
+synchroniser l’application avec la sauvegarde de ce jeu.[CLEAR]
+Veuillez fermer puis mettre à jour Pokémon HOME.",0,5760
+52,	,AF66E44C86071324,[REF:52],0,6080
+53,nx_load_userchange_title,06E6C6C2D7A42653,Choix de l’utilisateur,0,6092
+54,nx_load_userchange_01,DA606E6F26E33CE8,[REF:54],0,6140
+55,	,AF66E44C86071324,[REF:55],0,6152
+56,nx_load_title_beluga_1,79CDCAF8F1656B34,"Pokémon : Let’s Go, Pikachu",0,6164
+57,nx_load_title_beluga_2,79CDCDF8F165704D,"Pokémon : Let’s Go, Évoli",0,6220
+58,nx_load_title_orion_1,09BE518446BE061F,Pokémon Épée,0,6272
+59,nx_load_title_orion_2,09BE528446BE07D2,Pokémon Bouclier,0,6300
+60,	,AF66E44C86071324,[REF:60],0,6336
+61,nx_load_help_1_010,165A1F76FB4FC2F4,"Sur cet écran, vous pouvez choisir quelle sauvegarde de jeu synchroniser
+avec Pokémon HOME !",0,6348
+62,nx_load_help_1_020,16641176FB57FFAF,"Si votre Nintendo Switch contient des sauvegardes de jeux qui peuvent
+être synchronisées avec Pokémon HOME, elles apparaîtront ici sous
+forme d’icônes !",0,6536
+63,nx_load_help_1_030,16608B76FB54E626,"Mais si vous voulez seulement mettre de l’ordre dans vos Boîtes
+sans synchroniser de jeu avec Pokémon HOME, c’est simple :
+il suffit de sélectionner cette icône-là !",0,6844
+64,	,AF66E44C86071324,[REF:64],0,7176
+65,nx_load_help_2_010,8E9EAB46CBC85EE9,"En gardant des Pokémon dans vos Boîtes, vous accumulerez
+des Points Pokémon HOME tous les jours !
+Plus vous avez de Pokémon sur Pokémon HOME, plus vous recevrez
+de points, alors gardez-en plein au chaud dans vos Boîtes !",4,7188
+66,nx_load_help_2_020,8EA1B146CBCA9EF2,"Dans ce menu, vous pouvez convertir vos Points Pokémon HOME
+en Points Combat et les envoyer vers un de vos jeux pour les utiliser !
+(Par contre, tous les jeux sont pas compatibles, alors faites attention...)",0,7632
+67,nx_load_msg_100,B34053F70DA4192A,"Un problème est survenu lors de la lecture des données
+de sauvegarde du jeu.[CLEAR]
+Le problème a été causé par le Pokémon occupant
+l’emplacement nº [CTRL:0200:0002] (en partant de la gauche)[RETURN]
+de la rangée nº [CTRL:0200:0001] de la Boîte « [CTRL:01C0:0000] ».",4,8048
+68,nx_load_msg_101,B34054F70DA41ADD,"Un problème est survenu lors de la lecture des données
+de sauvegarde du jeu.[CLEAR]
+Le problème a été causé par le Pokémon occupant
+l’emplacement nº [CTRL:0200:0002] (en partant de la gauche)[RETURN]
+de la rangée nº [CTRL:0202:0001] de la Boîte Pokémon.",4,8492
+69,	,AF66E44C86071324,[REF:69],0,8936
+70,nx_load_msg_102,B34051F70DA415C4,"Un problème est survenu lors de la lecture des données
+de sauvegarde du jeu.[CLEAR]
+Le problème a été causé par le Pokémon occupant
+l’emplacement nº [CTRL:0200:0002] (en partant de la gauche) de la rangée[RETURN]
+nº [CTRL:0200:0001] de l’Aire de Pâturage  « [CTRL:01C0:0000] ».",4,8948
+71,nx_load_title_delphis_1,ADBFF99A2886C9AB,Pokémon Diamant Étincelant,0,9416
+72,nx_load_title_delphis_2,ADBFFA9A2886CB5E,Pokémon Perle Scintillante,0,9472
+73,nx_load_title_hayabusa_1,0946731A41A3B00A,Légendes Pokémon : Arceus,0,9528
+74,nx_load_guide_021,6173FC53C26EB061,Choisissez un jeu dans lequel utiliser vos points.,0,9580
+75,nx_load_msg_051,BC4571F712D9D87B,"La sauvegarde de ce jeu a atteint la limite maximale de PBA.
+Vous ne pouvez pas en envoyer davantage pour le moment.",0,9684
+76,nx_load_msg_080_2_3,1D3C8A905911E02E,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon Diamant Étincelant.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,9920
+77,nx_load_msg_080_2_4,1D3C8D905911E547,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon Perle Scintillante.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,10276
+78,nx_load_msg_080_2_5,1D3C8C905911E394,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Légendes Pokémon : Arceus.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,10632
+79,nx_load_help_2_021,8EA1B246CBCAA0A5,"Vous pouvez utiliser les points accumulés dans les autres jeux !
+Comment ? Eh bien, simplement en les convertissant en points utilisés
+dans le jeu qui vous intéresse, puis en les transférant !
+(Par contre, tous les jeux ne sont pas compatibles, alors faites attention...)",0,10988
+80,	,AF66E44C86071324,[REF:80],0,11532
+81,nx_load_title_scarlet_01,6C5F64D7DE1F636E,Pokémon Écarlate,0,11544
+82,nx_load_title_violet_01,5B1851154D8FB139,Pokémon Violet,0,11580
+83,nx_load_msg_052,BC4572F712D9DA2E,"La sauvegarde de ce jeu a atteint la limite maximale de PL.
+Vous ne pouvez plus y envoyer de PL pour le moment.",0,11612
+84,nx_load_msg_080_5_1,15EDD39055509A39,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon Écarlate.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,11836
+85,nx_load_msg_080_5_2,15EDD09055509520,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Pokémon Violet.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,12172
+86,	,AF66E44C86071324,[REF:86],0,12504
+87,nx_load_title_Ikkaku,2182971FD64F981A,Légendes Pokémon : Z-A,0,12516
+88,nx_load_msg_080_6_1,FC9B6C9047292F34,"Cette sauvegarde ne provient pas de la version
+la plus à jour de Légendes Pokémon : Z-A.[CLEAR]
+Veuillez mettre ce jeu à jour, sauvegarder à nouveau,
+puis relancer Pokémon HOME.",0,12564
+89,nx_load_msg_042,BC48F4F712DCECEB,"Vous ne pouvez pas synchroniser Pokémon HOME
+avec la sauvegarde de ce jeu pour le moment.[CLEAR]
+Veuillez terminer la mission secondaire
+« La requête de Myosotis » dans Légendes Pokémon : Z-A,[RETURN]
+puis sauvegarder votre partie.",0,12912
+90,nx_load_msg_043,BC48F3F712DCEB38,"Vous ne pouvez pas encore synchroniser Pokémon HOME
+avec la sauvegarde de ce jeu.[CLEAR]
+Veuillez poursuivre votre partie dans Légendes Pokémon : Z-A
+jusqu’à débloquer les fonctionnalités en réseau, puis la sauvegarder.",0,13360
+91,nx_load_msg_044,BC48FAF712DCF71D,[REF:91],0,13792
+92,nx_load_msg_045,BC48F9F712DCF56A,[REF:92],0,13804
+93,nx_load_msg_046,BC48F8F712DCF3B7,"Vous ne pouvez pas synchroniser Pokémon HOME
+avec la sauvegarde de ce jeu pour le moment.[CLEAR]
+Veuillez revenir d’Extra Illumis dans Légendes Pokémon : Z-A,
+puis sauvegarder votre partie.",0,13816
+94,	,AF66E44C86071324,[REF:94],0,14188
+95,nx_load_index_030,9B63D96BD3D1B4D7,Synchronisation avec un jeu GBA,0,14200
+96,nx_load_msg_022,BC5D7CF712EE7D0D,"Les Pokémon envoyés dans Pokémon HOME ne pourront
+pas retourner d’où ils viennent.[CLEAR]
+Souhaitez-vous commencer la synchronisation ?",0,14264
+97,nx_load_msg_023,BC5D7BF712EE7B5A,Copie de la progression du Pokédex dans Pokémon HOME...,0,14528
+98,nx_load_msg_024,BC5D76F712EE72DB,"Vous ne pouvez effectuer de synchronisation avec un jeu
+Game Boy Advance (GBA) qu’une fois par minute.[RETURN]
+Veuillez patienter un instant.",0,14640
+99,nx_load_title_gbasoft_1,069CD36CD3EA7506,Pokémon Version Rouge Feu,0,14916
+100,nx_load_title_gbasoft_2,069CD26CD3EA7353,Pokémon Version Vert Feuille,0,14968
+101,	,AF66E44C86071324,[REF:101],0,15028
+102,nx_load_help_3_010,694E876FE122C3BA,"Sur cet écran, vous pouvez choisir quelle sauvegarde de jeu
+Game Boy Advance (GBA) synchroniser avec Pokémon HOME !",0,15040
+103,nx_load_help_3_020,694B016FE11FAA31,"Si votre Nintendo Switch contient des sauvegardes de jeux qui peuvent
+être synchronisées avec Pokémon HOME, elles apparaîtront ici sous
+forme d’icônes !",0,15272
+104,nx_load_help_3_030,6947FB6FE11D6A28,"Sélectionnez une icône et votre progression dans le Pokédex du jeu
+en question sera reflétée dans celui de Pokémon HOME !
+C’est pas beau, ça ?",0,15580

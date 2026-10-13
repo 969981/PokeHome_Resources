@@ -1,0 +1,51 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_link_index_010,5E27A64FD90FA579,Collegamento a Pokémon Champions,0,252
+1,nx_link_msg_001,5D24D6555855126E,"Verifica dei Pokémon di ritorno da Pokémon Champions
+in corso...",0,320
+2,nx_link_msg_yes,6DE163543F60E996,Sì,0,452
+3,nx_link_msg_no,69760125DBDFD8F8,No,0,460
+4,nx_link_msg_008,5D24CF5558550689,Verifica dell’account Nintendo in corso...,0,468
+5,nx_link_msg_009,5D24CE55585504D6,"Al momento, il tuo account di Pokémon Champions ha subito
+delle restrizioni nell’uso di questa funzione.[CLEAR]
+Il collegamento a Pokémon Champions è stato interrotto.",4,556
+6,nx_link_msg_010,5D2151555851FA98,Vuoi collegare questo account?,0,884
+7,nx_link_msg_011,5D2152555851FC4B,"Il collegamento a Pokémon Champions è stato interrotto.
+Tornerai al menu principale.",4,948
+8,nx_link_msg_012,5D2153555851FDFE,[REF:8],0,1120
+9,nx_link_msg_013,5D2154555851FFB1,"Sono stati trovati uno o più Pokémon di ritorno da
+Pokémon Champions.",0,1132
+10,nx_link_msg_014,5D21555558520164,"C[CTRL:1101:0000,0602]’èi sono [CTRL:0203:0000,002E] Pokémon di ritorno da Pokémon Champions.",0,1272
+11,nx_link_msg_015,5D21565558520317,Ritorno in corso...,0,1396
+12,nx_link_msg_016,5D215755585204CA,Ritorno da Pokémon Champions terminato!,0,1436
+13,nx_link_dialog_001,B4A51C1FF7B01785,Verifica dell’account di Pokémon Champions,0,1516
+14,nx_link_dialog_002,B4A5191FF7B0126C,Nome Allenatore:,0,1604
+15,nx_link_dialog_003,B4A51A1FF7B0141F,[CTRL:0100:0000],0,1640
+16,nx_link_dialog_004,B4A5171FF7B00F06,ID cliente:,4,1652
+17,nx_link_msg_019,5D214A555851EEB3,"Non hai ancora accolto in Pokémon Champions uno o più
+Pokémon che hai mandato in trasferta.[CLEAR]
+Avvia Pokémon Champions per effettuare la ricezione.",0,1676
+18,nx_link_msg_020,5D2BC355585B10D3,Manutenzione in corso per Pokémon Champions.,0,1972
+19,nx_link_msg_021,5D2BC255585B0F20,"Attendi che le operazioni di manutenzione
+di Pokémon Champions siano terminate.",4,2064
+20,nx_link_msg_022,5D2BC555585B1439,Account di Pokémon Champions non trovato.,4,2224
+21,nx_link_msg_023,5D2BC455585B1286,Tornerai al menu principale.,0,2308
+22,nx_link_msg_024,5D2BC755585B179F,"L’account di Pokémon Champions collegato all’account
+Nintendo attualmente in uso è associato a un account[RETURN]
+Pokémon HOME precedente.[CLEAR]
+Accedi a Pokémon Champions e dissocia l’account da quello
+precedente di Pokémon HOME.",0,2368
+23,nx_link_msg_025,5D2BC655585B15EC,"Hai già mandato in trasferta [CTRL:0203:0000,002E] Pokémon.[CLEAR]
+Non puoi mandarne altri.
+Tornerai al menu principale.",4,2816
+24,nx_link_msg_026,5D2BC955585B1B05,"La funzione di collegamento a Pokémon Champions
+è attualmente in manutenzione.[CLEAR]
+Il collegamento a Pokémon Champions è stato interrotto.",0,3020
+25,nx_link_msg_027,5D2BC855585B1952,"La funzione di collegamento a Pokémon Champions
+è attualmente in manutenzione.[CLEAR]
+Termine della manutenzione: [CTRL:0201:0002]/[CTRL:0201:0001]/[CTRL:0203:0000,0000] alle ore [CTRL:0201:0003]:[CTRL:0201:0004].[CLEAR]
+Il collegamento a Pokémon Champions è stato interrotto.",0,3296
+26,nx_link_msg_028,5D2BCB55585B1E6B,"Il box di Pokémon Champions è pieno![CLEAR]
+Se vuoi mandare in trasferta altri Pokémon, fai un po’
+di spazio nel box di Pokémon Champions.",4,3708
+27,nx_link_msg_029,5D2BCA55585B1CB8,Si è verificato un errore. Riprova dall’inizio.,0,3980
+28,nx_link_msg_030,5D285D5558582DAA,Si è verificato un errore. Tornerai al menu principale.,0,4076

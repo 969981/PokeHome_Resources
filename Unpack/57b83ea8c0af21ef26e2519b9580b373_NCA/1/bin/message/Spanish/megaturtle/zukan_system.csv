@@ -1,0 +1,322 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_zukan_index_010,53108D8DFB3981DC,Pokédex,0,1884
+1,nx_zukan_index_011,53108E8DFB39838F,"[CTRL:0203:0000,0000]",0,1900
+2,nx_zukan_index_012,53108F8DFB398542,Pokémon registrados:,0,1912
+3,nx_zukan_index_020,531A9F8DFB41F4F7,Tareas de investigación,0,1956
+4,nx_zukan_index_030,5317198DFB3EDB6E,[REF:4],0,2004
+5,nx_zukan_index_picup_0000,9AACD375CCD66365,Todos,0,2016
+6,nx_zukan_index_picup_0010,9AA9CD75CCD4235C,Kanto,0,2028
+7,nx_zukan_index_picup_0020,9AB3DF75CCDC9677,Johto,0,2040
+8,nx_zukan_index_picup_0030,9AB05975CCD97CEE,Hoenn,0,2052
+9,nx_zukan_index_picup_0040,9A9F5B75CCCB0D21,Sinnoh,0,2064
+10,nx_zukan_index_picup_0050,9A9BD575CCC7F398,Teselia,0,2080
+11,nx_zukan_index_picup_0060,9AA64775CCD109D3,Kalos,0,2096
+12,nx_zukan_index_picup_0070,9AA2E175CCCE26AA,Alola,4,2108
+13,nx_zukan_index_picup_0080,9A91E375CCBFB6DD,Galar,0,2120
+14,nx_zukan_index_picup_0090,9A8E5D75CCBC9D54,Hisui,0,2132
+15,nx_zukan_index_picup_0100,9196B875C79235FA,Paldea,0,2144
+16,nx_zukan_index_picup_9999,5D573DB0F12E19D9,Origen desconocido,4,2160
+17,	,AF66E44C86071324,[REF:17],0,2200
+18,nx_zukan_button_000,2D10F432335C5089,Atrás,4,2212
+19,nx_zukan_button_001,2D10F332335C4ED6,Ayuda,4,2224
+20,nx_zukan_button_010,2D0D6E3233593700,Grito,0,2236
+21,nx_zukan_button_020,2D1800323362839B,Color,0,2248
+22,nx_zukan_button_030,2D147A32335F6A12,Juegos,0,2260
+23,nx_zukan_button_040,2D1E8C323367DD2D,Entradas,4,2276
+24,nx_zukan_button_050,2D1B06323364C3A4,Frontal,0,2296
+25,nx_zukan_button_060,2D257832336DD9DF,Trasera,0,2312
+26,nx_zukan_button_065,2D257332336DD160,Idioma,4,2328
+27,nx_zukan_button_070,2D21F232336AC056,Eliminar este filtro,4,2344
+28,nx_zukan_button_080,2D2C043233733371,Restablecer todo,0,2388
+29,nx_zukan_button_081,2D2C0332337331BE,Filtrar,0,2424
+30,nx_zukan_button_082,2D2C02323373300B,Ordenar,4,2440
+31,nx_zukan_button_090,2D28FE323370F368,[REF:31],0,2456
+32,	,AF66E44C86071324,[REF:32],0,2468
+33,nx_zukan_menu_040,EAE4A6390F678062,[REF:33],0,2480
+34,nx_zukan_menu_050,EAE82C390F6A99EB,[REF:34],0,2492
+35,	,AF66E44C86071324,[REF:35],0,2504
+36,nx_zukan_top_010,1FB53F2EF34B87D7,Pokédex Nacional,0,2516
+37,nx_zukan_top_020,1FAB2D2EF34314BC,Tareas de investigación,0,2552
+38,nx_zukan_top_030,1FAEB32EF3462E45,Pokémon registrados:,0,2600
+39,nx_zukan_top_031,1FAEB22EF3462C92,"[CTRL:0203:0000,0000]",0,2644
+40,nx_zukan_top_040,1FA4412EF33D180A,[REF:40],0,2656
+41,nx_zukan_top_041,1FA4422EF33D19BD,[REF:41],0,2668
+42,nx_zukan_top_050,1FA7A72EF33FFB33,"Elige si quieres que se muestren todos los Pokémon o
+si prefieres limitar tu selección al conjunto de Pokémon
+que fueron descubiertos en una región en concreto.",4,2680
+43,nx_zukan_top_060,1F9DB52EF337BE78,Juegos requeridos,0,3004
+44,nx_zukan_top_070,1FA13B2EF33AD801,"Ayuda al Gran Oak en sus investigaciones reuniendo
+Pokémon que se ajusten a la descripción de la tarea.
+Es importante capturarlos en el juego correcto.",4,3040
+45,nx_zukan_top_080,1F96A92EF3318B66,"Aún no tienes ninguna tarea. Si conectas un juego desde el
+menú Pokémon, empezarán a aparecer tareas de investigación
+en esta pantalla.",4,3344
+46,nx_zukan_top_list_010,99EFA016330102E0,,0,3616
+47,nx_zukan_top_list_020,99F9B216330975FB,[REF:47],0,3620
+48,nx_zukan_top_list_030,99F62C1633065C72,[CTRL:0201:0000],0,3632
+49,	,AF66E44C86071324,[REF:49],0,3644
+50,nx_zukan_top_announce_010,49EC2E3FDB583C8F,"Los datos de [CTRL:0101:0000]
+se han registrado en la Pokédex.",0,3656
+51,nx_zukan_top_announce_020,49E1BC3FDB4F2654,"Se han registrado los datos de
+[CTRL:0203:0000,0000] Pokémon nuevo[CTRL:1101:0000,0100]s.",0,3760
+52,	,AF66E44C86071324,[REF:52],0,3876
+53,nx_zukan_top_msg_010,615D626D9054C229,"Aún no tienes registrado ningún Pokémon.[CLEAR]
+Deposita Pokémon en tus cajas de Pokémon HOME para que
+se registren sus datos en la Pokédex.",4,3888
+54,	,AF66E44C86071324,[REF:54],0,4164
+55,nx_zukan_top_picup_0000,42BDB5000DB2CB60,Todos,0,4176
+56,nx_zukan_top_picup_0010,42C13B000DB5E4E9,Kanto,0,4188
+57,nx_zukan_top_picup_0020,42C441000DB824F2,Johto,0,4200
+58,nx_zukan_top_picup_0030,42C7C7000DBB3E7B,Hoenn,0,4212
+59,nx_zukan_top_picup_0040,42CB4D000DBE5804,Sinnoh,0,4224
+60,nx_zukan_top_picup_0050,42CED3000DC1718D,Teselia,0,4240
+61,nx_zukan_top_picup_0060,42D239000DC454B6,Kalos,0,4256
+62,nx_zukan_top_picup_0070,42D53F000DC694BF,Alola,4,4268
+63,nx_zukan_top_picup_0080,42D8C5000DC9AE48,Galar,0,4280
+64,nx_zukan_top_picup_0090,42DC4B000DCCC7D1,Hisui,0,4292
+65,nx_zukan_top_picup_0100,4A20F00011859AAB,Paldea,0,4304
+66,nx_zukan_top_picup_9999,93DD5B4AE8CF64FC,Origen desconocido,4,4320
+67,	,AF66E44C86071324,[REF:67],0,4360
+68,nx_zukan_top_topics_0010,86D945ACBE497006,Tareas de Kanto,0,4372
+69,nx_zukan_top_topics_0020,86D5DFACBE468CDD,Tareas de Galar,0,4404
+70,nx_zukan_top_topics_0030,86D259ACBE437354,Tareas de Sinnoh,0,4436
+71,nx_zukan_top_topics_0040,86CED3ACBE4059CB,Tareas de Hisui,0,4472
+72,nx_zukan_top_topics_0041,86CED2ACBE405818,Tareas de Paldea,0,4504
+73,nx_zukan_top_topics_0060,86C847ACBE3B0039,Tareas de Kalos,0,4540
+74,nx_zukan_top_topics_0070,86C4C1ACBE37E6B0,Tareas de Kanto (GBA),0,4572
+75,	,AF66E44C86071324,[REF:75],0,4616
+76,nx_zukan_topics_filenumber_0010,E4D9F09C2A967D14,Tarea de Kanto n.º [CTRL:0201:0000],0,4628
+77,nx_zukan_topics_filenumber_0020,E4E4629C2A9F934F,Tarea de Galar n.º [CTRL:0201:0000],0,4676
+78,nx_zukan_topics_filenumber_0030,E4E0DC9C2A9C79C6,Tarea de Sinnoh n.º [CTRL:0201:0000],0,4724
+79,nx_zukan_topics_filenumber_0040,E4CFDE9C2A8E09F9,Tarea de Hisui n.º [CTRL:0201:0000],0,4776
+80,nx_zukan_topics_filenumber_0050,E4CC589C2A8AF070,Tarea de Paldea n.º [CTRL:0201:0000],0,4824
+81,nx_zukan_topics_filenumber_0060,E4D66A9C2A93638B,Tarea de Kalos n.º [CTRL:0201:0000],0,4876
+82,nx_zukan_topics_filenumber_0070,E4D3649C2A912382,Tarea de Kanto (GBA) n.º [CTRL:0201:0000],0,4924
+83,	,AF66E44C86071324,[REF:83],0,4984
+84,nx_zukan_detailed_000,4DA3659B58E91D49,"N.º [CTRL:0203:0000,0000]",0,4996
+85,nx_zukan_detailed_001,4DA3649B58E91B96,[CTRL:0101:0000],0,5016
+86,nx_zukan_detailed_010,4D9FDF9B58E603C0,Altura,4,5028
+87,nx_zukan_detailed_011,4D9FE09B58E60573,,0,5044
+88,nx_zukan_detailed_020,4DAA719B58EF505B,Peso,0,5048
+89,nx_zukan_detailed_021,4DAA709B58EF4EA8,,0,5060
+90,nx_zukan_detailed_030,4DA6EB9B58EC36D2,[CTRL:0104:0000],0,5064
+91,nx_zukan_detailed_040,4DB0FD9B58F4A9ED,,0,5076
+92,nx_zukan_detailed_041,4DB0FC9B58F4A83A,Forma [CTRL:0201:0000]/[CTRL:0201:0001],0,5080
+93,nx_zukan_detailed_050,4DAD779B58F19064,,0,5112
+94,nx_zukan_detailed_051,4DAD789B58F19217,[REF:94],0,5116
+95,nx_zukan_detailed_060,4DB7E99B58FAA69F,Juegos donde aparece ([CTRL:0200:0000]/[CTRL:0200:0001]),0,5128
+96,nx_zukan_detailed_061,4DB7E89B58FAA4EC,Juegos donde aparece,0,5196
+97,nx_zukan_detailed_070_jpn,9E9E5B539B79F195,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en japonés y podrás leer sus entradas de la Pokédex
+en japonés.",0,5240
+98,nx_zukan_detailed_070_eng,0E825753DAA66411,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en inglés y podrás leer sus entradas de la Pokédex
+en inglés.",0,5484
+99,nx_zukan_detailed_070_spa,656BEB540BF5DFAB,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en español (España) y podrás leer sus entradas de la
+Pokédex en español de España.",0,5724
+100,nx_zukan_detailed_070_fra,07635453D70DC0BA,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en francés y podrás leer sus entradas de la Pokédex
+en francés.",0,6004
+101,nx_zukan_detailed_070_ger,FFC60253D3095213,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en alemán y podrás leer sus entradas de la Pokédex
+en alemán.",0,6248
+102,nx_zukan_detailed_070_ita,A95A8153A2253BD5,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en italiano y podrás leer sus entradas de la Pokédex
+en italiano.",0,6488
+103,nx_zukan_detailed_070_kor,97382E5397A5043D,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en coreano y podrás leer sus entradas de la Pokédex
+en coreano.",0,6736
+104,nx_zukan_detailed_070_chs,DC355D53BEA1B919,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en chino simplificado y podrás leer sus entradas de
+la Pokédex en chino simplificado.",0,6980
+105,nx_zukan_detailed_070_cht,DC355E53BEA1BACC,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en chino tradicional y podrás leer sus entradas de
+la Pokédex en chino tradicional.",0,7268
+106,nx_zukan_detailed_070_latam,15FA3EDC47203C72,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en español (Latinoamérica) y podrás leer sus entradas
+de la Pokédex en español de Latinoamérica.",0,7552
+107,nx_zukan_detailed_gba,F6BD8D9C49E0B3C9,"No se han encontrado entradas de la Pokédex.
+Prueba a cambiar el idioma o el juego conectado.",0,7860
+108,nx_zukan_detailed_070_jpn_small,5959B58400BEB11D,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en japonés y podrás leer sus entradas de la Pokédex
+en japonés.",0,8048
+109,nx_zukan_detailed_070_eng_small,09D53AE9DACF7199,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en inglés y podrás leer sus entradas de la Pokédex
+en inglés.",0,8292
+110,nx_zukan_detailed_070_spa_small,9EE4BBE5898355C3,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en español (España) y podrás leer sus entradas de la
+Pokédex en español de España.",0,8532
+111,nx_zukan_detailed_070_fra_small,506CE34FF4CDCBCE,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en francés y podrás leer sus entradas de la Pokédex
+en francés.",0,8812
+112,nx_zukan_detailed_070_ger_small,CF301537DDF410EB,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en alemán y podrás leer sus entradas de la Pokédex
+en alemán.",0,9056
+113,nx_zukan_detailed_070_ita_small,CB0BE19F2363F05D,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en italiano y podrás leer sus entradas de la Pokédex
+en italiano.",0,9296
+114,nx_zukan_detailed_070_kor_small,50A8F366D4F841A5,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en coreano y podrás leer sus entradas de la Pokédex
+en coreano.",0,9544
+115,nx_zukan_detailed_070_chs_small,34B32A2D8D93CAC1,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en chino simplificado y podrás leer sus entradas de
+la Pokédex en chino simplificado.",0,9788
+116,nx_zukan_detailed_070_cht_small,1F7CC30F25045F00,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en chino tradicional y podrás leer sus entradas de
+la Pokédex en chino tradicional.",0,10076
+117,nx_zukan_detailed_070_latam_small,9C6D1F6C20E078E6,"Deposita en Pokémon HOME un [CTRL:0101:0000] atrapado en
+una partida en español (Latinoamérica) y podrás leer sus entradas
+de la Pokédex en español de Latinoamérica.",0,10360
+118,nx_zukan_detailed_gba_small,B5876ED04F4B1D31,"No se han encontrado entradas de la Pokédex.
+Prueba a cambiar el idioma o el juego conectado.",0,10668
+119,	,AF66E44C86071324,[REF:119],0,10856
+120,nx_zukan_list_010,441FCA488FC577D4,,0,10868
+121,nx_zukan_list_020,442A3C488FCE8E0F,"N.º [CTRL:0203:0000,0000]",0,10872
+122,nx_zukan_list_021,442A3B488FCE8C5C,,0,10892
+123,nx_zukan_list_022,442A3E488FCE9175,,0,10896
+124,nx_zukan_list_030,4426B6488FCB7486,[CTRL:0101:0000],0,10900
+125,nx_zukan_list_040,4415B8488FBD04B9,(?),0,10912
+126,	,AF66E44C86071324,[REF:126],0,10920
+127,nx_zukan_language_01,375806079A591BC6,Japonés (hiragana),0,10932
+128,nx_zukan_language_02,375805079A591A13,Japonés (kanji),0,10972
+129,nx_zukan_language_03,375804079A591860,Inglés,4,11004
+130,nx_zukan_language_04,37580B079A592445,Francés,0,11020
+131,nx_zukan_language_05,37580A079A592292,Alemán,4,11036
+132,nx_zukan_language_06,375809079A5920DF,Italiano,4,11052
+133,nx_zukan_language_07,375808079A591F2C,Coreano,0,11072
+134,nx_zukan_language_08,37580F079A592B11,Español (España),4,11088
+135,nx_zukan_language_09,37580E079A59295E,Chino simplificado,0,11124
+136,nx_zukan_language_10,375481079A5603F0,Chino tradicional,0,11164
+137,nx_zukan_language_11,375482079A5605A3,Español (Latinoamérica),4,11200
+138,	,AF66E44C86071324,[REF:138],0,11248
+139,nx_zukan_search_data_010,C437552C67A3C3C5,"N.º [CTRL:0203:0000,0000]",0,11260
+140,nx_zukan_search_data_020,C43ADB2C67A6DD4E,[CTRL:0101:0000],0,11280
+141,nx_zukan_search_guide_010,07DF7A205ADD7D67,[CTRL:01DA:0000] (sin filtros),0,11292
+142,nx_zukan_search_guide_020,07D4E8205AD430CC,"[CTRL:01DA:0000] (filtrados: [CTRL:0203:0001,0000] de [CTRL:0203:0002,0000])",0,11332
+143,nx_zukan_search_guide_030,07D86E205AD74A55,"[CTRL:01DA:0000] (filtrados: [CTRL:0203:0001,0000])",0,11400
+144,	,AF66E44C86071324,[REF:144],0,11448
+145,nx_zukan_search_title,16395A443366EC8B,Filtros de búsqueda,0,11460
+146,nx_zukan_search_sort,3DF65C4B7FFD7C93,Criterios de ordenación,0,11500
+147,nx_zukan_search_name,32DBC8ABDF0B1330,Nombre,0,11548
+148,nx_zukan_search_type1,A42D3ECCBCD63B06,Tipo 1,0,11564
+149,nx_zukan_search_type2,A42D3DCCBCD63953,Tipo 2,0,11580
+150,nx_zukan_search_color,31D0B67882CD256A,Color,0,11596
+151,nx_zukan_search_shape,2B61830E94584E54,Figura,0,11608
+152,nx_zukan_search_form,19ED76ED60C728B9,Forma,0,11624
+153,nx_zukan_search_version,44BE3BA7FAB1A205,Juego,0,11636
+154,nx_zukan_search_register,4708974DCBD995AE,Registro en la Pokédex,0,11648
+155,	,AF66E44C86071324,[REF:155],0,11696
+156,nx_zukan_search_head_name,9ED0D0EE6F31CD91,Buscar por nombre,0,11708
+157,nx_zukan_search_head_type,8C6575CA67F751EA,Buscar por tipo,0,11744
+158,nx_zukan_search_head_color,76ED2EB5F462AEFD,Buscar por color,0,11776
+159,nx_zukan_search_head_shape,D4EEFD95193B2287,Buscar por figura,0,11812
+160,nx_zukan_search_head_form,4FCE4B34EAAB8FFC,Buscar por forma,0,11848
+161,nx_zukan_search_head_version,73E6812EB2613716,Buscar por juegos en los que aparece,0,11884
+162,nx_zukan_search_head_register,5A26B2CF49C77D73,Buscar por registro en la Pokédex,0,11960
+163,nx_zukan_search_nil,CECDBE77DC8628AA,No se han encontrado resultados.,0,12028
+164,	,AF66E44C86071324,[REF:164],0,12096
+165,nx_zukan_sort_01,00BF326FDFB37690,Por número,0,12108
+166,nx_zukan_sort_02,00BF356FDFB37BA9,Alfabéticamente,4,12132
+167,nx_zukan_sort_03,00BF346FDFB379F6,Pesado → Ligero,0,12164
+168,nx_zukan_sort_04,00BF376FDFB37F0F,Ligero → Pesado,0,12196
+169,nx_zukan_sort_05,00BF366FDFB37D5C,Alto → Bajo,4,12228
+170,nx_zukan_sort_06,00BF396FDFB38275,Bajo → Alto,0,12252
+171,	,AF66E44C86071324,[REF:171],0,12276
+172,nx_zukan_color_01,AA189EFD1AD46075,Rojo,0,12288
+173,nx_zukan_color_02,AA189BFD1AD45B5C,Azul,4,12300
+174,nx_zukan_color_03,AA189CFD1AD45D0F,Verde,0,12312
+175,nx_zukan_color_04,AA1899FD1AD457F6,Amarillo,4,12324
+176,nx_zukan_color_05,AA189AFD1AD459A9,Rosa,0,12344
+177,nx_zukan_color_06,AA1897FD1AD45490,Morado,0,12356
+178,nx_zukan_color_07,AA1898FD1AD45643,Marrón,0,12372
+179,nx_zukan_color_08,AA18A5FD1AD46C5A,Gris,0,12388
+180,nx_zukan_color_09,AA18A6FD1AD46E0D,Blanco,0,12400
+181,nx_zukan_color_10,AA1BA3FD1AD69ECB,Negro,0,12416
+182,	,AF66E44C86071324,[REF:182],0,12428
+183,nx_zukan_form_0010,1446FAA819DE8CB4,Todas las formas,0,12440
+184,nx_zukan_form_0020,1450ECA819E6C96F,Variocolor,0,12476
+185,nx_zukan_form_0030,144D66A819E3AFE6,Macho,0,12500
+186,nx_zukan_form_0040,143C68A819D54019,Hembra,0,12512
+187,nx_zukan_form_0050,143962A819D30010,Sexo desconocido,0,12528
+188,nx_zukan_form_1010,5F907A9F270B2635,Megaevolución,0,12564
+189,nx_zukan_form_1020,5F93809F270D663E,Regresión Primigenia,0,12592
+190,nx_zukan_form_1030,5F97069F27107FC7,Gigamax,0,12636
+191,nx_zukan_form_2010,2B23D2B78D5F8A76,Forma de Alola,0,12652
+192,nx_zukan_form_2020,2B206CB78D5CA74D,Forma de Galar,0,12684
+193,nx_zukan_form_2030,2B1CE6B78D598DC4,Forma de Hisui,0,12716
+194,nx_zukan_form_2040,2B1960B78D56743B,Forma de Paldea,0,12748
+195,	,AF66E44C86071324,[REF:195],0,12780
+196,nx_zukan_register_01,2E6379413994C3B3,Registrado,0,12792
+197,nx_zukan_register_02,2E637A413994C566,No registrado,0,12816
+198,	,AF66E44C86071324,[REF:198],0,12844
+199,nx_zukan_none_3,A45FE3B062A9EF1E,—,0,12856
+200,nx_zukan_none_5,A45FE5B062A9F284,—,0,12860
+201,nx_zukan_none_8,A45FDAB062A9DFD3,—,0,12864
+202,	,AF66E44C86071324,[REF:202],0,12868
+203,nx_zukan_topics_name1,F4DE6150C341F9F3,[CTRL:0101:0000],0,12880
+204,nx_zukan_topics_name2,F4DE6250C341FBA6,(?),0,12892
+205,nx_zukan_topics_conditions,9766CE8A635DF69D,,0,12900
+206,nx_zukan_topics_conditions_inactive_01,122F97415D3C578F,"Esta tarea se desbloqueará cuando hayas completado [CTRL:0201:0000] más de
+esta lista.",4,12904
+207,nx_zukan_topics_list_title,BF4A734F4DDC7452,,0,13056
+208,nx_zukan_topics_list_inactive,F4430E9C35355895,(?),0,13060
+209,nx_zukan_topics_list_progress,75015AE069AB084F,[CTRL:0200:0000]/[CTRL:0200:0001],0,13068
+210,nx_zukan_topics_guide_010,836CFEBA09CCD7A7,[CTRL:01DA:0000] (completadas: [CTRL:0201:0001]),0,13088
+211,	,AF66E44C86071324,[REF:211],0,13140
+212,nx_zukan_help1_010,DCF169A3820C5F5E,"El Gran Oak ha creado esta Pokédex digna de su nombre. En ella se
+registrarán automáticamente todos los Pokémon que deposites en tus
+cajas de Pokémon HOME.",4,13152
+213,nx_zukan_help1_020,DCEDE3A3820945D5,"Por supuesto, el objetivo final es reunir los datos de todos los Pokémon
+del mundo mundial, pero, para no agobiarte, puedes ir completándola
+poco a poco, por regiones, por ejemplo.",0,13464
+214,nx_zukan_help1_030,DCEA5DA382062C4C,"¡Y una cosita más! Al Gran Oak le gustaría que le echaras una mano en
+sus investigaciones. Si pulsas el botón L o R, podrás consultar las tareas
+que tiene reservadas para ti. ¡Es un gran honor!",0,13828
+215,	,AF66E44C86071324,[REF:215],0,14216
+216,nx_zukan_help2_010,C0106BC2CBCF33A7,"Aquí puedes consultar información detallada de todos y cada uno de tus
+Pokémon. Elige el que quieras de la lista que aparece en la parte derecha
+de la pantalla y ¡voilà!",4,14228
+217,nx_zukan_help2_020,C005D9C2CBC5E70C,"Mira, ¿por qué no pruebas a pulsar el botón ZL o ZR para consultar las
+entradas de la Pokédex de los distintos juegos? Conozco a más de uno y
+más de una que se pasan horas comparando entradas. ¡Yo mismo, vaya!",0,14568
+218,nx_zukan_help2_030,C0095FC2CBC90095,"Si tienes registrado un Pokémon que puede presentar varias formas, hasta
+es posible alternar entre ellas pulsando los botones L y R. ¿Te habías
+fijado en que la descripción cambia según la forma? Seguro que sí, pero
+yo te lo digo por si acaso.",0,14988
+219,nx_zukan_help2_040,BFFF6DC2CBC0C3DA,"Uy, ¡que se me olvidaba! Si pulsas el botón Y, también podrás consultar
+en qué juego o juegos aparece. Eso significa que podrías hacerte con
+ese Pokémon en dichos juegos. Mola, ¿eh?",4,15476
+220,	,AF66E44C86071324,[REF:220],0,15840
+221,nx_zukan_help3_010,3693FF929ACA0B58,"Aquí se muestran todos los Pokémon que tienes registrados en la
+Pokédex, del primero al último. Para consultar los detalles de alguno,
+solo tienes que pulsar el botón A.",4,15852
+222,nx_zukan_help3_020,369E71929AD32193,"También es posible aplicar filtros de búsqueda en la Pokédex. Por si te
+da por buscar Pokémon de un mismo tipo, color o lo que sea, vaya. Solo
+tienes que pulsar el botón X y se abrirá una ventana con la lista de filtros
+que puedes usar para hacerte la vida más fácil.",0,16192
+223,nx_zukan_help3_030,369B0B929AD03E6A,"Pulsa el botón Y si quieres cambiar el orden en el que se muestran tus
+Pokémon. Además del típico número de la Pokédex, que nunca pasa de
+moda, tienes otras opciones como ordenarlos por peso, por altura, etc.
+¡Es curiosísimo!",0,16728
+224,	,AF66E44C86071324,[REF:224],0,17180
+225,nx_zukan_help4_010,1C5CFD86C9AE9721,"Si te preguntas qué es esto de las tareas, en realidad es muy sencillo. Son
+misiones muy chachis que el Gran Oak ha reservado especialmente para
+ti. Colabora en sus investigaciones capturando los Pokémon que te pida.",0,17192
+226,nx_zukan_help4_020,1C608386C9B1B0AA,"Si tienes datos guardados en tu Nintendo Switch de una región que le
+gustaría examinar, verás como se te va llenando esta pantalla de tareas.",0,17628
+227,nx_zukan_help4_030,1C63E986C9B493D3,"Pero oye, ten presente que, para completar una tarea, solo cuenta
+si reúnes los Pokémon que le interesan al Gran Oak y si los atrapas
+en la región indicada. ¡Que aquí no vale hacer trampas!",0,17912
+228,	,AF66E44C86071324,[REF:228],0,18292
+229,nx_zukan_help5_010,E39F9799B4F70A92,"A la derecha verás tu lista de tareas. Para completarlas, solo tienes que
+reunir los Pokémon que te encarguen. ¡Pan comido!",4,18304
+230,nx_zukan_help5_020,E39C1199B4F3F109,"¡Pero cuidadín! Porque si atrapas el Pokémon que toca, pero no en el
+juego ni con la forma que se te pide, no valdrá para completar la tarea.
+¡Asegúrate siempre de mirar bien dónde atrapaste a tus Pokémon!",0,18552
+231,nx_zukan_help5_030,E3988B99B4F0D780,"Cuando por fin consigas todos los Pokémon que cumplan los requisitos,
+solo tienes que depositarlos en tus cajas de Pokémon HOME y... ¡tachán!
+Verás que la tarea se marcará automáticamente como completada.",0,18964
+232,nx_zukan_help5_031,E3988C99B4F0D933,"Y una vez completada, así se quedará para siempre. Da igual que saques
+o que liberes los Pokémon de tus cajas de Pokémon HOME. ¡Lo hecho,
+hecho está!",0,19376

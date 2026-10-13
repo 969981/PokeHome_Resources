@@ -1,0 +1,142 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_moving_index_010,CB86EFAD618F68B3,轉移,0,604
+1,	,AF66E44C86071324,[REF:1],0,612
+2,nx_moving_button_000,14CC139DFB8CF9E0,返回,0,624
+3,nx_moving_button_001,14CC149DFB8CFB93,說明,0,632
+4,	,AF66E44C86071324,[REF:4],0,640
+5,nx_moving_guide_010,68FAD02E6B8472FB,"你可以從Nintendo 3DS的
+『寶可夢虛擬銀行』帶寶可夢過來。",0,652
+6,nx_moving_guide_011,68FACF2E6B847148,轉移後的寶可夢將無法回到Nintendo 3DS！,0,724
+7,nx_moving_guide_012,68FAD22E6B847661,"進行轉移前，請先到智慧型手機版的『Pokémon HOME』
+確認寶可夢可送去的遊戲軟體。",0,776
+8,nx_moving_guide_020,68F0BE2E6B7BFFE0,"請在Nintendo 3DS的『寶可夢虛擬銀行』
+選擇「轉移至Pokémon HOME」，
+並輸入轉移密碼。",0,868
+9,nx_moving_guide_021,68F0BF2E6B7C0193,"在密碼的有效時間結束前，
+無法進行任何操作。",0,980
+10,	,AF66E44C86071324,[REF:10],0,1028
+11,nx_moving_opt_010,68C8516A21551BFA,開始轉移,0,1040
+12,nx_moving_opt_020,68C4CB6A21520271,沒有Nintendo 3DS,0,1052
+13,	,AF66E44C86071324,[REF:13],0,1084
+14,nx_moving_comment_010,BC0EB6EB7431CC2E,[REF:14],0,1096
+15,nx_moving_comment_020,BC0B30EB742EB2A5,[REF:15],0,1108
+16,nx_moving_comment_030,BC082AEB742C729C,[REF:16],0,1120
+17,nx_moving_comment_040,BC04A4EB74295913,[REF:17],0,1132
+18,	,AF66E44C86071324,[REF:18],0,1144
+19,nx_moving_boxdata_010,3B867679FE0CD7AE,可寄放的數量,0,1156
+20,nx_moving_boxdata_011,3B867779FE0CD961,"[CTRL:0203:0000,0000]隻",0,1172
+21,nx_moving_boxdata_020,3B82F079FE09BE25,空盒子,0,1188
+22,nx_moving_boxdata_021,3B82EF79FE09BC72,[CTRL:0202:0000]個,0,1196
+23,	,AF66E44C86071324,[REF:23],0,1208
+24,nx_moving_pass_010,17F21C1F27D89F74,目前的轉移密碼,0,1220
+25,nx_moving_pass_020,17FC0E1F27E0DC2F,還剩,0,1236
+26,nx_moving_pass_021,17FC0D1F27E0DA7C,[CTRL:0201:0000]：[CTRL:0201:0001],0,1244
+27,nx_moving_pass_030,17F8881F27DDC2A6,,0,1264
+28,	,AF66E44C86071324,[REF:28],0,1268
+29,nx_moving_msg_010,11CF321701DB564E,"請注意！在轉移完成之前，
+將無法使用『Pokémon HOME』！[RETURN]
+要開始準備轉移嗎？",0,1280
+30,nx_moving_msg_020,11CBAC1701D83CC5,"請到Nintendo 3DS的『寶可夢虛擬銀行』，
+從「轉移至Pokémon HOME」選擇盒子，[RETURN]
+並操作至這個畫面。",0,1376
+31,nx_moving_msg_025,11CBA71701D83446,"你使用的『寶可夢虛擬銀行』
+版本可能過低。[CLEAR]
+請更新至最新版本的
+『寶可夢虛擬銀行』。[CLEAR]
+若有不清楚的地方，
+請參考『Pokémon HOME』官方網站。",0,1504
+32,nx_moving_msg_030,11C8261701D5233C,"轉移密碼的有效時間僅有3分鐘，
+請立刻在寶可夢虛擬銀行完成輸入。[CLEAR]
+此外，顯示轉移密碼後，
+在有效時間結束前將無法回到上一個畫面！[CLEAR]
+要顯示轉移密碼嗎？",0,1668
+33,nx_moving_msg_040,11C4A01701D209B3,"『Pokémon HOME』的盒子滿了！
+請整理盒子。",0,1832
+34,nx_moving_msg_050,11C13A1701CF268A,"找到『寶可夢虛擬銀行』的資料了！
+將開始準備轉移。[CLEAR]
+在完成轉移之前，
+將無法使用『Pokémon HOME』。",0,1888
+35,nx_moving_msg_060,11BE341701CCE681,"若有不清楚的地方，
+請參考『Pokémon HOME』官方網站。",0,2008
+36,nx_moving_msg_070,11BAAE1701C9CCF8,"已確認你在寶可夢虛擬銀行輸入的內容！
+將開始準備轉移。[CLEAR]
+在完成轉移之前，
+將無法使用『Pokémon HOME』。",0,2076
+37,nx_moving_msg_075,11BAB31701C9D577,"正在確認轉移密碼……
+請稍候片刻。",0,2200
+38,nx_moving_msg_080,11B7281701C6B36F,轉移密碼已失效！,0,2236
+39,nx_moving_msg_090,11B3A21701C399E6,"要確認在『寶可夢虛擬銀行』
+使用的「Nintendo Network ID」[CLEAR]
+是否有登錄在此用戶的
+Nintendo Account嗎？",0,2256
+40,nx_moving_msg_100,0A6EFD16FE0AC70C,"若完成確認，
+將自動開始轉移！[CLEAR]
+『寶可夢虛擬銀行』中的所有寶可夢
+將轉移至『Pokémon HOME』。[CLEAR]
+在完成轉移之前，
+將無法使用『Pokémon HOME』。[CLEAR]
+確定要確認Nintendo Network ID
+並開始轉移嗎？",0,2400
+41,nx_moving_msg_0110,1E6C011827B6DB43,"正在確認『寶可夢虛擬銀行』的資料……
+請停留在此畫面稍候片刻。",0,2652
+42,nx_moving_msg_0120,1E618F1827ADC508,[REF:42],0,2716
+43,nx_moving_msg_0130,1E65151827B0DE91,"找不到可轉移的
+『寶可夢虛擬銀行』資料。[CLEAR]
+請確認是否已和
+Nintendo Network ID連動。[CLEAR]
+此外，進行Nintendo Network ID
+的連動操作之後，[RETURN]
+需稍候片刻才會生效。",0,2728
+44,nx_moving_msg_pot_010,59DE40FD3D2345AA,開始,0,2940
+45,nx_moving_msg_pot_020,59DABAFD3D202C21,準備ＯＫ,0,2948
+46,nx_moving_msg_pot_025,59DABDFD3D20313A,沒有「轉移」,0,2960
+47,nx_moving_msg_pot_030,59D734FD3D1D1298,顯示,0,2976
+48,nx_moving_msg_pot_040,59EF3EFD3D31B577,退出,0,2984
+49,nx_moving_msg_pot_050,59EBB8FD3D2E9BEE,確認,0,2992
+50,	,AF66E44C86071324,[REF:50],0,3000
+51,nx_moving_immigrate_010,0B2ECD65BE4BC5D0,是,0,3012
+52,nx_moving_immigrate_020,0B38DF65BE5438EB,否,0,3016
+53,nx_moving_immigrate_030,0B355965BE511F62,保持盒子原狀,0,3020
+54,nx_moving_immigrate_040,0B3F6B65BE59927D,１隻隻轉移,0,3036
+55,nx_moving_immigrate_045,0B3F6665BE5989FE,整理盒子,0,3048
+56,nx_moving_immigrate_050,0B3C6565BE575274,退出,0,3060
+57,nx_moving_immigrate_msg_010,1F55A46D4D841D6A,"已完成轉移準備的
+寶可夢有[CTRL:0203:0000,0000]隻！[CLEAR]
+要如何接收到
+『Pokémon HOME』盒子中呢？",0,3068
+58,nx_moving_immigrate_msg_020,1F521E6D4D8103E1,"將按照寶可夢虛擬銀行的
+盒子配置方式接收。[CLEAR]
+確定要儲存紀錄嗎？",0,3172
+59,nx_moving_immigrate_msg_025,1F52216D4D8108FA,"無視寶可夢虛擬銀行的盒子配置方式，
+１隻隻接收至空位當中。[CLEAR]
+確定要儲存紀錄嗎？",0,3244
+60,nx_moving_immigrate_msg_030,1F4E986D4D7DEA58,"正在儲存紀錄……
+請勿關閉『Pokémon HOME』。",0,3332
+61,nx_moving_immigrate_msg_040,1F66A26D4D928D37,"已確實儲存紀錄！[CLEAR]
+已將寶可夢虛擬銀行的寶可夢
+接收至『Pokémon HOME』！",0,3392
+62,nx_moving_immigrate_msg_045,1F669D6D4D9284B8,"作為初次轉移的點數，
+你已獲得[CTRL:0203:0000,0000]P的[RETURN]
+『Pokémon HOME點數』！",0,3484
+63,nx_moving_immigrate_msg_050,1F631C6D4D8F73AE,"還需要[CTRL:0202:0000]個盒子的空間！
+要整理盒子嗎？",0,3572
+64,nx_moving_immigrate_msg_060,1F5F966D4D8C5A25,[REF:64],0,3620
+65,nx_moving_immigrate_msg_070,1F5C906D4D8A1A1C,[REF:65],0,3632
+66,nx_moving_immigrate_msg_080,1F3D9A6D4D6F7A8B,[REF:66],0,3644
+67,	,AF66E44C86071324,[REF:67],0,3656
+68,nx_moving_help_010,96110053E176176A,"從Nintendo 3DS的『寶可夢虛擬銀行』
+接寶可夢過來的動作，
+就稱為「轉移」喔萌！",0,3668
+69,nx_moving_help_020,960D7A53E172FDE1,"在『寶可夢虛擬銀行』輸入選擇
+「開始轉移」後所顯示的轉移密碼，
+就可以進行轉移喔萌！",0,3760
+70,nx_moving_help_030,9609F453E16FE458,"轉移密碼設有有效期限，
+要在時間以內完成輸入喔萌！
+還有，畫面上顯示著密碼時，
+將無法操作『Pokémon HOME』喔萌！",0,3848
+71,nx_moving_help_035,9609F953E16FECD7,"對了！告訴你一個好消息！
+轉移時圖鑑資料也會一起從連動的
+『寶可夢虛擬銀行』繼承過來喔萌！",0,3976
+72,nx_moving_help_040,9621FE53E1848737,"如果你在轉移時遇到問題，
+或是Nintendo 3DS不在手邊的話，
+就到『Pokémon HOME』官方網站確認看看吧！",0,4068

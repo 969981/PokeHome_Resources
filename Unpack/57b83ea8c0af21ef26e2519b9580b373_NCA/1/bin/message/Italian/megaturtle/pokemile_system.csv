@@ -1,0 +1,48 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_pokemile_index_010,6C05095BCA478F69,Punti,0,324
+1,	,AF66E44C86071324,[REF:1],0,336
+2,nx_pokemile_button_000,2A630686D9EFFF22,Indietro,4,348
+3,nx_pokemile_button_001,2A630786D9F000D5,Aiuto,4,368
+4,	,AF66E44C86071324,[REF:4],0,380
+5,nx_pokemile_010,A584652620CE94FA,Punti Pokémon HOME,0,392
+6,nx_pokemile_011,A584662620CE96AD,"[CTRL:0204:0000,002E] punti",0,432
+7,nx_pokemile_020,A580DF2620CB7B71,1 PL = [CTRL:0201:0000] punti,0,456
+8,nx_pokemile_030,A57DD92620C93B68,"Punti necessari: [CTRL:0204:0000,002E]",0,492
+9,nx_pokemile_040,A595632620DD04C7,[CTRL:0200:0000],0,540
+10,nx_pokemile_041,A595622620DD0314,PL,0,552
+11,nx_pokemile_050,A591DD2620D9EB3E,Conferma,0,560
+12,nx_pokemile_060,A58ED72620D7AB35,Scegli quanti punti vuoi convertire in PL.,8,580
+13,nx_pokemile_061,A58ED62620D7A982,PL,0,668
+14,nx_pokemile_062,A58ED52620D7A7CF,"[CTRL:0203:0000,002E]/[CTRL:0203:0001,002E]",0,676
+15,	,AF66E44C86071324,[REF:15],0,700
+16,nx_pokemile_msg_yes,189337D573D9EBE6,Sì,0,712
+17,nx_pokemile_msg_no,D4E97CD168E02068,No,0,720
+18,nx_pokemile_msg_010,068D25D68BB63A48,"Inviando così tanti punti supererai il limite per quel gioco.
+La quantità è stata ridotta al numero massimo consentito.",4,728
+19,nx_pokemile_msg_020,069797D68BBF5083,"Vuoi convertire [CTRL:0204:0000,002E] punt[CTRL:1101:0000,0101]oi in [CTRL:0203:0001,002E] PL
+e inviarl[CTRL:1101:0001,0101]oi al tuo gioco?",0,968
+20,nx_pokemile_msg_030,069431D68BBC6D5A,"Salvataggio in corso.
+Non chiudere Pokémon HOME.",0,1124
+21,nx_pokemile_msg_031,069432D68BBC6F0D,"Dati salvati![CLEAR]
+I punti sono stati convertiti!",0,1224
+22,	,AF66E44C86071324,[REF:22],0,1320
+23,nx_pokemile_help_010,C1E70C42F87C36D8,"Puoi scegliere di inviare PL al tuo gioco! Usa lo stick sinistro per
+scegliere la quantità e poi seleziona “Conferma”!",0,1332
+24,	,AF66E44C86071324,[REF:24],0,1572
+25,nx_pokemile_063,A58ED42620D7A61C,Scegli quanti punti vuoi convertire in PG.,8,1584
+26,nx_pokemile_065,A58ED22620D7A2B6,"[CTRL:0206:0000,002E]/[CTRL:0206:0001,002E]",0,1672
+27,nx_pokemile_021,A580DE2620CB79BE,"1 PG = [CTRL:0201:0000] punt[CTRL:1101:0000,0101]oi",0,1696
+28,nx_pokemile_064,A58ED32620D7A469,PG,0,1744
+29,nx_pokemile_msg_021,069796D68BBF4ED0,"Vuoi convertire [CTRL:0204:0000,002E] punt[CTRL:1101:0000,0101]oi in [CTRL:0204:0001,002E] PG
+e inviarl[CTRL:1101:0001,0101]oi al tuo gioco?",0,1752
+30,nx_pokemile_help_011,C1E70D42F87C388B,"Puoi scegliere di inviare PG al tuo gioco! Usa lo stick sinistro per
+scegliere la quantità e poi seleziona “Conferma”!",0,1908
+31,	,AF66E44C86071324,[REF:31],0,2148
+32,nx_pokemile_070,A58B512620D491AC,Scegli quanti punti vuoi convertire in CL.,8,2160
+33,nx_pokemile_071,A58B522620D4935F,"[CTRL:0206:0000,002E]/[CTRL:0206:0001,002E]",0,2248
+34,nx_pokemile_072,A58B532620D49512,[CTRL:0201:0000] CL = 1 punto,0,2272
+35,nx_pokemile_073,A58B542620D496C5,CL,0,2308
+36,nx_pokemile_msg_070,06A1A9D68BC7C39E,"Vuoi convertire [CTRL:0204:0000,002E] punt[CTRL:1101:0000,0101]oi in [CTRL:0205:0001,002E] CL
+e inviarl[CTRL:1101:0001,0101]oi al tuo gioco?",0,2316
+37,nx_pokemile_help_070,C1FB9042F88DC02E,"Puoi scegliere di inviare CL al tuo gioco! Usa lo stick sinistro per
+scegliere la quantità e poi seleziona ""Conferma""!",0,2472

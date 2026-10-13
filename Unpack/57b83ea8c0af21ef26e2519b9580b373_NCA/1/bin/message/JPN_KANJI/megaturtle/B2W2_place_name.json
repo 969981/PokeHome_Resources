@@ -1,0 +1,777 @@
+[
+  {
+    "hash_fnv64": "FADE0BA571FD5390",
+    "index": 0,
+    "label": "MAPNAME_NOTHING"
+  },
+  {
+    "hash_fnv64": "4C0B1782A5642760",
+    "index": 1,
+    "label": "MAPNAME_NAZONOBASYO"
+  },
+  {
+    "hash_fnv64": "DD9E67A3A54EF3FC",
+    "index": 2,
+    "label": "MAPNAME_TOOIBASYO"
+  },
+  {
+    "hash_fnv64": "8B88EBDF1DACC426",
+    "index": 3,
+    "label": "MAPNAME_INTRUDE"
+  },
+  {
+    "hash_fnv64": "405C9C1E7D3C7369",
+    "index": 4,
+    "label": "MAPNAME_T1KANOKO"
+  },
+  {
+    "hash_fnv64": "D49C6C2FE0CD4F98",
+    "index": 5,
+    "label": "MAPNAME_T2KARAKUSA"
+  },
+  {
+    "hash_fnv64": "8234A0BB799022A2",
+    "index": 6,
+    "label": "MAPNAME_C1SANYOU"
+  },
+  {
+    "hash_fnv64": "2C39E03C77AFFFF2",
+    "index": 7,
+    "label": "MAPNAME_C2SIPPOU"
+  },
+  {
+    "hash_fnv64": "553F98E13B77A8E8",
+    "index": 8,
+    "label": "MAPNAME_C3YAGURUMA"
+  },
+  {
+    "hash_fnv64": "50752E17036142C6",
+    "index": 9,
+    "label": "MAPNAME_C4RAIMON"
+  },
+  {
+    "hash_fnv64": "94CAA0BFF0C5B8AA",
+    "index": 10,
+    "label": "MAPNAME_C5HODOMOE"
+  },
+  {
+    "hash_fnv64": "BA684A63670B33CB",
+    "index": 11,
+    "label": "MAPNAME_C6FUKIYOSE"
+  },
+  {
+    "hash_fnv64": "8FAF423383700E1A",
+    "index": 12,
+    "label": "MAPNAME_C7SEKKA"
+  },
+  {
+    "hash_fnv64": "5B57F577591459AF",
+    "index": 13,
+    "label": "MAPNAME_C8SOURYU"
+  },
+  {
+    "hash_fnv64": "5D28278D52800A62",
+    "index": 14,
+    "label": "MAPNAME_R1"
+  },
+  {
+    "hash_fnv64": "5D28268D528008AF",
+    "index": 15,
+    "label": "MAPNAME_R2"
+  },
+  {
+    "hash_fnv64": "5D28258D528006FC",
+    "index": 16,
+    "label": "MAPNAME_R3"
+  },
+  {
+    "hash_fnv64": "5D28248D52800549",
+    "index": 17,
+    "label": "MAPNAME_R4"
+  },
+  {
+    "hash_fnv64": "5D28238D52800396",
+    "index": 18,
+    "label": "MAPNAME_R5"
+  },
+  {
+    "hash_fnv64": "5D28228D528001E3",
+    "index": 19,
+    "label": "MAPNAME_R6"
+  },
+  {
+    "hash_fnv64": "5D28218D52800030",
+    "index": 20,
+    "label": "MAPNAME_R7"
+  },
+  {
+    "hash_fnv64": "5D28308D528019AD",
+    "index": 21,
+    "label": "MAPNAME_R8"
+  },
+  {
+    "hash_fnv64": "5D282F8D528017FA",
+    "index": 22,
+    "label": "MAPNAME_R9"
+  },
+  {
+    "hash_fnv64": "CB4587232F918956",
+    "index": 23,
+    "label": "MAPNAME_R10"
+  },
+  {
+    "hash_fnv64": "CB4588232F918B09",
+    "index": 24,
+    "label": "MAPNAME_R11"
+  },
+  {
+    "hash_fnv64": "CB4585232F9185F0",
+    "index": 25,
+    "label": "MAPNAME_R12"
+  },
+  {
+    "hash_fnv64": "CB4586232F9187A3",
+    "index": 26,
+    "label": "MAPNAME_R13"
+  },
+  {
+    "hash_fnv64": "CB458B232F919022",
+    "index": 27,
+    "label": "MAPNAME_R14"
+  },
+  {
+    "hash_fnv64": "CB458C232F9191D5",
+    "index": 28,
+    "label": "MAPNAME_R15"
+  },
+  {
+    "hash_fnv64": "CB4589232F918CBC",
+    "index": 29,
+    "label": "MAPNAME_R16"
+  },
+  {
+    "hash_fnv64": "CB458A232F918E6F",
+    "index": 30,
+    "label": "MAPNAME_R17"
+  },
+  {
+    "hash_fnv64": "9FFCC423170F1259",
+    "index": 31,
+    "label": "MAPNAME_W18"
+  },
+  {
+    "hash_fnv64": "5CEB1B8D524C47E0",
+    "index": 32,
+    "label": "MAPNAME_D1"
+  },
+  {
+    "hash_fnv64": "5CEB1E8D524C4CF9",
+    "index": 33,
+    "label": "MAPNAME_D2"
+  },
+  {
+    "hash_fnv64": "5CEB1D8D524C4B46",
+    "index": 34,
+    "label": "MAPNAME_D3"
+  },
+  {
+    "hash_fnv64": "5CEB208D524C505F",
+    "index": 35,
+    "label": "MAPNAME_D4"
+  },
+  {
+    "hash_fnv64": "5CEB1F8D524C4EAC",
+    "index": 36,
+    "label": "MAPNAME_D5"
+  },
+  {
+    "hash_fnv64": "5CEB228D524C53C5",
+    "index": 37,
+    "label": "MAPNAME_D6"
+  },
+  {
+    "hash_fnv64": "5CEB218D524C5212",
+    "index": 38,
+    "label": "MAPNAME_D7"
+  },
+  {
+    "hash_fnv64": "5CEB248D524C572B",
+    "index": 39,
+    "label": "MAPNAME_D8"
+  },
+  {
+    "hash_fnv64": "5CEB238D524C5578",
+    "index": 40,
+    "label": "MAPNAME_D9"
+  },
+  {
+    "hash_fnv64": "BACFB423267DA110",
+    "index": 41,
+    "label": "MAPNAME_T03"
+  },
+  {
+    "hash_fnv64": "BACFBB23267DACF5",
+    "index": 42,
+    "label": "MAPNAME_T04"
+  },
+  {
+    "hash_fnv64": "BACFBA23267DAB42",
+    "index": 43,
+    "label": "MAPNAME_T05"
+  },
+  {
+    "hash_fnv64": "38E15B22DCE577DF",
+    "index": 44,
+    "label": "MAPNAME_C09"
+  },
+  {
+    "hash_fnv64": "D92C1822A690BED8",
+    "index": 45,
+    "label": "MAPNAME_N01"
+  },
+  {
+    "hash_fnv64": "5530BBB5BF4EAA9D",
+    "index": 46,
+    "label": "MAPNAME_C03R08"
+  },
+  {
+    "hash_fnv64": "F62F607B648F0AA1",
+    "index": 47,
+    "label": "MAPNAME_C04R01"
+  },
+  {
+    "hash_fnv64": "4EFFD70C06660F80",
+    "index": 48,
+    "label": "MAPNAME_C04R0110"
+  },
+  {
+    "hash_fnv64": "F62F5D7B648F0588",
+    "index": 49,
+    "label": "MAPNAME_C04R02"
+  },
+  {
+    "hash_fnv64": "485926437BFFCD65",
+    "index": 50,
+    "label": "MAPNAME_BC10"
+  },
+  {
+    "hash_fnv64": "B0CE40A1C1B8A530",
+    "index": 51,
+    "label": "MAPNAME_WC10"
+  },
+  {
+    "hash_fnv64": "38E4E722DCE89B9A",
+    "index": 52,
+    "label": "MAPNAME_C11"
+  },
+  {
+    "hash_fnv64": "2FC7A522D79E0D3C",
+    "index": 53,
+    "label": "MAPNAME_D14"
+  },
+  {
+    "hash_fnv64": "2FC7A622D79E0EEF",
+    "index": 54,
+    "label": "MAPNAME_D15"
+  },
+  {
+    "hash_fnv64": "54A4EC0C0F1621D7",
+    "index": 55,
+    "label": "MAPNAME_D02_01"
+  },
+  {
+    "hash_fnv64": "021DDD46BC9F68AF",
+    "index": 56,
+    "label": "MAPNAME_R07R01"
+  },
+  {
+    "hash_fnv64": "CD8D7FA1D4A7AAC4",
+    "index": 57,
+    "label": "MAPNAME_R08R01"
+  },
+  {
+    "hash_fnv64": "64FB5E9A2EB5576C",
+    "index": 58,
+    "label": "MAPNAME_R09R02"
+  },
+  {
+    "hash_fnv64": "64FB5F9A2EB5591F",
+    "index": 59,
+    "label": "MAPNAME_R09R03"
+  },
+  {
+    "hash_fnv64": "789FA13D12A0FAED",
+    "index": 60,
+    "label": "MAPNAME_R16R01"
+  },
+  {
+    "hash_fnv64": "2FC7A122D79E0670",
+    "index": 61,
+    "label": "MAPNAME_D10"
+  },
+  {
+    "hash_fnv64": "2FC7A322D79E09D6",
+    "index": 62,
+    "label": "MAPNAME_D12"
+  },
+  {
+    "hash_fnv64": "2FC7A422D79E0B89",
+    "index": 63,
+    "label": "MAPNAME_D13"
+  },
+  {
+    "hash_fnv64": "0D921A22C45DBF1A",
+    "index": 64,
+    "label": "MAPNAME_H01"
+  },
+  {
+    "hash_fnv64": "0D921922C45DBD67",
+    "index": 65,
+    "label": "MAPNAME_H02"
+  },
+  {
+    "hash_fnv64": "0D921822C45DBBB4",
+    "index": 66,
+    "label": "MAPNAME_H03"
+  },
+  {
+    "hash_fnv64": "0D921722C45DBA01",
+    "index": 67,
+    "label": "MAPNAME_H04"
+  },
+  {
+    "hash_fnv64": "0D921622C45DB84E",
+    "index": 68,
+    "label": "MAPNAME_H05"
+  },
+  {
+    "hash_fnv64": "E9B2B895FF02FAD7",
+    "index": 69,
+    "label": "MAPNAME_PALACE"
+  },
+  {
+    "hash_fnv64": "2FC7AA22D79E15BB",
+    "index": 70,
+    "label": "MAPNAME_D19"
+  },
+  {
+    "hash_fnv64": "2FD1B322D7A6798B",
+    "index": 71,
+    "label": "MAPNAME_D20"
+  },
+  {
+    "hash_fnv64": "2FD1B222D7A677D8",
+    "index": 72,
+    "label": "MAPNAME_D21"
+  },
+  {
+    "hash_fnv64": "C471774328357A9A",
+    "index": 73,
+    "label": "MAPNAME_D9_01"
+  },
+  {
+    "hash_fnv64": "9976740EDA2488A3",
+    "index": 74,
+    "label": "MAPNAME_D15_01"
+  },
+  {
+    "hash_fnv64": "6738CFD07C762B8B",
+    "index": 75,
+    "label": "MAPNAME_PALACE_01"
+  },
+  {
+    "hash_fnv64": "323434FBAA132603",
+    "index": 76,
+    "label": "MAPNAME_P_C4RAIMON"
+  },
+  {
+    "hash_fnv64": "9873566E2E135BC9",
+    "index": 77,
+    "label": "MAPNAME_P_C5HODOMOE"
+  },
+  {
+    "hash_fnv64": "4CC5E0C661454842",
+    "index": 78,
+    "label": "MAPNAME_P_C6FUKIYOSE"
+  },
+  {
+    "hash_fnv64": "F7F5E1D76B7204F1",
+    "index": 79,
+    "label": "MAPNAME_P_C7SEKKA"
+  },
+  {
+    "hash_fnv64": "7C645D0D67B69FEE",
+    "index": 80,
+    "label": "MAPNAME_P_C8SOURYU"
+  },
+  {
+    "hash_fnv64": "CE3861D07F299138",
+    "index": 81,
+    "label": "MAPNAME_P_T1KANOKO"
+  },
+  {
+    "hash_fnv64": "75BF919954A266B9",
+    "index": 82,
+    "label": "MAPNAME_P_WC10"
+  },
+  {
+    "hash_fnv64": "34FB6C3564663A0C",
+    "index": 83,
+    "label": "MAPNAME_P_BC10"
+  },
+  {
+    "hash_fnv64": "20E1F5DC26115579",
+    "index": 84,
+    "label": "MAPNAME_P_D5"
+  },
+  {
+    "hash_fnv64": "20E1F2DC26115060",
+    "index": 85,
+    "label": "MAPNAME_P_D6"
+  },
+  {
+    "hash_fnv64": "20E1F3DC26115213",
+    "index": 86,
+    "label": "MAPNAME_P_D7"
+  },
+  {
+    "hash_fnv64": "20E200DC2611682A",
+    "index": 87,
+    "label": "MAPNAME_P_D8"
+  },
+  {
+    "hash_fnv64": "F1580614AF801ACF",
+    "index": 88,
+    "label": "MAPNAME_P_D10"
+  },
+  {
+    "hash_fnv64": "586C8214E9A3B6E4",
+    "index": 89,
+    "label": "MAPNAME_P_H02"
+  },
+  {
+    "hash_fnv64": "586C8314E9A3B897",
+    "index": 90,
+    "label": "MAPNAME_P_H03"
+  },
+  {
+    "hash_fnv64": "586C8014E9A3B37E",
+    "index": 91,
+    "label": "MAPNAME_P_H04"
+  },
+  {
+    "hash_fnv64": "586C8114E9A3B531",
+    "index": 92,
+    "label": "MAPNAME_P_H05"
+  },
+  {
+    "hash_fnv64": "20B281DC25E91F9B",
+    "index": 93,
+    "label": "MAPNAME_P_R5"
+  },
+  {
+    "hash_fnv64": "20B282DC25E9214E",
+    "index": 94,
+    "label": "MAPNAME_P_R6"
+  },
+  {
+    "hash_fnv64": "20B283DC25E92301",
+    "index": 95,
+    "label": "MAPNAME_P_R7"
+  },
+  {
+    "hash_fnv64": "20B27CDC25E9171C",
+    "index": 96,
+    "label": "MAPNAME_P_R8"
+  },
+  {
+    "hash_fnv64": "20B27DDC25E918CF",
+    "index": 97,
+    "label": "MAPNAME_P_R9"
+  },
+  {
+    "hash_fnv64": "787FCB146B2C2422",
+    "index": 98,
+    "label": "MAPNAME_P_R11"
+  },
+  {
+    "hash_fnv64": "787FCA146B2C226F",
+    "index": 99,
+    "label": "MAPNAME_P_R12"
+  },
+  {
+    "hash_fnv64": "787FC9146B2C20BC",
+    "index": 100,
+    "label": "MAPNAME_P_R13"
+  },
+  {
+    "hash_fnv64": "787FC8146B2C1F09",
+    "index": 101,
+    "label": "MAPNAME_P_R14"
+  },
+  {
+    "hash_fnv64": "787FC7146B2C1D56",
+    "index": 102,
+    "label": "MAPNAME_P_R15"
+  },
+  {
+    "hash_fnv64": "787FC6146B2C1BA3",
+    "index": 103,
+    "label": "MAPNAME_P_R16"
+  },
+  {
+    "hash_fnv64": "664FEF1460A07963",
+    "index": 104,
+    "label": "MAPNAME_P_T03"
+  },
+  {
+    "hash_fnv64": "664FF41460A081E2",
+    "index": 105,
+    "label": "MAPNAME_P_T04"
+  },
+  {
+    "hash_fnv64": "40F48BF9558F78B1",
+    "index": 106,
+    "label": "MAPNAME_GATE_T02"
+  },
+  {
+    "hash_fnv64": "40F48DF9558F7C17",
+    "index": 107,
+    "label": "MAPNAME_GATE_T04"
+  },
+  {
+    "hash_fnv64": "F7485EF9BCF3BB0C",
+    "index": 108,
+    "label": "MAPNAME_GATE_C02"
+  },
+  {
+    "hash_fnv64": "F7485FF9BCF3BCBF",
+    "index": 109,
+    "label": "MAPNAME_GATE_C03"
+  },
+  {
+    "hash_fnv64": "F7485CF9BCF3B7A6",
+    "index": 110,
+    "label": "MAPNAME_GATE_C04"
+  },
+  {
+    "hash_fnv64": "F74868F9BCF3CC0A",
+    "index": 111,
+    "label": "MAPNAME_GATE_C08"
+  },
+  {
+    "hash_fnv64": "5840A764BCE238FB",
+    "index": 112,
+    "label": "MAPNAME_GATE_BC10"
+  },
+  {
+    "hash_fnv64": "FC0E6DB588223729",
+    "index": 113,
+    "label": "MAPNAME_GATE_WF10"
+  },
+  {
+    "hash_fnv64": "27C5209ED15BA940",
+    "index": 114,
+    "label": "MAPNAME_GATE_BRIDGE"
+  },
+  {
+    "hash_fnv64": "7B71FEDF6D5444CB",
+    "index": 115,
+    "label": "MAPNAME_GATE_ROAD"
+  },
+  {
+    "hash_fnv64": "3978185C76D5076F",
+    "index": 116,
+    "label": "MAPNAME_D20_01"
+  },
+  {
+    "hash_fnv64": "38E4E622DCE899E7",
+    "index": 117,
+    "label": "MAPNAME_C12"
+  },
+  {
+    "hash_fnv64": "38E4E522DCE89834",
+    "index": 118,
+    "label": "MAPNAME_C13"
+  },
+  {
+    "hash_fnv64": "38E4E422DCE89681",
+    "index": 119,
+    "label": "MAPNAME_C14"
+  },
+  {
+    "hash_fnv64": "38E4E322DCE894CE",
+    "index": 120,
+    "label": "MAPNAME_C15"
+  },
+  {
+    "hash_fnv64": "38E4E222DCE8931B",
+    "index": 121,
+    "label": "MAPNAME_C16"
+  },
+  {
+    "hash_fnv64": "BACFB923267DA98F",
+    "index": 122,
+    "label": "MAPNAME_T06"
+  },
+  {
+    "hash_fnv64": "BACFB823267DA7DC",
+    "index": 123,
+    "label": "MAPNAME_T07"
+  },
+  {
+    "hash_fnv64": "CB4590232F9198A1",
+    "index": 124,
+    "label": "MAPNAME_R19"
+  },
+  {
+    "hash_fnv64": "CB4221232F8EA62D",
+    "index": 125,
+    "label": "MAPNAME_R20"
+  },
+  {
+    "hash_fnv64": "A000532317123B2D",
+    "index": 126,
+    "label": "MAPNAME_W21"
+  },
+  {
+    "hash_fnv64": "CB421F232F8EA2C7",
+    "index": 127,
+    "label": "MAPNAME_R22"
+  },
+  {
+    "hash_fnv64": "CB421E232F8EA114",
+    "index": 128,
+    "label": "MAPNAME_R23"
+  },
+  {
+    "hash_fnv64": "2FC7A222D79E0823",
+    "index": 129,
+    "label": "MAPNAME_D11"
+  },
+  {
+    "hash_fnv64": "2FD1B522D7A67CF1",
+    "index": 130,
+    "label": "MAPNAME_D22"
+  },
+  {
+    "hash_fnv64": "2FD1B422D7A67B3E",
+    "index": 131,
+    "label": "MAPNAME_D23"
+  },
+  {
+    "hash_fnv64": "2FD1B722D7A68057",
+    "index": 132,
+    "label": "MAPNAME_D24"
+  },
+  {
+    "hash_fnv64": "2FD1B622D7A67EA4",
+    "index": 133,
+    "label": "MAPNAME_D25"
+  },
+  {
+    "hash_fnv64": "2FD1B922D7A683BD",
+    "index": 134,
+    "label": "MAPNAME_D26"
+  },
+  {
+    "hash_fnv64": "2FD1B822D7A6820A",
+    "index": 135,
+    "label": "MAPNAME_D27"
+  },
+  {
+    "hash_fnv64": "2FD1AB22D7A66BF3",
+    "index": 136,
+    "label": "MAPNAME_D28"
+  },
+  {
+    "hash_fnv64": "2FD1AA22D7A66A40",
+    "index": 137,
+    "label": "MAPNAME_D29"
+  },
+  {
+    "hash_fnv64": "2FCEAD22D7A43982",
+    "index": 138,
+    "label": "MAPNAME_D30"
+  },
+  {
+    "hash_fnv64": "E06D47346C10E786",
+    "index": 139,
+    "label": "MAPNAME_D31W"
+  },
+  {
+    "hash_fnv64": "E06D5C346C110B35",
+    "index": 140,
+    "label": "MAPNAME_D31B"
+  },
+  {
+    "hash_fnv64": "2FCEAB22D7A4361C",
+    "index": 141,
+    "label": "MAPNAME_D32"
+  },
+  {
+    "hash_fnv64": "2FCEAC22D7A437CF",
+    "index": 142,
+    "label": "MAPNAME_D33"
+  },
+  {
+    "hash_fnv64": "2FCEA922D7A432B6",
+    "index": 143,
+    "label": "MAPNAME_D34"
+  },
+  {
+    "hash_fnv64": "0D921522C45DB69B",
+    "index": 144,
+    "label": "MAPNAME_H06"
+  },
+  {
+    "hash_fnv64": "F74BE7F9BCF6D9AE",
+    "index": 145,
+    "label": "MAPNAME_GATE_C13"
+  },
+  {
+    "hash_fnv64": "F74BE8F9BCF6DB61",
+    "index": 146,
+    "label": "MAPNAME_GATE_C12"
+  },
+  {
+    "hash_fnv64": "2FCEAA22D7A43469",
+    "index": 147,
+    "label": "MAPNAME_D35"
+  },
+  {
+    "hash_fnv64": "B87A6E52A460B72D",
+    "index": 148,
+    "label": "MAPNAME_C03R1102"
+  },
+  {
+    "hash_fnv64": "614A5163987EAD35",
+    "index": 149,
+    "label": "MAPNAME_D29R0401"
+  },
+  {
+    "hash_fnv64": "58A0B463939674C4",
+    "index": 150,
+    "label": "MAPNAME_D29R0701"
+  },
+  {
+    "hash_fnv64": "83EFFD63AC1E3B21",
+    "index": 151,
+    "label": "MAPNAME_D29R0801"
+  },
+  {
+    "hash_fnv64": "8C999663B1066CC6",
+    "index": 152,
+    "label": "MAPNAME_D29R0901"
+  },
+  {
+    "hash_fnv64": "57046D11698A54B8",
+    "index": 153,
+    "label": "MAPNAME_T06R0401"
+  },
+  {
+    "hash_fnv64": "3D48851DAA08EEC5",
+    "index": 154,
+    "label": "msg_B2W2_place_name_max"
+  }
+]

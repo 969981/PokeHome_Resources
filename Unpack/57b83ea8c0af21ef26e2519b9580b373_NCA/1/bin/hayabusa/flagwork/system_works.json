@@ -1,0 +1,482 @@
+[
+  {
+    "hash_fnv64": "96A303F8D8048E00",
+    "index": 0,
+    "label": "WSYS_RIDE_STAMINA"
+  },
+  {
+    "hash_fnv64": "52DAF76250FE632A",
+    "index": 1,
+    "label": "WSYS_U_RANK"
+  },
+  {
+    "hash_fnv64": "789636AD069EAD42",
+    "index": 2,
+    "label": "WSYS_NS_BTL_AP_DAMAGE_COUNT"
+  },
+  {
+    "hash_fnv64": "8DE4ECDE8B18ADE5",
+    "index": 3,
+    "label": "WSYS_MKRG_GET_NUM_AREA00"
+  },
+  {
+    "hash_fnv64": "8DE4EBDE8B18AC32",
+    "index": 4,
+    "label": "WSYS_MKRG_GET_NUM_AREA01"
+  },
+  {
+    "hash_fnv64": "8DE4EADE8B18AA7F",
+    "index": 5,
+    "label": "WSYS_MKRG_GET_NUM_AREA02"
+  },
+  {
+    "hash_fnv64": "8DE4E9DE8B18A8CC",
+    "index": 6,
+    "label": "WSYS_MKRG_GET_NUM_AREA03"
+  },
+  {
+    "hash_fnv64": "8DE4E8DE8B18A719",
+    "index": 7,
+    "label": "WSYS_MKRG_GET_NUM_AREA04"
+  },
+  {
+    "hash_fnv64": "8DE4E7DE8B18A566",
+    "index": 8,
+    "label": "WSYS_MKRG_GET_NUM_AREA05"
+  },
+  {
+    "hash_fnv64": "BC03457FB79EF1FE",
+    "index": 9,
+    "label": "WSYS_MKRG_GET_NUM_TOTAL"
+  },
+  {
+    "hash_fnv64": "9259F3638F0D8720",
+    "index": 10,
+    "label": "WSYS_MKRG_LAST_REPORT_NUM"
+  },
+  {
+    "hash_fnv64": "2E4C791E76AB1B01",
+    "index": 11,
+    "label": "WSYS_UPDATE_PHOTO_STUDIO"
+  },
+  {
+    "hash_fnv64": "8EF4C98C3B956C1A",
+    "index": 12,
+    "label": "WSYS_UPDATE_ITEM_SHOP"
+  },
+  {
+    "hash_fnv64": "5E2D2D8676ABB5CD",
+    "index": 13,
+    "label": "WSYS_UPDATE_BARBER_SHOP"
+  },
+  {
+    "hash_fnv64": "C1A734574DB28157",
+    "index": 14,
+    "label": "WSYS_UPDATE_CLOTH_SHOP"
+  },
+  {
+    "hash_fnv64": "A32814F63AAF5E5E",
+    "index": 15,
+    "label": "WSYS_REST_CAMP_NUMBER"
+  },
+  {
+    "hash_fnv64": "8AA3191B81EC3A78",
+    "index": 16,
+    "label": "WSYS_FARM_UPDATE_COUNT"
+  },
+  {
+    "hash_fnv64": "DEA7FCE910D148DE",
+    "index": 17,
+    "label": "WSYS_FARM_HARVEST_COUNT"
+  },
+  {
+    "hash_fnv64": "58466E4E0821C372",
+    "index": 18,
+    "label": "WSYS_FARM_HARVEST_GRADE"
+  },
+  {
+    "hash_fnv64": "97FA64F178E0935E",
+    "index": 19,
+    "label": "WSYS_FARM_HARVEST_RESULT"
+  },
+  {
+    "hash_fnv64": "BFC271F889C1C8DE",
+    "index": 20,
+    "label": "WSYS_FARM_CROP1_VIEW_COUNT"
+  },
+  {
+    "hash_fnv64": "A85703CFDED70F11",
+    "index": 21,
+    "label": "WSYS_FARM_CROP2_VIEW_COUNT"
+  },
+  {
+    "hash_fnv64": "D87B76DD5988DF78",
+    "index": 22,
+    "label": "WSYS_FARM_CROP3_VIEW_COUNT"
+  },
+  {
+    "hash_fnv64": "BAB89295050E9D63",
+    "index": 23,
+    "label": "WSYS_FARM_CROP4_VIEW_COUNT"
+  },
+  {
+    "hash_fnv64": "DFC82FEEA9F1368B",
+    "index": 24,
+    "label": "WSYS_ICHO_SOLD_OUT"
+  },
+  {
+    "hash_fnv64": "D8BBC18B40892A39",
+    "index": 25,
+    "label": "WSYS_ICHO_LEAVE_COUNT"
+  },
+  {
+    "hash_fnv64": "3EE7379CF3CF94FF",
+    "index": 26,
+    "label": "WSYS_ICHO_LINEUP_UPDATE_COUNT"
+  },
+  {
+    "hash_fnv64": "091BF18ED0068A74",
+    "index": 27,
+    "label": "WSYS_ICHO_SAVE_TABLE_IDX"
+  },
+  {
+    "hash_fnv64": "D1B18AF1CFED4C69",
+    "index": 28,
+    "label": "WSYS_ICHO_SAVE_PROD_IDX"
+  },
+  {
+    "hash_fnv64": "A6E388BD57A07D08",
+    "index": 29,
+    "label": "WSYS_FACILITY_OPEN_ITEM"
+  },
+  {
+    "hash_fnv64": "FFF3824D6F36A3AC",
+    "index": 30,
+    "label": "WSYS_FACILITY_OPEN_HAIRSALON"
+  },
+  {
+    "hash_fnv64": "3C9F15AE0B3C5217",
+    "index": 31,
+    "label": "WSYS_FACILITY_OPEN_SKILLCUSTOMIZE"
+  },
+  {
+    "hash_fnv64": "910FADD41BF70FCB",
+    "index": 32,
+    "label": "WSYS_FACILITY_OPEN_FARM"
+  },
+  {
+    "hash_fnv64": "58B21E4662E91A65",
+    "index": 33,
+    "label": "WSYS_FACILITY_OPEN_BOUTIQUE"
+  },
+  {
+    "hash_fnv64": "97B762058B8FB439",
+    "index": 34,
+    "label": "WSYS_FACILITY_OPEN_PHOTO"
+  },
+  {
+    "hash_fnv64": "820C681A1B65ABFD",
+    "index": 35,
+    "label": "WSYS_FACILITY_OPEN_ICHOU"
+  },
+  {
+    "hash_fnv64": "D3AEE990B7AAB47E",
+    "index": 36,
+    "label": "WSYS_FACILITY_OPEN_ICHOU_RARE"
+  },
+  {
+    "hash_fnv64": "50DDDC62431018F0",
+    "index": 37,
+    "label": "WSYS_FACILITY_OPEN_BOX"
+  },
+  {
+    "hash_fnv64": "FD5888FBBCC66014",
+    "index": 38,
+    "label": "WSYS_FACILITY_OPEN_CANDY"
+  },
+  {
+    "hash_fnv64": "EA865630B0B2A5AA",
+    "index": 39,
+    "label": "WSYS_FACILITY_OPEN_COMMU"
+  },
+  {
+    "hash_fnv64": "036DB050B1EE7CF5",
+    "index": 40,
+    "label": "WSYS_FACILITY_OPEN_AMULET"
+  },
+  {
+    "hash_fnv64": "81645EF58FC0A045",
+    "index": 41,
+    "label": "WSYS_FACILITY_OPEN_HEART"
+  },
+  {
+    "hash_fnv64": "414B9CEEAB48C136",
+    "index": 42,
+    "label": "WSYS_FACILITY_OPEN_BTL_PORTAL"
+  },
+  {
+    "hash_fnv64": "8628E9CE0493AF74",
+    "index": 43,
+    "label": "WSYS_FACILITY_OPEN_POTATO"
+  },
+  {
+    "hash_fnv64": "95B76C49E5169DA1",
+    "index": 44,
+    "label": "WSYS_FACILITY_MAP_JUMP"
+  },
+  {
+    "hash_fnv64": "7C7764F5FB5AE87D",
+    "index": 45,
+    "label": "WSYS_FACILITY_UPDATE_HAIRSALON"
+  },
+  {
+    "hash_fnv64": "4B6F00877CA9D9FA",
+    "index": 46,
+    "label": "WSYS_FACILITY_UPDATE_BOUTIQUE"
+  },
+  {
+    "hash_fnv64": "D77335950A40A680",
+    "index": 47,
+    "label": "WSYS_FACILITY_UPDATE_PHOTO"
+  },
+  {
+    "hash_fnv64": "31B27F473745DA43",
+    "index": 48,
+    "label": "WSYS_FACILITY_UPDATE_ITEM"
+  },
+  {
+    "hash_fnv64": "4386C8348507839C",
+    "index": 49,
+    "label": "WSYS_SKILL_CUSTOMIZE_RANK"
+  },
+  {
+    "hash_fnv64": "2B432BD4BCE74BFD",
+    "index": 50,
+    "label": "WSYS_SKILL_CUSTOMIZE_RANK_LAST"
+  },
+  {
+    "hash_fnv64": "3C4C4AB975CE2CF6",
+    "index": 51,
+    "label": "WSYS_ADDITIONAL_BAG_SLOT_NUM"
+  },
+  {
+    "hash_fnv64": "8C20C42C3EBEE1A7",
+    "index": 52,
+    "label": "WSYS_UNNN_GET_NUM"
+  },
+  {
+    "hash_fnv64": "CFE17C825423DAA0",
+    "index": 53,
+    "label": "WSYS_POKEDEX_FREE_TASK01"
+  },
+  {
+    "hash_fnv64": "9ABCF041509A1C7B",
+    "index": 54,
+    "label": "WSYS_TEMP_RETURN_POS_X"
+  },
+  {
+    "hash_fnv64": "9ABCEF41509A1AC8",
+    "index": 55,
+    "label": "WSYS_TEMP_RETURN_POS_Y"
+  },
+  {
+    "hash_fnv64": "9ABCF241509A1FE1",
+    "index": 56,
+    "label": "WSYS_TEMP_RETURN_POS_Z"
+  },
+  {
+    "hash_fnv64": "D2D647249C41123A",
+    "index": 57,
+    "label": "WSYS_TEMP_RETURN_ANG"
+  },
+  {
+    "hash_fnv64": "9F28BF01A69E079B",
+    "index": 58,
+    "label": "WSYS_BALLOON_HIT_HIGH_SCORE"
+  },
+  {
+    "hash_fnv64": "DB126A2DD06FD1EA",
+    "index": 59,
+    "label": "WSYS_BANDIT_BATTLE_TYPE"
+  },
+  {
+    "hash_fnv64": "F271BAE4416A4D39",
+    "index": 60,
+    "label": "WSYS_BANDIT_1_AREA01"
+  },
+  {
+    "hash_fnv64": "F271B7E4416A4820",
+    "index": 61,
+    "label": "WSYS_BANDIT_1_AREA02"
+  },
+  {
+    "hash_fnv64": "F271B8E4416A49D3",
+    "index": 62,
+    "label": "WSYS_BANDIT_1_AREA03"
+  },
+  {
+    "hash_fnv64": "F271BDE4416A5252",
+    "index": 63,
+    "label": "WSYS_BANDIT_1_AREA04"
+  },
+  {
+    "hash_fnv64": "F271BEE4416A5405",
+    "index": 64,
+    "label": "WSYS_BANDIT_1_AREA05"
+  },
+  {
+    "hash_fnv64": "40634944727AE9BA",
+    "index": 65,
+    "label": "WSYS_BANDIT_2_AREA01"
+  },
+  {
+    "hash_fnv64": "40634844727AE807",
+    "index": 66,
+    "label": "WSYS_BANDIT_2_AREA02"
+  },
+  {
+    "hash_fnv64": "40634744727AE654",
+    "index": 67,
+    "label": "WSYS_BANDIT_2_AREA03"
+  },
+  {
+    "hash_fnv64": "40634644727AE4A1",
+    "index": 68,
+    "label": "WSYS_BANDIT_2_AREA04"
+  },
+  {
+    "hash_fnv64": "40634544727AE2EE",
+    "index": 69,
+    "label": "WSYS_BANDIT_2_AREA05"
+  },
+  {
+    "hash_fnv64": "256C033A64A1AE2F",
+    "index": 70,
+    "label": "WSYS_BANDIT_3_AREA01"
+  },
+  {
+    "hash_fnv64": "256C043A64A1AFE2",
+    "index": 71,
+    "label": "WSYS_BANDIT_3_AREA02"
+  },
+  {
+    "hash_fnv64": "256C053A64A1B195",
+    "index": 72,
+    "label": "WSYS_BANDIT_3_AREA03"
+  },
+  {
+    "hash_fnv64": "256BFE3A64A1A5B0",
+    "index": 73,
+    "label": "WSYS_BANDIT_3_AREA04"
+  },
+  {
+    "hash_fnv64": "256BFF3A64A1A763",
+    "index": 74,
+    "label": "WSYS_BANDIT_3_AREA05"
+  },
+  {
+    "hash_fnv64": "643AFC53F4954B60",
+    "index": 75,
+    "label": "WSYS_BANDIT_1_DEFEAT"
+  },
+  {
+    "hash_fnv64": "F0062CBF180A4E9F",
+    "index": 76,
+    "label": "WSYS_BANDIT_2_DEFEAT"
+  },
+  {
+    "hash_fnv64": "7873032FC5919BF6",
+    "index": 77,
+    "label": "WSYS_BANDIT_3_DEFEAT"
+  },
+  {
+    "hash_fnv64": "48DCB53EF45C3F59",
+    "index": 78,
+    "label": "WSYS_BANDIT_RESPAWN_COUNT"
+  },
+  {
+    "hash_fnv64": "00FD26D92C0B9BF3",
+    "index": 79,
+    "label": "WSYS_BTL_PORTAL_ID"
+  },
+  {
+    "hash_fnv64": "1F08CB736EB3E8A0",
+    "index": 80,
+    "label": "WSYS_D220_CAPTURE_BALL_TYPE"
+  },
+  {
+    "hash_fnv64": "4CFBF76DD11C1F59",
+    "index": 81,
+    "label": "WSYS_D220_CAPTURE_BALL_SIZE"
+  },
+  {
+    "hash_fnv64": "2348AE1567692F1E",
+    "index": 82,
+    "label": "WSYS_MASS_GANERATION_AREA01"
+  },
+  {
+    "hash_fnv64": "2348AD1567692D6B",
+    "index": 83,
+    "label": "WSYS_MASS_GANERATION_AREA02"
+  },
+  {
+    "hash_fnv64": "2348AC1567692BB8",
+    "index": 84,
+    "label": "WSYS_MASS_GANERATION_AREA03"
+  },
+  {
+    "hash_fnv64": "2348B3156769379D",
+    "index": 85,
+    "label": "WSYS_MASS_GANERATION_AREA04"
+  },
+  {
+    "hash_fnv64": "2348B215676935EA",
+    "index": 86,
+    "label": "WSYS_MASS_GANERATION_AREA05"
+  },
+  {
+    "hash_fnv64": "3479B04B2969F5EB",
+    "index": 87,
+    "label": "WSYS_OSOBJ_L_AREA01_01"
+  },
+  {
+    "hash_fnv64": "0BAEB856744447B4",
+    "index": 88,
+    "label": "WSYS_OSOBJ_L_AREA02_01"
+  },
+  {
+    "hash_fnv64": "61CF8936250F3C75",
+    "index": 89,
+    "label": "WSYS_OSOBJ_S_AREA02_01"
+  },
+  {
+    "hash_fnv64": "3A3FBD4696F6F453",
+    "index": 90,
+    "label": "WSYS_OSOBJ_S_AREA04_01"
+  },
+  {
+    "hash_fnv64": "DA09A82CBB0B39CF",
+    "index": 91,
+    "label": "WSYS_OSOBJ_L_AREA05_01"
+  },
+  {
+    "hash_fnv64": "A7FE86F2385F9860",
+    "index": 92,
+    "label": "WSYS_HISOYAKASPRAY_TIME"
+  },
+  {
+    "hash_fnv64": "F49C94524EB3ECBB",
+    "index": 93,
+    "label": "WSYS_PHIONE_CAPUTURE_COUNT"
+  },
+  {
+    "hash_fnv64": "09E90E18DFA7E2D8",
+    "index": 94,
+    "label": "WSYS_BOUTIQUE_NEW_ITEM_NUM"
+  },
+  {
+    "hash_fnv64": "1D240CB585166DE2",
+    "index": 95,
+    "label": "WSYS_REMATCH_DPA"
+  }
+]

@@ -1,0 +1,58 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_link_index_010,5E27A64FD90FA579,POKÉMON CHAMPIONS,0,252
+1,nx_link_msg_001,5D24D6555855126E,"Checking for Pokémon coming back from
+Pokémon Champions...",0,288
+2,nx_link_msg_yes,6DE163543F60E996,Yes,0,408
+3,nx_link_msg_no,69760125DBDFD8F8,No,0,416
+4,nx_link_msg_008,5D24CF5558550689,Checking Nintendo Account...,0,424
+5,nx_link_msg_009,5D24CE55585504D6,"Your Pokémon Champions account is currently restricted from
+using this feature.[CLEAR]
+Your attempt to connect to Pokémon Champions has been
+canceled.",0,484
+6,nx_link_msg_010,5D2151555851FA98,You’ll now link with this account. Is that OK?,0,780
+7,nx_link_msg_011,5D2152555851FC4B,"Linking with Pokémon Champions canceled.
+Returning to the main menu.",0,876
+8,nx_link_msg_012,5D2153555851FDFE,[REF:8],0,1016
+9,nx_link_msg_013,5D2154555851FFB1,"You’ve got Pokémon ready to come back from
+Pokémon Champions!",0,1028
+10,nx_link_msg_014,5D21555558520164,"There [CTRL:1101:0000,0302]isare [CTRL:0203:0000,002C] Pokémon that ha[CTRL:1101:0000,0201]sve come back
+from Pokémon Champions.",0,1152
+11,nx_link_msg_015,5D21565558520317,Bringing Pokémon back...,0,1316
+12,nx_link_msg_016,5D215755585204CA,Brought back Pokémon from Pokémon Champions!,0,1368
+13,nx_link_dialog_001,B4A51C1FF7B01785,Confirm Pokémon Champions Account,0,1460
+14,nx_link_dialog_002,B4A5191FF7B0126C,Trainer name:,0,1528
+15,nx_link_dialog_003,B4A51A1FF7B0141F,[CTRL:0100:0000],0,1556
+16,nx_link_dialog_004,B4A5171FF7B00F06,Support ID:,0,1568
+17,nx_link_msg_019,5D214A555851EEB3,"One or more Pokémon you sent to visit Pokémon Champions
+hasn’t been accepted on that end.[CLEAR]
+Please open Pokémon Champions and accept any visiting
+Pokémon first.",4,1592
+18,nx_link_msg_020,5D2BC355585B10D3,Pokémon Champions is currently undergoing maintenance.,0,1916
+19,nx_link_msg_021,5D2BC255585B0F20,"Please wait until the maintenance on Pokémon Champions
+is complete.",0,2028
+20,nx_link_msg_022,5D2BC555585B1439,No Pokémon Champions account found.,0,2164
+21,nx_link_msg_023,5D2BC455585B1286,Returning to the main menu.,0,2236
+22,nx_link_msg_024,5D2BC755585B179F,"Your linked Nintendo Account is associated with a Pokémon
+Champions account that’s linked to a previous Pokémon[RETURN]
+HOME account.[CLEAR]
+Please log in to Pokémon Champions and disconnect it from
+that previous Pokémon HOME account.",0,2292
+23,nx_link_msg_025,5D2BC655585B15EC,"You already have [CTRL:0203:0000,002C] Pokémon visiting Pokémon
+Champions. You can’t send any more.[CLEAR]
+Returning to the main menu.",0,2744
+24,nx_link_msg_026,5D2BC955585B1B05,"The link to Pokémon Champions is currently undergoing
+maintenance.[CLEAR]
+Your attempt to connect to Pokémon Champions has been
+canceled.",0,2976
+25,nx_link_msg_027,5D2BC855585B1952,"The link to Pokémon Champions is currently undergoing
+maintenance.[CLEAR]
+It is scheduled to end at [CTRL:0201:0003]:[CTRL:0201:0004] on [CTRL:0201:0001]/[CTRL:0201:0002]/[CTRL:0203:0000,0000].[CLEAR]
+Your attempt to connect to Pokémon Champions has been
+canceled.",0,3244
+26,nx_link_msg_028,5D2BCB55585B1E6B,"You have reached the maximum capacity of your Box in
+Pokémon Champions![CLEAR]
+If you want to send more Pokémon to visit and battle, first
+create some space in your Box in Pokémon Champions.",0,3632
+27,nx_link_msg_029,5D2BCA55585B1CB8,An error has occurred. Please try again from the beginning.,4,4008
+28,nx_link_msg_030,5D285D5558582DAA,"An error has occurred.
+Returning to the main menu...",4,4128

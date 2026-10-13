@@ -1,0 +1,134 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_moving_index_010,CB86EFAD618F68B3,Trasferimento,0,604
+1,	,AF66E44C86071324,[REF:1],0,632
+2,nx_moving_button_000,14CC139DFB8CF9E0,Indietro,4,644
+3,nx_moving_button_001,14CC149DFB8CFB93,Aiuto,4,664
+4,	,AF66E44C86071324,[REF:4],0,676
+5,nx_moving_guide_010,68FAD02E6B8472FB,"Puoi trasferire i Pokémon dalla Banca Pokémon
+per Nintendo 3DS.",0,688
+6,nx_moving_guide_011,68FACF2E6B847148,I Pokémon trasferiti non potranno essere ritrasferiti nel Nintendo 3DS!,4,816
+7,nx_moving_guide_012,68FAD22E6B847661,"Prima di effettuare il trasferimento di un Pokémon, controlla i giochi compatibili
+nell’app Pokémon HOME per dispositivi mobili.",0,960
+8,nx_moving_guide_020,68F0BE2E6B7BFFE0,"Seleziona “Trasferisci in Pokémon HOME”
+nella Banca Pokémon per Nintendo 3DS
+e inserisci il codice trasferimento.",0,1220
+9,nx_moving_guide_021,68F0BF2E6B7C0193,"Non potrai utilizzare Pokémon HOME
+finché il codice non sarà scaduto.",0,1448
+10,	,AF66E44C86071324,[REF:10],0,1588
+11,nx_moving_opt_010,68C8516A21551BFA,Inizia il trasferimento,4,1600
+12,nx_moving_opt_020,68C4CB6A21520271,Non ho un Nintendo 3DS,0,1648
+13,	,AF66E44C86071324,[REF:13],0,1696
+14,nx_moving_comment_010,BC0EB6EB7431CC2E,[REF:14],0,1708
+15,nx_moving_comment_020,BC0B30EB742EB2A5,[REF:15],0,1720
+16,nx_moving_comment_030,BC082AEB742C729C,[REF:16],0,1732
+17,nx_moving_comment_040,BC04A4EB74295913,[REF:17],0,1744
+18,	,AF66E44C86071324,[REF:18],0,1756
+19,nx_moving_boxdata_010,3B867679FE0CD7AE,Pokémon trasferibili,0,1768
+20,nx_moving_boxdata_011,3B867779FE0CD961,"[CTRL:0203:0000,002E]",0,1812
+21,nx_moving_boxdata_020,3B82F079FE09BE25,Box vuoti,0,1824
+22,nx_moving_boxdata_021,3B82EF79FE09BC72,[CTRL:0202:0000],0,1844
+23,	,AF66E44C86071324,[REF:23],0,1856
+24,nx_moving_pass_010,17F21C1F27D89F74,Codice trasferimento attuale,0,1868
+25,nx_moving_pass_020,17FC0E1F27E0DC2F,Tempo:,0,1928
+26,nx_moving_pass_021,17FC0D1F27E0DA7C,[CTRL:0201:0000]:[CTRL:0201:0001],0,1944
+27,nx_moving_pass_030,17F8881F27DDC2A6,,0,1964
+28,	,AF66E44C86071324,[REF:28],0,1968
+29,nx_moving_msg_010,11CF321701DB564E,"Attenzione! Non potrai usare Pokémon HOME finché
+il trasferimento non sarà completato![RETURN]
+Vuoi iniziare i preparativi per il trasferimento?",4,1980
+30,nx_moving_msg_020,11CBAC1701D83CC5,"Scegli “Trasferisci in Pokémon HOME” nella Banca Pokémon
+per Nintendo 3DS, scegli un box e prosegui fino alla
+schermata per l’immissione del codice trasferimento.",8,2260
+31,nx_moving_msg_025,11CBA71701D83446,"La Banca Pokémon potrebbe non essere aggiornata
+alla versione più recente. Aggiorna il software.[CLEAR]
+Se hai dubbi o domande, visita il sito ufficiale
+di Pokémon HOME.",0,2588
+32,nx_moving_msg_030,11C8261701D5233C,"I codici trasferimento sono validi solo per tre minuti.
+Inserisci il codice nella Banca Pokémon il più presto possibile.[CLEAR]
+Una volta che il codice trasferimento è attivo, non potrai
+tornare alla schermata precedente finché non sarà scaduto.[CLEAR]
+Vuoi creare un codice trasferimento?",4,2920
+33,nx_moving_msg_040,11C4A01701D209B3,"I box di Pokémon HOME sono pieni!
+Fai un po’ di spazio e riprova.",4,3484
+34,nx_moving_msg_050,11C13A1701CF268A,"Sono stati trovati dati della Banca Pokémon!
+Inizieranno i preparativi per il trasferimento.[CLEAR]
+Non potrai usare Pokémon HOME fino a che
+il trasferimento non sarà completato.",0,3616
+35,nx_moving_msg_060,11BE341701CCE681,"Se hai bisogno di aiuto, consulta il sito ufficiale
+di Pokémon HOME.",0,3968
+36,nx_moving_msg_070,11BAAE1701C9CCF8,"Il codice trasferimento è stato inserito nella Banca Pokémon!
+Inizieranno i preparativi per il trasferimento.[CLEAR]
+Non potrai usare Pokémon HOME fino a che
+il trasferimento non sarà completato.",4,4108
+37,nx_moving_msg_075,11BAB31701C9D577,"Verifica del codice trasferimento.
+Attendi...",0,4492
+38,nx_moving_msg_080,11B7281701C6B36F,Il codice trasferimento non è più valido!,4,4584
+39,nx_moving_msg_090,11B3A21701C399E6,"Vuoi cercare un Nintendo Network ID che abbia usato
+la Banca Pokémon e che sia associato all’account Nintendo[RETURN]
+di questo utente?",0,4668
+40,nx_moving_msg_100,0A6EFD16FE0AC70C,"Il trasferimento comincerà automaticamente se vengono
+trovati dei dati![CLEAR]
+Tutti i Pokémon presenti nella Banca Pokémon verranno
+trasferiti in Pokémon HOME.[CLEAR]
+Non potrai usare Pokémon HOME fino a che
+il trasferimento non sarà completato.[CLEAR]
+Vuoi cercare il Nintendo Network ID e iniziare
+il trasferimento?",4,4932
+41,nx_moving_msg_0110,1E6C011827B6DB43,"Verifica dei dati della Banca Pokémon in corso.
+Attendi...",0,5548
+42,nx_moving_msg_0120,1E618F1827ADC508,[REF:42],0,5668
+43,nx_moving_msg_0130,1E65151827B0DE91,"Non sono stati trovati dati della Banca Pokémon che
+possono essere trasferiti.[CLEAR]
+Verifica di aver effettuato correttamente il collegamento
+al Nintendo Network ID.[CLEAR]
+Se hai effettuato il collegamento da poco, potresti dover
+aspettare un po’ di tempo prima che diventi attivo.",0,5680
+44,nx_moving_msg_pot_010,59DE40FD3D2345AA,Inizia,4,6236
+45,nx_moving_msg_pot_020,59DABAFD3D202C21,Trasferisci,0,6252
+46,nx_moving_msg_pot_025,59DABDFD3D20313A,Opzione non disponibile,4,6276
+47,nx_moving_msg_pot_030,59D734FD3D1D1298,Visualizza,0,6324
+48,nx_moving_msg_pot_040,59EF3EFD3D31B577,Esci,4,6348
+49,nx_moving_msg_pot_050,59EBB8FD3D2E9BEE,Verifica,0,6360
+50,	,AF66E44C86071324,[REF:50],0,6380
+51,nx_moving_immigrate_010,0B2ECD65BE4BC5D0,Sì,0,6392
+52,nx_moving_immigrate_020,0B38DF65BE5438EB,No,0,6400
+53,nx_moving_immigrate_030,0B355965BE511F62,Riproduci i box originari,0,6408
+54,nx_moving_immigrate_040,0B3F6B65BE59927D,Un Pokémon alla volta,4,6460
+55,nx_moving_immigrate_045,0B3F6665BE5989FE,Gestisci i box,0,6504
+56,nx_moving_immigrate_050,0B3C6565BE575274,Indietro,4,6536
+57,nx_moving_immigrate_msg_010,1F55A46D4D841D6A,"C[CTRL:1101:0000,0602]’èi sono [CTRL:0203:0000,002E] Pokémon pront[CTRL:1101:0000,0101]oi per il trasferimento.[CLEAR]
+Come vuoi che venga[CTRL:1101:0000,0D0B] trasferitono trasferiti nei box
+di Pokémon HOME?",0,6556
+58,nx_moving_immigrate_msg_020,1F521E6D4D8103E1,"I Pokémon conserveranno la stessa posizione
+che avevano nei box della Banca Pokémon.[CLEAR]
+Vuoi salvare?",4,6840
+59,nx_moving_immigrate_msg_025,1F52216D4D8108FA,"Ciascun Pokémon sarà trasferito nel primo posto disponibile.[CLEAR]
+La posizione originaria nei box della Banca Pokémon sarà
+ignorata. Vuoi salvare?",0,7044
+60,nx_moving_immigrate_msg_030,1F4E986D4D7DEA58,"Salvataggio in corso.
+Non chiudere Pokémon HOME.",0,7336
+61,nx_moving_immigrate_msg_040,1F66A26D4D928D37,"Salvataggio completato.[CLEAR]
+I Pokémon della Banca Pokémon sono stati trasferiti
+nei box di Pokémon HOME!",0,7436
+62,nx_moving_immigrate_msg_045,1F669D6D4D9284B8,"Hai ricevuto [CTRL:0203:0000,0000] punti Pokémon HOME per celebrare
+il tuo primo trasferimento!",4,7644
+63,nx_moving_immigrate_msg_050,1F631C6D4D8F73AE,"Lo spazio nei box è insufficiente. Hai bisogno di [CTRL:0202:0000] spazi[CTRL:1101:0000,0001]o
+liber[CTRL:1101:0000,0101]oi. Vuoi modificare il contenuto dei box?",0,7804
+64,nx_moving_immigrate_msg_060,1F5F966D4D8C5A25,[REF:64],0,8044
+65,nx_moving_immigrate_msg_070,1F5C906D4D8A1A1C,[REF:65],0,8056
+66,nx_moving_immigrate_msg_080,1F3D9A6D4D6F7A8B,[REF:66],0,8068
+67,	,AF66E44C86071324,[REF:67],0,8080
+68,nx_moving_help_010,96110053E176176A,"Dunque... Spostare dei Pokémon dalla Banca Pokémon
+del Nintendo 3DS costituisce un “trasferimento”!",0,8092
+69,nx_moving_help_020,960D7A53E172FDE1,"Scegli “Inizia il trasferimento” e immetti il codice trasferimento
+nella Banca Pokémon per trasferire i tuoi Pokémon in Pokémon HOME!",8,8292
+70,nx_moving_help_030,9609F453E16FE458,"Il codice trasferimento è valido solo per un periodo di tempo limitato,
+quindi assicurati di immetterlo prima che scada!
+Inoltre, finché il codice rimane visualizzato, non potrai usare
+le altre funzioni di Pokémon HOME.",4,8560
+71,nx_moving_help_035,9609F953E16FECD7,"Ah, quasi dimenticavo un particolare interessante!
+Quando sposti dei Pokémon dalla Banca Pokémon,
+vengono trasferiti anche i dati del Pokédex!",4,9000
+72,nx_moving_help_040,9621FE53E1848737,"Se non hai ben chiaro come fare il trasferimento o se non hai con te
+il tuo Nintendo 3DS, prova a dare un’occhiata al sito ufficiale
+di Pokémon HOME.",0,9288

@@ -1,0 +1,511 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,TOKUSEIINFO_SWSH_000,89A04DA960FB13B2,-,0,2164
+1,TOKUSEIINFO_SWSH_001,89A04EA960FB1565,"A volte il cattivo odore emesso dal Pokémon
+fa tentennare i nemici quando attacca.",4,2168
+2,TOKUSEIINFO_SWSH_002,89A04BA960FB104C,"Quando il Pokémon entra in campo, attira la pioggia.",0,2336
+3,TOKUSEIINFO_SWSH_003,89A04CA960FB11FF,La Velocità aumenta a ogni turno.,0,2444
+4,TOKUSEIINFO_SWSH_004,89A049A960FB0CE6,"Il Pokémon è protetto da una dura corazza
+che gli evita di subire brutti colpi.",4,2512
+5,TOKUSEIINFO_SWSH_005,89A04AA960FB0E99,"Evita che il Pokémon vada KO in un sol colpo se ha
+tutti i PS, e lo rende immune alle mosse che causano
+KO immediato.",4,2672
+6,TOKUSEIINFO_SWSH_006,89A047A960FB0980,"Aumenta l’umidità circostante, impedendo l’uso
+di Autodistruzione e di altre mosse esplosive.",4,2908
+7,TOKUSEIINFO_SWSH_007,89A048A960FB0B33,"Il corpo flessibile del Pokémon gli impedisce
+di subire gli effetti della paralisi.",4,3096
+8,TOKUSEIINFO_SWSH_008,89A055A960FB214A,L’elusione aumenta durante le tempeste di sabbia.,0,3264
+9,TOKUSEIINFO_SWSH_009,89A056A960FB22FD,"Il contatto fisico con il corpo percorso
+dall’elettricità statica del Pokémon può
+causare paralisi.",4,3364
+10,TOKUSEIINFO_SWSH_010,89A3D3A960FE2D3B,"Se il Pokémon viene colpito da una mossa di tipo
+Elettro, recupera PS anziché subire danni.",0,3564
+11,TOKUSEIINFO_SWSH_011,89A3D2A960FE2B88,"Se il Pokémon viene colpito da una mossa di tipo
+Acqua, recupera PS anziché subire danni.",0,3748
+12,TOKUSEIINFO_SWSH_012,89A3D5A960FE30A1,"L’imperturbabilità del Pokémon lo protegge
+da infatuazioni e provocazioni.",0,3928
+13,TOKUSEIINFO_SWSH_013,89A3D4A960FE2EEE,"Neutralizza gli effetti di tutte le condizioni
+atmosferiche.",0,4080
+14,TOKUSEIINFO_SWSH_014,89A3D7A960FE3407,"La precisione del Pokémon aumenta grazie ai suoi
+occhi composti.",0,4204
+15,TOKUSEIINFO_SWSH_015,89A3D6A960FE3254,Il Pokémon soffre d’insonnia e non può addormentarsi.,4,4336
+16,TOKUSEIINFO_SWSH_016,89A3D9A960FE376D,Il Pokémon acquisisce il tipo della mossa subita.,4,4444
+17,TOKUSEIINFO_SWSH_017,89A3D8A960FE35BA,"L’immunità naturale del Pokémon gli impedisce
+di essere avvelenato.",0,4544
+18,TOKUSEIINFO_SWSH_018,89A3CBA960FE1FA3,"Se il Pokémon subisce una mossa di tipo Fuoco,
+ne sfrutta il calore per potenziare le proprie mosse
+dello stesso tipo.",0,4680
+19,TOKUSEIINFO_SWSH_019,89A3CAA960FE1DF0,"Il Pokémon è protetto da uno strato di scaglie
+che annulla gli effetti aggiuntivi delle mosse subite.",4,4920
+20,TOKUSEIINFO_SWSH_020,8999C1A960F5BA20,"Il Pokémon affronta la vita al proprio ritmo e per
+questo non può essere confuso.",4,5124
+21,TOKUSEIINFO_SWSH_021,8999C2A960F5BBD3,"Il Pokémon resiste a strumenti e mosse che causano
+la sostituzione appiccicandosi al terreno con le ventose.",4,5288
+22,TOKUSEIINFO_SWSH_022,8999C3A960F5BD86,"Quando il Pokémon entra in campo, la sua
+prepotenza intimidisce i nemici, riducendone
+l’Attacco.",0,5508
+23,TOKUSEIINFO_SWSH_023,8999C4A960F5BF39,"Il Pokémon calpesta l’ombra del nemico impedendogli
+la fuga o la sostituzione.",4,5704
+24,TOKUSEIINFO_SWSH_024,8999C5A960F5C0EC,"Se il Pokémon è colpito da un attacco diretto, grazie
+alla sua pelle ruvida infligge danni a sua volta.",0,5864
+25,TOKUSEIINFO_SWSH_025,8999C6A960F5C29F,"Un potere misterioso protegge il Pokémon e lo
+rende vulnerabile solo alle mosse superefficaci.",4,6072
+26,TOKUSEIINFO_SWSH_026,8999C7A960F5C452,"La capacità di levitare conferisce al Pokémon
+immunità agli attacchi di tipo Terra.",0,6264
+27,TOKUSEIINFO_SWSH_027,8999C8A960F5C605,"Può causare avvelenamento, paralisi o sonno
+a chi manda a segno un attacco diretto.",0,6432
+28,TOKUSEIINFO_SWSH_028,8999C9A960F5C7B8,"Se un nemico avvelena, paralizza o scotta un
+Pokémon con questa abilità, viene colpito dallo
+stesso problema di stato.",0,6600
+29,TOKUSEIINFO_SWSH_029,8999CAA960F5C96B,"Impedisce la diminuzione delle statistiche causata
+da abilità o mosse di altri Pokémon.",4,6840
+30,TOKUSEIINFO_SWSH_030,899D47A960F8D3A9,"Quando il Pokémon viene sostituito, guarisce
+dai problemi di stato.",0,7016
+31,TOKUSEIINFO_SWSH_031,899D46A960F8D1F6,"Il Pokémon attira e neutralizza le mosse di tipo Elettro
+e fa aumentare il suo Attacco Speciale.",4,7152
+32,TOKUSEIINFO_SWSH_032,899D45A960F8D043,Rende più probabili gli effetti aggiuntivi delle mosse.,0,7348
+33,TOKUSEIINFO_SWSH_033,899D44A960F8CE90,"Se piove, la Velocità aumenta.",0,7460
+34,TOKUSEIINFO_SWSH_034,899D4BA960F8DA75,"Se la luce del sole è intensa, la Velocità aumenta.",0,7524
+35,TOKUSEIINFO_SWSH_035,899D4AA960F8D8C2,"Illumina tutto intorno, rendendo più probabile
+incontrare Pokémon selvatici.",4,7628
+36,TOKUSEIINFO_SWSH_036,899D49A960F8D70F,"Quando il Pokémon entra in campo, copia l’abilità
+di un nemico.",0,7784
+37,TOKUSEIINFO_SWSH_037,899D48A960F8D55C,Raddoppia l’Attacco del Pokémon.,0,7912
+38,TOKUSEIINFO_SWSH_038,899D4FA960F8E141,Può avvelenare chi manda a segno un attacco diretto.,0,7980
+39,TOKUSEIINFO_SWSH_039,899D4EA960F8DF8E,"La capacità di concentrazione del Pokémon evita
+che tentenni per gli attacchi del nemico.",0,8088
+40,TOKUSEIINFO_SWSH_040,89AE45A961074376,"Il magma riveste il corpo del Pokémon
+impedendogli di venire congelato.",4,8268
+41,TOKUSEIINFO_SWSH_041,89AE46A961074529,"Un velo d’acqua riveste il corpo del Pokémon
+impedendogli di venire scottato.",4,8412
+42,TOKUSEIINFO_SWSH_042,89AE43A961074010,"La carica magnetica attrae i Pokémon di tipo
+Acciaio impedendogli la fuga o la sostituzione.",0,8568
+43,TOKUSEIINFO_SWSH_043,89AE44A9610741C3,"Il Pokémon è dotato di una sorta di isolamento
+acustico che lo rende immune alle mosse basate
+sul suono.",4,8756
+44,TOKUSEIINFO_SWSH_044,89AE49A961074A42,Il Pokémon recupera PS quando piove.,4,8968
+45,TOKUSEIINFO_SWSH_045,89AE4AA961074BF5,"Quando il Pokémon entra in campo, scatena
+una tempesta di sabbia.",0,9044
+46,TOKUSEIINFO_SWSH_046,89AE47A9610746DC,"Il Pokémon mette pressione al nemico, facendogli
+consumare più PP.",4,9176
+47,TOKUSEIINFO_SWSH_047,89AE48A96107488F,"Il Pokémon è protetto da uno spesso strato
+di grasso che dimezza il danno causato da
+mosse di tipo Fuoco e Ghiaccio.",4,9312
+48,TOKUSEIINFO_SWSH_048,89AE4DA96107510E,"Il Pokémon impiega metà del tempo per risvegliarsi
+dal sonno rispetto agli altri.",4,9548
+49,TOKUSEIINFO_SWSH_049,89AE4EA9610752C1,Può scottare chi manda a segno un attacco diretto.,0,9712
+50,TOKUSEIINFO_SWSH_050,89B14BA96109837F,Garantisce la fuga dai Pokémon selvatici.,0,9816
+51,TOKUSEIINFO_SWSH_051,89B14AA9610981CC,"La vista acuta del Pokémon impedisce che la sua
+precisione diminuisca.",0,9900
+52,TOKUSEIINFO_SWSH_052,89B14DA9610986E5,"L’Attacco del Pokémon non può diminuire
+grazie alla morsa micidiale in cui è in grado
+di stringere i nemici.",0,10044
+53,TOKUSEIINFO_SWSH_053,89B14CA961098532,"Il Pokémon può raccogliere lo strumento usato da
+un nemico durante la lotta. A volte potrebbe
+raccogliere strumenti anche fuori dalla lotta.",4,10264
+54,TOKUSEIINFO_SWSH_054,89B147A961097CB3,"Quando il Pokémon usa una mossa, nel turno
+successivo si riposerà.",0,10548
+55,TOKUSEIINFO_SWSH_055,89B146A961097B00,"L’Attacco aumenta, ma la precisione diminuisce.",0,10684
+56,TOKUSEIINFO_SWSH_056,89B149A961098019,"Può causare infatuazione a chi manda a segno
+un attacco diretto.",0,10780
+57,TOKUSEIINFO_SWSH_057,89B148A961097E66,"L’Attacco Speciale aumenta se ci sono alleati con
+l’abilità Meno o Più.",0,10912
+58,TOKUSEIINFO_SWSH_058,89B153A961099117,"L’Attacco Speciale aumenta se ci sono alleati con
+l’abilità Meno o Più.",0,11056
+59,TOKUSEIINFO_SWSH_059,89B152A961098F64,"Cambia il tipo del Pokémon in Acqua, Fuoco
+o Ghiaccio in base alle condizioni atmosferiche.",0,11200
+60,TOKUSEIINFO_SWSH_060,89A759A9610146C4,"Gli strumenti restano appiccicati al corpo adesivo
+del Pokémon e non possono essere rubati.",0,11384
+61,TOKUSEIINFO_SWSH_061,89A75AA961014877,"Il Pokémon può guarire dai problemi di stato
+facendo la muta completa della pelle.",4,11568
+62,TOKUSEIINFO_SWSH_062,89A75BA961014A2A,"Se il Pokémon è affetto da un problema di stato,
+tira fuori la grinta e aumenta il proprio Attacco.",0,11736
+63,TOKUSEIINFO_SWSH_063,89A75CA961014BDD,"Se il Pokémon è affetto da un problema di stato,
+le squame sulla sua pelle si induriscono aumentando
+la sua Difesa.",0,11936
+64,TOKUSEIINFO_SWSH_064,89A755A961013FF8,"Il Pokémon secerne delle sostanze tossiche.
+Se un nemico manda a segno una mossa che
+assorbe i PS, subisce dei danni.",4,12168
+65,TOKUSEIINFO_SWSH_065,89A756A9610141AB,"Quando il Pokémon ha pochi PS, la potenza delle
+sue mosse di tipo Erba aumenta.",0,12404
+66,TOKUSEIINFO_SWSH_066,89A757A96101435E,"Quando il Pokémon ha pochi PS, la potenza delle
+sue mosse di tipo Fuoco aumenta.",0,12564
+67,TOKUSEIINFO_SWSH_067,89A758A961014511,"Quando il Pokémon ha pochi PS, la potenza delle
+sue mosse di tipo Acqua aumenta.",0,12728
+68,TOKUSEIINFO_SWSH_068,89A751A96101392C,"Quando il Pokémon ha pochi PS, la potenza delle
+sue mosse di tipo Coleottero aumenta.",0,12892
+69,TOKUSEIINFO_SWSH_069,89A752A961013ADF,Protegge il Pokémon dai contraccolpi.,0,13064
+70,TOKUSEIINFO_SWSH_070,89AADFA96104604D,"Quando il Pokémon entra in campo, la luce solare
+diventa intensa.",0,13140
+71,TOKUSEIINFO_SWSH_071,89AADEA961045E9A,Impedisce la fuga al nemico.,4,13272
+72,TOKUSEIINFO_SWSH_072,89AADDA961045CE7,"Il Pokémon è talmente vivace che non può
+addormentarsi.",4,13332
+73,TOKUSEIINFO_SWSH_073,89AADCA961045B34,"Il Pokémon è protetto da un fumo chiaro che
+impedisce ai nemici di diminuire le sue statistiche.",4,13444
+74,TOKUSEIINFO_SWSH_074,89AADBA961045981,"L’Attacco del Pokémon raddoppia grazie
+alla sua padronanza delle tecniche yoga.",0,13640
+75,TOKUSEIINFO_SWSH_075,89AADAA9610457CE,"Il Pokémon è protetto da un guscio robusto
+che gli evita di subire brutti colpi.",4,13800
+76,TOKUSEIINFO_SWSH_076,89AAD9A96104561B,"Neutralizza gli effetti di tutte le condizioni
+atmosferiche.",0,13964
+77,TOKUSEIINFO_SWSH_077,89AAD8A961045468,"Se il Pokémon è confuso, la sua elusione aumenta.",0,14088
+78,TOKUSEIINFO_SWSH_078,89AAD7A9610452B5,"Se il Pokémon viene colpito da una mossa di
+tipo Elettro, la neutralizza e sfrutta la carica
+elettrica per aumentare la propria Velocità.",0,14188
+79,TOKUSEIINFO_SWSH_079,89AAD6A961045102,"Rende più forti contro nemici dello stesso sesso,
+ma più deboli contro nemici di sesso opposto.",0,14464
+80,TOKUSEIINFO_SWSH_080,89BBDDA96112D01A,"Se il Pokémon tentenna, il suo animo indomito
+si risveglia e la sua Velocità aumenta.",0,14656
+81,TOKUSEIINFO_SWSH_081,89BBDEA96112D1CD,"Se grandina, l’elusione aumenta.",0,14828
+82,TOKUSEIINFO_SWSH_082,89BBDBA96112CCB4,"Il Pokémon non attende di aver perso molti PS
+per mangiare certe bacche, ma lo fa non appena
+i suoi PS scendono a metà o meno.",4,14896
+83,TOKUSEIINFO_SWSH_083,89BBDCA96112CE67,"Se il Pokémon subisce un brutto colpo, monta su
+tutte le furie e il suo Attacco aumenta al massimo.",0,15152
+84,TOKUSEIINFO_SWSH_084,89BBD9A96112C94E,"Se il Pokémon usa o perde uno strumento,
+la sua Velocità aumenta.",0,15352
+85,TOKUSEIINFO_SWSH_085,89BBDAA96112CB01,"Il corpo termoresistente del Pokémon dimezza i danni
+che subisce dalle mosse di tipo Fuoco.",4,15484
+86,TOKUSEIINFO_SWSH_086,89BBD7A96112C5E8,Raddoppia le modifiche alle statistiche.,0,15668
+87,TOKUSEIINFO_SWSH_087,89BBD8A96112C79B,"Il Pokémon recupera PS se piove o se subisce
+mosse di tipo Acqua, ma perde PS con la luce solare
+intensa. Subisce più danni da mosse di tipo Fuoco.",4,15752
+88,TOKUSEIINFO_SWSH_088,89BBD5A96112C282,"Il Pokémon analizza Difesa e Difesa Speciale
+del nemico e, a seconda di qual è più bassa,
+aumenta il proprio Attacco o Attacco Speciale.",4,16048
+89,TOKUSEIINFO_SWSH_089,89BBD6A96112C435,Potenzia le mosse che utilizzano pugni.,0,16324
+90,TOKUSEIINFO_SWSH_090,89BF43A96115B343,"Se il Pokémon è avvelenato, recupera PS anziché
+perderli.",0,16404
+91,TOKUSEIINFO_SWSH_091,89BF42A96115B190,"Potenzia di molto le mosse dello stesso tipo
+del Pokémon.",0,16520
+92,TOKUSEIINFO_SWSH_092,89BF45A96115B6A9,"Le mosse multicolpo mandano a segno sempre
+il massimo dei colpi possibili.",0,16636
+93,TOKUSEIINFO_SWSH_093,89BF44A96115B4F6,"Se piove, il Pokémon guarisce dai problemi di stato.",0,16788
+94,TOKUSEIINFO_SWSH_094,89BF47A96115BA0F,"Se la luce del sole è intensa, l’Attacco Speciale
+aumenta, ma il Pokémon perde PS a ogni turno.",0,16896
+95,TOKUSEIINFO_SWSH_095,89BF46A96115B85C,"Se il Pokémon è affetto da un problema di stato,
+la Velocità aumenta.",0,17088
+96,TOKUSEIINFO_SWSH_096,89BF49A96115BD75,"Tutte le mosse del Pokémon diventano di tipo
+Normale e la loro potenza aumenta un po’.",0,17228
+97,TOKUSEIINFO_SWSH_097,89BF48A96115BBC2,Aumenta ulteriormente i danni inflitti dai brutti colpi.,4,17404
+98,TOKUSEIINFO_SWSH_098,89BF4BA96115C0DB,Il Pokémon subisce danni solo dagli attacchi.,4,17520
+99,TOKUSEIINFO_SWSH_099,89BF4AA96115BF28,"Il Pokémon e chiunque lo attacchi abbassano
+la guardia e le loro mosse vanno sempre a segno.",4,17612
+100,TOKUSEIINFO_SWSH_100,910388A964CDE2FD,Il Pokémon agisce sempre per ultimo.,4,17800
+101,TOKUSEIINFO_SWSH_101,910387A964CDE14A,Potenzia le mosse più deboli del Pokémon.,0,17876
+102,TOKUSEIINFO_SWSH_102,910386A964CDDF97,"Se la luce del sole è intensa, evita i problemi
+di stato.",0,17960
+103,TOKUSEIINFO_SWSH_103,910385A964CDDDE4,Il Pokémon non può usare lo strumento che ha con sé.,4,18076
+104,TOKUSEIINFO_SWSH_104,910384A964CDDC31,"Quando il Pokémon attacca, ignora l’abilità del
+bersaglio se questa ha effetto sulle mosse.",0,18184
+105,TOKUSEIINFO_SWSH_105,910383A964CDDA7E,"L’incredibile fortuna del Pokémon aumenta
+la sua probabilità di infliggere brutti colpi.",0,18368
+106,TOKUSEIINFO_SWSH_106,910382A964CDD8CB,"Chi manda KO questo Pokémon con un attacco
+diretto subisce dei danni.",0,18548
+107,TOKUSEIINFO_SWSH_107,910381A964CDD718,Rivela se il nemico ha mosse pericolose.,0,18688
+108,TOKUSEIINFO_SWSH_108,910380A964CDD565,"Quando il Pokémon entra in campo, rivela una delle
+mosse del nemico.",0,18772
+109,TOKUSEIINFO_SWSH_109,91037FA964CDD3B2,"Quando il Pokémon attacca, ignora le modifiche
+alle statistiche del nemico.",0,18912
+110,TOKUSEIINFO_SWSH_110,910082A964CBA2F4,"Permette alle mosse non molto efficaci di infliggere
+danni normalmente.",0,19064
+111,TOKUSEIINFO_SWSH_111,910083A964CBA4A7,Riduce i danni subiti dalle mosse superefficaci.,0,19208
+112,TOKUSEIINFO_SWSH_112,910084A964CBA65A,Dimezza per cinque turni l’Attacco e la Velocità.,0,19308
+113,TOKUSEIINFO_SWSH_113,910085A964CBA80D,"Permette di colpire Pokémon di tipo Spettro
+con mosse di tipo Normale e Lotta.",0,19408
+114,TOKUSEIINFO_SWSH_114,91007EA964CB9C28,"Il Pokémon attira e neutralizza le mosse di tipo Acqua
+e fa aumentare il proprio Attacco Speciale.",4,19568
+115,TOKUSEIINFO_SWSH_115,91007FA964CB9DDB,"Se grandina, il Pokémon recupera PS.",0,19768
+116,TOKUSEIINFO_SWSH_116,910080A964CB9F8E,Riduce i danni subiti dalle mosse superefficaci.,0,19844
+117,TOKUSEIINFO_SWSH_117,910081A964CBA141,"Quando il Pokémon entra in campo, provoca
+una grandinata.",0,19944
+118,TOKUSEIINFO_SWSH_118,91007AA964CB955C,"Il Pokémon può raccogliere del Miele alla fine
+della lotta.",4,20060
+119,TOKUSEIINFO_SWSH_119,91007BA964CB970F,"Quando il Pokémon entra in campo, rivela
+lo strumento del nemico.",0,20180
+120,TOKUSEIINFO_SWSH_120,910A74A964D3DFAF,Potenzia le mosse che causano contraccolpo.,0,20312
+121,TOKUSEIINFO_SWSH_121,910A73A964D3DDFC,"Cambia il tipo del Pokémon a seconda della lastra
+o del Cristallo Z che ha con sé.",0,20400
+122,TOKUSEIINFO_SWSH_122,910A76A964D3E315,"Se la luce del sole è intensa, aumenta l’Attacco
+e la Difesa Speciale del Pokémon e dei suoi alleati.",0,20568
+123,TOKUSEIINFO_SWSH_123,910A75A964D3E162,Infligge danni ai nemici addormentati.,4,20772
+124,TOKUSEIINFO_SWSH_124,910A70A964D3D8E3,"Se il Pokémon viene colpito da un attacco diretto,
+ruba lo strumento di chi lo ha attaccato.",0,20852
+125,TOKUSEIINFO_SWSH_125,910A6FA964D3D730,"Aumenta la potenza delle mosse, ma ne annulla
+gli effetti aggiuntivi.",4,21040
+126,TOKUSEIINFO_SWSH_126,910A72A964D3DC49,"Le modifiche alle statistiche hanno effetto inverso:
+le statistiche aumentano quando dovrebbero diminuire
+e viceversa.",0,21180
+127,TOKUSEIINFO_SWSH_127,910A71A964D3DA96,"Il nemico viene intimidito e non può mangiare
+bacche.",4,21420
+128,TOKUSEIINFO_SWSH_128,910A7CA964D3ED47,"L’Attacco aumenta di molto quando le statistiche
+diminuiscono a causa di un nemico.",0,21528
+129,TOKUSEIINFO_SWSH_129,910A7BA964D3EB94,"Quando i PS scendono a metà o meno, il Pokémon
+si scoraggia e l’Attacco e l’Attacco Speciale
+vengono dimezzati.",0,21696
+130,TOKUSEIINFO_SWSH_130,9106EEA964D0C626,Può bloccare la mossa subita dal Pokémon.,0,21920
+131,TOKUSEIINFO_SWSH_131,9106EFA964D0C7D9,A volte cura i problemi di stato degli alleati.,4,22004
+132,TOKUSEIINFO_SWSH_132,9106ECA964D0C2C0,"I danni inflitti agli alleati del Pokémon
+vengono ridotti.",4,22100
+133,TOKUSEIINFO_SWSH_133,9106EDA964D0C473,"Se il Pokémon subisce danni da mosse fisiche, la Difesa
+diminuisce e la Velocità aumenta di molto.",0,22220
+134,TOKUSEIINFO_SWSH_134,9106F2A964D0CCF2,Raddoppia il peso del Pokémon.,0,22420
+135,TOKUSEIINFO_SWSH_135,9106F3A964D0CEA5,Dimezza il peso del Pokémon.,0,22484
+136,TOKUSEIINFO_SWSH_136,9106F0A964D0C98C,"Se i PS sono al massimo, riduce il danno subito.",0,22544
+137,TOKUSEIINFO_SWSH_137,9106F1A964D0CB3F,"Se il Pokémon è avvelenato, la potenza delle sue mosse
+fisiche aumenta.",0,22644
+138,TOKUSEIINFO_SWSH_138,9106F6A964D0D3BE,"Se il Pokémon è scottato, la potenza delle sue mosse
+speciali aumenta.",0,22788
+139,TOKUSEIINFO_SWSH_139,9106F7A964D0D571,Può ricreare una bacca utilizzata.,0,22932
+140,TOKUSEIINFO_SWSH_140,90F5F0A964C25659,Il Pokémon prevede ed evita gli attacchi degli alleati.,4,23004
+141,TOKUSEIINFO_SWSH_141,90F5EFA964C254A6,"A ogni turno, aumenta di molto una statistica
+e ne riduce un’altra.",4,23116
+142,TOKUSEIINFO_SWSH_142,90F5EEA964C252F3,"Rende immuni ai danni da grandine e tempesta di
+sabbia, alle mosse Spora, Cottonspora, Sonnifero,
+Paralizzante e alle mosse “polvere”.",0,23252
+143,TOKUSEIINFO_SWSH_143,90F5EDA964C25140,Il Pokémon può avvelenare il nemico al solo contatto.,4,23524
+144,TOKUSEIINFO_SWSH_144,90F5F4A964C25D25,"Il Pokémon recupera un po’ di PS quando lascia
+il campo.",4,23632
+145,TOKUSEIINFO_SWSH_145,90F5F3A964C25B72,Evita che la Difesa diminuisca.,4,23748
+146,TOKUSEIINFO_SWSH_146,90F5F2A964C259BF,"Se c’è una tempeste di sabbia, la Velocità aumenta.",0,23812
+147,TOKUSEIINFO_SWSH_147,90F5F1A964C2580C,Il Pokémon resiste più facilmente alle mosse di stato.,4,23916
+148,TOKUSEIINFO_SWSH_148,90F5F8A964C263F1,"Se il Pokémon agisce per ultimo, la potenza
+della mossa aumenta.",0,24028
+149,TOKUSEIINFO_SWSH_149,90F5F7A964C2623E,"Il Pokémon inganna il nemico entrando in campo
+con le sembianze dell’ultimo Pokémon della propria
+squadra.",4,24160
+150,TOKUSEIINFO_SWSH_150,90F2EAA964C01650,Il Pokémon si trasforma nel nemico che ha davanti.,4,24376
+151,TOKUSEIINFO_SWSH_151,90F2EBA964C01803,"Il Pokémon attacca evitando le barriere e il sostituto
+del nemico.",4,24480
+152,TOKUSEIINFO_SWSH_152,90F2ECA964C019B6,"Al contatto con il Pokémon, l’abilità del nemico
+diventa Mummia.",4,24616
+153,TOKUSEIINFO_SWSH_153,90F2EDA964C01B69,"Quando manda un nemico KO, il Pokémon si fa
+sicuro di sé e aumenta il proprio Attacco.",0,24748
+154,TOKUSEIINFO_SWSH_154,90F2EEA964C01D1C,"Quando il Pokémon viene colpito da una mossa
+di tipo Buio, il suo forte senso di giustizia fa sì
+che l’Attacco aumenti.",0,24924
+155,TOKUSEIINFO_SWSH_155,90F2EFA964C01ECF,"Le mosse di tipo Buio, Spettro e Coleottero
+spaventano il Pokémon aumentandone la Velocità.",0,25164
+156,TOKUSEIINFO_SWSH_156,90F2F0A964C02082,"Il Pokémon respinge al mittente le mosse di stato senza
+subirne gli effetti.",4,25348
+157,TOKUSEIINFO_SWSH_157,90F2F1A964C02235,"Se il Pokémon viene colpito da una mossa di tipo Erba,
+la neutralizza e aumenta il proprio Attacco.",0,25504
+158,TOKUSEIINFO_SWSH_158,90F2F2A964C023E8,"Le mosse di stato del Pokémon acquistano
+priorità alta.",0,25704
+159,TOKUSEIINFO_SWSH_159,90F2F3A964C0259B,"Potenzia le mosse di tipo Roccia, Terra e Acciaio
+durante le tempeste di sabbia.",0,25816
+160,TOKUSEIINFO_SWSH_160,90FCFCA964C8896B,"Se il Pokémon viene colpito da un attacco diretto,
+infligge danni a sua volta con le sue spine di ferro.",0,25980
+161,TOKUSEIINFO_SWSH_161,90FCFBA964C887B8,"Cambia la forma del Pokémon se i PS scendono
+a metà o meno.",0,26192
+162,TOKUSEIINFO_SWSH_162,90FCFEA964C88CD1,Aumenta la precisione di tutta la squadra.,4,26312
+163,TOKUSEIINFO_SWSH_163,90FCFDA964C88B1E,"Quando il Pokémon attacca, ignora l’abilità del
+bersaglio se questa ha effetto sulle mosse.",0,26400
+164,TOKUSEIINFO_SWSH_164,90FD00A964C89037,"Quando il Pokémon attacca, ignora l’abilità del
+bersaglio se questa ha effetto sulle mosse.",0,26584
+165,TOKUSEIINFO_SWSH_165,90FCFFA964C88E84,"Protegge tutta la squadra da effetti che ne limitano
+la libertà di scelta delle mosse.",0,26768
+166,TOKUSEIINFO_SWSH_166,90FD02A964C8939D,"Rende gli alleati di tipo Erba immuni alla diminuzione
+delle statistiche e ai problemi di stato.",0,26944
+167,TOKUSEIINFO_SWSH_167,90FD01A964C891EA,"Quando il Pokémon mangia una bacca, recupera anche
+dei PS.",0,27140
+168,TOKUSEIINFO_SWSH_168,90FCF4A964C87BD3,"Cambia il tipo del Pokémon in quello della mossa
+che usa.",0,27260
+169,TOKUSEIINFO_SWSH_169,90FCF3A964C87A20,Dimezza il danno subito dalle mosse fisiche.,0,27376
+170,TOKUSEIINFO_SWSH_170,90F976A964C56FE2,"Quando chi la usa colpisce un Pokémon con una mossa,
+gli ruba lo strumento.",0,27468
+171,TOKUSEIINFO_SWSH_171,90F977A964C57195,"Protegge da alcune mosse a base di proiettili
+e bombe.",0,27620
+172,TOKUSEIINFO_SWSH_172,90F974A964C56C7C,"L’Attacco Speciale aumenta di molto quando le
+statistiche diminuiscono a causa di un nemico.",0,27732
+173,TOKUSEIINFO_SWSH_173,90F975A964C56E2F,"La robusta mascella del Pokémon permette
+morsi molto potenti.",0,27920
+174,TOKUSEIINFO_SWSH_174,90F972A964C56916,"Le mosse di tipo Normale diventano di tipo
+Ghiaccio e la loro potenza aumenta un po’.",0,28044
+175,TOKUSEIINFO_SWSH_175,90F973A964C56AC9,Rende il Pokémon e i suoi alleati immuni al sonno.,0,28216
+176,TOKUSEIINFO_SWSH_176,90F970A964C565B0,"Assume la Forma Spada se usa una mossa
+d’attacco e la Forma Scudo se usa Scudo Reale.",4,28320
+177,TOKUSEIINFO_SWSH_177,90F971A964C56763,"Se il Pokémon ha tutti i PS, le sue mosse
+di tipo Volante acquistano priorità alta.",0,28492
+178,TOKUSEIINFO_SWSH_178,90F97EA964C57D7A,"Potenzia le mosse “pulsar”, Forzasfera
+e Ondasana.",0,28660
+179,TOKUSEIINFO_SWSH_179,90F97FA964C57F2D,"In presenza di un Campo Erboso, la Difesa
+aumenta.",4,28764
+180,TOKUSEIINFO_SWSH_180,911EF8A964E56905,"Se un alleato usa uno strumento, il Pokémon
+gli passa il proprio.",0,28868
+181,TOKUSEIINFO_SWSH_181,911EF7A964E56752,Potenzia le mosse che causano un contatto fisico.,0,29000
+182,TOKUSEIINFO_SWSH_182,911EF6A964E5659F,"Le mosse di tipo Normale diventano di tipo Folletto
+e la loro potenza aumenta un po’.",0,29100
+183,TOKUSEIINFO_SWSH_183,911EF5A964E563EC,"Se il Pokémon viene colpito da un attacco diretto,
+la Velocità di chi l’ha colpito diminuisce.",0,29272
+184,TOKUSEIINFO_SWSH_184,911EF4A964E56239,"Le mosse di tipo Normale diventano di tipo Volante
+e la loro potenza aumenta un po’.",0,29464
+185,TOKUSEIINFO_SWSH_185,911EF3A964E56086,Il Pokémon e il suo piccolo attaccano insieme.,4,29636
+186,TOKUSEIINFO_SWSH_186,911EF2A964E55ED3,Potenzia le mosse di tipo Buio di tutti i Pokémon.,0,29732
+187,TOKUSEIINFO_SWSH_187,911EF1A964E55D20,Potenzia le mosse di tipo Folletto di tutti i Pokémon.,0,29836
+188,TOKUSEIINFO_SWSH_188,911F00A964E5769D,"Inverte gli effetti di tutte le aure riducendone
+la potenza.",4,29948
+189,TOKUSEIINFO_SWSH_189,911EFFA964E574EA,"Crea un clima che rende inefficaci
+gli attacchi di tipo Fuoco.",0,30072
+190,TOKUSEIINFO_SWSH_190,911B72A964E24F7C,"Crea un clima che rende inefficaci
+gli attacchi di tipo Acqua.",0,30200
+191,TOKUSEIINFO_SWSH_191,911B73A964E2512F,"Crea un clima che annulla i punti deboli
+del tipo Volante.",0,30328
+192,TOKUSEIINFO_SWSH_192,911B74A964E252E2,"Se il Pokémon subisce un attacco, la sua Difesa
+aumenta.",0,30448
+193,TOKUSEIINFO_SWSH_193,911B75A964E25495,"Se i PS scendono a metà o meno, il Pokémon
+si fa prendere dalla paura e abbandona la lotta
+in tutta fretta.",0,30564
+194,TOKUSEIINFO_SWSH_194,911B6EA964E248B0,"Se i PS scendono a metà o meno, il Pokémon
+abbandona la lotta per sfuggire al pericolo.",0,30780
+195,TOKUSEIINFO_SWSH_195,911B6FA964E24A63,"Se il Pokémon subisce una mossa di tipo Acqua,
+la sua Difesa aumenta di molto.",0,30956
+196,TOKUSEIINFO_SWSH_196,911B70A964E24C16,"Gli attacchi sferrati su un bersaglio avvelenato
+producono sempre brutti colpi.",0,31116
+197,TOKUSEIINFO_SWSH_197,911B71A964E24DC9,"Se i PS scendono a metà o meno, il guscio
+si rompe e il Pokémon si prepara all’offensiva.",0,31276
+198,TOKUSEIINFO_SWSH_198,911B7AA964E25D14,"Raddoppia i danni inflitti a un bersaglio che è
+appena entrato in campo per sostituire un altro
+Pokémon.",0,31456
+199,TOKUSEIINFO_SWSH_199,911B7BA964E25EC7,"Riduce i danni subiti dalle mosse di tipo Fuoco
+e rende immuni alle scottature.",0,31668
+200,TOKUSEIINFO_SWSH_200,77E0F7A956CF545C,Aumenta la potenza delle mosse di tipo Acciaio.,4,31828
+201,TOKUSEIINFO_SWSH_201,77E0F8A956CF560F,"Se i PS scendono a metà o meno a causa di
+un attacco, l’Attacco Speciale aumenta.",0,31924
+202,TOKUSEIINFO_SWSH_202,77E0F9A956CF57C2,"Se grandina, la Velocità aumenta.",0,32088
+203,TOKUSEIINFO_SWSH_203,77E0FAA956CF5975,"Il Pokémon è in grado di usare tutte le sue mosse
+senza entrare in contatto diretto con il bersaglio.",4,32156
+204,TOKUSEIINFO_SWSH_204,77E0F3A956CF4D90,"Le mosse del Pokémon basate sul suono diventano
+di tipo Acqua.",0,32360
+205,TOKUSEIINFO_SWSH_205,77E0F4A956CF4F43,"Le mosse che ripristinano direttamente i PS
+del Pokémon acquistano priorità alta.",0,32488
+206,TOKUSEIINFO_SWSH_206,77E0F5A956CF50F6,"Le mosse di tipo Normale diventano di tipo Elettro
+e la loro potenza aumenta un po’.",0,32652
+207,TOKUSEIINFO_SWSH_207,77E0F6A956CF52A9,"In presenza di un Campo Elettrico, la Velocità
+raddoppia.",4,32824
+208,TOKUSEIINFO_SWSH_208,77E0FFA956CF61F4,"Quando ha molti PS, il Pokémon forma un banco
+con i propri simili e si rafforza.
+Quando ne ha pochi, il banco si disperde.",0,32940
+209,TOKUSEIINFO_SWSH_209,77E100A956CF63A7,"Il panno che ricopre il Pokémon lo protegge
+da un singolo attacco.",4,33188
+210,TOKUSEIINFO_SWSH_210,77E3FDA956D19465,"Se il Pokémon manda KO un nemico, il legame con
+l’Allenatore si rafforza, attivando la trasformazione
+in Greninja Forma Ash. Acqualame si potenzia.",0,33324
+211,TOKUSEIINFO_SWSH_211,77E3FCA956D192B2,"Se i PS del Pokémon scendono a metà o meno, le
+cellule si raggruppano e gli permettono di assumere
+la Forma Perfetta.",0,33620
+212,TOKUSEIINFO_SWSH_212,77E3FBA956D190FF,"Il Pokémon è in grado di avvelenare il bersaglio
+anche se questo è di tipo Acciaio o Veleno.",4,33856
+213,TOKUSEIINFO_SWSH_213,77E3FAA956D18F4C,"Il Pokémon si trova in un costante stato di
+dormiveglia che gli impedisce di svegliarsi.
+Può attaccare anche da addormentato.",4,34044
+214,TOKUSEIINFO_SWSH_214,77E3F9A956D18D99,"L’aura di regalità del Pokémon impedisce al nemico
+di attaccarlo con mosse che hanno priorità alta.",0,34296
+215,TOKUSEIINFO_SWSH_215,77E3F8A956D18BE6,"Se il Pokémon viene mandato KO da un attacco,
+infligge a chi lo ha sferrato tanti danni quanti
+erano i suoi PS prima di ricevere il colpo.",0,34496
+216,TOKUSEIINFO_SWSH_216,77E3F7A956D18A33,"Permette al Pokémon di copiare immediatamente
+qualsiasi mossa basata sulla danza usata da un
+altro Pokémon in campo.",0,34776
+217,TOKUSEIINFO_SWSH_217,77E3F6A956D18880,"Aumenta la potenza delle mosse speciali
+degli alleati.",4,35012
+218,TOKUSEIINFO_SWSH_218,77E405A956D1A1FD,"Dimezza il danno causato dagli attacchi diretti
+di un nemico, ma raddoppia quello subito dalle
+mosse di tipo Fuoco.",0,35124
+219,TOKUSEIINFO_SWSH_219,77E404A956D1A04A,"Il Pokémon sbalordisce il nemico e non gli permette
+di attaccarlo con mosse che hanno priorità alta.",4,35356
+220,TOKUSEIINFO_SWSH_220,77E783A956D4ADEE,"Aumenta l’Attacco Speciale ogni volta che
+un Pokémon va KO.",4,35560
+221,TOKUSEIINFO_SWSH_221,77E784A956D4AFA1,"Se il Pokémon viene colpito da un attacco diretto,
+la Velocità di chi l’ha colpito diminuisce.",0,35680
+222,TOKUSEIINFO_SWSH_222,77E781A956D4AA88,"Il Pokémon acquisisce l’abilità di un alleato
+andato KO.",4,35872
+223,TOKUSEIINFO_SWSH_223,77E782A956D4AC3B,"Il Pokémon trasforma la propria abilità in quella
+di un alleato andato KO.",4,35988
+224,TOKUSEIINFO_SWSH_224,77E787A956D4B4BA,"Quando il Pokémon manda KO un altro Pokémon,
+aumenta la propria statistica di punta.",0,36140
+225,TOKUSEIINFO_SWSH_225,77E788A956D4B66D,"Il tipo del Pokémon cambia in base alla ROM
+installata.",4,36312
+226,TOKUSEIINFO_SWSH_226,77E785A956D4B154,"Quando il Pokémon entra in campo,
+lo trasforma in un Campo Elettrico.",0,36424
+227,TOKUSEIINFO_SWSH_227,77E786A956D4B307,"Quando il Pokémon entra in campo,
+lo trasforma in un Campo Psichico.",0,36564
+228,TOKUSEIINFO_SWSH_228,77E77BA956D4A056,"Quando il Pokémon entra in campo,
+lo trasforma in un Campo Nebbioso.",0,36704
+229,TOKUSEIINFO_SWSH_229,77E77CA956D4A209,"Quando il Pokémon entra in campo,
+lo trasforma in un Campo Erboso.",0,36844
+230,TOKUSEIINFO_SWSH_230,77EB09A956D7C777,"Impedisce la diminuzione delle statistiche causata
+da abilità o mosse di altri Pokémon.",4,36980
+231,TOKUSEIINFO_SWSH_231,77EB08A956D7C5C4,"Se i PS sono al massimo, riduce il danno subito.",0,37156
+232,TOKUSEIINFO_SWSH_232,77EB0BA956D7CADD,Riduce i danni subiti dalle mosse superefficaci.,0,37256
+233,TOKUSEIINFO_SWSH_233,77EB0AA956D7C92A,Potenzia le mosse superefficaci.,0,37356
+234,TOKUSEIINFO_SWSH_234,77EB05A956D7C0AB,"Quando il Pokémon entra in campo, il suo Attacco
+aumenta.",0,37424
+235,TOKUSEIINFO_SWSH_235,77EB04A956D7BEF8,"Quando il Pokémon entra in campo, la sua Difesa
+aumenta.",0,37540
+236,TOKUSEIINFO_SWSH_236,77EB07A956D7C411,"Cambia il tipo del Pokémon in quello della mossa
+che usa.",0,37656
+237,TOKUSEIINFO_SWSH_237,77EB06A956D7C25E,"Se il Pokémon non ha uno strumento con sé,
+raccoglie la Poké Ball del primo tentativo
+di cattura fallito.",0,37772
+238,TOKUSEIINFO_SWSH_238,77EB01A956D7B9DF,"Se il Pokémon subisce un attacco, sparge della lanugine
+che diminuisce la Velocità di tutti i Pokémon in campo
+tranne la sua.",0,37984
+239,TOKUSEIINFO_SWSH_239,77EB00A956D7B82C,"Permette di ignorare gli effetti di mosse e abilità
+che attirano altre mosse.",0,38236
+240,TOKUSEIINFO_SWSH_240,77D2FFA956C32498,"Rimanda al mittente le diminuzioni alle statistiche
+subite.",0,38392
+241,TOKUSEIINFO_SWSH_241,77D300A956C3264B,"Quando usa Surf o Sub, il Pokémon cattura una preda.
+Se subisce dei danni, la sputa fuori per attaccare.",0,38512
+242,TOKUSEIINFO_SWSH_242,77D301A956C327FE,"Permette di ignorare gli effetti di mosse e abilità
+che attirano altre mosse.",0,38724
+243,TOKUSEIINFO_SWSH_243,77D302A956C329B1,"Se il Pokémon viene colpito da una mossa di tipo Acqua
+o Fuoco, la sua Velocità aumenta moltissimo.",0,38880
+244,TOKUSEIINFO_SWSH_244,77D303A956C32B64,"Aumenta la potenza delle mosse basate sul suono.
+Inoltre, dimezza i danni subiti dal Pokémon se
+viene colpito da tali mosse.",4,39080
+245,TOKUSEIINFO_SWSH_245,77D304A956C32D17,"Quando il Pokémon viene colpito da un attacco,
+scatena una tempesta di sabbia.",0,39332
+246,TOKUSEIINFO_SWSH_246,77D305A956C32ECA,"Scaglie di ghiaccio proteggono il Pokémon dalle mosse
+speciali, dimezzandone i danni subiti.",8,39492
+247,TOKUSEIINFO_SWSH_247,77D306A956C3307D,Fa maturare le bacche raddoppiandone gli effetti.,0,39680
+248,TOKUSEIINFO_SWSH_248,77D2F7A956C31700,"Grazie al ghiaccio sulla testa, il Pokémon può incassare
+i danni causati da mosse fisiche, ma cambia forma.
+Torna al suo stato originale quando grandina.",0,39780
+249,TOKUSEIINFO_SWSH_249,77D2F8A956C318B3,"Potenzia le mosse di chi si trova nelle immediate
+vicinanze.",0,40088
+250,TOKUSEIINFO_SWSH_250,77D685A956C63E21,"Il tipo del Pokémon cambia a seconda dello stato
+del campo.",4,40212
+251,TOKUSEIINFO_SWSH_251,77D684A956C63C6E,"Quando il Pokémon entra in campo, annulla l’effetto
+di Schermoluce, Riflesso e Velaurora sia per i nemici
+che per gli alleati.",0,40332
+252,TOKUSEIINFO_SWSH_252,77D683A956C63ABB,Potenzia gli attacchi di tipo Acciaio degli alleati.,0,40588
+253,TOKUSEIINFO_SWSH_253,77D682A956C63908,"Se il Pokémon viene colpito da un attacco diretto,
+dopo tre turni va KO assieme a chi lo ha attaccato.
+Se uno dei due viene sostituito, non va KO.",0,40696
+254,TOKUSEIINFO_SWSH_254,77D689A956C644ED,"Se il Pokémon subisce un attacco diretto, scambia
+la sua abilità con quella di chi lo ha colpito.",0,40992
+255,TOKUSEIINFO_SWSH_255,77D688A956C6433A,"Aumenta l’Attacco ma costringe il Pokémon a usare
+solo la prima mossa selezionata.",4,41188
+256,TOKUSEIINFO_SWSH_256,77D687A956C64187,"Se in campo c’è un Pokémon con Gas Reagente,
+gli effetti delle abilità di tutti gli altri Pokémon
+vengono annullati o non si attivano.",0,41356
+257,TOKUSEIINFO_SWSH_257,77D686A956C63FD4,"Protegge il Pokémon e gli alleati dai problemi di stato
+causati dal veleno.",0,41628
+258,TOKUSEIINFO_SWSH_258,77D67DA956C63089,"Alla fine di ogni turno cambia forma, alternando
+tra Motivo Panciapiena e Motivo Panciavuota.",4,41780
+259,TOKUSEIINFO_SWSH_259,77D67CA956C62ED6,A volte permette al Pokémon di agire per primo.,4,41968
+260,TOKUSEIINFO_SWSH_260,77DA0BA956C957AA,"Quando il Pokémon utilizza un attacco diretto,
+gli effetti di mosse protettive vengono ignorati.",0,42064
+261,TOKUSEIINFO_SWSH_261,77DA0CA956C9595D,"Quando il Pokémon entra in campo, sparge un farmaco
+dalla conchiglia che annulla le modifiche alle statistiche
+degli alleati.",0,42260
+262,TOKUSEIINFO_SWSH_262,77DA09A956C95444,Potenzia le mosse di tipo Elettro.,0,42512
+263,TOKUSEIINFO_SWSH_263,77DA0AA956C955F7,Potenzia le mosse di tipo Drago.,0,42584
+264,TOKUSEIINFO_SWSH_264,77DA07A956C950DE,"Quando manda KO il nemico, emette un nitrito
+agghiacciante, aumentando il proprio Attacco.",0,42652
+265,TOKUSEIINFO_SWSH_265,77DA08A956C95291,"Quando manda KO il nemico, emette un nitrito
+terrificante, aumentando il proprio Attacco Speciale.",0,42836
+266,TOKUSEIINFO_SWSH_266,77DA05A956C94D78,"Il Pokémon ha una doppia abilità: Agitazione di Calyrex
+e Nitrito Bianco di Glastrier.",4,43036
+267,TOKUSEIINFO_SWSH_267,77DA06A956C94F2B,"Il Pokémon ha una doppia abilità: Agitazione di Calyrex
+e Nitrito Nero di Spectrier.",4,43212

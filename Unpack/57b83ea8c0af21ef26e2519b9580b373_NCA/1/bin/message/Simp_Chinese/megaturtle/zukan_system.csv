@@ -1,0 +1,322 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_zukan_index_010,53108D8DFB3981DC,图鉴,0,1884
+1,nx_zukan_index_011,53108E8DFB39838F,"[CTRL:0203:0000,0000]",0,1892
+2,nx_zukan_index_012,53108F8DFB398542,已添加的数量,0,1904
+3,nx_zukan_index_020,531A9F8DFB41F4F7,调查委托,0,1920
+4,nx_zukan_index_030,5317198DFB3EDB6E,[REF:4],0,1932
+5,nx_zukan_index_picup_0000,9AACD375CCD66365,所有宝可梦,0,1944
+6,nx_zukan_index_picup_0010,9AA9CD75CCD4235C,关都地区,0,1956
+7,nx_zukan_index_picup_0020,9AB3DF75CCDC9677,城都地区,0,1968
+8,nx_zukan_index_picup_0030,9AB05975CCD97CEE,丰缘地区,0,1980
+9,nx_zukan_index_picup_0040,9A9F5B75CCCB0D21,神奥地区,0,1992
+10,nx_zukan_index_picup_0050,9A9BD575CCC7F398,合众地区,0,2004
+11,nx_zukan_index_picup_0060,9AA64775CCD109D3,卡洛斯地区,0,2016
+12,nx_zukan_index_picup_0070,9AA2E175CCCE26AA,阿罗拉地区,0,2028
+13,nx_zukan_index_picup_0080,9A91E375CCBFB6DD,伽勒尔地区,0,2040
+14,nx_zukan_index_picup_0090,9A8E5D75CCBC9D54,洗翠地区,0,2052
+15,nx_zukan_index_picup_0100,9196B875C79235FA,帕底亚地区,0,2064
+16,nx_zukan_index_picup_9999,5D573DB0F12E19D9,不明,0,2076
+17,	,AF66E44C86071324,[REF:17],0,2084
+18,nx_zukan_button_000,2D10F432335C5089,返回,0,2096
+19,nx_zukan_button_001,2D10F332335C4ED6,帮助,0,2104
+20,nx_zukan_button_010,2D0D6E3233593700,叫声,0,2112
+21,nx_zukan_button_020,2D1800323362839B,颜色,0,2120
+22,nx_zukan_button_030,2D147A32335F6A12,出现软件,0,2128
+23,nx_zukan_button_040,2D1E8C323367DD2D,说明,0,2140
+24,nx_zukan_button_050,2D1B06323364C3A4,背面,0,2148
+25,nx_zukan_button_060,2D257832336DD9DF,正面,0,2156
+26,nx_zukan_button_065,2D257332336DD160,语言,0,2164
+27,nx_zukan_button_070,2D21F232336AC056,重置一项,0,2172
+28,nx_zukan_button_080,2D2C043233733371,重置全部,0,2184
+29,nx_zukan_button_081,2D2C0332337331BE,筛选,0,2196
+30,nx_zukan_button_082,2D2C02323373300B,排序,0,2204
+31,nx_zukan_button_090,2D28FE323370F368,[REF:31],0,2212
+32,	,AF66E44C86071324,[REF:32],0,2224
+33,nx_zukan_menu_040,EAE4A6390F678062,[REF:33],0,2236
+34,nx_zukan_menu_050,EAE82C390F6A99EB,[REF:34],0,2248
+35,	,AF66E44C86071324,[REF:35],0,2260
+36,nx_zukan_top_010,1FB53F2EF34B87D7,全国图鉴,0,2272
+37,nx_zukan_top_020,1FAB2D2EF34314BC,调查委托,0,2284
+38,nx_zukan_top_030,1FAEB32EF3462E45,已添加的数量,0,2296
+39,nx_zukan_top_031,1FAEB22EF3462C92,"[CTRL:0203:0000,0000]",0,2312
+40,nx_zukan_top_040,1FA4412EF33D180A,[REF:40],0,2324
+41,nx_zukan_top_041,1FA4422EF33D19BD,[REF:41],0,2336
+42,nx_zukan_top_050,1FA7A72EF33FFB33,"能够记录所有宝可梦的图鉴。
+还可以使用条件分类模式，
+来分别筛选各个地区的宝可梦。",0,2348
+43,nx_zukan_top_060,1F9DB52EF337BE78,调查软件,0,2432
+44,nx_zukan_top_070,1FA13B2EF33AD801,"要想助巨木博士一臂之力，
+就去集齐符合条件的宝可梦吧！
+要注意宝可梦是在哪款软件内捉到的！",0,2444
+45,nx_zukan_top_080,1F96A92EF3318B66,"目前没有委托文件！
+在宝可梦菜单连动软件后，
+委托文件就会被添加上去。",0,2536
+46,nx_zukan_top_list_010,99EFA016330102E0,,0,2608
+47,nx_zukan_top_list_020,99F9B216330975FB,[REF:47],0,2612
+48,nx_zukan_top_list_030,99F62C1633065C72,[CTRL:0201:0000],0,2624
+49,	,AF66E44C86071324,[REF:49],0,2636
+50,nx_zukan_top_announce_010,49EC2E3FDB583C8F,新添加了[CTRL:0101:0000]！,0,2648
+51,nx_zukan_top_announce_020,49E1BC3FDB4F2654,"新添加了[CTRL:0203:0000,0000]种宝可梦！",0,2668
+52,	,AF66E44C86071324,[REF:52],0,2700
+53,nx_zukan_top_msg_010,615D626D9054C229,"目前没有宝可梦被添加到图鉴！[CLEAR]
+请把宝可梦寄放到《Pokémon HOME》的盒子里
+以添加宝可梦的数据。",0,2712
+54,	,AF66E44C86071324,[REF:54],0,2824
+55,nx_zukan_top_picup_0000,42BDB5000DB2CB60,所有宝可梦,0,2836
+56,nx_zukan_top_picup_0010,42C13B000DB5E4E9,关都地区,0,2848
+57,nx_zukan_top_picup_0020,42C441000DB824F2,城都地区,0,2860
+58,nx_zukan_top_picup_0030,42C7C7000DBB3E7B,丰缘地区,0,2872
+59,nx_zukan_top_picup_0040,42CB4D000DBE5804,神奥地区,0,2884
+60,nx_zukan_top_picup_0050,42CED3000DC1718D,合众地区,0,2896
+61,nx_zukan_top_picup_0060,42D239000DC454B6,卡洛斯地区,0,2908
+62,nx_zukan_top_picup_0070,42D53F000DC694BF,阿罗拉地区,0,2920
+63,nx_zukan_top_picup_0080,42D8C5000DC9AE48,伽勒尔地区,0,2932
+64,nx_zukan_top_picup_0090,42DC4B000DCCC7D1,洗翠地区,0,2944
+65,nx_zukan_top_picup_0100,4A20F00011859AAB,帕底亚地区,0,2956
+66,nx_zukan_top_picup_9999,93DD5B4AE8CF64FC,不明,0,2968
+67,	,AF66E44C86071324,[REF:67],0,2976
+68,nx_zukan_top_topics_0010,86D945ACBE497006,关都文件,0,2988
+69,nx_zukan_top_topics_0020,86D5DFACBE468CDD,伽勒尔文件,0,3000
+70,nx_zukan_top_topics_0030,86D259ACBE437354,神奥文件,0,3012
+71,nx_zukan_top_topics_0040,86CED3ACBE4059CB,洗翠文件,0,3024
+72,nx_zukan_top_topics_0041,86CED2ACBE405818,帕底亚文件,0,3036
+73,nx_zukan_top_topics_0060,86C847ACBE3B0039,卡洛斯文件,0,3048
+74,nx_zukan_top_topics_0070,86C4C1ACBE37E6B0,关都文件（GBA）,0,3060
+75,	,AF66E44C86071324,[REF:75],0,3080
+76,nx_zukan_topics_filenumber_0010,E4D9F09C2A967D14,关都文件 #[CTRL:0201:0000],0,3092
+77,nx_zukan_topics_filenumber_0020,E4E4629C2A9F934F,伽勒尔文件 #[CTRL:0201:0000],0,3116
+78,nx_zukan_topics_filenumber_0030,E4E0DC9C2A9C79C6,神奥文件 #[CTRL:0201:0000],0,3140
+79,nx_zukan_topics_filenumber_0040,E4CFDE9C2A8E09F9,洗翠文件 #[CTRL:0201:0000],0,3164
+80,nx_zukan_topics_filenumber_0050,E4CC589C2A8AF070,帕底亚文件 #[CTRL:0201:0000],0,3188
+81,nx_zukan_topics_filenumber_0060,E4D66A9C2A93638B,卡洛斯文件 #[CTRL:0201:0000],0,3212
+82,nx_zukan_topics_filenumber_0070,E4D3649C2A912382,关都文件（GBA） #[CTRL:0201:0000],0,3236
+83,	,AF66E44C86071324,[REF:83],0,3268
+84,nx_zukan_detailed_000,4DA3659B58E91D49,"No.[CTRL:0203:0000,0000]",0,3280
+85,nx_zukan_detailed_001,4DA3649B58E91B96,[CTRL:0101:0000],0,3300
+86,nx_zukan_detailed_010,4D9FDF9B58E603C0,身高,0,3312
+87,nx_zukan_detailed_011,4D9FE09B58E60573,,0,3320
+88,nx_zukan_detailed_020,4DAA719B58EF505B,体重,0,3324
+89,nx_zukan_detailed_021,4DAA709B58EF4EA8,,0,3332
+90,nx_zukan_detailed_030,4DA6EB9B58EC36D2,[CTRL:0104:0000],0,3336
+91,nx_zukan_detailed_040,4DB0FD9B58F4A9ED,,0,3348
+92,nx_zukan_detailed_041,4DB0FC9B58F4A83A,样子 [CTRL:0201:0000]/[CTRL:0201:0001],0,3352
+93,nx_zukan_detailed_050,4DAD779B58F19064,,0,3380
+94,nx_zukan_detailed_051,4DAD789B58F19217,[REF:94],0,3384
+95,nx_zukan_detailed_060,4DB7E99B58FAA69F,出现软件 [CTRL:0200:0000]/[CTRL:0200:0001],0,3396
+96,nx_zukan_detailed_061,4DB7E89B58FAA4EC,出现软件,0,3428
+97,nx_zukan_detailed_070_jpn,9E9E5B539B79F195,"只要将【JPN】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3440
+98,nx_zukan_detailed_070_eng,0E825753DAA66411,"只要将【ENG】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3532
+99,nx_zukan_detailed_070_spa,656BEB540BF5DFAB,"只要将【ES-ES】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3624
+100,nx_zukan_detailed_070_fra,07635453D70DC0BA,"只要将【FRA】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3720
+101,nx_zukan_detailed_070_ger,FFC60253D3095213,"只要将【DEU】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3812
+102,nx_zukan_detailed_070_ita,A95A8153A2253BD5,"只要将【ITA】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3904
+103,nx_zukan_detailed_070_kor,97382E5397A5043D,"只要将【KOR】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,3996
+104,nx_zukan_detailed_070_chs,DC355D53BEA1B919,"只要将【CHS】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4088
+105,nx_zukan_detailed_070_cht,DC355E53BEA1BACC,"只要将【CHT】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4180
+106,nx_zukan_detailed_070_latam,15FA3EDC47203C72,"只要将【ES-LA】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4272
+107,nx_zukan_detailed_gba,F6BD8D9C49E0B3C9,"没有图鉴解说。
+请切换语言或软件。",0,4368
+108,nx_zukan_detailed_070_jpn_small,5959B58400BEB11D,"只要将【JPN】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4404
+109,nx_zukan_detailed_070_eng_small,09D53AE9DACF7199,"只要将【ENG】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4496
+110,nx_zukan_detailed_070_spa_small,9EE4BBE5898355C3,"只要将【ES-ES】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4588
+111,nx_zukan_detailed_070_fra_small,506CE34FF4CDCBCE,"只要将【FRA】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4684
+112,nx_zukan_detailed_070_ger_small,CF301537DDF410EB,"只要将【GER】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4776
+113,nx_zukan_detailed_070_ita_small,CB0BE19F2363F05D,"只要将【ITA】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4868
+114,nx_zukan_detailed_070_kor_small,50A8F366D4F841A5,"只要将【KOR】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,4960
+115,nx_zukan_detailed_070_chs_small,34B32A2D8D93CAC1,"只要将【CHS】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,5052
+116,nx_zukan_detailed_070_cht_small,1F7CC30F25045F00,"只要将【CHT】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,5144
+117,nx_zukan_detailed_070_latam_small,9C6D1F6C20E078E6,"只要将【ES-LA】的[CTRL:0101:0000]
+寄放到《Pokémon HOME》，
+就能阅读此语言的说明。",0,5236
+118,nx_zukan_detailed_gba_small,B5876ED04F4B1D31,"没有图鉴解说。
+请切换语言或软件。",0,5332
+119,	,AF66E44C86071324,[REF:119],0,5368
+120,nx_zukan_list_010,441FCA488FC577D4,,0,5380
+121,nx_zukan_list_020,442A3C488FCE8E0F,"No.[CTRL:0203:0000,0000]",0,5384
+122,nx_zukan_list_021,442A3B488FCE8C5C,,0,5404
+123,nx_zukan_list_022,442A3E488FCE9175,,0,5408
+124,nx_zukan_list_030,4426B6488FCB7486,[CTRL:0101:0000],0,5412
+125,nx_zukan_list_040,4415B8488FBD04B9,？？？？？？,0,5424
+126,	,AF66E44C86071324,[REF:126],0,5440
+127,nx_zukan_language_01,375806079A591BC6,日语（假名）,0,5452
+128,nx_zukan_language_02,375805079A591A13,日语（汉字）,0,5468
+129,nx_zukan_language_03,375804079A591860,英语,0,5484
+130,nx_zukan_language_04,37580B079A592445,法语,0,5492
+131,nx_zukan_language_05,37580A079A592292,德语,0,5500
+132,nx_zukan_language_06,375809079A5920DF,意大利语,0,5508
+133,nx_zukan_language_07,375808079A591F2C,韩语,0,5520
+134,nx_zukan_language_08,37580F079A592B11,欧洲西班牙语,0,5528
+135,nx_zukan_language_09,37580E079A59295E,简体中文,0,5544
+136,nx_zukan_language_10,375481079A5603F0,繁体中文,0,5556
+137,nx_zukan_language_11,375482079A5605A3,拉丁美洲西班牙语,0,5568
+138,	,AF66E44C86071324,[REF:138],0,5588
+139,nx_zukan_search_data_010,C437552C67A3C3C5,"No.[CTRL:0203:0000,0000]",0,5600
+140,nx_zukan_search_data_020,C43ADB2C67A6DD4E,[CTRL:0101:0000],0,5620
+141,nx_zukan_search_guide_010,07DF7A205ADD7D67,[CTRL:01DA:0000]  （无筛选）,0,5632
+142,nx_zukan_search_guide_020,07D4E8205AD430CC,"[CTRL:01DA:0000]  （筛选 [CTRL:0203:0001,0000]/[CTRL:0203:0002,0000]）",0,5656
+143,nx_zukan_search_guide_030,07D86E205AD74A55,"[CTRL:01DA:0000] （筛选 [CTRL:0203:0001,0000]种）",0,5704
+144,	,AF66E44C86071324,[REF:144],0,5740
+145,nx_zukan_search_title,16395A443366EC8B,筛选条件,0,5752
+146,nx_zukan_search_sort,3DF65C4B7FFD7C93,排序 ,0,5764
+147,nx_zukan_search_name,32DBC8ABDF0B1330,名字,0,5772
+148,nx_zukan_search_type1,A42D3ECCBCD63B06,属性１,0,5780
+149,nx_zukan_search_type2,A42D3DCCBCD63953,属性２,0,5788
+150,nx_zukan_search_color,31D0B67882CD256A,颜色,0,5796
+151,nx_zukan_search_shape,2B61830E94584E54,外形,0,5804
+152,nx_zukan_search_form,19ED76ED60C728B9,样子,0,5812
+153,nx_zukan_search_version,44BE3BA7FAB1A205,出现软件,0,5820
+154,nx_zukan_search_register,4708974DCBD995AE,已添加？,0,5832
+155,	,AF66E44C86071324,[REF:155],0,5844
+156,nx_zukan_search_head_name,9ED0D0EE6F31CD91,按名字搜索,0,5856
+157,nx_zukan_search_head_type,8C6575CA67F751EA,按属性搜索,0,5868
+158,nx_zukan_search_head_color,76ED2EB5F462AEFD,按颜色搜索,0,5880
+159,nx_zukan_search_head_shape,D4EEFD95193B2287,按外形搜索,0,5892
+160,nx_zukan_search_head_form,4FCE4B34EAAB8FFC,按样子搜索,0,5904
+161,nx_zukan_search_head_version,73E6812EB2613716,按出现软件搜索,0,5916
+162,nx_zukan_search_head_register,5A26B2CF49C77D73,按图鉴添加状况搜索,0,5932
+163,nx_zukan_search_nil,CECDBE77DC8628AA,没有符合条件的宝可梦！,0,5952
+164,	,AF66E44C86071324,[REF:164],0,5976
+165,nx_zukan_sort_01,00BF326FDFB37690,按编号,0,5988
+166,nx_zukan_sort_02,00BF356FDFB37BA9,按拼音,0,5996
+167,nx_zukan_sort_03,00BF346FDFB379F6,从重到轻,0,6004
+168,nx_zukan_sort_04,00BF376FDFB37F0F,从轻到重,0,6016
+169,nx_zukan_sort_05,00BF366FDFB37D5C,从高到矮,0,6028
+170,nx_zukan_sort_06,00BF396FDFB38275,从矮到高,0,6040
+171,	,AF66E44C86071324,[REF:171],0,6052
+172,nx_zukan_color_01,AA189EFD1AD46075,红色,0,6064
+173,nx_zukan_color_02,AA189BFD1AD45B5C,蓝色,0,6072
+174,nx_zukan_color_03,AA189CFD1AD45D0F,绿色,0,6080
+175,nx_zukan_color_04,AA1899FD1AD457F6,黄色,0,6088
+176,nx_zukan_color_05,AA189AFD1AD459A9,粉红色,0,6096
+177,nx_zukan_color_06,AA1897FD1AD45490,紫色,0,6104
+178,nx_zukan_color_07,AA1898FD1AD45643,褐色,0,6112
+179,nx_zukan_color_08,AA18A5FD1AD46C5A,灰色,0,6120
+180,nx_zukan_color_09,AA18A6FD1AD46E0D,白色,0,6128
+181,nx_zukan_color_10,AA1BA3FD1AD69ECB,黑色,0,6136
+182,	,AF66E44C86071324,[REF:182],0,6144
+183,nx_zukan_form_0010,1446FAA819DE8CB4,所有的样子,0,6156
+184,nx_zukan_form_0020,1450ECA819E6C96F,异色,0,6168
+185,nx_zukan_form_0030,144D66A819E3AFE6,♂的样子,0,6176
+186,nx_zukan_form_0040,143C68A819D54019,♀的样子,0,6188
+187,nx_zukan_form_0050,143962A819D30010,性别不明,0,6200
+188,nx_zukan_form_1010,5F907A9F270B2635,超级进化,0,6212
+189,nx_zukan_form_1020,5F93809F270D663E,原始回归,0,6224
+190,nx_zukan_form_1030,5F97069F27107FC7,超极巨化,0,6236
+191,nx_zukan_form_2010,2B23D2B78D5F8A76,阿罗拉的样子,0,6248
+192,nx_zukan_form_2020,2B206CB78D5CA74D,伽勒尔的样子,0,6264
+193,nx_zukan_form_2030,2B1CE6B78D598DC4,洗翠的样子,0,6280
+194,nx_zukan_form_2040,2B1960B78D56743B,帕底亚的样子,0,6292
+195,	,AF66E44C86071324,[REF:195],0,6308
+196,nx_zukan_register_01,2E6379413994C3B3,已添加,0,6320
+197,nx_zukan_register_02,2E637A413994C566,未添加,0,6328
+198,	,AF66E44C86071324,[REF:198],0,6336
+199,nx_zukan_none_3,A45FE3B062A9EF1E,－－－,0,6348
+200,nx_zukan_none_5,A45FE5B062A9F284,－－－－－,0,6356
+201,nx_zukan_none_8,A45FDAB062A9DFD3,－－－－－－－－,0,6368
+202,	,AF66E44C86071324,[REF:202],0,6388
+203,nx_zukan_topics_name1,F4DE6150C341F9F3,[CTRL:0101:0000],0,6400
+204,nx_zukan_topics_name2,F4DE6250C341FBA6,？？？？？？,0,6412
+205,nx_zukan_topics_conditions,9766CE8A635DF69D,,0,6428
+206,nx_zukan_topics_conditions_inactive_01,122F97415D3C578F,"此文件的调查委托
+只要完成[CTRL:0201:0000]件即可开放。",0,6432
+207,nx_zukan_topics_list_title,BF4A734F4DDC7452,,0,6480
+208,nx_zukan_topics_list_inactive,F4430E9C35355895,？？？？？？？？？？？？,0,6484
+209,nx_zukan_topics_list_progress,75015AE069AB084F,[CTRL:0200:0000]/[CTRL:0200:0001],0,6512
+210,nx_zukan_topics_guide_010,836CFEBA09CCD7A7,[CTRL:01DA:0000] （已完成：[CTRL:0201:0001]）,0,6532
+211,	,AF66E44C86071324,[REF:211],0,6564
+212,nx_zukan_help1_010,DCF169A3820C5F5E,"这个由巨木博士开发的
+宝可梦图鉴非～常强大！
+只要把宝可梦寄放到《Pokémon HOME》的盒子，
+宝可梦就会被自动添加到图鉴里哦萌！",0,6576
+213,nx_zukan_help1_020,DCEDE3A3820945D5,"记录所有宝可梦的信息
+是当然能够做到的事情。
+另外，还能按照各个地区的
+“条件分类模式”来筛选宝可梦哦萌！",0,6716
+214,nx_zukan_help1_030,DCEA5DA382062C4C,"不仅如此！按下L键或R键
+就能切换至“调查委托”哦萌！
+希望你能出一份力，
+帮助巨木博士完成伟大的研究！",0,6824
+215,	,AF66E44C86071324,[REF:215],0,6932
+216,nx_zukan_help2_010,C0106BC2CBCF33A7,"这里是详细信息画面，
+满载着宝可梦的信息！
+可以用右边的列表来选择宝可梦哦萌！",0,6944
+217,nx_zukan_help2_020,C005D9C2CBC5E70C,"你可以按ZL键或ZR键来切换说明！
+比较看看不同软件的说明也很有趣哦萌！",0,7024
+218,nx_zukan_help2_030,C0095FC2CBC90095,"如果宝可梦添加了多个样子的话，
+就可以按L键或R键来切换不同的样子！
+不同的样子还会有不同的说明哦萌！",0,7100
+219,nx_zukan_help2_040,BFFF6DC2CBC0C3DA,"还有，按下Y键就能查看
+宝可梦在哪个软件中出现哦萌！",0,7204
+220,	,AF66E44C86071324,[REF:220],0,7260
+221,nx_zukan_help3_010,3693FF929ACA0B58,"这里是一览画面。已经添加到图鉴的
+宝可梦们会在这里通～通显示出来！
+按下A键就能查看你所好奇的宝可梦哦萌！",0,7272
+222,nx_zukan_help3_020,369E71929AD32193,"按下X键可以打开筛选窗口！
+你可以按属性、颜色、外形等条件
+来筛选宝可梦哦萌！",0,7380
+223,nx_zukan_help3_030,369B0B929AD03E6A,"可以用Y键来改变排序！
+除了能按一般的编号排序之外，
+还能按身高或体重等条件来排序哦萌！",0,7460
+224,	,AF66E44C86071324,[REF:224],0,7552
+225,nx_zukan_help4_010,1C5CFD86C9AE9721,"所谓“调查委托”……
+就是指捕捉宝可梦的委托，
+而且会由巨木博士直接发给你哦萌！",0,7564
+226,nx_zukan_help4_020,1C608386C9B1B0AA,"如果你的Nintendo Switch主机里
+有指定软件的保存数据，
+那么符合各个地区标准的委托文件
+就会全部显示在这个画面上哦萌！",0,7648
+227,nx_zukan_help4_030,1C63E986C9B493D3,"要注意，如果不是按照各个文件
+指定的软件来捉宝可梦的话，
+是无法完成调查委托的哦萌！！",0,7784
+228,	,AF66E44C86071324,[REF:228],0,7872
+229,nx_zukan_help5_010,E39F9799B4F70A92,"画面的右边就是调查委托一览！
+只要集齐各个委托所需的宝可梦，
+就能完成委托哦萌！",0,7884
+230,nx_zukan_help5_020,E39C1199B4F3F109,"但是！如果没有在指定软件内捉到宝可梦，
+或者捉到不同样子的宝可梦，那么即使
+宝可梦的种族符合要求，也不能算作完成委托！
+所以要注意确认宝可梦是在哪款软件内捉到的哦萌！",0,7968
+231,nx_zukan_help5_030,E3988B99B4F0D780,"只要把符合条件的宝可梦
+寄放到《Pokémon HOME》的盒子里，
+项目就会自动完成哦萌！",0,8136
+232,nx_zukan_help5_031,E3988C99B4F0D933,"委托一旦完成，不管是从《Pokémon HOME》的
+盒子里领取宝可梦，还是将宝可梦放生，
+都不会对完成的委托产生影响哦萌！",0,8232

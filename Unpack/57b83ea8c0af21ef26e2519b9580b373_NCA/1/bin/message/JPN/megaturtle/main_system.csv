@@ -1,0 +1,73 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_main_index_010,584CD9E407258EC0,メインメニュー,0,444
+1,	,AF66E44C86071324,[REF:1],0,476
+2,nx_main_button_000,2469972884056955,もどる,0,496
+3,nx_main_button_001,24699628840567A2,ヘルプ,0,512
+4,	,AF66E44C86071324,[REF:4],0,528
+5,nx_main_box_010,1A46EF5B1FB74199,ポケモン,0,548
+6,nx_main_box_020,1A4A755B1FBA5B22,"あずけているかず　[CTRL:0203:0000,0000]",0,568
+7,nx_main_pokedex_010,D00ADF22BD2805EA,ずかん,0,628
+8,nx_main_pokedex_020,D0075922BD24EC61,"とうろくしたかず　[CTRL:0203:0000,0000]",0,644
+9,nx_main_pokedex_021,D0075822BD24EAAE,[REF:9],0,704
+10,nx_main_eshop_010,F2911EFA46A1BC6F,ニンテンドーeショップ,0,724
+11,nx_main_small_title_010,94DE8C9018BBEC7A,ポケモン,0,772
+12,nx_main_small_title_020,94DB069018B8D2F1,ずかん,0,792
+13,nx_main_small_title_030,94D8009018B692E8,てちょう,0,808
+14,nx_main_small_title_040,94EF8A9018CA5C47,ひっこし,0,828
+15,nx_main_small_title_050,94EC049018C742BE,ポイント,0,848
+16,nx_main_small_title_060,94E8FE9018C502B5,せってい,0,868
+17,	,AF66E44C86071324,[REF:17],0,888
+18,nx_main_comment_01,D94EEB682EE7E5B3,たくさんの　ポケモンを　あずけられる　ボックス,0,908
+19,nx_main_comment_02,D94EEC682EE7E766,ポケモンの　じょうほうを　チェックできる　ずかん,0,1004
+20,nx_main_comment_03,D94EED682EE7E919,ボックスの　あずけいれと　ひきだしの　きろく,0,1104
+21,nx_main_comment_04,D94EEE682EE7EACC,ニンテンドー3DSから　ポケモンを　つれてくる,0,1196
+22,nx_main_comment_05,D94EEF682EE7EC7F,たまった　『Pokémon HOMEポイント』を　つかう,0,1292
+23,nx_main_comment_06,D94EF0682EE7EE32,『Pokémon HOME』を　あれこれ　ちょうせい,0,1408
+24,nx_main_comment_07,D94EF1682EE7EFE5,プレミアムプランに　きりかえる,0,1516
+25,nx_main_comment_07_ex,7432D629AEA9EF2B,"プレミアムプランに　ついては
+『ニンテンドーeショップ』で
+かくにん　することが　できます
+よく　わからない　ばあいは
+おうちの　ひとと　いっしょに
+そうさを　すすめて　ください",0,1580
+26,	,AF66E44C86071324,[REF:26],0,1940
+27,nx_main_eshop_msg_010,5769BF9354BD9841,"ニンテンドーeショップで
+プレミアムプランの　かくにんを　しますか？",0,1960
+28,nx_main_eshop_msg_pot_010,13FA00777B30FE85,1かげつプラン (30にち),0,2100
+29,nx_main_eshop_msg_pot_020,13FD86777B34180E,3かげつプラン (90にち),0,2160
+30,nx_main_eshop_msg_pot_030,14008C777B365817,12かげつプラン (365にち),0,2220
+31,nx_main_eshop_msg_pot_999,6349F077A87F68F9,やめる,0,2288
+32,	,AF66E44C86071324,[REF:32],0,2304
+33,nx_main_msg_010,09F05BFC15443881,"フリープランでは　この　こうもくを
+りようする　ことが　できません！[CLEAR]
+ニンテンドーeショップで
+プレミアムプランに　きりかえて　ください",0,2324
+34,nx_main_msg_020,09F361FC1546788A,[REF:34],0,2612
+35,nx_main_msg_021,09F362FC15467A3D,[REF:35],0,2632
+36,nx_main_msg_022,09F35FFC15467524,[REF:36],0,2652
+37,nx_main_msg_030,09F6C7FC15495BB3,"『ちょうさリクエスト』に　あらたな
+リクエストファイルが　ついかされました！",0,2672
+38,	,AF66E44C86071324,[REF:38],0,2828
+39,nx_main_help_010,B131D26A7BFF4C93,"この　がめんは　メインメニュー
+あらゆる　きのうに　アクセス　できるモン！
+つかいたい　こうもくを　じゆうに　えらぶモン！",0,2848
+40,nx_main_help_020,B127606A7BF63658,"Lスティックで　カーソルを　うごかして
+Aボタンで　けってい　するモン！
+ひとつ　まえの　がめんに　もどりたいときは
+Bボタンを　おせば　オッケー！",0,3096
+41,	,AF66E44C86071324,[REF:41],0,3396
+42,nx_main_help_first_010,AE567A0D58881F2A,"ハーイ！　ボクの　なまえは　モンボー！
+キミに　『Pokémon HOME』の　つかいかたを
+レクチャー　するのが　ボクの　つとめだモン！",0,3416
+43,nx_main_help_first_020,AE52F40D588505A1,"－ボタンで　ボクを　よびだして　くれれば
+それぞれの　がめんの　つかいかたを　おしえるモン！
+では　さっそく！　このがめんの　せつめいから……",0,3696
+44,nx_main_small_title_070,94E5789018C1E92C,Pokémon GO,0,3984
+45,nx_main_msg_010,09F05BFC15443881,[REF:45],0,4028
+46,nx_main_comment_08,D94EF2682EE7F198,『Pokémon GO』の　ポケモンを　ひきとる,0,4048
+47,nx_main_msg_011,09F05AFC154436CE,[REF:47],0,4148
+48,nx_main_small_title_080,94C7029018A8231B,Pokémon Champions,0,4168
+49,nx_main_comment_09,D94EF3682EE7F34B,『Pokémon Champions』に　ポケモンを　えんせいさせる,0,4240
+50,	,AF66E44C86071324,[REF:50],0,4380
+51,nx_main_small_title_090,94C37C9018A50992,GBAシリーズ,0,4400
+52,nx_main_comment_10,D95270682EEAFD89,Nintendo Switchの　ゲームボーイアドバンスシリーズから　ポケモンを　つれてくる,0,4432

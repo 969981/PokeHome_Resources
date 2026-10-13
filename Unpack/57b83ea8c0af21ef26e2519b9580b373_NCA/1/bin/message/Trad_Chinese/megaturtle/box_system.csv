@@ -1,0 +1,630 @@
+﻿index,label,hash_fnv64,text,flags,source_offset
+0,nx_box_index_010,1F1DBF6C8CE43914,寶可夢,0,3388
+1,nx_box_index_020,1F28316C8CED4F4F,寶可夢一覽,0,3396
+2,	,AF66E44C86071324,[REF:2],0,3408
+3,nx_box_guide_010,EB995BBF9C61C030,[CTRL:01DA:0000]  （無篩選）,0,3420
+4,nx_box_guide_020,EBA36DBF9C6A334B,"[CTRL:01DA:0000]  （篩選 [CTRL:0204:0001,0000]/[CTRL:0204:0002,0000]）",0,3444
+5,nx_box_guide_030,EBA067BF9C67F342,[CTRL:01DA:0000]  （篩選中……）,0,3492
+6,	,AF66E44C86071324,[REF:6],0,3520
+7,nx_box_nameframe_010,D9A81028346DA738,[CTRL:0102:0000] (Lv.[CTRL:0202:0001]),0,3532
+8,nx_box_nameframe_011,D9A81128346DA8EB,[CTRL:0102:0000],0,3564
+9,nx_box_nameframe_015,D9A81528346DAFB7,蛋,0,3576
+10,nx_box_nameframe_020,D9B202283475E3F3,[REF:10],0,3580
+11,	,AF66E44C86071324,[REF:11],0,3592
+12,nx_box_catch_multiple,5CEE54657E408716,[CTRL:0201:0000],0,3604
+13,	,AF66E44C86071324,[REF:13],0,3616
+14,nx_box_button_000,0401AB36E6AC7441,返回,0,3628
+15,nx_box_button_001,0401AA36E6AC728E,說明,0,3636
+16,nx_box_button_010,03FE2536E6A95AB8,結束,0,3644
+17,nx_box_button_020,04081736E6B19773,一覽,0,3652
+18,nx_box_button_030,0404B136E6AEB44A,替換,0,3660
+19,nx_box_button_040,040F2336E6B7CA85,切換顯示內容,0,3668
+20,nx_box_button_031,0404B236E6AEB5FD,[REF:20],0,3684
+21,nx_box_button_050,040B9D36E6B4B0FC,全部重置,0,3696
+22,nx_box_button_060,0415AF36E6BD2417,一起放生,0,3708
+23,nx_box_button_065,0415AA36E6BD1B98,取消,0,3720
+24,nx_box_button_070,0412A936E6BAE40E,篩選,0,3728
+25,nx_box_button_080,03E61B36E694B7D9,排序,0,3736
+26,nx_box_button_090,03E31536E69277D0,全部重置,0,3744
+27,nx_box_button_100,FC9E7036E2D9A4F6,單項重置,0,3756
+28,	,AF66E44C86071324,[REF:28],0,3768
+29,nx_box_context_010,506E965A3BE1E68F,移動,0,3780
+30,nx_box_context_020,5064245A3BD8D054,查看資訊,0,3788
+31,nx_box_context_030,5067AA5A3BDBE9DD,標記,0,3800
+32,nx_box_context_040,505D985A3BD376C2,放生,0,3808
+33,nx_box_context_050,50609E5A3BD5B6CB,前往盒子,0,3816
+34,nx_box_context_999,9E0B865A67BEBC83,退出,0,3828
+35,	,AF66E44C86071324,[REF:35],0,3836
+36,nx_box_marking_010,F86E02F7B40F654F,標記,0,3848
+37,nx_box_marking_020,F86390F7B4064F14,確定,0,3856
+38,nx_box_marking_030,F86716F7B409689D,[REF:38],0,3864
+39,	,AF66E44C86071324,[REF:39],0,3876
+40,nx_box_release_010,356516A162FB1D51,僅放生1隻,0,3888
+41,nx_box_release_020,35689CA162FE36DA,一起放生,0,3900
+42,nx_box_release_030,356C02A163011A03,放生,0,3912
+43,nx_box_release_040,356F08A163035A0C,取消,0,3920
+44,nx_box_release_050,35728EA163067395,繼續,0,3928
+45,nx_box_release_060,357614A163098D1E,結束,0,3936
+46,nx_box_release_msg_010,BCFD45B3B6B0F8DF,"確定只要放生[CTRL:0102:0000]嗎？
+還是要和其他寶可夢一起放生呢？",0,3944
+47,nx_box_release_msg_020,BCF2D3B3B6A7E2A4,"確定要放生[CTRL:0102:0000]嗎？
+放生後的寶可夢將不會回來！",0,4004
+48,nx_box_release_msg_030,BCF659B3B6AAFC2D,"確定要放生這[CTRL:0202:0000]隻寶可夢嗎？
+放生後的寶可夢將不會回來！",0,4056
+49,nx_box_release_msg_040,BCEC47B3B6A28912,"已將[CTRL:0102:0000]放生了。
+再見了，[CTRL:0102:0000]！",0,4120
+50,nx_box_release_msg_050,BCEFCDB3B6A5A29B,"已將[CTRL:0102:0000]牠們放生了。
+再見了，大家！",0,4164
+51,nx_box_release_msg_060,BCE53BB3B69C5600,"無法再放生了！[CLEAR]
+在一次的連動中，
+最多只能放生[CTRL:0203:0000,0000]隻寶可夢。[CLEAR]
+想放生更多的寶可夢，
+請先儲存一次紀錄。",0,4208
+52,nx_box_release_msg_070,BCE8C1B3B69F6F89,不放生寶可夢就結束嗎？,0,4332
+53,nx_box_release_msg_080,BD14CFB3B6C4C23E,無法放生這隻寶可夢！,0,4356
+54,nx_box_release_msg_081,BD14D0B3B6C4C3F1,"無法放生在智慧型手機版中
+設定為我的最愛的寶可夢！",0,4380
+55,nx_box_release_msg_090,BD1855B3B6C7DBC7,蛋無法放生！,0,4432
+56,	,AF66E44C86071324,[REF:56],0,4448
+57,nx_box_operation_010,43F3BD16C47B6A65,[REF:57],0,4460
+58,nx_box_operation_020,43F74316C47E83EE,[REF:58],0,4472
+59,nx_box_operation_030,43FAC916C4819D77,[REF:59],0,4484
+60,nx_box_operation_040,43E2BF16C46CFA98,[REF:60],0,4496
+61,	,AF66E44C86071324,[REF:61],0,4508
+62,nx_box_pokedata_010,786A1E4480312115,[CTRL:0102:0000],0,4520
+63,nx_box_pokedata_020,786DA44480343A9E,Lv.[CTRL:0202:0000],0,4532
+64,nx_box_pokedata_030,78712A4480375427,[REF:64],0,4548
+65,nx_box_pokedata_031,7871294480375274,[CTRL:0189:0000],0,4560
+66,nx_box_pokedata_040,785920448022B148,性格,0,4572
+67,nx_box_pokedata_041,785921448022B2FB,[CTRL:0108:0000],0,4580
+68,nx_box_pokedata_050,785CA6448025CAD1,特性,0,4592
+69,nx_box_pokedata_051,785CA5448025C91E,[CTRL:0106:0000],0,4600
+70,nx_box_pokedata_060,78602C448028E45A,HP,0,4612
+71,nx_box_pokedata_061,78602D448028E60D,[CTRL:0202:0000],0,4620
+72,nx_box_pokedata_070,78639244802BC783,攻擊,0,4632
+73,nx_box_pokedata_071,78639144802BC5D0,[CTRL:0202:0000],0,4640
+74,nx_box_pokedata_080,784BA84480175B04,防禦,0,4652
+75,nx_box_pokedata_081,784BA94480175CB7,[CTRL:0202:0000],0,4660
+76,nx_box_pokedata_090,784F2E44801A748D,特攻,0,4672
+77,nx_box_pokedata_091,784F2D44801A72DA,[CTRL:0202:0000],0,4680
+78,nx_box_pokedata_100,7FC9D3448400D6D7,特防,0,4692
+79,nx_box_pokedata_101,7FC9D2448400D524,[CTRL:0202:0000],0,4700
+80,nx_box_pokedata_110,7FC6CD4483FE96CE,速度,0,4712
+81,nx_box_pokedata_111,7FC6CE4483FE9881,[CTRL:0202:0000],0,4720
+82,nx_box_pokedata_120,7FC3474483FB7D45,[CTRL:0107:0000],0,4732
+83,nx_box_pokedata_none_1,87AEB72D8BE2523E,－,0,4744
+84,nx_box_pokedata_none_2,87AEB62D8BE2508B,－－－－－,0,4748
+85,	,AF66E44C86071324,[REF:85],0,4760
+86,nx_box_boxname_default_010,36A3274EA11CD2B0,HOME[CTRL:0202:0000],0,4772
+87,nx_box_boxname_default_020,36AD394EA12545CB,盒子[CTRL:0202:0000],0,4792
+88,nx_box_boxname_010,D0FE60B9DF49C356,[CTRL:01C0:0000],0,4808
+89,nx_box_boxname_030,D0F774B9DF43C6A4,盒子空間 [CTRL:0201:0000]/[CTRL:0201:0001],0,4820
+90,nx_box_boxname_040,D0F46EB9DF41869B,最新30,0,4852
+91,nx_box_boxname_050,D0F0E8B9DF3E6D12,免費盒子,0,4864
+92,nx_box_boxpage_010,1D8AD436B757FC46,[CTRL:0202:0000]/[CTRL:0202:0001],0,4876
+93,nx_box_boxpage_030,1D83E836B751FF94,[REF:93],0,4896
+94,nx_box_switching_010,49CF13AA54B9496C,盒子,0,4908
+95,nx_box_switching_020,49D925AA54C1BC87,返回,0,4916
+96,nx_box_switching_030,49D59FAA54BEA2FE,最新30,0,4924
+97,	,AF66E44C86071324,[REF:97],0,4936
+98,nx_box_boxshumbnail_010,6EDC950F42D305CE,[CTRL:0201:0000]/[CTRL:0201:0001],0,4948
+99,	,AF66E44C86071324,[REF:99],0,4968
+100,nx_box_save_010,09A43B773847465D,是,0,4980
+101,nx_box_save_020,09A7A177384A2986,否,0,4984
+102,nx_box_save_030,09AB2777384D430F,儲存紀錄後退出,0,4988
+103,nx_box_save_040,09931D773838A030,不儲存紀錄直接退出,0,5004
+104,nx_box_save_050,0996A377383BB9B9,繼續操作,0,5024
+105,nx_box_save_msg_010,849A26FC5D7272F3,"要將現在的盒子狀態
+儲存到紀錄後結束嗎？",0,5036
+106,nx_box_save_msg_011,849A25FC5D727140,"有寶可夢帶有「？」的圖示！[CLEAR]
+就這樣儲存紀錄的話，
+可領出那隻寶可夢的軟體將會減少……[CLEAR]
+確定要將現在的盒子狀態
+儲存到紀錄後結束嗎？",0,5080
+107,nx_box_save_msg_012,849A28FC5D727659,"由於寶可夢能學會的招式
+會隨軟體有所不同，[CLEAR]
+因此寶可夢會記憶各個軟體的招式和PP，
+根據領出的軟體重新學會招式。[CLEAR]
+確定要將現在的盒子狀態
+儲存到紀錄後結束嗎？",0,5224
+108,nx_box_save_msg_013,849A27FC5D7274A6,"有寶可夢帶有「？」的圖示！[CLEAR]
+就這樣儲存紀錄的話，
+可以領出那隻寶可夢的軟體將會減少……[CLEAR]
+此外，寶可夢能學會的招式
+會隨軟體有所不同，[CLEAR]
+因此寶可夢會記憶各個軟體的招式和PP，
+根據領出的軟體重新學會招式。[CLEAR]
+確定要將現在的盒子狀態
+儲存到紀錄後結束嗎？",0,5396
+109,nx_box_save_msg_020,849034FC5D6A3638,"正在儲存紀錄……
+請勿關閉『Pokémon HOME』。",0,5672
+110,nx_box_save_msg_030,8493BAFC5D6D4FC1,已確實儲存紀錄了！,0,5732
+111,nx_box_save_msg_040,84A4B8FC5D7BBF8E,"與遊戲軟體語言不一致的
+盒子名字已變更！",0,5752
+112,nx_box_save_msg_040,84A4B8FC5D7BBF8E,[REF:112],0,5796
+113,nx_box_save_msg_050,84A7BEFC5D7DFF97,[REF:113],0,5808
+114,nx_box_save_msg_055,84A7B9FC5D7DF718,"盒子的狀態將不會儲存到紀錄！
+確定要繼續嗎？",0,5820
+115,nx_box_save_msg_060,849DACFC5D758C7C,"將不儲存紀錄而直接返回。
+請勿關閉『Pokémon HOME』。",0,5868
+116,nx_box_save_msg_070,84A132FC5D78A605,"有寶可夢帶有「？」的圖示！
+
+將『精靈寶可夢 Let's Go! 皮卡丘』
+和『精靈寶可夢 Let's Go! 伊布』
+寄放的寶可夢領出到別的軟體後，
+便不能將其帶回
+『精靈寶可夢 Let's Go! 皮卡丘』
+和『精靈寶可夢 Let's Go! 伊布』。",0,5936
+117,nx_box_save_msg_080,847BB0FC5D58ACE2,"由於寶可夢能學會的招式和特性
+會因為軟體而有所不同，
+因此各軟體中的招式、PP和特性會分別被記憶下來，
+並根據領出的軟體呈現對應的內容。
+
+在其他的軟體學會的招式，
+可以在『Pokémon HOME』
+領取寶可夢時回憶起來。",0,6196
+118,nx_box_save_msg_085,847BADFC5D58A7C9,"在『寶可夢 朱』和『寶可夢 紫』
+獲得的寶可夢送去
+『寶可夢傳說 阿爾宙斯』後，
+寶可夢的IDNo.會改變。
+
+寄放到『Pokémon HOME』後，
+會回復成原來的寶可夢IDNo.。",0,6424
+119,nx_box_save_msg_090,847F36FC5D5BC66B,[CTRL:0200:0000]/[CTRL:0200:0001],0,6612
+120,nx_box_save_msg_095,847F39FC5D5BCB84,請注意！,0,6632
+121,nx_box_save_msg_100,8DAD5BFC62B496B5,"若將『寶可夢 晶燦鑽石』
+和『寶可夢 明亮珍珠』中獲得的寶可夢，
+帶去『寶可夢 朱』
+和『寶可夢 紫』中進行極限特訓，
+在達到等級100前，
+無法將其帶回『寶可夢 晶燦鑽石』
+和『寶可夢 明亮珍珠』。",0,6644
+122,	,AF66E44C86071324,[REF:122],0,6848
+123,nx_box_msg_010,83083F333E19AFED,"無法將此寶可夢
+送到此軟體！",0,6860
+124,nx_box_msg_011,83083E333E19AE3A,"含有無法送到
+此軟體的寶可夢！",0,6892
+125,nx_box_msg_012,83083D333E19AC87,"替換對象中含有無法送到
+連動中軟體的寶可夢！",0,6924
+126,nx_box_msg_015,83083A333E19A76E,"這是無法寄放到
+『Pokémon HOME』的寶可夢！",0,6972
+127,nx_box_msg_016,830839333E19A5BB,"含有無法寄放到
+『Pokémon HOME』的寶可夢！",0,7028
+128,nx_box_msg_017,830838333E19A408,"替換對象中包含了無法寄放到
+『Pokémon HOME』的寶可夢！",0,7084
+129,nx_box_msg_020,830BA5333E1C9316,"無法寄放或領出
+對戰成員的寶可夢！",0,7152
+130,nx_box_msg_021,830BA6333E1C94C9,"無法寄放或領出
+同行的寶可夢！",0,7188
+131,nx_box_msg_030,830F2B333E1FAC9F,"無法寄放或領出
+準備交換的寶可夢！",0,7220
+132,nx_box_msg_035,830F26333E1FA420,無法寄放蛋到『Pokémon HOME』！,0,7256
+133,nx_box_msg_036,830F29333E1FA939,無法從『Pokémon HOME』領取出蛋！,0,7300
+134,nx_box_msg_040,82F721333E0B09C0,"帶有「？」圖示的寶可夢
+在儲存紀錄後，可領出的軟體將會減少！",0,7348
+135,nx_box_msg_050,82FAA7333E0E2349,這個盒子無法替換！,0,7412
+136,nx_box_msg_060,82FE2D333E113CD2,"這個遊戲軟體的盒子
+無法變更名字！",0,7432
+137,nx_box_msg_061,82FE2E333E113E85,"由於與遊戲軟體的顯示語言不同，
+無法變更名字！",0,7468
+138,nx_box_msg_070,8301B3333E14565B,"顯示盒子一覽的模式。
+亦可按Y鍵進行替換。",0,7516
+139,nx_box_msg_080,832029333E2E1C6C,"此模式可輕鬆找到透過連動
+寄放到『Pokémon HOME』的[RETURN]
+最新30隻寶可夢。",0,7560
+140,nx_box_msg_090,8323AF333E3135F5,"免費盒子最多可存放
+30隻寶可夢。",0,7652
+141,nx_box_msg_100,8C1B5433435B9D4F,[REF:141],0,7688
+142,nx_box_msg_110,8C17CE33435883C6,[REF:142],0,7700
+143,nx_box_msg_120,8C1468334355A09D,無法寄放或領出這隻寶可夢！,0,7712
+144,nx_box_msg_150,8C0A5633434D2D82,"在『Pokémon HOME』的盒子裡
+有寶可夢的招式被變更了！[CLEAR]
+將招式變更的寶可夢寄放到『Pokémon HOME』，
+其變更將不會被記錄！",0,7740
+145,nx_box_msg_140,8C0D5C33434F6D8B,"在『Pokémon HOME』的盒子裡
+有寶可夢的招式被變更了！[CLEAR]
+將招式變更的寶可夢寄放到『Pokémon HOME』，
+其變更將不會被記錄！",0,7892
+146,	,AF66E44C86071324,[REF:146],0,8044
+147,nx_box_alone_010,29DA684996638307,『Pokémon HOME』盒子資料,0,8056
+148,nx_box_alone_020,29D05649965B0FEC,寄放中數量,0,8096
+149,nx_box_alone_021,29D05749965B119F,"[CTRL:0203:0000,0000]/[CTRL:0203:0001,0000]",0,8108
+150,nx_box_alone_030,29D3DC49965E2975,空盒子,0,8132
+151,nx_box_alone_031,29D3DB49965E27C2,"[CTRL:0203:0000,0000]",0,8140
+152,nx_box_alone_040,29C96A499655133A,接收的盒子,0,8152
+153,nx_box_alone_041,29C96B49965514ED,[CTRL:0202:0000],0,8164
+154,nx_box_alone_none,E11FA23D148E4650,---,0,8176
+155,	,AF66E44C86071324,[REF:155],0,8184
+156,nx_box_alone_msg_yes,8FD29780ACB18ECB,[REF:156],0,8196
+157,nx_box_alone_msg_no,69D3CF8F4D5E5F5F,[REF:157],0,8208
+158,	,AF66E44C86071324,[REF:158],0,8220
+159,nx_box_applet_010,FA33F711C9978B4C,[REF:159],0,8232
+160,nx_box_applet_020,FA3E8911C9A0D7E7,[REF:160],0,8244
+161,	,AF66E44C86071324,[REF:161],0,8256
+162,nx_box_adddata_010,8C22C8AC79DB8CBB,標籤,0,8268
+163,nx_box_adddata_020,8C18B6AC79D319A0,盒子,0,8276
+164,nx_box_adddata_021,8C18B7AC79D31B53,[REF:164],0,8284
+165,	,AF66E44C86071324,[REF:165],0,8296
+166,nx_box_list_search_title,B4D5556B85248BD6,篩選條件,0,8308
+167,nx_box_list_search_race,4BE24885284BC085,寶可夢,0,8320
+168,nx_box_list_search_mf,AB902AE45B60E463,性別,0,8328
+169,nx_box_list_search_type1,6BF6B0E322C6A0FB,屬性１,0,8336
+170,nx_box_list_search_type2,6BF6B1E322C6A2AE,屬性２,0,8344
+171,nx_box_list_search_personal,328467F0CE3B4A00,性格,0,8352
+172,nx_box_list_search_marking,FEB1129802DB375F,標記,0,8360
+173,nx_box_list_search_graduate,D27CE397978EA655,來源標記,0,8368
+174,nx_box_list_search_skill1,E18AA8EF63634CE4,招式１,0,8380
+175,nx_box_list_search_skill2,E18AABEF636351FD,招式２,0,8388
+176,nx_box_list_search_skill3,E18AAAEF6363504A,招式３,0,8396
+177,nx_box_list_search_skill4,E18AA5EF636347CB,招式４,0,8404
+178,nx_box_list_search_chara,4C54E4775F4D43C7,特性,0,8412
+179,nx_box_list_search_parent,A6F4248A97384D80,初訓家,0,8420
+180,nx_box_list_search_color,DD6E9AA14EA41BF7,異色,0,8428
+181,nx_box_list_search_pokerus,3423579E7B213D19,寶可病毒,0,8436
+182,nx_box_list_search_pokedex,8AA6FA9EAC1A1EFE,圖鑑擷選,0,8448
+183,nx_box_list_search_moving,E5DAEF28C42A9F26,可送去的軟體,0,8460
+184,nx_box_list_search_label,801E255792BE09BE,標籤,0,8476
+185,	,AF66E44C86071324,[REF:185],0,8484
+186,nx_box_skill_set_010,E6C0730ACF4F10AE,回憶起招式,0,8496
+187,nx_box_skill_set_020,E6BCED0ACF4BF725,屬性,0,8508
+188,nx_box_skill_set_030,E6B9E70ACF49B71C,PP,0,8516
+189,nx_box_skill_set_040,E6B6610ACF469D93,[CTRL:0201:0000],0,8524
+190,nx_box_skill_set_050,E6B2FB0ACF43BA6A,分類,0,8536
+191,nx_box_skill_set_060,E6AF750ACF40A0E1,威力,0,8544
+192,nx_box_skill_set_070,E6ABEF0ACF3D8758,[CTRL:0202:0000],0,8552
+193,nx_box_skill_set_080,E6A8E90ACF3B474F,命中,0,8564
+194,nx_box_skill_set_090,E6A5630ACF382DC6,[CTRL:0202:0000],0,8572
+195,nx_box_skill_set_100,DDADBE0ACA0DC66C,忘記招式,0,8584
+196,nx_box_skill_set_110,DDB1440ACA10DFF5,"要忘記
+[CTRL:0107:0000]嗎？",0,8596
+197,nx_box_skill_set_120,DDB44A0ACA131FFE,"忘記了
+[CTRL:0107:0000]！",0,8620
+198,nx_box_skill_set_130,DDB7D00ACA163987,"這樣就沒有招式可以使用了！
+無法忘記招式。",0,8640
+199,nx_box_skill_set_140,DDA0460ACA027028,按筆畫,0,8684
+200,nx_box_skill_set_150,DDA34C0ACA04B031,發動時間,0,8692
+201,nx_box_skill_set_160,DDA6D20ACA07C9BA,[REF:201],0,8704
+202,	,AF66E44C86071324,[REF:202],0,8716
+203,nx_box_list_search_nil,F13636074BFA870F,沒有符合條件的寶可夢！,0,8728
+204,	,AF66E44C86071324,[REF:204],0,8752
+205,nx_box_list_search_head_race,1A93531C23FE656A,按寶可夢搜尋,0,8764
+206,nx_box_list_search_head_mf,20163C142C2DA0E8,按性別搜尋,0,8780
+207,nx_box_list_search_head_type,F5579B0A64A7115F,按屬性搜尋,0,8792
+208,nx_box_list_search_head_personal,EAA83B894BA6A4C7,按性格搜尋,0,8804
+209,nx_box_list_search_head_marking,215A61C518C45C8E,按標記搜尋,0,8816
+210,nx_box_list_search_head_graduate,A5A019A5A9F75AD6,按來源標記搜尋,0,8828
+211,nx_box_list_search_head_skill,DB146DB093CFB28C,按已學會的招式搜尋,0,8844
+212,nx_box_list_search_head_chara,D4B8CDADBB81A2FA,按特性搜尋,0,8864
+213,nx_box_list_search_head_parent,EECA8C01FC4A99C7,按初訓家名字搜尋,0,8876
+214,nx_box_list_search_head_color,5F0FFFA7C184D696,按異色搜尋,0,8896
+215,nx_box_list_search_head_pokerus,8A532E9246E7F1A0,按寶可病毒搜尋,0,8908
+216,nx_box_list_search_head_pokedex,EF785391EF7EE2BB,按圖鑑擷選搜尋,0,8924
+217,nx_box_list_search_head_moving,7EF0462AF6D70D89,按可送去的軟體搜尋,0,8940
+218,nx_box_list_search_head_label,EB546C298C1A511F,按標籤搜尋,0,8960
+219,	,AF66E44C86071324,[REF:219],0,8972
+220,nx_box_list_mf_01,97CEE218AF999482,♂,0,8984
+221,nx_box_list_mf_02,97CEE118AF9992CF,♀,0,8988
+222,nx_box_list_mf_03,97CEE018AF99911C,無性別,0,8992
+223,	,AF66E44C86071324,[REF:223],0,9000
+224,nx_box_list_type_01,19C01AC32B99FE4B,一般,0,9012
+225,nx_box_list_type_02,19C01BC32B99FFFE,格鬥,0,9020
+226,nx_box_list_type_03,19C01CC32B9A01B1,飛行,0,9028
+227,nx_box_list_type_04,19C01DC32B9A0364,毒,0,9036
+228,nx_box_list_type_05,19C01EC32B9A0517,地面,0,9040
+229,nx_box_list_type_06,19C01FC32B9A06CA,岩石,0,9048
+230,nx_box_list_type_07,19C020C32B9A087D,蟲,0,9056
+231,nx_box_list_type_08,19C011C32B99EF00,幽靈,0,9060
+232,nx_box_list_type_09,19C012C32B99F0B3,鋼,0,9068
+233,nx_box_list_type_10,19C39FC32B9D1621,火,0,9072
+234,nx_box_list_type_11,19C39EC32B9D146E,水,0,9076
+235,nx_box_list_type_12,19C39DC32B9D12BB,草,0,9080
+236,nx_box_list_type_13,19C39CC32B9D1108,電,0,9084
+237,nx_box_list_type_14,19C3A3C32B9D1CED,超能力,0,9088
+238,nx_box_list_type_15,19C3A2C32B9D1B3A,冰,0,9096
+239,nx_box_list_type_16,19C3A1C32B9D1987,龍,0,9100
+240,nx_box_list_type_17,19C3A0C32B9D17D4,惡,0,9104
+241,nx_box_list_type_18,19C397C32B9D0889,妖精,0,9108
+242,nx_box_list_type_19,19C396C32B9D06D6,[REF:242],0,9116
+243,	,AF66E44C86071324,[REF:243],0,9128
+244,nx_box_list_seikaku_1,136CEBEEF7FB1972,[REF:244],0,9140
+245,nx_box_list_seikaku_2,136CEAEEF7FB17BF,[REF:245],0,9152
+246,nx_box_list_seikaku_3,136CE9EEF7FB160C,[REF:246],0,9164
+247,nx_box_list_seikaku_4,136CE8EEF7FB1459,[REF:247],0,9176
+248,nx_box_list_seikaku_5,136CE7EEF7FB12A6,[REF:248],0,9188
+249,nx_box_list_seikaku_6,136CE6EEF7FB10F3,[REF:249],0,9200
+250,nx_box_list_seikaku_7,136CE5EEF7FB0F40,[REF:250],0,9212
+251,nx_box_list_seikaku_8,136CF4EEF7FB28BD,[REF:251],0,9224
+252,nx_box_list_seikaku_9,136CF3EEF7FB270A,[REF:252],0,9236
+253,nx_box_list_seikaku_10,FD2E290F5FABEB26,[REF:253],0,9248
+254,nx_box_list_seikaku_11,FD2E2A0F5FABECD9,[REF:254],0,9260
+255,nx_box_list_seikaku_12,FD2E270F5FABE7C0,[REF:255],0,9272
+256,nx_box_list_seikaku_13,FD2E280F5FABE973,[REF:256],0,9284
+257,nx_box_list_seikaku_14,FD2E2D0F5FABF1F2,[REF:257],0,9296
+258,nx_box_list_seikaku_15,FD2E2E0F5FABF3A5,[REF:258],0,9308
+259,nx_box_list_seikaku_16,FD2E2B0F5FABEE8C,[REF:259],0,9320
+260,nx_box_list_seikaku_17,FD2E2C0F5FABF03F,[REF:260],0,9332
+261,nx_box_list_seikaku_18,FD2E310F5FABF8BE,[REF:261],0,9344
+262,nx_box_list_seikaku_19,FD2E320F5FABFA71,[REF:262],0,9356
+263,nx_box_list_seikaku_20,FD2AC30F5FA907FD,[REF:263],0,9368
+264,nx_box_list_seikaku_21,FD2AC20F5FA9064A,[REF:264],0,9380
+265,nx_box_list_seikaku_22,FD2AC10F5FA90497,[REF:265],0,9392
+266,nx_box_list_seikaku_23,FD2AC00F5FA902E4,[REF:266],0,9404
+267,nx_box_list_seikaku_24,FD2ABF0F5FA90131,[REF:267],0,9416
+268,nx_box_list_seikaku_25,FD2ABE0F5FA8FF7E,[REF:268],0,9428
+269,nx_box_list_seikaku_1_m,E113301F90E3512E,勤奮＋薄荷,0,9440
+270,nx_box_list_seikaku_2_m,D9C4E31F8D22BF57,怕寂寞＋薄荷,0,9452
+271,nx_box_list_seikaku_3_m,D19CBA1F88A8C6EC,勇敢＋薄荷,0,9468
+272,nx_box_list_seikaku_4_m,C6E7B51F8203D36D,固執＋薄荷,0,9480
+273,nx_box_list_seikaku_5_m,C0728C1F7EFB6F82,頑皮＋薄荷,0,9492
+274,nx_box_list_seikaku_6_m,B5BD3F1F785601AB,大膽＋薄荷,0,9504
+275,nx_box_list_seikaku_7_m,AD95161F73DC0940,坦率＋薄荷,0,9516
+276,nx_box_list_seikaku_8_m,3071811FBE3E9DD1,悠閒＋薄荷,0,9528
+277,nx_box_list_seikaku_9_m,2848581FB9C2F266,淘氣＋薄荷,0,9540
+278,nx_box_list_seikaku_10_m,0F2985A39B479C02,樂天＋薄荷,0,9552
+279,nx_box_list_seikaku_11_m,159EAEA39E4FFFED,膽小＋薄荷,0,9564
+280,nx_box_list_seikaku_12_m,FC4C0FA3902835C0,急躁＋薄荷,0,9576
+281,nx_box_list_seikaku_13_m,047438A394A22E2B,認真＋薄荷,0,9588
+282,nx_box_list_seikaku_14_m,2FCA29A3AD2F7DAE,爽朗＋薄荷,0,9600
+283,nx_box_list_seikaku_15_m,3A7F32A3B3D477F9,天真＋薄荷,0,9612
+284,nx_box_list_seikaku_16_m,2053B3A3A4F4F36C,內斂＋薄荷,0,9624
+285,nx_box_list_seikaku_17_m,287BDCA3A96EEBD7,慢吞吞＋薄荷,0,9636
+286,nx_box_list_seikaku_18_m,53D1CDA3C1FC3B5A,冷靜＋薄荷,0,9652
+287,nx_box_list_seikaku_19_m,5B20D6A3C5BE0CA5,害羞＋薄荷,0,9664
+288,nx_box_list_seikaku_20_m,6CDF0F9B431AB111,馬虎＋薄荷,0,9676
+289,nx_box_list_seikaku_21_m,64B6E69B3EA0B8A6,溫和＋薄荷,0,9688
+290,nx_box_list_seikaku_22_m,5D67D99B3ADEE08F,溫順＋薄荷,0,9700
+291,nx_box_list_seikaku_23_m,538C909B34F31D44,自大＋薄荷,0,9712
+292,nx_box_list_seikaku_24_m,4C3D6B9B31311C65,慎重＋薄荷,0,9724
+293,nx_box_list_seikaku_25_m,4189629B2A8DD51A,浮躁＋薄荷,0,9736
+294,	,AF66E44C86071324,[REF:294],0,9748
+295,nx_box_list_graduate_01,D3970A8349B80418,無標記,0,9760
+296,	,AF66E44C86071324,[REF:296],0,9768
+297,nx_box_list_color_01,3F669A3DE577C658,異色,0,9780
+298,nx_box_list_color_02,3F669D3DE577CB71,一般,0,9788
+299,	,AF66E44C86071324,[REF:299],0,9796
+300,nx_box_list_pokerus_01,CC886724CCB5565A,無寶可病毒,0,9808
+301,	,AF66E44C86071324,[REF:301],0,9820
+302,nx_box_list_pokedex_01,05AF2CD3AA78B0E7,關都地區,0,9832
+303,nx_box_list_pokedex_02,05AF2DD3AA78B29A,城都地區,0,9844
+304,nx_box_list_pokedex_03,05AF2ED3AA78B44D,豐緣地區,0,9856
+305,nx_box_list_pokedex_04,05AF27D3AA78A868,神奧地區,0,9868
+306,nx_box_list_pokedex_05,05AF28D3AA78AA1B,合眾地區,0,9880
+307,nx_box_list_pokedex_06,05AF29D3AA78ABCE,卡洛斯地區,0,9892
+308,nx_box_list_pokedex_07,05AF2AD3AA78AD81,阿羅拉地區,0,9904
+309,nx_box_list_pokedex_08,05AF23D3AA78A19C,伽勒爾地區,0,9916
+310,nx_box_list_pokedex_09,05AF24D3AA78A34F,洗翠地區,0,9928
+311,nx_box_list_pokedex_10,05B231D3AA7AEF3D,帕底亞地區,0,9940
+312,nx_box_list_pokedex_unkown,0E311B8F76767D74,不明,0,9952
+313,	,AF66E44C86071324,[REF:313],0,9960
+314,nx_box_list_moving_01,D8DD44CDBB4E4E2D,無,0,9972
+315,	,AF66E44C86071324,[REF:315],0,9976
+316,nx_box_list_label_01,05C28278AC8C8B0B,（ラベル表示枠）,0,9988
+317,	,AF66E44C86071324,[REF:317],0,10008
+318,nx_box_list_none_3,D12262633D3EE2DB,－－－,0,10020
+319,nx_box_list_none_5,D12268633D3EED0D,－－－－－,0,10028
+320,nx_box_list_none_8,D1225B633D3ED6F6,－－－－－－－－,0,10040
+321,	,AF66E44C86071324,[REF:321],0,10060
+322,nx_box_list_head_sort,BE838C473EC4AF0E,排序,0,10072
+323,	,AF66E44C86071324,[REF:323],0,10080
+324,nx_box_list_sort_01,24A1D0223A2A487B,按盒子排序,0,10092
+325,nx_box_list_sort_02,24A1D1223A2A4A2E,寄放從新到舊,0,10104
+326,nx_box_list_sort_03,24A1D2223A2A4BE1,寄放從舊到新,0,10120
+327,nx_box_list_sort_04,24A1D3223A2A4D94,等級從高到低,0,10136
+328,nx_box_list_sort_05,24A1D4223A2A4F47,等級從低到高,0,10152
+329,nx_box_list_sort_06,24A1D5223A2A50FA,ＨＰ從高到低,0,10168
+330,nx_box_list_sort_07,24A1D6223A2A52AD,ＨＰ從低到高,0,10184
+331,nx_box_list_sort_08,24A1C7223A2A3930,攻擊從高到低,0,10200
+332,nx_box_list_sort_09,24A1C8223A2A3AE3,攻擊從低到高,0,10216
+333,nx_box_list_sort_10,24A555223A2D6051,防禦從高到低,0,10232
+334,nx_box_list_sort_11,24A554223A2D5E9E,防禦從低到高,0,10248
+335,nx_box_list_sort_12,24A553223A2D5CEB,特攻從高到低,0,10264
+336,nx_box_list_sort_13,24A552223A2D5B38,特攻從低到高,0,10280
+337,nx_box_list_sort_14,24A559223A2D671D,特防從高到低,0,10296
+338,nx_box_list_sort_15,24A558223A2D656A,特防從低到高,0,10312
+339,nx_box_list_sort_16,24A557223A2D63B7,速度從高到低,0,10328
+340,nx_box_list_sort_17,24A556223A2D6204,速度從低到高,0,10344
+341,nx_box_list_sort_18,24A54D223A2D52B9,按全國圖鑑排序,0,10360
+342,nx_box_list_sort_19,24A54C223A2D5106,按種族名稱排序,0,10376
+343,	,AF66E44C86071324,[REF:343],0,10392
+344,nx_box_help1_010,6699567399801466,"這裡是寶可夢盒的畫面！
+你可以在這裡寄放或領取
+連動中儲存資料裡的寶可夢喔萌！",0,10404
+345,nx_box_help1_020,6695F073997D313D,"按下ZL鍵或ZR鍵可變更操作模式！
+游標為紅色時是「普通模式」。
+游標為藍色時是「替換模式」。
+游標為綠色時是「範圍模式」。",0,10484
+346,nx_box_help1_025,6695EB73997D28BE,"只要選擇盒子的按鍵，
+就會切換到盒子空間的一覽畫面！
+還可以替換盒子喔萌！",0,10612
+347,nx_box_help1_030,6692EA73997AF134,"這個是「最新30」的按鍵！按下按鍵
+你就能連線到盒子，查看最近寄放到
+『Pokémon HOME』的30隻寶可夢喔萌！",0,10688
+348,nx_box_help1_040,668F64739977D7AB,"整理完盒子之後，
+別忘了按下＋鍵儲存紀錄再結束！
+如果不儲存紀錄的話，
+你剛剛的操作可會白～忙一場喔萌！",0,10808
+349,nx_box_help2_010,3562B89246FC4A4F,[REF:349],0,10916
+350,nx_box_help2_020,3558469246F33414,"現在你使用的是基礎方案，
+可以使用「免費盒子」，
+最多可寄放３０隻寶可夢喔萌！",0,10928
+351,nx_box_help2_030,355BCC9246F64D9D,"如果你曾經使用進階方案，
+在『Pokémon HOME』寄放了許多寶可夢，
+那麼可以領取最後寄放的３０隻寶可夢喔萌！",0,11008
+352,nx_box_help2_040,3551BA9246EDDA82,[REF:352],0,11128
+353,nx_box_help2_050,3554C09246F01A8B,[REF:353],0,11140
+354,nx_box_help3_010,16ACEC6527AF83E0,"如果你想把所有盒子直接接收過來，
+那就需要足夠容納所有「接收的盒子」
+的「空盒子」喔萌！",0,11152
+355,nx_box_help4_010,E66CCA58B8DB0349,"在這個畫面，你可以一次閱覽
+『Pokémon HOME』與儲存資料裡
+盒子中所～有的寶可夢喔萌！",0,11244
+356,nx_box_help4_020,E6705058B8DE1CD2,"按下Y鍵就能變更排列順序！
+無論想按寶可夢的攻擊或防禦
+來從高到低或從低到高排列，
+順序通通隨心所欲喔萌！",0,11344
+357,nx_box_help4_030,E673D658B8E1365B,"按下Ｘ鍵可以加入各種條件，
+快速找到你想要的寶可夢！
+不論招式或特性等等，都能加入篩選喔萌！",0,11452
+358,nx_box_msg_130,8C10E23343528714,"由於這隻從『Pokémon GO』帶過來的寶可夢[CLEAR]
+在此紀錄中並未獲得過，
+因此無法領取。",0,11548
+359,hade,F38ED1C313C0C8D5,[REF:359],0,11644
+360,nx_box_msg_018,830837333E19A255,"這是目前無法寄放到
+『Pokémon HOME』的寶可夢！",0,11656
+361,nx_box_msg_019,830836333E19A0A2,"含有目前無法寄放到
+『Pokémon HOME』的寶可夢！",0,11716
+362,nx_box_msg_022,830BA3333E1C8FB0,"替換對象中包含了目前無法寄放到
+『Pokémon HOME』的寶可夢！",0,11776
+363,nx_box_msg_023,830BA4333E1C9163,"替換對象中包含了目前無法寄放到
+『Pokémon HOME』的寶可夢！",0,11848
+364,nx_box_msg_024,830BA9333E1C99E2,"已從此紀錄寄放過
+異色的[CTRL:0101:0000]！[CLEAR]
+從相同的紀錄最多只能寄放１隻
+異色的[CTRL:0101:0000]！",0,11920
+365,nx_box_msg_025,830BAA333E1C9B95,"已從此紀錄寄放過
+[CTRL:0101:0000]！[CLEAR]
+從相同的紀錄最多只能寄放１隻
+[CTRL:0101:0000]！",0,12012
+366,nx_box_msg_026,830BA7333E1C967C,"[CTRL:0102:0000]有問題，
+因此無法寄放！",0,12092
+367,nx_box_msg_032,830F2D333E1FB005,"[CTRL:0102:0000]有問題，
+因此無法寄放！",0,12128
+368,nx_box_msg_027,830BA8333E1C982F,"含有異色的[CTRL:0101:0000]等
+已從此紀錄寄放過的寶可夢！[CLEAR]
+從相同的紀錄最多只能寄放１隻
+異色的[CTRL:0101:0000]！",0,12164
+369,nx_box_msg_028,830BAD333E1CA0AE,"含有[CTRL:0101:0000]等
+已從此紀錄寄放過的寶可夢！[CLEAR]
+從相同的紀錄最多只能寄放１隻
+[CTRL:0101:0000]！",0,12268
+370,nx_box_msg_029,830BAE333E1CA261,"選擇了２隻以上的
+[CTRL:0101:0000]！[CLEAR]
+從相同的紀錄最多只能寄放１隻
+[CTRL:0101:0000]！",0,12360
+371,nx_box_msg_031,830F2A333E1FAAEC,"選擇了２隻以上
+異色的[CTRL:0101:0000]！[CLEAR]
+從相同的紀錄最多只能寄放１隻
+異色的[CTRL:0101:0000]！",0,12440
+372,nx_box_msg_033,830F2C333E1FAE52,"[CTRL:0102:0000]已進行了極限特訓，
+且尚未達到等級100！[CLEAR]
+在達到等級100前
+無法領取！",0,12528
+373,nx_box_msg_034,830F27333E1FA5D3,"[CTRL:0102:0000]等寶可夢已進行了極限特訓，
+且尚未達到等級100！[CLEAR]
+在達到等級100前
+無法領取！",0,12620
+374,nx_box_boxflame_syn,905496878E46A587,『Pokémon Champions』的遠征盒子,0,12720
+375,nx_box_boxtitle_syn_01,1022B9BCBF893AB0,曾經遠征過,0,12772
+376,nx_box_boxtitle_syn_02,1022BCBCBF893FC9,遠征中,0,12784
+377,nx_box_boxdata_syn_01,0BFE9757FB6FE868,"[CTRL:0203:0000,0000]",0,12792
+378,nx_box_boxdata_syn_02,0BFE9A57FB6FED81,"[CTRL:0203:0000,0000]",0,12804
+379,nx_box_button_syn_02,346E39D095D83DD6,查看資訊,0,12816
+380,nx_box_button_syn_03,346E3AD095D83F89,派去遠征,0,12828
+381,nx_box_msg_syn_01,CAFC381465C07700,"要將目前選擇中的寶可夢
+派去『Pokémon Champions』遠征嗎？",0,12840
+382,nx_box_msg_syn_02,CAFC3B1465C07C19,"遠征中……
+請勿關閉『Pokémon HOME』。",0,12916
+383,nx_box_msg_syn_03,CAFC3A1465C07A66,"派[CTRL:0102:0000]
+去遠征了！",0,12968
+384,nx_box_msg_syn_04,CAFC3D1465C07F7F,"派[CTRL:0102:0000]牠們
+去遠征了！",0,12992
+385,nx_box_msg_syn_05,CAFC3C1465C07DCC,"無法再選擇了！[CLEAR]
+一次最多只能派
+[CTRL:0201:0000]隻寶可夢去遠征。",0,13020
+386,nx_box_msg_syn_07,CAFC3E1465C08132,"還選擇著
+要派去遠征的寶可夢。[CLEAR]
+確定就這樣返回主選單嗎？",0,13084
+387,nx_box_msg_syn_08,CAFC411465C0864B,[REF:387],0,13148
+388,nx_box_msg_syn_09,CAFC401465C08498,"『Pokémon Champions』的盒子已滿。[CLEAR]
+如果想派新的寶可夢去遠征，[CLEAR]
+請將『Pokémon Champions』的盒子
+整理出空間。",0,13160
+389,nx_box_msg_syn_10,CAF8D31465BD958A,"確定要中止遠征，
+返回主選單嗎？",0,13316
+390,nx_box_msg_syn_11,CAF8D41465BD973D,[REF:390],0,13352
+391,nx_box_msg_syn_12,CAF8D11465BD9224,無法派這隻寶可夢去遠征。,0,13364
+392,nx_box_msg_syn_13,CAF8D21465BD93D7,"準備交換的寶可夢
+無法派去遠征！",0,13392
+393,nx_box_msg_syn_14,CAF8CF1465BD8EBE,這隻寶可夢已經在遠征了。,0,13428
+394,nx_box_msg_syn_15,CAF8D01465BD9071,蛋無法派去遠征。,0,13456
+395,nx_box_list_sort_20,24A8DB223A3079DA,遠征中的寶可夢,0,13476
+396,nx_box_save_msg_110,8DA9D5FC62B17D2C,"有寶可夢帶有「？」的圖示！
+
+領出到『寶可夢傳說 Z-A』後，
+便不能將其帶回其他的軟體。",0,13492
+397,nx_box_help_syn1_010,F8E9C69849585A1D,"你可以在這裡和
+『Pokémon Champions』連結喔萌！",0,13584
+398,nx_box_help_syn1_020,F8ED2C98495B3D46,"可以將寄放在『Pokémon HOME』的寶可夢
+派去『Pokémon Champions』遠征，
+也可以確認從『Pokémon Champions』
+回來的寶可夢喔萌！",0,13652
+399,nx_box_help_syn1_030,F8F0B298495E56CF,"遠征中的寶可夢
+將無法帶到其他
+『寶可夢』系列喔萌！",0,13824
+400,nx_box_help_syn1_040,F8D8A8984949B3F0,"如果想將遠征中的寶可夢
+帶到其他『寶可夢』系列，
+必須先到『Pokémon Champions』
+送回寶可夢，要注意喔萌！",0,13880
+401,nx_box_help_syn1_050,F8DC2E98494CCD79,"一次最多可派３０隻寶可夢
+去『Pokémon Champions』遠征！
+最多總計可派１０００隻去遠征喔萌！",0,14004
+402,nx_box_help_syn2_010,6C4F7AC7DC98E968,"在這個畫面，你可以一次閱覽
+『Pokémon HOME』裡所～有的寶可夢喔萌！",0,14116
+403,nx_box_help_syn2_020,6C596CC7DCA12623,"按下L鍵就能變更排列順序！
+無論想按寶可夢的攻擊或防禦
+來從高到低或從低到高排列，
+順序通通隨心所欲喔萌！",0,14196
+404,nx_box_help_syn2_030,6C5606C7DC9E42FA,"按下R鍵可以加入各種條件，
+快速找到你想要的寶可夢！
+不論招式或特性等等，都能加入篩選喔萌！",0,14304
+405,nx_box_syn_save_01,2A084AD8D8D33D4E,"派去『Pokémon Champions』遠征的寶可夢，
+遠征中將無法在『Pokémon HOME』進行以下操作。
+
+・從盒子裡領取到其他的軟體
+・從盒子裡放生
+・標記",0,14400
+406,nx_box_syn_save_02,2A0849D8D8D33B9B,請留意！,0,14572
+407,nx_box_msg_syn_06,CAFC3F1465C082E5,"已派出[CTRL:0203:0000,0000]隻寶可夢
+去『Pokémon Champions』遠征，[CLEAR]
+無法再派更多寶可夢去遠征。",0,14584
+408,nx_box_msg_syn_16,CAF8CD1465BD8B58,"有寶可夢無法去
+『Pokémon Champions』遠征。",0,14692
+409,nx_box_msg_syn_17,CAF8CE1465BD8D0B,"要派去遠征的寶可夢中，
+似乎有寶可夢跟上一次
+去『Pokémon Champions』
+遠征時的樣子不一樣。
+
+如果就這樣執行遠征的話，
+在『Pokémon Champions』的
+訓練內容將重置，請注意。",0,14756
+410,nx_box_msg_syn_18,CAF8CB1465BD87F2,"確定就這樣派寶可夢
+去『Pokémon Champions』遠征嗎？",0,14964
+411,nx_box_msg_037,830F28333E1FA786,"無法將此語言的寶可夢
+送到此軟體！",0,15036
+412,nx_box_msg_038,830F33333E1FBA37,"含有無法送到此軟體的
+語言的寶可夢！",0,15072
+413,nx_box_syn_save_03,2A0848D8D8D339E8,"『精靈寶可夢 Let's Go! 皮卡丘』
+和『精靈寶可夢 Let's Go! 伊布』
+寄放的寶可夢一旦派去遠征後，
+
+便不能將其帶回
+『精靈寶可夢 Let's Go! 皮卡丘』
+和『精靈寶可夢 Let's Go! 伊布』。
+
+但可帶去其他的軟體。",0,15112
+414,nx_box_help_syn3_010,A661DE9F63E151B7,"曾經遠征過『Pokémon Champions』的寶可夢，
+在選擇寶可夢的畫面或一覽畫面上
+會顯示遠征圖示喔萌！",0,15364
+415,nx_box_help_syn3_020,A657CC9F63D8DE9C,"遠征中的寶可夢會帶有遠征圖示，
+並且以反灰顯示而不能選擇喔萌！",0,15480
+416,nx_box_help_msg_syn_01,8EEA3656F34221B4,"要確認『Pokémon Champions連結』的
+相關說明嗎？",0,15544
+417,nx_box_help_syn_select_01,7DDA40CE79383089,關於連結,0,15612
+418,nx_box_help_syn_select_02,7DDA3DCE79382B70,關於遠征圖示,0,15624
+419,nx_box_help_syn_select_03,7DDA3ECE79382D23,取消,0,15640
+420,nx_box_save_msg_121,8DB3E6FC62B9EE94,"透過GBA系列連動獲得的寶可夢
+送去連動中的軟體後，
+寶可夢的IDNo.會改變。
+
+寄放到『Pokémon HOME』後，
+會回復成原來的寶可夢IDNo.。",0,15648
