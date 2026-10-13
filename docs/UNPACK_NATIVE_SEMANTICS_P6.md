@@ -196,22 +196,60 @@ Native 使用 `LDRSH`，`0xFFFF` 实际为 `-1`，
 `mirror-0.9.2` 已重新生成并推送。避免将旧版的 0.9.1
 输出用于效果判断。
 
-### 下一条未闭合的道具效果分派
+### 效果属性扩展：Native selector 26–70 真实解析闭环
 
-`main+0x4FD0B8` 对 `selector>25` 的处理进入
-`main+0x4FD0E4`，根据记录 `+0x15` 的类型字节
-选择不同分支。其中 `+0x15 == 1` 的条件分支
-会以 `record+0x1E` 为基址，并在 `main+0x4FD270`
-对更大的属性编号进行位标志/参数分派。
-这是 **下一阶段** 需要按原始 opcode 和业务消费者
-继续追踪的路径，不能把未知参数自行命名为效果强度等。
+对 `selector > 25` 的读取，Native 先在 `main+0x4FD0E4`
+检查记录内的 `record[0x15]` 分类字节。静态 opcode
+区分三种分支：
+
+```c
+if (variant == 1) {
+    // x1 = record + 0x1E;
+    // 45 路间接表，selector 在 [26,70]
+    goto main_plus_0x4FD270;
+} else if (variant == 0 || variant == 2) {
+    return *(uint8_t *)(record + 0x1E);
+} else {
+    return 0;
+}
+```
+
+主路径 `main+0x4FD270` 执行 `selector - 26`，
+然后通过 ELF **`main+0x657FE6` 的 45 字节常量表**
+计算 `main+0x4FD294 + 4 × entry` 跳转地址。
+原始 45 个入口已完全覆盖 `26–70`，每个都有
+精确 opcode、参数偏移、位掩码或有符号类型：
+
+| 选择范围 | Native 访问模式 | 证据界限 |
+|---|---|---|
+| 26–37 | 从 `record+0x1E` 的 32 位字取单 bit（0–11） | 直接 ELF |
+| 38–59 | 从 `record+0x1E..+0x24` 取多位或单 bit | 直接 ELF |
+| 60–65 | `LDRSB` 读取 `record+0x25..+0x2A`，int8 | 直接 ELF |
+| 66–67 | `LDRB` 读取 `record+0x2B..+0x2C`，uint8 | 直接 ELF |
+| 68–70 | `LDRSB` 读取 `record+0x2D..+0x2F`，int8 | 直接 ELF |
+
+当前原始文件 1166 条独立记录的 variant 分布：
+`0:1007`、`1:159`。已编写零副作用的
+`tools/home41_item_native_effect_values.py`，
+对 1829 个逻辑 ID 和 45 项效果 Native Selector
+做全量源字节读取验证。源代码只恢复**真实读取的数值与位提取**；
+例如 `selector 66` 在 `item_id=17` 上为数值 20，
+但没有证据证明它对应 HP 恢复量之类的特定业务标签。
+
+- [45 路效果分派及原始 opcode](../derived/4.1.0/native_item_topics/p6_item_extended_effect_routes.json)
+- [1,829 × 45 实际效果属性 CSV](../Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.native_effects.csv)
+- [真实资源 + Native ELF 45 路验收 CI](https://github.com/969981/PokeHome_Resources/actions/runs/38351279775)
+
+**下一阶段未闭合的是上层 gameplay 消费者：**战斗或道具使用逻辑如何根据
+具体道具 ID 与 26..70 读取值判定实际效果；应先沿高层调用者追溯各字段
+被读取的上下文及具体数值的操作，然后才将 raw 字段提升为真正的业务名称。
 
 ## 工程状态
 
-`mirror-0.9.2` 已实际校验：12,074 个源文件，
+`mirror-0.9.3` 已实际校验：12,074 个源文件，
 **converted=6,700、partial=5,371、unsupported=3、failed=0**，
-真实镜像输出 **47,850** 个。
-Item8 `item.dat` 和 Topics 都有 Native 属性关联产物，
-但仍标为 `partial`，因为完整 UI 条件和业务效果含义尚未全闭合。
-剩余三个 `unsupported` 均为 BFOTF 字体。
+真实镜像输出 **47,851** 个。
+Item8 `item.dat` 与 Topics 均已拥有可审计的 Native 字段/标志产物，
+但依然标为 `partial`，因为还缺完整 gameplay/UI 条件的业务含义证据。
+剩余三份 `unsupported` 均为 BFOTF 字体。
 
