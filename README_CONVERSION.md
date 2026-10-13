@@ -158,3 +158,20 @@ python .\tools\home41_bntx_to_png.py `
 [`derived/4.1.0/place_names/`](derived/4.1.0/place_names/) 中有 `B2W2_English.csv`、`B2W2_Simp_Chinese.csv` 等 **11 语言 × 154 条 = 1,694 条** 直接从源 DAT/AHTB 解密得到的地名记录（并非凭名称翻译），包含原始 label / FNV64 / index。
 
 注意：这些文件及上述 16 张 PNG 已经真正转换并提交；**完整 12,082 个源文件尚未整仓跑通并发布所有衍生文件**。GitHub Actions 首次尝试在无执行步骤的情况下失败，不能将其视作完成验收。当前的 `derived` 目录代表已提交的真实转换子集，脚本代表可用转换流程。
+
+## 实际转换新增：七套 Personal 数据（全部 7 个文件）
+
+不是仅有表头或字段推测：已从原始 `*.perbin` 的 FlatBuffers 根表/向量/Record/字段读取出**全部 7 套记录的原始字段**，分别提交 `.json` + `.csv`，每个条目保留原始 `raw_hex`，可以使用 pandas/Excel/脚本检索比较。
+
+- [`derived/4.1.0/personal/`](derived/4.1.0/personal/) — 14 个已提交 JSON / CSV 文件。
+- **8,485** 个表内记录，**157,049** 条非空字段原始数据：
+  - global 1,479；beluga 1,109；delphis 560；hayabusa 1,276；
+  - orion 1,192；titan 1,424；ikkaku 1,445。
+- 字段编号只是原始 FlatBuffers slot index；**并未把未知字段猜成个体能力、技能参数或实体物种编号**。
+- 每份 JSON 都含源文件 `source_git_sha1`、源字节数、记录数，供原始字节交叉核对。
+
+## 完整源文件索引（不是完整解码结果）
+
+[`derived/4.1.0/inventory/`](derived/4.1.0/inventory/) 有 5 个真实 Git 树生成的 `source_manifest_*.csv`、一个 `source_inventory_summary.json`，覆盖**12,082 个源文件 / 1,085,794,873 字节**，保留 Git Blob SHA-1、大小、目录分类。可对照转换后的文件和脚本持续追溯原始资源。
+
+**进度边界**：上述全部 Personal 数据、11 语言 B2W2 地点、16 张 PNG、原有 10 份压缩研究数据与完整源清单已经在当前 `4.1.0` 分支提交。其余 5,089 个招式小文件、3,538 个 gzip 纹理等尚未完成整仓批量实测转换；不可凭一个脚本存在就宣称全量产物已经生成。完整 58,740 行地点 CSV 目前仍在 `HOME-Live-Plugin-CHS` 研究仓库：GitHub 内容接口对其 1.1MB 压缩文件无法返回完整载荷，Git 对象也不能跨仓库直接引用。
