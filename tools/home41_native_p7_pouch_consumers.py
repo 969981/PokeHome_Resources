@@ -38,7 +38,7 @@ CASE_DEFINITIONS=(
 
 ANCHORS={
     0x266D48:("mov","w1, #0xe"),
-    0x266D50:("mov","w0, w21"),
+    0x266D4C:("mov","w0, w21"),
     0x266D58:("bl","#0x4fd48c"),
     0x266D5C:("cmp","w0, #8"),
     0x266D74:("ldrb","[x9, x8]"),
@@ -48,7 +48,7 @@ ANCHORS={
     0x266EA8:("ubfx","#0xf, #0xf"),
     0x266EAC:("cmp","#0x3e6"),
     0x266EC4:("and","#0xc0007fff"),
-    0x266EC8:("orr","lsl #0xf"),
+    0x266EC8:("orr","lsl #15"),
     0x266ED0:("str","[x8, x10, lsl #2]"),
     0x266F30:("str","[x8, x10, lsl #2]"),
     0x4FD854:("and","#0xffff"),
