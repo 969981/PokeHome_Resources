@@ -1,0 +1,75 @@
+name: HOME 4.1.0 P6 publish native-linked topic references
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p6-publish-topic-refs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p6-publish-topic-refs
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax plus raw-byte topics, native and existing regression
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p test_home41_topics.py -v
+          python -m unittest discover -s tools -p test_home41_topics_semantic.py -v
+          python -m unittest discover -s tools -p test_home41_pokedex_item.py -v
+          python -m unittest discover -s tools -p test_home41_item8_semantic.py -v
+      - name: Convert and verify topic original plus 500 linked references
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind topics --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --kind topics --strict
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          base=Path("Unpack")
+          full=json.loads((base/"_meta/summary.json").read_text())
+          assert full["source_files"]==12074 and full["status_counts"].get("unsupported")==3,full
+          assert full["status_counts"].get("failed",0)==0,full
+          manifest=json.loads((base/"_meta/manifest.json").read_text())
+          rows=[r for r in manifest["files"] if r.get("detected_format")=="topics"]
+          assert len(rows)==1
+          assert rows[0]["records"]==693 and len(rows[0]["outputs"])==3,rows[0]
+          p=base/"57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.references.csv"
+          with p.open(encoding="utf-8-sig", newline="") as f:
+              entries=list(csv.DictReader(f))
+          assert len(entries)==500
+          print("native topic species/form pairs:",len(entries))
+          print("manifest:",full)
+          PY
+      - name: Git publish third topic CSV and refreshed complete manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          root=Path("Unpack")
+          manifest=json.loads((root/"_meta/manifest.json").read_text())
+          row=next(x for x in manifest["files"] if x.get("detected_format")=="topics")
+          paths=[str(root/o["path"]) for o in row["outputs"]]
+          paths += [str(x) for x in (root/"_meta").glob("*") if x.is_file()]
+          for path in paths:
+              subprocess.run(["git","add","-f","--",path],check=True)
+          print("staged outputs:",len(paths))
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish P6 500 native-linked Pokédex Topics species/form references'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
