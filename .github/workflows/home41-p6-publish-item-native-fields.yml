@@ -1,0 +1,108 @@
+name: HOME 4.1.0 P6 publish native Item8 property getters
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p6-publish-item-native-fields.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p6-publish-item-native-fields
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax and native ELF disassembler
+        run: |
+          python -m pip install capstone==5.0.6
+          python -m compileall -q tools
+      - name: Raw HOME original source and native all-ID tests
+        run: |
+          python -m unittest discover -s tools -p test_home41_native_item_getter.py -v
+          python -m unittest discover -s tools -p test_home41_item8_semantic.py -v
+          python -m unittest discover -s tools -p test_home41_pokedex_item.py -v
+          python -m unittest discover -s tools -p test_home41_topics_semantic.py -v
+      - name: Prove 25 Native field Getter opcodes directly against original ELF
+        run: |
+          python tools/home41_native_item_field_getters.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out derived/4.1.0/native_item_topics/p6_item_native_field_getters.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('derived/4.1.0/native_item_topics/p6_item_native_field_getters.json')
+          d=json.loads(p.read_text())
+          assert d['original_elf_sha256']=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          assert d['native_properties_count']==25, d['native_properties_count']
+          assert d['raw_record_stride_bytes']==48
+          assert next(x for x in d['property_getters'] if x['field_name_provisional_pkNX_or_raw']=='watts_price_pkNX')['native_read_width_bits']==32
+          assert next(x for x in d['property_getters'] if x['field_name_provisional_pkNX_or_raw']=='signed_sprite_pkNX')['native_read_signed']
+          print('verified 25 individual field Getter signatures')
+          PY
+      - name: Regenerate real mirrored original item and check all outputs
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind pokemon --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --kind pokemon --strict
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          meta=Path('Unpack/_meta')
+          s=json.loads((meta/'summary.json').read_text())
+          assert s['source_files']==12074,s
+          assert s['status_counts'].get('failed',0)==0,s
+          assert s['status_counts'].get('unsupported')==3,s
+          m=json.loads((meta/'manifest.json').read_text())
+          item=next(r for r in m['files'] if r['source_path'].endswith('/bin/pml/item/item.dat'))
+          assert item['status']=='partial' and len(item['outputs'])==7,item
+          root=Path('Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item')
+          p=root/'item.semantic.csv'
+          with p.open(encoding='utf-8-sig',newline='') as stream: rows=list(csv.DictReader(stream))
+          assert len(rows)==1829
+          assert all(r['price_watts_native_u32']==r['price_watts_u16'] for r in rows)
+          assert all(r['price_alternate_native_u32']==r['price_alternate_u16'] for r in rows)
+          assert rows[100]['item_sprite_native_i16']=='-1'
+          assert rows[2]['native_price_watts_rva']=='0x4FD114'
+          print('actual mirrored semantic rows:',len(rows),'summary:',s['status_counts'])
+          PY
+      - name: Publish native verifier and updated real mirror files
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          root=Path('Unpack')
+          doc=json.loads((root/'_meta/manifest.json').read_text())
+          item=next(r for r in doc['files'] if r['source_path'].endswith('/bin/pml/item/item.dat'))
+          paths=[
+            'derived/4.1.0/native_item_topics/p6_item_native_field_getters.json',
+            *[str(root/r['path']) for r in item['outputs']],
+            *[str(p) for p in (root/'_meta').glob('*') if p.is_file()],
+          ]
+          for path in paths:
+            subprocess.run(['git','add','-f','--',path],check=True)
+          print('staged paths:',len(paths))
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish P6 25 native Item8 Getter signatures and full-width item semantic export'
+            git reset --hard HEAD
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then
+                echo 'P6 native Item8 field outputs published'
+                exit 0
+              fi
+              sleep 2
+            done
+            exit 1
+          fi
