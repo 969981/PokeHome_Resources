@@ -1,0 +1,81 @@
+name: HOME 4.1.0 publish grammar and lookup tables
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-publish-tables.yml'
+  workflow_run:
+    workflows: ['HOME 4.1.0 Unpack v2 full Release']
+    types: [completed]
+    branches: ['4.1.0']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-grammar-and-index-tables
+  cancel-in-progress: false
+jobs:
+  publish-tables:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Parse and verify actual grammar, item hash and form index samples
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p 'test_home41_tables.py' -v
+      - name: Convert all indexed grammar and lookup resources
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind tables --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --kind tables --strict
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('Unpack/_meta/manifest.json').read_text())
+          expected=[x for x in data['files'] if x['detected_format']=='tables']
+          assert len(expected)==11, len(expected)
+          assert all(x['status']=='partial' for x in expected), expected
+          assert all(x['outputs'] for x in expected), expected
+          stats=json.loads(Path('Unpack/_meta/summary.json').read_text())['status_counts']
+          assert stats.get('failed',0)==0 and stats.get('unsupported')<=10,stats
+          print('verified table files:',len(expected),'remaining unsupported:',stats.get('unsupported',0))
+          PY
+      - name: Publish decoded tables (and manifest after Release completion)
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import os
+          import subprocess
+          from pathlib import Path
+          root=Path('Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1')
+          selected=[
+            root/'bin/message/grammar',
+            root/'bin/pml/item',
+            root/'bin/hayabusa/appli/pokedex/res_table',
+          ]
+          for location in selected:
+              files=[p for p in location.glob('*.csv') if p.is_file()]
+              files += [p for p in location.glob('*.json') if p.is_file()]
+              # Only newly supported files from this research round.
+              files=[p for p in files if ('grammar' in str(p) or 'item_hash_to_index' in p.name
+                                        or 'pokedex_form_storage_index_table' in p.name)]
+              for p in files: subprocess.run(['git','add','--',str(p)],check=True)
+          if os.environ.get('EVENT_NAME')=='workflow_run':
+              subprocess.run(['git','add','--','Unpack/_meta/manifest.csv',
+                              'Unpack/_meta/manifest.json','Unpack/_meta/summary.json',
+                              'Unpack/_meta/unsupported.csv','Unpack/_meta/source_manifest.csv'],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish decoded grammar selectors and item/form lookup tables'
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
