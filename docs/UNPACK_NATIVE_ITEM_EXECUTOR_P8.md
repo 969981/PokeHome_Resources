@@ -84,6 +84,20 @@ main+0x4FD8F0  blr x8
 - [BLR 原始 ELF 测试 Actions](https://github.com/969981/PokeHome_Resources/actions/runs/38361006565)
 - [独立边界与逻辑值回归](https://github.com/969981/PokeHome_Resources/actions/runs/38361217854)
 
+### 其他直接调用是否属于效果消费者？
+
+P7 的完整直接 `BL` 表还含有
+`main+0x69B70` 和 `main+0x69B9C`，
+两处调用 `main+0x4FD50C`。该目标函数的现有
+Opcode 窗口从 `0x4FD50C` 起以
+`STR XZR`、`STP XZR` 初始化对象多个字段，
+并装入原生接口相关的常量地址，
+符合**资源对象初始化**而不是直接效果参数读取的特征。
+目前没有找到这两处调用把 `26..70` 作为 selector
+传给扩展分派器的链路。
+
+这仍是静态消费者分类，不是完整反编译出来的功能名。
+
 ## 3. 已恢复 45 个效果数值，但不能跨越的证据边界
 
 源文件 `item.dat` **1,166 条独立记录**包含 45 个
@@ -134,6 +148,15 @@ main+0x4FD8F0  blr x8
 `Pokémon HOME 4.1.0 main.elf`，并不是剑盾或朱紫的
 实际战斗引擎可执行文件。没有对应游戏二进制时
 不能声称已经追到了 HP 状态 Setter。
+
+### 游戏 ELF / RomFS 输入要求
+
+下一阶段必须知道游戏的**具体版本**，并取得相应来源的原始
+`main.elf`（或可合法研究的 NSO/ExeFS dump）以及同版本
+道具数据。不应依靠 HOME ELF 的 `0x4FD...` RVA 猜其他游戏
+的函数地址。输入应当记录构建 ID、文件长度及 SHA256，
+后续报告保留 `ItemID → 来源记录 → 真实消费者 PC →
+目标状态 Setter PC → 动态前后状态` 五元组证据。
 
 ## 5. 交付与验收
 
