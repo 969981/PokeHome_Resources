@@ -1,0 +1,26 @@
+name: HOME 4.1.0 P8 effect consumer evidence regression
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p8-effect-consumer-regression.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check original byte-level evidence and static consumer boundaries
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p test_home41_p8_effect_executor_evidence.py -v
+          python -m unittest discover -s tools -p test_home41_item_native_effect_values.py -v
+          python -m unittest discover -s tools -p test_home41_item_native_properties.py -v
