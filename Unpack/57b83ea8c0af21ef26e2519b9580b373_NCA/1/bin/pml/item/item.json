@@ -22,6 +22,20 @@
     "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item_hash_to_index.dat": "ad0e7c311f8b46db4b216e335dc60897d3261528175a485c286fa4e1dd837639"
   },
   "lookup_count": 1832,
+  "native_effect_selector_matrix": {
+    "caveat": "48-byte item record offsets and field bit extraction are Native ELF-verified; effects on gameplay are unproven.",
+    "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+    "format": "HOME 4.1.0 Native Item8 effect selector 26..70 values",
+    "logical_items": 1829,
+    "payload_bytes": 18,
+    "payload_record_offset": 30,
+    "selector_count": 45,
+    "source_effect_variant_record_offset": 21,
+    "variant_counts_by_logical_item": {
+      "0": 1670,
+      "1": 159
+    }
+  },
   "native_elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
   "native_item_field_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
   "native_item_record_getter": "0x4FD784",
