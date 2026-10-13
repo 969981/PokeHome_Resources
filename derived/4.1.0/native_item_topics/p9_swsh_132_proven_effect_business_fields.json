@@ -1,0 +1,77 @@
+{
+  "study": "P9 Sword/Shield 1.3.2 Item8 extended effect usage (not HOME game effect execution)",
+  "native_item8_getter": "0x788630",
+  "elf_builds": {
+    "sword": {
+      "sha256": "689db76a880c6ca5b20308343e6f49268c67f75fd009b7d644a166e18adc0652",
+      "build_id": "a3b75bcd3311385aeed67fbeeb79cbb7bf02f471",
+      "size_bytes": 40065128
+    },
+    "shield": {
+      "sha256": "f59618e93f585c967f508fb10b94da81bbaab6014cadacb9a82351546ae091f4",
+      "build_id": "a16802625e7826bf83b6f9708e475b912a9ab7df",
+      "size_bytes": 40065272
+    }
+  },
+  "direct_dispatcher_calls_per_build": 126,
+  "confirmed_constant_effect_calls_per_build": 78,
+  "known_field_count": 5,
+  "unproved_effect_selector_count": 40,
+  "known_fields": [
+    {
+      "native_selector": 66,
+      "item8_record_offset": "0x2B",
+      "native_read_type": "uint8",
+      "business_meaning": "HP recovery amount, with special 0xFD/0xFE/0xFF maxHP codes",
+      "sword_selector_call_rva": "0x13B6940",
+      "shield_selector_call_rva": "0x13B6970",
+      "both_actual_status_store_rva": "0x76F0F0",
+      "evidence_level": "AArch64 game caller → actual native calculation → status write; no runtime sample"
+    },
+    {
+      "native_selector": 67,
+      "item8_record_offset": "0x2C",
+      "native_read_type": "uint8",
+      "business_meaning": "single move PP recovery amount",
+      "sword_selector_call_rva": "0x13B6BC8",
+      "shield_selector_call_rva": "0x13B6BF8",
+      "both_actual_status_store_rva": "0x770DDC",
+      "evidence_level": "AArch64 game caller → actual native calculation → status write; no runtime sample"
+    },
+    {
+      "native_selector": 68,
+      "item8_record_offset": "0x2D",
+      "native_read_type": "int8",
+      "business_meaning": "friendship adjustment current tier 0..99",
+      "sword_selector_call_rva": "0x13A9D44",
+      "shield_selector_call_rva": "0x13A9D74",
+      "both_actual_status_store_rva": "0x76FEE8",
+      "evidence_level": "AArch64 game caller → actual native calculation → status write; no runtime sample"
+    },
+    {
+      "native_selector": 69,
+      "item8_record_offset": "0x2E",
+      "native_read_type": "int8",
+      "business_meaning": "friendship adjustment current tier 100..159",
+      "sword_selector_call_rva": "0x13A9D54",
+      "shield_selector_call_rva": "0x13A9D84",
+      "both_actual_status_store_rva": "0x76FEE8",
+      "evidence_level": "AArch64 game caller → actual native calculation → status write; no runtime sample"
+    },
+    {
+      "native_selector": 70,
+      "item8_record_offset": "0x2F",
+      "native_read_type": "int8",
+      "business_meaning": "friendship adjustment current tier 160..255",
+      "sword_selector_call_rva": "0x13A9D64",
+      "shield_selector_call_rva": "0x13A9D94",
+      "both_actual_status_store_rva": "0x76FEE8",
+      "evidence_level": "AArch64 game caller → actual native calculation → status write; no runtime sample"
+    }
+  ],
+  "caveats": [
+    "Sword/Shield 1.3.2 source ELF binaries were only read from the user's Library and are NOT committed here",
+    "Source item.dat records of matching SWSH 1.3.2 RomFS are not yet available; per-item ID values across HOME and game have not been crossmatched",
+    "Business meaning is a static game native proof, not a live game execution trace"
+  ]
+}
