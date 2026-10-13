@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Pokémon HOME 4.1.0 BNTX/SARC -> genuine PNG (read only; stdlib).
 
-Supported: RGBA8, BC1, BC3, BC4-UNORM, BC5-UNORM.
-ASTC/BC7/BC6 and unknown formats are *not* renamed to PNG.
+Supported: RGBA8, BC1, BC3, BC4-UNORM, BC5-UNORM; optional ASTC 4x4..12x12.
+Without texture2ddecoder, ASTC and unknown formats are *not* renamed to PNG.
 BC4/BC5 use documented visualization mappings (grey / RG with blue=0).
 Accepts *.bntx, *.bntx.gz and *.arc SARC archives.
 """
@@ -23,6 +23,16 @@ MAX_EXPANDED = 96 * 1024 * 1024
 MAX_PIXELS = 32 * 1024 * 1024
 BLOCK_FORMATS = {0x1A: 8, 0x1C: 16, 0x1D: 8, 0x1E: 16}
 ALLOWED = {0x0B, 0x1A, 0x1C, 0x1D, 0x1E}
+ASTC_BLOCKS = dict(zip(range(0x2D, 0x3B), [
+    (4, 4), (5, 4), (5, 5), (6, 5), (6, 6), (8, 5), (8, 6),
+    (8, 8), (10, 5), (10, 6), (10, 8), (10, 10), (12, 10), (12, 12)
+]))
+
+try:
+    import texture2ddecoder as _texture2ddecoder
+except ImportError:
+    _texture2ddecoder = None
+
 
 def u16(b, p):
     if p < 0 or p + 2 > len(b):
@@ -137,21 +147,50 @@ def decode_bntx(source):
                 "type": value_type, "png_status": "unsupported"}
         if not width or not height or width * height > MAX_PIXELS or dims != 1 or arrays != 1:
             info["reason"] = "invalid dimensions/depth/array"; yield info, None; continue
-        if pixel_fmt not in ALLOWED or value_type not in (1, 6):
+        if pixel_fmt not in ALLOWED and pixel_fmt not in ASTC_BLOCKS or value_type not in (1, 6):
             info["reason"] = "pixel decoder not implemented"; yield info, None; continue
         if tiled not in (0, 1):
             info["reason"] = "tile mode not implemented"; yield info, None; continue
         if pixel_fmt in (0x1D, 0x1E) and value_type != 1:
             info["reason"] = "signed BC4/BC5 unsupported"; yield info, None; continue
-        bw = 1 if pixel_fmt == 0x0B else 4
-        bh = bw
-        block_bytes = 4 if pixel_fmt == 0x0B else BLOCK_FORMATS[pixel_fmt]
+        if pixel_fmt in ASTC_BLOCKS and _texture2ddecoder is None:
+            info["reason"] = "optional texture2ddecoder required for ASTC"
+            yield info, None
+            continue
+        if pixel_fmt in ASTC_BLOCKS:
+            bw, bh = ASTC_BLOCKS[pixel_fmt]
+            block_bytes = 16
+        else:
+            bw = 1 if pixel_fmt == 0x0B else 4
+            bh = bw
+            block_bytes = 4 if pixel_fmt == 0x0B else BLOCK_FORMATS[pixel_fmt]
         width_blocks, height_blocks = (width + bw - 1) // bw, (height + bh - 1) // bh
         data_ptr = u64(source, b + 112)
         mip0 = u64(source, data_ptr)
         blockheight = 1 << (layout & 7)
         if blockheight > 32:
             raise ValueError("blockheight too high")
+        if pixel_fmt in ASTC_BLOCKS:
+            blocks = bytearray(width_blocks * height_blocks * 16)
+            for block_y in range(height_blocks):
+                for block_x in range(width_blocks):
+                    addr = mip0 + block_linear_offset(block_x, block_y, width_blocks,
+                                                      16, tiled, blockheight)
+                    if addr + 16 > len(source):
+                        raise ValueError(f"ASTC tex {index} block outside source")
+                    dst = (block_y * width_blocks + block_x) * 16
+                    blocks[dst:dst + 16] = source[addr:addr + 16]
+            raw_bgra = _texture2ddecoder.decode_astc(bytes(blocks), width, height, bw, bh)
+            if len(raw_bgra) != width * height * 4:
+                raise ValueError("ASTC decoder returned wrong pixel size")
+            pixels = bytearray(raw_bgra)
+            for o in range(0, len(pixels), 4):
+                pixels[o], pixels[o + 2] = pixels[o + 2], pixels[o]
+            info["png_status"] = "decoded"
+            info["color_interpretation"] = "ASTC decoded BGRA to RGBA"
+            info["astc_block"] = [bw, bh]
+            yield info, png_rgba(width, height, pixels)
+            continue
         pixels = bytearray(width * height * 4)
         for block_y in range(height_blocks):
             for block_x in range(width_blocks):
