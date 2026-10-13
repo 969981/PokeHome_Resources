@@ -42,7 +42,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.8.0"
+PARSER_VERSION = "mirror-0.9.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -312,6 +312,9 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             joined = join_item_hash(doc, associated)
             typed = decode_item8_semantic(data)
             doc["pkNX_item8_semantic_provenance"] = typed["schema_reference"]
+            doc["native_item_record_getter"] = typed["native_record_getter_rva"]
+            doc["native_item_field_getter_evidence"] = typed["native_field_getter_evidence"]
+            doc["native_elf_sha256"] = typed["native_elf_sha256"]
             doc["item_id_count"] = typed["item_count"]
             doc["semantic_record_count"] = len(typed["rows"])
             sink.put(main.with_name(main.stem + ".semantic.csv"),
@@ -334,7 +337,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 if k not in ("index_rows", "aux_pairs", "record_rows")
             }))
             return "partial", doc["record_count"], [
-                "Item8 fields matched pkNX with HOME real-byte validation; per-field native getters pending",
+                "HOME 4.1.0 original ELF confirms selected Item8 Getter widths, offsets and flags; their business names cross-referenced to pkNX",
                 "348 auxiliary index pairs remain untyped",
                 "hash presence mismatches within 1829 item IDs: " +
                     str(joined["in_domain_presence_mismatch_rows"])
