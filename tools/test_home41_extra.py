@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bnsh, decode_bffnt, decode_akpk
-from home41_bntx_to_png import decode_bntx
+from home41_bntx_to_png import decode_bntx, _texture2ddecoder
 from unpack_home41 import NCA, export_one, output_name
 
 ROMFS=Path(__file__).resolve().parents[1]/NCA/"1"
@@ -63,6 +63,8 @@ class ExtraTests(unittest.TestCase):
             self.assertTrue((out/name).is_file())
 
     def test_bc7_optional_real_image(self):
+        if _texture2ddecoder is None:
+            self.skipTest('BC7 native codec not installed; use pip install texture2ddecoder==1.0.6')
         blob=gzip.decompress(self.source(ASTC).read_bytes())
         results=list(decode_bntx(blob))
         self.assertTrue(results)
