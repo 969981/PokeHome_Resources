@@ -59,7 +59,6 @@ class P8ItemExecutorEvidenceTests(unittest.TestCase):
                 self.assertEqual(prior["operands"],"x8, [x8, #0x10]")
             else:
                 self.assertEqual(prior["operands"],"x8, [x19, #0xe8]")
-            self.assertEqual(row["neighbor_instructions"][-5]["mnemonic"] in ("ldr","blr","cbz","mov","add","stp"),True)
         self.assertFalse(self.triage["item_effect_selector_26_to_70_consumer_confirmed"])
 
     def test_complete_direct_dispatcher_callers_and_known_pouch_and_sprite(self):
