@@ -286,7 +286,6 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
         elif name == "item.dat":
             doc = decode_item_data(data)
             aux_path = source.with_name("item_hash_to_index.dat")
-            from home41_tables import decode_item_hash_index
             associated = decode_item_hash_index(read_file(aux_path))
             joined = join_item_hash(doc, associated)
             doc["join_dependencies"] = {aux_path.relative_to(repo).as_posix(): hash_file(aux_path)}
