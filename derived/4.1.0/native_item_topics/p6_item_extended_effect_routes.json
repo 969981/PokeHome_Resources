@@ -1,0 +1,1213 @@
+{
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "extended_dispatch_rva": "0x4FD270",
+  "original_table_rva": "0x657FE6",
+  "base_branch_address": "0x4FD294",
+  "first_selector": 26,
+  "last_selector": 70,
+  "selector_count": 45,
+  "exact_native_dispatch_anchor_count": 14,
+  "precise_formula": "main+0x4FD294 + 4*read_u8(main+0x657FE6+(selector-26))",
+  "type_byte_offset": 21,
+  "payload_byte_offset": 30,
+  "branch_type1": "extended selector dispatch and bit/parameter access",
+  "branch_type0_or2": "returns record+0x1E raw byte",
+  "other_types": "returns zero",
+  "caveat": "This is an attribute/effect access and conditional routing chain, not a semantic proof of battle effects",
+  "rows": [
+    {
+      "extended_selector": 26,
+      "table_index": 0,
+      "branch_table_byte": 0,
+      "native_target_rva": "0x4FD294",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD294",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD298",
+          "mnemonic": "and",
+          "operands": "w0, w8, #1",
+          "bytes": "00010012"
+        },
+        {
+          "pc": "0x4FD29C",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 27,
+      "table_index": 1,
+      "branch_table_byte": 5,
+      "native_target_rva": "0x4FD2A8",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2A8",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2AC",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #1, #1",
+          "bytes": "00050153"
+        },
+        {
+          "pc": "0x4FD2B0",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 28,
+      "table_index": 2,
+      "branch_table_byte": 8,
+      "native_target_rva": "0x4FD2B4",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2B4",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2B8",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #2, #1",
+          "bytes": "00090253"
+        },
+        {
+          "pc": "0x4FD2BC",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 29,
+      "table_index": 3,
+      "branch_table_byte": 11,
+      "native_target_rva": "0x4FD2C0",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2C0",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2C4",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #3, #1",
+          "bytes": "000d0353"
+        },
+        {
+          "pc": "0x4FD2C8",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 30,
+      "table_index": 4,
+      "branch_table_byte": 14,
+      "native_target_rva": "0x4FD2CC",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2CC",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2D0",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #4, #1",
+          "bytes": "00110453"
+        },
+        {
+          "pc": "0x4FD2D4",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 31,
+      "table_index": 5,
+      "branch_table_byte": 17,
+      "native_target_rva": "0x4FD2D8",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2D8",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2DC",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #5, #1",
+          "bytes": "00150553"
+        },
+        {
+          "pc": "0x4FD2E0",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 32,
+      "table_index": 6,
+      "branch_table_byte": 20,
+      "native_target_rva": "0x4FD2E4",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2E4",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2E8",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #6, #1",
+          "bytes": "00190653"
+        },
+        {
+          "pc": "0x4FD2EC",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 33,
+      "table_index": 7,
+      "branch_table_byte": 23,
+      "native_target_rva": "0x4FD2F0",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2F0",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD2F4",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #7, #1",
+          "bytes": "001d0753"
+        },
+        {
+          "pc": "0x4FD2F8",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 34,
+      "table_index": 8,
+      "branch_table_byte": 26,
+      "native_target_rva": "0x4FD2FC",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD2FC",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD300",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #8, #1",
+          "bytes": "00210853"
+        },
+        {
+          "pc": "0x4FD304",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 35,
+      "table_index": 9,
+      "branch_table_byte": 29,
+      "native_target_rva": "0x4FD308",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD308",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD30C",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #9, #1",
+          "bytes": "00250953"
+        },
+        {
+          "pc": "0x4FD310",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 36,
+      "table_index": 10,
+      "branch_table_byte": 32,
+      "native_target_rva": "0x4FD314",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD314",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD318",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xa, #1",
+          "bytes": "00290a53"
+        },
+        {
+          "pc": "0x4FD31C",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 37,
+      "table_index": 11,
+      "branch_table_byte": 35,
+      "native_target_rva": "0x4FD320",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD320",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD324",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xb, #1",
+          "bytes": "002d0b53"
+        },
+        {
+          "pc": "0x4FD328",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 38,
+      "table_index": 12,
+      "branch_table_byte": 38,
+      "native_target_rva": "0x4FD32C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD32C",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD330",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xc, #4",
+          "bytes": "003d0c53"
+        },
+        {
+          "pc": "0x4FD334",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 39,
+      "table_index": 13,
+      "branch_table_byte": 41,
+      "native_target_rva": "0x4FD338",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD338",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #2]",
+          "bytes": "28044079"
+        },
+        {
+          "pc": "0x4FD33C",
+          "mnemonic": "and",
+          "operands": "w0, w8, #0xf",
+          "bytes": "000d0012"
+        },
+        {
+          "pc": "0x4FD340",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 40,
+      "table_index": 14,
+      "branch_table_byte": 44,
+      "native_target_rva": "0x4FD344",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD344",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD348",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0x14, #4",
+          "bytes": "005d1453"
+        },
+        {
+          "pc": "0x4FD34C",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 41,
+      "table_index": 15,
+      "branch_table_byte": 47,
+      "native_target_rva": "0x4FD350",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD350",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x1, #3]",
+          "bytes": "280c4039"
+        },
+        {
+          "pc": "0x4FD354",
+          "mnemonic": "and",
+          "operands": "w0, w8, #0xf",
+          "bytes": "000d0012"
+        },
+        {
+          "pc": "0x4FD358",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 42,
+      "table_index": 16,
+      "branch_table_byte": 50,
+      "native_target_rva": "0x4FD35C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD35C",
+          "mnemonic": "ldr",
+          "operands": "w8, [x1]",
+          "bytes": "280040b9"
+        },
+        {
+          "pc": "0x4FD360",
+          "mnemonic": "lsr",
+          "operands": "w0, w8, #0x1c",
+          "bytes": "007d1c53"
+        },
+        {
+          "pc": "0x4FD364",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 43,
+      "table_index": 17,
+      "branch_table_byte": 53,
+      "native_target_rva": "0x4FD368",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD368",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD36C",
+          "mnemonic": "and",
+          "operands": "w0, w8, #0xf",
+          "bytes": "000d0012"
+        },
+        {
+          "pc": "0x4FD370",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 44,
+      "table_index": 18,
+      "branch_table_byte": 56,
+      "native_target_rva": "0x4FD374",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD374",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD378",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #4, #2",
+          "bytes": "00150453"
+        },
+        {
+          "pc": "0x4FD37C",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 45,
+      "table_index": 19,
+      "branch_table_byte": 59,
+      "native_target_rva": "0x4FD380",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD380",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD384",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #6, #1",
+          "bytes": "00190653"
+        },
+        {
+          "pc": "0x4FD388",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 46,
+      "table_index": 20,
+      "branch_table_byte": 62,
+      "native_target_rva": "0x4FD38C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD38C",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD390",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #7, #1",
+          "bytes": "001d0753"
+        },
+        {
+          "pc": "0x4FD394",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 47,
+      "table_index": 21,
+      "branch_table_byte": 65,
+      "native_target_rva": "0x4FD398",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD398",
+          "mnemonic": "ldurh",
+          "operands": "w8, [x1, #5]",
+          "bytes": "28504078"
+        },
+        {
+          "pc": "0x4FD39C",
+          "mnemonic": "and",
+          "operands": "w0, w8, #1",
+          "bytes": "00010012"
+        },
+        {
+          "pc": "0x4FD3A0",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 48,
+      "table_index": 22,
+      "branch_table_byte": 68,
+      "native_target_rva": "0x4FD3A4",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3A4",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3A8",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #9, #1",
+          "bytes": "00250953"
+        },
+        {
+          "pc": "0x4FD3AC",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 49,
+      "table_index": 23,
+      "branch_table_byte": 71,
+      "native_target_rva": "0x4FD3B0",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3B0",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3B4",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xa, #1",
+          "bytes": "00290a53"
+        },
+        {
+          "pc": "0x4FD3B8",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 50,
+      "table_index": 24,
+      "branch_table_byte": 74,
+      "native_target_rva": "0x4FD3BC",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3BC",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3C0",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xb, #1",
+          "bytes": "002d0b53"
+        },
+        {
+          "pc": "0x4FD3C4",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 51,
+      "table_index": 25,
+      "branch_table_byte": 77,
+      "native_target_rva": "0x4FD3C8",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3C8",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3CC",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xc, #1",
+          "bytes": "00310c53"
+        },
+        {
+          "pc": "0x4FD3D0",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 52,
+      "table_index": 26,
+      "branch_table_byte": 80,
+      "native_target_rva": "0x4FD3D4",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3D4",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3D8",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xd, #1",
+          "bytes": "00350d53"
+        },
+        {
+          "pc": "0x4FD3DC",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 53,
+      "table_index": 27,
+      "branch_table_byte": 83,
+      "native_target_rva": "0x4FD3E0",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3E0",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3E4",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #0xe, #1",
+          "bytes": "00390e53"
+        },
+        {
+          "pc": "0x4FD3E8",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 54,
+      "table_index": 28,
+      "branch_table_byte": 86,
+      "native_target_rva": "0x4FD3EC",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3EC",
+          "mnemonic": "ldrh",
+          "operands": "w8, [x1, #4]",
+          "bytes": "28084079"
+        },
+        {
+          "pc": "0x4FD3F0",
+          "mnemonic": "lsr",
+          "operands": "w0, w8, #0xf",
+          "bytes": "007d0f53"
+        },
+        {
+          "pc": "0x4FD3F4",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 55,
+      "table_index": 29,
+      "branch_table_byte": 89,
+      "native_target_rva": "0x4FD3F8",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD3F8",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x1, #6]",
+          "bytes": "28184039"
+        },
+        {
+          "pc": "0x4FD3FC",
+          "mnemonic": "and",
+          "operands": "w0, w8, #1",
+          "bytes": "00010012"
+        },
+        {
+          "pc": "0x4FD400",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 56,
+      "table_index": 30,
+      "branch_table_byte": 92,
+      "native_target_rva": "0x4FD404",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD404",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x1, #6]",
+          "bytes": "28184039"
+        },
+        {
+          "pc": "0x4FD408",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #1, #1",
+          "bytes": "00050153"
+        },
+        {
+          "pc": "0x4FD40C",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 57,
+      "table_index": 31,
+      "branch_table_byte": 95,
+      "native_target_rva": "0x4FD410",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD410",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x1, #6]",
+          "bytes": "28184039"
+        },
+        {
+          "pc": "0x4FD414",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #2, #1",
+          "bytes": "00090253"
+        },
+        {
+          "pc": "0x4FD418",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 58,
+      "table_index": 32,
+      "branch_table_byte": 98,
+      "native_target_rva": "0x4FD41C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD41C",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x1, #6]",
+          "bytes": "28184039"
+        },
+        {
+          "pc": "0x4FD420",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #3, #1",
+          "bytes": "000d0353"
+        },
+        {
+          "pc": "0x4FD424",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 59,
+      "table_index": 33,
+      "branch_table_byte": 101,
+      "native_target_rva": "0x4FD428",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD428",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x1, #6]",
+          "bytes": "28184039"
+        },
+        {
+          "pc": "0x4FD42C",
+          "mnemonic": "ubfx",
+          "operands": "w0, w8, #4, #1",
+          "bytes": "00110453"
+        },
+        {
+          "pc": "0x4FD430",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 60,
+      "table_index": 34,
+      "branch_table_byte": 104,
+      "native_target_rva": "0x4FD434",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD434",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #7]",
+          "bytes": "201cc039"
+        },
+        {
+          "pc": "0x4FD438",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 61,
+      "table_index": 35,
+      "branch_table_byte": 106,
+      "native_target_rva": "0x4FD43C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD43C",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #8]",
+          "bytes": "2020c039"
+        },
+        {
+          "pc": "0x4FD440",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 62,
+      "table_index": 36,
+      "branch_table_byte": 108,
+      "native_target_rva": "0x4FD444",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD444",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #9]",
+          "bytes": "2024c039"
+        },
+        {
+          "pc": "0x4FD448",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 63,
+      "table_index": 37,
+      "branch_table_byte": 110,
+      "native_target_rva": "0x4FD44C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD44C",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #0xa]",
+          "bytes": "2028c039"
+        },
+        {
+          "pc": "0x4FD450",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 64,
+      "table_index": 38,
+      "branch_table_byte": 112,
+      "native_target_rva": "0x4FD454",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD454",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #0xb]",
+          "bytes": "202cc039"
+        },
+        {
+          "pc": "0x4FD458",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 65,
+      "table_index": 39,
+      "branch_table_byte": 114,
+      "native_target_rva": "0x4FD45C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD45C",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #0xc]",
+          "bytes": "2030c039"
+        },
+        {
+          "pc": "0x4FD460",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 66,
+      "table_index": 40,
+      "branch_table_byte": 116,
+      "native_target_rva": "0x4FD464",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD464",
+          "mnemonic": "ldrb",
+          "operands": "w0, [x1, #0xd]",
+          "bytes": "20344039"
+        },
+        {
+          "pc": "0x4FD468",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 67,
+      "table_index": 41,
+      "branch_table_byte": 118,
+      "native_target_rva": "0x4FD46C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD46C",
+          "mnemonic": "ldrb",
+          "operands": "w0, [x1, #0xe]",
+          "bytes": "20384039"
+        },
+        {
+          "pc": "0x4FD470",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 68,
+      "table_index": 42,
+      "branch_table_byte": 120,
+      "native_target_rva": "0x4FD474",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD474",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #0xf]",
+          "bytes": "203cc039"
+        },
+        {
+          "pc": "0x4FD478",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 69,
+      "table_index": 43,
+      "branch_table_byte": 122,
+      "native_target_rva": "0x4FD47C",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD47C",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #0x10]",
+          "bytes": "2040c039"
+        },
+        {
+          "pc": "0x4FD480",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    },
+    {
+      "extended_selector": 70,
+      "table_index": 44,
+      "branch_table_byte": 124,
+      "native_target_rva": "0x4FD484",
+      "first_opcodes": [
+        {
+          "pc": "0x4FD484",
+          "mnemonic": "ldrsb",
+          "operands": "w0, [x1, #0x11]",
+          "bytes": "2044c039"
+        },
+        {
+          "pc": "0x4FD488",
+          "mnemonic": "ret",
+          "operands": "",
+          "bytes": "c0035fd6"
+        }
+      ],
+      "effect_payload_base": "raw Item8 record+0x1E, if source flag at +0x15 equals 1",
+      "business_semantics": "not recovered"
+    }
+  ]
+}
