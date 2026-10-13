@@ -66,6 +66,26 @@ remain unknown.
 Outputs: `pokedex_form_storage_index_table.csv` and `.json`
 (structural metadata). Meaning of packed values remains unproven.
 
+## Direct BFBS schema application: Pokedex blacklist
+
+`black_list_main_array.bfbs` is a real FlatBuffers reflection schema,
+not an inferred binary header. It defines root
+`PokedexBlackListMainArray.values` as a vector of
+`PokedexBlackListMain` tables with exact named 16-bit signed fields:
+
+- `devNo: short`
+- `formNo: short`
+
+Reading the adjacent 76-byte `black_list_main_array.bin` through
+those reflected field indices and optional-field defaults recovers
+**three records**: `(720,0)`, `(720,1)`, `(721,0)`.
+Unlike a vtable/raw-hex dump, this is a typed, named data table.
+The parser `tools/home41_reflection_decode.py` verifies vtable
+boundaries and field width, and rejects unsupported schema types.
+Mirrored outputs are `black_list_main_array.json` and
+`black_list_main_array.csv`. No behavioral interpretation of the
+blacklist beyond the original field names has been assigned.
+
 ## Status and validation
 
 - All three decoders enforce bounds, lengths, terminators, and the
