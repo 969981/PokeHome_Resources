@@ -17,6 +17,8 @@ from home41_elf_disasm_windows import window
 from home41_native_p6_consumer_scan import EXPECTED_ELF_SHA
 
 WINDOWS = [
+    ("PML item.dat unique direct caller before generic dispatch",0x4FD67C,0x280,0x560),
+    ("PML global item context client",0x500DC4,0x100,0x200),
     ("topics resource load and owner assignment",0x12B10,0x60,0x160),
     ("topics same-owner early read",0x12E5C,0xB0,0x180),
     ("topics same-owner second read",0x12EE0,0x90,0x120),
