@@ -118,3 +118,43 @@ SARC 中的 `.bntx` 可先用 `--kind archives --extract` 解包，再将输出�
 ```powershell
 python -c "import gzip, pathlib; p=pathlib.Path('derived/4.1.0/p2_waza_flatbuffer_diff.csv.gz'); p.with_suffix('').write_bytes(gzip.decompress(p.read_bytes()))"
 ```
+
+## 新增：原生 BNTX/BCn PNG 解码与真实图片（2026-10-13）
+
+本仓库已经不只是 `.bntx` 元数据识别：新增纯 Python 标准库 [`tools/home41_bntx_to_png.py`](tools/home41_bntx_to_png.py)，可以真正从 **RGBA8、BC1、BC3、BC4 UNORM、BC5 UNORM** Nintendo Switch BNTX 纹理解码并输出 PNG。支持 BlockLinear（Tegra）去平铺、`.bntx.gz` 解压和 SARC 中 `.bntx` 成员递归提取。
+
+**已实际提交 16 张真实 PNG：**
+
+- [RGBA8 `primitive_renderer_texture.png`](derived/4.1.0/png/primitive_renderer_texture.png) — 32×32，来自原文件，内容为白色。
+- [BC3 `icon_pokerus.png`](derived/4.1.0/png/icon_pokerus.png)、[`icon_pokerus_anti.png`](derived/4.1.0/png/icon_pokerus_anti.png) — 两张 44×44。
+- [BC3 `icon_label_00.png`](derived/4.1.0/png/icon_label_00.png) — 64×64。
+- [BC5 `icon_generation_00～11`](derived/4.1.0/png/channels/) — 十二张 64×64，**R/G 通道数据可视化**（不是游戏着色器的最终颜色）。
+
+**兼容性边界**：ASTC、BC7、BC6 等尚未实现的格式不能由此工具直接还原 PNG；对应项写入 `texture_index.csv` 的 `unsupported` 状态。不能认为 3,538 张 gzip 纹理全部转换成功。
+
+```powershell
+# 一条命令：全量 CSV/JSON + 可支持的 PNG
+python .\tools\export_home41_everything.py `
+    --root $romfs `
+    --out '..\HOME41_all_converted' `
+    --extract-sarc
+
+# 单独扫描 BNTX 与 SARC 纹理
+python .\tools\home41_bntx_to_png.py `
+    --root $romfs `
+    --out '..\HOME41_all_png' `
+    --archives
+```
+
+`export_home41_everything.py` 的输出包括：
+
+- `metadata/`：每个文件解析 JSON/CSV，`index.csv`、`summary.json`
+- `pml/`：全部可解析 Waza、Personal 原始字段长表
+- `png/`：PNG、`texture_index.csv`、错误/不支持状态
+- `conversion_report.json`：分步骤执行结果和能力边界
+
+## 已直接提交的 11 语言地点 CSV
+
+[`derived/4.1.0/place_names/`](derived/4.1.0/place_names/) 中有 `B2W2_English.csv`、`B2W2_Simp_Chinese.csv` 等 **11 语言 × 154 条 = 1,694 条** 直接从源 DAT/AHTB 解密得到的地名记录（并非凭名称翻译），包含原始 label / FNV64 / index。
+
+注意：这些文件及上述 16 张 PNG 已经真正转换并提交；**完整 12,082 个源文件尚未整仓跑通并发布所有衍生文件**。GitHub Actions 首次尝试在无执行步骤的情况下失败，不能将其视作完成验收。当前的 `derived` 目录代表已提交的真实转换子集，脚本代表可用转换流程。
