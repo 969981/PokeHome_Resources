@@ -31,6 +31,7 @@ from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
 from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bffnt, decode_bnsh, decode_akpk
 from home41_tables import decode_grammar, grammar_csv_rows, decode_item_hash_index, decode_form_storage_index
 from home41_reflection_decode import decode_reflected_scalar_vector_tables
+from home41_topics import decode_pokedex_topics
 from home41_pokedex_item import (
     decode_pokemon_test, decode_pokemon_valid, decode_pokedex_form,
     decode_pokedex_shape, decode_pokedex_sugata, decode_item_data,
@@ -39,7 +40,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.4.0"
+PARSER_VERSION = "mirror-0.5.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -100,6 +101,8 @@ def type_for(relative: Path) -> str:
     name = relative.name.lower()
     suffix = relative.suffix.lower()
     rel = relative.as_posix().lower()
+    if rel == "bin/appli/mtt_pokedex/bin/topics_data.bin":
+        return "topics"
     if rel in (
         "bin/pokemon/pokemon_list/pokemon_test_list.bin",
         "bin/pokemon/pokemon_list/pokemon_valid_list.bin",
@@ -254,6 +257,15 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
     count = 0
     if main is None:
         return "unsupported", 0, ["format parser not implemented"], sink.commit()
+
+    if category == "topics":
+        doc = decode_pokedex_topics(read_file(source))
+        rows = doc["rows"]
+        sink.put(main.with_suffix(".csv"), csv_bytes(rows, list(rows[0])))
+        sink.put(main, json_bytes({k: v for k, v in doc.items() if k != "rows"}))
+        return "partial", len(rows), [
+            "7 groups, 99 fixed slots, 140 active and 553 identical placeholder records; inner u32 semantics unknown"
+        ], sink.commit()
 
     if category == "pokemon":
         data = read_file(source)
@@ -579,7 +591,7 @@ def main(argv=None):
     p.add_argument("--out", type=Path, default=Path("Unpack"), help="output root")
     task = p.add_mutually_exclusive_group()
     task.add_argument("--file", help="one RomFS file, relative to repository or RomFS")
-    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other", "tables", "pokemon"])
+    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other", "tables", "pokemon", "topics"])
     task.add_argument("--all", action="store_true", help="run all RomFS formats")
     p.add_argument("--dry-run", action="store_true", help="plan without writing")
     p.add_argument("--resume", action="store_true", help="reuse verified outputs")
