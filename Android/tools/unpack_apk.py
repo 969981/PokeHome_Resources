@@ -61,9 +61,12 @@ def inspect_members(infos):
         if not (info.is_dir() or stat.S_ISREG(mode) or stat.S_IFMT(mode) == 0):
             raise ValueError("unsupported ZIP member type")
         key = str(path).rstrip("/")
-        if key in names or key.casefold() in folded:
-            raise ValueError("duplicate / case-folding collision")
+        if key in names:
+            raise ValueError("duplicate ZIP member name")
         names.add(key)
+        # Case-only name conflicts exist in this exact APK. Extraction uses
+        # deterministic aliases for those entries, and manifest tracks both
+        # the original archive path and emitted path.
         folded.add(key.casefold())
         if info.file_size > MAX_MEMBER:
             raise ValueError("oversized member")
@@ -77,6 +80,12 @@ def extract(apk, root):
     with zipfile.ZipFile(apk) as archive:
         infos = archive.infolist()
         declared = inspect_members(infos)
+        folded_counts = {}
+        for info in infos:
+            if info.is_dir():
+                continue
+            key = str(safe_member(info.filename)).casefold()
+            folded_counts[key] = folded_counts.get(key, 0) + 1
         if (root / "raw").exists():
             raise FileExistsError("output/raw already exists; use a new output path")
         raw = root / "raw"
@@ -85,7 +94,13 @@ def extract(apk, root):
         manifest = []
         for entry in infos:
             relative = safe_member(entry.filename)
-            target = raw.joinpath(*relative.parts)
+            raw_key = str(relative)
+            output_relative = relative
+            if not entry.is_dir() and folded_counts.get(raw_key.casefold(), 0) > 1:
+                name = relative.name
+                marker = hashlib.sha256(raw_key.encode("utf-8")).hexdigest()[:10]
+                output_relative = relative.with_name(name + ".__case_" + marker)
+            target = raw.joinpath(*output_relative.parts)
             if not target.resolve().is_relative_to(raw.resolve()):
                 raise ValueError("ZIP member escaped output root")
             if entry.is_dir():
@@ -108,7 +123,8 @@ def extract(apk, root):
             if actual != entry.file_size:
                 raise ValueError("ZIP byte count mismatch: " + entry.filename)
             manifest.append({
-                "path": str(relative), "bytes": actual, "crc32": f"{entry.CRC:08x}",
+                "path": str(relative), "extraction_path": str(output_relative),
+                "bytes": actual, "crc32": f"{entry.CRC:08x}",
                 "sha256": digest.hexdigest(),
             })
         if seen_bytes != declared:
@@ -163,7 +179,7 @@ def main(argv=None):
                 raise ValueError("missing or hash-mismatched key member: " + name)
             report["key_files"][name] = {"sha256": match["sha256"], "bytes": match["bytes"]}
         with open(reports / "apk_manifest.csv", "w", newline="", encoding="utf-8") as fp:
-            writer = csv.DictWriter(fp, fieldnames=["path", "bytes", "crc32", "sha256"])
+            writer = csv.DictWriter(fp, fieldnames=["path", "extraction_path", "bytes", "crc32", "sha256"])
             writer.writeheader()
             writer.writerows(manifest)
         report["zip_file_count"] = len(manifest)
