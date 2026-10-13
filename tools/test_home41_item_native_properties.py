@@ -58,7 +58,7 @@ class Item26NativePropertiesTests(unittest.TestCase):
                 raw=int.from_bytes(src.record_bytes[off:off+width//8],"little",signed=signed)
                 # Native extractor operation is solely bitmask/shift, not
                 # guessed semantic name or numerical substitution.
-                if label.startswith("flag10_bit"):
+                if label.startswith("flag10_bit") or label.startswith("flags_10_bit"):
                     raw=(raw>>int(label.split("bit")[-1]))&1
                 elif label=="flags_10_low5":
                     raw&=0x1f
@@ -80,6 +80,20 @@ class Item26NativePropertiesTests(unittest.TestCase):
         self.assertEqual(raw[2]["native_s02_watts_price_pkNX"],40)
         self.assertEqual(raw[100]["native_s04_signed_sprite_pkNX"],-1)
         self.assertTrue(all(v["native_s11_flags_10_low5"]<32 for v in raw))
+        for bit_name in (
+            "native_s08_flag10_bit12", "native_s12_flags_10_bit5",
+            "native_s13_flags_10_bit6", "native_s24_flags_10_bit7",
+            "native_s25_flags_10_bit13",
+        ):
+            self.assertTrue(all(v[bit_name] in (0,1) for v in raw),bit_name)
+        # Independent raw-byte check: these must be boolean *bits*, never
+        # an unshifted 16-bit source word such as 0x201F.
+        sample=native_item_record(self.blob,1).record_bytes
+        mask=struct.unpack_from("<H",sample,0x10)[0]
+        self.assertEqual(raw[1]["native_s12_flags_10_bit5"], (mask>>5)&1)
+        self.assertEqual(raw[1]["native_s13_flags_10_bit6"], (mask>>6)&1)
+        self.assertEqual(raw[1]["native_s24_flags_10_bit7"], (mask>>7)&1)
+        self.assertEqual(raw[1]["native_s25_flags_10_bit13"], (mask>>13)&1)
         self.assertTrue(all(0<=v["native_s19_flags_17_low4"]<16 for v in raw))
         self.assertTrue(all(0<=v["native_s20_flags_17_high4"]<16 for v in raw))
         self.assertEqual(max(v["native_s02_watts_price_pkNX"] for v in raw),8000)
