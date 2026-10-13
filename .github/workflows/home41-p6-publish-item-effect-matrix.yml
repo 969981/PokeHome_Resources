@@ -1,0 +1,82 @@
+name: HOME 4.1.0 P6 publish 45 Native item effect values
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p6-publish-item-effect-matrix.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p6-publish-item-effect-matrix
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run exact original Item8 45 effects and 26 property tests
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p test_home41_item_native_effect_values.py -v
+          python -m unittest discover -s tools -p test_home41_item_native_properties.py -v
+          python -m unittest discover -s tools -p test_home41_item8_semantic.py -v
+          python -m unittest discover -s tools -p test_home41_native_item_getter.py -v
+          python -m unittest discover -s tools -p test_home41_pokedex_item.py -v
+      - name: Produce actual 1829 x 45 effect values CSV and verify manifest
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind pokemon --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --kind pokemon --strict
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('Unpack')
+          s=json.loads((root/'_meta/summary.json').read_text())
+          assert s['parser_version']=='mirror-0.9.3',s
+          assert s['source_files']==12074 and s['total_outputs']==47851,s
+          assert s['status_counts']=={'converted':6700,'partial':5371,'unsupported':3},s
+          manifest=json.loads((root/'_meta/manifest.json').read_text())
+          entry=next(x for x in manifest['files'] if x['source_path'].endswith('/bin/pml/item/item.dat'))
+          assert entry['status']=='partial' and len(entry['outputs'])==9,entry
+          filename=root/'57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.native_effects.csv'
+          with filename.open(encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          assert len(rows)==1829
+          assert len(rows[0])==50
+          assert rows[2]['native_effect_s26_raw']=='1'
+          assert rows[2]['native_effect_s70_raw']=='1'
+          assert rows[17]['native_effect_variant_at_0x15']=='1'
+          assert rows[17]['native_effect_s66_raw']=='20'
+          print('Effect value matrix verified:',len(rows),'x 45')
+          PY
+      - name: Commit real 45 effect selector values and refreshed manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          root=Path('Unpack')
+          manifest=json.loads((root/'_meta/manifest.json').read_text())
+          item=next(x for x in manifest['files'] if x['source_path'].endswith('/bin/pml/item/item.dat'))
+          paths=[str(root/o['path']) for o in item['outputs']]
+          paths += [str(p) for p in (root/'_meta').glob('*') if p.is_file()]
+          for path in paths: subprocess.run(['git','add','-f','--',path],check=True)
+          print('staged outputs:',len(paths))
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: export original HOME 1829 x 45 Native gated Item8 effect values'
+            git reset --hard HEAD
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
