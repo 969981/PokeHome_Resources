@@ -1,4 +1,5 @@
 name: HOME 4.1.0 P7 original ItemSprite business sink
+# Correct ADRP+ADD effective RVA: 0x616BA7 and 0x60AFF3.
 on:
   push:
     branches: ['4.1.0']
