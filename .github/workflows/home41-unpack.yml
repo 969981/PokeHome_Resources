@@ -10,6 +10,8 @@ on:
       - 'tools/export_home41_resources.py'
       - 'tools/home41_romfs_core.py'
       - 'tools/home41_bntx_to_png.py'
+      - 'tools/home41_extra_formats.py'
+      - 'tools/test_home41_extra.py'
       - '.github/workflows/home41-unpack.yml'
   workflow_dispatch:
 
@@ -29,6 +31,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install optional BC7 decoder
+        run: python -m pip install texture2ddecoder==1.0.6
       - name: Syntax check
         run: python -m compileall -q tools
       - name: Existing and mirrored real-byte tests
