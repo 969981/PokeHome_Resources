@@ -49,6 +49,34 @@ class ItemSemanticTests(unittest.TestCase):
         self.assertEqual(unused["record_index"], 0)
         self.assertEqual(unused["item_sprite_u16"], 65535)
 
+    def test_native_u32_width_sign_and_real_record_regression(self):
+        from home41_native_item_getter import native_item_record
+        import struct
+
+        semantic = decode_item8_semantic(self.raw)
+        rows = semantic["rows"]
+        self.assertEqual(semantic["native_price_field_width_bits"],
+                         {"price": 32, "watts": 32, "alternate": 32})
+        self.assertTrue(semantic["native_sprite_field_signed"])
+        self.assertEqual(semantic["native_field_getter_evidence"],
+                         "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json")
+        self.assertEqual(len(rows), 1829)
+        for row in rows:
+            raw = native_item_record(self.raw, row["item_id"]).record_bytes
+            self.assertEqual(row["price_u32"], struct.unpack_from("<I", raw, 0)[0])
+            self.assertEqual(row["price_watts_native_u32"], struct.unpack_from("<I", raw, 4)[0])
+            self.assertEqual(row["price_alternate_native_u32"], struct.unpack_from("<I", raw, 8)[0])
+            self.assertEqual(row["price_watts_u16"], row["price_watts_native_u32"])
+            self.assertEqual(row["price_alternate_u16"], row["price_alternate_native_u32"])
+            self.assertEqual(row["item_sprite_u16"], struct.unpack_from("<H", raw, 0x1a)[0])
+            self.assertEqual(row["item_sprite_native_i16"], struct.unpack_from("<h", raw, 0x1a)[0])
+            self.assertEqual(row["native_price_watts_rva"], "0x4FD114")
+            self.assertEqual(row["native_item_sprite_signed_rva"], "0x4FD12C")
+        self.assertEqual(rows[100]["item_sprite_native_i16"], -1)
+        self.assertEqual(rows[100]["item_sprite_u16"], 65535)
+        self.assertEqual(max(r["price_watts_native_u32"] for r in rows), 8000)
+        self.assertEqual(max(r["price_alternate_native_u32"] for r in rows), 1000)
+
     def test_item_hash_row_outside_domain_not_valid_item_id(self):
         structural = decode_item_data(self.raw)
         hashes = decode_item_hash_index(HASH.read_bytes())
