@@ -31,7 +31,7 @@ from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.1.1"
+PARSER_VERSION = "mirror-0.1.2"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -311,13 +311,19 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             member = data[info["offset"]:info["offset"] + info["bytes"]]
             sink.put(raw_prefix / member_path, member)
             if member.startswith((b"FLYT", b"FLAN")):
-                sections = layout_sections(member)
-                sink.put(nested_prefix / member_path.with_suffix(".json"),
-                         json_bytes({"member": info["name"], "sections": sections}))
+                try:
+                    sections = layout_sections(member)
+                    sink.put(nested_prefix / member_path.with_suffix(".json"),
+                             json_bytes({"member": info["name"], "sections": sections}))
+                except (ValueError, struct.error) as exc:
+                    warnings.append(info["name"] + ": unparsed layout: " + str(exc))
             if member.startswith(b"BNTX"):
-                n, skipped = export_png(member, nested_prefix / member_path, sink)
-                if skipped:
-                    warnings.append(info["name"] + ": " + "; ".join(skipped[:3]))
+                try:
+                    n, skipped = export_png(member, nested_prefix / member_path, sink)
+                    if skipped:
+                        warnings.append(info["name"] + ": " + "; ".join(skipped[:3]))
+                except (ValueError, struct.error, IndexError) as exc:
+                    warnings.append(info["name"] + ": unparsed BNTX: " + str(exc))
         return ("partial" if warnings else "converted"), count, warnings, sink.commit()
 
     if name.endswith(".bntx.gz") or suffix == ".bntx":
@@ -329,7 +335,10 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             image_prefix = main
         else:
             image_prefix = main.with_suffix(".bntx")
-        count, skipped = export_png(data, image_prefix, sink)
+        try:
+            count, skipped = export_png(data, image_prefix, sink)
+        except (ValueError, struct.error, IndexError) as exc:
+            count, skipped = 0, ["BNTX PNG decoder could not parse pixels: " + str(exc)]
         if skipped:
             warnings.extend(skipped)
         if not count:
