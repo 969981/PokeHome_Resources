@@ -34,6 +34,7 @@ from home41_reflection_decode import decode_reflected_scalar_vector_tables
 from home41_topics import decode_pokedex_topics
 from home41_topics_semantic import annotate_topics
 from home41_item8_semantic import decode_item8_semantic
+from home41_item_native_properties import decode_item_native_properties
 from home41_pokedex_item import (
     decode_pokemon_test, decode_pokemon_valid, decode_pokedex_form,
     decode_pokedex_shape, decode_pokedex_sugata, decode_item_data,
@@ -42,7 +43,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.9.0"
+PARSER_VERSION = "mirror-0.9.1"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -311,6 +312,12 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             associated = decode_item_hash_index(read_file(aux_path))
             joined = join_item_hash(doc, associated)
             typed = decode_item8_semantic(data)
+            native_matrix = decode_item_native_properties(data)
+            sink.put(main.with_name(main.stem + ".native_properties.csv"),
+                     csv_bytes(native_matrix["rows"], native_matrix["column_names"]))
+            doc["native_item_selector_matrix"] = {
+                k: v for k, v in native_matrix.items() if k not in ("rows", "column_names")
+            }
             doc["pkNX_item8_semantic_provenance"] = typed["schema_reference"]
             doc["native_item_record_getter"] = typed["native_record_getter_rva"]
             doc["native_item_field_getter_evidence"] = typed["native_field_getter_evidence"]
@@ -337,7 +344,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 if k not in ("index_rows", "aux_pairs", "record_rows")
             }))
             return "partial", doc["record_count"], [
-                "HOME 4.1.0 original ELF confirms selected Item8 Getter widths, offsets and flags; their business names cross-referenced to pkNX",
+                "Original HOME native 26-selector/48-byte Item8 matrix plus 25 Getter opcode proofs; pkNX field names remain independently cross-referenced",
                 "348 auxiliary index pairs remain untyped",
                 "hash presence mismatches within 1829 item IDs: " +
                     str(joined["in_domain_presence_mismatch_rows"])
