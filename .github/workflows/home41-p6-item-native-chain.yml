@@ -1,4 +1,5 @@
 name: HOME 4.1.0 P6 item data-pointer consumer hunt
+# Now traces the exact record Getter main+0x4FD784.
 on:
   push:
     branches: ['4.1.0']
