@@ -2,6 +2,12 @@
 
 日期：2026-10-13；分支：`4.1.0`。
 
+> **P7 续篇已发布**：[UNPACK_NATIVE_ITEM_CONSUMERS_P7.md](UNPACK_NATIVE_ITEM_CONSUMERS_P7.md)。
+> P7 已用原始 ELF 证明 Item8 Native Pouch 业务使用、九个背包存储分区、
+> 有符号 Sprite 图标资源键与 fallback；战斗实际效果消费者仍未闭合。
+> P7 当前镜像版本 `mirror-1.0.0`，保持 5371 partial / 3 unsupported。
+
+
 ## 审计边界
 
 使用本仓库原始 `..._NCA/0/main.elf`，SHA-256 固定为
