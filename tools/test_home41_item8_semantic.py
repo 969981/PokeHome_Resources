@@ -85,6 +85,9 @@ class ItemSemanticTests(unittest.TestCase):
             self.assertEqual(entries[2]["pouch_name_pkNX"], "Balls")
             meta = json.loads((out / main.with_name("item.semantic.json")).read_text())
             self.assertEqual(meta["item_count"], 1829)
+            self.assertEqual(meta["native_record_getter_rva"], "0x4FD784")
+            self.assertEqual(meta["native_elf_sha256"], "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a")
+            self.assertEqual(entries[2]["native_record_pointer_getter_rva"], "0x4FD784")
             self.assertIn("kwsch/pkNX", meta["schema_reference"])
 
 if __name__ == "__main__":
