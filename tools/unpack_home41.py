@@ -32,6 +32,7 @@ from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bff
 from home41_tables import decode_grammar, grammar_csv_rows, decode_item_hash_index, decode_form_storage_index
 from home41_reflection_decode import decode_reflected_scalar_vector_tables
 from home41_topics import decode_pokedex_topics
+from home41_item8_semantic import decode_item8_semantic
 from home41_pokedex_item import (
     decode_pokemon_test, decode_pokemon_valid, decode_pokedex_form,
     decode_pokedex_shape, decode_pokedex_sugata, decode_item_data,
@@ -40,7 +41,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.5.0"
+PARSER_VERSION = "mirror-0.6.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -300,6 +301,14 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             aux_path = source.with_name("item_hash_to_index.dat")
             associated = decode_item_hash_index(read_file(aux_path))
             joined = join_item_hash(doc, associated)
+            typed = decode_item8_semantic(data)
+            doc["pkNX_item8_semantic_provenance"] = typed["schema_reference"]
+            doc["item_id_count"] = typed["item_count"]
+            doc["semantic_record_count"] = len(typed["rows"])
+            sink.put(main.with_name(main.stem + ".semantic.csv"),
+                     csv_bytes(typed["rows"], list(typed["rows"][0])))
+            sink.put(main.with_name(main.stem + ".semantic.json"),
+                     json_bytes({k: v for k, v in typed.items() if k != "rows"}))
             doc["join_dependencies"] = {aux_path.relative_to(repo).as_posix(): hash_file(aux_path)}
             doc["hash_join_summary"] = {
                 k: v for k, v in joined.items() if k != "rows"
@@ -316,8 +325,10 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 if k not in ("index_rows", "aux_pairs", "record_rows")
             }))
             return "partial", doc["record_count"], [
-                "48-byte item fields and auxiliary index pair meanings unresolved",
-                "hash join mismatches: " + str(joined["presence_mismatch_rows"])
+                "Item8 fields matched pkNX with HOME real-byte validation; per-field native getters pending",
+                "348 auxiliary index pairs remain untyped",
+                "hash presence mismatches within 1829 item IDs: " +
+                    str(joined["in_domain_presence_mismatch_rows"])
             ], sink.commit()
         else:
             raise ValueError("unhandled pokemon data format")
