@@ -1,0 +1,60 @@
+{
+  "version": "4.1.0",
+  "resource": "bin/pml/waza/beluga/waza0001.wazabin",
+  "size_bytes": 52,
+  "interpretation": "FlatBuffers untyped field bytes; u32 values are only candidates",
+  "root_offset": 24,
+  "table_vtable_offset": 4,
+  "fields": [
+    {
+      "field_index": 0,
+      "present": true,
+      "offset_in_object": 8,
+      "raw_hex": "01000000",
+      "u32_candidate": 1
+    },
+    {
+      "field_index": 1,
+      "present": true,
+      "offset_in_object": 7,
+      "raw_hex": "01",
+      "u32_candidate": null
+    },
+    {
+      "field_index": 2,
+      "present": false
+    },
+    {
+      "field_index": 3,
+      "present": false
+    },
+    {
+      "field_index": 4,
+      "present": true,
+      "offset_in_object": 12,
+      "raw_hex": "01000000",
+      "u32_candidate": 1
+    },
+    {
+      "field_index": 5,
+      "present": true,
+      "offset_in_object": 16,
+      "raw_hex": "28000000",
+      "u32_candidate": 40
+    },
+    {
+      "field_index": 6,
+      "present": true,
+      "offset_in_object": 20,
+      "raw_hex": "64000000",
+      "u32_candidate": 100
+    },
+    {
+      "field_index": 7,
+      "present": true,
+      "offset_in_object": 24,
+      "raw_hex": "23000000",
+      "u32_candidate": 35
+    }
+  ]
+}
