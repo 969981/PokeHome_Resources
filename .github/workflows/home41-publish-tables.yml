@@ -76,6 +76,9 @@ jobs:
           PY
           if ! git diff --cached --quiet; then
             git commit -m 'data: publish decoded grammar selectors and item/form lookup tables'
+            # The scoped push intentionally leaves generated _meta changes unstaged:
+            # Release is still running. The data-only commit is safe to rebase.
+            git reset --hard HEAD
             git pull --rebase origin 4.1.0
             git push origin HEAD:4.1.0
           fi
