@@ -17,8 +17,8 @@ from home41_elf_disasm_windows import window
 from home41_item8_semantic import decode_item8_semantic
 
 ELF_SHA="bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a"
-TEXT_TEMPLATE_RVA=0x6160BA7
-FALLBACK_RVA=0x60AFFF3
+TEXT_TEMPLATE_RVA=0x616BA7
+FALLBACK_RVA=0x60AFF3
 SELECTOR=4
 CHECK={
     0x2C3040:("bl","#0x4fd4f8"),
