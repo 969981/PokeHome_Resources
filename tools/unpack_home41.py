@@ -1,0 +1,490 @@
+#!/usr/bin/env python3
+"""Pokémon HOME 4.1.0 read-only RomFS -> mirrored Unpack tree.
+
+Run from the repository root:
+  python tools/unpack_home41.py --root . --out Unpack --dry-run
+  python tools/unpack_home41.py --root . --out Unpack --kind pml --resume
+  python tools/unpack_home41.py --root . --out Unpack --all --resume
+  python tools/unpack_home41.py --root . --out Unpack --verify --strict
+
+Output names and statuses: docs/UNPACK_OUTPUT_SPEC.md.
+This does not edit original resources. Python 3.9+, standard library.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import gzip
+import hashlib
+import json
+import os
+import re
+import struct
+import sys
+import tempfile
+from collections import Counter
+from pathlib import Path
+
+from export_home41_resources import fbs_details, layout_sections, safe_member
+from home41_bntx_to_png import decode_bntx
+from home41_p2_pml_readonly import payload, records
+from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
+
+NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
+SOURCE_PREFIX = NCA + "/1/"
+PARSER_VERSION = "mirror-0.1.0"
+MAX_SOURCE = 128 * 1024 * 1024
+MAX_EXPANDED = 96 * 1024 * 1024
+COLS = [
+    "source_path", "source_size", "source_sha256", "detected_format",
+    "parser", "parser_version", "status", "outputs", "output_sha256",
+    "records", "warning", "error", "collision_fallback",
+]
+
+
+def digest(blob: bytes) -> str:
+    return hashlib.sha256(blob).hexdigest()
+
+
+def hash_file(path: Path) -> str:
+    state = hashlib.sha256()
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            state.update(block)
+    return state.hexdigest()
+
+
+def json_bytes(value) -> bytes:
+    return (json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+
+
+def csv_bytes(rows, fields):
+    import io
+    buf = io.StringIO(newline="")
+    writer = csv.DictWriter(buf, fieldnames=fields, extrasaction="ignore")
+    writer.writeheader()
+    writer.writerows(rows)
+    return buf.getvalue().encode("utf-8-sig")
+
+
+def check_in_directory(root: Path, child: Path) -> None:
+    if not child.is_relative_to(root):
+        raise ValueError("destination escapes output directory: " + str(child))
+
+
+def save_atomic(path: Path, blob: bytes, out: Path) -> None:
+    check_in_directory(out, path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if any(p.is_symlink() for p in (path, *path.parents) if p == out or out in p.parents):
+        raise ValueError("output symlink refused: " + str(path))
+    fd, tmp = tempfile.mkstemp(prefix=".unpack-", dir=path.parent)
+    try:
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(blob)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
+
+
+def type_for(relative: Path) -> str:
+    name = relative.name.lower()
+    suffix = relative.suffix.lower()
+    if suffix == ".wazabin" or suffix == ".perbin":
+        return "pml"
+    if suffix in (".tbl", ".dat"):
+        return "messages"
+    if suffix == ".arc":
+        return "archives"
+    if suffix == ".bntx" or name.endswith(".bntx.gz"):
+        return "images"
+    return "other"
+
+
+def output_name(relative: Path) -> Path | None:
+    name = relative.name
+    lower = name.lower()
+    suffix = relative.suffix.lower()
+    if lower.endswith(".bntx.gz"):
+        new = name[:-3]  # actual gunzip -> .bntx (not fake PNG)
+    elif suffix in (".dat",):
+        new = name[: -len(relative.suffix)] + ".csv"
+    elif suffix in (".tbl", ".arc", ".perbin", ".wazabin"):
+        new = name[: -len(relative.suffix)] + ".json"
+    elif suffix == ".bntx":
+        new = name[: -len(relative.suffix)] + ".png"
+    elif suffix == ".bin" and (lower.endswith(("_lyt.bin", "_uikit.bin")) or lower.startswith("grow_")):
+        new = name[: -len(relative.suffix)] + ".json"
+    else:
+        return None
+    return relative.with_name(new)
+
+
+def enumerate_sources(repo: Path):
+    folder = repo / NCA / "1"
+    if not folder.is_dir():
+        raise ValueError("RomFS directory missing: " + str(folder))
+    return [
+        p for p in sorted(folder.rglob("*"))
+        if p.is_file() and not p.is_symlink()
+        and not any(q.is_symlink() for q in p.relative_to(folder).parents if q != Path("."))
+    ]
+
+
+def plan_paths(sources, repo: Path):
+    """Collision-safe path plan; fallback to full source suffix only if needed."""
+    occupied = {}
+    plans, collisions = {}, []
+    for source in sources:
+        rel = source.relative_to(repo)
+        target = output_name(rel)
+        if target is None:
+            plans[rel.as_posix()] = {"main": None, "collision_fallback": False}
+            continue
+        first = target
+        key = first.as_posix().casefold()
+        fallback = False
+        if key in occupied:
+            target = rel.with_name(rel.name + (".csv" if rel.suffix.lower() == ".dat" else ".json"))
+            fallback = True
+            key = target.as_posix().casefold()
+            collisions.append({"path": rel.as_posix(), "collides_with": occupied[first.as_posix().casefold()],
+                               "fallback": target.as_posix()})
+            if key in occupied:
+                raise ValueError("output name collision cannot be resolved: " + rel.as_posix())
+        occupied[key] = rel.as_posix()
+        plans[rel.as_posix()] = {"main": target.as_posix(), "collision_fallback": fallback}
+    return plans, collisions
+
+
+class Sink:
+    def __init__(self, out: Path):
+        self.out = out
+        self.outputs = []
+
+    def put(self, relative: Path | str, content: bytes):
+        rel = Path(relative)
+        if rel.is_absolute() or ".." in rel.parts or not rel.parts:
+            raise ValueError("unsafe destination path: " + str(relative))
+        path = self.out / rel
+        save_atomic(path, content, self.out)
+        self.outputs.append({"path": rel.as_posix(), "sha256": digest(content), "size": len(content)})
+
+
+def read_file(path: Path):
+    if path.stat().st_size > MAX_SOURCE:
+        raise ValueError("source file exceeds 128 MiB parser limit")
+    return path.read_bytes()
+
+
+def decompressed(path: Path):
+    with gzip.open(path, "rb") as stream:
+        value = stream.read(MAX_EXPANDED + 1)
+    if len(value) > MAX_EXPANDED:
+        raise ValueError("decompressed BNTX exceeds 96 MiB")
+    if not value.startswith(b"BNTX"):
+        raise ValueError("gzip payload is not BNTX")
+    return value
+
+
+def export_png(bntx: bytes, prefix: Path, sink: Sink):
+    decoded = 0
+    unresolved = []
+    textures = list(decode_bntx(bntx))
+    if not textures:
+        raise ValueError("BNTX has no texture records")
+    multiple = len(textures) != 1
+    for meta, png in textures:
+        if png is None:
+            unresolved.append(meta.get("reason", "unsupported texture"))
+            continue
+        if not png.startswith(b"\x89PNG\r\n\x1a\n"):
+            raise ValueError("invalid PNG from decoder")
+        target = (prefix / ("texture_%03d.png" % meta["texture_index"])
+                  if multiple else prefix.with_suffix(".png"))
+        sink.put(target, png)
+        decoded += 1
+    return decoded, unresolved
+
+
+def export_one(source: Path, repo: Path, out: Path, main: Path | None):
+    relative = source.relative_to(repo)
+    category = type_for(source.relative_to(repo / NCA / "1"))
+    suffix = source.suffix.lower()
+    name = source.name.lower()
+    sink = Sink(out)
+    warnings = []
+    count = 0
+    if main is None:
+        return "unsupported", 0, ["format parser not implemented"], sink.outputs
+
+    if suffix == ".tbl":
+        rows = [{"index": i, "label": label, "hash_fnv64": f"{h:016X}"}
+                for i, (label, h) in enumerate(ahtb_labels(read_file(source)))]
+        sink.put(main, json_bytes(rows))
+        return "converted", len(rows), warnings, sink.outputs
+
+    if suffix == ".dat":
+        twin = source.with_suffix(".tbl")
+        if twin.is_file():
+            names = ahtb_labels(read_file(twin))
+            lines = dat_lines(read_file(source))
+            if len(names) == len(lines) + 1 and names[-1][0].lower().endswith("max"):
+                names = names[:-1]
+            if len(names) != len(lines):
+                raise ValueError("AHTB/DAT text and label counts disagree")
+            rows = [
+                {"index": line["index"], "label": label, "hash_fnv64": f"{fnv:016X}",
+                 "text": line["text"], "flags": line["flags"], "source_offset": line["offset"]}
+                for (label, fnv), line in zip(names, lines)
+            ]
+            sink.put(main, csv_bytes(rows, ["index", "label", "hash_fnv64", "text", "flags", "source_offset"]))
+            return "converted", len(rows), warnings, sink.outputs
+        if "sort_string" in relative.parts:
+            raw = read_file(source)
+            if len(raw) % 2:
+                raise ValueError("sort table has odd byte length")
+            rows = [{"index": i, "value_u16": x[0]}
+                    for i, x in enumerate(struct.iter_unpack("<H", raw))]
+            sink.put(main, csv_bytes(rows, ["index", "value_u16"]))
+            return "partial", len(rows), ["sort index semantic meaning unverified"], sink.outputs
+        return "unsupported", 0, ["DAT has no matching AHTB schema"], sink.outputs
+
+    if suffix == ".perbin":
+        data = read_file(source)
+        arrays = records(data)
+        parsed = []
+        for i, table in enumerate(arrays):
+            vals = payload(data, table)
+            parsed.append({"record_index": i, "fields": [
+                {"field_index": j, "raw_hex": val}
+                for j, val in enumerate(vals) if val is not None
+            ]})
+        sink.put(main, json_bytes({"source": relative.as_posix(), "record_count": len(arrays),
+                                   "certainty": "structure_only", "records": parsed}))
+        return "partial", len(arrays), ["FlatBuffers fields have unverified business meaning"], sink.outputs
+
+    if suffix == ".wazabin" or name.endswith(("_lyt.bin", "_uikit.bin")):
+        report = fbs_details(read_file(source))
+        sink.put(main, json_bytes(report))
+        return "partial", len(report["fields"]), ["FlatBuffers field types are candidates"], sink.outputs
+
+    if suffix == ".bin" and name.startswith("grow_"):
+        raw = read_file(source)
+        if len(raw) % 4:
+            raise ValueError("growth data is not aligned to u32")
+        rows = [{"index": i, "value_u32": x[0]}
+                for i, x in enumerate(struct.iter_unpack("<I", raw))]
+        sink.put(main, json_bytes({"certainty": "u32_candidate", "rows": rows}))
+        return "partial", len(rows), ["growth array interpretation unverified"], sink.outputs
+
+    if suffix == ".arc":
+        data = read_file(source)
+        members = sarc_members(data)
+        sink.put(main, json_bytes({"source": relative.as_posix(), "members": members}))
+        count = len(members)
+        raw_prefix = Path("_raw_members") / relative
+        nested_prefix = main.with_suffix("")
+        for info in members:
+            member_path = safe_member(info["name"])
+            member = data[info["offset"]:info["offset"] + info["bytes"]]
+            sink.put(raw_prefix / member_path, member)
+            if member.startswith((b"FLYT", b"FLAN")):
+                sections = layout_sections(member)
+                sink.put(nested_prefix / Path(str(member_path) + ".json"),
+                         json_bytes({"member": info["name"], "sections": sections}))
+            if member.startswith(b"BNTX"):
+                n, skipped = export_png(member, nested_prefix / member_path, sink)
+                if skipped:
+                    warnings.append(info["name"] + ": " + "; ".join(skipped[:3]))
+        return ("partial" if warnings else "converted"), count, warnings, sink.outputs
+
+    if name.endswith(".bntx.gz") or suffix == ".bntx":
+        data = decompressed(source) if name.endswith(".gz") else read_file(source)
+        if not data.startswith(b"BNTX"):
+            raise ValueError("not a BNTX texture container")
+        if name.endswith(".gz"):
+            sink.put(main, data)
+            image_prefix = main
+        else:
+            image_prefix = main.with_suffix(".bntx")
+        count, skipped = export_png(data, image_prefix, sink)
+        if skipped:
+            warnings.extend(skipped)
+        if not count:
+            warnings.append("BNTX kept; PNG format unsupported")
+        return ("partial" if warnings or count == 0 else "converted"), count, warnings, sink.outputs
+
+    return "unsupported", 0, ["format parser not implemented"], sink.outputs
+
+
+def selected(path: Path, repo: Path, args) -> bool:
+    rel = path.relative_to(repo)
+    if args.file:
+        name = args.file.replace("\\", "/").lstrip("./")
+        if name.startswith("1/"):
+            name = NCA + "/" + name
+        if name.startswith("bin/") or name.startswith("system_resource/"):
+            name = SOURCE_PREFIX + name
+        return rel.as_posix() == name
+    if args.kind in ("all", None):
+        return True
+    return type_for(path.relative_to(repo / NCA / "1")) == args.kind
+
+
+def load_manifest(path: Path):
+    if not path.is_file():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    rows = data["files"] if isinstance(data, dict) else data
+    return {row["source_path"]: row for row in rows}
+
+
+def valid_cached(row, source, out):
+    if row.get("parser_version") != PARSER_VERSION or row.get("source_sha256") != hash_file(source):
+        return False
+    if row.get("status") not in ("converted", "partial"):
+        return False
+    return all((out / f["path"]).is_file() and hash_file(out / f["path"]) == f["sha256"]
+               for f in row.get("outputs", [])) and bool(row.get("outputs"))
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--root", type=Path, default=Path("."), help="repository root")
+    p.add_argument("--out", type=Path, default=Path("Unpack"), help="output root")
+    task = p.add_mutually_exclusive_group()
+    task.add_argument("--file", help="one RomFS file, relative to repository or RomFS")
+    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other"])
+    task.add_argument("--all", action="store_true", help="run all RomFS formats")
+    p.add_argument("--dry-run", action="store_true", help="plan without writing")
+    p.add_argument("--resume", action="store_true", help="reuse verified outputs")
+    p.add_argument("--verify", action="store_true", help="verify manifest only; no writes")
+    p.add_argument("--strict", action="store_true", help="fail on not-run/failed records")
+    args = p.parse_args(argv)
+    try:
+        repo = args.root.resolve(strict=True)
+        out = (repo / args.out).resolve()
+        source_root = (repo / NCA / "1").resolve(strict=True)
+        if not source_root.is_dir():
+            raise ValueError("source RomFS not found")
+        if out == source_root or source_root in out.parents or out in source_root.parents:
+            raise ValueError("output must not overlap source RomFS")
+        sources = enumerate_sources(repo)
+        plan, collisions = plan_paths(sources, repo)
+        chosen = [x for x in sources if selected(x, repo, args)]
+        if args.file and not chosen:
+            raise ValueError("requested source file not found")
+        print(f"RomFS files: {len(sources)}; selected: {len(chosen)}; primary collisions: {len(collisions)}")
+        if args.dry_run:
+            print(json.dumps({"sample_paths": [
+                {"source": p.relative_to(repo).as_posix(),
+                 "output": plan[p.relative_to(repo).as_posix()]["main"]}
+                for p in chosen[:12]], "collisions": collisions[:30]}, ensure_ascii=False, indent=2))
+            return 0
+        manifest_path = out / "_meta" / "manifest.json"
+        prior = load_manifest(manifest_path)
+        if args.verify:
+            errors = []
+            for item in sources:
+                key = item.relative_to(repo).as_posix()
+                row = prior.get(key)
+                if row is None:
+                    errors.append("missing manifest: " + key)
+                    continue
+                if row["source_sha256"] != hash_file(item):
+                    errors.append("source SHA differs: " + key)
+                if args.strict and row["status"] in ("failed", "not_run"):
+                    errors.append("incomplete: " + key)
+                for obj in row.get("outputs", []):
+                    target = out / obj["path"]
+                    if not target.is_file() or hash_file(target) != obj["sha256"]:
+                        errors.append("output SHA differs: " + obj["path"])
+            print(json.dumps({"verified_files": len(sources), "problems": len(errors),
+                              "examples": errors[:50]}, ensure_ascii=False, indent=2))
+            return 1 if errors else 0
+        out.mkdir(parents=True, exist_ok=True)
+        rows = {}
+        failures = 0
+        chosen_keys = {p.relative_to(repo).as_posix() for p in chosen}
+        for i, item in enumerate(sources, 1):
+            rel = item.relative_to(repo).as_posix()
+            old = prior.get(rel, {})
+            if rel not in chosen_keys:
+                rows[rel] = old or {"source_path": rel, "status": "not_run"}
+                continue
+            try:
+                source_hash = hash_file(item)
+                info = plan[rel]
+                if args.resume and valid_cached(old, item, out):
+                    rows[rel] = old
+                    continue
+                status, n, warning, outputs = export_one(
+                    item, repo, out, Path(info["main"]) if info["main"] else None)
+                row = {"source_path": rel, "source_size": item.stat().st_size,
+                       "source_sha256": source_hash,
+                       "detected_format": type_for(item.relative_to(source_root)),
+                       "parser": "tools/unpack_home41.py", "parser_version": PARSER_VERSION,
+                       "status": status, "outputs": outputs, "records": n,
+                       "warning": "; ".join(warning), "error": "",
+                       "collision_fallback": info["collision_fallback"]}
+            except (OSError, ValueError, struct.error, EOFError, UnicodeError, IndexError) as e:
+                failures += 1
+                row = {"source_path": rel, "source_size": item.stat().st_size,
+                       "source_sha256": hash_file(item),
+                       "detected_format": type_for(item.relative_to(source_root)),
+                       "parser": "tools/unpack_home41.py", "parser_version": PARSER_VERSION,
+                       "status": "failed", "outputs": [], "records": 0,
+                       "warning": "", "error": str(e), "collision_fallback": plan[rel]["collision_fallback"]}
+            rows[rel] = row
+            if i % 500 == 0:
+                print(f"Processed source {i}/{len(sources)} ({rel}); new failures={failures}", flush=True)
+        # Fill missing source hashes even for untouched entries: complete source inventory.
+        for item in sources:
+            key = item.relative_to(repo).as_posix()
+            row = rows[key]
+            if not row.get("source_sha256"):
+                row.update({"source_size": item.stat().st_size, "source_sha256": hash_file(item),
+                            "detected_format": type_for(item.relative_to(source_root)),
+                            "parser": "tools/unpack_home41.py", "parser_version": PARSER_VERSION,
+                            "outputs": [], "records": 0, "warning": "", "error": "",
+                            "collision_fallback": plan[key]["collision_fallback"]})
+        ordered = [rows[p.relative_to(repo).as_posix()] for p in sources]
+        stats = Counter(row["status"] for row in ordered)
+        meta = Path("_meta")
+        save_atomic(out / meta / "source_manifest.csv",
+                    csv_bytes([{"source_path": row["source_path"], "source_size": row["source_size"],
+                                "source_sha256": row["source_sha256"],
+                                "detected_format": row["detected_format"]}
+                               for row in ordered],
+                              ["source_path", "source_size", "source_sha256", "detected_format"]), out)
+        flat = []
+        for row in ordered:
+            record = dict(row)
+            record["outputs"] = json.dumps([x["path"] for x in row["outputs"]], ensure_ascii=False)
+            record["output_sha256"] = json.dumps([x["sha256"] for x in row["outputs"]])
+            flat.append(record)
+        save_atomic(out / meta / "manifest.csv", csv_bytes(flat, COLS), out)
+        save_atomic(manifest_path, json_bytes({"version": "4.1.0", "parser_version": PARSER_VERSION,
+                                               "files": ordered}), out)
+        save_atomic(out / meta / "unsupported.csv",
+                    csv_bytes([x for x in flat if x["status"] == "unsupported"], COLS), out)
+        save_atomic(out / meta / "errors.csv",
+                    csv_bytes([x for x in flat if x["status"] == "failed"], COLS), out)
+        save_atomic(out / meta / "summary.json",
+                    json_bytes({"source_files": len(sources), "selected": len(chosen),
+                                "status_counts": dict(stats), "primary_collision_count": len(collisions),
+                                "total_outputs": sum(len(x["outputs"]) for x in ordered),
+                                "romfs_bytes": sum(x["source_size"] for x in ordered),
+                                "parser_version": PARSER_VERSION}), out)
+        print(json.dumps({"source_files": len(sources), "status": dict(stats),
+                          "failures_this_run": failures}, ensure_ascii=False))
+        return 1 if failures or (args.strict and stats.get("not_run", 0)) else 0
+    except (OSError, ValueError, json.JSONDecodeError) as e:
+        p.error(str(e))
+
+
+if __name__ == "__main__":
+    sys.exit(main())
