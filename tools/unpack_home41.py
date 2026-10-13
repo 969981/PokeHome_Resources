@@ -31,10 +31,15 @@ from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
 from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bffnt, decode_bnsh, decode_akpk
 from home41_tables import decode_grammar, grammar_csv_rows, decode_item_hash_index, decode_form_storage_index
 from home41_reflection_decode import decode_reflected_scalar_vector_tables
+from home41_pokedex_item import (
+    decode_pokemon_test, decode_pokemon_valid, decode_pokedex_form,
+    decode_pokedex_shape, decode_pokedex_sugata, decode_item_data,
+    join_item_hash, pokemon_key_crosswalk,
+)
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.3.0"
+PARSER_VERSION = "mirror-0.4.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -95,6 +100,15 @@ def type_for(relative: Path) -> str:
     name = relative.name.lower()
     suffix = relative.suffix.lower()
     rel = relative.as_posix().lower()
+    if rel in (
+        "bin/pokemon/pokemon_list/pokemon_test_list.bin",
+        "bin/pokemon/pokemon_list/pokemon_valid_list.bin",
+        "bin/appli/mtt_pokedex/bin/form_data.bin",
+        "bin/appli/mtt_pokedex/bin/shape_data.bin",
+        "bin/appli/mtt_pokedex/bin/sugata.bin",
+        "bin/pml/item/item.dat",
+    ):
+        return "pokemon"
     if (rel.startswith("bin/message/grammar/") and suffix == ".dat"
             or rel == "bin/pml/item/item_hash_to_index.dat"
             or rel == "bin/hayabusa/appli/pokedex/res_table/pokedex_form_storage_index_table.bin"):
@@ -240,6 +254,73 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
     count = 0
     if main is None:
         return "unsupported", 0, ["format parser not implemented"], sink.commit()
+
+    if category == "pokemon":
+        data = read_file(source)
+        if name == "pokemon_test_list.bin":
+            doc = decode_pokemon_test(data)
+            other = source.with_name("pokemon_valid_list.bin")
+            form_path = repo / NCA / "1/bin/appli/mtt_pokedex/bin/form_data.bin"
+            shape_path = repo / NCA / "1/bin/appli/mtt_pokedex/bin/shape_data.bin"
+            docs = [
+                doc, decode_pokemon_valid(read_file(other)),
+                decode_pokedex_form(read_file(form_path)),
+                decode_pokedex_shape(read_file(shape_path)),
+            ]
+            crosswalk = pokemon_key_crosswalk(*docs)
+            doc["join_dependencies"] = {
+                p.relative_to(repo).as_posix(): hash_file(p)
+                for p in (other, form_path, shape_path)
+            }
+            doc["crosswalk_counts"] = {k: v for k, v in crosswalk.items() if k != "rows"}
+            sink.put(main.with_name(main.stem + ".crosswalk.csv"),
+                     csv_bytes(crosswalk["rows"], list(crosswalk["rows"][0])))
+        elif name == "pokemon_valid_list.bin":
+            doc = decode_pokemon_valid(data)
+        elif name == "form_data.bin":
+            doc = decode_pokedex_form(data)
+        elif name == "shape_data.bin":
+            doc = decode_pokedex_shape(data)
+        elif name == "sugata.bin":
+            doc = decode_pokedex_sugata(data)
+        elif name == "item.dat":
+            doc = decode_item_data(data)
+            aux_path = source.with_name("item_hash_to_index.dat")
+            from home41_tables import decode_item_hash_index
+            associated = decode_item_hash_index(read_file(aux_path))
+            joined = join_item_hash(doc, associated)
+            doc["join_dependencies"] = {aux_path.relative_to(repo).as_posix(): hash_file(aux_path)}
+            doc["hash_join_summary"] = {
+                k: v for k, v in joined.items() if k != "rows"
+            }
+            sink.put(main.with_name(main.stem + ".id_lookup.csv"),
+                     csv_bytes(doc["index_rows"], list(doc["index_rows"][0])))
+            sink.put(main.with_name(main.stem + ".aux_pairs.csv"),
+                     csv_bytes(doc["aux_pairs"], list(doc["aux_pairs"][0])))
+            sink.put(main.with_name(main.stem + ".hash_join.csv"),
+                     csv_bytes(joined["rows"], list(joined["rows"][0])))
+            sink.put(main, csv_bytes(doc["record_rows"], list(doc["record_rows"][0])))
+            sink.put(main.with_suffix(".json"), json_bytes({
+                k: v for k, v in doc.items()
+                if k not in ("index_rows", "aux_pairs", "record_rows")
+            }))
+            return "partial", doc["record_count"], [
+                "48-byte item fields and auxiliary index pair meanings unresolved",
+                "hash join mismatches: " + str(joined["presence_mismatch_rows"])
+            ], sink.commit()
+        else:
+            raise ValueError("unhandled pokemon data format")
+        rows = doc["rows"]
+        sink.put(main.with_suffix(".csv"),
+                 csv_bytes(rows, list(rows[0]) if rows else ["row"]))
+        if name == "shape_data.bin":
+            sink.put(main.with_name(main.stem + ".shape_pairs.csv"),
+                     csv_bytes(doc["shape_pairs"], list(doc["shape_pairs"][0])))
+        sink.put(main, json_bytes({k: v for k, v in doc.items()
+                                   if k not in ("rows", "shape_pairs")}))
+        return "partial", len(rows), [
+            "fixed records and cross-file key joins verified; field semantics not fully known"
+        ], sink.commit()
 
     if category == "tables":
         raw = read_file(source)
@@ -499,7 +580,7 @@ def main(argv=None):
     p.add_argument("--out", type=Path, default=Path("Unpack"), help="output root")
     task = p.add_mutually_exclusive_group()
     task.add_argument("--file", help="one RomFS file, relative to repository or RomFS")
-    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other", "tables"])
+    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other", "tables", "pokemon"])
     task.add_argument("--all", action="store_true", help="run all RomFS formats")
     p.add_argument("--dry-run", action="store_true", help="plan without writing")
     p.add_argument("--resume", action="store_true", help="reuse verified outputs")
