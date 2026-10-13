@@ -17,7 +17,7 @@ from home41_elf_disasm_windows import window
 
 ELF_SHA="bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a"
 START=0x4FD050
-STOP=0x4FD494
+STOP=0x4FD900
 ANCHORS={
   "record_getter_wrapper_init":"0x4FD06C",
   "wrapper_record_getter_call":"0x4FD098",
@@ -26,6 +26,10 @@ ANCHORS={
   "extended_selector_entry":"0x4FD258",
   "extended_selector_45way":"0x4FD270",
   "original_record_pointer_getter":"0x4FD784",
+  "item_dispatch_wrapper_1":"0x4FD48C",
+  "item_dispatch_wrapper_2":"0x4FD800",
+  "property_caller_1":"0x4FD4D4",
+  "property_caller_2":"0x4FD830",
 }
 def sext(n,bits):
     return n-(1<<bits) if n&(1<<(bits-1)) else n
