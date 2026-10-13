@@ -482,7 +482,10 @@ def main(argv=None):
         prior = load_manifest(manifest_path)
         if args.verify:
             errors = []
-            for item in sources:
+            # Source-scoped verification is intentional: Git holds readable
+            # results, while Release contains bulk BNTX and SARC raw members.
+            # --verify --all remains strict for a complete extracted Release.
+            for item in chosen:
                 key = item.relative_to(repo).as_posix()
                 row = prior.get(key)
                 if row is None:
@@ -496,7 +499,7 @@ def main(argv=None):
                     target = out / obj["path"]
                     if not target.is_file() or hash_file(target) != obj["sha256"]:
                         errors.append("output SHA differs: " + obj["path"])
-            print(json.dumps({"verified_files": len(sources), "problems": len(errors),
+            print(json.dumps({"verified_files": len(chosen), "problems": len(errors),
                               "examples": errors[:50]}, ensure_ascii=False, indent=2))
             return 1 if errors else 0
         out.mkdir(parents=True, exist_ok=True)
