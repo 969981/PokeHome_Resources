@@ -38,7 +38,7 @@ jobs:
           assert d['status_counts'].get('unsupported',999)<65,d
           PY
       - name: Verify original + decoded file hashes
-        run: python tools/unpack_home41.py --root . --out Unpack --verify --strict
+        run: python tools/unpack_home41.py --root . --out Unpack --verify --kind other --strict
       - name: Commit structural JSON FBS CSV and manifest
         run: |
           set -euo pipefail
