@@ -77,6 +77,43 @@ class ItemSemanticTests(unittest.TestCase):
         self.assertEqual(max(r["price_watts_native_u32"] for r in rows), 8000)
         self.assertEqual(max(r["price_alternate_native_u32"] for r in rows), 1000)
 
+    def test_native_proven_pouch_business_and_sprite_asset_keys(self):
+        from home41_item8_semantic import (
+            POUCH_NATIVE_STORAGE_SLOTS, POUCH_NATIVE_OWNER_MEMBERS,
+        )
+        d=decode_item8_semantic(self.raw)
+        self.assertEqual(
+            d["pouch_native_catalog_record_counts"],
+            [37,27,10,53,640,200,20,25,154],
+        )
+        self.assertEqual(d["pouch_native_bag_slot_capacities"],
+                         [60,30,20,80,550,210,100,100,64])
+        self.assertEqual(d["native_icon_key_format"],"item_%04d^o")
+        self.assertEqual(d["native_icon_fallback_key"],"item_dummy^o")
+        self.assertFalse(d["native_business_consumer_provenance"]["actual_battle_effect_consumer_proven"])
+        self.assertEqual(d["rows"][2]["native_icon_resource_key"],"item_0002^o")
+        self.assertEqual(d["rows"][17]["native_icon_resource_key"],"item_0017^o")
+        self.assertEqual(d["rows"][100]["native_icon_resource_key"],"item_dummy^o")
+        self.assertEqual(d["rows"][2]["native_pouch_bag_slot_capacity"],30)
+        self.assertEqual(d["rows"][17]["native_pouch_bag_slot_capacity"],60)
+        self.assertEqual(d["rows"][2]["native_pouch_owner_member_offset"],0x2658)
+        for row in d["rows"]:
+            cat=row["pouch_index"]
+            self.assertEqual(row["native_pouch_owner_member_offset"],
+                             POUCH_NATIVE_OWNER_MEMBERS[cat])
+            self.assertEqual(row["native_pouch_bag_slot_capacity"],
+                             POUCH_NATIVE_STORAGE_SLOTS[cat])
+            if row["item_sprite_native_i16"]<0:
+                self.assertTrue(row["native_icon_uses_fallback_key"])
+                self.assertEqual(row["native_icon_resource_key"],"item_dummy^o")
+            else:
+                self.assertFalse(row["native_icon_uses_fallback_key"])
+                self.assertEqual(
+                    row["native_icon_resource_key"],
+                    f"item_{row['item_sprite_native_i16']:04d}^o",
+                )
+        self.assertEqual(sum(r["native_icon_uses_fallback_key"] for r in d["rows"]),683)
+
     def test_item_hash_row_outside_domain_not_valid_item_id(self):
         structural = decode_item_data(self.raw)
         hashes = decode_item_hash_index(HASH.read_bytes())
@@ -126,6 +163,9 @@ class ItemSemanticTests(unittest.TestCase):
             self.assertEqual(extended[2]["native_effect_s26_raw"], "1")
             self.assertEqual(extended[17]["native_effect_variant_at_0x15"], "1")
             self.assertEqual(entries[2]["pouch_name_pkNX"], "Balls")
+            self.assertEqual(entries[2]["native_icon_resource_key"], "item_0002^o")
+            self.assertEqual(entries[100]["native_icon_resource_key"], "item_dummy^o")
+            self.assertEqual(entries[2]["native_pouch_bag_slot_capacity"], "30")
             meta = json.loads((out / main.with_name("item.semantic.json")).read_text())
             self.assertEqual(meta["item_count"], 1829)
             self.assertEqual(meta["native_record_getter_rva"], "0x4FD784")
