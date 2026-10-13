@@ -30,6 +30,7 @@ from home41_p2_pml_readonly import payload, records
 from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
 from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bffnt, decode_bnsh, decode_akpk
 from home41_tables import decode_grammar, grammar_csv_rows, decode_item_hash_index, decode_form_storage_index
+from home41_reflection_decode import decode_reflected_scalar_vector_tables
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
@@ -313,6 +314,18 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
         doc["source"] = relative.as_posix()
         sink.put(main, json_bytes(doc))
         return "partial", len(doc["fields"]), ["FlatBuffers field meaning unverified"], sink.commit()
+
+    if suffix == ".bin" and name == "black_list_main_array.bin":
+        schema_file = source.with_suffix(".bfbs")
+        if not schema_file.is_file():
+            raise ValueError("matching BFBS reflection schema is required")
+        reflection = Reflection(read_file(schema_file)).extract()
+        doc = decode_reflected_scalar_vector_tables(read_file(source), reflection)
+        doc["schema_source"] = schema_file.relative_to(repo).as_posix()
+        sink.put(main, json_bytes(doc))
+        keys = ["row", *doc["field_types"]]
+        sink.put(main.with_suffix(".csv"), csv_bytes(doc["rows"], keys))
+        return "converted", doc["count"], warnings, sink.commit()
 
     if suffix == ".bin" and "zukan_sort_" in name:
         blob = read_file(source)
