@@ -33,6 +33,8 @@ jobs:
         run: |
           python tools/unpack_home41.py --root . --out Unpack --kind tables --resume
           python tools/unpack_home41.py --root . --out Unpack --verify --kind tables --strict
+          python tools/unpack_home41.py --root . --out Unpack --file bin/ikkaku/world/ik_data/ui/pokedex/black_list_main/black_list_main_array.bin --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --file bin/ikkaku/world/ik_data/ui/pokedex/black_list_main/black_list_main_array.bin --strict
           python - <<'PY'
           import json
           from pathlib import Path
@@ -41,6 +43,8 @@ jobs:
           assert len(expected)==11, len(expected)
           assert all(x['status']=='partial' for x in expected), expected
           assert all(x['outputs'] for x in expected), expected
+          typed=[x for x in data['files'] if x['source_path'].endswith('/black_list_main_array.bin')]
+          assert len(typed)==1 and typed[0]['status']=='converted' and len(typed[0]['outputs'])==2,typed
           stats=json.loads(Path('Unpack/_meta/summary.json').read_text())['status_counts']
           assert stats.get('failed',0)==0 and stats.get('unsupported')<=10,stats
           print('verified table files:',len(expected),'remaining unsupported:',stats.get('unsupported',0))
@@ -61,13 +65,15 @@ jobs:
             root/'bin/message/grammar',
             root/'bin/pml/item',
             root/'bin/hayabusa/appli/pokedex/res_table',
+            root/'bin/ikkaku/world/ik_data/ui/pokedex/black_list_main',
           ]
           for location in selected:
               files=[p for p in location.glob('*.csv') if p.is_file()]
               files += [p for p in location.glob('*.json') if p.is_file()]
               # Only newly supported files from this research round.
               files=[p for p in files if ('grammar' in str(p) or 'item_hash_to_index' in p.name
-                                        or 'pokedex_form_storage_index_table' in p.name)]
+                                        or 'pokedex_form_storage_index_table' in p.name
+                                        or 'black_list_main_array' in p.name)]
               for p in files: subprocess.run(['git','add','--',str(p)],check=True)
           if os.environ.get('EVENT_NAME')=='workflow_run':
               subprocess.run(['git','add','--','Unpack/_meta/manifest.csv',
