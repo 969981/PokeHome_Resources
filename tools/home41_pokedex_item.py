@@ -107,7 +107,7 @@ def decode_pokedex_sugata(data: bytes) -> dict:
 
 
 def decode_item_data(data: bytes) -> dict:
-    """Recover 1,832 16-bit lookups and 1,166 fixed 48-byte records.
+    """Recover 1,829 item IDs (three padded slots) and 1,166 fixed 48-byte records.
 
     Header layout checked using real HOME 4.1.0 bytes at offsets 0,2,4,64.
     Remaining region between the lookup array and payload is 348 raw u16/u16
@@ -127,12 +127,16 @@ def decode_item_data(data: bytes) -> dict:
     lookup = struct.unpack_from(f"<{lookup_count}H", data, 68)
     if max(lookup) >= record_count:
         raise ValueError("lookup references nonexistent record")
+    item_count = declared_max  # Confirmed against pkNX Item8.GetArray: u16@0.
+    if item_count > lookup_count or any(lookup[item_count:]):
+        raise ValueError("item index padding must be three zero entries")
     nonzero = [v for v in lookup if v]
     if len(set(nonzero)) != record_count - 1 or set(nonzero) != set(range(1, record_count)):
         raise ValueError("lookup does not contain every nonzero record index exactly once")
     lookup_rows = [
-        {"candidate_item_id": i, "record_index_raw_u16": value,
-         "zero_is_ambiguous": value == 0}
+        {"candidate_item_id": i if i < item_count else None,
+         "index_slot": i, "outside_item_id_domain": i >= item_count,
+         "record_index_raw_u16": value, "zero_is_ambiguous": value == 0}
         for i, value in enumerate(lookup)
     ]
     aux = [
@@ -140,7 +144,7 @@ def decode_item_data(data: bytes) -> dict:
         for i, (a, b) in enumerate(struct.iter_unpack("<HH", data[lookup_end:record_start]))
     ]
     index_to_item = {r["record_index_raw_u16"]: r["candidate_item_id"]
-                     for r in lookup_rows if r["record_index_raw_u16"]}
+                     for r in lookup_rows if r["record_index_raw_u16"] and not r["outside_item_id_domain"]}
     record_rows = []
     for i in range(record_count):
         offset = record_start + 48 * i
@@ -154,8 +158,10 @@ def decode_item_data(data: bytes) -> dict:
         record_rows.append(rec)
     return {
         "format": "HOME 4.1.0 PML item multi-index and fixed-record table",
-        "file_bytes": len(data), "declared_first_u16": declared_max,
-        "lookup_count": lookup_count, "record_count": record_count,
+        "file_bytes": len(data), "item_id_count": item_count,
+        "declared_first_u16": declared_max,
+        "lookup_count": lookup_count, "padding_index_slots": lookup_count - item_count,
+        "record_count": record_count,
         "record_stride": 48, "record_start": record_start,
         "aux_pair_count": len(aux),
         "header_first68_hex": data[:68].hex(),
@@ -170,6 +176,7 @@ def join_item_hash(item_data: dict, hash_doc: dict) -> dict:
     hashed = hash_doc["rows"]
     rows = []
     mismatches = []
+    in_domain_mismatches = []
     for i, hr in enumerate(hashed):
         if i >= len(look):
             raise ValueError("hash index longer than item lookup")
@@ -177,14 +184,21 @@ def join_item_hash(item_data: dict, hash_doc: dict) -> dict:
         h_index = hr["index_candidate_u32"]
         if bool(ri) != bool(h_index):
             mismatches.append(i)
+            if i < item_data["item_id_count"]:
+                in_domain_mismatches.append(i)
         rows.append({"hash_row": i, "hash_u64_hex": hr["hash_u64_hex"],
                      "hash_index_raw_u32": h_index, "item_lookup_record_index_u16": ri,
                      "present_in_both": bool(ri) and bool(h_index),
-                     "nonzero_presence_agrees": bool(ri) == bool(h_index)})
+                     "nonzero_presence_agrees": bool(ri) == bool(h_index),
+                     "outside_item_id_domain": i >= item_data["item_id_count"]})
     return {"rows": rows, "hash_rows": len(rows),
             "nonzero_both": sum(x["present_in_both"] for x in rows),
             "presence_mismatch_rows": mismatches,
-            "certainty": "record ordinals aligned; hash-to-item identity and unmatched tail behavior not assumed"}
+            "in_domain_presence_mismatch_rows": in_domain_mismatches,
+            "outside_domain_presence_mismatch_rows": [
+                i for i in mismatches if i >= item_data["item_id_count"]
+            ],
+            "certainty": "item ID domain uses u16@0=1829 per pkNX Item8; observed hash row 1829 lies outside valid item IDs"}
 
 
 def pokemon_key_crosswalk(test: dict, valid: dict, form: dict, shape: dict) -> dict:
