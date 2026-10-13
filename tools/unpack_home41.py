@@ -35,6 +35,7 @@ from home41_topics import decode_pokedex_topics
 from home41_topics_semantic import annotate_topics
 from home41_item8_semantic import decode_item8_semantic
 from home41_item_native_properties import decode_item_native_properties
+from home41_item_native_effect_values import decode_native_item_effects
 from home41_pokedex_item import (
     decode_pokemon_test, decode_pokemon_valid, decode_pokedex_form,
     decode_pokedex_shape, decode_pokedex_sugata, decode_item_data,
@@ -43,7 +44,7 @@ from home41_pokedex_item import (
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.9.2"
+PARSER_VERSION = "mirror-0.9.3"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -313,6 +314,12 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             joined = join_item_hash(doc, associated)
             typed = decode_item8_semantic(data)
             native_matrix = decode_item_native_properties(data)
+            native_effects = decode_native_item_effects(data)
+            sink.put(main.with_name(main.stem + ".native_effects.csv"),
+                     csv_bytes(native_effects["rows"], native_effects["column_names"]))
+            doc["native_effect_selector_matrix"] = {
+                k: v for k, v in native_effects.items() if k not in ("rows", "column_names")
+            }
             sink.put(main.with_name(main.stem + ".native_properties.csv"),
                      csv_bytes(native_matrix["rows"], native_matrix["column_names"]))
             doc["native_item_selector_matrix"] = {
@@ -344,7 +351,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 if k not in ("index_rows", "aux_pairs", "record_rows")
             }))
             return "partial", doc["record_count"], [
-                "Original HOME native 26-selector/48-byte Item8 matrix plus 25 Getter opcode proofs; pkNX field names remain independently cross-referenced",
+                "HOME ELF proves item 26 direct attributes and 45 variant-gated effect selectors; actual battle effect semantics not yet recovered; pkNX business names cross-referenced",
                 "348 auxiliary index pairs remain untyped",
                 "hash presence mismatches within 1829 item IDs: " +
                     str(joined["in_domain_presence_mismatch_rows"])
