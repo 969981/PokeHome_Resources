@@ -131,7 +131,7 @@ def decode_bntx(source):
         name_ptr = u64(source, b + 96)
         name_length = u16(source, name_ptr) if name_ptr + 2 <= len(source) else 0
         name = source[name_ptr + 2:name_ptr + 2 + min(name_length, 256)].split(b"\0", 1)[0].decode("utf-8", "replace")
-        name = re.sub(r"[^a-zA-Z0-9_.-]", "_", name).strip("_.") or f"texture_{index:03d}"
+        name = re.split(r"[^a-zA-Z0-9_.-]", name, maxsplit=1)[0].strip("_.") or f"texture_{index:03d}"
         info = {"texture_index": index, "name": name, "format": f"0x{fmt:04X}",
                 "width": width, "height": height, "tile_mode": tiled,
                 "type": value_type, "png_status": "unsupported"}
