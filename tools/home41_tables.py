@@ -27,7 +27,7 @@ def decode_grammar(data: bytes) -> dict:
             raise ValueError("nonempty zero-term grammar")
         return {"format": "HOME grammar substitution table",
                 "term_count": 0, "matrix_width": 0,
-                "terms": [], "matrix": [],
+                "terms": [], "matrix": [], "resolved_selectors": [],
                 "certainty": "complete byte layout; grammatical case semantics not inferred"}
     offsets = list(struct.unpack_from("<" + "H" * count, data, 2))
     if offsets[0] != start_terms or any(x % 2 for x in offsets):
