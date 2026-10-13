@@ -7,9 +7,20 @@
   ],
   "indexed_slot_capacity": 1832,
   "item_count": 1829,
+  "native_elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "native_field_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
+  "native_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_getter_proof.json",
+  "native_price_field_width_bits": {
+    "alternate": 32,
+    "price": 32,
+    "watts": 32
+  },
+  "native_record_getter_rva": "0x4FD784",
+  "native_sprite_field_signed": true,
+  "native_verified": "ELF native 1832-capacity, 1166 records, 0x40 base, 0x44 indexed u16 mapping, 48-byte stride and selected direct field Getter RVA/opcode proofs; field semantic names still pkNX-correlated",
   "record_bytes": 48,
   "record_start": 5124,
-  "schema_confidence": "pkNX Item8 offset definitions plus HOME original real-byte cross-validation; not yet each native getter",
+  "schema_confidence": "HOME original ELF native field widths/offsets plus pinned pkNX Item8 business names and exact ROMFS regression",
   "schema_reference": "https://github.com/kwsch/pkNX/blob/0936c08eb14ed08eb9042c008404b24bf60e088a/pkNX.Structures/Item/Item8.cs",
   "source_sha256": "4f5edd3f0ca8ed0c60ceb91fda0c5385f20ec986a66dcf4aa68d1c145903a1a2",
   "unique_record_count": 1166

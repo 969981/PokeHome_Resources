@@ -1,0 +1,602 @@
+{
+  "original_elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "native_record_getter_rva": "0x4FD784",
+  "native_wrapper_init_rva": "0x4FD06C",
+  "native_property_selector_rva": "0x4FD0B8",
+  "native_entry_byte_verified": true,
+  "native_properties_count": 25,
+  "raw_record_stride_bytes": 48,
+  "wrapper_opcode_chain": [
+    {
+      "pc": "0x4FD098",
+      "mnemonic": "bl",
+      "operands": "#0x4fd784",
+      "instruction_bytes_le": "bb010094"
+    },
+    {
+      "pc": "0x4FD09C",
+      "mnemonic": "str",
+      "operands": "x0, [x20]",
+      "instruction_bytes_le": "800200f9"
+    },
+    {
+      "pc": "0x4FD0E4",
+      "mnemonic": "ldr",
+      "operands": "x8, [x0]",
+      "instruction_bytes_le": "080040f9"
+    }
+  ],
+  "property_getters": [
+    {
+      "field_name_provisional_pkNX_or_raw": "price_pkNX",
+      "native_getter_rva": "0x4FD108",
+      "raw_record_offset": 0,
+      "native_read_width_bits": 32,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD108",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD10C",
+        "mnemonic": "ldr",
+        "operands": "w0, [x8]",
+        "instruction_bytes_le": "000140b9"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "watts_price_pkNX",
+      "native_getter_rva": "0x4FD114",
+      "raw_record_offset": 4,
+      "native_read_width_bits": 32,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD114",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD118",
+        "mnemonic": "ldr",
+        "operands": "w0, [x8, #4]",
+        "instruction_bytes_le": "000540b9"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "alternate_price_pkNX",
+      "native_getter_rva": "0x4FD120",
+      "raw_record_offset": 8,
+      "native_read_width_bits": 32,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD120",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD124",
+        "mnemonic": "ldr",
+        "operands": "w0, [x8, #8]",
+        "instruction_bytes_le": "000940b9"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_0c_raw",
+      "native_getter_rva": "0x4FD138",
+      "raw_record_offset": 12,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD138",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD13C",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0xc]",
+        "instruction_bytes_le": "00314039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_0d_raw",
+      "native_getter_rva": "0x4FD144",
+      "raw_record_offset": 13,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD144",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD148",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0xd]",
+        "instruction_bytes_le": "00354039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_0e_raw",
+      "native_getter_rva": "0x4FD150",
+      "raw_record_offset": 14,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD150",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD154",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0xe]",
+        "instruction_bytes_le": "00394039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flag10_bit12",
+      "native_getter_rva": "0x4FD15C",
+      "raw_record_offset": 16,
+      "native_read_width_bits": 16,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD15C",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD160",
+        "mnemonic": "ldrh",
+        "operands": "w8, [x8, #0x10]",
+        "instruction_bytes_le": "08214079"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD164",
+        "mnemonic": "ubfx",
+        "operands": "w0, w8, #0xc, #1",
+        "instruction_bytes_le": "00310c53"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_12_raw",
+      "native_getter_rva": "0x4FD16C",
+      "raw_record_offset": 18,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD16C",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD170",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x12]",
+        "instruction_bytes_le": "00494039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_0f_raw",
+      "native_getter_rva": "0x4FD178",
+      "raw_record_offset": 15,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD178",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD17C",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0xf]",
+        "instruction_bytes_le": "003d4039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_10_low5",
+      "native_getter_rva": "0x4FD184",
+      "raw_record_offset": 16,
+      "native_read_width_bits": 16,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD184",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD188",
+        "mnemonic": "ldrh",
+        "operands": "w8, [x8, #0x10]",
+        "instruction_bytes_le": "08214079"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD18C",
+        "mnemonic": "and",
+        "operands": "w0, w8, #0x1f",
+        "instruction_bytes_le": "00110012"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_10_bit5",
+      "native_getter_rva": "0x4FD194",
+      "raw_record_offset": 16,
+      "native_read_width_bits": 16,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD194",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD198",
+        "mnemonic": "ldrh",
+        "operands": "w8, [x8, #0x10]",
+        "instruction_bytes_le": "08214079"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD19C",
+        "mnemonic": "ubfx",
+        "operands": "w0, w8, #5, #1",
+        "instruction_bytes_le": "00150553"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_10_bit6",
+      "native_getter_rva": "0x4FD1A4",
+      "raw_record_offset": 16,
+      "native_read_width_bits": 16,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1A4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1A8",
+        "mnemonic": "ldrh",
+        "operands": "w8, [x8, #0x10]",
+        "instruction_bytes_le": "08214079"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD1AC",
+        "mnemonic": "ubfx",
+        "operands": "w0, w8, #6, #1",
+        "instruction_bytes_le": "00190653"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "pouch_low4_pkNX",
+      "native_getter_rva": "0x4FD1B4",
+      "raw_record_offset": 17,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1B4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1B8",
+        "mnemonic": "ldrb",
+        "operands": "w8, [x8, #0x11]",
+        "instruction_bytes_le": "08454039"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD1BC",
+        "mnemonic": "and",
+        "operands": "w0, w8, #0xf",
+        "instruction_bytes_le": "000d0012"
+      },
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "effect_field_pkNX",
+      "native_getter_rva": "0x4FD1C4",
+      "raw_record_offset": 19,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1C4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1C8",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x13]",
+        "instruction_bytes_le": "004d4039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_14_raw",
+      "native_getter_rva": "0x4FD1D0",
+      "raw_record_offset": 20,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1D0",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1D4",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x14]",
+        "instruction_bytes_le": "00514039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "can_use_on_pokemon_pkNX",
+      "native_getter_rva": "0x4FD1DC",
+      "raw_record_offset": 21,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1DC",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1E0",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x15]",
+        "instruction_bytes_le": "00554039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_16_raw",
+      "native_getter_rva": "0x4FD1E8",
+      "raw_record_offset": 22,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1E8",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1EC",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x16]",
+        "instruction_bytes_le": "00594039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_17_low4",
+      "native_getter_rva": "0x4FD1F4",
+      "raw_record_offset": 23,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD1F4",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD1F8",
+        "mnemonic": "ldrb",
+        "operands": "w8, [x8, #0x17]",
+        "instruction_bytes_le": "085d4039"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD1FC",
+        "mnemonic": "and",
+        "operands": "w0, w8, #0xf",
+        "instruction_bytes_le": "000d0012"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_17_high4",
+      "native_getter_rva": "0x4FD204",
+      "raw_record_offset": 23,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD204",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD208",
+        "mnemonic": "ldrb",
+        "operands": "w8, [x8, #0x17]",
+        "instruction_bytes_le": "085d4039"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD20C",
+        "mnemonic": "lsr",
+        "operands": "w0, w8, #4",
+        "instruction_bytes_le": "007d0453"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "misc_18_raw",
+      "native_getter_rva": "0x4FD214",
+      "raw_record_offset": 24,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD214",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD218",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x18]",
+        "instruction_bytes_le": "00614039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "group_type_pkNX",
+      "native_getter_rva": "0x4FD220",
+      "raw_record_offset": 28,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD220",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD224",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x1c]",
+        "instruction_bytes_le": "00714039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "group_index_pkNX",
+      "native_getter_rva": "0x4FD22C",
+      "raw_record_offset": 29,
+      "native_read_width_bits": 8,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD22C",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD230",
+        "mnemonic": "ldrb",
+        "operands": "w0, [x8, #0x1d]",
+        "instruction_bytes_le": "00754039"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_10_bit7",
+      "native_getter_rva": "0x4FD238",
+      "raw_record_offset": 16,
+      "native_read_width_bits": 16,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD238",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD23C",
+        "mnemonic": "ldrh",
+        "operands": "w8, [x8, #0x10]",
+        "instruction_bytes_le": "08214079"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD240",
+        "mnemonic": "ubfx",
+        "operands": "w0, w8, #7, #1",
+        "instruction_bytes_le": "001d0753"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "flags_10_bit13",
+      "native_getter_rva": "0x4FD248",
+      "raw_record_offset": 16,
+      "native_read_width_bits": 16,
+      "native_read_signed": false,
+      "record_pointer_read": {
+        "pc": "0x4FD248",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD24C",
+        "mnemonic": "ldrh",
+        "operands": "w8, [x8, #0x10]",
+        "instruction_bytes_le": "08214079"
+      },
+      "bit_extraction": {
+        "pc": "0x4FD250",
+        "mnemonic": "ubfx",
+        "operands": "w0, w8, #0xd, #1",
+        "instruction_bytes_le": "00350d53"
+      },
+      "business_label_confidence": "raw field / Native bit operation only"
+    },
+    {
+      "field_name_provisional_pkNX_or_raw": "signed_sprite_pkNX",
+      "native_getter_rva": "0x4FD12C",
+      "raw_record_offset": 26,
+      "native_read_width_bits": 16,
+      "native_read_signed": true,
+      "record_pointer_read": {
+        "pc": "0x4FD12C",
+        "mnemonic": "ldr",
+        "operands": "x8, [x0]",
+        "instruction_bytes_le": "080040f9"
+      },
+      "native_field_read": {
+        "pc": "0x4FD130",
+        "mnemonic": "ldrsh",
+        "operands": "w0, [x8, #0x1a]",
+        "instruction_bytes_le": "0035c079"
+      },
+      "bit_extraction": null,
+      "business_label_confidence": "pkNX cross-reference"
+    }
+  ],
+  "field_names_limitation": "Native opcodes establish offsets, width and signs, pkNX separately suggests business names; effects require runtime consumer study."
+}
