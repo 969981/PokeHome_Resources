@@ -1,0 +1,3932 @@
+{
+  "certainty": "UTF-16LE string pool and per-cell byte offsets verified against original data; grammar condition meanings unknown",
+  "format": "HOME grammar substitution table",
+  "matrix": [
+    [
+      0,
+      8,
+      14,
+      8,
+      8,
+      22,
+      8,
+      22,
+      8,
+      8,
+      30,
+      36,
+      36,
+      36,
+      36,
+      46,
+      46,
+      46,
+      46,
+      46,
+      0,
+      8,
+      14,
+      8,
+      8,
+      22,
+      8,
+      22,
+      8,
+      8
+    ],
+    [
+      0,
+      8,
+      14,
+      8,
+      8,
+      22,
+      8,
+      22,
+      8,
+      8,
+      30,
+      36,
+      36,
+      36,
+      36,
+      46,
+      46,
+      46,
+      46,
+      46,
+      0,
+      8,
+      14,
+      8,
+      8,
+      22,
+      8,
+      22,
+      8,
+      8
+    ],
+    [
+      0,
+      0,
+      8,
+      0,
+      0,
+      18,
+      28,
+      18,
+      28,
+      28,
+      36,
+      46,
+      46,
+      46,
+      46,
+      60,
+      60,
+      60,
+      60,
+      60,
+      74,
+      84,
+      96,
+      84,
+      84,
+      110,
+      84,
+      110,
+      84,
+      84
+    ],
+    [
+      0,
+      0,
+      8,
+      0,
+      0,
+      18,
+      28,
+      18,
+      28,
+      28,
+      36,
+      46,
+      46,
+      46,
+      46,
+      60,
+      60,
+      60,
+      60,
+      60,
+      74,
+      84,
+      96,
+      84,
+      84,
+      110,
+      84,
+      110,
+      84,
+      84
+    ],
+    [
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10,
+      50,
+      60,
+      60,
+      60,
+      60,
+      74,
+      74,
+      74,
+      74,
+      74,
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10,
+      50,
+      60,
+      60,
+      60,
+      60,
+      74,
+      74,
+      74,
+      74,
+      74,
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10,
+      50,
+      60,
+      60,
+      60,
+      60,
+      74,
+      74,
+      74,
+      74,
+      74,
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10,
+      50,
+      60,
+      60,
+      60,
+      60,
+      74,
+      74,
+      74,
+      74,
+      74,
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      8,
+      18,
+      8,
+      8,
+      30,
+      8,
+      30,
+      8,
+      8,
+      42,
+      50,
+      50,
+      50,
+      50,
+      62,
+      62,
+      62,
+      62,
+      62,
+      0,
+      8,
+      18,
+      8,
+      8,
+      30,
+      8,
+      30,
+      8,
+      8
+    ],
+    [
+      0,
+      8,
+      18,
+      8,
+      8,
+      30,
+      8,
+      30,
+      8,
+      8,
+      42,
+      50,
+      50,
+      50,
+      50,
+      62,
+      62,
+      62,
+      62,
+      62,
+      0,
+      8,
+      18,
+      8,
+      8,
+      30,
+      8,
+      30,
+      8,
+      8
+    ],
+    [
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10,
+      50,
+      60,
+      60,
+      60,
+      60,
+      74,
+      74,
+      74,
+      74,
+      74,
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10,
+      50,
+      60,
+      60,
+      60,
+      60,
+      74,
+      74,
+      74,
+      74,
+      74,
+      0,
+      10,
+      22,
+      10,
+      10,
+      36,
+      10,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      6
+    ]
+  ],
+  "matrix_width": 30,
+  "resolved_selectors": [
+    {
+      "resolved_text": "il ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 1,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "lo ",
+      "selector_column": 2,
+      "selector_raw_u8": 14,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 3,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 4,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "la ",
+      "selector_column": 5,
+      "selector_raw_u8": 22,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 6,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "la ",
+      "selector_column": 7,
+      "selector_raw_u8": 22,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 8,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 9,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "i ",
+      "selector_column": 10,
+      "selector_raw_u8": 30,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "gli ",
+      "selector_column": 11,
+      "selector_raw_u8": 36,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "gli ",
+      "selector_column": 12,
+      "selector_raw_u8": 36,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "gli ",
+      "selector_column": 13,
+      "selector_raw_u8": 36,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "gli ",
+      "selector_column": 14,
+      "selector_raw_u8": 36,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "le ",
+      "selector_column": 15,
+      "selector_raw_u8": 46,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "le ",
+      "selector_column": 16,
+      "selector_raw_u8": 46,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "le ",
+      "selector_column": 17,
+      "selector_raw_u8": 46,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "le ",
+      "selector_column": 18,
+      "selector_raw_u8": 46,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "le ",
+      "selector_column": 19,
+      "selector_raw_u8": 46,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "il ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 21,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "lo ",
+      "selector_column": 22,
+      "selector_raw_u8": 14,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 23,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 24,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "la ",
+      "selector_column": 25,
+      "selector_raw_u8": 22,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 26,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "la ",
+      "selector_column": 27,
+      "selector_raw_u8": 22,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 28,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "l’",
+      "selector_column": 29,
+      "selector_raw_u8": 8,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "Il ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 1,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Lo ",
+      "selector_column": 2,
+      "selector_raw_u8": 14,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 3,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 4,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "La ",
+      "selector_column": 5,
+      "selector_raw_u8": 22,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 6,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "La ",
+      "selector_column": 7,
+      "selector_raw_u8": 22,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 8,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 9,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "I ",
+      "selector_column": 10,
+      "selector_raw_u8": 30,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Gli ",
+      "selector_column": 11,
+      "selector_raw_u8": 36,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Gli ",
+      "selector_column": 12,
+      "selector_raw_u8": 36,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Gli ",
+      "selector_column": 13,
+      "selector_raw_u8": 36,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Gli ",
+      "selector_column": 14,
+      "selector_raw_u8": 36,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Le ",
+      "selector_column": 15,
+      "selector_raw_u8": 46,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Le ",
+      "selector_column": 16,
+      "selector_raw_u8": 46,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Le ",
+      "selector_column": 17,
+      "selector_raw_u8": 46,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Le ",
+      "selector_column": 18,
+      "selector_raw_u8": 46,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Le ",
+      "selector_column": 19,
+      "selector_raw_u8": 46,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Il ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 21,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "Lo ",
+      "selector_column": 22,
+      "selector_raw_u8": 14,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 23,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 24,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "La ",
+      "selector_column": 25,
+      "selector_raw_u8": 22,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 26,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "La ",
+      "selector_column": 27,
+      "selector_raw_u8": 22,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 28,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "L’",
+      "selector_column": 29,
+      "selector_raw_u8": 8,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "un ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "un ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "uno ",
+      "selector_column": 2,
+      "selector_raw_u8": 8,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "un ",
+      "selector_column": 3,
+      "selector_raw_u8": 0,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "un ",
+      "selector_column": 4,
+      "selector_raw_u8": 0,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "una ",
+      "selector_column": 5,
+      "selector_raw_u8": 18,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "un’",
+      "selector_column": 6,
+      "selector_raw_u8": 28,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "una ",
+      "selector_column": 7,
+      "selector_raw_u8": 18,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "un’",
+      "selector_column": 8,
+      "selector_raw_u8": 28,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "un’",
+      "selector_column": 9,
+      "selector_raw_u8": 28,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dei ",
+      "selector_column": 10,
+      "selector_raw_u8": 36,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 11,
+      "selector_raw_u8": 46,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 12,
+      "selector_raw_u8": 46,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 13,
+      "selector_raw_u8": 46,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 14,
+      "selector_raw_u8": 46,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 15,
+      "selector_raw_u8": 60,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 16,
+      "selector_raw_u8": 60,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 17,
+      "selector_raw_u8": 60,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 18,
+      "selector_raw_u8": 60,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 19,
+      "selector_raw_u8": 60,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "del ",
+      "selector_column": 20,
+      "selector_raw_u8": 74,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 21,
+      "selector_raw_u8": 84,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dello ",
+      "selector_column": 22,
+      "selector_raw_u8": 96,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 23,
+      "selector_raw_u8": 84,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 24,
+      "selector_raw_u8": 84,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "della ",
+      "selector_column": 25,
+      "selector_raw_u8": 110,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 26,
+      "selector_raw_u8": 84,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "della ",
+      "selector_column": 27,
+      "selector_raw_u8": 110,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 28,
+      "selector_raw_u8": 84,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 29,
+      "selector_raw_u8": 84,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "Un ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Un ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Uno ",
+      "selector_column": 2,
+      "selector_raw_u8": 8,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Un ",
+      "selector_column": 3,
+      "selector_raw_u8": 0,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Un ",
+      "selector_column": 4,
+      "selector_raw_u8": 0,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Una ",
+      "selector_column": 5,
+      "selector_raw_u8": 18,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Un’",
+      "selector_column": 6,
+      "selector_raw_u8": 28,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Una ",
+      "selector_column": 7,
+      "selector_raw_u8": 18,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Un’",
+      "selector_column": 8,
+      "selector_raw_u8": 28,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Un’",
+      "selector_column": 9,
+      "selector_raw_u8": 28,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dei ",
+      "selector_column": 10,
+      "selector_raw_u8": 36,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 11,
+      "selector_raw_u8": 46,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 12,
+      "selector_raw_u8": 46,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 13,
+      "selector_raw_u8": 46,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 14,
+      "selector_raw_u8": 46,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 15,
+      "selector_raw_u8": 60,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 16,
+      "selector_raw_u8": 60,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 17,
+      "selector_raw_u8": 60,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 18,
+      "selector_raw_u8": 60,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 19,
+      "selector_raw_u8": 60,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Del ",
+      "selector_column": 20,
+      "selector_raw_u8": 74,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 21,
+      "selector_raw_u8": 84,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dello ",
+      "selector_column": 22,
+      "selector_raw_u8": 96,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 23,
+      "selector_raw_u8": 84,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 24,
+      "selector_raw_u8": 84,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Della ",
+      "selector_column": 25,
+      "selector_raw_u8": 110,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 26,
+      "selector_raw_u8": 84,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Della ",
+      "selector_column": 27,
+      "selector_raw_u8": 110,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 28,
+      "selector_raw_u8": 84,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 29,
+      "selector_raw_u8": 84,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "del ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 1,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dello ",
+      "selector_column": 2,
+      "selector_raw_u8": 22,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 3,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 4,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "della ",
+      "selector_column": 5,
+      "selector_raw_u8": 36,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 6,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "della ",
+      "selector_column": 7,
+      "selector_raw_u8": 36,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 8,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 9,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dei ",
+      "selector_column": 10,
+      "selector_raw_u8": 50,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 11,
+      "selector_raw_u8": 60,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 12,
+      "selector_raw_u8": 60,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 13,
+      "selector_raw_u8": 60,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "degli ",
+      "selector_column": 14,
+      "selector_raw_u8": 60,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 15,
+      "selector_raw_u8": 74,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 16,
+      "selector_raw_u8": 74,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 17,
+      "selector_raw_u8": 74,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 18,
+      "selector_raw_u8": 74,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "delle ",
+      "selector_column": 19,
+      "selector_raw_u8": 74,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "del ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 21,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dello ",
+      "selector_column": 22,
+      "selector_raw_u8": 22,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 23,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 24,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "della ",
+      "selector_column": 25,
+      "selector_raw_u8": 36,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 26,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "della ",
+      "selector_column": 27,
+      "selector_raw_u8": 36,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 28,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "dell’",
+      "selector_column": 29,
+      "selector_raw_u8": 10,
+      "term_index": 4
+    },
+    {
+      "resolved_text": "Del ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 1,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dello ",
+      "selector_column": 2,
+      "selector_raw_u8": 22,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 3,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 4,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Della ",
+      "selector_column": 5,
+      "selector_raw_u8": 36,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 6,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Della ",
+      "selector_column": 7,
+      "selector_raw_u8": 36,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 8,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 9,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dei ",
+      "selector_column": 10,
+      "selector_raw_u8": 50,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 11,
+      "selector_raw_u8": 60,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 12,
+      "selector_raw_u8": 60,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 13,
+      "selector_raw_u8": 60,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Degli ",
+      "selector_column": 14,
+      "selector_raw_u8": 60,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 15,
+      "selector_raw_u8": 74,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 16,
+      "selector_raw_u8": 74,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 17,
+      "selector_raw_u8": 74,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 18,
+      "selector_raw_u8": 74,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Delle ",
+      "selector_column": 19,
+      "selector_raw_u8": 74,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Del ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 21,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dello ",
+      "selector_column": 22,
+      "selector_raw_u8": 22,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 23,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 24,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Della ",
+      "selector_column": 25,
+      "selector_raw_u8": 36,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 26,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Della ",
+      "selector_column": 27,
+      "selector_raw_u8": 36,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 28,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "Dell’",
+      "selector_column": 29,
+      "selector_raw_u8": 10,
+      "term_index": 5
+    },
+    {
+      "resolved_text": "sul ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 1,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sullo ",
+      "selector_column": 2,
+      "selector_raw_u8": 22,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 3,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 4,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulla ",
+      "selector_column": 5,
+      "selector_raw_u8": 36,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 6,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulla ",
+      "selector_column": 7,
+      "selector_raw_u8": 36,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 8,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 9,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sui ",
+      "selector_column": 10,
+      "selector_raw_u8": 50,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sugli ",
+      "selector_column": 11,
+      "selector_raw_u8": 60,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sugli ",
+      "selector_column": 12,
+      "selector_raw_u8": 60,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sugli ",
+      "selector_column": 13,
+      "selector_raw_u8": 60,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sugli ",
+      "selector_column": 14,
+      "selector_raw_u8": 60,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulle ",
+      "selector_column": 15,
+      "selector_raw_u8": 74,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulle ",
+      "selector_column": 16,
+      "selector_raw_u8": 74,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulle ",
+      "selector_column": 17,
+      "selector_raw_u8": 74,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulle ",
+      "selector_column": 18,
+      "selector_raw_u8": 74,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulle ",
+      "selector_column": 19,
+      "selector_raw_u8": 74,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sul ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 21,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sullo ",
+      "selector_column": 22,
+      "selector_raw_u8": 22,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 23,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 24,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulla ",
+      "selector_column": 25,
+      "selector_raw_u8": 36,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 26,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sulla ",
+      "selector_column": 27,
+      "selector_raw_u8": 36,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 28,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "sull’",
+      "selector_column": 29,
+      "selector_raw_u8": 10,
+      "term_index": 6
+    },
+    {
+      "resolved_text": "Sul ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 1,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sullo ",
+      "selector_column": 2,
+      "selector_raw_u8": 22,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 3,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 4,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulla ",
+      "selector_column": 5,
+      "selector_raw_u8": 36,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 6,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulla ",
+      "selector_column": 7,
+      "selector_raw_u8": 36,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 8,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 9,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sui ",
+      "selector_column": 10,
+      "selector_raw_u8": 50,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sugli ",
+      "selector_column": 11,
+      "selector_raw_u8": 60,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sugli ",
+      "selector_column": 12,
+      "selector_raw_u8": 60,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sugli ",
+      "selector_column": 13,
+      "selector_raw_u8": 60,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sugli ",
+      "selector_column": 14,
+      "selector_raw_u8": 60,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulle ",
+      "selector_column": 15,
+      "selector_raw_u8": 74,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulle ",
+      "selector_column": 16,
+      "selector_raw_u8": 74,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulle ",
+      "selector_column": 17,
+      "selector_raw_u8": 74,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulle ",
+      "selector_column": 18,
+      "selector_raw_u8": 74,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulle ",
+      "selector_column": 19,
+      "selector_raw_u8": 74,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sul ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 21,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sullo ",
+      "selector_column": 22,
+      "selector_raw_u8": 22,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 23,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 24,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulla ",
+      "selector_column": 25,
+      "selector_raw_u8": 36,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 26,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sulla ",
+      "selector_column": 27,
+      "selector_raw_u8": 36,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 28,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "Sull’",
+      "selector_column": 29,
+      "selector_raw_u8": 10,
+      "term_index": 7
+    },
+    {
+      "resolved_text": "al ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 1,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "allo ",
+      "selector_column": 2,
+      "selector_raw_u8": 18,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 3,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 4,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alla ",
+      "selector_column": 5,
+      "selector_raw_u8": 30,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 6,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alla ",
+      "selector_column": 7,
+      "selector_raw_u8": 30,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 8,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 9,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "ai ",
+      "selector_column": 10,
+      "selector_raw_u8": 42,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "agli ",
+      "selector_column": 11,
+      "selector_raw_u8": 50,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "agli ",
+      "selector_column": 12,
+      "selector_raw_u8": 50,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "agli ",
+      "selector_column": 13,
+      "selector_raw_u8": 50,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "agli ",
+      "selector_column": 14,
+      "selector_raw_u8": 50,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alle ",
+      "selector_column": 15,
+      "selector_raw_u8": 62,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alle ",
+      "selector_column": 16,
+      "selector_raw_u8": 62,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alle ",
+      "selector_column": 17,
+      "selector_raw_u8": 62,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alle ",
+      "selector_column": 18,
+      "selector_raw_u8": 62,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alle ",
+      "selector_column": 19,
+      "selector_raw_u8": 62,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "al ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 21,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "allo ",
+      "selector_column": 22,
+      "selector_raw_u8": 18,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 23,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 24,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alla ",
+      "selector_column": 25,
+      "selector_raw_u8": 30,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 26,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "alla ",
+      "selector_column": 27,
+      "selector_raw_u8": 30,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 28,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "all’",
+      "selector_column": 29,
+      "selector_raw_u8": 8,
+      "term_index": 8
+    },
+    {
+      "resolved_text": "Al ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 1,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Allo ",
+      "selector_column": 2,
+      "selector_raw_u8": 18,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 3,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 4,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alla ",
+      "selector_column": 5,
+      "selector_raw_u8": 30,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 6,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alla ",
+      "selector_column": 7,
+      "selector_raw_u8": 30,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 8,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 9,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Ai ",
+      "selector_column": 10,
+      "selector_raw_u8": 42,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Agli ",
+      "selector_column": 11,
+      "selector_raw_u8": 50,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Agli ",
+      "selector_column": 12,
+      "selector_raw_u8": 50,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Agli ",
+      "selector_column": 13,
+      "selector_raw_u8": 50,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Agli ",
+      "selector_column": 14,
+      "selector_raw_u8": 50,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alle ",
+      "selector_column": 15,
+      "selector_raw_u8": 62,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alle ",
+      "selector_column": 16,
+      "selector_raw_u8": 62,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alle ",
+      "selector_column": 17,
+      "selector_raw_u8": 62,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alle ",
+      "selector_column": 18,
+      "selector_raw_u8": 62,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alle ",
+      "selector_column": 19,
+      "selector_raw_u8": 62,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Al ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 21,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Allo ",
+      "selector_column": 22,
+      "selector_raw_u8": 18,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 23,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 24,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alla ",
+      "selector_column": 25,
+      "selector_raw_u8": 30,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 26,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "Alla ",
+      "selector_column": 27,
+      "selector_raw_u8": 30,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 28,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "All’",
+      "selector_column": 29,
+      "selector_raw_u8": 8,
+      "term_index": 9
+    },
+    {
+      "resolved_text": "nel ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 1,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nello ",
+      "selector_column": 2,
+      "selector_raw_u8": 22,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 3,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 4,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nella ",
+      "selector_column": 5,
+      "selector_raw_u8": 36,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 6,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nella ",
+      "selector_column": 7,
+      "selector_raw_u8": 36,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 8,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 9,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nei ",
+      "selector_column": 10,
+      "selector_raw_u8": 50,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "negli ",
+      "selector_column": 11,
+      "selector_raw_u8": 60,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "negli ",
+      "selector_column": 12,
+      "selector_raw_u8": 60,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "negli ",
+      "selector_column": 13,
+      "selector_raw_u8": 60,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "negli ",
+      "selector_column": 14,
+      "selector_raw_u8": 60,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nelle ",
+      "selector_column": 15,
+      "selector_raw_u8": 74,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nelle ",
+      "selector_column": 16,
+      "selector_raw_u8": 74,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nelle ",
+      "selector_column": 17,
+      "selector_raw_u8": 74,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nelle ",
+      "selector_column": 18,
+      "selector_raw_u8": 74,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nelle ",
+      "selector_column": 19,
+      "selector_raw_u8": 74,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nel ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 21,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nello ",
+      "selector_column": 22,
+      "selector_raw_u8": 22,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 23,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 24,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nella ",
+      "selector_column": 25,
+      "selector_raw_u8": 36,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 26,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nella ",
+      "selector_column": 27,
+      "selector_raw_u8": 36,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 28,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "nell’",
+      "selector_column": 29,
+      "selector_raw_u8": 10,
+      "term_index": 10
+    },
+    {
+      "resolved_text": "Nel ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 1,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nello ",
+      "selector_column": 2,
+      "selector_raw_u8": 22,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 3,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 4,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nella ",
+      "selector_column": 5,
+      "selector_raw_u8": 36,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 6,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nella ",
+      "selector_column": 7,
+      "selector_raw_u8": 36,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 8,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 9,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nei ",
+      "selector_column": 10,
+      "selector_raw_u8": 50,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Negli ",
+      "selector_column": 11,
+      "selector_raw_u8": 60,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Negli ",
+      "selector_column": 12,
+      "selector_raw_u8": 60,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Negli ",
+      "selector_column": 13,
+      "selector_raw_u8": 60,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Negli ",
+      "selector_column": 14,
+      "selector_raw_u8": 60,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nelle ",
+      "selector_column": 15,
+      "selector_raw_u8": 74,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nelle ",
+      "selector_column": 16,
+      "selector_raw_u8": 74,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nelle ",
+      "selector_column": 17,
+      "selector_raw_u8": 74,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nelle ",
+      "selector_column": 18,
+      "selector_raw_u8": 74,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nelle ",
+      "selector_column": 19,
+      "selector_raw_u8": 74,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nel ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 21,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nello ",
+      "selector_column": 22,
+      "selector_raw_u8": 22,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 23,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 24,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nella ",
+      "selector_column": 25,
+      "selector_raw_u8": 36,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 26,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nella ",
+      "selector_column": 27,
+      "selector_raw_u8": 36,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 28,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "Nell’",
+      "selector_column": 29,
+      "selector_raw_u8": 10,
+      "term_index": 11
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 2,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "ed ",
+      "selector_column": 3,
+      "selector_raw_u8": 6,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 4,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 5,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 6,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 7,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "ed ",
+      "selector_column": 8,
+      "selector_raw_u8": 6,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 9,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 10,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 11,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 12,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "ed ",
+      "selector_column": 13,
+      "selector_raw_u8": 6,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 14,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 15,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 16,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 17,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "ed ",
+      "selector_column": 18,
+      "selector_raw_u8": 6,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 19,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 21,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 22,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "ed ",
+      "selector_column": 23,
+      "selector_raw_u8": 6,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 24,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 25,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 26,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 27,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "ed ",
+      "selector_column": 28,
+      "selector_raw_u8": 6,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "e ",
+      "selector_column": 29,
+      "selector_raw_u8": 0,
+      "term_index": 12
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 2,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "Ed ",
+      "selector_column": 3,
+      "selector_raw_u8": 6,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 4,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 5,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 6,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 7,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "Ed ",
+      "selector_column": 8,
+      "selector_raw_u8": 6,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 9,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 10,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 11,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 12,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "Ed ",
+      "selector_column": 13,
+      "selector_raw_u8": 6,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 14,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 15,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 16,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 17,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "Ed ",
+      "selector_column": 18,
+      "selector_raw_u8": 6,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 19,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 21,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 22,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "Ed ",
+      "selector_column": 23,
+      "selector_raw_u8": 6,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 24,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 25,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 26,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 27,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "Ed ",
+      "selector_column": 28,
+      "selector_raw_u8": 6,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "E ",
+      "selector_column": 29,
+      "selector_raw_u8": 0,
+      "term_index": 13
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 2,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 3,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "ad ",
+      "selector_column": 4,
+      "selector_raw_u8": 6,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 5,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 6,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 7,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 8,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "ad ",
+      "selector_column": 9,
+      "selector_raw_u8": 6,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 10,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 11,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 12,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 13,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "ad ",
+      "selector_column": 14,
+      "selector_raw_u8": 6,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 15,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 16,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 17,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 18,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "ad ",
+      "selector_column": 19,
+      "selector_raw_u8": 6,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 21,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 22,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 23,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "ad ",
+      "selector_column": 24,
+      "selector_raw_u8": 6,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 25,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 26,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 27,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 28,
+      "selector_raw_u8": 0,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "ad ",
+      "selector_column": 29,
+      "selector_raw_u8": 6,
+      "term_index": 14
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 2,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 3,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "Ad ",
+      "selector_column": 4,
+      "selector_raw_u8": 6,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 5,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 6,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 7,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 8,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "Ad ",
+      "selector_column": 9,
+      "selector_raw_u8": 6,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 10,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 11,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 12,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 13,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "Ad ",
+      "selector_column": 14,
+      "selector_raw_u8": 6,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 15,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 16,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 17,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 18,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "Ad ",
+      "selector_column": 19,
+      "selector_raw_u8": 6,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 20,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 21,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 22,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 23,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "Ad ",
+      "selector_column": 24,
+      "selector_raw_u8": 6,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 25,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 26,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 27,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 28,
+      "selector_raw_u8": 0,
+      "term_index": 15
+    },
+    {
+      "resolved_text": "Ad ",
+      "selector_column": 29,
+      "selector_raw_u8": 6,
+      "term_index": 15
+    }
+  ],
+  "term_count": 16,
+  "terms": [
+    {
+      "absolute_offset": 514,
+      "index": 0,
+      "text": "il ",
+      "utf16_bytes": 54,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "il "
+        },
+        {
+          "relative_byte_offset": 8,
+          "text": "l’"
+        },
+        {
+          "relative_byte_offset": 14,
+          "text": "lo "
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "la "
+        },
+        {
+          "relative_byte_offset": 30,
+          "text": "i "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "gli "
+        },
+        {
+          "relative_byte_offset": 46,
+          "text": "le "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 568,
+      "index": 1,
+      "text": "Il ",
+      "utf16_bytes": 54,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "Il "
+        },
+        {
+          "relative_byte_offset": 8,
+          "text": "L’"
+        },
+        {
+          "relative_byte_offset": 14,
+          "text": "Lo "
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "La "
+        },
+        {
+          "relative_byte_offset": 30,
+          "text": "I "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "Gli "
+        },
+        {
+          "relative_byte_offset": 46,
+          "text": "Le "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 622,
+      "index": 2,
+      "text": "un ",
+      "utf16_bytes": 124,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "un "
+        },
+        {
+          "relative_byte_offset": 8,
+          "text": "uno "
+        },
+        {
+          "relative_byte_offset": 18,
+          "text": "una "
+        },
+        {
+          "relative_byte_offset": 28,
+          "text": "un’"
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "dei "
+        },
+        {
+          "relative_byte_offset": 46,
+          "text": "degli "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "delle "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "del "
+        },
+        {
+          "relative_byte_offset": 84,
+          "text": "dell’"
+        },
+        {
+          "relative_byte_offset": 96,
+          "text": "dello "
+        },
+        {
+          "relative_byte_offset": 110,
+          "text": "della "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 746,
+      "index": 3,
+      "text": "Un ",
+      "utf16_bytes": 124,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "Un "
+        },
+        {
+          "relative_byte_offset": 8,
+          "text": "Uno "
+        },
+        {
+          "relative_byte_offset": 18,
+          "text": "Una "
+        },
+        {
+          "relative_byte_offset": 28,
+          "text": "Un’"
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "Dei "
+        },
+        {
+          "relative_byte_offset": 46,
+          "text": "Degli "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "Delle "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "Del "
+        },
+        {
+          "relative_byte_offset": 84,
+          "text": "Dell’"
+        },
+        {
+          "relative_byte_offset": 96,
+          "text": "Dello "
+        },
+        {
+          "relative_byte_offset": 110,
+          "text": "Della "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 870,
+      "index": 4,
+      "text": "del ",
+      "utf16_bytes": 88,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "del "
+        },
+        {
+          "relative_byte_offset": 10,
+          "text": "dell’"
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "dello "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "della "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "dei "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "degli "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "delle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 958,
+      "index": 5,
+      "text": "Del ",
+      "utf16_bytes": 88,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "Del "
+        },
+        {
+          "relative_byte_offset": 10,
+          "text": "Dell’"
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "Dello "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "Della "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "Dei "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "Degli "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "Delle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1046,
+      "index": 6,
+      "text": "sul ",
+      "utf16_bytes": 88,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "sul "
+        },
+        {
+          "relative_byte_offset": 10,
+          "text": "sull’"
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "sullo "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "sulla "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "sui "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "sugli "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "sulle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1134,
+      "index": 7,
+      "text": "Sul ",
+      "utf16_bytes": 88,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "Sul "
+        },
+        {
+          "relative_byte_offset": 10,
+          "text": "Sull’"
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "Sullo "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "Sulla "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "Sui "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "Sugli "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "Sulle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1222,
+      "index": 8,
+      "text": "al ",
+      "utf16_bytes": 74,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "al "
+        },
+        {
+          "relative_byte_offset": 8,
+          "text": "all’"
+        },
+        {
+          "relative_byte_offset": 18,
+          "text": "allo "
+        },
+        {
+          "relative_byte_offset": 30,
+          "text": "alla "
+        },
+        {
+          "relative_byte_offset": 42,
+          "text": "ai "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "agli "
+        },
+        {
+          "relative_byte_offset": 62,
+          "text": "alle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1296,
+      "index": 9,
+      "text": "Al ",
+      "utf16_bytes": 74,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "Al "
+        },
+        {
+          "relative_byte_offset": 8,
+          "text": "All’"
+        },
+        {
+          "relative_byte_offset": 18,
+          "text": "Allo "
+        },
+        {
+          "relative_byte_offset": 30,
+          "text": "Alla "
+        },
+        {
+          "relative_byte_offset": 42,
+          "text": "Ai "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "Agli "
+        },
+        {
+          "relative_byte_offset": 62,
+          "text": "Alle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1370,
+      "index": 10,
+      "text": "nel ",
+      "utf16_bytes": 88,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "nel "
+        },
+        {
+          "relative_byte_offset": 10,
+          "text": "nell’"
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "nello "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "nella "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "nei "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "negli "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "nelle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1458,
+      "index": 11,
+      "text": "Nel ",
+      "utf16_bytes": 88,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "Nel "
+        },
+        {
+          "relative_byte_offset": 10,
+          "text": "Nell’"
+        },
+        {
+          "relative_byte_offset": 22,
+          "text": "Nello "
+        },
+        {
+          "relative_byte_offset": 36,
+          "text": "Nella "
+        },
+        {
+          "relative_byte_offset": 50,
+          "text": "Nei "
+        },
+        {
+          "relative_byte_offset": 60,
+          "text": "Negli "
+        },
+        {
+          "relative_byte_offset": 74,
+          "text": "Nelle "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1546,
+      "index": 12,
+      "text": "e ",
+      "utf16_bytes": 14,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "e "
+        },
+        {
+          "relative_byte_offset": 6,
+          "text": "ed "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1560,
+      "index": 13,
+      "text": "E ",
+      "utf16_bytes": 14,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "E "
+        },
+        {
+          "relative_byte_offset": 6,
+          "text": "Ed "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1574,
+      "index": 14,
+      "text": "a ",
+      "utf16_bytes": 14,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "a "
+        },
+        {
+          "relative_byte_offset": 6,
+          "text": "ad "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 1588,
+      "index": 15,
+      "text": "A ",
+      "utf16_bytes": 14,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "A "
+        },
+        {
+          "relative_byte_offset": 6,
+          "text": "Ad "
+        }
+      ]
+    }
+  ]
+}

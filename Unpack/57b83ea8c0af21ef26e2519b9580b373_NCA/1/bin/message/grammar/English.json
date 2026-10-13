@@ -1,0 +1,252 @@
+{
+  "certainty": "UTF-16LE string pool and per-cell byte offsets verified against original data; grammar condition meanings unknown",
+  "format": "HOME grammar substitution table",
+  "matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      6,
+      14,
+      14,
+      14,
+      14
+    ],
+    [
+      0,
+      6,
+      14,
+      14,
+      14,
+      14
+    ]
+  ],
+  "matrix_width": 6,
+  "resolved_selectors": [
+    {
+      "resolved_text": "the ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "the ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "the ",
+      "selector_column": 2,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "the ",
+      "selector_column": 3,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "the ",
+      "selector_column": 4,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "the ",
+      "selector_column": 5,
+      "selector_raw_u8": 0,
+      "term_index": 0
+    },
+    {
+      "resolved_text": "The ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "The ",
+      "selector_column": 1,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "The ",
+      "selector_column": 2,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "The ",
+      "selector_column": 3,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "The ",
+      "selector_column": 4,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "The ",
+      "selector_column": 5,
+      "selector_raw_u8": 0,
+      "term_index": 1
+    },
+    {
+      "resolved_text": "a ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "an ",
+      "selector_column": 1,
+      "selector_raw_u8": 6,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 2,
+      "selector_raw_u8": 14,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 3,
+      "selector_raw_u8": 14,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 4,
+      "selector_raw_u8": 14,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 5,
+      "selector_raw_u8": 14,
+      "term_index": 2
+    },
+    {
+      "resolved_text": "A ",
+      "selector_column": 0,
+      "selector_raw_u8": 0,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "An ",
+      "selector_column": 1,
+      "selector_raw_u8": 6,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 2,
+      "selector_raw_u8": 14,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 3,
+      "selector_raw_u8": 14,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 4,
+      "selector_raw_u8": 14,
+      "term_index": 3
+    },
+    {
+      "resolved_text": "",
+      "selector_column": 5,
+      "selector_raw_u8": 14,
+      "term_index": 3
+    }
+  ],
+  "term_count": 4,
+  "terms": [
+    {
+      "absolute_offset": 34,
+      "index": 0,
+      "text": "the ",
+      "utf16_bytes": 10,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "the "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 44,
+      "index": 1,
+      "text": "The ",
+      "utf16_bytes": 10,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "The "
+        }
+      ]
+    },
+    {
+      "absolute_offset": 54,
+      "index": 2,
+      "text": "a ",
+      "utf16_bytes": 16,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "a "
+        },
+        {
+          "relative_byte_offset": 6,
+          "text": "an "
+        },
+        {
+          "relative_byte_offset": 14,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "absolute_offset": 70,
+      "index": 3,
+      "text": "A ",
+      "utf16_bytes": 16,
+      "variants": [
+        {
+          "relative_byte_offset": 0,
+          "text": "A "
+        },
+        {
+          "relative_byte_offset": 6,
+          "text": "An "
+        },
+        {
+          "relative_byte_offset": 14,
+          "text": ""
+        }
+      ]
+    }
+  ]
+}
