@@ -71,6 +71,24 @@ The resulting output files alongside the original mirrored path are:
   hash u64 from `item_hash_to_index.dat` in **hex** to preserve precision.
 - `item.json`: counts, original 68-byte header and hash joins.
 
+## V5 勘误（2026-10-13）
+
+本 P4.2 文件保留首次解包时的原始考证过程；后续已在
+[UNPACK_ITEM8_SEMANTICS_V5.md](UNPACK_ITEM8_SEMANTICS_V5.md)
+通过 pkNX `Item8.GetArray` 源码和同一个 HOME 4.1.0 资源样本验证：
+
+- `u16@0=1829` **实际是可寻址的 item ID 项数**；
+- `u16@2=1832` 是索引区槽位容量，多出的三槽为零且超出有效 ID 范围；
+- `u16@4=1166` 才是物理 48 字节记录条数；
+- `u32@0x40=5124` 是记录区起始；
+- 哈希表第 1829 行不属于 `0..1828` 有效 item ID 范围，故不宜视为一个有效道具的索引错误。
+
+第五轮已实际交付 `item.semantic.csv`（1829 个 ID）的价格、Pouch、
+EffectField、ItemSprite 等 **pkNX-一致且通过样本校验的字段名称**，
+并通过原始 ELF 证明了文件路径、哈希索引 16 字节迭代读取链。
+但并未将每个字段的 HOME native Getter 逐一闭合。
+以下原始段落仅为 P4.2 **历史阶段结论**，以 V5 勘误为准。
+
 ## Cross-file verification: item hash mapping
 
 The existing `item_hash_to_index.dat` contains 1,830 entries.
