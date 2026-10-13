@@ -109,44 +109,109 @@ ELF 常量表 `main+0x62D39C` 精确导出：
 `0x225C30` 读取的全局 flags 表如何由用户具体图鉴状态写入，
 尚缺 producer XREF 或同 Tracker 的实机对照。
 
-## Item.dat Native Getter：已追到调用链，但未证明字段别名
+## Item.dat Native Getter：加载→ID 索引→属性读取全链路已闭合
 
-- `main+0x502104` 在函数内引用 `item.dat` 字符串，用于格式化/
-  取得资源路径；不是 Price/Effect 的 Getter。
-- `main+0x5020A0` 是格式化路径所在函数。全 ELF Direct BL
-  仅找到 **一个**调用点 `main+0x4FD67C`，因此该地址是下一阶段
-  继续追对象和内存载入的最佳入口。
-- `main+0x50213C` 为通用资源转发/构建路径，
-  有 **十个**直接 BL 调用点，并非特定道具效果读取者。
-- `main+0x502950` 的全局资源上下文 getter 出现 32 个直接 BL 调用点。
-- `item_hash_to_index.dat` 的读取循环 `main+0x6986C`
-  使用 `[x23],#0x10` 读取下一个 16 字节索引条目并通过
-  `STRH` 提取一个低 16 位数据成员。
+资源装载链的真实 ELF opcode（已按 `main.elf` SHA 原始验证）：
 
-在 `main+0x500000..0x550000` 的 81,920 条解码指令范围内，
-对 “MOV #0x30 → 后续 17 指令内含使用该寄存器的 UMADDL/MADD”
-的保守扫描 **没有候选**。这只是局部特征匹配为零，不代表所有 ELF
-不存在该 Getter；编译器可能使用其他乘法/移位优化或把数据访问
-内联到另一个模块。**不能宣称已定位道具 48 字节对象的 native 属性 Getter**。
+```text
+main+0x5020A0   格式化 item.dat 资源路径
+main+0x4FD67C   唯一 BL 调用上述路径函数
+main+0x4FD6C0   将资源对象句柄保存到 owner+0x58
+main+0x4FD76C   读取 raw resource+0x190
+main+0x4FD774   把原始数据指针写入 owner+0x160
+main+0x4FD784   ItemID→48-byte record 的 Native Getter
+main+0x4FD098   唯一 BL Getter 的 wrapper 构造调用
+main+0x4FD09C   wrapper+0x00 保存 record 指针
+main+0x4FD0B8   26 项属性选择器
+main+0x4FD108..0x4FD250   25 个直接字段 Getter
+```
 
-`item.semantic.csv` 仍然使用经原始数据交叉验证的
-[pkNX Item8 源码定义](https://github.com/kwsch/pkNX/blob/0936c08eb14ed08eb9042c008404b24bf60e088a/pkNX.Structures/Item/Item8.cs)，
-其中价格、分类、图标等字段可信，但只是**外部同结构定义+实样验证**，
-不同于 HOME native 某个字段的直接 XREF 证明。
+`main+0x4FD784` 的真实公式：
 
-- [P6 item ELF 调用与候选审计 JSON](../derived/4.1.0/native_item_topics/p6_item_native_chain.json)
-- [扩展 item Caller 反汇编窗口](UNPACK_P6_NATIVE_FOCUS_WINDOWS.md)
-- [Native 调用链 CI](https://github.com/969981/PokeHome_Resources/actions/runs/38348839311)
+```c
+uint16_t capacity = read_u16(raw + 0x02);  // 当前 1832
+uint16_t record_count = read_u16(raw + 0x04);  // 当前 1166
+uint16_t item_index = (uint16_t)item_id;
+assert(item_index < capacity);
+uint16_t slot = read_u16(raw + 0x44 + 2 * item_index);
+assert(slot < record_count);
+return raw + read_u32(raw + 0x40) + 48 * slot;
+```
 
-下一步重点：从 `main+0x4FD67C` 返回值沿资源句柄追
-`item.dat` 解引用地址到 `0x40` 数据偏移/索引读取处，
-记录每个 Native 访问指令的真实 PC、字段偏移、有效类型及调用者，
-再进一步追 ItemEffect 等业务消费者；无证据的命名暂不推进。
+容量 `1832` 和有效 ID 数 `1829` 不相同。末尾三个容量填充槽
+映射共享的 `record_index=0`，不能将它们认定为真实道具 ID。
+ELF 逐条 opcode 已通过
+[Item8 record Getter CI](https://github.com/969981/PokeHome_Resources/actions/runs/38349457838)；
+[17 条严格 Opcode 证据](../derived/4.1.0/native_item_topics/p6_item_native_getter_proof.json)；
+全 `1832` 槽复现见 `tools/test_home41_native_item_getter.py`。
+
+### 原生 26 路属性分派与字段宽度
+
+`main+0x4FD0B8` 通过 `main+0x657FCC` 的 **26 字节跳转表**
+选择 `0..25` 属性，目的地址由
+`0x4FD0DC + table[selector] × 4` 计算。
+`selector=0` 读取包装对象的道具 ID，`1..25` 直接匹配
+前述 Getter 函数入口。原始 CPU 指令确认各字段的偏移、
+符号扩展和位提取；以下业务名称另外根据 pkNX 对照：
+
+| Native selector | Getter | 原始偏移 | 原生读取 | pkNX 对照/说明 |
+|---:|---|---:|---|---|
+| 0 | `0x4FD0DC` | wrapper+0x08 | uint32 | Item ID |
+| 1 | `0x4FD108` | +0x00 | uint32 | Price |
+| 2 | `0x4FD114` | +0x04 | uint32 | PriceWatts |
+| 3 | `0x4FD120` | +0x08 | uint32 | PriceAlternate |
+| 4 | `0x4FD12C` | +0x1A | **int16** | ItemSprite |
+| 8 | `0x4FD15C` | +0x10 | uint16 提取 bit12 | raw flag |
+| 11–13 | `0x4FD184..0x4FD1A4` | +0x10 | uint16 掩码/bit5/bit6 | raw flag |
+| 14 | `0x4FD1B4` | +0x11 | byte 低 4 位 | Pouch |
+| 15 | `0x4FD1C4` | +0x13 | uint8 | EffectField |
+| 17 | `0x4FD1DC` | +0x15 | uint8 | CanUseOnPokemon |
+| 19–20 | `0x4FD1F4/0x4FD204` | +0x17 | byte 低/高 4 位 | raw flag |
+| 22–23 | `0x4FD220/0x4FD22C` | +0x1C/+0x1D | uint8 | GroupType/GroupIndex |
+| 24–25 | `0x4FD238/0x4FD248` | +0x10 | uint16 提取 bit7/bit13 | raw flag |
+
+其余 Native 读取入口、精确 opcode、字段类型和宽度统一见
+[25 Getter 原始 ELF 证据](../derived/4.1.0/native_item_topics/p6_item_native_field_getters.json)
+与 [26 路属性分派表](../derived/4.1.0/native_item_topics/p6_item_property_selector_routes.json)。
+
+经原始 `item.dat` 的 1166 个独立记录检测，`+0x04/+0x08`
+Native 均使用 **32-bit LDR**，本版高 16 位恰好全零：
+瓦特价格最大 8000、备用价格最大 1000；原兼容 `uint16`
+字段保留，新增了 `price_watts_native_u32` 和
+`price_alternate_native_u32`。图标 `+0x1A`
+Native 使用 `LDRSH`，`0xFFFF` 实际为 `-1`，
+同时保留 `item_sprite_u16=65535` 供历史兼容。
+
+完整实际镜像：
+
+- [1,829 × 26 属性矩阵 item.native_properties.csv](../Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.native_properties.csv)
+- [1,829 行 pkNX 业务字段及 Native provenance](../Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.semantic.csv)
+- [Native Getter 导出元信息](../Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.semantic.json)
+- [全部验证的 26 属性镜像 CI](https://github.com/969981/PokeHome_Resources/actions/runs/38350730770)
+
+**审计修复记录：**第一版属性投影漏处理若干
+`flags_10_bit5/6/7/13` 的移位，将整个 `u16`
+错误导出为某些二进制标志。现已修正为单 bit 的 `0/1`，
+并添加独立 `range(0,2)` 约束与源数据交叉校验，
+`mirror-0.9.2` 已重新生成并推送。避免将旧版的 0.9.1
+输出用于效果判断。
+
+### 下一条未闭合的道具效果分派
+
+`main+0x4FD0B8` 对 `selector>25` 的处理进入
+`main+0x4FD0E4`，根据记录 `+0x15` 的类型字节
+选择不同分支。其中 `+0x15 == 1` 的条件分支
+会以 `record+0x1E` 为基址，并在 `main+0x4FD270`
+对更大的属性编号进行位标志/参数分派。
+这是 **下一阶段** 需要按原始 opcode 和业务消费者
+继续追踪的路径，不能把未知参数自行命名为效果强度等。
 
 ## 工程状态
 
-`mirror-0.7.0` 的最新校验：12,074 源文件，
+`mirror-0.9.2` 已实际校验：12,074 个源文件，
 **converted=6,700、partial=5,371、unsupported=3、failed=0**，
-真实镜像输出 **47,849** 个。P6 的 `topics_data.references.csv`
-新增一份有效产物，不能虚假把整个 `topics_data.bin` 算成
-所有字段均已恢复的 converted。剩余三种 unsupported 均为 BFOTF 字体。
+真实镜像输出 **47,850** 个。
+Item8 `item.dat` 和 Topics 都有 Native 属性关联产物，
+但仍标为 `partial`，因为完整 UI 条件和业务效果含义尚未全闭合。
+剩余三个 `unsupported` 均为 BFOTF 字体。
+
