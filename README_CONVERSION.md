@@ -98,3 +98,23 @@ python .\tools\export_home41_pml_csv.py `
 大批量资源可在 GitHub Actions 手动运行 `HOME 4.1.0 resource conversion`，分组导出 JSON/CSV 工件。首次 CI 未能启动正常的执行步骤，**不能视为测试通过**，应检查仓库 Actions 的运行器与计费状态。
 
 SARC 中的 `.bntx` 可先用 `--kind archives --extract` 解包，再将输出的 `archives_extracted` 目录作为 `--kind images` 的输入进行 PNG 转换。
+
+## 已复制到资源仓库的验证数据
+
+`derived/4.1.0/` 现包含 **10 份与既有研究仓库 Git blob SHA 完全一致**的压缩 CSV/JSON：
+
+- `p1_place_resource_status.csv.gz`：地点资源文件状态；
+- `p2_waza_flatbuffer_diff.csv.gz`：921 个招式 ID 的原始字段差异；
+- `p2_personal_record_presence_and_rawdiff.csv.gz`：各游戏 Personal 记录存在性与原始差异；
+- `p3_sarc_members.csv.gz`：SARC 成员目录与尺寸；
+- `p3_elf_resource_xrefs.csv.gz`、结构证据与 P1/P2/P3 摘要 JSON。
+
+其中 **58,740 行完整地点文本的 `p1_all_place_labels_text.csv.gz` 文件仍保存在原研究仓库**，未重复复制（连接器对大于 1 MiB 的文件未返回有效内容）；可从上文给出的 `HOME-Live-Plugin-CHS` 原路径下载，不影响资源仓库本地批量重新生成。
+
+另外新增 [`B2W2_place_name_English.csv`](examples/4.1.0/B2W2_place_name_English.csv)，来自真实 DAT/AHTB 的 **154 条英文地名文本**，包含 Nuvema Town、Accumula Town 等，无需运行脚本即可查看。
+
+解压任意 `.csv.gz`：
+
+```powershell
+python -c "import gzip, pathlib; p=pathlib.Path('derived/4.1.0/p2_waza_flatbuffer_diff.csv.gz'); p.with_suffix('').write_bytes(gzip.decompress(p.read_bytes()))"
+```
