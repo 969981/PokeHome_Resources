@@ -1,4 +1,5 @@
 name: HOME 4.1.0 P6 original ELF item and topic consumers
+# Whole-segment disassembly must tolerate executable PT_LOAD embedded data.
 on:
   push:
     branches: ['4.1.0']
