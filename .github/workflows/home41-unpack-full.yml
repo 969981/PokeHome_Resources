@@ -1,0 +1,137 @@
+name: HOME 4.1.0 complete mirrored Unpack and release
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-unpack-full.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-unpack-full-release
+  cancel-in-progress: false
+
+jobs:
+  build-full:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: home41-unpack-4.1.0-mirror-v1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Baseline test and source path check
+        run: |
+          set -euo pipefail
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p 'test_home41_*.py' -v
+          python tools/unpack_home41.py --root . --out Unpack --dry-run
+      - name: Convert all 12074 HOME 4.1.0 resources
+        id: convert
+        shell: bash
+        run: |
+          set +e
+          python tools/unpack_home41.py --root . --out Unpack --all --resume
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Verify source file hashes, outputs and source coverage
+        id: verify
+        shell: bash
+        run: |
+          set +e
+          python tools/unpack_home41.py --root . --out Unpack --verify --strict
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Emit full conversion statistics
+        run: |
+          cat Unpack/_meta/summary.json
+          python - <<'PY'
+          import json
+          summary=json.load(open("Unpack/_meta/summary.json"))
+          assert summary["source_files"]==12074, summary
+          assert summary["status_counts"].get("not_run",0)==0, summary
+          print("All original files have statuses; failures:",summary["status_counts"].get("failed",0))
+          PY
+      - name: Publish JSON CSV PNG and source manifests to Git
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          out=Path('Unpack')
+          paths=[]
+          for p in (out/'57b83ea8c0af21ef26e2519b9580b373_NCA'/'1').rglob('*'):
+              if p.is_file() and p.suffix.lower() in ('.json','.csv','.png') and p.stat().st_size < 50*1024*1024:
+                  paths.append(str(p))
+          for p in (out/'_meta').glob('*'):
+              if p.is_file() and p.stat().st_size < 50*1024*1024:
+                  paths.append(str(p))
+          for k in range(0,len(paths),100):
+              subprocess.run(['git','add','--',*paths[k:k+100]],check=True)
+          print("Prepared",len(paths),"small readable and audit files for Git")
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m "data: publish 4.1.0 SARC UI textures and full mirror audit"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Build complete Unpack archive and SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-out
+          tar -czf release-out/home41-unpack-complete.tar.gz Unpack/
+          sha256sum release-out/home41-unpack-complete.tar.gz | tee release-out/SHA256SUMS.txt
+          ls -lh release-out
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('release-out/home41-unpack-complete.tar.gz')
+          if p.stat().st_size <= 1800*1024*1024:
+              print('One release asset:',p.stat().st_size,'bytes')
+          else:
+              n=0
+              with p.open('rb') as inp:
+                  while (block:=inp.read(1400*1024*1024)):
+                      (p.parent/f'{p.name}.part{n:03d}').write_bytes(block)
+                      n+=1
+              p.unlink()
+              print('Split release into',n,'parts; concatenate before extraction')
+          PY
+      - name: Publish permanent Release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="$RELEASE_TAG"
+          notes="Full mirrored Unpack of HOME Switch 4.1.0. This is a best-effort decoder: refer to Unpack/_meta/summary.json for converted, partial, unsupported and failed counts. Extract archive at repository root to recover binary containers and original SARC members; readable JSON/CSV/PNG is also checked into the 4.1.0 branch. Assets have SHA-256 checksum. If .part files exist, concatenate in ascending part order."
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" release-out/* --clobber
+          else
+            gh release create "$tag" release-out/* --target "$(git rev-parse HEAD)" --title "HOME 4.1.0 mirrored Unpack v1" --notes "$notes" --prerelease
+          fi
+          gh release view "$tag" --json url --jq .url
+      - name: Upload text manifest as short-term fallback
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-unpack-full-summary
+          path: Unpack/_meta/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Signal actual conversion failures
+        if: ${{ steps.convert.outputs.exit_code != '0' || steps.verify.outputs.exit_code != '0' }}
+        run: |
+          echo "Some source conversions failed or verification diverged; see Git-tracked Unpack/_meta/errors.csv"
+          exit 1
