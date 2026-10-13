@@ -1,0 +1,101 @@
+{
+  "active_count": 140,
+  "certainty": "complete byte-exact 312-byte record partition, 7 group headers and shared placeholder verified; 78 inner words remain raw unsigned u32 and their gameplay semantics are unknown",
+  "decoded_slots": 693,
+  "format": "HOME 4.1.0 seven groups of 99 fixed 312-byte topic slots",
+  "group_count": 7,
+  "group_header_bytes": 16,
+  "group_stride_bytes": 30904,
+  "groups": [
+    {
+      "absolute_header_offset": 8,
+      "active_slots": 20,
+      "group_index": 0,
+      "header_u32_raw": [
+        3192483846,
+        2262386092,
+        2818090,
+        0
+      ],
+      "placeholder_slots": 79
+    },
+    {
+      "absolute_header_offset": 30912,
+      "active_slots": 20,
+      "group_index": 1,
+      "header_u32_raw": [
+        3192294621,
+        2262163372,
+        2949164,
+        0
+      ],
+      "placeholder_slots": 79
+    },
+    {
+      "absolute_header_offset": 61816,
+      "active_slots": 20,
+      "group_index": 2,
+      "header_u32_raw": [
+        3192091476,
+        2261932460,
+        3211312,
+        0
+      ],
+      "placeholder_slots": 79
+    },
+    {
+      "absolute_header_offset": 92720,
+      "active_slots": 20,
+      "group_index": 3,
+      "header_u32_raw": [
+        3191888331,
+        2261701548,
+        47,
+        0
+      ],
+      "placeholder_slots": 79
+    },
+    {
+      "absolute_header_offset": 123624,
+      "active_slots": 20,
+      "group_index": 4,
+      "header_u32_raw": [
+        3191887896,
+        2261701292,
+        3342386,
+        0
+      ],
+      "placeholder_slots": 79
+    },
+    {
+      "absolute_header_offset": 154528,
+      "active_slots": 20,
+      "group_index": 5,
+      "header_u32_raw": [
+        3191537721,
+        2261272492,
+        52,
+        0
+      ],
+      "placeholder_slots": 79
+    },
+    {
+      "absolute_header_offset": 185432,
+      "active_slots": 20,
+      "group_index": 6,
+      "header_u32_raw": [
+        3191334576,
+        2261041580,
+        3735608,
+        0
+      ],
+      "placeholder_slots": 79
+    }
+  ],
+  "placeholder_count": 553,
+  "placeholder_hex": "45262284e49cf2cb45262284e49cf2cb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "placeholder_sha256": "821712813f4f7ac3726af9a59fafa5e533a23e46a4a64b0ec299f67567f69c95",
+  "size_bytes": 216336,
+  "slot_stride_bytes": 312,
+  "slots_per_group": 99
+}

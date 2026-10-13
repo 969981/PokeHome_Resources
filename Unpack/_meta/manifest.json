@@ -127892,17 +127892,28 @@
     },
     {
       "collision_fallback": false,
-      "detected_format": "other",
+      "detected_format": "topics",
       "error": "",
-      "outputs": [],
+      "outputs": [
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.csv",
+          "sha256": "c5639faf7a54de41f9dbc390eb9555999c6cb3d382aca8d04ed782311daf4041",
+          "size": 176749
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.json",
+          "sha256": "6b8ee0a0130ba10b7ac64af3cdc08879fd9e7b63d3942751c88ebaeb0d34cb6b",
+          "size": 2886
+        }
+      ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.2.0",
-      "records": 0,
+      "parser_version": "mirror-0.5.0",
+      "records": 693,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/topics_data.bin",
       "source_sha256": "141be49529981e5bc56b6605c7f3223f3c506ee4753fb0ff2d3be16e792c3b8f",
       "source_size": 216336,
-      "status": "unsupported",
-      "warning": "untyped binary array without verified schema"
+      "status": "partial",
+      "warning": "7 groups, 99 fixed slots, 140 active and 553 identical placeholder records; inner u32 semantics unknown"
     },
     {
       "collision_fallback": false,
@@ -420327,6 +420338,6 @@
       "warning": ""
     }
   ],
-  "parser_version": "mirror-0.4.0",
+  "parser_version": "mirror-0.5.0",
   "version": "4.1.0"
 }
