@@ -1,0 +1,668 @@
+{
+  "status": "static ELF string and PC-relative reference scan only",
+  "no_semantic_claim": "PC-relative address references do not prove data consumers or 48-byte fields",
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "elf_bytes": 8261352,
+  "segments": [
+    {
+      "file_offset": 2616,
+      "vaddr": 0,
+      "size": 6259360,
+      "memory_size": 6259360,
+      "executable": true
+    },
+    {
+      "file_offset": 6261976,
+      "vaddr": 6262784,
+      "size": 1499136,
+      "memory_size": 1499136,
+      "executable": false
+    },
+    {
+      "file_offset": 7761112,
+      "vaddr": 7761920,
+      "size": 500240,
+      "memory_size": 4169728,
+      "executable": false
+    }
+  ],
+  "needles": [
+    "item.dat",
+    "item_hash_to_index",
+    "pml/item",
+    "topics_data.bin",
+    "topics_data",
+    "mtt_pokedex",
+    "pokemon_valid_list",
+    "pokemon_test_list",
+    "form_data.bin",
+    "pokedex",
+    "item_data.bin"
+  ],
+  "strings": [
+    {
+      "file_offset": 6335335,
+      "virtual_address": 6336143,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_list_detail_00_lyt.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6335414,
+      "virtual_address": 6336222,
+      "text": "mtt_pokedex_top_bg_07^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6346449,
+      "virtual_address": 6347257,
+      "text": "bin/pml/item/item_hash_to_index.dat",
+      "needles": [
+        "item_hash_to_index",
+        "pml/item"
+      ]
+    },
+    {
+      "file_offset": 6346820,
+      "virtual_address": 6347628,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_help_texture.arc",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6349199,
+      "virtual_address": 6350007,
+      "text": "mtt_pokedex_top_bg_00^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6354472,
+      "virtual_address": 6355280,
+      "text": "bin/hayabusa/appli/pokedex/res_table/pokedex_form_storage_index_table.bin",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6357616,
+      "virtual_address": 6358424,
+      "text": "mtt_pokedex_top_bg_04^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6360151,
+      "virtual_address": 6360959,
+      "text": "mtt_pokedex_top_bg_08^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6369102,
+      "virtual_address": 6369910,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_top_00_uikit.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6369157,
+      "virtual_address": 6369965,
+      "text": "mtt_pokedex_top_bg_99^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6370973,
+      "virtual_address": 6371781,
+      "text": "bin/appli/mtt_pokedex/bin/topics_data.bin",
+      "needles": [
+        "topics_data.bin",
+        "topics_data",
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6373760,
+      "virtual_address": 6374568,
+      "text": "bin/pml/item",
+      "needles": [
+        "pml/item"
+      ]
+    },
+    {
+      "file_offset": 6374278,
+      "virtual_address": 6375086,
+      "text": "mtt_pokedex_top_bg_03^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6376858,
+      "virtual_address": 6377666,
+      "text": "mtt_pokedex_top_bg_01^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6380490,
+      "virtual_address": 6381298,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_search_00_lyt.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6380546,
+      "virtual_address": 6381354,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_top_00_lyt.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6380599,
+      "virtual_address": 6381407,
+      "text": "mtt_pokedex_top_bg_09^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6380630,
+      "virtual_address": 6381438,
+      "text": "bin/ikkaku/world/exl/pokedex_contents_data/pokedex_mega_contents_data/pokedex_mega_contents_data",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6383458,
+      "virtual_address": 6384266,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_top_00.arc",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6388380,
+      "virtual_address": 6389188,
+      "text": "bin/appli/mtt_pokedex/bin/form_data.bin",
+      "needles": [
+        "mtt_pokedex",
+        "form_data.bin",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6391611,
+      "virtual_address": 6392419,
+      "text": "bin/ikkaku/world/exl/pokedex_not_complete_target_data/pokedex_not_complete_target_data/pokedex_not_complete_target_dat",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6394119,
+      "virtual_address": 6394927,
+      "text": "mtt_pokedex_top_bg_10^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6400058,
+      "virtual_address": 6400866,
+      "text": "bin/appli/mtt_pokedex/bin/shape_data.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6400099,
+      "virtual_address": 6400907,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_list_detail_00_uikit.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6400244,
+      "virtual_address": 6401052,
+      "text": "bin/ikkaku/world/ik_data/ui/pokedex/black_list_main/black_list_main_array.bfbs",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6403376,
+      "virtual_address": 6404184,
+      "text": "anime_L_cursor_popup_00_pos_shift_pokedex",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6405563,
+      "virtual_address": 6406371,
+      "text": "bin/pokemon/pokemon_list/pokemon_valid_list.bin",
+      "needles": [
+        "pokemon_valid_list"
+      ]
+    },
+    {
+      "file_offset": 6406052,
+      "virtual_address": 6406860,
+      "text": "mtt_pokedex_top_bg_05^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6412099,
+      "virtual_address": 6412907,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_topics_00_uikit.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6413196,
+      "virtual_address": 6414004,
+      "text": "item.dat",
+      "needles": [
+        "item.dat"
+      ]
+    },
+    {
+      "file_offset": 6415059,
+      "virtual_address": 6415867,
+      "text": "bin/appli/mtt_pokedex/bin/sugata.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6415117,
+      "virtual_address": 6415925,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_topics_00_lyt.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6415173,
+      "virtual_address": 6415981,
+      "text": "anime_select_pokedex",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6415194,
+      "virtual_address": 6416002,
+      "text": "mtt_pokedex_top_bg_06^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6415238,
+      "virtual_address": 6416046,
+      "text": "bin/hayabusa/appli/pokedex/res_table/pokedex_research_task_table.bin",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6415307,
+      "virtual_address": 6416115,
+      "text": "bin/ikkaku/world/ik_data/ui/pokedex/black_list_main/black_list_main_array.bin",
+      "needles": [
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6418522,
+      "virtual_address": 6419330,
+      "text": "bin/appli/mtt_pokedex/bin/mtt_pokedex_search_00_uikit.bin",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    },
+    {
+      "file_offset": 6418580,
+      "virtual_address": 6419388,
+      "text": "mtt_pokedex_top_bg_02^q",
+      "needles": [
+        "mtt_pokedex",
+        "pokedex"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "pc": 1613452,
+      "add_pc": 1613456,
+      "target_va": 6336143,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "B0002408",
+      "add_opcode": "913A3D08",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_list_detail_00_lyt.bin"
+      ]
+    },
+    {
+      "pc": 432028,
+      "add_pc": 432032,
+      "target_va": 6347257,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "90002D20",
+      "add_opcode": "9127E400",
+      "string_text": [
+        "bin/pml/item/item_hash_to_index.dat"
+      ]
+    },
+    {
+      "pc": 1568496,
+      "add_pc": 1568500,
+      "target_va": 6347628,
+      "kind": "ADRP+ADD",
+      "rd": 2,
+      "add_rd": 2,
+      "opcode": "F0002462",
+      "add_opcode": "912DB042",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_help_texture.arc"
+      ]
+    },
+    {
+      "pc": 1857704,
+      "add_pc": 1857708,
+      "target_va": 6355280,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "D0002240",
+      "add_opcode": "91254000",
+      "string_text": [
+        "bin/hayabusa/appli/pokedex/res_table/pokedex_form_storage_index_table.bin"
+      ]
+    },
+    {
+      "pc": 1687456,
+      "add_pc": 1687460,
+      "target_va": 6369910,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "900023C8",
+      "add_opcode": "9109D908",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_top_00_uikit.bin"
+      ]
+    },
+    {
+      "pc": 76560,
+      "add_pc": 76564,
+      "target_va": 6371781,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "B0003000",
+      "add_opcode": "91271400",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/topics_data.bin"
+      ]
+    },
+    {
+      "pc": 429132,
+      "add_pc": 429136,
+      "target_va": 6374568,
+      "kind": "ADRP+ADD",
+      "rd": 9,
+      "add_rd": 9,
+      "opcode": "90002D69",
+      "add_opcode": "9112A129",
+      "string_text": [
+        "bin/pml/item"
+      ]
+    },
+    {
+      "pc": 1648004,
+      "add_pc": 1648008,
+      "target_va": 6381298,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "F0002408",
+      "add_opcode": "913BC908",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_search_00_lyt.bin"
+      ]
+    },
+    {
+      "pc": 1687256,
+      "add_pc": 1687260,
+      "target_va": 6381354,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "D00023C8",
+      "add_opcode": "913CA908",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_top_00_lyt.bin"
+      ]
+    },
+    {
+      "pc": 1694220,
+      "add_pc": 1694224,
+      "target_va": 6384266,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "B00023C0",
+      "add_opcode": "912A2800",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_top_00.arc"
+      ]
+    },
+    {
+      "pc": 1561732,
+      "add_pc": 1561736,
+      "target_va": 6389188,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "D00024C0",
+      "add_opcode": "91371000",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/form_data.bin"
+      ]
+    },
+    {
+      "pc": 1561528,
+      "add_pc": 1561532,
+      "target_va": 6400866,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "B00024E0",
+      "add_opcode": "912D8800",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/shape_data.bin"
+      ]
+    },
+    {
+      "pc": 1613652,
+      "add_pc": 1613656,
+      "target_va": 6400907,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "B0002488",
+      "add_opcode": "912E2D08",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_list_detail_00_uikit.bin"
+      ]
+    },
+    {
+      "pc": 1647752,
+      "add_pc": 1647756,
+      "target_va": 6404184,
+      "kind": "ADRP+ADD",
+      "rd": 1,
+      "add_rd": 1,
+      "opcode": "B0002441",
+      "add_opcode": "91216021",
+      "string_text": [
+        "anime_L_cursor_popup_00_pos_shift_pokedex"
+      ]
+    },
+    {
+      "pc": 76792,
+      "add_pc": 76796,
+      "target_va": 6406371,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "D0003040",
+      "add_opcode": "91038C00",
+      "string_text": [
+        "bin/pokemon/pokemon_list/pokemon_valid_list.bin"
+      ]
+    },
+    {
+      "pc": 1661636,
+      "add_pc": 1661640,
+      "target_va": 6412907,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "90002448",
+      "add_opcode": "9129AD08",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_topics_00_uikit.bin"
+      ]
+    },
+    {
+      "pc": 5251332,
+      "add_pc": 5251336,
+      "target_va": 6414004,
+      "kind": "ADRP+ADD",
+      "rd": 5,
+      "add_rd": 5,
+      "opcode": "F00008C5",
+      "add_opcode": "913AD0A5",
+      "string_text": [
+        "item.dat"
+      ]
+    },
+    {
+      "pc": 1561280,
+      "add_pc": 1561284,
+      "target_va": 6415867,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "B0002500",
+      "add_opcode": "9117EC00",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/sugata.bin"
+      ]
+    },
+    {
+      "pc": 1661436,
+      "add_pc": 1661440,
+      "target_va": 6415925,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "B0002448",
+      "add_opcode": "9118D508",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_topics_00_lyt.bin"
+      ]
+    },
+    {
+      "pc": 1687148,
+      "add_pc": 1687152,
+      "target_va": 6415981,
+      "kind": "ADRP+ADD",
+      "rd": 1,
+      "add_rd": 1,
+      "opcode": "F0002401",
+      "add_opcode": "9119B421",
+      "string_text": [
+        "anime_select_pokedex"
+      ]
+    },
+    {
+      "pc": 1860056,
+      "add_pc": 1860060,
+      "target_va": 6416046,
+      "kind": "ADRP+ADD",
+      "rd": 0,
+      "add_rd": 0,
+      "opcode": "900022C0",
+      "add_opcode": "911AB800",
+      "string_text": [
+        "bin/hayabusa/appli/pokedex/res_table/pokedex_research_task_table.bin"
+      ]
+    },
+    {
+      "pc": 1648204,
+      "add_pc": 1648208,
+      "target_va": 6419330,
+      "kind": "ADRP+ADD",
+      "rd": 8,
+      "add_rd": 8,
+      "opcode": "B0002468",
+      "add_opcode": "910E0908",
+      "string_text": [
+        "bin/appli/mtt_pokedex/bin/mtt_pokedex_search_00_uikit.bin"
+      ]
+    }
+  ],
+  "string_hits": 38,
+  "direct_reference_hits": 22
+}
