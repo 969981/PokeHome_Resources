@@ -247,7 +247,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             sink.put(main, csv_bytes(doc["terms"], ["index", "absolute_offset", "utf16_bytes", "text"]))
             sink.put(main.with_name(main.stem + ".selectors.csv"),
                      csv_bytes(grammar_csv_rows(doc),
-                               ["term_index", "selector_column", "selector_raw_u8"]))
+                               ["term_index", "selector_column", "selector_raw_u8", "resolved_text"]))
             sink.put(main.with_suffix(".json"), json_bytes(doc))
             return "partial", doc["term_count"], [
                 "UTF-16 terms and selector matrix decoded; grammatical selector meanings unverified"], sink.commit()
