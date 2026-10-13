@@ -1,0 +1,517 @@
+{
+  "members": [
+    {
+      "bytes": 1156,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_passive_select.bflan",
+      "offset": 8192,
+      "sha256": "a2730f86e02a85c4fe884c1596d19544c80185038f1654da3735ecbf8bd56ae3"
+    },
+    {
+      "bytes": 1508,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_touch.bflan",
+      "offset": 9360,
+      "sha256": "019b2aaa8713e836a963c22d5e7ab8b8a8cdc87691f3625bf7893213753cf9bf"
+    },
+    {
+      "bytes": 944,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_passive_unselect.bflan",
+      "offset": 10880,
+      "sha256": "4b6de33cf99e85306888cfdbc2589fd51353d24c68d759d41e4e80d79e4f91b5"
+    },
+    {
+      "bytes": 2844,
+      "index": 3,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_return.bflyt",
+      "offset": 11824,
+      "sha256": "4b10f418f4fe8714b36d0e814f7b0bc6b71d73f74b491df8995d38cb487b3046"
+    },
+    {
+      "bytes": 196,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_unselect.bflan",
+      "offset": 14672,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 244,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_cancel.bflan",
+      "offset": 14880,
+      "sha256": "d20699c7e964c6509208eca375395acabaedddf71a1943fdc3e26db3d7f81afa"
+    },
+    {
+      "bytes": 2728,
+      "index": 6,
+      "magic": "FLYT",
+      "name": "blyt/mtt_select_savedata_button_user_name.bflyt",
+      "offset": 15136,
+      "sha256": "4fd8c4fa4a509099bf95f353a9b2c05613d83edb8cacb179ff12fac917661d35"
+    },
+    {
+      "bytes": 296,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_key_select.bflan",
+      "offset": 17872,
+      "sha256": "58f841a4f5448fdbfb5de386771e5303a61a99069315ffcdce162d1c0aacbb6e"
+    },
+    {
+      "bytes": 232,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_key_select.bflan",
+      "offset": 18176,
+      "sha256": "3dc7152e3ffaab0a6be224fb09453642a9a3fdf1f9b2ad1abff30a3d49e2d9b8"
+    },
+    {
+      "bytes": 244,
+      "index": 9,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_cancel.bflan",
+      "offset": 18416,
+      "sha256": "1c00c80206f9d47076e1acd34ce0f9482aa4c424659570c7375ff6ca3eace3df"
+    },
+    {
+      "bytes": 1440,
+      "index": 10,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_scrollbar_00.bflyt",
+      "offset": 18672,
+      "sha256": "db7f0c0ebd4ab9d92f88074270188ac89f60910f2440e5c49578410d16628da6"
+    },
+    {
+      "bytes": 192,
+      "index": 11,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive.bflan",
+      "offset": 20112,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 884,
+      "index": 12,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_f_in.bflan",
+      "offset": 20304,
+      "sha256": "f359d18577e0a8d7efa7205811692679f8edcea343177c67e0a1613d531de69f"
+    },
+    {
+      "bytes": 192,
+      "index": 13,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_passive.bflan",
+      "offset": 21200,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 204,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_cancel.bflan",
+      "offset": 21392,
+      "sha256": "40f78dea43ff7ad1f351d169773ffd41da7f212c4f4bd029770a47f2875f6268"
+    },
+    {
+      "bytes": 204,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive_unselect.bflan",
+      "offset": 21600,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 37512,
+      "index": 16,
+      "magic": "BNSH",
+      "name": "bgsh/__ArchiveShader.bnsh",
+      "offset": 24576,
+      "sha256": "0493044b32069a0411afbc0dd97875b065863ca55e0e4d8d1734ebef7528cac8"
+    },
+    {
+      "bytes": 1508,
+      "index": 17,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_deco_window.bflyt",
+      "offset": 62096,
+      "sha256": "3c83bfe15704a9b226fba5555b64b7e03e109dc046da685f5d11849bf7bd9083"
+    },
+    {
+      "bytes": 200,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_passive_select.bflan",
+      "offset": 63616,
+      "sha256": "84e09e23196fdb223471c481a4fdc00b67d79c285e26ccee7f211f072c698a1b"
+    },
+    {
+      "bytes": 1800,
+      "index": 19,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_key_select.bflan",
+      "offset": 63824,
+      "sha256": "d12db9f0ea481ff76c5420ea7af38df20d81c9d7ac1049737e867f7a292fb696"
+    },
+    {
+      "bytes": 796,
+      "index": 20,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_in.bflan",
+      "offset": 65632,
+      "sha256": "0ebd41a23c6312f2eceb1adf31750e368f5e564d76f9485eefef1fc269e4bc78"
+    },
+    {
+      "bytes": 2812,
+      "index": 21,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_help.bflyt",
+      "offset": 66432,
+      "sha256": "889d5c4086fb46fdd9f54fd93fa2c984e99f943d0f8a7ae57ab5349d7a111cf6"
+    },
+    {
+      "bytes": 204,
+      "index": 22,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_release.bflan",
+      "offset": 69248,
+      "sha256": "b52b678c80a0f403f4ad2ea3185b0000139010a1a4f98fa776e53d9799f118c9"
+    },
+    {
+      "bytes": 172,
+      "index": 23,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 69456,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 200,
+      "index": 24,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_select.bflan",
+      "offset": 69632,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 192,
+      "index": 25,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive.bflan",
+      "offset": 69840,
+      "sha256": "00a391b33225d4433c64edabeda2273f7dd179fa868d8012d00e998cc7af4b03"
+    },
+    {
+      "bytes": 808,
+      "index": 26,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_out.bflan",
+      "offset": 70032,
+      "sha256": "4727ef24f046e9125700eb739128c0080384a704c9ce35ca22b166b765d1be06"
+    },
+    {
+      "bytes": 268,
+      "index": 27,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_release.bflan",
+      "offset": 70848,
+      "sha256": "667ba3eb3325d7f53518f4ac6c9ad0573d163af9f6875674352d4890e531f9f7"
+    },
+    {
+      "bytes": 192,
+      "index": 28,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_keep.bflan",
+      "offset": 71120,
+      "sha256": "334e4b3683e548eb85e1048858360356ad2ac65ae088381865c69bf6e800249b"
+    },
+    {
+      "bytes": 200,
+      "index": 29,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive_select.bflan",
+      "offset": 71312,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 244,
+      "index": 30,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_touch.bflan",
+      "offset": 71520,
+      "sha256": "440727ecca061b4d23fb0e4abbdf71e2b6a158cd9bb4d2958f11848a2cbc7fe7"
+    },
+    {
+      "bytes": 1220,
+      "index": 31,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_cancel.bflan",
+      "offset": 71776,
+      "sha256": "aab2fb1272a218f1ac07ba3da0549123e4ca706a5bc72364bfdb3f547286f64c"
+    },
+    {
+      "bytes": 192,
+      "index": 32,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_keep.bflan",
+      "offset": 73008,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 192,
+      "index": 33,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_keep.bflan",
+      "offset": 73200,
+      "sha256": "251cc3a2440cbffa9704e8292044d2e0a68f6d554312b696227a9aa5a414df2f"
+    },
+    {
+      "bytes": 196,
+      "index": 34,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_unselect.bflan",
+      "offset": 73392,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 296,
+      "index": 35,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_key_select.bflan",
+      "offset": 73600,
+      "sha256": "161a9d7ce9c8c8cbcc2a982244d2f14de74e7ffc43bb227f247fc67f40e24aa9"
+    },
+    {
+      "bytes": 888,
+      "index": 36,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_unselect.bflan",
+      "offset": 73904,
+      "sha256": "ec910c6abdfe3867cda22df413dd604dbe7cec949f4eaab672acda9e71c73b0e"
+    },
+    {
+      "bytes": 1412,
+      "index": 37,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_header_index_left.bflyt",
+      "offset": 74800,
+      "sha256": "ef188b9534d06df84e376ec8c08a9538b77016d3629d99f87a8760e98267312c"
+    },
+    {
+      "bytes": 1220,
+      "index": 38,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_release.bflan",
+      "offset": 76224,
+      "sha256": "f965cba69f9efd3e102e752eedfff1d1f7d0acb6d8ffaaa776b0eee9d7027287"
+    },
+    {
+      "bytes": 500,
+      "index": 39,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_passive.bflan",
+      "offset": 77456,
+      "sha256": "cd50ecc1f784430af390905cd6c3d64b8d73f9903c065842e899d87622eae55c"
+    },
+    {
+      "bytes": 1052,
+      "index": 40,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_select.bflan",
+      "offset": 77968,
+      "sha256": "6805a695449c3dbf3924b7eadf3c1b2b148ff50faa22bb1eda27408179e06095"
+    },
+    {
+      "bytes": 192,
+      "index": 41,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_active.bflan",
+      "offset": 79024,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 204,
+      "index": 42,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_passive_unselect.bflan",
+      "offset": 79216,
+      "sha256": "352c515979964502c0134bee8984b4e9c850424f83bab46b3d872b0a83117c70"
+    },
+    {
+      "bytes": 692,
+      "index": 43,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_select.bflan",
+      "offset": 79424,
+      "sha256": "41d59ded9330f6685b5515c667087d2caa1eb189df6ed2a053542214bb3ab3b2"
+    },
+    {
+      "bytes": 500,
+      "index": 44,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_active.bflan",
+      "offset": 80128,
+      "sha256": "ab6e6e0d2945f80f55ea6baf40fbed717fb15549932416f01823e11bc9840fa9"
+    },
+    {
+      "bytes": 28,
+      "index": 45,
+      "magic": "\u0001\u0000\u0000\u0000",
+      "name": "bgsh/__ArchiveShader.bushvt",
+      "offset": 80640,
+      "sha256": "151e28e32af587e3c8838b84513a69ad6917efa7067ad37a92daeeefea201ca4"
+    },
+    {
+      "bytes": 172,
+      "index": 46,
+      "magic": "FCPX",
+      "name": "fcpx/system42_jpn.bfcpx",
+      "offset": 80672,
+      "sha256": "eecae797353acc0c6ff77d88c99a92d73c229e6df4085726c63886f42946f299"
+    },
+    {
+      "bytes": 192,
+      "index": 47,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_select.bflan",
+      "offset": 80848,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 48,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_active.bflan",
+      "offset": 81040,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 216,
+      "index": 49,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_touch.bflan",
+      "offset": 81232,
+      "sha256": "d964d485fe74b3a8a731b5020ce25ae1071875aeb2cbc933886c1e62ec4c4082"
+    },
+    {
+      "bytes": 344,
+      "index": 50,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_switch_00.bflan",
+      "offset": 81456,
+      "sha256": "068dd4d0c2ebd118c6e2b9912c2a9b9a728283ce120d9d8d9f82cfa9830064ae"
+    },
+    {
+      "bytes": 600,
+      "index": 51,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_unselect.bflan",
+      "offset": 81808,
+      "sha256": "ef6837df957325559b1135d0f06c338627cf27748f7f87939fd402503ffeb1b4"
+    },
+    {
+      "bytes": 268,
+      "index": 52,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_release.bflan",
+      "offset": 82416,
+      "sha256": "0d1d0e7e63b7ebcf2a5c2d1637e93b96e64c6f45f2c1f0cb27c33d288df25b92"
+    },
+    {
+      "bytes": 909440,
+      "index": 53,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 86016,
+      "sha256": "5c77de7e58db5434e2fae2264af6f0b65a7077bb5b8b1872a610ab5e0169af99"
+    },
+    {
+      "bytes": 204,
+      "index": 54,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_unselect.bflan",
+      "offset": 995456,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 932,
+      "index": 55,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_f_out.bflan",
+      "offset": 995664,
+      "sha256": "8881a8553a05aa153de658c7d4587337b5073ace8fb03fc0322e267d5ce2af3e"
+    },
+    {
+      "bytes": 20280,
+      "index": 56,
+      "magic": "FLYT",
+      "name": "blyt/mtt_select_savedata.bflyt",
+      "offset": 996608,
+      "sha256": "3f5f483a3c5d5a91a1f135b45218671b76d9e34f252391206815bf28869188bb"
+    },
+    {
+      "bytes": 344,
+      "index": 57,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_switch_01.bflan",
+      "offset": 1016896,
+      "sha256": "51b65d45d9f47854ebea614210084ab7b1478d8b5b6a56add7732b223bb24b1f"
+    },
+    {
+      "bytes": 2732,
+      "index": 58,
+      "magic": "FLYT",
+      "name": "blyt/mtt_select_savedata_button_icon_rom_00.bflyt",
+      "offset": 1017248,
+      "sha256": "3c9988814f896bb24c313c919dd854e89ea8cd68c750c4938da8ba246608bb6b"
+    },
+    {
+      "bytes": 192,
+      "index": 59,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_select.bflan",
+      "offset": 1019984,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 60,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_active.bflan",
+      "offset": 1020176,
+      "sha256": "0570406900ef8b47609c7cf045f3942ce7cf83750676fdb7198834b2da91b429"
+    },
+    {
+      "bytes": 192,
+      "index": 61,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_user_name_keep.bflan",
+      "offset": 1020368,
+      "sha256": "d546d64c610150e4376ec1bbeec0291e06c75ee285065857fc13830de433bbaf"
+    },
+    {
+      "bytes": 244,
+      "index": 62,
+      "magic": "FLAN",
+      "name": "anim/mtt_select_savedata_button_icon_rom_00_touch.bflan",
+      "offset": 1020560,
+      "sha256": "cfaa13583c7a17d48df09723f7160a7059236d08b94fc6f37f1c4c08af33c83f"
+    },
+    {
+      "bytes": 192,
+      "index": 63,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_keep.bflan",
+      "offset": 1020816,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_select_savedata/bin/mtt_select_savedata_sch.arc"
+}

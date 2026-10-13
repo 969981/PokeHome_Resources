@@ -1,0 +1,266 @@
+{
+  "member": "blyt/mtt_mainmenu_button_small_05.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 260,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 124,
+      "index": 2,
+      "offset": 340,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 464,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 596,
+      "index": 4,
+      "offset": 500,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 1096,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 1180,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 1188,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1272,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1280,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 1364,
+      "pane_name": "keep",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 1448,
+      "pane_name": "key_select",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 1532,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 1540,
+      "pane_name": "N_keyselect_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 1624,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 148,
+      "index": 15,
+      "offset": 1632,
+      "pane_name": "W_btn_base_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 1780,
+      "pane_name": "P_button_icon_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 640,
+      "index": 17,
+      "offset": 1916,
+      "pane_name": "L_icon_new_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 18,
+      "offset": 2556,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 2596,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 2604,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 21,
+      "offset": 2612,
+      "pane_name": "N_popup",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 22,
+      "offset": 2696,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 23,
+      "offset": 2704,
+      "pane_name": "P_popup_bg_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 24,
+      "offset": 2840,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 3132,
+      "pane_name": "P_popup_bg_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 26,
+      "offset": 3268,
+      "pane_name": "T_popup_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 27,
+      "offset": 3452,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 3508,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 29,
+      "offset": 3516,
+      "pane_name": "Bounding_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 84,
+      "index": 30,
+      "offset": 3600,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 31,
+      "offset": 3684,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 32,
+      "offset": 3692,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 33,
+      "offset": 3700,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 34,
+      "offset": 3744,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 116,
+      "index": 35,
+      "offset": 3752,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 36,
+      "offset": 3868,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 37,
+      "offset": 3936,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 38,
+      "offset": 4004,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 4072,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 428,
+      "index": 40,
+      "offset": 4080,
+      "tag": "cnt1"
+    }
+  ]
+}

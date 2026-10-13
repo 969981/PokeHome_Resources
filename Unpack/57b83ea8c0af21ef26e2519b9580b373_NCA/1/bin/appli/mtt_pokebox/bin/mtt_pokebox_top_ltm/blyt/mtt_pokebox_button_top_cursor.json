@@ -1,0 +1,179 @@
+{
+  "member": "blyt/mtt_pokebox_button_top_cursor.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 212,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 248,
+      "index": 2,
+      "offset": 292,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 676,
+      "index": 3,
+      "offset": 540,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 1216,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 1300,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 1308,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 1392,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 1400,
+      "pane_name": "N_btn_cursor_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 1484,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 10,
+      "offset": 1492,
+      "pane_name": "P_base_cursor_type_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 1628,
+      "pane_name": "P_base_cursor_selected_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 1764,
+      "pane_name": "P_icon_cursor_type_l_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 1900,
+      "pane_name": "P_icon_cursor_type_r_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 14,
+      "offset": 2036,
+      "pane_name": "P_icon_cursor_type_c_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 2172,
+      "pane_name": "P_cursor_type_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 348,
+      "index": 16,
+      "offset": 2308,
+      "pane_name": "L_btn_arrow_zr_s_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 348,
+      "index": 17,
+      "offset": 2656,
+      "pane_name": "L_btn_arrow_zl_s_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 18,
+      "offset": 3004,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 3012,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 20,
+      "offset": 3020,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 3104,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 22,
+      "offset": 3112,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 3156,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 164,
+      "index": 24,
+      "offset": 3164,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 25,
+      "offset": 3328,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 26,
+      "offset": 3336,
+      "tag": "cnt1"
+    }
+  ]
+}

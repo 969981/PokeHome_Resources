@@ -1,0 +1,335 @@
+{
+  "member": "blyt/mtt_context_marking_00.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 132,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 752,
+      "index": 2,
+      "offset": 204,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 956,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 2228,
+      "index": 4,
+      "offset": 992,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 3220,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 3304,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 3312,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 3396,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 3404,
+      "pane_name": "N_keep_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 3488,
+      "pane_name": "N_modal_dim_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 3572,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 3580,
+      "pane_name": "P_modal_dim_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 3716,
+      "pane_name": "window_area_bound",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 3800,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 15,
+      "offset": 3808,
+      "pane_name": "N_pos_no_btn_key_b",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 3892,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 17,
+      "offset": 3900,
+      "pane_name": "N_pos_with_btn_key_b",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 18,
+      "offset": 3984,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 19,
+      "offset": 3992,
+      "pane_name": "N_anim_root",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 4076,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 21,
+      "offset": 4084,
+      "pane_name": "W_base_window_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 4248,
+      "pane_name": "P_base_shadow_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 23,
+      "offset": 4384,
+      "pane_name": "P_base_header_line_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 24,
+      "offset": 4520,
+      "pane_name": "T_header_marking_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 25,
+      "offset": 4720,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 84,
+      "index": 26,
+      "offset": 4776,
+      "pane_name": "B_size_inner_contents_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 27,
+      "offset": 4860,
+      "pane_name": "L_mtt_context_button_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 28,
+      "offset": 4996,
+      "pane_name": "L_icon_marking_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 29,
+      "offset": 5652,
+      "pane_name": "L_icon_marking_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 30,
+      "offset": 6308,
+      "pane_name": "L_icon_marking_02",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 31,
+      "offset": 6964,
+      "pane_name": "L_icon_marking_03",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 32,
+      "offset": 7620,
+      "pane_name": "L_icon_marking_04",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 33,
+      "offset": 8276,
+      "pane_name": "L_icon_marking_05",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 84,
+      "index": 34,
+      "offset": 8932,
+      "pane_name": "N_btn_key_b_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 35,
+      "offset": 9016,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 36,
+      "offset": 9056,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 120,
+      "index": 37,
+      "offset": 9064,
+      "pane_name": "L_btn_key_b_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 38,
+      "offset": 9184,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 9192,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 40,
+      "offset": 9200,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 41,
+      "offset": 9208,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 42,
+      "offset": 9216,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 43,
+      "offset": 9300,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 44,
+      "offset": 9308,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 45,
+      "offset": 9316,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 9360,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 92,
+      "index": 47,
+      "offset": 9368,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 48,
+      "offset": 9460,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 49,
+      "offset": 9528,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 50,
+      "offset": 9596,
+      "tag": "gre1"
+    }
+  ]
+}

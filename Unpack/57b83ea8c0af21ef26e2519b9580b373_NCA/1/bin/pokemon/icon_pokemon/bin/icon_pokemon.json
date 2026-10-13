@@ -1,0 +1,21 @@
+{
+  "members": [
+    {
+      "bytes": 500,
+      "index": 0,
+      "magic": "FLYT",
+      "name": "blyt/icon_pokemon.bflyt",
+      "offset": 4096,
+      "sha256": "64b45c943d56101f6bcebcac539c87d323845ebf1f18a0eb855c2290ff0d7e07"
+    },
+    {
+      "bytes": 52879496,
+      "index": 1,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 8192,
+      "sha256": "eca6074b6b4a8c6f487c515dee8080e147426b4db335dd8b5847b9a1efc7de06"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon/bin/icon_pokemon.arc"
+}

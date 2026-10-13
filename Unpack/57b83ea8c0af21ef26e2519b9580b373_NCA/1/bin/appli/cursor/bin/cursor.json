@@ -1,0 +1,69 @@
+{
+  "members": [
+    {
+      "bytes": 608,
+      "index": 0,
+      "magic": "FLYT",
+      "name": "blyt/cursor.bflyt",
+      "offset": 4096,
+      "sha256": "e42ee36a759561a3a2b3183ee3387c069461c2b21d53a96d230c6f1390b86663"
+    },
+    {
+      "bytes": 216,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_select.bflan",
+      "offset": 4704,
+      "sha256": "e8162bc6f52d5009d1d9886722fdaaae94f7f52d4b3ea4d427290f93aad559bb"
+    },
+    {
+      "bytes": 192,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_catch.bflan",
+      "offset": 4928,
+      "sha256": "a86814fa2d4eb869f99ba77e8750fc31b97b069f274094b571e245c17c1675c7"
+    },
+    {
+      "bytes": 256,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_keep.bflan",
+      "offset": 5120,
+      "sha256": "a02c47989428dea69edcbf722683ced079b27254c80100be8d13933a0114fbba"
+    },
+    {
+      "bytes": 1420,
+      "index": 4,
+      "magic": "FLYT",
+      "name": "blyt/cursor_00.bflyt",
+      "offset": 5376,
+      "sha256": "6934ef0d21a6e64e2d59e51f39215a7e897b708e67764ccb66ce8ada38adb530"
+    },
+    {
+      "bytes": 188,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/cursor_Tag_00.bflan",
+      "offset": 6800,
+      "sha256": "8b03281f7358993e11d48c28531d11982c200989244bb3d55a83adfcf17f029f"
+    },
+    {
+      "bytes": 24696,
+      "index": 6,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 8192,
+      "sha256": "0b5d183794956bd3edaea6ff921c17dfc830088011ac66edc39e27749dedb24b"
+    },
+    {
+      "bytes": 192,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_normal.bflan",
+      "offset": 32896,
+      "sha256": "1334577faf36bc9917132dae02f2089b2122363d96904c40d7927cc10e6cc99b"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/cursor/bin/cursor.arc"
+}

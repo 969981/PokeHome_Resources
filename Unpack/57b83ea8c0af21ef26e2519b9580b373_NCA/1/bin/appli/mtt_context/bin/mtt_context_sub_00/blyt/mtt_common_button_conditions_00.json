@@ -1,0 +1,508 @@
+{
+  "member": "blyt/mtt_common_button_conditions_00.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 388,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 188,
+      "index": 2,
+      "offset": 468,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 656,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 1268,
+      "index": 4,
+      "offset": 692,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 1960,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 2044,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 2052,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 2136,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 2144,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 2228,
+      "pane_name": "keep",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 2312,
+      "pane_name": "key_select",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 2396,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 2404,
+      "pane_name": "passive",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 2488,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 148,
+      "index": 15,
+      "offset": 2496,
+      "pane_name": "W_btn_base_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 84,
+      "index": 16,
+      "offset": 2644,
+      "pane_name": "N_select_conditions",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 17,
+      "offset": 2728,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 196,
+      "index": 18,
+      "offset": 2736,
+      "pane_name": "T_button_pd_bs_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 19,
+      "offset": 2932,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 20,
+      "offset": 2988,
+      "pane_name": "P_pd_bs_icon_shape_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 21,
+      "offset": 3124,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 96,
+      "index": 22,
+      "offset": 3164,
+      "tag": "ali1"
+    },
+    {
+      "bytes": 40,
+      "index": 23,
+      "offset": 3260,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 24,
+      "offset": 3300,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 3308,
+      "pane_name": "P_pd_bs_icon_version_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 26,
+      "offset": 3444,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 27,
+      "offset": 3496,
+      "pane_name": "P_pd_bs_icon_version_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 28,
+      "offset": 3632,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 29,
+      "offset": 3684,
+      "pane_name": "P_pd_bs_icon_version_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 30,
+      "offset": 3820,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 31,
+      "offset": 3872,
+      "pane_name": "P_pd_bs_icon_version_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 32,
+      "offset": 4008,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 33,
+      "offset": 4060,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 34,
+      "offset": 4068,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 35,
+      "offset": 4076,
+      "pane_name": "N_user_data_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 36,
+      "offset": 4160,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 37,
+      "offset": 4200,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 192,
+      "index": 38,
+      "offset": 4208,
+      "pane_name": "T_param_username_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 39,
+      "offset": 4400,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 40,
+      "offset": 4456,
+      "pane_name": "P_icon_user_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 41,
+      "offset": 4592,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 42,
+      "offset": 4600,
+      "pane_name": "N_trainer_data_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 43,
+      "offset": 4684,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 44,
+      "offset": 4724,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 188,
+      "index": 45,
+      "offset": 4732,
+      "pane_name": "T_param_trainername_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 46,
+      "offset": 4920,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 47,
+      "offset": 4976,
+      "pane_name": "P_icon_trainer_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 48,
+      "offset": 5112,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 49,
+      "offset": 5120,
+      "pane_name": "N_label_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 50,
+      "offset": 5204,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 51,
+      "offset": 5244,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 188,
+      "index": 52,
+      "offset": 5252,
+      "pane_name": "T_param_labelname_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 53,
+      "offset": 5440,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 116,
+      "index": 54,
+      "offset": 5496,
+      "pane_name": "L_icon_label_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 55,
+      "offset": 5612,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 56,
+      "offset": 5620,
+      "pane_name": "N_color_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 57,
+      "offset": 5704,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 58,
+      "offset": 5744,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 59,
+      "offset": 5752,
+      "pane_name": "P_icon_color_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 60,
+      "offset": 5888,
+      "pane_name": "P_icon_color_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 61,
+      "offset": 6024,
+      "pane_name": "T_param_color_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 62,
+      "offset": 6208,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 63,
+      "offset": 6264,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 64,
+      "offset": 6272,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 65,
+      "offset": 6280,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 66,
+      "offset": 6288,
+      "pane_name": "Bounding_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 84,
+      "index": 67,
+      "offset": 6372,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 68,
+      "offset": 6456,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 69,
+      "offset": 6464,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 70,
+      "offset": 6472,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 6516,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 72,
+      "offset": 6524,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 73,
+      "offset": 6592,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 212,
+      "index": 74,
+      "offset": 6660,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 75,
+      "offset": 6872,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 76,
+      "offset": 6940,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 77,
+      "offset": 7008,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 428,
+      "index": 78,
+      "offset": 7016,
+      "tag": "cnt1"
+    }
+  ]
+}

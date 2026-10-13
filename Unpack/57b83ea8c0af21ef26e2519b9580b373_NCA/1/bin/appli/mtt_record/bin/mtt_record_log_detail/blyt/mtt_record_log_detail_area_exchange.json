@@ -1,0 +1,508 @@
+{
+  "member": "blyt/mtt_record_log_detail_area_exchange.bflyt",
+  "sections": [
+    {
+      "bytes": 64,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 308,
+      "index": 1,
+      "offset": 84,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 56,
+      "index": 2,
+      "offset": 392,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 3116,
+      "index": 3,
+      "offset": 448,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 3564,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 3648,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 3656,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 3740,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 3748,
+      "pane_name": "N_area_exchange_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 3832,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 3840,
+      "pane_name": "N_list",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 3924,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 12,
+      "offset": 3932,
+      "pane_name": "W_record_detail_w_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 4096,
+      "pane_name": "P_record_detail_w_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 14,
+      "offset": 4232,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 4524,
+      "pane_name": "P_record_detail_h_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 16,
+      "offset": 4660,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 17,
+      "offset": 4952,
+      "pane_name": "P_record_detail_ds_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 84,
+      "index": 18,
+      "offset": 5088,
+      "pane_name": "N_info_top_transaction",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 5172,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 204,
+      "index": 20,
+      "offset": 5180,
+      "pane_name": "T_param_transaction_time",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 21,
+      "offset": 5384,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 5440,
+      "pane_name": "P_logo_l_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 192,
+      "index": 23,
+      "offset": 5576,
+      "pane_name": "T_param_trainerid_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 24,
+      "offset": 5768,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 188,
+      "index": 25,
+      "offset": 5824,
+      "pane_name": "T_param_trainername_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 26,
+      "offset": 6012,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 27,
+      "offset": 6068,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 240,
+      "index": 28,
+      "offset": 6076,
+      "pane_name": "T_heading_user_name_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 29,
+      "offset": 6316,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 84,
+      "index": 30,
+      "offset": 6372,
+      "pane_name": "N_info_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 31,
+      "offset": 6456,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 32,
+      "offset": 6464,
+      "pane_name": "P_info_bg_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 6600,
+      "pane_name": "P_info_poke_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 196,
+      "index": 34,
+      "offset": 6736,
+      "pane_name": "W_base_personality_01",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 35,
+      "offset": 6932,
+      "pane_name": "P_base_parent",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 36,
+      "offset": 7068,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 37,
+      "offset": 7360,
+      "pane_name": "P_info_icon_lang_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 38,
+      "offset": 7496,
+      "pane_name": "P_info_icon_monbo_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 39,
+      "offset": 7632,
+      "pane_name": "T_param_nickname_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 40,
+      "offset": 7816,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 41,
+      "offset": 7872,
+      "pane_name": "T_param_level_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 42,
+      "offset": 8056,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 43,
+      "offset": 8112,
+      "pane_name": "T_param_number_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 44,
+      "offset": 8296,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 45,
+      "offset": 8352,
+      "pane_name": "T_param_pokename_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 46,
+      "offset": 8536,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 156,
+      "index": 47,
+      "offset": 8592,
+      "pane_name": "L_info_icon_gender_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 48,
+      "offset": 8748,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 49,
+      "offset": 8756,
+      "pane_name": "N_info_01",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 50,
+      "offset": 8840,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 51,
+      "offset": 8848,
+      "pane_name": "P_info_bg_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 52,
+      "offset": 8984,
+      "pane_name": "P_info_poke_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 196,
+      "index": 53,
+      "offset": 9120,
+      "pane_name": "W_base_personality_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 54,
+      "offset": 9316,
+      "pane_name": "P_base_parent_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 55,
+      "offset": 9452,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 56,
+      "offset": 9744,
+      "pane_name": "P_info_icon_lang_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 57,
+      "offset": 9880,
+      "pane_name": "P_info_icon_monbo_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 58,
+      "offset": 10016,
+      "pane_name": "T_param_nickname_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 59,
+      "offset": 10200,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 60,
+      "offset": 10256,
+      "pane_name": "T_param_level_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 61,
+      "offset": 10440,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 62,
+      "offset": 10496,
+      "pane_name": "T_param_number_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 63,
+      "offset": 10680,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 64,
+      "offset": 10736,
+      "pane_name": "T_param_pokename_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 65,
+      "offset": 10920,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 156,
+      "index": 66,
+      "offset": 10976,
+      "pane_name": "L_info_icon_gender_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 67,
+      "offset": 11132,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 68,
+      "offset": 11140,
+      "pane_name": "P_exchange_arrow_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 69,
+      "offset": 11276,
+      "pane_name": "P_exchange_arrow_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 70,
+      "offset": 11412,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 11420,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 72,
+      "offset": 11428,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 73,
+      "offset": 11436,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 74,
+      "offset": 11520,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 75,
+      "offset": 11528,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 76,
+      "offset": 11572,
+      "tag": "cnt1"
+    }
+  ]
+}

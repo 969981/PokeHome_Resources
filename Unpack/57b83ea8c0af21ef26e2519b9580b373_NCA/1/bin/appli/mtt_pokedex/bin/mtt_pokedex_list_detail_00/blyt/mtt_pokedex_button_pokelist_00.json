@@ -1,0 +1,312 @@
+{
+  "member": "blyt/mtt_pokedex_button_pokelist_00.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 224,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 152,
+      "index": 2,
+      "offset": 304,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 456,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 780,
+      "index": 4,
+      "offset": 492,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 1272,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 1356,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 1364,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1448,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1456,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 1540,
+      "pane_name": "N_keep",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 1624,
+      "pane_name": "key_select",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 1708,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 1716,
+      "pane_name": "N_passive",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 1800,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 15,
+      "offset": 1808,
+      "pane_name": "N_touch_release",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1892,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 148,
+      "index": 17,
+      "offset": 1900,
+      "pane_name": "W_button_base_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 18,
+      "offset": 2048,
+      "pane_name": "P_poke_bg_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 84,
+      "index": 19,
+      "offset": 2184,
+      "pane_name": "N_notfound",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 2268,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 21,
+      "offset": 2276,
+      "pane_name": "P_poke_notfound_bg_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 2412,
+      "pane_name": "P_poke_notfound_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 2548,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 24,
+      "offset": 2556,
+      "pane_name": "P_pokeIcon_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 2692,
+      "pane_name": "P_pokeIcon_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 26,
+      "offset": 2828,
+      "pane_name": "T_pokeNumber_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 27,
+      "offset": 3012,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 28,
+      "offset": 3068,
+      "pane_name": "T_pokeName_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 29,
+      "offset": 3252,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 30,
+      "offset": 3308,
+      "pane_name": "L_icon_new_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 31,
+      "offset": 3428,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 32,
+      "offset": 3468,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 33,
+      "offset": 3476,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 34,
+      "offset": 3484,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 35,
+      "offset": 3492,
+      "pane_name": "Bounding_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 36,
+      "offset": 3576,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 37,
+      "offset": 3584,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 38,
+      "offset": 3668,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 39,
+      "offset": 3676,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 40,
+      "offset": 3720,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 212,
+      "index": 41,
+      "offset": 3728,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 42,
+      "offset": 3940,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 43,
+      "offset": 4008,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 140,
+      "index": 44,
+      "offset": 4076,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 45,
+      "offset": 4216,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 4284,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 428,
+      "index": 47,
+      "offset": 4292,
+      "tag": "cnt1"
+    }
+  ]
+}

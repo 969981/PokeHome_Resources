@@ -1,0 +1,173 @@
+{
+  "members": [
+    {
+      "bytes": 172,
+      "index": 0,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 4096,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 200,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_passive_select.bflan",
+      "offset": 4272,
+      "sha256": "fdf9002782ee33d22e8f3cb0f4a1e35856d579846d5358a20d67ee5b8aa5c299"
+    },
+    {
+      "bytes": 196,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_unselect.bflan",
+      "offset": 4480,
+      "sha256": "403431fb64b09be99b0067c65de07986a038a64f49b38274cbb1f489705bebf0"
+    },
+    {
+      "bytes": 672,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_00_out.bflan",
+      "offset": 4688,
+      "sha256": "f4eb1f44e53ec66c2e08c4e0ba46ce783f8f579827eb80a4bb33882ab2dce7ca"
+    },
+    {
+      "bytes": 724,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_00_f_out.bflan",
+      "offset": 5360,
+      "sha256": "815445fb56f9d33db5c8b91aca0b66bbadb1bdabca19d9f4cbecdd3eb9c8da36"
+    },
+    {
+      "bytes": 192,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_select.bflan",
+      "offset": 6096,
+      "sha256": "10cdbee98d683d3ef37c300d5f11c8ecb36c8154d4b49e8859c0d36babe5902e"
+    },
+    {
+      "bytes": 192,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_active.bflan",
+      "offset": 6288,
+      "sha256": "bb6bee948b3645073e0e1cc905928944026c6e81f2f63cde8b18178c411d2e86"
+    },
+    {
+      "bytes": 192,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_passive.bflan",
+      "offset": 6480,
+      "sha256": "16e0cf93918a54ed0ace3e48c21b3fc741931e8c3c5283084464f2e4a8df600c"
+    },
+    {
+      "bytes": 2512,
+      "index": 8,
+      "magic": "FLYT",
+      "name": "blyt/mtt_title_button_00.bflyt",
+      "offset": 6672,
+      "sha256": "935137d0fc2181150f7f5e8f9d178745f73672825f5ce7cb6d51d2bc452befe1"
+    },
+    {
+      "bytes": 172,
+      "index": 9,
+      "magic": "FCPX",
+      "name": "fcpx/system42_jpn.bfcpx",
+      "offset": 9184,
+      "sha256": "eecae797353acc0c6ff77d88c99a92d73c229e6df4085726c63886f42946f299"
+    },
+    {
+      "bytes": 748,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_00_f_in.bflan",
+      "offset": 9360,
+      "sha256": "39ad009d094f7ffff08ee15d28d8f71af0bb3fc98ae02baccf67ab531056d469"
+    },
+    {
+      "bytes": 204,
+      "index": 11,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_passive_unselect.bflan",
+      "offset": 10112,
+      "sha256": "e710a0146ea32c492fda97b56e9f553cc6912287ddcbd8d762a0ea8a5bd25fee"
+    },
+    {
+      "bytes": 1011840,
+      "index": 12,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 12288,
+      "sha256": "59a9493d5e24e5f597304f3625103e09cfc511bf09ec8153e8e26a07e4e4ade9"
+    },
+    {
+      "bytes": 644,
+      "index": 13,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_release.bflan",
+      "offset": 1024128,
+      "sha256": "30d111c6e0d27c98250a33e3aa985c0811dde3907391222ae3729ecf9578932b"
+    },
+    {
+      "bytes": 788,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_touch.bflan",
+      "offset": 1024784,
+      "sha256": "b9f2893cc825c933210a61205d52fcb5afd6fb9691cc99759ae8e0561ee152f2"
+    },
+    {
+      "bytes": 984,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_key_select.bflan",
+      "offset": 1025584,
+      "sha256": "cd0dbcfaf7dcbb5ce6d4416571a013d68af326668943162e35048578a783898d"
+    },
+    {
+      "bytes": 644,
+      "index": 16,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_cancel.bflan",
+      "offset": 1026576,
+      "sha256": "39947809e3e1cf1b729c6c2b0254b40e8d6b7909d39570d4eb886017ec894dfb"
+    },
+    {
+      "bytes": 252,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_button_00_keep.bflan",
+      "offset": 1027232,
+      "sha256": "0760ee68b1ee4dd5e3abd24632fb4a5546e01890b777342cf7e19d1f6bbae496"
+    },
+    {
+      "bytes": 684,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_00_in.bflan",
+      "offset": 1027488,
+      "sha256": "0d03ec893fb2259648d0d82bfe5fe6316a367d3a703df89da6297eabd337521c"
+    },
+    {
+      "bytes": 3096,
+      "index": 19,
+      "magic": "FLYT",
+      "name": "blyt/mtt_title_00.bflyt",
+      "offset": 1028176,
+      "sha256": "233ee3c0d5dcd849c19e06eab7f7e7766200c391541ae374964a219c52db93ae"
+    },
+    {
+      "bytes": 192,
+      "index": 20,
+      "magic": "FLAN",
+      "name": "anim/mtt_title_00_keep.bflan",
+      "offset": 1031280,
+      "sha256": "75d085c981cd27aeb98d8e44562f837944f58dd10b2cb7624cd25972e4460155"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_title/bin/mtt_title_00.arc"
+}

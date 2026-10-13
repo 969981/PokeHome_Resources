@@ -1,0 +1,151 @@
+{
+  "member": "blyt/mtt_status_radarchart_vfx.bflyt",
+  "sections": [
+    {
+      "bytes": 56,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 116,
+      "index": 1,
+      "offset": 76,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 88,
+      "index": 2,
+      "offset": 192,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 472,
+      "index": 3,
+      "offset": 280,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 752,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 836,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 844,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 928,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 936,
+      "pane_name": "N_status_radarchart_vfx",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 1020,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 10,
+      "offset": 1028,
+      "pane_name": "P_vfx_max_param_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 1164,
+      "pane_name": "P_maxparam_particle_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 1300,
+      "pane_name": "P_maxparam_particle_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 1436,
+      "pane_name": "P_maxparam_particle_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 14,
+      "offset": 1572,
+      "pane_name": "P_maxparam_particle_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 1708,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1716,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 17,
+      "offset": 1724,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 18,
+      "offset": 1732,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 1776,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 164,
+      "index": 20,
+      "offset": 1784,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 1948,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 22,
+      "offset": 1956,
+      "tag": "cnt1"
+    }
+  ]
+}

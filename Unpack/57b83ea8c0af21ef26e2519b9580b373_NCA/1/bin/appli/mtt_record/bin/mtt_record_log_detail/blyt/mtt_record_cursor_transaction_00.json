@@ -1,0 +1,315 @@
+{
+  "member": "blyt/mtt_record_cursor_transaction_00.bflyt",
+  "sections": [
+    {
+      "bytes": 64,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 132,
+      "index": 1,
+      "offset": 84,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 56,
+      "index": 2,
+      "offset": 216,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 272,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 380,
+      "index": 4,
+      "offset": 308,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 688,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 772,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 780,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 864,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 872,
+      "pane_name": "pokedex_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 956,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 964,
+      "pane_name": "N_crover_popup_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 1048,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 1056,
+      "pane_name": "N_popup_record_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 1140,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 1148,
+      "pane_name": "P_crover_popup_base_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 16,
+      "offset": 1284,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 196,
+      "index": 17,
+      "offset": 1576,
+      "pane_name": "T_nickname_poke_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 18,
+      "offset": 1772,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 1828,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 1836,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 21,
+      "offset": 1844,
+      "pane_name": "N_anim_cursor_v_wait_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 22,
+      "offset": 1928,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 23,
+      "offset": 1936,
+      "pane_name": "N_anim_cursor_v_selec_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 24,
+      "offset": 2020,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 2028,
+      "pane_name": "P_cursor_outline_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 26,
+      "offset": 2164,
+      "pane_name": "P_cursor_color_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 27,
+      "offset": 2300,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 2308,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 29,
+      "offset": 2316,
+      "pane_name": "N_pokeinfo_underbar_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 2400,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 31,
+      "offset": 2408,
+      "pane_name": "N_shift_pos_set_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 32,
+      "offset": 2492,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 2500,
+      "pane_name": "P_pokeinfo_underbar_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 34,
+      "offset": 2636,
+      "pane_name": "P_pokeinfo_underbar_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 35,
+      "offset": 2772,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 36,
+      "offset": 2780,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 37,
+      "offset": 2788,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 38,
+      "offset": 2796,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 2880,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 40,
+      "offset": 2888,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 41,
+      "offset": 2896,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 42,
+      "offset": 2940,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 43,
+      "offset": 2948,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 44,
+      "offset": 3016,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 45,
+      "offset": 3084,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 92,
+      "index": 46,
+      "offset": 3152,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 47,
+      "offset": 3244,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 60,
+      "index": 48,
+      "offset": 3252,
+      "tag": "cnt1"
+    }
+  ]
+}

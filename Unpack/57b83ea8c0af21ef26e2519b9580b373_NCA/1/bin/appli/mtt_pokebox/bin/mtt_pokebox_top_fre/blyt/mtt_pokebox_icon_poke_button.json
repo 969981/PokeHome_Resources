@@ -1,0 +1,75 @@
+{
+  "member": "blyt/mtt_pokebox_icon_poke_button.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 84,
+      "index": 1,
+      "offset": 80,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 2,
+      "offset": 164,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 172,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 256,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 264,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 348,
+      "pane_name": "Bounding_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 432,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 440,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 9,
+      "offset": 448,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 10,
+      "offset": 492,
+      "tag": "cnt1"
+    }
+  ]
+}

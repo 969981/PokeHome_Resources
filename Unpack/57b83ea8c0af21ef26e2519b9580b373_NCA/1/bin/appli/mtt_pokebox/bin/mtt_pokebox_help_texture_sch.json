@@ -1,0 +1,21 @@
+{
+  "members": [
+    {
+      "bytes": 492,
+      "index": 0,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokebox_help_texture.bflyt",
+      "offset": 4096,
+      "sha256": "e4c25c3e14547866774d47428076d6923a82d8381efad951a358b16bcdbfbc1b"
+    },
+    {
+      "bytes": 9740416,
+      "index": 1,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 8192,
+      "sha256": "ba47b1e8dbbbea20864373ef17f99b0ef00a4c081357b6b489cb1e29ff2af03a"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokebox/bin/mtt_pokebox_help_texture_sch.arc"
+}

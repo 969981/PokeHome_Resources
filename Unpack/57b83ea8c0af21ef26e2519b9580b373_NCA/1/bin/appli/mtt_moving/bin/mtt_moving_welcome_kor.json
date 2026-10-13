@@ -1,0 +1,101 @@
+{
+  "members": [
+    {
+      "bytes": 444,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_moving_welcome_f_out.bflan",
+      "offset": 4096,
+      "sha256": "75bb49cbd9f18231aa6e207a6083fabb4827469e74856055e5f9af3db0ae4e99"
+    },
+    {
+      "bytes": 444,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_moving_welcome_f_in.bflan",
+      "offset": 4544,
+      "sha256": "09c7430ddf9cb6b4777cb51c4c69d1ff45e81c449237ad05ce5c00542fed20f9"
+    },
+    {
+      "bytes": 172,
+      "index": 2,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 4992,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 3564,
+      "index": 3,
+      "magic": "FLYT",
+      "name": "blyt/mtt_moving_welcome.bflyt",
+      "offset": 5168,
+      "sha256": "b4337939c21938188b1b8f85dfea5c107acd7fdbad7d4d009621b83fa75f3f18"
+    },
+    {
+      "bytes": 192,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_moving_welcome_keep.bflan",
+      "offset": 8736,
+      "sha256": "251cc3a2440cbffa9704e8292044d2e0a68f6d554312b696227a9aa5a414df2f"
+    },
+    {
+      "bytes": 1412,
+      "index": 5,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_header_index_left.bflyt",
+      "offset": 8928,
+      "sha256": "ef188b9534d06df84e376ec8c08a9538b77016d3629d99f87a8760e98267312c"
+    },
+    {
+      "bytes": 464,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_moving_welcome_out.bflan",
+      "offset": 10352,
+      "sha256": "e4456d35b18a97df8ec4fde9cfbedc3e4f98f0fe08713932b0ca8ae6c318db44"
+    },
+    {
+      "bytes": 172,
+      "index": 7,
+      "magic": "FCPX",
+      "name": "fcpx/system42_jpn.bfcpx",
+      "offset": 10816,
+      "sha256": "eecae797353acc0c6ff77d88c99a92d73c229e6df4085726c63886f42946f299"
+    },
+    {
+      "bytes": 172,
+      "index": 8,
+      "magic": "FCPX",
+      "name": "fcpx/system54_jpn.bfcpx",
+      "offset": 10992,
+      "sha256": "1431233ea651945ce9b9fa0711e68e157983ba70bb3bbc9cd9ce3e4722e64da9"
+    },
+    {
+      "bytes": 282752,
+      "index": 9,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 12288,
+      "sha256": "5abddf19a9989d56e9d68048c8e8dbb2618266267433a4f61da6d1a26a0415bd"
+    },
+    {
+      "bytes": 428,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_moving_welcome_in.bflan",
+      "offset": 295040,
+      "sha256": "024c421f2942882b31b7c5161701e91fd3c310464b995b6b2988d7c0b1760a69"
+    },
+    {
+      "bytes": 740,
+      "index": 11,
+      "magic": "FLYT",
+      "name": "blyt/mtt_moving_logo_title_00.bflyt",
+      "offset": 295472,
+      "sha256": "1689c2b9cb1811fd74286e105b028bbb7bf9f05e33519112d1c872e4ad5a99e7"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_moving/bin/mtt_moving_welcome_kor.arc"
+}

@@ -1,0 +1,165 @@
+{
+  "members": [
+    {
+      "bytes": 472,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_key_select.bflan",
+      "offset": 4096,
+      "sha256": "363a1b326c9dad922500229493e695641f231a4f904938991f96a28b451f24d1"
+    },
+    {
+      "bytes": 1232,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_passive_unselect.bflan",
+      "offset": 4576,
+      "sha256": "26911fee3a48b6f8e68d88265b668c01ca9635f00b258afe6e9496461b5f3551"
+    },
+    {
+      "bytes": 1248,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_unselect.bflan",
+      "offset": 5808,
+      "sha256": "ee854911d468d6aeca0b4987c75f01ab08c467bb08cfbe226f84882a03e6a929"
+    },
+    {
+      "bytes": 192,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_passive.bflan",
+      "offset": 7056,
+      "sha256": "b0dc6e25bed5156e0240abe5a2c82303c419f6192d739a2b4b677fa4148332e6"
+    },
+    {
+      "bytes": 208,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_00_mtt_context_menu_keep.bflan",
+      "offset": 7248,
+      "sha256": "6cc5985f30ee239d1feb86a77577b7e8a4449780d91b00d80684fbec22deeb2b"
+    },
+    {
+      "bytes": 3336,
+      "index": 5,
+      "magic": "FLYT",
+      "name": "blyt/mtt_context_button_00.bflyt",
+      "offset": 7456,
+      "sha256": "b4392c0a586911acc8c838056b8797d8e3128a15b33103a2503ffa4a10d55c97"
+    },
+    {
+      "bytes": 172,
+      "index": 6,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 10800,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 372,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_cancel.bflan",
+      "offset": 10976,
+      "sha256": "37763c32ac5a138c689403f8f50ce92c8d01a265514c969c8e1a075ea5577812"
+    },
+    {
+      "bytes": 408,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_switch.bflan",
+      "offset": 11360,
+      "sha256": "c7b043e4f496958b80e24c8078819748e2526ba1183f69b3f8bdb7f2a82c5b43"
+    },
+    {
+      "bytes": 336,
+      "index": 9,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_00_mtt_context_menu_patern_00.bflan",
+      "offset": 11776,
+      "sha256": "6460651e0da068afaa055cb724e32d3cc966ffe7976adce5bb6b6723b8ec5ef8"
+    },
+    {
+      "bytes": 420,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_release.bflan",
+      "offset": 12112,
+      "sha256": "eebc523dc15dd51ed5c6396eac93c7e355b11913fe21e346be82552b35dc4cf4"
+    },
+    {
+      "bytes": 336,
+      "index": 11,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_00_mtt_context_menu_out.bflan",
+      "offset": 12544,
+      "sha256": "86b5532f5b5f040d4d72e8902325eac85ca956c9c0b5afd7e464af61a7f0a0a8"
+    },
+    {
+      "bytes": 1444,
+      "index": 12,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_passive_select.bflan",
+      "offset": 12880,
+      "sha256": "70b7defe41714ba137dd2a1b78498e225c90d090ecf46a3ec837165e958dc853"
+    },
+    {
+      "bytes": 2876,
+      "index": 13,
+      "magic": "FLYT",
+      "name": "blyt/mtt_context_00.bflyt",
+      "offset": 14336,
+      "sha256": "1d1a690797504a03a5542f7641f067e3fbac0830ec66812e95e5854a9207810c"
+    },
+    {
+      "bytes": 192,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_keep.bflan",
+      "offset": 17216,
+      "sha256": "236ee274ef6d8fcdd117fc85933ae606e6742fdc32da45bb3dae1d1e043bf004"
+    },
+    {
+      "bytes": 372,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_touch.bflan",
+      "offset": 17408,
+      "sha256": "a40653924823a224c3c4ac945fe19fe7273801ca5b7711cbebc3a06a280da447"
+    },
+    {
+      "bytes": 20608,
+      "index": 16,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 20480,
+      "sha256": "980628f1e5108f01cd1e462add23d85f36e3f259c18ca1a6316c2f96fa6356b8"
+    },
+    {
+      "bytes": 1412,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_select.bflan",
+      "offset": 41088,
+      "sha256": "56a81aa512d01c827d7fa85b1916b120c8a2b89229eae87ff2f1b216b4ed4c69"
+    },
+    {
+      "bytes": 192,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_button_00_active.bflan",
+      "offset": 42512,
+      "sha256": "fedfc85b49dbc43d3d7d51bb0f588e5024ea1d04933f62e10c97b20701be89b0"
+    },
+    {
+      "bytes": 320,
+      "index": 19,
+      "magic": "FLAN",
+      "name": "anim/mtt_context_00_mtt_context_menu_in.bflan",
+      "offset": 42704,
+      "sha256": "169e34adafa6b15982bd86e3fefe2f23e6ed8376e080eb1708cd35c161996f56"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_context/bin/mtt_context_00.arc"
+}

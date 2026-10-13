@@ -1,0 +1,101 @@
+{
+  "members": [
+    {
+      "bytes": 188,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_out.bflan",
+      "offset": 4096,
+      "sha256": "f9ce61affe2e7be9676aedda8742915c184881c123f60b31ec6e8ea67d2a5a6c"
+    },
+    {
+      "bytes": 204,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_f_out.bflan",
+      "offset": 4288,
+      "sha256": "20f24da2a47a8f779d01ca8fe40c64fa52f5a74671251cf5e5b07e5512f76eee"
+    },
+    {
+      "bytes": 1328,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_img_00_switch.bflan",
+      "offset": 4496,
+      "sha256": "46415a933348f612785c786bf35597033c7c4b162eb7bb2c87f611f3279ba87c"
+    },
+    {
+      "bytes": 204,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_f_in.bflan",
+      "offset": 5824,
+      "sha256": "d4e6b05e45434803875fe5f40eeea3abea528a26b49fb062fa2f0394a65e27ba"
+    },
+    {
+      "bytes": 3480,
+      "index": 4,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_msg_character_img_00.bflyt",
+      "offset": 6032,
+      "sha256": "202384e923090f181ec2f776f8ceb2b732c0a55c0c869c710fb7efe9a565e544"
+    },
+    {
+      "bytes": 204,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_chr_out.bflan",
+      "offset": 9520,
+      "sha256": "89c7f912b1ad2003de8c38e40983d19ba20a13ebb4b0be557d06bedde7cd5701"
+    },
+    {
+      "bytes": 1012,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_img_00_keep.bflan",
+      "offset": 9728,
+      "sha256": "6413af0ead00199bbc55b9148b652606b9ea0498e93b1ad686e2b362a6a46fe2"
+    },
+    {
+      "bytes": 16031872,
+      "index": 7,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 12288,
+      "sha256": "9eb43424f97670c0c18480667f22b11efab0ef6c02380d1e1190533fc0146e12"
+    },
+    {
+      "bytes": 204,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_chr_in.bflan",
+      "offset": 16044160,
+      "sha256": "7e1ecc0a258fe39f700cd9e64cb22bf306a26863c4423155dd09fa782c36796d"
+    },
+    {
+      "bytes": 200,
+      "index": 9,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_in.bflan",
+      "offset": 16044368,
+      "sha256": "de1acf6a28e32e6fe36620455cf8e72368a1d4be0e66b3078f991cab847c9b0b"
+    },
+    {
+      "bytes": 192,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_msg_character_00_keep.bflan",
+      "offset": 16044576,
+      "sha256": "0c3a66b4d8c5bc61d17e93f6cdc0131de919e0a132686b1563f42eeb2e1bb968"
+    },
+    {
+      "bytes": 1384,
+      "index": 11,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_msg_character_00.bflyt",
+      "offset": 16044768,
+      "sha256": "ed4bf2d286d212e277a0636e1e29a40cd712827995da998d59efc936fbd09543"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_common_msg/bin/mtt_common_msg_character_00.arc"
+}

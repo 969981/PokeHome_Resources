@@ -1,0 +1,458 @@
+{
+  "member": "blyt/mtt_common_icon_pokemon_00.bflyt",
+  "sections": [
+    {
+      "bytes": 56,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 224,
+      "index": 1,
+      "offset": 76,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 448,
+      "index": 2,
+      "offset": 300,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 1684,
+      "index": 3,
+      "offset": 748,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 2432,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 2516,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 2524,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 2608,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 2616,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 2700,
+      "pane_name": "N_passive_d_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 136,
+      "index": 10,
+      "offset": 2784,
+      "pane_name": "P_icon_poke_deco_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 2920,
+      "pane_name": "key_select",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 3004,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 3012,
+      "pane_name": "N_passive_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 3096,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 3104,
+      "pane_name": "P_mtt_select_pokeIcon_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 3240,
+      "pane_name": "P_mtt_select_pokeIcon_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 84,
+      "index": 17,
+      "offset": 3376,
+      "pane_name": "N_icon_poke_state_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 18,
+      "offset": 3460,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 3500,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 20,
+      "offset": 3508,
+      "pane_name": "P_icon_notdeposit_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 21,
+      "offset": 3644,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 3684,
+      "pane_name": "P_icon_bsetting_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 23,
+      "offset": 3820,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 24,
+      "offset": 3860,
+      "pane_name": "P_icon_trading_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 25,
+      "offset": 3996,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 26,
+      "offset": 4036,
+      "pane_name": "P_icon_expedition_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 27,
+      "offset": 4172,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 28,
+      "offset": 4212,
+      "pane_name": "P_icon_expedition_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 29,
+      "offset": 4348,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 4388,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 31,
+      "offset": 4396,
+      "pane_name": "P_icon_inner_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 32,
+      "offset": 4532,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 4540,
+      "pane_name": "P_icon_expedition_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 34,
+      "offset": 4676,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 35,
+      "offset": 4716,
+      "pane_name": "P_icon_check_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 36,
+      "offset": 4852,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 37,
+      "offset": 4892,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 38,
+      "offset": 4900,
+      "pane_name": "P_icon_check_inner_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 5036,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 40,
+      "offset": 5044,
+      "pane_name": "P_icon_olddata_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 41,
+      "offset": 5180,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 42,
+      "offset": 5220,
+      "pane_name": "P_icon_disabled_skill",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 43,
+      "offset": 5356,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 44,
+      "offset": 5396,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 45,
+      "offset": 5404,
+      "pane_name": "P_icon_disabled_skill_in",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 5540,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 47,
+      "offset": 5548,
+      "pane_name": "P_icon_lock_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 48,
+      "offset": 5684,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 49,
+      "offset": 5724,
+      "pane_name": "P_icon_generation_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 50,
+      "offset": 5860,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 51,
+      "offset": 5900,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 52,
+      "offset": 5908,
+      "pane_name": "P_icon_generation_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 53,
+      "offset": 6044,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 54,
+      "offset": 6052,
+      "pane_name": "P_wazamachine_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 55,
+      "offset": 6188,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 56,
+      "offset": 6228,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 57,
+      "offset": 6236,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 58,
+      "offset": 6244,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 59,
+      "offset": 6252,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 60,
+      "offset": 6260,
+      "pane_name": "Bounding_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 61,
+      "offset": 6344,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 62,
+      "offset": 6352,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 63,
+      "offset": 6396,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 64,
+      "offset": 6404,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 65,
+      "offset": 6472,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 66,
+      "offset": 6540,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 67,
+      "offset": 6608,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 68,
+      "offset": 6676,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 69,
+      "offset": 6744,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 428,
+      "index": 70,
+      "offset": 6752,
+      "tag": "cnt1"
+    }
+  ]
+}

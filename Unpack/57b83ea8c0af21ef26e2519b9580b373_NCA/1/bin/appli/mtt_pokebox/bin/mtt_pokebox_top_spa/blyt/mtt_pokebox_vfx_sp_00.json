@@ -1,0 +1,610 @@
+{
+  "member": "blyt/mtt_pokebox_vfx_sp_00.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 116,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 28,
+      "index": 2,
+      "offset": 188,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 1684,
+      "index": 3,
+      "offset": 216,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 1900,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 1984,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 1992,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 2076,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 2084,
+      "pane_name": "N_vfx_giratina_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 2168,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 2176,
+      "pane_name": "N_anim_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 2260,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 2268,
+      "pane_name": "P_fog_000",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 2404,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 14,
+      "offset": 2412,
+      "pane_name": "N_anim_01",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 2496,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 2504,
+      "pane_name": "P_fog_001",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 17,
+      "offset": 2640,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 18,
+      "offset": 2648,
+      "pane_name": "N_anim_02",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 2732,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 20,
+      "offset": 2740,
+      "pane_name": "P_fog_002",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 2876,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 22,
+      "offset": 2884,
+      "pane_name": "N_anim_03",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 2968,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 24,
+      "offset": 2976,
+      "pane_name": "P_fog_003",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 25,
+      "offset": 3112,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 26,
+      "offset": 3120,
+      "pane_name": "N_anim_04",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 27,
+      "offset": 3204,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 28,
+      "offset": 3212,
+      "pane_name": "P_fog_004",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 29,
+      "offset": 3348,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 30,
+      "offset": 3356,
+      "pane_name": "N_anim_05",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 31,
+      "offset": 3440,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 32,
+      "offset": 3448,
+      "pane_name": "P_fog_005",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 33,
+      "offset": 3584,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 34,
+      "offset": 3592,
+      "pane_name": "N_anim_06",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 35,
+      "offset": 3676,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 36,
+      "offset": 3684,
+      "pane_name": "P_fog_006",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 37,
+      "offset": 3820,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 38,
+      "offset": 3828,
+      "pane_name": "N_anim_07",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 3912,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 40,
+      "offset": 3920,
+      "pane_name": "P_fog_007",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 41,
+      "offset": 4056,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 42,
+      "offset": 4064,
+      "pane_name": "N_anim_08",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 43,
+      "offset": 4148,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 44,
+      "offset": 4156,
+      "pane_name": "P_fog_008",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 45,
+      "offset": 4292,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 46,
+      "offset": 4300,
+      "pane_name": "N_anim_09",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 47,
+      "offset": 4384,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 48,
+      "offset": 4392,
+      "pane_name": "P_fog_009",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 49,
+      "offset": 4528,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 50,
+      "offset": 4536,
+      "pane_name": "N_anim_10",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 51,
+      "offset": 4620,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 52,
+      "offset": 4628,
+      "pane_name": "P_fog_010",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 53,
+      "offset": 4764,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 54,
+      "offset": 4772,
+      "pane_name": "N_anim_11",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 55,
+      "offset": 4856,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 56,
+      "offset": 4864,
+      "pane_name": "P_fog_011",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 57,
+      "offset": 5000,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 58,
+      "offset": 5008,
+      "pane_name": "N_anim_12",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 59,
+      "offset": 5092,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 60,
+      "offset": 5100,
+      "pane_name": "P_fog_012",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 61,
+      "offset": 5236,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 62,
+      "offset": 5244,
+      "pane_name": "N_anim_13",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 63,
+      "offset": 5328,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 64,
+      "offset": 5336,
+      "pane_name": "P_fog_013",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 65,
+      "offset": 5472,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 66,
+      "offset": 5480,
+      "pane_name": "N_anim_14",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 67,
+      "offset": 5564,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 68,
+      "offset": 5572,
+      "pane_name": "P_fog_014",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 69,
+      "offset": 5708,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 70,
+      "offset": 5716,
+      "pane_name": "N_anim_15",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 5800,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 72,
+      "offset": 5808,
+      "pane_name": "P_fog_015",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 73,
+      "offset": 5944,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 74,
+      "offset": 5952,
+      "pane_name": "N_anim_16",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 75,
+      "offset": 6036,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 76,
+      "offset": 6044,
+      "pane_name": "P_fog_016",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 77,
+      "offset": 6180,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 78,
+      "offset": 6188,
+      "pane_name": "N_anim_17",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 79,
+      "offset": 6272,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 80,
+      "offset": 6280,
+      "pane_name": "P_fog_017",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 81,
+      "offset": 6416,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 82,
+      "offset": 6424,
+      "pane_name": "N_anim_18",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 83,
+      "offset": 6508,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 84,
+      "offset": 6516,
+      "pane_name": "P_fog_018",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 85,
+      "offset": 6652,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 86,
+      "offset": 6660,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 87,
+      "offset": 6668,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 88,
+      "offset": 6676,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 89,
+      "offset": 6684,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 90,
+      "offset": 6728,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 500,
+      "index": 91,
+      "offset": 6736,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 92,
+      "offset": 7236,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 93,
+      "offset": 7244,
+      "tag": "cnt1"
+    }
+  ]
+}

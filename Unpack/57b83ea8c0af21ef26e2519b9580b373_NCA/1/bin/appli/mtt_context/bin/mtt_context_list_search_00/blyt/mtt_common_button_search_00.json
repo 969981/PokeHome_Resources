@@ -1,0 +1,575 @@
+{
+  "member": "blyt/mtt_common_button_search_00.bflyt",
+  "sections": [
+    {
+      "bytes": 56,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 392,
+      "index": 1,
+      "offset": 76,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 860,
+      "index": 2,
+      "offset": 468,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 1328,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 2772,
+      "index": 4,
+      "offset": 1364,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 4136,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 4220,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 4228,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 4312,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 4320,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 4404,
+      "pane_name": "keep",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 4488,
+      "pane_name": "key_select",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 4572,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 4580,
+      "pane_name": "N_keyselect_01",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 4664,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 4672,
+      "pane_name": "P_replacement_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 16,
+      "offset": 4808,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 140,
+      "index": 17,
+      "offset": 5100,
+      "pane_name": "W_btn_base_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 18,
+      "offset": 5240,
+      "pane_name": "P_btn_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 19,
+      "offset": 5376,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 188,
+      "index": 20,
+      "offset": 5668,
+      "pane_name": "T_button_pds_b_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 21,
+      "offset": 5856,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 84,
+      "index": 22,
+      "offset": 5912,
+      "pane_name": "N_selected_conditions",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 5996,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 192,
+      "index": 24,
+      "offset": 6004,
+      "pane_name": "T_button_pds_b_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 84,
+      "index": 25,
+      "offset": 6196,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 26,
+      "offset": 6280,
+      "pane_name": "P_pds_icon_shape_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 27,
+      "offset": 6416,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 96,
+      "index": 28,
+      "offset": 6456,
+      "tag": "ali1"
+    },
+    {
+      "bytes": 40,
+      "index": 29,
+      "offset": 6552,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 6592,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 31,
+      "offset": 6600,
+      "pane_name": "P_pds_icon_version_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 32,
+      "offset": 6736,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 6788,
+      "pane_name": "P_pds_icon_version_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 34,
+      "offset": 6924,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 35,
+      "offset": 6976,
+      "pane_name": "P_pds_icon_version_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 36,
+      "offset": 7112,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 37,
+      "offset": 7164,
+      "pane_name": "P_pds_icon_version_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 52,
+      "index": 38,
+      "offset": 7300,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 7352,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 40,
+      "offset": 7360,
+      "pane_name": "N_label_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 41,
+      "offset": 7444,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 42,
+      "offset": 7484,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 116,
+      "index": 43,
+      "offset": 7492,
+      "pane_name": "L_icon_label_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 188,
+      "index": 44,
+      "offset": 7608,
+      "pane_name": "T_button_pds_b_02",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 45,
+      "offset": 7796,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 7852,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 47,
+      "offset": 7860,
+      "pane_name": "N_marking",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 48,
+      "offset": 7944,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 49,
+      "offset": 7984,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 656,
+      "index": 50,
+      "offset": 7992,
+      "pane_name": "L_icon_marking_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 51,
+      "offset": 8648,
+      "pane_name": "L_icon_marking_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 52,
+      "offset": 9304,
+      "pane_name": "L_icon_marking_02",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 53,
+      "offset": 9960,
+      "pane_name": "L_icon_marking_03",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 54,
+      "offset": 10616,
+      "pane_name": "L_icon_marking_04",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 656,
+      "index": 55,
+      "offset": 11272,
+      "pane_name": "L_icon_marking_05",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 56,
+      "offset": 11928,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 57,
+      "offset": 11936,
+      "pane_name": "N_user_data_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 58,
+      "offset": 12020,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 59,
+      "offset": 12060,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 188,
+      "index": 60,
+      "offset": 12068,
+      "pane_name": "T_param_username_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 61,
+      "offset": 12256,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 62,
+      "offset": 12312,
+      "pane_name": "P_icon_user_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 63,
+      "offset": 12448,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 64,
+      "offset": 12456,
+      "pane_name": "N_color_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 65,
+      "offset": 12540,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 66,
+      "offset": 12580,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 67,
+      "offset": 12588,
+      "pane_name": "P_icon_color_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 68,
+      "offset": 12724,
+      "pane_name": "P_icon_color_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 69,
+      "offset": 12860,
+      "pane_name": "T_param_color_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 70,
+      "offset": 13044,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 13100,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 72,
+      "offset": 13108,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 73,
+      "offset": 13116,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 74,
+      "offset": 13124,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 75,
+      "offset": 13132,
+      "pane_name": "Bounding_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 84,
+      "index": 76,
+      "offset": 13216,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 77,
+      "offset": 13300,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 78,
+      "offset": 13308,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 79,
+      "offset": 13316,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 80,
+      "offset": 13360,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 236,
+      "index": 81,
+      "offset": 13368,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 82,
+      "offset": 13604,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 83,
+      "offset": 13672,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 84,
+      "offset": 13740,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 85,
+      "offset": 13808,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 86,
+      "offset": 13876,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 87,
+      "offset": 13944,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 428,
+      "index": 88,
+      "offset": 13952,
+      "tag": "cnt1"
+    }
+  ]
+}

@@ -1,0 +1,738 @@
+{
+  "member": "blyt/mtt_record_detail.bflyt",
+  "sections": [
+    {
+      "bytes": 48,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 136,
+      "index": 1,
+      "offset": 68,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 160,
+      "index": 2,
+      "offset": 204,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 364,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 1900,
+      "index": 4,
+      "offset": 400,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 2300,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 2384,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 2392,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 2476,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 2484,
+      "pane_name": "N_keep_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 2568,
+      "pane_name": "N_pokebox_top_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 2652,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 12,
+      "offset": 2660,
+      "pane_name": "N_anim_root_title_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 2744,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 14,
+      "offset": 2752,
+      "pane_name": "L_indexbar_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 2880,
+      "pane_name": "P_icon_title_box_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 3016,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 17,
+      "offset": 3024,
+      "pane_name": "N_anim_root_fade_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 18,
+      "offset": 3108,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 19,
+      "offset": 3116,
+      "pane_name": "N_anim_root_right",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 3200,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 21,
+      "offset": 3208,
+      "pane_name": "W_record_detail_w_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 3372,
+      "pane_name": "P_record_detail_ds_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 23,
+      "offset": 3508,
+      "pane_name": "P_record_detail_h_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 24,
+      "offset": 3644,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 84,
+      "index": 25,
+      "offset": 3936,
+      "pane_name": "N_info_message_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 4020,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 192,
+      "index": 27,
+      "offset": 4028,
+      "pane_name": "T_heading_title_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 28,
+      "offset": 4220,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 29,
+      "offset": 4276,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 30,
+      "offset": 4284,
+      "pane_name": "N_icon_poke_latest_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 31,
+      "offset": 4368,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 32,
+      "offset": 4376,
+      "pane_name": "P_icon_poke_latest_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 33,
+      "offset": 4512,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 34,
+      "offset": 4552,
+      "pane_name": "P_icon_poke_latest_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 35,
+      "offset": 4688,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 36,
+      "offset": 4728,
+      "pane_name": "P_icon_poke_latest_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 37,
+      "offset": 4864,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 38,
+      "offset": 4904,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 39,
+      "offset": 4912,
+      "pane_name": "N_record_detail_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 40,
+      "offset": 4996,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 41,
+      "offset": 5004,
+      "pane_name": "N_detail_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 42,
+      "offset": 5088,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 43,
+      "offset": 5096,
+      "pane_name": "P_line_skill_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 44,
+      "offset": 5232,
+      "pane_name": "T_param_head_record_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 45,
+      "offset": 5432,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 192,
+      "index": 46,
+      "offset": 5488,
+      "pane_name": "T_unit_record_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 47,
+      "offset": 5680,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 48,
+      "offset": 5736,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 49,
+      "offset": 5744,
+      "pane_name": "N_detail_01",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 50,
+      "offset": 5828,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 51,
+      "offset": 5836,
+      "pane_name": "P_line_skill_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 52,
+      "offset": 5972,
+      "pane_name": "T_param_head_record_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 53,
+      "offset": 6172,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 192,
+      "index": 54,
+      "offset": 6228,
+      "pane_name": "T_unit_record_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 55,
+      "offset": 6420,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 56,
+      "offset": 6476,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 57,
+      "offset": 6484,
+      "pane_name": "N_detail_02",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 58,
+      "offset": 6568,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 59,
+      "offset": 6576,
+      "pane_name": "P_line_skill_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 60,
+      "offset": 6712,
+      "pane_name": "T_param_head_record_02",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 61,
+      "offset": 6912,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 192,
+      "index": 62,
+      "offset": 6968,
+      "pane_name": "T_unit_record_02",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 63,
+      "offset": 7160,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 64,
+      "offset": 7216,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 65,
+      "offset": 7224,
+      "pane_name": "N_detail_03",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 66,
+      "offset": 7308,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 67,
+      "offset": 7316,
+      "pane_name": "P_line_skill_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 68,
+      "offset": 7452,
+      "pane_name": "T_param_head_record_03",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 69,
+      "offset": 7652,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 192,
+      "index": 70,
+      "offset": 7708,
+      "pane_name": "T_unit_record_03",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 71,
+      "offset": 7900,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 72,
+      "offset": 7956,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 73,
+      "offset": 7964,
+      "pane_name": "N_detail_04",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 74,
+      "offset": 8048,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 75,
+      "offset": 8088,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 76,
+      "offset": 8096,
+      "pane_name": "P_line_skill_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 77,
+      "offset": 8232,
+      "pane_name": "T_param_head_record_04",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 78,
+      "offset": 8432,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 192,
+      "index": 79,
+      "offset": 8488,
+      "pane_name": "T_unit_record_04",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 80,
+      "offset": 8680,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 81,
+      "offset": 8736,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 82,
+      "offset": 8744,
+      "pane_name": "N_detail_05",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 83,
+      "offset": 8828,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 84,
+      "offset": 8868,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 85,
+      "offset": 8876,
+      "pane_name": "P_line_skill_05",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 200,
+      "index": 86,
+      "offset": 9012,
+      "pane_name": "T_param_head_record_05",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 87,
+      "offset": 9212,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 192,
+      "index": 88,
+      "offset": 9268,
+      "pane_name": "T_unit_record_05",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 89,
+      "offset": 9460,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 90,
+      "offset": 9516,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 91,
+      "offset": 9524,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 92,
+      "offset": 9532,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 93,
+      "offset": 9540,
+      "pane_name": "N_anim_root_under",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 94,
+      "offset": 9624,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 95,
+      "offset": 9632,
+      "pane_name": "N_optionbar_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 96,
+      "offset": 9716,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 300,
+      "index": 97,
+      "offset": 9724,
+      "pane_name": "L_btn_opb_plus7_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 128,
+      "index": 98,
+      "offset": 10024,
+      "pane_name": "L_btn_opb_b3_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 128,
+      "index": 99,
+      "offset": 10152,
+      "pane_name": "L_btn_opb_help",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 100,
+      "offset": 10280,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 101,
+      "offset": 10288,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 102,
+      "offset": 10296,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 103,
+      "offset": 10304,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 104,
+      "offset": 10312,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 105,
+      "offset": 10320,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 106,
+      "offset": 10404,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 107,
+      "offset": 10412,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 108,
+      "offset": 10456,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 116,
+      "index": 109,
+      "offset": 10464,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 116,
+      "index": 110,
+      "offset": 10580,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 111,
+      "offset": 10696,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 116,
+      "index": 112,
+      "offset": 10764,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 113,
+      "offset": 10880,
+      "tag": "gre1"
+    }
+  ]
+}

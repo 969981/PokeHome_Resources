@@ -1,0 +1,65 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 1.1210387714598537e-44,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "08000000",
+      "reference_candidate": {
+        "length_candidate": 3,
+        "target_offset": 28,
+        "u32_vector_preview": [
+          60,
+          32,
+          4
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 8,
+      "u32_candidate": 8,
+      "u8_candidate": 8
+    },
+    {
+      "field_index": 1,
+      "float32_candidate": 1.1770907100328463e-43,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "54000000",
+      "reference_candidate": {
+        "length_candidate": 3,
+        "target_offset": 108,
+        "u32_vector_preview": [
+          220,
+          112,
+          4
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 84,
+      "u32_candidate": 84,
+      "u8_candidate": 84
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4,
+      8
+    ],
+    "object_size": 12,
+    "root": 16,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 3,
+        "offset_candidate": 28
+      },
+      "1": {
+        "length_candidate": 3,
+        "offset_candidate": 108
+      }
+    },
+    "vtable": 8,
+    "vtable_size": 8
+  }
+}

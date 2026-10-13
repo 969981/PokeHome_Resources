@@ -1,0 +1,287 @@
+{
+  "member": "blyt/mtt_common_character_00.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 196,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 336,
+      "index": 2,
+      "offset": 268,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 892,
+      "index": 3,
+      "offset": 604,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 1496,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 1580,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 1588,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 1672,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 1680,
+      "pane_name": "N_character",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 1764,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 1772,
+      "pane_name": "N_body",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 1856,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 1864,
+      "pane_name": "P_body_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 2000,
+      "pane_name": "P_highlight_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 14,
+      "offset": 2136,
+      "pane_name": "P_eyes_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 2272,
+      "pane_name": "P_eyes_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 2408,
+      "pane_name": "P_mouth_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 17,
+      "offset": 2544,
+      "pane_name": "P_mouth_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 18,
+      "offset": 2680,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 19,
+      "offset": 2688,
+      "pane_name": "N_hair",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 2772,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 21,
+      "offset": 2780,
+      "pane_name": "P_hair_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 22,
+      "offset": 2916,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 23,
+      "offset": 2924,
+      "pane_name": "N_nose",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 24,
+      "offset": 3008,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 3016,
+      "pane_name": "P_nose_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 3152,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 27,
+      "offset": 3160,
+      "pane_name": "N_hand_left",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 3244,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 29,
+      "offset": 3252,
+      "pane_name": "P_hand_l_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 3388,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 31,
+      "offset": 3396,
+      "pane_name": "N_hand_right",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 32,
+      "offset": 3480,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 3488,
+      "pane_name": "P_hand_r_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 34,
+      "offset": 3624,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 35,
+      "offset": 3632,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 36,
+      "offset": 3640,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 37,
+      "offset": 3648,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 38,
+      "offset": 3656,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 39,
+      "offset": 3700,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 236,
+      "index": 40,
+      "offset": 3708,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 140,
+      "index": 41,
+      "offset": 3944,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 42,
+      "offset": 4084,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 43,
+      "offset": 4092,
+      "tag": "cnt1"
+    }
+  ]
+}

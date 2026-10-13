@@ -1,0 +1,55 @@
+{
+  "member": "blyt/icon_pokerus.bflyt",
+  "sections": [
+    {
+      "bytes": 44,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 36,
+      "index": 1,
+      "offset": 64,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 100,
+      "index": 2,
+      "offset": 100,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 200,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 284,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 5,
+      "offset": 292,
+      "pane_name": "P_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 428,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 7,
+      "offset": 436,
+      "tag": "grp1"
+    }
+  ]
+}

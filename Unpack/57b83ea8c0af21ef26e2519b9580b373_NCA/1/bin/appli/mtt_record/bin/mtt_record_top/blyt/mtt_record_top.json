@@ -1,0 +1,430 @@
+{
+  "member": "blyt/mtt_record_top.bflyt",
+  "sections": [
+    {
+      "bytes": 44,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 132,
+      "index": 1,
+      "offset": 64,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 188,
+      "index": 2,
+      "offset": 196,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 384,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 812,
+      "index": 4,
+      "offset": 420,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 1232,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 1316,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 1324,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1408,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1416,
+      "pane_name": "N_keep_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 1500,
+      "pane_name": "N_pokebox_top_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 1584,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 12,
+      "offset": 1592,
+      "pane_name": "N_anim_root_title_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 1676,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 14,
+      "offset": 1684,
+      "pane_name": "L_indexbar_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 1812,
+      "pane_name": "P_icon_title_record_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1948,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 17,
+      "offset": 1956,
+      "pane_name": "N_anim_root_fade_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 18,
+      "offset": 2040,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 19,
+      "offset": 2048,
+      "pane_name": "N_anim_root_top",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 2132,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 21,
+      "offset": 2140,
+      "pane_name": "N_info_message_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 22,
+      "offset": 2224,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 208,
+      "index": 23,
+      "offset": 2232,
+      "pane_name": "T_param_info_task_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 24,
+      "offset": 2440,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 25,
+      "offset": 2496,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 2504,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 27,
+      "offset": 2512,
+      "pane_name": "N_anim_root_left",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 2596,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 29,
+      "offset": 2604,
+      "pane_name": "N_anim_root_img_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 2688,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 31,
+      "offset": 2696,
+      "pane_name": "P_img_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 32,
+      "offset": 2832,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 3124,
+      "pane_name": "P_img_00_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 34,
+      "offset": 3260,
+      "pane_name": "P_img_00_1",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 35,
+      "offset": 3396,
+      "pane_name": "P_img_00_2",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 36,
+      "offset": 3532,
+      "pane_name": "P_img_00_3",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 37,
+      "offset": 3668,
+      "pane_name": "P_img_01_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 38,
+      "offset": 3804,
+      "pane_name": "P_img_02_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 39,
+      "offset": 3940,
+      "pane_name": "P_img_03_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 40,
+      "offset": 4076,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 41,
+      "offset": 4084,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 42,
+      "offset": 4092,
+      "pane_name": "N_anim_root_right",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 43,
+      "offset": 4176,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 124,
+      "index": 44,
+      "offset": 4184,
+      "pane_name": "L_btn_record_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 124,
+      "index": 45,
+      "offset": 4308,
+      "pane_name": "L_btn_passbook_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 4432,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 47,
+      "offset": 4440,
+      "pane_name": "N_anim_root_under",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 48,
+      "offset": 4524,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 49,
+      "offset": 4532,
+      "pane_name": "N_optionbar_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 50,
+      "offset": 4616,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 51,
+      "offset": 4624,
+      "pane_name": "L_btn_opb_b3_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 128,
+      "index": 52,
+      "offset": 4752,
+      "pane_name": "L_btn_opb_help",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 53,
+      "offset": 4880,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 54,
+      "offset": 4888,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 55,
+      "offset": 4896,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 56,
+      "offset": 4904,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 57,
+      "offset": 4912,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 58,
+      "offset": 4920,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 59,
+      "offset": 5004,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 60,
+      "offset": 5012,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 61,
+      "offset": 5056,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 62,
+      "offset": 5064,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 356,
+      "index": 63,
+      "offset": 5132,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 64,
+      "offset": 5488,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 65,
+      "offset": 5556,
+      "tag": "gre1"
+    }
+  ]
+}

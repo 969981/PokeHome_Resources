@@ -1,0 +1,1312 @@
+{
+  "member": "blyt/mtt_pokebox_preview_box.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 124,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 132,
+      "index": 2,
+      "offset": 196,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 328,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 4844,
+      "index": 4,
+      "offset": 364,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 5208,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 5292,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 5300,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 5384,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 5392,
+      "pane_name": "N_keep_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 5476,
+      "pane_name": "N_preview_inbox_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 5560,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 12,
+      "offset": 5568,
+      "pane_name": "N_info_prebox_l",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 13,
+      "offset": 5652,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 5692,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 15,
+      "offset": 5700,
+      "pane_name": "W_base_info_preview_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 5864,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 17,
+      "offset": 5872,
+      "pane_name": "W_base_boxname_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 192,
+      "index": 18,
+      "offset": 6036,
+      "pane_name": "T_param_boxname_l",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 19,
+      "offset": 6228,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 20,
+      "offset": 6284,
+      "pane_name": "T_param_boxpage_l",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 21,
+      "offset": 6468,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 22,
+      "offset": 6524,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 6532,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 24,
+      "offset": 6540,
+      "pane_name": "N_info_prebox_r",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 25,
+      "offset": 6624,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 6664,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 27,
+      "offset": 6672,
+      "pane_name": "W_base_info_preview_01",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 6836,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 29,
+      "offset": 6844,
+      "pane_name": "W_base_boxname_01",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 192,
+      "index": 30,
+      "offset": 7008,
+      "pane_name": "T_param_boxname_r",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 31,
+      "offset": 7200,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 184,
+      "index": 32,
+      "offset": 7256,
+      "pane_name": "T_param_boxpage_r",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 33,
+      "offset": 7440,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 34,
+      "offset": 7496,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 35,
+      "offset": 7504,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 164,
+      "index": 36,
+      "offset": 7512,
+      "pane_name": "W_shadow_list_bbox_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 84,
+      "index": 37,
+      "offset": 7676,
+      "pane_name": "N_deco_pokeback_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 38,
+      "offset": 7760,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 39,
+      "offset": 7768,
+      "pane_name": "P_window_deco_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 40,
+      "offset": 7904,
+      "pane_name": "P_window_deco_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 41,
+      "offset": 8040,
+      "pane_name": "P_window_deco_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 42,
+      "offset": 8176,
+      "pane_name": "P_window_deco_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 43,
+      "offset": 8312,
+      "pane_name": "P_window_deco_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 44,
+      "offset": 8448,
+      "pane_name": "P_window_deco_05",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 45,
+      "offset": 8584,
+      "pane_name": "P_window_deco_06",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 46,
+      "offset": 8720,
+      "pane_name": "P_window_deco_07",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 47,
+      "offset": 8856,
+      "pane_name": "P_window_deco_08",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 48,
+      "offset": 8992,
+      "pane_name": "P_window_deco_09",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 49,
+      "offset": 9128,
+      "pane_name": "P_window_deco_10",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 50,
+      "offset": 9264,
+      "pane_name": "P_window_deco_11",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 51,
+      "offset": 9400,
+      "pane_name": "P_window_deco_12",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 52,
+      "offset": 9536,
+      "pane_name": "P_window_deco_13",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 53,
+      "offset": 9672,
+      "pane_name": "P_window_deco_14",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 54,
+      "offset": 9808,
+      "pane_name": "P_window_deco_15",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 55,
+      "offset": 9944,
+      "pane_name": "P_window_deco_16",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 56,
+      "offset": 10080,
+      "pane_name": "P_window_deco_17",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 57,
+      "offset": 10216,
+      "pane_name": "P_window_deco_18",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 58,
+      "offset": 10352,
+      "pane_name": "P_window_deco_19",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 59,
+      "offset": 10488,
+      "pane_name": "P_window_deco_20",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 60,
+      "offset": 10624,
+      "pane_name": "P_window_deco_21",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 61,
+      "offset": 10760,
+      "pane_name": "P_window_deco_22",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 62,
+      "offset": 10896,
+      "pane_name": "P_window_deco_23",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 63,
+      "offset": 11032,
+      "pane_name": "P_window_deco_24",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 64,
+      "offset": 11168,
+      "pane_name": "P_window_deco_25",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 65,
+      "offset": 11304,
+      "pane_name": "P_window_deco_26",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 66,
+      "offset": 11440,
+      "pane_name": "P_window_deco_27",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 67,
+      "offset": 11576,
+      "pane_name": "P_window_deco_28",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 68,
+      "offset": 11712,
+      "pane_name": "P_window_deco_29",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 69,
+      "offset": 11848,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 70,
+      "offset": 11856,
+      "pane_name": "N_parent_icon_poke_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 11940,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 72,
+      "offset": 11948,
+      "pane_name": "P_icon_pokemon_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 73,
+      "offset": 12076,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 74,
+      "offset": 12084,
+      "pane_name": "N_parent_icon_poke_01",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 75,
+      "offset": 12168,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 76,
+      "offset": 12176,
+      "pane_name": "P_icon_pokemon_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 77,
+      "offset": 12304,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 78,
+      "offset": 12312,
+      "pane_name": "N_parent_icon_poke_02",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 79,
+      "offset": 12396,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 80,
+      "offset": 12404,
+      "pane_name": "P_icon_pokemon_02",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 81,
+      "offset": 12532,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 82,
+      "offset": 12540,
+      "pane_name": "N_parent_icon_poke_03",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 83,
+      "offset": 12624,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 84,
+      "offset": 12632,
+      "pane_name": "P_icon_pokemon_03",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 85,
+      "offset": 12760,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 86,
+      "offset": 12768,
+      "pane_name": "N_parent_icon_poke_04",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 87,
+      "offset": 12852,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 88,
+      "offset": 12860,
+      "pane_name": "P_icon_pokemon_04",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 89,
+      "offset": 12988,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 90,
+      "offset": 12996,
+      "pane_name": "N_parent_icon_poke_05",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 91,
+      "offset": 13080,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 92,
+      "offset": 13088,
+      "pane_name": "P_icon_pokemon_05",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 93,
+      "offset": 13216,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 94,
+      "offset": 13224,
+      "pane_name": "N_parent_icon_poke_06",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 95,
+      "offset": 13308,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 96,
+      "offset": 13316,
+      "pane_name": "P_icon_pokemon_06",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 97,
+      "offset": 13444,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 98,
+      "offset": 13452,
+      "pane_name": "N_parent_icon_poke_07",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 99,
+      "offset": 13536,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 100,
+      "offset": 13544,
+      "pane_name": "P_icon_pokemon_07",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 101,
+      "offset": 13672,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 102,
+      "offset": 13680,
+      "pane_name": "N_parent_icon_poke_08",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 103,
+      "offset": 13764,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 104,
+      "offset": 13772,
+      "pane_name": "P_icon_pokemon_08",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 105,
+      "offset": 13900,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 106,
+      "offset": 13908,
+      "pane_name": "N_parent_icon_poke_09",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 107,
+      "offset": 13992,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 108,
+      "offset": 14000,
+      "pane_name": "P_icon_pokemon_09",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 109,
+      "offset": 14128,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 110,
+      "offset": 14136,
+      "pane_name": "N_parent_icon_poke_10",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 111,
+      "offset": 14220,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 112,
+      "offset": 14228,
+      "pane_name": "P_icon_pokemon_10",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 113,
+      "offset": 14356,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 114,
+      "offset": 14364,
+      "pane_name": "N_parent_icon_poke_11",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 115,
+      "offset": 14448,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 116,
+      "offset": 14456,
+      "pane_name": "P_icon_pokemon_11",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 117,
+      "offset": 14584,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 118,
+      "offset": 14592,
+      "pane_name": "N_parent_icon_poke_12",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 119,
+      "offset": 14676,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 120,
+      "offset": 14684,
+      "pane_name": "P_icon_pokemon_12",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 121,
+      "offset": 14812,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 122,
+      "offset": 14820,
+      "pane_name": "N_parent_icon_poke_13",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 123,
+      "offset": 14904,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 124,
+      "offset": 14912,
+      "pane_name": "P_icon_pokemon_13",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 125,
+      "offset": 15040,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 126,
+      "offset": 15048,
+      "pane_name": "N_parent_icon_poke_14",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 127,
+      "offset": 15132,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 128,
+      "offset": 15140,
+      "pane_name": "P_icon_pokemon_14",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 129,
+      "offset": 15268,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 130,
+      "offset": 15276,
+      "pane_name": "N_parent_icon_poke_15",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 131,
+      "offset": 15360,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 132,
+      "offset": 15368,
+      "pane_name": "P_icon_pokemon_15",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 133,
+      "offset": 15496,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 134,
+      "offset": 15504,
+      "pane_name": "N_parent_icon_poke_16",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 135,
+      "offset": 15588,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 136,
+      "offset": 15596,
+      "pane_name": "P_icon_pokemon_16",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 137,
+      "offset": 15724,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 138,
+      "offset": 15732,
+      "pane_name": "N_parent_icon_poke_17",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 139,
+      "offset": 15816,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 140,
+      "offset": 15824,
+      "pane_name": "P_icon_pokemon_17",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 141,
+      "offset": 15952,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 142,
+      "offset": 15960,
+      "pane_name": "N_parent_icon_poke_18",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 143,
+      "offset": 16044,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 144,
+      "offset": 16052,
+      "pane_name": "P_icon_pokemon_18",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 145,
+      "offset": 16180,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 146,
+      "offset": 16188,
+      "pane_name": "N_parent_icon_poke_19",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 147,
+      "offset": 16272,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 148,
+      "offset": 16280,
+      "pane_name": "P_icon_pokemon_19",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 149,
+      "offset": 16408,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 150,
+      "offset": 16416,
+      "pane_name": "N_parent_icon_poke_20",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 151,
+      "offset": 16500,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 152,
+      "offset": 16508,
+      "pane_name": "P_icon_pokemon_20",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 153,
+      "offset": 16636,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 154,
+      "offset": 16644,
+      "pane_name": "N_parent_icon_poke_21",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 155,
+      "offset": 16728,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 156,
+      "offset": 16736,
+      "pane_name": "P_icon_pokemon_21",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 157,
+      "offset": 16864,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 158,
+      "offset": 16872,
+      "pane_name": "N_parent_icon_poke_22",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 159,
+      "offset": 16956,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 160,
+      "offset": 16964,
+      "pane_name": "P_icon_pokemon_22",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 161,
+      "offset": 17092,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 162,
+      "offset": 17100,
+      "pane_name": "N_parent_icon_poke_23",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 163,
+      "offset": 17184,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 164,
+      "offset": 17192,
+      "pane_name": "P_icon_pokemon_23",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 165,
+      "offset": 17320,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 166,
+      "offset": 17328,
+      "pane_name": "N_parent_icon_poke_24",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 167,
+      "offset": 17412,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 168,
+      "offset": 17420,
+      "pane_name": "P_icon_pokemon_24",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 169,
+      "offset": 17548,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 170,
+      "offset": 17556,
+      "pane_name": "N_parent_icon_poke_25",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 171,
+      "offset": 17640,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 172,
+      "offset": 17648,
+      "pane_name": "P_icon_pokemon_25",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 173,
+      "offset": 17776,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 174,
+      "offset": 17784,
+      "pane_name": "N_parent_icon_poke_26",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 175,
+      "offset": 17868,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 176,
+      "offset": 17876,
+      "pane_name": "P_icon_pokemon_26",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 177,
+      "offset": 18004,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 178,
+      "offset": 18012,
+      "pane_name": "N_parent_icon_poke_27",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 179,
+      "offset": 18096,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 180,
+      "offset": 18104,
+      "pane_name": "P_icon_pokemon_27",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 181,
+      "offset": 18232,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 182,
+      "offset": 18240,
+      "pane_name": "N_parent_icon_poke_28",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 183,
+      "offset": 18324,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 184,
+      "offset": 18332,
+      "pane_name": "P_icon_pokemon_28",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 185,
+      "offset": 18460,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 186,
+      "offset": 18468,
+      "pane_name": "N_parent_icon_poke_29",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 187,
+      "offset": 18552,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 188,
+      "offset": 18560,
+      "pane_name": "P_icon_pokemon_29",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 189,
+      "offset": 18688,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 190,
+      "offset": 18696,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 191,
+      "offset": 18704,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 192,
+      "offset": 18712,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 193,
+      "offset": 18796,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 194,
+      "offset": 18804,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 195,
+      "offset": 18848,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 196,
+      "offset": 18856,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 197,
+      "offset": 18924,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 198,
+      "offset": 18992,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 199,
+      "offset": 19000,
+      "tag": "cnt1"
+    }
+  ]
+}

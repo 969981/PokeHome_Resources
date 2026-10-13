@@ -1,0 +1,106 @@
+{
+  "member": "blyt/mtt_common_deco_window.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 116,
+      "index": 1,
+      "offset": 72,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 588,
+      "index": 2,
+      "offset": 188,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 776,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 860,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 868,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 952,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 960,
+      "pane_name": "N_common_deco_window",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1044,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 196,
+      "index": 9,
+      "offset": 1052,
+      "pane_name": "W_base_window_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 140,
+      "index": 10,
+      "offset": 1248,
+      "pane_name": "W_base_header_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 1388,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 1396,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 1404,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 14,
+      "offset": 1412,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 15,
+      "offset": 1456,
+      "tag": "cnt1"
+    }
+  ]
+}

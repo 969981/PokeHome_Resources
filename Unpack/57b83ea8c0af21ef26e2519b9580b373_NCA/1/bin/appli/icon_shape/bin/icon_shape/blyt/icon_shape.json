@@ -1,0 +1,55 @@
+{
+  "member": "blyt/icon_shape.bflyt",
+  "sections": [
+    {
+      "bytes": 40,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 32,
+      "index": 1,
+      "offset": 60,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 100,
+      "index": 2,
+      "offset": 92,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 192,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 276,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 5,
+      "offset": 284,
+      "pane_name": "P_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 420,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 7,
+      "offset": 428,
+      "tag": "grp1"
+    }
+  ]
+}

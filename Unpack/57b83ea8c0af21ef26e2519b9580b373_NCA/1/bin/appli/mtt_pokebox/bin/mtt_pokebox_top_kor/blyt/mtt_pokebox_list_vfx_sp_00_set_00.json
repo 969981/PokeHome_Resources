@@ -1,0 +1,489 @@
+{
+  "member": "blyt/mtt_pokebox_list_vfx_sp_00_set_00.bflyt",
+  "sections": [
+    {
+      "bytes": 64,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 84,
+      "index": 1,
+      "offset": 84,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 2,
+      "offset": 168,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 176,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 260,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 268,
+      "pane_name": "N_pokebox_list_vfx_sp_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 352,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 360,
+      "pane_name": "N_set_vfx_sp_00_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 444,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 120,
+      "index": 9,
+      "offset": 452,
+      "pane_name": "L_vfx_sp_00_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 10,
+      "offset": 572,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 11,
+      "offset": 612,
+      "pane_name": "L_vfx_sp_00_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 12,
+      "offset": 732,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 13,
+      "offset": 772,
+      "pane_name": "L_vfx_sp_00_02",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 14,
+      "offset": 892,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 15,
+      "offset": 932,
+      "pane_name": "L_vfx_sp_00_03",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 16,
+      "offset": 1052,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 17,
+      "offset": 1092,
+      "pane_name": "L_vfx_sp_00_04",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 18,
+      "offset": 1212,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 19,
+      "offset": 1252,
+      "pane_name": "L_vfx_sp_00_05",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 20,
+      "offset": 1372,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 21,
+      "offset": 1412,
+      "pane_name": "L_vfx_sp_00_06",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 22,
+      "offset": 1532,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 23,
+      "offset": 1572,
+      "pane_name": "L_vfx_sp_00_07",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 24,
+      "offset": 1692,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 25,
+      "offset": 1732,
+      "pane_name": "L_vfx_sp_00_08",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 26,
+      "offset": 1852,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 27,
+      "offset": 1892,
+      "pane_name": "L_vfx_sp_00_09",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 28,
+      "offset": 2012,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 29,
+      "offset": 2052,
+      "pane_name": "L_vfx_sp_00_10",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 30,
+      "offset": 2172,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 31,
+      "offset": 2212,
+      "pane_name": "L_vfx_sp_00_11",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 32,
+      "offset": 2332,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 33,
+      "offset": 2372,
+      "pane_name": "L_vfx_sp_00_12",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 34,
+      "offset": 2492,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 35,
+      "offset": 2532,
+      "pane_name": "L_vfx_sp_00_13",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 36,
+      "offset": 2652,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 37,
+      "offset": 2692,
+      "pane_name": "L_vfx_sp_00_14",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 38,
+      "offset": 2812,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 39,
+      "offset": 2852,
+      "pane_name": "L_vfx_sp_00_15",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 40,
+      "offset": 2972,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 41,
+      "offset": 3012,
+      "pane_name": "L_vfx_sp_00_16",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 42,
+      "offset": 3132,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 43,
+      "offset": 3172,
+      "pane_name": "L_vfx_sp_00_17",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 44,
+      "offset": 3292,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 45,
+      "offset": 3332,
+      "pane_name": "L_vfx_sp_00_18",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 46,
+      "offset": 3452,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 47,
+      "offset": 3492,
+      "pane_name": "L_vfx_sp_00_19",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 48,
+      "offset": 3612,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 49,
+      "offset": 3652,
+      "pane_name": "L_vfx_sp_00_20",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 50,
+      "offset": 3772,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 51,
+      "offset": 3812,
+      "pane_name": "L_vfx_sp_00_21",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 52,
+      "offset": 3932,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 53,
+      "offset": 3972,
+      "pane_name": "L_vfx_sp_00_22",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 54,
+      "offset": 4092,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 55,
+      "offset": 4132,
+      "pane_name": "L_vfx_sp_00_23",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 56,
+      "offset": 4252,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 57,
+      "offset": 4292,
+      "pane_name": "L_vfx_sp_00_24",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 58,
+      "offset": 4412,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 59,
+      "offset": 4452,
+      "pane_name": "L_vfx_sp_00_25",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 60,
+      "offset": 4572,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 61,
+      "offset": 4612,
+      "pane_name": "L_vfx_sp_00_26",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 62,
+      "offset": 4732,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 63,
+      "offset": 4772,
+      "pane_name": "L_vfx_sp_00_27",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 64,
+      "offset": 4892,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 65,
+      "offset": 4932,
+      "pane_name": "L_vfx_sp_00_28",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 66,
+      "offset": 5052,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 67,
+      "offset": 5092,
+      "pane_name": "L_vfx_sp_00_29",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 40,
+      "index": 68,
+      "offset": 5212,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 69,
+      "offset": 5252,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 70,
+      "offset": 5260,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 5268,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 72,
+      "offset": 5276,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 73,
+      "offset": 5284,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 74,
+      "offset": 5328,
+      "tag": "cnt1"
+    }
+  ]
+}

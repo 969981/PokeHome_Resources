@@ -1,0 +1,1181 @@
+{
+  "members": [
+    {
+      "bytes": 1508,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_touch.bflan",
+      "offset": 12288,
+      "sha256": "019b2aaa8713e836a963c22d5e7ab8b8a8cdc87691f3625bf7893213753cf9bf"
+    },
+    {
+      "bytes": 192,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_passive.bflan",
+      "offset": 13808,
+      "sha256": "866dd3b7ecb330b037b83cca0d2cbba38b6c85f4061947c4767f00479e97af49"
+    },
+    {
+      "bytes": 200,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_passive_select.bflan",
+      "offset": 14000,
+      "sha256": "fdf9002782ee33d22e8f3cb0f4a1e35856d579846d5358a20d67ee5b8aa5c299"
+    },
+    {
+      "bytes": 192,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_touch.bflan",
+      "offset": 14208,
+      "sha256": "2bbd72957b4e41c6545cef3b023b8a60fd0d4e6bf41b86fa6dbc669aba23b73e"
+    },
+    {
+      "bytes": 192,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_cancel.bflan",
+      "offset": 14400,
+      "sha256": "2aea75f8c64a6265c3bcb52876911dfd3ea580507601f9bc0d6b5f8861a00584"
+    },
+    {
+      "bytes": 2844,
+      "index": 5,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_return.bflyt",
+      "offset": 14592,
+      "sha256": "4b10f418f4fe8714b36d0e814f7b0bc6b71d73f74b491df8995d38cb487b3046"
+    },
+    {
+      "bytes": 196,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_unselect.bflan",
+      "offset": 17440,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 204,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_passive_unselect.bflan",
+      "offset": 17648,
+      "sha256": "e710a0146ea32c492fda97b56e9f553cc6912287ddcbd8d762a0ea8a5bd25fee"
+    },
+    {
+      "bytes": 216,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_touch.bflan",
+      "offset": 17856,
+      "sha256": "35f1f0bc7f98276ea38cea3767fd4bd090e2422c295076fd4c7970051c27e130"
+    },
+    {
+      "bytes": 5412,
+      "index": 9,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_area_point.bflyt",
+      "offset": 18080,
+      "sha256": "f8d0879a8c01cd7839416e47fb70c12b8c69d9a04b55932f157533c781f25dbb"
+    },
+    {
+      "bytes": 17712,
+      "index": 10,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_area_transaction.bflyt",
+      "offset": 23504,
+      "sha256": "9b1c14a8349e08a1c081099ea819b90d5d3b3b541cc28ce9bcd9ee311c62ea1c"
+    },
+    {
+      "bytes": 192,
+      "index": 11,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_cancel.bflan",
+      "offset": 41216,
+      "sha256": "962bc937263391bc2dc6a5eaa1666a217b7609b57019d9d4745b66903ff10a5c"
+    },
+    {
+      "bytes": 196,
+      "index": 12,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_unselect.bflan",
+      "offset": 41408,
+      "sha256": "06752e4481d8132036f2b530a8cb3ac271ef3fcbc6da8ba0cf903ce2d0e703aa"
+    },
+    {
+      "bytes": 232,
+      "index": 13,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_key_select.bflan",
+      "offset": 41616,
+      "sha256": "3dc7152e3ffaab0a6be224fb09453642a9a3fdf1f9b2ad1abff30a3d49e2d9b8"
+    },
+    {
+      "bytes": 232,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_key_select.bflan",
+      "offset": 41856,
+      "sha256": "3b75c5a2357578c62cad628ba595ce9f8ed325b94c6cf31359c3882484d9a1c3"
+    },
+    {
+      "bytes": 196,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_key_select.bflan",
+      "offset": 42096,
+      "sha256": "d7262b488633673547f57abbca23c16ae939ea3e138ce748aa680c4e0120b700"
+    },
+    {
+      "bytes": 192,
+      "index": 16,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_select.bflan",
+      "offset": 42304,
+      "sha256": "10cdbee98d683d3ef37c300d5f11c8ecb36c8154d4b49e8859c0d36babe5902e"
+    },
+    {
+      "bytes": 192,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_active.bflan",
+      "offset": 42496,
+      "sha256": "61b1f3ba1352c1f1fa9006fa626e005b51b6c5ee6c57945cdd8006bec2ea561e"
+    },
+    {
+      "bytes": 1440,
+      "index": 18,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_scrollbar_00.bflyt",
+      "offset": 42688,
+      "sha256": "db7f0c0ebd4ab9d92f88074270188ac89f60910f2440e5c49578410d16628da6"
+    },
+    {
+      "bytes": 192,
+      "index": 19,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_passive.bflan",
+      "offset": 44128,
+      "sha256": "866dd3b7ecb330b037b83cca0d2cbba38b6c85f4061947c4767f00479e97af49"
+    },
+    {
+      "bytes": 196,
+      "index": 20,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_key_select.bflan",
+      "offset": 44320,
+      "sha256": "d7262b488633673547f57abbca23c16ae939ea3e138ce748aa680c4e0120b700"
+    },
+    {
+      "bytes": 2860,
+      "index": 21,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_04.bflyt",
+      "offset": 44528,
+      "sha256": "d02235f0abac1fee81e66e5c492193d311347397473ed97b8751a335e9443977"
+    },
+    {
+      "bytes": 196,
+      "index": 22,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_unselect.bflan",
+      "offset": 47392,
+      "sha256": "72c8e1f518594872de0eb33f2906644bb4ce7c20ec9b65455b1cf79fccac4556"
+    },
+    {
+      "bytes": 5464,
+      "index": 23,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail.bflyt",
+      "offset": 47600,
+      "sha256": "a0c3e6904e5d54ea87641809062d16fd2f2154ea4b9d2e4fbfcd004643eb209c"
+    },
+    {
+      "bytes": 192,
+      "index": 24,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive.bflan",
+      "offset": 53072,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 196,
+      "index": 25,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_unselect.bflan",
+      "offset": 53264,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 204,
+      "index": 26,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_passive_unselect.bflan",
+      "offset": 53472,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 204,
+      "index": 27,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_cancel.bflan",
+      "offset": 53680,
+      "sha256": "40f78dea43ff7ad1f351d169773ffd41da7f212c4f4bd029770a47f2875f6268"
+    },
+    {
+      "bytes": 204,
+      "index": 28,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_passive_unselect.bflan",
+      "offset": 53888,
+      "sha256": "e710a0146ea32c492fda97b56e9f553cc6912287ddcbd8d762a0ea8a5bd25fee"
+    },
+    {
+      "bytes": 192,
+      "index": 29,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_passive.bflan",
+      "offset": 54096,
+      "sha256": "a8363d3f1b92dd4f8f788ed4f53ce0d1fb8687bcd9ab152bc8aa29b1699e1e41"
+    },
+    {
+      "bytes": 204,
+      "index": 30,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive_unselect.bflan",
+      "offset": 54288,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 37512,
+      "index": 31,
+      "magic": "BNSH",
+      "name": "bgsh/__ArchiveShader.bnsh",
+      "offset": 57344,
+      "sha256": "0493044b32069a0411afbc0dd97875b065863ca55e0e4d8d1734ebef7528cac8"
+    },
+    {
+      "bytes": 1800,
+      "index": 32,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_key_select.bflan",
+      "offset": 94864,
+      "sha256": "d12db9f0ea481ff76c5420ea7af38df20d81c9d7ac1049737e867f7a292fb696"
+    },
+    {
+      "bytes": 192,
+      "index": 33,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_passive.bflan",
+      "offset": 96672,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 192,
+      "index": 34,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_release.bflan",
+      "offset": 96864,
+      "sha256": "473ddfb02d8ed7dbf6578b5ce1437b4413c82e6251aaf12a8de8de9fa074b479"
+    },
+    {
+      "bytes": 192,
+      "index": 35,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_touch.bflan",
+      "offset": 97056,
+      "sha256": "7c4f386977c94aeabacc39bd0742efc7db982388b767ea6f851f43f66454d38c"
+    },
+    {
+      "bytes": 200,
+      "index": 36,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_passive_select.bflan",
+      "offset": 97248,
+      "sha256": "7910f5573c6445b78e9523837cf23f5aa721d4461d37c8600491c4839eb0a996"
+    },
+    {
+      "bytes": 192,
+      "index": 37,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_cancel.bflan",
+      "offset": 97456,
+      "sha256": "721955ab8823f6bd1eddbc1faac5e1589ec23f7dd02b5f6546d9edecc734b2ad"
+    },
+    {
+      "bytes": 480,
+      "index": 38,
+      "magic": "FLAN",
+      "name": "anim/mtt_icon_gender_00_switch.bflan",
+      "offset": 97648,
+      "sha256": "f89c6dd56a4148ce59c7825cd04d45fa9508ca3a00ef0b4335d62740fd93b298"
+    },
+    {
+      "bytes": 1512,
+      "index": 39,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_toggle.bflan",
+      "offset": 98128,
+      "sha256": "5c9f20749b18a8897043b731af5cf2bfdbc6a6245b297d2661a2de0a55eb2c03"
+    },
+    {
+      "bytes": 196,
+      "index": 40,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_unselect.bflan",
+      "offset": 99648,
+      "sha256": "403431fb64b09be99b0067c65de07986a038a64f49b38274cbb1f489705bebf0"
+    },
+    {
+      "bytes": 2812,
+      "index": 41,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_help.bflyt",
+      "offset": 99856,
+      "sha256": "889d5c4086fb46fdd9f54fd93fa2c984e99f943d0f8a7ae57ab5349d7a111cf6"
+    },
+    {
+      "bytes": 192,
+      "index": 42,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_cancel.bflan",
+      "offset": 102672,
+      "sha256": "962bc937263391bc2dc6a5eaa1666a217b7609b57019d9d4745b66903ff10a5c"
+    },
+    {
+      "bytes": 192,
+      "index": 43,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_release.bflan",
+      "offset": 102864,
+      "sha256": "473ddfb02d8ed7dbf6578b5ce1437b4413c82e6251aaf12a8de8de9fa074b479"
+    },
+    {
+      "bytes": 204,
+      "index": 44,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_release.bflan",
+      "offset": 103056,
+      "sha256": "b52b678c80a0f403f4ad2ea3185b0000139010a1a4f98fa776e53d9799f118c9"
+    },
+    {
+      "bytes": 204,
+      "index": 45,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_passive_unselect.bflan",
+      "offset": 103264,
+      "sha256": "9e0d0ce77926b2fad80c26d8a59cd9cab2c4f015ca16e3fb44b0756b3d021cf6"
+    },
+    {
+      "bytes": 172,
+      "index": 46,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 103472,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 200,
+      "index": 47,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_select.bflan",
+      "offset": 103648,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 192,
+      "index": 48,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive.bflan",
+      "offset": 103856,
+      "sha256": "00a391b33225d4433c64edabeda2273f7dd179fa868d8012d00e998cc7af4b03"
+    },
+    {
+      "bytes": 196,
+      "index": 49,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_unselect.bflan",
+      "offset": 104048,
+      "sha256": "72c8e1f518594872de0eb33f2906644bb4ce7c20ec9b65455b1cf79fccac4556"
+    },
+    {
+      "bytes": 204,
+      "index": 50,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_cancel.bflan",
+      "offset": 104256,
+      "sha256": "8c07c72f652373dfe7b4bd1d4f1d07b0a582c9a8b6afb7f721c8040c8bcc330a"
+    },
+    {
+      "bytes": 192,
+      "index": 51,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_select.bflan",
+      "offset": 104464,
+      "sha256": "7d1a16409c0650554bf2274b1c4d1be54b3229cc1dffe785fe1a2640d6354e10"
+    },
+    {
+      "bytes": 192,
+      "index": 52,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_active.bflan",
+      "offset": 104656,
+      "sha256": "34aa8524b974116c60ed684c85e82662711eaddcf0db815f690d03a7bd46b6bc"
+    },
+    {
+      "bytes": 192,
+      "index": 53,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_touch.bflan",
+      "offset": 104848,
+      "sha256": "2bbd72957b4e41c6545cef3b023b8a60fd0d4e6bf41b86fa6dbc669aba23b73e"
+    },
+    {
+      "bytes": 200,
+      "index": 54,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive_select.bflan",
+      "offset": 105040,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 192,
+      "index": 55,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_passive.bflan",
+      "offset": 105248,
+      "sha256": "866dd3b7ecb330b037b83cca0d2cbba38b6c85f4061947c4767f00479e97af49"
+    },
+    {
+      "bytes": 192,
+      "index": 56,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_release.bflan",
+      "offset": 105440,
+      "sha256": "335b4bcc44bf63e7df36d5079c41e05115bafd919f4e3e1e09f67b1b783d2dd7"
+    },
+    {
+      "bytes": 200,
+      "index": 57,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_area_transaction_out.bflan",
+      "offset": 105632,
+      "sha256": "419fc8f66f6f16044d23ba8cd135517fbfd727371c4ada096c23bdf97752466b"
+    },
+    {
+      "bytes": 464,
+      "index": 58,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_shift_left.bflan",
+      "offset": 105840,
+      "sha256": "6311cfcdf16590a4d9f401dbe319502aa7d9377f2fd94f4504cc16520ce72b0f"
+    },
+    {
+      "bytes": 1220,
+      "index": 59,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_cancel.bflan",
+      "offset": 106304,
+      "sha256": "aab2fb1272a218f1ac07ba3da0549123e4ca706a5bc72364bfdb3f547286f64c"
+    },
+    {
+      "bytes": 192,
+      "index": 60,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_keep.bflan",
+      "offset": 107536,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 204,
+      "index": 61,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_release.bflan",
+      "offset": 107728,
+      "sha256": "3c1fbb0b54bd1c22a5dce2ca6b3658c22a3e47fae65be58195bb56bd09846126"
+    },
+    {
+      "bytes": 568,
+      "index": 62,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_in.bflan",
+      "offset": 107936,
+      "sha256": "1f3a7dfa74e840eea3298f21cc56c18474541675021f8a1a7b6a2b8b760d45cd"
+    },
+    {
+      "bytes": 216,
+      "index": 63,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_cursor_transaction_00_select.bflan",
+      "offset": 108512,
+      "sha256": "d24df955fb5020bde6162bf86d0e69306590d514b6917906adf51bb76b4ee652"
+    },
+    {
+      "bytes": 192,
+      "index": 64,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_keep.bflan",
+      "offset": 108736,
+      "sha256": "a83fd2450d2490c182f86b2da899b09debfece6751cb439469b85cc323c69780"
+    },
+    {
+      "bytes": 288,
+      "index": 65,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_wazamachine.bflan",
+      "offset": 108928,
+      "sha256": "90a991cacfdd090ea8dd257524575e5659b8e840fcf1eb35c7563f63c7e391b9"
+    },
+    {
+      "bytes": 192,
+      "index": 66,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_passive.bflan",
+      "offset": 109216,
+      "sha256": "5176fffcb69eb81a8bbffa562818b42fb367d05a8bfe892d9c2d63b24e3f019b"
+    },
+    {
+      "bytes": 196,
+      "index": 67,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_unselect.bflan",
+      "offset": 109408,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 2868,
+      "index": 68,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_button_arrow_l_gray.bflyt",
+      "offset": 109616,
+      "sha256": "c463cc0056b9dfbd93ef8710462f488fc3a85d8704cf8d06de58d6a74f47ead1"
+    },
+    {
+      "bytes": 192,
+      "index": 69,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_keep.bflan",
+      "offset": 112496,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 196,
+      "index": 70,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_unselect.bflan",
+      "offset": 112688,
+      "sha256": "403431fb64b09be99b0067c65de07986a038a64f49b38274cbb1f489705bebf0"
+    },
+    {
+      "bytes": 200,
+      "index": 71,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_cursor_transaction_00_in.bflan",
+      "offset": 112896,
+      "sha256": "65d6998ce1ac16f5ccb411615a376093adc49a3ff43284e5212612adf806adaa"
+    },
+    {
+      "bytes": 200,
+      "index": 72,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_passive_select.bflan",
+      "offset": 113104,
+      "sha256": "7910f5573c6445b78e9523837cf23f5aa721d4461d37c8600491c4839eb0a996"
+    },
+    {
+      "bytes": 1512,
+      "index": 73,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_toggle.bflan",
+      "offset": 113312,
+      "sha256": "46f04c363d4b06a3317cc518988e72f430bbd16c740d46e2449a1d795530cb26"
+    },
+    {
+      "bytes": 2868,
+      "index": 74,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_button_arrow_r_gray.bflyt",
+      "offset": 114832,
+      "sha256": "db992be97664cbce5e58b43deac4d7a1a5ffb8d126e638d102b432b5bb7cdffb"
+    },
+    {
+      "bytes": 3344,
+      "index": 75,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_tab_reposit_00.bflyt",
+      "offset": 117712,
+      "sha256": "281346483e780f9d3d805a66e6f9bd218afc942f81b50851e223d2d5d27df4b3"
+    },
+    {
+      "bytes": 200,
+      "index": 76,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_passive_select.bflan",
+      "offset": 121056,
+      "sha256": "46e11fe62cd2d91f797f948910a71c82bfd95153619dcbbe3c7048a42b122b30"
+    },
+    {
+      "bytes": 1412,
+      "index": 77,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_header_index_left.bflyt",
+      "offset": 121264,
+      "sha256": "ef188b9534d06df84e376ec8c08a9538b77016d3629d99f87a8760e98267312c"
+    },
+    {
+      "bytes": 1220,
+      "index": 78,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_release.bflan",
+      "offset": 122688,
+      "sha256": "f965cba69f9efd3e102e752eedfff1d1f7d0acb6d8ffaaa776b0eee9d7027287"
+    },
+    {
+      "bytes": 192,
+      "index": 79,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_touch.bflan",
+      "offset": 123920,
+      "sha256": "2bbd72957b4e41c6545cef3b023b8a60fd0d4e6bf41b86fa6dbc669aba23b73e"
+    },
+    {
+      "bytes": 192,
+      "index": 80,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_select.bflan",
+      "offset": 124112,
+      "sha256": "269364f3a7dba75702fae0f2dd10d796f672f18daf35d2c54992943146391ae8"
+    },
+    {
+      "bytes": 192,
+      "index": 81,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_active.bflan",
+      "offset": 124304,
+      "sha256": "23695d3451b10f98b763498fb76bed71e4f4bb158768c0166f7d1d329173518f"
+    },
+    {
+      "bytes": 7648,
+      "index": 82,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_area_delivery.bflyt",
+      "offset": 124496,
+      "sha256": "d2d48362164ba294c86c91fd84cfbf7e2d649c31d66d92cc4fc01633411651ce"
+    },
+    {
+      "bytes": 216,
+      "index": 83,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_cursor_transaction_00_wait.bflan",
+      "offset": 132144,
+      "sha256": "343ed924053793d072f2684a8521dbb10f821bbf375fb2715d7d3eb490629b12"
+    },
+    {
+      "bytes": 192,
+      "index": 84,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_cancel.bflan",
+      "offset": 132368,
+      "sha256": "962bc937263391bc2dc6a5eaa1666a217b7609b57019d9d4745b66903ff10a5c"
+    },
+    {
+      "bytes": 192,
+      "index": 85,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_select.bflan",
+      "offset": 132560,
+      "sha256": "10cdbee98d683d3ef37c300d5f11c8ecb36c8154d4b49e8859c0d36babe5902e"
+    },
+    {
+      "bytes": 192,
+      "index": 86,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_active.bflan",
+      "offset": 132752,
+      "sha256": "61b1f3ba1352c1f1fa9006fa626e005b51b6c5ee6c57945cdd8006bec2ea561e"
+    },
+    {
+      "bytes": 192,
+      "index": 87,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_release.bflan",
+      "offset": 132944,
+      "sha256": "473ddfb02d8ed7dbf6578b5ce1437b4413c82e6251aaf12a8de8de9fa074b479"
+    },
+    {
+      "bytes": 192,
+      "index": 88,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_touch.bflan",
+      "offset": 133136,
+      "sha256": "fc641c19dbeb02df29cb6cb2a1fc83f85faca258c2aa012dcb3083246fdc97ec"
+    },
+    {
+      "bytes": 192,
+      "index": 89,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_keep.bflan",
+      "offset": 133328,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 11624,
+      "index": 90,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_area_exchange.bflyt",
+      "offset": 133520,
+      "sha256": "0d9ffceeb0c85e4458737948b067e8e2370b7457a762d3f9e77e68893680a07f"
+    },
+    {
+      "bytes": 200,
+      "index": 91,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_passive_select.bflan",
+      "offset": 145152,
+      "sha256": "fdf9002782ee33d22e8f3cb0f4a1e35856d579846d5358a20d67ee5b8aa5c299"
+    },
+    {
+      "bytes": 28,
+      "index": 92,
+      "magic": "\u0001\u0000\u0000\u0000",
+      "name": "bgsh/__ArchiveShader.bushvt",
+      "offset": 145360,
+      "sha256": "151e28e32af587e3c8838b84513a69ad6917efa7067ad37a92daeeefea201ca4"
+    },
+    {
+      "bytes": 448,
+      "index": 93,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_shift_right.bflan",
+      "offset": 145392,
+      "sha256": "f51178b686eb79a3fb91288173a99fa8fb84ed0ba305e3b90953d657ef0c4c41"
+    },
+    {
+      "bytes": 644,
+      "index": 94,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_f_in.bflan",
+      "offset": 145840,
+      "sha256": "2c4dcf89817618db6620cab1b20fe4e5af2a2c63a848b9416ced40da7e1a09dd"
+    },
+    {
+      "bytes": 192,
+      "index": 95,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_keep.bflan",
+      "offset": 146496,
+      "sha256": "37b27da98b2727cd2b06ff7ef5930f11a3ddd44405bdabd501f9a59c547b12a6"
+    },
+    {
+      "bytes": 200,
+      "index": 96,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_cursor_transaction_00_out.bflan",
+      "offset": 146688,
+      "sha256": "8c5b2b8370b2977b0e1638ed0913e9b35110567c55307b4017570e23cc503b1d"
+    },
+    {
+      "bytes": 1292,
+      "index": 97,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_release.bflan",
+      "offset": 146896,
+      "sha256": "b05e576f0203d052d563abd3b18b95ef61da068be3152ea05a69a9c4e1e3bf55"
+    },
+    {
+      "bytes": 3368,
+      "index": 98,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_tab_drawout_00.bflyt",
+      "offset": 148192,
+      "sha256": "11e2d3963bd8ca0aeee3bd3973c12194cb74fdd4bbac6c53c6f905577e3f1196"
+    },
+    {
+      "bytes": 172,
+      "index": 99,
+      "magic": "FCPX",
+      "name": "fcpx/system42_jpn.bfcpx",
+      "offset": 151568,
+      "sha256": "eecae797353acc0c6ff77d88c99a92d73c229e6df4085726c63886f42946f299"
+    },
+    {
+      "bytes": 520,
+      "index": 100,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_cursor_transaction_00_pos_shift_boxtop.bflan",
+      "offset": 151744,
+      "sha256": "a668edae6b92043cf609a58394449f353d323dd8a66d3fa98ae1af56eaf33ff8"
+    },
+    {
+      "bytes": 192,
+      "index": 101,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_select.bflan",
+      "offset": 152272,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 102,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_active.bflan",
+      "offset": 152464,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 216,
+      "index": 103,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_touch.bflan",
+      "offset": 152656,
+      "sha256": "d964d485fe74b3a8a731b5020ce25ae1071875aeb2cbc933886c1e62ec4c4082"
+    },
+    {
+      "bytes": 4280,
+      "index": 104,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_area_moving.bflyt",
+      "offset": 152880,
+      "sha256": "579fd07307be6731003e1f8568ed8f2a31e8b05c40dcf3a1a4a1e05b54c00ed5"
+    },
+    {
+      "bytes": 1516,
+      "index": 105,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_toggle_off.bflan",
+      "offset": 157168,
+      "sha256": "45886885e535c81f8c9e3f49dfd856546533d89f1f8adba74fa3324c832a720b"
+    },
+    {
+      "bytes": 192,
+      "index": 106,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_keep.bflan",
+      "offset": 158688,
+      "sha256": "37b27da98b2727cd2b06ff7ef5930f11a3ddd44405bdabd501f9a59c547b12a6"
+    },
+    {
+      "bytes": 384,
+      "index": 107,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_shift_reset.bflan",
+      "offset": 158880,
+      "sha256": "53098b3977785e01ad27521a360da9428ca7db7af37beae00dd51e9d98b7cddb"
+    },
+    {
+      "bytes": 200,
+      "index": 108,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_passive_select.bflan",
+      "offset": 159264,
+      "sha256": "fdf9002782ee33d22e8f3cb0f4a1e35856d579846d5358a20d67ee5b8aa5c299"
+    },
+    {
+      "bytes": 192,
+      "index": 109,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_passive.bflan",
+      "offset": 159472,
+      "sha256": "5176fffcb69eb81a8bbffa562818b42fb367d05a8bfe892d9c2d63b24e3f019b"
+    },
+    {
+      "bytes": 196,
+      "index": 110,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_unselect.bflan",
+      "offset": 159664,
+      "sha256": "403431fb64b09be99b0067c65de07986a038a64f49b38274cbb1f489705bebf0"
+    },
+    {
+      "bytes": 192,
+      "index": 111,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_select.bflan",
+      "offset": 159872,
+      "sha256": "7d1a16409c0650554bf2274b1c4d1be54b3229cc1dffe785fe1a2640d6354e10"
+    },
+    {
+      "bytes": 192,
+      "index": 112,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_active.bflan",
+      "offset": 160064,
+      "sha256": "34aa8524b974116c60ed684c85e82662711eaddcf0db815f690d03a7bd46b6bc"
+    },
+    {
+      "bytes": 172,
+      "index": 113,
+      "magic": "FCPX",
+      "name": "fcpx/system54_jpn.bfcpx",
+      "offset": 160256,
+      "sha256": "1431233ea651945ce9b9fa0711e68e157983ba70bb3bbc9cd9ce3e4722e64da9"
+    },
+    {
+      "bytes": 393344,
+      "index": 114,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 163840,
+      "sha256": "28fb445f839baecc44b16276779a4e1af6ac71590c620db882a1a01e404b7b60"
+    },
+    {
+      "bytes": 204,
+      "index": 115,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_unselect.bflan",
+      "offset": 557184,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 200,
+      "index": 116,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_area_transaction_in.bflan",
+      "offset": 557392,
+      "sha256": "696e44f07606b56f2bc22aa330b66b32a914a2c8d574218afa6ebc13011b3365"
+    },
+    {
+      "bytes": 580,
+      "index": 117,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_out.bflan",
+      "offset": 557600,
+      "sha256": "aae115bd4dce15060eb21455a13582d6ef2a5a7d8e56a82a60950725c7def1f3"
+    },
+    {
+      "bytes": 1512,
+      "index": 118,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_toggle.bflan",
+      "offset": 558192,
+      "sha256": "5673051218aa916e8788a887f7bae7d750469f8b73515e9124fd8578c4efc38b"
+    },
+    {
+      "bytes": 192,
+      "index": 119,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_touch.bflan",
+      "offset": 559712,
+      "sha256": "7c4f386977c94aeabacc39bd0742efc7db982388b767ea6f851f43f66454d38c"
+    },
+    {
+      "bytes": 192,
+      "index": 120,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_select.bflan",
+      "offset": 559904,
+      "sha256": "10cdbee98d683d3ef37c300d5f11c8ecb36c8154d4b49e8859c0d36babe5902e"
+    },
+    {
+      "bytes": 192,
+      "index": 121,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_active.bflan",
+      "offset": 560096,
+      "sha256": "61b1f3ba1352c1f1fa9006fa626e005b51b6c5ee6c57945cdd8006bec2ea561e"
+    },
+    {
+      "bytes": 704,
+      "index": 122,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_f_out.bflan",
+      "offset": 560288,
+      "sha256": "4f067dcbcc797bd2481fad1690e386106c71c45dfe86eb145a1579a65b642fdc"
+    },
+    {
+      "bytes": 196,
+      "index": 123,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_key_select.bflan",
+      "offset": 560992,
+      "sha256": "87be3b6f9300344fbdd27c30e6f0b3407ab7e104ce1b319b2aac6dee2f664eec"
+    },
+    {
+      "bytes": 1516,
+      "index": 124,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_release_00_toggle_off.bflan",
+      "offset": 561200,
+      "sha256": "276370b288e419aa4edf7fa9b07b09cf443bd1b86f807a339c8a60d9820b3458"
+    },
+    {
+      "bytes": 192,
+      "index": 125,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_keep.bflan",
+      "offset": 562720,
+      "sha256": "37b27da98b2727cd2b06ff7ef5930f11a3ddd44405bdabd501f9a59c547b12a6"
+    },
+    {
+      "bytes": 204,
+      "index": 126,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_passive_unselect.bflan",
+      "offset": 562912,
+      "sha256": "9e0d0ce77926b2fad80c26d8a59cd9cab2c4f015ca16e3fb44b0756b3d021cf6"
+    },
+    {
+      "bytes": 200,
+      "index": 127,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_passive_select.bflan",
+      "offset": 563120,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 192,
+      "index": 128,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_cancel.bflan",
+      "offset": 563328,
+      "sha256": "721955ab8823f6bd1eddbc1faac5e1589ec23f7dd02b5f6546d9edecc734b2ad"
+    },
+    {
+      "bytes": 1516,
+      "index": 129,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_reposit_00_toggle_off.bflan",
+      "offset": 563520,
+      "sha256": "7cc1c8ce115926fa407dbb1818ddc2d6074c37a896c21c4f4dbb992e8b2316c2"
+    },
+    {
+      "bytes": 1752,
+      "index": 130,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_key_select.bflan",
+      "offset": 565040,
+      "sha256": "edf7d6516cd1d1567f201d4d4d5fecc3c806527222c064e86f70ad068b58e496"
+    },
+    {
+      "bytes": 832,
+      "index": 131,
+      "magic": "FLYT",
+      "name": "blyt/mtt_icon_gender_00.bflyt",
+      "offset": 566800,
+      "sha256": "433b4981d6c299641490d06a309430f553ba794421c2a9a66ba7130688280924"
+    },
+    {
+      "bytes": 1764,
+      "index": 132,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_key_select.bflan",
+      "offset": 567632,
+      "sha256": "9e5b0045dbd5514506d821dfe1b7168ac248cfaab5f75bc7458c8b2bb77231f7"
+    },
+    {
+      "bytes": 192,
+      "index": 133,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_select.bflan",
+      "offset": 569408,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 134,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_active.bflan",
+      "offset": 569600,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 3368,
+      "index": 135,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_tab_release_00.bflyt",
+      "offset": 569792,
+      "sha256": "7ef44759c3a6e7e651c343eef570582261337cd0efae9213a97fc17256f56eed"
+    },
+    {
+      "bytes": 3312,
+      "index": 136,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_cursor_transaction_00.bflyt",
+      "offset": 573168,
+      "sha256": "93c54b08fdbf38ace9a10fd125ee9db93c03c738c6592720b42b79a86c2691a0"
+    },
+    {
+      "bytes": 192,
+      "index": 137,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_select.bflan",
+      "offset": 576480,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 138,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_active.bflan",
+      "offset": 576672,
+      "sha256": "0570406900ef8b47609c7cf045f3942ce7cf83750676fdb7198834b2da91b429"
+    },
+    {
+      "bytes": 1304,
+      "index": 139,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_release.bflan",
+      "offset": 576864,
+      "sha256": "d7723a95a006f9ddb2ca27f16e8076948852dc93b74af24979bc1329fc45f096"
+    },
+    {
+      "bytes": 204,
+      "index": 140,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_icon_pokemon_00_passive_unselect.bflan",
+      "offset": 578176,
+      "sha256": "44f9fce3b02f3a5c70861dab6f8f203d8cc8274aa91f45931c0fb74b74db95e3"
+    },
+    {
+      "bytes": 196,
+      "index": 141,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_key_select.bflan",
+      "offset": 578384,
+      "sha256": "d7262b488633673547f57abbca23c16ae939ea3e138ce748aa680c4e0120b700"
+    },
+    {
+      "bytes": 192,
+      "index": 142,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_keep.bflan",
+      "offset": 578592,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 192,
+      "index": 143,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_keep.bflan",
+      "offset": 578784,
+      "sha256": "251cc3a2440cbffa9704e8292044d2e0a68f6d554312b696227a9aa5a414df2f"
+    },
+    {
+      "bytes": 204,
+      "index": 144,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_tab_drawout_00_passive_unselect.bflan",
+      "offset": 578976,
+      "sha256": "e710a0146ea32c492fda97b56e9f553cc6912287ddcbd8d762a0ea8a5bd25fee"
+    },
+    {
+      "bytes": 7180,
+      "index": 145,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_icon_pokemon_00.bflyt",
+      "offset": 579184,
+      "sha256": "d6f45ed58ee5bc3551aed57afab0e2e8a0e63442cab7fb8b4d1f0eea6e039069"
+    },
+    {
+      "bytes": 192,
+      "index": 146,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_keep.bflan",
+      "offset": 586368,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_record/bin/mtt_record_log_detail.arc"
+}

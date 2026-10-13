@@ -1,0 +1,120 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 1.3732724950383207e-42,
+      "object_offset": 4,
+      "present": true,
+      "raw_hex": "d4030000",
+      "reference_candidate": {
+        "length_candidate": 1,
+        "target_offset": 1000,
+        "u32_vector_preview": [
+          12
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 980,
+      "u32_candidate": 980,
+      "u8_candidate": 212
+    },
+    {
+      "field_index": 1,
+      "float32_candidate": 1.2611686178923354e-42,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "84030000",
+      "reference_candidate": {
+        "length_candidate": 1,
+        "target_offset": 924,
+        "u32_vector_preview": [
+          16
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 900,
+      "u32_candidate": 900,
+      "u8_candidate": 132
+    },
+    {
+      "field_index": 2,
+      "float32_candidate": 7.567011707354012e-43,
+      "object_offset": 12,
+      "present": true,
+      "raw_hex": "1c020000",
+      "reference_candidate": {
+        "length_candidate": 5,
+        "target_offset": 568,
+        "u32_vector_preview": [
+          292,
+          216,
+          148,
+          72,
+          4
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 540,
+      "u32_candidate": 540,
+      "u8_candidate": 28
+    },
+    {
+      "field_index": 3,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 16,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 10,
+        "target_offset": 36,
+        "u32_vector_preview": [
+          488,
+          420,
+          376,
+          324,
+          272,
+          220,
+          168,
+          108,
+          56,
+          4
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "object_size": 20,
+    "root": 16,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 1,
+        "offset_candidate": 1000
+      },
+      "1": {
+        "length_candidate": 1,
+        "offset_candidate": 924
+      },
+      "2": {
+        "length_candidate": 5,
+        "offset_candidate": 568
+      },
+      "3": {
+        "length_candidate": 10,
+        "offset_candidate": 36
+      }
+    },
+    "vtable": 4,
+    "vtable_size": 12
+  }
+}

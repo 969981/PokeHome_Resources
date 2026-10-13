@@ -1,0 +1,125 @@
+{
+  "member": "blyt/mtt_pokedex_topics_pokename_00.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 88,
+      "index": 1,
+      "offset": 80,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 2,
+      "offset": 168,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 500,
+      "index": 3,
+      "offset": 204,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 704,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 788,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 796,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 880,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 888,
+      "pane_name": "N_topics_pokename",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 972,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 196,
+      "index": 10,
+      "offset": 980,
+      "pane_name": "W_pokename_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 184,
+      "index": 11,
+      "offset": 1176,
+      "pane_name": "T_pokename_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 12,
+      "offset": 1360,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 1416,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 14,
+      "offset": 1424,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 1508,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1516,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 17,
+      "offset": 1524,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 18,
+      "offset": 1568,
+      "tag": "cnt1"
+    }
+  ]
+}

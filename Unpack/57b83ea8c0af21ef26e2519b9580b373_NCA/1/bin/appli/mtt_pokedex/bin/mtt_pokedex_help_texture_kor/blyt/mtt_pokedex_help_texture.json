@@ -1,0 +1,55 @@
+{
+  "member": "blyt/mtt_pokedex_help_texture.bflyt",
+  "sections": [
+    {
+      "bytes": 56,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 40,
+      "index": 1,
+      "offset": 76,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 100,
+      "index": 2,
+      "offset": 116,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 216,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 300,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 5,
+      "offset": 308,
+      "pane_name": "P_help_texture_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 444,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 7,
+      "offset": 452,
+      "tag": "grp1"
+    }
+  ]
+}

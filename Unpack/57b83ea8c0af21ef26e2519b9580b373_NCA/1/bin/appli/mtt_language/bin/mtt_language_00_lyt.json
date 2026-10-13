@@ -1,0 +1,138 @@
+{
+  "certainty": "structure_only; field indices and scalar interpretations are NOT typed",
+  "fields": [
+    {
+      "field_index": 0,
+      "float32_candidate": 4.818785159120181e-41,
+      "object_offset": 8,
+      "present": true,
+      "raw_hex": "54860000",
+      "reference_candidate": {
+        "length_candidate": 1,
+        "target_offset": 34416,
+        "u32_vector_preview": [
+          12
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 34388,
+      "u32_candidate": 34388,
+      "u8_candidate": 84
+    },
+    {
+      "field_index": 1,
+      "float32_candidate": 4.807574771405582e-41,
+      "object_offset": 12,
+      "present": true,
+      "raw_hex": "04860000",
+      "reference_candidate": {
+        "length_candidate": 1,
+        "target_offset": 34340,
+        "u32_vector_preview": [
+          16
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 34308,
+      "u32_candidate": 34308,
+      "u8_candidate": 4
+    },
+    {
+      "field_index": 2,
+      "float32_candidate": 2.061029781328941e-41,
+      "object_offset": 16,
+      "present": true,
+      "raw_hex": "74390000",
+      "reference_candidate": {
+        "length_candidate": 174,
+        "target_offset": 14744,
+        "u32_vector_preview": [
+          19532,
+          19456,
+          19396,
+          19320,
+          19260,
+          19184,
+          19072,
+          18948,
+          18824,
+          18708,
+          18600,
+          18484
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 14708,
+      "u32_candidate": 14708,
+      "u8_candidate": 116
+    },
+    {
+      "field_index": 3,
+      "float32_candidate": 5.605193857299268e-45,
+      "object_offset": 20,
+      "present": true,
+      "raw_hex": "04000000",
+      "reference_candidate": {
+        "length_candidate": 186,
+        "target_offset": 44,
+        "u32_vector_preview": [
+          14656,
+          14588,
+          14544,
+          14492,
+          14440,
+          14388,
+          14336,
+          14276,
+          14196,
+          14112,
+          14028,
+          13952
+        ]
+      },
+      "storage_width_candidate": 4,
+      "u16_candidate": 4,
+      "u32_candidate": 4,
+      "u8_candidate": 4
+    },
+    {
+      "field_index": 4,
+      "object_offset": 7,
+      "present": true,
+      "raw_hex": "01",
+      "storage_width_candidate": 1,
+      "u8_candidate": 1
+    }
+  ],
+  "header": {
+    "field_offsets": [
+      8,
+      12,
+      16,
+      20,
+      7
+    ],
+    "object_size": 24,
+    "root": 20,
+    "u32_vector_candidates": {
+      "0": {
+        "length_candidate": 1,
+        "offset_candidate": 34416
+      },
+      "1": {
+        "length_candidate": 1,
+        "offset_candidate": 34340
+      },
+      "2": {
+        "length_candidate": 174,
+        "offset_candidate": 14744
+      },
+      "3": {
+        "length_candidate": 186,
+        "offset_candidate": 44
+      }
+    },
+    "vtable": 6,
+    "vtable_size": 14
+  }
+}

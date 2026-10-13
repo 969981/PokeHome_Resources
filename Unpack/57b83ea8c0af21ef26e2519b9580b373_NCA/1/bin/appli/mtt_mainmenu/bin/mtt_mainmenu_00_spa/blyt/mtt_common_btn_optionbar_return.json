@@ -1,0 +1,208 @@
+{
+  "member": "blyt/mtt_common_btn_optionbar_return.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 220,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 36,
+      "index": 2,
+      "offset": 300,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 336,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 196,
+      "index": 4,
+      "offset": 372,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 568,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 652,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 660,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 744,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 752,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 836,
+      "pane_name": "keep",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 920,
+      "pane_name": "nothing",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 12,
+      "offset": 1004,
+      "pane_name": "N_btn_keyassign_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 1088,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 14,
+      "offset": 1096,
+      "pane_name": "P_base_btn_return_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 15,
+      "offset": 1232,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 16,
+      "offset": 1524,
+      "pane_name": "T_return_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 17,
+      "offset": 1700,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 18,
+      "offset": 1756,
+      "pane_name": "P_icon_key_option_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 1892,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 20,
+      "offset": 1900,
+      "pane_name": "Bound_00",
+      "tag": "bnd1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 1984,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 22,
+      "offset": 1992,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 2076,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 24,
+      "offset": 2084,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 25,
+      "offset": 2128,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 26,
+      "offset": 2136,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 27,
+      "offset": 2204,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 28,
+      "offset": 2272,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 29,
+      "offset": 2340,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 2408,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 428,
+      "index": 31,
+      "offset": 2416,
+      "tag": "cnt1"
+    }
+  ]
+}

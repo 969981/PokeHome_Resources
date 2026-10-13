@@ -1,0 +1,209 @@
+{
+  "member": "blyt/mtt_status_bar_skill.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 124,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 132,
+      "index": 2,
+      "offset": 196,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 328,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 596,
+      "index": 4,
+      "offset": 364,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 960,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 1044,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 1052,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1136,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1144,
+      "pane_name": "N_bar_skill_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 1228,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 1236,
+      "pane_name": "P_skill_base_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 12,
+      "offset": 1372,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 1664,
+      "pane_name": "P_skill_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 188,
+      "index": 14,
+      "offset": 1800,
+      "pane_name": "T_skill_name_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 15,
+      "offset": 1988,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 2044,
+      "pane_name": "P_loader_icon_skill_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 17,
+      "offset": 2180,
+      "pane_name": "P_kdw_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 18,
+      "offset": 2316,
+      "pane_name": "P_plusw_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 2452,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 136,
+      "index": 20,
+      "offset": 2460,
+      "pane_name": "P_icon_disabled_skill",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 2596,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 2604,
+      "pane_name": "P_icon_disabled_skill_in",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 2740,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 24,
+      "offset": 2748,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 25,
+      "offset": 2756,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 2840,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 27,
+      "offset": 2848,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 2892,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 188,
+      "index": 29,
+      "offset": 2900,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 30,
+      "offset": 3088,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 31,
+      "offset": 3096,
+      "tag": "cnt1"
+    }
+  ]
+}

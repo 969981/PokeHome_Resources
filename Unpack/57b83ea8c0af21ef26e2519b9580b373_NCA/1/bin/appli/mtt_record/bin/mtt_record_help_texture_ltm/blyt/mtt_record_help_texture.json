@@ -1,0 +1,55 @@
+{
+  "member": "blyt/mtt_record_help_texture.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 40,
+      "index": 1,
+      "offset": 72,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 100,
+      "index": 2,
+      "offset": 112,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 212,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 296,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 5,
+      "offset": 304,
+      "pane_name": "P_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 440,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 7,
+      "offset": 448,
+      "tag": "grp1"
+    }
+  ]
+}

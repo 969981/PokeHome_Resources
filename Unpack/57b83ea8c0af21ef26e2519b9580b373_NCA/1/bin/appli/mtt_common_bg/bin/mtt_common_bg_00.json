@@ -1,0 +1,565 @@
+{
+  "members": [
+    {
+      "bytes": 2336,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_logdetail_log.bflan",
+      "offset": 8192,
+      "sha256": "cca6bee1950851d5c14dd8912c2363a04763ceac40e6d41557de3a08b01729c6"
+    },
+    {
+      "bytes": 2344,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_welcome_box.bflan",
+      "offset": 10528,
+      "sha256": "47487ce9c2aec6b8c0fe6eb4ae3ca9ad017c2c31ee28af7ff7c65cad17e5613d"
+    },
+    {
+      "bytes": 2336,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_record_passbook.bflan",
+      "offset": 12880,
+      "sha256": "6aa12f101ec7f7e7789763ac7654d8f39f352256634aed8daf4237526741563f"
+    },
+    {
+      "bytes": 4040,
+      "index": 3,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_bg_square.bflyt",
+      "offset": 15216,
+      "sha256": "558ec97de1bb44e155917e949543ad7ce5fd93ea9cd5419049d21de353da47df"
+    },
+    {
+      "bytes": 5856,
+      "index": 4,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_bg_00.bflyt",
+      "offset": 19264,
+      "sha256": "acec0e92acc8d8d8502b690575ff7971a9f504481e25d700b40b01621b678e5b"
+    },
+    {
+      "bytes": 4388,
+      "index": 5,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_bg_diamond_p.bflyt",
+      "offset": 25120,
+      "sha256": "4ccaf10ba209b8b19b214a7f43a2880f806cb80257ad5b5946ff874fe86758d8"
+    },
+    {
+      "bytes": 2384,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_detail_search.bflan",
+      "offset": 29520,
+      "sha256": "a160c19d332492b3068ed16b6b3fcf877a931686e6f418cd4473d2e240c2c6fe"
+    },
+    {
+      "bytes": 204,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_f_in.bflan",
+      "offset": 31904,
+      "sha256": "ccbbedfb311b4718d5eb9a8ea3d899e05d13a25f49a250d39a6079925d1ec39c"
+    },
+    {
+      "bytes": 204,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_f_out.bflan",
+      "offset": 32112,
+      "sha256": "d4c30eb905b70a0973502e811ed77c53613bce70afa6151fe68d92762df23a7e"
+    },
+    {
+      "bytes": 2336,
+      "index": 9,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_title_language.bflan",
+      "offset": 32320,
+      "sha256": "e5d3c43dde3af8e63f59d739578c1ec3499fbb12ca16ed113054cca0dea39fc8"
+    },
+    {
+      "bytes": 2332,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_title_region.bflan",
+      "offset": 34656,
+      "sha256": "68c2e6c29eb7a8056c4d2a3355f9bd84ae48ecbefbefef0165ac5a3aa0a11292"
+    },
+    {
+      "bytes": 2332,
+      "index": 11,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_record_log.bflan",
+      "offset": 36992,
+      "sha256": "8f14d6f09eeded057276a9213758655689adbdeb3f312f02b19144f736f4e4b5"
+    },
+    {
+      "bytes": 2344,
+      "index": 12,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_status_box.bflan",
+      "offset": 39328,
+      "sha256": "d9bb047acfc146c1a0a16be48298d726cba748a40e80db9e1ebf82afe912064e"
+    },
+    {
+      "bytes": 2384,
+      "index": 13,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_search_detail.bflan",
+      "offset": 41680,
+      "sha256": "09fa68cff066cc3a461124175d73d50186556e6352cc7d73c09b76da26ac7c19"
+    },
+    {
+      "bytes": 2344,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_box_status.bflan",
+      "offset": 44064,
+      "sha256": "61648a3fc86ca4e4156470801842f4cd80a6658634439b6e68b3b18caae0d960"
+    },
+    {
+      "bytes": 2336,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_passbook_main.bflan",
+      "offset": 46416,
+      "sha256": "d71758f88f9ecf6e826fd3a1f7ab9734de1761af657defb793b5c367d2599c75"
+    },
+    {
+      "bytes": 2332,
+      "index": 16,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_log_record.bflan",
+      "offset": 48752,
+      "sha256": "57221531c632945847679c6f0031f07a8de12d41a472e3721996752da27a7459"
+    },
+    {
+      "bytes": 2368,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_terms_main.bflan",
+      "offset": 51088,
+      "sha256": "25996e52c73ad89589e553930bae592c195720f4c2043c2db4b7e64c985ce975"
+    },
+    {
+      "bytes": 2380,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_dex_search.bflan",
+      "offset": 53456,
+      "sha256": "0a18b58f9e27d4d2cc6a8e8b5d26318ffa5b660c2498b2c2d8111ad06ab70792"
+    },
+    {
+      "bytes": 5748,
+      "index": 19,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_square_keep.bflan",
+      "offset": 55840,
+      "sha256": "f9d363b6fa69770fed527f4ea4a5614d1890a69f83e89e4176c1679381be8a33"
+    },
+    {
+      "bytes": 2344,
+      "index": 20,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_topicslist_topicsdetail.bflan",
+      "offset": 61600,
+      "sha256": "22ae06635e5678b405899379892837c1c316b6bfb6782e2c681eb682d7ee6cfe"
+    },
+    {
+      "bytes": 2932,
+      "index": 21,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_topics_main.bflan",
+      "offset": 63952,
+      "sha256": "222f082b5c9cc02b6c2d1fcc1d120cef321efb54f54e26cebd752c528273bd6f"
+    },
+    {
+      "bytes": 2372,
+      "index": 22,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_transfer_detail.bflan",
+      "offset": 66896,
+      "sha256": "1719f90d2f9b0ad08b6a7f564e786692193aaf33f39cbb17fb02dbd2c9f9742c"
+    },
+    {
+      "bytes": 2336,
+      "index": 23,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_selectsave_main.bflan",
+      "offset": 69280,
+      "sha256": "515379d192190108b7bf07da215517ce7889760d996d08233ea96c5a72142134"
+    },
+    {
+      "bytes": 2332,
+      "index": 24,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_passbook_log.bflan",
+      "offset": 71616,
+      "sha256": "0efe47078ca9ce4aed47a51a7e24424624e2cf9e7152daa0d62c855d144afec1"
+    },
+    {
+      "bytes": 2332,
+      "index": 25,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_point_main.bflan",
+      "offset": 73952,
+      "sha256": "35d4c94b99681a791b1d2e033d7b46288d1d555c96c8d754106710ed975a2170"
+    },
+    {
+      "bytes": 2344,
+      "index": 26,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_topicsdetail_topicslist.bflan",
+      "offset": 76288,
+      "sha256": "ae3779bc5d639117c785b631663478236da2e14d95be84d133edb41314cdd0c0"
+    },
+    {
+      "bytes": 2336,
+      "index": 27,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_terms_tutorial.bflan",
+      "offset": 78640,
+      "sha256": "228fce27662632a3851b20a4a747ecee64af340ba11aad7494974058f9486719"
+    },
+    {
+      "bytes": 2932,
+      "index": 28,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_topics_dex.bflan",
+      "offset": 80976,
+      "sha256": "9d38c06a22e9bc2aab60032d864f2cea0133297104f96124b31e2c0eb2b9dac1"
+    },
+    {
+      "bytes": 2336,
+      "index": 29,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_selectsave.bflan",
+      "offset": 83920,
+      "sha256": "d9ffe802c8e19f8edf82e48dabdc093dcd485c4079bffad768d52e48bb110036"
+    },
+    {
+      "bytes": 2340,
+      "index": 30,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_topicslist_topics.bflan",
+      "offset": 86256,
+      "sha256": "1880e002df3fcf066a10ae0cade2de7a8ab1326a7a2d912f48f293d723a5e8bd"
+    },
+    {
+      "bytes": 2332,
+      "index": 31,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_option_main.bflan",
+      "offset": 88608,
+      "sha256": "68389d74cfaa6cf5d0ee0e2f837a1b3f721ca75e68537c10a3fe226275e788da"
+    },
+    {
+      "bytes": 2928,
+      "index": 32,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_dex_main.bflan",
+      "offset": 90944,
+      "sha256": "935f280aa5b6ab9f45c359f5c9cdd4024f867d96300be18ec524bae7b5e64cf4"
+    },
+    {
+      "bytes": 2332,
+      "index": 33,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_option.bflan",
+      "offset": 93872,
+      "sha256": "1dbe3073141793a4aa8cc809ff23eb771b3551da5dd4d8d15e1bd07a3de00a03"
+    },
+    {
+      "bytes": 192,
+      "index": 34,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_keep.bflan",
+      "offset": 96208,
+      "sha256": "1dd7b72596795ff7144dc3c7e8370b84673183ed137397aaca0ed3fbced0c2de"
+    },
+    {
+      "bytes": 2336,
+      "index": 35,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_log_logdetail.bflan",
+      "offset": 96400,
+      "sha256": "b76933bd6ac7366863c149b43378c2f9c1ffd5b495538b4fd94c661bd282acab"
+    },
+    {
+      "bytes": 2380,
+      "index": 36,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_search_dex.bflan",
+      "offset": 98736,
+      "sha256": "1b4ca223945c4c7cf7713f6d37a5d17db63c5c9be022bd09f51a4e156870429d"
+    },
+    {
+      "bytes": 2356,
+      "index": 37,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_title.bflan",
+      "offset": 101120,
+      "sha256": "5c5486621f293e0e1e3678460f242ce119cd26940fa60b1d62109f8ecb590af3"
+    },
+    {
+      "bytes": 200,
+      "index": 38,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_in.bflan",
+      "offset": 103488,
+      "sha256": "2e1faff5ef27d1cae4bca64ebdf98258194e7204635ac75032edbdaf6812a54e"
+    },
+    {
+      "bytes": 4388,
+      "index": 39,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_diamond_p_keep.bflan",
+      "offset": 103696,
+      "sha256": "89a2a85aed6819e605c971ce9e17227502ffac1f4ac4973c5d8063b79ba45297"
+    },
+    {
+      "bytes": 2372,
+      "index": 40,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_tutorial_main.bflan",
+      "offset": 108096,
+      "sha256": "4b70ed4d53bcb2c1676963695bd3da96099caa2c029f7ce66444a4371f611d6e"
+    },
+    {
+      "bytes": 2372,
+      "index": 41,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_trnsnone_main.bflan",
+      "offset": 110480,
+      "sha256": "7afdaab42fc2a296c764104ea13506af784281cc3d3d7ae15cdf2a29cbe8f91a"
+    },
+    {
+      "bytes": 2332,
+      "index": 42,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_moving_main.bflan",
+      "offset": 112864,
+      "sha256": "a280ad93e44e6f0359ac2602578b57a538e6ccfcaeb8b97eef195deb1096d216"
+    },
+    {
+      "bytes": 2332,
+      "index": 43,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_log_passbook.bflan",
+      "offset": 115200,
+      "sha256": "fc32f11ea384e010bb9f8f4dbc3a0e128b5d1aef7065aaa58e614b5ebbe3b26c"
+    },
+    {
+      "bytes": 2332,
+      "index": 44,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_region_terms.bflan",
+      "offset": 117536,
+      "sha256": "7782060a1efa600011eedf57c1498c7dd734e9df8d0d11bd8aafb008dc4900b5"
+    },
+    {
+      "bytes": 2332,
+      "index": 45,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_title_terms.bflan",
+      "offset": 119872,
+      "sha256": "e025abaa53b7c5fe94a46be361c992d48b1bf0207fc5aea0d5632f621d7d2987"
+    },
+    {
+      "bytes": 2332,
+      "index": 46,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_moving.bflan",
+      "offset": 122208,
+      "sha256": "8f6f4dc020d0034e87cf490d23f20e94af75628d63008d541b40d2b32c21be4d"
+    },
+    {
+      "bytes": 2332,
+      "index": 47,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_terms_title.bflan",
+      "offset": 124544,
+      "sha256": "e475e3654052da4e14a3a9e5a466a19c50c80a650a3b74281fa13191f9f9abb7"
+    },
+    {
+      "bytes": 2344,
+      "index": 48,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_box_welcome.bflan",
+      "offset": 126880,
+      "sha256": "cada420b3bbace15d361720cceda36502bc0422c39afb99a5baee1bcf490bdf8"
+    },
+    {
+      "bytes": 2348,
+      "index": 49,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_selectsave_box.bflan",
+      "offset": 129232,
+      "sha256": "457d42ab4c221f3245d3c375931755a79c1ec4f4d519a7724b04e61a8e7b0f3d"
+    },
+    {
+      "bytes": 2328,
+      "index": 50,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_error.bflan",
+      "offset": 131584,
+      "sha256": "a1513b138984d5d7bca8d29c6f1b92443e675853762ce61ba72b640b88dde43b"
+    },
+    {
+      "bytes": 4328,
+      "index": 51,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_diamond_b_keep.bflan",
+      "offset": 133920,
+      "sha256": "c9403696183520694dcb1a918795ea4d90311af430fb064eb686efdc21a97c5a"
+    },
+    {
+      "bytes": 110720,
+      "index": 52,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 139264,
+      "sha256": "1e815a27c777cd59b8e826e58270d6f91266bb0230663c09236b855149615d15"
+    },
+    {
+      "bytes": 200,
+      "index": 53,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_out.bflan",
+      "offset": 249984,
+      "sha256": "238c13553aae5513aa589d45e01015df468f69c7152b0e9e0a6a338431572e1d"
+    },
+    {
+      "bytes": 2336,
+      "index": 54,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_language_terms.bflan",
+      "offset": 250192,
+      "sha256": "dd97464bb738055c17573838c7d277244e5a1684446c732931e5bd11dde13f70"
+    },
+    {
+      "bytes": 2336,
+      "index": 55,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_passbook_record.bflan",
+      "offset": 252528,
+      "sha256": "ebc3a35eb083fe1831bfa90982d142384487294254ddb586949cf429f1f3d193"
+    },
+    {
+      "bytes": 2332,
+      "index": 56,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_welcome_main.bflan",
+      "offset": 254864,
+      "sha256": "432603d9a79e78ed489cd91a4b45877c15aad61c2343ff8a33341f5b3a264fd7"
+    },
+    {
+      "bytes": 2340,
+      "index": 57,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_moving_onetimepass.bflan",
+      "offset": 257200,
+      "sha256": "8608756f1c1e57f94077ca0754f9ef534f94d80868fb52662c096af53e3759f2"
+    },
+    {
+      "bytes": 2336,
+      "index": 58,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_selectsave_point.bflan",
+      "offset": 259552,
+      "sha256": "a5b3d35c217032459b0f5080b9f855a7edae86bc69dabe41e661304851429e5e"
+    },
+    {
+      "bytes": 2336,
+      "index": 59,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_passbook.bflan",
+      "offset": 261888,
+      "sha256": "99e272de1d3ee6f860485909dfeb4aa0872abc5517151e13ef0cf830e8c98063"
+    },
+    {
+      "bytes": 2932,
+      "index": 60,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_dex_topics.bflan",
+      "offset": 264224,
+      "sha256": "2df5a90571d7c38b6355a0777e27a6eb5f5c0dcab10f3960ad1b57fb6dfca814"
+    },
+    {
+      "bytes": 2360,
+      "index": 61,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_transfer.bflan",
+      "offset": 267168,
+      "sha256": "3e9aecfc1c800bca567e9d7e5ec005807ce2013bda53845c930b0d241ba77665"
+    },
+    {
+      "bytes": 2340,
+      "index": 62,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_topics_topicslist.bflan",
+      "offset": 269536,
+      "sha256": "f8ae9cb18d5678ada7d8ccfa4bfef2f3d1732a509ca8ddb7c24931dbe4af75f8"
+    },
+    {
+      "bytes": 2372,
+      "index": 63,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_title_welcome.bflan",
+      "offset": 271888,
+      "sha256": "beb6bf0f876a7cf305f531699338d52877e7c4610247cf6f2d063ca63e04256f"
+    },
+    {
+      "bytes": 2336,
+      "index": 64,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_transfer_main.bflan",
+      "offset": 274272,
+      "sha256": "e204afcd3a89f3602b6126ce848fc5d87b82de5bbd39e987737c661d05244cd0"
+    },
+    {
+      "bytes": 2368,
+      "index": 65,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_title_main.bflan",
+      "offset": 276608,
+      "sha256": "0f00048e40c7b6a7a68e0959703be3a556c19c2f6dde9f7b189e5b5c0bec7fc9"
+    },
+    {
+      "bytes": 4388,
+      "index": 66,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_bg_diamond_b.bflyt",
+      "offset": 278976,
+      "sha256": "bc591a642af8fe022ac0b285c169b3940fe0720db9fb1101b8065c9aaf23002f"
+    },
+    {
+      "bytes": 2340,
+      "index": 67,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_onetimepass_moving.bflan",
+      "offset": 283376,
+      "sha256": "446ce6c1757655d916567aa89df2eef4677627d78ff810e73bb9a3e316b1ba9d"
+    },
+    {
+      "bytes": 2340,
+      "index": 68,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_box_main.bflan",
+      "offset": 285728,
+      "sha256": "bcf2fadf206bceea1cd9c81226bb1d1555fcdc11547115074c83d30f55949e28"
+    },
+    {
+      "bytes": 2928,
+      "index": 69,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_bg_00_switch_main_dex.bflan",
+      "offset": 288080,
+      "sha256": "1e2bf3a8a24ba769767aaf50a21237deeb23074fc7eab71988c1ae9b34729f9f"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_common_bg/bin/mtt_common_bg_00.arc"
+}

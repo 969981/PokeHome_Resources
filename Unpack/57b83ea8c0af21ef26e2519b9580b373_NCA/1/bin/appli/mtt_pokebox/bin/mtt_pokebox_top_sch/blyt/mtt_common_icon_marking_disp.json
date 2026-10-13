@@ -1,0 +1,111 @@
+{
+  "member": "blyt/mtt_common_icon_marking_disp.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 128,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 88,
+      "index": 2,
+      "offset": 208,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 188,
+      "index": 3,
+      "offset": 296,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 484,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 568,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 576,
+      "pane_name": "icon_marking_disp_anim",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 660,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 8,
+      "offset": 668,
+      "pane_name": "icon_marking_disp_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 9,
+      "offset": 804,
+      "pane_name": "icon_marking_disp_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 940,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 948,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 12,
+      "offset": 956,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 1000,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 92,
+      "index": 14,
+      "offset": 1008,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 1100,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 16,
+      "offset": 1108,
+      "tag": "cnt1"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "member": "blyt/mtt_record_log_detail_area_moving.bflyt",
+  "sections": [
+    {
+      "bytes": 64,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 140,
+      "index": 1,
+      "offset": 84,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 80,
+      "index": 2,
+      "offset": 224,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 1004,
+      "index": 3,
+      "offset": 304,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 1308,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 1392,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 1400,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 1484,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 1492,
+      "pane_name": "N_area_moving_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 1576,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 164,
+      "index": 10,
+      "offset": 1584,
+      "pane_name": "W_record_detail_w_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 1748,
+      "pane_name": "P_record_detail_w_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 12,
+      "offset": 1884,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 2176,
+      "pane_name": "P_record_detail_h_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 14,
+      "offset": 2312,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 2604,
+      "pane_name": "P_record_detail_ds_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 84,
+      "index": 16,
+      "offset": 2740,
+      "pane_name": "N_info_top_transaction",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 17,
+      "offset": 2824,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 204,
+      "index": 18,
+      "offset": 2832,
+      "pane_name": "T_param_transaction_time",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 19,
+      "offset": 3036,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 3092,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 216,
+      "index": 21,
+      "offset": 3100,
+      "pane_name": "T_info_moving_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 22,
+      "offset": 3316,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 23,
+      "offset": 3372,
+      "pane_name": "P_icon_from_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 24,
+      "offset": 3508,
+      "pane_name": "P_moving_arrow_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 3644,
+      "pane_name": "P_icon_sending_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 240,
+      "index": 26,
+      "offset": 3780,
+      "pane_name": "T_heading_moving_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 27,
+      "offset": 4020,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 28,
+      "offset": 4076,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 29,
+      "offset": 4084,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 30,
+      "offset": 4092,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 31,
+      "offset": 4176,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 32,
+      "offset": 4184,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 33,
+      "offset": 4228,
+      "tag": "cnt1"
+    }
+  ]
+}

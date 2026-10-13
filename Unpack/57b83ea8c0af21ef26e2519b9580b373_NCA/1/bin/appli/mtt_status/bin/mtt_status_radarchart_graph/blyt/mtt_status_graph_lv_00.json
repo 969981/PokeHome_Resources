@@ -1,0 +1,183 @@
+{
+  "member": "blyt/mtt_status_graph_lv_00.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 120,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 224,
+      "index": 2,
+      "offset": 192,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 416,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 588,
+      "index": 4,
+      "offset": 452,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 1040,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 1124,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 1132,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1216,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1224,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 1308,
+      "pane_name": "N_ganba_lv_grp",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 1392,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 1400,
+      "pane_name": "P_bg_param_lv_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 1536,
+      "pane_name": "P_bg_param_lv_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 14,
+      "offset": 1672,
+      "pane_name": "P_lv_guage_base_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 1808,
+      "pane_name": "P_lv_guage_base_1",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 1944,
+      "pane_name": "P_lv_guage_glow",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 176,
+      "index": 17,
+      "offset": 2080,
+      "pane_name": "T_lv_numb",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 18,
+      "offset": 2256,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 2312,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 2320,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 2328,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 22,
+      "offset": 2336,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 2380,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 24,
+      "offset": 2388,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 116,
+      "index": 25,
+      "offset": 2456,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 2572,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 27,
+      "offset": 2580,
+      "tag": "cnt1"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "members": [
+    {
+      "bytes": 472,
+      "index": 0,
+      "magic": "FLYT",
+      "name": "blyt/icon_shape.bflyt",
+      "offset": 4096,
+      "sha256": "26a6c2c871e56698a5d22ae3573d68896ca49f9e933fd2795a5095ccbc64a390"
+    },
+    {
+      "bytes": 241792,
+      "index": 1,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 8192,
+      "sha256": "39231b1909c70417e4ed9c4e5d049f7d997382bd2110715ebce725c9382ecb5f"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_shape/bin/icon_shape.arc"
+}

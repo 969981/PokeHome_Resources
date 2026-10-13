@@ -1,0 +1,185 @@
+{
+  "member": "blyt/mtt_common_msg_character_img_00.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 120,
+      "index": 1,
+      "offset": 80,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 200,
+      "index": 2,
+      "offset": 200,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 1024,
+      "index": 3,
+      "offset": 400,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 1424,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 1508,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 1516,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 1600,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 1608,
+      "pane_name": "N_keep_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1692,
+      "pane_name": "N_character_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 1776,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 1784,
+      "pane_name": "P_chara_0000",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 1920,
+      "pane_name": "P_tex_line_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 13,
+      "offset": 2056,
+      "pane_name": "P_noise_particle_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 14,
+      "offset": 2192,
+      "pane_name": "P_noise_line_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 2328,
+      "pane_name": "P_noise_line_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 2464,
+      "pane_name": "P_noise_line_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 17,
+      "offset": 2600,
+      "pane_name": "P_noise_line_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 18,
+      "offset": 2736,
+      "pane_name": "P_noise_line_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 2872,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 20,
+      "offset": 2880,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 21,
+      "offset": 2888,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 22,
+      "offset": 2896,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 23,
+      "offset": 2940,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 236,
+      "index": 24,
+      "offset": 2948,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 236,
+      "index": 25,
+      "offset": 3184,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 26,
+      "offset": 3420,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 27,
+      "offset": 3428,
+      "tag": "cnt1"
+    }
+  ]
+}

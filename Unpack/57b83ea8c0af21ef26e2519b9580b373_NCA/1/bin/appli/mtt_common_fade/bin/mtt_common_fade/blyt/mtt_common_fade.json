@@ -1,0 +1,130 @@
+{
+  "member": "blyt/mtt_common_fade.bflyt",
+  "sections": [
+    {
+      "bytes": 44,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 120,
+      "index": 1,
+      "offset": 64,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 60,
+      "index": 2,
+      "offset": 184,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 3,
+      "offset": 244,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 4,
+      "offset": 328,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 336,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 420,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 428,
+      "pane_name": "N_common_fade_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 512,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 520,
+      "pane_name": "N_anim_root_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 604,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 612,
+      "pane_name": "P_fade_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 748,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 756,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 764,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 772,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 16,
+      "offset": 780,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 17,
+      "offset": 824,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 18,
+      "offset": 832,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 900,
+      "tag": "gre1"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "member": "blyt/mtt_status_con_max_00.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 116,
+      "index": 1,
+      "offset": 72,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 40,
+      "index": 2,
+      "offset": 188,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 148,
+      "index": 3,
+      "offset": 228,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 376,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 460,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 468,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 552,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 8,
+      "offset": 560,
+      "pane_name": "P_base_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 9,
+      "offset": 696,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 10,
+      "offset": 988,
+      "pane_name": "P_icon_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 1124,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 1132,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 13,
+      "offset": 1140,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 1184,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 15,
+      "offset": 1192,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1260,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 17,
+      "offset": 1268,
+      "tag": "cnt1"
+    }
+  ]
+}

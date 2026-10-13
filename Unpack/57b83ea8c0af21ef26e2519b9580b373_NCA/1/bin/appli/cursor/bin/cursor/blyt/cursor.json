@@ -1,0 +1,86 @@
+{
+  "member": "blyt/cursor.bflyt",
+  "sections": [
+    {
+      "bytes": 36,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 116,
+      "index": 1,
+      "offset": 56,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 84,
+      "index": 2,
+      "offset": 172,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 3,
+      "offset": 256,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 264,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 348,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 108,
+      "index": 6,
+      "offset": 356,
+      "pane_name": "L_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 464,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 472,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 9,
+      "offset": 480,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 524,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 11,
+      "offset": 532,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 600,
+      "tag": "gre1"
+    }
+  ]
+}

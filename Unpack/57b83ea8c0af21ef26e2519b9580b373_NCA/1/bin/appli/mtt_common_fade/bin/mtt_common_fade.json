@@ -1,0 +1,29 @@
+{
+  "members": [
+    {
+      "bytes": 200,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_fade_in.bflan",
+      "offset": 192,
+      "sha256": "9ddbc79e94761ddd892b03b56ef487b2f9187e74f256f587d15b144b7f759a06"
+    },
+    {
+      "bytes": 200,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_fade_out.bflan",
+      "offset": 400,
+      "sha256": "21728c0e081e59e3f05d4845a13c2a3646072bb1037783fe87c2cc404fe53fca"
+    },
+    {
+      "bytes": 908,
+      "index": 2,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_fade.bflyt",
+      "offset": 608,
+      "sha256": "e7a771287cda2c0dfff8760dabdbcfa07c6c48fb2a5375ffde37da1d94734736"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_common_fade/bin/mtt_common_fade.arc"
+}

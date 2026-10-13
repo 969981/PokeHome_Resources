@@ -1,0 +1,1237 @@
+{
+  "members": [
+    {
+      "bytes": 1508,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_touch.bflan",
+      "offset": 12288,
+      "sha256": "019b2aaa8713e836a963c22d5e7ab8b8a8cdc87691f3625bf7893213753cf9bf"
+    },
+    {
+      "bytes": 2844,
+      "index": 1,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_return.bflyt",
+      "offset": 13808,
+      "sha256": "4b10f418f4fe8714b36d0e814f7b0bc6b71d73f74b491df8995d38cb487b3046"
+    },
+    {
+      "bytes": 196,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_unselect.bflan",
+      "offset": 16656,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 216,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_touch.bflan",
+      "offset": 16864,
+      "sha256": "35f1f0bc7f98276ea38cea3767fd4bd090e2422c295076fd4c7970051c27e130"
+    },
+    {
+      "bytes": 192,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_cancel.bflan",
+      "offset": 17088,
+      "sha256": "721955ab8823f6bd1eddbc1faac5e1589ec23f7dd02b5f6546d9edecc734b2ad"
+    },
+    {
+      "bytes": 192,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_cancel.bflan",
+      "offset": 17280,
+      "sha256": "721955ab8823f6bd1eddbc1faac5e1589ec23f7dd02b5f6546d9edecc734b2ad"
+    },
+    {
+      "bytes": 232,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_key_select.bflan",
+      "offset": 17472,
+      "sha256": "3dc7152e3ffaab0a6be224fb09453642a9a3fdf1f9b2ad1abff30a3d49e2d9b8"
+    },
+    {
+      "bytes": 192,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_keep.bflan",
+      "offset": 17712,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 2840,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_select.bflan",
+      "offset": 17904,
+      "sha256": "71f3a78026bf4d86646d1883428ec9f980725d908aa4d542efecc980caa58eaf"
+    },
+    {
+      "bytes": 192,
+      "index": 9,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_active.bflan",
+      "offset": 20752,
+      "sha256": "c5017ba5e30132404193cf6ad3915771af2c52035bdd240ac66ae8e461225a49"
+    },
+    {
+      "bytes": 232,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_key_select.bflan",
+      "offset": 20944,
+      "sha256": "3b75c5a2357578c62cad628ba595ce9f8ed325b94c6cf31359c3882484d9a1c3"
+    },
+    {
+      "bytes": 1440,
+      "index": 11,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_scrollbar_00.bflyt",
+      "offset": 21184,
+      "sha256": "db7f0c0ebd4ab9d92f88074270188ac89f60910f2440e5c49578410d16628da6"
+    },
+    {
+      "bytes": 2860,
+      "index": 12,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_04.bflyt",
+      "offset": 22624,
+      "sha256": "d02235f0abac1fee81e66e5c492193d311347397473ed97b8751a335e9443977"
+    },
+    {
+      "bytes": 196,
+      "index": 13,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_unselect.bflan",
+      "offset": 25488,
+      "sha256": "72c8e1f518594872de0eb33f2906644bb4ce7c20ec9b65455b1cf79fccac4556"
+    },
+    {
+      "bytes": 192,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive.bflan",
+      "offset": 25696,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 196,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_unselect.bflan",
+      "offset": 25888,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 204,
+      "index": 16,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_passive_unselect.bflan",
+      "offset": 26096,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 204,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_cancel.bflan",
+      "offset": 26304,
+      "sha256": "40f78dea43ff7ad1f351d169773ffd41da7f212c4f4bd029770a47f2875f6268"
+    },
+    {
+      "bytes": 192,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_passive.bflan",
+      "offset": 26512,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 204,
+      "index": 19,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive_unselect.bflan",
+      "offset": 26704,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 320864,
+      "index": 20,
+      "magic": "BNSH",
+      "name": "bgsh/__ArchiveShader.bnsh",
+      "offset": 28672,
+      "sha256": "039d0f527f5bbe85b7894a73f873a9f61f24f31fa47d8b173bfe4a481ed10a2f"
+    },
+    {
+      "bytes": 792,
+      "index": 21,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_key_select.bflan",
+      "offset": 349536,
+      "sha256": "0fdc59c5e79f129204b012a5e6a9ca515a670c2172cf5e5b7cea128253b5320f"
+    },
+    {
+      "bytes": 1800,
+      "index": 22,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_key_select.bflan",
+      "offset": 350336,
+      "sha256": "d12db9f0ea481ff76c5420ea7af38df20d81c9d7ac1049737e867f7a292fb696"
+    },
+    {
+      "bytes": 192,
+      "index": 23,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_passive.bflan",
+      "offset": 352144,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 192,
+      "index": 24,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_touch.bflan",
+      "offset": 352336,
+      "sha256": "7c4f386977c94aeabacc39bd0742efc7db982388b767ea6f851f43f66454d38c"
+    },
+    {
+      "bytes": 200,
+      "index": 25,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_passive_select.bflan",
+      "offset": 352528,
+      "sha256": "7910f5573c6445b78e9523837cf23f5aa721d4461d37c8600491c4839eb0a996"
+    },
+    {
+      "bytes": 192,
+      "index": 26,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_cancel.bflan",
+      "offset": 352736,
+      "sha256": "721955ab8823f6bd1eddbc1faac5e1589ec23f7dd02b5f6546d9edecc734b2ad"
+    },
+    {
+      "bytes": 224,
+      "index": 27,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_icon_version_s_00_unselect.bflan",
+      "offset": 352928,
+      "sha256": "33f5455b41068535bf34bdfcba89cf799aafea31a60e6d6cde06879b6bf74a92"
+    },
+    {
+      "bytes": 196,
+      "index": 28,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_unselect.bflan",
+      "offset": 353152,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 2860,
+      "index": 29,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_05.bflyt",
+      "offset": 353360,
+      "sha256": "143924f4afd9a28fd6a07b831a6ba7d55c28d3f449c4fca8c0685b703468195c"
+    },
+    {
+      "bytes": 716,
+      "index": 30,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_icon_version_s_00_passive.bflan",
+      "offset": 356224,
+      "sha256": "2629d86c2d92f0eca96225942c8ed292a70771d316af907f21a87dcc6dd22190"
+    },
+    {
+      "bytes": 192,
+      "index": 31,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_keep.bflan",
+      "offset": 356944,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 220,
+      "index": 32,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_icon_version_s_00_select.bflan",
+      "offset": 357136,
+      "sha256": "f448f315f3473d9ab320349de0af81860d1184f794581c26fc613ecdabedc1fb"
+    },
+    {
+      "bytes": 716,
+      "index": 33,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_icon_version_s_00_active.bflan",
+      "offset": 357360,
+      "sha256": "568a82557a5f450b1a51486166b6a77a8d6f46072c6475324617412dd1db5c35"
+    },
+    {
+      "bytes": 2812,
+      "index": 34,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_help.bflyt",
+      "offset": 358080,
+      "sha256": "889d5c4086fb46fdd9f54fd93fa2c984e99f943d0f8a7ae57ab5349d7a111cf6"
+    },
+    {
+      "bytes": 844,
+      "index": 35,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_list_detail_00_f_out.bflan",
+      "offset": 360896,
+      "sha256": "2e893dd3149ceb8ffbfb6f7c49fa518f664880e5a8d9b1be3d90768c5b54780f"
+    },
+    {
+      "bytes": 200,
+      "index": 36,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_passive_select.bflan",
+      "offset": 361744,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 204,
+      "index": 37,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_release.bflan",
+      "offset": 361952,
+      "sha256": "b52b678c80a0f403f4ad2ea3185b0000139010a1a4f98fa776e53d9799f118c9"
+    },
+    {
+      "bytes": 204,
+      "index": 38,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_passive_unselect.bflan",
+      "offset": 362160,
+      "sha256": "9e0d0ce77926b2fad80c26d8a59cd9cab2c4f015ca16e3fb44b0756b3d021cf6"
+    },
+    {
+      "bytes": 192,
+      "index": 39,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_keep.bflan",
+      "offset": 362368,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 172,
+      "index": 40,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 362560,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 200,
+      "index": 41,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_select.bflan",
+      "offset": 362736,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 1240,
+      "index": 42,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokedex_icon_version_s_00.bflyt",
+      "offset": 362944,
+      "sha256": "5971e0de8050602e6ec1a10aa6d7553cf9d0fba36d3a05680dc022288bbb854a"
+    },
+    {
+      "bytes": 192,
+      "index": 43,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive.bflan",
+      "offset": 364192,
+      "sha256": "00a391b33225d4433c64edabeda2273f7dd179fa868d8012d00e998cc7af4b03"
+    },
+    {
+      "bytes": 192,
+      "index": 44,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_select.bflan",
+      "offset": 364384,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 45,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_active.bflan",
+      "offset": 364576,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 196,
+      "index": 46,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_unselect.bflan",
+      "offset": 364768,
+      "sha256": "72c8e1f518594872de0eb33f2906644bb4ce7c20ec9b65455b1cf79fccac4556"
+    },
+    {
+      "bytes": 204,
+      "index": 47,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_cancel.bflan",
+      "offset": 364976,
+      "sha256": "8c07c72f652373dfe7b4bd1d4f1d07b0a582c9a8b6afb7f721c8040c8bcc330a"
+    },
+    {
+      "bytes": 192,
+      "index": 48,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_select.bflan",
+      "offset": 365184,
+      "sha256": "7d1a16409c0650554bf2274b1c4d1be54b3229cc1dffe785fe1a2640d6354e10"
+    },
+    {
+      "bytes": 192,
+      "index": 49,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_active.bflan",
+      "offset": 365376,
+      "sha256": "34aa8524b974116c60ed684c85e82662711eaddcf0db815f690d03a7bd46b6bc"
+    },
+    {
+      "bytes": 200,
+      "index": 50,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_passive_select.bflan",
+      "offset": 365568,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 200,
+      "index": 51,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_passive_select.bflan",
+      "offset": 365776,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 796,
+      "index": 52,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_list_detail_00_f_in.bflan",
+      "offset": 365984,
+      "sha256": "78cfe4b530d27c6d9b806751fc55f3367966933cd4563db71d01af29a48fbcf3"
+    },
+    {
+      "bytes": 196,
+      "index": 53,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_unselect.bflan",
+      "offset": 366784,
+      "sha256": "72c8e1f518594872de0eb33f2906644bb4ce7c20ec9b65455b1cf79fccac4556"
+    },
+    {
+      "bytes": 4720,
+      "index": 54,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokedex_button_pokelist_00.bflyt",
+      "offset": 366992,
+      "sha256": "2b6c61f5314748bccfe841dc025900252748acab05a5731bd812acca5bfca533"
+    },
+    {
+      "bytes": 204,
+      "index": 55,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_release.bflan",
+      "offset": 371712,
+      "sha256": "3c1fbb0b54bd1c22a5dce2ca6b3658c22a3e47fae65be58195bb56bd09846126"
+    },
+    {
+      "bytes": 192,
+      "index": 56,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_select.bflan",
+      "offset": 371920,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 57,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_active.bflan",
+      "offset": 372112,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 456,
+      "index": 58,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_switch_poke.bflan",
+      "offset": 372304,
+      "sha256": "cc9d8986ba541bb7fc6fecc28eac546f4d5b12d9446af85a34420cd0833c281e"
+    },
+    {
+      "bytes": 204,
+      "index": 59,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_cancel.bflan",
+      "offset": 372768,
+      "sha256": "8c07c72f652373dfe7b4bd1d4f1d07b0a582c9a8b6afb7f721c8040c8bcc330a"
+    },
+    {
+      "bytes": 1220,
+      "index": 60,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_cancel.bflan",
+      "offset": 372976,
+      "sha256": "aab2fb1272a218f1ac07ba3da0549123e4ca706a5bc72364bfdb3f547286f64c"
+    },
+    {
+      "bytes": 192,
+      "index": 61,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_keep.bflan",
+      "offset": 374208,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 204,
+      "index": 62,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_release.bflan",
+      "offset": 374400,
+      "sha256": "3c1fbb0b54bd1c22a5dce2ca6b3658c22a3e47fae65be58195bb56bd09846126"
+    },
+    {
+      "bytes": 204,
+      "index": 63,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_passive_unselect.bflan",
+      "offset": 374608,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 192,
+      "index": 64,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_passive.bflan",
+      "offset": 374816,
+      "sha256": "5176fffcb69eb81a8bbffa562818b42fb367d05a8bfe892d9c2d63b24e3f019b"
+    },
+    {
+      "bytes": 196,
+      "index": 65,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_unselect.bflan",
+      "offset": 375008,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 2868,
+      "index": 66,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_button_arrow_l_gray.bflyt",
+      "offset": 375216,
+      "sha256": "c463cc0056b9dfbd93ef8710462f488fc3a85d8704cf8d06de58d6a74f47ead1"
+    },
+    {
+      "bytes": 192,
+      "index": 67,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_keep.bflan",
+      "offset": 378096,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 2740,
+      "index": 68,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_passive_select.bflan",
+      "offset": 378288,
+      "sha256": "a511827e0a4bddecfd5598783ad887f60944d9808907df7faa10ceed870b10a6"
+    },
+    {
+      "bytes": 216,
+      "index": 69,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_touch.bflan",
+      "offset": 381040,
+      "sha256": "35f1f0bc7f98276ea38cea3767fd4bd090e2422c295076fd4c7970051c27e130"
+    },
+    {
+      "bytes": 200,
+      "index": 70,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_passive_select.bflan",
+      "offset": 381264,
+      "sha256": "7910f5573c6445b78e9523837cf23f5aa721d4461d37c8600491c4839eb0a996"
+    },
+    {
+      "bytes": 2868,
+      "index": 71,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_button_arrow_r_gray.bflyt",
+      "offset": 381472,
+      "sha256": "db992be97664cbce5e58b43deac4d7a1a5ffb8d126e638d102b432b5bb7cdffb"
+    },
+    {
+      "bytes": 232,
+      "index": 72,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_key_select.bflan",
+      "offset": 384352,
+      "sha256": "3b75c5a2357578c62cad628ba595ce9f8ed325b94c6cf31359c3882484d9a1c3"
+    },
+    {
+      "bytes": 204,
+      "index": 73,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_passive_unselect.bflan",
+      "offset": 384592,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 1412,
+      "index": 74,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_header_index_left.bflyt",
+      "offset": 384800,
+      "sha256": "ef188b9534d06df84e376ec8c08a9538b77016d3629d99f87a8760e98267312c"
+    },
+    {
+      "bytes": 1220,
+      "index": 75,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_release.bflan",
+      "offset": 386224,
+      "sha256": "f965cba69f9efd3e102e752eedfff1d1f7d0acb6d8ffaaa776b0eee9d7027287"
+    },
+    {
+      "bytes": 220,
+      "index": 76,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_cancel.bflan",
+      "offset": 387456,
+      "sha256": "7290f5f0914b7e6a025c4617e7aa1b709c9993a9c40c51889b896e84084b77a7"
+    },
+    {
+      "bytes": 196,
+      "index": 77,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_unselect.bflan",
+      "offset": 387680,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 192,
+      "index": 78,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_select.bflan",
+      "offset": 387888,
+      "sha256": "7d1a16409c0650554bf2274b1c4d1be54b3229cc1dffe785fe1a2640d6354e10"
+    },
+    {
+      "bytes": 192,
+      "index": 79,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_active.bflan",
+      "offset": 388080,
+      "sha256": "34aa8524b974116c60ed684c85e82662711eaddcf0db815f690d03a7bd46b6bc"
+    },
+    {
+      "bytes": 192,
+      "index": 80,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_select.bflan",
+      "offset": 388272,
+      "sha256": "7d1a16409c0650554bf2274b1c4d1be54b3229cc1dffe785fe1a2640d6354e10"
+    },
+    {
+      "bytes": 192,
+      "index": 81,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_active.bflan",
+      "offset": 388464,
+      "sha256": "34aa8524b974116c60ed684c85e82662711eaddcf0db815f690d03a7bd46b6bc"
+    },
+    {
+      "bytes": 216,
+      "index": 82,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_touch.bflan",
+      "offset": 388656,
+      "sha256": "35f1f0bc7f98276ea38cea3767fd4bd090e2422c295076fd4c7970051c27e130"
+    },
+    {
+      "bytes": 2700,
+      "index": 83,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_unselect.bflan",
+      "offset": 388880,
+      "sha256": "ee65bdc699573ef4f21705cb2d27dbe309da1b0b8496b6d3f65a026f5cbe7c3a"
+    },
+    {
+      "bytes": 2876,
+      "index": 84,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokedex_button_arrow_zr_small_00.bflyt",
+      "offset": 391584,
+      "sha256": "329b862afb609e8b5367577612ffbe6ea8f37e4d535a8006f40e0deabefba0f5"
+    },
+    {
+      "bytes": 408,
+      "index": 85,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_icon_gender_00_switch.bflan",
+      "offset": 394464,
+      "sha256": "6b09bc8d6ac569af104b62b50d88162bdf7bb9cf8598adff962a515022d02cbc"
+    },
+    {
+      "bytes": 192,
+      "index": 86,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_keep.bflan",
+      "offset": 394880,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 192,
+      "index": 87,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_passive.bflan",
+      "offset": 395072,
+      "sha256": "5176fffcb69eb81a8bbffa562818b42fb367d05a8bfe892d9c2d63b24e3f019b"
+    },
+    {
+      "bytes": 156,
+      "index": 88,
+      "magic": "\u0003\u0000\u0000\u0000",
+      "name": "bgsh/__ArchiveShader.bushvt",
+      "offset": 395264,
+      "sha256": "d313c1739e5cd17b434d19ebe8f9973b7a8dc47a8e69f06a279a30b3a3260104"
+    },
+    {
+      "bytes": 1292,
+      "index": 89,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_release.bflan",
+      "offset": 395424,
+      "sha256": "b05e576f0203d052d563abd3b18b95ef61da068be3152ea05a69a9c4e1e3bf55"
+    },
+    {
+      "bytes": 232,
+      "index": 90,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_key_select.bflan",
+      "offset": 396720,
+      "sha256": "3b75c5a2357578c62cad628ba595ce9f8ed325b94c6cf31359c3882484d9a1c3"
+    },
+    {
+      "bytes": 2256,
+      "index": 91,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_key_select.bflan",
+      "offset": 396960,
+      "sha256": "9a943147134e89804f261054e3db9079b2d503de5aa8b98a6283d0965e639987"
+    },
+    {
+      "bytes": 172,
+      "index": 92,
+      "magic": "FCPX",
+      "name": "fcpx/system42_jpn.bfcpx",
+      "offset": 399216,
+      "sha256": "eecae797353acc0c6ff77d88c99a92d73c229e6df4085726c63886f42946f299"
+    },
+    {
+      "bytes": 192,
+      "index": 93,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_select.bflan",
+      "offset": 399392,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 94,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_active.bflan",
+      "offset": 399584,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 216,
+      "index": 95,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_touch.bflan",
+      "offset": 399776,
+      "sha256": "d964d485fe74b3a8a731b5020ce25ae1071875aeb2cbc933886c1e62ec4c4082"
+    },
+    {
+      "bytes": 204,
+      "index": 96,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_passive_unselect.bflan",
+      "offset": 400000,
+      "sha256": "9e0d0ce77926b2fad80c26d8a59cd9cab2c4f015ca16e3fb44b0756b3d021cf6"
+    },
+    {
+      "bytes": 196,
+      "index": 97,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_unselect.bflan",
+      "offset": 400208,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 192,
+      "index": 98,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_passive.bflan",
+      "offset": 400416,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 192,
+      "index": 99,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_list_detail_00_keep.bflan",
+      "offset": 400608,
+      "sha256": "66f0c965000cfea9eb70a7eab3b959aea46830df64a70574acbd052c187ae287"
+    },
+    {
+      "bytes": 204,
+      "index": 100,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_passive_unselect.bflan",
+      "offset": 400800,
+      "sha256": "9e0d0ce77926b2fad80c26d8a59cd9cab2c4f015ca16e3fb44b0756b3d021cf6"
+    },
+    {
+      "bytes": 192,
+      "index": 101,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_passive.bflan",
+      "offset": 401008,
+      "sha256": "3073a00fb157445d7b3d029698d5f0e330a4410c908b37a73cb1e8ccc8d27d7a"
+    },
+    {
+      "bytes": 192,
+      "index": 102,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_passive.bflan",
+      "offset": 401200,
+      "sha256": "5176fffcb69eb81a8bbffa562818b42fb367d05a8bfe892d9c2d63b24e3f019b"
+    },
+    {
+      "bytes": 192,
+      "index": 103,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_passive.bflan",
+      "offset": 401392,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 192,
+      "index": 104,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_select.bflan",
+      "offset": 401584,
+      "sha256": "7d1a16409c0650554bf2274b1c4d1be54b3229cc1dffe785fe1a2640d6354e10"
+    },
+    {
+      "bytes": 192,
+      "index": 105,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_active.bflan",
+      "offset": 401776,
+      "sha256": "34aa8524b974116c60ed684c85e82662711eaddcf0db815f690d03a7bd46b6bc"
+    },
+    {
+      "bytes": 1204,
+      "index": 106,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokedex_icon_gender_00.bflyt",
+      "offset": 401968,
+      "sha256": "07de7d36e175c180848802ce4989f12c066ce1ead79b63ec802af6aad764c80f"
+    },
+    {
+      "bytes": 462976,
+      "index": 107,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 405504,
+      "sha256": "ff5c030c051262a2473fd2c628b195fc599c2248a5346d90a58f610f6eb15c42"
+    },
+    {
+      "bytes": 720,
+      "index": 108,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_list_detail_00_out.bflan",
+      "offset": 868480,
+      "sha256": "532dfc645ffda73c4777b95bd5808ad4a0c2cdb4294c51e7588aee56085cc739"
+    },
+    {
+      "bytes": 196,
+      "index": 109,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_unselect.bflan",
+      "offset": 869200,
+      "sha256": "72c8e1f518594872de0eb33f2906644bb4ce7c20ec9b65455b1cf79fccac4556"
+    },
+    {
+      "bytes": 204,
+      "index": 110,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_unselect.bflan",
+      "offset": 869408,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 192,
+      "index": 111,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_passive.bflan",
+      "offset": 869616,
+      "sha256": "5176fffcb69eb81a8bbffa562818b42fb367d05a8bfe892d9c2d63b24e3f019b"
+    },
+    {
+      "bytes": 2856,
+      "index": 112,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_02.bflyt",
+      "offset": 869808,
+      "sha256": "2f89028009195ca2b5ef403ad5d401addacb7e7b0e76c13f7837031111dc0cca"
+    },
+    {
+      "bytes": 192,
+      "index": 113,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_touch.bflan",
+      "offset": 872672,
+      "sha256": "7c4f386977c94aeabacc39bd0742efc7db982388b767ea6f851f43f66454d38c"
+    },
+    {
+      "bytes": 192,
+      "index": 114,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_touch.bflan",
+      "offset": 872864,
+      "sha256": "7c4f386977c94aeabacc39bd0742efc7db982388b767ea6f851f43f66454d38c"
+    },
+    {
+      "bytes": 708,
+      "index": 115,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_list_detail_00_in.bflan",
+      "offset": 873056,
+      "sha256": "265473cd1b97eeaac6f8885abea6aa73f222e1c909b702581c5f767c5e8d7da0"
+    },
+    {
+      "bytes": 204,
+      "index": 116,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_cancel.bflan",
+      "offset": 873776,
+      "sha256": "8c07c72f652373dfe7b4bd1d4f1d07b0a582c9a8b6afb7f721c8040c8bcc330a"
+    },
+    {
+      "bytes": 752,
+      "index": 117,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_release.bflan",
+      "offset": 873984,
+      "sha256": "92514df4345f6f6899c17fafbbca99f28862ca52730a62e486a5c88bd37c4d00"
+    },
+    {
+      "bytes": 204,
+      "index": 118,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_passive_unselect.bflan",
+      "offset": 874736,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 204,
+      "index": 119,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_passive_unselect.bflan",
+      "offset": 874944,
+      "sha256": "9e0d0ce77926b2fad80c26d8a59cd9cab2c4f015ca16e3fb44b0756b3d021cf6"
+    },
+    {
+      "bytes": 200,
+      "index": 120,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_passive_select.bflan",
+      "offset": 875152,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 192,
+      "index": 121,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_cancel.bflan",
+      "offset": 875360,
+      "sha256": "721955ab8823f6bd1eddbc1faac5e1589ec23f7dd02b5f6546d9edecc734b2ad"
+    },
+    {
+      "bytes": 1752,
+      "index": 122,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_key_select.bflan",
+      "offset": 875552,
+      "sha256": "edf7d6516cd1d1567f201d4d4d5fecc3c806527222c064e86f70ad068b58e496"
+    },
+    {
+      "bytes": 1764,
+      "index": 123,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_key_select.bflan",
+      "offset": 877312,
+      "sha256": "9e5b0045dbd5514506d821dfe1b7168ac248cfaab5f75bc7458c8b2bb77231f7"
+    },
+    {
+      "bytes": 192,
+      "index": 124,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_select.bflan",
+      "offset": 879088,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 125,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_04_active.bflan",
+      "offset": 879280,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 33788,
+      "index": 126,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokedex_list_detail_00.bflyt",
+      "offset": 879472,
+      "sha256": "0ebbccb3615fbd34324b786487f454f8d582e02c1246c77e6213658abd799a82"
+    },
+    {
+      "bytes": 204,
+      "index": 127,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_cancel.bflan",
+      "offset": 913264,
+      "sha256": "8c07c72f652373dfe7b4bd1d4f1d07b0a582c9a8b6afb7f721c8040c8bcc330a"
+    },
+    {
+      "bytes": 2744,
+      "index": 128,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_passive_unselect.bflan",
+      "offset": 913472,
+      "sha256": "c49993386145cd54df0592662d28b30a08c357b2fada9b5258a6c3c2ce38c262"
+    },
+    {
+      "bytes": 200,
+      "index": 129,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_passive_select.bflan",
+      "offset": 916224,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 204,
+      "index": 130,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_03_release.bflan",
+      "offset": 916432,
+      "sha256": "3c1fbb0b54bd1c22a5dce2ca6b3658c22a3e47fae65be58195bb56bd09846126"
+    },
+    {
+      "bytes": 192,
+      "index": 131,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_keep.bflan",
+      "offset": 916640,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 220,
+      "index": 132,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_release.bflan",
+      "offset": 916832,
+      "sha256": "175c6533fa9ce14783f6520cd13eb53b04ed9972344394eac93137093f3f2428"
+    },
+    {
+      "bytes": 792,
+      "index": 133,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_key_select.bflan",
+      "offset": 917056,
+      "sha256": "da1b544d375d897ff9fb3c21826230850248bdb2cabb660bfddee88506dbb230"
+    },
+    {
+      "bytes": 200,
+      "index": 134,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zr_small_00_passive_select.bflan",
+      "offset": 917856,
+      "sha256": "7910f5573c6445b78e9523837cf23f5aa721d4461d37c8600491c4839eb0a996"
+    },
+    {
+      "bytes": 192,
+      "index": 135,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_select.bflan",
+      "offset": 918064,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 136,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_active.bflan",
+      "offset": 918256,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 192,
+      "index": 137,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_select.bflan",
+      "offset": 918448,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 138,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_help_active.bflan",
+      "offset": 918640,
+      "sha256": "0570406900ef8b47609c7cf045f3942ce7cf83750676fdb7198834b2da91b429"
+    },
+    {
+      "bytes": 1304,
+      "index": 139,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_r_gray_release.bflan",
+      "offset": 918832,
+      "sha256": "d7723a95a006f9ddb2ca27f16e8076948852dc93b74af24979bc1329fc45f096"
+    },
+    {
+      "bytes": 204,
+      "index": 140,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_release.bflan",
+      "offset": 920144,
+      "sha256": "3c1fbb0b54bd1c22a5dce2ca6b3658c22a3e47fae65be58195bb56bd09846126"
+    },
+    {
+      "bytes": 216,
+      "index": 141,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_touch.bflan",
+      "offset": 920352,
+      "sha256": "35f1f0bc7f98276ea38cea3767fd4bd090e2422c295076fd4c7970051c27e130"
+    },
+    {
+      "bytes": 2856,
+      "index": 142,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_03.bflyt",
+      "offset": 920576,
+      "sha256": "d8042c68426ef587633fbdf17998a6a7a4486efb0fec9f1f397f44fc25fc0b4f"
+    },
+    {
+      "bytes": 232,
+      "index": 143,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_02_key_select.bflan",
+      "offset": 923440,
+      "sha256": "3b75c5a2357578c62cad628ba595ce9f8ed325b94c6cf31359c3882484d9a1c3"
+    },
+    {
+      "bytes": 192,
+      "index": 144,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_05_keep.bflan",
+      "offset": 923680,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 192,
+      "index": 145,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_arrow_l_gray_keep.bflan",
+      "offset": 923872,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 220,
+      "index": 146,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_touch.bflan",
+      "offset": 924064,
+      "sha256": "0cc734fbd88d510d5757826727413226238722f02d8e27f8efa7180d73e5bf70"
+    },
+    {
+      "bytes": 936,
+      "index": 147,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_icon_new_00.bflyt",
+      "offset": 924288,
+      "sha256": "bfabd0214cc69fa54587cff9c6699671b2cd2e648bad5511eaba0f9b2ad19bb5"
+    },
+    {
+      "bytes": 2876,
+      "index": 148,
+      "magic": "FLYT",
+      "name": "blyt/mtt_pokedex_button_arrow_zl_small_00.bflyt",
+      "offset": 925232,
+      "sha256": "d30de034daf650edf0c0bc5f8df73dbdda63ee1de75b367e1aa5d370405b099c"
+    },
+    {
+      "bytes": 192,
+      "index": 149,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_touch.bflan",
+      "offset": 928112,
+      "sha256": "7c4f386977c94aeabacc39bd0742efc7db982388b767ea6f851f43f66454d38c"
+    },
+    {
+      "bytes": 200,
+      "index": 150,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_passive_select.bflan",
+      "offset": 928304,
+      "sha256": "7910f5573c6445b78e9523837cf23f5aa721d4461d37c8600491c4839eb0a996"
+    },
+    {
+      "bytes": 192,
+      "index": 151,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_pokelist_00_keep.bflan",
+      "offset": 928512,
+      "sha256": "d18099c85475a84ec3462c769ea1c194151cee373f813475d53757a96c8b9769"
+    },
+    {
+      "bytes": 752,
+      "index": 152,
+      "magic": "FLAN",
+      "name": "anim/mtt_pokedex_button_arrow_zl_small_00_release.bflan",
+      "offset": 928704,
+      "sha256": "e31d21ece05cca403e4727abed3938eaef7fb1319f2e9d441145419e2b92da7e"
+    },
+    {
+      "bytes": 192,
+      "index": 153,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_keep.bflan",
+      "offset": 929456,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/mtt_pokedex_list_detail_00.arc"
+}

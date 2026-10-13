@@ -1,0 +1,656 @@
+{
+  "member": "blyt/mtt_pokebox_info_poke.bflyt",
+  "sections": [
+    {
+      "bytes": 52,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 308,
+      "index": 1,
+      "offset": 72,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 2,
+      "offset": 380,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 2812,
+      "index": 3,
+      "offset": 416,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 3228,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 3312,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 3320,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 3404,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 3412,
+      "pane_name": "N_info_poke_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 9,
+      "offset": 3496,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 3536,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 140,
+      "index": 11,
+      "offset": 3544,
+      "pane_name": "W_base_info_poke_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 12,
+      "offset": 3684,
+      "pane_name": "P_base_info_poke_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 292,
+      "index": 13,
+      "offset": 3820,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 14,
+      "offset": 4112,
+      "pane_name": "L_btn_info_marking_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 136,
+      "index": 15,
+      "offset": 4232,
+      "pane_name": "P_base_heading_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 4368,
+      "pane_name": "P_base_heading_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 180,
+      "index": 17,
+      "offset": 4504,
+      "pane_name": "T_heading_personality_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 18,
+      "offset": 4684,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 180,
+      "index": 19,
+      "offset": 4740,
+      "pane_name": "T_heading_characteris_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 20,
+      "offset": 4920,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 21,
+      "offset": 4976,
+      "pane_name": "P_base_heading_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 5112,
+      "pane_name": "P_base_heading_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 23,
+      "offset": 5248,
+      "pane_name": "P_base_heading_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 24,
+      "offset": 5384,
+      "pane_name": "P_base_heading_05",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 5520,
+      "pane_name": "P_base_heading_06",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 26,
+      "offset": 5656,
+      "pane_name": "P_base_heading_07",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 176,
+      "index": 27,
+      "offset": 5792,
+      "pane_name": "T_heading_hp_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 28,
+      "offset": 5968,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 180,
+      "index": 29,
+      "offset": 6024,
+      "pane_name": "T_heading_atk_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 30,
+      "offset": 6204,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 180,
+      "index": 31,
+      "offset": 6260,
+      "pane_name": "T_heading_def_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 32,
+      "offset": 6440,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 180,
+      "index": 33,
+      "offset": 6496,
+      "pane_name": "T_heading_satk_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 34,
+      "offset": 6676,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 180,
+      "index": 35,
+      "offset": 6732,
+      "pane_name": "T_heading_sdef_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 36,
+      "offset": 6912,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 180,
+      "index": 37,
+      "offset": 6968,
+      "pane_name": "T_heading_agi_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 38,
+      "offset": 7148,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 84,
+      "index": 39,
+      "offset": 7204,
+      "pane_name": "N_visible_root_param_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 40,
+      "offset": 7288,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 41,
+      "offset": 7296,
+      "pane_name": "P_logo_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 42,
+      "offset": 7432,
+      "pane_name": "P_logo_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 43,
+      "offset": 7568,
+      "pane_name": "P_icon_playername_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 44,
+      "offset": 7704,
+      "pane_name": "P_icon_monbo_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 184,
+      "index": 45,
+      "offset": 7840,
+      "pane_name": "T_name_nickname_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 46,
+      "offset": 8024,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 156,
+      "index": 47,
+      "offset": 8080,
+      "pane_name": "L_icon_gender_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 84,
+      "index": 48,
+      "offset": 8236,
+      "pane_name": "N_icon_dm_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 49,
+      "offset": 8320,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 50,
+      "offset": 8360,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 51,
+      "offset": 8368,
+      "pane_name": "P_icon_dm_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 52,
+      "offset": 8504,
+      "pane_name": "P_icon_dm_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 53,
+      "offset": 8640,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 116,
+      "index": 54,
+      "offset": 8648,
+      "pane_name": "L_icon_gem_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 184,
+      "index": 55,
+      "offset": 8764,
+      "pane_name": "T_param_level_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 56,
+      "offset": 8948,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 57,
+      "offset": 9004,
+      "pane_name": "P_icon_type_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 58,
+      "offset": 9140,
+      "pane_name": "P_icon_type_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 59,
+      "offset": 9276,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 60,
+      "offset": 9316,
+      "pane_name": "P_icon_btr_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 61,
+      "offset": 9452,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 62,
+      "offset": 9492,
+      "pane_name": "P_icon_shiny_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 63,
+      "offset": 9628,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 64,
+      "offset": 9668,
+      "pane_name": "P_icon_anti_pokerus_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 40,
+      "index": 65,
+      "offset": 9804,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 66,
+      "offset": 9844,
+      "pane_name": "P_icon_pokerus_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 67,
+      "offset": 9980,
+      "pane_name": "P_bspoke_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 68,
+      "offset": 10116,
+      "pane_name": "P_icon_lang_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 69,
+      "offset": 10252,
+      "pane_name": "P_icon_generation_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 188,
+      "index": 70,
+      "offset": 10388,
+      "pane_name": "T_name_race_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 71,
+      "offset": 10576,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 188,
+      "index": 72,
+      "offset": 10632,
+      "pane_name": "T_param_personality_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 73,
+      "offset": 10820,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 188,
+      "index": 74,
+      "offset": 10876,
+      "pane_name": "T_param_characteris_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 75,
+      "offset": 11064,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 76,
+      "offset": 11120,
+      "pane_name": "T_param_hp_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 77,
+      "offset": 11296,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 78,
+      "offset": 11352,
+      "pane_name": "T_param_atk_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 79,
+      "offset": 11528,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 80,
+      "offset": 11584,
+      "pane_name": "T_param_def_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 81,
+      "offset": 11760,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 82,
+      "offset": 11816,
+      "pane_name": "T_param_satk_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 83,
+      "offset": 11992,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 84,
+      "offset": 12048,
+      "pane_name": "T_param_sdef_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 85,
+      "offset": 12224,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 176,
+      "index": 86,
+      "offset": 12280,
+      "pane_name": "T_param_agi_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 87,
+      "offset": 12456,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 120,
+      "index": 88,
+      "offset": 12512,
+      "pane_name": "L_info_skill_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 120,
+      "index": 89,
+      "offset": 12632,
+      "pane_name": "L_info_skill_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 120,
+      "index": 90,
+      "offset": 12752,
+      "pane_name": "L_info_skill_02",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 120,
+      "index": 91,
+      "offset": 12872,
+      "pane_name": "L_info_skill_03",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 8,
+      "index": 92,
+      "offset": 12992,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 93,
+      "offset": 13000,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 94,
+      "offset": 13008,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 95,
+      "offset": 13016,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 96,
+      "offset": 13100,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 97,
+      "offset": 13108,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 98,
+      "offset": 13152,
+      "tag": "cnt1"
+    }
+  ]
+}

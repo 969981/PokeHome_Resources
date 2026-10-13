@@ -1,0 +1,977 @@
+{
+  "member": "blyt/mtt_pokebox_top_boxwidow.bflyt",
+  "sections": [
+    {
+      "bytes": 56,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 576,
+      "index": 1,
+      "offset": 76,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 384,
+      "index": 2,
+      "offset": 652,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 1036,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 9228,
+      "index": 4,
+      "offset": 1072,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 10300,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 10384,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 10392,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 10476,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 10484,
+      "pane_name": "N_bank_box_bg_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 10568,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 10576,
+      "pane_name": "N_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 164,
+      "index": 12,
+      "offset": 10660,
+      "pane_name": "W_window_list_bbox_o_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 164,
+      "index": 13,
+      "offset": 10824,
+      "pane_name": "W_window_list_bactive_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 84,
+      "index": 14,
+      "offset": 10988,
+      "pane_name": "N_window_deco_grid_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 11072,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 16,
+      "offset": 11080,
+      "pane_name": "P_window_deco_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 17,
+      "offset": 11216,
+      "pane_name": "P_window_deco_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 18,
+      "offset": 11352,
+      "pane_name": "P_window_deco_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 19,
+      "offset": 11488,
+      "pane_name": "P_window_deco_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 20,
+      "offset": 11624,
+      "pane_name": "P_window_deco_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 21,
+      "offset": 11760,
+      "pane_name": "P_window_deco_05",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 22,
+      "offset": 11896,
+      "pane_name": "P_window_deco_06",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 23,
+      "offset": 12032,
+      "pane_name": "P_window_deco_07",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 24,
+      "offset": 12168,
+      "pane_name": "P_window_deco_08",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 25,
+      "offset": 12304,
+      "pane_name": "P_window_deco_09",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 26,
+      "offset": 12440,
+      "pane_name": "P_window_deco_10",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 27,
+      "offset": 12576,
+      "pane_name": "P_window_deco_11",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 28,
+      "offset": 12712,
+      "pane_name": "P_window_deco_12",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 29,
+      "offset": 12848,
+      "pane_name": "P_window_deco_13",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 30,
+      "offset": 12984,
+      "pane_name": "P_window_deco_14",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 31,
+      "offset": 13120,
+      "pane_name": "P_window_deco_15",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 32,
+      "offset": 13256,
+      "pane_name": "P_window_deco_16",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 33,
+      "offset": 13392,
+      "pane_name": "P_window_deco_17",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 34,
+      "offset": 13528,
+      "pane_name": "P_window_deco_18",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 35,
+      "offset": 13664,
+      "pane_name": "P_window_deco_19",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 36,
+      "offset": 13800,
+      "pane_name": "P_window_deco_20",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 37,
+      "offset": 13936,
+      "pane_name": "P_window_deco_21",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 38,
+      "offset": 14072,
+      "pane_name": "P_window_deco_22",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 39,
+      "offset": 14208,
+      "pane_name": "P_window_deco_23",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 40,
+      "offset": 14344,
+      "pane_name": "P_window_deco_24",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 41,
+      "offset": 14480,
+      "pane_name": "P_window_deco_25",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 42,
+      "offset": 14616,
+      "pane_name": "P_window_deco_26",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 43,
+      "offset": 14752,
+      "pane_name": "P_window_deco_27",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 44,
+      "offset": 14888,
+      "pane_name": "P_window_deco_28",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 45,
+      "offset": 15024,
+      "pane_name": "P_window_deco_29",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 15160,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 47,
+      "offset": 15168,
+      "pane_name": "N_window_deco_30_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 48,
+      "offset": 15252,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 49,
+      "offset": 15260,
+      "pane_name": "P_window_deco_box_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 50,
+      "offset": 15396,
+      "pane_name": "P_window_deco_box_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 51,
+      "offset": 15532,
+      "pane_name": "P_window_deco_box_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 52,
+      "offset": 15668,
+      "pane_name": "P_window_deco_box_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 53,
+      "offset": 15804,
+      "pane_name": "P_window_deco_box_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 54,
+      "offset": 15940,
+      "pane_name": "P_window_deco_box_05",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 55,
+      "offset": 16076,
+      "pane_name": "P_window_deco_box_06",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 56,
+      "offset": 16212,
+      "pane_name": "P_window_deco_box_07",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 57,
+      "offset": 16348,
+      "pane_name": "P_window_deco_box_08",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 58,
+      "offset": 16484,
+      "pane_name": "P_window_deco_box_09",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 59,
+      "offset": 16620,
+      "pane_name": "P_window_deco_box_10",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 60,
+      "offset": 16756,
+      "pane_name": "P_window_deco_box_11",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 61,
+      "offset": 16892,
+      "pane_name": "P_window_deco_box_12",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 62,
+      "offset": 17028,
+      "pane_name": "P_window_deco_box_13",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 63,
+      "offset": 17164,
+      "pane_name": "P_window_deco_box_14",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 64,
+      "offset": 17300,
+      "pane_name": "P_window_deco_box_15",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 65,
+      "offset": 17436,
+      "pane_name": "P_window_deco_box_16",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 66,
+      "offset": 17572,
+      "pane_name": "P_window_deco_box_17",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 67,
+      "offset": 17708,
+      "pane_name": "P_window_deco_box_18",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 68,
+      "offset": 17844,
+      "pane_name": "P_window_deco_box_19",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 69,
+      "offset": 17980,
+      "pane_name": "P_window_deco_box_20",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 70,
+      "offset": 18116,
+      "pane_name": "P_window_deco_box_21",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 71,
+      "offset": 18252,
+      "pane_name": "P_window_deco_box_22",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 72,
+      "offset": 18388,
+      "pane_name": "P_window_deco_box_23",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 73,
+      "offset": 18524,
+      "pane_name": "P_window_deco_box_24",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 74,
+      "offset": 18660,
+      "pane_name": "P_window_deco_box_25",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 75,
+      "offset": 18796,
+      "pane_name": "P_window_deco_box_26",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 76,
+      "offset": 18932,
+      "pane_name": "P_window_deco_box_27",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 77,
+      "offset": 19068,
+      "pane_name": "P_window_deco_box_28",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 78,
+      "offset": 19204,
+      "pane_name": "P_window_deco_box_29",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 79,
+      "offset": 19340,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 80,
+      "offset": 19348,
+      "pane_name": "N_cannot_put_down_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 81,
+      "offset": 19432,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 82,
+      "offset": 19440,
+      "pane_name": "P_cannot_put_down_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 83,
+      "offset": 19576,
+      "pane_name": "P_cannot_put_down_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 84,
+      "offset": 19712,
+      "pane_name": "P_cannot_put_down_02",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 85,
+      "offset": 19848,
+      "pane_name": "P_cannot_put_down_03",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 86,
+      "offset": 19984,
+      "pane_name": "P_cannot_put_down_04",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 87,
+      "offset": 20120,
+      "pane_name": "P_cannot_put_down_05",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 88,
+      "offset": 20256,
+      "pane_name": "P_cannot_put_down_06",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 89,
+      "offset": 20392,
+      "pane_name": "P_cannot_put_down_07",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 90,
+      "offset": 20528,
+      "pane_name": "P_cannot_put_down_08",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 91,
+      "offset": 20664,
+      "pane_name": "P_cannot_put_down_09",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 92,
+      "offset": 20800,
+      "pane_name": "P_cannot_put_down_10",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 93,
+      "offset": 20936,
+      "pane_name": "P_cannot_put_down_11",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 94,
+      "offset": 21072,
+      "pane_name": "P_cannot_put_down_12",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 95,
+      "offset": 21208,
+      "pane_name": "P_cannot_put_down_13",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 96,
+      "offset": 21344,
+      "pane_name": "P_cannot_put_down_14",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 97,
+      "offset": 21480,
+      "pane_name": "P_cannot_put_down_15",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 98,
+      "offset": 21616,
+      "pane_name": "P_cannot_put_down_16",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 99,
+      "offset": 21752,
+      "pane_name": "P_cannot_put_down_17",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 100,
+      "offset": 21888,
+      "pane_name": "P_cannot_put_down_18",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 101,
+      "offset": 22024,
+      "pane_name": "P_cannot_put_down_19",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 102,
+      "offset": 22160,
+      "pane_name": "P_cannot_put_down_20",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 103,
+      "offset": 22296,
+      "pane_name": "P_cannot_put_down_21",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 104,
+      "offset": 22432,
+      "pane_name": "P_cannot_put_down_22",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 105,
+      "offset": 22568,
+      "pane_name": "P_cannot_put_down_23",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 106,
+      "offset": 22704,
+      "pane_name": "P_cannot_put_down_24",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 107,
+      "offset": 22840,
+      "pane_name": "P_cannot_put_down_25",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 108,
+      "offset": 22976,
+      "pane_name": "P_cannot_put_down_26",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 109,
+      "offset": 23112,
+      "pane_name": "P_cannot_put_down_27",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 110,
+      "offset": 23248,
+      "pane_name": "P_cannot_put_down_28",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 111,
+      "offset": 23384,
+      "pane_name": "P_cannot_put_down_29",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 112,
+      "offset": 23520,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 140,
+      "index": 113,
+      "offset": 23528,
+      "pane_name": "W_window_list_bbox_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 136,
+      "index": 114,
+      "offset": 23668,
+      "pane_name": "P_window_header_shadow_0",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 132,
+      "index": 115,
+      "offset": 23804,
+      "pane_name": "L_btn_boxname_change_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 124,
+      "index": 116,
+      "offset": 23936,
+      "pane_name": "L_btn_arrow_l_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 124,
+      "index": 117,
+      "offset": 24060,
+      "pane_name": "L_btn_arrow_r_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 84,
+      "index": 118,
+      "offset": 24184,
+      "pane_name": "N_btn_banner_l_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 119,
+      "offset": 24268,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 120,
+      "offset": 24276,
+      "pane_name": "L_btn_changelist_01",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 184,
+      "index": 121,
+      "offset": 24404,
+      "pane_name": "T_keyassign_option_01",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 122,
+      "offset": 24588,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 123,
+      "offset": 24644,
+      "pane_name": "P_banner_s_current_ti_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 124,
+      "offset": 24780,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 125,
+      "offset": 24788,
+      "pane_name": "N_btn_banner_r_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 126,
+      "offset": 24872,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 128,
+      "index": 127,
+      "offset": 24880,
+      "pane_name": "L_btn_changelist_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 124,
+      "index": 128,
+      "offset": 25008,
+      "pane_name": "L_btn_goto_newest30_00",
+      "tag": "prt1"
+    },
+    {
+      "bytes": 184,
+      "index": 129,
+      "offset": 25132,
+      "pane_name": "T_keyassign_option_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 130,
+      "offset": 25316,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 136,
+      "index": 131,
+      "offset": 25372,
+      "pane_name": "P_banner_s_current_title",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 132,
+      "offset": 25508,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 133,
+      "offset": 25516,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 134,
+      "offset": 25524,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 135,
+      "offset": 25532,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 136,
+      "offset": 25616,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 137,
+      "offset": 25624,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 138,
+      "offset": 25668,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 956,
+      "index": 139,
+      "offset": 25676,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 140,
+      "offset": 26632,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 141,
+      "offset": 26700,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 142,
+      "offset": 26708,
+      "tag": "cnt1"
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "members": [
+    {
+      "bytes": 192,
+      "index": 0,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_keep.bflan",
+      "offset": 8192,
+      "sha256": "236ee274ef6d8fcdd117fc85933ae606e6742fdc32da45bb3dae1d1e043bf004"
+    },
+    {
+      "bytes": 2844,
+      "index": 1,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_btn_optionbar_return.bflyt",
+      "offset": 8384,
+      "sha256": "4b10f418f4fe8714b36d0e814f7b0bc6b71d73f74b491df8995d38cb487b3046"
+    },
+    {
+      "bytes": 196,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_unselect.bflan",
+      "offset": 11232,
+      "sha256": "12f7bed61c89dad608be972f39751a5785e880948b18c40c0473f85291feac71"
+    },
+    {
+      "bytes": 232,
+      "index": 3,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_key_select.bflan",
+      "offset": 11440,
+      "sha256": "3dc7152e3ffaab0a6be224fb09453642a9a3fdf1f9b2ad1abff30a3d49e2d9b8"
+    },
+    {
+      "bytes": 1156,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_passive_select.bflan",
+      "offset": 11680,
+      "sha256": "5e3cfc043793710be7a86349ab6624a89d466475696509192edaccba54d7ecd3"
+    },
+    {
+      "bytes": 196,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_unselect.bflan",
+      "offset": 12848,
+      "sha256": "49bb9ce3e1b58ac4589b71309bf8f24bd99d9fc17e3cae4a932409afb725a6d3"
+    },
+    {
+      "bytes": 1440,
+      "index": 6,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_scrollbar_00.bflyt",
+      "offset": 13056,
+      "sha256": "db7f0c0ebd4ab9d92f88074270188ac89f60910f2440e5c49578410d16628da6"
+    },
+    {
+      "bytes": 192,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_passive.bflan",
+      "offset": 14496,
+      "sha256": "f68d824092d7b7bdb9ca433f4bf4c8a85f9775d0fe3b097732885c2e21a62394"
+    },
+    {
+      "bytes": 192,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive.bflan",
+      "offset": 14688,
+      "sha256": "e5bf2d9fffee22035b3f1b74b9fbb1f07316f911428fab6848aa56bc26e77a79"
+    },
+    {
+      "bytes": 204,
+      "index": 9,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_cancel.bflan",
+      "offset": 14880,
+      "sha256": "40f78dea43ff7ad1f351d169773ffd41da7f212c4f4bd029770a47f2875f6268"
+    },
+    {
+      "bytes": 296,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_key_select.bflan",
+      "offset": 15088,
+      "sha256": "a158d6ee55a2d17f756aa0dda0df7515d9151149d4ce1abe6da7d1a3a1a9ee66"
+    },
+    {
+      "bytes": 37512,
+      "index": 11,
+      "magic": "BNSH",
+      "name": "bgsh/__ArchiveShader.bnsh",
+      "offset": 16384,
+      "sha256": "0493044b32069a0411afbc0dd97875b065863ca55e0e4d8d1734ebef7528cac8"
+    },
+    {
+      "bytes": 192,
+      "index": 12,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_cancel.bflan",
+      "offset": 53904,
+      "sha256": "5a4d4e957f3987ddba7546d26d6a6d4a2569b8545b74df35b1e51595a3658096"
+    },
+    {
+      "bytes": 244,
+      "index": 13,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_cancel.bflan",
+      "offset": 54096,
+      "sha256": "5446860c55b88a1554a4c5e8c400fcd0eadfe317c94d7790a7211a65d9e7d8a1"
+    },
+    {
+      "bytes": 200,
+      "index": 14,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_passive_select.bflan",
+      "offset": 54352,
+      "sha256": "0277667072892c6bc941054c00eb427a13322176851073cc70f28a421cfaced8"
+    },
+    {
+      "bytes": 296,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_key_select.bflan",
+      "offset": 54560,
+      "sha256": "a158d6ee55a2d17f756aa0dda0df7515d9151149d4ce1abe6da7d1a3a1a9ee66"
+    },
+    {
+      "bytes": 944,
+      "index": 16,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_passive_unselect.bflan",
+      "offset": 54864,
+      "sha256": "6b47a1eed1bac8f52d3329f552a36cd2fe49d9e78f3a87ae0bdad201e6e93252"
+    },
+    {
+      "bytes": 204,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_passive_unselect.bflan",
+      "offset": 55808,
+      "sha256": "3556bd19b7aec64a7a13352ddfc4339735f08f4912dfa3ad68ca2beacdf29db8"
+    },
+    {
+      "bytes": 244,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_touch.bflan",
+      "offset": 56016,
+      "sha256": "5bfc845e810f9c09456c3a2e8f7135a403ce6634e4ad67ba7f26ec786faf981a"
+    },
+    {
+      "bytes": 216,
+      "index": 19,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_select.bflan",
+      "offset": 56272,
+      "sha256": "e8162bc6f52d5009d1d9886722fdaaae94f7f52d4b3ea4d427290f93aad559bb"
+    },
+    {
+      "bytes": 268,
+      "index": 20,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_release.bflan",
+      "offset": 56496,
+      "sha256": "00594cc9445e1b08059b7bae0550d104b9e90ff56fb537b0f342f7cff227219f"
+    },
+    {
+      "bytes": 204,
+      "index": 21,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_release.bflan",
+      "offset": 56768,
+      "sha256": "b52b678c80a0f403f4ad2ea3185b0000139010a1a4f98fa776e53d9799f118c9"
+    },
+    {
+      "bytes": 172,
+      "index": 22,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 56976,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 200,
+      "index": 23,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_select.bflan",
+      "offset": 57152,
+      "sha256": "8be4c4ffede3900d3153ac7be86f0e08258657d13130af8a40dc1d54f850c715"
+    },
+    {
+      "bytes": 192,
+      "index": 24,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_passive.bflan",
+      "offset": 57360,
+      "sha256": "bd7b124b0c2dfe11822d125411f9a8f18fd2c23514e39a10054d3e530cf3dff0"
+    },
+    {
+      "bytes": 192,
+      "index": 25,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_catch.bflan",
+      "offset": 57552,
+      "sha256": "a86814fa2d4eb869f99ba77e8750fc31b97b069f274094b571e245c17c1675c7"
+    },
+    {
+      "bytes": 844,
+      "index": 26,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_f_in.bflan",
+      "offset": 57744,
+      "sha256": "5d2ba44fb9fc436e38e8c7be0384a4def4d96d5131ef54dc99539aa8cc62b588"
+    },
+    {
+      "bytes": 10512,
+      "index": 27,
+      "magic": "FLYT",
+      "name": "blyt/mtt_terms_of_service.bflyt",
+      "offset": 58592,
+      "sha256": "ada8c3a5fa38c13c883fb2f245a19cbc8983c214a7b6db37cb667ddfb9fbcf61"
+    },
+    {
+      "bytes": 1052,
+      "index": 28,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_select.bflan",
+      "offset": 69104,
+      "sha256": "3132ad9e6b9cb801b62127ac96ee5ebb510f3a2ea2dbbcc9738ce5891ca0868b"
+    },
+    {
+      "bytes": 192,
+      "index": 29,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_active.bflan",
+      "offset": 70160,
+      "sha256": "b96fe20fde856200e56c66f363f5ab040d213d61b896fe04c00e4b8c930b6348"
+    },
+    {
+      "bytes": 2456,
+      "index": 30,
+      "magic": "FLYT",
+      "name": "blyt/mtt_terms_of_service_button_no.bflyt",
+      "offset": 70352,
+      "sha256": "1085c14586afc655c01b4b7d691e3b427839f0f830746ad71b02c6a5de8e8b41"
+    },
+    {
+      "bytes": 192,
+      "index": 31,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_release.bflan",
+      "offset": 72816,
+      "sha256": "e41b6c3079c13958c2ff66efb5f6eb5b8c3e2e7fa6c9786d2b0471831981975f"
+    },
+    {
+      "bytes": 888,
+      "index": 32,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_unselect.bflan",
+      "offset": 73008,
+      "sha256": "6d9d3ec95305d36e397cdc4cca81bf32d9a28729ae81a43b558f3a2c0eff743e"
+    },
+    {
+      "bytes": 256,
+      "index": 33,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_keep.bflan",
+      "offset": 73904,
+      "sha256": "a02c47989428dea69edcbf722683ced079b27254c80100be8d13933a0114fbba"
+    },
+    {
+      "bytes": 192,
+      "index": 34,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_passive.bflan",
+      "offset": 74160,
+      "sha256": "f68d824092d7b7bdb9ca433f4bf4c8a85f9775d0fe3b097732885c2e21a62394"
+    },
+    {
+      "bytes": 1420,
+      "index": 35,
+      "magic": "FLYT",
+      "name": "blyt/cursor_00.bflyt",
+      "offset": 74352,
+      "sha256": "6934ef0d21a6e64e2d59e51f39215a7e897b708e67764ccb66ce8ada38adb530"
+    },
+    {
+      "bytes": 192,
+      "index": 36,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_keep.bflan",
+      "offset": 75776,
+      "sha256": "334e4b3683e548eb85e1048858360356ad2ac65ae088381865c69bf6e800249b"
+    },
+    {
+      "bytes": 28,
+      "index": 37,
+      "magic": "\u0001\u0000\u0000\u0000",
+      "name": "bgsh/__ArchiveShader.bushvt",
+      "offset": 75968,
+      "sha256": "151e28e32af587e3c8838b84513a69ad6917efa7067ad37a92daeeefea201ca4"
+    },
+    {
+      "bytes": 1156,
+      "index": 38,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_passive_select.bflan",
+      "offset": 76000,
+      "sha256": "5e3cfc043793710be7a86349ab6624a89d466475696509192edaccba54d7ecd3"
+    },
+    {
+      "bytes": 172,
+      "index": 39,
+      "magic": "FCPX",
+      "name": "fcpx/system42_jpn.bfcpx",
+      "offset": 77168,
+      "sha256": "eecae797353acc0c6ff77d88c99a92d73c229e6df4085726c63886f42946f299"
+    },
+    {
+      "bytes": 192,
+      "index": 40,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_select.bflan",
+      "offset": 77344,
+      "sha256": "3a651f71f09b7a18cfdd6316382285d25d268a34102ab6882b769f28d02f258e"
+    },
+    {
+      "bytes": 192,
+      "index": 41,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_active.bflan",
+      "offset": 77536,
+      "sha256": "6624ae7351f349ce92933e76ad5aa079b99225e3c78bfb0142796c68b873ded8"
+    },
+    {
+      "bytes": 216,
+      "index": 42,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_touch.bflan",
+      "offset": 77728,
+      "sha256": "d964d485fe74b3a8a731b5020ce25ae1071875aeb2cbc933886c1e62ec4c4082"
+    },
+    {
+      "bytes": 2456,
+      "index": 43,
+      "magic": "FLYT",
+      "name": "blyt/mtt_terms_of_service_button_yes.bflyt",
+      "offset": 77952,
+      "sha256": "b234f03c94c6e8146febcd68f78105b7974200571e8e759a7d127c603340dbad"
+    },
+    {
+      "bytes": 192,
+      "index": 44,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_touch.bflan",
+      "offset": 80416,
+      "sha256": "ea64b724d33f5e975024583ae83f10f8f006428a54f8af5e1d16a080cabd55af"
+    },
+    {
+      "bytes": 192,
+      "index": 45,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_select.bflan",
+      "offset": 80608,
+      "sha256": "2052de9b4dc11f2cc062cb9a7b13b6343489ce7da37b1f76bfc5533b543b15fb"
+    },
+    {
+      "bytes": 192,
+      "index": 46,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_active.bflan",
+      "offset": 80800,
+      "sha256": "4ae77b47835b57c18340a32ec6a41b368ae8f4819d7d09f493c2f56a6b7d35e8"
+    },
+    {
+      "bytes": 708,
+      "index": 47,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_in.bflan",
+      "offset": 80992,
+      "sha256": "33bf81d71023c41c5f4f0f327d106b84d9eb2bd375365d6285cb401bf3a2e221"
+    },
+    {
+      "bytes": 1052,
+      "index": 48,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_select.bflan",
+      "offset": 81712,
+      "sha256": "3132ad9e6b9cb801b62127ac96ee5ebb510f3a2ea2dbbcc9738ce5891ca0868b"
+    },
+    {
+      "bytes": 192,
+      "index": 49,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_active.bflan",
+      "offset": 82768,
+      "sha256": "b96fe20fde856200e56c66f363f5ab040d213d61b896fe04c00e4b8c930b6348"
+    },
+    {
+      "bytes": 192,
+      "index": 50,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_keep.bflan",
+      "offset": 82960,
+      "sha256": "b43c97ddf32eb22cbb312458ef9f8ed9bc546ce89e87a654d5f3e59506b3c976"
+    },
+    {
+      "bytes": 944,
+      "index": 51,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_passive_unselect.bflan",
+      "offset": 83152,
+      "sha256": "6b47a1eed1bac8f52d3329f552a36cd2fe49d9e78f3a87ae0bdad201e6e93252"
+    },
+    {
+      "bytes": 73856,
+      "index": 52,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 86016,
+      "sha256": "1ff035064b9816cac6bcffcd9909be7d11d762cff9a18e5b81035065630118ad"
+    },
+    {
+      "bytes": 708,
+      "index": 53,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_out.bflan",
+      "offset": 159872,
+      "sha256": "74594bcf477cb942c25f753a0f8dd747b5f1e84866d665c15e6bd631cff73bd4"
+    },
+    {
+      "bytes": 204,
+      "index": 54,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_passive_unselect.bflan",
+      "offset": 160592,
+      "sha256": "e3a9c04ed0976e1732e92cffc2de81a89edcc131dd9ca81603a1d20cceb56217"
+    },
+    {
+      "bytes": 268,
+      "index": 55,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_yes_release.bflan",
+      "offset": 160800,
+      "sha256": "00594cc9445e1b08059b7bae0550d104b9e90ff56fb537b0f342f7cff227219f"
+    },
+    {
+      "bytes": 192,
+      "index": 56,
+      "magic": "FLAN",
+      "name": "anim/cursor_00_normal.bflan",
+      "offset": 161072,
+      "sha256": "1334577faf36bc9917132dae02f2089b2122363d96904c40d7927cc10e6cc99b"
+    },
+    {
+      "bytes": 244,
+      "index": 57,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_touch.bflan",
+      "offset": 161264,
+      "sha256": "5bfc845e810f9c09456c3a2e8f7135a403ce6634e4ad67ba7f26ec786faf981a"
+    },
+    {
+      "bytes": 820,
+      "index": 58,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_f_out.bflan",
+      "offset": 161520,
+      "sha256": "5e013264b3c82879c3c6827498ddecb4352c13bb76775f7d918b32a67ccb7094"
+    },
+    {
+      "bytes": 1884,
+      "index": 59,
+      "magic": "FLYT",
+      "name": "blyt/mtt_terms_of_service_piece_00.bflyt",
+      "offset": 162352,
+      "sha256": "1e0718186a33f716f45d4cd2fab31c91472076be47eab2364fb9e018315d49d1"
+    },
+    {
+      "bytes": 192,
+      "index": 60,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_keep.bflan",
+      "offset": 164240,
+      "sha256": "236ee274ef6d8fcdd117fc85933ae606e6742fdc32da45bb3dae1d1e043bf004"
+    },
+    {
+      "bytes": 196,
+      "index": 61,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_piece_00_key_select.bflan",
+      "offset": 164432,
+      "sha256": "e1c739d2471508d3fb2a5ce07cf6e7634e144dfea303d9ad0905fe9519b59180"
+    },
+    {
+      "bytes": 888,
+      "index": 62,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_unselect.bflan",
+      "offset": 164640,
+      "sha256": "6d9d3ec95305d36e397cdc4cca81bf32d9a28729ae81a43b558f3a2c0eff743e"
+    },
+    {
+      "bytes": 244,
+      "index": 63,
+      "magic": "FLAN",
+      "name": "anim/mtt_terms_of_service_button_no_cancel.bflan",
+      "offset": 165536,
+      "sha256": "5446860c55b88a1554a4c5e8c400fcd0eadfe317c94d7790a7211a65d9e7d8a1"
+    },
+    {
+      "bytes": 192,
+      "index": 64,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_btn_optionbar_return_keep.bflan",
+      "offset": 165792,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_terms_of_service/bin/mtt_terms_of_service.arc"
+}

@@ -1,0 +1,130 @@
+{
+  "member": "blyt/mtt_pokedex_icon_gender_00.bflyt",
+  "sections": [
+    {
+      "bytes": 56,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 116,
+      "index": 1,
+      "offset": 76,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 48,
+      "index": 2,
+      "offset": 192,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 188,
+      "index": 3,
+      "offset": 240,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 428,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 512,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 520,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 604,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 612,
+      "pane_name": "N_icon_gender_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 696,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 10,
+      "offset": 704,
+      "pane_name": "P_icon_gender_male_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 11,
+      "offset": 840,
+      "pane_name": "P_icon_gender_female_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 976,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 13,
+      "offset": 984,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 14,
+      "offset": 992,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 15,
+      "offset": 1000,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1044,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 92,
+      "index": 17,
+      "offset": 1052,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 18,
+      "offset": 1144,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 52,
+      "index": 19,
+      "offset": 1152,
+      "tag": "cnt1"
+    }
+  ]
+}

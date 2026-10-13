@@ -1,0 +1,197 @@
+{
+  "members": [
+    {
+      "bytes": 7108,
+      "index": 0,
+      "magic": "FLYT",
+      "name": "blyt/mtt_record_log_detail_popup.bflyt",
+      "offset": 4096,
+      "sha256": "109f6ef726a858b272f37e4e7146b0b46030953fbc2e25e8231547c68bc2ec46"
+    },
+    {
+      "bytes": 192,
+      "index": 1,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_passive.bflan",
+      "offset": 11216,
+      "sha256": "4f195e9810ee63da22200bae992b81f4b97e468ed36efddebccc18bfcd871356"
+    },
+    {
+      "bytes": 1608,
+      "index": 2,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_key_select.bflan",
+      "offset": 11408,
+      "sha256": "a92f44b2d05d358e3628ee6e46c649a354fb2fcbe7047e4657f7be178d431f8c"
+    },
+    {
+      "bytes": 37512,
+      "index": 3,
+      "magic": "BNSH",
+      "name": "bgsh/__ArchiveShader.bnsh",
+      "offset": 16384,
+      "sha256": "0493044b32069a0411afbc0dd97875b065863ca55e0e4d8d1734ebef7528cac8"
+    },
+    {
+      "bytes": 192,
+      "index": 4,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_select.bflan",
+      "offset": 53904,
+      "sha256": "10cdbee98d683d3ef37c300d5f11c8ecb36c8154d4b49e8859c0d36babe5902e"
+    },
+    {
+      "bytes": 192,
+      "index": 5,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_active.bflan",
+      "offset": 54096,
+      "sha256": "4cb984cf702c3594987ebc8b89c64caf323c829c46f9dfd7067505d58f3fcc05"
+    },
+    {
+      "bytes": 328,
+      "index": 6,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_popup_in.bflan",
+      "offset": 54288,
+      "sha256": "f13c0f807c91f78637c0f926ea69b2a336d833e773b3a16c0fef7ffc9089b0f2"
+    },
+    {
+      "bytes": 480,
+      "index": 7,
+      "magic": "FLAN",
+      "name": "anim/mtt_icon_gender_00_switch.bflan",
+      "offset": 54624,
+      "sha256": "f89c6dd56a4148ce59c7825cd04d45fa9508ca3a00ef0b4335d62740fd93b298"
+    },
+    {
+      "bytes": 1268,
+      "index": 8,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_release.bflan",
+      "offset": 55104,
+      "sha256": "11d3b4906766fd482a35fc7f31fbf5be1f87106e86f7e1bb7a66f482d21508f0"
+    },
+    {
+      "bytes": 172,
+      "index": 9,
+      "magic": "FCPX",
+      "name": "fcpx/system32_jpn.bfcpx",
+      "offset": 56384,
+      "sha256": "4bffc810bc4ec0c0584719cc3736db514642fc845ea16d5cb8c92a31e81f57a4"
+    },
+    {
+      "bytes": 404,
+      "index": 10,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_popup_f_in.bflan",
+      "offset": 56560,
+      "sha256": "6d996102cf10be470fa62d5222dba5ca9c1cfb2af8a78b97133722a55b3c6870"
+    },
+    {
+      "bytes": 204,
+      "index": 11,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_passive_unselect.bflan",
+      "offset": 56976,
+      "sha256": "e710a0146ea32c492fda97b56e9f553cc6912287ddcbd8d762a0ea8a5bd25fee"
+    },
+    {
+      "bytes": 380,
+      "index": 12,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_popup_f_out.bflan",
+      "offset": 57184,
+      "sha256": "922619c2af57844bf961159e19a71c9eef38ee815e4ce5dfcf32b1b091a9921a"
+    },
+    {
+      "bytes": 28,
+      "index": 13,
+      "magic": "\u0001\u0000\u0000\u0000",
+      "name": "bgsh/__ArchiveShader.bushvt",
+      "offset": 57568,
+      "sha256": "151e28e32af587e3c8838b84513a69ad6917efa7067ad37a92daeeefea201ca4"
+    },
+    {
+      "bytes": 2548,
+      "index": 14,
+      "magic": "FLYT",
+      "name": "blyt/mtt_common_button_close.bflyt",
+      "offset": 57600,
+      "sha256": "4a9b5a3479533ccbd5fc4129aabc0009cb404ea8aff4fa9d2e1f63bf24ae1237"
+    },
+    {
+      "bytes": 192,
+      "index": 15,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_popup_keep.bflan",
+      "offset": 60160,
+      "sha256": "251cc3a2440cbffa9704e8292044d2e0a68f6d554312b696227a9aa5a414df2f"
+    },
+    {
+      "bytes": 1268,
+      "index": 16,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_cancel.bflan",
+      "offset": 60352,
+      "sha256": "eeabe613b8dcfe7130e9635e84036b760adcddd705e4cd21293d876b2399ab01"
+    },
+    {
+      "bytes": 328,
+      "index": 17,
+      "magic": "FLAN",
+      "name": "anim/mtt_record_log_detail_popup_out.bflan",
+      "offset": 61632,
+      "sha256": "de32b4decad088c7a681e7b1314cd994e373e69790429a7f2ccab6e1f6df4da1"
+    },
+    {
+      "bytes": 200,
+      "index": 18,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_passive_select.bflan",
+      "offset": 61968,
+      "sha256": "fdf9002782ee33d22e8f3cb0f4a1e35856d579846d5358a20d67ee5b8aa5c299"
+    },
+    {
+      "bytes": 233600,
+      "index": 19,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 65536,
+      "sha256": "9a50f9c6ad406b26353fa0b84788395f8f9988c859463e1a625a9d1758e63f7b"
+    },
+    {
+      "bytes": 192,
+      "index": 20,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_keep.bflan",
+      "offset": 299136,
+      "sha256": "b72dde4b1d9d95edd7de5ec651a9e70b8ee71cfccaa628ed469302f960da4042"
+    },
+    {
+      "bytes": 196,
+      "index": 21,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_unselect.bflan",
+      "offset": 299328,
+      "sha256": "403431fb64b09be99b0067c65de07986a038a64f49b38274cbb1f489705bebf0"
+    },
+    {
+      "bytes": 832,
+      "index": 22,
+      "magic": "FLYT",
+      "name": "blyt/mtt_icon_gender_00.bflyt",
+      "offset": 299536,
+      "sha256": "433b4981d6c299641490d06a309430f553ba794421c2a9a66ba7130688280924"
+    },
+    {
+      "bytes": 1436,
+      "index": 23,
+      "magic": "FLAN",
+      "name": "anim/mtt_common_button_close_touch.bflan",
+      "offset": 300368,
+      "sha256": "764eb85f9b4711c3a023c06006d021abd1bc482d54f6b6cedb3132d04a266d4c"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_record/bin/mtt_record_log_detail_popup.arc"
+}

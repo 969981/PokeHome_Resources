@@ -1,0 +1,672 @@
+{
+  "member": "blyt/mtt_common_cursor.bflyt",
+  "sections": [
+    {
+      "bytes": 48,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 228,
+      "index": 1,
+      "offset": 68,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 152,
+      "index": 2,
+      "offset": 296,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 3,
+      "offset": 448,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 732,
+      "index": 4,
+      "offset": 484,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 5,
+      "offset": 1216,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 6,
+      "offset": 1300,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 7,
+      "offset": 1308,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 8,
+      "offset": 1392,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 9,
+      "offset": 1400,
+      "pane_name": "N_icon_pos_parent",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 10,
+      "offset": 1484,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 11,
+      "offset": 1492,
+      "pane_name": "N_icon_pos_group",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 12,
+      "offset": 1576,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 13,
+      "offset": 1584,
+      "pane_name": "N_icon_pos_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 14,
+      "offset": 1668,
+      "pane_name": "N_icon_pos_01",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 15,
+      "offset": 1752,
+      "pane_name": "N_icon_pos_02",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 16,
+      "offset": 1836,
+      "pane_name": "N_icon_pos_03",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 17,
+      "offset": 1920,
+      "pane_name": "N_icon_pos_04",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 18,
+      "offset": 2004,
+      "pane_name": "N_icon_pos_05",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 19,
+      "offset": 2088,
+      "pane_name": "N_icon_pos_06",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 20,
+      "offset": 2172,
+      "pane_name": "N_icon_pos_07",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 21,
+      "offset": 2256,
+      "pane_name": "N_icon_pos_08",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 22,
+      "offset": 2340,
+      "pane_name": "N_icon_pos_09",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 23,
+      "offset": 2424,
+      "pane_name": "N_icon_pos_10",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 24,
+      "offset": 2508,
+      "pane_name": "N_icon_pos_11",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 25,
+      "offset": 2592,
+      "pane_name": "N_icon_pos_12",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 26,
+      "offset": 2676,
+      "pane_name": "N_icon_pos_13",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 27,
+      "offset": 2760,
+      "pane_name": "N_icon_pos_14",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 28,
+      "offset": 2844,
+      "pane_name": "N_icon_pos_15",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 29,
+      "offset": 2928,
+      "pane_name": "N_icon_pos_16",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 30,
+      "offset": 3012,
+      "pane_name": "N_icon_pos_17",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 31,
+      "offset": 3096,
+      "pane_name": "N_icon_pos_18",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 32,
+      "offset": 3180,
+      "pane_name": "N_icon_pos_19",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 33,
+      "offset": 3264,
+      "pane_name": "N_icon_pos_20",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 34,
+      "offset": 3348,
+      "pane_name": "N_icon_pos_21",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 35,
+      "offset": 3432,
+      "pane_name": "N_icon_pos_22",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 36,
+      "offset": 3516,
+      "pane_name": "N_icon_pos_23",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 37,
+      "offset": 3600,
+      "pane_name": "N_icon_pos_24",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 38,
+      "offset": 3684,
+      "pane_name": "N_icon_pos_25",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 39,
+      "offset": 3768,
+      "pane_name": "N_icon_pos_26",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 40,
+      "offset": 3852,
+      "pane_name": "N_icon_pos_27",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 41,
+      "offset": 3936,
+      "pane_name": "N_icon_pos_28",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 84,
+      "index": 42,
+      "offset": 4020,
+      "pane_name": "N_icon_pos_29",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 43,
+      "offset": 4104,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 44,
+      "offset": 4112,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 45,
+      "offset": 4120,
+      "pane_name": "pokebox_cursor",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 46,
+      "offset": 4204,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 47,
+      "offset": 4212,
+      "pane_name": "pokebox_cursor_v",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 48,
+      "offset": 4296,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 49,
+      "offset": 4304,
+      "pane_name": "N_anim_cursor_catche",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 50,
+      "offset": 4388,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 51,
+      "offset": 4396,
+      "pane_name": "P_cursor_catche_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 52,
+      "offset": 4532,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 53,
+      "offset": 4540,
+      "pane_name": "N_anim_cursor_v_wait_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 54,
+      "offset": 4624,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 55,
+      "offset": 4632,
+      "pane_name": "N_anim_cursor_v_selec_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 56,
+      "offset": 4716,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 57,
+      "offset": 4724,
+      "pane_name": "P_cursor_outline_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 58,
+      "offset": 4860,
+      "pane_name": "P_cursor_color_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 59,
+      "offset": 4996,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 60,
+      "offset": 5004,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 61,
+      "offset": 5012,
+      "pane_name": "N_pokeinfo_underbar_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 62,
+      "offset": 5096,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 63,
+      "offset": 5104,
+      "pane_name": "N_shift_pos_set_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 64,
+      "offset": 5188,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 65,
+      "offset": 5196,
+      "pane_name": "P_pokeinfo_underbar_00",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 66,
+      "offset": 5332,
+      "pane_name": "P_pokeinfo_underbar_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 67,
+      "offset": 5468,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 68,
+      "offset": 5476,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 69,
+      "offset": 5484,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 70,
+      "offset": 5492,
+      "pane_name": "pokebox_cursor_h",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 71,
+      "offset": 5576,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 72,
+      "offset": 5584,
+      "pane_name": "N_catch_num_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 40,
+      "index": 73,
+      "offset": 5668,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 74,
+      "offset": 5708,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 140,
+      "index": 75,
+      "offset": 5716,
+      "pane_name": "W_base_catch_num_00",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 176,
+      "index": 76,
+      "offset": 5856,
+      "pane_name": "T_param_catch_num_00",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 77,
+      "offset": 6032,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 78,
+      "offset": 6088,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 79,
+      "offset": 6096,
+      "pane_name": "N_anim_cursor_h_wait_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 80,
+      "offset": 6180,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 81,
+      "offset": 6188,
+      "pane_name": "N_anim_cursor_h_select_0",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 82,
+      "offset": 6272,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 136,
+      "index": 83,
+      "offset": 6280,
+      "pane_name": "P_cursor_outline_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 136,
+      "index": 84,
+      "offset": 6416,
+      "pane_name": "P_cursor_color_01",
+      "tag": "pic1"
+    },
+    {
+      "bytes": 8,
+      "index": 85,
+      "offset": 6552,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 86,
+      "offset": 6560,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 87,
+      "offset": 6568,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 88,
+      "offset": 6576,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 89,
+      "offset": 6584,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 90,
+      "offset": 6668,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 91,
+      "offset": 6676,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 92,
+      "offset": 6684,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 93,
+      "offset": 6728,
+      "tag": "grs1"
+    },
+    {
+      "bytes": 68,
+      "index": 94,
+      "offset": 6736,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 92,
+      "index": 95,
+      "offset": 6804,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 116,
+      "index": 96,
+      "offset": 6896,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 92,
+      "index": 97,
+      "offset": 7012,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 92,
+      "index": 98,
+      "offset": 7104,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 68,
+      "index": 99,
+      "offset": 7196,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 8,
+      "index": 100,
+      "offset": 7264,
+      "tag": "gre1"
+    },
+    {
+      "bytes": 60,
+      "index": 101,
+      "offset": 7272,
+      "tag": "cnt1"
+    }
+  ]
+}

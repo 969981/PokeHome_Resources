@@ -1,0 +1,21 @@
+{
+  "members": [
+    {
+      "bytes": 492,
+      "index": 0,
+      "magic": "FLYT",
+      "name": "blyt/mtt_gba_help_texture.bflyt",
+      "offset": 4096,
+      "sha256": "a71c82248cdbe9a5c74a8be88d1373f712f29bff22ab1aafb255f9f503bbb391"
+    },
+    {
+      "bytes": 1085544,
+      "index": 1,
+      "magic": "BNTX",
+      "name": "timg/__Combined.bntx",
+      "offset": 8192,
+      "sha256": "f760dbd32416420366b2c7340fc7ebaa7380669d80ea2b0be3c24b2b950322a0"
+    }
+  ],
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_gba/bin/mtt_gba_help_texture_ger.arc"
+}

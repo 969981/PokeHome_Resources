@@ -1,0 +1,144 @@
+{
+  "member": "blyt/mtt_common_header_index_left.bflyt",
+  "sections": [
+    {
+      "bytes": 60,
+      "index": 0,
+      "offset": 20,
+      "tag": "lyt1"
+    },
+    {
+      "bytes": 36,
+      "index": 1,
+      "offset": 80,
+      "tag": "txl1"
+    },
+    {
+      "bytes": 36,
+      "index": 2,
+      "offset": 116,
+      "tag": "fnl1"
+    },
+    {
+      "bytes": 284,
+      "index": 3,
+      "offset": 152,
+      "tag": "mat1"
+    },
+    {
+      "bytes": 84,
+      "index": 4,
+      "offset": 436,
+      "pane_name": "RootPane",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 5,
+      "offset": 520,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 6,
+      "offset": 528,
+      "pane_name": "all",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 7,
+      "offset": 612,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 8,
+      "offset": 620,
+      "pane_name": "N_anim_root_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 9,
+      "offset": 704,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 84,
+      "index": 10,
+      "offset": 712,
+      "pane_name": "N_indexbar_00",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 11,
+      "offset": 796,
+      "tag": "pas1"
+    },
+    {
+      "bytes": 148,
+      "index": 12,
+      "offset": 804,
+      "pane_name": "W_header_bg",
+      "tag": "wnd1"
+    },
+    {
+      "bytes": 192,
+      "index": 13,
+      "offset": 952,
+      "pane_name": "T_P_base_heading_title_0",
+      "tag": "txt1"
+    },
+    {
+      "bytes": 56,
+      "index": 14,
+      "offset": 1144,
+      "tag": "usd1"
+    },
+    {
+      "bytes": 8,
+      "index": 15,
+      "offset": 1200,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 16,
+      "offset": 1208,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 8,
+      "index": 17,
+      "offset": 1216,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 84,
+      "index": 18,
+      "offset": 1224,
+      "pane_name": "mstxt",
+      "tag": "pan1"
+    },
+    {
+      "bytes": 8,
+      "index": 19,
+      "offset": 1308,
+      "tag": "pae1"
+    },
+    {
+      "bytes": 44,
+      "index": 20,
+      "offset": 1316,
+      "tag": "grp1"
+    },
+    {
+      "bytes": 52,
+      "index": 21,
+      "offset": 1360,
+      "tag": "cnt1"
+    }
+  ]
+}
