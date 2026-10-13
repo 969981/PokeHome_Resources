@@ -39,6 +39,10 @@ jobs:
           assert len(d['rows'])==9
           assert [int(r['native_blr_rva'],16) for r in d['rows']]==sorted(int(r['native_blr_rva'],16) for r in d['rows'])
           assert all(r['resolved_target'] is None for r in d['rows'])
+          assert d['interface_slot_0x18_sites']==7,d
+          assert d['interface_slot_0x10_sites']==1,d
+          assert d['owner_callback_sites']==1,d
+          assert d['item_effect_selector_26_to_70_consumer_confirmed'] is False
           print('verified BLR count:',d['raw_local_blr_sites'])
           PY
       - name: Publish original ELF BLR source register evidence
