@@ -19,10 +19,14 @@ jobs:
         run: |
           python tools/home41_probe_unknown.py
           python -m json.tool docs/UNPACK_P4_SIGNATURES.json >/dev/null
+          python tools/unpack_home41.py --root . --out Unpack --kind other --resume || true
+          echo '=== P4 parser errors ==='
+          cat Unpack/_meta/errors.csv
       - name: Publish signature evidence
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/UNPACK_P4_SIGNATURES.json
-          git commit -m "research: capture real signatures of 65 unresolved HOME assets"
+          git diff --cached --quiet || git commit -m "research: capture real signatures of unresolved HOME assets"
+          if git diff --cached --quiet; then echo "No signature changes"; fi
           git push origin HEAD:4.1.0
