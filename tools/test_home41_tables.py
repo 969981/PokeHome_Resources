@@ -78,6 +78,29 @@ class TablesTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             decode_form_storage_index(self.read(rel)[:-1])
 
+    def test_bfbs_typed_blacklist(self):
+        from home41_extra_formats import Reflection
+        from home41_reflection_decode import decode_reflected_scalar_vector_tables
+        stem = "bin/ikkaku/world/ik_data/ui/pokedex/black_list_main/black_list_main_array"
+        schema = Reflection(self.read(stem + ".bfbs")).extract()
+        decoded = decode_reflected_scalar_vector_tables(self.read(stem + ".bin"), schema)
+        self.assertEqual(decoded["root_table"], "PokedexBlackListMainArray")
+        self.assertEqual(decoded["count"], 3)
+        self.assertEqual(decoded["rows"],
+                         [{"row": 0, "devNo": 720, "formNo": 0},
+                          {"row": 1, "devNo": 720, "formNo": 1},
+                          {"row": 2, "devNo": 721, "formNo": 0}])
+        with tempfile.TemporaryDirectory() as folder:
+            source = ROMFS / (stem + ".bin")
+            out = Path(folder)
+            status, count, warnings, outputs = export_one(
+                source, ROOT, out, output_name(source.relative_to(ROOT)))
+            self.assertEqual(status, "converted")
+            self.assertEqual(count, 3)
+            self.assertFalse(warnings)
+            self.assertEqual(len(outputs), 2)
+            self.assertTrue((out / NCA / "1" / (stem + ".csv")).is_file())
+
     def test_export_mirror_real(self):
         rels = ["bin/message/grammar/English.dat",
                 "bin/pml/item/item_hash_to_index.dat",
