@@ -74,12 +74,14 @@ class TopicsTests(unittest.TestCase):
             status, n, warning, outputs = export_one(FILE, ROOT, out, main)
             self.assertEqual(status, "partial")
             self.assertEqual(n, 693)
-            self.assertEqual(len(outputs), 2)
+            self.assertEqual(len(outputs), 3)
             self.assertTrue(warning)
             self.assertTrue(all((out / x["path"]).is_file() for x in outputs))
             meta = json.loads((out / main).read_text(encoding="utf-8"))
             self.assertEqual(meta["placeholder_count"], 553)
             self.assertEqual(meta["active_count"], 140)
+            self.assertEqual(meta["native_reference_summary"]["reference_count"], 500)
+            self.assertEqual(meta["native_reference_summary"]["group_summary"][5]["native_flags_bit_position"], 7)
             with (out / main.with_suffix(".csv")).open(encoding="utf-8-sig") as fp:
                 decoded = list(csv.DictReader(fp))
             self.assertEqual(len(decoded), 693)
@@ -87,6 +89,16 @@ class TopicsTests(unittest.TestCase):
             self.assertEqual(decoded[0]["slot_index"], "0")
             self.assertEqual(decoded[-1]["group_index"], "6")
             self.assertEqual(decoded[-1]["slot_index"], "98")
+            with (out / main.with_name("topics_data.references.csv")).open(
+                    encoding="utf-8-sig", newline="") as fp:
+                refs = list(csv.DictReader(fp))
+            self.assertEqual(len(refs), 500)
+            self.assertEqual(refs[0]["group_index"], "0")
+            self.assertEqual(refs[0]["species_no_candidate_u32"], "19")
+            self.assertEqual(
+                [int(x["species_no_candidate_u32"]) for x in refs if x["group_index"]=="4" and x["topic_index"]=="0"],
+                [906, 909, 912],
+            )
 
 if __name__ == "__main__":
     unittest.main()
