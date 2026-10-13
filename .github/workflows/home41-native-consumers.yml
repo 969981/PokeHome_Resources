@@ -1,0 +1,45 @@
+name: HOME 4.1.0 native item and topics consumer audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-native-consumers.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-native-consumers
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependencies and compilation
+        run: |
+          python -m pip install capstone==5.0.6
+          python -m compileall -q tools
+      - name: Verify original exact opcode facts and emit annotated windows
+        run: |
+          python tools/home41_elf_consumer_evidence.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out docs/UNPACK_ELF_NATIVE_ITEM_TOPICS_CONSUMERS.md
+          test -s docs/UNPACK_ELF_NATIVE_ITEM_TOPICS_CONSUMERS.md
+      - name: Commit disassembly evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- docs/UNPACK_ELF_NATIVE_ITEM_TOPICS_CONSUMERS.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: verified ELF item index stride and topics load consumer opcodes'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
