@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Read-only, source-anchored semantics for HOME 4.1.0 0x30-byte PML Item8.
+"""HOME 4.1.0 source-anchored native Item8 record and field semantics.
 
-Offsets are matched against pinned pkNX.Structures/Item/Item8.cs and the
-actual HOME item.dat record geometry.  Native HOME per-field getters still
-require independent ELF verification; therefore fields stay annotated as
-'pkNX-compatible' rather than asserted to be HOME internal function names.
+Record pointer and the per-field read *widths/offsets* are verified against
+HOME 4.1.0 original main.elf; the business meanings are separately annotated
+using pinned pkNX Item8.cs and real HOME ROMFS data. Do not conflate them.
 """
 from __future__ import annotations
 import hashlib
@@ -48,8 +47,15 @@ def decode_item8_semantic(data: bytes) -> dict:
         if native.data_offset != ofs or native.record_bytes != raw or native.record_index_u16 != index:
             raise ValueError(f"native Item8 record mismatch for ID {item_id}")
         price = struct.unpack_from("<I", raw, 0)[0]
-        watts = struct.unpack_from("<H", raw, 4)[0]
-        alternative = struct.unpack_from("<H", raw, 8)[0]
+        watts_native = struct.unpack_from("<I", raw, 4)[0]
+        alternative_native = struct.unpack_from("<I", raw, 8)[0]
+        watts = watts_native & 0xFFFF
+        alternative = alternative_native & 0xFFFF
+        # Historical pkNX-compatible u16 columns must never truncate data
+        # without explicit validation. Current original blob has zero upper
+        # halves for both u32 native getters.
+        if watts_native != watts or alternative_native != alternative:
+            raise ValueError(f"native 32-bit price exceeds pkNX u16 compatibility at ID {item_id}")
         pouch_raw = raw[0x11]
         pouch = pouch_raw & 15
         group_type = raw[0x1C]
@@ -62,6 +68,15 @@ def decode_item8_semantic(data: bytes) -> dict:
             "price_u32": price,
             "price_watts_u16": watts,
             "price_alternate_u16": alternative,
+            "price_watts_native_u32": watts_native,
+            "price_alternate_native_u32": alternative_native,
+            "native_price_rva": "0x4FD108",
+            "native_price_watts_rva": "0x4FD114",
+            "native_price_alternate_rva": "0x4FD120",
+            "native_pouch_low4_rva": "0x4FD1B4",
+            "native_effect_field_rva": "0x4FD1C4",
+            "native_item_use_rva": "0x4FD1DC",
+            "native_item_sprite_signed_rva": "0x4FD12C",
             "pouch_raw_u8": pouch_raw,
             "pouch_index": pouch,
             "pouch_name_pkNX": (POUCH_NAMES[pouch] if pouch < len(POUCH_NAMES)
@@ -70,6 +85,7 @@ def decode_item8_semantic(data: bytes) -> dict:
             "can_use_on_pokemon": raw[0x15] == 1,
             "can_use_on_pokemon_raw_u8": raw[0x15],
             "item_sprite_u16": struct.unpack_from("<H", raw, 0x1A)[0],
+            "item_sprite_native_i16": struct.unpack_from("<h", raw, 0x1A)[0],
             "group_type_u8": group_type,
             "group_type_name_pkNX": GROUP_NAMES.get(group_type, f"Unknown_{group_type}"),
             "group_index_u8": raw[0x1D],
@@ -94,8 +110,11 @@ def decode_item8_semantic(data: bytes) -> dict:
         "native_record_getter_rva": "0x4FD784",
         "native_elf_sha256": EXPECTED_SHA_ELF,
         "native_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_getter_proof.json",
-        "native_verified": "native 1832-capacity, 1166 records, 0x40 start, 0x44 lookup and 48-byte stride; NOT per-field business names",
-        "schema_confidence": "pkNX Item8 offset definitions plus HOME original real-byte cross-validation; not yet each native getter",
+        "native_verified": "ELF native 1832-capacity, 1166 records, 0x40 base, 0x44 indexed u16 mapping, 48-byte stride and selected direct field Getter RVA/opcode proofs; field semantic names still pkNX-correlated",
+        "schema_confidence": "HOME original ELF native field widths/offsets plus pinned pkNX Item8 business names and exact ROMFS regression",
+        "native_field_getter_evidence": "derived/4.1.0/native_item_topics/p6_item_native_field_getters.json",
+        "native_price_field_width_bits": {"price": 32, "watts": 32, "alternate": 32},
+        "native_sprite_field_signed": True,
         "item_count": item_count,
         "indexed_slot_capacity": capacity,
         "indexed_padding": padding,
