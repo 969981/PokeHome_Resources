@@ -35,7 +35,7 @@ jobs:
           assert not any(x['status']=='failed' for x in data)
           PY
       - name: Verify source and output hashes
-        run: python tools/unpack_home41.py --root . --out Unpack --verify --strict
+        run: python tools/unpack_home41.py --root . --out Unpack --verify --kind images --strict
       - name: Commit all new BC7 PNGs and audit metadata
         run: |
           set -euo pipefail
