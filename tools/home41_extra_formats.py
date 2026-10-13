@@ -266,15 +266,16 @@ def decode_bffnt(data):
 def decode_bnsh(data):
     if data[:4]!=b"BNSH":raise ValueError("not Nintendo BNSH")
     if data[12:14]!=b"\xff\xfe":raise ValueError("unsupported BNSH endian")
-    header={"format":"Nintendo Switch BNSH shader archive",
+    offset_1c=u32(data,28)
+    if offset_1c > len(data):
+        raise ValueError("BNSH header offset 0x1C beyond file")
+    return {"format":"Nintendo Switch BNSH shader archive",
             "version_raw":data[8:12].hex(),
-            "declared_file_size_candidate":u32(data,28),
+            "header_u32_0x1c":offset_1c,
+            "header_u32_0x1c_equals_file_size":offset_1c==len(data),
             "size_bytes":len(data),
             "header_hex":data[:64].hex(),
-            "certainty":"signature/header only; shader programs NOT disassembled"}
-    if header["declared_file_size_candidate"]!=len(data):
-        raise ValueError("BNSH declared byte length mismatch")
-    return header
+            "certainty":"signature/header only; 0x1C meaning unresolved; shader programs NOT disassembled"}
 
 def decode_akpk(data):
     if data[:4]!=b"AKPK":raise ValueError("not Audiokinetic AKPK")
