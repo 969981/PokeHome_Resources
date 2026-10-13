@@ -229248,9 +229248,19 @@
       "error": "",
       "outputs": [
         {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.semantic.csv",
+          "sha256": "00d89ddb0dcb6af02cf713354dff349027429fd1b94575c567ac7f9e080805a3",
+          "size": 307438
+        },
+        {
+          "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.semantic.json",
+          "sha256": "a894066fda32ac2af367617275c339cbd204811566b05e50cf7f397cfc00e5ce",
+          "size": 602
+        },
+        {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.id_lookup.csv",
-          "sha256": "6aeaffeb9addae87cb09da5cdb43531ae974f51970a43bce89baeb922350f168",
-          "size": 26320
+          "sha256": "eb748c671e8f19cbe4301cf86bdf3bba83420f237e7f4a84b1bdcee1ea20d26e",
+          "size": 45381
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.aux_pairs.csv",
@@ -229259,8 +229269,8 @@
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.hash_join.csv",
-          "sha256": "4535feb0a60178ea52af477562b954944bf52584cc96a0ebcef1c586c28a3ce2",
-          "size": 72733
+          "sha256": "fe419317325210fdd4972e2c4408beeaa2edf7dea8301bc98f6a3bab9f99f99e",
+          "size": 83735
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.csv",
@@ -229269,18 +229279,18 @@
         },
         {
           "path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.json",
-          "sha256": "8629f10dd7f6a15e8bd11fadcef765c5bec6c15b3d5fad6fa77aa4c7baafdb88",
-          "size": 956
+          "sha256": "a33193dc25582de0adfbd19a4af05cbcea5ad09e23994d79b970c6a322ba8644",
+          "size": 1307
         }
       ],
       "parser": "tools/unpack_home41.py",
-      "parser_version": "mirror-0.4.0",
+      "parser_version": "mirror-0.6.0",
       "records": 1166,
       "source_path": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item.dat",
       "source_sha256": "4f5edd3f0ca8ed0c60ceb91fda0c5385f20ec986a66dcf4aa68d1c145903a1a2",
       "source_size": 61092,
       "status": "partial",
-      "warning": "48-byte item fields and auxiliary index pair meanings unresolved; hash join mismatches: [1829]"
+      "warning": "Item8 fields matched pkNX with HOME real-byte validation; per-field native getters pending; 348 auxiliary index pairs remain untyped; hash presence mismatches within 1829 item IDs: []"
     },
     {
       "collision_fallback": false,
@@ -420338,6 +420348,6 @@
       "warning": ""
     }
   ],
-  "parser_version": "mirror-0.5.0",
+  "parser_version": "mirror-0.6.0",
   "version": "4.1.0"
 }

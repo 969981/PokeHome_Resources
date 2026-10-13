@@ -5,19 +5,27 @@
   "file_bytes": 61092,
   "format": "HOME 4.1.0 PML item multi-index and fixed-record table",
   "hash_join_summary": {
-    "certainty": "record ordinals aligned; hash-to-item identity and unmatched tail behavior not assumed",
+    "certainty": "item ID domain uses u16@0=1829 per pkNX Item8; observed hash row 1829 lies outside valid item IDs",
     "hash_rows": 1830,
+    "in_domain_presence_mismatch_rows": [],
     "nonzero_both": 1165,
+    "outside_domain_presence_mismatch_rows": [
+      1829
+    ],
     "presence_mismatch_rows": [
       1829
     ]
   },
   "header_first68_hex": "250728078e04c80000280038c80000000000000000250035c80000000000000025001b000a0035008002c800140019009a00000000000000000000000000000004140000",
+  "item_id_count": 1829,
   "join_dependencies": {
     "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item/item_hash_to_index.dat": "ad0e7c311f8b46db4b216e335dc60897d3261528175a485c286fa4e1dd837639"
   },
   "lookup_count": 1832,
+  "padding_index_slots": 3,
+  "pkNX_item8_semantic_provenance": "https://github.com/kwsch/pkNX/blob/0936c08eb14ed08eb9042c008404b24bf60e088a/pkNX.Structures/Item/Item8.cs",
   "record_count": 1166,
   "record_start": 5124,
-  "record_stride": 48
+  "record_stride": 48,
+  "semantic_record_count": 1829
 }

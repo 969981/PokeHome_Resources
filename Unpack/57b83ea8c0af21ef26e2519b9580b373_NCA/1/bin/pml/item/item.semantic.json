@@ -1,0 +1,16 @@
+{
+  "format": "HOME 4.1.0 item.dat / pkNX Item8 0x30-compatible fields",
+  "indexed_padding": [
+    0,
+    0,
+    0
+  ],
+  "indexed_slot_capacity": 1832,
+  "item_count": 1829,
+  "record_bytes": 48,
+  "record_start": 5124,
+  "schema_confidence": "pkNX Item8 offset definitions plus HOME original real-byte cross-validation; not yet each native getter",
+  "schema_reference": "https://github.com/kwsch/pkNX/blob/0936c08eb14ed08eb9042c008404b24bf60e088a/pkNX.Structures/Item/Item8.cs",
+  "source_sha256": "4f5edd3f0ca8ed0c60ceb91fda0c5385f20ec986a66dcf4aa68d1c145903a1a2",
+  "unique_record_count": 1166
+}
