@@ -1,0 +1,87 @@
+name: HOME 4.1.0 publish mirrored text data
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-unpack-publish-text.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-unpack-publish-text
+  cancel-in-progress: false
+
+jobs:
+  publish-text:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Configure Git commit author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Convert all real Waza and Personal sources
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind pml --resume
+          python - <<'PY'
+          import json
+          d=json.load(open("Unpack/_meta/summary.json"))
+          assert d["selected"]==5096,d
+          assert d["status_counts"].get("failed",0)==0,d
+          assert d["total_outputs"]>=5096,d
+          print("PML source count",d["selected"],"outputs",d["total_outputs"])
+          PY
+      - name: Publish actual PML JSON outputs and manifest
+        run: |
+          set -euo pipefail
+          git add -A -- Unpack/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: publish 5096 real HOME 4.1.0 PML mirrored JSON files"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Convert all multilingual DAT and AHTB TBL
+        id: messages
+        run: |
+          set +e
+          python tools/unpack_home41.py --root . --out Unpack --kind messages --resume
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          python - <<'PY'
+          import json
+          d=json.load(open("Unpack/_meta/summary.json"))
+          print("Message conversion statistics:",json.dumps(d,ensure_ascii=False,indent=2))
+          assert d["selected"]==3062, d
+          PY
+          exit 0
+      - name: Publish genuine text results (and error report if any)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- Unpack/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: publish HOME 4.1.0 mirrored DAT TBL text exports"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Upload final verification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-unpack-pml-messages-manifest
+          path: Unpack/_meta/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Fail on actual message parser errors
+        if: ${{ steps.messages.outputs.exit_code != '0' }}
+        run: |
+          echo "Partial conversion results committed; inspect Unpack/_meta/errors.csv"
+          exit 1
