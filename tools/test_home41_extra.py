@@ -62,14 +62,15 @@ class ExtraTests(unittest.TestCase):
             self.assertGreater(n,0)
             self.assertTrue((out/name).is_file())
 
-    def test_astc_optional_real_image(self):
+    def test_bc7_optional_real_image(self):
         blob=gzip.decompress(self.source(ASTC).read_bytes())
         results=list(decode_bntx(blob))
         self.assertTrue(results)
         self.assertTrue(all(x["png_status"]=="decoded" for x,_ in results),str(results[0][0]))
         for info,png in results:
             self.assertTrue(png.startswith(b"\x89PNG\r\n\x1a\n"))
-            self.assertIn("astc_block",info)
+            self.assertEqual(info["format"],"0x2001")
+            self.assertEqual(info["block_dimensions"],[4,4])
 
 if __name__=="__main__":
     unittest.main()
