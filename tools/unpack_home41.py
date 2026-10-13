@@ -8,7 +8,7 @@ Run from the repository root:
   python tools/unpack_home41.py --root . --out Unpack --verify --strict
 
 Output names and statuses: docs/UNPACK_OUTPUT_SPEC.md.
-This does not edit original resources. Python 3.9+, standard library.
+This does not edit original resources. Python 3.10+, standard library.
 """
 from __future__ import annotations
 
@@ -18,7 +18,6 @@ import gzip
 import hashlib
 import json
 import os
-import re
 import struct
 import sys
 import tempfile
@@ -126,11 +125,9 @@ def enumerate_sources(repo: Path):
     folder = repo / NCA / "1"
     if not folder.is_dir():
         raise ValueError("RomFS directory missing: " + str(folder))
-    return [
-        p for p in sorted(folder.rglob("*"))
-        if p.is_file() and not p.is_symlink()
-        and not any(q.is_symlink() for q in p.relative_to(folder).parents if q != Path("."))
-    ]
+    return [p for p in sorted(folder.rglob("*"))
+            if p.is_file() and not p.is_symlink()
+            and all(not q.is_symlink() for q in list(p.parents) if q == folder or folder in q.parents)]
 
 
 def plan_paths(sources, repo: Path):
@@ -293,7 +290,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             sink.put(raw_prefix / member_path, member)
             if member.startswith((b"FLYT", b"FLAN")):
                 sections = layout_sections(member)
-                sink.put(nested_prefix / Path(str(member_path) + ".json"),
+                sink.put(nested_prefix / member_path.with_suffix(".json"),
                          json_bytes({"member": info["name"], "sections": sections}))
             if member.startswith(b"BNTX"):
                 n, skipped = export_png(member, nested_prefix / member_path, sink)

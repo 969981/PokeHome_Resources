@@ -1,0 +1,117 @@
+{
+  "purpose": "Provenance of 16 reused preexisting decoded examples, not full CLI manifest",
+  "records": [
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/beluga_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/beluga_personal_total.csv",
+      "source_blob_sha1": "1aa0bb1770e3419e70b0fe60dbbe9ba217739f45",
+      "output_blob_sha1": "1aa0bb1770e3419e70b0fe60dbbe9ba217739f45",
+      "bytes": 281498
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/beluga_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/beluga_personal_total.json",
+      "source_blob_sha1": "35469f6a4a3d18b91f973c9b79b10dca1febe030",
+      "output_blob_sha1": "35469f6a4a3d18b91f973c9b79b10dca1febe030",
+      "bytes": 272097
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/delphis_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/delphis_personal_total.csv",
+      "source_blob_sha1": "46f4fce2c3c98677212aa0c2a2ca7d95a2ddf5b0",
+      "output_blob_sha1": "46f4fce2c3c98677212aa0c2a2ca7d95a2ddf5b0",
+      "bytes": 139317
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/delphis_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/delphis_personal_total.json",
+      "source_blob_sha1": "f923b7de1bbd3fd5ff0a896ddfcc385e194a6158",
+      "output_blob_sha1": "f923b7de1bbd3fd5ff0a896ddfcc385e194a6158",
+      "bytes": 136900
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/global_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/global_personal_total.csv",
+      "source_blob_sha1": "47dc488c47ca26c33906b4403ce3cf167e00feaa",
+      "output_blob_sha1": "47dc488c47ca26c33906b4403ce3cf167e00feaa",
+      "bytes": 384556
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/global_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/global_personal_total.json",
+      "source_blob_sha1": "d1ad294e3483c0ca61112a236ec0e5b49af9073b",
+      "output_blob_sha1": "d1ad294e3483c0ca61112a236ec0e5b49af9073b",
+      "bytes": 364474
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/hayabusa_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/hayabusa_personal_total.csv",
+      "source_blob_sha1": "72fe0acc2cde8f591a9d4edfdf05ce20bfb44b43",
+      "output_blob_sha1": "72fe0acc2cde8f591a9d4edfdf05ce20bfb44b43",
+      "bytes": 126229
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/hayabusa_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/hayabusa_personal_total.json",
+      "source_blob_sha1": "ea894e310e710b9aec64e5f3cc504d6852347c78",
+      "output_blob_sha1": "ea894e310e710b9aec64e5f3cc504d6852347c78",
+      "bytes": 147802
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/ikkaku_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/ikkaku_personal_total.csv",
+      "source_blob_sha1": "e421d3d1d7862b43f30c36c045c1d22c8d83d1eb",
+      "output_blob_sha1": "e421d3d1d7862b43f30c36c045c1d22c8d83d1eb",
+      "bytes": 379629
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/ikkaku_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/ikkaku_personal_total.json",
+      "source_blob_sha1": "481999f6d6fdc2ccdf3caa56d008307201b62f48",
+      "output_blob_sha1": "481999f6d6fdc2ccdf3caa56d008307201b62f48",
+      "bytes": 360234
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/orion_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/orion_personal_total.csv",
+      "source_blob_sha1": "8501668dce0e7a0a46b49f7f7791e9cc2d745566",
+      "output_blob_sha1": "8501668dce0e7a0a46b49f7f7791e9cc2d745566",
+      "bytes": 299849
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/orion_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/orion_personal_total.json",
+      "source_blob_sha1": "94d9c5edd49be494ac08b147106933b60939b888",
+      "output_blob_sha1": "94d9c5edd49be494ac08b147106933b60939b888",
+      "bytes": 288875
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/titan_personal_total.csv",
+      "derived_from": "derived/4.1.0/personal/titan_personal_total.csv",
+      "source_blob_sha1": "f5c0452345013259e628d34369a913f62e40cbd5",
+      "output_blob_sha1": "f5c0452345013259e628d34369a913f62e40cbd5",
+      "bytes": 378612
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal/titan_personal_total.json",
+      "derived_from": "derived/4.1.0/personal/titan_personal_total.json",
+      "source_blob_sha1": "7a3c12829fb04d3f04f67d78786a5304185c8ae7",
+      "output_blob_sha1": "7a3c12829fb04d3f04f67d78786a5304185c8ae7",
+      "bytes": 358781
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/waza/beluga/waza0001.json",
+      "derived_from": "examples/4.1.0/waza0001.json",
+      "source_blob_sha1": "5dd9f434cec60ede47544f11a655a46d1838b189",
+      "output_blob_sha1": "5dd9f434cec60ede47544f11a655a46d1838b189",
+      "bytes": 1236
+    },
+    {
+      "target": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture/primitive_renderer_texture.png",
+      "derived_from": "derived/4.1.0/png/primitive_renderer_texture.png",
+      "source_blob_sha1": "ee4311b039e0099bc26a9974d304ca07d86bfb87",
+      "output_blob_sha1": "ee4311b039e0099bc26a9974d304ca07d86bfb87",
+      "bytes": 4196
+    }
+  ]
+}

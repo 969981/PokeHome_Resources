@@ -16,9 +16,9 @@
 ## P0 — 基线与调度器
 
 - [x] **U00 仓库审计与文档基线**：核实已有工具、Git 树、输入规模；建立 `AGENTS.md`、目标/任务/命名规范。**本轮完成的仅为文档与目录说明**。
-- [ ] **U01 完整源清单重建**：编写 inventory 扫描，逐文件输出 `source_path,size,sha256,extension,magic`；与 `derived/4.1.0/inventory/` 的已有 source blob 列表对齐（注意 Git blob SHA-1 不等同文件 SHA-256）。验收：RomFS 恰好记录 12,074 行，发现新增/缺失有差异报告。
-- [ ] **U02 输出路径规划器**：构造镜像相对路径、处理复合扩展名、配对 DAT/TBL、处理文件名大小写折叠和输出碰撞；规划归档成员空间。验收：`--dry-run` 不写文件，所有源文件均有确定输出计划或明确原因，无静默覆盖。
-- [ ] **U03 统一 CLI**：新建 `tools/unpack_home41.py`，实现 `--file / --kind / --all / --dry-run / --resume / --verify / --strict`，全部复用旧解析库；日志、错误和路径稳定。验收：Windows PowerShell/Linux 均可运行；中断恢复不会损坏已有文件。
+- [x] **U01 完整源清单重建（实现已提交，真实整仓运行待验收）**：编写 inventory 扫描，逐文件输出 `source_path,size,sha256,extension,magic`；与 `derived/4.1.0/inventory/` 的已有 source blob 列表对齐（注意 Git blob SHA-1 不等同文件 SHA-256）。验收：RomFS 恰好记录 12,074 行，发现新增/缺失有差异报告。
+- [x] **U02 输出路径规划器（实现已提交，CI 待验收）**：构造镜像相对路径、处理复合扩展名、配对 DAT/TBL、处理文件名大小写折叠和输出碰撞；规划归档成员空间。验收：`--dry-run` 不写文件，所有源文件均有确定输出计划或明确原因，无静默覆盖。
+- [x] **U03 统一 CLI（首版已提交，CI 待验收）**：新建 `tools/unpack_home41.py`，实现 `--file / --kind / --all / --dry-run / --resume / --verify / --strict`，全部复用旧解析库；日志、错误和路径稳定。验收：Windows PowerShell/Linux 均可运行；中断恢复不会损坏已有文件。
 
 ## P1 — PML、文本与表格
 
@@ -80,4 +80,4 @@ U00(完成：文档)
 
 ## 当前状态
 
-截至 2026-10-13：**仅 U00 规划文档与 Unpack 目录引导说明完成**。仓库既有解码器、样例和 `derived/` 可复用，但尚不能代替本项目统一 CLI、镜像全量转换和发布验收。
+截至 2026-10-13：**U00 文档、U01–U03 首版代码已提交；P1/P3 首批 16 个真实镜像产物已复用既有验证数据。** [实施进度](UNPACK_PROGRESS.md) 记录运行状态。GitHub Actions 运行 38336950044 失败且无 steps，不能声称任何新的镜像全量测试通过。剩余 U04–U17 的全量处理和验收未完成。

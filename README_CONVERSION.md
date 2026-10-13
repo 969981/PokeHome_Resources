@@ -175,3 +175,24 @@ python .\tools\home41_bntx_to_png.py `
 [`derived/4.1.0/inventory/`](derived/4.1.0/inventory/) 有 5 个真实 Git 树生成的 `source_manifest_*.csv`、一个 `source_inventory_summary.json`，覆盖**12,082 个源文件 / 1,085,794,873 字节**，保留 Git Blob SHA-1、大小、目录分类。可对照转换后的文件和脚本持续追溯原始资源。
 
 **进度边界**：上述全部 Personal 数据、11 语言 B2W2 地点、16 张 PNG、原有 10 份压缩研究数据与完整源清单已经在当前 `4.1.0` 分支提交。其余 5,089 个招式小文件、3,538 个 gzip 纹理等尚未完成整仓批量实测转换；不可凭一个脚本存在就宣称全量产物已经生成。完整 58,740 行地点 CSV 目前仍在 `HOME-Live-Plugin-CHS` 研究仓库：GitHub 内容接口对其 1.1MB 压缩文件无法返回完整载荷，Git 对象也不能跨仓库直接引用。
+
+
+## Unpack 镜像工程（2026-10-13 首轮）
+
+新入口已提交：[tools/unpack_home41.py](tools/unpack_home41.py)。
+
+```powershell
+# 预演所有文件的镜像路径及命名冲突，不写盘
+python tools/unpack_home41.py --root . --out Unpack --dry-run
+
+# 先转换 PML，再进行增量全量转换
+python tools/unpack_home41.py --root . --out Unpack --kind pml --resume
+python tools/unpack_home41.py --root . --out Unpack --all --resume
+
+# 独立核验源 SHA-256、输出 SHA-256 与状态
+python tools/unpack_home41.py --root . --out Unpack --verify --strict
+```
+
+注意新入口需要 **Python 3.10+**，原始 `..._NCA/1/` 永远只读。镜像产物位于 `Unpack/<NCA>/1/<原路径>`；源文件清单和执行 manifest 由脚本写到 `Unpack/_meta/`。
+
+当前 `Unpack/` 已发布首批 **16 个真实、来自既有验证过的转换数据**，不是已完成整仓批量执行。详见 [实施进度](docs/UNPACK_PROGRESS.md) 与 [本轮任务](docs/UNPACK_TASKS.md)。原 GitHub Actions 运行器在本轮尝试中返回“失败但无实际 steps”，因此不能声称 CI/全量任务通过。
