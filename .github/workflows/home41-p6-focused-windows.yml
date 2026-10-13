@@ -1,4 +1,5 @@
 name: HOME 4.1.0 P6 native focused consumers
+# Track the sole direct record-pointer getter call at main+0x4FD098.
 # Includes main+0x4FD67C unique item.dat path caller, 2026-10-13.
 on:
   push:
