@@ -29,10 +29,11 @@ from home41_bntx_to_png import decode_bntx
 from home41_p2_pml_readonly import payload, records
 from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
 from home41_extra_formats import Reflection, bfbs_to_fbs, decode_bnk, decode_bffnt, decode_bnsh, decode_akpk
+from home41_tables import decode_grammar, grammar_csv_rows, decode_item_hash_index, decode_form_storage_index
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.2.0"
+PARSER_VERSION = "mirror-0.3.0"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -92,6 +93,11 @@ def save_atomic(path: Path, blob: bytes, out: Path) -> None:
 def type_for(relative: Path) -> str:
     name = relative.name.lower()
     suffix = relative.suffix.lower()
+    rel = relative.as_posix().lower()
+    if (rel.startswith("bin/message/grammar/") and suffix == ".dat"
+            or rel == "bin/pml/item/item_hash_to_index.dat"
+            or rel == "bin/hayabusa/appli/pokedex/res_table/pokedex_form_storage_index_table.bin"):
+        return "tables"
     if suffix == ".wazabin" or suffix == ".perbin":
         return "pml"
     if suffix in (".tbl", ".dat"):
@@ -233,6 +239,35 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
     count = 0
     if main is None:
         return "unsupported", 0, ["format parser not implemented"], sink.commit()
+
+    if category == "tables":
+        raw = read_file(source)
+        if "grammar" in relative.parts:
+            doc = decode_grammar(raw)
+            sink.put(main, csv_bytes(doc["terms"], ["index", "absolute_offset", "utf16_bytes", "text"]))
+            sink.put(main.with_name(main.stem + ".selectors.csv"),
+                     csv_bytes(grammar_csv_rows(doc),
+                               ["term_index", "selector_column", "selector_raw_u8"]))
+            sink.put(main.with_suffix(".json"), json_bytes(doc))
+            return "partial", doc["term_count"], [
+                "UTF-16 terms and selector matrix decoded; grammatical selector meanings unverified"], sink.commit()
+        if name == "item_hash_to_index.dat":
+            doc = decode_item_hash_index(raw)
+            sink.put(main, csv_bytes(doc["rows"],
+                                    ["row", "hash_u64_hex", "index_candidate_u32", "reserved_u32"]))
+            sink.put(main.with_suffix(".json"), json_bytes({
+                k: v for k, v in doc.items() if k != "rows"}))
+            return "partial", doc["count"], [
+                "hash and index bytes recovered; index consumer not traced"], sink.commit()
+        if name == "pokedex_form_storage_index_table.bin":
+            doc = decode_form_storage_index(raw)
+            sink.put(main, json_bytes({k: v for k, v in doc.items() if k != "rows"}))
+            sink.put(main.with_suffix(".csv"),
+                     csv_bytes(doc["rows"],
+                               ["row", "packed_value_u32", "packed_hex", "ordinal_u16"]))
+            return "partial", doc["count"], [
+                "form table record layout verified; packed key meaning unverified"], sink.commit()
+        raise ValueError("unrecognized table category")
 
     if suffix == ".bfbs":
         doc = Reflection(read_file(source)).extract()
@@ -451,7 +486,7 @@ def main(argv=None):
     p.add_argument("--out", type=Path, default=Path("Unpack"), help="output root")
     task = p.add_mutually_exclusive_group()
     task.add_argument("--file", help="one RomFS file, relative to repository or RomFS")
-    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other"])
+    task.add_argument("--kind", choices=["all", "pml", "messages", "archives", "images", "other", "tables"])
     task.add_argument("--all", action="store_true", help="run all RomFS formats")
     p.add_argument("--dry-run", action="store_true", help="plan without writing")
     p.add_argument("--resume", action="store_true", help="reuse verified outputs")
