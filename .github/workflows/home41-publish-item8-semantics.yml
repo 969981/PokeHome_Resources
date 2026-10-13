@@ -1,0 +1,74 @@
+name: HOME 4.1.0 publish item semantic fields
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-publish-item8-semantics.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-publish-item8-semantics
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Real HOME data semantic and original functionality tests
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p test_home41_item8_semantic.py -v
+          python -m unittest discover -s tools -p test_home41_pokedex_item.py -v
+          python -m unittest discover -s tools -p test_home41_topics.py -v
+          python -m unittest discover -s tools -p test_home41_tables.py -v
+      - name: Export and hash-verify the source-aware 1829-item table
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --file bin/pml/item/item.dat --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --file bin/pml/item/item.dat --strict
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('Unpack')
+          m=json.loads((root/'_meta/manifest.json').read_text())
+          selected=[r for r in m['files'] if r['source_path'].endswith('/pml/item/item.dat')]
+          assert len(selected)==1
+          r=selected[0]
+          assert r['status']=='partial' and len(r['outputs'])==7,r
+          names=[p['path'] for p in r['outputs']]
+          assert any(x.endswith('/item.semantic.csv') for x in names)
+          assert any(x.endswith('/item.semantic.json') for x in names)
+          stats=json.loads((root/'_meta/summary.json').read_text())
+          assert stats['status_counts'].get('unsupported')==3,stats
+          assert stats['status_counts'].get('failed',0)==0,stats
+          print('verified item outputs:',names)
+          print('summary:',stats)
+          PY
+      - name: Commit new CSV and JSON with updated manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          root=Path('Unpack')
+          manifest=json.loads((root/'_meta/manifest.json').read_text())
+          row=next(x for x in manifest['files'] if x['source_path'].endswith('/pml/item/item.dat'))
+          files=[str(root/f['path']) for f in row['outputs']]
+          files += [str(f) for f in (root/'_meta').glob('*') if f.is_file()]
+          for p in files:
+              subprocess.run(['git','add','-f','--',p],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish source-verified 1829 Item8 price pouch effect records'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
