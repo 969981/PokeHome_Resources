@@ -40,6 +40,19 @@ def inspect(elf:bytes,prior:dict)->dict:
             (mn.startswith("ldr") and op.startswith("x8,"))
         ]
         producer=preceding_load[-1] if preceding_load else None
+        # Verify the actual indirect callee comes from interface slots, or
+        # the callback member +0xE8. The final case is not a vtable load.
+        if pc == 0x4FD8F0:
+            expected=("ldr","x8, [x19, #0xe8]")
+            expected_source_class="owner_callback_member_0xE8"
+        elif pc == 0x4FD6D8:
+            expected=("ldr","x8, [x8, #0x10]")
+            expected_source_class="object_interface_slot_0x10"
+        else:
+            expected=("ldr","x8, [x8, #0x18]")
+            expected_source_class="object_interface_slot_0x18"
+        if not producer or (producer[1],producer[2])!=expected:
+            raise ValueError(f"BLR true x8 source mismatch at 0x{pc:X}: {producer}")
         rows.append({
             "native_blr_rva":f"0x{pc:X}",
             "blr_argument_register":"x8",
@@ -52,6 +65,8 @@ def inspect(elf:bytes,prior:dict)->dict:
                 {"rva":f"0x{addr:X}","mnemonic":mn,"operands":op,"bytes_le":raw}
                 for addr,mn,op,raw in ins
             ],
+            "target_source_class":expected_source_class,
+            "is_direct_item_property_dispatch":False,
             "resolved_target":None,
             "confirmed_item_property_or_battle_effect_call":False,
             "note":"Register-derived BLR, target requires exact live object and vtable values.",
@@ -60,6 +75,15 @@ def inspect(elf:bytes,prior:dict)->dict:
         "elf_sha256":sha,
         "source_indirect_scan":"derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json",
         "raw_local_blr_sites":len(rows),
+        "interface_slot_0x18_sites":sum(
+            r["target_source_class"]=="object_interface_slot_0x18" for r in rows
+        ),
+        "interface_slot_0x10_sites":sum(
+            r["target_source_class"]=="object_interface_slot_0x10" for r in rows
+        ),
+        "owner_callback_sites":sum(
+            r["target_source_class"]=="owner_callback_member_0xE8" for r in rows
+        ),
         "direct_item_property_dispatch_call_count":2,
         "item_effect_selector_26_to_70_consumer_confirmed":False,
         "rows":rows,
