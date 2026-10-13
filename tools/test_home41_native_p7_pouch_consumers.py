@@ -16,6 +16,13 @@ EXPECTED_SLOT_CAPACITY=[60,30,20,80,550,210,100,100,64]
 class ItemNativePouchConsumerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        # Main mirrored Unpack tests intentionally have stdlib-only Python.
+        # Native disassembly is verified in the dedicated Capstone-enabled
+        # P7 CI and skipped, not failed, when Capstone is absent.
+        try:
+            import capstone
+        except ImportError as exc:
+            raise unittest.SkipTest("P7 ELF disassembly requires optional capstone") from exc
         cls.raw=ITEM.read_bytes()
         cls.doc=analyze(ELF.read_bytes(),cls.raw)
 
