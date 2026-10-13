@@ -8,7 +8,8 @@
     "0x50226c_resource_descriptor_builder": 1,
     "0x502950_global_resource_context": 32,
     "0x5020c4_item_path_call_string_helper": 0,
-    "0x69e90_hash_lookup_entry_consumer": 1
+    "0x69e90_hash_lookup_entry_consumer": 1,
+    "0x4fd784_item_dat_record_pointer_getter": 1
   },
   "callers": {
     "0x5020a0_item_dat_formatted_path": [
@@ -290,6 +291,14 @@
         "mn": "bl",
         "op": "#0x69e90",
         "byte": "87010094"
+      }
+    ],
+    "0x4fd784_item_dat_record_pointer_getter": [
+      {
+        "pc": 5230744,
+        "mn": "bl",
+        "op": "#0x4fd784",
+        "byte": "bb010094"
       }
     ]
   },
