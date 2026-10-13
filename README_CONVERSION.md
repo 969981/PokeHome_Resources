@@ -71,3 +71,30 @@ HOME41_converted/
 - [`tools/export_home41_resources.py`](tools/export_home41_resources.py)：批量转换入口。
 - [`tools/home41_romfs_core.py`](tools/home41_romfs_core.py)：从 `HOME-Live-Plugin-CHS` 复用的 AHTB、DAT、SARC、FlatBuffers 只读解析器。
 - [`tools/home41_p2_pml_readonly.py`](tools/home41_p2_pml_readonly.py)：从之前的 4.1.0 PML 研究复用的 per-record 原始字段与差异审计。
+
+## PML 专用结构化导出（推荐）
+
+为了使原始字段**直接可在 Excel / pandas 中筛选**，另提供两份聚合长表：
+
+```powershell
+python .\tools\export_home41_pml_csv.py `
+    --root "$romfs\bin\pml" `
+    --out '..\HOME41_pml_csv'
+```
+
+- `waza_fields.csv`：每条记录包含 game、move_id、field_index、raw_hex、byte_count。
+- `personal_fields.csv`：每条记录包含 game、record_index、field_index、raw_hex、byte_count。
+- `errors.csv`：任何与 4.1.0 实际文件不一致的记录（例如招式文件名 ID 与字段 ID 不符）。
+- `summary.json`：各版本记录数、错误数。
+
+**这是真实字段字节的结构化输出，不等于已确认的招式威力、属性或合法性表。**
+
+## 已随源码提交的真实样例
+
+- [`examples/4.1.0/event_flags.csv`](examples/4.1.0/event_flags.csv) — 已逐条核对 **214/214** 个 AHTB 标签 FNV64 哈希。
+- [`examples/4.1.0/waza0001.json`](examples/4.1.0/waza0001.json) — 真实 52 字节 Waza FlatBuffers，根对象 0x18、字段原始 hex。
+- [`examples/4.1.0/mtt_common_fade_sarc.json`](examples/4.1.0/mtt_common_fade_sarc.json) — 真实 1516 字节 SARC 的三个 UI 成员。
+
+大批量资源可在 GitHub Actions 手动运行 `HOME 4.1.0 resource conversion`，分组导出 JSON/CSV 工件。首次 CI 未能启动正常的执行步骤，**不能视为测试通过**，应检查仓库 Actions 的运行器与计费状态。
+
+SARC 中的 `.bntx` 可先用 `--kind archives --extract` 解包，再将输出的 `archives_extracted` 目录作为 `--kind images` 的输入进行 PNG 转换。
