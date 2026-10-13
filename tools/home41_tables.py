@@ -39,27 +39,43 @@ def decode_grammar(data: bytes) -> dict:
     matrix = [list(data[end_header + row * width:end_header + (row + 1) * width])
               for row in range(count)]
     terms = []
+    selectors = []
     for i, start in enumerate(offsets):
         end = offsets[i + 1] if i + 1 < count else len(data)
         segment = data[start:end]
         if len(segment) < 2 or len(segment) % 2 or not segment.endswith(b"\0\0"):
-            raise ValueError("grammar term missing UTF-16 NUL terminator")
-        term = segment[:-2].decode("utf-16-le")
-        if "\0" in term:
-            raise ValueError("embedded UTF-16 NUL in grammar term")
+            raise ValueError("grammar row missing UTF-16 NUL terminator")
+        variants = []
+        position = 0
+        while position < len(segment):
+            next_end = None
+            for j in range(position, len(segment), 2):
+                if segment[j:j + 2] == b"\0\0":
+                    next_end = j
+                    break
+            if next_end is None:
+                raise ValueError("unterminated grammar variant")
+            phrase = segment[position:next_end].decode("utf-16-le")
+            variants.append({"relative_byte_offset": position, "text": phrase})
+            position = next_end + 2
+        positions = {x["relative_byte_offset"]: x["text"] for x in variants}
+        for column, selector in enumerate(matrix[i]):
+            if selector not in positions:
+                raise ValueError("grammar matrix selector does not point to a string start")
+            selectors.append({"term_index": i, "selector_column": column,
+                              "selector_raw_u8": selector, "resolved_text": positions[selector]})
         terms.append({"index": i, "absolute_offset": start,
-                      "utf16_bytes": len(segment), "text": term})
+                      "utf16_bytes": len(segment), "text": variants[0]["text"],
+                      "variants": variants})
     return {"format": "HOME grammar substitution table",
             "term_count": count, "matrix_width": width,
-            "terms": terms, "matrix": matrix,
-            "certainty": "UTF-16LE terms and u8 selector matrix recovered exactly; selector semantics unknown"}
+            "terms": terms, "matrix": matrix, "resolved_selectors": selectors,
+            "certainty": "UTF-16LE string pool and per-cell byte offsets verified against original data; grammar condition meanings unknown"}
 
 
 def grammar_csv_rows(doc: dict):
-    """Stable long form: every matrix selector has row and column coordinates."""
-    return [{"term_index": i, "selector_column": col, "selector_raw_u8": value}
-            for i, values in enumerate(doc["matrix"])
-            for col, value in enumerate(values)]
+    """Lossless selector matrix resolved to actual language-dependent phrases."""
+    return doc["resolved_selectors"]
 
 
 def decode_item_hash_index(data: bytes) -> dict:
