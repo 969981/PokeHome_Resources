@@ -1,0 +1,68 @@
+name: HOME 4.1.0 resource conversion
+
+on:
+  push:
+    paths:
+      - 'tools/export_home41_resources.py'
+      - 'tools/home41_romfs_core.py'
+      - 'tools/home41_p2_pml_readonly.py'
+      - 'tools/test_home41_export.py'
+      - 'README_CONVERSION.md'
+      - '.github/workflows/home41-convert.yml'
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: 'Resource group to export'
+        required: true
+        default: 'messages'
+        type: choice
+        options:
+          - messages
+          - flatbuffers
+          - archives
+          - images
+      extract_members:
+        description: 'Extract SARC member files (larger artifact)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  verify-and-export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python syntax check
+        run: python -m compileall -q tools
+      - name: Smoke tests on real 4.1.0 assets
+        run: python -m unittest discover -s tools -p 'test_home41_export.py' -v
+      - name: Convert selected 4.1.0 resource group
+        if: github.event_name == 'workflow_dispatch'
+        shell: bash
+        env:
+          KIND: ${{ inputs.kind }}
+          EXTRACT: ${{ inputs.extract_members }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "$EXTRACT" = "true" ]; then args+=(--extract); fi
+          python tools/export_home41_resources.py \
+            --root 57b83ea8c0af21ef26e2519b9580b373_NCA/1 \
+            --out "$RUNNER_TEMP/home41_converted" --kind "$KIND" --png off "${args[@]}"
+      - name: Upload JSON/CSV output
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-${{ inputs.kind }}-json-csv
+          path: ${{ runner.temp }}/home41_converted/
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 6
