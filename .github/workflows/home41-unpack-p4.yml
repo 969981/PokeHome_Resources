@@ -1,0 +1,79 @@
+name: HOME 4.1.0 ASTC and other formats
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home41-unpack-p4.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-unpack-p4
+  cancel-in-progress: false
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned optional ASTC decoder
+        run: python -m pip install texture2ddecoder==1.0.6
+      - name: Compile and run real-format tests
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p 'test_home41_extra.py' -v
+          python -m unittest discover -s tools -p 'test_home41_unpack.py' -v
+      - name: Convert all other format assets
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind other --resume
+          python - <<'PY'
+          import json
+          d=json.load(open('Unpack/_meta/summary.json'))
+          assert d['status_counts'].get('failed',0)==0,d
+          print('After other:',d)
+          PY
+      - name: Decode 3538 compressed BNTX images into PNG
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind images --resume
+          python - <<'PY'
+          import json
+          d=json.load(open('Unpack/_meta/summary.json'))
+          assert d['status_counts'].get('failed',0)==0,d
+          print('After ASTC:',d)
+          PY
+      - name: Verify all current mirror outputs against source hashes
+        run: python tools/unpack_home41.py --root . --out Unpack --verify --strict
+      - name: Publish new readable JSON CSV PNG to Git
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          paths=[]
+          for p in (Path('Unpack')/'57b83ea8c0af21ef26e2519b9580b373_NCA'/'1').rglob('*'):
+              if p.is_file() and p.suffix.lower() in {'.json','.csv','.png','.fbs'} and p.stat().st_size < 50*1024*1024:
+                  paths.append(str(p))
+          for p in (Path('Unpack')/'_meta').glob('*'):
+              if p.is_file(): paths.append(str(p))
+          for k in range(0,len(paths),90):
+              subprocess.run(['git','add','--',*paths[k:k+90]],check=True)
+          print('Indexed',len(paths),'converted readable files')
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m "data: publish recovered BFBS Wwise and ASTC PNG mirrors"
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
+      - name: Upload new format summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-unpack-astc-p4-report
+          path: Unpack/_meta/
+          retention-days: 30
+          if-no-files-found: warn
