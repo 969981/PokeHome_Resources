@@ -1,0 +1,27 @@
+name: Android 4.1.0 extractor tests
+on:
+  push:
+    branches: ["4.1.0"]
+    paths:
+      - "Android/**"
+      - ".github/workflows/android41-unpack-tests.yml"
+  workflow_dispatch:
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            Android
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Syntax-check Android tooling
+        run: python -m compileall -q Android/tools Android/tests
+      - name: Test ZIP extraction guards
+        run: python -m unittest discover -s Android/tests -v
