@@ -12,7 +12,7 @@ This **Android/** area complements the existing Switch 4.1.0 NCA/Unpack tree. It
 | global-metadata.dat SHA-256 | `dde114e58c195c44d8261ff00259c2da5dcfd62facad6103ea4b60b77bebb0ad` |
 | Unity | 6000.0.71f1; metadata format 31 |
 
-These hashes were recovered from [previously documented analysis](https://github.com/969981/HOME-Live-Plugin-CHS/blob/home-core-editor/docs/pokemon_home_reverse/4.1.0/111_home_4_1_0_android_il2cpp_layout_rva_reconstruction.md). **No original APK was accessible in the execution environment for this new commit.** Do not mistake saved evidence for a fresh run.
+These hashes were recovered from [previously documented analysis](https://github.com/969981/HOME-Live-Plugin-CHS/blob/home-core-editor/docs/pokemon_home_reverse/4.1.0/111_home_4_1_0_android_il2cpp_layout_rva_reconstruction.md). **Update (2026-10-13):** The exact SHA-256-matched APK was recovered from the user's file library and analyzed. See [real execution report](REAL_APK_EXECUTION_20261013.md) for actual counts, 94 JADX errors, Native validation and publication boundary. The original earlier setup commit did not have the APK.
 
 ## Local reproduction
 
@@ -55,5 +55,5 @@ Research results: [ID ownership and generation boundaries](ID_GENERATION_RESEARC
 ### Evidence/publishing status
 
 - **Existing archival Android 4.1.0 IL2CPP research**: documented and linked, not re-executed here.
-- **This delivery**: executable *workflow source* and static research dossier; APK-dependent extraction and native reanalysis **pending exact input**.
+- **This delivery update**: exact APK raw extraction, REA package analysis, JADX normal and fallback, and targeted IL2CPP Native disassembly have now been executed. The full local archive is a separate conversation artifact, **not published in the public Git tree**.
 - **Publication**: do not commit proprietary APK payload, whole decompiled app, native binaries, metadata blobs, authenticated traffic, real account IDs or tokens. Derived evidence can be shared after review and redaction.
