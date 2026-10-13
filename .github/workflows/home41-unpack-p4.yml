@@ -1,4 +1,4 @@
-name: HOME 4.1.0 ASTC and other formats
+name: HOME 4.1.0 BC7 texture and P4 formats
 on:
   push:
     branches: ['4.1.0']
@@ -34,7 +34,7 @@ jobs:
           assert d['status_counts'].get('failed',0)==0,d
           print('After other:',d)
           PY
-      - name: Decode 3538 compressed BNTX images into PNG
+      - name: Decode 3538 BC7 compressed BNTX images into PNG
         run: |
           python tools/unpack_home41.py --root . --out Unpack --kind images --resume
           python - <<'PY'
