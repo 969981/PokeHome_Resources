@@ -1,0 +1,1247 @@
+{
+  "audit": "SWSH 1.3.2 cross-game Item8 effect consumer static native analysis",
+  "sword": {
+    "edition": "sword",
+    "filename": "剑1.3.2.elf",
+    "size_bytes": 40065128,
+    "sha256": "689db76a880c6ca5b20308343e6f49268c67f75fd009b7d644a166e18adc0652",
+    "build_id": "a3b75bcd3311385aeed67fbeeb79cbb7bf02f471",
+    "pml_path": {
+      "producer_rva": "0x7D1BD8",
+      "result_virtual_rva": "0x1BE87D7",
+      "content": "bin/pml/item"
+    },
+    "native_item_dispatcher_rva": "0x788630",
+    "extended_selector_66_getter_rva": "0x7889C8",
+    "extended_selector_67_getter_rva": "0x7889D0",
+    "extended_selector_67_source": {
+      "native_read": "LDRB W0,[X9,#0x2C]",
+      "offset_in_48byte_record": "0x2C",
+      "native_type": "uint8"
+    },
+    "extended_selector_66_source": {
+      "native_read": "LDRB W0,[X9,#0x2B]",
+      "offset_in_48byte_record": "0x2B",
+      "native_type": "uint8"
+    },
+    "total_direct_bl_calls_to_dispatcher": 126,
+    "strict_effect_selector_calls_immediately_preceded_by_mov_w1": 78,
+    "effect_selector_call_counts": {
+      "26": 2,
+      "27": 2,
+      "29": 2,
+      "34": 2,
+      "35": 2,
+      "36": 4,
+      "37": 3,
+      "45": 2,
+      "46": 1,
+      "47": 3,
+      "49": 2,
+      "50": 3,
+      "51": 4,
+      "52": 4,
+      "53": 4,
+      "54": 4,
+      "55": 4,
+      "57": 1,
+      "58": 1,
+      "59": 1,
+      "61": 4,
+      "65": 4,
+      "66": 2,
+      "67": 5,
+      "68": 4,
+      "69": 4,
+      "70": 4
+    },
+    "effect_selector_calls": [
+      {
+        "callsite_rva": "0x7B3468",
+        "source_rva": "0x7B3460",
+        "selector": 37,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x7CB2F4",
+        "source_rva": "0x7CB2EC",
+        "selector": 37,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9D44",
+        "source_rva": "0x13A9D3C",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9D54",
+        "source_rva": "0x13A9D4C",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9D64",
+        "source_rva": "0x13A9D5C",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9E4C",
+        "source_rva": "0x13A9E44",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9E5C",
+        "source_rva": "0x13A9E54",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9E6C",
+        "source_rva": "0x13A9E64",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B61D0",
+        "source_rva": "0x13B61C8",
+        "selector": 26,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B61E8",
+        "source_rva": "0x13B61E0",
+        "selector": 27,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6218",
+        "source_rva": "0x13B6210",
+        "selector": 29,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B625C",
+        "source_rva": "0x13B6254",
+        "selector": 34,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B626C",
+        "source_rva": "0x13B6264",
+        "selector": 35,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B627C",
+        "source_rva": "0x13B6274",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B628C",
+        "source_rva": "0x13B6284",
+        "selector": 49,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B62B8",
+        "source_rva": "0x13B62B0",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B62D8",
+        "source_rva": "0x13B62D0",
+        "selector": 45,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B62E8",
+        "source_rva": "0x13B62E0",
+        "selector": 46,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6320",
+        "source_rva": "0x13B6318",
+        "selector": 47,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6524",
+        "source_rva": "0x13B651C",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6534",
+        "source_rva": "0x13B652C",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6560",
+        "source_rva": "0x13B6558",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B659C",
+        "source_rva": "0x13B6594",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B65D8",
+        "source_rva": "0x13B65D0",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6630",
+        "source_rva": "0x13B6628",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6640",
+        "source_rva": "0x13B6638",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6838",
+        "source_rva": "0x13B6830",
+        "selector": 26,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6860",
+        "source_rva": "0x13B6858",
+        "selector": 29,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B68AC",
+        "source_rva": "0x13B68A4",
+        "selector": 27,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B68F0",
+        "source_rva": "0x13B68E8",
+        "selector": 34,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6900",
+        "source_rva": "0x13B68F8",
+        "selector": 35,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6910",
+        "source_rva": "0x13B6908",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6920",
+        "source_rva": "0x13B6918",
+        "selector": 49,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6940",
+        "source_rva": "0x13B6938",
+        "selector": 66,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6978",
+        "source_rva": "0x13B6970",
+        "selector": 66,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B69D0",
+        "source_rva": "0x13B69C8",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B69FC",
+        "source_rva": "0x13B69F4",
+        "selector": 37,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6A0C",
+        "source_rva": "0x13B6A04",
+        "selector": 45,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6AE4",
+        "source_rva": "0x13B6ADC",
+        "selector": 47,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6AF4",
+        "source_rva": "0x13B6AEC",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6B50",
+        "source_rva": "0x13B6B48",
+        "selector": 47,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6B70",
+        "source_rva": "0x13B6B68",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6BC8",
+        "source_rva": "0x13B6BC0",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6C24",
+        "source_rva": "0x13B6C1C",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6C80",
+        "source_rva": "0x13B6C78",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6D50",
+        "source_rva": "0x13B6D48",
+        "selector": 50,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6E58",
+        "source_rva": "0x13B6E50",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6E68",
+        "source_rva": "0x13B6E60",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6F40",
+        "source_rva": "0x13B6F38",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7028",
+        "source_rva": "0x13B7020",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7110",
+        "source_rva": "0x13B7108",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B71F8",
+        "source_rva": "0x13B71F0",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7208",
+        "source_rva": "0x13B7200",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B73AC",
+        "source_rva": "0x13B73A4",
+        "selector": 57,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B73BC",
+        "source_rva": "0x13B73B4",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B73E8",
+        "source_rva": "0x13B73E0",
+        "selector": 58,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B73F8",
+        "source_rva": "0x13B73F0",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B741C",
+        "source_rva": "0x13B7414",
+        "selector": 59,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B742C",
+        "source_rva": "0x13B7424",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7504",
+        "source_rva": "0x13B74FC",
+        "selector": 50,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7530",
+        "source_rva": "0x13B7528",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7540",
+        "source_rva": "0x13B7538",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B755C",
+        "source_rva": "0x13B7554",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7588",
+        "source_rva": "0x13B7580",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B75B4",
+        "source_rva": "0x13B75AC",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B75C4",
+        "source_rva": "0x13B75BC",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B75E0",
+        "source_rva": "0x13B75D8",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B76D8",
+        "source_rva": "0x13B76D0",
+        "selector": 50,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B76F8",
+        "source_rva": "0x13B76F0",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7708",
+        "source_rva": "0x13B7700",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7718",
+        "source_rva": "0x13B7710",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7738",
+        "source_rva": "0x13B7730",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7758",
+        "source_rva": "0x13B7750",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7768",
+        "source_rva": "0x13B7760",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7778",
+        "source_rva": "0x13B7770",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B77F8",
+        "source_rva": "0x13B77F0",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7848",
+        "source_rva": "0x13B7840",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7888",
+        "source_rva": "0x13B7880",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      }
+    ],
+    "hp_effect_proof": {
+      "normal_source_call_rva": "0x13B6940",
+      "fainted_source_call_rva": "0x13B6978",
+      "restoration_handler_call_rva": "0x13B69B0",
+      "max_hp_getter_rva": "0x7681F0",
+      "current_hp_getter_rva": "0x7680A0",
+      "add_amount_rva": "0x77B0CC",
+      "cap_to_max_rva": "0x77B0DC",
+      "hp_setter_rva": "0x76F040",
+      "actual_halfword_store_rva": "0x76F0F0",
+      "special_source_values": {
+        "253": "max_hp >> 2",
+        "254": "max_hp >> 1",
+        "255": "max_hp"
+      },
+      "static_meaning": "select effect selector 66 from Item8, restore HP by min(currentHP + amount, maxHP), write back"
+    },
+    "pp_effect_proof": {
+      "selector": 67,
+      "selector_call_rva": "0x13B6BC8",
+      "pp_restore_call_rva": "0x13B6C18",
+      "pp_getter_rva": "0x76A040",
+      "max_pp_accessor_rva": "0x780A40",
+      "pp_add_rva": "0x77B7D8",
+      "pp_cap_rva": "0x77B7E4",
+      "pp_restorer_rva": "0x77B770",
+      "pp_setter_rva": "0x770D20",
+      "pp_storage_write_rva": "0x770DDC",
+      "static_meaning": "selector67 restores per-move PP (indexed 0–3), capped at maximum and written as a byte"
+    },
+    "friendship_tier_adjustment_proof": {
+      "native_read_getter_rva": "0x788630",
+      "signed_item_bytes": {
+        "68": {
+          "callsite_rva": "0x13A9D44",
+          "signed_source_rva": "0x7889D8",
+          "record_offset": "0x2D"
+        },
+        "69": {
+          "callsite_rva": "0x13A9D54",
+          "signed_source_rva": "0x7889E0",
+          "record_offset": "0x2E"
+        },
+        "70": {
+          "callsite_rva": "0x13A9D64",
+          "signed_source_rva": "0x7889E8",
+          "record_offset": "0x2F"
+        }
+      },
+      "current_value_accessor_call_rva": "0x13A9D88",
+      "current_value_accessor_rva": "0x77D3E0",
+      "tier_thresholds": [
+        99,
+        159
+      ],
+      "signed_adjustment_load_rva": "0x13A9D9C",
+      "add_to_current_rva": "0x13A9DF0",
+      "clamp_negative_to_zero_rva": "0x13A9DF4",
+      "cap_above_255_rva": "0x13A9E00",
+      "adjusted_writer_call_rva": "0x13A9E08",
+      "adjusted_writer_rva": "0x77D3F0",
+      "byte_setter_rva": "0x76FE10",
+      "actual_byte_store_rva": "0x76FEE8",
+      "static_meaning": "signed item attributes 68–70 selected by current 0..99, 100..159, 160..255 friendliness/friendship bands, applied to current status and saturated to 0..255, then stored",
+      "semantic_confidence": "high; read/write/threshold native opcodes proven, no runtime sample"
+    },
+    "strict_raw_opcodes": {
+      "8199128": "0xF000A0A9",
+      "8199132": "0x911F5D29",
+      "7898672": "0x7100643F",
+      "7898716": "0x39405528",
+      "7899084": "0x5100682A",
+      "7899592": "0x3940AD20",
+      "20670784": "0x97CF473C",
+      "20670840": "0x97CF472E",
+      "20670892": "0x2A1703E1",
+      "20670896": "0x97CF11BC",
+      "7844028": "0x97FFB44D",
+      "7844040": "0x97FFB3F6",
+      "7844044": "0x0B130008",
+      "7844060": "0x1A8832A1",
+      "7844072": "0x17FFCFD6",
+      "7794928": "0x79006514",
+      "7899600": "0x3940B120",
+      "7845836": "0x97FFBA1D",
+      "7845848": "0x0B350108",
+      "7845860": "0x1A8882D6",
+      "7845928": "0x17FFD53E",
+      "7802332": "0x39008914",
+      "20670884": "0x53027EF7",
+      "20670820": "0x53017EF7"
+    },
+    "evidence_scope": "ELF code and item record layout; SWSH RomFS item_id->effect value matching unverified"
+  },
+  "shield": {
+    "edition": "shield",
+    "filename": "盾1.3.2.elf",
+    "size_bytes": 40065272,
+    "sha256": "f59618e93f585c967f508fb10b94da81bbaab6014cadacb9a82351546ae091f4",
+    "build_id": "a16802625e7826bf83b6f9708e475b912a9ab7df",
+    "pml_path": {
+      "producer_rva": "0x7D1BD8",
+      "result_virtual_rva": "0x1BE8818",
+      "content": "bin/pml/item"
+    },
+    "native_item_dispatcher_rva": "0x788630",
+    "extended_selector_66_getter_rva": "0x7889C8",
+    "extended_selector_67_getter_rva": "0x7889D0",
+    "extended_selector_67_source": {
+      "native_read": "LDRB W0,[X9,#0x2C]",
+      "offset_in_48byte_record": "0x2C",
+      "native_type": "uint8"
+    },
+    "extended_selector_66_source": {
+      "native_read": "LDRB W0,[X9,#0x2B]",
+      "offset_in_48byte_record": "0x2B",
+      "native_type": "uint8"
+    },
+    "total_direct_bl_calls_to_dispatcher": 126,
+    "strict_effect_selector_calls_immediately_preceded_by_mov_w1": 78,
+    "effect_selector_call_counts": {
+      "26": 2,
+      "27": 2,
+      "29": 2,
+      "34": 2,
+      "35": 2,
+      "36": 4,
+      "37": 3,
+      "45": 2,
+      "46": 1,
+      "47": 3,
+      "49": 2,
+      "50": 3,
+      "51": 4,
+      "52": 4,
+      "53": 4,
+      "54": 4,
+      "55": 4,
+      "57": 1,
+      "58": 1,
+      "59": 1,
+      "61": 4,
+      "65": 4,
+      "66": 2,
+      "67": 5,
+      "68": 4,
+      "69": 4,
+      "70": 4
+    },
+    "effect_selector_calls": [
+      {
+        "callsite_rva": "0x7B3468",
+        "source_rva": "0x7B3460",
+        "selector": 37,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x7CB2F4",
+        "source_rva": "0x7CB2EC",
+        "selector": 37,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9D74",
+        "source_rva": "0x13A9D6C",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9D84",
+        "source_rva": "0x13A9D7C",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9D94",
+        "source_rva": "0x13A9D8C",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9E7C",
+        "source_rva": "0x13A9E74",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9E8C",
+        "source_rva": "0x13A9E84",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13A9E9C",
+        "source_rva": "0x13A9E94",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6200",
+        "source_rva": "0x13B61F8",
+        "selector": 26,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6218",
+        "source_rva": "0x13B6210",
+        "selector": 27,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6248",
+        "source_rva": "0x13B6240",
+        "selector": 29,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B628C",
+        "source_rva": "0x13B6284",
+        "selector": 34,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B629C",
+        "source_rva": "0x13B6294",
+        "selector": 35,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B62AC",
+        "source_rva": "0x13B62A4",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B62BC",
+        "source_rva": "0x13B62B4",
+        "selector": 49,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B62E8",
+        "source_rva": "0x13B62E0",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6308",
+        "source_rva": "0x13B6300",
+        "selector": 45,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6318",
+        "source_rva": "0x13B6310",
+        "selector": 46,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6350",
+        "source_rva": "0x13B6348",
+        "selector": 47,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6554",
+        "source_rva": "0x13B654C",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6564",
+        "source_rva": "0x13B655C",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6590",
+        "source_rva": "0x13B6588",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B65CC",
+        "source_rva": "0x13B65C4",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6608",
+        "source_rva": "0x13B6600",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6660",
+        "source_rva": "0x13B6658",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6670",
+        "source_rva": "0x13B6668",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6868",
+        "source_rva": "0x13B6860",
+        "selector": 26,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6890",
+        "source_rva": "0x13B6888",
+        "selector": 29,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B68DC",
+        "source_rva": "0x13B68D4",
+        "selector": 27,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6920",
+        "source_rva": "0x13B6918",
+        "selector": 34,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6930",
+        "source_rva": "0x13B6928",
+        "selector": 35,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6940",
+        "source_rva": "0x13B6938",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6950",
+        "source_rva": "0x13B6948",
+        "selector": 49,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6970",
+        "source_rva": "0x13B6968",
+        "selector": 66,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B69A8",
+        "source_rva": "0x13B69A0",
+        "selector": 66,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6A00",
+        "source_rva": "0x13B69F8",
+        "selector": 36,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6A2C",
+        "source_rva": "0x13B6A24",
+        "selector": 37,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6A3C",
+        "source_rva": "0x13B6A34",
+        "selector": 45,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6B14",
+        "source_rva": "0x13B6B0C",
+        "selector": 47,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6B24",
+        "source_rva": "0x13B6B1C",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6B80",
+        "source_rva": "0x13B6B78",
+        "selector": 47,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6BA0",
+        "source_rva": "0x13B6B98",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6BF8",
+        "source_rva": "0x13B6BF0",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6C54",
+        "source_rva": "0x13B6C4C",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6CB0",
+        "source_rva": "0x13B6CA8",
+        "selector": 67,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6D80",
+        "source_rva": "0x13B6D78",
+        "selector": 50,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6E88",
+        "source_rva": "0x13B6E80",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6E98",
+        "source_rva": "0x13B6E90",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B6F70",
+        "source_rva": "0x13B6F68",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7058",
+        "source_rva": "0x13B7050",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7140",
+        "source_rva": "0x13B7138",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7228",
+        "source_rva": "0x13B7220",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7238",
+        "source_rva": "0x13B7230",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B73DC",
+        "source_rva": "0x13B73D4",
+        "selector": 57,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B73EC",
+        "source_rva": "0x13B73E4",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7418",
+        "source_rva": "0x13B7410",
+        "selector": 58,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7428",
+        "source_rva": "0x13B7420",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B744C",
+        "source_rva": "0x13B7444",
+        "selector": 59,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B745C",
+        "source_rva": "0x13B7454",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7534",
+        "source_rva": "0x13B752C",
+        "selector": 50,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7560",
+        "source_rva": "0x13B7558",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7570",
+        "source_rva": "0x13B7568",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B758C",
+        "source_rva": "0x13B7584",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B75B8",
+        "source_rva": "0x13B75B0",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B75E4",
+        "source_rva": "0x13B75DC",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B75F4",
+        "source_rva": "0x13B75EC",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7610",
+        "source_rva": "0x13B7608",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7708",
+        "source_rva": "0x13B7700",
+        "selector": 50,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7728",
+        "source_rva": "0x13B7720",
+        "selector": 51,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7738",
+        "source_rva": "0x13B7730",
+        "selector": 61,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7748",
+        "source_rva": "0x13B7740",
+        "selector": 52,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7768",
+        "source_rva": "0x13B7760",
+        "selector": 54,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7788",
+        "source_rva": "0x13B7780",
+        "selector": 55,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7798",
+        "source_rva": "0x13B7790",
+        "selector": 65,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B77A8",
+        "source_rva": "0x13B77A0",
+        "selector": 53,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7828",
+        "source_rva": "0x13B7820",
+        "selector": 68,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B7878",
+        "source_rva": "0x13B7870",
+        "selector": 69,
+        "direct_bl_target": "0x788630"
+      },
+      {
+        "callsite_rva": "0x13B78B8",
+        "source_rva": "0x13B78B0",
+        "selector": 70,
+        "direct_bl_target": "0x788630"
+      }
+    ],
+    "hp_effect_proof": {
+      "normal_source_call_rva": "0x13B6970",
+      "fainted_source_call_rva": "0x13B69A8",
+      "restoration_handler_call_rva": "0x13B69E0",
+      "max_hp_getter_rva": "0x7681F0",
+      "current_hp_getter_rva": "0x7680A0",
+      "add_amount_rva": "0x77B0CC",
+      "cap_to_max_rva": "0x77B0DC",
+      "hp_setter_rva": "0x76F040",
+      "actual_halfword_store_rva": "0x76F0F0",
+      "special_source_values": {
+        "253": "max_hp >> 2",
+        "254": "max_hp >> 1",
+        "255": "max_hp"
+      },
+      "static_meaning": "select effect selector 66 from Item8, restore HP by min(currentHP + amount, maxHP), write back"
+    },
+    "pp_effect_proof": {
+      "selector": 67,
+      "selector_call_rva": "0x13B6BF8",
+      "pp_restore_call_rva": "0x13B6C48",
+      "pp_getter_rva": "0x76A040",
+      "max_pp_accessor_rva": "0x780A40",
+      "pp_add_rva": "0x77B7D8",
+      "pp_cap_rva": "0x77B7E4",
+      "pp_restorer_rva": "0x77B770",
+      "pp_setter_rva": "0x770D20",
+      "pp_storage_write_rva": "0x770DDC",
+      "static_meaning": "selector67 restores per-move PP (indexed 0–3), capped at maximum and written as a byte"
+    },
+    "friendship_tier_adjustment_proof": {
+      "native_read_getter_rva": "0x788630",
+      "signed_item_bytes": {
+        "68": {
+          "callsite_rva": "0x13A9D74",
+          "signed_source_rva": "0x7889D8",
+          "record_offset": "0x2D"
+        },
+        "69": {
+          "callsite_rva": "0x13A9D84",
+          "signed_source_rva": "0x7889E0",
+          "record_offset": "0x2E"
+        },
+        "70": {
+          "callsite_rva": "0x13A9D94",
+          "signed_source_rva": "0x7889E8",
+          "record_offset": "0x2F"
+        }
+      },
+      "current_value_accessor_call_rva": "0x13A9DB8",
+      "current_value_accessor_rva": "0x77D3E0",
+      "tier_thresholds": [
+        99,
+        159
+      ],
+      "signed_adjustment_load_rva": "0x13A9DCC",
+      "add_to_current_rva": "0x13A9E20",
+      "clamp_negative_to_zero_rva": "0x13A9E24",
+      "cap_above_255_rva": "0x13A9E30",
+      "adjusted_writer_call_rva": "0x13A9E38",
+      "adjusted_writer_rva": "0x77D3F0",
+      "byte_setter_rva": "0x76FE10",
+      "actual_byte_store_rva": "0x76FEE8",
+      "static_meaning": "signed item attributes 68–70 selected by current 0..99, 100..159, 160..255 friendliness/friendship bands, applied to current status and saturated to 0..255, then stored",
+      "semantic_confidence": "high; read/write/threshold native opcodes proven, no runtime sample"
+    },
+    "strict_raw_opcodes": {
+      "8199128": "0xF000A0A9",
+      "8199132": "0x91206129",
+      "7898672": "0x7100643F",
+      "7898716": "0x39405528",
+      "7899084": "0x5100682A",
+      "7899592": "0x3940AD20",
+      "20670784": "0x97CF473C",
+      "20670840": "0x54000300",
+      "20670892": "0x710006FF",
+      "20670896": "0x54000140",
+      "7844028": "0x97FFB44D",
+      "7844040": "0x97FFB3F6",
+      "7844044": "0x0B130008",
+      "7844060": "0x1A8832A1",
+      "7844072": "0x17FFCFD6",
+      "7794928": "0x79006514",
+      "7899600": "0x3940B120",
+      "7845836": "0x97FFBA1D",
+      "7845848": "0x0B350108",
+      "7845860": "0x1A8882D6",
+      "7845928": "0x17FFD53E",
+      "7802332": "0x39008914",
+      "20670884": "0xAA1303E0",
+      "20670820": "0x5400044A"
+    },
+    "evidence_scope": "ELF code and item record layout; SWSH RomFS item_id->effect value matching unverified"
+  },
+  "core_read_and_hp_write_chains_match": true,
+  "limitations": [
+    "There is no paired SWSH RomFS item resource in this audit.",
+    "Business meaning of selectors 66 HP, 67 PP, 68-70 tier-based friendship adjustment is statically proved; remaining selectors are unverified.",
+    "HP state accessors inferred from min(current+amount,max) flow and downstream halfword setter; runtime state traces not captured."
+  ]
+}
