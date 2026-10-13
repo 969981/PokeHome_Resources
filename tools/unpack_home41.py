@@ -31,7 +31,7 @@ from home41_romfs_core import ahtb_labels, dat_lines, sarc_members
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 SOURCE_PREFIX = NCA + "/1/"
-PARSER_VERSION = "mirror-0.1.0"
+PARSER_VERSION = "mirror-0.1.1"
 MAX_SOURCE = 128 * 1024 * 1024
 MAX_EXPANDED = 96 * 1024 * 1024
 COLS = [
@@ -157,17 +157,33 @@ def plan_paths(sources, repo: Path):
 
 
 class Sink:
+    """Stage an entire source file's outputs before modifying published files."""
     def __init__(self, out: Path):
         self.out = out
         self.outputs = []
+        self._pending = []
+        self._seen = set()
 
     def put(self, relative: Path | str, content: bytes):
         rel = Path(relative)
         if rel.is_absolute() or ".." in rel.parts or not rel.parts:
             raise ValueError("unsafe destination path: " + str(relative))
-        path = self.out / rel
-        save_atomic(path, content, self.out)
+        key = rel.as_posix().casefold()
+        if key in self._seen:
+            raise ValueError("duplicate outputs for source file: " + rel.as_posix())
+        self._seen.add(key)
+        check_in_directory(self.out, self.out / rel)
+        self._pending.append((rel, content))
         self.outputs.append({"path": rel.as_posix(), "sha256": digest(content), "size": len(content)})
+
+    def commit(self):
+        # Parsing failures before this step leave previous outputs intact.
+        # Individual file replacement is atomic; a disk failure during a
+        # multi-file commit is still visible as a failed manifest record.
+        for rel, content in self._pending:
+            save_atomic(self.out / rel, content, self.out)
+        self._pending.clear()
+        return self.outputs
 
 
 def read_file(path: Path):
@@ -215,18 +231,24 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
     warnings = []
     count = 0
     if main is None:
-        return "unsupported", 0, ["format parser not implemented"], sink.outputs
+        return "unsupported", 0, ["format parser not implemented"], sink.commit()
 
     if suffix == ".tbl":
+        raw = read_file(source)
+        if not raw.startswith(b"AHTB"):
+            return "unsupported", 0, ["not an AHTB label table"], sink.commit()
         rows = [{"index": i, "label": label, "hash_fnv64": f"{h:016X}"}
-                for i, (label, h) in enumerate(ahtb_labels(read_file(source)))]
+                for i, (label, h) in enumerate(ahtb_labels(raw))]
         sink.put(main, json_bytes(rows))
-        return "converted", len(rows), warnings, sink.outputs
+        return "converted", len(rows), warnings, sink.commit()
 
     if suffix == ".dat":
         twin = source.with_suffix(".tbl")
         if twin.is_file():
-            names = ahtb_labels(read_file(twin))
+            twin_data = read_file(twin)
+            if not twin_data.startswith(b"AHTB"):
+                return "unsupported", 0, ["paired table is not AHTB"], sink.commit()
+            names = ahtb_labels(twin_data)
             lines = dat_lines(read_file(source))
             if len(names) == len(lines) + 1 and names[-1][0].lower().endswith("max"):
                 names = names[:-1]
@@ -238,7 +260,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 for (label, fnv), line in zip(names, lines)
             ]
             sink.put(main, csv_bytes(rows, ["index", "label", "hash_fnv64", "text", "flags", "source_offset"]))
-            return "converted", len(rows), warnings, sink.outputs
+            return "converted", len(rows), warnings, sink.commit()
         if "sort_string" in relative.parts:
             raw = read_file(source)
             if len(raw) % 2:
@@ -246,8 +268,8 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             rows = [{"index": i, "value_u16": x[0]}
                     for i, x in enumerate(struct.iter_unpack("<H", raw))]
             sink.put(main, csv_bytes(rows, ["index", "value_u16"]))
-            return "partial", len(rows), ["sort index semantic meaning unverified"], sink.outputs
-        return "unsupported", 0, ["DAT has no matching AHTB schema"], sink.outputs
+            return "partial", len(rows), ["sort index semantic meaning unverified"], sink.commit()
+        return "unsupported", 0, ["DAT has no matching AHTB schema"], sink.commit()
 
     if suffix == ".perbin":
         data = read_file(source)
@@ -261,12 +283,12 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             ]})
         sink.put(main, json_bytes({"source": relative.as_posix(), "record_count": len(arrays),
                                    "certainty": "structure_only", "records": parsed}))
-        return "partial", len(arrays), ["FlatBuffers fields have unverified business meaning"], sink.outputs
+        return "partial", len(arrays), ["FlatBuffers fields have unverified business meaning"], sink.commit()
 
     if suffix == ".wazabin" or name.endswith(("_lyt.bin", "_uikit.bin")):
         report = fbs_details(read_file(source))
         sink.put(main, json_bytes(report))
-        return "partial", len(report["fields"]), ["FlatBuffers field types are candidates"], sink.outputs
+        return "partial", len(report["fields"]), ["FlatBuffers field types are candidates"], sink.commit()
 
     if suffix == ".bin" and name.startswith("grow_"):
         raw = read_file(source)
@@ -275,7 +297,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
         rows = [{"index": i, "value_u32": x[0]}
                 for i, x in enumerate(struct.iter_unpack("<I", raw))]
         sink.put(main, json_bytes({"certainty": "u32_candidate", "rows": rows}))
-        return "partial", len(rows), ["growth array interpretation unverified"], sink.outputs
+        return "partial", len(rows), ["growth array interpretation unverified"], sink.commit()
 
     if suffix == ".arc":
         data = read_file(source)
@@ -296,7 +318,7 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
                 n, skipped = export_png(member, nested_prefix / member_path, sink)
                 if skipped:
                     warnings.append(info["name"] + ": " + "; ".join(skipped[:3]))
-        return ("partial" if warnings else "converted"), count, warnings, sink.outputs
+        return ("partial" if warnings else "converted"), count, warnings, sink.commit()
 
     if name.endswith(".bntx.gz") or suffix == ".bntx":
         data = decompressed(source) if name.endswith(".gz") else read_file(source)
@@ -312,9 +334,9 @@ def export_one(source: Path, repo: Path, out: Path, main: Path | None):
             warnings.extend(skipped)
         if not count:
             warnings.append("BNTX kept; PNG format unsupported")
-        return ("partial" if warnings or count == 0 else "converted"), count, warnings, sink.outputs
+        return ("partial" if warnings or count == 0 else "converted"), count, warnings, sink.commit()
 
-    return "unsupported", 0, ["format parser not implemented"], sink.outputs
+    return "unsupported", 0, ["format parser not implemented"], sink.commit()
 
 
 def selected(path: Path, repo: Path, args) -> bool:
