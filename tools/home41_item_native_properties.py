@@ -49,7 +49,7 @@ ROUTES = (
 
 def _native_value(raw: bytes, label: str, offset: int, bits: int, signed: bool) -> int:
     val=int.from_bytes(raw[offset:offset+bits//8], "little", signed=signed)
-    if label.startswith("flag10_bit"):
+    if label.startswith("flag10_bit") or label.startswith("flags_10_bit"):
         n=int(label.split("bit")[-1])
         return (val>>n)&1
     if label == "flags_10_low5":
