@@ -1,0 +1,44 @@
+name: HOME 4.1.0 P6 native focused consumers
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p6-focused-windows.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p6-focused-windows
+  cancel-in-progress: false
+jobs:
+  focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native decoder
+        run: |
+          python -m pip install capstone==5.0.6
+          python -m py_compile tools/home41_native_p6_focus_windows.py
+      - name: Exact opcodes, context windows and source provenance
+        run: |
+          python tools/home41_native_p6_focus_windows.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out docs/UNPACK_P6_NATIVE_FOCUS_WINDOWS.md
+          test -s docs/UNPACK_P6_NATIVE_FOCUS_WINDOWS.md
+      - name: Persist verified disassembly
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- docs/UNPACK_P6_NATIVE_FOCUS_WINDOWS.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: original ELF P6 item and topics native focused disassembly'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
