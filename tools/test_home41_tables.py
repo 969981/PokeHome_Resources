@@ -39,6 +39,12 @@ class TablesTests(unittest.TestCase):
                 self.assertEqual((d["term_count"], d["matrix_width"]), (count, width))
                 self.assertEqual([x["text"] for x in d["terms"][:len(terms)]], terms)
                 self.assertEqual(len(grammar_csv_rows(d)), count * width)
+                self.assertTrue(all("resolved_text" in x for x in grammar_csv_rows(d)))
+                if lang == "English":
+                    self.assertEqual([v["text"] for v in d["terms"][2]["variants"]], ["a ", "an ", ""])
+                    self.assertEqual(d["resolved_selectors"][13]["resolved_text"], "an ")
+                if lang == "French":
+                    self.assertIn("l’", [v["text"] for v in d["terms"][0]["variants"]])
                 self.assertEqual(type_for(Path("bin/message/grammar/" + lang + ".dat")), "tables")
 
     def test_grammar_reject_corruption(self):
