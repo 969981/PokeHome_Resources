@@ -1,0 +1,81 @@
+name: HOME 4.1.0 publish Pokemon and item decoded arrays
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-publish-pokemon-item.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-pokemon-item-publish
+  cancel-in-progress: false
+jobs:
+  publish-pokemon-item:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Real-byte schema-free format regression
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p 'test_home41_pokedex_item.py' -v
+          python -m unittest discover -s tools -p 'test_home41_tables.py' -v
+      - name: Decode six files and hash-verify each output
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind pokemon --resume
+          python tools/unpack_home41.py --root . --out Unpack --kind pokemon --verify --strict
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          manifest=json.loads(Path('Unpack/_meta/manifest.json').read_text())
+          rows=[r for r in manifest['files'] if r.get('detected_format')=='pokemon']
+          assert len(rows)==6,len(rows)
+          assert all(x['status']=='partial' and len(x['outputs'])>=2 for x in rows),rows
+          stats=json.loads(Path('Unpack/_meta/summary.json').read_text())
+          assert stats['status_counts'].get('unsupported')==4,stats
+          assert stats['status_counts'].get('failed',0)==0,stats
+          print('Format-converted source rows:',[(r['source_path'],len(r['outputs'])) for r in rows])
+          print('Verified summary:',stats)
+          PY
+      - name: Publish mirrors and the consistent metadata manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          root=Path('Unpack')
+          manifest=json.loads((root/'_meta/manifest.json').read_text())
+          selected=[r for r in manifest['files'] if r.get('detected_format')=='pokemon']
+          paths=[]
+          for r in selected:
+              for entry in r['outputs']:
+                  p=root/entry['path']
+                  if not p.is_file():raise RuntimeError(f'missing verified artifact {p}')
+                  paths.append(str(p))
+          paths += [str(p) for p in (root/'_meta').glob('*') if p.is_file()]
+          for i in range(0,len(paths),70):
+              subprocess.run(['git','add','-f','--',*paths[i:i+70]],check=True)
+          print('Staged verified resources:',len(paths))
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish Pokemon indexes, Pokedex arrays and PML item 48-byte records'
+            git reset --hard HEAD
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
+      - name: Retain parser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-pokemon-item-manifest
+          path: Unpack/_meta/
+          retention-days: 30
+          if-no-files-found: warn
