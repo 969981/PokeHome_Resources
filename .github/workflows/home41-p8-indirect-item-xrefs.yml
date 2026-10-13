@@ -1,0 +1,57 @@
+name: HOME 4.1.0 P8 Item8 indirect and relocation xrefs
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p8-indirect-item-xrefs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p8-indirect-item-xrefs
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile independent ELF audit tool
+        run: python -m py_compile tools/home41_native_p8_indirect_xrefs.py
+      - name: Audit entire executable PC relative Item8 function pointers and relocations
+        run: |
+          python tools/home41_native_p8_indirect_xrefs.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json').read_text())
+          assert r['original_elf_sha256']=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          assert r['executable_code_words_scanned']>1000000
+          assert len(r['target_function_starts'])==7
+          assert r['local_blr_count']>=1
+          print('P8 indirect target candidate count:',r['address_taken_pc_relative_candidate_count'])
+          print('P8 relocation candidate count:',r['relocation_to_item_address_candidate_count'])
+          PY
+      - name: Publish original ELF P8 auditable evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- derived/4.1.0/native_item_topics/p8_item_indirect_xrefs.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: P8 original ELF PC-relative item function references, relocations and BLR sites'
+            git reset --hard HEAD
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
