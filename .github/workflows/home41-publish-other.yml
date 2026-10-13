@@ -1,0 +1,60 @@
+name: HOME 4.1.0 publish P4 structural resources
+on:
+  workflow_run:
+    workflows: ['HOME 4.1.0 publish BC7 icons']
+    types: [completed]
+    branches: ['4.1.0']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-post-bc7-structural
+  cancel-in-progress: false
+jobs:
+  publish-structural:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regression checks for variable BNSH header and real P4 assets
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p test_home41_extra.py -v
+      - name: Convert 137 other files and assert no parser exception
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind other --resume
+          cat Unpack/_meta/summary.json
+          python - <<'PY'
+          import json
+          d=json.load(open('Unpack/_meta/summary.json'))
+          assert d['status_counts'].get('failed',0)==0, d
+          assert d['status_counts'].get('not_run',0)==0,d
+          assert d['status_counts'].get('unsupported',999)<65,d
+          PY
+      - name: Verify original + decoded file hashes
+        run: python tools/unpack_home41.py --root . --out Unpack --verify --strict
+      - name: Commit structural JSON FBS CSV and manifest
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          p=Path('Unpack')
+          paths=[str(x) for x in (p/'57b83ea8c0af21ef26e2519b9580b373_NCA'/'1').rglob('*') if x.is_file() and x.suffix.lower() in {'.json','.csv','.fbs'} and x.stat().st_size<50*1024*1024]
+          paths+= [str(x) for x in (p/'_meta').glob('*') if x.is_file()]
+          for n in range(0,len(paths),90):
+              subprocess.run(['git','add','--',*paths[n:n+90]],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish BFBS Wwise BNK FFNT BNSH and PRMB structure files'
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
