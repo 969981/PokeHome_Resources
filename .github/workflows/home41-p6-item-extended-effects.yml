@@ -1,0 +1,58 @@
+name: HOME 4.1.0 P6 45 extended item effect selectors
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p6-item-extended-effects.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p6-item-extended-effects
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile native effect table parser
+        run: |
+          python -m pip install capstone==5.0.6
+          python -m py_compile tools/home41_native_item_extended_effect.py
+      - name: Byte-exact read of ELF 45-way extended item effects
+        run: |
+          python tools/home41_native_item_extended_effect.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out derived/4.1.0/native_item_topics/p6_item_extended_effect_routes.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('derived/4.1.0/native_item_topics/p6_item_extended_effect_routes.json').read_text())
+          assert d['elf_sha256']=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          assert len(d['rows'])==45
+          assert [x['extended_selector'] for x in d['rows']]==list(range(26,71))
+          assert d['exact_native_dispatch_anchor_count']>=14
+          print('Native extended 26..70 route map validated')
+          PY
+      - name: Commit strict native effect route evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- derived/4.1.0/native_item_topics/p6_item_extended_effect_routes.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish verified 45-way Item8 native extended effect parameter routes'
+            git reset --hard HEAD
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
