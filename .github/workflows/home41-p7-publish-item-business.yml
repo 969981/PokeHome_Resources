@@ -1,0 +1,87 @@
+name: HOME 4.1.0 P7 publish native Pouch and sprite business semantics
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-p7-publish-item-business.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-p7-publish-item-business
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Source compilation and real Native Item8 regression
+        run: |
+          python -m compileall -q tools
+          python -m unittest discover -s tools -p test_home41_item8_semantic.py -v
+          python -m unittest discover -s tools -p test_home41_native_item_getter.py -v
+          python -m unittest discover -s tools -p test_home41_item_native_effect_values.py -v
+          python -m unittest discover -s tools -p test_home41_item_native_properties.py -v
+      - name: Export real item semantics and verify mirror
+        run: |
+          python tools/unpack_home41.py --root . --out Unpack --kind pokemon --resume
+          python tools/unpack_home41.py --root . --out Unpack --verify --kind pokemon --strict
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('Unpack')
+          meta=json.loads((root/'_meta/summary.json').read_text())
+          assert meta['parser_version']=='mirror-1.0.0',meta
+          assert meta['source_files']==12074 and meta['total_outputs']==47851,meta
+          assert meta['status_counts']=={'converted':6700,'partial':5371,'unsupported':3},meta
+          manifest=json.loads((root/'_meta/manifest.json').read_text())
+          row=next(x for x in manifest['files'] if x['source_path'].endswith('/bin/pml/item/item.dat'))
+          assert len(row['outputs'])==9,row
+          directory=root/'57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item'
+          p=directory/'item.semantic.csv'
+          with p.open(encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          assert len(rows)==1829
+          assert rows[2]['native_icon_resource_key']=='item_0002^o'
+          assert rows[17]['native_icon_resource_key']=='item_0017^o'
+          assert rows[100]['native_icon_resource_key']=='item_dummy^o'
+          assert rows[2]['native_pouch_bag_slot_capacity']=='30'
+          assert sum(r['native_icon_uses_fallback_key']=='True' for r in rows)==683
+          semantic=json.loads((directory/'item.semantic.json').read_text())
+          assert semantic['pouch_native_catalog_record_counts']==[37,27,10,53,640,200,20,25,154]
+          assert semantic['pouch_native_bag_slot_capacities']==[60,30,20,80,550,210,100,100,64]
+          assert semantic['native_business_consumer_provenance']['actual_battle_effect_consumer_proven'] is False
+          print('Verified P7 Native Item8 business consumer data:',len(rows),'records')
+          PY
+      - name: Publish regenerated item semantics and manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          root=Path('Unpack')
+          manifest=json.loads((root/'_meta/manifest.json').read_text())
+          row=next(x for x in manifest['files'] if x['source_path'].endswith('/bin/pml/item/item.dat'))
+          paths=[str(root/p['path']) for p in row['outputs']]
+          paths += [str(p) for p in (root/'_meta').glob('*') if p.is_file()]
+          for path in paths:
+              subprocess.run(['git','add','-f','--',path],check=True)
+          print('P7 verified stage:',len(paths))
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: P7 mirror item native bag classification and original asset icon keys'
+            git reset --hard HEAD
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
