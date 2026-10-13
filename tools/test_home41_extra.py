@@ -41,7 +41,12 @@ class ExtraTests(unittest.TestCase):
 
     def test_bnsh_real_header(self):
         doc=decode_bnsh(self.source(BNSH).read_bytes())
-        self.assertEqual(doc["declared_file_size_candidate"],doc["size_bytes"])
+        self.assertEqual(doc["header_u32_0x1c"],doc["size_bytes"])
+
+    def test_bnsh_untyped_movie_header(self):
+        doc=decode_bnsh(self.source("system_resource/shader/movie.bnsh").read_bytes())
+        self.assertFalse(doc["header_u32_0x1c_equals_file_size"])
+        self.assertLess(doc["header_u32_0x1c"],doc["size_bytes"])
 
     def test_nintendo_font_sections(self):
         doc=decode_bffnt(self.source(FONT).read_bytes())
