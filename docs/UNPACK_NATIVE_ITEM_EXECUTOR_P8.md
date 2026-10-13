@@ -2,6 +2,14 @@
 
 **日期**：2026-10-13　**研究仓库**：`969981/PokeHome_Resources`　**分支**：`4.1.0`
 
+> **P9 最新进展（2026-10-13）**：用户 Library 已找到剑/盾 **1.3.2** 原始 `main.elf`。
+> 对两个具体 Build ID 独立校验后，已定位同构 Item8 Getter `main+0x788630`，
+> 并从 `selector 66 → HP 恢复 → STRH 写入`、
+> `selector 67 → PP 恢复 → STRB 写入` 完成剑盾 Native 静态调用闭环。
+> P8 对 *HOME 自身* 没有发现对应效果执行器的结论仍成立，
+> 但“不具备真正游戏 ELF”的障碍已解除。
+> [P9 双版本原生执行者技术文档](SWSH_1_3_2_NATIVE_ITEM_EFFECT_EXECUTORS_P9.md)。
+
 **真实原始 ELF SHA-256**：`bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a`
 
 本轮目标不是再从 `record+0x1E` 拆分原始属性，而是确认
