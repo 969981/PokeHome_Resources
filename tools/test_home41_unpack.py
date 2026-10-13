@@ -71,6 +71,14 @@ class MirrorTests(unittest.TestCase):
         target.write_bytes(b"tampered")
         self.assertEqual(self.run_unpack("--verify"), 1)
 
+    def test_scoped_verification_when_release_only_members_are_missing(self):
+        self.assertEqual(self.run_unpack("--all"),0)
+        members=[x for x in (self.out/"_raw_members").rglob("*") if x.is_file()]
+        self.assertTrue(members)
+        members[0].unlink()
+        self.assertEqual(self.run_unpack("--verify","--kind","images","--strict"),0)
+        self.assertEqual(self.run_unpack("--verify","--strict"),1)
+
     def test_collision_fallback(self):
         base = self.repo / NCA / "1" / "bin/collision"
         base.mkdir(parents=True)
