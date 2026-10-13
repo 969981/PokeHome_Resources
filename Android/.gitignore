@@ -1,0 +1,14 @@
+# Locally generated copyrighted artifacts, original APKs, decompiled sources and sensitive traces
+work/
+output/
+*.apk
+*.apks
+*.aab
+*.xapk
+*.so
+global-metadata.dat
+*.har
+*.pcap
+*.pcapng
+*.saz
+*.tokens
