@@ -1,0 +1,260 @@
+{
+  "audit": "SW/SH 1.3.2 Item8 P10 native consumer static evidence",
+  "sword": {
+    "sha256": "689db76a880c6ca5b20308343e6f49268c67f75fd009b7d644a166e18adc0652",
+    "build_id": "a3b75bcd3311385aeed67fbeeb79cbb7bf02f471",
+    "status": {
+      "clear_call": "0x13B6898",
+      "setter": "0x76EB60",
+      "status_store32": "0x76EC10",
+      "selectors": [
+        {
+          "selector": 26,
+          "native_status_code": 2,
+          "eligibility_call": "0x13B61D0",
+          "apply_check_call": "0x13B6838"
+        },
+        {
+          "selector": 27,
+          "native_status_code": 5,
+          "eligibility_call": "0x13B61E8",
+          "apply_check_call": "0x13B68AC"
+        },
+        {
+          "selector": 28,
+          "native_status_code": 4,
+          "eligibility_call": "0x13B6200",
+          "apply_check_call": "0x13B6878"
+        },
+        {
+          "selector": 29,
+          "native_status_code": 3,
+          "eligibility_call": "0x13B6218",
+          "apply_check_call": "0x13B6860"
+        },
+        {
+          "selector": 30,
+          "native_status_code": 1,
+          "eligibility_call": "0x13B6230",
+          "apply_check_call": "0x13B6804"
+        }
+      ]
+    },
+    "pp": {
+      "pp_up_stage_store": "0x770F3C",
+      "pp_up_stage_setter": "0x770E80",
+      "flags": {
+        "45": "PP Up stage +1",
+        "46": "PP Up stage +3",
+        "47": "single-slot PP restoration",
+        "48": "all-slot PP restoration"
+      }
+    },
+    "ev": {
+      "current_getter": "0x77A6E0",
+      "writer": "0x77A8A0",
+      "cap_helper": "0x77AB70",
+      "per_stat_cap": 252,
+      "total_cap": 510,
+      "channels": [
+        {
+          "name": "HP",
+          "stat_enum": 0,
+          "flag_selector": 50,
+          "signed_delta_selector": 60,
+          "flag_call": "0x13B6D50",
+          "delta_call": "0x13B6D60",
+          "apply_call": "0x13B6E34",
+          "byte_store": "0x770488",
+          "storage_offset": "0x1E"
+        },
+        {
+          "name": "Attack",
+          "stat_enum": 1,
+          "flag_selector": 51,
+          "signed_delta_selector": 61,
+          "flag_call": "0x13B6E58",
+          "delta_call": "0x13B6E68",
+          "apply_call": "0x13B6F28",
+          "byte_store": "0x7705D8",
+          "storage_offset": "0x1F"
+        },
+        {
+          "name": "Defense",
+          "stat_enum": 2,
+          "flag_selector": 52,
+          "signed_delta_selector": 62,
+          "flag_call": "0x13B6F40",
+          "delta_call": "0x13B6F50",
+          "apply_call": "0x13B700C",
+          "byte_store": "0x770728",
+          "storage_offset": "0x20"
+        },
+        {
+          "name": "Speed",
+          "stat_enum": 5,
+          "flag_selector": 53,
+          "signed_delta_selector": 63,
+          "flag_call": "0x13B7028",
+          "delta_call": "0x13B7038",
+          "apply_call": "0x13B70F4",
+          "byte_store": "0x770B18",
+          "storage_offset": "0x21"
+        },
+        {
+          "name": "SpAttack",
+          "stat_enum": 3,
+          "flag_selector": 54,
+          "signed_delta_selector": 64,
+          "flag_call": "0x13B7110",
+          "delta_call": "0x13B7120",
+          "apply_call": "0x13B71DC",
+          "byte_store": "0x770878",
+          "storage_offset": "0x22"
+        },
+        {
+          "name": "SpDefense",
+          "stat_enum": 4,
+          "flag_selector": 55,
+          "signed_delta_selector": 65,
+          "flag_call": "0x13B71F8",
+          "delta_call": "0x13B7208",
+          "apply_call": "0x13B72AC",
+          "byte_store": "0x7709C8",
+          "storage_offset": "0x23"
+        }
+      ]
+    }
+  },
+  "shield": {
+    "sha256": "f59618e93f585c967f508fb10b94da81bbaab6014cadacb9a82351546ae091f4",
+    "build_id": "a16802625e7826bf83b6f9708e475b912a9ab7df",
+    "status": {
+      "clear_call": "0x13B68C8",
+      "setter": "0x76EB60",
+      "status_store32": "0x76EC10",
+      "selectors": [
+        {
+          "selector": 26,
+          "native_status_code": 2,
+          "eligibility_call": "0x13B6200",
+          "apply_check_call": "0x13B6868"
+        },
+        {
+          "selector": 27,
+          "native_status_code": 5,
+          "eligibility_call": "0x13B6218",
+          "apply_check_call": "0x13B68DC"
+        },
+        {
+          "selector": 28,
+          "native_status_code": 4,
+          "eligibility_call": "0x13B6230",
+          "apply_check_call": "0x13B68A8"
+        },
+        {
+          "selector": 29,
+          "native_status_code": 3,
+          "eligibility_call": "0x13B6248",
+          "apply_check_call": "0x13B6890"
+        },
+        {
+          "selector": 30,
+          "native_status_code": 1,
+          "eligibility_call": "0x13B6260",
+          "apply_check_call": "0x13B6834"
+        }
+      ]
+    },
+    "pp": {
+      "pp_up_stage_store": "0x770F3C",
+      "pp_up_stage_setter": "0x770E80",
+      "flags": {
+        "45": "PP Up stage +1",
+        "46": "PP Up stage +3",
+        "47": "single-slot PP restoration",
+        "48": "all-slot PP restoration"
+      }
+    },
+    "ev": {
+      "current_getter": "0x77A6E0",
+      "writer": "0x77A8A0",
+      "cap_helper": "0x77AB70",
+      "per_stat_cap": 252,
+      "total_cap": 510,
+      "channels": [
+        {
+          "name": "HP",
+          "stat_enum": 0,
+          "flag_selector": 50,
+          "signed_delta_selector": 60,
+          "flag_call": "0x13B6D80",
+          "delta_call": "0x13B6D90",
+          "apply_call": "0x13B6E64",
+          "byte_store": "0x770488",
+          "storage_offset": "0x1E"
+        },
+        {
+          "name": "Attack",
+          "stat_enum": 1,
+          "flag_selector": 51,
+          "signed_delta_selector": 61,
+          "flag_call": "0x13B6E88",
+          "delta_call": "0x13B6E98",
+          "apply_call": "0x13B6F58",
+          "byte_store": "0x7705D8",
+          "storage_offset": "0x1F"
+        },
+        {
+          "name": "Defense",
+          "stat_enum": 2,
+          "flag_selector": 52,
+          "signed_delta_selector": 62,
+          "flag_call": "0x13B6F70",
+          "delta_call": "0x13B6F80",
+          "apply_call": "0x13B703C",
+          "byte_store": "0x770728",
+          "storage_offset": "0x20"
+        },
+        {
+          "name": "Speed",
+          "stat_enum": 5,
+          "flag_selector": 53,
+          "signed_delta_selector": 63,
+          "flag_call": "0x13B7058",
+          "delta_call": "0x13B7068",
+          "apply_call": "0x13B7124",
+          "byte_store": "0x770B18",
+          "storage_offset": "0x21"
+        },
+        {
+          "name": "SpAttack",
+          "stat_enum": 3,
+          "flag_selector": 54,
+          "signed_delta_selector": 64,
+          "flag_call": "0x13B7140",
+          "delta_call": "0x13B7150",
+          "apply_call": "0x13B720C",
+          "byte_store": "0x770878",
+          "storage_offset": "0x22"
+        },
+        {
+          "name": "SpDefense",
+          "stat_enum": 4,
+          "flag_selector": 55,
+          "signed_delta_selector": 65,
+          "flag_call": "0x13B7228",
+          "delta_call": "0x13B7238",
+          "apply_call": "0x13B72DC",
+          "byte_store": "0x7709C8",
+          "storage_offset": "0x23"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No matching Sword/Shield 1.3.2 RomFS per-item value comparison.",
+    "No runtime state trace. Unknown selectors cannot be declared unused.",
+    "Status enum-to-localized status names not proved here."
+  ]
+}
