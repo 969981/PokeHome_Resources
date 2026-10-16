@@ -71,3 +71,13 @@ PokeHome_Resources / 4.1.0
 - 导出失败：核对源文件缺失、数量、FlatBuffers 字段范围和 DAT/AHTB 解码日志。
 - 导出成功但同步失败：检查 HOME_CORE_EDITOR_PUSH_TOKEN 是否配置、过期、仓库权限不足或目标分支受保护。
 - 原始归档单文件超过 95 MiB：脚本会停止并要求改用 Git LFS / Release，不会绕过 Git 限制。
+
+
+## 6. 真实 CI 导出记录（2026-10-16）
+
+[Actions Run 38849367651](https://github.com/969981/PokeHome_Resources/actions/runs/38849367651) 的源码检出、语法验证、针对性 PML/Waza/AHTB/DAT 测试、全量导出、数据总量验证及 Artifact 上传均成功；随后在 **Check private destination access** 步骤因仓库 Secret HOME_CORE_EDITOR_PUSH_TOKEN 尚未配置而主动失败。**私有仓库的 generated/ 此时尚无同步结果**。
+
+- Artifact：home41-romfs-full-export，ZIP 4,832,373 字节，GitHub Artifact ID 12024676911；到期 2026-10-30。
+- 实际导出：Personal 8,485，Species/Form 1,479，Waza 5,089，Move ID 921；原始文件 5,139 个；已导出其他表文件 74 个。
+- 源 TAR.GZ：2,293,165 字节；SHA-256 cc5908d0b474c0bcb12f5d5d487aeabb0070fb8ed5cb140c31a28a90113081c9。
+- 下一步：配置只允许写私有目标仓库的 Secret，并在上述 Actions Run 重新运行失败作业/手动运行工作流。只有远端 push 成功及 generated/ 存在实物才能判定同步完成。
