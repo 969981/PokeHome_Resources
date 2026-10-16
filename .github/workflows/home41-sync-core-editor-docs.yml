@@ -1,0 +1,141 @@
+name: HOME 4.1.0 ROMFS export to home-core-editor docs
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-sync-core-editor-docs.yml'
+      - 'tools/home41_export_to_core_editor.py'
+      - 'tools/export_home41_pml_csv.py'
+      - 'tools/home41_p2_pml_readonly.py'
+      - 'tools/home41_romfs_core.py'
+      - '57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/**'
+      - '57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message/**'
+      - '57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/**'
+      - '57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/**'
+      - 'Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/**'
+      - 'Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message/**'
+      - 'Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list/**'
+      - 'Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: home41-core-editor-docs-publish
+  cancel-in-progress: false
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout ROMFS from PokeHome_Resources
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          persist-credentials: false
+          sparse-checkout: |
+            tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/zukan_data
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/personal
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message/Simp_Chinese/megaturtle
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message/English/megaturtle
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/mtt_pokedex/bin
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/zukan_data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate parser syntax and existing PML tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/home41_export_to_core_editor.py tools/export_home41_pml_csv.py tools/home41_p2_pml_readonly.py tools/home41_romfs_core.py
+          python -m unittest discover -s tools -p test_home41_export.py -v
+      - name: Export original bytes, Wazabin fields and full decoded tables
+        env:
+          OUTPUT_DIR: ${{ runner.temp }}/home41_romfs_full_4_1_0
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/home41_export_to_core_editor.py --resource-repo . --output "$OUTPUT_DIR"
+          python - <<'PY'
+          import csv, json, os
+          from pathlib import Path
+          root=Path(os.environ["OUTPUT_DIR"])
+          report=json.loads((root/"bundle_summary.json").read_text())
+          expected={"personal":8485,"unique_species_forms":1479,"waza":5089,"unique_moves":921}
+          assert report["semantic_counts"] == expected, report
+          for name, rows in [("species_forms_all_games.csv",8485),("moves_all_games.csv",5089),
+                             ("species_6game_matrix.csv",1479),("moves_6game_matrix.csv",921)]:
+              with (root/"semantic"/name).open(encoding="utf-8-sig",newline="") as stream:
+                  n=sum(1 for _ in csv.DictReader(stream))
+              assert n == rows,(name,n)
+          assert report["source_files"] >= 5119,report
+          assert (root/"raw_fields/waza_fields.csv").stat().st_size > 100000
+          assert (root/"source_romfs_subset.tar.gz").stat().st_size > 100000
+          print("Verified full ROMFS export:",expected,"archived sources:",report["source_files"])
+          PY
+      - name: Upload exported bundle as a fallback artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-romfs-full-export
+          path: ${{ runner.temp }}/home41_romfs_full_4_1_0
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Check private destination access
+        env:
+          TARGET_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          if [ -z "$TARGET_TOKEN" ]; then
+            echo "::error::Missing HOME_CORE_EDITOR_PUSH_TOKEN in PokeHome_Resources Actions secrets. Grant fine-grained Contents read/write on private HOME-Live-Plugin-CHS only."
+            exit 1
+          fi
+      - name: Checkout home-core-editor private destination
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: home-core-editor
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: _plugin_target
+          persist-credentials: true
+          sparse-checkout: |
+            docs/pokemon_home_reverse/4.1.0/resources/home41_romfs_full_4_1_0
+      - name: Copy verified outputs into private docs and push
+        env:
+          OUTPUT_DIR: ${{ runner.temp }}/home41_romfs_full_4_1_0
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest_rel="docs/pokemon_home_reverse/4.1.0/resources/home41_romfs_full_4_1_0/generated"
+          dst="_plugin_target/$dest_rel"
+          mkdir -p "$dst"
+          rsync -a --delete -- "$OUTPUT_DIR/" "$dst/"
+          cd _plugin_target
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -A -- "$dest_rel"
+          if git diff --cached --quiet; then
+            echo "Generated resources already match home-core-editor; no commit needed."
+            exit 0
+          fi
+          git commit -m "data(home41): sync original ROMFS bundle and fully decoded resource tables"
+          for attempt in 1 2 3; do
+            git pull --rebase origin home-core-editor
+            if git push origin HEAD:home-core-editor; then
+              echo "Published full resources in $dest_rel"
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "::error::Could not publish to private home-core-editor after retries."
+          exit 1
