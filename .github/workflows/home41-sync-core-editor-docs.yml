@@ -58,7 +58,26 @@ jobs:
         run: |
           set -euo pipefail
           python -m py_compile tools/home41_export_to_core_editor.py tools/export_home41_pml_csv.py tools/home41_p2_pml_readonly.py tools/home41_romfs_core.py
-          python -m unittest discover -s tools -p test_home41_export.py -v
+          python - <<'PY'
+          import struct
+          from pathlib import Path
+          import sys
+          sys.path.insert(0, str(Path('tools').resolve()))
+          from home41_p2_pml_readonly import records, table
+          from home41_romfs_core import ahtb_labels, dat_lines
+          root=Path("57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin")
+          global_pml=(root/"pml/personal/global_personal_total.perbin").read_bytes()
+          assert len(records(global_pml))==1479
+          move=(root/"pml/waza/orion/waza0098.wazabin").read_bytes()
+          t=table(move,struct.unpack_from("<I",move,0)[0])
+          assert struct.unpack_from("<I",move,t[0]+t[1][0])[0]==98
+          msg=root/"message/Simp_Chinese/megaturtle"
+          labels=ahtb_labels((msg/"monsname.tbl").read_bytes())
+          texts=dat_lines((msg/"monsname.dat").read_bytes())
+          assert len(labels) in (len(texts),len(texts)+1)
+          assert len((root/"pokemon/pokemon_list/pokemon_valid_list.bin").read_bytes())==11936
+          print("Focused Personal/Waza/AHTB/DAT/valid-list smoke tests passed.")
+          PY
       - name: Export original bytes, Wazabin fields and full decoded tables
         env:
           OUTPUT_DIR: ${{ runner.temp }}/home41_romfs_full_4_1_0
