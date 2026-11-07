@@ -196,8 +196,11 @@ class GuestOnboardingTests(unittest.TestCase):
         class OneRetryNeeded(FakeADB):
             def __call__(self, *args, **kw):
                 res = super().__call__(*args, **kw)
-                if args[:3] == ("shell", "input", "tap") and len(self.taps) == 2:
-                    self.image = BIRTHDAY
+                if args[:3] == ("shell", "input", "tap"):
+                    if len(self.taps) == 2:
+                        self.image = BIRTHDAY
+                    elif len(self.taps) == 3:
+                        self.image = YEAR_POPUP
                 return res
         with tempfile.TemporaryDirectory() as d:
             fake = OneRetryNeeded(COUNTRY)
