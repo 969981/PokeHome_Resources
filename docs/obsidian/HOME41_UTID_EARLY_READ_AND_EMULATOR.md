@@ -213,3 +213,13 @@ python tools/home41_auth_timeline.py --input /path/to/redacted-frida-events.json
 - Nintendo Getting Started: https://en-americas-support.nintendo.com/app/answers/detail/a_id/48857
 - Nintendo FAQ (mobile guest allowed): https://en-americas-support.nintendo.com/app/answers/detail/p/856/a_id/48803
 - Android testing runtime permission: https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/java/android/permission/Permissions.md
+
+
+## 14. 第九轮实测：相机成功预授予，下一个阻塞是位置权限
+
+- [Actions #42339409576](https://github.com/969981/PokeHome_Resources/actions/runs/42339409576) 成功完成。
+- \`camera_permission_preflight.status=verified_granted\`，\`grant_command_ok=true\`、\`appop_command_ok=true\`，说明受控、无摄像头的 GitHub AVD 已可靠消除相机弹窗；没有改动其他危险权限。
+- 但 \`system_prompt_actions=hierarchy_unavailable\`，最终 screenshot 实际为 Android **“Allow Pokémon HOME to access this device's location?”**，并不是 HOME 游戏错误，也不是注册/登录页面。
+- 新实现 \`predeny_emulator_location\`：对 APK 中声明的 \`ACCESS_FINE_LOCATION\` 和 \`ACCESS_COARSE_LOCATION\`，在临时 AVD 上设置 revoked + \`USER_SET|USER_FIXED\` 并配置 appops ignore，\`dumpsys package\` 再次核实两权限均 \`granted=false\`。**不向 HOME 授予位置访问**。
+- 只有 \`location_permission_preflight.status=verified_denied_fixed\` 才算系统位置权限处理通过；如果提示仍出现，以截图为准继续排查。不同设备的 OS 行为可能不同，不能把模拟器的一次结果视为所有 Android 设备的保证。
+- 第九轮 \`home_language_screen_recognized=false\`、\`simplified_chinese_selected=false\`、\`auth_registration_status=not_attempted_no_test_account\`、\`first_basic_utid_status=not_observed\`，明确**没有取得 ID**。

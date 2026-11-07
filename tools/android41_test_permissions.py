@@ -41,3 +41,48 @@ def configure_emulator_camera_permission(adb,package:str)->dict:
         "grant_unconfirmed"
     )
     return result
+
+
+# HOME requests location in a fresh AVD after CAMERA is handled. Fixing a
+# DENIED state is preferable to granting access to device location for an
+# account-registration test, and it prevents repeated permission prompts.
+LOCATIONS=("android.permission.ACCESS_FINE_LOCATION",
+           "android.permission.ACCESS_COARSE_LOCATION")
+
+def predeny_emulator_location(adb,package:str)->dict:
+    initial=adb("shell","dumpsys","package",package,secs=25)
+    dump=initial.stdout if initial and initial.returncode==0 else ""
+    items={}
+    for permission in LOCATIONS:
+        if permission not in dump:
+            items[permission]={"declared":False,"status":"not_declared"}
+            continue
+        revoked=adb("shell","pm","revoke",package,permission,secs=20)
+        fixed=adb("shell","pm","set-permission-flags",package,permission,
+                  "user-set","user-fixed",secs=20)
+        # AppOps default deny is also set on disposable synthetic-location AVD.
+        op_name="FINE_LOCATION" if "FINE" in permission else "COARSE_LOCATION"
+        appop=adb("shell","cmd","appops","set",package,op_name,"ignore",secs=20)
+        items[permission]={
+            "declared":True,
+            "revoke_command_ok":bool(revoked and revoked.returncode==0),
+            "fixed_command_ok":bool(fixed and fixed.returncode==0),
+            "appops_ignore_ok":bool(appop and appop.returncode==0),
+        }
+    check=adb("shell","dumpsys","package",package,secs=25)
+    checked=check.stdout if check and check.returncode==0 else ""
+    for permission,item in items.items():
+        if not item["declared"]:continue
+        m=re.search(re.escape(permission)+r":\s*granted=(true|false).*?flags=\[([^\]]*)\]",checked)
+        flags=m.group(2) if m else ""
+        item["granted_false"]=bool(m and m.group(1)=="false")
+        item["user_fixed"]=bool("USER_FIXED" in flags and "USER_SET" in flags)
+        item["status"]="verified_denied_fixed" if (
+            item["granted_false"] and item["user_fixed"]) else "not_verified"
+    active=[v for v in items.values() if v["declared"]]
+    overall="verified_denied_fixed" if active and all(
+        x["status"]=="verified_denied_fixed" for x in active) else (
+        "no_location_permission_requested" if not active else "not_verified")
+    return {"strategy":"pre_deny_and_user_fix_disposable_avd",
+            "status":overall,"details":items,
+            "location_access_granted":False if overall=="verified_denied_fixed" else None}

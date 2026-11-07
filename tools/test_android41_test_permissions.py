@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
-from android41_test_permissions import configure_emulator_camera_permission,CAMERA
+from android41_test_permissions import configure_emulator_camera_permission,predeny_emulator_location,CAMERA,LOCATIONS
 
 class FakeAdb:
     def __init__(self,declared=True,grant_success=True):
@@ -23,6 +23,24 @@ class FakeAdb:
         if args[1:4]==("cmd","appops","set"):
             return SimpleNamespace(returncode=0,stdout="")
         return SimpleNamespace(returncode=1,stdout="")
+
+class FakeLocationAdb:
+    def __init__(self):
+        self.calls=[]
+        self.fixed=set()
+    def __call__(self,*args,secs=30,**kwargs):
+        self.calls.append(args)
+        if args[1:3]==("dumpsys","package"):
+            lines=[]
+            for p in LOCATIONS:
+                flags="USER_SET|USER_FIXED" if p in self.fixed else ""
+                lines.append(f"{p}: granted=false, flags=[{flags}]")
+            return SimpleNamespace(returncode=0,stdout="\n".join(lines))
+        if args[1:3]==("pm","set-permission-flags"):
+            self.fixed.add(args[3])
+            return SimpleNamespace(returncode=0,stdout="")
+        return SimpleNamespace(returncode=0,stdout="")
+
 class PermissionTests(unittest.TestCase):
     def test_only_camera_is_pregranted(self):
         fake=FakeAdb()
@@ -37,6 +55,18 @@ class PermissionTests(unittest.TestCase):
         r=configure_emulator_camera_permission(fake,"jp.pokemon.pokemonhome")
         self.assertEqual(r["status"],"not_declared")
         self.assertEqual(len(fake.calls),1)
+
+    def test_location_is_denied_and_fixed_without_grant(self):
+        fake=FakeLocationAdb()
+        r=predeny_emulator_location(fake,"jp.pokemon.pokemonhome")
+        self.assertEqual(r["status"],"verified_denied_fixed")
+        self.assertFalse(r["location_access_granted"])
+        self.assertTrue(all(x["status"]=="verified_denied_fixed"
+            for x in r["details"].values()))
+        self.assertFalse(any(args[1:3]==("pm","grant") for args in fake.calls))
+        self.assertTrue(all(args[-1]=="ignore" for args in fake.calls
+            if args[1:4]==("cmd","appops","set")))
+
     def test_error_explicit(self):
         fake=FakeAdb(grant_success=False)
         r=configure_emulator_camera_permission(fake,"jp.pokemon.pokemonhome")
