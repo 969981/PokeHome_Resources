@@ -195,3 +195,33 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 - 这次 `first_basic_utid_event_seen=false`、`api_stage_event_count=0`，与本次仅为未提交注册的首次启动一致。**不能推出已取得六位 ID，也不能证明具体哪个服务端响应包含了 basic.utid。**
 - [完整脱敏原生证据](https://github.com/969981/PokeHome_Resources/actions/runs/42380528102) 包含 `frida_interface_events.jsonl` 与 `frida_interface_summary.json`；不保存任何原始 UTID、访问令牌或 HTTP payload。
 - 最新 `android41_emulator_probe.py` 已将 ARM64 observer 的附加时机提前到已校验 HOME 启动后、**语言/地区/生日控件操作之前**。其目的在于真正观察官方首次初始化期间的回调，而不是在所有 UI 操作结束后再附加。依旧不提交生日、不自动接受协议、不创建/删除账号；当前测试目标为 `1999-04-05`，只有 4 月、5 日本地 UI 选择经过截图验证，1999 年尚未可靠选中。
+
+
+## 十一、提前附加导致白屏的回归与截图门控修复
+
+### 失败证据，不把 GitHub Actions 成功当 UI 成功
+
+[GitHub Actions #42381075880](https://github.com/969981/PokeHome_Resources/actions/runs/42381075880) 最终 workflow=success，**但这是资源扫描/Artifact 上传成功，不代表 HOME UI 已通过**。读取该次专属 Artifact 后：
+
+- `frida_server_setup.status=ready`、`frida_interface.status=spawn_attach_resumed`、`observed_arch=x64`、`java_hook_ready=true`、`dns_hook_ready=true`。
+- ARM64 在 HOME 页面尚未出现之前提前尝试 `realm='emulated'`：`emulated_realm_before_ui_status=emulated_attach_or_load_failed`、`emulated_realm_error_type=TransportError`。
+- 真实 `screen_15s.png` 和 `onboarding_final.png` 均为**纯白屏**，`onboarding.status=no_known_next_screen`，70 次检查、`completed=[]`，没有进入任何验证过的页面，也没有执行生日/注册。
+- 本轮有 7 条原生 Socket 事件；`api_stage_event_count=0`，`arm64_observer_ready=false`，`first_basic_utid_event_seen=false`。
+- 白屏在初始 15s 截图即出现；**不能证明是 emulated attach 引起白屏**。只能证明这轮在未知／白屏状态尝试 emulated attach 失败，不应把该异常当成服务端返回信息或 UTID 事件。
+
+对照 [#42380528059](https://github.com/969981/PokeHome_Resources/actions/runs/42380528059)：先完成正常 UI 操作，再附加 ARM64 时 `emulated_realm_status=emulated_arm64_readonly_observer_loaded`、`arm64_hook_preflight_seen=true`、`arm64_observer_ready=true`，月=4、日=5 的实际页面截图也存在。两轮差异支持调整**附加的前置条件**，但尚未证明单一因果。
+
+### 实施修复：两张真实 UI 截图 → ARM64 就绪 → 首次点击
+
+已更新 `tools/home41_guest_onboarding.py`、`tools/android41_emulator_probe.py`：
+
+1. 移除启动 15s 时无条件尝试 `realm='emulated'` 的动作。
+2. 状态机在连续两帧识别同一 HOME 已知初始化页面（此前真实验收过的语言、地区、出生日期页）之后，且在**首次 HOME 页面 tap 之前**，调用可选 `on_first_verified_page` 回调安装 ARM64 只读 Hook。纯白屏、未知模态和通信错误不能触发它。
+3. `FridaInterfaceMonitor.probe_emulated_realm()` 在 ARM64 `libil2cpp.so` 可见且 RVA 边界通过后加载 `early_home_tid_observer.js`，但不再把仅 `script.load()` 视为就绪。**必须在最多 8 秒内收到真实 `read_only_observer_ready` 事件**才返回 `emulated_arm64_readonly_observer_loaded`。
+4. `TransportError`、未就绪或其他失败则立即停止该次 UI 自动化，不点语言确认、生日下一步或其他注册相关控件；报告 `early_arm64_hook_unavailable_safe_stop` 和脱敏错误类型。未开启监控的普通 UI 测试保持原逻辑。
+5. 白屏或未知页面不会在结尾再次尝试 ARM64 附加，避免不可信运行中重复激活。
+6. 状态独立记录 `early_arm64_hook_attempted`、`early_arm64_hook_status`、`early_arm64_hook_before_first_tap`；绝不能把只有 x64 Socket 事件的运行记成已命中 `SetBasic`。
+
+[快速 CI #42382760960](https://github.com/969981/PokeHome_Resources/actions/runs/42382760960) **54 项测试通过**，明确覆盖白屏无 Hook、出现有效页面后首次 tap 之前 Hook、TransportError 失败前停止、ARM64 就绪事件和拒绝仅 script.load 的假阳性。[Frida 编译专项 #42382760968](https://github.com/969981/PokeHome_Resources/actions/runs/42382760968) 10 项通过。
+
+下一次真实模拟器回归是 [#42382760954](https://github.com/969981/PokeHome_Resources/actions/runs/42382760954)。必须读取其专属 `emulator_probe_summary.json`、`onboarding_checkpoint.json`、`frida_interface_events.jsonl` 与截图后判断；工作流成功只是运行结束。截止本次文档整理，没有注册账号、DOB 提交、首次 `basic.utid` 或官方六位 ID 对账。
