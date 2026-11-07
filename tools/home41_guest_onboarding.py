@@ -222,7 +222,9 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "account_deleted": False,
         "first_basic_utid_observed": False,
         "year_picker_verified": False,
-        "year_scrolls_confirmed": 0,
+        "year_scroll_commands_succeeded": 0,
+        "year_popup_remained_open_after_wheel": 0,
+        "year_labels_changed_verified": False,
         "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
@@ -324,38 +326,41 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "birth_year_picker_verified_open"
                             result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
                             break
-                    # A swipe is reversible UI navigation only. Restrict every
-                    # gesture to the already-observed popup rectangle, verify
-                    # popup stays visible, and retain each actual screenshot.
-                    # Do not guess row/year labels or click an unverified year.
+                    # Android 15 supports InputShellCommand's pointer
+                    # ACTION_SCROLL (mouse wheel), which does not generate a
+                    # touchscreen UP/click. In real run #42360115832 a
+                    # touchscreen swipe accidentally SELECTED 2019, so that
+                    # gesture must never be repeated on this Unity dropdown.
+                    # Send bounded wheel events over a verified year-popup
+                    # rectangle, capture after EACH, and stop on disappearance.
+                    # Wheel exit=0 != list movement; record that uncertainty.
                     if result["year_picker_verified"]:
                         from PIL import Image
                         from io import BytesIO
                         with Image.open(BytesIO(picker_frame)) as src:
                             width, height = src.size
-                        for swipe_no in range(profile.get("explore_year_scrolls", 0)):
-                            swipe = adb(
-                                "shell", "input", "swipe",
-                                str(int(width * .20)), str(int(height * .59)),
-                                str(int(width * .20)), str(int(height * .37)),
-                                "550", secs=18)
-                            if swipe is None or swipe.returncode != 0:
-                                result["stop_reason"] = "year_scroll_adb_failed"
+                        for wheel_no in range(profile.get("explore_year_scrolls", 0)):
+                            wheel = adb(
+                                "shell", "input", "mouse", "scroll",
+                                str(int(width * .20)), str(int(height * .43)),
+                                "--axis", "VSCROLL,-3", secs=18)
+                            if wheel is None or wheel.returncode != 0:
+                                result["stop_reason"] = "mouse_wheel_scroll_unsupported"
                                 break
-                            # Retain evidence even if the page changed or an
-                            # unexpected error appeared. Never tap these pages.
+                            result["year_scroll_commands_succeeded"] += 1
                             if interval_seconds > 0:
                                 time.sleep(interval_seconds)
-                            scrolled = _capture(adb, output, "")
-                            save(f"onboarding_year_scroll_{swipe_no+1:02d}.png", scrolled) if scrolled else None
-                            if not birth_year_popup_visible(scrolled):
-                                result["stop_reason"] = "year_popup_not_verified_after_swipe"
+                            wheel_frame = _capture(adb, output, "")
+                            if wheel_frame:
+                                save(f"onboarding_year_wheel_{wheel_no+1:02d}.png", wheel_frame)
+                            if not birth_year_popup_visible(wheel_frame):
+                                result["stop_reason"] = "year_popup_disappeared_after_wheel_event"
                                 break
-                            result["year_scrolls_confirmed"] += 1
-                        if result["year_scrolls_confirmed"]:
-                            result["status"] = "year_list_scrolled_unverified_labels"
+                            result["year_popup_remained_open_after_wheel"] += 1
+                        if result["year_scroll_commands_succeeded"]:
+                            result["status"] = "mouse_wheel_scroll_probe_only"
                             if result["stop_reason"] == "year_list_visible_birthdate_unsubmitted":
-                                result["stop_reason"] = "scroll_evidence_captured_no_year_selected"
+                                result["stop_reason"] = "wheel_screenshots_need_year_label_review"
             break
         save(f"onboarding_before_{name}.png", data)
         if isinstance(point, tuple) and len(point) == 3 and point[0] == "px":
