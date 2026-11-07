@@ -187,6 +187,9 @@ def main():
             # never grant or read a physical user's device location.
             report["location_permission_preflight"]=predeny_emulator_location(
                 adb,PACKAGE)
+            from android41_test_permissions import predeny_emulator_notifications
+            report["notifications_permission_preflight"]=predeny_emulator_notifications(
+                adb,PACKAGE)
             # Set the standard Android OS immersive acknowledgement on a
             # disposable emulator, not HOME's in-app Terms/consent.
             immersive=adb("shell","settings","put","secure",

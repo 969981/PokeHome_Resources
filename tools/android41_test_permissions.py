@@ -86,3 +86,27 @@ def predeny_emulator_location(adb,package:str)->dict:
     return {"strategy":"pre_deny_and_user_fix_disposable_avd",
             "status":overall,"details":items,
             "location_access_granted":False if overall=="verified_denied_fixed" else None}
+
+
+NOTIFY="android.permission.POST_NOTIFICATIONS"
+
+def predeny_emulator_notifications(adb,package:str)->dict:
+    initial=adb("shell","dumpsys","package",package,secs=25)
+    src=initial.stdout if initial and initial.returncode==0 else ""
+    if NOTIFY not in src:
+        return {"status":"not_declared","granted":None}
+    revoke=adb("shell","pm","revoke",package,NOTIFY,secs=20)
+    fixed=adb("shell","pm","set-permission-flags",package,NOTIFY,
+              "user-set","user-fixed",secs=20)
+    check=adb("shell","dumpsys","package",package,secs=25)
+    checked=check.stdout if check and check.returncode==0 else ""
+    m=re.search(re.escape(NOTIFY)+r":\s*granted=(true|false).*?flags=\[([^\]]*)\]",checked)
+    flags=m.group(2) if m else ""
+    denied=bool(m and m.group(1)=="false")
+    user_fixed=bool("USER_FIXED" in flags and "USER_SET" in flags)
+    return {"status":"verified_denied_fixed" if denied and user_fixed else "not_verified",
+            "granted":not denied if m else None,
+            "user_fixed":user_fixed,
+            "revoke_command_ok":bool(revoke and revoke.returncode==0),
+            "fixed_command_ok":bool(fixed and fixed.returncode==0),
+            "strategy":"deny_notifications_at_os_permission_manager"}

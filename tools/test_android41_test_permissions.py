@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
-from android41_test_permissions import configure_emulator_camera_permission,predeny_emulator_location,CAMERA,LOCATIONS
+from android41_test_permissions import configure_emulator_camera_permission,predeny_emulator_location,predeny_emulator_notifications,CAMERA,LOCATIONS,NOTIFY
 
 class FakeAdb:
     def __init__(self,declared=True,grant_success=True):
@@ -41,6 +41,21 @@ class FakeLocationAdb:
             return SimpleNamespace(returncode=0,stdout="")
         return SimpleNamespace(returncode=0,stdout="")
 
+
+class FakeNotifyAdb:
+    def __init__(self):
+        self.fixed=False
+        self.calls=[]
+    def __call__(self,*args,secs=30,**kwargs):
+        self.calls.append(args)
+        if args[1:3]==("dumpsys","package"):
+            flags="USER_SET|USER_FIXED" if self.fixed else ""
+            return SimpleNamespace(returncode=0,
+                stdout=f"{NOTIFY}: granted=false, flags=[{flags}]")
+        if args[1:3]==("pm","set-permission-flags"):
+            self.fixed=True
+        return SimpleNamespace(returncode=0,stdout="")
+
 class PermissionTests(unittest.TestCase):
     def test_only_camera_is_pregranted(self):
         fake=FakeAdb()
@@ -55,6 +70,15 @@ class PermissionTests(unittest.TestCase):
         r=configure_emulator_camera_permission(fake,"jp.pokemon.pokemonhome")
         self.assertEqual(r["status"],"not_declared")
         self.assertEqual(len(fake.calls),1)
+
+
+    def test_notifications_denied_without_grant(self):
+        fake=FakeNotifyAdb()
+        r=predeny_emulator_notifications(fake,"jp.pokemon.pokemonhome")
+        self.assertEqual(r["status"],"verified_denied_fixed")
+        self.assertFalse(r["granted"])
+        self.assertTrue(r["user_fixed"])
+        self.assertFalse(any(x[1:3]==("pm","grant") for x in fake.calls))
 
     def test_location_is_denied_and_fixed_without_grant(self):
         fake=FakeLocationAdb()

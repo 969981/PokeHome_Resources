@@ -223,3 +223,14 @@ python tools/home41_auth_timeline.py --input /path/to/redacted-frida-events.json
 - 新实现 \`predeny_emulator_location\`：对 APK 中声明的 \`ACCESS_FINE_LOCATION\` 和 \`ACCESS_COARSE_LOCATION\`，在临时 AVD 上设置 revoked + \`USER_SET|USER_FIXED\` 并配置 appops ignore，\`dumpsys package\` 再次核实两权限均 \`granted=false\`。**不向 HOME 授予位置访问**。
 - 只有 \`location_permission_preflight.status=verified_denied_fixed\` 才算系统位置权限处理通过；如果提示仍出现，以截图为准继续排查。不同设备的 OS 行为可能不同，不能把模拟器的一次结果视为所有 Android 设备的保证。
 - 第九轮 \`home_language_screen_recognized=false\`、\`simplified_chinese_selected=false\`、\`auth_registration_status=not_attempted_no_test_account\`、\`first_basic_utid_status=not_observed\`，明确**没有取得 ID**。
+
+
+## 15. 第十轮：位置权限固定拒绝成功，通知权限成为下一道 OS 阻塞
+
+- [Actions #42339886710](https://github.com/969981/PokeHome_Resources/actions/runs/42339886710) 全部步骤成功。
+- 真实 \`location_permission_preflight.status=verified_denied_fixed\`，两项 \`ACCESS_FINE_LOCATION\` 和 \`ACCESS_COARSE_LOCATION\` 都有 \`granted_false=true\`、\`user_fixed=true\`、\`appops_ignore_ok=true\`；没有授予 HOME 位置访问。
+- \`camera_permission_preflight.status=verified_granted\`，相机预授予亦保持成功（仅无真实相机硬件的临时模拟器）。
+- \`screen_after_wait.png\` 真实显示下一系统层弹窗：**“Allow Pokémon HOME to send you notifications?”**，\`Don't allow\` 尚未被 UI 自动处理。HOME 进程仍存活，未发生账户注册。
+- 因此新增 \`predeny_emulator_notifications\`：对已声明的 \`POST_NOTIFICATIONS\` 用 \`pm revoke\` + \`pm set-permission-flags user-set user-fixed\` 提前固定拒绝，再由 \`dumpsys package\` 验证，避免点击同意或上传用户通知内容。
+- 下一次运行必须核对 \`notifications_permission_preflight.status=verified_denied_fixed\` 和语言页真实截图，再判断初始化是否还有其它系统权限。
+- 目前没有账户注册回调、服务器 \`basic.utid\` 或六位 ID 的真实捕获，不能由这些权限成功推断发号成功。
