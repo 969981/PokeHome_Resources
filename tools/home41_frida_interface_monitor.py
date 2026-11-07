@@ -39,7 +39,10 @@ MAX_EVENTS = 180
 
 def sanitize(payload: object) -> dict | None:
     """Allowlist only transport-neutral metadata, never arbitrary fields."""
-    if not isinstance(payload, dict) or payload.get("event") not in ALLOWED_EVENTS:
+    if not isinstance(payload, dict):
+        return None
+    requested = payload.get("event")
+    if not isinstance(requested, str) or requested not in ALLOWED_EVENTS:
         return None
     event = payload["event"]
     cleaned = {"event": event}
@@ -47,8 +50,9 @@ def sanitize(payload: object) -> dict | None:
     if isinstance(elapsed, (int, float)) and not isinstance(elapsed, bool) and 0 <= elapsed < 86400000:
         cleaned["elapsed_ms"] = int(elapsed)
     if event in {"java_http_request_open", "java_http_response_status"}:
+        category = payload.get("category")
         cleaned["category"] = (
-            payload.get("category") if payload.get("category") in CATEGORIES
+            category if isinstance(category, str) and category in CATEGORIES
             else "other"
         )
         if event == "java_http_response_status":
@@ -57,7 +61,7 @@ def sanitize(payload: object) -> dict | None:
                 cleaned["http_status"] = code
     if event == "native_arch_report":
         arch = payload.get("arch")
-        cleaned["arch"] = arch if arch in ARCHES else "unknown"
+        cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
         cleaned["arm64_rva_hook_supported"] = payload.get("arm64_rva_hook_supported") is True
     if event == "hook_preflight":
         cleaned["supported_arch"] = payload.get("supported_arch") is True
