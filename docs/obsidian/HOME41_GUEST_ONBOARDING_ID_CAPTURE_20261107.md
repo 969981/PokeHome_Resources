@@ -47,3 +47,16 @@ tools/early_home_tid_observer.js 已增加 SetBasic 首次命中时的 LR/调用
 - [[HOME41_REGISTRATION_EARLIEST_UTID_GATE]]
 - [官方：手机版无需 Nintendo Account](https://app-ph.pokemon-support.com/hc/zh-tw/articles/360058218891)
 - [官方：删除 HOME 账号及永久性](https://app-ph.pokemon-support.com/hc/zh-cn/articles/34818163611545)
+
+## 2026-11-07：最新 GitHub Actions 验收（#42354360305）
+
+> [!warning] GitHub Actions 工作流成功，**并不意味着 HOME 在线登录成功**。
+
+- [Android 模拟器真实运行 #42354360305](https://github.com/969981/PokeHome_Resources/actions/runs/42354360305) 的最终状态是 workflow success；已下载 `home-android-4.1.0-emulator-probe`（artifact ID `13567023493`）核验截图与运行报告。
+- `screen_after_country_selection.png` 显示日文通信错误：`code:800 / detail code:100101`。截图名称只是程序预定的截图阶段，**不是中国大陆选择已经执行或成功的证明**。
+- 报告明确：`home_language_screen_recognized=false`、`simplified_chinese_confirmed=false`、`region_page_poll_attempts=0`、`mainland_option_visual_gate=false`、`country_selection_tap_attempted=false`、`country_selected=false`。
+- `birthdate_entered=false`、`terms_or_privacy_accepted=false`、`auth_registration_status=not_attempted_no_test_account`、`first_basic_utid_status=not_observed`；**未创建测试账号、未获得任何真实六位 ID、未执行账号删除**。
+- 此前首次尝试中持续重复出现 800/100101，尚不能确证是 AVD 网络、HOME 服务端或其它环境因素。官方说明在此错误发生时可以稍后重试或更换 Wi-Fi：[官方 800/100101 说明](https://app-ph.pokemon-support.com/hc/en-us/articles/58149598512281--Pok%C3%A9mon-HOME-Smartphone-version-The-error-code-800-detail-code-100101-appears-and-I-can-t-log-in-to-Pok%C3%A9mon-HOME)。
+- 独立 [六位 ID 只读分析 Smoke Test #42354360295](https://github.com/969981/PokeHome_Resources/actions/runs/42354360295) 为 success，只表示脚本、fixture 与语法检查通过，不构成账户运行时 ID 捕获证据。
+
+**下次验收优先级**：先解决通信错误，拿到完成语言与国家选择后的真正生日页；然后才是未绑定任天堂账号的正常资料初始化、小火龙选择、首次 `basic.utid`、客户端可见六位 ID 的语义对账。未获得真实新号成功回包前，不得进行删除重建循环。
