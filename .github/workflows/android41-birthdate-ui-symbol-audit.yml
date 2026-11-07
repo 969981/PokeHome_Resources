@@ -1,0 +1,68 @@
+name: HOME Android 4.1.0 private IL2CPP birthdate dropdown/scroll audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-birthdate-ui-symbol-audit.yml'
+      - 'tools/home41_birthdate_ui_symbol_audit.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/android41-birthdate-ui-symbol-audit.yml
+            tools/home41_birthdate_ui_symbol_audit.py
+            Unpack/Android/4.1.0/il2cpp/script.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify source and process all real static UI entries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/home41_birthdate_ui_symbol_audit.py
+          test -s Unpack/Android/4.1.0/il2cpp/script.json
+          python tools/home41_birthdate_ui_symbol_audit.py \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --output ci-birthdate-ui/birthdate_ui_method_candidates.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          o=json.loads(Path('ci-birthdate-ui/birthdate_ui_method_candidates.json').read_text())
+          print("Method count:",o['source_method_count'])
+          print("UI candidate counts:",o['group_match_total'])
+          assert o['source_method_count']>=100000
+          assert not o['year_1999_selected']
+          assert not o['birthday_submitted']
+          PY
+      - name: Upload private, static method-name evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-private-birthdate-ui-methods
+          path: ci-birthdate-ui/
+          retention-days: 5
+          if-no-files-found: warn
+      - name: Clarify limitations
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## HOME 4.1.0 birthdate UI static method audit'
+            echo '- Inspects user private IL2CppDumper ScriptMethod names, not a live HOME session.'
+            echo '- No automatic birthday submission, account actions, tokens or server calls.'
+            echo '- RVA names are candidates; must inspect native UI callsites before any runtime interaction.'
+          } >> "$GITHUB_STEP_SUMMARY"
