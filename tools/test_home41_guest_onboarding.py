@@ -177,6 +177,37 @@ class GuestOnboardingTests(unittest.TestCase):
             self.assertEqual(len(fake.taps), 1)
             self.assertFalse(result["birthday_submitted"])
 
+    def test_stuck_known_confirmation_retries_then_stops(self):
+        profile = load_guest_profile(PROFILE)
+        with tempfile.TemporaryDirectory() as d:
+            fake = FakeADB(COUNTRY)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=30, interval_seconds=0)
+            self.assertEqual(result["status"], "stage_transition_unconfirmed")
+            self.assertEqual(result["stage_retry_counts"]["confirm_mainland"], 2)
+            self.assertEqual(len(fake.taps), 3)
+            self.assertFalse(result["account_created"])
+            self.assertFalse(result["birthday_submitted"])
+            self.assertTrue((Path(d)/"onboarding_stuck_after_tap.png").is_file())
+
+    def test_stuck_confirmation_can_recover_after_retry(self):
+        profile = load_guest_profile(PROFILE)
+        profile["explore_year_scrolls"] = 0
+        class OneRetryNeeded(FakeADB):
+            def __call__(self, *args, **kw):
+                res = super().__call__(*args, **kw)
+                if args[:3] == ("shell", "input", "tap") and len(self.taps) == 2:
+                    self.image = BIRTHDAY
+                return res
+        with tempfile.TemporaryDirectory() as d:
+            fake = OneRetryNeeded(COUNTRY)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=25, interval_seconds=0)
+            self.assertEqual(result["stage_retry_counts"]["confirm_mainland"], 1)
+            self.assertTrue(result["year_picker_verified"])
+            self.assertFalse(result["birthday_submitted"])
+            self.assertFalse(result["account_created"])
+
     def test_unknown_screen_never_taps(self):
         profile = load_guest_profile(PROFILE)
         unknown = screenshot([])
