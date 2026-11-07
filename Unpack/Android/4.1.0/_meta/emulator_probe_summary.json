@@ -16,22 +16,13 @@
   "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
     {
-      "event": "deny_android_runtime_permission",
-      "success": true
-    },
-    {
-      "event": "deny_android_runtime_permission",
-      "success": true
-    },
-    {
-      "event": "deny_android_runtime_permission",
-      "success": true
-    },
-    {
       "event": "no_android_system_prompt_matched"
     }
   ],
   "screenshot_after_system_prompts": true,
+  "home_language_screen_recognized": false,
+  "simplified_chinese_selected": false,
+  "screenshot_after_language_step": true,
   "screenshot_after_wait": true,
   "process_after_wait": true,
   "process_exit_diagnostics": {
@@ -43,7 +34,7 @@
       "am_proc_died": 0,
       "am_crash": 0,
       "has died": 0,
-      "ProcessRecord": 1,
+      "ProcessRecord": 0,
       "Force finishing": 0,
       "ANR in": 0,
       "tombstoned": 0,
@@ -52,9 +43,7 @@
       "UnsatisfiedLinkError": 0,
       "libndk_translation": 0
     },
-    "events": [
-      "11-07 04:26:38.038   578   689 W system_server: Long monitor contention with owner CachedAppOptimizerThread (690) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt"
-    ],
+    "events": [],
     "raw_log_saved": false,
     "system_event_counts": {
       "am_proc_died": 1,
@@ -68,7 +57,7 @@
     "Fatal signal": 0,
     "dlopen failed": 0
   },
-  "test_emulator_adb_root": false,
+  "test_emulator_adb_root": true,
   "cache_bytes": 0,
   "cache_candidates": 0,
   "cache_types": {}
