@@ -12,6 +12,12 @@
   "result": "app_running_no_recognized_cache_assets",
   "screenshot_at_15s": true,
   "process_at_15s": true,
+  "system_prompt_actions": [
+    {
+      "event": "no_android_system_prompt_matched"
+    }
+  ],
+  "screenshot_after_system_prompts": true,
   "screenshot_after_wait": true,
   "process_after_wait": true,
   "crash_signal_counts": {
