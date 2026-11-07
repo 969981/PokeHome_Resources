@@ -75,3 +75,23 @@ status: implemented-ci-verification-pending
 - [Frida 脱敏单元测试 #42373639433](https://github.com/969981/PokeHome_Resources/actions/runs/42373639433)：44/44 通过。
 - [Frida 完整模拟器 #42373639368](https://github.com/969981/PokeHome_Resources/actions/runs/42373639368)：需要查看实际 Frida Server、Agent 和事件文件验收，不能因为通过单元测试就宣布成功。
 - 目标日期 **1999-04-05**，当前界面已经独立验证 **4 月、5 日**。年份未选中，没有完整生日提交、账号创建/删除或首次六位 ID。
+
+
+## 2026-11-07：真实截图与 Agent 编译核验进展
+
+### 月/日实际截图已闭合
+
+从完整模拟器运行 #42368887392 下载的真实 Artifact 中逐张查看：
+- month_4_popup_02.png 展示月份 1～9，可见第四个选项；
+- month_4_selected_field_source.png 的月份输入框实际显示 **4**；
+- day_5_popup_02.png 展示日期 1～9，可见第五个选项；
+- month_4_day_5_unsubmitted_form.png 最终真实显示“**年（未选）/ 4 / 5**”。
+
+在此之前数据报告中的 month/day `_semantically_verified=false` 是为了避免将点击命令误当成已选中；以上真正截图可以将*人工验收*结论更新为月=4、日=5。仍没有完整出生日期 1999-04-05，更没有提交或观察到六位 ID。
+
+### Frida 17 bundle 并非普通纯 JS
+
+[Frida agent 编译 #42374090402](https://github.com/969981/PokeHome_Resources/actions/runs/42374090402) 已通过。**237,685 字节**，官方编译器输出以 `📦` 包头、字节长度、源路径和 `✄` 分隔符开始，后面才是 JavaScript payload。这是 Frida 17 接受的编译器包格式；用 Node 的 `--check` 直接检查整包会报语法错，不表示 Frida bundle 构建失败。独立 CI 已改为先验证包格式，再抽出 JS 部分检查语法。实际 `Session.create_script(bundle)` 应接收完整包，不应剥离头后再注入。
+
+- 事件脱敏/Frida spawn 测试：[#42373639433](https://github.com/969981/PokeHome_Resources/actions/runs/42373639433)，44 项通过。
+- 真正的 Android x86_64 Frida server、spawn、连接及 API 事件：[#42373639368](https://github.com/969981/PokeHome_Resources/actions/runs/42373639368)，当前仍须按实际 Artifact 判定；以上 CI 都不代表已捕获真实 HTTP 内容。
