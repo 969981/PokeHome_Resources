@@ -1,0 +1,134 @@
+import io
+import json
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+from PIL import Image
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
+from home41_guest_onboarding import (
+    load_guest_profile, mainland_confirmation_yes, birthday_year_dropdown,
+    error_modal_like, recognize, run_known_guest_setup
+)
+
+PROFILE = Path(__file__).with_name("home41_guest_profile.json")
+W, H = 1080, 2340
+
+
+def screenshot(points):
+    im = Image.new("RGB", (W, H), (0, 0, 0))
+    for x, y, rgb in points:
+        im.putpixel((int(x * W), int(y * H)), rgb)
+    dest = io.BytesIO()
+    im.save(dest, format="PNG")
+    return dest.getvalue()
+
+
+COUNTRY = screenshot([
+    (.50, .03, (121, 146, 97)), (.50, .15, (23, 107, 91)),
+    (.50, .34, (247, 251, 247)), (.50, .49, (247, 251, 247)),
+    (.68, .64, (255, 173, 4)), (.30, .70, (11, 100, 101)),
+    (.30, .75, (11, 100, 101)),
+])
+BIRTHDAY = screenshot([
+    (.50, .03, (207, 249, 166)), (.50, .15, (38, 179, 151)),
+    (.50, .23, (206, 250, 169)), (.20, .29, (248, 250, 245)),
+    (.45, .29, (248, 250, 245)), (.50, .95, (255, 173, 4)),
+])
+ERROR = screenshot([
+    (.50, .03, (149, 152, 148)), (.50, .15, (148, 151, 148)),
+    (.50, .34, (247, 251, 247)), (.50, .49, (247, 251, 247)),
+    (.68, .64, (255, 173, 4)), (.30, .75, (142, 149, 149)),
+])
+
+
+class Result:
+    def __init__(self, stdout=b"", returncode=0):
+        self.stdout = stdout
+        self.returncode = returncode
+
+
+class FakeADB:
+    def __init__(self, image):
+        self.image = image
+        self.taps = []
+
+    def __call__(self, *args, **kw):
+        if args[:3] == ("exec-out", "screencap", "-p"):
+            return Result(self.image)
+        if args[:3] == ("shell", "input", "tap"):
+            self.taps.append(args[3:])
+            return Result(returncode=0)
+        raise AssertionError(f"Unexpected ADB call: {args}")
+
+
+class GuestOnboardingTests(unittest.TestCase):
+    def test_profile_persists_choices(self):
+        p = load_guest_profile(PROFILE)
+        self.assertFalse(p["nintendo_account_link"])
+        self.assertEqual(p["language"], "zh-Hans")
+        self.assertEqual(p["country"], "中国大陆")
+        self.assertEqual(p["starter_species_id"], 4)
+        self.assertFalse(p["create_account"])
+
+    def test_unsafe_profile_is_rejected(self):
+        p = load_guest_profile(PROFILE)
+        with tempfile.TemporaryDirectory() as d:
+            fn = Path(d) / "profile.json"
+            p["delete_account"] = True
+            fn.write_text(json.dumps(p), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                load_guest_profile(fn)
+
+    def test_country_modal_recognized_only(self):
+        self.assertEqual(mainland_confirmation_yes(COUNTRY), (.68, .64))
+        self.assertIsNone(mainland_confirmation_yes(BIRTHDAY))
+        self.assertIsNone(mainland_confirmation_yes(ERROR))
+        self.assertEqual(recognize(COUNTRY)[0], "confirm_mainland")
+
+    def test_birthday_detected_and_year_picker_is_safe(self):
+        self.assertEqual(birthday_year_dropdown(BIRTHDAY), (.2, .29))
+        self.assertIsNone(birthday_year_dropdown(COUNTRY))
+        self.assertEqual(recognize(BIRTHDAY)[0], "birthdate_page")
+
+    def test_error_dialog_stops_without_tap(self):
+        self.assertTrue(error_modal_like(ERROR))
+        profile = load_guest_profile(PROFILE)
+        with tempfile.TemporaryDirectory() as d:
+            fake = FakeADB(ERROR)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=4, interval_seconds=0)
+            self.assertEqual(result["status"], "blocked_by_unclassified_modal")
+            self.assertEqual(fake.taps, [])
+            self.assertFalse(result["account_created"])
+            self.assertTrue((Path(d)/"onboarding_checkpoint.json").exists())
+
+    def test_no_birthdate_submission(self):
+        profile = load_guest_profile(PROFILE)
+        with tempfile.TemporaryDirectory() as d:
+            fake = FakeADB(BIRTHDAY)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=4, interval_seconds=0)
+            self.assertEqual(result["status"], "birth_year_picker_open_attempted")
+            self.assertEqual(len(fake.taps), 1)
+            self.assertEqual(fake.taps[0], ("216", "678"))
+            self.assertFalse(result["birthday_submitted"])
+            self.assertFalse(result["terms_accepted"])
+            self.assertFalse(result["account_created"])
+            self.assertTrue((Path(d)/"onboarding_birth_year_picker.png").is_file())
+
+    def test_unknown_screen_never_taps(self):
+        profile = load_guest_profile(PROFILE)
+        unknown = screenshot([])
+        with tempfile.TemporaryDirectory() as d:
+            fake = FakeADB(unknown)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=4, interval_seconds=0)
+            self.assertEqual(result["status"], "no_known_next_screen")
+            self.assertEqual(fake.taps, [])
+
+
+if __name__ == "__main__":
+    unittest.main()
