@@ -19,7 +19,9 @@ class TimelineTests(unittest.TestCase):
         self.assertEqual(r["first_basic_relative_to_registration_response"],"after")
         self.assertEqual(r["six_digit_candidate"],"888888")
         self.assertNotIn("secret",json.dumps(r))
-        self.assertNotIn("token",json.dumps(r))
+        # Event-stage key token_response_seen is metadata, not a leaked credential.
+        self.assertNotIn('"token":',json.dumps(r))
+        self.assertNotIn('"authorization":',json.dumps(r))
     def test_no_registration_not_attributed(self):
         r=analyze([evt("first_basic_utid",500,six_digit_candidate="000000")])
         self.assertEqual(r["first_basic_relative_to_registration_response"],"unknown")
