@@ -159,3 +159,30 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 - 实机结果需以 [#42379526660](https://github.com/969981/PokeHome_Resources/actions/runs/42379526660) 的 `frida_interface_summary.json.emulated_realm_status`、`emulated_arch`、`emulated_il2cpp_visible` 为准。不能预先声称 ARM64 SetBasic 钩子已运行。
 
 当 `emulated` attach 无效时，不应尝试把 ARM64 函数地址转为 x64 并直接钩取；应另用真正 ARM64 测试设备或可被 Frida 识别的 Android 仿真环境做分支验证。
+
+
+## 九、ARM64 emulated realm 实机成功与回调事件修复
+
+### native ARM64 realm 成功
+
+- [实机 #42379526660](https://github.com/969981/PokeHome_Resources/actions/runs/42379526660) 的脱敏 Artifact 实际显示：
+  - `frida_spawn_attached=true`，`emulated_realm_probe_status=emulated_arm64_readonly_observer_loaded`；
+  - `emulated_arch=arm64`，`emulated_il2cpp_visible=true`，`emulated_basic_rva_in_bounds=true`；
+  - 同时正常 x64 端可观察原生 Socket 连接/收发 `native_transport_event_count=7`；
+  - 但 `api_stage_event_count=0`、`first_basic_utid_event_seen=false`，**当时没有 ARM64 Hook 真正触发的证据**。
+- [复测 #42380051198](https://github.com/969981/PokeHome_Resources/actions/runs/42380051198) 同样可以访问 ARM64 IL2CPP，但 `arm64_hook_preflight_seen=false`、`arm64_observer_ready=false`、`arm64_preflight_exception_seen=false`。即使观察器改为库加载完即尝试安装，仍未获得 Hook 反馈。
+- 现象原因待复核：老 `tools/early_home_tid_observer.js` 通过 `console.log` 输出事件，但已成功的 emulated realm 小探针用 `send()`。因此本次已改为原生 observer 的 `report()` 统一走 Frida `send()`，`tools/home41_fast_id_probe.py` 同步兼容 send/log 两种消息，且对事件保留严格白名单。
+- 新 [Frida 首启复测 #42380528102](https://github.com/969981/PokeHome_Resources/actions/runs/42380528102) 需要实机检查 `hook_preflight`、`read_only_observer_ready` 或 `preflight_exception`：它们三个事实必须明确，不应把“脚本 loaded”直接记为 Hook ready。
+
+### 核验链
+
+`frida_server_setup.status == ready`
+→ `frida_interface.status == spawn_attach_resumed`
+→ `emulated_arch == arm64`
+→ `emulated_il2cpp_visible && emulated_basic_rva_in_bounds`
+→ `arm64_hook_preflight_seen`
+→ `arm64_observer_ready`
+→ `first_basic_utid_event_seen`
+→ **官方 HOME UI 六位 Trainer ID 对账**。
+
+当前证据已经闭合到第 4 步；最后三项尚未完成。不应该根据静态 RVA、有 Hook 代码或 Socket 收发推测用户 ID 或注册成功。全程不提交生日、不做账号创建或删除。
