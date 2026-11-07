@@ -41,6 +41,18 @@ jobs:
           print("compiled_agent_head_hex",data[:48].hex())
           print("compiled_agent_head_preview",repr(data[:90].decode("utf-8","replace")))
           PY
-          node --check /tmp/home41-frida-interface-bundle.js
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("/tmp/home41-frida-interface-bundle.js")
+          data = p.read_text(encoding="utf-8")
+          # Frida 17 bundle format intentionally starts with a package
+          # manifest (📦 + byte length + source path) and ✄ separator.
+          # Frida Session.create_script() consumes that envelope directly.
+          assert data.startswith("📦\\n".replace("\\\\n","\\n")), "missing Frida bundle magic"
+          assert "✄" in data, "missing Frida bundle payload separator"
+          body = data.split("✄",1)[1].lstrip("\\r\\n")
+          Path("/tmp/home41-frida-extracted-payload.js").write_text(body,encoding="utf-8")
+          PY
+          node --check /tmp/home41-frida-extracted-payload.js
           python -m unittest tools/test_home41_frida_interface_monitor.py -v
           echo "Frida bundle compiled; real device attach and network data are not validated by this job."
