@@ -5,6 +5,8 @@ on:
     branches: ['4.1.0']
     paths:
       - '.github/workflows/home41-smali-differential-test.yml'
+      - 'Android/Smali/tools/smali_runtime_probe.py'
+      - 'Android/Smali/tools/smali_differential_runtime.py'
   workflow_dispatch:
 
 permissions:
@@ -173,7 +175,7 @@ jobs:
               f.write(f"- Status: `{report['status']}`\n")
               f.write(f"- Emulator action: `{os.environ.get('RUNTIME_OUTCOME')}`\n")
               for k,v in report['matrix'].get('results',{}).items():
-                  f.write(f"- {k}: install={v.get('install_ok')}, process alive={v.get('process_at_35s')}, screen visible={v.get('screen_at_35s',{}).get('nonblank')}\n")
+                  f.write(f"- {k}: install={v.get('install_ok')}, process alive={v.get('process_at_35s')}, verified HOME UI={v.get('home_ui_verified')}\n")
           PY
 
       - name: Save screenshots and JSON (seven-day evidence)
@@ -219,7 +221,7 @@ jobs:
           python - <<'PY'
           import json
           r=json.load(open('Android/Smali/4.1.0/DIFFERENTIAL_RUNTIME_REPORT.json'))
-          if r.get('status')!='all_four_launch_visible':
+          if r.get('status')!='all_four_home_ui_verified':
               raise SystemExit('Smali APK runtime still differs: '+str(r.get('status')))
-          print('All four signed variants display visible UI.')
+          print('All four signed variants show verified HOME language UI (not Android permission dialogs).')
           PY
