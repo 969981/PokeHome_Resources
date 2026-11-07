@@ -1,0 +1,39 @@
+{
+  "auth_method_candidates": 11,
+  "first_utid_observed": false,
+  "group_counts": {
+    "create_login": 0,
+    "create_token": 0,
+    "receive_basic": 1,
+    "register_user": 9,
+    "response_common": 1
+  },
+  "input": "private_home_android_4.1.0_il2cpp_script.json",
+  "native_address_anchor_checks": {
+    "ApiRequestAuthRegisterUser$$CallAfterResponse": {
+      "dumper_addresses_hex": [
+        "0x1D33294"
+      ],
+      "expected_elf_rva_hex": "0x1D33294",
+      "status": "static_address_match"
+    },
+    "ApiRequestAuthRegisterUser$$SerializeRequestParameter": {
+      "dumper_addresses_hex": [
+        "0x1D334A4"
+      ],
+      "expected_elf_rva_hex": "0x1D334A4",
+      "status": "static_address_match"
+    },
+    "UDManager$$SetBasic": {
+      "dumper_addresses_hex": [
+        "0x1D763D0"
+      ],
+      "expected_elf_rva_hex": "0x1D763D0",
+      "status": "static_address_match"
+    }
+  },
+  "real_user_registered": false,
+  "script_method_entries": 180628,
+  "semantic_limitation": "Function names/addresses do NOT determine which HTTP response first includes basic.utid; requires a real consenting account trace.",
+  "status": "static_symbols_indexed"
+}
