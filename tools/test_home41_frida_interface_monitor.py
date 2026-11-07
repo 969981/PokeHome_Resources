@@ -173,6 +173,58 @@ class MonitorTests(unittest.TestCase):
             output=(Path(d)/"frida_interface_events.jsonl").read_text()
             self.assertNotIn("PRIVATE",output)
 
+    def test_year_1999_index_must_be_native_verified_ordered_options(self):
+        candidate={
+            "event":"year_1999_option_index_verified",
+            "selected_index":27,"total_options":127,
+            "first_year":2026,"last_year":1900,
+            "descending_sequential":True,
+            "memory_address":"0xprivate","token":"NO_COPY",
+            "raw_birthdate":"1999-04-05"
+        }
+        clean=sanitize(candidate)
+        self.assertEqual(clean,{
+            "event":"year_1999_option_index_verified",
+            "selected_index":27,"total_options":127,
+            "first_year":2026,"last_year":1900,
+            "descending_sequential":True
+        })
+        self.assertNotIn("NO_COPY",json.dumps(clean))
+        self.assertNotIn("0xprivate",json.dumps(clean))
+        self.assertEqual(sanitize({"event":"year_options_inspector_hook_installed"}),
+                         {"event":"year_options_inspector_hook_installed"})
+        for modify in (
+            {"selected_index":200},
+            {"selected_index":"27"},
+            {"total_options":999},
+            {"descending_sequential":False},
+            {"first_year":1800},
+            {"last_year":2050}
+        ):
+            item=dict(candidate);item.update(modify)
+            self.assertIsNone(sanitize(item))
+
+    def test_verified_option_index_not_an_actual_birthdate_submission(self):
+        with tempfile.TemporaryDirectory() as d:
+            monitor=FridaInterfaceMonitor(Path(d),Path(d)/"fixture")
+            monitor.on_message({"type":"send","payload":{
+                "event":"year_options_inspector_hook_installed"
+            }})
+            monitor.on_message({"type":"send","payload":{
+                "event":"year_1999_option_index_verified",
+                "selected_index":27,"total_options":127,
+                "first_year":2026,"last_year":1900,
+                "descending_sequential":True,
+            }})
+            report=monitor.stop()
+            self.assertTrue(report["year_options_hook_installed"])
+            self.assertTrue(report["year_1999_option_index_observed"])
+            self.assertEqual(report["year_1999_option_index"],27)
+            self.assertFalse(report["first_basic_utid_event_seen"])
+            self.assertEqual(report["birthdate_ui_callback_event_count"],0)
+            self.assertEqual(report["api_stage_event_count"],0)
+            self.assertTrue(report["guest_registration_attempted_by_monitor"] is False)
+
     def test_first_utid_event_without_persisting_numeric_value(self):
         event=sanitize({"event":"first_basic_utid",
                         "six_digit_candidate":"123456",
