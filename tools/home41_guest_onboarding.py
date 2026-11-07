@@ -123,6 +123,24 @@ def birthday_year_dropdown(img: bytes):
     return None
 
 
+
+def birth_year_popup_visible(img: bytes) -> bool:
+    """Stable dropdown evidence from real run #42358938707 final screenshot.
+
+    The popup's light gray 2026..2018 list obscures the green age screen
+    to the left of the month/day dropdowns. Does NOT infer a selected year.
+    """
+    return _signature(img, (
+        (.50, .15, (38, 179, 151), 16),
+        (.20, .29, (238, 240, 235), 16),
+        (.20, .35, (237, 240, 235), 16),
+        (.20, .45, (237, 240, 235), 16),
+        (.20, .55, (237, 240, 235), 16),
+        (.50, .40, (178, 239, 174), 22),
+        (.50, .95, (255, 173, 4), 16),
+    ))
+
+
 def error_modal_like(img: bytes) -> bool:
     """Stops on known general/error-like modal, never infers numeric error code."""
     return _signature(img, (
@@ -199,6 +217,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "account_created": False,
         "account_deleted": False,
         "first_basic_utid_observed": False,
+        "year_picker_verified": False,
         "screenshots": [],
     }
     minimum_stage = 0
@@ -252,11 +271,22 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                 if tap is not None and tap.returncode == 0:
                     result["completed"].append("inspect_birth_year_picker")
                     result["status"] = "birth_year_picker_open_attempted"
-                    result["stop_reason"] = "picker_opened_no_birthdate_submitted"
-                    if interval_seconds > 0:
-                        time.sleep(interval_seconds)
-                    _capture(adb, output, "onboarding_birth_year_picker.png")
-                    result["screenshots"].append("onboarding_birth_year_picker.png")
+                    result["stop_reason"] = "tap_sent_picker_not_yet_verified"
+                    stable_count = 0
+                    for _ in range(12):
+                        if interval_seconds > 0:
+                            time.sleep(interval_seconds)
+                        picker_frame = _capture(adb, output, "")
+                        if birth_year_popup_visible(picker_frame):
+                            stable_count += 1
+                        else:
+                            stable_count = 0
+                        if stable_count >= 2:
+                            save("onboarding_birth_year_picker.png", picker_frame)
+                            result["year_picker_verified"] = True
+                            result["status"] = "birth_year_picker_verified_open"
+                            result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
+                            break
             break
         save(f"onboarding_before_{name}.png", data)
         if isinstance(point, tuple) and len(point) == 3 and point[0] == "px":
