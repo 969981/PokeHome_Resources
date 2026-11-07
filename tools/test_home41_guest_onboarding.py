@@ -10,7 +10,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 from home41_guest_onboarding import (
     load_guest_profile, mainland_confirmation_yes, birthday_year_dropdown,
-    error_modal_like, recognize, run_known_guest_setup
+    error_modal_like, birth_year_popup_visible, recognize, run_known_guest_setup
 )
 
 PROFILE = Path(__file__).with_name("home41_guest_profile.json")
@@ -37,6 +37,13 @@ BIRTHDAY = screenshot([
     (.50, .23, (206, 250, 169)), (.20, .29, (248, 250, 245)),
     (.45, .29, (248, 250, 245)), (.50, .95, (255, 173, 4)),
 ])
+YEAR_POPUP = screenshot([
+    (.50, .15, (38, 179, 151)), (.20, .29, (238, 240, 235)),
+    (.20, .35, (237, 240, 235)), (.20, .45, (237, 240, 235)),
+    (.20, .55, (237, 240, 235)), (.50, .40, (178, 239, 174)),
+    (.50, .95, (255, 173, 4)),
+])
+
 ERROR = screenshot([
     (.50, .03, (149, 152, 148)), (.50, .15, (148, 151, 148)),
     (.50, .34, (247, 251, 247)), (.50, .49, (247, 251, 247)),
@@ -51,8 +58,9 @@ class Result:
 
 
 class FakeADB:
-    def __init__(self, image):
+    def __init__(self, image, after_tap=None):
         self.image = image
+        self.after_tap = after_tap
         self.taps = []
 
     def __call__(self, *args, **kw):
@@ -60,6 +68,8 @@ class FakeADB:
             return Result(self.image)
         if args[:3] == ("shell", "input", "tap"):
             self.taps.append(args[3:])
+            if self.after_tap is not None:
+                self.image = self.after_tap
             return Result(returncode=0)
         raise AssertionError(f"Unexpected ADB call: {args}")
 
@@ -108,10 +118,13 @@ class GuestOnboardingTests(unittest.TestCase):
     def test_no_birthdate_submission(self):
         profile = load_guest_profile(PROFILE)
         with tempfile.TemporaryDirectory() as d:
-            fake = FakeADB(BIRTHDAY)
+            fake = FakeADB(BIRTHDAY, after_tap=YEAR_POPUP)
             result = run_known_guest_setup(fake, Path(d), profile,
                                            max_checks=4, interval_seconds=0)
-            self.assertEqual(result["status"], "birth_year_picker_open_attempted")
+            self.assertEqual(result["status"], "birth_year_picker_verified_open")
+            self.assertTrue(result["year_picker_verified"])
+            self.assertTrue(birth_year_popup_visible(YEAR_POPUP))
+            self.assertFalse(birth_year_popup_visible(BIRTHDAY))
             self.assertEqual(len(fake.taps), 1)
             self.assertEqual(fake.taps[0], ("216", "678"))
             self.assertFalse(result["birthday_submitted"])
