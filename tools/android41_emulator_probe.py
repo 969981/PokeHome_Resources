@@ -241,6 +241,38 @@ def mainland_confirmation_yes_from_screenshot(png_bytes):
     return int(w*.68), int(h*.64)
 
 
+
+def birthday_year_dropdown_from_screenshot(png_bytes):
+    """Only expand year dropdown on evidenced HOME 4.1.0 age-input page.
+
+    Screenshot from Actions 42356611191. Never submit any date or press NEXT.
+    """
+    if not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return None
+    try:
+        from PIL import Image
+        from io import BytesIO
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (ImportError,OSError,ValueError):
+        return None
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return None
+    def col(x,y):return im.getpixel((int(w*x),int(h*y)))
+    def near(c,expected,t=15):return all(abs(a-b)<=t for a,b in zip(c,expected))
+    if not (
+        near(col(.5,.03),(207,249,166)) and
+        near(col(.5,.15),(38,179,151)) and
+        near(col(.5,.23),(206,250,169)) and
+        near(col(.2,.29),(248,250,245)) and
+        near(col(.45,.29),(248,250,245)) and
+        near(col(.5,.95),(255,173,4))
+    ):
+        return None
+    return int(w*.2),int(h*.29)
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--apk",type=Path,required=True)
@@ -402,6 +434,25 @@ def main():
                 time.sleep(9)
             report["screenshot_after_country_confirmation"]=snap(
                 args.output,"screen_after_country_confirmation.png")
+            # Birth date is immutable after submission. Explore the YEAR
+            # picker only; do not select an arbitrary DOB or press NEXT.
+            birthday_png=args.output/"screen_after_country_confirmation.png"
+            birth_year_pos=birthday_year_dropdown_from_screenshot(
+                birthday_png.read_bytes() if birthday_png.is_file() and
+                report.get("country_confirmation_tap_succeeded",False) else b"")
+            report["birthday_page_recognized"]=bool(birth_year_pos)
+            report["birth_year_dropdown_open_attempted"]=False
+            report["birth_year_dropdown_tap_succeeded"]=False
+            if birth_year_pos is not None:
+                year_tap=adb("shell","input","tap",str(birth_year_pos[0]),
+                             str(birth_year_pos[1]),secs=15)
+                report["birth_year_dropdown_open_attempted"]=True
+                report["birth_year_dropdown_tap_succeeded"]=bool(
+                    year_tap and year_tap.returncode==0)
+                time.sleep(4)
+            report["screenshot_after_birth_year_dropdown"]=snap(
+                args.output,"screen_after_birth_year_dropdown.png")
+
 
             # A successful input event does NOT establish that the server
             # accepted the region; the new screenshot must be reviewed.
