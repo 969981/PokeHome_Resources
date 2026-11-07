@@ -31,7 +31,7 @@ def package_audit(a: Path, b: Path):
         original_only=sorted(originals.keys()-signed.keys())
         signed_only=sorted(signed.keys()-originals.keys())
         relevant=[name for name in changed+original_only+signed_only
-                  if not name.startswith('META-INF/')]
+                  if not name.startswith('META-INF/') and name!='stamp-cert-sha256']
         return {
             "zip_original_count":len(originals),
             "zip_resigned_count":len(signed),
@@ -40,7 +40,7 @@ def package_audit(a: Path, b: Path):
             "changed_member_names":sorted(changed)[:40],
             "original_only":original_only[:40],
             "resigned_only":signed_only[:40],
-            "non_signature_payload_modified":bool(relevant),
+            "non_signature_payload_modified":bool(relevant),\n            "source_stamp_certificate_marker_removed": ("stamp-cert-sha256" in original_only),
             "non_signature_changed_samples":relevant[:25],
             "native_so_bytes_identical":all(
                 name in signed and old.read(name)==new.read(name)
