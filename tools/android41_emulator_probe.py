@@ -11,6 +11,7 @@ import sys
 import tempfile
 import time
 from pathlib import Path
+from android41_ui_flow import dismiss_android_system_prompts
 
 PACKAGE="jp.pokemon.pokemonhome"
 ROOTS=[
@@ -130,6 +131,10 @@ def main():
             report["screenshot_at_15s"]=snap(args.output,"screen_15s.png")
             first=adb("shell","pidof",PACKAGE)
             report["process_at_15s"]=bool(first and first.returncode==0 and first.stdout.strip())
+            # Only interact with explicit Android OS overlays. Never click
+            # HOME app Terms, registration, consent, account or deletion UI.
+            report["system_prompt_actions"]=dismiss_android_system_prompts(adb)
+            report["screenshot_after_system_prompts"]=snap(args.output,"screen_after_system_prompts.png")
             if successful:time.sleep(max(0,args.idle_seconds-15))
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
             second=adb("shell","pidof",PACKAGE)
