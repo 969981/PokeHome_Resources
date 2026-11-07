@@ -1,0 +1,24 @@
+{
+  "source_repo": "969981/Home_Android",
+  "source_ref": "master",
+  "source_path": "ROMS/4.1.0/",
+  "original_sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
+  "apktool_version": "3.0.3",
+  "smali_directories": [
+    "smali",
+    "smali_classes2",
+    "smali_classes3"
+  ],
+  "smali_files": 14841,
+  "native_so_files": 9,
+  "large_files_sharded": 0,
+  "decoded_files_in_git_project": 16858,
+  "first_build_unsigned_sha256": "1d98b16a522a658c91ec02543e3e4acf72cfb9728e045f8d268c96f90b4decfa",
+  "test_signed_apk_sha256": "b87b6f4896ffc4d01f969def11f7fa23aa677e61bc9f050cca642fd37a49c5cd",
+  "restored_source_build_sha256": "b0dde4fd500371426a7ddc6d91f73b458227543de02c74ce0a732dc8ef5bc0ee",
+  "status": "apktool_build_and_shard_rebuild_success",
+  "signing": "disposable test certificate; not an original signature",
+  "runtime_tested": false,
+  "il2cpp_source_recovered": false,
+  "workflow_run": "https://github.com/969981/PokeHome_Resources/actions/runs/42361355758"
+}

@@ -1,0 +1,99 @@
+version: 3.0.3
+apkFileName: jp.pokemon.pokemonhome_4.1.0-81_minAPI23(arm64-v8a)(nodpi)_apkmirror.com.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 23
+  targetSdkVersion: 36
+versionInfo:
+  versionCode: 81
+  versionName: 4.1.0
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- png
+- META-INF/androidx.activity_activity-ktx.version
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.customview_customview.version
+- META-INF/androidx.datastore_datastore.version
+- META-INF/androidx.documentfile_documentfile.version
+- META-INF/androidx.fragment_fragment.version
+- META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.loader_loader.version
+- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
+- META-INF/androidx.print_print.version
+- META-INF/androidx.privacysandbox.ads_ads-adservices-java.version
+- META-INF/androidx.privacysandbox.ads_ads-adservices.version
+- META-INF/androidx.profileinstaller_profileinstaller.version
+- META-INF/androidx.room_room-runtime.version
+- META-INF/androidx.savedstate_savedstate-ktx.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.sqlite_sqlite-framework.version
+- META-INF/androidx.sqlite_sqlite.version
+- META-INF/androidx.startup_startup-runtime.version
+- META-INF/androidx.tracing_tracing.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/androidx.viewpager_viewpager.version
+- META-INF/androidx.webkit_webkit.version
+- META-INF/androidx.work_work-runtime-ktx.version
+- META-INF/androidx.work_work-runtime.version
+- META-INF/com.android.games.engine.build_fingerprint
+- META-INF/kotlinx_coroutines_android.version
+- META-INF/kotlinx_coroutines_core.version
+- META-INF/kotlinx_coroutines_play_services.version
+- assets/AB/bgm_mt_ps_01.aba
+- assets/AB/bgm_mt_st_sys01.aba
+- assets/AB/bgm_mt_st_sys02.aba
+- assets/AB/bgm_mt_st_sys03.aba
+- assets/AB/cap0001_f00_s0.aba
+- assets/AB/cap0004_f00_s0.aba
+- assets/AB/cap0007_f00_s0.aba
+- assets/UnityServicesProjectConfiguration.json
+- assets/bin/Data/08dac8fc22e70ea4f87fc275ef62cb81.resource
+- assets/bin/Data/0e1e059546588774bbd531abaf0386b5.resource
+- assets/bin/Data/14b19f00969d89c49b1797c3147e1b9f.resource
+- assets/bin/Data/1bb6d6879f6ddbc438300b30b81d25ae.resource
+- assets/bin/Data/294ba4b153c2cc146b4daafce6063b9b.resource
+- assets/bin/Data/297d0f442bc927642a0059630fb9e56f.resource
+- assets/bin/Data/2996ecccad30c1442a63384d1e4dc606.resource
+- assets/bin/Data/2ddfd08bb289c5945a0c0d2212367b9a.resource
+- assets/bin/Data/3743762d798d7684581f35490e10d7c2.resource
+- assets/bin/Data/3b04d6f4311b726418082a03d7c47399.resource
+- assets/bin/Data/3cd9d0fde1443f04e9ea921a494abeb6.resource
+- assets/bin/Data/3e53f8d0a9556f144abbf4e51dd93f18.resource
+- assets/bin/Data/3feb80e2e5344274baca152a0891ba03.resource
+- assets/bin/Data/487a812bdd83b0a4fa87fa9058aff31d.resource
+- assets/bin/Data/4a11c58ce80227644a4521563555543e.resource
+- assets/bin/Data/53c05c742e160fe449edd9eb3c8e788a.resource
+- assets/bin/Data/57521efd22deeac4d953222696952364.resource
+- assets/bin/Data/651885524c72c5449b0279fb2e4d6924.resource
+- assets/bin/Data/6b8c20b291eac9f40b822e2e82f2ac76.resource
+- assets/bin/Data/6fa796aadc4c1b54fb99683360843376.resource
+- assets/bin/Data/7f2099dee8d12ce4ebdedccd1dc7b6fb.resource
+- assets/bin/Data/7f7e653ef247f3643bdc7ffd10ec29ed.resource
+- assets/bin/Data/82d03a9662fbfa245bbcf3a2c658aae4.resource
+- assets/bin/Data/850a3ec2a75dc3f46ab9978159d7552c.resource
+- assets/bin/Data/879153a03c091154da36c179ad9f012a.resource
+- assets/bin/Data/8a75cd62569497c4084d0087ae07a2ed.resource
+- assets/bin/Data/RuntimeInitializeOnLoads.json
+- assets/bin/Data/ScriptingAssemblies.json
+- assets/bin/Data/b4df90387ff545a44bb90d100c3469be.resource
+- assets/bin/Data/ba80e6dd7def9c143874e37c134d38ea.resource
+- assets/bin/Data/bc36af2419574a84299b6380a043592e.resource
+- assets/bin/Data/c6f167c0707323e48a7495ec6cbf84a9.resource
+- assets/bin/Data/c959a9b8fa1c8344297160ba6d355bef.resource
+- assets/bin/Data/ce734b35e78524d489ccd5b8b8ac12b0.resource
+- assets/bin/Data/ce8e92f7b4f89ff4b9dc1ebb456a926c.resource
+- assets/bin/Data/da2759a19b83519469d7512071e660c0.resource
+- assets/bin/Data/de4929b58bf5a4c4d87360f20c01e229.resource
+- assets/bin/Data/e2780e5ddacac91499dae12a7c20348c.resource
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- okhttp3/internal/publicsuffix/publicsuffixes.gz
+- res/raw/com_android_billingclient_heterodyne_info
+- res/raw/com_android_billingclient_registration_info.binarypb
