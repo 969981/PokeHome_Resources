@@ -124,6 +124,11 @@ jobs:
           fi
           if ! git diff --cached --quiet; then
             git commit -m "reports(android): actual emulator run and detected cache resources [skip ci]"
+            # A docs/analysis commit may have advanced 4.1.0 during this
+            # long-running emulator job. Never force-push or overwrite it.
+            # Rebase only this one report commit onto the current branch.
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
             git push origin HEAD:4.1.0
           fi
       - name: Private 3-day visual evidence and capture manifest
