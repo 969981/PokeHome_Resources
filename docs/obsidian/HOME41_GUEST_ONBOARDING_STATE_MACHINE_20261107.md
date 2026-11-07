@@ -183,3 +183,25 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 - 状态仅保存 `recognized_screen`、`exact_title_and_button_in_os_hierarchy`、`os_dialog_close_sent`、`launcher_recovery_direct_start_sent` 和系统恢复后截图；不保留 UI 层级 XML 或账号敏感数据。
 - 独立 [Actions #42362628444](https://github.com/969981/PokeHome_Resources/actions/runs/42362628444) 通过 **26 项** 只读/安全单元测试，包括本次 Android OS ANR 精确匹配及非 Launcher ANR 拒绝行为。
 - 真正模拟器重新验收：[Actions #42362631400](https://github.com/969981/PokeHome_Resources/actions/runs/42362631400)。仍以真实 Artifact、截图、状态为准；不绑定 Nintendo Account，不提交出生日期，不创建/删除账号。
+
+
+## 2026-11-07：实机完整打开年、月、日选择器
+
+[GitHub Actions #42362631400](https://github.com/969981/PokeHome_Resources/actions/runs/42362631400) 已真实完成：
+- HOME 从冷启动完成简体中文、亚太地区、中国大陆确认与生日页，共 22 次截图轮询；成功打开年份弹窗。
+- Android OS Pixel Launcher ANR 恢复分支本次未触发，因为没有检测到该弹窗；因此不会错误地对 HOME 执行操作。
+- 年份列表鼠标滚轮四次后依然可见，目标 2000 未出现；`KEYCODE_PAGE_DOWN` 发送成功，`year_popup_remained_open_after_key=true`，但前后真实截图仍从 2026 列到 2018，无可见页移。
+- UIAutomator dump 本次可以返回 XML（`year_accessibility.available=true`），但精确过滤 1900～2026 的数字年份后 `year_accessibility.year_nodes=[]`，说明**至少当前可访问层级没有暴露可以定位的年份选项**，不宜直接用 UiSelector 点击 2000。
+- `KEYCODE_BACK` 确实关闭年份列表，返回生日表单。随后在确定是年龄表单时点击月份输入框，真实 `date_month_menu_after_tap.png` 显示 1～9 的纵向列表；返回表单后点击日期输入框，`date_day_menu_after_tap.png` 也显示 1～9。
+- 程序报告 `onboarding.status=date_picker_diagnostics_year_key_and_month_day_menus_inspected_no_date_submission`，`month_menu_open_tap_sent=true`，`day_menu_open_tap_sent=true`，但 **year_selected=false、month_selected=false、day_selected=false、birthday_submitted=false、account_created=false、first_basic_utid_observed=false**。
+- 对应 Artifact id 13569554341，证据 ZIP 完整含年、月、日截图。Month/Day=1 的第一项位置已经从截图确认，但仍没有点击并核实选择结果。
+
+### 对 2000 年选择的下一步研究
+
+已经真实排除：
+1. 常规触屏长 swipe：能触发年份选择（曾误选 2019 并关闭列表），不能被当成无副作用滚动。
+2. Android mouse ACTION_SCROLL：四次命令成功但年份灰字像素不移动。
+3. 单次 KEYCODE_PAGE_DOWN：列表仍不发生可见位移。
+4. 原生 UIAutomator 年份数字节点：当前没有暴露真实四位年份节点。
+
+下一步可利用**本地、未提交的选择结果**研究列表重新展开的锚点：在已确认的可见年份项上进行一次受控选择，再打开年份列表，查看是否围绕当前选中年份定位，而不是继续猜测触屏滚动目标。操作仍不能触及“下一步”、协议、注册、删除，不绑定 Nintendo Account。若重新展开仍回到 2026～2018，则应转向游戏自身下拉列表的输入事件/运行时结构研究。
