@@ -9,9 +9,13 @@ import Java from "frida-java-bridge";
 const start = Date.now();
 let sent = 0;
 const MAX = 100;
-function emit(kind) {
+function emit(kind, details) {
   if (sent++ >= MAX) return;
-  send({ event: kind, elapsed_ms: Date.now() - start });
+  send(Object.assign({ event: kind, elapsed_ms: Date.now() - start }, details || {}));
+}
+function safeStaticJavaName(value) {
+  const s = String(value || "");
+  return /^[A-Za-z_][A-Za-z0-9_.-]{0,63}$/.test(s) ? s : null;
 }
 emit("agent_loaded");
 if (!Java.available) {
@@ -42,12 +46,16 @@ if (!Java.available) {
           const msg = String(content || "");
           // Only record the signature-related message prefix.
           // Never copy message bodies/certificates/actual hash values.
+          const target = safeStaticJavaName(receiver);
+          const method = safeStaticJavaName(callback);
+          const destination = target && method
+            ? {receiver_class: target, handler_method: method} : {};
           if (msg.indexOf("toCharsString:") === 0) {
-            emit("signature_chars_sent_to_unity");
+            emit("signature_chars_sent_to_unity", destination);
           } else if (msg.indexOf("hash:") === 0) {
-            emit("signature_hash_sent_to_unity");
+            emit("signature_hash_sent_to_unity", destination);
           } else if (msg.indexOf("PackageName:") === 0) {
-            emit("package_name_sent_to_unity");
+            emit("package_name_sent_to_unity", destination);
           }
         } catch (_) {}
         return unitySend.call(this, receiver, callback, content);
