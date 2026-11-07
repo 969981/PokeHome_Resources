@@ -369,9 +369,11 @@ def main():
             report["country_confirmation_tap_attempted"]="confirm_mainland" in completed
             report["country_confirmation_tap_succeeded"]="confirm_mainland" in completed
             report["birthday_page_recognized"]=onboarding["status"] in (
-                "at_birthdate_page","birth_year_picker_open_attempted")
+                "at_birthdate_page","birth_year_picker_open_attempted",
+                "birth_year_picker_verified_open")
             report["birth_year_dropdown_open_attempted"]=(
                 "inspect_birth_year_picker" in completed)
+            report["birth_year_dropdown_verified_open"]=onboarding.get("year_picker_verified",False)
             report["birth_year_dropdown_tap_succeeded"]=(
                 "inspect_birth_year_picker" in completed)
             # UI moved past country prompt, but remote account profile does not
