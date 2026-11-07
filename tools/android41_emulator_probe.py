@@ -147,6 +147,64 @@ def read_process_exit_diagnostics():
             "am_anr":lines.count("am_anr")}
     return info
 
+
+def safe_android_network_snapshot():
+    """OS-only emulator connectivity snapshot. Never save hosts, payloads or credentials."""
+    result={"android_utc_time":None,"airplane_mode":None,
+            "route_present":False,"network_validated_flag_seen":False,
+            "network_internet_flag_seen":False,"private_dns_mode":"unknown",
+            "proxy_configured":None}
+    def value(*command,limit=80):
+        proc=adb("shell",*command,secs=15)
+        return (proc.stdout or "").strip()[:limit] if proc and proc.returncode==0 else ""
+    value_date=value("date","-u","+%Y-%m-%dT%H:%M:%SZ")
+    if re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z",value_date):
+        result["android_utc_time"]=value_date
+    airplane=value("settings","get","global","airplane_mode_on")
+    if airplane in ("0","1"):result["airplane_mode"]=airplane=="1"
+    dns=value("settings","get","global","private_dns_mode")
+    if dns in ("off","opportunistic","hostname"):
+        result["private_dns_mode"]=dns
+    proxy=value("settings","get","global","http_proxy")
+    if proxy:
+        result["proxy_configured"]=proxy.lower() not in ("null",":0","none")
+    routes=value("ip","route",limit=1024)
+    result["route_present"]=bool("default " in routes)
+    network=value("dumpsys","connectivity",limit=30000)
+    result["network_validated_flag_seen"]="VALIDATED" in network
+    result["network_internet_flag_seen"]="INTERNET" in network
+    return result
+
+
+def known_home_error_dialog_layout(png_bytes):
+    """Detect previously witnessed generic HOME error-modal *layout* only.
+
+    Matching does not establish a specific 800 / 100101 code; read screenshot.
+    No OCR, no network request, no UI tap.
+    """
+    if not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return False
+    try:
+        from PIL import Image
+        from io import BytesIO
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (ImportError,OSError,ValueError):
+        return False
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return False
+    def col(x,y):return im.getpixel((int(w*x),int(h*y)))
+    def near(c,expected,t=20):return all(abs(a-b)<=t for a,b in zip(c,expected))
+    return (
+        near(col(.5,.2),(148,151,148)) and
+        near(col(.5,.34),(247,251,247)) and
+        near(col(.5,.49),(247,251,247)) and
+        near(col(.5,.64),(255,173,4)) and
+        near(col(.5,.9),(140,149,149))
+    )
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--apk",type=Path,required=True)
@@ -199,7 +257,7 @@ def main():
             report["android_immersive_setting"]="confirmed" if (
                 immersive and immersive.returncode==0 and verify_immersive
                 and "confirmed" in (verify_immersive.stdout or "")) else "not_confirmed"
-            adb("logcat","-c",secs=10)
+            report["android_network_preflight"]=safe_android_network_snapshot()\n            adb("logcat","-c",secs=10)
             launched=adb("shell","monkey","-p",PACKAGE,"-c","android.intent.category.LAUNCHER","1",secs=50)
             successful=bool(launched and launched.returncode==0 and "Events injected: 1" in launched.stdout)
             report["launch_status"]="event_sent" if successful else "launcher_failed"
@@ -299,6 +357,11 @@ def main():
                     -report["home_language_poll_wait_seconds"]
                     -report["region_page_poll_wait_seconds"]))
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
+            last_png=args.output/"screen_after_wait.png"
+            report["known_home_error_modal_layout"]=known_home_error_dialog_layout(
+                last_png.read_bytes() if last_png.is_file() else b"")
+            report["android_network_after_wait"]=safe_android_network_snapshot()
+
             second=adb("shell","pidof",PACKAGE)
             report["process_after_wait"]=bool(second and second.returncode==0 and second.stdout.strip())
             report["process_exit_diagnostics"]=read_process_exit_diagnostics()
@@ -321,6 +384,7 @@ def main():
             report["result"]=(
                 "launcher_failed" if not successful else
                 "app_process_ended" if not report["process_after_wait"] else
+                "home_error_dialog_visible_unclassified" if report["known_home_error_modal_layout"] else
                 "app_running_and_assets_collected" if report["cache_files"] else
                 "app_running_no_recognized_cache_assets")
     except Exception as e:
