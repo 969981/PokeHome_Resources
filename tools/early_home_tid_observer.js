@@ -35,9 +35,11 @@ let loginCallbackSeen = false;
 let firstValueFound = false;
 
 function report(event, fields = {}) {
-  console.log(JSON.stringify({
-    event, elapsed_ms: Date.now() - initialMs, ...fields
-  }));
+  // Frida's emulated ARM64 agent can deliver explicit send() messages
+  // even when console.log() messages are not forwarded to the native
+  // Python session. Raw fields stay in process/host memory: consumers
+  // strictly whitelist and discard tokens and numeric UTID from CI.
+  send({event, elapsed_ms: Date.now() - initialMs, ...fields});
 }
 
 function tryReadIl2CppString(ptr) {
