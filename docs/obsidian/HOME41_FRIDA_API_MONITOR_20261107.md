@@ -186,3 +186,12 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 → **官方 HOME UI 六位 Trainer ID 对账**。
 
 当前证据已经闭合到第 4 步；最后三项尚未完成。不应该根据静态 RVA、有 Hook 代码或 Socket 收发推测用户 ID 或注册成功。全程不提交生日、不做账号创建或删除。
+
+
+## 十、ARM64 只读 Hook 真实预检及就绪已闭合
+
+- [Frida 实机 #42380528102](https://github.com/969981/PokeHome_Resources/actions/runs/42380528102) 已成功闭合 ARM64 原生观察器的**实际运行**：`emulated_arch=arm64`、`emulated_il2cpp_visible=true`、`emulated_basic_rva_in_bounds=true`，且 `hook_preflight` 真正出现 1 次、`supported_arch=true`；约 2.420s 后，观察器发出了 **`read_only_observer_ready`** 事件，`arm64_preflight_exception_seen=false`。因此不再只是脚本 loaded，而是实测到 native hook 安装完成后的就绪消息。
+- 问题修复原理：以前 `tools/early_home_tid_observer.js` 使用 `console.log` 输出阶段事件，在 Frida 17 的 emulated realm 中即使脚本已加载，Python 仍观察不到日志；将 `report()` 改成 Frida 原生 `send()` 并兼容老 `home41_fast_id_probe.py` 的 send/log 后，ARM64 Hook 就绪成功上报。此前还已保留先检查模块、未加载再轮询的无损初始化。
+- 这次 `first_basic_utid_event_seen=false`、`api_stage_event_count=0`，与本次仅为未提交注册的首次启动一致。**不能推出已取得六位 ID，也不能证明具体哪个服务端响应包含了 basic.utid。**
+- [完整脱敏原生证据](https://github.com/969981/PokeHome_Resources/actions/runs/42380528102) 包含 `frida_interface_events.jsonl` 与 `frida_interface_summary.json`；不保存任何原始 UTID、访问令牌或 HTTP payload。
+- 最新 `android41_emulator_probe.py` 已将 ARM64 observer 的附加时机提前到已校验 HOME 启动后、**语言/地区/生日控件操作之前**。其目的在于真正观察官方首次初始化期间的回调，而不是在所有 UI 操作结束后再附加。依旧不提交生日、不自动接受协议、不创建/删除账号；当前测试目标为 `1999-04-05`，只有 4 月、5 日本地 UI 选择经过截图验证，1999 年尚未可靠选中。
