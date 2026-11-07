@@ -125,3 +125,27 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 2. 再从月/日控件中分别读取选项并确定 01/01；DOB 是不可修改信息，提交前应校验三项均正确。
 3. 头像和小火龙仍为配置字段、未经过真实运行；每补一页都加入严格图片签名、离线单测和新的真实 Actions 截图。
 4. 不绑定 Nintendo Account；云端账号创建、首次响应 `basic.utid`、官方删除与新号区别仍各有独立验收门槛。
+
+
+## 2026-11-07：长触屏滑动会误选年份；改用非点击式滚轮事件
+
+### 真实屏幕证据
+
+- [#42360115832](https://github.com/969981/PokeHome_Resources/actions/runs/42360115832) 完成：自动经过简体中文、亚太、中国大陆确认并稳定打开年份列表（`checks=24`、`year_picker_verified=true`）。
+- 旧滚动命令是 `adb shell input swipe 216 1380 216 865 550`，目的仅为移动年份列表。但 `onboarding_year_scroll_01.png` **真实显示年份字段变成 `2019`，并且列表关闭**。这是真实 UI 意外选择，而不是滚动成功。
+- 状态机及时检测到列表不再可见，`year_scrolls_confirmed=0`、`stop_reason=year_popup_not_verified_after_swipe`；没有继续发送第二次触屏滑动，也没有按“下一步”，`birthday_submitted=false`、`account_created=false`、`first_basic_utid_observed=false`。
+- 这意味着触屏拖动在这个 HOME 4.1.0 Unity 年份下拉控件内不能作为无副作用滚动手段；已删除此触屏滑动路径。注意 `2019` 是**模拟器里临时已选择的年份，并非上传服务器的出生日期**。
+
+### 修订实现与判定边界
+
+根据 Android Open Source Project 的 `InputShellCommand` 实现、CTS 用例，Android 支持 `input mouse scroll x y --axis VSCROLL,-3`，其动作为 `MotionEvent.ACTION_SCROLL`、不触发触屏点击。项目改为在经过截图签名确认的年份弹窗内部尝试**少量鼠标滚轮事件**，每次检查列表是否仍可见，拍摄 `onboarding_year_wheel_01.png` 等证据。
+
+相关 Android 原始资料：
+- https://android.googlesource.com/platform/frameworks/base/+/master/services/core/java/com/android/server/input/InputShellCommand.java
+- https://android.googlesource.com/platform/cts/+/ca45a15a359a75f55907f370562cc96497e27b3b/tests/input/src/android/input/cts/InputShellCommandTest.kt
+
+新的程序记录 `year_scroll_commands_succeeded`（系统命令未报错）与 `year_popup_remained_open_after_wheel`（截图表明列表没消失）两个事实。它们**都不能单独证明年份列表确实发生了数值滚动**；`year_labels_changed_verified=false` 初始保守。必须检查真实列表截图，再决定下一步是否定位/选中 2000 年。
+
+- [#42360314004](https://github.com/969981/PokeHome_Resources/actions/runs/42360314004)：新增语言确认失败有限重试、已知弹窗失效停止等 **17 项离线测试通过**。
+- 最新滚轮模拟器任务：[Actions #42360703091](https://github.com/969981/PokeHome_Resources/actions/runs/42360703091)。实际结果须以后续截图、JSON、日志为准；不得把 CI 触发视为已选中 2000 年。
+- 仍保持不绑定 Nintendo Account，头像保持第一个有效选项、小火龙编号 0004，`submit_birthdate=false`、`accept_terms=false`、`create_account=false`、`delete_account=false`。
