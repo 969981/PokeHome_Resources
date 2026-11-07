@@ -92,9 +92,21 @@ def observe(apk: Path, name: str, bundle: Path, root: Path, remote_device):
             time.sleep(25)
             summary["process_at_60s"] = process_present()
             summary["screen_at_60s"] = screenshot(out, "screen_60s.png")
-            summary["home_language_verified"] = bool(
-                summary["screen_at_35s"].get("home_language_verified") or
-                summary["screen_at_60s"].get("home_language_verified")
+            if not (summary["screen_at_35s"].get("home_language_verified") or
+                    summary["screen_at_60s"].get("home_language_verified")):
+                # Real Frida spawn-instrumented cold start can still show the
+                # Pokémon loading screen at 60 seconds. Do not call this a
+                # failed boot until later verified screenshots are captured.
+                time.sleep(35)
+                summary["process_at_95s"] = process_present()
+                summary["screen_at_95s"] = screenshot(out, "screen_95s.png")
+                if not summary["screen_at_95s"].get("home_language_verified"):
+                    time.sleep(35)
+                    summary["process_at_130s"] = process_present()
+                    summary["screen_at_130s"] = screenshot(out, "screen_130s.png")
+            summary["home_language_verified"] = any(
+                summary.get("screen_at_" + t, {}).get("home_language_verified", False)
+                for t in ("35s", "60s", "95s", "130s")
             )
             summary["crash_signals"] = crash_summary().get("counts", {})
         except Exception as e:
