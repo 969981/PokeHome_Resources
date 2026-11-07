@@ -26,6 +26,7 @@ jobs:
             .github/workflows/android41-birthdate-ui-symbol-audit.yml
             tools/home41_birthdate_ui_symbol_audit.py
             Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/il2cpp/dump.cs
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -47,6 +48,37 @@ jobs:
           assert o['source_method_count']>=100000
           assert not o['year_1999_selected']
           assert not o['birthday_submitted']
+          PY
+      - name: Extract exact birthdate controller field layouts from dump.cs
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          source=Path("Unpack/Android/4.1.0/il2cpp/dump.cs")
+          s=source.read_text(encoding="utf-8-sig")
+          targets=["FirstBootViewInputBirthData", "FirstBootPullDownLabel",
+                   "FirstBootBodyController", "CustomTMPDropdownScrollList",
+                   "CustomTMPDropdown"]
+          out={}
+          for name in targets:
+              needle="class "+name
+              pos=s.find(needle)
+              if pos<0:
+                  out[name]={"located":False}
+                  continue
+              # A class name may appear in namespace declarations or comments;
+              # use the first matching class and limit to an independent window.
+              start=max(0,s.rfind("// Namespace:",0,pos))
+              end=s.find("\n}\n",pos)
+              if end<0 or end-pos>35000:
+                  end=min(len(s),pos+35000)
+              out[name]={"located":True,
+                         "class_excerpt":s[start:end+2][:36000]}
+          Path("ci-birthdate-ui/birthdate_class_layouts.json").write_text(
+              json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print({k:v["located"] for k,v in out.items()})
+          assert out["FirstBootViewInputBirthData"]["located"]
           PY
       - name: Upload private, static method-name evidence
         if: always()
