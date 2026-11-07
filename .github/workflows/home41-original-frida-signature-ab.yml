@@ -179,9 +179,12 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          p=Path('Android/Smali/4.1.0/FRIDA_SIGNATURE_CALL_TRACE.json')
+          # The private sparse checkout may remove an output under the
+          # unsparsified Android/Smali/4.1.0 path after git commit/rebase.
+          # Use the generated runtime evidence retained outside the git tree.
+          p=Path('signing-runtime-evidence/comparison.json')
           if not p.exists(): raise SystemExit("No runtime trace produced")
-          r=json.loads(p.read_text()).get('results',{})
+          r=json.loads(p.read_text())
           if not r.get('original',{}).get('home_language_verified'):
             raise SystemExit("Original app did NOT demonstrate valid UI under Frida; no conclusive comparison")
           print("Original app boots while signature reads are only OBSERVED, not modified.")
