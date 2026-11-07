@@ -57,8 +57,23 @@ def screenshot(out: Path, name: str):
             small = im.convert("RGB").resize((50, 100))
             colors = len(set(small.getdata()))
             variances = ImageStat.Stat(small).stddev
+            full = im.convert("RGB")
+            w, h = full.size
+            near = lambda x, y, wanted, delta=14: all(
+                abs(a-b) <= delta for a,b in zip(
+                    full.getpixel((int(w*x), int(h*y))), wanted))
+            # Verified HOME 4.1.0 language selection fingerprint. An Android
+            # location permission dialog is NOT app UI and must never pass.
+            home_language = (
+                near(.5,.02,(202,244,161))
+                and near(.5,.14,(38,179,151))
+                and near(.3,.24,(240,246,236))
+                and near(.3,.775,(240,246,236))
+                and near(.3,.83,(240,246,236))
+            )
             return {
                 "saved": True, "nonblank": colors >= 12 and max(variances) >= 6,
+                "home_language_verified": bool(home_language),
                 "color_samples": colors,
                 "channel_stddev_rounded": [round(n, 1) for n in variances],
                 "dimensions": [im.width, im.height],
@@ -78,6 +93,51 @@ def crash_summary():
         return {"available": False, "counts": {}}
     content = (p.stdout or "").lower()
     return {"available": True, "counts": {label: content.count(label) for label in CRASH_PATTERNS}}
+
+
+def predeny_location_and_notification():
+    """Pre-deny Android OS prompts on a fresh disposable emulator only."""
+    preflight = {"location": {}, "notifications": {}, "location_denied_fixed": False}
+    dump = adb("shell", "dumpsys", "package", PACKAGE, timeout=25)
+    before = (dump.stdout or "") if dump and dump.returncode == 0 else ""
+    for permission, op_name in [
+        ("android.permission.ACCESS_FINE_LOCATION", "FINE_LOCATION"),
+        ("android.permission.ACCESS_COARSE_LOCATION", "COARSE_LOCATION"),
+    ]:
+        if permission not in before:
+            preflight["location"][permission] = "not_declared"
+            continue
+        revoke = adb("shell", "pm", "revoke", PACKAGE, permission, timeout=20)
+        flags = adb("shell", "pm", "set-permission-flags", PACKAGE,
+                    permission, "user-set", "user-fixed", timeout=20)
+        op = adb("shell", "cmd", "appops", "set", PACKAGE, op_name, "ignore", timeout=20)
+        preflight["location"][permission] = bool(
+            revoke and revoke.returncode == 0 and flags and flags.returncode == 0
+            and op and op.returncode == 0)
+    notification = "android.permission.POST_NOTIFICATIONS"
+    if notification in before:
+        revoke = adb("shell", "pm", "revoke", PACKAGE, notification, timeout=20)
+        fixed = adb("shell", "pm", "set-permission-flags", PACKAGE,
+                    notification, "user-set", "user-fixed", timeout=20)
+        preflight["notifications"]["commands_ok"] = bool(
+            revoke and revoke.returncode == 0 and fixed and fixed.returncode == 0)
+    check = adb("shell", "dumpsys", "package", PACKAGE, timeout=25)
+    after = (check.stdout or "") if check and check.returncode == 0 else ""
+    confirmations = []
+    for permission, sent in list(preflight["location"].items()):
+        if sent == "not_declared":
+            continue
+        match = re.search(re.escape(permission) +
+                          r":\s*granted=(true|false).*?flags=\[([^\]]*)\]", after)
+        verified = bool(match and match.group(1) == "false"
+                        and "USER_FIXED" in match.group(2)
+                        and "USER_SET" in match.group(2))
+        preflight["location"][permission] = {
+            "commands_ok": sent, "verified": verified,
+        }
+        confirmations.append(verified)
+    preflight["location_denied_fixed"] = bool(confirmations) and all(confirmations)
+    return preflight
 
 
 def case(apk: Path, name: str, root: Path):
@@ -105,6 +165,7 @@ def case(apk: Path, name: str, root: Path):
         adb("shell", "cmd", "appops", "set", PACKAGE, "CAMERA", "allow", timeout=12)
         adb("shell", "settings", "put", "secure",
             "immersive_mode_confirmations", "confirmed", timeout=12)
+        summary["os_permissions_preflight"] = predeny_location_and_notification()
         adb("logcat", "-c", timeout=12)
         launched = adb("shell", "monkey", "-p", PACKAGE,
                        "-c", "android.intent.category.LAUNCHER", "1", timeout=50)
@@ -123,9 +184,10 @@ def case(apk: Path, name: str, root: Path):
             "shell", "dumpsys", "activity", "top"
         )
     summary["result"] = (
-        "visible_process_survived" if summary["install_ok"]
+        "home_language_screen_verified" if summary["install_ok"]
         and summary["launch_event_sent"] and summary["process_at_35s"]
-        and summary.get("screen_at_35s", {}).get("nonblank") is True
+        and summary.get("os_permissions_preflight", {}).get("location_denied_fixed")
+        and summary.get("screen_at_35s", {}).get("home_language_verified") is True
         else "not_verified"
     )
     (out / "result.json").write_text(
@@ -149,9 +211,9 @@ def compare(rebuilt: dict, original: dict, device: dict):
         "account_functionality_verified": False,
         "il2cpp_decompilation_verified": False,
     }
-    if original["result"] != "visible_process_survived":
+    if original["result"] != "home_language_screen_verified":
         result["status"] = "blocked_reference_baseline_not_verified"
-    elif rebuilt["result"] != "visible_process_survived":
+    elif rebuilt["result"] != "home_language_screen_verified":
         result["status"] = "reconstructed_app_launch_regression_or_unverified"
     elif any(rebuilt.get("crash_evidence", {}).get("counts", {}).values()):
         result["status"] = "rebuilt_process_alive_but_crash_signals_present"
