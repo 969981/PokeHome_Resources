@@ -1,0 +1,107 @@
+{
+  "java_plugin_signature_reading": {
+    "class": "jp.co.ilca.www.checksignature.CheckSignatureCore",
+    "get_signing_info": true,
+    "get_package_manager": true,
+    "returns_to_unity": true,
+    "sends_cert_chars": true,
+    "sends_cert_hashcode": true,
+    "has_fixed_expected_certificate": false,
+    "caution": "Presence of a class does NOT establish it executes on launch."
+  },
+  "adjust_sdk_signer": {
+    "native_library_name": "libsigner.so",
+    "java_loader": "com.adjust.sdk.sig.NativeLibHelper",
+    "loaded_by_adjust_sdk": true,
+    "dynamic_needed_libraries": [
+      "0x0000000000000001 (NEEDED)             Shared library: [liblog.so]",
+      "0x0000000000000001 (NEEDED)             Shared library: [libm.so]",
+      "0x0000000000000001 (NEEDED)             Shared library: [libdl.so]",
+      "0x0000000000000001 (NEEDED)             Shared library: [libc.so]"
+    ],
+    "caution": "Adjust SDK request signing is not automatically equivalent to Pokémon HOME server signature enforcement."
+  },
+  "il2cpp_stringliteral_matches": {
+    "CheckSignatureCore": [],
+    "CheckSignature": [],
+    "checksignature": [],
+    "toCharsString:": [],
+    "GetSignature": [
+      "droid\",     \"address\": \"0x466B1E8\"   },   {     \"value\": \"AndroidJNIHelper.GetSignature: using Byte parameters is obsolete, use SByte parameters instead\",     \"address\": \"0x466B1F0\"   },   {     \"value\": \"AndroidJNIHe",
+      " \"getSharedPreferences\",     \"address\": \"0x4680508\"   },   {     \"value\": \"getSignature\",     \"address\": \"0x4680510\"   },   {     \"value\": \"getSpeed\",     \"address\": \"0x4680518\"   },   {     \"value\": \"getStackTraceStr"
+    ],
+    "SignatureHash": [],
+    "SignatureCheck": [],
+    "Signer": [
+      "    \"value\": \"Design\",     \"address\": \"0x466E700\"   },   {     \"value\": \"Designer\",     \"address\": \"0x466E708\"   },   {     \"value\": \"Desktop\",     \"address\": \"0x466E710\"   },   {     \"value\": \"Dest or count is "
+    ],
+    "Certificate": [
+      "\"-----BEGIN\",     \"address\": \"0x4668180\"   },   {     \"value\": \"-----BEGIN CERTIFICATE-----\",     \"address\": \"0x4668188\"   },   {     \"value\": \"-----BEGIN {0}-----\",     \"address\": \"0x4668190\"   },   {     \"value\": \"",
+      " {     \"value\": \"CData\",     \"address\": \"0x466BF38\"   },   {     \"value\": \"CERTIFICATE\",     \"address\": \"0x466BF40\"   },   {     \"value\": \"CFB with Feedbaack \\u003E 64 bits\",     \"address\": \"0x466BF48\"   },   {     \"",
+      "\",     \"address\": \"0x466CC80\"   },   {     \"value\": \"Cannot request client certificate before receiving one from the server.\",     \"address\": \"0x466CC88\"   },   {     \"value\": \"Cannot resize source, because its size ",
+      "\"value\": \"Cannot validate an Apple receipt without supplying an Apple root certificate\",     \"address\": \"0x466CF38\"   },   {     \"value\": \"Cannot validate due to unhandled exception. (\",     \"address\": \"0x466CF40\"   ",
+      " header flags mismatch\",     \"address\": \"0x466D0E8\"   },   {     \"value\": \"Certificate Signing\",     \"address\": \"0x466D0F0\"   },   {     \"value\": \"Certificate does not have a private key\",     \"address\": \"0x466D0F8\" "
+    ],
+    "9007": []
+  },
+  "il2cpp_managed_type_matches": {
+    "CheckSignatureCore": [],
+    "CheckSignature": [
+      "te() { }  \t// RVA: 0x35ECECC Offset: 0x35E8ECC VA: 0x35ECECC \tprivate bool CheckSignature() { }  \t// RVA: 0x35EDB78 Offset: 0x35E9B78 VA: 0x35EDB78 \tprivate bool CompareIssuerSerial(string issuer, byte[] serial, X509Cer",
+      "time) { }  \t// RVA: 0x3DD9E00 Offset: 0x3DD5E00 VA: 0x3DD9E00 \tpublic bool CheckSignature(X509Cert signer) { }  \t// RVA: 0x3DD9E50 Offset: 0x3DD5E50 VA: 0x3DD9E50 \tprivate bool VerifySignatureWithSha256OrSha1(X509Cert s",
+      "gner) { }  \t// RVA: 0x3DDA064 Offset: 0x3DD6064 VA: 0x3DDA064 \tpublic bool CheckSignatureSha256(X509Cert signer) { }  \t// RVA: 0x3DD99FC Offset: 0x3DD59FC VA: 0x3DD99FC \tprivate void ParseNode(Asn1Node root) { }  \t// RV"
+    ],
+    "checksignature": [
+      "te() { }  \t// RVA: 0x35ECECC Offset: 0x35E8ECC VA: 0x35ECECC \tprivate bool CheckSignature() { }  \t// RVA: 0x35EDB78 Offset: 0x35E9B78 VA: 0x35EDB78 \tprivate bool CompareIssuerSerial(string issuer, byte[] serial, X509Cer",
+      "time) { }  \t// RVA: 0x3DD9E00 Offset: 0x3DD5E00 VA: 0x3DD9E00 \tpublic bool CheckSignature(X509Cert signer) { }  \t// RVA: 0x3DD9E50 Offset: 0x3DD5E50 VA: 0x3DD9E50 \tprivate bool VerifySignatureWithSha256OrSha1(X509Cert s",
+      "gner) { }  \t// RVA: 0x3DDA064 Offset: 0x3DD6064 VA: 0x3DDA064 \tpublic bool CheckSignatureSha256(X509Cert signer) { }  \t// RVA: 0x3DD99FC Offset: 0x3DD59FC VA: 0x3DD99FC \tprivate void ParseNode(Asn1Node root) { }  \t// RV"
+    ],
+    "toCharsString:": [],
+    "GetSignature": [
+      "// RVA: 0x367EC18 Offset: 0x367AC18 VA: 0x367EC18 \tprotected static Type[] GetSignature(MethodBase methodBase, bool load) { }  \t// RVA: 0x367EDE8 Offset: 0x367ADE8 VA: 0x367EDE8 \tinternal static int MarshalProperties(",
+      "  \t// RVA: 0x3EEFCF0 Offset: 0x3EEBCF0 VA: 0x3EEFCF0 \tpublic static string GetSignature(object obj) { }  \t// RVA: 0x3EF0A54 Offset: 0x3EECA54 VA: 0x3EF0A54 \tpublic static string GetSignature(object[] args) { }  \t// RV",
+      "  \t// RVA: 0x3EF0A54 Offset: 0x3EECA54 VA: 0x3EF0A54 \tpublic static string GetSignature(object[] args) { }  \t// RVA: -1 Offset: -1 \tpublic static ArrayType ConvertFromJNIArray<ArrayType>(IntPtr array) { } \t/* GenericI",
+      "pFullySharedGenericType> \t*/  \t// RVA: -1 Offset: -1 \tpublic static string GetSignature<ReturnType>(object[] args) { } \t/* GenericInstMethod : \t| \t|-RVA: 0x24BFEC4 Offset: 0x24BBEC4 VA: 0x24BFEC4 \t|-AndroidJNIHelper.G"
+    ],
+    "SignatureHash": [],
+    "SignatureCheck": [],
+    "Signer": [
+      "ivate string process_name; // 0xD8  \t// Properties \t[Browsable(False)] \t[DesignerSerializationVisibility(0)] \t[MonitoringDescription(\"Indicates if the process component is associated with a real process.\")] \tpri",
+      "s associated with a real process.\")] \tprivate bool Associated { get; } \t[DesignerSerializationVisibility(0)] \t[MonitoringDescription(\"Indicates if the associated process has been terminated.\")] \t[Browsable(False",
+      "een terminated.\")] \t[Browsable(False)] \tpublic bool HasExited { get; } \t[DesignerSerializationVisibility(0)] \t[MonitoringDescription(\"The unique identifier for the process.\")] \tpublic int Id { get; } \t[Browsable",
+      "ocess exit.\")] \tpublic ISynchronizeInvoke SynchronizingObject { get; } \t[DesignerSerializationVisibility(0)] \t[MonitoringDescription(\"The name of this process.\")] \tpublic string ProcessName { get; }  \t// Methods"
+    ],
+    "Certificate": [
+      "ResourceString(string str) { } }  // Namespace: Mono [Flags] internal enum CertificateImportFlags // TypeDefIndex: 5062 { \t// Fields \tpublic int value__; // 0x0 \tpublic const CertificateImportFlags None = 0; \tpublic ",
+      " TypeDefIndex: 5062 { \t// Fields \tpublic int value__; // 0x0 \tpublic const CertificateImportFlags None = 0; \tpublic const CertificateImportFlags DisableNativeBackend = 1; \tpublic const CertificateImportFlags DisableA",
+      "lue__; // 0x0 \tpublic const CertificateImportFlags None = 0; \tpublic const CertificateImportFlags DisableNativeBackend = 1; \tpublic const CertificateImportFlags DisableAutomaticFallback = 2; }  // Namespace: Mono int",
+      "ublic const CertificateImportFlags DisableNativeBackend = 1; \tpublic const CertificateImportFlags DisableAutomaticFallback = 2; }  // Namespace: Mono internal static class DependencyInjector // TypeDefIndex: 5063 { \t"
+    ],
+    "9007": [
+      "uditFailure = 4503599627370496; \tpublic const EventKeywords AuditSuccess = 9007199254740992; \tpublic const EventKeywords CorrelationHint = 4503599627370496; \tpublic const EventKeywords EventLogClassic = 360287",
+      "D674 \t|-List<RaycastResult>.System.Collections.IList.Remove \t| \t|-RVA: 0x3290074 Offset: 0x328C074 VA: 0x3290074 \t|-List<RuleMatcher>.System.Collections.IList.Remove \t| \t|-RVA: 0x3292918 Offset: 0x328E918 VA: ",
+      "em.Collections.IList.Remove \t| \t|-RVA: 0x3290074 Offset: 0x328C074 VA: 0x3290074 \t|-List<RuleMatcher>.System.Collections.IList.Remove \t| \t|-RVA: 0x3292918 Offset: 0x328E918 VA: 0x3292918 \t|-List<sbyte>.System.",
+      "eld<Vector2Int, object, int>.UpdateDisplay \t| \t|-RVA: 0x29047B0 Offset: 0x29007B0 VA: 0x29047B0 \t|-BaseCompositeField<Vector3, object, float>.UpdateDisplay \t| \t|-RVA: 0x2905B04 Offset: 0x2901B04 VA: 0x2905B04 "
+    ]
+  },
+  "il2cpp_native_ascii_matches": {
+    "CheckSignatureCore": [],
+    "CheckSignature": [],
+    "checksignature": [],
+    "toCharsString:": [],
+    "GetSignature": [],
+    "SignatureHash": [],
+    "SignatureCheck": [],
+    "Signer": [
+      "EPKcm _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignERKS5_mm _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEmc _ZNKSt6__ndk112basic_stringIcNS_11char_traitsI",
+      "EPKwm _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignERKS5_mm _ZNKSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE4copyEPwmm _ZNSt6__ndk112basic_stringIwNS_11char_traitsI"
+    ],
+    "Certificate": [
+      "ocksRaycasts_Injected(System.IntPtr,System.Boolean) UnityEngine.Networking.CertificateHandler::ReleaseFromScripting_Injected(System.IntPtr) Firebase.Platform.dll UnityEngine.InputForUIModule.dll UnityEngine.JSONSeria",
+      "Canvas::get_overrideSorting_Injected(System.IntPtr) UnityEngine.Networking.CertificateHandler::Create(UnityEngine.Networking.CertificateHandler) UnityEngine.Networking.DownloadHandlerScript::CreatePreallocated(UnityE",
+      ") UnityEngine.Networking.CertificateHandler::Create(UnityEngine.Networking.CertificateHandler) UnityEngine.Networking.DownloadHandlerScript::CreatePreallocated(UnityEngine.Networking.DownloadHandlerScript,System.Byte"
+    ],
+    "9007": []
+  },
+  "status": "static_metadata_only_not_runtime_proof"
+}
