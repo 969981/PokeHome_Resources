@@ -61,3 +61,17 @@ flowchart TD
 - 完整迭代日志：[[HOME41_UTID_EARLY_READ_AND_EMULATOR]]
 
 真实首次注册还缺：**经账号所有者确认的国家/地区、真实生日/年龄信息、条款确认与授权账号会话**。无上述信息时不能为用户捏造“测试账号”，也不能模拟服务器正常分配的 UTID。目标是观察而非修改 ID。
+
+
+## 2026-11-07 继续：地区页的可逆探索（不提交账号资料）
+
+十三轮 Actions \`42341229111\` 的 \`screen_after_wait.png\` 实际分辨率是 **1080×2340**。在颜色与布局复核后，已确认此页面含七个大区分类：非洲、北美洲、拉丁美洲、大洋洲、**亚太地区**、欧洲和中东地区。
+
+本轮仅为判明接下来可选的国家/地区列表，新增 \`screenshot_apac_region_expand_position\`：同时验证顶部青绿色标题栏、淡绿色底色和七条白色圆角选项的像素结构，且只返回**第五项“亚太地区”的展开箭头位置**。若截图不是当前已核验的地区列表，则返回 \`None\` 并禁止任何点击。展开以后只截图，不选择国家/地区，也不提交出生日期或确认协议。
+
+- 状态字段：\`region_list_page_recognized\`、\`region_apac_dropdown_expansion_attempted\`、\`region_apac_dropdown_tap_succeeded\`；
+- 明确约束：\`country_selected=false\`、\`birthdate_entered=false\`、\`terms_or_privacy_accepted=false\`；
+- 截图：\`screen_after_region_dropdown.png\` 仅保存至私有短期 Actions Artifact；
+- 下一步仍需来自账号本人明确授权的地区/生日/条款选择以及真实首次注册会话，才能比较注册回调与首个 \`SetBasic\` 事件。
+
+**地区展开属于导航实验，不能等价于账号地区设置成功。**

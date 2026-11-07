@@ -105,6 +105,24 @@ class HomeSystemOverlayTest(unittest.TestCase):
         buf=BytesIO();im.save(buf,format="PNG")
         self.assertIsNone(screenshot_language_confirmation_yes(buf.getvalue()))
 
+
+    def test_apac_region_expansion_rejects_unknown_pages(self):
+        from io import BytesIO
+        from PIL import Image,ImageDraw
+        from android41_ui_flow import screenshot_apac_region_expand_position
+        im=Image.new("RGB",(1080,2340),(158,243,215))
+        d=ImageDraw.Draw(im)
+        d.rectangle((0,0,1079,140),fill=(210,252,169))
+        d.rectangle((0,220,1079,520),fill=(38,179,151))
+        for y in (.24,.30,.36,.42,.48,.54,.60):
+            row=int(2340*y)
+            d.rectangle((145,row-28,910,row+28),fill=(248,250,245))
+        buffer=BytesIO();im.save(buffer,format="PNG")
+        self.assertEqual(screenshot_apac_region_expand_position(buffer.getvalue()),(885,1123))
+        im=Image.new("RGB",(1080,2340),(238,237,244))
+        buffer=BytesIO();im.save(buffer,format="PNG")
+        self.assertIsNone(screenshot_apac_region_expand_position(buffer.getvalue()))
+
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
         self.assertIsNone(parse_system_action(None))

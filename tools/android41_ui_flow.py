@@ -143,6 +143,44 @@ def screenshot_language_confirmation_yes(png_bytes:bytes):
         return int(w*.68),int(h*.64)
     return None
 
+
+def screenshot_apac_region_expand_position(png_bytes:bytes):
+    """Find the APAC dropdown on the verified HOME region-CHOICE screen.
+
+    This ONLY expands a list of places; it NEVER selects a country, confirms
+    residence, enters age/birthdate or accepts HOME/Nintendo agreements.
+    Match 7 full-width pale region rows and the original teal page header.
+    """
+    if not png_bytes or not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return None
+    try:
+        from io import BytesIO
+        from PIL import Image
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (OSError,ImportError,ValueError):
+        return None
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return None
+    def pixel(x,y):
+        return im.getpixel((int(w*x),int(h*y)))
+    def near(actual,expected,t=12):
+        return all(abs(a-b)<=t for a,b in zip(actual,expected))
+    if not near(pixel(.5,.02),(210,252,169)):
+        return None
+    if not near(pixel(.5,.15),(38,179,151)):
+        return None
+    if not near(pixel(.5,.8),(158,243,215)):
+        return None
+    # Seven white pill rows from Africa through Middle East. Sample at 30%
+    # of screen width to avoid glyphs and right-arrow icons.
+    if not all(near(pixel(.3,y),(248,250,245))
+               for y in (.24,.30,.36,.42,.48,.54,.60)):
+        return None
+    # Expand APAC, fifth row. Do not choose a country inside that list.
+    return int(w*.82),int(h*.48)
+
 def wait_for_known_language_page(adb,max_checks:int=9,interval_seconds:float=10.0):
     """Only recognize the evidenced HOME language screen, bounded wait."""
     if max_checks<1 or max_checks>20:
