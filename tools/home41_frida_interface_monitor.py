@@ -37,6 +37,10 @@ ALLOWED_EVENTS = frozenset({
     "birthdate_day_change_index", "dropdown_scroll_open_index",
     "date_hook_installed", "date_hook_install_failed",
     "date_hook_rva_outside_module",
+    "year_options_inspector_hook_installed",
+    "year_options_inspector_hook_unavailable",
+    "year_options_layout_not_verified",
+    "year_1999_option_index_verified",
 })
 CATEGORIES = frozenset({
     "register", "token", "login", "locale", "basic_profile", "other"
@@ -91,6 +95,30 @@ def sanitize(payload: object) -> dict | None:
         arch = payload.get("arch")
         cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
         cleaned["arm64_rva_hook_supported"] = payload.get("arm64_rva_hook_supported") is True
+    if event == "year_1999_option_index_verified":
+        value = payload.get("selected_index")
+        count = payload.get("total_options")
+        first = payload.get("first_year")
+        last = payload.get("last_year")
+        sequential = payload.get("descending_sequential") is True
+        valid = (
+            isinstance(value, int) and not isinstance(value, bool)
+            and isinstance(count, int) and not isinstance(count, bool)
+            and isinstance(first, int) and not isinstance(first, bool)
+            and isinstance(last, int) and not isinstance(last, bool)
+            and 100 <= count <= 140 and 0 <= value < count
+            and 1900 <= last <= first <= 2100
+            and sequential and first - last >= count - 3
+        )
+        if not valid:
+            return None
+        cleaned.update({
+            "selected_index": value,
+            "total_options": count,
+            "first_year": first,
+            "last_year": last,
+            "descending_sequential": True,
+        })
     if event in DATE_EVENT_MAX_INDEX:
         value = payload.get("selected_index")
         if (isinstance(value, int) and not isinstance(value, bool)
@@ -328,6 +356,14 @@ class FridaInterfaceMonitor:
             "birthdate_ui_hook_install_count": counts["date_hook_installed"],
             "birthdate_ui_callback_event_count": sum(
                 counts[name] for name in DATE_EVENT_MAX_INDEX),
+            "year_options_hook_installed": (
+                counts["year_options_inspector_hook_installed"] > 0),
+            "year_1999_option_index_observed": (
+                counts["year_1999_option_index_verified"] > 0),
+            "year_1999_option_index": next(
+                (entry["selected_index"] for entry in self.events
+                 if entry["event"] == "year_1999_option_index_verified"),
+                None),
             "arm64_preflight_exception_seen": counts["preflight_exception"] > 0,
             "first_basic_utid_event_seen": counts["first_basic_utid"] > 0,
             "first_basic_utid_numeric_value_saved": False,
