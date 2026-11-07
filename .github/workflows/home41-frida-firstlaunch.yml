@@ -7,6 +7,8 @@ on:
       - 'tools/home41_frida_first_launch_smoke.py'
       - 'tools/home41_frida_server_setup.py'
       - 'tools/home41_frida_interface_monitor.py'
+      - 'tools/early_home_tid_observer.js'
+      - 'tools/home41_frida_emulated_realm_probe.js'
       - 'tools/home41_frida_interface_agent.js'
   workflow_dispatch:
 permissions:
