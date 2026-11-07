@@ -103,12 +103,33 @@ def screenshot_simplified_chinese_option(png_bytes:bytes):
         return im.getpixel((int(w*x),int(h*y)))
     def near(actual,wanted,delta=14):
         return all(abs(a-b)<=delta for a,b in zip(actual,wanted))
-    if (near(sample(.5,.02),(202,244,161))
-            and near(sample(.5,.14),(38,179,151))
-            and near(sample(.3,.24),(240,246,236))
-            and near(sample(.3,.775),(240,246,236))
-            and near(sample(.3,.83),(240,246,236))):
+    # Two visually distinct native Unity viewport alignments, both
+    # confirmed by real Actions screenshots:
+    #   #42382578315 header at y=.14, 简体中文 row at y=.775
+    #   #42382760954 header at y=.08, 简体中文 row at y=.720
+    # Each variant independently checks non-row banner/background pixels,
+    # multiple list entries, and an end-of-list boundary to prevent blind
+    # taps on unrelated pages. No OCR or inferred UI position.
+    original = (
+        near(sample(.5,.02),(202,244,161))
+        and near(sample(.5,.14),(38,179,151))
+        and near(sample(.3,.24),(240,246,236))
+        and near(sample(.3,.775),(240,246,236))
+        and near(sample(.3,.83),(240,246,236))
+    )
+    if original:
         return int(w*.5),int(h*.775)
+    compact = (
+        near(sample(.5,.02),(202,244,161))
+        and near(sample(.5,.08),(38,179,151))
+        and near(sample(.3,.18),(240,246,236))
+        and near(sample(.3,.24),(240,246,236))
+        and near(sample(.3,.720),(240,246,236))
+        and near(sample(.3,.780),(240,246,236))
+        and near(sample(.3,.83),(158,241,216))
+    )
+    if compact:
+        return int(w*.5),int(h*.720)
     return None
 
 
