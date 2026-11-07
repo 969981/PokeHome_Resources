@@ -107,11 +107,22 @@ class GuestOnboardingTests(unittest.TestCase):
         self.assertIsNone(birthday_year_dropdown(COUNTRY))
         self.assertEqual(recognize(BIRTHDAY)[0], "birthdate_page")
 
+    def test_reopened_selected_year_uses_dark_highlight(self):
+        # Verified on real #42366372912 after local 2018 selection:
+        # the selected top row background changes (238,240,235)->(208,210,206).
+        with Image.open(io.BytesIO(YEAR_POPUP)) as source:
+            im=source.convert("RGB")
+        im.putpixel((int(W*.2),int(H*.29)),(208,210,206))
+        out=io.BytesIO()
+        im.save(out,format="PNG")
+        self.assertTrue(birth_year_popup_visible(out.getvalue()))
+
     def test_error_dialog_stops_without_tap(self):
         self.assertTrue(error_modal_like(ERROR))
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(ERROR)
             result = run_known_guest_setup(fake, Path(d), profile,
@@ -125,6 +136,7 @@ class GuestOnboardingTests(unittest.TestCase):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         # This test checks opening only; the real profile may explore swipes.
         profile["explore_year_scrolls"] = 0
         with tempfile.TemporaryDirectory() as d:
@@ -146,6 +158,7 @@ class GuestOnboardingTests(unittest.TestCase):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         profile["explore_year_scrolls"] = 3
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(BIRTHDAY, after_tap=YEAR_POPUP)
@@ -170,6 +183,7 @@ class GuestOnboardingTests(unittest.TestCase):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         profile["explore_year_scrolls"] = 4
         class DisappearingPopup(FakeADB):
             def __call__(self, *args, **kw):
@@ -192,6 +206,7 @@ class GuestOnboardingTests(unittest.TestCase):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(COUNTRY)
             result = run_known_guest_setup(fake, Path(d), profile,
@@ -207,6 +222,7 @@ class GuestOnboardingTests(unittest.TestCase):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         profile["explore_year_scrolls"] = 0
         class OneRetryNeeded(FakeADB):
             def __call__(self, *args, **kw):
@@ -230,6 +246,7 @@ class GuestOnboardingTests(unittest.TestCase):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
+        profile["probe_year_edge_drag"] = False
         unknown = screenshot([])
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(unknown)
