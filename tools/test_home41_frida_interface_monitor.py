@@ -88,6 +88,35 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(sanitize({"event":"native_arch_report","arch":["unsafe"]})["arch"],
                          "unknown")
 
+    def test_real_ui_year_index_mapping_requires_both_observations(self):
+        with tempfile.TemporaryDirectory() as d:
+            dest=Path(d)
+            monitor=FridaInterfaceMonitor(dest,dest/"bundle.js")
+            monitor.on_message({"type":"send","payload":{
+                "event":"year_1999_option_index_verified",
+                "selected_index":27,"total_options":127,
+                "first_year":2026,"last_year":1900,
+                "descending_sequential":True}})
+            first=monitor.stop()
+            self.assertTrue(first["year_1999_option_index_observed"])
+            self.assertFalse(first["known_2018_index_expected_8_observed"])
+        with tempfile.TemporaryDirectory() as d:
+            dest=Path(d)
+            monitor=FridaInterfaceMonitor(dest,dest/"bundle.js")
+            monitor.on_message({"type":"send","payload":{
+                "event":"year_1999_option_index_verified",
+                "selected_index":27,"total_options":127,
+                "first_year":2026,"last_year":1900,
+                "descending_sequential":True}})
+            monitor.on_message({"type":"send","payload":{
+                "event":"birthdate_year_change_index","selected_index":8}})
+            summary=monitor.stop()
+            self.assertEqual(summary["known_2018_ui_calibration_index"],8)
+            self.assertTrue(summary["known_2018_index_expected_8_observed"])
+            self.assertTrue(summary["year_mapping_requires_ui_screenshot_review"])
+            self.assertFalse(summary["first_basic_utid_event_seen"])
+            self.assertFalse(summary["guest_registration_attempted_by_monitor"])
+
     def test_native_transport_metadata_only_no_ip_or_payload(self):
         fields = {
             "event":"native_socket_connect", "family":"ipv4",
