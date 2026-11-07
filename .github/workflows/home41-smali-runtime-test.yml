@@ -1,0 +1,214 @@
+name: HOME Android 4.1.0 Smali reconstructed APK runtime A/B smoke
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-smali-runtime-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-smali-actual-emulator-test
+  cancel-in-progress: false
+
+jobs:
+  emulator:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - name: Fetch private Smali sources and test scripts
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            Android/Smali
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Verify probe and fetch original reference APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q pillow
+          python -m compileall -q Android/Smali/tools Android/Smali/tests
+          python -m unittest discover -s Android/Smali/tests -v
+          git clone --depth=1 --filter=blob:none --sparse \
+            https://github.com/969981/Home_Android.git "$RUNNER_TEMP/home41-reference"
+          git -C "$RUNNER_TEMP/home41-reference" sparse-checkout set ROMS/4.1.0
+          mapfile -t apks < <(find "$RUNNER_TEMP/home41-reference/ROMS/4.1.0" -name '*.apk' -type f)
+          test "${#apks[@]}" -eq 1
+          echo "ORIGINAL_APK=${apks[0]}" >> "$GITHUB_ENV"
+          echo "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1  ${apks[0]}" | sha256sum -c -
+          mkdir -p runtime-smoke
+
+      - name: Reassemble all 14,841 Smali files from scratch, never reuse cached DEX
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 --retry-delay 2 \
+            https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar \
+            -o "$RUNNER_TEMP/apktool.jar"
+          project=Android/Smali/4.1.0
+          test -s "$project/apktool.yml"
+          test -d "$project/smali"
+          test -d "$project/smali_classes2"
+          test -d "$project/smali_classes3"
+          python Android/Smali/tools/shard_large.py check --root "$project"
+          python Android/Smali/tools/shard_large.py restore --root "$project"
+          count=$(find "$project" -type f -name '*.smali' | wc -l)
+          echo "Assembly input: $count real Smali source files"
+          test "$count" -eq 14841
+          # Previous CI committed 'build/apk/classes.dex' -- delete ALL bytecode caches.
+          rm -rf "$project/build" "$project/dist"
+          java -Xmx4g -jar "$RUNNER_TEMP/apktool.jar" b -f "$project" \
+            -o "$RUNNER_TEMP/home41-from-clean-smali-unsigned.apk"
+          unzip -t "$RUNNER_TEMP/home41-from-clean-smali-unsigned.apk" | tail -n 2
+
+      - name: Align and sign disposable debug APK and validate original identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          sdk_dir="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          tools_dir=$(find "$sdk_dir/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
+          test -x "$tools_dir/zipalign"
+          test -x "$tools_dir/apksigner"
+          test -x "$tools_dir/aapt"
+          "$tools_dir/zipalign" -f -p 4 "$RUNNER_TEMP/home41-from-clean-smali-unsigned.apk" \
+            "$RUNNER_TEMP/home41-aligned.apk"
+          keytool -genkeypair -noprompt -alias disposable \
+            -keyalg RSA -keysize 2048 -validity 2 \
+            -keystore "$RUNNER_TEMP/home41-test-only.jks" \
+            -storepass changeit -keypass changeit \
+            -dname "CN=HOME 4.1.0 scratch test"
+          "$tools_dir/apksigner" sign \
+            --ks "$RUNNER_TEMP/home41-test-only.jks" \
+            --ks-key-alias disposable --ks-pass pass:changeit --key-pass pass:changeit \
+            --out "$RUNNER_TEMP/home41-clean-smali-debug.apk" \
+            "$RUNNER_TEMP/home41-aligned.apk"
+          "$tools_dir/apksigner" verify --verbose "$RUNNER_TEMP/home41-clean-smali-debug.apk"
+          "$tools_dir/aapt" dump badging "$RUNNER_TEMP/home41-clean-smali-debug.apk" \
+            | grep '^package:' | tee runtime-smoke/rebuilt_package.txt
+          "$tools_dir/aapt" dump badging "$ORIGINAL_APK" \
+            | grep '^package:' | tee runtime-smoke/original_package.txt
+          diff runtime-smoke/original_package.txt runtime-smoke/rebuilt_package.txt
+          echo "REBUILT_APK=$RUNNER_TEMP/home41-clean-smali-debug.apk" >> "$GITHUB_ENV"
+          sha256sum "$RUNNER_TEMP/home41-clean-smali-debug.apk" | awk '{print $1}' > runtime-smoke/rebuilt_sha256.txt
+
+      - name: Enable Android KVM
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' \
+            | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          test -e /dev/kvm
+
+      - name: Actual Android 15 emulator, rebuilt app then clean original control
+        id: android_trial
+        uses: reactivecircus/android-emulator-runner@v2
+        continue-on-error: true
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: python Android/Smali/tools/smali_runtime_probe.py --rebuilt "$REBUILT_APK" --original "$ORIGINAL_APK" --out runtime-smoke
+
+      - name: Publish traceable result, even when emulator fails
+        if: always()
+        shell: bash
+        env:
+          EMULATOR_STEP_OUTCOME: ${{ steps.android_trial.outcome }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          root=Path('runtime-smoke')
+          root.mkdir(exist_ok=True)
+          report=root/'comparison.json'
+          if not report.is_file():
+              report.write_text(json.dumps({
+                  'status':'emulator_setup_failed_before_probe',
+                  'emulator_action_outcome':os.environ.get('EMULATOR_STEP_OUTCOME'),
+                  'runtime_equivalent_verified':False,
+                  'account_functionality_verified':False
+              },indent=2)+'\n',encoding='utf-8')
+          data=json.loads(report.read_text(encoding='utf-8'))
+          summary=Path('Android/Smali/4.1.0/RUNTIME_SMOKE_REPORT.json')
+          summary.write_text(json.dumps({
+              'source':'actual Android 15 API35 emulator ARM64 translation smoke',
+              'workflow':f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+              'smali_clean_reassembly':os.environ.get('REBUILT_APK') is not None,
+              'android_action_outcome':os.environ.get('EMULATOR_STEP_OUTCOME'),
+              'test_result':data,
+              'original_signature_restored':False,
+              'user_account_actions':False
+          },ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a',encoding='utf-8') as f:
+              f.write('## HOME Android 4.1.0 rebuilt APK actual emulator A/B\n\n')
+              f.write(f"- Status: `{data.get('status','missing')}`\n")
+              f.write(f"- Emulator outcome: `{os.environ.get('EMULATOR_STEP_OUTCOME')}`\n")
+              for name in ('reconstructed','reference'):
+                  child=data.get(name,{})
+                  f.write(f"- {name}: install={child.get('install_ok')}; launcher={child.get('launch_event_sent')}; pid at 35s={child.get('process_at_35s')}; screen={child.get('screen_at_35s',{}).get('nonblank')}\n")
+              f.write('\nOnly fresh disposable installs, no registration, Terms, HOME ID or real accounts.\n')
+          print('ANDROID_SMALI_RUNTIME_STATUS='+str(data.get('status')))
+          PY
+
+      - name: Archive screenshots and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-smali-rebuilt-real-emulator-smoke
+          path: runtime-smoke/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Commit factual runtime smoke report to private repository
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s Android/Smali/4.1.0/RUNTIME_SMOKE_REPORT.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f Android/Smali/4.1.0/RUNTIME_SMOKE_REPORT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test(android): record actual rebuilt APK emulator evidence [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
+
+      - name: Enforce real on-device smoke acceptance
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('runtime-smoke/comparison.json').read_text())
+          if r['status']!='both_original_and_rebuilt_smoke_passed':
+              raise SystemExit('Real device smoke did not pass: '+str(r['status']))
+          print('Both source-built and original APK survived 35 seconds with nonblank screens.')
+          PY
