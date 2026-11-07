@@ -56,7 +56,7 @@
   },
   "android_immersive_setting": "confirmed",
   "android_network_preflight": {
-    "android_utc_time": "2026-11-07T13:55:37Z",
+    "android_utc_time": "2026-11-07T14:04:30Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -68,12 +68,13 @@
   "screenshot_at_15s": true,
   "process_at_15s": true,
   "launcher_os_anr_recovery": {
-    "recognized_screen": false,
-    "exact_title_and_button_in_os_hierarchy": false,
-    "os_dialog_close_sent": false,
+    "recognized_screen": true,
+    "exact_title_and_button_in_os_hierarchy": true,
+    "os_dialog_close_sent": true,
     "home_account_actions_performed": false
   },
   "launcher_recovery_direct_start_sent": false,
+  "screenshot_after_launcher_anr_recovery": true,
   "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
     {
@@ -102,7 +103,7 @@
       "inspect_birth_year_picker"
     ],
     "last_observed_stage": "birthdate_page",
-    "checks": 30,
+    "checks": 27,
     "stop_reason": "month_day_local_only_no_birthdate_submission",
     "birthday_submitted": false,
     "terms_accepted": false,
@@ -239,14 +240,14 @@
   "country_selection_server_confirmed": false,
   "birthdate_entered": false,
   "terms_or_privacy_accepted": false,
-  "home_language_check_count": 30,
+  "home_language_check_count": 27,
   "home_language_poll_wait_seconds": 0,
-  "region_page_poll_attempts": 30,
+  "region_page_poll_attempts": 27,
   "region_page_poll_wait_seconds": 0,
   "screenshot_after_wait": true,
   "known_home_error_modal_layout": false,
   "android_network_after_wait": {
-    "android_utc_time": "2026-11-07T14:00:17Z",
+    "android_utc_time": "2026-11-07T14:08:18Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -276,9 +277,9 @@
     "events": [],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 2,
+      "am_proc_died": 3,
       "am_crash": 0,
-      "am_anr": 0
+      "am_anr": 1
     }
   },
   "crash_signal_counts": {
@@ -294,12 +295,21 @@
   "frida_interface": {
     "status": "spawn_attach_resumed",
     "error_type": null,
+    "emulated_realm_status": "not_attempted",
+    "emulated_realm_error_type": null,
+    "emulated_arch": "unknown",
+    "emulated_il2cpp_visible": false,
+    "emulated_basic_rva_in_bounds": false,
     "frida_agent_loaded": true,
     "java_hook_ready": true,
     "dns_hook_ready": true,
     "il2cpp_module_seen": false,
     "observed_arch": "x64",
     "arm64_native_rva_hooks_usable": false,
+    "native_socket_hook_ready": true,
+    "native_socket_io_hooks_ready": true,
+    "native_transport_event_count": 6,
+    "native_transport_only_metadata": true,
     "api_stage_event_count": 0,
     "first_basic_utid_event_seen": false,
     "first_basic_utid_numeric_value_saved": false,
@@ -309,11 +319,16 @@
       "java_response_hook_ready": 1,
       "java_runtime_ready": 1,
       "java_url_hook_ready": 1,
-      "native_arch_report": 1
+      "native_arch_report": 1,
+      "native_connect_hook_ready": 1,
+      "native_socket_connect": 1,
+      "native_socket_io_hooks_ready": 1,
+      "native_socket_receive": 2,
+      "native_socket_send": 3
     },
-    "event_count": 6,
-    "duration_seconds": 280.4,
-    "note": "Java/DNS stage events are not full HTTP responses. Native ARM64 hooks not validated on an x86_64 native-bridge emulator. Missing event != missing server field.",
+    "event_count": 14,
+    "duration_seconds": 229.0,
+    "note": "Java/DNS and native socket events are not full HTTP responses. Native socket traffic cannot identify the endpoint or HTTP response body. ARM64 hooks not validated on x64 native-bridge emulator.",
     "raw_http_or_auth_material_saved": false,
     "guest_registration_attempted_by_monitor": false
   }
