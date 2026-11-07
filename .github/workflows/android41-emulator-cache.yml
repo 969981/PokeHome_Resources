@@ -63,7 +63,7 @@ jobs:
           heap-size: 512M
           disable-animations: true
           emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
-          script: python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output ci_emulator_trial --idle-seconds 120
+          script: python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output ci_emulator_trial --idle-seconds 45
       - name: Run Unity resource parser on any real cache assets
         if: always()
         shell: bash

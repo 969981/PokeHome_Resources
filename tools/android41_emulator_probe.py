@@ -96,6 +96,57 @@ def collect(out,limit=500,max_bytes=256*1024*1024):
                 "kind":kind,"source_area":["external_files","app_cache","app_files"][area]})
     return result
 
+def read_process_exit_diagnostics():
+    """Minimal pre-login, redacted Android OS exit evidence.
+
+    Never persist a full logcat or account/token/request contents.
+    """
+    import re
+    info={"exit_info_available":False,"exit_info_reason_lines":[],
+          "log_signal_counts":{},"events":[],
+          "raw_log_saved":False}
+    dump=adb("shell","dumpsys","activity","exit-info",PACKAGE,secs=35)
+    if dump and dump.returncode==0:
+        info["exit_info_available"]=True
+        for raw in dump.stdout.splitlines():
+            line=raw.strip()
+            if re.match(r"(?i)^(reason|subreason|status|process|description|pid|timestamp|exit-info):",line):
+                clean=re.sub(r"(?i)(token|cookie|auth|csrf|nonce|secret|id_token)[^\s]*","[redacted]",line)
+                info["exit_info_reason_lines"].append(clean[:170])
+                if len(info["exit_info_reason_lines"])>=35:break
+    errors=adb("logcat","-d","-t","7000",secs=35)
+    signal_tokens=("FATAL EXCEPTION","Fatal signal","am_proc_died","am_crash",
+                   "has died","ProcessRecord","Force finishing","ANR in",
+                   "tombstoned","crash_dump","permission denial",
+                   "UnsatisfiedLinkError","libndk_translation")
+    if errors and errors.returncode==0:
+        low=errors.stdout.lower()
+        info["log_signal_counts"]={k:low.count(k.lower()) for k in signal_tokens}
+        allow_tags=("ActivityManager","ActivityTaskManager","AndroidRuntime","crash_dump",
+                    "tombstoned","libc","Unity","DEBUG")
+        for line in errors.stdout.splitlines():
+            if not ("jp.pokemon.pokemonhome" in line or
+                    any(t.lower() in line.lower() for t in signal_tokens)):
+                continue
+            if not any(t in line for t in allow_tags) and not any(
+                    t.lower() in line.lower() for t in signal_tokens):
+                continue
+            if re.search(r"(?i)token|cookie|authorization|csrf|nonce|password|id_token|account",line):
+                continue
+            clean=re.sub(r"https?://\S+","[url]",line)
+            clean=re.sub(r"[\w.+-]+@[\w.-]+","[email]",clean)
+            clean=re.sub(r"\b[0-9a-fA-F]{32,}\b","[identifier]",clean)
+            info["events"].append(clean[:240])
+            if len(info["events"])>=40:break
+    evt=adb("logcat","-d","-b","events","-t","4000",secs=25)
+    if evt and evt.returncode==0:
+        lines=evt.stdout.lower()
+        info["system_event_counts"]={
+            "am_proc_died":lines.count("am_proc_died"),
+            "am_crash":lines.count("am_crash"),
+            "am_anr":lines.count("am_anr")}
+    return info
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--apk",type=Path,required=True)
@@ -154,6 +205,7 @@ def main():
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
             second=adb("shell","pidof",PACKAGE)
             report["process_after_wait"]=bool(second and second.returncode==0 and second.stdout.strip())
+            report["process_exit_diagnostics"]=read_process_exit_diagnostics()
             log=adb("logcat","-d","-t","2200",secs=30)
             if log and log.returncode==0:
                 report["crash_signal_counts"]={

@@ -130,3 +130,14 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 - 下一轮增加 \`initial_screenshot_immersive_signature\`，使用**已成功落盘的 \`screen_15s.png\` 原始字节**做同一严格匹配，避免第二次截屏与权限弹窗的异步竞争。
 - 同时使用 Android 模拟器的 \`settings put secure immersive_mode_confirmations confirmed\` 设置仅跳过**操作系统**全屏使用说明，不绕过 Pokémon HOME 自身协议、登录或授权。运行时会读回记录为 \`android_immersive_setting\`。
 - 结果必须结合三个字段：\`android_immersive_setting\`、\`initial_screenshot_immersive_signature\`、\`system_prompt_actions\`。系统截图与缓存都保留独立证据；CI 成功本身仍不代表 HOME 账号注册或 ID 获取成功。
+
+
+## 10. 2026-11-07 第六轮：系统提示可禁用，但应用启动后退出
+
+- [Actions #42337686894](https://github.com/969981/PokeHome_Resources/actions/runs/42337686894) 完成。
+- Android API 35 的 \`settings put secure immersive_mode_confirmations confirmed\` 写入成功且读回 \`confirmed\`，两张实际截图都是 Android 桌面而非全屏使用提示。**这一次不是 UI 遮罩造成的“进程存活假象”**。
+- APK 安装和启动事件返回成功，但 \`process_at_15s=false\`、\`process_after_wait=false\`，最终状态 \`app_process_ended\`。实际截图在桌面，HOME 图标存在。
+- 既有四类 logcat 崩溃关键字统计均为 0，不足以证明不存在主动退出或其他进程错误。
+- 没有登录、首次 \`basic.utid\`、训练家六位 ID 或游戏模型缓存；不是“HOME 已正常进入游戏”。
+- 再次执行时改为 45 秒快速诊断，额外收集 Android 系统 exit-info、\`am_proc_died\` / \`am_crash\` 计数和最多 40 条经过过滤与脱敏的相关系统日志，禁止保存完整 logcat、帐号标识和网络令牌。
+- **动态可用性结论**：在没有测试帐号与正常 APP 界面的前提下，本方案仍不能验证 \`register\` 专属/公共响应首发 UTID；需先排查启动退出并确认当前版本是否支持这套测试系统。
