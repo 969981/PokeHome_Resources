@@ -6,7 +6,7 @@ from smali_runtime_probe import compare
 
 
 def record(ok):
-    return {"result": "visible_process_survived" if ok else "not_verified",
+    return {"result": "home_language_screen_verified" if ok else "not_verified",
             "crash_evidence": {"counts": {"fatal signal": 0}}}
 
 
