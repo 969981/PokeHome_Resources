@@ -24,6 +24,23 @@ class TimelineTests(unittest.TestCase):
         r=analyze([evt("first_basic_utid",500,six_digit_candidate="000000")])
         self.assertEqual(r["first_basic_relative_to_registration_response"],"unknown")
         self.assertIsNone(r["delta_ms_from_register_response"])
+    def test_login_request_response_time_correlation(self):
+        # A common basic callback could happen before the business-specific
+        # login after-response callback; signed deltas must be preserved.
+        lines=[evt("registration_response_handler_enter",100),
+               evt("token_response_handler_enter",300),
+               evt("login_request_serializer_enter",500),
+               evt("first_basic_utid",850,six_digit_candidate="010203"),
+               evt("login_response_handler_enter",900)]
+        r=analyze(lines)
+        self.assertTrue(r["token_response_seen"])
+        self.assertTrue(r["login_request_seen"])
+        self.assertTrue(r["login_response_seen"])
+        self.assertEqual(r["delta_ms_from_login_request"],350)
+        self.assertEqual(r["delta_ms_from_login_response"],-50)
+        self.assertEqual(r["first_basic_relative_to_login_response"],"before")
+        self.assertEqual(r["delta_ms_from_register_response"],750)
+        self.assertEqual(r["six_digit_candidate"],"010203")
     def test_ignore_untrusted_logs(self):
         r=analyze([evt("unknown",10,authorization="hi"),"not json",
                    evt("first_basic_utid",30,six_digit_candidate="12345"),

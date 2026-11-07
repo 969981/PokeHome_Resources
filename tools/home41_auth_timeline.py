@@ -15,6 +15,9 @@ SAFE_EVENTS={
     "read_only_observer_ready",
     "registration_request_serializer_enter",
     "registration_response_handler_enter",
+    "token_response_handler_enter",
+    "login_request_serializer_enter",
+    "login_response_handler_enter",
     "first_basic_utid",
     "basic_utid_not_yet_numeric",
     "unsupported_native_arch",
@@ -46,14 +49,24 @@ def analyze(lines):
     rows=_parse_lines(lines)
     reg_starts=[e["elapsed_ms"] for e in rows if e["event"]=="registration_request_serializer_enter"]
     reg_responses=[e["elapsed_ms"] for e in rows if e["event"]=="registration_response_handler_enter"]
+    token_responses=[e["elapsed_ms"] for e in rows if e["event"]=="token_response_handler_enter"]
+    login_starts=[e["elapsed_ms"] for e in rows if e["event"]=="login_request_serializer_enter"]
+    login_responses=[e["elapsed_ms"] for e in rows if e["event"]=="login_response_handler_enter"]
     basics=[e for e in rows if e["event"]=="first_basic_utid"]
     result={"status":"no_real_basic_utid_observed","event_count":len(rows),
             "registration_request_seen":bool(reg_starts),
             "registration_response_seen":bool(reg_responses),
+            "token_response_seen":bool(token_responses),
+            "login_request_seen":bool(login_starts),
+            "login_response_seen":bool(login_responses),
             "first_basic_utid_seen":bool(basics),
             "seconds_since_observer_start":None,
             "first_basic_relative_to_registration_response":"unknown",
             "delta_ms_from_register_response":None,
+            "first_basic_relative_to_login_response":"unknown",
+            "delta_ms_from_login_response":None,
+            "first_basic_relative_to_login_request":"unknown",
+            "delta_ms_from_login_request":None,
             "six_digit_candidate":None,
             "limitation":"Timing alone does not prove which HTTP response produced basic.utid or validate HOME's six-digit display semantics."}
     if not basics:return result
@@ -66,6 +79,18 @@ def analyze(lines):
         diff=b["elapsed_ms"]-first
         result["delta_ms_from_register_response"]=diff
         result["first_basic_relative_to_registration_response"]=(
+            "before" if diff<0 else "same_tick" if diff==0 else "after")
+    if login_responses:
+        first=login_responses[0]
+        diff=b["elapsed_ms"]-first
+        result["delta_ms_from_login_response"]=diff
+        result["first_basic_relative_to_login_response"]=(
+            "before" if diff<0 else "same_tick" if diff==0 else "after")
+    if login_starts:
+        first=login_starts[0]
+        diff=b["elapsed_ms"]-first
+        result["delta_ms_from_login_request"]=diff
+        result["first_basic_relative_to_login_request"]=(
             "before" if diff<0 else "same_tick" if diff==0 else "after")
     return result
 

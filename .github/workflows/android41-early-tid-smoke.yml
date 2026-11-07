@@ -7,6 +7,8 @@ on:
       - 'tools/early_home_tid_observer.js'
       - 'tools/early_tid_candidate.py'
       - 'tools/test_early_tid_candidate.py'
+      - 'tools/home41_auth_timeline.py'
+      - 'tools/test_home41_auth_timeline.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,6 +25,8 @@ jobs:
             tools/early_home_tid_observer.js
             tools/early_tid_candidate.py
             tools/test_early_tid_candidate.py
+            tools/home41_auth_timeline.py
+            tools/test_home41_auth_timeline.py
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
@@ -30,6 +34,6 @@ jobs:
       - name: Verify offline ID conversion fixtures and Frida JS syntax
         run: |
           set -euo pipefail
-          python -m unittest tools/test_early_tid_candidate.py -v
+          python -m unittest tools/test_early_tid_candidate.py tools/test_home41_auth_timeline.py -v
           node --check tools/early_home_tid_observer.js
           python tools/early_tid_candidate.py --utid 888888 --target 888888

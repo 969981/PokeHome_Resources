@@ -2,7 +2,7 @@
 title: "HOME Android 4.1.0 注册回调函数地址及最早 UTID 证据"
 tags: [pokemon-home, android, il2cpp, registration, login, utid, evidence]
 version: "4.1.0"
-status: "11 条初步静态命中；Token/Login 类名扩大搜索中；无在线 UTID"
+status: "54 条真实静态候选已提取；注册-令牌-登录-SetBasic 链就绪；无在线 UTID"
 updated: "2026-11-07"
 ---
 
@@ -55,3 +55,28 @@ T2 first_basic_utid
 - 新补充公共响应处理入口候选 \`ApiManager$$CallbackResponseHook = 0x1D2AFF0\`，还需与之前已验证的内部指令 \`0x1D2BA60\` 一起做边界确认。
 
 **重要的筛选缺口：** 精确匹配 \`ApiRequestAuthCreateLogin\` / \`ApiRequestAuthCreateToken\` 得到 0 条。它只能证明**这两个类名未命中**，不表示客户端没有首次登录或令牌创建流程；新版规则扩大到 \`ApiRequest + Login/Token\` 的类名集合，重新审计真实地址。仍然没有运行注册/登录网络请求。
+
+
+## 第二轮真实方法清单：54 条候选，登录与令牌类名闭合（2026-11-07）
+
+[Actions #42352499946](https://github.com/969981/PokeHome_Resources/actions/runs/42352499946) 通过，实际审计 \`ScriptMethod=180628\`，筛出 54 条注册/令牌/登录/公共回调/基本资料处理候选。其中 \`ApiRequestCreateToken\` 与 \`ApiRequestLogin\` 是客户端真实类名，而非先前假设的 \`ApiRequestAuthCreateToken\` 和 \`ApiRequestAuthCreateLogin\`。
+
+| 阶段 | 实际方法名称 | Dumper ELF 地址候选 |
+|---|---|---:|
+| 注册请求构造 | \`ApiRequestAuthRegisterUser$$SerializeRequestParameter\` | \`0x1D334A4\` |
+| 注册响应回调 | \`ApiRequestAuthRegisterUser$$CallAfterResponse\` | \`0x1D33294\` |
+| 令牌请求构造 | \`ApiRequestCreateToken$$SerializeRequestParameter\` | \`0x1D35888\` |
+| 令牌响应回调 | \`ApiRequestCreateToken$$CallAfterResponse\` | \`0x1D35AD0\` |
+| 登录请求构造 | \`ApiRequestLogin$$SerializeRequestParameter\` | \`0x1D3BE50\` |
+| 登录响应回调 | \`ApiRequestLogin$$CallAfterResponse\` | \`0x1D3C020\` |
+| 公共响应处理入口 | \`ApiManager$$CallbackResponseHook\` | \`0x1D2AFF0\` |
+| 用户基本资料接收 | \`UDManager$$SetBasic\` | \`0x1D763D0\` |
+
+其中三个历史 ELF Native 地址再次匹配，\`ResponseParamCommon.basic (+0x18) -> SetBasic\` 的真实 AArch64 \`BL\` 边见 \`Android/UTID_CID_NATIVE_CALLCHAIN_20261013.md\`。**其余方法属于静态入口候选**，不能仅凭名称保证 HTTP 路径与原生调用关系相同；需同版本地址范围的 disassembly 和自有账号实测。
+
+新版本 \`tools/early_home_tid_observer.js\` 为令牌回调、登录请求构造、登录响应回调增加只读时间事件；\`tools/home41_auth_timeline.py\` 对比：
+- \`first_basic_utid - registration_response_handler_enter\`；
+- \`first_basic_utid - login_request_serializer_enter\`；
+- \`first_basic_utid - login_response_handler_enter\`。
+
+回调函数**进入**不代表认证成功（尚须检查实际 HTTP 结果）；\`SetBasic\` 首次收到 \`utid\` 前后顺序也不自动证明 \`basic\` 来自哪一个服务端响应。当前没有在线事件样本，不能给出实际多少秒，也不能据此声称成功刷到目标 ID。

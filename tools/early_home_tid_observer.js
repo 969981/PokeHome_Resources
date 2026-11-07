@@ -15,6 +15,9 @@ const HOME = {
   basicSetRva: 0x1D763D0,
   registerSerializeRva: 0x1D334A4,
   registerCallbackRva: 0x1D33294,
+  tokenCallbackRva: 0x1D35AD0,
+  loginSerializeRva: 0x1D3BE50,
+  loginCallbackRva: 0x1D3C020,
   basicUtidField: 0xF0,
   managedStringLength: 0x10,
   managedStringChars: 0x14,
@@ -26,6 +29,9 @@ let setupDone = false;
 let initialMs = Date.now();
 let registerSerializeSeen = false;
 let registerCallbackSeen = false;
+let tokenCallbackSeen = false;
+let loginRequestSeen = false;
+let loginCallbackSeen = false;
 let firstValueFound = false;
 
 function report(event, fields = {}) {
@@ -85,6 +91,27 @@ function installHooks(module) {
     }
   });
 
+  // These are entry markers only, not evidence of HTTP 200 or completion.
+  // Exact function names discovered from the 4.1.0 IL2CppDumper 180,628-method index.
+  Interceptor.attach(addr(HOME.tokenCallbackRva), {
+    onEnter() {
+      tokenCallbackSeen = true;
+      report("token_response_handler_enter");
+    }
+  });
+  Interceptor.attach(addr(HOME.loginSerializeRva), {
+    onEnter() {
+      loginRequestSeen = true;
+      report("login_request_serializer_enter");
+    }
+  });
+  Interceptor.attach(addr(HOME.loginCallbackRva), {
+    onEnter() {
+      loginCallbackSeen = true;
+      report("login_response_handler_enter");
+    }
+  });
+
   let hook = Interceptor.attach(addr(HOME.basicSetRva), {
     onEnter(args) {
       if (firstValueFound) return;
@@ -104,6 +131,9 @@ function installHooks(module) {
           target_tid7: targetTid7,
           registration_serializer_seen: registerSerializeSeen,
           registration_callback_seen: registerCallbackSeen,
+          token_callback_seen: tokenCallbackSeen,
+          login_request_seen: loginRequestSeen,
+          login_callback_seen: loginCallbackSeen,
           semantic_status: "UTID_TO_HOME_TRAINER_ID_NOT_RUNTIME_VERIFIED"
         });
         // Detach only the observer after first ID. Never interfere with HOME.
