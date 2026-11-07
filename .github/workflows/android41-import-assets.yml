@@ -1,0 +1,134 @@
+name: Import HOME Android 4.1.0 converted resources into private Git
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-import-assets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: private-home-android-4.1.0-import
+  cancel-in-progress: false
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Sparse checkout private destination branch
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          persist-credentials: true
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            .github/workflows
+            Unpack/Android
+          sparse-checkout-cone-mode: true
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch reproducible tools and original APK from public source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --filter=blob:none --branch master             https://github.com/969981/Home_Android.git _android_source
+          test -f _android_source/tools/home.py
+          test "$(find _android_source/ROMS/4.1.0 -maxdepth 1 -name '*.apk' | wc -l)" -eq 1
+          python -m unittest discover -s _android_source/tests -v
+
+      - name: Audit, safely extract, reassemble and scan the APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          python _android_source/tools/home.py audit --version 4.1.0
+          python _android_source/tools/home.py extract --version 4.1.0
+          python _android_source/tools/reassemble_splits.py --version 4.1.0
+          python _android_source/tools/home.py scan --version 4.1.0
+          python _android_source/tools/native_audit.py --version 4.1.0
+
+      - name: Install Unity asset and geometry conversion libraries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r _android_source/tools/requirements-unity.txt
+
+      - name: Export Android resources to private Unpack tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest="$GITHUB_WORKSPACE/Unpack/Android/4.1.0"
+          mkdir -p "$dest"
+          python _android_source/tools/export_raw_assets.py --version 4.1.0 --out "$dest"
+          python _android_source/tools/unity_export.py --version 4.1.0 --out "$dest" --max-size-mib 256
+          python _android_source/tools/mesh_to_glb.py --version 4.1.0 --resources "$dest"
+          python _android_source/tools/unity_failures.py --version 4.1.0
+          python _android_source/tools/index_db.py --version 4.1.0
+          mkdir -p "$dest/_meta"
+          cp -a _android_source/reports/4.1.0/. "$dest/_meta/"
+          # Existing repo agent rules prohibit forcibly committing derived font binaries.
+          rm -rf "$dest/fonts"
+
+      - name: Validate and inventory files before committing
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest="Unpack/Android/4.1.0"
+          test -f "$dest/_meta/summary.json"
+          test -f "$dest/_meta/unity_summary.json"
+          test -f "$dest/_meta/glb_summary.json"
+          test -f "$dest/_meta/resources.sqlite"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path("Unpack/Android/4.1.0")
+          s=json.loads((d/"_meta/unity_summary.json").read_text(encoding="utf-8"))
+          glb=json.loads((d/"_meta/glb_summary.json").read_text(encoding="utf-8"))
+          png=len(list((d/"images").glob("*.png")))+len(list((d/"sprites").glob("*.png")))
+          print("PNG:",png,"OBJ:",len(list((d/"models").glob("*.obj"))),"GLB:",len(list((d/"models/glb").glob("*.glb"))))
+          print("Unity:",s["candidate_containers"],"containers,",s["objects_total"],"objects")
+          assert png>=1000 and glb["glb_converted"]>=30, "Refuse incomplete asset publication"
+          oversize=[str(p) for p in d.rglob("*") if p.is_file() and p.stat().st_size>95*1024*1024]
+          if oversize: raise SystemExit("Oversized Git objects: "+str(oversize[:20]))
+          m={"source_repository":"969981/Home_Android","source_ref":"master",
+             "source_apk_sha256":json.loads((d/"_meta/summary.json").read_text())["apk_sha256"],
+             "destination_repository":"969981/PokeHome_Resources","destination_branch":"4.1.0",
+             "scope":"Android APK embedded and derived resources only; not remote cache",
+             "file_count":sum(p.is_file() for p in d.rglob("*")),
+             "fonts_excluded_from_git":True}
+          (d/"_meta/import_summary.json").write_text(json.dumps(m,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+          PY
+          du -sh "$dest"
+
+      - name: Persist actual asset files and reports in private Git branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f Unpack/Android/4.1.0
+          echo "Staged files:"
+          git diff --cached --name-only | wc -l
+          if git diff --cached --quiet; then
+            echo "No file changes"
+          else
+            git commit -m "assets(android): import HOME 4.1.0 converted APK resources [skip ci]"
+            git push origin HEAD:4.1.0
+          fi
+
+      - name: Upload pipeline reports for diagnosis
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android41-private-import-audit
+          path: _android_source/reports/4.1.0/
+          if-no-files-found: warn
+          retention-days: 7
