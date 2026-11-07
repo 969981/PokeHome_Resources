@@ -111,6 +111,21 @@ def screenshot_simplified_chinese_option(png_bytes:bytes):
         return int(w*.5),int(h*.775)
     return None
 
+
+def wait_for_known_language_page(adb,max_checks:int=9,interval_seconds:float=10.0):
+    """Only recognize the evidenced HOME language screen, bounded wait."""
+    if max_checks<1 or max_checks>20:
+        raise ValueError("max_checks out of range")
+    for attempt in range(max_checks):
+        image=adb("exec-out","screencap","-p",secs=30,binary=True)
+        pos=screenshot_simplified_chinese_option(
+            image.stdout if image and image.returncode==0 else b"")
+        if pos is not None:
+            return pos, attempt+1
+        if attempt+1<max_checks and interval_seconds>0:
+            time.sleep(interval_seconds)
+    return None,max_checks
+
 def dismiss_android_system_prompts(adb, initial_png:bytes|None=None, max_rounds:int=4):
     result=[]
     for round_index in range(max_rounds):

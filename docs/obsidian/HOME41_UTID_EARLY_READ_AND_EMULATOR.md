@@ -234,3 +234,12 @@ python tools/home41_auth_timeline.py --input /path/to/redacted-frida-events.json
 - 因此新增 \`predeny_emulator_notifications\`：对已声明的 \`POST_NOTIFICATIONS\` 用 \`pm revoke\` + \`pm set-permission-flags user-set user-fixed\` 提前固定拒绝，再由 \`dumpsys package\` 验证，避免点击同意或上传用户通知内容。
 - 下一次运行必须核对 \`notifications_permission_preflight.status=verified_denied_fixed\` 和语言页真实截图，再判断初始化是否还有其它系统权限。
 - 目前没有账户注册回调、服务器 \`basic.utid\` 或六位 ID 的真实捕获，不能由这些权限成功推断发号成功。
+
+
+## 16. 第十一轮：三类权限闭环，剩余的是 APP 首屏加载时序
+
+- [Actions #42340272409](https://github.com/969981/PokeHome_Resources/actions/runs/42340272409) 实测 \`camera_permission_preflight.status=verified_granted\`、\`location_permission_preflight.status=verified_denied_fixed\`、\`notifications_permission_preflight.status=verified_denied_fixed\`；权限管理器没有再提示确认。
+- HOME 进程仍存活，\`process_after_wait=true\`。语言页识别为 false，但 \`screen_after_language_step.png\` 实际是 **The Pokémon Company** 启动画面，\`screen_after_wait.png\` 实际为 Pokémon HOME Logo + 加载转圈。这不是注册失败或模拟器权限错误，而是原脚本只在启动后固定时刻检查语言页，恰逢尚未加载完毕。
+- 纠正：在严格匹配曾实测的首次语言选择页像素签名时，才进行 \`简体中文\` 选项点击；用 \`wait_for_known_language_page\` 每 10 秒只读截图检查，最多 9 次，最多约 80 秒；不在未知 UI 乱点。
+- 本次延长 \`--idle-seconds\` 到 120，并记录 \`home_language_check_count\`、\`home_language_poll_wait_seconds\`，实际截图仍必须验证选择是否生效。
+- 服务条款、出生日期、地区以及合法自有账号的授权注册仍然未执行，不可据此宣称已捕获服务器 \`utid\`。

@@ -2,7 +2,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
-from android41_ui_flow import parse_system_action
+from android41_ui_flow import parse_system_action,wait_for_known_language_page
 
 class HomeSystemOverlayTest(unittest.TestCase):
     def test_known_native_prompts(self):
@@ -64,6 +64,27 @@ class HomeSystemOverlayTest(unittest.TestCase):
         im=Image.new("RGB",(1080,2340),(238,237,244))
         buf=BytesIO();im.save(buf,format="PNG")
         self.assertIsNone(screenshot_simplified_chinese_option(buf.getvalue()))
+
+
+    def test_language_poll_bounded_and_read_only(self):
+        from types import SimpleNamespace
+        from io import BytesIO
+        from PIL import Image,ImageDraw
+        im=Image.new("RGB",(1080,2340),(160,235,210))
+        d=ImageDraw.Draw(im)
+        d.rectangle((0,0,1079,215),fill=(202,244,161))
+        d.rectangle((0,215,1079,402),fill=(38,179,151))
+        for y in (561,1813,1942):
+            d.rectangle((150,y-45,800,y+45),fill=(240,246,236))
+        stream=BytesIO();im.save(stream,format="PNG")
+        counts=[]
+        def adb(*args,**kwargs):
+            counts.append(args)
+            return SimpleNamespace(returncode=0,stdout=stream.getvalue())
+        pos,tries=wait_for_known_language_page(adb,max_checks=2,interval_seconds=0)
+        self.assertEqual(pos,(540,1813))
+        self.assertEqual(tries,1)
+        self.assertEqual(counts,[("exec-out","screencap","-p")])
 
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
