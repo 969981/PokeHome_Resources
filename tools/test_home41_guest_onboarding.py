@@ -110,6 +110,7 @@ class GuestOnboardingTests(unittest.TestCase):
     def test_error_dialog_stops_without_tap(self):
         self.assertTrue(error_modal_like(ERROR))
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(ERROR)
             result = run_known_guest_setup(fake, Path(d), profile,
@@ -121,6 +122,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_no_birthdate_submission(self):
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         # This test checks opening only; the real profile may explore swipes.
         profile["explore_year_scrolls"] = 0
         with tempfile.TemporaryDirectory() as d:
@@ -140,6 +142,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_mouse_wheel_probe_does_not_click_year(self):
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         profile["explore_year_scrolls"] = 3
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(BIRTHDAY, after_tap=YEAR_POPUP)
@@ -162,6 +165,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_mouse_wheel_stops_if_popup_disappears(self):
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         profile["explore_year_scrolls"] = 4
         class DisappearingPopup(FakeADB):
             def __call__(self, *args, **kw):
@@ -182,6 +186,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_stuck_known_confirmation_retries_then_stops(self):
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(COUNTRY)
             result = run_known_guest_setup(fake, Path(d), profile,
@@ -195,6 +200,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_stuck_confirmation_can_recover_after_retry(self):
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         profile["explore_year_scrolls"] = 0
         class OneRetryNeeded(FakeADB):
             def __call__(self, *args, **kw):
@@ -216,6 +222,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_unknown_screen_never_taps(self):
         profile = load_guest_profile(PROFILE)
+        profile["inspect_date_controls"] = False
         unknown = screenshot([])
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(unknown)
