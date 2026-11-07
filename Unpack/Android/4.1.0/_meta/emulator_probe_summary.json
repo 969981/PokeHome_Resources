@@ -60,18 +60,24 @@
   "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
     {
-      "event": "hierarchy_unavailable"
+      "event": "no_android_system_prompt_matched"
     }
   ],
   "screenshot_after_system_prompts": true,
-  "home_language_check_count": 4,
-  "home_language_poll_wait_seconds": 30,
-  "home_language_screen_recognized": true,
-  "simplified_chinese_selected": true,
+  "home_language_check_count": 9,
+  "home_language_poll_wait_seconds": 80,
+  "home_language_screen_recognized": false,
+  "simplified_chinese_selected": false,
   "screenshot_after_language_step": true,
-  "language_confirmation_dialog_recognized": true,
-  "simplified_chinese_confirmed": true,
+  "language_confirmation_dialog_recognized": false,
+  "simplified_chinese_confirmed": false,
   "screenshot_after_language_confirmation": true,
+  "region_list_page_recognized": false,
+  "region_apac_dropdown_expansion_attempted": false,
+  "screenshot_after_region_dropdown": true,
+  "country_selected": false,
+  "birthdate_entered": false,
+  "terms_or_privacy_accepted": false,
   "screenshot_after_wait": true,
   "process_after_wait": true,
   "process_exit_diagnostics": {
@@ -83,31 +89,44 @@
       "am_proc_died": 0,
       "am_crash": 0,
       "has died": 0,
-      "ProcessRecord": 0,
+      "ProcessRecord": 7,
       "Force finishing": 0,
       "ANR in": 0,
-      "tombstoned": 0,
+      "tombstoned": 6,
       "crash_dump": 0,
       "permission denial": 0,
       "UnsatisfiedLinkError": 0,
       "libndk_translation": 0
     },
-    "events": [],
+    "events": [
+      "11-07 07:27:28.403   560   577 W system_server: Long monitor contention with owner CachedAppOptimizerThread (691) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt",
+      "11-07 07:27:57.687   560  1778 W system_server: Long monitor contention with owner AlarmManager (696) at int com.android.server.am.ActivityManagerService.broadcastIntentInPackage(java.lang.String, java.lang.String, int, int, int, android.co",
+      "11-07 07:27:57.692   560  2955 W system_server: Long monitor contention with owner AlarmManager (696) at int com.android.server.am.ActivityManagerService.broadcastIntentInPackage(java.lang.String, java.lang.String, int, int, int, android.co",
+      "11-07 07:27:57.702   560  1072 W system_server: Long monitor contention with owner AlarmManager (696) at int com.android.server.am.ActivityManagerService.broadcastIntentInPackage(java.lang.String, java.lang.String, int, int, int, android.co",
+      "11-07 07:27:57.735   560   862 W system_server: Long monitor contention with owner AlarmManager (696) at int com.android.server.am.ActivityManagerService.broadcastIntentInPackage(java.lang.String, java.lang.String, int, int, int, android.co",
+      "11-07 07:28:03.423   560   599 W system_server: Long monitor contention with owner binder:560_11 (1628) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.cont",
+      "11-07 07:28:11.645   207   207 I tombstoned: received crash request for pid 1140",
+      "11-07 07:28:11.664  1140  1150 I ndroid.settings: Wrote stack traces to tombstoned",
+      "11-07 07:28:11.665   207   207 E tombstoned: Traces for pid 1140 written to: trace_00",
+      "11-07 07:28:27.560   207   207 I tombstoned: received crash request for pid 1140",
+      "11-07 07:28:27.570   207   207 E tombstoned: Traces for pid 1140 written to: trace_01",
+      "11-07 07:28:27.571  1140  1150 I ndroid.settings: Wrote stack traces to tombstoned"
+    ],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 1,
+      "am_proc_died": 4,
       "am_crash": 0,
-      "am_anr": 0
+      "am_anr": 2
     }
   },
   "crash_signal_counts": {
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
     "Fatal signal": 0,
-    "dlopen failed": 1
+    "dlopen failed": 0
   },
-  "test_emulator_adb_root": true,
+  "test_emulator_adb_root": false,
   "cache_bytes": 0,
-  "cache_candidates": 1,
+  "cache_candidates": 0,
   "cache_types": {}
 }
