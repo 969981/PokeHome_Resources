@@ -67,6 +67,10 @@ def load_guest_profile(filename: Path) -> dict:
         raise ValueError("inspect_date_controls must be boolean")
     if obj.get("inspect_date_controls", False) and not obj["inspect_birth_year_picker"]:
         raise ValueError("date controls inspection requires the year picker")
+    if type(obj.get("probe_year_anchor", False)) is not bool:
+        raise ValueError("probe_year_anchor must be boolean")
+    if obj.get("probe_year_anchor", False) and not obj["inspect_birth_year_picker"]:
+        raise ValueError("year anchor probe requires picker inspection")
     birthday = obj.get("birthdate_candidate")
     try:
         if not isinstance(birthday, str):
@@ -230,6 +234,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "year_popup_remained_open_after_wheel": 0,
         "year_labels_changed_verified": False,
         "date_picker_diagnostics": None,
+        "year_anchor_diagnostics": None,
         "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
@@ -331,6 +336,20 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "birth_year_picker_verified_open"
                             result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
                             break
+                    # Focused reversible research mode: one 2018-row click,
+                    # verify year field, then reopen. Do NOT keep scrolling or
+                    # inspect other controls in the same run; this preserves
+                    # the exact anchor evidence for manual comparison.
+                    if (result["year_picker_verified"]
+                            and profile.get("probe_year_anchor", False)):
+                        from home41_year_anchor_probe import probe_year_reopen_anchor
+                        diag = probe_year_reopen_anchor(
+                            adb, output, interval_seconds=interval_seconds)
+                        result["year_anchor_diagnostics"] = diag
+                        result["screenshots"].extend(diag["screenshots"])
+                        result["status"] = "year_anchor_" + diag["status"]
+                        result["stop_reason"] = "year_anchor_probe_no_dob_submission"
+                        break
                     # Android 15 supports InputShellCommand's pointer
                     # ACTION_SCROLL (mouse wheel), which does not generate a
                     # touchscreen UP/click. In real run #42360115832 a
