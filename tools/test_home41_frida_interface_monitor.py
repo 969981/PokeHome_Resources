@@ -207,6 +207,90 @@ class MonitorTests(unittest.TestCase):
             self.assertNotIn("0x1D763D0",serialized)
             self.assertFalse(result["first_basic_utid_event_seen"])
 
+    def test_emulated_arm64_hook_waits_for_actual_ready_event(self):
+        class EmulatedScript(FakeScript):
+            def __init__(self, label):
+                super().__init__()
+                self.label=label
+            def load(self):
+                self.loaded=True
+                if self.label=="probe":
+                    self.cb({"type":"send","payload":{
+                        "event":"emulated_realm_probe","arch":"arm64",
+                        "il2cpp_visible":True,"basic_rva_in_bounds":True}})
+                elif self.label=="native":
+                    self.cb({"type":"send","payload":{
+                        "event":"hook_preflight","supported_arch":True}})
+                    self.cb({"type":"send","payload":{
+                        "event":"read_only_observer_ready"}})
+        class EmulatedSession(FakeSession):
+            def create_script(self, source):
+                kind="native" if "ARM64_HOOK_TEST" in source else "probe"
+                script=EmulatedScript(kind)
+                self.scripts.append(script)
+                return script
+        class EmulatedDevice(FakeDevice):
+            def attach(self,pid,realm="native"):
+                if realm=="emulated":
+                    return EmulatedSession()
+                return super().attach(pid)
+        fake=FakeFrida()
+        fake.manager.device=EmulatedDevice()
+        with tempfile.TemporaryDirectory() as d:
+            dest=Path(d)
+            bundle=dest/"bundle.js"
+            bundle.write_text("/* compiled test bundle */"*8)
+            probe=dest/"probe.js"
+            probe.write_text("send({event:'emulated_realm_probe'});")
+            native=dest/"native.js"
+            native.write_text("// ARM64_HOOK_TEST")
+            monitor=FridaInterfaceMonitor(dest,bundle,native)
+            self.assertTrue(monitor.start(fake))
+            self.assertEqual(
+                monitor.probe_emulated_realm(probe),
+                "emulated_arm64_readonly_observer_loaded")
+            report=monitor.stop()
+            self.assertTrue(report["arm64_observer_ready"])
+            self.assertTrue(report["arm64_hook_preflight_seen"])
+            self.assertFalse(report["first_basic_utid_event_seen"])
+
+    def test_emulated_arm64_unready_script_is_not_reported_ready(self):
+        class NoReadyScript(FakeScript):
+            def load(self):
+                self.loaded=True
+                if not getattr(self,"is_native",False):
+                    self.cb({"type":"send","payload":{
+                        "event":"emulated_realm_probe","arch":"arm64",
+                        "il2cpp_visible":True,"basic_rva_in_bounds":True}})
+        class EmulatedSession(FakeSession):
+            def create_script(self, source):
+                s=NoReadyScript()
+                s.is_native="ARM64_HOOK_TEST" in source
+                self.scripts.append(s)
+                return s
+        class Device(FakeDevice):
+            def attach(self,pid,realm="native"):
+                return EmulatedSession() if realm=="emulated" else super().attach(pid)
+        fake=FakeFrida()
+        fake.manager.device=Device()
+        with tempfile.TemporaryDirectory() as d:
+            dest=Path(d)
+            bundle=dest/"bundle.js"
+            bundle.write_text("/* compiled test bundle */"*8)
+            probe=dest/"probe.js"
+            probe.write_text("send({event:'emulated_realm_probe'});")
+            native=dest/"native.js"
+            native.write_text("// ARM64_HOOK_TEST")
+            monitor=FridaInterfaceMonitor(dest,bundle,native)
+            self.assertTrue(monitor.start(fake))
+            monitor.arm64_hook_ready_seen.wait=lambda timeout: False
+            self.assertEqual(
+                monitor.probe_emulated_realm(probe),
+                "emulated_arm64_hook_readiness_unverified")
+            summary=monitor.stop()
+            self.assertFalse(summary["arm64_observer_ready"])
+            self.assertFalse(summary["first_basic_utid_event_seen"])
+
     def test_missing_emulated_realm_is_explicit_not_fake_success(self):
         fake=FakeFrida()
         with tempfile.TemporaryDirectory() as d:
