@@ -1,0 +1,27 @@
+{
+  "package": "jp.pokemon.pokemonhome",
+  "apk_sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
+  "android_api": "35",
+  "device_abis": "x86_64,arm64-v8a",
+  "native_bridge": "libndk_translation.so",
+  "app_login_attempted": false,
+  "terms_auto_accepted": false,
+  "install_status": "ok",
+  "launch_status": "event_sent",
+  "cache_files": 0,
+  "result": "app_running_no_recognized_cache_assets",
+  "screenshot_at_15s": true,
+  "process_at_15s": true,
+  "screenshot_after_wait": true,
+  "process_after_wait": true,
+  "crash_signal_counts": {
+    "FATAL EXCEPTION": 0,
+    "UnsatisfiedLinkError": 0,
+    "Fatal signal": 0,
+    "dlopen failed": 0
+  },
+  "test_emulator_adb_root": true,
+  "cache_bytes": 0,
+  "cache_candidates": 0,
+  "cache_types": {}
+}
