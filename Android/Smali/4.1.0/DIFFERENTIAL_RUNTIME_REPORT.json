@@ -1,6 +1,6 @@
 {
-  "run": "https://github.com/969981/PokeHome_Resources/actions/runs/42366966148",
-  "status": "all_four_launch_visible",
+  "run": "https://github.com/969981/PokeHome_Resources/actions/runs/42367756274",
+  "status": "resigned_original_fails_original_passes_signature_or_ziplayout_suspected",
   "runtime_action_outcome": "success",
   "matrix": {
     "device": {
@@ -9,11 +9,11 @@
       "device_abilist": "x86_64,arm64-v8a",
       "native_bridge": "libndk_translation.so"
     },
-    "status": "all_four_launch_visible",
+    "status": "resigned_original_fails_original_passes_signature_or_ziplayout_suspected",
     "results": {
       "apktool_rebuilt": {
         "apk": "apktool_rebuilt",
-        "sha256": "f3515af424007110404b3ebd1b93af8f12e56bc11ef7bb44df803ec59f80f828",
+        "sha256": "78cff0e8366201d3bb06834a6f2b60b517bc0aec403318414d10ce535d1e010f",
         "install_ok": true,
         "launch_event_sent": true,
         "process_at_12s": true,
@@ -21,9 +21,113 @@
         "test_scope": "install, launch, 2 screenshots, process and crash counts only",
         "accounts_created": false,
         "terms_accepted": false,
+        "os_permissions_preflight": {
+          "location": {
+            "android.permission.ACCESS_FINE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            },
+            "android.permission.ACCESS_COARSE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            }
+          },
+          "notifications": {
+            "commands_ok": true
+          },
+          "location_denied_fixed": true
+        },
         "screen_at_12s": {
           "saved": true,
           "nonblank": false,
+          "home_language_verified": false,
+          "color_samples": 1,
+          "channel_stddev_rounded": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "screen_at_35s": {
+          "saved": true,
+          "nonblank": false,
+          "home_language_verified": false,
+          "color_samples": 1,
+          "channel_stddev_rounded": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "process_at_60s": true,
+        "screen_at_60s": {
+          "saved": true,
+          "nonblank": true,
+          "home_language_verified": false,
+          "color_samples": 212,
+          "channel_stddev_rounded": [
+            45.1,
+            45.2,
+            48.2
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "home_ui_verified": false,
+        "crash_evidence": {
+          "available": true,
+          "counts": {
+            "fatal exception": 0,
+            "fatal signal": 0,
+            "unsatisfiedlinkerror": 0,
+            "dlopen failed": 0,
+            "am_crash": 0,
+            "anr in jp.pokemon.pokemonhome": 0
+          }
+        },
+        "displayed_foreground_package": false,
+        "result": "not_verified"
+      },
+      "original_assets_smali_dex": {
+        "apk": "original_assets_smali_dex",
+        "sha256": "6fa99009181eff2c4527807e86582f67242cab40bacf96fb396874eef9d46996",
+        "install_ok": true,
+        "launch_event_sent": true,
+        "process_at_12s": true,
+        "process_at_35s": true,
+        "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+        "accounts_created": false,
+        "terms_accepted": false,
+        "os_permissions_preflight": {
+          "location": {
+            "android.permission.ACCESS_FINE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            },
+            "android.permission.ACCESS_COARSE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            }
+          },
+          "notifications": {
+            "commands_ok": true
+          },
+          "location_denied_fixed": true
+        },
+        "screen_at_12s": {
+          "saved": true,
+          "nonblank": false,
+          "home_language_verified": false,
           "color_samples": 1,
           "channel_stddev_rounded": [
             0.0,
@@ -38,69 +142,35 @@
         "screen_at_35s": {
           "saved": true,
           "nonblank": true,
-          "color_samples": 660,
+          "home_language_verified": false,
+          "color_samples": 194,
           "channel_stddev_rounded": [
-            63.5,
-            64.1,
-            70.0
+            20.8,
+            19.4,
+            19.4
           ],
           "dimensions": [
             1080,
             2340
           ]
         },
-        "crash_evidence": {
-          "available": true,
-          "counts": {
-            "fatal exception": 0,
-            "fatal signal": 0,
-            "unsatisfiedlinkerror": 0,
-            "dlopen failed": 0,
-            "am_crash": 0,
-            "anr in jp.pokemon.pokemonhome": 0
-          }
-        },
-        "displayed_foreground_package": false,
-        "result": "visible_process_survived"
-      },
-      "original_assets_smali_dex": {
-        "apk": "original_assets_smali_dex",
-        "sha256": "458f66999494d60c4a4a002684ee4f05ff806f56023372601d37c8e3763364ae",
-        "install_ok": true,
-        "launch_event_sent": true,
-        "process_at_12s": true,
-        "process_at_35s": true,
-        "test_scope": "install, launch, 2 screenshots, process and crash counts only",
-        "accounts_created": false,
-        "terms_accepted": false,
-        "screen_at_12s": {
+        "process_at_60s": true,
+        "screen_at_60s": {
           "saved": true,
           "nonblank": true,
-          "color_samples": 636,
+          "home_language_verified": false,
+          "color_samples": 216,
           "channel_stddev_rounded": [
-            63.1,
-            63.9,
-            69.9
+            46.2,
+            44.4,
+            47.0
           ],
           "dimensions": [
             1080,
             2340
           ]
         },
-        "screen_at_35s": {
-          "saved": true,
-          "nonblank": true,
-          "color_samples": 660,
-          "channel_stddev_rounded": [
-            63.5,
-            64.1,
-            70.0
-          ],
-          "dimensions": [
-            1080,
-            2340
-          ]
-        },
+        "home_ui_verified": false,
         "crash_evidence": {
           "available": true,
           "counts": {
@@ -113,11 +183,11 @@
           }
         },
         "displayed_foreground_package": false,
-        "result": "visible_process_survived"
+        "result": "not_verified"
       },
       "resigned_original": {
         "apk": "resigned_original",
-        "sha256": "987a26294a985e957cb05c6364415160854a95b73e789ebc54b4a73617c57ff8",
+        "sha256": "843aefc707978e64448ae2e27a5e3fc121e9242c348fa71e472190e66e33f30b",
         "install_ok": true,
         "launch_event_sent": true,
         "process_at_12s": true,
@@ -125,14 +195,31 @@
         "test_scope": "install, launch, 2 screenshots, process and crash counts only",
         "accounts_created": false,
         "terms_accepted": false,
+        "os_permissions_preflight": {
+          "location": {
+            "android.permission.ACCESS_FINE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            },
+            "android.permission.ACCESS_COARSE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            }
+          },
+          "notifications": {
+            "commands_ok": true
+          },
+          "location_denied_fixed": true
+        },
         "screen_at_12s": {
           "saved": true,
-          "nonblank": true,
-          "color_samples": 660,
+          "nonblank": false,
+          "home_language_verified": false,
+          "color_samples": 1,
           "channel_stddev_rounded": [
-            63.5,
-            64.1,
-            70.0
+            0.0,
+            0.0,
+            0.0
           ],
           "dimensions": [
             1080,
@@ -142,17 +229,35 @@
         "screen_at_35s": {
           "saved": true,
           "nonblank": true,
-          "color_samples": 660,
+          "home_language_verified": false,
+          "color_samples": 215,
           "channel_stddev_rounded": [
-            63.5,
-            64.1,
-            70.0
+            46.2,
+            44.5,
+            47.0
           ],
           "dimensions": [
             1080,
             2340
           ]
         },
+        "process_at_60s": true,
+        "screen_at_60s": {
+          "saved": true,
+          "nonblank": true,
+          "home_language_verified": false,
+          "color_samples": 218,
+          "channel_stddev_rounded": [
+            46.2,
+            44.5,
+            47.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "home_ui_verified": false,
         "crash_evidence": {
           "available": true,
           "counts": {
@@ -165,7 +270,7 @@
           }
         },
         "displayed_foreground_package": false,
-        "result": "visible_process_survived"
+        "result": "not_verified"
       },
       "original": {
         "apk": "original",
@@ -177,14 +282,31 @@
         "test_scope": "install, launch, 2 screenshots, process and crash counts only",
         "accounts_created": false,
         "terms_accepted": false,
+        "os_permissions_preflight": {
+          "location": {
+            "android.permission.ACCESS_FINE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            },
+            "android.permission.ACCESS_COARSE_LOCATION": {
+              "commands_ok": true,
+              "verified": true
+            }
+          },
+          "notifications": {
+            "commands_ok": true
+          },
+          "location_denied_fixed": true
+        },
         "screen_at_12s": {
           "saved": true,
-          "nonblank": true,
-          "color_samples": 660,
+          "nonblank": false,
+          "home_language_verified": false,
+          "color_samples": 1,
           "channel_stddev_rounded": [
-            63.5,
-            64.1,
-            70.0
+            0.0,
+            0.0,
+            0.0
           ],
           "dimensions": [
             1080,
@@ -194,17 +316,35 @@
         "screen_at_35s": {
           "saved": true,
           "nonblank": true,
-          "color_samples": 660,
+          "home_language_verified": false,
+          "color_samples": 594,
           "channel_stddev_rounded": [
-            63.5,
-            64.1,
-            70.0
+            20.2,
+            8.2,
+            12.3
           ],
           "dimensions": [
             1080,
             2340
           ]
         },
+        "process_at_60s": true,
+        "screen_at_60s": {
+          "saved": true,
+          "nonblank": true,
+          "home_language_verified": true,
+          "color_samples": 1078,
+          "channel_stddev_rounded": [
+            45.8,
+            15.5,
+            29.7
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "home_ui_verified": true,
         "crash_evidence": {
           "available": true,
           "counts": {
@@ -217,7 +357,7 @@
           }
         },
         "displayed_foreground_package": false,
-        "result": "visible_process_survived"
+        "result": "home_language_screen_verified"
       }
     },
     "interpretation": "Qualifies bootstrap UI only; not service login, account, or IL2CPP source recovery.",
