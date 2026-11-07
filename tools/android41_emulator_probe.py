@@ -161,6 +161,8 @@ def main():
         "native_bridge":prop("ro.dalvik.vm.native.bridge"),
         "app_login_attempted":False,"terms_auto_accepted":False,
         "install_status":"not_started","launch_status":"not_started",
+        "auth_registration_status":"not_attempted_no_test_account",
+        "first_basic_utid_status":"not_observed",
         "cache_files":0,"result":"not_started"}
     try:
         adb("shell","input","keyevent","KEYCODE_WAKEUP")
@@ -174,6 +176,12 @@ def main():
             report["result"]="blocked_before_launch"
         else:
             report["install_status"]="ok"
+            from android41_test_permissions import configure_emulator_camera_permission
+            # The disposable AVD has no camera hardware (both cameras disabled).
+            # Pre-grant only CAMERA so Android doesn't show repeated runtime
+            # permission prompts. Never alter Nintendo/HOME authentication.
+            report["camera_permission_preflight"]=configure_emulator_camera_permission(
+                adb,PACKAGE)
             # Set the standard Android OS immersive acknowledgement on a
             # disposable emulator, not HOME's in-app Terms/consent.
             immersive=adb("shell","settings","put","secure",

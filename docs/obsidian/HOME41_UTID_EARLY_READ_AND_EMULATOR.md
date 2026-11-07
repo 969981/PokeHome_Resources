@@ -176,3 +176,40 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 | 首次 \`basic.utid\` 实机读到 | **未验证** | 尚无授权注册会话 |
 | HOME 六位训练家 ID 确认为 \`utid % 10^6\` | **未验证** | 仍缺一组官方 UI 对照 |
 | 指定 \`888888\` 由服务端生成/可多次重刷 | **未验证** | 没有服务器分配算法或安全批量注册机制 |
+
+
+## 13. 2026-11-07 第九轮：Camera 权限确定性初始化和真实回调时间对照器
+
+### 为什么改成 Android 权限管理器配置
+
+此前多轮 Actions 是权限弹窗的 **OS 权限层** 不稳定，而不是 HOME 账号 API 的故障。本次测试模拟器创建时已设置 \`-camera-back none -camera-front none\`，不会暴露物理摄像头。仅在此一次性、无用户数据的测试设备上，安装 APK 后通过 \`pm grant jp.pokemon.pokemonhome android.permission.CAMERA\`，并用 \`dumpsys package\` 读回 \`granted=true\` 验证。其它 Android 危险权限不授予；之前版本通过屏幕点击拒绝的方式保留作为 fallback。此权限变更仅影响测试 AVD，不代表正常设备建议关闭权限保护。
+
+**验收字段**：\`camera_permission_preflight.status=verified_granted\`；如果不是这个值，不能声明权限问题已解决，需保留实际截图并报告原因。官方 Android 文档明确支持在测试中通过 \`pm\` 对危险权限进行配置；这是官方测试接口，不是绕过 HOME 的授权/认证。
+
+### 时间线对照：只有真实注册回调才可以回答“早多少秒”
+
+使用自有、合法的新 HOME 测试账号且**已实际阅读/确认官方条款**后，在 ARM64 原生设备上启动只读 Frida 观察器。它会记三个事件：
+
+- \`registration_request_serializer_enter\` → 构造注册请求；
+- \`registration_response_handler_enter\` → 注册专属响应回调；
+- \`first_basic_utid\` → 首次可读的 \`UDManager.SetBasic\` 数字候选。
+
+\`tools/home41_auth_timeline.py\` 接收这些事件的日志，计算 \`Δt=first_basic_utid.elapsed_ms - registration_response_handler_enter.elapsed_ms\`，但**不会据此断言首个 \`basic\` 属于注册响应**；仍需绑定真正的响应请求类别。若 \`first_basic_utid\` 没有出现，则明确返回 \`no_real_basic_utid_observed\`。不会把预测、随机生成的数字或静态 RVA 当作在线发号实测。
+
+\`\`\`bash
+python tools/home41_auth_timeline.py --input /path/to/redacted-frida-events.jsonl \
+  --output home41_auth_timeline_summary.json
+\`\`\`
+
+**严格的限制**：
+
+- 官方 Nintendo 支持文档：手机端可以不关联 Nintendo Account 使用，但第一次安装选择语言、国家/地区、生日、阅读并同意条款都是正常初始化步骤，不能凭空捏造个人出生日期；部分服务还要求首次就关联 Nintendo Account。
+- 此 GitHub Actions 运行器是短生命周期的 headless AVD，当前没有由用户提供的合法空白账号、生日/国家选择以及条款确认，因此**不可能凭本次运行证明新注册回调与 \`basic.utid\` 的真实顺序**。
+- \`home41_auth_timeline.py\` 的测试数据只是测试时间线排序与过滤，不能宣称测试时创建了 HOME 云端账号。
+- Android IL2CPP 地址针对 ARM64 ELF；x86_64 使用 \`libndk_translation\`，尚未证明 Frida 能在其转译的 ARM64 代码执行 \`Interceptor.attach\`，不能假装完成运行时 hook。
+
+### 官方参考
+
+- Nintendo Getting Started: https://en-americas-support.nintendo.com/app/answers/detail/a_id/48857
+- Nintendo FAQ (mobile guest allowed): https://en-americas-support.nintendo.com/app/answers/detail/p/856/a_id/48803
+- Android testing runtime permission: https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/java/android/permission/Permissions.md
