@@ -40,7 +40,7 @@ jobs:
           test -f "$APK"
           test "$(sha256sum "$APK" | cut -d' ' -f1)" = "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1"
           echo "HOME41_APK=$APK" >> "$GITHUB_ENV"
-          mkdir -p .ci_emulator_trial
+          mkdir -p ci_emulator_trial
       - name: Enable KVM
         shell: bash
         run: |
@@ -59,7 +59,7 @@ jobs:
           heap-size: 512M
           disable-animations: true
           emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
-          script: python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output .ci_emulator_trial --idle-seconds 120
+          script: python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output ci_emulator_trial --idle-seconds 120
       - name: Run Unity resource parser on any real cache assets
         if: always()
         shell: bash
@@ -67,8 +67,8 @@ jobs:
           set -euo pipefail
           dst="Unpack/Android/4.1.0"
           mkdir -p "$dst/_meta" "$dst/runtime_cache/emulator" "$dst/runtime_cache/imported"
-          if test -f .ci_emulator_trial/emulator_probe_summary.json; then
-            cp .ci_emulator_trial/emulator_probe_summary.json "$dst/_meta/emulator_probe_summary.json"
+          if test -f ci_emulator_trial/emulator_probe_summary.json; then
+            cp ci_emulator_trial/emulator_probe_summary.json "$dst/_meta/emulator_probe_summary.json"
           else
             python - <<'PY'
           import json
@@ -78,8 +78,8 @@ jobs:
             "reason":"Android emulator setup did not complete; no APK launch confirmed"},indent=2)+"\n")
           PY
           fi
-          if test -d .ci_emulator_trial/cache && test -n "$(find .ci_emulator_trial/cache -type f -print -quit)"; then
-            cp -an .ci_emulator_trial/cache/. "$dst/runtime_cache/emulator/"
+          if test -d ci_emulator_trial/cache && test -n "$(find ci_emulator_trial/cache -type f -print -quit)"; then
+            cp -an ci_emulator_trial/cache/. "$dst/runtime_cache/emulator/"
             python _android_source/tools/runtime_cache_inventory.py --version 4.1.0 \
               --cache-dir "$dst/runtime_cache/emulator" --out "$dst/runtime_cache/imported" --report "$dst/_meta"
           else
@@ -123,6 +123,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: home-android-4.1.0-emulator-probe
-          path: .ci_emulator_trial/
+          path: ci_emulator_trial/
           if-no-files-found: warn
           retention-days: 3
