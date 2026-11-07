@@ -1,0 +1,66 @@
+name: HOME 4.1.0 Frida first-launch read-only network probe
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-frida-firstlaunch.yml'
+      - 'tools/home41_frida_first_launch_smoke.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  firstlaunch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout: |
+            tools
+            .github/workflows
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify APK and compile Frida agent
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p frida_firstlaunch
+          python -m pip install -q "frida==17.26.1"
+          npm install --no-save --no-package-lock --no-audit --no-fund frida-java-bridge frida-compile
+          ./node_modules/.bin/frida-compile tools/home41_frida_interface_agent.js -o /tmp/home41_frida_interface_compiled.js -S -c
+          git clone --depth=1 --filter=blob:none https://github.com/969981/Home_Android.git _android_source
+          APK="$(find _android_source/ROMS/4.1.0 -maxdepth 1 -type f -name '*.apk' | head -1)"
+          test -f "$APK"
+          echo "HOME41_APK=$APK" >> "$GITHUB_ENV"
+      - name: Enable KVM
+        shell: bash
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Start disposable API35 emulator and Frida observer
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none -dns-server 8.8.8.8,8.8.4.4
+          script: |
+            python tools/home41_frida_server_setup.py --output frida_firstlaunch/frida_server_setup.json
+            python tools/home41_frida_first_launch_smoke.py --apk "$HOME41_APK" --output frida_firstlaunch
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-frida-sanitized-firstlaunch
+          path: frida_firstlaunch/
+          if-no-files-found: warn
+          retention-days: 3
