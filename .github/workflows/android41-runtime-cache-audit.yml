@@ -1,0 +1,124 @@
+name: HOME Android 4.1.0 runtime cache and species evidence audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-runtime-cache-audit.yml'
+      - 'Unpack/Android/4.1.0/runtime_cache_input/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home-android-private-cache-index
+  cancel-in-progress: false
+
+jobs:
+  classify-runtime-assets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout only relevant private resources and IL2CPP script
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          sparse-checkout: |
+            .github/workflows
+            Unpack/Android/4.1.0/_meta
+            Unpack/Android/4.1.0/il2cpp
+            Unpack/Android/4.1.0/runtime_cache_input
+            Unpack/Android/4.1.0/runtime_cache
+          sparse-checkout-cone-mode: false
+          filter: blob:none
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch tested resource and cache indexing tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth=1 --filter=blob:none https://github.com/969981/Home_Android.git _android_source
+          python -m unittest discover -s _android_source/tests -v
+      - name: Derive evidence-based resource-loader method name candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          report="Unpack/Android/4.1.0/_meta"
+          python _android_source/tools/il2cpp_loader_hints.py \
+            --script Unpack/Android/4.1.0/il2cpp/script.json --report "$report"
+      - name: Inventory approved runtime cache only if supplied
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="Unpack/Android/4.1.0"
+          report="$root/_meta"
+          # This folder must contain only previously reviewed Unity/game assets,
+          # NOT raw app-internal directories, credentials or account databases.
+          if test -d "$root/runtime_cache_input" && test -n "$(find "$root/runtime_cache_input" -type f -print -quit)"; then
+            python _android_source/tools/runtime_cache_inventory.py \
+              --version 4.1.0 --cache-dir "$root/runtime_cache_input" \
+              --out "$root/runtime_cache/imported" --report "$report"
+          else
+            python _android_source/tools/runtime_cache_inventory.py \
+              --version 4.1.0 --report "$report"
+          fi
+      - name: Scan actual Unity cached bundles and index species/form hints
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r _android_source/tools/requirements-unity.txt
+          root="Unpack/Android/4.1.0"
+          python _android_source/tools/pokemon_cache_scan.py \
+            --version 4.1.0 --assets "$root/runtime_cache/imported" \
+            --report "$root/_meta" --out "$root/runtime_cache"
+      - name: Verify statuses and store evidence in private Git
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("Unpack/Android/4.1.0/_meta")
+          inv=json.loads((p/"runtime_inventory_summary.json").read_text())
+          poke=json.loads((p/"pokemon_cache_summary.json").read_text())
+          hints=json.loads((p/"il2cpp_loader_hints_summary.json").read_text())
+          print("Cache:",inv["status"],"eligible:",inv["eligible_files"])
+          print("Species:",poke["status"],"count:",poke.get("species_candidates",0))
+          print("IL2CPP loader method name hits:",hints["hits"])
+          assert (p/"il2cpp_loader_hints.csv").is_file()
+          assert (p/"runtime_inventory.csv").is_file()
+          assert (p/"pokemon_asset_candidates.csv").is_file()
+          # No fabricated species/model results in absence of runtime cache.
+          if inv["status"]=="runtime_cache_not_supplied":
+              assert poke["status"]=="no_cached_unity_assets"
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f Unpack/Android/4.1.0/_meta/il2cpp_loader_hints.csv \
+                    Unpack/Android/4.1.0/_meta/il2cpp_loader_hints_summary.json \
+                    Unpack/Android/4.1.0/_meta/runtime_inventory.csv \
+                    Unpack/Android/4.1.0/_meta/runtime_inventory_summary.json \
+                    Unpack/Android/4.1.0/_meta/pokemon_asset_candidates.csv \
+                    Unpack/Android/4.1.0/_meta/pokemon_cache_summary.json
+          if [ -d Unpack/Android/4.1.0/runtime_cache/imported ]; then
+            if find Unpack/Android/4.1.0/runtime_cache -type f -size +95M | grep -q .; then
+              echo "Refusing large Git blobs"; exit 1
+            fi
+            git add -f Unpack/Android/4.1.0/runtime_cache/imported \
+                      Unpack/Android/4.1.0/runtime_cache/pokemon || true
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "reports(android): cache asset provenance and IL2CPP loader hints [skip ci]"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Upload cache classification diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-runtime-cache-species-audit
+          path: |
+            Unpack/Android/4.1.0/_meta/runtime_inventory_summary.json
+            Unpack/Android/4.1.0/_meta/pokemon_cache_summary.json
+            Unpack/Android/4.1.0/_meta/il2cpp_loader_hints_summary.json
+          retention-days: 14
+          if-no-files-found: warn
