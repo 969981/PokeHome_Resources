@@ -1,5 +1,5 @@
 {
-  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42375246500",
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42375870072",
   "status": "completed",
   "frida_setup": {
     "status": "ready",
@@ -18,7 +18,7 @@
       "sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
       "installation": "ok",
       "frida_spawn_attached": true,
-      "home_language_verified": false,
+      "home_language_verified": true,
       "signing_credentials_logged": false,
       "certificates_modified_by_monitor": false,
       "official_server_requests_modified": false,
@@ -42,13 +42,13 @@
       "process_at_35s": true,
       "screen_at_35s": {
         "saved": true,
-        "nonblank": true,
+        "nonblank": false,
         "home_language_verified": false,
-        "color_samples": 194,
+        "color_samples": 207,
         "channel_stddev_rounded": [
-          20.8,
-          19.4,
-          19.4
+          4.8,
+          3.3,
+          4.3
         ],
         "dimensions": [
           1080,
@@ -58,13 +58,13 @@
       "process_at_60s": true,
       "screen_at_60s": {
         "saved": true,
-        "nonblank": false,
-        "home_language_verified": false,
-        "color_samples": 177,
+        "nonblank": true,
+        "home_language_verified": true,
+        "color_samples": 1087,
         "channel_stddev_rounded": [
-          5.3,
-          3.9,
-          4.4
+          45.8,
+          15.5,
+          29.7
         ],
         "dimensions": [
           1080,
@@ -96,7 +96,7 @@
     },
     "resigned": {
       "variant": "directly_resigned",
-      "sha256": "cb286aeb7705768e1d983b83ed0673683a0f6cfc383776e8eda71220d26ee45f",
+      "sha256": "5f8070996a6556e2ca580f3b2ad358579eefe590e3118c3a10a3d29f377839a5",
       "installation": "ok",
       "frida_spawn_attached": true,
       "home_language_verified": false,
@@ -125,11 +125,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 81,
+        "color_samples": 220,
         "channel_stddev_rounded": [
-          7.4,
-          7.4,
-          7.3
+          46.2,
+          44.5,
+          47.0
         ],
         "dimensions": [
           1080,
@@ -138,6 +138,38 @@
       },
       "process_at_60s": true,
       "screen_at_60s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 220,
+        "channel_stddev_rounded": [
+          46.2,
+          44.5,
+          47.0
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_95s": true,
+      "screen_at_95s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 206,
+        "channel_stddev_rounded": [
+          46.2,
+          44.4,
+          46.9
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_130s": true,
+      "screen_at_130s": {
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
@@ -175,7 +207,7 @@
       "signing_result_sent_to_unity": true,
       "observer_ready": true
     },
-    "failure_correlation": "not_reproduced_or_original_not_verified",
+    "failure_correlation": "only_resigned_failed_home_screen",
     "signature_check_execution_proved": true,
     "note": "The installed signature-reading Java class is not necessarily executed at startup. A 0 event count is not proof of no native or server-side certificate validation."
   },
