@@ -340,6 +340,27 @@ def main():
             from android41_ui_flow import screenshot_immersive_hint_position
             captured=(args.output/"screen_15s.png")
             initial_png=captured.read_bytes() if captured.is_file() else b""
+            # A real Android 15 Pixel Launcher ANR blocked all HOME screens
+            # in run 42361874063, despite the HOME process being alive.
+            # Only dismiss an exact, screen+Android-hierarchy verified
+            # Pixel Launcher OS dialog; never tap HOME or consent prompts.
+            from android41_os_anr_recovery import dismiss_verified_launcher_anr
+            report["launcher_os_anr_recovery"]=dismiss_verified_launcher_anr(
+                adb,initial_png)
+            if report["launcher_os_anr_recovery"]["os_dialog_close_sent"]:
+                direct=adb("shell","am","start","-a",
+                    "android.intent.action.MAIN","-c",
+                    "android.intent.category.LAUNCHER","-p",PACKAGE,secs=35)
+                report["launcher_recovery_direct_start_sent"]=bool(
+                    direct and direct.returncode==0)
+                time.sleep(10)
+                report["screenshot_after_launcher_anr_recovery"]=snap(
+                    args.output,"screen_after_launcher_anr_recovery.png")
+                new_png=args.output/"screen_after_launcher_anr_recovery.png"
+                if new_png.is_file():
+                    initial_png=new_png.read_bytes()
+            else:
+                report["launcher_recovery_direct_start_sent"]=False
             report["initial_screenshot_immersive_signature"]=bool(
                 screenshot_immersive_hint_position(initial_png))
             report["system_prompt_actions"]=dismiss_android_system_prompts(
