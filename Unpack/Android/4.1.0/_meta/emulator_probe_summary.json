@@ -9,9 +9,11 @@
   "install_status": "ok",
   "launch_status": "event_sent",
   "cache_files": 0,
-  "result": "app_running_no_recognized_cache_assets",
+  "result": "app_process_ended",
+  "android_immersive_setting": "confirmed",
   "screenshot_at_15s": true,
-  "process_at_15s": true,
+  "process_at_15s": false,
+  "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
     {
       "event": "no_android_system_prompt_matched"
@@ -19,7 +21,7 @@
   ],
   "screenshot_after_system_prompts": true,
   "screenshot_after_wait": true,
-  "process_after_wait": true,
+  "process_after_wait": false,
   "crash_signal_counts": {
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
