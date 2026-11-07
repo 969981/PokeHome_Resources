@@ -56,7 +56,7 @@
   },
   "android_immersive_setting": "confirmed",
   "android_network_preflight": {
-    "android_utc_time": "2026-11-07T11:28:53Z",
+    "android_utc_time": "2026-11-07T11:39:57Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -132,6 +132,7 @@
         "year_edge_after_02.png"
       ]
     },
+    "month_day_candidate_diagnostics": null,
     "stage_retry_counts": {},
     "year_selected": false,
     "month_selected": false,
@@ -189,6 +190,7 @@
       "year_edge_after_02.png"
     ]
   },
+  "month_day_candidate_diagnostics": null,
   "birth_year_dropdown_tap_succeeded": true,
   "country_selected": true,
   "country_selection_server_confirmed": false,
@@ -201,7 +203,7 @@
   "screenshot_after_wait": true,
   "known_home_error_modal_layout": false,
   "android_network_after_wait": {
-    "android_utc_time": "2026-11-07T11:32:12Z",
+    "android_utc_time": "2026-11-07T11:43:12Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -219,7 +221,7 @@
       "am_proc_died": 0,
       "am_crash": 0,
       "has died": 0,
-      "ProcessRecord": 5,
+      "ProcessRecord": 3,
       "Force finishing": 0,
       "ANR in": 0,
       "tombstoned": 0,
@@ -229,11 +231,8 @@
       "libndk_translation": 0
     },
     "events": [
-      "11-07 11:31:21.625   568  1925 W ActivityManager: ProcessRecord{f5b706e 0:com.google.android.settings.intelligence/u0a140} is attached to a previous process 3288",
-      "11-07 11:31:21.822   568  1931 W ActivityManager: ProcessRecord{f5b706e 0:com.google.android.settings.intelligence/u0a140} is attached to a previous process 3288",
-      "11-07 11:31:34.588   568  1801 W system_server: Long monitor contention with owner CachedAppOptimizerThread (678) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt",
-      "11-07 11:31:34.597   568   677 W system_server: Long monitor contention with owner CachedAppOptimizerThread (678) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt",
-      "11-07 11:32:10.979   568   601 W system_server: Long monitor contention with owner binder:568_B (1154) at android.content.ComponentName com.android.server.am.ActivityManagerService.startService(android.app.IApplicationThread, android.conten"
+      "11-07 11:41:54.899   561   601 W system_server: Long monitor contention with owner binder:561_A (1231) at android.app.ContentProviderHolder com.android.server.am.ContentProviderHelper.getContentProviderImpl(android.app.IApplicationThread, j",
+      "11-07 11:41:55.361   561  2379 W system_server: Long monitor contention with owner PackageManager (626) at void com.android.server.am.ProcessRecord.killLocked(java.lang.String, java.lang.String, int, int, boolean, boolean)(ProcessRecord.jav"
     ],
     "raw_log_saved": false,
     "system_event_counts": {
@@ -246,7 +245,7 @@
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
     "Fatal signal": 0,
-    "dlopen failed": 1
+    "dlopen failed": 0
   },
   "test_emulator_adb_root": true,
   "cache_bytes": 0,
