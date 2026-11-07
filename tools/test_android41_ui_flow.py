@@ -66,6 +66,27 @@ class HomeSystemOverlayTest(unittest.TestCase):
         self.assertIsNone(screenshot_simplified_chinese_option(buf.getvalue()))
 
 
+    def test_compact_language_layout_from_real_emulator_42382760954(self):
+        from io import BytesIO
+        from PIL import Image,ImageDraw
+        from android41_ui_flow import screenshot_simplified_chinese_option
+        # Pixel geometry calibrated from the actual 1080x2340 screenshot:
+        # teal header y=.08; 简体中文 row y=.720 instead of old y=.775.
+        img=Image.new("RGB",(1080,2340),(158,241,216))
+        d=ImageDraw.Draw(img)
+        d.rectangle((0,0,1079,150),fill=(202,244,161))
+        d.rectangle((0,150,1079,235),fill=(38,179,151))
+        for y in (.18,.24,.720,.780):
+            middle=int(2340*y)
+            d.rectangle((150,middle-35,850,middle+35),fill=(240,246,236))
+        b=BytesIO();img.save(b,format="PNG")
+        self.assertEqual(screenshot_simplified_chinese_option(b.getvalue()),(540,1684))
+        # An unrecognized screen with similar rounded pale list elements
+        # must NOT become a click if the teal HOME header is missing.
+        d.rectangle((0,150,1079,235),fill=(202,244,161))
+        b=BytesIO();img.save(b,format="PNG")
+        self.assertIsNone(screenshot_simplified_chinese_option(b.getvalue()))
+
     def test_language_poll_bounded_and_read_only(self):
         from types import SimpleNamespace
         from io import BytesIO
