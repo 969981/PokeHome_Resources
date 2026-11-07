@@ -77,6 +77,14 @@ def load_guest_profile(filename: Path) -> dict:
         raise ValueError("year edge drag requires picker inspection")
     if obj.get("probe_year_edge_drag", False) and obj.get("probe_year_anchor", False):
         raise ValueError("run only one reversible year probe per emulator session")
+    if type(obj.get("probe_month_day_candidates", False)) is not bool:
+        raise ValueError("probe_month_day_candidates must be boolean")
+    if obj.get("probe_month_day_candidates", False) and not obj["inspect_birth_year_picker"]:
+        raise ValueError("month/day probe requires verified year picker")
+    if obj.get("probe_month_day_candidates", False) and (
+            obj.get("probe_year_edge_drag", False) or obj.get("probe_year_anchor", False)
+            or obj.get("inspect_date_controls", False) or obj.get("explore_year_scrolls", 0)):
+        raise ValueError("month/day probe cannot be combined with unrelated year gestures")
     birthday = obj.get("birthdate_candidate")
     try:
         if not isinstance(birthday, str):
@@ -246,6 +254,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "date_picker_diagnostics": None,
         "year_anchor_diagnostics": None,
         "year_edge_drag_diagnostics": None,
+        "month_day_candidate_diagnostics": None,
         "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
@@ -347,6 +356,16 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "birth_year_picker_verified_open"
                             result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
                             break
+                    if (result["year_picker_verified"]
+                            and profile.get("probe_month_day_candidates", False)):
+                        from home41_month_day_candidate_probe import inspect_local_month_day
+                        diag = inspect_local_month_day(
+                            adb, output, interval_seconds=interval_seconds)
+                        result["month_day_candidate_diagnostics"] = diag
+                        result["screenshots"].extend(diag["screenshots"])
+                        result["status"] = "month_day_candidate_" + diag["status"]
+                        result["stop_reason"] = "month_day_local_only_no_birthdate_submission"
+                        break
                     if (result["year_picker_verified"]
                             and profile.get("probe_year_edge_drag", False)):
                         from home41_year_edge_drag_probe import probe_year_edge_drag
