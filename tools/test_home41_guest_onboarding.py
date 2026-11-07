@@ -62,6 +62,7 @@ class FakeADB:
         self.image = image
         self.after_tap = after_tap
         self.taps = []
+        self.swipes = []
 
     def __call__(self, *args, **kw):
         if args[:3] == ("exec-out", "screencap", "-p"):
@@ -70,6 +71,9 @@ class FakeADB:
             self.taps.append(args[3:])
             if self.after_tap is not None:
                 self.image = self.after_tap
+            return Result(returncode=0)
+        if args[:3] == ("shell", "input", "swipe"):
+            self.swipes.append(args[3:])
             return Result(returncode=0)
         raise AssertionError(f"Unexpected ADB call: {args}")
 
@@ -131,6 +135,45 @@ class GuestOnboardingTests(unittest.TestCase):
             self.assertFalse(result["terms_accepted"])
             self.assertFalse(result["account_created"])
             self.assertTrue((Path(d)/"onboarding_birth_year_picker.png").is_file())
+
+    def test_year_scrolls_remain_in_popup_without_selecting(self):
+        profile = load_guest_profile(PROFILE)
+        profile["explore_year_scrolls"] = 3
+        with tempfile.TemporaryDirectory() as d:
+            fake = FakeADB(BIRTHDAY, after_tap=YEAR_POPUP)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=5, interval_seconds=0)
+            self.assertEqual(result["status"], "year_list_scrolled_unverified_labels")
+            self.assertEqual(result["year_scrolls_confirmed"], 3)
+            self.assertEqual(len(fake.taps), 1)
+            self.assertEqual(len(fake.swipes), 3)
+            self.assertEqual(fake.swipes[0], ("216", "1380", "216", "865", "550"))
+            self.assertFalse(result["year_selected"])
+            self.assertFalse(result["month_selected"])
+            self.assertFalse(result["day_selected"])
+            self.assertFalse(result["birthday_submitted"])
+            self.assertFalse(result["account_created"])
+            self.assertEqual(
+                len(list(Path(d).glob("onboarding_year_scroll_*.png"))), 3)
+
+    def test_scroll_stops_if_popup_disappears(self):
+        profile = load_guest_profile(PROFILE)
+        profile["explore_year_scrolls"] = 4
+        class DisappearingPopup(FakeADB):
+            def __call__(self, *args, **kw):
+                if args[:3] == ("shell", "input", "swipe"):
+                    self.image = BIRTHDAY
+                return super().__call__(*args, **kw)
+        with tempfile.TemporaryDirectory() as d:
+            fake = DisappearingPopup(BIRTHDAY, after_tap=YEAR_POPUP)
+            result = run_known_guest_setup(fake, Path(d), profile,
+                                           max_checks=5, interval_seconds=0)
+            self.assertEqual(result["stop_reason"],
+                             "year_popup_not_verified_after_swipe")
+            self.assertEqual(result["year_scrolls_confirmed"], 0)
+            self.assertEqual(len(fake.swipes), 1)
+            self.assertEqual(len(fake.taps), 1)
+            self.assertFalse(result["birthday_submitted"])
 
     def test_unknown_screen_never_taps(self):
         profile = load_guest_profile(PROFILE)
