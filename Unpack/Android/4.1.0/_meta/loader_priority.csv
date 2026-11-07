@@ -1,0 +1,21 @@
+stage,priority,method_name,address_candidate,reason
+model_identity,P1,MasterDataHelper$$GetPokemonModel,0x1CDB518,物种模型元数据索引
+model_identity,P1,MasterDataHelper$$GetPokemonModels,0x1CDB5BC,模型元数据列表
+model_identity,P1,MD.Data.PokemonModel$$SolveReferences,0x1F0DD00,模型元数据引用闭合
+model_identity,P1,MD.Util$$GetModelMD,0x1F0810C,模型主数据读取
+model_instance,P1,PokemonSetController$$LoadHomeModelAsync,0x1C5A434,HOME 模型异步加载
+model_instance,P1,PokemonSetController$$InitModelForUI,0x1C5AA98,模型进入 UI 的入口
+model_instance,P1,PokemonSetController$$InitModelForUI,0x1C5B090,模型进入 UI 的入口
+model_viewer,P1,ModelViewerController$$LoadModel,0x1D26F44,图鉴模型查看入口
+model_viewer,P1,ModelViewerController$$PlayAnim,0x1D2733C,动画播放入口
+model_viewer,P1,ModelViewerController$$PlayAnim,0x1D273E0,动画播放入口
+bundle_download,P1,ILib.Unity.Net.SplitDownloadAssetBundleManager$$DownloadModelCoroutine,0x1F41B34,模型分块下载入口
+bundle_download,P1,ILib.Unity.Net.SplitDownloadAssetBundleManager$$RequestDownload,0x1F4142C,资源下载请求
+bundle_download,P2,ILib.Unity.Net.AssetBundleMDDownloader$$Download,0x1F2B7DC,AssetBundle 清单下载
+bundle_decode,P1,ILib.File.AssetbundlePackageFileExtracter$$ReadHeader,0x1F1699C,资源包头读取
+bundle_decode,P2,ILib.File.AssetbundlePackageFileExtracter$$UnpackAndWriteOnefile,0x1F16C70,资源包文件写出
+bundle_decode,P2,ILib.File.AssetbundlePackageFileExtracter$$UnpackAndWrite,0x1F171D8,资源包解包
+bundle_loader,P1,ILib.Unity.File.RAssetBundleManager$$LoadRequest,0x1F48FE0,本地资源包加载请求
+bundle_loader,P1,ILib.Unity.File.RAssetBundleManager$$LoadRequest,0x1F49140,本地资源包加载请求
+bundle_cache,P1,SmartPoint.AssetAssistant.AssetManager$$IsCached,0x240872C,缓存命中判定
+model_viewer,P2,HomeScreenRandomModelLoader$$GetActiveModelMD,0x1C994F4,首页随机模型配置
