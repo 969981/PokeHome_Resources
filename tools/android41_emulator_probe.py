@@ -278,6 +278,7 @@ def main():
     p.add_argument("--apk",type=Path,required=True)
     p.add_argument("--output",type=Path,required=True)
     p.add_argument("--idle-seconds",type=int,default=120)
+    p.add_argument("--guest-profile",type=Path,default=Path("tools/home41_guest_profile.json"))
     args=p.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
     report={
@@ -344,137 +345,47 @@ def main():
             report["system_prompt_actions"]=dismiss_android_system_prompts(
                 adb,initial_png=initial_png)
             report["screenshot_after_system_prompts"]=snap(args.output,"screen_after_system_prompts.png")
-            # Observe first-launch HOME language choice without accepting any
-            # service Terms or submitting registration credentials.
-            from android41_ui_flow import wait_for_known_language_page
-            pos,checks=wait_for_known_language_page(
-                adb,max_checks=9,interval_seconds=10)
-            report["home_language_check_count"]=checks
-            report["home_language_poll_wait_seconds"]=(checks-1)*10
-            report["home_language_screen_recognized"]=bool(pos)
-            if pos is not None:
-                select=adb("shell","input","tap",str(pos[0]),str(pos[1]),secs=15)
-                report["simplified_chinese_selected"]=bool(select and select.returncode==0)
-                time.sleep(8)
-            else:
-                report["simplified_chinese_selected"]=False
-            report["screenshot_after_language_step"]=snap(args.output,"screen_after_language_step.png")
-            from android41_ui_flow import screenshot_language_confirmation_yes
-            preview=args.output/"screen_after_language_step.png"
-            confirmation=screenshot_language_confirmation_yes(
-                preview.read_bytes() if preview.is_file() and report["simplified_chinese_selected"] else b"")
-            report["language_confirmation_dialog_recognized"]=bool(confirmation)
-            if confirmation is not None:
-                accepted=adb("shell","input","tap",
-                             str(confirmation[0]),str(confirmation[1]),secs=15)
-                report["simplified_chinese_confirmed"]=bool(
-                    accepted and accepted.returncode==0)
-                time.sleep(8)
-            else:
-                report["simplified_chinese_confirmed"]=False
-            report["screenshot_after_language_confirmation"]=snap(
-                args.output,"screen_after_language_confirmation.png")
-            # Reversible navigation only: expand APAC region's list, never
-            # choose/submit a country or any personal onboarding details.
-            from android41_ui_flow import wait_for_stable_region_page
-            if report["simplified_chinese_confirmed"]:
-                region_point,tries=wait_for_stable_region_page(
-                    adb,max_checks=10,interval_seconds=6)
-            else:
-                region_point,tries=None,0
-            report["region_page_poll_attempts"]=tries
-            report["region_page_poll_wait_seconds"]=max(0,tries-1)*6
-            report["region_list_page_recognized"]=bool(region_point)
-            report["region_apac_dropdown_expansion_attempted"]=False
-            if region_point is not None:
-                expanded=adb("shell","input","tap",
-                             str(region_point[0]),str(region_point[1]),secs=15)
-                report["region_apac_dropdown_expansion_attempted"]=True
-                report["region_apac_dropdown_tap_succeeded"]=bool(
-                    expanded and expanded.returncode==0)
-                time.sleep(5)
-            report["screenshot_after_region_dropdown"]=snap(
-                args.output,"screen_after_region_dropdown.png")
-            # Select the first APAC country ONLY when the saved screenshot
-            # exactly matches the already audited teal country-list layout.
-            # No age, Terms, Nintendo login, account creation or deletion.
-            from android41_ui_flow import screenshot_apac_mainland_option
-            country_png=args.output/"screen_after_region_dropdown.png"
-            country_point=screenshot_apac_mainland_option(
-                country_png.read_bytes() if country_png.is_file()
-                and report.get("region_apac_dropdown_tap_succeeded",False) else b"")
-            report["mainland_option_visual_gate"]=bool(country_point)
-            report["country_selection_tap_attempted"]=False
-            report["country_selection_tap_succeeded"]=False
-            if country_point is not None:
-                selected=adb("shell","input","tap",str(country_point[0]),
-                             str(country_point[1]),secs=15)
-                report["country_selection_tap_attempted"]=True
-                report["country_selection_tap_succeeded"]=bool(
-                    selected and selected.returncode==0)
-                time.sleep(8)
-            report["screenshot_after_country_selection"]=snap(
-                args.output,"screen_after_country_selection.png")
-            # Country selection is a two-stage UI; the screenshot from
-            # 42356071498 explicitly confirms a "China Mainland" YES/NO modal.
-            # Only confirm that exactly recognized modal. Never accept ToS
-            # or account/Nintendo registration prompts.
-            modal_png=args.output/"screen_after_country_selection.png"
-            mainland_yes=mainland_confirmation_yes_from_screenshot(
-                modal_png.read_bytes() if modal_png.is_file()
-                and report.get("country_selection_tap_succeeded",False) else b"")
-            report["country_confirmation_dialog_recognized"]=bool(mainland_yes)
-            report["country_confirmation_tap_attempted"]=False
-            report["country_confirmation_tap_succeeded"]=False
-            if mainland_yes is not None:
-                confirmed=adb("shell","input","tap",str(mainland_yes[0]),str(mainland_yes[1]),secs=15)
-                report["country_confirmation_tap_attempted"]=True
-                report["country_confirmation_tap_succeeded"]=bool(
-                    confirmed and confirmed.returncode==0)
-                time.sleep(9)
-            report["screenshot_after_country_confirmation"]=snap(
-                args.output,"screen_after_country_confirmation.png")
-
-            # Birthday screen fades in asynchronously after confirming region.
-            # Poll stable UI pixel signatures before touching the year picker;
-            # unknown screen -> no click. DOB and NEXT are never submitted.
-            birth_year_pos=None
-            report["birthday_page_poll_attempts"]=0
-            if report.get("country_confirmation_tap_succeeded",False):
-                for trial in range(15):
-                    snap(args.output,"screen_birthdate_stable.png")
-                    stable_png=args.output/"screen_birthdate_stable.png"
-                    birth_year_pos=birthday_year_dropdown_from_screenshot(
-                        stable_png.read_bytes() if stable_png.is_file() else b"")
-                    report["birthday_page_poll_attempts"]=trial+1
-                    if birth_year_pos is not None:
-                        break
-                    if trial<14:
-                        time.sleep(3)
-            report["birthday_page_recognized"]=bool(birth_year_pos)
-            report["birth_year_dropdown_open_attempted"]=False
-            report["birth_year_dropdown_tap_succeeded"]=False
-            if birth_year_pos is not None:
-                year_tap=adb("shell","input","tap",str(birth_year_pos[0]),
-                             str(birth_year_pos[1]),secs=15)
-                report["birth_year_dropdown_open_attempted"]=True
-                report["birth_year_dropdown_tap_succeeded"]=bool(
-                    year_tap and year_tap.returncode==0)
-                time.sleep(4)
-            report["screenshot_after_birth_year_dropdown"]=snap(
-                args.output,"screen_after_birth_year_dropdown.png")
-
-
-            # A successful input event does NOT establish that the server
-            # accepted the region; the new screenshot must be reviewed.
-            report["country_selected"]=False
+            # Single reusable stage-driven flow: all previously verified
+            # selections are replayed from one profile with screenshot guards.
+            # No Nintendo login, irreversible DOB submission, ToS or account ops.
+            from home41_guest_onboarding import (
+                load_guest_profile, run_known_guest_setup)
+            profile=load_guest_profile(args.guest_profile)
+            onboarding=run_known_guest_setup(
+                adb,args.output,profile,max_checks=70,interval_seconds=3)
+            report["onboarding"]=onboarding
+            completed=set(onboarding["completed"])
+            report["home_language_screen_recognized"]="choose_language" in completed
+            report["simplified_chinese_selected"]="choose_language" in completed
+            report["simplified_chinese_confirmed"]="confirm_language" in completed
+            report["language_confirmation_dialog_recognized"]="confirm_language" in completed
+            report["region_list_page_recognized"]="expand_apac" in completed
+            report["region_apac_dropdown_expansion_attempted"]="expand_apac" in completed
+            report["region_apac_dropdown_tap_succeeded"]="expand_apac" in completed
+            report["mainland_option_visual_gate"]="select_mainland" in completed
+            report["country_selection_tap_attempted"]="select_mainland" in completed
+            report["country_selection_tap_succeeded"]="select_mainland" in completed
+            report["country_confirmation_dialog_recognized"]="confirm_mainland" in completed
+            report["country_confirmation_tap_attempted"]="confirm_mainland" in completed
+            report["country_confirmation_tap_succeeded"]="confirm_mainland" in completed
+            report["birthday_page_recognized"]=onboarding["status"] in (
+                "at_birthdate_page","birth_year_picker_open_attempted")
+            report["birth_year_dropdown_open_attempted"]=(
+                "inspect_birth_year_picker" in completed)
+            report["birth_year_dropdown_tap_succeeded"]=(
+                "inspect_birth_year_picker" in completed)
+            # UI moved past country prompt, but remote account profile does not
+            # exist yet and no server-country confirmation has been verified.
+            report["country_selected"]=report["birthday_page_recognized"]
             report["country_selection_server_confirmed"]=False
             report["birthdate_entered"]=False
             report["terms_or_privacy_accepted"]=False
-            if successful:
-                time.sleep(max(0,args.idle_seconds-33
-                    -report["home_language_poll_wait_seconds"]
-                    -report["region_page_poll_wait_seconds"]))
+            report["auth_registration_status"]="not_attempted_no_test_account"
+            report["first_basic_utid_status"]="not_observed"
+            report["home_language_check_count"]=onboarding["checks"]
+            report["home_language_poll_wait_seconds"]=0
+            report["region_page_poll_attempts"]=onboarding["checks"]
+            report["region_page_poll_wait_seconds"]=0
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
             last_png=args.output/"screen_after_wait.png"
             report["known_home_error_modal_layout"]=known_home_error_dialog_layout(
