@@ -16,6 +16,11 @@ on:
       - 'tools/test_home41_year_edge_drag_probe.py'
       - 'tools/home41_month_day_candidate_probe.py'
       - 'tools/test_home41_month_day_candidate_probe.py'
+      - 'tools/home41_frida_interface_agent.js'
+      - 'tools/home41_frida_interface_monitor.py'
+      - 'tools/test_home41_frida_interface_monitor.py'
+      - 'tools/home41_frida_server_setup.py'
+      - 'tools/early_home_tid_observer.js'
       - 'tools/android41_os_anr_recovery.py'
       - 'tools/test_android41_os_anr_recovery.py'
       - 'tools/android41_ui_flow.py'
@@ -54,14 +59,24 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install -q pillow
-          python -m py_compile tools/android41_emulator_probe.py tools/android41_ui_flow.py tools/home41_guest_onboarding.py tools/home41_date_picker_probe.py tools/home41_year_anchor_probe.py tools/home41_year_edge_drag_probe.py tools/home41_month_day_candidate_probe.py tools/android41_os_anr_recovery.py
-          python -m unittest tools/test_android41_ui_flow.py tools/test_android41_test_permissions.py tools/test_home41_guest_onboarding.py tools/test_home41_date_picker_probe.py tools/test_home41_year_anchor_probe.py tools/test_home41_year_edge_drag_probe.py tools/test_home41_month_day_candidate_probe.py tools/test_android41_os_anr_recovery.py tools/test_home41_auth_timeline.py -v
+          python -m py_compile tools/android41_emulator_probe.py tools/android41_ui_flow.py tools/home41_guest_onboarding.py tools/home41_date_picker_probe.py tools/home41_year_anchor_probe.py tools/home41_year_edge_drag_probe.py tools/home41_month_day_candidate_probe.py tools/android41_os_anr_recovery.py tools/home41_frida_interface_monitor.py tools/home41_frida_server_setup.py
+          python -m unittest tools/test_android41_ui_flow.py tools/test_android41_test_permissions.py tools/test_home41_guest_onboarding.py tools/test_home41_date_picker_probe.py tools/test_home41_year_anchor_probe.py tools/test_home41_year_edge_drag_probe.py tools/test_home41_month_day_candidate_probe.py tools/test_android41_os_anr_recovery.py tools/test_home41_auth_timeline.py tools/test_home41_frida_interface_monitor.py -v
           git clone --depth=1 --filter=blob:none https://github.com/969981/Home_Android.git _android_source
           APK="$(find _android_source/ROMS/4.1.0 -maxdepth 1 -type f -name '*.apk' | head -1)"
           test -f "$APK"
           test "$(sha256sum "$APK" | cut -d' ' -f1)" = "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1"
           echo "HOME41_APK=$APK" >> "$GITHUB_ENV"
           mkdir -p ci_emulator_trial
+      - name: Build Frida 17 agent with explicit Java Bridge
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q "frida==17.26.1"
+          npm install --no-save --no-package-lock --no-audit --no-fund frida-compile frida-java-bridge
+          ./node_modules/.bin/frida-compile tools/home41_frida_interface_agent.js \
+            -o /tmp/home41_frida_interface_compiled.js -S -c
+          test -s /tmp/home41_frida_interface_compiled.js
       - name: Enable KVM
         shell: bash
         run: |
@@ -80,7 +95,9 @@ jobs:
           heap-size: 512M
           disable-animations: true
           emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none -dns-server 8.8.8.8,8.8.4.4
-          script: python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output ci_emulator_trial --idle-seconds 120
+          script: |
+            python tools/home41_frida_server_setup.py --output ci_emulator_trial/frida_server_setup.json
+            python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output ci_emulator_trial --idle-seconds 120 --frida-interface-monitor
       - name: Run Unity resource parser on any real cache assets
         if: always()
         shell: bash
