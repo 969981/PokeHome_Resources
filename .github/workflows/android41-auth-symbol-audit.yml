@@ -1,0 +1,77 @@
+name: HOME Android 4.1.0 registration and earliest-UTID static symbol audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-auth-symbol-audit.yml'
+      - 'tools/home41_auth_symbol_audit.py'
+      - 'tools/test_home41_auth_symbol_audit.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: private-home41-auth-symbol-index
+  cancel-in-progress: false
+jobs:
+  index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/android41-auth-symbol-audit.yml
+            tools/home41_auth_symbol_audit.py
+            tools/test_home41_auth_symbol_audit.py
+            Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/_meta/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate parser on fixture method lists
+        run: |
+          python -m py_compile tools/home41_auth_symbol_audit.py
+          python -m unittest tools/test_home41_auth_symbol_audit.py -v
+      - name: Index actual v4.1.0 dumper method entries
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s Unpack/Android/4.1.0/il2cpp/script.json
+          python tools/home41_auth_symbol_audit.py \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --out-dir Unpack/Android/4.1.0/_meta
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("Unpack/Android/4.1.0/_meta/auth_method_audit.json").read_text())
+          print("ScriptMethod count:",d["script_method_entries"])
+          print("Auth-related methods:",d["auth_method_candidates"])
+          assert d["script_method_entries"]>=100000,"Wrong script.json or incomplete restoration"
+          assert d["auth_method_candidates"]>0,"No auth method candidates"
+          PY
+      - name: Commit evidence-only outputs to private 4.1.0 branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f Unpack/Android/4.1.0/_meta/auth_method_candidates.csv \
+                     Unpack/Android/4.1.0/_meta/auth_method_audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m "reports(android): 4.1.0 registration and UTID static symbol index [skip ci]"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Preserve diagnostic summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-auth-static-symbol-audit
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            Unpack/Android/4.1.0/_meta/auth_method_candidates.csv
+            Unpack/Android/4.1.0/_meta/auth_method_audit.json

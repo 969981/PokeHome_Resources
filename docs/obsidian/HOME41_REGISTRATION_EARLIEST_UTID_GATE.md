@@ -86,3 +86,12 @@ flowchart TD
 - 修复 \`wait_for_stable_region_page\`：仅在完整的七行地区页截图特征匹配后才展开亚太地区；最多检查十次、间隔六秒，在错误弹窗、动画和未知页面时不点击。记录 \`region_page_poll_attempts\`、\`region_page_poll_wait_seconds\`。
 - 仍然**不填写实际国别、出生日期，不确认协议，不创建/删除账号**。下一轮应将通信失败和地区 UI 无法匹配分别记录，防止误报。
 
+
+
+## 2026-11-07 亚太地区列表：真实只读 UI 验收
+
+- GitHub Actions [#42351711883](https://github.com/969981/PokeHome_Resources/actions/runs/42351711883) 已完成，\`home_language_screen_recognized=true\`、\`simplified_chinese_confirmed=true\`、\`region_list_page_recognized=true\`、\`region_page_poll_attempts=2\`、\`region_apac_dropdown_expansion_attempted=true\`、\`region_apac_dropdown_tap_succeeded=true\`；
+- \`screen_after_region_dropdown.png\` 实际显示亚太地区下的中国大陆、香港、日本、韩国、马来西亚、菲律宾、新加坡、台湾、泰国及其他选项。这是已展开的清单，**没有选择或上传任何国家信息**；
+- \`country_selected=false\`，\`birthdate_entered=false\`，\`terms_or_privacy_accepted=false\`，\`first_basic_utid_status=not_observed\`；新账号注册尚未发生；
+- 前一轮 #42351084210 曾出现官方已记载的通信错误 \`code:800/detail:100101\`，官方建议稍后重试或检查网络；该轮并未点击地区选项；
+- 详细的注册与登录函数静态索引见 [[HOME41_AUTH_METHOD_INDEX]]。
