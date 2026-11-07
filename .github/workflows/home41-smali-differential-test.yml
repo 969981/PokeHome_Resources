@@ -1,0 +1,225 @@
+name: HOME Android 4.1.0 Smali APK root-cause differential emulator matrix
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-smali-differential-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-smali-four-variant-isolation
+  cancel-in-progress: false
+
+jobs:
+  four-variants:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            Android/Smali
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Verify test harness and obtain exact original reference APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q pillow
+          python -m compileall -q Android/Smali/tools Android/Smali/tests
+          python -m unittest discover -s Android/Smali/tests -v
+          git clone --depth=1 --filter=blob:none --sparse \
+            https://github.com/969981/Home_Android.git "$RUNNER_TEMP/home41-source"
+          git -C "$RUNNER_TEMP/home41-source" sparse-checkout set ROMS/4.1.0
+          mapfile -t apks < <(find "$RUNNER_TEMP/home41-source/ROMS/4.1.0" -type f -name '*.apk')
+          test "${#apks[@]}" -eq 1
+          echo "ORIGINAL_APK=${apks[0]}" >> "$GITHUB_ENV"
+          echo "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1  ${apks[0]}" | sha256sum -c -
+          mkdir -p runtime-differential
+
+      - name: Rebuild actual Smali DEX from clean project
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 --retry-delay 3 \
+            https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar \
+            -o "$RUNNER_TEMP/apktool.jar"
+          project=Android/Smali/4.1.0
+          test "$(find "$project" -name '*.smali' -type f | wc -l)" -eq 14841
+          python Android/Smali/tools/shard_large.py restore --root "$project"
+          rm -rf "$project/build" "$project/dist"
+          java -Xmx4g -jar "$RUNNER_TEMP/apktool.jar" b -f "$project" \
+            -o "$RUNNER_TEMP/apktool-unsigned.apk"
+          unzip -t "$RUNNER_TEMP/apktool-unsigned.apk" | tail -n 2
+
+      - name: Create packaging differential and DEX hybrid variant
+        shell: bash
+        run: |
+          set -euo pipefail
+          python Android/Smali/tools/smali_apk_differential.py \
+            --original "$ORIGINAL_APK" \
+            --rebuilt "$RUNNER_TEMP/apktool-unsigned.apk" \
+            --hybrid-output "$RUNNER_TEMP/hybrid-unsigned.apk" \
+            --audit-output runtime-differential/apk_member_diff.json
+          python - <<'PY'
+          import json
+          r=json.load(open('runtime-differential/apk_member_diff.json'))
+          print('APK payload delta:',r['different_content_by_category'])
+          print('Unity assets identical:',r['source_unity_assets_identical'])
+          print('Native libs identical:',r['source_native_libs_identical'])
+          PY
+
+      - name: Sign THREE controlled APK variants with exactly the same disposable key
+        shell: bash
+        run: |
+          set -euo pipefail
+          sdk_dir="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          tools_dir=$(find "$sdk_dir/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
+          test -x "$tools_dir/zipalign"
+          test -x "$tools_dir/apksigner"
+          keytool -genkeypair -noprompt -alias scratch \
+            -keyalg RSA -keysize 2048 -validity 2 \
+            -keystore "$RUNNER_TEMP/home41-variants.jks" \
+            -storepass changeit -keypass changeit -dname "CN=HOME disposable A/B tester"
+          for variant in apktool hybrid original; do
+            if [ "$variant" = apktool ]; then src="$RUNNER_TEMP/apktool-unsigned.apk";
+            elif [ "$variant" = hybrid ]; then src="$RUNNER_TEMP/hybrid-unsigned.apk";
+            else src="$ORIGINAL_APK"; fi
+            "$tools_dir/zipalign" -f -p 4 "$src" "$RUNNER_TEMP/${variant}-aligned.apk"
+            "$tools_dir/apksigner" sign \
+              --ks "$RUNNER_TEMP/home41-variants.jks" --ks-key-alias scratch \
+              --ks-pass pass:changeit --key-pass pass:changeit \
+              --out "$RUNNER_TEMP/${variant}-test-signed.apk" \
+              "$RUNNER_TEMP/${variant}-aligned.apk"
+            "$tools_dir/apksigner" verify --verbose "$RUNNER_TEMP/${variant}-test-signed.apk" \
+              | grep 'Verified using v2 scheme' | head -n 1
+          done
+          mkdir -p runtime-differential/sha
+          sha256sum "$RUNNER_TEMP/"*-test-signed.apk > runtime-differential/sha/variant_hashes.txt
+          echo "APKTOOL_SIGNED=$RUNNER_TEMP/apktool-test-signed.apk" >> "$GITHUB_ENV"
+          echo "HYBRID_SIGNED=$RUNNER_TEMP/hybrid-test-signed.apk" >> "$GITHUB_ENV"
+          echo "RESIGNED_ORIGINAL=$RUNNER_TEMP/original-test-signed.apk" >> "$GITHUB_ENV"
+
+      - name: Enable KVM
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' \
+            | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          test -e /dev/kvm
+
+      - name: Actual Android emulator four-variant A/B with screenshots
+        id: runtime
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: python Android/Smali/tools/smali_differential_runtime.py --rebuilt "$APKTOOL_SIGNED" --hybrid "$HYBRID_SIGNED" --resigned "$RESIGNED_ORIGINAL" --original "$ORIGINAL_APK" --out runtime-differential
+
+      - name: Assemble evidence and identify strongest supported failure boundary
+        if: always()
+        shell: bash
+        env:
+          RUNTIME_OUTCOME: ${{ steps.runtime.outcome }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          root=Path('runtime-differential'); root.mkdir(exist_ok=True)
+          matrix=root/'matrix.json'
+          if not matrix.is_file():
+              matrix.write_text(json.dumps({'status':'emulator_or_preflight_not_completed'},indent=2)+'\n')
+          payload=root/'apk_member_diff.json'
+          report={
+              'run':f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+              'status':json.loads(matrix.read_text()).get('status'),
+              'runtime_action_outcome':os.environ.get('RUNTIME_OUTCOME'),
+              'matrix':json.loads(matrix.read_text()),
+              'payload_diff':json.loads(payload.read_text()) if payload.is_file() else None,
+              'comment':'Three variants use one disposable key; untouched official original is separate; no real account data or consent interactions.'
+          }
+          dst=Path('Android/Smali/4.1.0/DIFFERENTIAL_RUNTIME_REPORT.json')
+          dst.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('APK_VARIANT_DIFFERENTIAL_STATUS='+str(report['status']))
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as f:
+              f.write('## Rebuilt HOME APK four-variant differential\n\n')
+              f.write(f"- Status: `{report['status']}`\n")
+              f.write(f"- Emulator action: `{os.environ.get('RUNTIME_OUTCOME')}`\n")
+              for k,v in report['matrix'].get('results',{}).items():
+                  f.write(f"- {k}: install={v.get('install_ok')}, process alive={v.get('process_at_35s')}, screen visible={v.get('screen_at_35s',{}).get('nonblank')}\n")
+          PY
+
+      - name: Save screenshots and JSON (seven-day evidence)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-smali-package-signature-isolation
+          path: runtime-differential/
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Save test APK variants for further independent validation
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-smali-testing-only-variants
+          path: |
+            ${{ runner.temp }}/apktool-test-signed.apk
+            ${{ runner.temp }}/hybrid-test-signed.apk
+            ${{ runner.temp }}/original-test-signed.apk
+          compression-level: 0
+          retention-days: 3
+
+      - name: Commit actual differential finding to private 4.1.0
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f Android/Smali/4.1.0/DIFFERENTIAL_RUNTIME_REPORT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test(android): compare signing-only, Smali DEX and full repack on emulator [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
+
+      - name: Gate full rebuilt APK on actual screen visibility
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('Android/Smali/4.1.0/DIFFERENTIAL_RUNTIME_REPORT.json'))
+          if r.get('status')!='all_four_launch_visible':
+              raise SystemExit('Smali APK runtime still differs: '+str(r.get('status')))
+          print('All four signed variants display visible UI.')
+          PY
