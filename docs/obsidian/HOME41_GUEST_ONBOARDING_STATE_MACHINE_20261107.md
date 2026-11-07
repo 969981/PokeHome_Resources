@@ -259,3 +259,25 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 - 当前年选择器实测只有 2026～2018 可见；尝试单次拖动右侧空白区的实机运行 [#42367266437](https://github.com/969981/PokeHome_Resources/actions/runs/42367266437) 在本段记录时仍运行。必须先核查此运行证据，才能确认是否有进入 1999 的可靠路径。
 - 本次配置自动触发新模拟器和离线 CI；**仅更新测试候选，不代表本地或云端已提交生日**。
 - 继续保持 `nintendo_account_link=false`、`submit_birthdate=false`、`accept_terms=false`、`create_account=false`、`delete_account=false`。没有首次 `basic.utid` 或六位 HOME ID。
+
+
+## 2026-11-07：1999-04-05 的四月五日本地选择实验
+
+### 右侧灰色边缘拖动的真实结论
+
+[Actions #42367266437](https://github.com/969981/PokeHome_Resources/actions/runs/42367266437) 和随后的 [#42367803435](https://github.com/969981/PokeHome_Resources/actions/runs/42367803435) 均真实走完简体中文、亚太、中国大陆的初始化，打开年份菜单并在灰色无文字区执行一次较慢的拖动。
+
+**真实截图 year_edge_after_02.png 中的年份变成 2019，年份列表关闭**；没有向更早的年份滚动。由此确认：在已验证的初始年份下拉菜单上，文本区域和右侧空白边缘使用普通 ADB touchscreen swipe 都可能触发本地年份选择。此方法已停用，不能用于安全定位 1999。与早期触屏滑动、鼠标滚轮、KEYCODE_PAGE_DOWN、选择 2018 后重新展开的结论一致，以上方法均尚未找到可靠滚动方案。
+
+这两轮都没有完成 DOB 提交、注册或删除；没有首次 basic.utid，也没有六位 ID。
+
+### 4 月、5 日的局部 UI 选择器
+
+用户最终测试生日设为 **1999-04-05**。先不猜年份控件，只研究可见的 4 月、5 日：
+- 新增 tools/home41_month_day_candidate_probe.py：检查年份菜单处于已验证状态，然后 KEYCODE_BACK 返回生日表单、确认表单、打开月份选择器，通过多点浅灰像素签名确认下拉框存在，在已知 **4** 的行位置 x=0.48/y=0.443 执行一次 tap；再验证返回年龄表单并拍照。
+- 只在成功确认返回表单后，打开日期选择器，用真实截图校准的 **5** 行位置 x=0.75/y=0.483 执行一次 tap；最后保存 month_4_day_5_unsubmitted_form.png 供人工核对显示数值。
+- 新增 tools/test_home41_month_day_candidate_probe.py，覆盖签名、4/5 选择、未知页拒绝、任何状态不允许点击“下一步”。
+- 原状态机以 profile.probe_month_day_candidates=true 启动此单独阶段，禁止同时运行年份拖动、滚轮或年份锚点实验。
+- 成功发送本地点击 ≠ 可靠选中。month_value_semantically_verified 和 day_value_semantically_verified 仍默认为 false，必须通过真实截图核对方可确认。
+- [Actions #42368869473](https://github.com/969981/PokeHome_Resources/actions/runs/42368869473) 离线 **40/40 测试通过**。实际模拟器 [#42368887392](https://github.com/969981/PokeHome_Resources/actions/runs/42368887392) 是独立验收证据，不得预先宣称成功。
+- 安全边界继续维持 nintendo_account_link=false、submit_birthdate=false、accept_terms=false、create_account=false、delete_account=false。当前 1999 仍无法安全定位，因此没有权威的整组 1999-04-05 完整选择结果。
