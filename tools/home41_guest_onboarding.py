@@ -63,6 +63,10 @@ def load_guest_profile(filename: Path) -> dict:
         raise ValueError("explore_year_scrolls must be an integer from 0 to 4")
     if obj.get("explore_year_scrolls", 0) and not obj["inspect_birth_year_picker"]:
         raise ValueError("scrolling requires year picker inspection")
+    if type(obj.get("inspect_date_controls", False)) is not bool:
+        raise ValueError("inspect_date_controls must be boolean")
+    if obj.get("inspect_date_controls", False) and not obj["inspect_birth_year_picker"]:
+        raise ValueError("date controls inspection requires the year picker")
     birthday = obj.get("birthdate_candidate")
     try:
         if not isinstance(birthday, str):
@@ -225,6 +229,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "year_scroll_commands_succeeded": 0,
         "year_popup_remained_open_after_wheel": 0,
         "year_labels_changed_verified": False,
+        "date_picker_diagnostics": None,
         "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
@@ -361,6 +366,20 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "mouse_wheel_scroll_probe_only"
                             if result["stop_reason"] == "year_list_visible_birthdate_unsubmitted":
                                 result["stop_reason"] = "wheel_screenshots_need_year_label_review"
+                    # Only after the original dropdown is STILL visible may
+                    # the separate non-submitting year-key/month/day inspector run.
+                    if profile.get("inspect_date_controls", False):
+                        current = _capture(adb, output, "")
+                        if birth_year_popup_visible(current):
+                            from home41_date_picker_probe import explore_date_controls
+                            diag = explore_date_controls(
+                                adb, output, interval_seconds=interval_seconds)
+                            result["date_picker_diagnostics"] = diag
+                            result["status"] = "date_picker_diagnostics_" + diag["status"]
+                            result["stop_reason"] = "date_picker_diagnostics_completed_without_submission"
+                            result["screenshots"].extend(diag["screenshot_names"])
+                        else:
+                            result["stop_reason"] = "date_control_inspection_skipped_popup_not_visible"
             break
         save(f"onboarding_before_{name}.png", data)
         if isinstance(point, tuple) and len(point) == 3 and point[0] == "px":
