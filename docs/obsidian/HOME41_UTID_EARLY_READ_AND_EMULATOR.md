@@ -25,8 +25,8 @@ updated: "2026-11-07"
 - [[HOME41_EARLIEST_TRAINER_ID|最早训练家 ID 的函数分析]]
 - [[ANDROID41_MODEL_CACHE_LOADER_MAP|模型与 AssetBundle 加载器入口]]
 - [[ANDROID41_RUNTIME_CACHE_AND_SPECIES|运行时缓存与物种映射]]
-- [[../Android/UTID_CID_NATIVE_CALLCHAIN_20261013|UTID / CID 原生证据]]
-- [[../Android/REGISTRATION_ID_REROLL_REQUEST_AUDIT_20261013|注销-注册请求审计]]
+- [[Android/UTID_CID_NATIVE_CALLCHAIN_20261013|UTID / CID 原生证据]]
+- [[Android/REGISTRATION_ID_REROLL_REQUEST_AUDIT_20261013|注销-注册请求审计]]
 
 ## 1. 真实静态证据
 
@@ -152,3 +152,27 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 - 目前仍无登录、注册、UUID、UTID 或 HOME 六位训练家 ID，缓存 \`0\`：正常，因为只是语言选择页。
 - 下一轮脚本仅在屏幕截图与已观察的 HOME 语言选择页像素布局同时匹配时点击 \`简体中文\`（首选语言设置），等待并截取下一屏。**明确禁止自动确认协议、Nintendo 登录或触发云端账户创建/删除**。
 - 工具字段 \`home_language_screen_recognized\` 和 \`simplified_chinese_selected\` 分别表示截图检测与 ADB 点击事件；即使后者为 true 也须通过下一屏截图证明语言实际生效。
+
+
+## 12. 2026-11-07 第八轮：首次语言页与原生相机权限提示的时序差异
+
+- [Actions #42338672876](https://github.com/969981/PokeHome_Resources/actions/runs/42338672876) 完成，\`install_status=ok\`、\`process_at_15s=true\`、\`process_after_wait=true\`。
+- 本轮 \`home_language_screen_recognized=false\`、\`simplified_chinese_selected=false\`：**没有做任何游戏内点击**。
+- 最终真实截图 \`screen_after_wait.png\` 仍为 Android 系统相机权限请求：\`Allow Pokémon HOME to take pictures and record video?\`，按钮含 \`Don't allow\`，下方为灰色遮罩。\`system_prompt_actions=no_android_system_prompt_matched\`，权限处理没有命中。
+- 这与第七轮已经成功完成三次系统权限拒绝并进入 \`Choose Your Language\` 的实测结果并不冲突：同一个 Android API35 转译环境存在时序/原生 UI 层级识别差异。
+- 后续改进应优先在一次性模拟器内设置相机等系统运行时权限的拒绝标志，或完善与截图签名绑定的权限按钮点击，再测试完整 UI；**不能**以这次 CI success 虚构语言选项已经选中。
+- 当前最重要的业务结论不变：注册专属响应返回 \`uuid\`，六位训练家 ID 的最早可观察候选仍是首次 \`ResponseParamCommon.basic.utid → UDManager.SetBasic\`。真实前后时序、UTID 数值语义、服务器是否每次创建新 ID 均未实测。
+- 所有账号操作保持未执行状态；现阶段不要开发无证据的大批量账户创建与删除循环。
+
+### 本阶段验收矩阵
+
+| 检查 | 状态 | 证据 |
+|---|---|---|
+| 4.1.0 APK 在 GitHub Actions AVD 安装 | 已通过 | run 42338242991、42338672876 |
+| ARM64 转译器正常加载 APK | 已通过 | \`libndk_translation.so\` |
+| HOME 首次语言选择页存在且能显示 | 已通过 | run 42338242991 Screenshot |
+| 相机权限自动稳定处理 | **未通过** | run 42338672876 |
+| 语言项 \`简体中文\` 实际选中 | **未验证** | run 42338672876 未触发点击 |
+| 首次 \`basic.utid\` 实机读到 | **未验证** | 尚无授权注册会话 |
+| HOME 六位训练家 ID 确认为 \`utid % 10^6\` | **未验证** | 仍缺一组官方 UI 对照 |
+| 指定 \`888888\` 由服务端生成/可多次重刷 | **未验证** | 没有服务器分配算法或安全批量注册机制 |
