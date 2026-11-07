@@ -1,12 +1,12 @@
 {
-  "auth_method_candidates": 11,
+  "auth_method_candidates": 54,
   "first_utid_observed": false,
   "group_counts": {
-    "create_login": 0,
-    "create_token": 0,
+    "create_login": 7,
+    "create_token": 34,
     "receive_basic": 1,
     "register_user": 9,
-    "response_common": 1
+    "response_common": 3
   },
   "input": "private_home_android_4.1.0_il2cpp_script.json",
   "native_address_anchor_checks": {
