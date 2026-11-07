@@ -6,6 +6,8 @@ on:
       - '.github/workflows/home41-frida-compile-smoke.yml'
       - 'tools/home41_frida_interface_agent.js'
       - 'tools/home41_frida_interface_monitor.py'
+      - 'tools/early_home_tid_observer.js'
+      - 'tools/home41_frida_emulated_realm_probe.js'
       - 'tools/test_home41_frida_interface_monitor.py'
   workflow_dispatch:
 permissions:
@@ -54,5 +56,7 @@ jobs:
           Path("/tmp/home41-frida-extracted-payload.js").write_text(body,encoding="utf-8")
           PY
           node --check /tmp/home41-frida-extracted-payload.js
+          node --check tools/early_home_tid_observer.js
+          node --check tools/home41_frida_emulated_realm_probe.js
           python -m unittest tools/test_home41_frida_interface_monitor.py -v
           echo "Frida bundle compiled; real device attach and network data are not validated by this job."
