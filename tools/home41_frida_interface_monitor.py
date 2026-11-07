@@ -10,6 +10,7 @@ The IL2CPP ARM64 SetBasic observer is loaded only on native ARM64 targets.
 from __future__ import annotations
 
 import json
+import threading
 import time
 from collections import Counter
 from pathlib import Path
@@ -31,7 +32,7 @@ ALLOWED_EVENTS = frozenset({
     "registration_response_handler_enter",
     "token_response_handler_enter", "login_request_serializer_enter",
     "login_response_handler_enter", "first_basic_utid",
-    "basic_utid_not_yet_numeric",
+    "basic_utid_not_yet_numeric", "emulated_realm_probe",
 })
 CATEGORIES = frozenset({
     "register", "token", "login", "locale", "basic_profile", "other"
@@ -79,6 +80,11 @@ def sanitize(payload: object) -> dict | None:
         arch = payload.get("arch")
         cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
         cleaned["arm64_rva_hook_supported"] = payload.get("arm64_rva_hook_supported") is True
+    if event == "emulated_realm_probe":
+        arch = payload.get("arch")
+        cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
+        cleaned["il2cpp_visible"] = payload.get("il2cpp_visible") is True
+        cleaned["basic_rva_in_bounds"] = payload.get("basic_rva_in_bounds") is True
     if event == "hook_preflight":
         cleaned["supported_arch"] = payload.get("supported_arch") is True
     if event == "first_basic_utid":
@@ -106,6 +112,12 @@ class FridaInterfaceMonitor:
         self.started_at = time.monotonic()
         self.arch = "unknown"
         self.load_errors = 0
+        self.emulated_session = None
+        self.emulated_scripts = []
+        self.emulated_status = "not_attempted"
+        self.emulated_error_type = None
+        self.emulated_probe_seen = threading.Event()
+        self.emulated_probe = None
 
     def on_message(self, message: object, _data=None) -> None:
         if not isinstance(message, dict):
@@ -129,6 +141,9 @@ class FridaInterfaceMonitor:
             self.events.append(evt)
             if evt["event"] == "native_arch_report":
                 self.arch = evt.get("arch", "unknown")
+            if evt["event"] == "emulated_realm_probe":
+                self.emulated_probe = evt
+                self.emulated_probe_seen.set()
 
     def start(self, frida_module=None) -> bool:
         """Connect to ADB-forwarded disposable frida-server and spawn HOME."""
@@ -170,7 +185,69 @@ class FridaInterfaceMonitor:
                     pass
             return False
 
+    def probe_emulated_realm(self, probe_script: Path) -> str:
+        """Best-effort ARM64 realm visibility check AFTER HOME has loaded.
+
+        Android native bridge may not offer an emulated realm. Never infer
+        success from x64 attach and never patch ARM64 RVAs in native x64 realm.
+        Use only already-existing static read-only observer when ARM64 is
+        visible and the RVAs fit the loaded module.
+        """
+        if self.setup_status != "spawn_attach_resumed" or self.device is None:
+            self.emulated_status = "native_not_ready"
+            return self.emulated_status
+        if not probe_script.is_file():
+            self.emulated_status = "probe_script_missing"
+            return self.emulated_status
+        self.emulated_status = "attaching"
+        try:
+            self.emulated_session = self.device.attach(
+                self.pid, realm="emulated")
+            script = self.emulated_session.create_script(
+                probe_script.read_text(encoding="utf-8"))
+            script.on("message", self.on_message)
+            script.load()
+            self.emulated_scripts.append(script)
+            if not self.emulated_probe_seen.wait(timeout=5.0):
+                self.emulated_status = "emulated_probe_event_not_observed"
+                return self.emulated_status
+            probe = self.emulated_probe or {}
+            if probe.get("arch") != "arm64":
+                self.emulated_status = "emulated_arch_not_arm64"
+                return self.emulated_status
+            if not (probe.get("il2cpp_visible") is True
+                    and probe.get("basic_rva_in_bounds") is True):
+                self.emulated_status = "emulated_il2cpp_rva_not_verified"
+                return self.emulated_status
+            # Static addresses were confirmed for one exact 4.1.0 ARM64
+            # binary. Do not hook unless the corresponding ARM64 module
+            # is actually visible in this emulated realm.
+            if self.native_agent is not None and self.native_agent.is_file():
+                native = self.emulated_session.create_script(
+                    self.native_agent.read_text(encoding="utf-8"))
+                native.on("message", self.on_message)
+                native.load()
+                self.emulated_scripts.append(native)
+                self.emulated_status = "emulated_arm64_readonly_observer_loaded"
+            else:
+                self.emulated_status = "emulated_arm64_visible_no_native_observer"
+            return self.emulated_status
+        except Exception as exc:
+            self.emulated_status = "emulated_attach_or_load_failed"
+            self.emulated_error_type = type(exc).__name__
+            return self.emulated_status
+
     def stop(self) -> dict:
+        for script in reversed(self.emulated_scripts):
+            try:
+                script.unload()
+            except Exception:
+                pass
+        if self.emulated_session is not None:
+            try:
+                self.emulated_session.detach()
+            except Exception:
+                pass
         for script in reversed(self.scripts):
             try:
                 script.unload()
@@ -186,6 +263,13 @@ class FridaInterfaceMonitor:
         report = {
             "status": self.setup_status,
             "error_type": self.setup_error_type,
+            "emulated_realm_status": self.emulated_status,
+            "emulated_realm_error_type": self.emulated_error_type,
+            "emulated_arch": (self.emulated_probe or {}).get("arch","unknown"),
+            "emulated_il2cpp_visible": (self.emulated_probe or {}).get(
+                "il2cpp_visible",False),
+            "emulated_basic_rva_in_bounds": (self.emulated_probe or {}).get(
+                "basic_rva_in_bounds",False),
             "frida_agent_loaded": counts["frida_agent_loaded"] > 0,
             "java_hook_ready": counts["java_url_hook_ready"] > 0,
             "dns_hook_ready": counts["dns_hook_ready"] > 0,
