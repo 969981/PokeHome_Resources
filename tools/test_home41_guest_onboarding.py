@@ -135,6 +135,73 @@ class GuestOnboardingTests(unittest.TestCase):
             self.assertFalse(result["account_created"])
             self.assertTrue((Path(d)/"onboarding_checkpoint.json").exists())
 
+    def test_hook_waits_for_two_verified_frames_and_runs_before_first_tap(self):
+        profile=load_guest_profile(PROFILE)
+        profile["probe_month_day_candidates"]=False
+        calls=[]
+        fake=FakeADB(BIRTHDAY,after_tap=YEAR_POPUP)
+        def hook():
+            calls.append(("hook",len(fake.taps)))
+            return "emulated_arm64_readonly_observer_loaded"
+        with tempfile.TemporaryDirectory() as d:
+            result=run_known_guest_setup(
+                fake,Path(d),profile,max_checks=5,interval_seconds=0,
+                on_first_verified_page=hook)
+            self.assertEqual(calls,[("hook",0)])
+            self.assertEqual(len(fake.taps),1)
+            self.assertTrue(result["year_picker_verified"])
+            self.assertTrue(result["early_arm64_hook_before_first_tap"])
+            self.assertEqual(result["early_arm64_hook_status"],
+                             "emulated_arm64_readonly_observer_loaded")
+            self.assertFalse(result["birthday_submitted"])
+
+    def test_white_screen_never_attaches_or_taps(self):
+        profile=load_guest_profile(PROFILE)
+        calls=[]
+        fake=FakeADB(screenshot([]))
+        with tempfile.TemporaryDirectory() as d:
+            result=run_known_guest_setup(
+                fake,Path(d),profile,max_checks=6,interval_seconds=0,
+                on_first_verified_page=lambda: calls.append("attached"))
+            self.assertEqual(result["status"],"no_known_next_screen")
+            self.assertEqual(calls,[])
+            self.assertEqual(fake.taps,[])
+            self.assertFalse(result["early_arm64_hook_attempted"])
+            self.assertFalse(result["account_created"])
+
+    def test_transport_error_safe_stops_before_tap(self):
+        profile=load_guest_profile(PROFILE)
+        fake=FakeADB(BIRTHDAY)
+        def hook():
+            raise ConnectionError("ignored-sensitive-transport-detail")
+        with tempfile.TemporaryDirectory() as d:
+            result=run_known_guest_setup(
+                fake,Path(d),profile,max_checks=5,interval_seconds=0,
+                on_first_verified_page=hook)
+            self.assertEqual(result["status"],
+                             "early_arm64_hook_unavailable_safe_stop")
+            self.assertEqual(result["early_arm64_hook_status"],
+                             "hook_callback_exception_ConnectionError")
+            self.assertEqual(fake.taps,[])
+            self.assertFalse(result["birthday_submitted"])
+            self.assertTrue((Path(d)/"onboarding_frida_hook_failure_verified_page.png").is_file())
+            self.assertNotIn("ignored-sensitive",json.dumps(result))
+
+    def test_failing_arm64_emulated_realm_status_does_not_tap(self):
+        profile=load_guest_profile(PROFILE)
+        fake=FakeADB(BIRTHDAY)
+        calls=[]
+        with tempfile.TemporaryDirectory() as d:
+            result=run_known_guest_setup(
+                fake,Path(d),profile,max_checks=8,interval_seconds=0,
+                on_first_verified_page=lambda:
+                    calls.append("attempt") or "emulated_attach_or_load_failed")
+            self.assertEqual(calls,["attempt"])
+            self.assertEqual(result["early_arm64_hook_status"],
+                             "emulated_attach_or_load_failed")
+            self.assertEqual(fake.taps,[])
+            self.assertFalse(result["account_created"])
+
     def test_no_birthdate_submission(self):
         profile = load_guest_profile(PROFILE)
         profile["inspect_date_controls"] = False
