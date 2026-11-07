@@ -84,6 +84,8 @@ class GuestOnboardingTests(unittest.TestCase):
         self.assertFalse(p["nintendo_account_link"])
         self.assertEqual(p["language"], "zh-Hans")
         self.assertEqual(p["country"], "中国大陆")
+        self.assertEqual(p["birthdate_candidate"], "1999-04-05")
+        self.assertFalse(p["submit_birthdate"])
         self.assertEqual(p["starter_species_id"], 4)
         self.assertFalse(p["create_account"])
 
