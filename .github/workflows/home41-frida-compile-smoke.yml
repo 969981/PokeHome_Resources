@@ -48,9 +48,9 @@ jobs:
           # Frida 17 bundle format intentionally starts with a package
           # manifest (📦 + byte length + source path) and ✄ separator.
           # Frida Session.create_script() consumes that envelope directly.
-          assert data.startswith("📦\\n".replace("\\\\n","\\n")), "missing Frida bundle magic"
+          assert data.startswith("📦" + chr(10)), "missing Frida bundle magic"
           assert "✄" in data, "missing Frida bundle payload separator"
-          body = data.split("✄",1)[1].lstrip("\\r\\n")
+          body = data.split("✄",1)[1].lstrip(chr(10) + chr(13))
           Path("/tmp/home41-frida-extracted-payload.js").write_text(body,encoding="utf-8")
           PY
           node --check /tmp/home41-frida-extracted-payload.js
