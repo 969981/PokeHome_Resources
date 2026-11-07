@@ -1,0 +1,103 @@
+name: HOME Android signature-to-Unity static reference audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-signature-path-static.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so
+            Android/Smali/4.1.0/lib/arm64-v8a/libsigner.so
+            Android/Smali/4.1.0/smali_classes3/jp/co/ilca/www/checksignature/CheckSignatureCore.smali
+            Android/Smali/4.1.0/smali/com/adjust/sdk/sig/NativeLibHelper.smali
+            Unpack/Android/4.1.0/il2cpp/dump.cs
+            Unpack/Android/4.1.0/il2cpp/stringliteral.json
+            .github/workflows/home41-signature-path-static.yml
+          persist-credentials: true
+      - name: Audit signing callback and recover managed/native references
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,re,subprocess
+          from pathlib import Path
+          java=Path('Android/Smali/4.1.0/smali_classes3/jp/co/ilca/www/checksignature/CheckSignatureCore.smali').read_text()
+          adjust=Path('Android/Smali/4.1.0/smali/com/adjust/sdk/sig/NativeLibHelper.smali').read_text()
+          dump=Path('Unpack/Android/4.1.0/il2cpp/dump.cs').read_text(errors='replace')
+          literals=Path('Unpack/Android/4.1.0/il2cpp/stringliteral.json').read_text(errors='replace')
+          terms=['CheckSignatureCore','CheckSignature','checksignature','toCharsString:',
+                 'GetSignature','SignatureHash','SignatureCheck','Signer','Certificate','9007']
+          def excerpt(text,term,limit=3):
+              escaped=re.escape(term)
+              res=[]
+              for m in list(re.finditer(escaped,text,re.I))[:limit]:
+                  res.append(text[max(0,m.start()-75):min(len(text),m.end()+130)].replace('\n',' ')[:270])
+              return res
+          so=Path('Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so')
+          signer=Path('Android/Smali/4.1.0/lib/arm64-v8a/libsigner.so')
+          native=subprocess.run(['strings','-a','-n','7',str(so)],capture_output=True,text=True,errors='replace').stdout
+          native_signer=subprocess.run(['readelf','-d',str(signer)],capture_output=True,text=True,errors='replace').stdout
+          report={
+              'java_plugin_signature_reading':{
+                  'class':'jp.co.ilca.www.checksignature.CheckSignatureCore',
+                  'get_signing_info':('SigningInfo;' in java),
+                  'get_package_manager':('getPackageManager' in java),
+                  'returns_to_unity':('UnitySendMessage' in java),
+                  'sends_cert_chars':('toCharsString:' in java),
+                  'sends_cert_hashcode':('hash:' in java),
+                  'has_fixed_expected_certificate':False,
+                  'caution':'Presence of a class does NOT establish it executes on launch.'
+              },
+              'adjust_sdk_signer':{
+                  'native_library_name':'libsigner.so',
+                  'java_loader':'com.adjust.sdk.sig.NativeLibHelper',
+                  'loaded_by_adjust_sdk':('const-string v0, "signer"' in adjust),
+                  'dynamic_needed_libraries':[line.strip()[:160] for line in native_signer.splitlines() if 'NEEDED' in line][:20],
+                  'caution':'Adjust SDK request signing is not automatically equivalent to Pokémon HOME server signature enforcement.'
+              },
+              'il2cpp_stringliteral_matches':{k:excerpt(literals,k,5) for k in terms},
+              'il2cpp_managed_type_matches':{k:excerpt(dump,k,4) for k in terms},
+              'il2cpp_native_ascii_matches':{k:excerpt(native,k,4) for k in terms},
+              'status':'static_metadata_only_not_runtime_proof'
+          }
+          out=Path('Android/Smali/4.1.0/STATIC_SIGNATURE_TRACE.json')
+          out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({k:report[k] for k in ('java_plugin_signature_reading','adjust_sdk_signer','status')},ensure_ascii=False,indent=2))
+          print('Match counts:',{k:(len(report['il2cpp_stringliteral_matches'][k]),len(report['il2cpp_managed_type_matches'][k]),len(report['il2cpp_native_ascii_matches'][k])) for k in terms})
+          PY
+      - name: Save actual static evidence to private branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/STATIC_SIGNATURE_TRACE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'analysis(android): read-only native IL2CPP and signing callback trace [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-static-certificate-callchain
+          path: Android/Smali/4.1.0/STATIC_SIGNATURE_TRACE.json
+          if-no-files-found: warn
+          retention-days: 7
