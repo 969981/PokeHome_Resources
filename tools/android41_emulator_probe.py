@@ -474,6 +474,12 @@ def main():
         report["error_summary"]=str(e)[:160]
     if frida_monitor is not None:
         try:
+            # Only after HOME UI loaded; the ARM64 Native Bridge may not be
+            # initialized at the initial Frida x64 spawn attach.
+            if report.get("frida_spawn_attach_succeeded"):
+                report["emulated_realm_probe_status"] = (
+                    frida_monitor.probe_emulated_realm(
+                        Path("tools/home41_frida_emulated_realm_probe.js")))
             report["frida_interface"]=frida_monitor.stop()
         except Exception as e:
             report["frida_interface"]={
