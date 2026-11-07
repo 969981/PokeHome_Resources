@@ -1,0 +1,126 @@
+{
+  "source": "actual Android 15 API35 emulator ARM64 translation smoke",
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42366271778",
+  "smali_clean_reassembly": true,
+  "android_action_outcome": "failure",
+  "test_result": {
+    "device": {
+      "android_api": "35",
+      "android_cpu_abi": "x86_64",
+      "android_supported_abis": "x86_64,arm64-v8a",
+      "android_native_bridge": "libndk_translation.so"
+    },
+    "reconstructed": {
+      "apk": "rebuilt",
+      "sha256": "3ef1dd4d263af26ba28830da5ce7e7432b273213c2e384a6a0c94662c74d81bb",
+      "install_ok": true,
+      "launch_event_sent": true,
+      "process_at_12s": true,
+      "process_at_35s": true,
+      "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+      "accounts_created": false,
+      "terms_accepted": false,
+      "screen_at_12s": {
+        "saved": true,
+        "nonblank": false,
+        "color_samples": 1,
+        "channel_stddev_rounded": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "screen_at_35s": {
+        "saved": true,
+        "nonblank": false,
+        "color_samples": 1,
+        "channel_stddev_rounded": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "crash_evidence": {
+        "available": true,
+        "counts": {
+          "fatal exception": 0,
+          "fatal signal": 0,
+          "unsatisfiedlinkerror": 0,
+          "dlopen failed": 3,
+          "am_crash": 0,
+          "anr in jp.pokemon.pokemonhome": 0
+        }
+      },
+      "displayed_foreground_package": false,
+      "result": "not_verified"
+    },
+    "reference": {
+      "apk": "original",
+      "sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
+      "install_ok": true,
+      "launch_event_sent": true,
+      "process_at_12s": true,
+      "process_at_35s": true,
+      "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+      "accounts_created": false,
+      "terms_accepted": false,
+      "screen_at_12s": {
+        "saved": true,
+        "nonblank": false,
+        "color_samples": 1,
+        "channel_stddev_rounded": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "screen_at_35s": {
+        "saved": true,
+        "nonblank": true,
+        "color_samples": 660,
+        "channel_stddev_rounded": [
+          63.5,
+          64.1,
+          70.0
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "crash_evidence": {
+        "available": true,
+        "counts": {
+          "fatal exception": 0,
+          "fatal signal": 0,
+          "unsatisfiedlinkerror": 0,
+          "dlopen failed": 1,
+          "am_crash": 0,
+          "anr in jp.pokemon.pokemonhome": 0
+        }
+      },
+      "displayed_foreground_package": false,
+      "result": "visible_process_survived"
+    },
+    "reference_result": "visible_process_survived",
+    "rebuilt_result": "not_verified",
+    "runtime_equivalent_verified": false,
+    "account_functionality_verified": false,
+    "il2cpp_decompilation_verified": false,
+    "status": "reconstructed_app_launch_regression_or_unverified"
+  },
+  "original_signature_restored": false,
+  "user_account_actions": false
+}
