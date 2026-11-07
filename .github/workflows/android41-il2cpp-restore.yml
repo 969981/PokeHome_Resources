@@ -1,0 +1,135 @@
+name: HOME Android 4.1.0 IL2CPP method recovery trial
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/android41-il2cpp-restore.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: private-home-android-il2cpp-dumper
+  cancel-in-progress: false
+
+jobs:
+  il2cpp-trial:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          sparse-checkout: |
+            .github/workflows
+            Unpack/Android
+          sparse-checkout-cone-mode: true
+          filter: blob:none
+          fetch-depth: 1
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch original APK and pinned IL2CppDumper implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --filter=blob:none \
+            https://github.com/969981/Home_Android.git _android_source
+          git clone --filter=blob:none --no-checkout \
+            https://github.com/ChanGu54/Il2CppDumper.git _il2cpp_tool
+          git -C _il2cpp_tool fetch --depth=1 origin cbd5daba1e0cc1b6dcabda46191d988b694c5222
+          git -C _il2cpp_tool checkout --detach FETCH_HEAD
+          python _android_source/tools/home.py audit --version 4.1.0
+          python _android_source/tools/home.py extract --version 4.1.0
+      - name: Build Linux .NET 8 dumper
+        shell: bash
+        run: |
+          set -euo pipefail
+          dotnet publish _il2cpp_tool/Il2CppDumper/Il2CppDumper.csproj \
+            -c Release -f net8.0 --self-contained false \
+            -p:UseAppHost=false -o "$RUNNER_TEMP/dumper"
+          test -f "$RUNNER_TEMP/dumper/Il2CppDumper.dll"
+          # Upstream config defaults to interactive ReadKey; disable it in CI.
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path(os.environ['RUNNER_TEMP'])/'dumper/config.json'
+          cfg=json.loads(p.read_text())
+          cfg['RequireAnyKey']=False
+          p.write_text(json.dumps(cfg,indent=2))
+          PY
+      - name: Analyze matching ARM64 ELF and metadata v31
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="$GITHUB_WORKSPACE/Unpack/Android/4.1.0/il2cpp"
+          mkdir -p "$target"
+          elf="_android_source/Unpack/4.1.0/apk/raw/lib/arm64-v8a/libil2cpp.so"
+          meta="_android_source/Unpack/4.1.0/apk/raw/assets/bin/Data/Managed/Metadata/global-metadata.dat"
+          set +e
+          timeout 240s dotnet "$RUNNER_TEMP/dumper/Il2CppDumper.dll" \
+            "$elf" "$meta" "$target" > "$RUNNER_TEMP/dumper.log" 2>&1
+          code=$?
+          set -e
+          cp "$RUNNER_TEMP/dumper.log" "$target/dumper.log"
+          DUMPER_EXIT="$code" python - <<'PY'
+          import json,os,hashlib
+          from pathlib import Path
+          target=Path("Unpack/Android/4.1.0/il2cpp")
+          out=[p for p in target.rglob('*') if p.is_file()]
+          script=target/'script.json'
+          methods=0
+          if script.exists():
+              try:
+                  j=json.loads(script.read_text(encoding="utf-8-sig"))
+                  methods=len(j.get('ScriptMethod',[])) if isinstance(j,dict) else 0
+              except Exception: pass
+          report={
+              "source":"Pokémon HOME Android APK version 4.1.0 / metadata v31",
+              "tool":"ChanGu54/Il2CppDumper",
+              "tool_commit":"cbd5daba1e0cc1b6dcabda46191d988b694c5222",
+              "exit_code":int(os.environ['DUMPER_EXIT']),
+              "generated_files":len(out),
+              "dummy_dll_count":len(list((target/'DummyDll').glob('*.dll'))),
+              "script_json_present":script.exists(),
+              "script_method_entries":methods,
+              "dump_cs_present":(target/'dump.cs').exists(),
+              "status":"method_address_map_generated" if methods else "not_verified",
+              "limitation":"Generated method labels and addresses are NOT restored method bodies or proven runtime execution."
+          }
+          (target/'restore_summary.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print(json.dumps(report,indent=2))
+          PY
+          if [ "$code" -ne 0 ]; then
+            echo "Dumper nonzero exit; metadata report preserved for troubleshooting"
+          fi
+      - name: Stage validated outputs only and commit to private branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest="Unpack/Android/4.1.0/il2cpp"
+          test -f "$dest/restore_summary.json"
+          if find "$dest" -type f -size +95M | grep -q .; then
+            echo "Some generated files exceed Git blob safe size; stop"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$dest"
+          if ! git diff --cached --quiet; then
+            git commit -m "analysis(android): IL2CPP v31 registration recovery attempt [skip ci]"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Upload trial diagnostic files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-il2cpp-private-trial
+          path: |
+            Unpack/Android/4.1.0/il2cpp/restore_summary.json
+            Unpack/Android/4.1.0/il2cpp/dumper.log
+          if-no-files-found: warn
+          retention-days: 7
