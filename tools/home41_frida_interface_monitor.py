@@ -118,6 +118,7 @@ class FridaInterfaceMonitor:
         self.emulated_error_type = None
         self.emulated_probe_seen = threading.Event()
         self.emulated_probe = None
+        self.arm64_hook_ready_seen = threading.Event()
 
     def on_message(self, message: object, _data=None) -> None:
         if not isinstance(message, dict):
@@ -144,6 +145,8 @@ class FridaInterfaceMonitor:
             if evt["event"] == "emulated_realm_probe":
                 self.emulated_probe = evt
                 self.emulated_probe_seen.set()
+            if evt["event"] == "read_only_observer_ready":
+                self.arm64_hook_ready_seen.set()
 
     def start(self, frida_module=None) -> bool:
         """Connect to ADB-forwarded disposable frida-server and spawn HOME."""
@@ -228,6 +231,13 @@ class FridaInterfaceMonitor:
                 native.on("message", self.on_message)
                 native.load()
                 self.emulated_scripts.append(native)
+                # The host must not begin the first HOME UI tap simply
+                # because the source script was loaded. Wait for the real
+                # Frida ARM64 hook readiness send() event. This was
+                # observed ~969ms later in Actions #42380528059.
+                if not self.arm64_hook_ready_seen.wait(timeout=8.0):
+                    self.emulated_status = "emulated_arm64_hook_readiness_unverified"
+                    return self.emulated_status
                 self.emulated_status = "emulated_arm64_readonly_observer_loaded"
             else:
                 self.emulated_status = "emulated_arm64_visible_no_native_observer"
