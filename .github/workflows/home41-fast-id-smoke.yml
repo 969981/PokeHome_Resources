@@ -1,0 +1,29 @@
+name: HOME Android 4.1.0 earliest ID read-only smoke tests
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-fast-id-smoke.yml'
+      - 'tools/home41_fast_id_probe.py'
+      - 'tools/test_home41_fast_id_probe.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout: |
+            .github/workflows
+            tools
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check
+        run: python -m py_compile tools/home41_fast_id_probe.py tools/test_home41_fast_id_probe.py
+      - name: Test sanitized no-UI ID watcher (offline fixtures only)
+        run: python -m unittest tools/test_home41_fast_id_probe.py -v
