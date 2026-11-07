@@ -5,6 +5,9 @@
  * No API replays, certificate bypass, return-value edits or account actions.
  */
 "use strict";
+// Frida 17 Python Session.create_script() does NOT bundle Java bridge.
+// Bundled by frida-compile in the workflow (see official Frida bridges docs).
+import Java from "frida-java-bridge";
 const boot = Date.now();
 const MAX_EVENTS = 200;
 let events = 0;
