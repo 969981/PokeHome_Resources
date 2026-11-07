@@ -44,7 +44,12 @@ def run(apk: Path, output: Path, bundle: Path) -> dict:
             return report
         # Frida spawn/resume should be enough to start the process.
         # No monkey, no taps, no birthday, no acceptance or signup.
-        time.sleep(40)
+        time.sleep(20)
+        # Native realm is x64 on this AVD. Explicitly attempt Frida 17's
+        # emulated realm only after Unity/Native Bridge had time to load.
+        report["emulated_realm_probe_status"] = monitor.probe_emulated_realm(
+            Path("tools/home41_frida_emulated_realm_probe.js"))
+        time.sleep(20)
         p=subprocess.run(["adb","shell","pidof",PACKAGE],
                          capture_output=True,timeout=10)
         report["home_process_alive_after_capture"]=(
