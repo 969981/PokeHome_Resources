@@ -112,3 +112,12 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 - 实际缓存对象 0，\`pokemon_cache_summary.json\` = \`no_cached_unity_assets\`；没有找到 ID 或建立新账号。
 - 由此新增 \`screenshot_immersive_hint_position\`，只在严格命中真实 Android 15 全屏提示图像特征时点击 OS 按钮；随后重试 UIAutomator 对权限拒绝按钮的处理。这是一种针对**已确认系统画面**的有限回退，不允许随意自动点击 HOME UI。
 - 必须用下一轮模拟器截图和 JSON 证明 OS 弹窗已经消失，不能以通过单元测试代替真实 UI 验收。
+
+
+## 8. 2026-11-07 第四轮：可复现实测像素与视觉误判修复
+
+- [Actions #42336616397](https://github.com/969981/PokeHome_Resources/actions/runs/42336616397) 成功执行，实际报告仍为 \`no_android_system_prompt_matched\`、0 缓存、未注册。
+- \`screen_15s.png\`：在 1080×2340 设备上，点位 \`(0.5w,0.055h)\`、\`(0.75w,0.24h)\` 是 Android 提示白色背景；\`(0.85w,0.28h)\` 是蓝色 \`Got it\` 按钮；\`(0.5w,0.39h)\` 是下方灰色区域。
+- \`screen_after_system_prompts.png\`：顶部与蓝色按钮未变，但相机系统权限弹窗出现使 \`(0.5w,0.9h)\` 从 \`(127,127,127)\` 变为 \`(51,51,51)\`。旧规则对该下半屏点位的要求属于**过度检测**，是误判根因。
+- 修复：仅由稳定的顶部 OS 白色面板 + 蓝色按钮 + 紧邻背景区域四个点位判断，并在运行 \`uiautomator\` 前先试此已知提示的视觉检测。**没有使用 OCR，不会识别或点击 HOME 业务页面**。
+- 当前修复仍需下一次 Actions 真实截图与 \`system_prompt_actions\` 报告确认，不能仅凭像素样例单元测试声称游戏已过登录。

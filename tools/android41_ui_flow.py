@@ -75,8 +75,7 @@ def screenshot_immersive_hint_position(png_bytes:bytes):
     blue=lambda c: 48<=c[0]<=100 and 67<=c[1]<=125 and 115<=c[2]<=181 and c[2]>c[1]>c[0]
     gray=lambda c: 94<=min(c) and max(c)<=146 and max(c)-min(c)<=22
     if (light(pixel(.50,.055)) and light(pixel(.75,.24))
-            and blue(pixel(.85,.28)) and gray(pixel(.50,.39))
-            and gray(pixel(.50,.90))):
+            and blue(pixel(.85,.28)) and gray(pixel(.50,.39))):
         # center of empirically observed OS button (x~918, y~655)
         return (int(w*.85),int(h*.28))
     return None
@@ -84,32 +83,31 @@ def screenshot_immersive_hint_position(png_bytes:bytes):
 def dismiss_android_system_prompts(adb, max_rounds:int=4):
     result=[]
     for _ in range(max_rounds):
-        check=adb("shell","uiautomator","dump","/sdcard/window.xml",secs=30)
-        if check is None or check.returncode!=0:
-            result.append({"event":"uiautomator_unavailable"})
-            break
-        xml=adb("shell","cat","/sdcard/window.xml",secs=12)
-        if xml is None or xml.returncode!=0:
-            result.append({"event":"hierarchy_unavailable"})
-            break
-        choice=parse_system_action(xml.stdout)
-        if choice is None:
-            # Some Android immersive overlays aren't in uiautomator's tree.
-            # An image fallback is allowed only if the complete known
-            # Android-system visual signature matches the current screenshot.
-            image=adb("exec-out","screencap","-p",secs=30,binary=True)
-            pos=screenshot_immersive_hint_position(
-                image.stdout if image and image.returncode==0 else b"")
-            if pos is None:
+        # The known Android immersive tip may not be exposed by uiautomator.
+        # Check a strict visual signature first, before additional OS prompts
+        # alter the dimmed background. No blind taps are ever permitted.
+        screen=adb("exec-out","screencap","-p",secs=30,binary=True)
+        pos=screenshot_immersive_hint_position(
+            screen.stdout if screen and screen.returncode==0 else b"")
+        if pos is not None:
+            choice=("dismiss_android_immersive_hint_visual_signature",pos)
+        else:
+            dump=adb("shell","uiautomator","dump","/sdcard/window.xml",secs=30)
+            if dump is None or dump.returncode!=0:
+                result.append({"event":"uiautomator_unavailable"})
+                break
+            xml=adb("shell","cat","/sdcard/window.xml",secs=12)
+            if xml is None or xml.returncode!=0:
+                result.append({"event":"hierarchy_unavailable"})
+                break
+            choice=parse_system_action(xml.stdout)
+            if choice is None:
                 result.append({"event":"no_android_system_prompt_matched"})
                 break
-            choice=("dismiss_android_immersive_hint_visual_signature",pos)
         event,(x,y)=choice
-        # An ADB tap is performed ONLY after explicit permitted OS package +
-        # literal button label is read from Android's UI hierarchy.
-        tapped=adb("shell","input","tap",str(x),str(y),secs=12)
-        result.append({"event":event,"success":bool(tapped and tapped.returncode==0)})
-        if not tapped or tapped.returncode!=0:
+        clicked=adb("shell","input","tap",str(x),str(y),secs=12)
+        result.append({"event":event,"success":bool(clicked and clicked.returncode==0)})
+        if not clicked or clicked.returncode!=0:
             break
         time.sleep(2)
     return result

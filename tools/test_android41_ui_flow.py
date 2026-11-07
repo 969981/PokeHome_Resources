@@ -36,6 +36,16 @@ class HomeSystemOverlayTest(unittest.TestCase):
         io=BytesIO()
         im.save(io,format="PNG")
         self.assertIsNone(screenshot_immersive_hint_position(io.getvalue()))
+        # Real emulator screenshots may have a darkened permission dialog
+        # under the full-screen sheet; lower screen is not necessarily gray.
+        dim=Image.new("RGB",(1080,2340),(51,51,51))
+        d=ImageDraw.Draw(dim)
+        d.rectangle((0,0,1079,790),fill=(238,237,244))
+        d.rectangle((825,585,1000,715),fill=(71,93,146))
+        d.rectangle((0,850,1079,1100),fill=(120,120,123))
+        buffer=BytesIO()
+        dim.save(buffer,format="PNG")
+        self.assertEqual(screenshot_immersive_hint_position(buffer.getvalue()),(918,655))
 
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
