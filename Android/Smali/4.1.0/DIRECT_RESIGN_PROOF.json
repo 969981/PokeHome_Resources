@@ -1,0 +1,12 @@
+{
+  "status": "emulator_incomplete",
+  "job": "https://github.com/969981/PokeHome_Resources/actions/runs/42373658860",
+  "device_outcome": "skipped",
+  "apk_content_audit": null,
+  "original_certificate_info": "Verified using v1 scheme (JAR signing): true\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): true",
+  "test_certificate_info": "Verified using v1 scheme (JAR signing): true\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): true",
+  "app_runtime": {
+    "status": "emulator_incomplete"
+  },
+  "caution": "A signing-only correlation does not independently prove whether the client or backend rejects the signature. No login, account creation or request manipulation was performed."
+}
