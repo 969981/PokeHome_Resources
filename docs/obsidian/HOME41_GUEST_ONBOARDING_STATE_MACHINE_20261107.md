@@ -229,3 +229,22 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 - 官方说明：https://app-ph.pokemon-support.com/hc/en-us/articles/58149598512281--Pok%C3%A9mon-HOME-Smartphone-version-The-error-code-800-detail-code-100101-appears-and-I-can-t-log-in-to-Pok%C3%A9mon-HOME 。其建议是稍后重试或更换网络，而没有证明是某个客户端 Hook / 页面选择故障。
 - 新一次独立模拟器试验 [Actions #42366372912](https://github.com/969981/PokeHome_Resources/actions/runs/42366372912) 在启动参数中增加 -dns-server 8.8.8.8,8.8.4.4，作为网络变量隔离尝试，非已验证修复。必须查看新的实机截图和 JSON 才能确认它是否奏效。
 - 全程不绑定 Nintendo Account、不提交生日、不接受协议、不注册、不删除账号，首次 basic.utid 仍未观察到。
+
+
+### DNS 复测：2018 年已选择，但重新展开始终从 2026 开始
+
+- [GitHub Actions #42366372912](https://github.com/969981/PokeHome_Resources/actions/runs/42366372912) 实际成功完成六步游客初始化、打开年份下拉框、触发 2018 年候选选择，并保存选择前/后及重新展开截图。
+- year_anchor_selected_field_closeup_source.png **真实显示年字段为 2018**，月和日仍未选择；菜单重新打开后的 year_anchor_reopened_09.png **仍显示 2026、2025、……2018**，并没有围绕 2018 继续向 2010 或 2000 定位。说明“每次选择列表末项再重新打开”不是有效的滚动分页法。
+- 原运行结构化结果：year_anchor_diagnostics.initial_2018_row_geometry_verified=true、known_2018_row_tap_sent=true、birth_form_after_candidate_tap_verified=true、reopen_year_picker_tap_sent=true，但 year_popup_after_reopen_verified=false。**这个 false 是识别器误判，并非菜单没打开。**
+- 经过完整 PNG 像素复查：年份弹窗的 x=0.20,y=0.29 在未选择状态背景 RGB=(238,240,235)，选择 2018 后重新展开变成 RGB=(208,210,206)，原因是已选条目的深灰高亮。其余多个弹窗像素锚点均匹配。已修改 tools/home41_guest_onboarding.py 的 birth_year_popup_visible，使它同时接受两种真实背景样式；模拟器这一组截图足以证明重开动作成功。
+- **未提交出生日期**（birthday_submitted=false），没有调用注册或删除，首次 basic.utid 未观察到，未获得六位 HOME ID。
+
+### 新尝试：只在列表右侧空白边缘执行一次拖动
+
+因为文字列上的 touchscreen swipe 曾误选 2019 年、mouse scroll 和 KEYCODE_PAGE_DOWN 均未令年份移动，而锚点重新展开也没有效果，下一步将变量从手势方向改为**起点区域**：在年份列表右侧灰色空白边缘进行单次滑动。
+
+- tools/home41_year_edge_drag_probe.py 新增严格的灰色右边缘四点签名：x=0.375、y=0.35/0.38/0.50/0.60；只有确认已打开的原始年份菜单才发送一次 `adb shell input swipe`，从 (x=0.375,y=0.60) 到 (x=0.375,y=0.36)，历时 650ms。
+- 必须捕获操作前与操作后真实截图；如果列表仍开着，人工核验数字有没有移动；如果列表关闭，说明可能又选中了本地年份，此时停止，不进行第二次尝试。**不会自动点击下一步或提交日期。**
+- 固定配置切换为 probe_year_anchor=false、probe_year_edge_drag=true、explore_year_scrolls=0、inspect_date_controls=false；仍保留 birthdate_candidate=2000-01-01，nintendo_account_link=false、submit_birthdate=false、accept_terms=false、create_account=false、delete_account=false。
+- [独立测试 #42367266216](https://github.com/969981/PokeHome_Resources/actions/runs/42367266216)：**36 项通过**，包含新边缘拖动与已选年份深灰高亮识别用例。
+- 实机任务 [#42367266437](https://github.com/969981/PokeHome_Resources/actions/runs/42367266437) 已触发；本段文档不能把触发或离线测试当作真正完成滚动。应从该任务 Artifact 里的 year_edge_before.png、year_edge_after_*.png 独立确认结果。
