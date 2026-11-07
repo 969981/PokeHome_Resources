@@ -168,6 +168,63 @@ class MonitorTests(unittest.TestCase):
             self.assertIn("pokemon_dns_query",persisted)
             self.assertTrue((out/"frida_interface_summary.json").exists())
 
+    def test_emulated_arm64_realm_metadata_without_values(self):
+        class EmulatedScript(FakeScript):
+            def load(self):
+                self.loaded=True
+                self.cb({"type":"send","payload":{
+                    "event":"emulated_realm_probe","arch":"arm64",
+                    "il2cpp_visible":True,"basic_rva_in_bounds":True,
+                    "rva":"0x1D763D0","token":"PRIVATE_TOKEN"}})
+        class EmulatedSession(FakeSession):
+            def create_script(self, data):
+                s=EmulatedScript()
+                self.scripts.append(s)
+                return s
+        class DeviceWithEmulation(FakeDevice):
+            def attach(self,pid, realm="native"):
+                if realm=="emulated":
+                    return EmulatedSession()
+                return super().attach(pid)
+        fake=FakeFrida()
+        fake.manager.device=DeviceWithEmulation()
+        with tempfile.TemporaryDirectory() as d:
+            out=Path(d)
+            bundle=out/"native.js"
+            bundle.write_text("/* safe native bundle */"*8)
+            emulated=out/"realm.js"
+            emulated.write_text('send({event:"emulated_realm_probe"});')
+            monitor=FridaInterfaceMonitor(out,bundle)
+            self.assertTrue(monitor.start(fake))
+            status=monitor.probe_emulated_realm(emulated)
+            self.assertEqual(status,"emulated_arm64_visible_no_native_observer")
+            result=monitor.stop()
+            self.assertTrue(result["emulated_il2cpp_visible"])
+            self.assertTrue(result["emulated_basic_rva_in_bounds"])
+            self.assertEqual(result["emulated_arch"],"arm64")
+            serialized=(out/"frida_interface_events.jsonl").read_text()
+            self.assertNotIn("PRIVATE_TOKEN",serialized)
+            self.assertNotIn("0x1D763D0",serialized)
+            self.assertFalse(result["first_basic_utid_event_seen"])
+
+    def test_missing_emulated_realm_is_explicit_not_fake_success(self):
+        fake=FakeFrida()
+        with tempfile.TemporaryDirectory() as d:
+            out=Path(d)
+            bundle=out/"native.js"
+            bundle.write_text("/* safe native bundle */"*8)
+            probe=out/"probe.js"
+            probe.write_text("send({event:'emulated_realm_probe'});")
+            monitor=FridaInterfaceMonitor(out,bundle)
+            self.assertTrue(monitor.start(fake))
+            self.assertEqual(
+                monitor.probe_emulated_realm(probe),
+                "emulated_attach_or_load_failed")
+            report=monitor.stop()
+            self.assertEqual(report["emulated_realm_error_type"],"TypeError")
+            self.assertFalse(report["emulated_il2cpp_visible"])
+            self.assertFalse(report["first_basic_utid_event_seen"])
+
     def test_missing_bundle_is_safe_failure(self):
         with tempfile.TemporaryDirectory() as d:
             fake=FakeFrida()
