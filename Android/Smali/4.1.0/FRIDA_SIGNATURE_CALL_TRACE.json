@@ -1,0 +1,185 @@
+{
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42375246500",
+  "status": "completed",
+  "frida_setup": {
+    "status": "ready",
+    "frida_version": "17.26.1",
+    "server_cpu": "x86_64",
+    "checksum_verified": true,
+    "adb_root_confirmed": true,
+    "frida_server_started": true,
+    "adb_forward_started": true
+  },
+  "device_job_status": "success",
+  "results": {
+    "status": "completed",
+    "original": {
+      "variant": "official_unmodified",
+      "sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
+      "installation": "ok",
+      "frida_spawn_attached": true,
+      "home_language_verified": false,
+      "signing_credentials_logged": false,
+      "certificates_modified_by_monitor": false,
+      "official_server_requests_modified": false,
+      "app_accounts_touched": false,
+      "permission_preflight": {
+        "location": {
+          "android.permission.ACCESS_FINE_LOCATION": {
+            "commands_ok": true,
+            "verified": true
+          },
+          "android.permission.ACCESS_COARSE_LOCATION": {
+            "commands_ok": true,
+            "verified": true
+          }
+        },
+        "notifications": {
+          "commands_ok": true
+        },
+        "location_denied_fixed": true
+      },
+      "process_at_35s": true,
+      "screen_at_35s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 194,
+        "channel_stddev_rounded": [
+          20.8,
+          19.4,
+          19.4
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_60s": true,
+      "screen_at_60s": {
+        "saved": true,
+        "nonblank": false,
+        "home_language_verified": false,
+        "color_samples": 177,
+        "channel_stddev_rounded": [
+          5.3,
+          3.9,
+          4.4
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "crash_signals": {
+        "fatal exception": 0,
+        "fatal signal": 0,
+        "unsatisfiedlinkerror": 0,
+        "dlopen failed": 0,
+        "am_crash": 0,
+        "anr in jp.pokemon.pokemonhome": 0
+      },
+      "hook_event_counts": {
+        "agent_loaded": 1,
+        "checksignature_core_called": 1,
+        "checksignature_hook_ready": 1,
+        "java_ready": 1,
+        "package_name_sent_to_unity": 1,
+        "signature_chars_sent_to_unity": 1,
+        "signature_hash_sent_to_unity": 1,
+        "unity_message_hook_ready": 1
+      },
+      "frida_script_errors": 0,
+      "signing_callback_invoked": true,
+      "signing_result_sent_to_unity": true,
+      "observer_ready": true
+    },
+    "resigned": {
+      "variant": "directly_resigned",
+      "sha256": "cb286aeb7705768e1d983b83ed0673683a0f6cfc383776e8eda71220d26ee45f",
+      "installation": "ok",
+      "frida_spawn_attached": true,
+      "home_language_verified": false,
+      "signing_credentials_logged": false,
+      "certificates_modified_by_monitor": false,
+      "official_server_requests_modified": false,
+      "app_accounts_touched": false,
+      "permission_preflight": {
+        "location": {
+          "android.permission.ACCESS_FINE_LOCATION": {
+            "commands_ok": true,
+            "verified": true
+          },
+          "android.permission.ACCESS_COARSE_LOCATION": {
+            "commands_ok": true,
+            "verified": true
+          }
+        },
+        "notifications": {
+          "commands_ok": true
+        },
+        "location_denied_fixed": true
+      },
+      "process_at_35s": true,
+      "screen_at_35s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 81,
+        "channel_stddev_rounded": [
+          7.4,
+          7.4,
+          7.3
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_60s": true,
+      "screen_at_60s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 212,
+        "channel_stddev_rounded": [
+          46.2,
+          44.4,
+          46.9
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "crash_signals": {
+        "fatal exception": 0,
+        "fatal signal": 0,
+        "unsatisfiedlinkerror": 0,
+        "dlopen failed": 0,
+        "am_crash": 0,
+        "anr in jp.pokemon.pokemonhome": 0
+      },
+      "hook_event_counts": {
+        "agent_loaded": 1,
+        "checksignature_core_called": 1,
+        "checksignature_hook_ready": 1,
+        "java_ready": 1,
+        "package_name_sent_to_unity": 1,
+        "signature_chars_sent_to_unity": 1,
+        "signature_hash_sent_to_unity": 1,
+        "unity_message_hook_ready": 1
+      },
+      "frida_script_errors": 0,
+      "signing_callback_invoked": true,
+      "signing_result_sent_to_unity": true,
+      "observer_ready": true
+    },
+    "failure_correlation": "not_reproduced_or_original_not_verified",
+    "signature_check_execution_proved": true,
+    "note": "The installed signature-reading Java class is not necessarily executed at startup. A 0 event count is not proof of no native or server-side certificate validation."
+  },
+  "requires_official_signing_cert_for_real_online_equivalence": "not independently proven by callback events",
+  "does_not_modify_official_apk": true,
+  "does_not_bypass_integrity_or_login": true
+}
