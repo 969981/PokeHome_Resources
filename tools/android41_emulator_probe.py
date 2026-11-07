@@ -232,6 +232,21 @@ def main():
             else:
                 report["simplified_chinese_selected"]=False
             report["screenshot_after_language_step"]=snap(args.output,"screen_after_language_step.png")
+            from android41_ui_flow import screenshot_language_confirmation_yes
+            preview=args.output/"screen_after_language_step.png"
+            confirmation=screenshot_language_confirmation_yes(
+                preview.read_bytes() if preview.is_file() and report["simplified_chinese_selected"] else b"")
+            report["language_confirmation_dialog_recognized"]=bool(confirmation)
+            if confirmation is not None:
+                accepted=adb("shell","input","tap",
+                             str(confirmation[0]),str(confirmation[1]),secs=15)
+                report["simplified_chinese_confirmed"]=bool(
+                    accepted and accepted.returncode==0)
+                time.sleep(8)
+            else:
+                report["simplified_chinese_confirmed"]=False
+            report["screenshot_after_language_confirmation"]=snap(
+                args.output,"screen_after_language_confirmation.png")
             if successful:
                 time.sleep(max(0,args.idle_seconds-33-report["home_language_poll_wait_seconds"]))
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")

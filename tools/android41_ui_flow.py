@@ -112,6 +112,37 @@ def screenshot_simplified_chinese_option(png_bytes:bytes):
     return None
 
 
+
+def screenshot_language_confirmation_yes(png_bytes:bytes):
+    """Identify only the observed Simplified Chinese language confirmation.
+
+    Does NOT match HOME Terms of Use, account creation or any legal consent.
+    The signature combines dimmed language-page header, white centered modal
+    and orange YES control in its known position.
+    """
+    if not png_bytes or not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return None
+    try:
+        from io import BytesIO
+        from PIL import Image
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (OSError,ImportError,ValueError):
+        return None
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return None
+    def get(x,y):return im.getpixel((int(w*x),int(h*y)))
+    def near(a,b,t=16):return all(abs(x-y)<=t for x,y in zip(a,b))
+    if (near(get(.5,.03),(124,149,100))
+            and near(get(.5,.14),(23,107,91))
+            and near(get(.5,.35),(247,251,247))
+            and near(get(.12,.53),(247,251,247))
+            and near(get(.68,.64),(255,173,4))
+            and near(get(.5,.8),(144,148,142))):
+        return int(w*.68),int(h*.64)
+    return None
+
 def wait_for_known_language_page(adb,max_checks:int=9,interval_seconds:float=10.0):
     """Only recognize the evidenced HOME language screen, bounded wait."""
     if max_checks<1 or max_checks>20:

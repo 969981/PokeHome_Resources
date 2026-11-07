@@ -243,3 +243,14 @@ python tools/home41_auth_timeline.py --input /path/to/redacted-frida-events.json
 - 纠正：在严格匹配曾实测的首次语言选择页像素签名时，才进行 \`简体中文\` 选项点击；用 \`wait_for_known_language_page\` 每 10 秒只读截图检查，最多 9 次，最多约 80 秒；不在未知 UI 乱点。
 - 本次延长 \`--idle-seconds\` 到 120，并记录 \`home_language_check_count\`、\`home_language_poll_wait_seconds\`，实际截图仍必须验证选择是否生效。
 - 服务条款、出生日期、地区以及合法自有账号的授权注册仍然未执行，不可据此宣称已捕获服务器 \`utid\`。
+
+
+## 17. 2026-11-07 第十二轮：已自动选择简体中文，真实进入语言确认弹窗
+
+- [Actions #42340681700](https://github.com/969981/PokeHome_Resources/actions/runs/42340681700) 完整运行成功。
+- \`camera_permission_preflight.status=verified_granted\`、\`location_permission_preflight.status=verified_denied_fixed\`、\`notifications_permission_preflight.status=verified_denied_fixed\`。无任何后续 Android 系统权限弹窗；HOME 进程保持存活。
+- \`home_language_screen_recognized=true\`、\`home_language_check_count=4\`、\`home_language_poll_wait_seconds=30\`、\`simplified_chinese_selected=true\`，与截图实际吻合。
+- \`screen_after_language_step.png\` 显示游戏原生对话框：**确认所选语言：简体中文，按钮“否 / 是”**。因此第一次真实验证了“按 HOME 语言页选项 → 游戏正确识别为简体中文”这一完整的 UI 前半段。
+- 新增只针对已观测弹窗像素颜色、白色模态面板、橙色“是”按钮以及暗化语言页背景的严格签名 \`screenshot_language_confirmation_yes\`；点击确认仅会选择显示语言，不接受法律条款，也不创建账号。
+- 之后截取下一页；如果是国家/地区、真实出生日期或协议界面，不填造个人资料，不自动确认协议。
+- 尚无真实测试用户登录/注册和 \`basic.utid\` 观察；因为新用户正常注册之前仍须合法完成地区、生日与条款步骤，不能以模拟值代替真实授权。

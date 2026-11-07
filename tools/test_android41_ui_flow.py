@@ -86,6 +86,25 @@ class HomeSystemOverlayTest(unittest.TestCase):
         self.assertEqual(tries,1)
         self.assertEqual(counts,[("exec-out","screencap","-p")])
 
+
+    def test_language_confirmation_requires_full_specific_pattern(self):
+        from io import BytesIO
+        from PIL import Image,ImageDraw
+        from android41_ui_flow import screenshot_language_confirmation_yes
+        im=Image.new("RGB",(1080,2340),(100,150,135))
+        painter=ImageDraw.Draw(im)
+        painter.rectangle((0,0,1079,200),fill=(124,149,100))
+        painter.rectangle((0,200,1079,400),fill=(23,107,91))
+        painter.rectangle((40,740,1000,1510),fill=(247,251,247))
+        painter.rectangle((600,1440,850,1550),fill=(255,173,4))
+        painter.rectangle((300,1700,800,1950),fill=(144,148,142))
+        buf=BytesIO();im.save(buf,format="PNG")
+        # Ensure actual center of orange button is within mock orange region.
+        self.assertEqual(screenshot_language_confirmation_yes(buf.getvalue()),(734,1497))
+        im=Image.new("RGB",(1080,2340),(247,251,247))
+        buf=BytesIO();im.save(buf,format="PNG")
+        self.assertIsNone(screenshot_language_confirmation_yes(buf.getvalue()))
+
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
         self.assertIsNone(parse_system_action(None))
