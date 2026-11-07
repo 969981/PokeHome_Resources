@@ -71,6 +71,12 @@ def load_guest_profile(filename: Path) -> dict:
         raise ValueError("probe_year_anchor must be boolean")
     if obj.get("probe_year_anchor", False) and not obj["inspect_birth_year_picker"]:
         raise ValueError("year anchor probe requires picker inspection")
+    if type(obj.get("probe_year_edge_drag", False)) is not bool:
+        raise ValueError("probe_year_edge_drag must be boolean")
+    if obj.get("probe_year_edge_drag", False) and not obj["inspect_birth_year_picker"]:
+        raise ValueError("year edge drag requires picker inspection")
+    if obj.get("probe_year_edge_drag", False) and obj.get("probe_year_anchor", False):
+        raise ValueError("run only one reversible year probe per emulator session")
     birthday = obj.get("birthdate_candidate")
     try:
         if not isinstance(birthday, str):
@@ -142,15 +148,19 @@ def birth_year_popup_visible(img: bytes) -> bool:
     The popup's light gray 2026..2018 list obscures the green age screen
     to the left of the month/day dropdowns. Does NOT infer a selected year.
     """
-    return _signature(img, (
+    # Reopening after selecting 2018 shades the selected item darker.
+    # Real run #42366372912: x=.20,y=.29 changes from (238,240,235)
+    # to (208,210,206). Both are legitimate open dropdown states.
+    common = (
         (.50, .15, (38, 179, 151), 16),
-        (.20, .29, (238, 240, 235), 16),
         (.20, .35, (237, 240, 235), 16),
         (.20, .45, (237, 240, 235), 16),
         (.20, .55, (237, 240, 235), 16),
         (.50, .40, (178, 239, 174), 22),
         (.50, .95, (255, 173, 4), 16),
-    ))
+    )
+    return (_signature(img, common + ((.20, .29, (238, 240, 235), 16),))
+            or _signature(img, common + ((.20, .29, (208, 210, 206), 16),)))
 
 
 def error_modal_like(img: bytes) -> bool:
@@ -235,6 +245,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "year_labels_changed_verified": False,
         "date_picker_diagnostics": None,
         "year_anchor_diagnostics": None,
+        "year_edge_drag_diagnostics": None,
         "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
@@ -336,6 +347,16 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "birth_year_picker_verified_open"
                             result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
                             break
+                    if (result["year_picker_verified"]
+                            and profile.get("probe_year_edge_drag", False)):
+                        from home41_year_edge_drag_probe import probe_year_edge_drag
+                        diag = probe_year_edge_drag(
+                            adb, output, interval_seconds=interval_seconds)
+                        result["year_edge_drag_diagnostics"] = diag
+                        result["screenshots"].extend(diag["screenshots"])
+                        result["status"] = "year_edge_drag_" + diag["status"]
+                        result["stop_reason"] = "edge_drag_probe_no_dob_submission"
+                        break
                     # Focused reversible research mode: one 2018-row click,
                     # verify year field, then reopen. Do NOT keep scrolling or
                     # inspect other controls in the same run; this preserves
