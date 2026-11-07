@@ -121,6 +121,8 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_no_birthdate_submission(self):
         profile = load_guest_profile(PROFILE)
+        # This test checks opening only; the real profile may explore swipes.
+        profile["explore_year_scrolls"] = 0
         with tempfile.TemporaryDirectory() as d:
             fake = FakeADB(BIRTHDAY, after_tap=YEAR_POPUP)
             result = run_known_guest_setup(fake, Path(d), profile,
