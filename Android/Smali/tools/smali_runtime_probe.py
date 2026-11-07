@@ -179,6 +179,14 @@ def case(apk: Path, name: str, root: Path):
         time.sleep(23)
         summary["process_at_35s"] = process_present()
         summary["screen_at_35s"] = screenshot(out, "screen_35s.png")
+        if not summary["screen_at_35s"].get("home_language_verified"):
+            # Cold IL2CPP initialization may need additional time.
+            time.sleep(25)
+            summary["process_at_60s"] = process_present()
+            summary["screen_at_60s"] = screenshot(out, "screen_60s.png")
+        summary["home_ui_verified"] = bool(
+            summary.get("screen_at_35s", {}).get("home_language_verified")
+            or summary.get("screen_at_60s", {}).get("home_language_verified"))
         summary["crash_evidence"] = crash_summary()
         summary["displayed_foreground_package"] = PACKAGE in value(
             "shell", "dumpsys", "activity", "top"
@@ -187,7 +195,7 @@ def case(apk: Path, name: str, root: Path):
         "home_language_screen_verified" if summary["install_ok"]
         and summary["launch_event_sent"] and summary["process_at_35s"]
         and summary.get("os_permissions_preflight", {}).get("location_denied_fixed")
-        and summary.get("screen_at_35s", {}).get("home_language_verified") is True
+        and summary.get("home_ui_verified") is True
         else "not_verified"
     )
     (out / "result.json").write_text(
@@ -196,7 +204,7 @@ def case(apk: Path, name: str, root: Path):
     print(json.dumps({"case": name, "result": summary["result"],
                       "install": summary["install_ok"],
                       "process_at_35s": summary["process_at_35s"],
-                      "screen_nonblank": summary.get("screen_at_35s", {}).get("nonblank")}))
+                      "home_language_verified": summary.get("home_ui_verified")}))
     return summary
 
 
