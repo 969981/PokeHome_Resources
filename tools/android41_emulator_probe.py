@@ -275,7 +275,7 @@ def main():
             country_png=args.output/"screen_after_region_dropdown.png"
             country_point=screenshot_apac_mainland_option(
                 country_png.read_bytes() if country_png.is_file()
-                and report["region_apac_dropdown_tap_succeeded"] else b"")
+                and report.get("region_apac_dropdown_tap_succeeded",False) else b"")
             report["mainland_option_visual_gate"]=bool(country_point)
             report["country_selection_tap_attempted"]=False
             report["country_selection_tap_succeeded"]=False
