@@ -364,6 +364,21 @@ class FridaInterfaceMonitor:
                 (entry["selected_index"] for entry in self.events
                  if entry["event"] == "year_1999_option_index_verified"),
                 None),
+            "known_2018_ui_calibration_index": next(
+                (entry["selected_index"] for entry in self.events
+                 if entry["event"] == "birthdate_year_change_index"),
+                None),
+            "known_2018_index_expected_8_observed": (
+                any(entry["event"] == "birthdate_year_change_index"
+                    and entry.get("selected_index") == 8
+                    for entry in self.events)
+                and any(entry["event"] == "year_1999_option_index_verified"
+                    and entry.get("selected_index") == 27
+                    and entry.get("first_year") == 2026
+                    and entry.get("descending_sequential") is True
+                    for entry in self.events)
+            ),
+            "year_mapping_requires_ui_screenshot_review": True,
             "arm64_preflight_exception_seen": counts["preflight_exception"] > 0,
             "first_basic_utid_event_seen": counts["first_basic_utid"] > 0,
             "first_basic_utid_numeric_value_saved": False,
