@@ -434,12 +434,23 @@ def main():
                 time.sleep(9)
             report["screenshot_after_country_confirmation"]=snap(
                 args.output,"screen_after_country_confirmation.png")
-            # Birth date is immutable after submission. Explore the YEAR
-            # picker only; do not select an arbitrary DOB or press NEXT.
-            birthday_png=args.output/"screen_after_country_confirmation.png"
-            birth_year_pos=birthday_year_dropdown_from_screenshot(
-                birthday_png.read_bytes() if birthday_png.is_file() and
-                report.get("country_confirmation_tap_succeeded",False) else b"")
+
+            # Birthday screen fades in asynchronously after confirming region.
+            # Poll stable UI pixel signatures before touching the year picker;
+            # unknown screen -> no click. DOB and NEXT are never submitted.
+            birth_year_pos=None
+            report["birthday_page_poll_attempts"]=0
+            if report.get("country_confirmation_tap_succeeded",False):
+                for trial in range(15):
+                    snap(args.output,"screen_birthdate_stable.png")
+                    stable_png=args.output/"screen_birthdate_stable.png"
+                    birth_year_pos=birthday_year_dropdown_from_screenshot(
+                        stable_png.read_bytes() if stable_png.is_file() else b"")
+                    report["birthday_page_poll_attempts"]=trial+1
+                    if birth_year_pos is not None:
+                        break
+                    if trial<14:
+                        time.sleep(3)
             report["birthday_page_recognized"]=bool(birth_year_pos)
             report["birth_year_dropdown_open_attempted"]=False
             report["birth_year_dropdown_tap_succeeded"]=False
