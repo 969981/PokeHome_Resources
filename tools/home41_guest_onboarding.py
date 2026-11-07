@@ -59,6 +59,10 @@ def load_guest_profile(filename: Path) -> dict:
             raise ValueError(f"Unsupported or unsafe profile option: {key}")
     if type(obj.get("inspect_birth_year_picker")) is not bool:
         raise ValueError("inspect_birth_year_picker must be boolean")
+    if type(obj.get("explore_year_scrolls", 0)) is not int or not 0 <= obj.get("explore_year_scrolls", 0) <= 4:
+        raise ValueError("explore_year_scrolls must be an integer from 0 to 4")
+    if obj.get("explore_year_scrolls", 0) and not obj["inspect_birth_year_picker"]:
+        raise ValueError("scrolling requires year picker inspection")
     birthday = obj.get("birthdate_candidate")
     try:
         if not isinstance(birthday, str):
@@ -218,6 +222,10 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "account_deleted": False,
         "first_basic_utid_observed": False,
         "year_picker_verified": False,
+        "year_scrolls_confirmed": 0,
+        "year_selected": False,
+        "month_selected": False,
+        "day_selected": False,
         "screenshots": [],
     }
     minimum_stage = 0
@@ -287,6 +295,38 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "birth_year_picker_verified_open"
                             result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
                             break
+                    # A swipe is reversible UI navigation only. Restrict every
+                    # gesture to the already-observed popup rectangle, verify
+                    # popup stays visible, and retain each actual screenshot.
+                    # Do not guess row/year labels or click an unverified year.
+                    if result["year_picker_verified"]:
+                        from PIL import Image
+                        from io import BytesIO
+                        with Image.open(BytesIO(picker_frame)) as src:
+                            width, height = src.size
+                        for swipe_no in range(profile.get("explore_year_scrolls", 0)):
+                            swipe = adb(
+                                "shell", "input", "swipe",
+                                str(int(width * .20)), str(int(height * .59)),
+                                str(int(width * .20)), str(int(height * .37)),
+                                "550", secs=18)
+                            if swipe is None or swipe.returncode != 0:
+                                result["stop_reason"] = "year_scroll_adb_failed"
+                                break
+                            # Retain evidence even if the page changed or an
+                            # unexpected error appeared. Never tap these pages.
+                            if interval_seconds > 0:
+                                time.sleep(interval_seconds)
+                            scrolled = _capture(adb, output, "")
+                            save(f"onboarding_year_scroll_{swipe_no+1:02d}.png", scrolled) if scrolled else None
+                            if not birth_year_popup_visible(scrolled):
+                                result["stop_reason"] = "year_popup_not_verified_after_swipe"
+                                break
+                            result["year_scrolls_confirmed"] += 1
+                        if result["year_scrolls_confirmed"]:
+                            result["status"] = "year_list_scrolled_unverified_labels"
+                            if result["stop_reason"] == "year_list_visible_birthdate_unsubmitted":
+                                result["stop_reason"] = "scroll_evidence_captured_no_year_selected"
             break
         save(f"onboarding_before_{name}.png", data)
         if isinstance(point, tuple) and len(point) == 3 and point[0] == "px":
