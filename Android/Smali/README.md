@@ -27,3 +27,22 @@ java -jar apktool_3.0.3.jar b Android/Smali/4.1.0 -o home41-rebuilt-unsigned.apk
 - `apksigner verify` 成功表示测试签名有效，不意味着账号登录、数据迁移或 API 功能正常。
 - 只向私有 `969981/PokeHome_Resources` 提交，不向公开 `Home_Android` 仓库发布成批反编译代码及资源。
 - `4.1.0` 工程可能很大，请检查 Git、版权和备份要求；不应上载私密账号、token、流量包或私有账号数据。
+
+
+## 2026-11-07 在线启动与重签名限制（实测）
+
+**切勿将“可编译 + 已签名 + 能安装”描述为“可以正常启动 HOME 官方在线功能”。**
+
+- 四组真实 Android 模拟器 A/B 测试表明：未修改原版能正常显示语言选择页；完全 Smali 重构版、原素材 + 重编译 DEX 版均不能通过首次通信。
+- 更严格的对照：直接对原始 APK 使用 `apksigner` 重签名，不经过 Apktool、zipalign，保持原始 DEX/SO/Manifest/资源不变，依然出现 `code:400, detail code:9007`。
+- 这证明修改 DEX **不是该错误的必要条件**，但还未证明错误究竟由客户端、平台身份还是服务器哪一道校验产生；不要编造“跳过一个 if 即可修复”。
+- 正式服务所用应用证书/可信身份不能从 `META-INF` 公钥和旧签名文件重新生成；若没有发行方控制的签名或授权的测试环境，自签名 APK 不能宣称恢复官方服务端兼容。
+
+正在使用可运行的替代路径：**原封不动的官方签名 APK + Frida 17 只读观察**，从真实 UI 及 Java-Unity 回调研究原生运行时。测试代码与验收见：
+
+- [签名限制与调试方案](RUN_DEBUG_WITH_OFFICIAL_APK.md)
+- [根因实测与范围](SIGNING_BOOTSTRAP_ROOT_CAUSE_2026-11-07.md)
+- [原版与重签名版 Frida 对照 workflow](../../.github/workflows/home41-original-frida-signature-ab.yml)
+- [Frida 签名读取回调记录](4.1.0/FRIDA_SIGNATURE_CALL_TRACE.json)
+
+所有实验必须保持在一次性模拟器或授权账户环境中，不对官方账号进行批量创建/删除，不记录私有令牌，也不通过伪造证书或服务端响应冒充成功。
