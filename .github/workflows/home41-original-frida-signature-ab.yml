@@ -5,6 +5,7 @@ on:
     branches: ['4.1.0']
     paths:
       - '.github/workflows/home41-original-frida-signature-ab.yml'
+      - 'Android/Smali/tools/signature_frida_ab.py'
   workflow_dispatch:
 
 permissions:
