@@ -205,6 +205,42 @@ def known_home_error_dialog_layout(png_bytes):
     )
 
 
+
+def mainland_confirmation_yes_from_screenshot(png_bytes):
+    """Click-safe guard calibrated to actual 2026-11-07 country modal (run 42356071498).
+
+    Distinguishes the China Mainland region-confirm dialog from the similar
+    language and network error dialogs by the APAC teal rows behind it.
+    Unknown or transition screens must return None.
+    """
+    if not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return None
+    try:
+        from PIL import Image
+        from io import BytesIO
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (ImportError,OSError,ValueError):
+        return None
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return None
+    def col(x,y):return im.getpixel((int(w*x),int(h*y)))
+    def near(c,expected,t=15):
+        return all(abs(a-b)<=t for a,b in zip(c,expected))
+    if not (
+        near(col(.5,.03),(121,146,97)) and
+        near(col(.5,.15),(23,107,91)) and
+        near(col(.5,.34),(247,251,247)) and
+        near(col(.5,.49),(247,251,247)) and
+        near(col(.68,.64),(255,173,4)) and
+        near(col(.3,.70),(11,100,101)) and
+        near(col(.3,.75),(11,100,101))
+    ):
+        return None
+    return int(w*.68), int(h*.64)
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--apk",type=Path,required=True)
@@ -347,6 +383,26 @@ def main():
                 time.sleep(8)
             report["screenshot_after_country_selection"]=snap(
                 args.output,"screen_after_country_selection.png")
+            # Country selection is a two-stage UI; the screenshot from
+            # 42356071498 explicitly confirms a "China Mainland" YES/NO modal.
+            # Only confirm that exactly recognized modal. Never accept ToS
+            # or account/Nintendo registration prompts.
+            modal_png=args.output/"screen_after_country_selection.png"
+            mainland_yes=mainland_confirmation_yes_from_screenshot(
+                modal_png.read_bytes() if modal_png.is_file()
+                and report.get("country_selection_tap_succeeded",False) else b"")
+            report["country_confirmation_dialog_recognized"]=bool(mainland_yes)
+            report["country_confirmation_tap_attempted"]=False
+            report["country_confirmation_tap_succeeded"]=False
+            if mainland_yes is not None:
+                confirmed=adb("shell","input","tap",str(mainland_yes[0]),str(mainland_yes[1]),secs=15)
+                report["country_confirmation_tap_attempted"]=True
+                report["country_confirmation_tap_succeeded"]=bool(
+                    confirmed and confirmed.returncode==0)
+                time.sleep(9)
+            report["screenshot_after_country_confirmation"]=snap(
+                args.output,"screen_after_country_confirmation.png")
+
             # A successful input event does NOT establish that the server
             # accepted the region; the new screenshot must be reviewed.
             report["country_selected"]=False
