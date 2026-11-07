@@ -154,16 +154,23 @@ function installHooks(module) {
   report("read_only_observer_ready");
 }
 
-// Spawn attach may happen before Unity loads libil2cpp.so. Poll until loaded.
-const poll = setInterval(function () {
+// In Frida 17's ARM64 emulated realm we may attach *after* Unity has
+// loaded libil2cpp.so. Install immediately in that case: relying only on
+// setInterval() can leave scripts loaded without ever reporting hook ready.
+// Retain polling for original spawn-attach before Unity loads.
+function tryInstallNow() {
   try {
-    const mod = Process.findModuleByName(HOME.lib);
-    if (mod) {
-      clearInterval(poll);
-      installHooks(mod);
-    }
-  } catch(e) {
-    clearInterval(poll);
-    report("preflight_exception", {error_type:String(e.name||"unknown")});
+    const module = Process.findModuleByName(HOME.lib);
+    if (!module) return false;
+    installHooks(module);
+    return true;
+  } catch (e) {
+    report("preflight_exception", {error_type:String(e.name || "unknown")});
+    return true; // Do not retry potentially partially installed hooks.
   }
-}, 250);
+}
+if (!tryInstallNow()) {
+  const poll = setInterval(function () {
+    if (tryInstallNow()) clearInterval(poll);
+  }, 250);
+}
