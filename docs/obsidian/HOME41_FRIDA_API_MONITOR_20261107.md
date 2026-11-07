@@ -310,3 +310,23 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 ### 下一验收
 
 后续使用 `FirstBootViewInputBirthData.SetData` 的只读 `yearOptionDataList` 检查求出 **1999** 在列表中的实际 index，再通过可见 UI 或经过验证的本地 Unity 下拉操作选中；必须用截图验证“年=1999、月=4、日=5”。还未选中 1999，也未提交生日。不能因为单元测试用了 27 这个合成索引，就宣布真实索引为 27。注册回调、服务端 `basic.utid` 和六位 Trainer ID 尚未验收。
+
+## 十五、1999 选项真实索引 27 与 2018 可见项校准
+
+### 运行时年份列表证据
+
+[真实模拟器 #42386652133](https://github.com/969981/PokeHome_Resources/actions/runs/42386652133) 的报告确认：
+
+- ARM64 FirstBootViewInputBirthData.SetData 只读 Hook 收到 year_1999_option_index_verified，1999 年的选项 index=27，年份列表从 2026 逐年递减到 1900。
+- 在第一次语言选择 tap 前已安装 ARM64 只读 Hook，随后成功进入出生日期页面；月 4／日 5 的 UI 回调已独立验证为 index 3／4。
+- 此结果只证明年份**选项位置**，并不证明 index=27 可以直接传给本地 Unity setter；1999 年尚未在真实表单中选中，更没有提交生日或获得 basic.utid。
+
+### 可见 2018 年索引校准
+
+当前实验保留目标生日 1999-04-05，临时启用 probe_year_anchor=true（其他年份滚动、月日自动选择均关闭）。仅在真实已验证的年份列表中点击一次可见 2018，拍摄本地字段显示，并重新展开，不点击下一步、不创建账号。
+
+Frida 17 ARM64 OnYearChageValue 的只读回调应独立报告 index=8（2026-2018）；只在**同一运行**既观察到此回调、又重新验证 1999→27 的年份选项时，监控器才报告 known_2018_index_expected_8_observed=true。仍须人工检查 year_anchor_selected_field_closeup_source.png 确实显示 2018，才算完成校准。
+
+- [实机校准 #42392087765](https://github.com/969981/PokeHome_Resources/actions/runs/42392087765)
+- [新增交叉校验回归 #42392140383](https://github.com/969981/PokeHome_Resources/actions/runs/42392140383)
+- 不绑定 Nintendo Account、不提交生日、不接受条款、不注册、不删除账号。首次 HOME 六位训练家 ID 仍未取得。
