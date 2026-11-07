@@ -225,3 +225,41 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 [快速 CI #42382760960](https://github.com/969981/PokeHome_Resources/actions/runs/42382760960) **54 项测试通过**，明确覆盖白屏无 Hook、出现有效页面后首次 tap 之前 Hook、TransportError 失败前停止、ARM64 就绪事件和拒绝仅 script.load 的假阳性。[Frida 编译专项 #42382760968](https://github.com/969981/PokeHome_Resources/actions/runs/42382760968) 10 项通过。
 
 下一次真实模拟器回归是 [#42382760954](https://github.com/969981/PokeHome_Resources/actions/runs/42382760954)。必须读取其专属 `emulator_probe_summary.json`、`onboarding_checkpoint.json`、`frida_interface_events.jsonl` 与截图后判断；工作流成功只是运行结束。截止本次文档整理，没有注册账号、DOB 提交、首次 `basic.utid` 或官方六位 ID 对账。
+
+
+## 十二、UI 上移布局修复与日期下拉函数索引观测
+
+### 2026-11-07 #42382760954：为什么提前 Hook 没有尝试
+
+- [GitHub Actions #42382760954](https://github.com/969981/PokeHome_Resources/actions/runs/42382760954) 实际 Artifact 里的 `screen_15s.png` 为白屏，但`onboarding_final.png` 已经显示 **英文 Choose Your Language** 页面。**这轮不是持续白屏，也没有重新触发 ARM64 TransportError。**
+- `onboarding.status=no_known_next_screen`、`checks=70`、`completed=[]`；`early_arm64_hook_attempted=false`、`emulated_realm_status=not_attempted`、`api_stage_event_count=0`、`native_transport_event_count=8`。没有任何用户首次初始化点击。
+- 真正阻塞点是语言识别器只使用原布局。两次 1080×2340 真截图对比：原语言页在 y≈0.14 有青绿标题条、**简体中文**行 y≈0.775；这轮标题条上移到 y≈0.08，**简体中文**行 y≈0.720，差值接近 **0.055 屏幕高度**。其他语言选项同样整体上移；旧五点像素签名因此无法认出新版首屏。
+- 已更新 `tools/android41_ui_flow.py` 的 `screenshot_simplified_chinese_option()`：保留原坐标方案，并为截图确认的新布局增加独立组合校验（浅绿背景、青绿标题、多个浅灰语言选项及末行之外绿色背景）；**只有模式全匹配才返回 x=.5,y=.720**。无匹配则拒绝点击，不使用 OCR 猜测。
+- 新单元测试 `tools/test_android41_ui_flow.py::test_compact_language_layout_from_real_emulator_42382760954` 采用相同的像素位置，并验证缺失标题时返回 None；不把任何页面视为可以点击。
+
+### 2026-11-07 私有 IL2CPP 审计带来的年份突破方向
+
+[Native Birthdate UI audit #42384315106](https://github.com/969981/PokeHome_Resources/actions/runs/42384315106) 是来自 **180,628 个 HOME 4.1.0 IL2CPP 函数**的静态索引，Artifact 中 `birthdate_class_layouts.json` 有以下原始证据：
+
+| 类或方法 | 4.1.0 ARM64 RVA／偏移 | 解释 |
+|---|---|---|
+| `FirstBootViewInputBirthData.START_YEAR` | 常量 1900 | 年份选项的静态起点定义；未验年列表排序算法 |
+| `FirstBootViewInputBirthData.yearDropdown` | 对象字段 +0x28 | 年份选框的原生组件指针 |
+| `FirstBootViewInputBirthData.inputedYear` | 实例字段 +0x58 | 本地年份字段，**不代表已提交服务端** |
+| `FirstBootViewInputBirthData.OnYearChageValue(int index)` | `0x1C80EF8` | 年份索引变化回调 |
+| `FirstBootViewInputBirthData.OnMonthChangeValue(int index)` | `0x1C814C0` | 月份索引变化回调 |
+| `FirstBootViewInputBirthData.OnDayChangeValue(int index)` | `0x1C8181C` | 日期索引变化回调 |
+| `CustomTMPDropdownScrollList.Open(int value)` | `0x1F14C90` | 打开基于 `EnhancedScroller` 的下拉滚动列表 |
+| `CustomTMPDropdown.SetValueWithoutNotify(int)` | `0x1F14150` | 游戏自身 UI 方法，**此阶段不调用、不改写** |
+
+这说明先前普通 ADB swipe 导致误选年份，并不能证明游戏没有滚动功能：它使用的是真实 Unity `EnhancedScroller` 组件而不是 Android 原生滚轮。静态索引足以确定可以安放观测点，但 **尚不能证明 1999 的索引=27、会从 2026 起倒序，也不能证明 UI 改写后服务端会保存**。必须用真实点击与 Hook 返回索引交叉验证。
+
+新增 `tools/early_home_tid_observer.js` 原生只读 Hook（不修改任何入参）：
+- `birthdate_year_change_index`、`birthdate_month_change_index`、`birthdate_day_change_index`：仅捕获进入对应 Unity 回调时的有界 index；
+- `dropdown_scroll_open_index`：只记录打开滚动列表的原生 index 参数；同一时间需要匹配截图才能确认来自“年”还是“月／日”；
+- `date_hook_installed`/失败事件：每个 Hook 都有独立安装结果，不等同函数已经命中；
+- `tools/home41_frida_interface_monitor.py` 严格限制索引边界与 Hook 名称，丢弃所有完整生日文本、用户标识、对象地址、网络 URL、令牌或未认可字段。
+- 新测试确保出生日期本地 UI 回调计数 **不等同** `api_stage_event_count` 或 `first_basic_utid_event_seen`。
+- [只读监控快速 CI #42385968843](https://github.com/969981/PokeHome_Resources/actions/runs/42385968843)：**56 项测试成功**；[Frida 17 bundle #42385968860](https://github.com/969981/PokeHome_Resources/actions/runs/42385968860) 通过 **12 项专项测试**。
+
+下一验收标准：1. 新布局进入中文界面成功；2. 首次非破坏性点击前 ARM64 观察器真正就绪；3. 在真实月/日 UI 操作期间观察回调索引，并和截图中的“4”“5”对应；4. 后续再进行一次已知可见年份的本地选择，确定年索引规律，然后才考虑导航到 **1999**。一直不提交日期、不绑定 Nintendo Account、不做云端注册或删除。
