@@ -1,0 +1,337 @@
+{
+  "run": "https://github.com/969981/PokeHome_Resources/actions/runs/42366966148",
+  "status": "all_four_launch_visible",
+  "runtime_action_outcome": "success",
+  "matrix": {
+    "device": {
+      "android_api": "35",
+      "device_abi": "x86_64",
+      "device_abilist": "x86_64,arm64-v8a",
+      "native_bridge": "libndk_translation.so"
+    },
+    "status": "all_four_launch_visible",
+    "results": {
+      "apktool_rebuilt": {
+        "apk": "apktool_rebuilt",
+        "sha256": "f3515af424007110404b3ebd1b93af8f12e56bc11ef7bb44df803ec59f80f828",
+        "install_ok": true,
+        "launch_event_sent": true,
+        "process_at_12s": true,
+        "process_at_35s": true,
+        "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+        "accounts_created": false,
+        "terms_accepted": false,
+        "screen_at_12s": {
+          "saved": true,
+          "nonblank": false,
+          "color_samples": 1,
+          "channel_stddev_rounded": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "screen_at_35s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 660,
+          "channel_stddev_rounded": [
+            63.5,
+            64.1,
+            70.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "crash_evidence": {
+          "available": true,
+          "counts": {
+            "fatal exception": 0,
+            "fatal signal": 0,
+            "unsatisfiedlinkerror": 0,
+            "dlopen failed": 0,
+            "am_crash": 0,
+            "anr in jp.pokemon.pokemonhome": 0
+          }
+        },
+        "displayed_foreground_package": false,
+        "result": "visible_process_survived"
+      },
+      "original_assets_smali_dex": {
+        "apk": "original_assets_smali_dex",
+        "sha256": "458f66999494d60c4a4a002684ee4f05ff806f56023372601d37c8e3763364ae",
+        "install_ok": true,
+        "launch_event_sent": true,
+        "process_at_12s": true,
+        "process_at_35s": true,
+        "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+        "accounts_created": false,
+        "terms_accepted": false,
+        "screen_at_12s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 636,
+          "channel_stddev_rounded": [
+            63.1,
+            63.9,
+            69.9
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "screen_at_35s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 660,
+          "channel_stddev_rounded": [
+            63.5,
+            64.1,
+            70.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "crash_evidence": {
+          "available": true,
+          "counts": {
+            "fatal exception": 0,
+            "fatal signal": 0,
+            "unsatisfiedlinkerror": 0,
+            "dlopen failed": 1,
+            "am_crash": 0,
+            "anr in jp.pokemon.pokemonhome": 0
+          }
+        },
+        "displayed_foreground_package": false,
+        "result": "visible_process_survived"
+      },
+      "resigned_original": {
+        "apk": "resigned_original",
+        "sha256": "987a26294a985e957cb05c6364415160854a95b73e789ebc54b4a73617c57ff8",
+        "install_ok": true,
+        "launch_event_sent": true,
+        "process_at_12s": true,
+        "process_at_35s": true,
+        "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+        "accounts_created": false,
+        "terms_accepted": false,
+        "screen_at_12s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 660,
+          "channel_stddev_rounded": [
+            63.5,
+            64.1,
+            70.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "screen_at_35s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 660,
+          "channel_stddev_rounded": [
+            63.5,
+            64.1,
+            70.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "crash_evidence": {
+          "available": true,
+          "counts": {
+            "fatal exception": 0,
+            "fatal signal": 0,
+            "unsatisfiedlinkerror": 0,
+            "dlopen failed": 0,
+            "am_crash": 0,
+            "anr in jp.pokemon.pokemonhome": 0
+          }
+        },
+        "displayed_foreground_package": false,
+        "result": "visible_process_survived"
+      },
+      "original": {
+        "apk": "original",
+        "sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
+        "install_ok": true,
+        "launch_event_sent": true,
+        "process_at_12s": true,
+        "process_at_35s": true,
+        "test_scope": "install, launch, 2 screenshots, process and crash counts only",
+        "accounts_created": false,
+        "terms_accepted": false,
+        "screen_at_12s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 660,
+          "channel_stddev_rounded": [
+            63.5,
+            64.1,
+            70.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "screen_at_35s": {
+          "saved": true,
+          "nonblank": true,
+          "color_samples": 660,
+          "channel_stddev_rounded": [
+            63.5,
+            64.1,
+            70.0
+          ],
+          "dimensions": [
+            1080,
+            2340
+          ]
+        },
+        "crash_evidence": {
+          "available": true,
+          "counts": {
+            "fatal exception": 0,
+            "fatal signal": 0,
+            "unsatisfiedlinkerror": 0,
+            "dlopen failed": 0,
+            "am_crash": 0,
+            "anr in jp.pokemon.pokemonhome": 0
+          }
+        },
+        "displayed_foreground_package": false,
+        "result": "visible_process_survived"
+      }
+    },
+    "interpretation": "Qualifies bootstrap UI only; not service login, account, or IL2CPP source recovery.",
+    "read_only_no_registration": true
+  },
+  "payload_diff": {
+    "original_entries": 1810,
+    "apktool_entries": 1806,
+    "original_only_count": 105,
+    "rebuilt_only_count": 101,
+    "different_content_count": 8,
+    "different_content_by_category": {
+      "manifest": 1,
+      "DEX": 3,
+      "resource": 4
+    },
+    "different_compression_methods_count": 0,
+    "sample_changed_member_names": [
+      "AndroidManifest.xml",
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "res/color/common_google_signin_btn_text_dark.xml",
+      "res/color/common_google_signin_btn_text_light.xml",
+      "res/color/common_google_signin_btn_tint.xml",
+      "resources.arsc"
+    ],
+    "source_native_libs_identical": true,
+    "source_unity_assets_identical": true,
+    "source_dex_identical": false,
+    "original_dex_names": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex"
+    ],
+    "rebuilt_dex_names": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex"
+    ],
+    "original_only_sample": [
+      "META-INF/GOOGPLAY.RSA",
+      "META-INF/GOOGPLAY.SF",
+      "META-INF/MANIFEST.MF",
+      "res/-8.xml",
+      "res/-p.png",
+      "res/1C.9.png",
+      "res/2H.xml",
+      "res/2K.9.png",
+      "res/3z.png",
+      "res/47.xml",
+      "res/4W.png",
+      "res/5J.9.png",
+      "res/5c.png",
+      "res/6h.png",
+      "res/79.9.png",
+      "res/7R.png",
+      "res/9m.xml",
+      "res/Af.9.png",
+      "res/BQ.9.png",
+      "res/Bl.xml",
+      "res/Bz.xml",
+      "res/C_.9.png",
+      "res/Dd.png",
+      "res/De.png",
+      "res/EQ.xml",
+      "res/Eh.png",
+      "res/Em.png",
+      "res/FN.png",
+      "res/Gx.png",
+      "res/H-.png",
+      "res/I2.png",
+      "res/I3.9.png",
+      "res/Iw.png",
+      "res/K-.xml",
+      "res/K0.png"
+    ],
+    "rebuilt_only_sample": [
+      "res/drawable-hdpi/common_full_open_on_phone.png",
+      "res/drawable-hdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "res/drawable-hdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+      "res/drawable-hdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+      "res/drawable-hdpi/common_google_signin_btn_text_light_normal_background.9.png",
+      "res/drawable-hdpi/googleg_disabled_color_18.png",
+      "res/drawable-hdpi/googleg_standard_color_18.png",
+      "res/drawable-hdpi/notification_bg_low_normal.9.png",
+      "res/drawable-hdpi/notification_bg_low_pressed.9.png",
+      "res/drawable-hdpi/notification_bg_normal.9.png",
+      "res/drawable-hdpi/notification_bg_normal_pressed.9.png",
+      "res/drawable-hdpi/notify_panel_notification_icon_bg.png",
+      "res/drawable-mdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "res/drawable-mdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+      "res/drawable-mdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+      "res/drawable-mdpi/common_google_signin_btn_text_light_normal_background.9.png",
+      "res/drawable-mdpi/googleg_disabled_color_18.png",
+      "res/drawable-mdpi/googleg_standard_color_18.png",
+      "res/drawable-mdpi/notification_bg_low_normal.9.png",
+      "res/drawable-mdpi/notification_bg_low_pressed.9.png",
+      "res/drawable-mdpi/notification_bg_normal.9.png",
+      "res/drawable-mdpi/notification_bg_normal_pressed.9.png",
+      "res/drawable-mdpi/notify_panel_notification_icon_bg.png",
+      "res/drawable-xhdpi/common_full_open_on_phone.png",
+      "res/drawable-xhdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "res/drawable-xhdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+      "res/drawable-xhdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+      "res/drawable-xhdpi/common_google_signin_btn_text_light_normal_background.9.png",
+      "res/drawable-xhdpi/googleg_disabled_color_18.png",
+      "res/drawable-xhdpi/googleg_standard_color_18.png",
+      "res/drawable-xhdpi/notification_bg_low_normal.9.png",
+      "res/drawable-xhdpi/notification_bg_low_pressed.9.png",
+      "res/drawable-xhdpi/notification_bg_normal.9.png",
+      "res/drawable-xhdpi/notification_bg_normal_pressed.9.png",
+      "res/drawable-xhdpi/notify_panel_notification_icon_bg.png"
+    ]
+  },
+  "comment": "Three variants use one disposable key; untouched official original is separate; no real account data or consent interactions."
+}
