@@ -95,3 +95,27 @@ status: implemented-ci-verification-pending
 
 - 事件脱敏/Frida spawn 测试：[#42373639433](https://github.com/969981/PokeHome_Resources/actions/runs/42373639433)，44 项通过。
 - 真正的 Android x86_64 Frida server、spawn、连接及 API 事件：[#42373639368](https://github.com/969981/PokeHome_Resources/actions/runs/42373639368)，当前仍须按实际 Artifact 判定；以上 CI 都不代表已捕获真实 HTTP 内容。
+
+
+## 七、实机 Frida 注入与传输层盲区核验
+
+### 真实注入与分级观测（已完成）
+
+- 完整 HOME UI 运行：[Actions #42374803315](https://github.com/969981/PokeHome_Resources/actions/runs/42374803315)，独立无 UI 启动：[Actions #42374866803](https://github.com/969981/PokeHome_Resources/actions/runs/42374866803)，**两轮均有真实 Artifact**，不能只依据工作流 success 推测。
+- `frida_server_setup.json`：**status=ready**，官方 frida-server 17.26.1 SHA256 校验通过、Android ADB root 检查通过、server 进程启动、端口转发和 TCP 连接均通过。
+- `frida_interface_summary.json` 两轮均为 **status=spawn_attach_resumed**、`frida_agent_loaded=true`、`java_hook_ready=true`、`dns_hook_ready=true`、`observed_arch=x64`；对应 `frida_interface_events.jsonl` 均确实包含六条事件：`frida_agent_loaded`、`native_arch_report`、`dns_hook_ready`、`java_runtime_ready`、`java_url_hook_ready`、`java_response_hook_ready`。
+- **重要负结果**：两轮 `api_stage_event_count=0`，`il2cpp_module_seen=false`、`first_basic_utid_event_seen=false`，没有 Java HTTP 请求/响应、按 Pokémon 域名识别的 DNS 事件，或真实 `basic.utid`。因此本轮只证明监控器附加与 Hook 安装成功，不代表已经捕获接口通信。由于 Unity 和 ARM64 Native Bridge 的原因，事件 0 不能解释成 HOME 没有网络连接。
+- 完整 UI 运行再次通过简体中文、亚太、中国大陆，并保存了本地选择 **月=4、日=5** 的截图；目标 **1999-04-05** 的年份 1999 未定位，生日、协议和注册均未提交。
+
+### 新尝试：Native Socket metadata（不读取数据包）
+
+针对 Java/DNS Hook 没有实际网络事件，新增到 `tools/home41_frida_interface_agent.js`：
+- 仅当 `libc connect()` 入参的 `sa_family` 是 IPv4/IPv6 时，监测非阻塞连接及返回类别；**不读取或记录 sockaddr 里的 IP 地址/端口**。
+- 对该连接的 fd，使用 `send/sendto/write/recv/recvfrom/read` 拦截点，只按返回的**正数字节数粗略分类**成 1–512、513–4096、超过 4096；不保存字节内容、缓冲指针、fd、IP、域名、URL、请求头或 Token。
+- 对这些事件单独输出 `native_transport_event_count`；**绝不把 Socket 收发称为 HTTP 200、具体 API 路径或 `SetBasic` 响应**。仍保留独立 `api_stage_event_count`，不存在时保持 0。
+- `tools/home41_frida_interface_monitor.py` 对 `native_socket_connect/native_socket_send/native_socket_receive` 严格白名单清洗，未知字段（包括恶意注入的 Authorization、IP）都不进入 Artifact。
+- [Frida bundle CI #42378979751](https://github.com/969981/PokeHome_Resources/actions/runs/42378979751) 已成功编译并通过 6 项专项测试；[只读观测单元 CI #42378979678](https://github.com/969981/PokeHome_Resources/actions/runs/42378979678) 通过 **46 项**。真实 Socket 事件需要查看运行 [#42378930850](https://github.com/969981/PokeHome_Resources/actions/runs/42378930850)、[#42378956808](https://github.com/969981/PokeHome_Resources/actions/runs/42378956808) 的 Artifact 才能确认；在未取得实际事件前不把它们记为成功。
+
+### 关于下一步真正的 API 响应
+
+Socket Hook 仅提供“进程是否有原生收发”与大致时序。要知道 `basic.utid` 是哪个服务端响应下发，优先在**实机 ARM64 的 IL2CPP 回调**里记录字段是否首次赋值、事件时序，再跟该运行的官方 UI 六位显示对账。现存 ARM64 RVA 不适用于 x64 Native Bridge，不能硬插，更不能通过修改网络响应或账号资料来推断合法六位 ID。
