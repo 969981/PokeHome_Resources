@@ -1,0 +1,187 @@
+name: HOME 4.1.0 official-signature Frida read-only startup A/B
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-original-frida-signature-ab.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-original-frida-signature-ab
+  cancel-in-progress: false
+
+jobs:
+  original-signed-runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            Android/Smali/tools
+            tools/home41_frida_server_setup.py
+            .github/workflows
+          sparse-checkout-cone-mode: false
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate scripts and compile Frida 17 Java observer bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q frida==17.26.1 pillow
+          python -m compileall -q Android/Smali/tools tools/home41_frida_server_setup.py
+          npm install --no-save --no-package-lock --no-audit --no-fund frida-java-bridge frida-compile
+          ./node_modules/.bin/frida-compile Android/Smali/tools/signature_trace_agent.js \
+            -o "$RUNNER_TEMP/signature_agent_bundle.js" -S -c
+          python - <<'PY'
+          from pathlib import Path
+          path=Path(__import__('os').environ['RUNNER_TEMP'])/'signature_agent_bundle.js'
+          s=path.read_text()
+          assert s.startswith("📦"+chr(10)) and "✄" in s
+          print("Frida 17 signature call-chain bundle valid, size", len(s))
+          PY
+          echo "SIGNATURE_AGENT=$RUNNER_TEMP/signature_agent_bundle.js" >> "$GITHUB_ENV"
+
+      - name: Fetch exact untouched HOME 4.1.0 APK and prepare only signing-related variant
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth=1 --filter=blob:none --sparse \
+            https://github.com/969981/Home_Android.git "$RUNNER_TEMP/ref-apk"
+          git -C "$RUNNER_TEMP/ref-apk" sparse-checkout set ROMS/4.1.0
+          mapfile -t candidates < <(find "$RUNNER_TEMP/ref-apk/ROMS/4.1.0" -type f -name '*.apk')
+          test "${#candidates[@]}" -eq 1
+          echo "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1  ${candidates[0]}" | sha256sum -c -
+          echo "OFFICIAL_APK=${candidates[0]}" >> "$GITHUB_ENV"
+          mkdir -p signing-runtime-evidence
+          build_dir=$(find "${ANDROID_HOME:-/usr/local/lib/android/sdk}/build-tools" \
+            -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
+          test -x "$build_dir/apksigner"
+          keytool -genkeypair -noprompt -alias ci-only \
+            -keyalg RSA -keysize 2048 -validity 2 -keystore "$RUNNER_TEMP/ci-only.jks" \
+            -storepass changeit -keypass changeit -dname "CN=HOME disposable diagnostics"
+          "$build_dir/apksigner" sign --ks "$RUNNER_TEMP/ci-only.jks" \
+            --ks-key-alias ci-only --ks-pass pass:changeit --key-pass pass:changeit \
+            --out "$RUNNER_TEMP/resigned-only.apk" "${candidates[0]}"
+          "$build_dir/apksigner" verify -v "$RUNNER_TEMP/resigned-only.apk"
+          python Android/Smali/tools/audit_direct_resign.py \
+            --original "${candidates[0]}" --resigned "$RUNNER_TEMP/resigned-only.apk" \
+            --output signing-runtime-evidence/payload_diff.json
+          echo "RESIGNED_APK=$RUNNER_TEMP/resigned-only.apk" >> "$GITHUB_ENV"
+
+      - name: Enable hardware virtualization
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' \
+            | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          test -e /dev/kvm
+
+      - name: Start read-only Frida and compare runtime signature checks
+        id: emulator
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: |
+            python tools/home41_frida_server_setup.py --output signing-runtime-evidence/frida_server_setup.json
+            python -c "import json; r=json.load(open('signing-runtime-evidence/frida_server_setup.json')); assert r['status']=='ready', r['status']"
+            python Android/Smali/tools/signature_frida_ab.py --original "$OFFICIAL_APK" --resigned "$RESIGNED_APK" --bundle "$SIGNATURE_AGENT" --output signing-runtime-evidence
+
+      - name: Persist read-only result and failure qualifier
+        if: always()
+        shell: bash
+        env:
+          EMULATOR_OUTCOME: ${{ steps.emulator.outcome }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          root=Path("signing-runtime-evidence")
+          root.mkdir(parents=True,exist_ok=True)
+          f=root/"comparison.json"
+          compare=json.loads(f.read_text()) if f.exists() else {"status":"no_real_runtime_comparison"}
+          out={
+            "workflow":f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+            "status":compare.get("status"),
+            "frida_setup":json.loads((root/"frida_server_setup.json").read_text()) if (root/"frida_server_setup.json").exists() else None,
+            "device_job_status":os.environ.get("EMULATOR_OUTCOME"),
+            "results":compare,
+            "requires_official_signing_cert_for_real_online_equivalence":"not independently proven by callback events",
+            "does_not_modify_official_apk":True,
+            "does_not_bypass_integrity_or_login":True
+          }
+          target=Path("Android/Smali/4.1.0/FRIDA_SIGNATURE_CALL_TRACE.json")
+          target.parent.mkdir(parents=True,exist_ok=True)
+          target.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as o:
+            o.write("## Official HOME certificate vs direct-resign, Frida read-only\n\n")
+            o.write(f"- Status: `{out['status']}`\n")
+            o.write(f"- Emulator: `{out['device_job_status']}`\n")
+            for key in ["original","resigned"]:
+              v=compare.get(key,{})
+              o.write(f"- {key}: HOME UI={v.get('home_language_verified')}, signature callback invoked={v.get('signing_callback_invoked')}, Frida ready={v.get('observer_ready')}\n")
+          PY
+      - name: Upload screenshots and event-only trace
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-official-signature-readonly-frida-ab
+          path: signing-runtime-evidence/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Commit factual diagnostic result to private branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/FRIDA_SIGNATURE_CALL_TRACE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test(android): persist original-vs-resigned Frida signature callback evidence [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
+
+      - name: Require original app to boot under instrumentation
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('Android/Smali/4.1.0/FRIDA_SIGNATURE_CALL_TRACE.json')
+          if not p.exists(): raise SystemExit("No runtime trace produced")
+          r=json.loads(p.read_text()).get('results',{})
+          if not r.get('original',{}).get('home_language_verified'):
+            raise SystemExit("Original app did NOT demonstrate valid UI under Frida; no conclusive comparison")
+          print("Original app boots while signature reads are only OBSERVED, not modified.")
+          PY
