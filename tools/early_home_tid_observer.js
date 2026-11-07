@@ -20,6 +20,7 @@ const HOME = {
   loginCallbackRva: 0x1D3C020,
   // 4.1.0 IL2CPP ScriptMethod metadata, not offset guesses:
   // FirstBootViewInputBirthData.OnYearChageValue(int index)
+  birthdateSetDataRva: 0x1C80964,
   birthdateYearChangeRva: 0x1C80EF8,
   birthdateMonthChangeRva: 0x1C814C0,
   birthdateDayChangeRva: 0x1C8181C,
@@ -160,6 +161,71 @@ function installHooks(module) {
       }
     }
   });
+  // Static field layout from FirstBootViewInputBirthData (4.1.0):
+  // yearOptionDataList at +0x40, List<T>._items +0x10, _size +0x18.
+  // OptionData.m_Text at +0x10. Read ONLY short public year labels,
+  // then emit the target's INDEX, NEVER any pointer, UI text or DOB.
+  // No invocation of setters, callbacks or app methods occurs here.
+  try {
+    Interceptor.attach(addr(HOME.birthdateSetDataRva), {
+      onEnter(args) {
+        this.view = args[0];
+      },
+      onLeave() {
+        if (!this.view || this.view.isNull()) return;
+        try {
+          const list = this.view.add(0x40).readPointer();
+          if (list.isNull()) return;
+          const count = list.add(0x18).readS32();
+          if (count < 100 || count > 140) {
+            report("year_options_layout_not_verified");
+            return;
+          }
+          const items = list.add(0x10).readPointer();
+          if (items.isNull()) return;
+          const years = [];
+          const size = Process.pointerSize;
+          for (let i = 0; i < count; i++) {
+            const option = items.add(0x20 + i*size).readPointer();
+            if (option.isNull()) continue;
+            const txt = option.add(0x10).readPointer();
+            if (txt.isNull()) continue;
+            const len = txt.add(0x10).readU32();
+            if (len < 4 || len > 12) continue;
+            const raw = txt.add(0x14).readUtf16String(len);
+            const match = raw.match(/^([12][0-9]{3})[^0-9]*$/);
+            if (!match) continue;
+            const year = Number(match[1]);
+            if (year >= 1900 && year <= 2100) years.push([i,year]);
+          }
+          if (years.length < count - 2) {
+            report("year_options_layout_not_verified");
+            return;
+          }
+          const consecutive = years.every((entry,i) =>
+            i === 0 || years[i-1][1] - entry[1] === 1);
+          const matched = years.filter(entry => entry[1] === 1999);
+          if (!consecutive || matched.length !== 1) {
+            report("year_options_layout_not_verified");
+            return;
+          }
+          report("year_1999_option_index_verified", {
+            selected_index: matched[0][0],
+            total_options: count,
+            first_year: years[0][1],
+            last_year: years[years.length-1][1],
+            descending_sequential: true
+          });
+        } catch (_) {
+          report("year_options_layout_not_verified");
+        }
+      }
+    });
+    report("year_options_inspector_hook_installed");
+  } catch (_) {
+    report("year_options_inspector_hook_unavailable");
+  }
+
   // Trace Unity's own date-picker events, not network responses.
   // Verify callback indices against matching HOME screenshots before
   // inferring which index means 1999. No setter, callback invocation,
