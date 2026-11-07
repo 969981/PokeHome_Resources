@@ -291,6 +291,9 @@ class FridaInterfaceMonitor:
                     "login_response_handler_enter"
                 )
             ),
+            "arm64_hook_preflight_seen": counts["hook_preflight"] > 0,
+            "arm64_observer_ready": counts["read_only_observer_ready"] > 0,
+            "arm64_preflight_exception_seen": counts["preflight_exception"] > 0,
             "first_basic_utid_event_seen": counts["first_basic_utid"] > 0,
             "first_basic_utid_numeric_value_saved": False,
             "event_counts": dict(sorted(counts.items())),
