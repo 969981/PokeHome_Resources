@@ -84,3 +84,15 @@ tools/early_home_tid_observer.js 已增加 SetBasic 首次命中时的 LR/调用
 ### 下一步条件
 
 确认年份下拉控件表现 → 在官方允许、用户授权的有效配置下选择年月日 → 确认日期变更限制及必要协议 → 正常创建 guest 用户 → 在原生 ARM64 上只读获取第一个 `basic.utid` → 与六位显示 ID 校对。未验证官方永久删除云端账号前，不自动循环创建/删除账号。保留 `auth_registration_status=not_attempted_no_test_account` 与 `first_basic_utid_status=not_observed`，不能用工作流成功标记代替它们。
+
+
+### 第四轮实际结果：年龄页稳态等待测试被网络错误阻断
+
+- [Actions #42357644804](https://github.com/969981/PokeHome_Resources/actions/runs/42357644804) 的模拟器实际安装启动，但 `home_language_screen_recognized=false`、`country_confirmation_tap_succeeded=false`、`birthday_page_poll_attempts=0`、`birth_year_dropdown_open_attempted=false`。
+- 真实最终截图为日文「通信環境が良い場所で再度お試しください」等网络环境提示，并非生日控件；没有显示详细数值错误码，**不能擅自标注为 800/100101**。
+- 报告 `result=home_error_dialog_visible_unclassified`。未登录、不绑定 Nintendo Account、无云端账号注册或 ID 下发。
+- 工作流被标记 failure 的直接原因是最后 Git 推送报告时 remote 4.1.0 已因本轮 Obsidian 文档提交前进，导致 `[rejected] HEAD -> 4.1.0 (fetch first)`；**不是模拟器启动失败**。原始截图和 JSON 已成功上传至该次短期 Artifact（ID `13568154230`），仓库上的最后一份报告未被本轮覆盖。
+- 已在 `.github/workflows/android41-emulator-cache.yml` 中补上 `git fetch origin 4.1.0` + `git rebase FETCH_HEAD` 后再推送，不使用 force push。此改动尚未经过新一轮 Actions 执行验证。
+- 原因区分：年龄页过渡动画导致的识别失败是第三轮 #42357127834；网络阻断是第四轮 #42357644804。两个失败点不应合并成一个问题。
+
+截至本轮最远**真实完成位置**依然是第二轮 #42356611191 的中国大陆确认后年龄页出现。当前没有真实 `basic.utid`、目标六位 ID、生日提交、头像、小火龙选择或官方云端删除验收。
