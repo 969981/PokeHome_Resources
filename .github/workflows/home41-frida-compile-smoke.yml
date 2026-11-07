@@ -1,0 +1,38 @@
+name: HOME 4.1.0 Frida 17 bridge bundle smoke test
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-frida-compile-smoke.yml'
+      - 'tools/home41_frida_interface_agent.js'
+      - 'tools/home41_frida_interface_monitor.py'
+      - 'tools/test_home41_frida_interface_monitor.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frida-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          sparse-checkout: |
+            tools
+            .github/workflows
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile Java bridge explicitly for Frida 17
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-package-lock --no-audit --no-fund frida-java-bridge frida-compile
+          ./node_modules/.bin/frida-compile tools/home41_frida_interface_agent.js -o /tmp/home41-frida-interface-bundle.js -S -c
+          test -s /tmp/home41-frida-interface-bundle.js
+          node --check /tmp/home41-frida-interface-bundle.js
+          python -m unittest tools/test_home41_frida_interface_monitor.py -v
+          echo "Frida bundle compiled; real device attach and network data are not validated by this job."
