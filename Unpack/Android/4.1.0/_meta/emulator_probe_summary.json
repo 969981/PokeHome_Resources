@@ -56,7 +56,7 @@
   },
   "android_immersive_setting": "confirmed",
   "android_network_preflight": {
-    "android_utc_time": "2026-11-07T11:04:25Z",
+    "android_utc_time": "2026-11-07T11:14:31Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -81,7 +81,7 @@
   ],
   "screenshot_after_system_prompts": true,
   "onboarding": {
-    "status": "year_anchor_reopen_year_picker_not_verified",
+    "status": "year_anchor_reopened_year_list_requires_visual_anchor_review",
     "mode": "verified-ui-navigation",
     "nintendo_account_linked": false,
     "profile": {
@@ -101,7 +101,7 @@
       "inspect_birth_year_picker"
     ],
     "last_observed_stage": "birthdate_page",
-    "checks": 25,
+    "checks": 24,
     "stop_reason": "year_anchor_probe_no_dob_submission",
     "birthday_submitted": false,
     "terms_accepted": false,
@@ -114,12 +114,12 @@
     "year_labels_changed_verified": false,
     "date_picker_diagnostics": null,
     "year_anchor_diagnostics": {
-      "status": "reopen_year_picker_not_verified",
+      "status": "reopened_year_list_requires_visual_anchor_review",
       "initial_2018_row_geometry_verified": true,
       "known_2018_row_tap_sent": true,
       "birth_form_after_candidate_tap_verified": true,
       "reopen_year_picker_tap_sent": true,
-      "year_popup_after_reopen_verified": false,
+      "year_popup_after_reopen_verified": true,
       "year_value_semantically_verified": false,
       "list_anchor_semantically_verified": false,
       "birthdate_submitted": false,
@@ -133,15 +133,10 @@
         "year_anchor_selected_field_closeup_source.png",
         "year_anchor_reopened_01.png",
         "year_anchor_reopened_02.png",
-        "year_anchor_reopened_03.png",
-        "year_anchor_reopened_04.png",
-        "year_anchor_reopened_05.png",
-        "year_anchor_reopened_06.png",
-        "year_anchor_reopened_07.png",
-        "year_anchor_reopened_08.png",
-        "year_anchor_reopened_09.png"
+        "year_anchor_reopened_final.png"
       ]
     },
+    "year_edge_drag_diagnostics": null,
     "stage_retry_counts": {},
     "year_selected": false,
     "month_selected": false,
@@ -160,13 +155,7 @@
       "year_anchor_selected_field_closeup_source.png",
       "year_anchor_reopened_01.png",
       "year_anchor_reopened_02.png",
-      "year_anchor_reopened_03.png",
-      "year_anchor_reopened_04.png",
-      "year_anchor_reopened_05.png",
-      "year_anchor_reopened_06.png",
-      "year_anchor_reopened_07.png",
-      "year_anchor_reopened_08.png",
-      "year_anchor_reopened_09.png",
+      "year_anchor_reopened_final.png",
       "onboarding_final.png"
     ]
   },
@@ -191,12 +180,12 @@
   "birth_year_labels_changed_verified": false,
   "date_picker_diagnostics": null,
   "year_anchor_diagnostics": {
-    "status": "reopen_year_picker_not_verified",
+    "status": "reopened_year_list_requires_visual_anchor_review",
     "initial_2018_row_geometry_verified": true,
     "known_2018_row_tap_sent": true,
     "birth_form_after_candidate_tap_verified": true,
     "reopen_year_picker_tap_sent": true,
-    "year_popup_after_reopen_verified": false,
+    "year_popup_after_reopen_verified": true,
     "year_value_semantically_verified": false,
     "list_anchor_semantically_verified": false,
     "birthdate_submitted": false,
@@ -210,13 +199,7 @@
       "year_anchor_selected_field_closeup_source.png",
       "year_anchor_reopened_01.png",
       "year_anchor_reopened_02.png",
-      "year_anchor_reopened_03.png",
-      "year_anchor_reopened_04.png",
-      "year_anchor_reopened_05.png",
-      "year_anchor_reopened_06.png",
-      "year_anchor_reopened_07.png",
-      "year_anchor_reopened_08.png",
-      "year_anchor_reopened_09.png"
+      "year_anchor_reopened_final.png"
     ]
   },
   "birth_year_dropdown_tap_succeeded": true,
@@ -224,14 +207,14 @@
   "country_selection_server_confirmed": false,
   "birthdate_entered": false,
   "terms_or_privacy_accepted": false,
-  "home_language_check_count": 25,
+  "home_language_check_count": 24,
   "home_language_poll_wait_seconds": 0,
-  "region_page_poll_attempts": 25,
+  "region_page_poll_attempts": 24,
   "region_page_poll_wait_seconds": 0,
   "screenshot_after_wait": true,
   "known_home_error_modal_layout": false,
   "android_network_after_wait": {
-    "android_utc_time": "2026-11-07T11:08:11Z",
+    "android_utc_time": "2026-11-07T11:17:48Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -259,11 +242,11 @@
       "libndk_translation": 0
     },
     "events": [
-      "11-07 11:07:14.514   583   623 W system_server: Long monitor contention with owner binder:583_17 (1785) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.cont"
+      "11-07 11:17:22.252   560   597 W system_server: Long monitor contention with owner binder:560_1F (2477) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.cont"
     ],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 2,
+      "am_proc_died": 1,
       "am_crash": 0,
       "am_anr": 0
     }
@@ -272,7 +255,7 @@
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
     "Fatal signal": 0,
-    "dlopen failed": 0
+    "dlopen failed": 1
   },
   "test_emulator_adb_root": true,
   "cache_bytes": 0,
