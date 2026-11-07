@@ -16,9 +16,9 @@ def classify(name:str)->str|None:
     lower=name.lower()
     if "apirequestauthregisteruser" in lower:
         return "register_user"
-    if "apimanager$callbackresponsehook" in lower:
+    if "apimanager" in lower and "callbackresponsehook" in lower:
         return "response_common"
-    if "udmanager$setbasic" in lower:
+    if "udmanager" in lower and "setbasic" in lower:
         return "receive_basic"
     # The real generated class naming may use AuthCreateLogin,
     # CreateAuthLogin, TokenCreate, etc. Match request + semantic noun
