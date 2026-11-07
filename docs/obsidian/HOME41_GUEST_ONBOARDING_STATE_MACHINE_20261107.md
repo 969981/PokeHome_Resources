@@ -248,3 +248,14 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 - 固定配置切换为 probe_year_anchor=false、probe_year_edge_drag=true、explore_year_scrolls=0、inspect_date_controls=false；仍保留 birthdate_candidate=2000-01-01，nintendo_account_link=false、submit_birthdate=false、accept_terms=false、create_account=false、delete_account=false。
 - [独立测试 #42367266216](https://github.com/969981/PokeHome_Resources/actions/runs/42367266216)：**36 项通过**，包含新边缘拖动与已选年份深灰高亮识别用例。
 - 实机任务 [#42367266437](https://github.com/969981/PokeHome_Resources/actions/runs/42367266437) 已触发；本段文档不能把触发或离线测试当作真正完成滚动。应从该任务 Artifact 里的 year_edge_before.png、year_edge_after_*.png 独立确认结果。
+
+
+## 2026-11-07：测试出生日期改为 1999-04-05
+
+用户调整固定的游客模式注册测试生日：原先的 2000-01-01 候选配置替换为 **1999-04-05（1999 年 4 月 5 日）**。修改点是 `tools/home41_guest_profile.json` 的 `birthdate_candidate`；原历史实验中出现的 2000-01-01 不代表已经提交过该日期。
+
+- 预期 UI 分量：`year=1999`、`month=4`、`day=5`；需分别从真实 HOME 日期控件核对，不能仅用配置值或 ADB 命令成功代表选中成功。
+- `tools/test_home41_guest_onboarding.py` 增加日期配置断言。原状态机能正常加载该有效日期，因为日期位于校验范围内。
+- 当前年选择器实测只有 2026～2018 可见；尝试单次拖动右侧空白区的实机运行 [#42367266437](https://github.com/969981/PokeHome_Resources/actions/runs/42367266437) 在本段记录时仍运行。必须先核查此运行证据，才能确认是否有进入 1999 的可靠路径。
+- 本次配置自动触发新模拟器和离线 CI；**仅更新测试候选，不代表本地或云端已提交生日**。
+- 继续保持 `nintendo_account_link=false`、`submit_birthdate=false`、`accept_terms=false`、`create_account=false`、`delete_account=false`。没有首次 `basic.utid` 或六位 HOME ID。
