@@ -1,5 +1,5 @@
 {
-  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42375870072",
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42376058783",
   "status": "completed",
   "frida_setup": {
     "status": "ready",
@@ -16,87 +16,6 @@
     "original": {
       "variant": "official_unmodified",
       "sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
-      "installation": "ok",
-      "frida_spawn_attached": true,
-      "home_language_verified": true,
-      "signing_credentials_logged": false,
-      "certificates_modified_by_monitor": false,
-      "official_server_requests_modified": false,
-      "app_accounts_touched": false,
-      "permission_preflight": {
-        "location": {
-          "android.permission.ACCESS_FINE_LOCATION": {
-            "commands_ok": true,
-            "verified": true
-          },
-          "android.permission.ACCESS_COARSE_LOCATION": {
-            "commands_ok": true,
-            "verified": true
-          }
-        },
-        "notifications": {
-          "commands_ok": true
-        },
-        "location_denied_fixed": true
-      },
-      "process_at_35s": true,
-      "screen_at_35s": {
-        "saved": true,
-        "nonblank": false,
-        "home_language_verified": false,
-        "color_samples": 207,
-        "channel_stddev_rounded": [
-          4.8,
-          3.3,
-          4.3
-        ],
-        "dimensions": [
-          1080,
-          2340
-        ]
-      },
-      "process_at_60s": true,
-      "screen_at_60s": {
-        "saved": true,
-        "nonblank": true,
-        "home_language_verified": true,
-        "color_samples": 1087,
-        "channel_stddev_rounded": [
-          45.8,
-          15.5,
-          29.7
-        ],
-        "dimensions": [
-          1080,
-          2340
-        ]
-      },
-      "crash_signals": {
-        "fatal exception": 0,
-        "fatal signal": 0,
-        "unsatisfiedlinkerror": 0,
-        "dlopen failed": 0,
-        "am_crash": 0,
-        "anr in jp.pokemon.pokemonhome": 0
-      },
-      "hook_event_counts": {
-        "agent_loaded": 1,
-        "checksignature_core_called": 1,
-        "checksignature_hook_ready": 1,
-        "java_ready": 1,
-        "package_name_sent_to_unity": 1,
-        "signature_chars_sent_to_unity": 1,
-        "signature_hash_sent_to_unity": 1,
-        "unity_message_hook_ready": 1
-      },
-      "frida_script_errors": 0,
-      "signing_callback_invoked": true,
-      "signing_result_sent_to_unity": true,
-      "observer_ready": true
-    },
-    "resigned": {
-      "variant": "directly_resigned",
-      "sha256": "5f8070996a6556e2ca580f3b2ad358579eefe590e3118c3a10a3d29f377839a5",
       "installation": "ok",
       "frida_spawn_attached": true,
       "home_language_verified": false,
@@ -125,11 +44,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 220,
+        "color_samples": 167,
         "channel_stddev_rounded": [
-          46.2,
-          44.5,
-          47.0
+          49.2,
+          48.9,
+          51.4
         ],
         "dimensions": [
           1080,
@@ -141,11 +60,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 220,
+        "color_samples": 167,
         "channel_stddev_rounded": [
-          46.2,
-          44.5,
-          47.0
+          49.2,
+          48.9,
+          51.4
         ],
         "dimensions": [
           1080,
@@ -157,11 +76,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 206,
+        "color_samples": 167,
         "channel_stddev_rounded": [
-          46.2,
-          44.4,
-          46.9
+          49.2,
+          48.9,
+          51.4
         ],
         "dimensions": [
           1080,
@@ -173,11 +92,120 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 212,
+        "color_samples": 167,
         "channel_stddev_rounded": [
-          46.2,
-          44.4,
-          46.9
+          49.2,
+          48.9,
+          51.4
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "crash_signals": {
+        "fatal exception": 0,
+        "fatal signal": 0,
+        "unsatisfiedlinkerror": 0,
+        "dlopen failed": 1,
+        "am_crash": 0,
+        "anr in jp.pokemon.pokemonhome": 0
+      },
+      "hook_event_counts": {
+        "agent_loaded": 1,
+        "checksignature_hook_ready": 1,
+        "java_ready": 1,
+        "unity_message_hook_ready": 1
+      },
+      "frida_script_errors": 0,
+      "signing_callback_invoked": false,
+      "signing_result_sent_to_unity": false,
+      "observer_ready": true
+    },
+    "resigned": {
+      "variant": "directly_resigned",
+      "sha256": "73130e367ccb153fbbcef30804368c9508d91e15e9df27b7d87ce7890a901f0d",
+      "installation": "ok",
+      "frida_spawn_attached": true,
+      "home_language_verified": false,
+      "signing_credentials_logged": false,
+      "certificates_modified_by_monitor": false,
+      "official_server_requests_modified": false,
+      "app_accounts_touched": false,
+      "permission_preflight": {
+        "location": {
+          "android.permission.ACCESS_FINE_LOCATION": {
+            "commands_ok": true,
+            "verified": true
+          },
+          "android.permission.ACCESS_COARSE_LOCATION": {
+            "commands_ok": true,
+            "verified": true
+          }
+        },
+        "notifications": {
+          "commands_ok": true
+        },
+        "location_denied_fixed": true
+      },
+      "process_at_35s": true,
+      "screen_at_35s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 195,
+        "channel_stddev_rounded": [
+          49.2,
+          48.9,
+          51.4
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_60s": true,
+      "screen_at_60s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 195,
+        "channel_stddev_rounded": [
+          49.2,
+          48.9,
+          51.4
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_95s": true,
+      "screen_at_95s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 194,
+        "channel_stddev_rounded": [
+          49.2,
+          48.9,
+          51.4
+        ],
+        "dimensions": [
+          1080,
+          2340
+        ]
+      },
+      "process_at_130s": true,
+      "screen_at_130s": {
+        "saved": true,
+        "nonblank": true,
+        "home_language_verified": false,
+        "color_samples": 194,
+        "channel_stddev_rounded": [
+          49.2,
+          48.9,
+          51.4
         ],
         "dimensions": [
           1080,
@@ -194,21 +222,17 @@
       },
       "hook_event_counts": {
         "agent_loaded": 1,
-        "checksignature_core_called": 1,
         "checksignature_hook_ready": 1,
         "java_ready": 1,
-        "package_name_sent_to_unity": 1,
-        "signature_chars_sent_to_unity": 1,
-        "signature_hash_sent_to_unity": 1,
         "unity_message_hook_ready": 1
       },
       "frida_script_errors": 0,
-      "signing_callback_invoked": true,
-      "signing_result_sent_to_unity": true,
+      "signing_callback_invoked": false,
+      "signing_result_sent_to_unity": false,
       "observer_ready": true
     },
-    "failure_correlation": "only_resigned_failed_home_screen",
-    "signature_check_execution_proved": true,
+    "failure_correlation": "not_reproduced_or_original_not_verified",
+    "signature_check_execution_proved": false,
     "note": "The installed signature-reading Java class is not necessarily executed at startup. A 0 event count is not proof of no native or server-side certificate validation."
   },
   "requires_official_signing_cert_for_real_online_equivalence": "not independently proven by callback events",
