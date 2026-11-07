@@ -381,15 +381,18 @@ def main():
             report["system_prompt_actions"]=dismiss_android_system_prompts(
                 adb,initial_png=initial_png)
             report["screenshot_after_system_prompts"]=snap(args.output,"screen_after_system_prompts.png")
-            # The 17.26 emulated realm is verified on this Native Bridge.
-            # Attach the *read-only* ARM64 observer before the verified
-            # language/region taps, so any legitimate Unity callbacks can
-            # be observed in order. The previous end-of-run attach missed
-            # the onboarding stage entirely.
-            if frida_monitor is not None and report.get("frida_spawn_attach_succeeded"):
-                report["emulated_realm_before_ui_status"] = (
-                    frida_monitor.probe_emulated_realm(
-                        Path("tools/home41_frida_emulated_realm_probe.js")))
+            # Never attach the emulated ARM64 realm on a white/unknown
+            # startup page. #42381075880 hit TransportError and never
+            # identified a HOME UI page. Hook only within the state
+            # machine after two verified frames but BEFORE its first tap.
+            def verified_page_arm64_probe():
+                return frida_monitor.probe_emulated_realm(
+                    Path("tools/home41_frida_emulated_realm_probe.js"))
+            arm64_ui_hook = (
+                verified_page_arm64_probe if
+                frida_monitor is not None and
+                report.get("frida_spawn_attach_succeeded")
+                else None)
             # Single reusable stage-driven flow: all previously verified
             # selections are replayed from one profile with screenshot guards.
             # No Nintendo login, irreversible DOB submission, ToS or account ops.
@@ -397,7 +400,8 @@ def main():
                 load_guest_profile, run_known_guest_setup)
             profile=load_guest_profile(args.guest_profile)
             onboarding=run_known_guest_setup(
-                adb,args.output,profile,max_checks=70,interval_seconds=3)
+                adb,args.output,profile,max_checks=70,interval_seconds=3,
+                on_first_verified_page=arm64_ui_hook)
             report["onboarding"]=onboarding
             completed=set(onboarding["completed"])
             report["home_language_screen_recognized"]="choose_language" in completed
@@ -485,11 +489,10 @@ def main():
         try:
             # Only after HOME UI loaded; the ARM64 Native Bridge may not be
             # initialized at the initial Frida x64 spawn attach.
-            if (report.get("frida_spawn_attach_succeeded")
-                    and frida_monitor.emulated_status == "not_attempted"):
-                report["emulated_realm_probe_status"] = (
-                    frida_monitor.probe_emulated_realm(
-                        Path("tools/home41_frida_emulated_realm_probe.js")))
+            # For unknown/white/error screens, deliberately do not
+            # attempt ARM64 realm attach even at the end of the run.
+            # Report 'not_attempted' instead of altering a blocked app.
+            report["emulated_realm_probe_status"] = frida_monitor.emulated_status
             report["frida_interface"]=frida_monitor.stop()
         except Exception as e:
             report["frida_interface"]={
