@@ -263,3 +263,28 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 - [只读监控快速 CI #42385968843](https://github.com/969981/PokeHome_Resources/actions/runs/42385968843)：**56 项测试成功**；[Frida 17 bundle #42385968860](https://github.com/969981/PokeHome_Resources/actions/runs/42385968860) 通过 **12 项专项测试**。
 
 下一验收标准：1. 新布局进入中文界面成功；2. 首次非破坏性点击前 ARM64 观察器真正就绪；3. 在真实月/日 UI 操作期间观察回调索引，并和截图中的“4”“5”对应；4. 后续再进行一次已知可见年份的本地选择，确定年索引规律，然后才考虑导航到 **1999**。一直不提交日期、不绑定 Nintendo Account、不做云端注册或删除。
+
+
+## 十三、4 个出生日期原生 Hook 的实机安装与候选索引读取
+
+### Frida 模拟执行环境实机证据
+
+- [实际运行 #42385936928](https://github.com/969981/PokeHome_Resources/actions/runs/42385936928) 的 Artifact 包括 `first_launch_report.json`、`frida_interface_events.jsonl`、`frida_interface_summary.json`，确认 `frida_spawn_attached=true`、`emulated_arch=arm64`、`arm64_hook_preflight_seen=true`、`arm64_observer_ready=true`。
+- ARM64 emulated realm 发出 **4 个真正的 `date_hook_installed` 事件**，依次是 `birthdate_year_change_index`、`birthdate_month_change_index`、`birthdate_day_change_index`、`dropdown_scroll_open_index`，后续才出现 `read_only_observer_ready`。这验证了静态 RVA 可用和 Frida 安装回调成功。
+- 该实机是**首次启动无 UI 点击**测试：`birthdate_ui_callback_event_count=0`、`api_stage_event_count=0`、`first_basic_utid_event_seen=false`。不能从已安装推断回调已触发、实际选中了 1999 或账号已经创建。
+- 同轮 x64 Native Socket 元数据中出现 7 次网络收发事件，与 API 响应／HTTP 状态码无关。
+
+### 直接读取 Unity 年份列表，而不是猜索引
+
+静态审计证明 `FirstBootViewInputBirthData` 上的 `yearOptionDataList` 字段位于 +0x40，类型为 `List<CustomTMPDropdown.OptionData>`，其中 `OptionData.m_Text` 为 UTF-16 文本。年列表对应 `SetData(int languageCode)` 的 **RVA `0x1C80964`**。
+
+新增 `tools/early_home_tid_observer.js` 的只读实验入口：
+1. **仅拦截 `SetData` 的入口/返回**，不修改任何入参、不调用游戏方法或设置日期。
+2. 方法返回后读取有界的 100～140 个选项；每项最多 12 UTF-16 字符，仅在 Frida 进程内匹配 1900～2100 的四位年份。
+3. 只有大多数选项都是合理年份、数列严格逐年递减、且只有一个 1999 匹配时，才通过 `send()` 上报 `year_1999_option_index_verified`，仅包含 **选项索引、数量、首末年份以及是否严格递减**；不输出原始文本、对象地址、HTTP 包或身份凭据。
+4. 实际元数据可能含占位选项；对此允许最多 2 个不符合数字年份的选项，并由严格递减条件排除明显错序。其余情况上报 `year_options_layout_not_verified` 或不触发。
+5. 只有真实运行收到了 `year_1999_option_index_verified`，才可将索引作为**本地 UI 选项位置的候选**；不表示已经选择 1999，也不表示该索引可直接作为 Unity setter 入参。
+
+独立监控器 `tools/home41_frida_interface_monitor.py` 仅在进一步验证列表数值合理时保留目标选项索引。新的单元测试覆盖错误长度、伪造顺序、非数字输入和敏感资料字段过滤。
+
+[快速测试 #42386652090](https://github.com/969981/PokeHome_Resources/actions/runs/42386652090) **58 项通过**；[Frida 编译测试 #42386652173](https://github.com/969981/PokeHome_Resources/actions/runs/42386652173) 通过。**尚无真实 1999 目标索引，也没有实际 UI 年份选择或 `basic.utid`**。完整模拟器还要验证 HOME 的语言新布局、首次点击前 Hook 就绪、然后进入 DOB 页并收到 `SetData`/月日回调事件。
