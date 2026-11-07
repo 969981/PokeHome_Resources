@@ -60,7 +60,7 @@
   "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
     {
-      "event": "no_android_system_prompt_matched"
+      "event": "hierarchy_unavailable"
     }
   ],
   "screenshot_after_system_prompts": true,
@@ -69,6 +69,9 @@
   "home_language_screen_recognized": true,
   "simplified_chinese_selected": true,
   "screenshot_after_language_step": true,
+  "language_confirmation_dialog_recognized": true,
+  "simplified_chinese_confirmed": true,
+  "screenshot_after_language_confirmation": true,
   "screenshot_after_wait": true,
   "process_after_wait": true,
   "process_exit_diagnostics": {
@@ -92,7 +95,7 @@
     "events": [],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 2,
+      "am_proc_died": 1,
       "am_crash": 0,
       "am_anr": 0
     }
@@ -103,7 +106,7 @@
     "Fatal signal": 0,
     "dlopen failed": 1
   },
-  "test_emulator_adb_root": false,
+  "test_emulator_adb_root": true,
   "cache_bytes": 0,
   "cache_candidates": 1,
   "cache_types": {}
