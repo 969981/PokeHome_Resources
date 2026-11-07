@@ -182,6 +182,44 @@ def screenshot_apac_region_expand_position(png_bytes:bytes):
     return int(w*.82),int(h*.48)
 
 
+def screenshot_apac_mainland_option(png_bytes:bytes):
+    """Strict visual gate for the FIRST teal country row in the expanded APAC list.
+
+    Calibrated only against real 1080x2340 HOME 4.1.0 screenshot
+    (Actions run 42351711883). This selects 中国大陆, not a Nintendo Account,
+    birthday, age, Terms of Use, account registration or deletion.
+    Return None on any unknown/transition/error screen.
+    """
+    if not png_bytes or not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return None
+    try:
+        from io import BytesIO
+        from PIL import Image
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (ImportError,OSError,ValueError):
+        return None
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return None
+    def get(x,y):
+        return im.getpixel((int(w*x),int(h*y)))
+    def near(a,b,t=12):
+        return all(abs(x-y)<=t for x,y in zip(a,b))
+    if not near(get(.5,.15),(38,179,151)):
+        return None
+    # Header and the upper six region rows must still be visible, while
+    # rows one and two of expanded APAC are teal at their original positions.
+    if not near(get(.3,.48),(248,250,245)):
+        return None
+    if not all(near(get(.3,y),(18,166,168)) for y in (.535,.588,.641)):
+        return None
+    if not near(get(.15,.535),(18,166,168)):
+        return None
+    # Avoid Chinese label glyphs; tap left side INSIDE the confirmed first row.
+    return int(w*.30),int(h*.535)
+
+
 def wait_for_stable_region_page(adb,max_checks:int=10,interval_seconds:float=6.0):
     """Wait for the full-size, non-animated 7-row region page.
 
