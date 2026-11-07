@@ -158,7 +158,7 @@ def safe_android_network_snapshot():
         proc=adb("shell",*command,secs=15)
         return (proc.stdout or "").strip()[:limit] if proc and proc.returncode==0 else ""
     value_date=value("date","-u","+%Y-%m-%dT%H:%M:%SZ")
-    if re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z",value_date):
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z",value_date):
         result["android_utc_time"]=value_date
     airplane=value("settings","get","global","airplane_mode_on")
     if airplane in ("0","1"):result["airplane_mode"]=airplane=="1"
@@ -257,7 +257,8 @@ def main():
             report["android_immersive_setting"]="confirmed" if (
                 immersive and immersive.returncode==0 and verify_immersive
                 and "confirmed" in (verify_immersive.stdout or "")) else "not_confirmed"
-            report["android_network_preflight"]=safe_android_network_snapshot()\n            adb("logcat","-c",secs=10)
+            report["android_network_preflight"]=safe_android_network_snapshot()
+            adb("logcat","-c",secs=10)
             launched=adb("shell","monkey","-p",PACKAGE,"-c","android.intent.category.LAUNCHER","1",secs=50)
             successful=bool(launched and launched.returncode==0 and "Events injected: 1" in launched.stdout)
             report["launch_status"]="event_sent" if successful else "launcher_failed"
