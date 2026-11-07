@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import time
 from collections import Counter
 from pathlib import Path
@@ -50,6 +51,18 @@ def observe(apk: Path, name: str, bundle: Path, root: Path, remote_device):
         data = {"event": payload["event"]}
         if isinstance(elapsed, int) and not isinstance(elapsed, bool) and 0 <= elapsed <= 600000:
             data["elapsed_ms"] = elapsed
+        # Callback receiver/method are static Unity object/method names,
+        # never arbitrary message text. Strict allowlist prevents IDs,
+        # URLs, certificates, tokens or unexpected untrusted data.
+        if payload["event"] in {
+            "signature_chars_sent_to_unity",
+            "signature_hash_sent_to_unity",
+            "package_name_sent_to_unity",
+        }:
+            for k in ("receiver_class", "handler_method"):
+                v = payload.get(k)
+                if isinstance(v, str) and re.fullmatch(r"[A-Za-z_][A-Za-z0-9_.-]{0,63}", v):
+                    data[k] = v
         events.append(data)
 
     summary = {
