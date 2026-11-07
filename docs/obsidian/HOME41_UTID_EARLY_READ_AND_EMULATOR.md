@@ -102,3 +102,13 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 - \`tools/early_home_tid_observer.js\`：只读 native hook。
 - \`docs/HOME41_EARLIEST_TRAINER_ID.md\`：原始早期 ID 静态分析。
 - \`docs/obsidian/HOME41_UTID_EARLY_READ_AND_EMULATOR.md\`：本文。
+
+
+## 7. 2026-11-07 本轮实测：UIAutomator 识别盲区
+
+- 已完成 [Actions #42336066871](https://github.com/969981/PokeHome_Resources/actions/runs/42336066871)：工作流成功；APK 安装成功；HOME 进程存活，致命崩溃计数 0。
+- \`system_prompt_actions\` 实际返回 \`no_android_system_prompt_matched\`。
+- \`screen_after_wait.png\` 直接证实还停留在 Android 系统 **Viewing full screen → Got it**；不是 Nintendo 登录、注册成功或模型下载页面。
+- 实际缓存对象 0，\`pokemon_cache_summary.json\` = \`no_cached_unity_assets\`；没有找到 ID 或建立新账号。
+- 由此新增 \`screenshot_immersive_hint_position\`，只在严格命中真实 Android 15 全屏提示图像特征时点击 OS 按钮；随后重试 UIAutomator 对权限拒绝按钮的处理。这是一种针对**已确认系统画面**的有限回退，不允许随意自动点击 HOME UI。
+- 必须用下一轮模拟器截图和 JSON 证明 OS 弹窗已经消失，不能以通过单元测试代替真实 UI 验收。
