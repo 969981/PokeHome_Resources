@@ -54,6 +54,9 @@ jobs:
           python _android_source/tools/reassemble_splits.py --version 4.1.0
           python _android_source/tools/home.py scan --version 4.1.0
           python _android_source/tools/native_audit.py --version 4.1.0
+          python _android_source/tools/aba_probe.py --version 4.1.0
+          python _android_source/tools/il2cpp_sections.py --version 4.1.0
+          python _android_source/tools/cache_diff.py --version 4.1.0
 
       - name: Install Unity asset and geometry conversion libraries
         shell: bash
@@ -69,6 +72,7 @@ jobs:
           mkdir -p "$dest"
           python _android_source/tools/export_raw_assets.py --version 4.1.0 --out "$dest"
           python _android_source/tools/unity_export.py --version 4.1.0 --out "$dest" --max-size-mib 256
+          python _android_source/tools/unity_references.py --version 4.1.0
           python _android_source/tools/mesh_to_glb.py --version 4.1.0 --resources "$dest"
           python _android_source/tools/unity_failures.py --version 4.1.0
           python _android_source/tools/index_db.py --version 4.1.0
