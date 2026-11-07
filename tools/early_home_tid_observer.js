@@ -18,6 +18,13 @@ const HOME = {
   tokenCallbackRva: 0x1D35AD0,
   loginSerializeRva: 0x1D3BE50,
   loginCallbackRva: 0x1D3C020,
+  // 4.1.0 IL2CPP ScriptMethod metadata, not offset guesses:
+  // FirstBootViewInputBirthData.OnYearChageValue(int index)
+  birthdateYearChangeRva: 0x1C80EF8,
+  birthdateMonthChangeRva: 0x1C814C0,
+  birthdateDayChangeRva: 0x1C8181C,
+  // Custom.UI.CustomTMPDropdownScrollList.Open(int value)
+  dropdownScrollOpenRva: 0x1F14C90,
   basicUtidField: 0xF0,
   managedStringLength: 0x10,
   managedStringChars: 0x14,
@@ -153,6 +160,41 @@ function installHooks(module) {
       }
     }
   });
+  // Trace Unity's own date-picker events, not network responses.
+  // Verify callback indices against matching HOME screenshots before
+  // inferring which index means 1999. No setter, callback invocation,
+  // input rewriting or DOB submission is used here.
+  const dateCallbacks = [
+    ["birthdate_year_change_index", HOME.birthdateYearChangeRva, 127],
+    ["birthdate_month_change_index", HOME.birthdateMonthChangeRva, 13],
+    ["birthdate_day_change_index", HOME.birthdateDayChangeRva, 32],
+    ["dropdown_scroll_open_index", HOME.dropdownScrollOpenRva, 127]
+  ];
+  const observed = Object.create(null);
+  for (const [name, rva, limit] of dateCallbacks) {
+    if (rva >= module.size) {
+      report("date_hook_rva_outside_module");
+      continue;
+    }
+    observed[name] = 0;
+    try {
+      Interceptor.attach(addr(rva), {
+        onEnter(args) {
+          if (observed[name] >= 8) return;
+          observed[name]++;
+          let index;
+          try { index = args[1].toInt32(); } catch (_) { index = -999; }
+          if (index >= 0 && index < limit)
+            report(name, {selected_index: index});
+          else
+            report(name, {index_range_valid: false});
+        }
+      });
+      report("date_hook_installed", {hook_kind: name});
+    } catch (e) {
+      report("date_hook_install_failed", {hook_kind: name});
+    }
+  }
   report("read_only_observer_ready");
 }
 
