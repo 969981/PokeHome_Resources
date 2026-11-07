@@ -64,8 +64,10 @@
     }
   ],
   "screenshot_after_system_prompts": true,
-  "home_language_screen_recognized": false,
-  "simplified_chinese_selected": false,
+  "home_language_check_count": 4,
+  "home_language_poll_wait_seconds": 30,
+  "home_language_screen_recognized": true,
+  "simplified_chinese_selected": true,
   "screenshot_after_language_step": true,
   "screenshot_after_wait": true,
   "process_after_wait": true,
@@ -78,7 +80,7 @@
       "am_proc_died": 0,
       "am_crash": 0,
       "has died": 0,
-      "ProcessRecord": 1,
+      "ProcessRecord": 0,
       "Force finishing": 0,
       "ANR in": 0,
       "tombstoned": 0,
@@ -87,12 +89,10 @@
       "UnsatisfiedLinkError": 0,
       "libndk_translation": 0
     },
-    "events": [
-      "11-07 04:55:30.240   559   582 W system_server: Long monitor contention with owner CachedAppOptimizerThread (680) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt"
-    ],
+    "events": [],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 1,
+      "am_proc_died": 2,
       "am_crash": 0,
       "am_anr": 0
     }
@@ -101,9 +101,9 @@
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
     "Fatal signal": 0,
-    "dlopen failed": 0
+    "dlopen failed": 1
   },
-  "test_emulator_adb_root": true,
+  "test_emulator_adb_root": false,
   "cache_bytes": 0,
   "cache_candidates": 1,
   "cache_types": {}
