@@ -173,3 +173,13 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 沿用 tools/home41_guest_profile.json：2000-01-01 只是本地候选配置；不绑定 Nintendo Account，submit_birthdate=false，accept_terms=false，create_account=false，delete_account=false。
 
 [独立 CI #42361870671](https://github.com/969981/PokeHome_Resources/actions/runs/42361870671)：**22/22 测试通过**。完整模拟器 [#42361874063](https://github.com/969981/PokeHome_Resources/actions/runs/42361874063) 仍需实际截图与报告验收。只有在验证可见年份、月份与日期均与候选一致后，才能考虑官方允许的进一步初始化步骤。
+
+
+## 2026-11-07：Android Pixel Launcher ANR 阻断生日控件探测
+
+- [Actions #42361874063](https://github.com/969981/PokeHome_Resources/actions/runs/42361874063) 的新年月日探针运行，APK 安装成功、HOME 进程活着，但从启动 15s 到末尾的真实截图都显示 Android OS 对话框 “Pixel Launcher isn't responding”，按钮为 “Close app” / “Wait”。这是 Android 启动器 ANR，**不是 HOME 网络服务端报错、不是注册失败、更不是 2000 年未找到**。
+- 该次 `onboarding.status=no_known_next_screen`，`completed=[]`、`checks=70`；未进入 HOME 语言、生日页面。系统 Event 统计 `am_anr=1`。本次年月日探针完全没有执行，切勿将 CI SUCCESS 误认为运行时验证成功。
+- 为此新增 `tools/android41_os_anr_recovery.py` 和 `tools/test_android41_os_anr_recovery.py`。它必须同时满足 **15s 截图的九点真实 OS 灰色 ANR 弹窗签名** 与 **UIAutomator 解析到完全一致的 “Pixel Launcher isn't responding” 标题、唯一 “Close app” 按钮有效边界**，才会点击关闭系统启动器；然后用 `adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -p jp.pokemon.pokemonhome` 直接启动 HOME。只允许 Android OS 层面的这一种精确恢复，任何不匹配都跳过。
+- 状态仅保存 `recognized_screen`、`exact_title_and_button_in_os_hierarchy`、`os_dialog_close_sent`、`launcher_recovery_direct_start_sent` 和系统恢复后截图；不保留 UI 层级 XML 或账号敏感数据。
+- 独立 [Actions #42362628444](https://github.com/969981/PokeHome_Resources/actions/runs/42362628444) 通过 **26 项** 只读/安全单元测试，包括本次 Android OS ANR 精确匹配及非 Launcher ANR 拒绝行为。
+- 真正模拟器重新验收：[Actions #42362631400](https://github.com/969981/PokeHome_Resources/actions/runs/42362631400)。仍以真实 Artifact、截图、状态为准；不绑定 Nintendo Account，不提交出生日期，不创建/删除账号。
