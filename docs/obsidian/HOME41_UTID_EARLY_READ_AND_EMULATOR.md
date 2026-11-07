@@ -121,3 +121,12 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 - \`screen_after_system_prompts.png\`：顶部与蓝色按钮未变，但相机系统权限弹窗出现使 \`(0.5w,0.9h)\` 从 \`(127,127,127)\` 变为 \`(51,51,51)\`。旧规则对该下半屏点位的要求属于**过度检测**，是误判根因。
 - 修复：仅由稳定的顶部 OS 白色面板 + 蓝色按钮 + 紧邻背景区域四个点位判断，并在运行 \`uiautomator\` 前先试此已知提示的视觉检测。**没有使用 OCR，不会识别或点击 HOME 业务页面**。
 - 当前修复仍需下一次 Actions 真实截图与 \`system_prompt_actions\` 报告确认，不能仅凭像素样例单元测试声称游戏已过登录。
+
+
+## 9. 2026-11-07 第五轮：改为初始截图复用与 OS 设置双验证
+
+- [Actions #42337122744](https://github.com/969981/PokeHome_Resources/actions/runs/42337122744) CI success，但 \`system_prompt_actions\` 仍为 \`no_android_system_prompt_matched\`。
+- 本轮 \`screen_15s.png\` 的实际 1080×2340 像素符合屏幕识别标准：顶部 \`(238,237,244)\`、蓝色按钮 \`(71,93,146)\`、下方灰色 \`(127,127,127)\`。因此不是该已存图片本身缺少视觉特征。
+- 下一轮增加 \`initial_screenshot_immersive_signature\`，使用**已成功落盘的 \`screen_15s.png\` 原始字节**做同一严格匹配，避免第二次截屏与权限弹窗的异步竞争。
+- 同时使用 Android 模拟器的 \`settings put secure immersive_mode_confirmations confirmed\` 设置仅跳过**操作系统**全屏使用说明，不绕过 Pokémon HOME 自身协议、登录或授权。运行时会读回记录为 \`android_immersive_setting\`。
+- 结果必须结合三个字段：\`android_immersive_setting\`、\`initial_screenshot_immersive_signature\`、\`system_prompt_actions\`。系统截图与缓存都保留独立证据；CI 成功本身仍不代表 HOME 账号注册或 ID 获取成功。

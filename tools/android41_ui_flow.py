@@ -80,15 +80,18 @@ def screenshot_immersive_hint_position(png_bytes:bytes):
         return (int(w*.85),int(h*.28))
     return None
 
-def dismiss_android_system_prompts(adb, max_rounds:int=4):
+def dismiss_android_system_prompts(adb, initial_png:bytes|None=None, max_rounds:int=4):
     result=[]
-    for _ in range(max_rounds):
-        # The known Android immersive tip may not be exposed by uiautomator.
-        # Check a strict visual signature first, before additional OS prompts
-        # alter the dimmed background. No blind taps are ever permitted.
-        screen=adb("exec-out","screencap","-p",secs=30,binary=True)
-        pos=screenshot_immersive_hint_position(
-            screen.stdout if screen and screen.returncode==0 else b"")
+    for round_index in range(max_rounds):
+        # The initial screenshot is already verified by the main probe. Use
+        # those exact bytes for the first OS prompt check rather than racing
+        # against another asynchronously appearing permission dialog.
+        if round_index==0 and initial_png:
+            pixels=initial_png
+        else:
+            screen=adb("exec-out","screencap","-p",secs=30,binary=True)
+            pixels=screen.stdout if screen and screen.returncode==0 else b""
+        pos=screenshot_immersive_hint_position(pixels)
         if pos is not None:
             choice=("dismiss_android_immersive_hint_visual_signature",pos)
         else:

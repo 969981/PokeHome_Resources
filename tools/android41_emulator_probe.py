@@ -123,6 +123,15 @@ def main():
             report["result"]="blocked_before_launch"
         else:
             report["install_status"]="ok"
+            # Set the standard Android OS immersive acknowledgement on a
+            # disposable emulator, not HOME's in-app Terms/consent.
+            immersive=adb("shell","settings","put","secure",
+                          "immersive_mode_confirmations","confirmed",secs=18)
+            verify_immersive=adb("shell","settings","get","secure",
+                                "immersive_mode_confirmations",secs=18)
+            report["android_immersive_setting"]="confirmed" if (
+                immersive and immersive.returncode==0 and verify_immersive
+                and "confirmed" in (verify_immersive.stdout or "")) else "not_confirmed"
             adb("logcat","-c",secs=10)
             launched=adb("shell","monkey","-p",PACKAGE,"-c","android.intent.category.LAUNCHER","1",secs=50)
             successful=bool(launched and launched.returncode==0 and "Events injected: 1" in launched.stdout)
@@ -133,7 +142,13 @@ def main():
             report["process_at_15s"]=bool(first and first.returncode==0 and first.stdout.strip())
             # Only interact with explicit Android OS overlays. Never click
             # HOME app Terms, registration, consent, account or deletion UI.
-            report["system_prompt_actions"]=dismiss_android_system_prompts(adb)
+            from android41_ui_flow import screenshot_immersive_hint_position
+            captured=(args.output/"screen_15s.png")
+            initial_png=captured.read_bytes() if captured.is_file() else b""
+            report["initial_screenshot_immersive_signature"]=bool(
+                screenshot_immersive_hint_position(initial_png))
+            report["system_prompt_actions"]=dismiss_android_system_prompts(
+                adb,initial_png=initial_png)
             report["screenshot_after_system_prompts"]=snap(args.output,"screen_after_system_prompts.png")
             if successful:time.sleep(max(0,args.idle_seconds-15))
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
