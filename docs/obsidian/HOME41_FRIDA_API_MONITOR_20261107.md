@@ -119,3 +119,43 @@ status: implemented-ci-verification-pending
 ### 关于下一步真正的 API 响应
 
 Socket Hook 仅提供“进程是否有原生收发”与大致时序。要知道 `basic.utid` 是哪个服务端响应下发，优先在**实机 ARM64 的 IL2CPP 回调**里记录字段是否首次赋值、事件时序，再跟该运行的官方 UI 六位显示对账。现存 ARM64 RVA 不适用于 x64 Native Bridge，不能硬插，更不能通过修改网络响应或账号资料来推断合法六位 ID。
+
+
+## 八、原生 Socket 真实命中与 Frida 17.26 的 emulated realm
+
+### 原生传输第一条真实证据
+
+[独立 Frida 首启 #42378956808](https://github.com/969981/PokeHome_Resources/actions/runs/42378956808) 的真实 Artifact 给出：
+
+| 字段 | 结果 |
+| --- | --- |
+| frida_server_setup.status | ready |
+| frida_interface.status | spawn_attach_resumed |
+| native_connect_hook_ready | true |
+| native_socket_io_hooks_ready | true |
+| native_transport_event_count | **6** |
+| 原生 IPv6 连接尝试 | **1**（约 3.501s；返回非 0，并非已证明连接成功） |
+| Socket send | **3**（约 3.523s、5.469s、5.558s） |
+| Socket receive | **2**（约 4.008s、5.805s） |
+| api_stage_event_count | **0** |
+| first_basic_utid_event_seen | **false** |
+| observed_arch | **x64** |
+| il2cpp_module_seen | false |
+
+这是真实运行中的 `Interceptor` 收发事件，而不是静态代码或合成单元测试。因此已经证明进程有 Socket 级别的数据收发，但**仍不清楚是否对应 HOME 用户信息 API**；不会推出任何 HTTP 状态或 `basic.utid` 内容。完整 Artifact 由 Actions 链接进入下载。
+
+### Native Bridge 原生架构研究
+
+Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026/11/05/frida-17-26-0-released/ 提到 emulated realm 在 Android x86_64 Native Bridge 下修复了线程列表、导出符号查找和加载问题。Frida 核心 API 支持 `session=device.attach(pid, realm='emulated')`，官方参考 https://frida.re/news/releases/ 。
+
+本项目的 CPU: Android API35 x86_64 + `ro.dalvik.vm.native.bridge=libndk_translation.so`，观察到 Frida 默认 `Process.arch=x64`，无法列出 ARM64 的 `libil2cpp.so`。该状态不代表 ARM64 游戏库没加载，更不能直接拿 x64 realm 的 `Interceptor` 安装 ARM64 RVA。
+
+新增：
+
+- `tools/home41_frida_emulated_realm_probe.js`：只读收集 emulated realm 的 `Process.arch`、`libil2cpp.so` 是否可见，以及 `SetBasic` 候选 RVA 是否在模块范围内；不报告地址、内存内容、UTID 或凭据。
+- `FridaInterfaceMonitor.probe_emulated_realm()`：在正常 HOME 进程启动约 20 秒后，显式 `device.attach(pid, realm='emulated')`；失败只记错误类别。仅在 `arch=arm64`、`libil2cpp.so visible=true` 且 RVA 边界有效时，加载原有 ARM64 只读 `early_home_tid_observer.js`。
+- `tools/home41_frida_first_launch_smoke.py`：正常 x64 Frida 启动、等待 Unity 加载、尝试 emulated realm、再记录事件并退出；不点击任何 HOME 页面或执行账号操作。
+- [快速 CI #42379574983](https://github.com/969981/PokeHome_Resources/actions/runs/42379574983) 通过 **48 项单元测试**；[Frida 编译 #42379574956](https://github.com/969981/PokeHome_Resources/actions/runs/42379574956) 通过，包含 8 项专项测试。
+- 实机结果需以 [#42379526660](https://github.com/969981/PokeHome_Resources/actions/runs/42379526660) 的 `frida_interface_summary.json.emulated_realm_status`、`emulated_arch`、`emulated_il2cpp_visible` 为准。不能预先声称 ARM64 SetBasic 钩子已运行。
+
+当 `emulated` attach 无效时，不应尝试把 ARM64 函数地址转为 x64 并直接钩取；应另用真正 ARM64 测试设备或可被 Frida 识别的 Android 仿真环境做分支验证。
