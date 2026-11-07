@@ -47,6 +47,24 @@ class HomeSystemOverlayTest(unittest.TestCase):
         dim.save(buffer,format="PNG")
         self.assertEqual(screenshot_immersive_hint_position(buffer.getvalue()),(918,655))
 
+
+    def test_language_option_only_on_known_home_screen(self):
+        from io import BytesIO
+        from PIL import Image,ImageDraw
+        from android41_ui_flow import screenshot_simplified_chinese_option
+        im=Image.new("RGB",(1080,2340),(158,241,207))
+        draw=ImageDraw.Draw(im)
+        draw.rectangle((0,0,1079,215),fill=(202,244,161))
+        draw.rectangle((0,215,1079,402),fill=(38,179,151))
+        for y in (561,1813,1942):
+            draw.rectangle((150,y-45,800,y+45),fill=(240,246,236))
+        buf=BytesIO()
+        im.save(buf,format="PNG")
+        self.assertEqual(screenshot_simplified_chinese_option(buf.getvalue()),(540,1813))
+        im=Image.new("RGB",(1080,2340),(238,237,244))
+        buf=BytesIO();im.save(buf,format="PNG")
+        self.assertIsNone(screenshot_simplified_chinese_option(buf.getvalue()))
+
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
         self.assertIsNone(parse_system_action(None))

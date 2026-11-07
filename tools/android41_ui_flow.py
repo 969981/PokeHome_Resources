@@ -80,6 +80,37 @@ def screenshot_immersive_hint_position(png_bytes:bytes):
         return (int(w*.85),int(h*.28))
     return None
 
+
+def screenshot_simplified_chinese_option(png_bytes:bytes):
+    """Only recognize the empirically observed HOME first-launch language UI.
+
+    This is an ordinary, non-account client language preference, not consent
+    to Terms or an authentication action. Unknown screens return None.
+    """
+    if not png_bytes or not png_bytes.startswith(bytes.fromhex("89504e470d0a1a0a")):
+        return None
+    try:
+        from io import BytesIO
+        from PIL import Image
+        with Image.open(BytesIO(png_bytes)) as source:
+            im=source.convert("RGB")
+    except (OSError,ImportError,ValueError):
+        return None
+    w,h=im.size
+    if w<600 or h<1200 or not 1.9<h/w<2.5:
+        return None
+    def sample(x,y):
+        return im.getpixel((int(w*x),int(h*y)))
+    def near(actual,wanted,delta=14):
+        return all(abs(a-b)<=delta for a,b in zip(actual,wanted))
+    if (near(sample(.5,.02),(202,244,161))
+            and near(sample(.5,.14),(38,179,151))
+            and near(sample(.3,.24),(240,246,236))
+            and near(sample(.3,.775),(240,246,236))
+            and near(sample(.3,.83),(240,246,236))):
+        return int(w*.5),int(h*.775)
+    return None
+
 def dismiss_android_system_prompts(adb, initial_png:bytes|None=None, max_rounds:int=4):
     result=[]
     for round_index in range(max_rounds):

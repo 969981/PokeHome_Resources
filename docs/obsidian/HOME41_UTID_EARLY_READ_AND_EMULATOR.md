@@ -141,3 +141,14 @@ frida -U -f jp.pokemon.pokemonhome -l tools/early_home_tid_observer.js
 - 没有登录、首次 \`basic.utid\`、训练家六位 ID 或游戏模型缓存；不是“HOME 已正常进入游戏”。
 - 再次执行时改为 45 秒快速诊断，额外收集 Android 系统 exit-info、\`am_proc_died\` / \`am_crash\` 计数和最多 40 条经过过滤与脱敏的相关系统日志，禁止保存完整 logcat、帐号标识和网络令牌。
 - **动态可用性结论**：在没有测试帐号与正常 APP 界面的前提下，本方案仍不能验证 \`register\` 专属/公共响应首发 UTID；需先排查启动退出并确认当前版本是否支持这套测试系统。
+
+
+## 11. 2026-11-07 第七轮：真正进入 HOME 的首次语言选择页
+
+- [Actions #42338242991](https://github.com/969981/PokeHome_Resources/actions/runs/42338242991) 全部完成，\`result=app_running_no_recognized_cache_assets\`。
+- 安卓 API35 / \`libndk_translation.so\`；安装成功、启动时与观察结束进程均存活，致命崩溃计数、ANR 和 \`am_crash\` 均为 0。
+- \`android_immersive_setting=confirmed\`，系统全屏提示已被正确处理；系统权限对话框共三次选择 \`deny_android_runtime_permission\` 且返回成功。该权限拒绝只属于 OS，不涉及 Pokémon HOME 条款。
+- **最重要的真实视觉证据**：\`screen_after_wait.png\` 显示 Pokémon HOME 4.1.0 自身的 \`Choose Your Language\` 界面，有 English、简体中文、繁體中文等语言项，确认已经进入游戏 APP 首次使用 UI，而不是 Android 桌面。
+- 目前仍无登录、注册、UUID、UTID 或 HOME 六位训练家 ID，缓存 \`0\`：正常，因为只是语言选择页。
+- 下一轮脚本仅在屏幕截图与已观察的 HOME 语言选择页像素布局同时匹配时点击 \`简体中文\`（首选语言设置），等待并截取下一屏。**明确禁止自动确认协议、Nintendo 登录或触发云端账户创建/删除**。
+- 工具字段 \`home_language_screen_recognized\` 和 \`simplified_chinese_selected\` 分别表示截图检测与 ADB 点击事件；即使后者为 true 也须通过下一屏截图证明语言实际生效。

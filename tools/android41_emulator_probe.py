@@ -201,7 +201,22 @@ def main():
             report["system_prompt_actions"]=dismiss_android_system_prompts(
                 adb,initial_png=initial_png)
             report["screenshot_after_system_prompts"]=snap(args.output,"screen_after_system_prompts.png")
-            if successful:time.sleep(max(0,args.idle_seconds-15))
+            # Observe first-launch HOME language choice without accepting any
+            # service Terms or submitting registration credentials.
+            time.sleep(10)
+            candidate=adb("exec-out","screencap","-p",secs=30,binary=True)
+            from android41_ui_flow import screenshot_simplified_chinese_option
+            pos=screenshot_simplified_chinese_option(
+                candidate.stdout if candidate and candidate.returncode==0 else b"")
+            report["home_language_screen_recognized"]=bool(pos)
+            if pos is not None:
+                select=adb("shell","input","tap",str(pos[0]),str(pos[1]),secs=15)
+                report["simplified_chinese_selected"]=bool(select and select.returncode==0)
+                time.sleep(8)
+            else:
+                report["simplified_chinese_selected"]=False
+            report["screenshot_after_language_step"]=snap(args.output,"screen_after_language_step.png")
+            if successful:time.sleep(max(0,args.idle_seconds-33))
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
             second=adb("shell","pidof",PACKAGE)
             report["process_after_wait"]=bool(second and second.returncode==0 and second.stdout.strip())
