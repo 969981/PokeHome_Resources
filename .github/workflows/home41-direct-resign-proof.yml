@@ -5,6 +5,7 @@ on:
     branches: ['4.1.0']
     paths:
       - '.github/workflows/home41-direct-resign-proof.yml'
+      - 'Android/Smali/tools/audit_direct_resign.py'
   workflow_dispatch:
 
 permissions:
@@ -99,7 +100,7 @@ jobs:
           sudo udevadm trigger --name-match=kvm
           test -e /dev/kvm
 
-      - name: Direct-resign versus original Android 15 runtime A/B
+      - name: Direct-resign signing-metadata-only versus original Android 15 runtime A/B
         id: runtime
         uses: reactivecircus/android-emulator-runner@v2
         continue-on-error: true
