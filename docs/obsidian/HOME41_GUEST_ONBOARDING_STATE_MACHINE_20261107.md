@@ -205,3 +205,27 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 4. 原生 UIAutomator 年份数字节点：当前没有暴露真实四位年份节点。
 
 下一步可利用**本地、未提交的选择结果**研究列表重新展开的锚点：在已确认的可见年份项上进行一次受控选择，再打开年份列表，查看是否围绕当前选中年份定位，而不是继续猜测触屏滚动目标。操作仍不能触及“下一步”、协议、注册、删除，不绑定 Nintendo Account。若重新展开仍回到 2026～2018，则应转向游戏自身下拉列表的输入事件/运行时结构研究。
+
+
+## 2026-11-07：受控选择 2018 年并重新打开年份列表的锚点实验
+
+### 实验设计
+
+新增工具 tools/home41_year_anchor_probe.py 和 tools/test_home41_year_anchor_probe.py。继续复用简体中文、亚太地区、中国大陆、生日页验证路径，然后执行：
+
+1. 在**真实已见到 2026～2018 年列表**的页面上，必须通过多位置像素签名验证弹窗仍打开、2018 年位于最下方可见条目，才允许在相对坐标 x=0.20、y=0.635 点击一次。
+2. 点击后，必须连续两帧验证回到年龄表单，并保存字段截图。成功发送点击不等于证明已选中 2018，截图需要人工核实。
+3. 在确认的年龄表单中，仅点击“年”的下拉框（相对 x=0.20、y=0.29）重新打开，连续两帧验证弹窗并保存新截图，用于判断年份列表是否相对已选年份定位。
+4. 停止，不点击“下一步”，不填写/提交月、日，不调用任天堂账号、云端注册或删除。年候选值仍保持 2000-01-01；2018 只是一个可逆的单次 UI 观察选项。
+5. 该实验隔离此前已知无效的 touchscreen swipe、mouse wheel 和 KEYCODE_PAGE_DOWN。观察年份锚点变化后再决定下一阶段。
+
+新增运行时字段 year_anchor_diagnostics，包括：initial_2018_row_geometry_verified、known_2018_row_tap_sent、birth_form_after_candidate_tap_verified、reopen_year_picker_tap_sent、year_popup_after_reopen_verified、year_value_semantically_verified、list_anchor_semantically_verified（后两项默认 false，需要截图外部核验）。
+
+[独立 CI #42365501768](https://github.com/969981/PokeHome_Resources/actions/runs/42365501768)：31 项测试通过。
+
+### 首轮阻断及重跑
+
+- [Actions #42365501727](https://github.com/969981/PokeHome_Resources/actions/runs/42365501727) 安装、启动 HOME 成功，但第 7 次截图检查发现日文通信错误弹窗，**真实数字为 code:800 / detail code:100101**。onboarding.status=blocked_by_unclassified_modal、completed=[]、year_anchor_diagnostics=null。**未进入生日页，更没有测试锚点**。
+- 官方说明：https://app-ph.pokemon-support.com/hc/en-us/articles/58149598512281--Pok%C3%A9mon-HOME-Smartphone-version-The-error-code-800-detail-code-100101-appears-and-I-can-t-log-in-to-Pok%C3%A9mon-HOME 。其建议是稍后重试或更换网络，而没有证明是某个客户端 Hook / 页面选择故障。
+- 新一次独立模拟器试验 [Actions #42366372912](https://github.com/969981/PokeHome_Resources/actions/runs/42366372912) 在启动参数中增加 -dns-server 8.8.8.8,8.8.4.4，作为网络变量隔离尝试，非已验证修复。必须查看新的实机截图和 JSON 才能确认它是否奏效。
+- 全程不绑定 Nintendo Account、不提交生日、不接受协议、不注册、不删除账号，首次 basic.utid 仍未观察到。
