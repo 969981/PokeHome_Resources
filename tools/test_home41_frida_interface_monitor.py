@@ -103,7 +103,7 @@ class MonitorTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             out=Path(d)
             bundle=out/"agent.js"
-            bundle.write_text("// compiled and validated in workflow")
+            bundle.write_text("// fake compiled test bundle\n" + ("/* safe fixture */" * 8))
             observer=FridaInterfaceMonitor(out,bundle)
             self.assertTrue(observer.start(fake))
             self.assertEqual(fake.manager.target,"127.0.0.1:27042")
