@@ -108,3 +108,20 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 **下一项验收**：首次通过新状态机拿到完整年份下拉选项截图；随后逐步实现年月日选择（需要核对控件、合法性与不得更改规则），再继续头像 → 小火龙。登录/Token/首次 `ResponseParamCommon.basic.utid` 需要独立的原生 ARM64 Hook 证据，当前 x86_64 + Native Bridge 模拟器没有这项验证。**无任天堂账号关联、无自动删号循环。**
 
 参考：[[HOME41_GUEST_ONBOARDING_ID_CAPTURE_20261107]]、[[HOME41_NO_UI_FIRST_ID_PATH_20261107]]。
+
+
+## 2026-11-07：状态机第一次真实自动重放，进入年份列表
+
+- [GitHub Actions #42358938707](https://github.com/969981/PokeHome_Resources/actions/runs/42358938707) **success**，实际报告 `onboarding.status=birth_year_picker_open_attempted`，`checks=28`。
+- `completed` 明确包含 `choose_language`、`confirm_language`、`expand_apac`、`select_mainland`、`confirm_mainland`、`inspect_birth_year_picker`，全部一次性由统一状态机自动执行。
+- `onboarding_final.png` **真实可见**年份下拉菜单：从 2026、2025 … 降至 2018，显示可滚动列表。初始 `onboarding_birth_year_picker.png` 截屏过早，处于下拉动画期；因此本次运行结构化状态仍只能称“点击已发送”，**截图才证明列表稍后实际出现**。
+- 为修复这个时间差，又增加 `birth_year_popup_visible` 的独立灰色列表签名 + 连续两次校验。未来 `year_picker_verified=true` 和 `birth_year_picker_verified_open` 仅在真正看到稳定列表时输出，点击不等于确认打开。
+- 本轮未选择 2000 年，未输入月/日，未点击下一步；`birthday_submitted=false`、`terms_accepted=false`、`account_created=false`、`account_deleted=false`、`first_basic_utid_observed=false`。**无真实六位 ID**。
+- [独立只读/UI 单测 #42359250851](https://github.com/969981/PokeHome_Resources/actions/runs/42359250851)：13 项测试通过（6 项最早 UTID 只读逻辑、7 项本次状态机逻辑）。
+
+### 下一段脚本应该补什么
+
+1. 从真实年份列表验证“滑动/选中 2000”的 scroll 与 click 行为；需要只选年份并截屏，不能随意点击下一步。
+2. 再从月/日控件中分别读取选项并确定 01/01；DOB 是不可修改信息，提交前应校验三项均正确。
+3. 头像和小火龙仍为配置字段、未经过真实运行；每补一页都加入严格图片签名、离线单测和新的真实 Actions 截图。
+4. 不绑定 Nintendo Account；云端账号创建、首次响应 `basic.utid`、官方删除与新号区别仍各有独立验收门槛。
