@@ -1,0 +1,35 @@
+name: HOME 4.1.0 earliest six-digit trainer ID research smoke test
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-early-tid-smoke.yml'
+      - 'tools/early_home_tid_observer.js'
+      - 'tools/early_tid_candidate.py'
+      - 'tools/test_early_tid_candidate.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout: |
+            .github/workflows/android41-early-tid-smoke.yml
+            tools/early_home_tid_observer.js
+            tools/early_tid_candidate.py
+            tools/test_early_tid_candidate.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify offline ID conversion fixtures and Frida JS syntax
+        run: |
+          set -euo pipefail
+          python -m unittest tools/test_early_tid_candidate.py -v
+          node --check tools/early_home_tid_observer.js
+          python tools/early_tid_candidate.py --utid 888888 --target 888888
