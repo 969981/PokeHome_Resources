@@ -21,6 +21,9 @@ ALLOWED_EVENTS = frozenset({
     "java_response_hook_ready", "java_response_hook_unavailable",
     "java_http_request_open", "java_http_response_status",
     "dns_hook_ready", "dns_hook_unavailable", "pokemon_dns_query",
+    "native_connect_hook_ready", "native_connect_hook_unavailable",
+    "native_socket_io_hooks_ready", "native_socket_io_hooks_unavailable",
+    "native_socket_connect", "native_socket_send", "native_socket_receive",
     "native_arch_report", "il2cpp_module_seen", "il2cpp_module_unavailable",
     "script_runtime_error", "hook_preflight", "read_only_observer_ready",
     "unsupported_native_arch", "invalid_module_size", "preflight_exception",
@@ -34,6 +37,9 @@ CATEGORIES = frozenset({
     "register", "token", "login", "locale", "basic_profile", "other"
 })
 ARCHES = frozenset({"arm64", "arm", "x64", "ia32", "x86_64"})
+SOCKET_FAMILIES = frozenset({"ipv4", "ipv6"})
+CONNECT_OUTCOMES = frozenset({"returned_zero", "other_return"})
+BYTE_BANDS = frozenset({"zero", "1_512", "513_4096", "over_4096"})
 MAX_EVENTS = 180
 
 
@@ -59,6 +65,16 @@ def sanitize(payload: object) -> dict | None:
             code = payload.get("status_code")
             if isinstance(code, int) and not isinstance(code, bool) and 100 <= code <= 599:
                 cleaned["http_status"] = code
+    if event == "native_socket_connect":
+        fam = payload.get("family")
+        outcome = payload.get("outcome")
+        cleaned["family"] = fam if isinstance(fam, str) and fam in SOCKET_FAMILIES else "unknown"
+        cleaned["outcome"] = (outcome if isinstance(outcome, str)
+                              and outcome in CONNECT_OUTCOMES else "unknown")
+    if event in {"native_socket_send", "native_socket_receive"}:
+        size_band = payload.get("size_band")
+        cleaned["size_band"] = (size_band if isinstance(size_band, str)
+                                and size_band in BYTE_BANDS else "unknown")
     if event == "native_arch_report":
         arch = payload.get("arch")
         cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
@@ -176,6 +192,12 @@ class FridaInterfaceMonitor:
             "il2cpp_module_seen": counts["il2cpp_module_seen"] > 0,
             "observed_arch": self.arch,
             "arm64_native_rva_hooks_usable": self.arch == "arm64",
+            "native_socket_hook_ready": counts["native_connect_hook_ready"] > 0,
+            "native_socket_io_hooks_ready": counts["native_socket_io_hooks_ready"] > 0,
+            "native_transport_event_count": (
+                counts["native_socket_connect"] + counts["native_socket_send"]
+                + counts["native_socket_receive"]),
+            "native_transport_only_metadata": True,
             "api_stage_event_count": sum(
                 counts[e] for e in (
                     "java_http_request_open", "java_http_response_status",
@@ -190,7 +212,7 @@ class FridaInterfaceMonitor:
             "event_counts": dict(sorted(counts.items())),
             "event_count": len(self.events),
             "duration_seconds": round(time.monotonic() - self.started_at, 1),
-            "note": "Java/DNS stage events are not full HTTP responses. Native ARM64 hooks not validated on an x86_64 native-bridge emulator. Missing event != missing server field.",
+            "note": "Java/DNS and native socket events are not full HTTP responses. Native socket traffic cannot identify the endpoint or HTTP response body. ARM64 hooks not validated on x64 native-bridge emulator.",
             "raw_http_or_auth_material_saved": False,
             "guest_registration_attempted_by_monitor": False,
         }
