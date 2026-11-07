@@ -99,10 +99,18 @@ def live_observe(script_path: Path, timeout_seconds: int) -> list[dict]:
     stopping = threading.Event()
 
     def on_message(message: dict, unused_data: object) -> None:
-        # Console.log() from the read-only Frida script emits type='log'.
-        if message.get("type") != "log":
+        # Frida 17's ARM64 emulated realm uses send() for reliable native
+        # hook marker delivery; preserve legacy log event support too.
+        kind = message.get("type")
+        if kind == "send":
+            payload = message.get("payload")
+            if not isinstance(payload, dict):
+                return
+            event = parse_safe_event(json.dumps(payload, ensure_ascii=False))
+        elif kind == "log":
+            event = parse_safe_event(message.get("payload"))
+        else:
             return
-        event = parse_safe_event(message.get("payload"))
         if event is None:
             return
         events.append(event)
