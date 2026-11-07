@@ -124,8 +124,16 @@ function installHooks(module) {
           return;
         }
         const candidate = String(parsed.number % 1000000).padStart(6, "0");
+        // The 4.1.0 AArch64 static BL at 0x1D2BA64 returns to 0x1D2BA68.
+        // The return address establishes the consumer callsite, not the exact
+        // server endpoint that produced this response.
+        const lr = this.context.lr;
+        const commonBasicReturn = addr(0x1D2BA68);
+        const callerRelative = lr.sub(module.base);
         firstValueFound = true;
         report("first_basic_utid", {
+          caller_rva: callerRelative.toString(),
+          observed_common_response_basic_consumer: lr.equals(commonBasicReturn),
           six_digit_candidate: candidate,
           matches_target: candidate === targetTid7,
           target_tid7: targetTid7,
