@@ -9,26 +9,66 @@
   "install_status": "ok",
   "launch_status": "event_sent",
   "cache_files": 0,
-  "result": "app_process_ended",
+  "result": "app_running_no_recognized_cache_assets",
   "android_immersive_setting": "confirmed",
   "screenshot_at_15s": true,
-  "process_at_15s": false,
+  "process_at_15s": true,
   "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
+    {
+      "event": "deny_android_runtime_permission",
+      "success": true
+    },
+    {
+      "event": "deny_android_runtime_permission",
+      "success": true
+    },
+    {
+      "event": "deny_android_runtime_permission",
+      "success": true
+    },
     {
       "event": "no_android_system_prompt_matched"
     }
   ],
   "screenshot_after_system_prompts": true,
   "screenshot_after_wait": true,
-  "process_after_wait": false,
+  "process_after_wait": true,
+  "process_exit_diagnostics": {
+    "exit_info_available": true,
+    "exit_info_reason_lines": [],
+    "log_signal_counts": {
+      "FATAL EXCEPTION": 0,
+      "Fatal signal": 0,
+      "am_proc_died": 0,
+      "am_crash": 0,
+      "has died": 0,
+      "ProcessRecord": 1,
+      "Force finishing": 0,
+      "ANR in": 0,
+      "tombstoned": 0,
+      "crash_dump": 0,
+      "permission denial": 0,
+      "UnsatisfiedLinkError": 0,
+      "libndk_translation": 0
+    },
+    "events": [
+      "11-07 04:26:38.038   578   689 W system_server: Long monitor contention with owner CachedAppOptimizerThread (690) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt"
+    ],
+    "raw_log_saved": false,
+    "system_event_counts": {
+      "am_proc_died": 1,
+      "am_crash": 0,
+      "am_anr": 0
+    }
+  },
   "crash_signal_counts": {
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
     "Fatal signal": 0,
     "dlopen failed": 0
   },
-  "test_emulator_adb_root": true,
+  "test_emulator_adb_root": false,
   "cache_bytes": 0,
   "cache_candidates": 0,
   "cache_types": {}
