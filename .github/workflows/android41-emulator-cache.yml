@@ -1,0 +1,128 @@
+name: HOME Android 4.1.0 emulator install, launch and resource cache probe
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-emulator-cache.yml'
+      - 'tools/android41_emulator_probe.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: private-home41-emulator-probe
+  cancel-in-progress: false
+jobs:
+  emulator:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - name: Checkout private scripts and reports only
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout: |
+            .github/workflows
+            tools
+            Unpack/Android/4.1.0/_meta
+            Unpack/Android/4.1.0/runtime_cache
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch APK, verify SHA-256, check probe script
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/android41_emulator_probe.py
+          git clone --depth=1 --filter=blob:none https://github.com/969981/Home_Android.git _android_source
+          APK="$(find _android_source/ROMS/4.1.0 -maxdepth 1 -type f -name '*.apk' | head -1)"
+          test -f "$APK"
+          test "$(sha256sum "$APK" | cut -d' ' -f1)" = "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1"
+          echo "HOME41_APK=$APK" >> "$GITHUB_ENV"
+          mkdir -p .ci_emulator_trial
+      - name: Enable KVM
+        shell: bash
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          if test -e /dev/kvm; then ls -l /dev/kvm; else echo "KVM not available"; fi
+      - name: Start API35 x86_64 Google APIs emulator; install HOME and try native asset download
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: python tools/android41_emulator_probe.py --apk "$HOME41_APK" --output .ci_emulator_trial --idle-seconds 120
+      - name: Run Unity resource parser on any real cache assets
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          dst="Unpack/Android/4.1.0"
+          mkdir -p "$dst/_meta" "$dst/runtime_cache/emulator" "$dst/runtime_cache/imported"
+          if test -f .ci_emulator_trial/emulator_probe_summary.json; then
+            cp .ci_emulator_trial/emulator_probe_summary.json "$dst/_meta/emulator_probe_summary.json"
+          else
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("Unpack/Android/4.1.0/_meta/emulator_probe_summary.json")
+          p.write_text(json.dumps({"result":"emulator_not_booted","cache_files":0,
+            "reason":"Android emulator setup did not complete; no APK launch confirmed"},indent=2)+"\n")
+          PY
+          fi
+          if test -d .ci_emulator_trial/cache && test -n "$(find .ci_emulator_trial/cache -type f -print -quit)"; then
+            cp -an .ci_emulator_trial/cache/. "$dst/runtime_cache/emulator/"
+            python _android_source/tools/runtime_cache_inventory.py --version 4.1.0 \
+              --cache-dir "$dst/runtime_cache/emulator" --out "$dst/runtime_cache/imported" --report "$dst/_meta"
+          else
+            python _android_source/tools/runtime_cache_inventory.py --version 4.1.0 --report "$dst/_meta"
+          fi
+          python -m pip install -q -r _android_source/tools/requirements-unity.txt
+          python _android_source/tools/pokemon_cache_scan.py --version 4.1.0 \
+            --assets "$dst/runtime_cache/imported" --report "$dst/_meta" --out "$dst/runtime_cache"
+      - name: Commit only validated cache files and actual diagnostic reports to private Git
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          dst="Unpack/Android/4.1.0"
+          test -f "$dst/_meta/emulator_probe_summary.json"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path("Unpack/Android/4.1.0/_meta/emulator_probe_summary.json").read_text())
+          print("Emulator:",p.get("result"),"cache files:",p.get("cache_files",0))
+          PY
+          if find "$dst/runtime_cache" -type f -size +95M | grep -q .; then
+            echo "Refusing >95 MiB Git objects"; exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$dst/_meta/emulator_probe_summary.json"
+          for f in runtime_inventory.csv runtime_inventory_summary.json pokemon_asset_candidates.csv pokemon_cache_summary.json; do
+            if test -f "$dst/_meta/$f"; then git add -f "$dst/_meta/$f"; fi
+          done
+          if test -n "$(find "$dst/runtime_cache/emulator" -type f -print -quit)"; then
+            git add -f "$dst/runtime_cache/emulator" "$dst/runtime_cache/imported"
+            if test -d "$dst/runtime_cache/pokemon"; then git add -f "$dst/runtime_cache/pokemon"; fi
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "reports(android): actual emulator run and detected cache resources [skip ci]"
+            git push origin HEAD:4.1.0
+          fi
+      - name: Private 3-day visual evidence and capture manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home-android-4.1.0-emulator-probe
+          path: .ci_emulator_trial/
+          if-no-files-found: warn
+          retention-days: 3
