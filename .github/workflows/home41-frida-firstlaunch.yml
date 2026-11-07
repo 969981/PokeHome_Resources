@@ -5,6 +5,9 @@ on:
     paths:
       - '.github/workflows/home41-frida-firstlaunch.yml'
       - 'tools/home41_frida_first_launch_smoke.py'
+      - 'tools/home41_frida_server_setup.py'
+      - 'tools/home41_frida_interface_monitor.py'
+      - 'tools/home41_frida_interface_agent.js'
   workflow_dispatch:
 permissions:
   contents: read
