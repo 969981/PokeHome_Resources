@@ -55,6 +55,7 @@ jobs:
           python _android_source/tools/home.py scan --version 4.1.0
           python _android_source/tools/native_audit.py --version 4.1.0
           python _android_source/tools/aba_probe.py --version 4.1.0
+          python _android_source/tools/aba_fsb5.py --version 4.1.0
           python _android_source/tools/il2cpp_sections.py --version 4.1.0
           python _android_source/tools/cache_diff.py --version 4.1.0
 
