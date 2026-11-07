@@ -10,6 +10,8 @@ import argparse
 import hashlib
 import json
 import lzma
+import socket
+import time
 import subprocess
 import tempfile
 from pathlib import Path
@@ -77,17 +79,37 @@ def install() -> dict:
         if chmod.returncode != 0:
             report["status"] = "server_chmod_failed"
             return report
-        boot = cmd("adb", "shell", "/data/local/tmp/home41-frida-server",
-                   "-l", "127.0.0.1:27042", "-D", secs=25)
-        if boot.returncode != 0:
-            report["status"] = "server_start_failed"
+        # The Android frida-server 17 command stays in the foreground.
+        # subprocess.run(..., timeout=25) gave TimeoutExpired on real
+        # Actions #42373639368 even though the binary was verified. Keep
+        # a detached adb shell process with *no inherited stdout/stderr*
+        # instead, and validate an actual TCP listener via ADB forward.
+        server = subprocess.Popen(
+            ["adb", "shell", "/data/local/tmp/home41-frida-server",
+             "-l", "127.0.0.1:27042"],
+            stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL, start_new_session=True)
+        time.sleep(2)
+        if server.poll() is not None:
+            report["status"] = "server_exited_early"
             return report
-        report["frida_server_started"] = True
         forward = cmd("adb","forward","tcp:27042","tcp:27042",secs=20)
         if forward.returncode != 0:
             report["status"] = "adb_forward_failed"
             return report
         report["adb_forward_started"] = True
+        connected = False
+        for _ in range(8):
+            try:
+                with socket.create_connection(("127.0.0.1",27042),timeout=2):
+                    connected = True
+                    break
+            except OSError:
+                time.sleep(1)
+        if not connected:
+            report["status"] = "frida_server_port_unreachable"
+            return report
+        report["frida_server_started"] = True
         report["status"] = "ready"
     except Exception as e:
         # Never persist GitHub URLs, network messages or ADB command output.
