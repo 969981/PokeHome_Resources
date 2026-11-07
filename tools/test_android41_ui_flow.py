@@ -149,6 +149,22 @@ class HomeSystemOverlayTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             wait_for_stable_region_page(fake,21,0)
 
+    def test_apac_country_choice_requires_verified_expanded_screen(self):
+        from io import BytesIO
+        from PIL import Image, ImageDraw
+        from android41_ui_flow import screenshot_apac_mainland_option
+        im=Image.new("RGB",(1080,2340),(158,243,215))
+        dr=ImageDraw.Draw(im)
+        dr.rectangle((0,220,1079,520),fill=(38,179,151))
+        dr.rectangle((100,1090,850,1150),fill=(248,250,245))
+        dr.rectangle((100,1190,850,1600),fill=(18,166,168))
+        out=BytesIO();im.save(out,format="PNG")
+        self.assertEqual(screenshot_apac_mainland_option(out.getvalue()),(324,1251))
+        im=Image.new("RGB",(1080,2340),(247,251,247))
+        out=BytesIO();im.save(out,format="PNG")
+        self.assertIsNone(screenshot_apac_mainland_option(out.getvalue()))
+
+
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
         self.assertIsNone(parse_system_action(None))
