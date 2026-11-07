@@ -128,6 +128,51 @@ class MonitorTests(unittest.TestCase):
             self.assertFalse(s["first_basic_utid_event_seen"])
             self.assertTrue(s["native_transport_only_metadata"])
 
+    def test_native_birthdate_indices_are_minimal_and_bounded(self):
+        valid=(
+            ("birthdate_year_change_index",8),
+            ("birthdate_month_change_index",3),
+            ("birthdate_day_change_index",4),
+            ("dropdown_scroll_open_index",0),
+        )
+        for name,index in valid:
+            clean=sanitize({
+                "event":name,"selected_index":index,
+                "raw_date":"1999-04-05","authorization":"PRIVATE",
+                "il2cpp_object_address":"0xDeadBeef"})
+            self.assertEqual(clean,{"event":name,"selected_index":index})
+        for name in ("birthdate_year_change_index",
+                     "birthdate_month_change_index",
+                     "birthdate_day_change_index"):
+            for invalid in (-1,999,True,"27",{"bad":"yes"}):
+                evt=sanitize({"event":name,"selected_index":invalid})
+                self.assertEqual(evt,{"event":name,"index_range_valid":False})
+        hook=sanitize({"event":"date_hook_installed",
+                      "hook_kind":"birthdate_year_change_index",
+                      "path":"/private/home/libil2cpp.so"})
+        self.assertEqual(hook,{"event":"date_hook_installed",
+                      "hook_kind":"birthdate_year_change_index"})
+        self.assertEqual(sanitize({"event":"date_hook_install_failed",
+                        "hook_kind":["unsafe"]})["hook_kind"],"unknown")
+
+    def test_birthdate_ui_callbacks_are_not_api_or_utid(self):
+        with tempfile.TemporaryDirectory() as d:
+            monitor=FridaInterfaceMonitor(Path(d),Path(d)/"fixture.js")
+            for event in (
+                "date_hook_installed","date_hook_installed",
+                "birthdate_year_change_index","birthdate_month_change_index",
+                "birthdate_day_change_index","dropdown_scroll_open_index"):
+                monitor.on_message({"type":"send","payload":{"event":event,
+                    "hook_kind":"birthdate_year_change_index",
+                    "selected_index":8,"basic_utid":"PRIVATE_123456"}})
+            summary=monitor.stop()
+            self.assertEqual(summary["birthdate_ui_hook_install_count"],2)
+            self.assertEqual(summary["birthdate_ui_callback_event_count"],4)
+            self.assertEqual(summary["api_stage_event_count"],0)
+            self.assertFalse(summary["first_basic_utid_event_seen"])
+            output=(Path(d)/"frida_interface_events.jsonl").read_text()
+            self.assertNotIn("PRIVATE",output)
+
     def test_first_utid_event_without_persisting_numeric_value(self):
         event=sanitize({"event":"first_basic_utid",
                         "six_digit_candidate":"123456",
