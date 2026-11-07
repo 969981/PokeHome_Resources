@@ -2,7 +2,7 @@
 title: "HOME Android 4.1.0 注册回调函数地址及最早 UTID 证据"
 tags: [pokemon-home, android, il2cpp, registration, login, utid, evidence]
 version: "4.1.0"
-status: "自动静态方法清单待验收；无首次在线 UTID"
+status: "11 条初步静态命中；Token/Login 类名扩大搜索中；无在线 UTID"
 updated: "2026-11-07"
 ---
 
@@ -43,3 +43,15 @@ T2 first_basic_utid
 当前 **未完成真实注册、没有 UTID 样本、没有生成 888888**。不能将静态方法命中、CI 成功、UTID 模型或模拟测试时间线视为在线发号证据。
 
 相关文档：[[HOME41_REGISTRATION_EARLIEST_UTID_GATE]]、[[HOME41_UTID_EARLY_READ_AND_EMULATOR]]。
+
+
+## 第一轮真实脚本审计结果（2026-11-07）
+
+[Actions #42352256829](https://github.com/969981/PokeHome_Resources/actions/runs/42352256829) 全部通过，\`script_method_entries=180628\`、\`auth_method_candidates=11\`。已核对三个关键候选地址与历史 ARM64 原生证据完全一致：
+
+- \`ApiRequestAuthRegisterUser$$SerializeRequestParameter = 0x1D334A4\`
+- \`ApiRequestAuthRegisterUser$$CallAfterResponse = 0x1D33294\`
+- \`UDManager$$SetBasic = 0x1D763D0\`
+- 新补充公共响应处理入口候选 \`ApiManager$$CallbackResponseHook = 0x1D2AFF0\`，还需与之前已验证的内部指令 \`0x1D2BA60\` 一起做边界确认。
+
+**重要的筛选缺口：** 精确匹配 \`ApiRequestAuthCreateLogin\` / \`ApiRequestAuthCreateToken\` 得到 0 条。它只能证明**这两个类名未命中**，不表示客户端没有首次登录或令牌创建流程；新版规则扩大到 \`ApiRequest + Login/Token\` 的类名集合，重新审计真实地址。仍然没有运行注册/登录网络请求。

@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
-from home41_auth_symbol_audit import analyze,number
+from home41_auth_symbol_audit import analyze,number,classify
 
 class HomeAuthSymbolAuditTest(unittest.TestCase):
     def test_parse_numbers(self):
@@ -36,6 +36,12 @@ class HomeAuthSymbolAuditTest(unittest.TestCase):
         self.assertEqual(summary["status"],"no_relevant_symbols")
         self.assertTrue(all(x["status"]=="missing_or_mismatch"
             for x in summary["native_address_anchor_checks"].values()))
+    def test_discover_alternate_login_token_class_names(self):
+        self.assertEqual(classify("ApiRequestCreateLogin$CallAfterResponse"),"create_login")
+        self.assertEqual(classify("ApiRequestAuthLogin$CallAfterResponse"),"create_login")
+        self.assertEqual(classify("ApiRequestAuthTokenCreate$CallAfterResponse"),"create_token")
+        self.assertIsNone(classify("LoginView$OnClick"))
+        self.assertIsNone(classify("UserDelete$CallAfterResponse"))
     def test_schema_required(self):
         with self.assertRaises(ValueError):
             analyze({"methods":[]})

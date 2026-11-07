@@ -10,13 +10,24 @@ import csv
 import json
 from pathlib import Path
 
-STAGES={
-    "register_user":("ApiRequestAuthRegisterUser",),
-    "create_token":("ApiRequestAuthCreateToken",),
-    "create_login":("ApiRequestAuthCreateLogin",),
-    "response_common":("ApiManager$$CallbackResponseHook",),
-    "receive_basic":("UDManager$$SetBasic",),
-}
+STAGES=("register_user","create_token","create_login","response_common","receive_basic")
+
+def classify(name:str)->str|None:
+    lower=name.lower()
+    if "apirequestauthregisteruser" in lower:
+        return "register_user"
+    if "apimanager$callbackresponsehook" in lower:
+        return "response_common"
+    if "udmanager$setbasic" in lower:
+        return "receive_basic"
+    # The real generated class naming may use AuthCreateLogin,
+    # CreateAuthLogin, TokenCreate, etc. Match request + semantic noun
+    # instead of assuming unverified C# class spellings.
+    if "apirequest" in lower and "login" in lower:
+        return "create_login"
+    if "apirequest" in lower and "token" in lower:
+        return "create_token"
+    return None
 ANCHORS={
     "ApiRequestAuthRegisterUser$$SerializeRequestParameter":0x1D334A4,
     "ApiRequestAuthRegisterUser$$CallAfterResponse":0x1D33294,
@@ -42,17 +53,16 @@ def select(methods):
     for item in methods:
         if not isinstance(item,dict):continue
         name=str(item.get("Name") or "")
-        for stage,labels in STAGES.items():
-            if any(label.lower() in name.lower() for label in labels):
-                addr=number(item.get("Address"))
-                rows.append({
-                    "stage":stage,
-                    "method_name":name[:320],
-                    "address_candidate_hex":f"0x{addr:X}" if addr is not None else "",
-                    "address_decimal":str(addr) if addr is not None else "",
-                    "evidence":"il2cppdumper_script_method_name",
-                })
-                break
+        stage=classify(name)
+        if stage is not None:
+            addr=number(item.get("Address"))
+            rows.append({
+                "stage":stage,
+                "method_name":name[:320],
+                "address_candidate_hex":f"0x{addr:X}" if addr is not None else "",
+                "address_decimal":str(addr) if addr is not None else "",
+                "evidence":"il2cppdumper_script_method_name",
+            })
     rows.sort(key=lambda x:(x["stage"],x["method_name"],x["address_decimal"]))
     return rows
 
