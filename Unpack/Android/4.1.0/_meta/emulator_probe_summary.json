@@ -8,15 +8,26 @@
   "terms_auto_accepted": false,
   "install_status": "ok",
   "launch_status": "event_sent",
+  "auth_registration_status": "not_attempted_no_test_account",
+  "first_basic_utid_status": "not_observed",
   "cache_files": 0,
   "result": "app_running_no_recognized_cache_assets",
+  "camera_permission_preflight": {
+    "strategy": "pregrant_camera_on_disposable_camera_less_avd",
+    "camera_permission_declared": true,
+    "grant_command_ok": true,
+    "appop_command_ok": true,
+    "verified_granted": true,
+    "other_permissions_modified": false,
+    "status": "verified_granted"
+  },
   "android_immersive_setting": "confirmed",
   "screenshot_at_15s": true,
   "process_at_15s": true,
   "initial_screenshot_immersive_signature": false,
   "system_prompt_actions": [
     {
-      "event": "no_android_system_prompt_matched"
+      "event": "hierarchy_unavailable"
     }
   ],
   "screenshot_after_system_prompts": true,
@@ -34,7 +45,7 @@
       "am_proc_died": 0,
       "am_crash": 0,
       "has died": 0,
-      "ProcessRecord": 0,
+      "ProcessRecord": 1,
       "Force finishing": 0,
       "ANR in": 0,
       "tombstoned": 0,
@@ -43,7 +54,9 @@
       "UnsatisfiedLinkError": 0,
       "libndk_translation": 0
     },
-    "events": [],
+    "events": [
+      "11-07 04:43:27.641   559   601 W ActivityManager: ProcessRecord{c59e780 0:com.google.android.settings.intelligence/u0a140} is attached to a previous process 3300"
+    ],
     "raw_log_saved": false,
     "system_event_counts": {
       "am_proc_died": 1,
