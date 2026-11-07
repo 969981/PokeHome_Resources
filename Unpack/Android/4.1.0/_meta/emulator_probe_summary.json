@@ -56,7 +56,7 @@
   },
   "android_immersive_setting": "confirmed",
   "android_network_preflight": {
-    "android_utc_time": "2026-11-07T11:14:31Z",
+    "android_utc_time": "2026-11-07T11:21:39Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -81,7 +81,7 @@
   ],
   "screenshot_after_system_prompts": true,
   "onboarding": {
-    "status": "year_anchor_reopened_year_list_requires_visual_anchor_review",
+    "status": "year_edge_drag_popup_closed_possible_local_year_selection",
     "mode": "verified-ui-navigation",
     "nintendo_account_linked": false,
     "profile": {
@@ -101,8 +101,8 @@
       "inspect_birth_year_picker"
     ],
     "last_observed_stage": "birthdate_page",
-    "checks": 24,
-    "stop_reason": "year_anchor_probe_no_dob_submission",
+    "checks": 30,
+    "stop_reason": "edge_drag_probe_no_dob_submission",
     "birthday_submitted": false,
     "terms_accepted": false,
     "account_created": false,
@@ -113,30 +113,25 @@
     "year_popup_remained_open_after_wheel": 0,
     "year_labels_changed_verified": false,
     "date_picker_diagnostics": null,
-    "year_anchor_diagnostics": {
-      "status": "reopened_year_list_requires_visual_anchor_review",
-      "initial_2018_row_geometry_verified": true,
-      "known_2018_row_tap_sent": true,
-      "birth_form_after_candidate_tap_verified": true,
-      "reopen_year_picker_tap_sent": true,
-      "year_popup_after_reopen_verified": true,
-      "year_value_semantically_verified": false,
-      "list_anchor_semantically_verified": false,
-      "birthdate_submitted": false,
+    "year_anchor_diagnostics": null,
+    "year_edge_drag_diagnostics": {
+      "status": "popup_closed_possible_local_year_selection",
+      "right_padding_verified": true,
+      "edge_drag_sent": true,
+      "popup_still_open": false,
+      "birth_form_visible_after": true,
+      "list_year_text_changed_verified": false,
+      "selected_year_verified": false,
+      "birthday_submitted": false,
       "nintendo_account_linked": false,
       "account_created": false,
       "account_deleted": false,
       "screenshots": [
-        "year_anchor_initial_popup.png",
-        "year_anchor_form_01.png",
-        "year_anchor_form_02.png",
-        "year_anchor_selected_field_closeup_source.png",
-        "year_anchor_reopened_01.png",
-        "year_anchor_reopened_02.png",
-        "year_anchor_reopened_final.png"
+        "year_edge_before.png",
+        "year_edge_after_01.png",
+        "year_edge_after_02.png"
       ]
     },
-    "year_edge_drag_diagnostics": null,
     "stage_retry_counts": {},
     "year_selected": false,
     "month_selected": false,
@@ -149,13 +144,9 @@
       "onboarding_before_confirm_mainland.png",
       "onboarding_birthdate_page.png",
       "onboarding_birth_year_picker.png",
-      "year_anchor_initial_popup.png",
-      "year_anchor_form_01.png",
-      "year_anchor_form_02.png",
-      "year_anchor_selected_field_closeup_source.png",
-      "year_anchor_reopened_01.png",
-      "year_anchor_reopened_02.png",
-      "year_anchor_reopened_final.png",
+      "year_edge_before.png",
+      "year_edge_after_01.png",
+      "year_edge_after_02.png",
       "onboarding_final.png"
     ]
   },
@@ -179,27 +170,23 @@
   "birth_year_popup_visible_after_wheel_events": 0,
   "birth_year_labels_changed_verified": false,
   "date_picker_diagnostics": null,
-  "year_anchor_diagnostics": {
-    "status": "reopened_year_list_requires_visual_anchor_review",
-    "initial_2018_row_geometry_verified": true,
-    "known_2018_row_tap_sent": true,
-    "birth_form_after_candidate_tap_verified": true,
-    "reopen_year_picker_tap_sent": true,
-    "year_popup_after_reopen_verified": true,
-    "year_value_semantically_verified": false,
-    "list_anchor_semantically_verified": false,
-    "birthdate_submitted": false,
+  "year_anchor_diagnostics": null,
+  "year_edge_drag_diagnostics": {
+    "status": "popup_closed_possible_local_year_selection",
+    "right_padding_verified": true,
+    "edge_drag_sent": true,
+    "popup_still_open": false,
+    "birth_form_visible_after": true,
+    "list_year_text_changed_verified": false,
+    "selected_year_verified": false,
+    "birthday_submitted": false,
     "nintendo_account_linked": false,
     "account_created": false,
     "account_deleted": false,
     "screenshots": [
-      "year_anchor_initial_popup.png",
-      "year_anchor_form_01.png",
-      "year_anchor_form_02.png",
-      "year_anchor_selected_field_closeup_source.png",
-      "year_anchor_reopened_01.png",
-      "year_anchor_reopened_02.png",
-      "year_anchor_reopened_final.png"
+      "year_edge_before.png",
+      "year_edge_after_01.png",
+      "year_edge_after_02.png"
     ]
   },
   "birth_year_dropdown_tap_succeeded": true,
@@ -207,14 +194,14 @@
   "country_selection_server_confirmed": false,
   "birthdate_entered": false,
   "terms_or_privacy_accepted": false,
-  "home_language_check_count": 24,
+  "home_language_check_count": 30,
   "home_language_poll_wait_seconds": 0,
-  "region_page_poll_attempts": 24,
+  "region_page_poll_attempts": 30,
   "region_page_poll_wait_seconds": 0,
   "screenshot_after_wait": true,
   "known_home_error_modal_layout": false,
   "android_network_after_wait": {
-    "android_utc_time": "2026-11-07T11:17:48Z",
+    "android_utc_time": "2026-11-07T11:25:15Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -232,7 +219,7 @@
       "am_proc_died": 0,
       "am_crash": 0,
       "has died": 0,
-      "ProcessRecord": 1,
+      "ProcessRecord": 10,
       "Force finishing": 0,
       "ANR in": 0,
       "tombstoned": 0,
@@ -242,11 +229,17 @@
       "libndk_translation": 0
     },
     "events": [
-      "11-07 11:17:22.252   560   597 W system_server: Long monitor contention with owner binder:560_1F (2477) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.cont"
+      "11-07 11:23:46.046   557  1630 W system_server: Long monitor contention with owner CachedAppOptimizerThread (687) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.freezeProcess(com.android.server.am.ProcessRecord)(CachedAppOpt",
+      "11-07 11:23:55.307   557   599 W system_server: Long monitor contention with owner binder:557_9 (1237) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.conte",
+      "11-07 11:24:20.941   557   599 W system_server: Long monitor contention with owner android.perm (937) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.conten",
+      "11-07 11:24:59.737   557   680 W system_server: Long monitor contention with owner PackageManager (624) at com.android.server.am.ProcessRecord com.android.server.am.ProcessList.removeProcessNameLocked(java.lang.String, int, com.android.serv",
+      "11-07 11:24:59.739   557  1485 W system_server: Long monitor contention with owner PackageManager (624) at com.android.server.am.ProcessRecord com.android.server.am.ProcessList.removeProcessNameLocked(java.lang.String, int, com.android.serv",
+      "11-07 11:24:59.757   557   686 W system_server: Long monitor contention with owner PackageManager (624) at com.android.server.am.ProcessRecord com.android.server.am.ProcessList.removeProcessNameLocked(java.lang.String, int, com.android.serv",
+      "11-07 11:25:00.512   557   599 W ActivityManager: ProcessRecord{1f442f8 0:com.google.android.settings.intelligence/u0a140} is attached to a previous process 3386"
     ],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 1,
+      "am_proc_died": 2,
       "am_crash": 0,
       "am_anr": 0
     }
@@ -255,9 +248,9 @@
     "FATAL EXCEPTION": 0,
     "UnsatisfiedLinkError": 0,
     "Fatal signal": 0,
-    "dlopen failed": 1
+    "dlopen failed": 0
   },
-  "test_emulator_adb_root": true,
+  "test_emulator_adb_root": false,
   "cache_bytes": 0,
   "cache_candidates": 2,
   "cache_types": {}
