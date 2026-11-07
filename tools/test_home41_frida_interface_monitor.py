@@ -88,6 +88,46 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(sanitize({"event":"native_arch_report","arch":["unsafe"]})["arch"],
                          "unknown")
 
+    def test_native_transport_metadata_only_no_ip_or_payload(self):
+        fields = {
+            "event":"native_socket_connect", "family":"ipv4",
+            "outcome":"returned_zero", "host":"private.login.example",
+            "ip":"203.0.113.42", "port":443,
+            "payload":"Authorization: Bearer PRIVATE",
+            "elapsed_ms":88
+        }
+        cleaned=sanitize(fields)
+        self.assertEqual(cleaned,{
+            "event":"native_socket_connect","family":"ipv4",
+            "outcome":"returned_zero","elapsed_ms":88
+        })
+        self.assertNotIn("PRIVATE",json.dumps(cleaned))
+        self.assertNotIn("203.0.113.42",json.dumps(cleaned))
+        for kind in ("native_socket_send", "native_socket_receive"):
+            item=sanitize({"event":kind,"size_band":"513_4096",
+                            "bytes":"secret", "buffer":"raw"})
+            self.assertEqual(item,{"event":kind,"size_band":"513_4096"})
+        self.assertEqual(sanitize({"event":"native_socket_send",
+            "size_band":["unsafe"]})["size_band"],"unknown")
+        self.assertEqual(sanitize({"event":"native_socket_connect",
+            "family":{"bad":True}})["family"],"unknown")
+
+    def test_transport_counts_not_falsely_called_api_responses(self):
+        with tempfile.TemporaryDirectory() as d:
+            monitor=FridaInterfaceMonitor(Path(d),Path(d)/"noop")
+            for name in ("native_connect_hook_ready",
+                         "native_socket_io_hooks_ready",
+                         "native_socket_connect",
+                         "native_socket_send","native_socket_receive"):
+                monitor.on_message({"type":"send","payload":{"event":name}})
+            s=monitor.stop()
+            self.assertEqual(s["native_transport_event_count"],3)
+            self.assertEqual(s["api_stage_event_count"],0)
+            self.assertTrue(s["native_socket_hook_ready"])
+            self.assertTrue(s["native_socket_io_hooks_ready"])
+            self.assertFalse(s["first_basic_utid_event_seen"])
+            self.assertTrue(s["native_transport_only_metadata"])
+
     def test_first_utid_event_without_persisting_numeric_value(self):
         event=sanitize({"event":"first_basic_utid",
                         "six_digit_candidate":"123456",
