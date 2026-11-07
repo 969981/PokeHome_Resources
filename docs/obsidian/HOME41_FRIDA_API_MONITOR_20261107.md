@@ -288,3 +288,25 @@ Frida 17.26.0 于 2026-11-05 发布，其官方说明 https://frida.re/news/2026
 独立监控器 `tools/home41_frida_interface_monitor.py` 仅在进一步验证列表数值合理时保留目标选项索引。新的单元测试覆盖错误长度、伪造顺序、非数字输入和敏感资料字段过滤。
 
 [快速测试 #42386652090](https://github.com/969981/PokeHome_Resources/actions/runs/42386652090) **58 项通过**；[Frida 编译测试 #42386652173](https://github.com/969981/PokeHome_Resources/actions/runs/42386652173) 通过。**尚无真实 1999 目标索引，也没有实际 UI 年份选择或 `basic.utid`**。完整模拟器还要验证 HOME 的语言新布局、首次点击前 Hook 就绪、然后进入 DOB 页并收到 `SetData`/月日回调事件。
+
+
+## 十四、Frida 在首次点击前安装成功并观察到月份、日期回调
+
+### 全量 HOME UI + 原生 ARM64 Hook 实机闭合
+
+[GitHub Actions #42385968873](https://github.com/969981/PokeHome_Resources/actions/runs/42385968873) 的真实 Artifact，不是脱离 HOME 的测试夹具，已经完成：
+
+- `frida_server_setup.status=ready`，`frida_interface.status=spawn_attach_resumed`，`emulated_realm_status=emulated_arm64_readonly_observer_loaded`。
+- `onboarding.early_arm64_hook_attempted=true`、`early_arm64_hook_before_first_tap=true`、`early_arm64_hook_status=emulated_arm64_readonly_observer_loaded`，证明在 **第一次语言选择 tap 前**完成 ARM64 观察器初始化。
+- `arm64_hook_preflight_seen=true`、`arm64_observer_ready=true`、`birthdate_ui_hook_install_count=4`。四个具体 native Hook 对应 `OnYearChageValue`、`OnMonthChangeValue`、`OnDayChangeValue`、`CustomTMPDropdownScrollList.Open`。
+- 语言选择、确认语言、亚太地区、中国大陆和出生日期页面均识别成功；照片 `month_4_day_5_unsubmitted_form.png` 显示年空白、月 4、日 5。
+- **实际回调**：`OnMonthChangeValue(index=3)` 对应界面选择 **4 月**，`OnDayChangeValue(index=4)` 对应选择 **5 日**。不仅是静态 RVA 或 Hook 安装状态，这两次真实运行事件把 UI 与 native index 配对。说明两个字段采用 **0-based** 索引。
+- `dropdown_scroll_open_index` 出现 3 次，但旧日志把当时不在 0～126 范围的入参记为 `index_range_valid=false`；不可推断其数值或每个弹窗的具体来源。
+- `birthdate_year_change_index=0` 次，因为本轮没有点击任何年份；`basic.utid`、注册/登录回调仍未命中。
+- `birthday_submitted=false`、`terms_accepted=false`、`account_created=false`、`account_deleted=false`。此实验不会触发云端账号操作。
+
+该实机结果已经证明截图门控、首次点击前 ARM64 Hook 安装与两项日期 native UI 事件**可以在同一真实 HOME 进程中同时实现**。
+
+### 下一验收
+
+后续使用 `FirstBootViewInputBirthData.SetData` 的只读 `yearOptionDataList` 检查求出 **1999** 在列表中的实际 index，再通过可见 UI 或经过验证的本地 Unity 下拉操作选中；必须用截图验证“年=1999、月=4、日=5”。还未选中 1999，也未提交生日。不能因为单元测试用了 27 这个合成索引，就宣布真实索引为 27。注册回调、服务端 `basic.utid` 和六位 Trainer ID 尚未验收。
