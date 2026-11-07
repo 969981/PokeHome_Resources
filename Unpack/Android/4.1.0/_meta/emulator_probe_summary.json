@@ -56,7 +56,7 @@
   },
   "android_immersive_setting": "confirmed",
   "android_network_preflight": {
-    "android_utc_time": "2026-11-07T12:43:37Z",
+    "android_utc_time": "2026-11-07T12:52:03Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -102,7 +102,7 @@
       "inspect_birth_year_picker"
     ],
     "last_observed_stage": "birthdate_page",
-    "checks": 29,
+    "checks": 27,
     "stop_reason": "month_day_local_only_no_birthdate_submission",
     "birthday_submitted": false,
     "terms_accepted": false,
@@ -239,14 +239,14 @@
   "country_selection_server_confirmed": false,
   "birthdate_entered": false,
   "terms_or_privacy_accepted": false,
-  "home_language_check_count": 29,
+  "home_language_check_count": 27,
   "home_language_poll_wait_seconds": 0,
-  "region_page_poll_attempts": 29,
+  "region_page_poll_attempts": 27,
   "region_page_poll_wait_seconds": 0,
   "screenshot_after_wait": true,
   "known_home_error_modal_layout": false,
   "android_network_after_wait": {
-    "android_utc_time": "2026-11-07T12:48:06Z",
+    "android_utc_time": "2026-11-07T12:56:24Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -276,9 +276,9 @@
     "events": [],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 2,
+      "am_proc_died": 4,
       "am_crash": 0,
-      "am_anr": 0
+      "am_anr": 1
     }
   },
   "crash_signal_counts": {
@@ -290,5 +290,24 @@
   "test_emulator_adb_root": true,
   "cache_bytes": 0,
   "cache_candidates": 2,
-  "cache_types": {}
+  "cache_types": {},
+  "frida_interface": {
+    "status": "frida_setup_failed",
+    "error_type": "ServerNotRunningError",
+    "frida_agent_loaded": false,
+    "java_hook_ready": false,
+    "dns_hook_ready": false,
+    "il2cpp_module_seen": false,
+    "observed_arch": "unknown",
+    "arm64_native_rva_hooks_usable": false,
+    "api_stage_event_count": 0,
+    "first_basic_utid_event_seen": false,
+    "first_basic_utid_numeric_value_saved": false,
+    "event_counts": {},
+    "event_count": 0,
+    "duration_seconds": 262.2,
+    "note": "Java/DNS stage events are not full HTTP responses. Native ARM64 hooks not validated on an x86_64 native-bridge emulator. Missing event != missing server field.",
+    "raw_http_or_auth_material_saved": false,
+    "guest_registration_attempted_by_monitor": false
+  }
 }
