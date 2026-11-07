@@ -33,6 +33,10 @@ ALLOWED_EVENTS = frozenset({
     "token_response_handler_enter", "login_request_serializer_enter",
     "login_response_handler_enter", "first_basic_utid",
     "basic_utid_not_yet_numeric", "emulated_realm_probe",
+    "birthdate_year_change_index", "birthdate_month_change_index",
+    "birthdate_day_change_index", "dropdown_scroll_open_index",
+    "date_hook_installed", "date_hook_install_failed",
+    "date_hook_rva_outside_module",
 })
 CATEGORIES = frozenset({
     "register", "token", "login", "locale", "basic_profile", "other"
@@ -41,6 +45,13 @@ ARCHES = frozenset({"arm64", "arm", "x64", "ia32", "x86_64"})
 SOCKET_FAMILIES = frozenset({"ipv4", "ipv6"})
 CONNECT_OUTCOMES = frozenset({"returned_zero", "other_return"})
 BYTE_BANDS = frozenset({"zero", "1_512", "513_4096", "over_4096"})
+DATE_EVENT_MAX_INDEX = {
+    "birthdate_year_change_index": 126,
+    "birthdate_month_change_index": 12,
+    "birthdate_day_change_index": 31,
+    "dropdown_scroll_open_index": 126,
+}
+DATE_HOOK_KINDS = frozenset(DATE_EVENT_MAX_INDEX)
 MAX_EVENTS = 180
 
 
@@ -80,6 +91,17 @@ def sanitize(payload: object) -> dict | None:
         arch = payload.get("arch")
         cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
         cleaned["arm64_rva_hook_supported"] = payload.get("arm64_rva_hook_supported") is True
+    if event in DATE_EVENT_MAX_INDEX:
+        value = payload.get("selected_index")
+        if (isinstance(value, int) and not isinstance(value, bool)
+                and 0 <= value <= DATE_EVENT_MAX_INDEX[event]):
+            cleaned["selected_index"] = value
+        else:
+            cleaned["index_range_valid"] = False
+    if event in {"date_hook_installed", "date_hook_install_failed"}:
+        kind = payload.get("hook_kind")
+        cleaned["hook_kind"] = (kind if isinstance(kind, str)
+                                and kind in DATE_HOOK_KINDS else "unknown")
     if event == "emulated_realm_probe":
         arch = payload.get("arch")
         cleaned["arch"] = arch if isinstance(arch, str) and arch in ARCHES else "unknown"
@@ -303,6 +325,9 @@ class FridaInterfaceMonitor:
             ),
             "arm64_hook_preflight_seen": counts["hook_preflight"] > 0,
             "arm64_observer_ready": counts["read_only_observer_ready"] > 0,
+            "birthdate_ui_hook_install_count": counts["date_hook_installed"],
+            "birthdate_ui_callback_event_count": sum(
+                counts[name] for name in DATE_EVENT_MAX_INDEX),
             "arm64_preflight_exception_seen": counts["preflight_exception"] > 0,
             "first_basic_utid_event_seen": counts["first_basic_utid"] > 0,
             "first_basic_utid_numeric_value_saved": False,
