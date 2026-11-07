@@ -149,3 +149,27 @@ python tools/android41_emulator_probe.py --apk <local HOME_4.1.0.apk> --output c
 - [#42360314004](https://github.com/969981/PokeHome_Resources/actions/runs/42360314004)：新增语言确认失败有限重试、已知弹窗失效停止等 **17 项离线测试通过**。
 - 最新滚轮模拟器任务：[Actions #42360703091](https://github.com/969981/PokeHome_Resources/actions/runs/42360703091)。实际结果须以后续截图、JSON、日志为准；不得把 CI 触发视为已选中 2000 年。
 - 仍保持不绑定 Nintendo Account，头像保持第一个有效选项、小火龙编号 0004，`submit_birthdate=false`、`accept_terms=false`、`create_account=false`、`delete_account=false`。
+
+
+## 2026-11-07：鼠标滚轮已实测无效；转入无提交的年月日控件探测
+
+### 第五轮真实截图与像素对账
+
+[GitHub Actions #42360703091](https://github.com/969981/PokeHome_Resources/actions/runs/42360703091) 已完成 SUCCESS：
+- 从冷启动自动完成简体中文、地区、中国大陆确认和年份弹窗打开，检查次数 checks=29。
+- 四次 adb shell input mouse scroll x y --axis VSCROLL,-3 均返回成功，年份列表仍保持打开，实际截图始终显示 2026～2018。
+- 用原始 PNG 的年份文字 ROI (x=105..359, y=730..1559) 做 RGB 灰色文字二值掩码对账：初始与四次滚轮后的文字区域各有 8,371 个匹配像素，交并比均为 1.0000，异或变化像素均为 0。说明年份文字位置确实没有移动。
+- year_labels_changed_verified=false，birthday_submitted=false，account_created=false，first_basic_utid_observed=false。不能把滚轮命令成功当成选中了 2000 年。
+
+### 新的诊断探针（只读 / 不提交）
+
+新增 tools/home41_date_picker_probe.py 和 tools/test_home41_date_picker_probe.py，已接入 tools/home41_guest_onboarding.py：
+1. 年份弹窗稳定确认后，调用 Android UIAutomator，**只记录 1900～2026 范围内的四位数字年份及有效节点矩形**，不保留原始 UI XML、密钥或其他文本。如果 Unity 没有暴露原生节点，应返回空结果，而非猜测 2000 所在位置。
+2. 尝试一次 KEYCODE_PAGE_DOWN，并分别截图，观察年份列表是否变化；不发送确认键，不点击年份。
+3. 尝试 KEYCODE_BACK 关闭年份菜单，必须通过生日表单截图签名确认返回成功，否则立即停止。
+4. 只在生日表单被识别后，打开月份并保存 date_month_menu_after_tap.png；回到生日表单后打开日期并保存 date_day_menu_after_tap.png。不选择具体年月日，也不点击“下一步”。
+5. 报告单独记录 year_accessibility、year_page_down_key_sent、month_menu_open_tap_sent、day_menu_open_tap_sent 和实际截图。
+
+沿用 tools/home41_guest_profile.json：2000-01-01 只是本地候选配置；不绑定 Nintendo Account，submit_birthdate=false，accept_terms=false，create_account=false，delete_account=false。
+
+[独立 CI #42361870671](https://github.com/969981/PokeHome_Resources/actions/runs/42361870671)：**22/22 测试通过**。完整模拟器 [#42361874063](https://github.com/969981/PokeHome_Resources/actions/runs/42361874063) 仍需实际截图与报告验收。只有在验证可见年份、月份与日期均与候选一致后，才能考虑官方允许的进一步初始化步骤。
