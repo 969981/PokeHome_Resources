@@ -15,7 +15,7 @@
   "delete_account": false,
   "explore_year_scrolls": 0,
   "inspect_date_controls": false,
-  "probe_year_anchor": false,
+  "probe_year_anchor": true,
   "probe_year_edge_drag": false,
-  "probe_month_day_candidates": true
+  "probe_month_day_candidates": false
 }
