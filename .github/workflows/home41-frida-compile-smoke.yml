@@ -33,6 +33,14 @@ jobs:
           npm install --no-save --no-package-lock --no-audit --no-fund frida-java-bridge frida-compile
           ./node_modules/.bin/frida-compile tools/home41_frida_interface_agent.js -o /tmp/home41-frida-interface-bundle.js -S -c
           test -s /tmp/home41-frida-interface-bundle.js
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("/tmp/home41-frida-interface-bundle.js")
+          data = p.read_bytes()
+          print("compiled_agent_size",len(data))
+          print("compiled_agent_head_hex",data[:48].hex())
+          print("compiled_agent_head_preview",repr(data[:90].decode("utf-8","replace")))
+          PY
           node --check /tmp/home41-frida-interface-bundle.js
           python -m unittest tools/test_home41_frida_interface_monitor.py -v
           echo "Frida bundle compiled; real device attach and network data are not validated by this job."
