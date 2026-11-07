@@ -223,6 +223,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "first_basic_utid_observed": False,
         "year_picker_verified": False,
         "year_scrolls_confirmed": 0,
+        "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
         "day_selected": False,
@@ -261,7 +262,35 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
             continue
         index = STAGES.index(name)
         if index < minimum_stage:
-            # Previous page still fading out; never double-tap a completed step.
+            # An ADB tap being accepted is not evidence the UI transitioned.
+            # The previously tapped *same* screen may remain due to a missed
+            # Unity click or disabled transition. Retry only a known, visually
+            # stable, non-destructive screen, no more than twice.
+            previous = STAGES[minimum_stage-1] if minimum_stage else None
+            if name == previous and consecutive >= 3:
+                retry_count = result["stage_retry_counts"].get(name, 0)
+                if retry_count >= 2:
+                    save("onboarding_stuck_after_tap.png", data)
+                    result["status"] = "stage_transition_unconfirmed"
+                    result["stop_reason"] = "known_stage_persisted_after_bounded_retries"
+                    break
+                if isinstance(point, tuple) and len(point) == 3 and point[0] == "px":
+                    retry_x, retry_y = point[1], point[2]
+                else:
+                    from PIL import Image
+                    from io import BytesIO
+                    with Image.open(BytesIO(data)) as src:
+                        width, height = src.size
+                    retry_x, retry_y = int(point[0]*width), int(point[1]*height)
+                tapped = adb("shell", "input", "tap",
+                             str(retry_x), str(retry_y), secs=15)
+                if tapped is None or tapped.returncode != 0:
+                    result["status"] = "retry_tap_failed"
+                    result["stop_reason"] = name
+                    break
+                result["stage_retry_counts"][name] = retry_count+1
+                consecutive = 0
+                last_detected = None
             if interval_seconds > 0:
                 time.sleep(interval_seconds)
             continue
