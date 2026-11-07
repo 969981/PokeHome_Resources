@@ -60,3 +60,27 @@ tools/early_home_tid_observer.js 已增加 SetBasic 首次命中时的 LR/调用
 - 独立 [六位 ID 只读分析 Smoke Test #42354360295](https://github.com/969981/PokeHome_Resources/actions/runs/42354360295) 为 success，只表示脚本、fixture 与语法检查通过，不构成账户运行时 ID 捕获证据。
 
 **下次验收优先级**：先解决通信错误，拿到完成语言与国家选择后的真正生日页；然后才是未绑定任天堂账号的正常资料初始化、小火龙选择、首次 `basic.utid`、客户端可见六位 ID 的语义对账。未获得真实新号成功回包前，不得进行删除重建循环。
+
+
+## 2026-11-07：真实国家确认与出生日期页面
+
+本阶段继续遵循：不绑定 Nintendo Account；仅对已实证的界面进行可逆导航；出生日期使用用户授权的有效配置，尚未提交；头像和御三家小火龙（0004）尚未选择；真实云端账号注册、basic.utid 与官方云端删除均未发生。
+
+| GitHub Actions | 真实界面进度 | 关键证据 |
+|---|---|---|
+| [#42356071498](https://github.com/969981/PokeHome_Resources/actions/runs/42356071498) | 中国大陆点击后出现【确认选择此地区吗？中国大陆】的 YES/NO 弹窗 | 语言、亚太地区展开、国家选项点击成功；无通用错误弹窗；`country_selected=false` 仅表示尚未最终确认 |
+| [#42356611191](https://github.com/969981/PokeHome_Resources/actions/runs/42356611191) | YES 被正确识别并点击，真实截图出现【确认年龄 → 请输入你的出生日期】、年/月/日三框、下一步 | `country_confirmation_tap_succeeded=true`，DOB 未填写 |
+| [#42357127834](https://github.com/969981/PokeHome_Resources/actions/runs/42357127834) | 国家确认仍成功，年龄页刚淡入时截图像素暂不稳定 | `birthday_page_recognized=false`、`birth_year_dropdown_open_attempted=false`，**不是注册失败** |
+
+这三轮 APK 均正常安装启动，HOME 进程存活，未观察到 Android 致命崩溃；第三轮的年龄页最终截图已经稳定，说明需要在确认后增加“等待年龄页面稳定”门控，而非立即点击。
+
+### 新增测试：稳定生日页后再展开年份
+
+- 代码在 `tools/android41_emulator_probe.py`：`birthday_year_dropdown_from_screenshot` 严格匹配已拍到的真实年龄页，以区别语言确认弹窗、国家确认弹窗和错误提示。匹配后只展开年选择框；不点击下一步，不输入/提交生日。
+- 新增最多 15 次 / 每次间隔 3 秒的稳态截图检查，以处理 Unity 页面的淡入异步延迟。
+- 新运行见 [#42357644804](https://github.com/969981/PokeHome_Resources/actions/runs/42357644804)，结果需以该运行实际 Artifact/报告为准；**创建云端用户、训练家 ID 和删号验收仍未完成**。
+- `android_network_preflight` 可验证飞行模式、Android connectivity 的 INTERNET/VALIDATED 标志，但不能单独据此判断 HOME 专用后端连通，亦不能解释所有 `800/100101` 原因。
+
+### 下一步条件
+
+确认年份下拉控件表现 → 在官方允许、用户授权的有效配置下选择年月日 → 确认日期变更限制及必要协议 → 正常创建 guest 用户 → 在原生 ARM64 上只读获取第一个 `basic.utid` → 与六位显示 ID 校对。未验证官方永久删除云端账号前，不自动循环创建/删除账号。保留 `auth_registration_status=not_attempted_no_test_account` 与 `first_basic_utid_status=not_observed`，不能用工作流成功标记代替它们。
