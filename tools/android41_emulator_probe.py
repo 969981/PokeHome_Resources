@@ -268,7 +268,30 @@ def main():
                 time.sleep(5)
             report["screenshot_after_region_dropdown"]=snap(
                 args.output,"screen_after_region_dropdown.png")
+            # Select the first APAC country ONLY when the saved screenshot
+            # exactly matches the already audited teal country-list layout.
+            # No age, Terms, Nintendo login, account creation or deletion.
+            from android41_ui_flow import screenshot_apac_mainland_option
+            country_png=args.output/"screen_after_region_dropdown.png"
+            country_point=screenshot_apac_mainland_option(
+                country_png.read_bytes() if country_png.is_file()
+                and report["region_apac_dropdown_tap_succeeded"] else b"")
+            report["mainland_option_visual_gate"]=bool(country_point)
+            report["country_selection_tap_attempted"]=False
+            report["country_selection_tap_succeeded"]=False
+            if country_point is not None:
+                selected=adb("shell","input","tap",str(country_point[0]),
+                             str(country_point[1]),secs=15)
+                report["country_selection_tap_attempted"]=True
+                report["country_selection_tap_succeeded"]=bool(
+                    selected and selected.returncode==0)
+                time.sleep(8)
+            report["screenshot_after_country_selection"]=snap(
+                args.output,"screen_after_country_selection.png")
+            # A successful input event does NOT establish that the server
+            # accepted the region; the new screenshot must be reviewed.
             report["country_selected"]=False
+            report["country_selection_server_confirmed"]=False
             report["birthdate_entered"]=False
             report["terms_or_privacy_accepted"]=False
             if successful:
