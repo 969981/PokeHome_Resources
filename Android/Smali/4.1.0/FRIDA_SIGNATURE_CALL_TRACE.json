@@ -1,5 +1,5 @@
 {
-  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42376058783",
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42376455037",
   "status": "completed",
   "frida_setup": {
     "status": "ready",
@@ -18,7 +18,7 @@
       "sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
       "installation": "ok",
       "frida_spawn_attached": true,
-      "home_language_verified": false,
+      "home_language_verified": true,
       "signing_credentials_logged": false,
       "certificates_modified_by_monitor": false,
       "official_server_requests_modified": false,
@@ -44,11 +44,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 167,
+        "color_samples": 175,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          18.3,
+          16.5,
+          16.6
         ],
         "dimensions": [
           1080,
@@ -58,13 +58,13 @@
       "process_at_60s": true,
       "screen_at_60s": {
         "saved": true,
-        "nonblank": true,
+        "nonblank": false,
         "home_language_verified": false,
-        "color_samples": 167,
+        "color_samples": 178,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          5.3,
+          3.9,
+          4.4
         ],
         "dimensions": [
           1080,
@@ -75,28 +75,12 @@
       "screen_at_95s": {
         "saved": true,
         "nonblank": true,
-        "home_language_verified": false,
-        "color_samples": 167,
+        "home_language_verified": true,
+        "color_samples": 1082,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
-        ],
-        "dimensions": [
-          1080,
-          2340
-        ]
-      },
-      "process_at_130s": true,
-      "screen_at_130s": {
-        "saved": true,
-        "nonblank": true,
-        "home_language_verified": false,
-        "color_samples": 167,
-        "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          45.8,
+          15.5,
+          29.7
         ],
         "dimensions": [
           1080,
@@ -113,18 +97,22 @@
       },
       "hook_event_counts": {
         "agent_loaded": 1,
+        "checksignature_core_called": 1,
         "checksignature_hook_ready": 1,
         "java_ready": 1,
+        "package_name_sent_to_unity": 1,
+        "signature_chars_sent_to_unity": 1,
+        "signature_hash_sent_to_unity": 1,
         "unity_message_hook_ready": 1
       },
       "frida_script_errors": 0,
-      "signing_callback_invoked": false,
-      "signing_result_sent_to_unity": false,
+      "signing_callback_invoked": true,
+      "signing_result_sent_to_unity": true,
       "observer_ready": true
     },
     "resigned": {
       "variant": "directly_resigned",
-      "sha256": "73130e367ccb153fbbcef30804368c9508d91e15e9df27b7d87ce7890a901f0d",
+      "sha256": "c24a6914782c42846fc8fb74dbe8faa0b952e64ae7276a5d59b90d1817e88972",
       "installation": "ok",
       "frida_spawn_attached": true,
       "home_language_verified": false,
@@ -153,11 +141,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 195,
+        "color_samples": 199,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          44.4,
+          44.7,
+          47.8
         ],
         "dimensions": [
           1080,
@@ -169,11 +157,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 195,
+        "color_samples": 216,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          46.2,
+          44.5,
+          47.0
         ],
         "dimensions": [
           1080,
@@ -185,11 +173,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 194,
+        "color_samples": 207,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          46.2,
+          44.4,
+          46.9
         ],
         "dimensions": [
           1080,
@@ -201,11 +189,11 @@
         "saved": true,
         "nonblank": true,
         "home_language_verified": false,
-        "color_samples": 194,
+        "color_samples": 216,
         "channel_stddev_rounded": [
-          49.2,
-          48.9,
-          51.4
+          46.2,
+          44.5,
+          47.0
         ],
         "dimensions": [
           1080,
@@ -222,17 +210,21 @@
       },
       "hook_event_counts": {
         "agent_loaded": 1,
+        "checksignature_core_called": 1,
         "checksignature_hook_ready": 1,
         "java_ready": 1,
+        "package_name_sent_to_unity": 1,
+        "signature_chars_sent_to_unity": 1,
+        "signature_hash_sent_to_unity": 1,
         "unity_message_hook_ready": 1
       },
       "frida_script_errors": 0,
-      "signing_callback_invoked": false,
-      "signing_result_sent_to_unity": false,
+      "signing_callback_invoked": true,
+      "signing_result_sent_to_unity": true,
       "observer_ready": true
     },
-    "failure_correlation": "not_reproduced_or_original_not_verified",
-    "signature_check_execution_proved": false,
+    "failure_correlation": "only_resigned_failed_home_screen",
+    "signature_check_execution_proved": true,
     "note": "The installed signature-reading Java class is not necessarily executed at startup. A 0 event count is not proof of no native or server-side certificate validation."
   },
   "requires_official_signing_cert_for_real_online_equivalence": "not independently proven by callback events",
