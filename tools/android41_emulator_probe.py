@@ -249,11 +249,14 @@ def main():
                 args.output,"screen_after_language_confirmation.png")
             # Reversible navigation only: expand APAC region's list, never
             # choose/submit a country or any personal onboarding details.
-            from android41_ui_flow import screenshot_apac_region_expand_position
-            region_png=args.output/"screen_after_language_confirmation.png"
-            region_point=screenshot_apac_region_expand_position(
-                region_png.read_bytes() if region_png.is_file()
-                and report["simplified_chinese_confirmed"] else b"")
+            from android41_ui_flow import wait_for_stable_region_page
+            if report["simplified_chinese_confirmed"]:
+                region_point,tries=wait_for_stable_region_page(
+                    adb,max_checks=10,interval_seconds=6)
+            else:
+                region_point,tries=None,0
+            report["region_page_poll_attempts"]=tries
+            report["region_page_poll_wait_seconds"]=max(0,tries-1)*6
             report["region_list_page_recognized"]=bool(region_point)
             report["region_apac_dropdown_expansion_attempted"]=False
             if region_point is not None:
@@ -269,7 +272,9 @@ def main():
             report["birthdate_entered"]=False
             report["terms_or_privacy_accepted"]=False
             if successful:
-                time.sleep(max(0,args.idle_seconds-33-report["home_language_poll_wait_seconds"]))
+                time.sleep(max(0,args.idle_seconds-33
+                    -report["home_language_poll_wait_seconds"]
+                    -report["region_page_poll_wait_seconds"]))
             report["screenshot_after_wait"]=snap(args.output,"screen_after_wait.png")
             second=adb("shell","pidof",PACKAGE)
             report["process_after_wait"]=bool(second and second.returncode==0 and second.stdout.strip())

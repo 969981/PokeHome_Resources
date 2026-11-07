@@ -181,6 +181,25 @@ def screenshot_apac_region_expand_position(png_bytes:bytes):
     # Expand APAC, fifth row. Do not choose a country inside that list.
     return int(w*.82),int(h*.48)
 
+
+def wait_for_stable_region_page(adb,max_checks:int=10,interval_seconds:float=6.0):
+    """Wait for the full-size, non-animated 7-row region page.
+
+    Never tap while the fade-in animation, language confirmation, network
+    errors, date-of-birth or Terms screen is displayed.
+    """
+    if max_checks<1 or max_checks>20:
+        raise ValueError("max_checks out of range")
+    for attempt in range(max_checks):
+        screenshot=adb("exec-out","screencap","-p",secs=30,binary=True)
+        pos=screenshot_apac_region_expand_position(
+            screenshot.stdout if screenshot and screenshot.returncode==0 else b"")
+        if pos is not None:
+            return pos,attempt+1
+        if attempt+1<max_checks and interval_seconds>0:
+            time.sleep(interval_seconds)
+    return None,max_checks
+
 def wait_for_known_language_page(adb,max_checks:int=9,interval_seconds:float=10.0):
     """Only recognize the evidenced HOME language screen, bounded wait."""
     if max_checks<1 or max_checks>20:

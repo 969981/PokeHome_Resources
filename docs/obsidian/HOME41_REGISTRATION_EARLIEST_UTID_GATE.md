@@ -75,3 +75,14 @@ flowchart TD
 - 下一步仍需来自账号本人明确授权的地区/生日/条款选择以及真实首次注册会话，才能比较注册回调与首个 \`SetBasic\` 事件。
 
 **地区展开属于导航实验，不能等价于账号地区设置成功。**
+
+
+## 2026-11-07 当前实测：通信错误 800 / 100101 与动画时序
+
+- [Actions #42351084210](https://github.com/969981/PokeHome_Resources/actions/runs/42351084210) 实测 APK 安装成功、HOME 进程存活，三种 OS 权限设置验证通过。但语言页轮询 9 次均未匹配；真实最终截图显示 **「エラー / つうしんエラーが はっせいしました / code:800 / detail code:100101」**，与注册/年龄/地区界面不同。
+- \`region_list_page_recognized=false\`、\`region_apac_dropdown_expansion_attempted=false\`、\`country_selected=false\`：此轮没有任何地区点击，也未发起新账号注册。
+- 官方 Pokémon HOME 支持文档明确列出了 **100101**，建议稍后再试，或重新连接/更换 Wi-Fi；原因可能是网络连接不稳定。官方说明：[code:800 / detail code:100101](https://app-ph.pokemon-support.com/hc/en-us/articles/58149598512281--Pok%C3%A9mon-HOME-Smartphone-version-The-error-code-800-detail-code-100101-appears-and-I-can-t-log-in-to-Pok%C3%A9mon-HOME)。这并不能证明本次必然是网络故障，也不能证明服务器有意限流/封禁。
+- **另一个独立时序问题**：既有 #42341229111 的 \`screen_after_language_confirmation.png\` 实际为地区页面淡入中，白色按钮颜色尚不稳定；相同运行的最终 \`screen_after_wait.png\` 才是稳定的七行地区列表。
+- 修复 \`wait_for_stable_region_page\`：仅在完整的七行地区页截图特征匹配后才展开亚太地区；最多检查十次、间隔六秒，在错误弹窗、动画和未知页面时不点击。记录 \`region_page_poll_attempts\`、\`region_page_poll_wait_seconds\`。
+- 仍然**不填写实际国别、出生日期，不确认协议，不创建/删除账号**。下一轮应将通信失败和地区 UI 无法匹配分别记录，防止误报。
+

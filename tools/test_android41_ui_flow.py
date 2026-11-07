@@ -2,7 +2,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
-from android41_ui_flow import parse_system_action,wait_for_known_language_page
+from android41_ui_flow import parse_system_action,wait_for_known_language_page,wait_for_stable_region_page
 
 class HomeSystemOverlayTest(unittest.TestCase):
     def test_known_native_prompts(self):
@@ -122,6 +122,32 @@ class HomeSystemOverlayTest(unittest.TestCase):
         im=Image.new("RGB",(1080,2340),(238,237,244))
         buffer=BytesIO();im.save(buffer,format="PNG")
         self.assertIsNone(screenshot_apac_region_expand_position(buffer.getvalue()))
+
+
+    def test_stable_region_poll_accepts_only_real_region_layout(self):
+        from types import SimpleNamespace
+        from io import BytesIO
+        from PIL import Image,ImageDraw
+        im=Image.new("RGB",(1080,2340),(158,243,215))
+        d=ImageDraw.Draw(im)
+        d.rectangle((0,0,1079,140),fill=(210,252,169))
+        d.rectangle((0,220,1079,520),fill=(38,179,151))
+        for y in (.24,.30,.36,.42,.48,.54,.60):
+            middle=int(2340*y)
+            d.rectangle((145,middle-28,910,middle+28),fill=(248,250,245))
+        real=BytesIO();im.save(real,format="PNG")
+        fade=Image.new("RGB",(1080,2340),(185,220,200))
+        b=BytesIO();fade.save(b,format="PNG")
+        replies=iter([b.getvalue(),real.getvalue()])
+        calls=[]
+        def fake(*args,**kwargs):
+            calls.append(args)
+            return SimpleNamespace(returncode=0,stdout=next(replies))
+        pos,count=wait_for_stable_region_page(fake,2,0)
+        self.assertEqual((pos,count),((885,1123),2))
+        self.assertEqual(calls,[("exec-out","screencap","-p")]*2)
+        with self.assertRaises(ValueError):
+            wait_for_stable_region_page(fake,21,0)
 
     def test_reject_malformed_xml(self):
         self.assertIsNone(parse_system_action("<n><unclosed>"))
