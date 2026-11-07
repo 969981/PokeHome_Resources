@@ -37,7 +37,7 @@ class FakeLocationAdb:
                 lines.append(f"{p}: granted=false, flags=[{flags}]")
             return SimpleNamespace(returncode=0,stdout="\n".join(lines))
         if args[1:3]==("pm","set-permission-flags"):
-            self.fixed.add(args[3])
+            self.fixed.add(args[4])
             return SimpleNamespace(returncode=0,stdout="")
         return SimpleNamespace(returncode=0,stdout="")
 
