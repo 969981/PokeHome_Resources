@@ -222,7 +222,8 @@ def _capture(adb: Callable, out: Path, filename: str) -> bytes:
 
 
 def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
-                          max_checks: int = 70, interval_seconds: float = 3) -> dict:
+                          max_checks: int = 70, interval_seconds: float = 3,
+                          on_first_verified_page: Callable[[], str] | None = None) -> dict:
     """Advance only the verified guest setup pages and stop at age picker.
 
     Checkpoint is a report about the current ephemeral emulator process;
@@ -241,6 +242,9 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "completed": [],
         "last_observed_stage": None,
         "checks": 0,
+        "early_arm64_hook_attempted": False,
+        "early_arm64_hook_status": "not_requested",
+        "early_arm64_hook_before_first_tap": False,
         "stop_reason": None,
         "birthday_submitted": False,
         "terms_accepted": False,
@@ -292,6 +296,26 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
             if interval_seconds > 0:
                 time.sleep(interval_seconds)
             continue
+        # Install optional ARM64 read-only Frida observer ONLY after a
+        # real HOME onboarding page has been screenshot-verified twice.
+        # In #42381075880 the first 15s screenshot was pure white, and
+        # attaching in that unverified state raised TransportError.
+        # A failed attempt stops without touching any HOME UI control.
+        if on_first_verified_page is not None and not result["early_arm64_hook_attempted"]:
+            result["early_arm64_hook_attempted"] = True
+            result["early_arm64_hook_before_first_tap"] = not bool(result["completed"])
+            try:
+                status = on_first_verified_page()
+                result["early_arm64_hook_status"] = (
+                    status if isinstance(status, str) and 0 < len(status) <= 96
+                    else "unexpected_callback_status")
+            except Exception as exc:
+                result["early_arm64_hook_status"] = "hook_callback_exception_" + type(exc).__name__
+            if result["early_arm64_hook_status"] != "emulated_arm64_readonly_observer_loaded":
+                save("onboarding_frida_hook_failure_verified_page.png", data)
+                result["status"] = "early_arm64_hook_unavailable_safe_stop"
+                result["stop_reason"] = "verified_page_no_uninstrumented_ui_taps"
+                break
         index = STAGES.index(name)
         if index < minimum_stage:
             # An ADB tap being accepted is not evidence the UI transitioned.
