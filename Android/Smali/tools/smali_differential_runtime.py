@@ -9,10 +9,10 @@ from smali_runtime_probe import case, value, sha256, ORIGINAL_SHA256
 
 
 def classify(results):
-    original=results["original"]["result"]=="visible_process_survived"
-    resigned=results["resigned_original"]["result"]=="visible_process_survived"
-    hybrid=results["original_assets_smali_dex"]["result"]=="visible_process_survived"
-    rebuilt=results["apktool_rebuilt"]["result"]=="visible_process_survived"
+    original=results["original"]["result"]=="home_language_screen_verified"
+    resigned=results["resigned_original"]["result"]=="home_language_screen_verified"
+    hybrid=results["original_assets_smali_dex"]["result"]=="home_language_screen_verified"
+    rebuilt=results["apktool_rebuilt"]["result"]=="home_language_screen_verified"
     if not original:
         return "blocked_original_baseline_not_visible"
     if not resigned:
@@ -21,7 +21,7 @@ def classify(results):
         return "original_resigned_passes_but_smali_dex_hybrid_fails"
     if not rebuilt:
         return "smali_dex_hybrid_passes_but_apktool_full_package_fails"
-    return "all_four_launch_visible"
+    return "all_four_home_ui_verified"
 
 
 def main():
