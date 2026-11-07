@@ -254,3 +254,32 @@ python tools/home41_auth_timeline.py --input /path/to/redacted-frida-events.json
 - 新增只针对已观测弹窗像素颜色、白色模态面板、橙色“是”按钮以及暗化语言页背景的严格签名 \`screenshot_language_confirmation_yes\`；点击确认仅会选择显示语言，不接受法律条款，也不创建账号。
 - 之后截取下一页；如果是国家/地区、真实出生日期或协议界面，不填造个人资料，不自动确认协议。
 - 尚无真实测试用户登录/注册和 \`basic.utid\` 观察；因为新用户正常注册之前仍须合法完成地区、生日与条款步骤，不能以模拟值代替真实授权。
+
+
+## 18. 第十三轮：简体中文确认完成，实际停在地区选择
+
+**真实 run：** [Actions #42341229111](https://github.com/969981/PokeHome_Resources/actions/runs/42341229111)，结果成功。最终 AVD 证据在私有 Actions Artifact \`home-android-4.1.0-emulator-probe\`，截图文件 \`screen_after_wait.png\`。
+
+观察结果：
+- 相机 \`verified_granted\`（仅虚拟无摄像头 AVD）；位置 \`verified_denied_fixed\`；通知 \`verified_denied_fixed\`，Android 系统层不再阻挡 HOME。
+- \`home_language_screen_recognized=true\`，\`simplified_chinese_selected=true\`；
+- \`language_confirmation_dialog_recognized=true\`，\`simplified_chinese_confirmed=true\`；
+- **真实 screenshot 最终显示** \`选择地区\`、\`请选择你所居住的地区。\`，列出非洲、北美洲、拉丁美洲、大洋洲、亚太地区、欧洲、中东地区。
+- HOME 进程仍在，未登录、未注册、未提交服务协议，\`auth_registration_status=not_attempted_no_test_account\`，\`first_basic_utid_status=not_observed\`。
+- **由此证明：** AVD → HOME 首次语言选择 → 简体中文确认 → 地区选择可以在 GitHub Actions 里可靠复现，但**不等于**已生成六位 Trainer ID。
+
+### 必须停止自动化的原因
+
+后续需要真实用户授权的地区/国家、不可随意编造的出生日期、官方条款与隐私协议确认，随后才会出现匿名手机 HOME 初始化（官方允许不连接 Nintendo Account）或 Nintendo 身份关联。请勿把 GitHub Runner 的所在地、虚构的出生日期或固定试验值当成用户的真实资料。用户必须完成必要的官方交互选择和协议确认；**不应将账号密码、授权码、ID Token、CSRF、Nonce 上传到 GitHub Actions Artifact 或仓库**。
+
+\`/auth/register/user\` 专属结果只有 \`uuid/apRes/naRes\`，真正最早可信的用户 ID 观察点仍是首次 \`ResponseParamCommon.basic.utid\` 经 \`UDManager.SetBasic\` 处理。当前未取得包含该字段的真实注册/登录会话。时间线工具 \`tools/home41_auth_timeline.py\` 在没有真实 \`first_basic_utid\` 事件时必须输出 \`no_real_basic_utid_observed\`，不得把模拟事件统计当作真实回调延迟。
+
+### 后续验收
+
+1. 在用户自己授权的空白 HOME 账号中，正常完成地区、出生日期和服务条款流程；手机端 guest 与 Nintendo 关联应单独留证。
+2. 在原生 ARM64 测试环境中附加只读回调观察器，记录注册 serializer、注册 response callback 与第一次 \`SetBasic\` 的本地单调时间戳。x86_64 Native Bridge 下 Frida ARM64 hook 仍未实机证明可用。
+3. 分别验证 \`first_basic_utid\` 是否发生在注册响应公共部分还是后续首次登录响应。即使时间相近，仍要根据真实响应生产者证明归属。
+4. 从同一合法新账号得到 HOME 游戏 UI 中的六位 ID，核对是否实际等于 \`int(utid) % 1,000,000\`。若不吻合，必须撤销该转换假设。
+5. 不批量注册、删号或重放认证请求；不要把服务端分配规则未知说成可定向刷 \`888888\`。
+
+本次到 **地区选择为止**，账号创建及实时 UTID 发放验证尚未完成。
