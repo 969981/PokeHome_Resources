@@ -279,6 +279,10 @@ def main():
     p.add_argument("--output",type=Path,required=True)
     p.add_argument("--idle-seconds",type=int,default=120)
     p.add_argument("--guest-profile",type=Path,default=Path("tools/home41_guest_profile.json"))
+    p.add_argument("--frida-interface-monitor",action="store_true",
+                   help="Spawn HOME with Frida read-only agent before UI navigation")
+    p.add_argument("--frida-agent-bundle",type=Path,
+                   default=Path("/tmp/home41_frida_interface_compiled.js"))
     args=p.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
     report={
@@ -291,6 +295,7 @@ def main():
         "auth_registration_status":"not_attempted_no_test_account",
         "first_basic_utid_status":"not_observed",
         "cache_files":0,"result":"not_started"}
+    frida_monitor = None
     try:
         adb("shell","input","keyevent","KEYCODE_WAKEUP")
         adb("shell","wm","dismiss-keyguard")
@@ -328,6 +333,16 @@ def main():
                 and "confirmed" in (verify_immersive.stdout or "")) else "not_confirmed"
             report["android_network_preflight"]=safe_android_network_snapshot()
             adb("logcat","-c",secs=10)
+            if args.frida_interface_monitor:
+                from home41_frida_interface_monitor import FridaInterfaceMonitor
+                frida_monitor=FridaInterfaceMonitor(
+                    args.output,args.frida_agent_bundle,
+                    Path("tools/early_home_tid_observer.js"))
+                report["frida_spawn_attach_succeeded"]=frida_monitor.start()
+            else:
+                report["frida_spawn_attach_succeeded"]=False
+            # Monkey brings a Frida-spawned HOME activity to the foreground,
+            # or launches it normally if Frida could not start.
             launched=adb("shell","monkey","-p",PACKAGE,"-c","android.intent.category.LAUNCHER","1",secs=50)
             successful=bool(launched and launched.returncode==0 and "Events injected: 1" in launched.stdout)
             report["launch_status"]="event_sent" if successful else "launcher_failed"
@@ -457,6 +472,14 @@ def main():
         report["result"]="probe_exception"
         report["error_type"]=type(e).__name__
         report["error_summary"]=str(e)[:160]
+    if frida_monitor is not None:
+        try:
+            report["frida_interface"]=frida_monitor.stop()
+        except Exception as e:
+            report["frida_interface"]={
+                "status":"sanitized_monitor_stop_failed",
+                "error_type":type(e).__name__,
+                "raw_http_or_auth_material_saved":False}
     (args.output/"emulator_probe_summary.json").write_text(
         json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print(json.dumps(report,indent=2,ensure_ascii=False))
