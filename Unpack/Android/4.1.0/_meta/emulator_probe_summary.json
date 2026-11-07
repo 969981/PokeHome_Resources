@@ -56,7 +56,7 @@
   },
   "android_immersive_setting": "confirmed",
   "android_network_preflight": {
-    "android_utc_time": "2026-11-07T15:19:57Z",
+    "android_utc_time": "2026-11-07T15:27:45Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -249,7 +249,7 @@
   "screenshot_after_wait": true,
   "known_home_error_modal_layout": false,
   "android_network_after_wait": {
-    "android_utc_time": "2026-11-07T15:24:03Z",
+    "android_utc_time": "2026-11-07T15:31:37Z",
     "airplane_mode": false,
     "route_present": false,
     "network_validated_flag_seen": true,
@@ -277,11 +277,11 @@
       "libndk_translation": 0
     },
     "events": [
-      "11-07 15:22:03.501   567   605 W system_server: Long monitor contention with owner binder:567_B (1244) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.conte"
+      "11-07 15:29:48.977   555   598 W system_server: Long monitor contention with owner android.perm (927) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.conten"
     ],
     "raw_log_saved": false,
     "system_event_counts": {
-      "am_proc_died": 1,
+      "am_proc_died": 2,
       "am_crash": 0,
       "am_anr": 0
     }
@@ -313,16 +313,22 @@
     "arm64_native_rva_hooks_usable": false,
     "native_socket_hook_ready": true,
     "native_socket_io_hooks_ready": true,
-    "native_transport_event_count": 7,
+    "native_transport_event_count": 6,
     "native_transport_only_metadata": true,
     "api_stage_event_count": 0,
     "arm64_hook_preflight_seen": true,
     "arm64_observer_ready": true,
+    "birthdate_ui_hook_install_count": 4,
+    "birthdate_ui_callback_event_count": 5,
     "arm64_preflight_exception_seen": false,
     "first_basic_utid_event_seen": false,
     "first_basic_utid_numeric_value_saved": false,
     "event_counts": {
+      "birthdate_day_change_index": 1,
+      "birthdate_month_change_index": 1,
+      "date_hook_installed": 4,
       "dns_hook_ready": 1,
+      "dropdown_scroll_open_index": 3,
       "emulated_realm_probe": 1,
       "frida_agent_loaded": 1,
       "hook_preflight": 1,
@@ -333,12 +339,12 @@
       "native_connect_hook_ready": 1,
       "native_socket_connect": 1,
       "native_socket_io_hooks_ready": 1,
-      "native_socket_receive": 3,
+      "native_socket_receive": 2,
       "native_socket_send": 3,
       "read_only_observer_ready": 1
     },
-    "event_count": 18,
-    "duration_seconds": 249.6,
+    "event_count": 26,
+    "duration_seconds": 233.3,
     "note": "Java/DNS and native socket events are not full HTTP responses. Native socket traffic cannot identify the endpoint or HTTP response body. ARM64 hooks not validated on x64 native-bridge emulator.",
     "raw_http_or_auth_material_saved": false,
     "guest_registration_attempted_by_monitor": false
