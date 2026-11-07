@@ -372,13 +372,15 @@ def main():
                 "at_birthdate_page","birth_year_picker_open_attempted",
                 "birth_year_picker_verified_open",
                 "year_list_scrolled_unverified_labels",
-                "mouse_wheel_scroll_probe_only")
+                "mouse_wheel_scroll_probe_only") or onboarding["status"].startswith(
+                "date_picker_diagnostics_")
             report["birth_year_dropdown_open_attempted"]=(
                 "inspect_birth_year_picker" in completed)
             report["birth_year_dropdown_verified_open"]=onboarding.get("year_picker_verified",False)
             report["birth_year_wheel_events_sent"]=onboarding.get("year_scroll_commands_succeeded",0)
             report["birth_year_popup_visible_after_wheel_events"]=onboarding.get("year_popup_remained_open_after_wheel",0)
             report["birth_year_labels_changed_verified"]=False
+            report["date_picker_diagnostics"]=onboarding.get("date_picker_diagnostics")
             report["birth_year_dropdown_tap_succeeded"]=(
                 "inspect_birth_year_picker" in completed)
             # UI moved past country prompt, but remote account profile does not
