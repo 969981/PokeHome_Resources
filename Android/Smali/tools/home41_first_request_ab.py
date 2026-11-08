@@ -253,7 +253,7 @@ def run_variant(name,apk,bundle,arm64_script,out,device):
         "http_status":status["observed_http_response_codes"],
         "response_callback_result_in_http_range":status["observed_api_callback_result_in_http_range"],
         "event_counts":status["event_counts"]
-    },ensure_ascii=False,flush=True))
+    },ensure_ascii=False),flush=True)
     return status
 
 
