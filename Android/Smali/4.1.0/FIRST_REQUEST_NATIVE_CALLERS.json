@@ -1,0 +1,354 @@
+{
+  "status": "static_direct_bl_callers_only",
+  "original_file": "HOME 4.1.0 ARM64 libil2cpp.so",
+  "targets": {
+    "api_response_callback_Ningale": {
+      "rva": "0x1F29E6C",
+      "definitions": [
+        {
+          "name": "ILib.Unity.Net.ApiRequestBase$$Ningale",
+          "signature": "void ILib_Unity_Net_ApiRequestBase__Ningale (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, System_Collections_Generic_Dictionary_string__string__o* dicHeader, System_Byte_array* data, const MethodInfo* method);"
+        }
+      ],
+      "count": 1,
+      "direct_callers": [
+        {
+          "callsite_rva": "0x1F2977C",
+          "containing_function_rva": "0x1F28E58",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.ApiRequestBase$$Monaflemit",
+              "signature": "void ILib_Unity_Net_ApiRequestBase__Monaflemit (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, System_Collections_Generic_Dictionary_string__string__o* dicHeader, System_Byte_array* data, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 2340
+        }
+      ]
+    },
+    "request_prepare_Parecool": {
+      "rva": "0x1F27F5C",
+      "definitions": [
+        {
+          "name": "ILib.Unity.Net.ApiRequestBase$$Parecool",
+          "signature": "bool ILib_Unity_Net_ApiRequestBase__Parecool (ILib_Unity_Net_ApiRequestBase_o* __this, const MethodInfo* method);"
+        }
+      ],
+      "count": 2,
+      "direct_callers": [
+        {
+          "callsite_rva": "0x1F27620",
+          "containing_function_rva": "0x1F27404",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.ApiRequestBase$$Request",
+              "signature": "void ILib_Unity_Net_ApiRequestBase__Request (ILib_Unity_Net_ApiRequestBase_o* __this, ILib_Unity_Net_ApiRequestBase_DelegateCallbackResult_o* callbackResult, float Prinplouf, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 540
+        },
+        {
+          "callsite_rva": "0x1F2A168",
+          "containing_function_rva": "0x1F2A074",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.ApiRequestBase$$Munja",
+              "signature": "void ILib_Unity_Net_ApiRequestBase__Munja (ILib_Unity_Net_ApiRequestBase_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 244
+        }
+      ]
+    },
+    "api_error_handler_Chapignon": {
+      "rva": "0x1F27858",
+      "definitions": [
+        {
+          "name": "ILib.Unity.Net.ApiRequestBase$$Chapignon",
+          "signature": "void ILib_Unity_Net_ApiRequestBase__Chapignon (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, int32_t resultDetailCode, ILib_Unity_Net_ResponseParameterBase_o* responseParam, const MethodInfo* method);"
+        }
+      ],
+      "count": 2,
+      "direct_callers": [
+        {
+          "callsite_rva": "0x1F29540",
+          "containing_function_rva": "0x1F28E58",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.ApiRequestBase$$Monaflemit",
+              "signature": "void ILib_Unity_Net_ApiRequestBase__Monaflemit (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, System_Collections_Generic_Dictionary_string__string__o* dicHeader, System_Byte_array* data, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 1768
+        },
+        {
+          "callsite_rva": "0x1F29830",
+          "containing_function_rva": "0x1F28E58",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.ApiRequestBase$$Monaflemit",
+              "signature": "void ILib_Unity_Net_ApiRequestBase__Monaflemit (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, System_Collections_Generic_Dictionary_string__string__o* dicHeader, System_Byte_array* data, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 2520
+        }
+      ]
+    },
+    "unity_web_request_send": {
+      "rva": "0x421A6DC",
+      "definitions": [
+        {
+          "name": "UnityEngine.Networking.UnityWebRequest$$SendWebRequest",
+          "signature": "UnityEngine_Networking_UnityWebRequestAsyncOperation_o* UnityEngine_Networking_UnityWebRequest__SendWebRequest (UnityEngine_Networking_UnityWebRequest_o* __this, const MethodInfo* method);"
+        }
+      ],
+      "count": 15,
+      "direct_callers": [
+        {
+          "callsite_rva": "0x1D10B38",
+          "containing_function_rva": "0x1D10A00",
+          "caller_function": [
+            {
+              "name": "MedalResourceData.<_CoDownloadMetaData>d__25$$MoveNext",
+              "signature": "bool MedalResourceData___CoDownloadMetaData_d__25__MoveNext (MedalResourceData___CoDownloadMetaData_d__25_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 312
+        },
+        {
+          "callsite_rva": "0x1D10CD8",
+          "containing_function_rva": "0x1D10BB8",
+          "caller_function": [
+            {
+              "name": "MedalResourceData.<_CoDownloadTexture>d__21$$MoveNext",
+              "signature": "bool MedalResourceData___CoDownloadTexture_d__21__MoveNext (MedalResourceData___CoDownloadTexture_d__21_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 288
+        },
+        {
+          "callsite_rva": "0x1D1145C",
+          "containing_function_rva": "0x1D11314",
+          "caller_function": [
+            {
+              "name": "MedalResourceData.<_CoLoadTexture>d__19$$MoveNext",
+              "signature": "bool MedalResourceData___CoLoadTexture_d__19__MoveNext (MedalResourceData___CoLoadTexture_d__19_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 328
+        },
+        {
+          "callsite_rva": "0x1D1160C",
+          "containing_function_rva": "0x1D114E0",
+          "caller_function": [
+            {
+              "name": "MedalResourceData.<_CoLoadTextureFromBase64Str>d__20$$MoveNext",
+              "signature": "bool MedalResourceData___CoLoadTextureFromBase64Str_d__20__MoveNext (MedalResourceData___CoLoadTextureFromBase64Str_d__20_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 300
+        },
+        {
+          "callsite_rva": "0x1D9BED8",
+          "containing_function_rva": "0x1D9BD5C",
+          "caller_function": [
+            {
+              "name": "NoticeBannerDataCacheValue.<>c__DisplayClass6_0.<<-ctor>g__Download|0>d$$MoveNext",
+              "signature": "bool NoticeBannerDataCacheValue___c__DisplayClass6_0____ctor_g__Download_0_d__MoveNext (NoticeBannerDataCacheValue___c__DisplayClass6_0____ctor_g__Download_0_d_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 380
+        },
+        {
+          "callsite_rva": "0x1DAD814",
+          "containing_function_rva": "0x1DAD70C",
+          "caller_function": [
+            {
+              "name": "TTBattleDataScreenController.<>c__DisplayClass45_0.<<DownloadImage>g__Download|0>d$$MoveNext",
+              "signature": "bool TTBattleDataScreenController___c__DisplayClass45_0___DownloadImage_g__Download_0_d__MoveNext (TTBattleDataScreenController___c__DisplayClass45_0___DownloadImage_g__Download_0_d_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 264
+        },
+        {
+          "callsite_rva": "0x1F37A14",
+          "containing_function_rva": "0x1F377F8",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.FileDownloader$$LoadRequest",
+              "signature": "void ILib_Unity_Net_FileDownloader__LoadRequest (ILib_Unity_Net_FileDownloader_o* __this, ILib_Unity_Net_FileDownloader_LoadWork_o* reqWork, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 540
+        },
+        {
+          "callsite_rva": "0x1F39204",
+          "containing_function_rva": "0x1F39198",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.Net.IAWWW.<CoSendRequest>d__18$$MoveNext",
+              "signature": "bool ILib_Unity_Net_IAWWW__CoSendRequest_d__18__MoveNext (ILib_Unity_Net_IAWWW__CoSendRequest_d__18_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 108
+        },
+        {
+          "callsite_rva": "0x1F4A90C",
+          "containing_function_rva": "0x1F4A790",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.File.RAssetBundleManager.<ExistStreamingFileCoroutine>d__34$$MoveNext",
+              "signature": "bool ILib_Unity_File_RAssetBundleManager__ExistStreamingFileCoroutine_d__34__MoveNext (ILib_Unity_File_RAssetBundleManager__ExistStreamingFileCoroutine_d__34_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 380
+        },
+        {
+          "callsite_rva": "0x1F4AC14",
+          "containing_function_rva": "0x1F4AB28",
+          "caller_function": [
+            {
+              "name": "ILib.Unity.File.RAssetBundleManager.<LoadUntiyWebRequest>d__40$$MoveNext",
+              "signature": "bool ILib_Unity_File_RAssetBundleManager__LoadUntiyWebRequest_d__40__MoveNext (ILib_Unity_File_RAssetBundleManager__LoadUntiyWebRequest_d__40_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 236
+        },
+        {
+          "callsite_rva": "0x2406004",
+          "containing_function_rva": "0x2405684",
+          "caller_function": [
+            {
+              "name": "SmartPoint.AssetAssistant.AssetManager$$ProcessRequestItem",
+              "signature": "bool SmartPoint_AssetAssistant_AssetManager__ProcessRequestItem (SmartPoint_AssetAssistant_IAssetRequestItem_o* requestItem, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 2432
+        },
+        {
+          "callsite_rva": "0x2407C90",
+          "containing_function_rva": "0x2405684",
+          "caller_function": [
+            {
+              "name": "SmartPoint.AssetAssistant.AssetManager$$ProcessRequestItem",
+              "signature": "bool SmartPoint_AssetAssistant_AssetManager__ProcessRequestItem (SmartPoint_AssetAssistant_IAssetRequestItem_o* requestItem, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 9740
+        },
+        {
+          "callsite_rva": "0x2417AE4",
+          "containing_function_rva": "0x24175E0",
+          "caller_function": [
+            {
+              "name": "SmartPoint.AssetAssistant.Sequencer.<LogSender>d__86$$MoveNext",
+              "signature": "bool SmartPoint_AssetAssistant_Sequencer__LogSender_d__86__MoveNext (SmartPoint_AssetAssistant_Sequencer__LogSender_d__86_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 1284
+        },
+        {
+          "callsite_rva": "0x395BF00",
+          "containing_function_rva": "0x395BCC0",
+          "caller_function": [
+            {
+              "name": "SRDebugger.Internal.BugReportApi.<Submit>d__19$$MoveNext",
+              "signature": "bool SRDebugger_Internal_BugReportApi__Submit_d__19__MoveNext (SRDebugger_Internal_BugReportApi__Submit_d__19_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 576
+        },
+        {
+          "callsite_rva": "0x3E430B8",
+          "containing_function_rva": "0x3E42FD0",
+          "caller_function": [
+            {
+              "name": "Unity.Services.Core.Internal.UnityWebRequestUtils$$GetTextAsync",
+              "signature": "System_Threading_Tasks_Task_string__o* Unity_Services_Core_Internal_UnityWebRequestUtils__GetTextAsync (System_String_o* uri, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 232
+        }
+      ]
+    },
+    "unity_web_request_response_code": {
+      "rva": "0x421AD30",
+      "definitions": [
+        {
+          "name": "UnityEngine.Networking.UnityWebRequest$$get_responseCode",
+          "signature": "int64_t UnityEngine_Networking_UnityWebRequest__get_responseCode (UnityEngine_Networking_UnityWebRequest_o* __this, const MethodInfo* method);"
+        }
+      ],
+      "count": 6,
+      "direct_callers": [
+        {
+          "callsite_rva": "0x395BFAC",
+          "containing_function_rva": "0x395BCC0",
+          "caller_function": [
+            {
+              "name": "SRDebugger.Internal.BugReportApi.<Submit>d__19$$MoveNext",
+              "signature": "bool SRDebugger_Internal_BugReportApi__Submit_d__19__MoveNext (SRDebugger_Internal_BugReportApi__Submit_d__19_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 748
+        },
+        {
+          "callsite_rva": "0x421AC68",
+          "containing_function_rva": "0x421AC20",
+          "caller_function": [
+            {
+              "name": "UnityEngine.Networking.UnityWebRequest$$get_error",
+              "signature": "System_String_o* UnityEngine_Networking_UnityWebRequest__get_error (UnityEngine_Networking_UnityWebRequest_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 72
+        },
+        {
+          "callsite_rva": "0x421AC90",
+          "containing_function_rva": "0x421AC20",
+          "caller_function": [
+            {
+              "name": "UnityEngine.Networking.UnityWebRequest$$get_error",
+              "signature": "System_String_o* UnityEngine_Networking_UnityWebRequest__get_error (UnityEngine_Networking_UnityWebRequest_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 112
+        },
+        {
+          "callsite_rva": "0x421D1F8",
+          "containing_function_rva": "0x421D174",
+          "caller_function": [
+            {
+              "name": "UnityEngine.WWW$$get_error",
+              "signature": "System_String_o* UnityEngine_WWW__get_error (UnityEngine_WWW_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 132
+        },
+        {
+          "callsite_rva": "0x421D214",
+          "containing_function_rva": "0x421D174",
+          "caller_function": [
+            {
+              "name": "UnityEngine.WWW$$get_error",
+              "signature": "System_String_o* UnityEngine_WWW__get_error (UnityEngine_WWW_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 160
+        },
+        {
+          "callsite_rva": "0x421D234",
+          "containing_function_rva": "0x421D174",
+          "caller_function": [
+            {
+              "name": "UnityEngine.WWW$$get_error",
+              "signature": "System_String_o* UnityEngine_WWW__get_error (UnityEngine_WWW_o* __this, const MethodInfo* method);"
+            }
+          ],
+          "offset_in_function": 192
+        }
+      ]
+    }
+  },
+  "coverage": "BL direct opcode only; does not detect blr, b/tail calls, interface delegates, reflection or native engine internals",
+  "not_a_runtime_network_confirmation": true
+}
