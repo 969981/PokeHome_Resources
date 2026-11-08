@@ -1,0 +1,12 @@
+{
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42461216246",
+  "emulator_outcome": "success",
+  "status": "probe_completed",
+  "arm64_hook_ready": true,
+  "callback_seen": false,
+  "only_bounded_result_classes": [],
+  "frida_script_errors": 0,
+  "callback_result_is_not_verified_http_status": true,
+  "does_not_read_certs_http_bodies_or_accounts": true,
+  "does_not_modify_app_requests_or_responses": true
+}
