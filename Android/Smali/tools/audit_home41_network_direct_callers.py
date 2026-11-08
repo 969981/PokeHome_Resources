@@ -12,6 +12,8 @@ import struct
 from pathlib import Path
 TARGETS={
     "api_response_callback_Ningale":0x1F29E6C,
+    "api_response_dispatcher_Monaflemit":0x1F28E58,
+    "unity_api_send_coroutine_IAWWW":0x1F39198,
     "request_prepare_Parecool":0x1F27F5C,
     "api_error_handler_Chapignon":0x1F27858,
     "unity_web_request_send":0x421A6DC,
