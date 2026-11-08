@@ -1,0 +1,64 @@
+{
+  "targets": {
+    "unity_gameobject": "Azurill",
+    "unity_receiver_method": "Tarinor"
+  },
+  "scope": "static IL2CPP metadata only; no certificates or account data",
+  "dump": {
+    "path": "Unpack/Android/4.1.0/il2cpp/dump.cs",
+    "sha256": "8b171cfa7531b8a5b88073b858acdeef47c96990fe1c6526f7790bcf52dccd1e",
+    "lines": 828159,
+    "match_count": 1,
+    "first_matches": [
+      {
+        "line": 58041,
+        "namespace": "// Namespace:",
+        "type_context": "public class CSM : MonoBehaviourSingleton<CSM> // TypeDefIndex: 1610",
+        "match_line": "\tpublic void Tarinor(string message) { }",
+        "source_excerpt": "\n\t// RVA: 0x1D4A548 Offset: 0x1D46548 VA: 0x1D4A548\n\tpublic void Initialize() { }\n\n\t// RVA: 0x1D4AA34 Offset: 0x1D46A34 VA: 0x1D4AA34\n\tpublic void Tarinor(string message) { }\n\n\t// RVA: 0x1D4AB04 Offset: 0x1D46B04 VA: 0x1D4AB04\n\tprivate void Skitty(string Delcatty) { }\n\n\t// RVA: 0x1D4AD0C Offset: 0x1D46D0C VA: 0x1D4AD0C\n\tprivate void Start() { }\n\n\t// RVA: 0x1D4AD10 Offset: 0x1D46D10 VA: 0x1D4AD10\n\tprivate void Update() { }\n\n\t// RVA: 0x1D4AD14 Offset: 0x1D46D14 VA: 0x1D4AD14"
+      }
+    ]
+  },
+  "script": {
+    "path": "Unpack/Android/4.1.0/il2cpp/script.json",
+    "sha256": "333188e7f30d04350b786769e5b208562a9727466c22764562626399cb35b78d",
+    "file_bytes": 78956491,
+    "match_count": 3,
+    "first_matches": [
+      {
+        "target": "Tarinor",
+        "byte_offset": 2899599,
+        "excerpt": "{\n      \"Address\": 30713160,\n      \"Name\": \"CSM$$Initialize\",\n      \"Signature\": \"void CSM__Initialize (CSM_o* __this, const MethodInfo* method);\",\n      \"TypeSignature\": \"vii\"\n    },\n    {\n      \"Address\": 30714420,\n      \"Name\": \"CSM$$[Tarinor]\",\n      \"Signature\": \"void CSM__Tarinor (CSM_o* __this, System_String_o* message, const MethodInfo* method);\",\n      \"TypeSignature\": \"viii\"\n    },\n    {\n      \"Address\": 30714628,\n      \"Name\": \"CSM$$Skitty\",\n      \"Signature\": \"void CSM_"
+      },
+      {
+        "target": "Azurill",
+        "byte_offset": 66761463,
+        "excerpt": "ure to disable sprite packing for this sprite.\"\n    },\n    {\n      \"Address\": 73820776,\n      \"Value\": \" As \"\n    },\n    {\n      \"Address\": 73820784,\n      \"Value\": \" Atlas Material\"\n    },\n    {\n      \"Address\": 73820792,\n      \"Value\": \" [Azurill]\"\n    },\n    {\n      \"Address\": 73820800,\n      \"Value\": \" ByRef\"\n    },\n    {\n      \"Address\": 73820808,\n      \"Value\": \" Cannot convert \\u0027{0}\\u0027 to type \\u0027{1}\\u0027.\"\n    },\n    {\n      \"Address\": 73820816,\n      \"Value\": \" Can"
+      },
+      {
+        "target": "Tarinor",
+        "byte_offset": 66763194,
+        "excerpt": "ddress\": 73820952,\n      \"Value\": \" Params=\"\n    },\n    {\n      \"Address\": 73820960,\n      \"Value\": \" SYSTEM \"\n    },\n    {\n      \"Address\": 73820968,\n      \"Value\": \" SYSTEM \\u0022\"\n    },\n    {\n      \"Address\": 73820976,\n      \"Value\": \" [Tarinor]\"\n    },\n    {\n      \"Address\": 73820984,\n      \"Value\": \" Type \\u0027{0}\\u0027 does not implement IComparable interface. Comparison cannot be done.\"\n    },\n    {\n      \"Address\": 73820992,\n      \"Value\": \" TypeEqual \"\n    },\n    {\n      \"A"
+      }
+    ]
+  },
+  "string_literals": {
+    "path": "Unpack/Android/4.1.0/il2cpp/stringliteral.json",
+    "sha256": "eba8b0f866db80e459a0ea4391354004b7a2d448526142ee3f5605d336a88730",
+    "file_bytes": 1658399,
+    "match_count": 2,
+    "first_matches": [
+      {
+        "target": "Azurill",
+        "byte_offset": 13621,
+        "excerpt": ": \" Also make sure to disable sprite packing for this sprite.\",\n    \"address\": \"0x4666A60\"\n  },\n  {\n    \"value\": \" As \",\n    \"address\": \"0x4666A68\"\n  },\n  {\n    \"value\": \" Atlas Material\",\n    \"address\": \"0x4666A70\"\n  },\n  {\n    \"value\": \" [Azurill]\",\n    \"address\": \"0x4666A78\"\n  },\n  {\n    \"value\": \" ByRef\",\n    \"address\": \"0x4666A80\"\n  },\n  {\n    \"value\": \" Cannot convert \\u0027{0}\\u0027 to type \\u0027{1}\\u0027.\",\n    \"address\": \"0x4666A88\"\n  },\n  {\n    \"value\": \" Cannot convert obj"
+      },
+      {
+        "target": "Tarinor",
+        "byte_offset": 15237,
+        "excerpt": "\"address\": \"0x4666B10\"\n  },\n  {\n    \"value\": \" Params=\",\n    \"address\": \"0x4666B18\"\n  },\n  {\n    \"value\": \" SYSTEM \",\n    \"address\": \"0x4666B20\"\n  },\n  {\n    \"value\": \" SYSTEM \\u0022\",\n    \"address\": \"0x4666B28\"\n  },\n  {\n    \"value\": \" [Tarinor]\",\n    \"address\": \"0x4666B30\"\n  },\n  {\n    \"value\": \" Type \\u0027{0}\\u0027 does not implement IComparable interface. Comparison cannot be done.\",\n    \"address\": \"0x4666B38\"\n  },\n  {\n    \"value\": \" TypeEqual \",\n    \"address\": \"0x4666B40\"\n  }"
+      }
+    ]
+  },
+  "caution": "UnitySendMessage receiver is usually a GameObject, not necessarily a managed type. Names alone do not establish signature rejection."
+}
