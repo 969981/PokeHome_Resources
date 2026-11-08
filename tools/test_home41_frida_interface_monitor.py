@@ -88,6 +88,61 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(sanitize({"event":"native_arch_report","arch":["unsafe"]})["arch"],
                          "unknown")
 
+    def test_rpc_local_year1999_uses_exact_runtime_year_map_and_single_arm(self):
+        class Exports:
+            def __init__(self):
+                self.calls=0
+            def armlocalyear1999(self):
+                self.calls+=1
+                return "local_year1999_arm_accepted"
+        class Script:
+            exports_sync=Exports()
+        with tempfile.TemporaryDirectory() as tmp:
+            monitor=FridaInterfaceMonitor(Path(tmp),Path(tmp)/"x")
+            monitor.emulated_status="emulated_arm64_readonly_observer_loaded"
+            monitor.emulated_native_script=Script()
+            self.assertEqual(monitor.arm_local_year1999(),"host_guard_rejected")
+        with tempfile.TemporaryDirectory() as tmp:
+            monitor=FridaInterfaceMonitor(Path(tmp),Path(tmp)/"x")
+            monitor.emulated_status="emulated_arm64_readonly_observer_loaded"
+            monitor.emulated_native_script=Script()
+            monitor.on_message({"type":"send","payload":{
+                "event":"year_1999_option_index_verified","selected_index":27,
+                "total_options":127,"first_year":2026,"last_year":1900,
+                "descending_sequential":True}})
+            self.assertEqual(monitor.arm_local_year1999(),
+                             "local_year1999_arm_accepted")
+            self.assertEqual(monitor.arm_local_year1999(),"host_guard_rejected")
+            self.assertEqual(monitor.emulated_native_script.exports_sync.calls,1)
+            monitor.on_message({"type":"send","payload":{
+                "event":"local_year1999_callback_redirected",
+                "from_index":8,"to_index":27,"personal":"SECRET"}})
+            monitor.on_message({"type":"send","payload":{
+                "event":"local_year1999_model_readback",
+                "year_is_1999":True, "utid":"DO_NOT_STORE"}})
+            report=monitor.stop()
+            self.assertTrue(report["local_year1999_redirect_event_seen"])
+            self.assertTrue(report["local_year1999_model_readback_confirmed"])
+            self.assertFalse(report["first_basic_utid_event_seen"])
+            payload=(Path(tmp)/"frida_interface_events.jsonl").read_text()
+            self.assertNotIn("SECRET",payload)
+            self.assertNotIn("DO_NOT_STORE",payload)
+
+    def test_rpc_local_year1999_never_arm_without_arm64_realm(self):
+        class Exports:
+            def armlocalyear1999(self):
+                raise AssertionError("must not call")
+        with tempfile.TemporaryDirectory() as tmp:
+            monitor=FridaInterfaceMonitor(Path(tmp),Path(tmp)/"x")
+            monitor.emulated_status="emulated_attach_or_load_failed"
+            monitor.emulated_native_script=type("Script",(),{"exports_sync":Exports()})()
+            monitor.on_message({"type":"send","payload":{
+                "event":"year_1999_option_index_verified",
+                "selected_index":27,"total_options":127,
+                "first_year":2026,"last_year":1900,
+                "descending_sequential":True}})
+            self.assertEqual(monitor.arm_local_year1999(),"host_guard_rejected")
+
     def test_real_ui_year_index_mapping_requires_both_observations(self):
         with tempfile.TemporaryDirectory() as d:
             dest=Path(d)
