@@ -198,6 +198,7 @@ def main():
         text = section.data()
         text_rva = section["sh_addr"]
 
+    print("ELF_TEXT_DEBUG",json.dumps({"text_start":hex(text_rva),"text_end":hex(text_rva+len(text)),"text_size":len(text),"expected_func_rva":"0x1F26E88","func_inside":text_rva <= 0x1F26E88 < text_rva+len(text)}),flush=True)
     starts, names = read_methods(a.script)
     reader = Cs(CS_ARCH_ARM64, CS_MODE_ARM)
     page = TYPEINFO_POINTER_RVA & ~0xFFF
