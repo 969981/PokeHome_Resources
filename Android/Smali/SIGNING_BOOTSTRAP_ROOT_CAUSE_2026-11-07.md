@@ -81,3 +81,37 @@
 原版在 95 秒显示 HOME 语言选择页；重签名版直到 130 秒仍未通过。由此可验证两者**都执行签名读取与转交**，但不能单凭回调命中认定签名检查就是 `400/9007` 的具体发出点。
 
 现在通过 [UNITY_SIGNATURE_CALLBACK_AUDIT.json](4.1.0/UNITY_SIGNATURE_CALLBACK_AUDIT.json) 做原始 IL2CPP dump / script / stringliteral 的精确查找，见 [新审核工作流](https://github.com/969981/PokeHome_Resources/actions/workflows/home41-signature-unity-callback-audit.yml)。下一步要找出真正消费 `Tarinor` 内容的 IL2CPP 接收方法和之后的分支，而非修改证书检查结果。
+
+## 2026-11-08：签名消息最终写入 ApiRequestBase.Lineon 的静态证据
+
+最新实际通过的 Actions：
+
+- [#42444503381](https://github.com/969981/PokeHome_Resources/actions/runs/42444503381)：`CSM.Tarinor` 解析目标来自 `dump.cs`、`script.json`。
+- [#42444620319](https://github.com/969981/PokeHome_Resources/actions/runs/42444620319)：读取 `libil2cpp.so` 真正 ARM64 字节，将 `Tarinor` / `Skitty` 的 BL 和跳转解析到具体方法。
+- [#42444908677](https://github.com/969981/PokeHome_Resources/actions/runs/42444908677)：扩展 `ILib.Unity.Net.ApiRequestBase` 下游函数。
+- [#42445024402](https://github.com/969981/PokeHome_Resources/actions/runs/42445024402)：进一步核对原始字段表（成功）。
+
+可证实的数据链：
+
+```text
+CheckSignatureCore.Check
+  └─ UnitySendMessage("Azurill", "Tarinor", message)
+      └─ CSM.Tarinor(string) @ 0x1D4AA34
+          └─ CSM.Skitty(string) @ 0x1D4AB04
+              ├─ ILib.Unity.Net.Draco.op_Implicit(string) @ 0x1F2CE50
+              └─ ApiRequestBase.Chenipotte(Draco) @ 0x1F26E78
+                  └─ ApiRequestBase.Charmillon(Draco,4,3) @ 0x1F26F1C
+                      └─ 转换值写入 ApiRequestBase.Lineon +0x78
+```
+
+`ApiRequestBase` 的真实字段声明：
+
+```csharp
+private static Draco Lineon; // 0x78
+```
+
+`Draco` 为包含 `string Value` 的结构体。写入的原生指令 `0x1F26F08: str x0, [x9,#0x78]`，源于 `Charmillon` 返回值；`x9` 源于相应静态字段存储指针。**因此签名回调经转换写入网络请求基础类的一块静态存储，这一环已经不是单纯猜测。**
+
+下一项尚未闭合的是找出 `Lineon` 的真正读取者、请求哪一部分使用它，以及 `400/9007` 究竟由哪个后端或本地错误分支产生。**不得把现有回调与字段写入证据当成已经修复自签名 APK 在线兼容。**
+
+权威资料：[Obsidian 调用链](../../docs/obsidian/HOME41_ANDROID_SIGNATURE_TO_IL2CPP_API_CALLCHAIN_20261108.md)、[原生指令和字段报告](4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json)。
