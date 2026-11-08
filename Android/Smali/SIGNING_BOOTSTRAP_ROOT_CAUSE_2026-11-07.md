@@ -115,3 +115,24 @@ private static Draco Lineon; // 0x78
 下一项尚未闭合的是找出 `Lineon` 的真正读取者、请求哪一部分使用它，以及 `400/9007` 究竟由哪个后端或本地错误分支产生。**不得把现有回调与字段写入证据当成已经修复自签名 APK 在线兼容。**
 
 权威资料：[Obsidian 调用链](../../docs/obsidian/HOME41_ANDROID_SIGNATURE_TO_IL2CPP_API_CALLCHAIN_20261108.md)、[原生指令和字段报告](4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json)。
+
+
+## 2026-11-08：Lineon 唯一读取者和序列化前数据链（真实 CI 通过）
+
+本轮不再把“未找到直接读取”误当作字段未使用。第一版 ELF 扫描器只查看 `.text` 节，遗漏了实际 IL2CPP 可执行方法，已改为覆盖可执行 `PT_LOAD` 段，并以 `Chenipotte @ 0x1F26F08` 的已知静态字段写入作正控制。加长函数内寄存器追踪至 800 指令后，`ApiRequestBase.Parecool` `0x1F28474` 的 `ldr x22,[x8,#0x78]` 被匹配为 **Lineon 直接静态字段读取**，重复扫描起点已经按机器指令 RVA 去重为一条。
+
+同偏移的 `ApiRequestBase.Ningale @ 0x1F29FC4` 被排除：`mov x19,x0` 证明其 `[x19,#0x78]` 来源为实例对象，而非静态 `Lineon`。
+
+后续 `Parecool` 指令进一步证明：
+- `0x1F28468/0x1F28480` 准备 `-4/-3` 参数，`0x1F28498` 再调用 `Charmillon(Lineon,-4,-3)`。
+- `0x1F284A0` 使用 `Draco.op_Implicit`；`0x1F284AC` 写入对象偏移 `+0x58`。
+- `0x1F284C4` 调用 `ApiRequestBase.SerializeToJson<object>`。这些是实机版本原生代码的静态指令证据，尚未独立观察最终 HTTP 请求字段。
+
+CI 与原始报告：
+- [TypeInfo 静态字段扫描 #42450870538](https://github.com/969981/PokeHome_Resources/actions/runs/42450870538)
+- [独立全局 +0x78 读写清单 #42450817648](https://github.com/969981/PokeHome_Resources/actions/runs/42450817648)
+- [Parecool/Ningale 方法级签名和逐指令断言 #42451023333](https://github.com/969981/PokeHome_Resources/actions/runs/42451023333)
+- [唯一静态读取清单](4.1.0/LINEON_STATIC_XREF_AUDIT.json)、[偏移歧义清单](4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json)、[完整方法证据](4.1.0/LINEON_READER_METHOD_TRACE.json)
+- [Obsidian 分析说明](../../docs/obsidian/HOME41_ANDROID_SIGNATURE_TO_IL2CPP_API_CALLCHAIN_20261108.md)
+
+**结论边界：**现已证明签名衍生数据会流入客户端请求序列化前的构造流程；尚不能仅凭静态调用链确认最终发出的字段、服务端证书策略或 `400/9007` 错误产生位置。原版 APK 仍可显示 HOME 语言选择页，但修改后的自签名构建依旧没有恢复官方联网兼容性。
