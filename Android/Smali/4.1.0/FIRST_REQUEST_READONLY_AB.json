@@ -1,5 +1,5 @@
 {
-  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42462929954",
+  "workflow": "https://github.com/969981/PokeHome_Resources/actions/runs/42462951100",
   "emulator_outcome": "success",
   "status": "completed",
   "test_version": "4.1.0",
@@ -9,7 +9,7 @@
     "frida_spawn_attached": true,
     "arm64_realm_attached": true,
     "arm64_native_agent_loaded": true,
-    "home_language_verified": true,
+    "home_language_verified": false,
     "signed_payload_logged": false,
     "auth_or_user_data_logged": false,
     "request_or_response_bodies_logged": false,
@@ -36,11 +36,11 @@
       "saved": true,
       "nonblank": true,
       "home_language_verified": false,
-      "color_samples": 191,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        21.0,
-        19.6,
-        19.6
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -52,11 +52,11 @@
       "saved": true,
       "nonblank": true,
       "home_language_verified": false,
-      "color_samples": 224,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        7.1,
-        6.7,
-        7.9
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -67,12 +67,12 @@
     "screen_at_95s": {
       "saved": true,
       "nonblank": true,
-      "home_language_verified": true,
-      "color_samples": 1079,
+      "home_language_verified": false,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        45.8,
-        15.4,
-        29.7
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -83,12 +83,12 @@
     "screen_at_130s": {
       "saved": true,
       "nonblank": true,
-      "home_language_verified": true,
-      "color_samples": 1052,
+      "home_language_verified": false,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        46.2,
-        15.5,
-        29.2
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -104,49 +104,39 @@
       "anr in jp.pokemon.pokemonhome": 0
     },
     "event_counts": {
-      "api_response_callback_enter": 1,
       "java_agent_loaded": 1,
       "java_hook_ready": 4,
       "java_ready": 1,
       "native_agent_loaded": 1,
       "native_hook_ready": 11,
       "native_module_ready": 1,
-      "native_probe_ready": 1,
-      "request_build_enter": 1,
-      "request_build_return": 1,
-      "request_field_write": 1,
-      "request_json_serializer_enter": 1,
-      "signature_state_read_for_request": 1,
-      "signature_state_setter_enter": 1,
-      "signature_state_write": 1,
-      "signing_check_java_enter": 1,
-      "signing_message_to_unity": 3,
-      "unity_request_send_enter": 2,
-      "unity_signing_callback_enter": 6
+      "native_probe_ready": 1
     },
-    "events_captured": 40,
+    "events_captured": 20,
     "frida_script_errors": 0,
     "native_probe_ready": true,
     "java_hooks_ready": 4,
-    "lineon_request_read_observed": true,
+    "lineon_request_read_observed": false,
     "first_stage_elapsed_ms": {
-      "signing_check_java_enter": 23824,
-      "signing_message_to_unity": 23824,
-      "unity_signing_callback_enter": 28741,
-      "signature_state_write": 28833,
-      "request_build_enter": 33423,
-      "signature_state_read_for_request": 33471,
-      "request_field_write": 33471,
-      "request_json_serializer_enter": 33473,
-      "unity_request_send_enter": 33599,
+      "signing_check_java_enter": null,
+      "signing_message_to_unity": null,
+      "unity_signing_callback_enter": null,
+      "signature_state_write": null,
+      "request_build_enter": null,
+      "signature_state_read_for_request": null,
+      "request_field_write": null,
+      "request_json_serializer_enter": null,
+      "unity_request_send_enter": null,
+      "app_error_handler_enter": null,
       "unity_http_response_status": null,
       "java_http_response_status": null,
-      "api_response_callback_enter": 56845
+      "api_response_callback_enter": null
     },
     "observed_http_response_codes": [],
-    "observed_api_callback_result_in_http_range": [
-      200
-    ],
+    "observed_api_callback_result_in_http_range": [],
+    "app_error_handler_events": [],
+    "app_error_400_9007_pair_observed": false,
+    "app_error_is_not_proven_http_status": true,
     "http_status_known": false,
     "native_callback_result_is_not_proven_http": true,
     "no_ui_clicks": true,
@@ -185,11 +175,11 @@
       "saved": true,
       "nonblank": true,
       "home_language_verified": false,
-      "color_samples": 221,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        46.2,
-        44.5,
-        47.0
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -201,11 +191,11 @@
       "saved": true,
       "nonblank": true,
       "home_language_verified": false,
-      "color_samples": 219,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        46.2,
-        44.5,
-        47.0
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -217,11 +207,11 @@
       "saved": true,
       "nonblank": true,
       "home_language_verified": false,
-      "color_samples": 218,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        46.2,
-        44.5,
-        47.0
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -233,11 +223,11 @@
       "saved": true,
       "nonblank": true,
       "home_language_verified": false,
-      "color_samples": 217,
+      "color_samples": 182,
       "channel_stddev_rounded": [
-        46.2,
-        44.4,
-        47.0
+        51.1,
+        50.7,
+        53.4
       ],
       "dimensions": [
         1080,
@@ -253,47 +243,39 @@
       "anr in jp.pokemon.pokemonhome": 0
     },
     "event_counts": {
-      "api_response_callback_enter": 1,
       "java_agent_loaded": 1,
       "java_hook_ready": 4,
       "java_ready": 1,
       "native_agent_loaded": 1,
       "native_hook_ready": 11,
       "native_module_ready": 1,
-      "native_probe_ready": 1,
-      "request_build_enter": 1,
-      "request_build_return": 1,
-      "request_field_write": 1,
-      "request_json_serializer_enter": 1,
-      "signature_state_read_for_request": 1,
-      "signature_state_setter_enter": 1,
-      "signature_state_write": 1,
-      "signing_check_java_enter": 1,
-      "signing_message_to_unity": 3,
-      "unity_request_send_enter": 1,
-      "unity_signing_callback_enter": 6
+      "native_probe_ready": 1
     },
-    "events_captured": 39,
+    "events_captured": 20,
     "frida_script_errors": 0,
     "native_probe_ready": true,
     "java_hooks_ready": 4,
-    "lineon_request_read_observed": true,
+    "lineon_request_read_observed": false,
     "first_stage_elapsed_ms": {
-      "signing_check_java_enter": 16419,
-      "signing_message_to_unity": 16419,
-      "unity_signing_callback_enter": 19512,
-      "signature_state_write": 19648,
-      "request_build_enter": 23163,
-      "signature_state_read_for_request": 23174,
-      "request_field_write": 23175,
-      "request_json_serializer_enter": 23181,
-      "unity_request_send_enter": 23202,
+      "signing_check_java_enter": null,
+      "signing_message_to_unity": null,
+      "unity_signing_callback_enter": null,
+      "signature_state_write": null,
+      "request_build_enter": null,
+      "signature_state_read_for_request": null,
+      "request_field_write": null,
+      "request_json_serializer_enter": null,
+      "unity_request_send_enter": null,
+      "app_error_handler_enter": null,
       "unity_http_response_status": null,
       "java_http_response_status": null,
-      "api_response_callback_enter": 29358
+      "api_response_callback_enter": null
     },
     "observed_http_response_codes": [],
     "observed_api_callback_result_in_http_range": [],
+    "app_error_handler_events": [],
+    "app_error_400_9007_pair_observed": false,
+    "app_error_is_not_proven_http_status": true,
     "http_status_known": false,
     "native_callback_result_is_not_proven_http": true,
     "no_ui_clicks": true,
