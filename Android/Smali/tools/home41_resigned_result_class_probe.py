@@ -43,6 +43,10 @@ def run(apk:Path,js:Path,out:Path):
         return report
     adb("shell","pm","grant",PACKAGE,"android.permission.CAMERA",timeout=12)
     adb("shell","cmd","appops","set",PACKAGE,"CAMERA","allow",timeout=12)
+    # Prevent Android's own "Viewing full screen / Got it" education overlay.
+    # This is a system setting, not a HOME account/consent action.
+    adb("shell","settings","put","secure","immersive_mode_confirmations","confirmed",timeout=12)
+    report["system_fullscreen_tutorial_preconfirmed"]=True
     report["permission_preflight"]=predeny_location_and_notification()
     import frida
     dev=frida.get_device_manager().add_remote_device("127.0.0.1:27042")
@@ -91,10 +95,11 @@ def run(apk:Path,js:Path,out:Path):
                     except Exception:pass
                 emulated=None
                 script=None
-        delay=65-(time.monotonic()-start)
-        if delay>0:time.sleep(delay)
-        report["process_alive_at_65s"]=process_present()
-        report["screen_at_65s"]=screenshot(out,"screen_65s.png")
+        for when in (65,95,130):
+            delay=when-(time.monotonic()-start)
+            if delay>0:time.sleep(delay)
+            report[f"process_alive_at_{when}s"]=process_present()
+            report[f"screen_at_{when}s"]=screenshot(out,f"screen_{when}s.png")
         report["status"]="probe_completed"
     except Exception as err:
         report["status"]="probe_exception"
