@@ -16,7 +16,8 @@ const STATIC_RVAS = {
   signature_field_read: 0x1F28474,
   signature_request_object_write: 0x1F284AC,
   request_serializer: 0x27395F0,
-  response_callback: 0x1F29E6C
+  response_callback: 0x1F29E6C,
+  api_error_handler: 0x1F27858
 };
 let registered = false;
 let eventTotal = 0;
@@ -28,6 +29,18 @@ function emit(event, info) {
   counts[event] = count + 1;
   eventTotal++;
   send(Object.assign({event, observer_elapsed_ms: Date.now() - start}, info || {}));
+}
+function classifyApiCode(value) {
+  if (value === 9007) return 'exact_9007';
+  if (value === 400) return 'exact_400';
+  if (value === 200) return 'exact_200';
+  if (value === 0) return 'zero';
+  if (value < 0) return 'negative';
+  if (value >= 100 && value <= 599) return 'other_http_range';
+  if (value >= 1 && value <= 99) return 'small_positive';
+  if (value >= 600 && value < 10000) return 'other_600_9999';
+  if (value >= 10000 && value <= 999999) return 'other_10000_999999';
+  return 'out_of_classification_range';
 }
 function hook(mod, name, rva, handlers) {
   if (!Number.isSafeInteger(rva) || rva <= 0 || rva >= mod.size) {
@@ -87,6 +100,22 @@ function setup() {
           result_code_if_http_range:code >= 100 && code <= 599 ? code : null
         });
       } catch (_) { emit('api_response_callback_enter', {result_kind:'unreadable'}); }
+    }
+  });
+  // App-level code and detail code are distinct arguments of Chapignon.
+  // Only fixed, bounded classification labels are emitted, never raw params
+  // or response content. This is not an HTTP status code monitor.
+  hook(mod, 'api_error_handler', STATIC_RVAS.api_error_handler, {
+    onEnter(args) {
+      try {
+        const result = args[1].toInt32();
+        const detail = args[2].toInt32();
+        emit('app_error_handler_enter', {
+          result_class: classifyApiCode(result),
+          detail_class: classifyApiCode(detail),
+          matches_display_pair_400_9007: result === 400 && detail === 9007
+        });
+      } catch (_) { emit('app_error_handler_unreadable'); }
     }
   });
   for (const [name, rva] of Object.entries(DYNAMIC_RVAS)) {
