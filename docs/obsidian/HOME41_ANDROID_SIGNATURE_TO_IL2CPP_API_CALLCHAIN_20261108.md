@@ -11,7 +11,7 @@ tags:
   - obsidian
   - signing
 updated: 2026-11-08
-status: "回调及下游 BL 已验证；9007 服务端语义和自签名在线兼容仍未验证"
+status: "Lineon 的静态写入、Parecool 读取和序列化前构造已核实；9007 服务端语义仍未验证"
 ---
 
 # 研究范围与结论
@@ -140,3 +140,59 @@ private string <Value>k__BackingField; // 0x0
 | 原版官方服务可允许自签名构建 | **未验证，不作此声称** |
 
 后续应继续做**不改数据的观察**：定位 `Charmillon` 所访问的状态字段与静态类型，并在已授权的原版运行环境中比对回调之后的阶段时间；若需要发行一个可正常连接官方服务的修改版，须采用发行方认可的签名、正式发布机制或获授权的服务端测试环境。不能以隐藏错误弹窗、伪造官方证书或跳过认证来替代验收。
+
+
+## 六、2026-11-08：Lineon 读取者与序列化前的往返转换，独立验收通过
+
+这一次不再止于 `Chenipotte` 的静态字段写入。
+
+### 全域静态引用审计
+
+先修复扫描器的一个基础性问题：`libil2cpp.so` 的 ELF `.text` 节仅含一部分原生方法（`0x192A5E0–0x1C159BC`），**不包含**已知的 `CSM`、`Chenipotte`、`Parecool`。因此改为读取 ELF 可执行 `PT_LOAD | PF_X` 段，以真实 VA/RVA 对齐。使用 `Chenipotte` `0x1F26F08` 作为强制正向控制。
+
+[Actions #42450703202](https://github.com/969981/PokeHome_Resources/actions/runs/42450703202) 验证基础全域扫描；[Actions #42450870538](https://github.com/969981/PokeHome_Resources/actions/runs/42450870538) 将方法内追踪窗口延长到 800 条指令后，识别到唯一的 `Lineon` 静态字段读取指令：
+
+```text
+ApiRequestBase.Parecool(this)    RVA 0x1F27F5C
+  0x1F28474: ldr x22, [x8, #0x78]  ; x8 已由 ApiRequestBase class->static_fields 导出
+```
+
+`Parecool` 在报告中被两个 ADRP 起点找到，但**都指向同一条机器指令**，需按指令 RVA 去重，不能算作两次读取。两处强制匹配的写入者分别为 `Chenipotte` (`0x1F26F08`) 和 `ApiRequestBase..cctor` (`0x1F2A890`)。
+
+独立的偏移扫描 [Actions #42450817648](https://github.com/969981/PokeHome_Resources/actions/runs/42450817648) 还找出 `ApiRequestBase.Ningale` 的 `0x1F29FC4: ldr x3,[x19,#0x78]`。但 `0x1F29E80: mov x19,x0` 证明 `x19` 来自实例 `this`，这一条读的是实例偏移，不是静态 `Lineon`。该类恰好同时具有静态 `Lineon // +0x78` 与实例 `Goelise // +0x78`，**绝不能仅凭数字偏移将二者混同**。
+
+### 关键：Parecool 把读取值进一步参与待序列化对象的构造
+
+对源二进制原始字节的直接反汇编，与 `script.json` 方法签名交叉核对：
+
+```csharp
+bool ILib_Unity_Net_ApiRequestBase__Parecool(
+    ILib_Unity_Net_ApiRequestBase_o* __this, const MethodInfo* method);
+```
+
+`Parecool` 于 `0x1F28474` 读取 `Lineon` 后出现以下连续指令：
+
+| ARM64 RVA | 操作 | 说明 |
+| --- | --- | --- |
+| `0x1F28468` | `mov w0, #-4` | 第一转换参数 |
+| `0x1F28474` | `ldr x22, [x8,#0x78]` | 读取静态 Lineon |
+| `0x1F28478` | `bl Soporifik.op_Implicit` | 包装 -4 |
+| `0x1F28480` | `mov w0, #-3` | 第二转换参数 |
+| `0x1F28488` | `bl Soporifik.op_Implicit` | 包装 -3 |
+| `0x1F28494` | `mov x0, x22` | 将 Lineon 作为首参数 |
+| `0x1F28498` | `bl ApiRequestBase.Charmillon` | 使用 -4/-3 转换 |
+| `0x1F284A0` | `bl Draco.op_Implicit` | 转成字符串 |
+| `0x1F284AC` | `str x1,[x0,#0x58]!` | 写到待处理对象字段 |
+| `0x1F284C4` | `bl ApiRequestBase.SerializeToJson<object>` | 序列化对象 |
+
+相对地，已核实 `Chenipotte` 用 `4`、`3` 对输入执行 `Charmillon` 并写入 `Lineon`。前后使用了成对相反符号参数，但**是否数学意义上恰为逆函数**仍需从 `Charmillon` 所有边界条件独立证明，不应直接称加解密算法完全可逆。
+
+[Actions #42451023333](https://github.com/969981/PokeHome_Resources/actions/runs/42451023333) 增加了逐条指令断言，确认正向证据、反向转换及 `Ningale` 实例字段歧义；完整报告：[LINEON_READER_METHOD_TRACE.json](../../Android/Smali/4.1.0/LINEON_READER_METHOD_TRACE.json)。
+
+### 已证实和未证实
+
+- **已证实：** 原版签名信息经 Java→Unity→`CSM`→`Chenipotte`，写入 `ApiRequestBase.Lineon`；`Parecool` 读取该值并在调用 JSON 序列化前用于构建对象。
+- **尚未证实：** 具体 JSON 字段名、最终请求是否包含相同内容、请求发生时间、服务端对该字段的校验条件，以及 `400/9007` 的具体拒绝路径。
+- **不能据此宣布：** 自签名重构版已恢复官方服务端身份，或通过跳过客户端比较就能正常登录。
+
+持续使用原始未修改 APK 做对照。未经授权不要伪造官方签名、修改认证参数或在生产账号上测试不可信修改包。
