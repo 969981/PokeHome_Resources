@@ -45,6 +45,7 @@ let loginCallbackSeen = false;
 let firstValueFound = false;
 let year1999OptionsChecked = false;
 let localYear1999Armed = false;
+let localYear1999ArmedAt = 0;
 let localYear1999Redirected = false;
 let localYear1999Expired = false;
 
@@ -58,6 +59,7 @@ rpc.exports = {
         localYear1999Redirected || localYear1999Expired)
       return "local_year1999_arm_rejected";
     localYear1999Armed = true;
+    localYear1999ArmedAt = Date.now();
     report("local_year1999_arm_accepted");
     return "local_year1999_arm_accepted";
   }
@@ -285,7 +287,9 @@ function installHooks(module) {
             // from an arbitrary Frida RPC thread.
             localYear1999Armed = false;
             localYear1999Expired = true;
-            if (index === 8 && year1999OptionsChecked && !args[0].isNull()) {
+            if (index === 8 && year1999OptionsChecked &&
+                Date.now() - localYear1999ArmedAt <= 20000 &&
+                !args[0].isNull()) {
               args[1] = ptr(27);
               index = 27;
               localYear1999Redirected = true;
