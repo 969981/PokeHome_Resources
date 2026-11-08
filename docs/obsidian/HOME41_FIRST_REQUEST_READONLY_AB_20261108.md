@@ -2,7 +2,7 @@
 title: "HOME Android 4.1.0：首次请求字段类别与 HTTP 结果只读 A/B 验收"
 tags: [pokemon-home, android, frida, il2cpp, network, read-only, reverse-engineering]
 date: 2026-11-08
-status: "已提交自动化：具体结果以 Actions 和 FIRST_REQUEST_READONLY_AB.json 为准"
+status: "完整首启 A/B 运行通过；差异已定位到响应回调阶段，但 HTTP 状态及 9007 语义尚未闭合"
 ---
 
 # 目的
@@ -84,3 +84,43 @@ CheckSignatureCore.Check (Java)
 首轮在完成原版采样后，因为 Python 调试输出处误将 `flush=True` 传进 `json.dumps`，在进入第二组测试前异常终止。原版事件与截图保存在 Artifact 中，但**未完成同轮重签名对照**。根因已定位，输出代码改为 `print(json.dumps(...), flush=True)`，下一轮重新运行完整 A/B。
 
 因此此节是**原版单边已验证证据**，不是双包差异结论，也不能证明 `400/9007` 出现在某个具体 HTTP 响应上。尤其不能由 callback result 200 断言后端 HTTP 返回 200。
+
+
+## 同轮完整 A/B：两份 APK 均到达响应回调，但结果类别不同
+
+[GitHub Actions #42460422767](https://github.com/969981/PokeHome_Resources/actions/runs/42460422767) **实际验收通过**，无注册、无账号操作、无请求/响应修改。
+
+- 原版在 95 秒已显示 HOME 语言选择页；原始签名和 ARM64 原生观察器正常。
+- 仅重签名版在 130 秒截图中仍为明确的 **`code:400 / detail code:9007`** 日文通信错误弹窗。
+- Java 和 ARM64 两端全部 10 个 native Hook 就绪，无 Frida 脚本异常；两包均命中完整签名衍生字段写入、读取、待序列化对象写入、JSON 序列化入口及 `UnityWebRequest.SendWebRequest`。
+- 两包**都命中一次** `ApiRequestBase.Ningale(int resultCode,Dictionary headers,byte[] data)` 响应回调。
+- 原版 `Ningale.resultCode=200`；重签名版同一参数**不在 100–599 范围**，由于隐私白名单本轮未持久化这个范围外的确切整数。
+- 两包 `UnityWebRequest.get_responseCode` 都未命中返回 100–599 的值；Java HttpURLConnection 也没有适用事件，所以**目前没有真实 HTTP 状态码**。不能把 `Ningale.resultCode=200` 或 UI `code:400` 直接理解成 HTTP 状态码。
+- 原版有 2 次 `UnityWebRequest.SendWebRequest` 事件，重签名版只有 1 次；但这仅统计 native Hook 事件，不能由次数直接推断实际网络包数。
+
+### 相对时间线（秒）
+
+| 阶段 | 原版 | 重签名版 |
+| --- | ---: | ---: |
+| Java 签名读取 | 28.881 | 19.872 |
+| `Lineon` 存储 | 36.063 | 23.993 |
+| `Parecool` 请求构造入口 | 41.459 | 28.117 |
+| `Lineon` 读取 | 41.554 | 28.126 |
+| JSON 序列化 | 41.564 | 28.130 |
+| 首次 `SendWebRequest` | 41.642 | 28.154 |
+| `Ningale` 响应回调 | 55.136 | 36.961 |
+
+这并不是重签名包在发出任何请求之前就被本地函数拦截的证据。双方均进行了完整构造并进入响应处理，**首个明确可观察差异是在响应回调参数类别和后续 UI 阶段**。原版还有第二次发送方法事件（77.524 秒），重签名版没有。
+
+### 图片及脱敏事件来源
+
+- 本轮私有 Actions Artifact：`home41-first-request-readonly-ab-evidence`，包含 `official_unmodified/screen_95s.png`、`directly_resigned/screen_130s.png`、两份 `events.jsonl`、两份 `summary.json`、`comparison.json`。
+- 分支汇总：[FIRST_REQUEST_READONLY_AB.json](../../Android/Smali/4.1.0/FIRST_REQUEST_READONLY_AB.json)。
+- 静态调用者证据：[FIRST_REQUEST_NATIVE_CALLERS.json](../../Android/Smali/4.1.0/FIRST_REQUEST_NATIVE_CALLERS.json)：`Ningale` 的直接调用者是 `ApiRequestBase.Monaflemit`；`SendWebRequest` 可以从 `ILib.Unity.Net.IAWWW.<CoSendRequest>d__18.MoveNext` 直接调用；已找到的 `get_responseCode` 6 处直接调用不涉及该 `IAWWW` 方法。此扫描只涵盖静态 `BL`，无法发现虚拟分发或委托调用。
+
+**结论边界：**现有证据将重签名启动故障定位到已执行请求构造/发送方法并进入响应回调之后，但不能证明拒绝发生在哪个 HTTP 连接或服务端规则中。UI `9007` 的代码与 `Ningale` 的确切值还没有通过同一个有证据的解析链关联。
+
+### 后续定向诊断
+
+针对原版/重签名差异，本轮单独增加了仅重签名的粗粒度 `Ningale.resultCode` 分类观察器；它**只判断是否精确等于 200、400、9007 或属于受限数值区间**，不读取、保存任何响应字节、证书正文或账号信息。[独立 CI](https://github.com/969981/PokeHome_Resources/actions/workflows/home41-resigned-result-class.yml) 和 [分类汇总](../../Android/Smali/4.1.0/RESIGNED_CALLBACK_CODE_CLASS.json) 以真实运行结果为准。
+
