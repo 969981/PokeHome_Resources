@@ -1,0 +1,2561 @@
+{
+  "status": "method_contexts_recovered",
+  "unique_confirmed_field_reads": [
+    {
+      "rva": "0x1F28474",
+      "kind": "field_read",
+      "methods": [
+        "ILib.Unity.Net.ApiRequestBase$$Parecool"
+      ],
+      "provenance": {
+        "explicit_typeinfo_adpr": true,
+        "typeinfo_slot_read": true,
+        "classinfo_read": true,
+        "static_fields_read": true
+      }
+    }
+  ],
+  "unique_verified_read_instruction_count": 1,
+  "typeinfo_reader_vs_instance_offset_ambiguity": true,
+  "methods": [
+    {
+      "method": "ApiRequestBase.Parecool",
+      "rva": "0x1F27F5C",
+      "native_length_bytes": 1840,
+      "method_script_records": [
+        {
+          "name": "ILib.Unity.Net.ApiRequestBase$$Parecool",
+          "signature": "bool ILib_Unity_Net_ApiRequestBase__Parecool (ILib_Unity_Net_ApiRequestBase_o* __this, const MethodInfo* method);",
+          "type_signature": "iii"
+        }
+      ],
+      "read_instruction_rva": "0x1F28474",
+      "read_instruction": {
+        "rva": "0x1F28474",
+        "mnemonic": "ldr",
+        "operands": "x22, [x8, #0x78]",
+        "target_method": null
+      },
+      "first_48_instructions": [
+        {
+          "rva": "0x1F27F5C",
+          "mnemonic": "sub",
+          "operands": "sp, sp, #0x70",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F60",
+          "mnemonic": "stp",
+          "operands": "x29, x30, [sp, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F64",
+          "mnemonic": "stp",
+          "operands": "x28, x27, [sp, #0x20]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F68",
+          "mnemonic": "stp",
+          "operands": "x26, x25, [sp, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F6C",
+          "mnemonic": "stp",
+          "operands": "x24, x23, [sp, #0x40]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F70",
+          "mnemonic": "stp",
+          "operands": "x22, x21, [sp, #0x50]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F74",
+          "mnemonic": "stp",
+          "operands": "x20, x19, [sp, #0x60]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F78",
+          "mnemonic": "adrp",
+          "operands": "x20, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F7C",
+          "mnemonic": "adrp",
+          "operands": "x21, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F80",
+          "mnemonic": "mov",
+          "operands": "x19, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F84",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x20, #0x6d5]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F88",
+          "mnemonic": "ldr",
+          "operands": "x21, [x21, #0xd80]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F8C",
+          "mnemonic": "tbnz",
+          "operands": "w8, #0, #0x1f27ff8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F90",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F94",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd88]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F98",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27F9C",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FA0",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FA4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FA8",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FAC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd48]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FB0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FB4",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FB8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd80]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FBC",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FC0",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FC4",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd90]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FC8",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FCC",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FD0",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd98]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FD4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FD8",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FDC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xda0]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FE0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FE4",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FE8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd78]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FEC",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FF0",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FF4",
+          "mnemonic": "strb",
+          "operands": "w8, [x20, #0x6d5]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FF8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F27FFC",
+          "mnemonic": "bl",
+          "operands": "#0x1b23d00",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28000",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28004",
+          "mnemonic": "mov",
+          "operands": "x21, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28008",
+          "mnemonic": "bl",
+          "operands": "#0x1f2b694",
+          "target_method": [
+            "ILib.Unity.Net.RequestParameterBase$$.ctor"
+          ]
+        },
+        {
+          "rva": "0x1F2800C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28010",
+          "mnemonic": "ldp",
+          "operands": "x9, x1, [x8, #0x188]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28014",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28018",
+          "mnemonic": "blr",
+          "operands": "x9",
+          "target_method": null
+        }
+      ],
+      "context_before": [
+        {
+          "rva": "0x1F28320",
+          "mnemonic": "bl",
+          "operands": "#0x2057058",
+          "target_method": [
+            "ExtensionMethod$$IsNullOrEmpty"
+          ]
+        },
+        {
+          "rva": "0x1F28324",
+          "mnemonic": "tbz",
+          "operands": "w0, #0, #0x1f28330",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28328",
+          "mnemonic": "mov",
+          "operands": "w0, wzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2832C",
+          "mnemonic": "b",
+          "operands": "#0x1f28590",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28330",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28334",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28338",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f28344",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2833C",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28340",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28344",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28348",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2834C",
+          "mnemonic": "ldr",
+          "operands": "x1, [x8, #0x68]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28350",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x10]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28354",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28358",
+          "mnemonic": "ldr",
+          "operands": "x8, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2835C",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28360",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28364",
+          "mnemonic": "ldr",
+          "operands": "w9, [x8, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28368",
+          "mnemonic": "ldr",
+          "operands": "x1, [x8, #0x80]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2836C",
+          "mnemonic": "str",
+          "operands": "w9, [x21, #0x18]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28370",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x20]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28374",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28378",
+          "mnemonic": "ldr",
+          "operands": "w8, [x19, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2837C",
+          "mnemonic": "ldr",
+          "operands": "x1, [x19, #0x28]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28380",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28384",
+          "mnemonic": "cmp",
+          "operands": "w8, #0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28388",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x30]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2838C",
+          "mnemonic": "cset",
+          "operands": "w8, gt",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28390",
+          "mnemonic": "stur",
+          "operands": "w8, [x0, #-8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28394",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28398",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2839C",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283A0",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f283a8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283A4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283A8",
+          "mnemonic": "adrp",
+          "operands": "x22, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283AC",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x22, #0x6f0]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283B0",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f283c8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283B4",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283B8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283BC",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283C0",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283C4",
+          "mnemonic": "strb",
+          "operands": "w8, [x22, #0x6f0]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283C8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283CC",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283D0",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f283dc",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283D4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283D8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283DC",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283E0",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283E4",
+          "mnemonic": "ldr",
+          "operands": "x1, [x8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283E8",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x38]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283EC",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283F0",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x23, #0x6eb]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283F4",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f2840c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283F8",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F283FC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28400",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28404",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28408",
+          "mnemonic": "strb",
+          "operands": "w8, [x23, #0x6eb]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2840C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28410",
+          "mnemonic": "adrp",
+          "operands": "x24, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28414",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28418",
+          "mnemonic": "ldr",
+          "operands": "x24, [x24, #0xd88]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2841C",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f28428",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28420",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28424",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28428",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2842C",
+          "mnemonic": "ldr",
+          "operands": "w1, [x8, #0x50]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28430",
+          "mnemonic": "bl",
+          "operands": "#0x1f2a3fc",
+          "target_method": [
+            "ILib.Unity.Net.ApiRequestBase$$Ramboum"
+          ]
+        },
+        {
+          "rva": "0x1F28434",
+          "mnemonic": "mov",
+          "operands": "x1, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28438",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2843C",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x40]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28440",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28444",
+          "mnemonic": "ldr",
+          "operands": "x8, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28448",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2844C",
+          "mnemonic": "ldr",
+          "operands": "w1, [x8, #0x88]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28450",
+          "mnemonic": "bl",
+          "operands": "#0x1f2a498",
+          "target_method": [
+            "ILib.Unity.Net.ApiRequestBase$$Brouhabam"
+          ]
+        },
+        {
+          "rva": "0x1F28454",
+          "mnemonic": "mov",
+          "operands": "x1, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28458",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2845C",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x48]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28460",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28464",
+          "mnemonic": "ldr",
+          "operands": "x8, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28468",
+          "mnemonic": "mov",
+          "operands": "w0, #-4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2846C",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28470",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0xb8]",
+          "target_method": null
+        }
+      ],
+      "context_after": [
+        {
+          "rva": "0x1F28478",
+          "mnemonic": "bl",
+          "operands": "#0x1f2fcf4",
+          "target_method": [
+            "ILib.Unity.Net.Soporifik$$op_Implicit"
+          ]
+        },
+        {
+          "rva": "0x1F2847C",
+          "mnemonic": "mov",
+          "operands": "w23, w0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28480",
+          "mnemonic": "mov",
+          "operands": "w0, #-3",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28484",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28488",
+          "mnemonic": "bl",
+          "operands": "#0x1f2fcf4",
+          "target_method": [
+            "ILib.Unity.Net.Soporifik$$op_Implicit"
+          ]
+        },
+        {
+          "rva": "0x1F2848C",
+          "mnemonic": "mov",
+          "operands": "w1, w23",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28490",
+          "mnemonic": "mov",
+          "operands": "w2, w0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28494",
+          "mnemonic": "mov",
+          "operands": "x0, x22",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28498",
+          "mnemonic": "bl",
+          "operands": "#0x1f26f1c",
+          "target_method": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ]
+        },
+        {
+          "rva": "0x1F2849C",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284A0",
+          "mnemonic": "bl",
+          "operands": "#0x1f30638",
+          "target_method": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ]
+        },
+        {
+          "rva": "0x1F284A4",
+          "mnemonic": "mov",
+          "operands": "x1, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284A8",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284AC",
+          "mnemonic": "str",
+          "operands": "x1, [x0, #0x58]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284B0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284B4",
+          "mnemonic": "ldr",
+          "operands": "x3, [x24]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284B8",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284BC",
+          "mnemonic": "mov",
+          "operands": "x1, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284C0",
+          "mnemonic": "mov",
+          "operands": "w2, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284C4",
+          "mnemonic": "bl",
+          "operands": "#0x27395f0",
+          "target_method": [
+            "ILib.Unity.Net.ApiRequestBase$$SerializeToJson<object>"
+          ]
+        },
+        {
+          "rva": "0x1F284C8",
+          "mnemonic": "mov",
+          "operands": "x1, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284CC",
+          "mnemonic": "mov",
+          "operands": "x21, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284D0",
+          "mnemonic": "str",
+          "operands": "x1, [x21, #0x60]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284D4",
+          "mnemonic": "mov",
+          "operands": "x0, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284D8",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284DC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284E0",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284E4",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f284ec",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284E8",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284EC",
+          "mnemonic": "adrp",
+          "operands": "x22, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284F0",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x22, #0x6f1]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284F4",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f2850c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284F8",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F284FC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28500",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28504",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28508",
+          "mnemonic": "strb",
+          "operands": "w8, [x22, #0x6f1]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2850C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28510",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28514",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f28520",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28518",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2851C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x29]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28520",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28524",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x8, #0x1b]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28528",
+          "mnemonic": "cbz",
+          "operands": "w8, #0x1f2858c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2852C",
+          "mnemonic": "mov",
+          "operands": "x0, x20",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28530",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28534",
+          "mnemonic": "bl",
+          "operands": "#0x1f2ce50",
+          "target_method": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ]
+        },
+        {
+          "rva": "0x1F28538",
+          "mnemonic": "ldr",
+          "operands": "x8, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2853C",
+          "mnemonic": "mov",
+          "operands": "x20, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28540",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28544",
+          "mnemonic": "mov",
+          "operands": "x0, x8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28548",
+          "mnemonic": "bl",
+          "operands": "#0x1f2ce50",
+          "target_method": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ]
+        },
+        {
+          "rva": "0x1F2854C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x27]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28550",
+          "mnemonic": "mov",
+          "operands": "x21, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28554",
+          "mnemonic": "ldr",
+          "operands": "w9, [x8, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28558",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f28564",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2855C",
+          "mnemonic": "mov",
+          "operands": "x0, x8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28560",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28564",
+          "mnemonic": "mov",
+          "operands": "x0, x20",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28568",
+          "mnemonic": "mov",
+          "operands": "x1, x21",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2856C",
+          "mnemonic": "mov",
+          "operands": "x2, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28570",
+          "mnemonic": "bl",
+          "operands": "#0x1f337e8",
+          "target_method": [
+            "ILib.Unity.Net.Crustabri$$Girafarig"
+          ]
+        },
+        {
+          "rva": "0x1F28574",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28578",
+          "mnemonic": "bl",
+          "operands": "#0x1f30638",
+          "target_method": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ]
+        },
+        {
+          "rva": "0x1F2857C",
+          "mnemonic": "mov",
+          "operands": "x1, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28580",
+          "mnemonic": "str",
+          "operands": "x0, [x19, #0x68]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28584",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28588",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2858C",
+          "mnemonic": "mov",
+          "operands": "w0, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28590",
+          "mnemonic": "ldp",
+          "operands": "x20, x19, [sp, #0x60]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28594",
+          "mnemonic": "ldp",
+          "operands": "x22, x21, [sp, #0x50]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28598",
+          "mnemonic": "ldp",
+          "operands": "x24, x23, [sp, #0x40]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2859C",
+          "mnemonic": "ldp",
+          "operands": "x26, x25, [sp, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285A0",
+          "mnemonic": "ldp",
+          "operands": "x28, x27, [sp, #0x20]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285A4",
+          "mnemonic": "ldp",
+          "operands": "x29, x30, [sp, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285A8",
+          "mnemonic": "add",
+          "operands": "sp, sp, #0x70",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285AC",
+          "mnemonic": "ret",
+          "operands": "",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285B0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23d18",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285B4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23d18",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285B8",
+          "mnemonic": "cmp",
+          "operands": "w1, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285BC",
+          "mnemonic": "mov",
+          "operands": "x19, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285C0",
+          "mnemonic": "b.ne",
+          "operands": "#0x1f28680",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285C4",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285C8",
+          "mnemonic": "bl",
+          "operands": "#0x42ccfd0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285CC",
+          "mnemonic": "mov",
+          "operands": "x19, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285D0",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44e7000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285D4",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xba8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285D8",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a7c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285DC",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285E0",
+          "mnemonic": "ldr",
+          "operands": "x1, [x8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285E4",
+          "mnemonic": "bl",
+          "operands": "#0x1b24120",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285E8",
+          "mnemonic": "tbnz",
+          "operands": "w0, #0, #0x1f28650",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285EC",
+          "mnemonic": "mov",
+          "operands": "w0, #8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285F0",
+          "mnemonic": "bl",
+          "operands": "#0x42cd000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285F4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285F8",
+          "mnemonic": "str",
+          "operands": "x8, [x0]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F285FC",
+          "mnemonic": "adrp",
+          "operands": "x1, #0x42d3000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F28600",
+          "mnemonic": "add",
+          "operands": "x1, x1, #0x4a8",
+          "target_method": null
+        }
+      ],
+      "confirmed_static_lineon": true,
+      "confidence_source": "TypeInfo->static_fields->+0x78 provenance plus independent +0x78 scan"
+    },
+    {
+      "method": "ApiRequestBase.Ningale",
+      "rva": "0x1F29E6C",
+      "native_length_bytes": 520,
+      "method_script_records": [
+        {
+          "name": "ILib.Unity.Net.ApiRequestBase$$Ningale",
+          "signature": "void ILib_Unity_Net_ApiRequestBase__Ningale (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, System_Collections_Generic_Dictionary_string__string__o* dicHeader, System_Byte_array* data, const MethodInfo* method);",
+          "type_signature": "viiiii"
+        }
+      ],
+      "read_instruction_rva": "0x1F29FC4",
+      "read_instruction": {
+        "rva": "0x1F29FC4",
+        "mnemonic": "ldr",
+        "operands": "x3, [x19, #0x78]",
+        "target_method": null
+      },
+      "first_48_instructions": [
+        {
+          "rva": "0x1F29E6C",
+          "mnemonic": "str",
+          "operands": "x30, [sp, #-0x30]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E70",
+          "mnemonic": "stp",
+          "operands": "x22, x21, [sp, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E74",
+          "mnemonic": "stp",
+          "operands": "x20, x19, [sp, #0x20]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E78",
+          "mnemonic": "adrp",
+          "operands": "x21, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E7C",
+          "mnemonic": "mov",
+          "operands": "w20, w1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E80",
+          "mnemonic": "mov",
+          "operands": "x19, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E84",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x21, #0x6d1]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E88",
+          "mnemonic": "tbnz",
+          "operands": "w8, #0, #0x1f29eac",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E8C",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E90",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E94",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E98",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E9C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd78]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EA0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EA4",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EA8",
+          "mnemonic": "strb",
+          "operands": "w8, [x21, #0x6d1]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EAC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19, #0x38]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EB0",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EB4",
+          "mnemonic": "bl",
+          "operands": "#0x3610b64",
+          "target_method": [
+            "System.String$$IsNullOrEmpty"
+          ]
+        },
+        {
+          "rva": "0x1F29EB8",
+          "mnemonic": "tbnz",
+          "operands": "w0, #0, #0x1f29ec8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EBC",
+          "mnemonic": "ldr",
+          "operands": "w8, [x19, #0x40]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EC0",
+          "mnemonic": "cmp",
+          "operands": "w8, #2",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EC4",
+          "mnemonic": "b.le",
+          "operands": "#0x1f29fec",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EC8",
+          "mnemonic": "cmp",
+          "operands": "w20, #0x198",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ECC",
+          "mnemonic": "b.ne",
+          "operands": "#0x1f29ef8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ED0",
+          "mnemonic": "ldr",
+          "operands": "w8, [x19, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ED4",
+          "mnemonic": "cmp",
+          "operands": "w8, #2",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ED8",
+          "mnemonic": "b.le",
+          "operands": "#0x1f29ffc",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EDC",
+          "mnemonic": "ldr",
+          "operands": "x3, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EE0",
+          "mnemonic": "cbnz",
+          "operands": "x3, #0x1f29fe0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EE4",
+          "mnemonic": "mov",
+          "operands": "w2, #0x8768",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EE8",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EEC",
+          "mnemonic": "mov",
+          "operands": "w1, #0x198",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EF0",
+          "mnemonic": "movk",
+          "operands": "w2, #1, lsl #16",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EF4",
+          "mnemonic": "b",
+          "operands": "#0x1f2a060",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EF8",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EFC",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x1f2a010",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F00",
+          "mnemonic": "adrp",
+          "operands": "x21, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F04",
+          "mnemonic": "ldr",
+          "operands": "x21, [x21, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F08",
+          "mnemonic": "ldr",
+          "operands": "x20, [x8, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F0C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F10",
+          "mnemonic": "ldr",
+          "operands": "w9, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F14",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f29f1c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F18",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F1C",
+          "mnemonic": "adrp",
+          "operands": "x22, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F20",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x22, #0x6e8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F24",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f29f3c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F28",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        }
+      ],
+      "context_before": [
+        {
+          "rva": "0x1F29E70",
+          "mnemonic": "stp",
+          "operands": "x22, x21, [sp, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E74",
+          "mnemonic": "stp",
+          "operands": "x20, x19, [sp, #0x20]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E78",
+          "mnemonic": "adrp",
+          "operands": "x21, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E7C",
+          "mnemonic": "mov",
+          "operands": "w20, w1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E80",
+          "mnemonic": "mov",
+          "operands": "x19, x0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E84",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x21, #0x6d1]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E88",
+          "mnemonic": "tbnz",
+          "operands": "w8, #0, #0x1f29eac",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E8C",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E90",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E94",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E98",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29E9C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xd78]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EA0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EA4",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EA8",
+          "mnemonic": "strb",
+          "operands": "w8, [x21, #0x6d1]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EAC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19, #0x38]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EB0",
+          "mnemonic": "mov",
+          "operands": "x1, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EB4",
+          "mnemonic": "bl",
+          "operands": "#0x3610b64",
+          "target_method": [
+            "System.String$$IsNullOrEmpty"
+          ]
+        },
+        {
+          "rva": "0x1F29EB8",
+          "mnemonic": "tbnz",
+          "operands": "w0, #0, #0x1f29ec8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EBC",
+          "mnemonic": "ldr",
+          "operands": "w8, [x19, #0x40]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EC0",
+          "mnemonic": "cmp",
+          "operands": "w8, #2",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EC4",
+          "mnemonic": "b.le",
+          "operands": "#0x1f29fec",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EC8",
+          "mnemonic": "cmp",
+          "operands": "w20, #0x198",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ECC",
+          "mnemonic": "b.ne",
+          "operands": "#0x1f29ef8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ED0",
+          "mnemonic": "ldr",
+          "operands": "w8, [x19, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ED4",
+          "mnemonic": "cmp",
+          "operands": "w8, #2",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29ED8",
+          "mnemonic": "b.le",
+          "operands": "#0x1f29ffc",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EDC",
+          "mnemonic": "ldr",
+          "operands": "x3, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EE0",
+          "mnemonic": "cbnz",
+          "operands": "x3, #0x1f29fe0",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EE4",
+          "mnemonic": "mov",
+          "operands": "w2, #0x8768",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EE8",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EEC",
+          "mnemonic": "mov",
+          "operands": "w1, #0x198",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EF0",
+          "mnemonic": "movk",
+          "operands": "w2, #1, lsl #16",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EF4",
+          "mnemonic": "b",
+          "operands": "#0x1f2a060",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EF8",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29EFC",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x1f2a010",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F00",
+          "mnemonic": "adrp",
+          "operands": "x21, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F04",
+          "mnemonic": "ldr",
+          "operands": "x21, [x21, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F08",
+          "mnemonic": "ldr",
+          "operands": "x20, [x8, #0x30]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F0C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F10",
+          "mnemonic": "ldr",
+          "operands": "w9, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F14",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f29f1c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F18",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F1C",
+          "mnemonic": "adrp",
+          "operands": "x22, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F20",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x22, #0x6e8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F24",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f29f3c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F28",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F2C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F30",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F34",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F38",
+          "mnemonic": "strb",
+          "operands": "w8, [x22, #0x6e8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F3C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F40",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F44",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f29f50",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F48",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F4C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F50",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F54",
+          "mnemonic": "mov",
+          "operands": "x1, x20",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F58",
+          "mnemonic": "str",
+          "operands": "x20, [x8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F5C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F60",
+          "mnemonic": "ldr",
+          "operands": "x0, [x8, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F64",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F68",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F6C",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x1f2a070",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F70",
+          "mnemonic": "adrp",
+          "operands": "x22, #0x47ed000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F74",
+          "mnemonic": "ldr",
+          "operands": "x20, [x8, #0x38]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F78",
+          "mnemonic": "ldrb",
+          "operands": "w9, [x22, #0x6e9]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F7C",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f29f94",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F80",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F84",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F88",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F8C",
+          "mnemonic": "mov",
+          "operands": "w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F90",
+          "mnemonic": "strb",
+          "operands": "w8, [x22, #0x6e9]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F94",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F98",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29F9C",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f29fa8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FA0",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FA4",
+          "mnemonic": "ldr",
+          "operands": "x0, [x21]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FA8",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0xb8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FAC",
+          "mnemonic": "mov",
+          "operands": "x1, x20",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FB0",
+          "mnemonic": "str",
+          "operands": "x20, [x0, #8]!",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FB4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a14",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FB8",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FBC",
+          "mnemonic": "cbz",
+          "operands": "x8, #0x1f2a070",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FC0",
+          "mnemonic": "ldr",
+          "operands": "x9, [x19]",
+          "target_method": null
+        }
+      ],
+      "context_after": [
+        {
+          "rva": "0x1F29FC8",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FCC",
+          "mnemonic": "ldp",
+          "operands": "w1, w2, [x8, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FD0",
+          "mnemonic": "ldp",
+          "operands": "x8, x4, [x9, #0x1b8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FD4",
+          "mnemonic": "blr",
+          "operands": "x8",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FD8",
+          "mnemonic": "ldr",
+          "operands": "x3, [x19, #0x70]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FDC",
+          "mnemonic": "cbz",
+          "operands": "x3, #0x1f2a070",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FE0",
+          "mnemonic": "ldp",
+          "operands": "w1, w2, [x3, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FE4",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FE8",
+          "mnemonic": "b",
+          "operands": "#0x1f2a060",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FEC",
+          "mnemonic": "add",
+          "operands": "w8, w8, #1",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FF0",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FF4",
+          "mnemonic": "str",
+          "operands": "w8, [x19, #0x40]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FF8",
+          "mnemonic": "b",
+          "operands": "#0x1f2a000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F29FFC",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A000",
+          "mnemonic": "ldp",
+          "operands": "x20, x19, [sp, #0x20]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A004",
+          "mnemonic": "ldp",
+          "operands": "x22, x21, [sp, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A008",
+          "mnemonic": "ldr",
+          "operands": "x30, [sp], #0x30",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A00C",
+          "mnemonic": "b",
+          "operands": "#0x1f2a074",
+          "target_method": [
+            "ILib.Unity.Net.ApiRequestBase$$Munja"
+          ]
+        },
+        {
+          "rva": "0x1F2A010",
+          "mnemonic": "ldr",
+          "operands": "x8, [x19]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A014",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A018",
+          "mnemonic": "ldp",
+          "operands": "x9, x1, [x8, #0x178]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A01C",
+          "mnemonic": "blr",
+          "operands": "x9",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A020",
+          "mnemonic": "cbz",
+          "operands": "x0, #0x1f2a070",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A024",
+          "mnemonic": "adrp",
+          "operands": "x8, #0x4501000",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A028",
+          "mnemonic": "mov",
+          "operands": "x2, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A02C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0xd78]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A030",
+          "mnemonic": "ldr",
+          "operands": "x1, [x8]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A034",
+          "mnemonic": "bl",
+          "operands": "#0x3615f48",
+          "target_method": [
+            "System.String$$Contains"
+          ]
+        },
+        {
+          "rva": "0x1F2A038",
+          "mnemonic": "tbz",
+          "operands": "w0, #0, #0x1f2a04c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A03C",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A040",
+          "mnemonic": "mov",
+          "operands": "w1, w20",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A044",
+          "mnemonic": "mov",
+          "operands": "w2, wzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A048",
+          "mnemonic": "b",
+          "operands": "#0x1f2a05c",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A04C",
+          "mnemonic": "mov",
+          "operands": "w2, #0x8768",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A050",
+          "mnemonic": "mov",
+          "operands": "x0, x19",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A054",
+          "mnemonic": "mov",
+          "operands": "w1, w20",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A058",
+          "mnemonic": "movk",
+          "operands": "w2, #1, lsl #16",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A05C",
+          "mnemonic": "mov",
+          "operands": "x3, xzr",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A060",
+          "mnemonic": "ldp",
+          "operands": "x20, x19, [sp, #0x20]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A064",
+          "mnemonic": "ldp",
+          "operands": "x22, x21, [sp, #0x10]",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A068",
+          "mnemonic": "ldr",
+          "operands": "x30, [sp], #0x30",
+          "target_method": null
+        },
+        {
+          "rva": "0x1F2A06C",
+          "mnemonic": "b",
+          "operands": "#0x1f27858",
+          "target_method": [
+            "ILib.Unity.Net.ApiRequestBase$$Chapignon"
+          ]
+        },
+        {
+          "rva": "0x1F2A070",
+          "mnemonic": "bl",
+          "operands": "#0x1b23d18",
+          "target_method": null
+        }
+      ],
+      "confirmed_static_lineon": false,
+      "confidence_source": "Only +0x78 offset match; must discriminate instance Goelise"
+    }
+  ],
+  "caution": "Only static AArch64 instruction provenance; not proof that HOME transmits the field or that server rejects it."
+}
