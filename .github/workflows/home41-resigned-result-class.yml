@@ -1,0 +1,155 @@
+name: HOME 4.1.0 isolated resigned API resultCode classifier
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-resigned-result-class.yml'
+      - 'Android/Smali/tools/home41_resigned_result_class_agent.js'
+      - 'Android/Smali/tools/home41_resigned_result_class_probe.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-resigned-result-class
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            Android/Smali/tools
+            tools/home41_frida_server_setup.py
+            .github/workflows/home41-resigned-result-class.yml
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Validate strict callback classification and original source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p resigned-class-evidence
+          python -m pip install -q 'frida==17.26.1' pillow
+          python -m py_compile Android/Smali/tools/home41_resigned_result_class_probe.py
+          git clone --depth=1 --filter=blob:none --sparse https://github.com/969981/Home_Android.git "$RUNNER_TEMP/apk-source"
+          git -C "$RUNNER_TEMP/apk-source" sparse-checkout set ROMS/4.1.0
+          mapfile -t files < <(find "$RUNNER_TEMP/apk-source/ROMS/4.1.0" -name '*.apk' -type f)
+          test "${#files[@]}" -eq 1
+          echo "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1  ${files[0]}" | sha256sum -c -
+          build_dir=$(find "${ANDROID_HOME:-/usr/local/lib/android/sdk}/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)
+          test -x "$build_dir/apksigner"
+          keytool -genkeypair -noprompt -alias ci-resultclass -keyalg RSA -keysize 2048 -validity 2 -keystore "$RUNNER_TEMP/resultclass.jks" -storepass changeit -keypass changeit -dname "CN=Disposable HOME response metadata"
+          "$build_dir/apksigner" sign --ks "$RUNNER_TEMP/resultclass.jks" --ks-key-alias ci-resultclass --ks-pass pass:changeit --key-pass pass:changeit --out "$RUNNER_TEMP/resign-only.apk" "${files[0]}"
+          "$build_dir/apksigner" verify -v "$RUNNER_TEMP/resign-only.apk"
+          python Android/Smali/tools/audit_direct_resign.py --original "${files[0]}" --resigned "$RUNNER_TEMP/resign-only.apk" --output resigned-class-evidence/payload_audit.json
+          echo "RESIGNED_APK=$RUNNER_TEMP/resign-only.apk" >> "$GITHUB_ENV"
+      - name: Enable KVM
+        shell: bash
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          test -e /dev/kvm
+      - name: Native ARM64 Frida result category in one disposable APK
+        id: emulator
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: |
+            python tools/home41_frida_server_setup.py --output resigned-class-evidence/frida_server_setup.json
+            python -c "import json; r=json.load(open('resigned-class-evidence/frida_server_setup.json')); assert r.get('status')=='ready',r"
+            python Android/Smali/tools/home41_resigned_result_class_probe.py --apk "$RESIGNED_APK" --agent Android/Smali/tools/home41_resigned_result_class_agent.js --out resigned-class-evidence
+      - name: Record strict result class without HTTP claims
+        if: always()
+        shell: bash
+        env:
+          EMULATOR_OUTCOME: ${{ steps.emulator.outcome }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          f=Path('resigned-class-evidence/summary.json')
+          data=json.loads(f.read_text()) if f.exists() else {"status":"missing_runtime_probe"}
+          result={
+            "workflow":f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+            "emulator_outcome":os.environ.get("EMULATOR_OUTCOME"),
+            "status":data.get("status"),
+            "arm64_hook_ready":data.get("hook_ready"),
+            "callback_seen":data.get("callback_seen"),
+            "only_bounded_result_classes":data.get("result_classes",[]),
+            "frida_script_errors":data.get("frida_script_errors"),
+            "callback_result_is_not_verified_http_status":True,
+            "does_not_read_certs_http_bodies_or_accounts":True,
+            "does_not_modify_app_requests_or_responses":True
+          }
+          target=Path('Android/Smali/4.1.0/RESIGNED_CALLBACK_CODE_CLASS.json')
+          target.parent.mkdir(parents=True,exist_ok=True)
+          target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open('a') as o:
+            o.write("## HOME 4.1.0 re-signed API callback result-class probe\n\n")
+            o.write(f"- Status: {result['status']}; ARM64 Hook: {result['arm64_hook_ready']}; callback seen: {result['callback_seen']}\n")
+            o.write(f"- Result class list: {result['only_bounded_result_classes']}\n")
+            o.write("These are only non-sensitive categories of a callback integer, NOT verified HTTP status codes.\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-resigned-nonhttp-api-result-class
+          path: resigned-class-evidence/
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Commit restricted evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/RESIGNED_CALLBACK_CODE_CLASS.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test(home41): record isolated re-signed API callback result category [skip ci]'
+            for attempt in 1 2 3 4; do
+              git fetch origin 4.1.0
+              git rebase FETCH_HEAD
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
+      - name: Validate real ARM64 callback, not guesswork
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('resigned-class-evidence/summary.json')
+          if not p.exists(): raise SystemExit('No real emulated ARM64 runtime event capture')
+          r=json.loads(p.read_text())
+          if not (r.get('hook_ready') and r.get('callback_seen')):
+            raise SystemExit('Callback and hook readiness not verified; refuse classification')
+          print('Bounded resultCode category obtained; no HTTP interpretation claimed')
+          PY
