@@ -41,6 +41,11 @@ ALLOWED_EVENTS = frozenset({
     "year_options_inspector_hook_unavailable",
     "year_options_layout_not_verified",
     "year_1999_option_index_verified",
+    "local_year1999_arm_accepted",
+    "local_year1999_callback_redirected",
+    "local_year1999_callback_refused",
+    "local_year1999_model_readback",
+    "local_year1999_model_readback_unavailable",
 })
 CATEGORIES = frozenset({
     "register", "token", "login", "locale", "basic_profile", "other"
@@ -119,6 +124,13 @@ def sanitize(payload: object) -> dict | None:
             "last_year": last,
             "descending_sequential": True,
         })
+    if event == "local_year1999_callback_redirected":
+        if (payload.get("from_index") != 8 or payload.get("to_index") != 27):
+            return None
+        cleaned["from_index"] = 8
+        cleaned["to_index"] = 27
+    if event == "local_year1999_model_readback":
+        cleaned["year_is_1999"] = payload.get("year_is_1999") is True
     if event in DATE_EVENT_MAX_INDEX:
         value = payload.get("selected_index")
         if (isinstance(value, int) and not isinstance(value, bool)
@@ -169,6 +181,8 @@ class FridaInterfaceMonitor:
         self.emulated_probe_seen = threading.Event()
         self.emulated_probe = None
         self.arm64_hook_ready_seen = threading.Event()
+        self.emulated_native_script = None
+        self.local_year1999_arm_status = "not_requested"
 
     def on_message(self, message: object, _data=None) -> None:
         if not isinstance(message, dict):
@@ -281,6 +295,7 @@ class FridaInterfaceMonitor:
                 native.on("message", self.on_message)
                 native.load()
                 self.emulated_scripts.append(native)
+                self.emulated_native_script = native
                 # The host must not begin the first HOME UI tap simply
                 # because the source script was loaded. Wait for the real
                 # Frida ARM64 hook readiness send() event. This was
@@ -296,6 +311,34 @@ class FridaInterfaceMonitor:
             self.emulated_status = "emulated_attach_or_load_failed"
             self.emulated_error_type = type(exc).__name__
             return self.emulated_status
+
+    def arm_local_year1999(self) -> str:
+        """Opt-in local UI test only, after real picker screenshot validation.
+
+        Does not execute a HOME native method from a Frida RPC thread.
+        The armed observer may rewrite ONE normal UI callback index only.
+        """
+        if (self.emulated_status != "emulated_arm64_readonly_observer_loaded"
+                or self.emulated_native_script is None
+                or self.local_year1999_arm_status != "not_requested"
+                or not any(
+                    e.get("event") == "year_1999_option_index_verified"
+                    and e.get("selected_index") == 27
+                    and e.get("first_year") == 2026
+                    and e.get("last_year") == 1900
+                    and e.get("total_options") == 127
+                    for e in self.events)):
+            self.local_year1999_arm_status = "host_guard_rejected"
+            return self.local_year1999_arm_status
+        try:
+            result = self.emulated_native_script.exports_sync.armlocalyear1999()
+            if result == "local_year1999_arm_accepted":
+                self.local_year1999_arm_status = "local_year1999_arm_accepted"
+            else:
+                self.local_year1999_arm_status = "rpc_arm_rejected"
+        except Exception as exc:
+            self.local_year1999_arm_status = "rpc_arm_failed_" + type(exc).__name__
+        return self.local_year1999_arm_status
 
     def stop(self) -> dict:
         for script in reversed(self.emulated_scripts):
@@ -324,6 +367,12 @@ class FridaInterfaceMonitor:
             "status": self.setup_status,
             "error_type": self.setup_error_type,
             "emulated_realm_status": self.emulated_status,
+            "local_year1999_arm_status": self.local_year1999_arm_status,
+            "local_year1999_redirect_event_seen": (
+                counts["local_year1999_callback_redirected"] > 0),
+            "local_year1999_model_readback_confirmed": any(
+                e.get("event") == "local_year1999_model_readback"
+                and e.get("year_is_1999") is True for e in self.events),
             "emulated_realm_error_type": self.emulated_error_type,
             "emulated_arch": (self.emulated_probe or {}).get("arch","unknown"),
             "emulated_il2cpp_visible": (self.emulated_probe or {}).get(
