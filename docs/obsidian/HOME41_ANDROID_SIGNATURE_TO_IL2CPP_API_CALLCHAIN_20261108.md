@@ -196,3 +196,48 @@ bool ILib_Unity_Net_ApiRequestBase__Parecool(
 - **不能据此宣布：** 自签名重构版已恢复官方服务端身份，或通过跳过客户端比较就能正常登录。
 
 持续使用原始未修改 APK 做对照。未经授权不要伪造官方签名、修改认证参数或在生产账号上测试不可信修改包。
+
+
+## 七、2026-11-08：首次请求真实 Frida A/B 与双层错误码新探针
+
+### 第一轮真实联网时间线（已完成）
+
+[Actions #42460422767](https://github.com/969981/PokeHome_Resources/actions/runs/42460422767) 使用经过 SHA256 验证的原版 APK 和同文件仅 `apksigner` 重签名的 APK，x86_64 Android API35 上启用 ARM64 native bridge，Frida 17 Java + emulated realm 均成功附加，两者没有账号操作、API 修改或 HTTP 内容采集。
+
+| 事件（从各自附加时间起） | 官方原版 | 仅重签名版 |
+| --- | ---: | ---: |
+| Java 签名读取 | 28,881ms | 19,872ms |
+| Unity 签名回调 | 35,619ms | 23,805ms |
+| `Lineon` 写入 | 36,063ms | 23,993ms |
+| 请求对象构造开始 | 41,459ms | 28,117ms |
+| `Lineon` 请求阶段读取 | 41,554ms | 28,126ms |
+| JSON 序列化入口 | 41,564ms | 28,130ms |
+| Unity 请求发送入口 | 41,642ms | 28,154ms |
+| API 响应回调入口 | 55,136ms | 36,961ms |
+
+这两列是**独立启动时钟**，不是绝对系统时间；不能从几秒的差距推断校验结果。原版 95 秒验证语言选择 UI，重签名版到 130 秒未能通过。
+
+Java HttpURLConnection 和 UnityWebRequest 的已装只读 HTTP 状态钩子都**未取得实际状态码**。因此 `observed_http_response_codes=[]` 是*观测缺口*，不是没有联网，也不是已确认的 HTTP 400。
+
+原版内部 `ApiRequestBase.Ningale` 的 `resultCode` 值落在 HTTP 状态码数字范围，且值为 `200`，但它只是应用 API 回调的整数。新的独立重签名版探针 [Actions #42461674896](https://github.com/969981/PokeHome_Resources/actions/runs/42461674896) 返回 `other_600_9999`，**尚不等于精确的 9007**。
+
+对应脱敏报告：[FIRST_REQUEST_READONLY_AB.json](../../Android/Smali/4.1.0/FIRST_REQUEST_READONLY_AB.json)、[RESIGNED_CALLBACK_CODE_CLASS.json](../../Android/Smali/4.1.0/RESIGNED_CALLBACK_CODE_CLASS.json)。
+
+### 为分离 400/9007 两层错误码新增的只读观察
+
+静态 direct-BL caller 审计 [Actions #42460787800](https://github.com/969981/PokeHome_Resources/actions/runs/42460787800) 已映射：
+
+```text
+ApiRequestBase.Monaflemit(resultCode, headers, bytes)
+  ├─ BL ApiRequestBase.Chapignon(resultCode, resultDetailCode, responseParam)
+  └─ BL ApiRequestBase.Ningale(resultCode, headers, bytes)
+```
+
+`Chapignon` 的实际参数声明是 `void Chapignon(ApiRequestBase* this, int32 resultCode, int32 resultDetailCode, ResponseParameterBase*)`，RVA `0x1F27858`。因此本次新增 Frida ARM64 原生钩子，**只记录经过固定分类的整数标签**及 `resultCode==400 && resultDetailCode==9007` 布尔值，不输出参数原文或服务器内容。
+
+代码路径：
+- `Android/Smali/tools/home41_first_request_native.js`：`app_error_handler_enter` 事件。
+- `Android/Smali/tools/home41_first_request_ab.py`：严格字段白名单和独立的 `app_error_handler_events` 时间线。
+- `.github/workflows/home41-first-request-ab.yml`：仍同时对比原版与仅重签名版。
+
+**进行中/未通过的断言不应写成实测发现**：只有在本次新 A/B 实际报告出现 `app_error_400_9007_pair_observed=true`，才可断言 Unity 的应用错误处理函数实际接到这对参数。在 HTTP 层直接捕获状态码或独立比对网络响应之前，该事件仍非“官方服务器返回 HTTP 400”的证据。
