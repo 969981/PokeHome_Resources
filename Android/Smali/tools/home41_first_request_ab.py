@@ -31,14 +31,15 @@ EVENTS=frozenset({
     "signature_state_read_for_request","request_field_write",
     "request_json_serializer_enter","api_response_callback_enter",
     "unity_http_response_status","unity_http_response_pending",
-    "unity_request_send_enter"
+    "unity_request_send_enter","app_error_handler_enter",
+    "app_error_handler_unreadable"
 })
 HOOKS=frozenset({
     "signing_check","unity_message","url_connection","java_http_status",
     "signing_receiver","signing_field_setter","signature_field_write",
     "request_prepare","signature_field_read","signature_request_object_write",
     "request_serializer","response_callback",
-    "unity_response_code","unity_request_send"
+    "unity_response_code","unity_request_send","api_error_handler"
 })
 CATEGORIES=frozenset({"register","token","login","locale","basic_profile","initial_config","other"})
 EVENT_LIMIT=400
@@ -73,6 +74,18 @@ def clean(payload, elapsed_ms):
         status=payload.get("result_code_if_http_range")
         if type(status) is int and 100<=status<=599:
             out["result_code_if_http_range"]=status
+    if name=="app_error_handler_enter":
+        allowed={
+            "exact_9007","exact_400","exact_200","zero","negative",
+            "other_http_range","small_positive","other_600_9999",
+            "other_10000_999999","out_of_classification_range"
+        }
+        for field in ("result_class","detail_class"):
+            value=payload.get(field)
+            out[field]=value if value in allowed else "unknown"
+        out["matches_display_pair_400_9007"]=(
+            payload.get("matches_display_pair_400_9007") is True
+        )
     if name=="request_build_return":
         out["success"]=payload.get("success") is True
     if name in {"request_field_write","signature_state_write",
@@ -224,7 +237,8 @@ def run_variant(name,apk,bundle,arm64_script,out,device):
             "unity_signing_callback_enter","signature_state_write",
             "request_build_enter","signature_state_read_for_request",
             "request_field_write","request_json_serializer_enter",
-            "unity_request_send_enter","unity_http_response_status",
+            "unity_request_send_enter","app_error_handler_enter",
+            "unity_http_response_status",
             "java_http_response_status","api_response_callback_enter"
         )
     }
@@ -238,6 +252,20 @@ def run_variant(name,apk,bundle,arm64_script,out,device):
         if e["event"]=="api_response_callback_enter"
         and "result_code_if_http_range" in e
     })
+    status["app_error_handler_events"]=[
+        {
+            "elapsed_ms":ev["elapsed_ms"],
+            "result_class":ev.get("result_class"),
+            "detail_class":ev.get("detail_class"),
+            "matches_display_pair_400_9007":ev.get("matches_display_pair_400_9007")
+        }
+        for ev in events if ev["event"]=="app_error_handler_enter"
+    ]
+    status["app_error_400_9007_pair_observed"]=any(
+        ev["matches_display_pair_400_9007"] is True
+        for ev in status["app_error_handler_events"]
+    )
+    status["app_error_is_not_proven_http_status"]=True
     status["http_status_known"]=bool(status["observed_http_response_codes"])
     status["native_callback_result_is_not_proven_http"]=True
     status["no_ui_clicks"]=True
