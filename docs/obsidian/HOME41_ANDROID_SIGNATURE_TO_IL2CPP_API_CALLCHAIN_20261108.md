@@ -60,7 +60,7 @@ receiver_class="Azurill"
 handler_method="Tarinor"
 ```
 
-这里 `Azurill` 是 UnitySendMessage **GameObject 对象名称**，不必然是 C# 类名；`Tarinor` 才是目标方法名称。这些名称看起来经过游戏资源名称混淆，不能理解为小球飞鱼和朝北鼻的宝可梦数据。观察器**未保存证书字符串、哈希正文、账户凭据、服务端应答或接口 URL**。
+这里 `Azurill` 是 UnitySendMessage **GameObject 对象名称**，不必然是 C# 类名；`Tarinor` 才是目标方法名称。这些名称看起来经过游戏资源名称混淆，不能将它们当作宝可梦实体数据。观察器**未保存证书字符串、哈希正文、账户凭据、服务端应答或接口 URL**。
 
 原始签名 APK 95 秒时确认 HOME 语言选择页；测试签名 APK 到 130 秒仍未通过。两者 Frida script error 都是 0。
 
