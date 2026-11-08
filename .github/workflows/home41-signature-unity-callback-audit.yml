@@ -1,0 +1,86 @@
+name: HOME 4.1.0 Unity signature callback IL2CPP target audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-signature-unity-callback-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-signature-unity-callback-audit
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            Android/Smali/tools/signature_unity_callback_audit.py
+            Unpack/Android/4.1.0/il2cpp/dump.cs
+            Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/il2cpp/stringliteral.json
+            .github/workflows/home41-signature-unity-callback-audit.yml
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Confirm recovered metadata and locate UnitySendMessage callback
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile Android/Smali/tools/signature_unity_callback_audit.py
+          python Android/Smali/tools/signature_unity_callback_audit.py \
+            --dump Unpack/Android/4.1.0/il2cpp/dump.cs \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --literals Unpack/Android/4.1.0/il2cpp/stringliteral.json \
+            --output Android/Smali/4.1.0/UNITY_SIGNATURE_CALLBACK_AUDIT.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path('Android/Smali/4.1.0/UNITY_SIGNATURE_CALLBACK_AUDIT.json').read_text())
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as f:
+            f.write('## UnitySendMessage signature callback: Azurill.Tarinor\n\n')
+            for name in ('dump','script','string_literals'):
+              section=r[name]
+              f.write(f"- {name}: {section['match_count']} exact token matches\n")
+              for m in section['first_matches'][:5]:
+                f.write(f"  - {m.get('match_line') or m.get('excerpt','')[:130]}\n")
+            f.write('\nStatic match is not proof that a signature comparison occurs in the target.\n')
+          PY
+
+      - name: Upload static evidence with method context
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-azurill-tarinor-il2cpp-static-audit
+          path: Android/Smali/4.1.0/UNITY_SIGNATURE_CALLBACK_AUDIT.json
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Commit source-backed static evidence to private branch
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/UNITY_SIGNATURE_CALLBACK_AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'analysis(android): save Azurill.Tarinor IL2CPP callback method evidence [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
