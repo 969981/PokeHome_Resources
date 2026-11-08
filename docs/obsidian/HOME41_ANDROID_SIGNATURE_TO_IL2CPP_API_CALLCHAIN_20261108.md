@@ -85,6 +85,29 @@ handler_method="Tarinor"
 
 目前 `Chenipotte` 具体设置的是请求字段、会话值、签名识别状态还是其他元数据，尚未通过后续接收字段和真实响应内容闭合。**不能将“传入 ApiRequestBase”简化成“已证明后端因签名拒绝登录”。**
 
+
+## 五、进一步深入的转换与静态字段写入（已运行 CI）
+
+[最新原生目标报告](../../Android/Smali/4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json) · [Actions #42444908677](https://github.com/969981/PokeHome_Resources/actions/runs/42444908677)
+
+新一轮自动测试通过并把实际 ARM64 指令与 script.json 参数类型逐一匹配：
+
+| 静态方法 | RVA | 参数及作用边界 |
+| --- | --- | --- |
+| `Draco.op_Implicit(string)` | `0x1F2CE50` | 返回 `Draco` 封装值 |
+| `ApiRequestBase.Chenipotte(Draco)` | `0x1F26E78` | 静态入口，继续调用 `Charmillon` |
+| `ApiRequestBase.Charmillon(Draco,Soporifik,Soporifik)` | `0x1F26F1C` | 转换字符串、进行字符/整数范围比较与运算 |
+| `Soporifik.op_Implicit(int)` | `0x1F2FCF4` | 将整数包装成 `Soporifik`，仅 1 条指令 |
+
+`Chenipotte` 的反汇编明确出现如下操作：
+
+- 准备整数 `4` 与 `3`，调用两次 `Soporifik.op_Implicit`。
+- 将 `Draco` 输入和两个 `Soporifik` 参数传给 `Charmillon`。
+- `Charmillon` 包含 `String.IsNullOrEmpty`、`String.get_Chars`、`Convert.ToInt32`、字符构造和算术比较等调用。
+- `Charmillon` 返回后，`Chenipotte` 在 `0x1F26F08` 执行 ARM64 `str x0, [x9, #0x78]`。这里 `x9` 由类元数据静态存储指针派生，说明结果被写入该类的一块共享状态。
+
+这条证据把签名消息从 Java -> Unity -> 网络组件扩展到**转换后结果的存储**。但尚未识别共享字段的原始业务名、后续读取方、真实 HTTP 请求字段或服务器响应语义。不能据此称为“官方签名校验已经被完全定位”，更不能将混淆算法替代受信任的官方签名。
+
 ## 四、源码与复测
 
 - `Android/Smali/tools/signature_trace_agent.js`：只读监听 Java `CheckSignatureCore.Check` 与 `UnityPlayer.UnitySendMessage` 的签名消息类型、Unity 接收方法名称。不能输出原始证书。
