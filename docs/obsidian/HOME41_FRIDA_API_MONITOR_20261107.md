@@ -330,3 +330,25 @@ Frida 17 ARM64 OnYearChageValue 的只读回调应独立报告 index=8（2026-20
 - [实机校准 #42392087765](https://github.com/969981/PokeHome_Resources/actions/runs/42392087765)
 - [新增交叉校验回归 #42392140383](https://github.com/969981/PokeHome_Resources/actions/runs/42392140383)
 - 不绑定 Nintendo Account、不提交生日、不接受条款、不注册、不删除账号。首次 HOME 六位训练家 ID 仍未取得。
+
+## 十六、2018 实机索引校准完成与一次性 1999 本地回调实验
+
+### 同一真实会话的双重索引证据
+
+- Actions #42392140383（https://github.com/969981/PokeHome_Resources/actions/runs/42392140383）的截图 year_anchor_selected_field_closeup_source.png 明确显示年份 **2018**，月份和日期仍空白。
+- 同一 Artifact 的 frida_interface_events.jsonl 记录了 2026～1900 完整倒序年份选项，1999 index=27；真实 `birthdate_year_change_index` 回调是 index=8，恰与 2018 的可见文字一致。
+- 报告 known_2018_index_expected_8_observed=true；不再是仅靠静态函数猜测的映射。首次 basic.utid 仍未触发，生日未提交。
+
+### 临时、单次的本地日期 UI 实验
+
+- `tools/early_home_tid_observer.js` 增加默认**不启用**的 `rpc.exports.armlocalyear1999()`。只允许 ARM64 已安装 Hook 且本轮实时读到 127 个 2026～1900 严格倒序选项、1999 唯一对应 index=27 时启用一次，20 秒自动失效，单个进程不可二次启用。
+- 仅在真正的 Unity `OnYearChageValue(int)` 回调发生、原始索引严格为 8（用户可见点击 2018）时，将本地这个回调的参数索引重定向为 27；不调用 HTTP／注册／登录接口，不修改服务器数据，也不执行生日下一步。
+- `onLeave` 只读检查 FirstBootViewInputBirthData.inputedYear（+0x58）是否为 1999，事件不记录附近个人资料和任何账户信息。注意：**本地内部字段变为 1999 不代表 UI 显示 1999**，需要独立检查截图。
+- 新探针 `tools/home41_local_year_1999_probe.py` 先以保守多点像素签名确认初始年份列表确实存在，再调用主机端 Frida RPC；若 RPC 拒绝、未准备好、超时或页面未知，零点击退出。成功启用后只点击一次已知可见的 2018 行，保存 `local_year1999_field_requires_visual_review.png` 和回调事件，绝不点击提交按钮。
+- 测试档仍为目标生日 **1999-04-05**，但此轮独立研究仅在本地尝试年份；4 月/5 日的功能已在之前实验独立验证，暂不混合执行。
+- [单元与 Frida 安全回归 #42443660570](https://github.com/969981/PokeHome_Resources/actions/runs/42443660570)：68/68 项通过，覆盖旧实验互斥、弹窗签名、一次性 RPC、异常停止、敏感字段白名单与无注册。
+- [真实模拟器 #42443660553](https://github.com/969981/PokeHome_Resources/actions/runs/42443660553)：需要检查本次独立 Artifact 的 native event 与 UI 实拍，尚不能在任务未完成时宣称 1999 已选中。
+
+### 安全性质区分
+
+常规 Frida Java/DNS/Socket 和 IL2CPP 注册、登录、SetBasic **观察器仍然只读**。上述受控的 index 8→27 **是有意改变仅本地 Unity UI 回调的实验功能**，不应被称为只读。没有用户同意的正常 DOB 提交、Nintendo Account 绑定、账号创建/删除，也没有已验证的真实六位 HOME ID。
