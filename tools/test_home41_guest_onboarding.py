@@ -142,6 +142,7 @@ class GuestOnboardingTests(unittest.TestCase):
     def test_error_dialog_stops_without_tap(self):
         self.assertTrue(error_modal_like(ERROR))
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
@@ -224,6 +225,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_no_birthdate_submission(self):
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
@@ -247,6 +249,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_mouse_wheel_probe_does_not_click_year(self):
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
@@ -273,6 +276,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_mouse_wheel_stops_if_popup_disappears(self):
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
@@ -297,6 +301,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_stuck_known_confirmation_retries_then_stops(self):
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
@@ -314,6 +319,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_stuck_confirmation_can_recover_after_retry(self):
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
@@ -339,6 +345,7 @@ class GuestOnboardingTests(unittest.TestCase):
 
     def test_unknown_screen_never_taps(self):
         profile = load_guest_profile(PROFILE)
+        profile["probe_local_year_1999"] = False
         profile["inspect_date_controls"] = False
         profile["probe_year_anchor"] = False
         profile["probe_year_edge_drag"] = False
