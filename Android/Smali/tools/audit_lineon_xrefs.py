@@ -255,6 +255,20 @@ def main():
         and any(ev["kind"]=="field_write" for ev in x["lineon_events"])
     ]
     if not control:
+        check_rva=0x1F26E88
+        check_offset=check_rva-text_rva
+        if 0 <= check_offset < len(text):
+            check_word=struct.unpack_from("<I", text, check_offset)[0]
+            print("CONTROL_DBG",json.dumps({
+                "text_rva":hex(text_rva),
+                "anchor_rva":hex(check_rva),
+                "raw_word":hex(check_word),
+                "decoded_adrp_page":hex(adrp_target(check_word,check_rva) or 0),
+                "records_sample":[{"method":r["method_names"][:2],"events":r["lineon_events"]} for r in records[:5]],
+                "anchor_count":anchors,"global_count":confirmed,
+            }),flush=True)
+            block=summarize_anchor(reader,text[check_offset:check_offset+0x94],check_rva,page)
+            print("CONTROL_TRACE",json.dumps(block),flush=True)
         raise SystemExit("Control missing: expected Chenipotte static Lineon write at 0x1F26F08")
 
     out = {
