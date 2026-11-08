@@ -13,6 +13,8 @@ on:
       - 'tools/test_home41_date_picker_probe.py'
       - 'tools/home41_year_anchor_probe.py'
       - 'tools/test_home41_year_anchor_probe.py'
+      - 'tools/home41_local_year_1999_probe.py'
+      - 'tools/test_home41_local_year_1999_probe.py'
       - 'tools/home41_year_edge_drag_probe.py'
       - 'tools/test_home41_year_edge_drag_probe.py'
       - 'tools/home41_month_day_candidate_probe.py'
@@ -44,6 +46,6 @@ jobs:
       - name: Install test image decoder
         run: python -m pip install pillow
       - name: Syntax check
-        run: python -m py_compile tools/home41_fast_id_probe.py tools/test_home41_fast_id_probe.py tools/home41_guest_onboarding.py tools/test_home41_guest_onboarding.py tools/home41_date_picker_probe.py tools/test_home41_date_picker_probe.py tools/home41_year_anchor_probe.py tools/test_home41_year_anchor_probe.py tools/home41_year_edge_drag_probe.py tools/test_home41_year_edge_drag_probe.py tools/home41_month_day_candidate_probe.py tools/test_home41_month_day_candidate_probe.py tools/android41_os_anr_recovery.py tools/test_android41_os_anr_recovery.py tools/home41_frida_interface_monitor.py tools/test_home41_frida_interface_monitor.py tools/home41_frida_server_setup.py
+        run: python -m py_compile tools/home41_fast_id_probe.py tools/test_home41_fast_id_probe.py tools/home41_guest_onboarding.py tools/test_home41_guest_onboarding.py tools/home41_date_picker_probe.py tools/test_home41_date_picker_probe.py tools/home41_year_anchor_probe.py tools/home41_local_year_1999_probe.py tools/test_home41_local_year_1999_probe.py tools/test_home41_year_anchor_probe.py tools/home41_year_edge_drag_probe.py tools/test_home41_year_edge_drag_probe.py tools/home41_month_day_candidate_probe.py tools/test_home41_month_day_candidate_probe.py tools/android41_os_anr_recovery.py tools/test_android41_os_anr_recovery.py tools/home41_frida_interface_monitor.py tools/test_home41_frida_interface_monitor.py tools/home41_frida_server_setup.py
       - name: Test sanitized no-UI ID watcher (offline fixtures only)
-        run: python -m unittest tools/test_home41_fast_id_probe.py tools/test_home41_guest_onboarding.py tools/test_home41_date_picker_probe.py tools/test_home41_year_anchor_probe.py tools/test_home41_year_edge_drag_probe.py tools/test_home41_month_day_candidate_probe.py tools/test_android41_os_anr_recovery.py tools/test_home41_frida_interface_monitor.py -v
+        run: python -m unittest tools/test_home41_fast_id_probe.py tools/test_home41_guest_onboarding.py tools/test_home41_date_picker_probe.py tools/test_home41_year_anchor_probe.py tools/test_home41_local_year_1999_probe.py tools/test_home41_year_edge_drag_probe.py tools/test_home41_month_day_candidate_probe.py tools/test_android41_os_anr_recovery.py tools/test_home41_frida_interface_monitor.py -v
