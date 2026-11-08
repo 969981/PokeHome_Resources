@@ -89,6 +89,26 @@ class GuestOnboardingTests(unittest.TestCase):
         self.assertEqual(p["starter_species_id"], 4)
         self.assertFalse(p["create_account"])
 
+    def test_one_shot_year_1999_mode_requires_isolated_birthday_probe(self):
+        with tempfile.TemporaryDirectory() as temp:
+            filename=Path(temp)/"profile.json"
+            profile=load_guest_profile(PROFILE)
+            profile["probe_year_anchor"]=False
+            profile["probe_year_edge_drag"]=False
+            profile["probe_month_day_candidates"]=False
+            profile["probe_local_year_1999"]=True
+            filename.write_text(json.dumps(profile),encoding="utf-8")
+            self.assertTrue(load_guest_profile(filename)["probe_local_year_1999"])
+            profile["probe_year_anchor"]=True
+            filename.write_text(json.dumps(profile),encoding="utf-8")
+            with self.assertRaises(ValueError):
+                load_guest_profile(filename)
+            profile["probe_year_anchor"]=False
+            profile["submit_birthdate"]=True
+            filename.write_text(json.dumps(profile),encoding="utf-8")
+            with self.assertRaises(ValueError):
+                load_guest_profile(filename)
+
     def test_unsafe_profile_is_rejected(self):
         p = load_guest_profile(PROFILE)
         with tempfile.TemporaryDirectory() as d:
