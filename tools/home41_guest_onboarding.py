@@ -85,6 +85,17 @@ def load_guest_profile(filename: Path) -> dict:
             obj.get("probe_year_edge_drag", False) or obj.get("probe_year_anchor", False)
             or obj.get("inspect_date_controls", False) or obj.get("explore_year_scrolls", 0)):
         raise ValueError("month/day probe cannot be combined with unrelated year gestures")
+    if type(obj.get("probe_local_year_1999", False)) is not bool:
+        raise ValueError("probe_local_year_1999 must be boolean")
+    if obj.get("probe_local_year_1999", False):
+        if not obj["inspect_birth_year_picker"]:
+            raise ValueError("local year probe requires verified year picker")
+        if (obj.get("probe_year_anchor", False)
+                or obj.get("probe_year_edge_drag", False)
+                or obj.get("probe_month_day_candidates", False)
+                or obj.get("inspect_date_controls", False)
+                or obj.get("explore_year_scrolls", 0)):
+            raise ValueError("local year probe must run alone")
     birthday = obj.get("birthdate_candidate")
     try:
         if not isinstance(birthday, str):
@@ -223,7 +234,8 @@ def _capture(adb: Callable, out: Path, filename: str) -> bytes:
 
 def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                           max_checks: int = 70, interval_seconds: float = 3,
-                          on_first_verified_page: Callable[[], str] | None = None) -> dict:
+                          on_first_verified_page: Callable[[], str] | None = None,
+                          arm_local_year_1999: Callable[[], str] | None = None) -> dict:
     """Advance only the verified guest setup pages and stop at age picker.
 
     Checkpoint is a report about the current ephemeral emulator process;
@@ -259,6 +271,7 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
         "year_anchor_diagnostics": None,
         "year_edge_drag_diagnostics": None,
         "month_day_candidate_diagnostics": None,
+        "local_year_1999_diagnostics": None,
         "stage_retry_counts": {},
         "year_selected": False,
         "month_selected": False,
@@ -380,6 +393,18 @@ def run_known_guest_setup(adb: Callable, output: Path, profile: dict,
                             result["status"] = "birth_year_picker_verified_open"
                             result["stop_reason"] = "year_list_visible_birthdate_unsubmitted"
                             break
+                    if (result["year_picker_verified"]
+                            and profile.get("probe_local_year_1999", False)):
+                        from home41_local_year_1999_probe import probe_local_year1999
+                        diag = probe_local_year1999(
+                            adb, output, arm_local_year_1999,
+                            interval_seconds=interval_seconds)
+                        result["local_year_1999_diagnostics"] = diag
+                        result["screenshots"].extend(diag["screenshots"])
+                        result["status"] = "local_year_1999_" + diag["status"]
+                        result["stop_reason"] = (
+                            "local_date_ui_callback_only_no_submission")
+                        break
                     if (result["year_picker_verified"]
                             and profile.get("probe_month_day_candidates", False)):
                         from home41_month_day_candidate_probe import inspect_local_month_day
