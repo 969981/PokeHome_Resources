@@ -1,0 +1,244 @@
+{
+  "status": "completed",
+  "methodology": "ARM64 unsigned-immediate LDR/STR and ADD #0x78, without requiring TypeInfo chain",
+  "elf_exec_region_count": 1,
+  "total_executable_bytes": 43667136,
+  "all_access_counts": {
+    "add64_address": 790,
+    "ldr32": 337,
+    "ldr64": 7847,
+    "str32": 370,
+    "str64": 912
+  },
+  "il2cpp_network_namespace_access_counts": {
+    "add64_address": 3,
+    "ldr64": 8,
+    "str64": 4
+  },
+  "methods_with_plus_0x78_candidate": {
+    "ILib.Unity.Net.ApiCode$$.cctor": {
+      "loads": 1,
+      "stores": 2,
+      "addresses": 1
+    },
+    "ILib.Unity.Net.ApiRequestBase$$Chenipotte": {
+      "loads": 0,
+      "stores": 1,
+      "addresses": 1
+    },
+    "ILib.Unity.Net.ApiRequestBase$$Parecool": {
+      "loads": 1,
+      "stores": 0,
+      "addresses": 0
+    },
+    "ILib.Unity.Net.ApiRequestBase$$Ningale": {
+      "loads": 1,
+      "stores": 0,
+      "addresses": 0
+    },
+    "ILib.Unity.Net.ApiRequestBase$$.cctor": {
+      "loads": 0,
+      "stores": 1,
+      "addresses": 1
+    },
+    "ILib.Unity.Net.Crustabri$$Typhlosion": {
+      "loads": 3,
+      "stores": 0,
+      "addresses": 0
+    },
+    "ILib.Unity.Net.IAWWW$$GetErrorCode": {
+      "loads": 2,
+      "stores": 0,
+      "addresses": 0
+    }
+  },
+  "known_lineon_write_control_verified": true,
+  "known_writer_addresses": [
+    "0x1F26F08",
+    "0x1F2A890"
+  ],
+  "important_ambiguity": "ApiRequestBase.Lineon is a STATIC Draco field at offset 0x78; ApiRequestBase.Goelise is an INSTANCE field also at offset 0x78. An offset match cannot identify the same logical field.",
+  "absence_does_not_prove_unread": true,
+  "records": [
+    {
+      "instruction_rva": "0x1F261C0",
+      "kind": "add64_address",
+      "instruction": "add x0, sp, #0x78",
+      "containing_method_rva": "0x1F26130",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiCode$$.cctor"
+      ],
+      "delta_from_method_start": 144,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F261D4",
+      "kind": "str64",
+      "instruction": "str xzr, [sp, #0x78]",
+      "containing_method_rva": "0x1F26130",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiCode$$.cctor"
+      ],
+      "delta_from_method_start": 164,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F261E4",
+      "kind": "ldr64",
+      "instruction": "ldr x9, [sp, #0x78]",
+      "containing_method_rva": "0x1F26130",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiCode$$.cctor"
+      ],
+      "delta_from_method_start": 180,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F2640C",
+      "kind": "str64",
+      "instruction": "str x9, [x8, #0x78]",
+      "containing_method_rva": "0x1F26130",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiCode$$.cctor"
+      ],
+      "delta_from_method_start": 732,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F26F08",
+      "kind": "str64",
+      "instruction": "str x0, [x9, #0x78]",
+      "containing_method_rva": "0x1F26E78",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiRequestBase$$Chenipotte"
+      ],
+      "delta_from_method_start": 144,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F26F10",
+      "kind": "add64_address",
+      "instruction": "add x0, x8, #0x78",
+      "containing_method_rva": "0x1F26E78",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiRequestBase$$Chenipotte"
+      ],
+      "delta_from_method_start": 152,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F28474",
+      "kind": "ldr64",
+      "instruction": "ldr x22, [x8, #0x78]",
+      "containing_method_rva": "0x1F27F5C",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiRequestBase$$Parecool"
+      ],
+      "delta_from_method_start": 1304,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F29FC4",
+      "kind": "ldr64",
+      "instruction": "ldr x3, [x19, #0x78]",
+      "containing_method_rva": "0x1F29E6C",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiRequestBase$$Ningale"
+      ],
+      "delta_from_method_start": 344,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F2A890",
+      "kind": "str64",
+      "instruction": "str x0, [x9, #0x78]",
+      "containing_method_rva": "0x1F2A7D0",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiRequestBase$$.cctor"
+      ],
+      "delta_from_method_start": 192,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F2A898",
+      "kind": "add64_address",
+      "instruction": "add x0, x8, #0x78",
+      "containing_method_rva": "0x1F2A7D0",
+      "method_candidates": [
+        "ILib.Unity.Net.ApiRequestBase$$.cctor"
+      ],
+      "delta_from_method_start": 200,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F2EE28",
+      "kind": "ldr64",
+      "instruction": "ldr x8, [x9, #0x78]",
+      "containing_method_rva": "0x1F2EB50",
+      "method_candidates": [
+        "ILib.Unity.Net.Crustabri$$Typhlosion"
+      ],
+      "delta_from_method_start": 728,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F2EE54",
+      "kind": "ldr64",
+      "instruction": "ldr x8, [x9, #0x78]",
+      "containing_method_rva": "0x1F2EB50",
+      "method_candidates": [
+        "ILib.Unity.Net.Crustabri$$Typhlosion"
+      ],
+      "delta_from_method_start": 772,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F2F270",
+      "kind": "ldr64",
+      "instruction": "ldr x9, [x8, #0x78]",
+      "containing_method_rva": "0x1F2EB50",
+      "method_candidates": [
+        "ILib.Unity.Net.Crustabri$$Typhlosion"
+      ],
+      "delta_from_method_start": 1824,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F38B80",
+      "kind": "ldr64",
+      "instruction": "ldr x0, [x0, #0x78]",
+      "containing_method_rva": "0x1F38B08",
+      "method_candidates": [
+        "ILib.Unity.Net.IAWWW$$GetErrorCode"
+      ],
+      "delta_from_method_start": 120,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    },
+    {
+      "instruction_rva": "0x1F38F9C",
+      "kind": "ldr64",
+      "instruction": "ldr x8, [x8, #0x78]",
+      "containing_method_rva": "0x1F38B08",
+      "method_candidates": [
+        "ILib.Unity.Net.IAWWW$$GetErrorCode"
+      ],
+      "delta_from_method_start": 1172,
+      "static_field_provenance_verified": false,
+      "note": "May access an instance object at +0x78; not a verified Lineon load"
+    }
+  ]
+}
