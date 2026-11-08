@@ -108,8 +108,10 @@ def main():
         size=finish-rva
         assert 0 < size < 0x1000 and offset+size < len(binary)
         ins=list(reader.disasm(binary[offset:offset+size],rva))
-        if not ins or ins[0].address!=rva or len(ins)<5:
+        if not ins or ins[0].address!=rva:
             raise RuntimeError("Unexpected ARM64 disassembly at "+name)
+        # Trivial ARM64 wrappers can be just 1-4 instructions.
+        # They remain valid static method bodies, not a disassembler failure.
         calls=[]
         instructions=[]
         for x in ins:
