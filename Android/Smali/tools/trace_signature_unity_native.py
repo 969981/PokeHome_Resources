@@ -57,6 +57,8 @@ def main():
     p.add_argument("--dump", required=True, type=Path)
     p.add_argument("--script", required=True, type=Path)
     p.add_argument("--output", required=True, type=Path)
+    p.add_argument("--include-downstream", action="store_true",
+                   help="Trace the two native methods called by CSM.Skitty")
     a=p.parse_args()
     from capstone import Cs, CS_ARCH_ARM64, CS_MODE_ARM
 
@@ -67,7 +69,21 @@ def main():
     reader=Cs(CS_ARCH_ARM64,CS_MODE_ARM)
     reader.detail=False
     targets=[]
-    for name,rva,offset,finish in TARGETS:
+    target_specs=list(TARGETS)
+    if a.include_downstream:
+        for name,rva in (
+            ("ILib.Unity.Net.Draco.op_Implicit",0x1F2CE50),
+            ("ILib.Unity.Net.ApiRequestBase.Chenipotte",0x1F26E78),
+        ):
+            assert any(
+                name.replace(".", "$",1).endswith("$" + target_name.split("$")[-1])
+                for target_name in method_index.get(rva,[])
+            ) or method_index.get(rva), "missing downstream native method"
+            i=bisect.bisect_right(addresses,rva)
+            next_method=addresses[i] if i<len(addresses) else rva+0x400
+            finish=min(next_method,rva+0x800)
+            target_specs.append((name,rva,rva-0x4000,finish))
+    for name,rva,offset,finish in target_specs:
         assert rva-offset==0x4000, "unexpected IL2CppDumper RVA-to-file offset"
         size=finish-rva
         assert 0 < size < 0x1000 and offset+size < len(binary)
@@ -95,6 +111,7 @@ def main():
                     })
         targets.append({
             "method":name,"rva":f"0x{rva:X}","elf_file_offset":f"0x{offset:X}",
+            "script_method_labels":method_index.get(rva,[])[:10],
             "bytes":size,"decoded_instructions":len(ins),
             "last_decoded_address":f"0x{ins[-1].address:X}",
             "instructions":instructions,"branch_and_call_targets":calls,
@@ -105,6 +122,11 @@ def main():
         "note":"Script method addresses are static IL2CppDumper candidates; branch targets do not prove application-level signature rejection.",
         "callback":"UnitySendMessage receiver=Azurill method=Tarinor; CSM.Tarinor(string message)",
         "class_context":extract_class(dump_text),
+        "downstream_dump_matches":[
+            {"term": term,"excerpt":dump_text[max(0,m.start()-800):m.end()+500][:1300]}
+            for term in ("Chenipotte","op_Implicit")
+            for m in list(re.finditer(r"\\b"+re.escape(term)+r"\\b",dump_text))[:35]
+        ] if a.include_downstream else [],
         "script_methods_count":sum(len(x) for x in method_index.values()),
         "targets":targets,
     }
