@@ -73,8 +73,9 @@ def main():
     while stack:
         node=stack.pop()
         if isinstance(node,dict):
-            if node.get("Address") in wanted_addrs and isinstance(node.get("Name"),str):
-                exact_signature_records.setdefault(node["Address"],[]).append({
+            address=node.get("Address")
+            if isinstance(address,int) and address in wanted_addrs and isinstance(node.get("Name"),str):
+                exact_signature_records.setdefault(address,[]).append({
                     k:node[k] for k in ("Name","Signature","TypeSignature")
                     if k in node
                 })
