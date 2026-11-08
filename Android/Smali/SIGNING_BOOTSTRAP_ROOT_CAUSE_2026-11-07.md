@@ -136,3 +136,17 @@ CI 与原始报告：
 - [Obsidian 分析说明](../../docs/obsidian/HOME41_ANDROID_SIGNATURE_TO_IL2CPP_API_CALLCHAIN_20261108.md)
 
 **结论边界：**现已证明签名衍生数据会流入客户端请求序列化前的构造流程；尚不能仅凭静态调用链确认最终发出的字段、服务端证书策略或 `400/9007` 错误产生位置。原版 APK 仍可显示 HOME 语言选择页，但修改后的自签名构建依旧没有恢复官方联网兼容性。
+
+
+## 2026-11-08：Frida ARM64 首次请求实测，响应阶段差异已复现
+
+[Actions #42460422767](https://github.com/969981/PokeHome_Resources/actions/runs/42460422767) 在同一一次性 Android 15 AVD 中，对 hash 验证的原始 HOME 4.1.0 APK 和只经 `apksigner` 重签名 APK 做对照。本轮 CI 的原版语言页验证与证据提交均成功；两组 Java/ARM64 Frida 钩子就绪，0 脚本异常，不注册、不修改 HTTP、不读取认证密钥。
+
+- 两边都在启动后依次出现 Java 签名检查 → `CSM.Tarinor` → `ApiRequestBase.Lineon` 静态写入 → `Parecool` 读取 → JSON 序列化 → `UnityWebRequest.SendWebRequest`。
+- 原版约 55.136 秒命中 `ApiRequestBase.Ningale` 的 `resultCode=200`，95 秒截图已在 HOME 官方语言选择页。原版有第二次 `SendWebRequest` 事件。
+- 重签名约 36.961 秒命中同一 `Ningale` 回调，整数**不在 100–599 范围**；130 秒截图仍显示 `code:400 / detail code:9007`。
+- 两组均未捕获 `UnityWebRequest.get_responseCode` 或 Java `HttpURLConnection.getResponseCode` 的真实 HTTP 状态。因此不能说 HTTP 200 vs HTTP 400，不能把 UI code 当 HTTP 状态。
+- 静态 ARM64 方法调用者 [FIRST_REQUEST_NATIVE_CALLERS.json](4.1.0/FIRST_REQUEST_NATIVE_CALLERS.json) 确认 `Ningale` 是 `ApiRequestBase.Monaflemit` 的直接 `BL` 目标；`UnityWebRequest.SendWebRequest` 可由 `ILib.Unity.Net.IAWWW.<CoSendRequest>d__18.MoveNext` 直接调用；`get_responseCode` 的 6 处直接调用未发现 `IAWWW`，其缺席实际运行事件有代码层解释。间接调用未分析，不能解释成没有 HTTP。
+- 主汇总：[FIRST_REQUEST_READONLY_AB.json](4.1.0/FIRST_REQUEST_READONLY_AB.json)；技术文档：[HOME41_FIRST_REQUEST_READONLY_AB_20261108.md](../../docs/obsidian/HOME41_FIRST_REQUEST_READONLY_AB_20261108.md)。
+
+**可证实：** 重签名 APK 至少执行完签名衍生字段处理和首次请求构造/发送方法，并进入应用响应回调；故障差异最早在这条可观察响应阶段出现。**不可证实：** 真实 HTTP 状态、某个官方服务器是否拒绝证书、应用错误 `9007` 的精确定义或是否可以在无发行方授权下恢复在线初始化。继续禁止把仅能安装和启动的 Smali 包描述成在线修复成功。
