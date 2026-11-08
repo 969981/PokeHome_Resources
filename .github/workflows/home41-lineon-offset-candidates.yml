@@ -1,0 +1,102 @@
+name: HOME 4.1.0 Lineon +0x78 independent candidate scan
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-lineon-offset-candidates.yml'
+      - 'Android/Smali/tools/audit_lineon_offset_candidates.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-lineon-offset-candidates
+  cancel-in-progress: false
+
+jobs:
+  broad-refs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/home41-lineon-offset-candidates.yml
+            Android/Smali/tools/audit_lineon_offset_candidates.py
+            Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so
+            Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/il2cpp/dump.cs
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check byte pattern decoder and source offset collisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'capstone==5.0.6' 'pyelftools==0.32'
+          python -m py_compile Android/Smali/tools/audit_lineon_offset_candidates.py
+          grep -F 'private static Draco Lineon; // 0x78' Unpack/Android/4.1.0/il2cpp/dump.cs
+          grep -F 'private ApiRequestBase.RepsonseParameterApi Goelise; // 0x78' Unpack/Android/4.1.0/il2cpp/dump.cs
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          spec=importlib.util.spec_from_file_location('offsetscan',Path('Android/Smali/tools/audit_lineon_offset_candidates.py'))
+          module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          for kind,opcode in [('str64',0xF9000000),('ldr64',0xF9400000)]:
+            word=opcode|((0x78//8)<<10)|(9<<5)
+            assert module.offset_match(word)==kind,(kind,hex(word))
+          assert module.offset_match(0x91000000|(0x78<<10))=='add64_address'
+          assert module.offset_match(0xD65F03C0) is None
+          print('ARM64 64-bit memory access classification: 4 checks passed')
+          PY
+      - name: Scan executable segments and identify candidate network methods
+        shell: bash
+        run: |
+          set -euo pipefail
+          python Android/Smali/tools/audit_lineon_offset_candidates.py \
+            --binary Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --out Android/Smali/4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path('Android/Smali/4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json').read_text())
+          assert r['known_lineon_write_control_verified']
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as f:
+            f.write('## Non-provenance ARM64 +0x78 cross-reference candidates\n\n')
+            f.write(f"- Network namespace candidates: {len(r['records'])}\n")
+            f.write(f"- Operation counts: {r['il2cpp_network_namespace_access_counts']}\n")
+            f.write(f"- Known static Lineon writers both present: {r['known_writer_addresses']}\n")
+            for key,value in sorted(r['methods_with_plus_0x78_candidate'].items()):
+              if key.startswith('ILib.Unity.Net.ApiRequestBase'):
+                f.write(f"- {key}: {value}\n")
+            f.write('\nWarning: +0x78 also names an INSTANCE field. Potential reader is not a confirmed Lineon read.\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-lineon-independent-offset-candidates
+          path: Android/Smali/4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Commit inspected candidate inventory
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'analysis(home41): persist independent plus-0x78 ARM64 network-class candidates [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
