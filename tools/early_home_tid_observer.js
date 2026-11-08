@@ -3,7 +3,9 @@
  * Verified target APK SHA256: 8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1
  * libil2cpp.so SHA256: 80bfbc3d480bf3c91297d65a441a37e40260b70fd8b0ddc8da70c34f0870b6fe
  *
- * This never sends HTTP, calls signup/delete APIs, changes app memory,
+ * This never sends HTTP or calls signup/delete APIs. The optional one-shot
+ * birth-year experiment rewrites only a local Unity UI callback index,
+ * when explicitly armed from a verified, non-submitting test page.
  * or records Nintendo OAuth/session secrets. Only attach to your own test app.
  * HOME's actual visible TID7 from this UTID conversion is NOT YET VERIFIED.
  */
@@ -41,6 +43,25 @@ let tokenCallbackSeen = false;
 let loginRequestSeen = false;
 let loginCallbackSeen = false;
 let firstValueFound = false;
+let year1999OptionsChecked = false;
+let localYear1999Armed = false;
+let localYear1999Redirected = false;
+let localYear1999Expired = false;
+
+// Disabled by default: only a host RPC after verified screenshot can arm.
+// One local Unity callback from a verified visible 2018 row (index 8)
+// may be mapped to index 27 (1999). No HTTP/registration behavior is changed.
+rpc.exports = {
+  armlocalyear1999() {
+    if (Process.arch !== "arm64" || !setupDone ||
+        !year1999OptionsChecked || localYear1999Armed ||
+        localYear1999Redirected || localYear1999Expired)
+      return "local_year1999_arm_rejected";
+    localYear1999Armed = true;
+    report("local_year1999_arm_accepted");
+    return "local_year1999_arm_accepted";
+  }
+};
 
 function report(event, fields = {}) {
   // Frida's emulated ARM64 agent can deliver explicit send() messages
@@ -209,6 +230,12 @@ function installHooks(module) {
             report("year_options_layout_not_verified");
             return;
           }
+          // Exact calibration: 2026..1900, with 1999 at index 27.
+          // Arm is refused unless runtime options match this full range.
+          year1999OptionsChecked = (
+              count === 127 && matched[0][0] === 27 &&
+              years[0][1] === 2026 &&
+              years[years.length-1][1] === 1900);
           report("year_1999_option_index_verified", {
             selected_index: matched[0][0],
             total_options: count,
@@ -246,14 +273,49 @@ function installHooks(module) {
     try {
       Interceptor.attach(addr(rva), {
         onEnter(args) {
+          this.yearRedirected = false;
           if (observed[name] >= 8) return;
           observed[name]++;
           let index;
           try { index = args[1].toInt32(); } catch (_) { index = -999; }
+          if (name === "birthdate_year_change_index" &&
+              localYear1999Armed && !localYear1999Redirected) {
+            // This hook is invoked on Unity's UI event thread after an
+            // actual user tap. Do not invoke a managed method or call
+            // from an arbitrary Frida RPC thread.
+            localYear1999Armed = false;
+            localYear1999Expired = true;
+            if (index === 8 && year1999OptionsChecked && !args[0].isNull()) {
+              args[1] = ptr(27);
+              index = 27;
+              localYear1999Redirected = true;
+              this.yearRedirected = true;
+              this.view = args[0];
+              report("local_year1999_callback_redirected", {
+                from_index: 8, to_index: 27
+              });
+            } else {
+              report("local_year1999_callback_refused");
+            }
+          }
           if (index >= 0 && index < limit)
             report(name, {selected_index: index});
           else
             report(name, {index_range_valid: false});
+        },
+        onLeave() {
+          if (name !== "birthdate_year_change_index" ||
+              !this.yearRedirected || !this.view) return;
+          // The field is the documented FirstBootViewInputBirthData
+          // inputedYear integer at +0x58; do not read nearby PII.
+          try {
+            const value = this.view.add(0x58).readS32();
+            report("local_year1999_model_readback", {
+              year_is_1999: value === 1999
+            });
+          } catch (_) {
+            report("local_year1999_model_readback_unavailable");
+          }
         }
       });
       report("date_hook_installed", {hook_kind: name});
