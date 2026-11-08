@@ -192,13 +192,22 @@ def main():
     with a.binary.open("rb") as f:
         elf = ELFFile(f)
         assert elf.elfclass == 64 and elf["e_machine"] == "EM_AARCH64"
-        section = elf.get_section_by_name(".text")
-        if section is None:
-            raise SystemExit("Missing ARM64 .text ELF section")
-        text = section.data()
-        text_rva = section["sh_addr"]
-
-    print("ELF_TEXT_DEBUG",json.dumps({"text_start":hex(text_rva),"text_end":hex(text_rva+len(text)),"text_size":len(text),"expected_func_rva":"0x1F26E88","func_inside":text_rva <= 0x1F26E88 < text_rva+len(text)}),flush=True)
+        # Unity IL2CPP functions do not all live in an ELF section named
+        # ".text": this binary's .text ends before CSM.Tarinor / Chenipotte.
+        # PT_LOAD PF_X is the authoritative executable mapping.
+        regions = [
+            (int(seg["p_vaddr"]), seg.data()[:int(seg["p_filesz"])])
+            for seg in elf.iter_segments()
+            if seg["p_type"] == "PT_LOAD" and (int(seg["p_flags"]) & 1)
+        ]
+    if not regions:
+        raise SystemExit("No executable ELF PT_LOAD segments")
+    print("ELF_EXECUTABLE_SEGMENTS",json.dumps([
+        {"start":hex(rva),"end":hex(rva+len(data)),"bytes":len(data)}
+        for rva,data in regions
+    ]),flush=True)
+    if not any(rva <= 0x1F26E88 < rva + len(data) for rva,data in regions):
+        raise SystemExit("Known CSM native method missing from PF_X ELF segments")
     starts, names = read_methods(a.script)
     reader = Cs(CS_ARCH_ARM64, CS_MODE_ARM)
     page = TYPEINFO_POINTER_RVA & ~0xFFF
@@ -206,48 +215,49 @@ def main():
     anchors = 0
     confirmed = 0
     fullchains = 0
-    l = len(text) // 4
-    for i in range(l):
-        pos = i * 4
-        word = struct.unpack_from("<I", text, pos)[0]
-        rva = text_rva + pos
-        if adrp_target(word, rva) != page:
-            continue
-        anchors += 1
-        if anchors > MAX_ANCHORS:
-            raise SystemExit("Unexpected TypeInfo ADRP page frequency; refuse unbounded scan")
-        meth_idx = bisect.bisect_right(starts, rva) - 1
-        method = starts[meth_idx] if meth_idx >= 0 else None
-        if method is None:
-            continue
-        # Clip at next method RVA; cap windows for performance.
-        next_method = starts[meth_idx+1] if meth_idx+1 < len(starts) else rva + MAX_INSNS*4
-        size = min(MAX_INSNS*4, max(0,next_method-rva), len(text)-pos)
-        if size < 12:
-            continue
-        block = summarize_anchor(reader, text[pos:pos+size], rva, page)
-        if not block["typeinfo_slot_read"]:
-            continue
-        confirmed += 1
-        if block["static_fields_read"]:
-            fullchains += 1
-        if not block["field_events"]:
-            continue
-        if len(records) >= MAX_RECORDS:
-            raise SystemExit("Unusually many Lineon candidate accesses")
-        records.append({
-            "adrp_rva":f"0x{rva:X}",
-            "method_start_rva":f"0x{method:X}",
-            "method_names":names.get(method,[])[:8],
-            "distance_to_method_start":rva-method,
-            "provenance": {
-                k:block[k] for k in (
-                    "explicit_typeinfo_adpr","typeinfo_slot_read","classinfo_read","static_fields_read"
-                )
-            },
-            "lineon_events":block["field_events"],
-            "instructions":block["evidence_lines"],
-        })
+    for text_rva, text in regions:
+        l = len(text) // 4
+        for i in range(l):
+            pos = i * 4
+            word = struct.unpack_from("<I", text, pos)[0]
+            rva = text_rva + pos
+            if adrp_target(word, rva) != page:
+                continue
+            anchors += 1
+            if anchors > MAX_ANCHORS:
+                raise SystemExit("Unexpected TypeInfo ADRP page frequency; refuse unbounded scan")
+            meth_idx = bisect.bisect_right(starts, rva) - 1
+            method = starts[meth_idx] if meth_idx >= 0 else None
+            if method is None:
+                continue
+            # Clip at next method RVA; cap windows for performance.
+            next_method = starts[meth_idx+1] if meth_idx+1 < len(starts) else rva + MAX_INSNS*4
+            size = min(MAX_INSNS*4, max(0,next_method-rva), len(text)-pos)
+            if size < 12:
+                continue
+            block = summarize_anchor(reader, text[pos:pos+size], rva, page)
+            if not block["typeinfo_slot_read"]:
+                continue
+            confirmed += 1
+            if block["static_fields_read"]:
+                fullchains += 1
+            if not block["field_events"]:
+                continue
+            if len(records) >= MAX_RECORDS:
+                raise SystemExit("Unusually many Lineon candidate accesses")
+            records.append({
+                "adrp_rva":f"0x{rva:X}",
+                "method_start_rva":f"0x{method:X}",
+                "method_names":names.get(method,[])[:8],
+                "distance_to_method_start":rva-method,
+                "provenance": {
+                    k:block[k] for k in (
+                        "explicit_typeinfo_adpr","typeinfo_slot_read","classinfo_read","static_fields_read"
+                    )
+                },
+                "lineon_events":block["field_events"],
+                "instructions":block["evidence_lines"],
+            })
 
     # A known positive control: ApiRequestBase.Chenipotte must be detected.
     control = [
@@ -256,20 +266,20 @@ def main():
         and any(ev["kind"]=="field_write" for ev in x["lineon_events"])
     ]
     if not control:
-        check_rva=0x1F26E88
-        check_offset=check_rva-text_rva
-        if 0 <= check_offset < len(text):
-            check_word=struct.unpack_from("<I", text, check_offset)[0]
-            print("CONTROL_DBG",json.dumps({
-                "text_rva":hex(text_rva),
-                "anchor_rva":hex(check_rva),
-                "raw_word":hex(check_word),
-                "decoded_adrp_page":hex(adrp_target(check_word,check_rva) or 0),
-                "records_sample":[{"method":r["method_names"][:2],"events":r["lineon_events"]} for r in records[:5]],
-                "anchor_count":anchors,"global_count":confirmed,
-            }),flush=True)
-            block=summarize_anchor(reader,text[check_offset:check_offset+0x94],check_rva,page)
-            print("CONTROL_TRACE",json.dumps(block),flush=True)
+        details=[]
+        for region_rva,region_data in regions:
+            check_rva=0x1F26E88
+            check_offset=check_rva-region_rva
+            if 0 <= check_offset < len(region_data):
+                check_word=struct.unpack_from("<I",region_data,check_offset)[0]
+                block=summarize_anchor(
+                    reader, region_data[check_offset:check_offset+0x94],check_rva,page)
+                details.append({
+                    "anchor_rva":hex(check_rva),
+                    "decoded_page":hex(adrp_target(check_word,check_rva) or 0),
+                    "register_chain":block
+                })
+        print("CONTROL_DIAGNOSTIC",json.dumps(details),flush=True)
         raise SystemExit("Control missing: expected Chenipotte static Lineon write at 0x1F26F08")
 
     out = {
@@ -278,8 +288,11 @@ def main():
         "static_field":"ILib.Unity.Net.ApiRequestBase.Lineon",
         "field_offset":"0x78",
         "static_class_fields_offset":"0xB8",
-        "text_rva":f"0x{text_rva:X}",
-        "text_bytes":len(text),
+        "executable_regions":[
+            {"rva_start":f"0x{rva:X}","bytes":len(data)}
+            for rva,data in regions
+        ],
+        "text_bytes":sum(len(data) for _,data in regions),
         "method_start_count":len(starts),
         "adrp_candidates_to_typeinfo_page":anchors,
         "with_confirmed_global_slot_load":confirmed,
