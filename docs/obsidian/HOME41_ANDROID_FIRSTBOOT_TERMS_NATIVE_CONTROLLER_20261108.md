@@ -50,6 +50,33 @@ Gest 是原版符号的原始拼写。TermsOfServiceConfirmDialog 可能由标�
 
 协议区域来自 Unity 预制体，因此 Android UIAutomator 不一定可以读到完整的文字或按钮。字段与 RVA 均来自静态布局；尚不具备安全写入依据。
 
+## 原版 FirstBoot Phase 已完成 A/B 验证
+
+静态证据：[原版 Phase 枚举提取 Actions #42462496408](https://github.com/969981/PokeHome_Resources/actions/runs/42462496408) 从 dump.cs 获取 TypeDefIndex 1949，完整 0—25 共 26 个枚举；相关步骤为：
+
+| 原版 Phase 值 | 精确符号 | 对应概念 |
+|---:|---|---|
+| 1 | LANGUAGE | 语言选择 |
+| 2 | MD_DOWNLOAD | 下载/准备 |
+| **3** | **TERM_OF_SERVICE** | **服务协议** |
+| 4 | ADVERTISEMENT_SDK | 广告 SDK 声明/设置 |
+| 5 | WARNING | 警告 |
+| 7—12 | NA_LINK_* | Nintendo Account 关联流程相关 |
+| 13 | NA_NOT_LINK | 不绑定 Nintendo Account |
+| 14 | MT_LOGIN | 移动端账户登录 |
+| 15 | MT_SELECT_ICON | 选择头像 |
+| 16 | MT_INPUT_NAME | 输入昵称 |
+| 17 | MT_INPUT_BIRTH | 出生日期 |
+| 18 | MT_SELECT_COUNTRY | 国家/地区 |
+| 19 | MT_CONFIRMATION | 信息确认 |
+| 21—22 | PROLOGUE / PROLOGUE2 | 序章 |
+| 23 | GEST_CONFIRMATION | 游客确认（原版拼写 GEST） |
+| 24 | ALL_END | 完成 |
+
+**动态证据**：[原版 HOME 实际运行 Actions #42461177711](https://github.com/969981/Home_Android/actions/runs/42461177711)：经过原版生日页「下一步」，FirstBootBodyController 当前 _currentPhase 原生读数为整数 3，且 ConfirmationTermOfService 实际命中；与上述静态 Phase 枚举一一对应，说明**确实到达了服务协议阶段**。这仍不等于已经勾选或同意。
+
+截图取证已改为 **只有原版 Phase 3 + 原生 Terms 控制器事件 + 未注册**才允许保存遮蔽系统栏的图像。普通 UIAutomator 无法给出具体按钮，不猜坐标、不调用原生条款写入函数。原版状态扫描不读取 token 或 UTID。
+
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
