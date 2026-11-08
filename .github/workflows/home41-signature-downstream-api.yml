@@ -5,6 +5,7 @@ on:
     branches: ['4.1.0']
     paths:
       - '.github/workflows/home41-signature-downstream-api.yml'
+      - 'Android/Smali/tools/trace_signature_unity_native.py'
   workflow_dispatch:
 
 permissions:
