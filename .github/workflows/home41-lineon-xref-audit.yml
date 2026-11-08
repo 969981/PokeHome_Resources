@@ -1,0 +1,114 @@
+name: HOME 4.1.0 Lineon ARM64 static cross-reference audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-lineon-xref-audit.yml'
+      - 'Android/Smali/tools/audit_lineon_xrefs.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-lineon-xref-audit
+  cancel-in-progress: false
+
+jobs:
+  lineon-readers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/home41-lineon-xref-audit.yml
+            Android/Smali/tools/audit_lineon_xrefs.py
+            Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so
+            Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/il2cpp/dump.cs
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Confirm original IL2CPP class and test AArch64 ADRP decoder
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'capstone==5.0.6' 'pyelftools==0.32'
+          python -m py_compile Android/Smali/tools/audit_lineon_xrefs.py
+          grep -F 'private static Draco Lineon; // 0x78' Unpack/Android/4.1.0/il2cpp/dump.cs
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          p=Path('Android/Smali/tools/audit_lineon_xrefs.py')
+          spec=importlib.util.spec_from_file_location('home41_lineon',p)
+          mod=importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          def make_adrp(pc,target,reg=8):
+            diff=(target-(pc & ~0xfff))//4096
+            assert -(1<<20)<=diff<(1<<20)
+            imm=diff & 0x1fffff
+            return 0x90000000 | ((imm&3)<<29) | (((imm>>2)&0x7ffff)<<5) | reg
+          for pc,target in [
+            (0x1F26E84,0x47ED000),
+            (0x1F26E88,0x44EA000),
+            (0x1F26F4C,0x44EA000),
+            (0x1D4AB30,0x44EA000),
+            (0x1D4AB14,0x44E7000),
+            (0x1FFF000,0x1E00000),
+          ]:
+            assert mod.adrp_target(make_adrp(pc,target),pc)==target,(pc,target)
+          assert mod.adrp_target(0xD65F03C0,0x1F26E88) is None
+          print('ARM64 ADRP decode: 7 checks passed')
+          PY
+      - name: Scan all original ARM64 .text and resolve static Lineon consumers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python Android/Smali/tools/audit_lineon_xrefs.py \
+            --binary Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --out Android/Smali/4.1.0/LINEON_STATIC_XREF_AUDIT.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path('Android/Smali/4.1.0/LINEON_STATIC_XREF_AUDIT.json')
+          r=json.loads(p.read_text())
+          assert r['known_control_write_detected'] is True
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as f:
+            f.write('## HOME 4.1.0: read-only Lineon static field XREF\n\n')
+            f.write(f"- Scope: {r['text_bytes']} bytes in .text, {r['method_start_count']} method RVAs\n")
+            f.write(f"- TypeInfo page ADRP: {r['adrp_candidates_to_typeinfo_page']}\n")
+            f.write(f"- Confirmed class static TypeInfo chain: {r['with_static_fields_access']}\n")
+            f.write(f"- Field read/write/address counts: {r['kind_counts']}\n")
+            for a in r['accesses']:
+              f.write(f"- {', '.join(a['method_names'][:2])}: {a['lineon_events']}\n")
+            f.write('\nOnly static register chains; no live HTTP/credential evidence.\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-apirequestbase-lineon-static-reader-audit
+          path: Android/Smali/4.1.0/LINEON_STATIC_XREF_AUDIT.json
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Commit static cross-reference report to private branch
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/LINEON_STATIC_XREF_AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'analysis(android): save source-backed Lineon static field readers [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
