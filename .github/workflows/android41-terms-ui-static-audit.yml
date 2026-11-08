@@ -27,6 +27,7 @@ jobs:
             tools/home41_terms_ui_symbol_audit.py
             tools/test_home41_terms_ui_symbol_audit.py
             Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/il2cpp/dump.cs
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -50,12 +51,47 @@ jobs:
           assert not report['utid_observed']
           print('Static terms candidate count by class group:',report['group_match_total'])
           PY
+      - name: Extract original agreement-related UI class fields and method signatures
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re, json
+          from pathlib import Path
+          src=Path("Unpack/Android/4.1.0/il2cpp/dump.cs")
+          contents=src.read_text(encoding="utf-8-sig")
+          targets=(
+              "FirstBootBodyController",
+              "FirstBootViewCheckBoxText",
+              "FirstBootViewClauseItem",
+              "FirstBootViewClausePart",
+              "FirstBootViewWideButton",
+              "TermsOfServiceConfirmDialog",
+              "FirstBootNaLinkDialog",
+          )
+          classes={}
+          for target in targets:
+              match=re.search(r"(?m)^.*\bclass\s+"+re.escape(target)+r"(?=\s|:)", contents)
+              if match is None:
+                  classes[target]={"located":False}
+                  continue
+              beg=max(0,contents.rfind("// Namespace:",0,match.start()))
+              end=contents.find("\n}\n",match.end())
+              if end<0 or end-beg>100000:
+                  end=min(len(contents),match.start()+100000)
+              classes[target]={"located":True,"class_declaration_and_methods":
+                               contents[beg:end+2][:100000]}
+          Path("ci-terms-static/terms_controller_class_layouts.json").write_text(
+              json.dumps(classes,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("Located classes:",{k:v["located"] for k,v in classes.items()})
+          assert classes["FirstBootBodyController"]["located"]
+          assert classes["FirstBootViewCheckBoxText"]["located"]
+          PY
       - name: Upload private source method candidates (not runtime proof)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: home41-terms-ui-static-method-candidates
-          path: ci-terms-static/method_candidates.json
+          path: ci-terms-static/
           retention-days: 5
           if-no-files-found: warn
       - name: State trust boundary
