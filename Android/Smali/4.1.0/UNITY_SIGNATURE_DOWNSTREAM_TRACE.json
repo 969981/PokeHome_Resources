@@ -2004,6 +2004,1315 @@
           "distance_from_nearest": null
         }
       ]
+    },
+    {
+      "method": "ILib.Unity.Net.ApiRequestBase.Charmillon",
+      "rva": "0x1F26F1C",
+      "elf_file_offset": "0x1F22F1C",
+      "script_method_labels": [
+        "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+      ],
+      "recovered_script_signatures": [
+        {
+          "Name": "ILib.Unity.Net.ApiRequestBase$$Charmillon",
+          "Signature": "ILib_Unity_Net_Draco_o ILib_Unity_Net_ApiRequestBase__Charmillon (ILib_Unity_Net_Draco_o Steelix, ILib_Unity_Net_Soporifik_o Snubbull, ILib_Unity_Net_Soporifik_o Granbull, const MethodInfo* method);",
+          "TypeSignature": "iiiii"
+        }
+      ],
+      "bytes": 636,
+      "decoded_instructions": 159,
+      "last_decoded_address": "0x1F27194",
+      "instructions": [
+        {
+          "rva": "0x1F26F1C",
+          "mnemonic": "str",
+          "operands": "x30, [sp, #-0x50]!"
+        },
+        {
+          "rva": "0x1F26F20",
+          "mnemonic": "stp",
+          "operands": "x26, x25, [sp, #0x10]"
+        },
+        {
+          "rva": "0x1F26F24",
+          "mnemonic": "stp",
+          "operands": "x24, x23, [sp, #0x20]"
+        },
+        {
+          "rva": "0x1F26F28",
+          "mnemonic": "stp",
+          "operands": "x22, x21, [sp, #0x30]"
+        },
+        {
+          "rva": "0x1F26F2C",
+          "mnemonic": "stp",
+          "operands": "x20, x19, [sp, #0x40]"
+        },
+        {
+          "rva": "0x1F26F30",
+          "mnemonic": "adrp",
+          "operands": "x21, #0x47ed000"
+        },
+        {
+          "rva": "0x1F26F34",
+          "mnemonic": "mov",
+          "operands": "x19, x2"
+        },
+        {
+          "rva": "0x1F26F38",
+          "mnemonic": "mov",
+          "operands": "x22, x1"
+        },
+        {
+          "rva": "0x1F26F3C",
+          "mnemonic": "ldrb",
+          "operands": "w8, [x21, #0x6dc]"
+        },
+        {
+          "rva": "0x1F26F40",
+          "mnemonic": "mov",
+          "operands": "x20, x0"
+        },
+        {
+          "rva": "0x1F26F44",
+          "mnemonic": "tbnz",
+          "operands": "w8, #0, #0x1f26f68"
+        },
+        {
+          "rva": "0x1F26F48",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44ea000"
+        },
+        {
+          "rva": "0x1F26F4C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x750]"
+        },
+        {
+          "rva": "0x1F26F50",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68"
+        },
+        {
+          "rva": "0x1F26F54",
+          "mnemonic": "adrp",
+          "operands": "x0, #0x44e7000"
+        },
+        {
+          "rva": "0x1F26F58",
+          "mnemonic": "ldr",
+          "operands": "x0, [x0, #0x810]"
+        },
+        {
+          "rva": "0x1F26F5C",
+          "mnemonic": "bl",
+          "operands": "#0x1b23a68"
+        },
+        {
+          "rva": "0x1F26F60",
+          "mnemonic": "mov",
+          "operands": "w8, #1"
+        },
+        {
+          "rva": "0x1F26F64",
+          "mnemonic": "strb",
+          "operands": "w8, [x21, #0x6dc]"
+        },
+        {
+          "rva": "0x1F26F68",
+          "mnemonic": "mov",
+          "operands": "x0, x20"
+        },
+        {
+          "rva": "0x1F26F6C",
+          "mnemonic": "mov",
+          "operands": "x1, xzr"
+        },
+        {
+          "rva": "0x1F26F70",
+          "mnemonic": "bl",
+          "operands": "#0x1f30638"
+        },
+        {
+          "rva": "0x1F26F74",
+          "mnemonic": "mov",
+          "operands": "x1, xzr"
+        },
+        {
+          "rva": "0x1F26F78",
+          "mnemonic": "mov",
+          "operands": "x20, x0"
+        },
+        {
+          "rva": "0x1F26F7C",
+          "mnemonic": "bl",
+          "operands": "#0x3610b64"
+        },
+        {
+          "rva": "0x1F26F80",
+          "mnemonic": "tbnz",
+          "operands": "w0, #0, #0x1f27170"
+        },
+        {
+          "rva": "0x1F26F84",
+          "mnemonic": "cbz",
+          "operands": "x20, #0x1f27190"
+        },
+        {
+          "rva": "0x1F26F88",
+          "mnemonic": "ldr",
+          "operands": "w3, [x20, #0x10]"
+        },
+        {
+          "rva": "0x1F26F8C",
+          "mnemonic": "cmp",
+          "operands": "w3, #0x63"
+        },
+        {
+          "rva": "0x1F26F90",
+          "mnemonic": "b.gt",
+          "operands": "#0x1f27170"
+        },
+        {
+          "rva": "0x1F26F94",
+          "mnemonic": "cmp",
+          "operands": "w3, #1"
+        },
+        {
+          "rva": "0x1F26F98",
+          "mnemonic": "b.lt",
+          "operands": "#0x1f27134"
+        },
+        {
+          "rva": "0x1F26F9C",
+          "mnemonic": "adrp",
+          "operands": "x25, #0x44e7000"
+        },
+        {
+          "rva": "0x1F26FA0",
+          "mnemonic": "adrp",
+          "operands": "x26, #0x44ea000"
+        },
+        {
+          "rva": "0x1F26FA4",
+          "mnemonic": "mov",
+          "operands": "x21, xzr"
+        },
+        {
+          "rva": "0x1F26FA8",
+          "mnemonic": "ldr",
+          "operands": "x25, [x25, #0x810]"
+        },
+        {
+          "rva": "0x1F26FAC",
+          "mnemonic": "ldr",
+          "operands": "x26, [x26, #0x750]"
+        },
+        {
+          "rva": "0x1F26FB0",
+          "mnemonic": "mov",
+          "operands": "x0, x20"
+        },
+        {
+          "rva": "0x1F26FB4",
+          "mnemonic": "mov",
+          "operands": "w1, w21"
+        },
+        {
+          "rva": "0x1F26FB8",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F26FBC",
+          "mnemonic": "bl",
+          "operands": "#0x360b5c4"
+        },
+        {
+          "rva": "0x1F26FC0",
+          "mnemonic": "ldr",
+          "operands": "x8, [x25]"
+        },
+        {
+          "rva": "0x1F26FC4",
+          "mnemonic": "mov",
+          "operands": "w23, w0"
+        },
+        {
+          "rva": "0x1F26FC8",
+          "mnemonic": "ldr",
+          "operands": "w9, [x8, #0xe4]"
+        },
+        {
+          "rva": "0x1F26FCC",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f26fd8"
+        },
+        {
+          "rva": "0x1F26FD0",
+          "mnemonic": "mov",
+          "operands": "x0, x8"
+        },
+        {
+          "rva": "0x1F26FD4",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F26FD8",
+          "mnemonic": "mov",
+          "operands": "w0, w23"
+        },
+        {
+          "rva": "0x1F26FDC",
+          "mnemonic": "mov",
+          "operands": "x1, xzr"
+        },
+        {
+          "rva": "0x1F26FE0",
+          "mnemonic": "bl",
+          "operands": "#0x36faea0"
+        },
+        {
+          "rva": "0x1F26FE4",
+          "mnemonic": "mov",
+          "operands": "w22, w22"
+        },
+        {
+          "rva": "0x1F26FE8",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F26FEC",
+          "mnemonic": "mov",
+          "operands": "x1, x22"
+        },
+        {
+          "rva": "0x1F26FF0",
+          "mnemonic": "bl",
+          "operands": "#0x1f33b70"
+        },
+        {
+          "rva": "0x1F26FF4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x26]"
+        },
+        {
+          "rva": "0x1F26FF8",
+          "mnemonic": "mov",
+          "operands": "w23, w0"
+        },
+        {
+          "rva": "0x1F26FFC",
+          "mnemonic": "ldr",
+          "operands": "w9, [x8, #0xe4]"
+        },
+        {
+          "rva": "0x1F27000",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f27010"
+        },
+        {
+          "rva": "0x1F27004",
+          "mnemonic": "mov",
+          "operands": "x0, x8"
+        },
+        {
+          "rva": "0x1F27008",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F2700C",
+          "mnemonic": "ldr",
+          "operands": "x8, [x26]"
+        },
+        {
+          "rva": "0x1F27010",
+          "mnemonic": "ldr",
+          "operands": "x8, [x8, #0xb8]"
+        },
+        {
+          "rva": "0x1F27014",
+          "mnemonic": "mov",
+          "operands": "w24, w23"
+        },
+        {
+          "rva": "0x1F27018",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F2701C",
+          "mnemonic": "mov",
+          "operands": "x0, x24"
+        },
+        {
+          "rva": "0x1F27020",
+          "mnemonic": "ldr",
+          "operands": "w1, [x8, #0xb8]"
+        },
+        {
+          "rva": "0x1F27024",
+          "mnemonic": "bl",
+          "operands": "#0x1f33b78"
+        },
+        {
+          "rva": "0x1F27028",
+          "mnemonic": "mov",
+          "operands": "w8, w0"
+        },
+        {
+          "rva": "0x1F2702C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F27030",
+          "mnemonic": "ldr",
+          "operands": "w9, [x0, #0xe4]"
+        },
+        {
+          "rva": "0x1F27034",
+          "mnemonic": "tbz",
+          "operands": "w8, #0, #0x1f2705c"
+        },
+        {
+          "rva": "0x1F27038",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f27044"
+        },
+        {
+          "rva": "0x1F2703C",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F27040",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F27044",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]"
+        },
+        {
+          "rva": "0x1F27048",
+          "mnemonic": "mov",
+          "operands": "x0, x24"
+        },
+        {
+          "rva": "0x1F2704C",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F27050",
+          "mnemonic": "ldr",
+          "operands": "w1, [x8, #0xb8]"
+        },
+        {
+          "rva": "0x1F27054",
+          "mnemonic": "bl",
+          "operands": "#0x1f33b84"
+        },
+        {
+          "rva": "0x1F27058",
+          "mnemonic": "b",
+          "operands": "#0x1f270a8"
+        },
+        {
+          "rva": "0x1F2705C",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f27068"
+        },
+        {
+          "rva": "0x1F27060",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F27064",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F27068",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]"
+        },
+        {
+          "rva": "0x1F2706C",
+          "mnemonic": "mov",
+          "operands": "x0, x24"
+        },
+        {
+          "rva": "0x1F27070",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F27074",
+          "mnemonic": "ldr",
+          "operands": "w1, [x8, #0xb4]"
+        },
+        {
+          "rva": "0x1F27078",
+          "mnemonic": "bl",
+          "operands": "#0x1f33b8c"
+        },
+        {
+          "rva": "0x1F2707C",
+          "mnemonic": "tbz",
+          "operands": "w0, #0, #0x1f270ac"
+        },
+        {
+          "rva": "0x1F27080",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F27084",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]"
+        },
+        {
+          "rva": "0x1F27088",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f27094"
+        },
+        {
+          "rva": "0x1F2708C",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F27090",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F27094",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]"
+        },
+        {
+          "rva": "0x1F27098",
+          "mnemonic": "mov",
+          "operands": "x0, x24"
+        },
+        {
+          "rva": "0x1F2709C",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F270A0",
+          "mnemonic": "ldr",
+          "operands": "w1, [x8, #0xb8]"
+        },
+        {
+          "rva": "0x1F270A4",
+          "mnemonic": "bl",
+          "operands": "#0x1f30620"
+        },
+        {
+          "rva": "0x1F270A8",
+          "mnemonic": "mov",
+          "operands": "w23, w0"
+        },
+        {
+          "rva": "0x1F270AC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F270B0",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]"
+        },
+        {
+          "rva": "0x1F270B4",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f270c0"
+        },
+        {
+          "rva": "0x1F270B8",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F270BC",
+          "mnemonic": "ldr",
+          "operands": "x0, [x26]"
+        },
+        {
+          "rva": "0x1F270C0",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]"
+        },
+        {
+          "rva": "0x1F270C4",
+          "mnemonic": "mov",
+          "operands": "w0, w23"
+        },
+        {
+          "rva": "0x1F270C8",
+          "mnemonic": "mov",
+          "operands": "x1, xzr"
+        },
+        {
+          "rva": "0x1F270CC",
+          "mnemonic": "ldr",
+          "operands": "x24, [x8, #0xc0]"
+        },
+        {
+          "rva": "0x1F270D0",
+          "mnemonic": "bl",
+          "operands": "#0x1f2fcf0"
+        },
+        {
+          "rva": "0x1F270D4",
+          "mnemonic": "ldr",
+          "operands": "x8, [x25]"
+        },
+        {
+          "rva": "0x1F270D8",
+          "mnemonic": "mov",
+          "operands": "w23, w0"
+        },
+        {
+          "rva": "0x1F270DC",
+          "mnemonic": "ldr",
+          "operands": "w9, [x8, #0xe4]"
+        },
+        {
+          "rva": "0x1F270E0",
+          "mnemonic": "cbnz",
+          "operands": "w9, #0x1f270ec"
+        },
+        {
+          "rva": "0x1F270E4",
+          "mnemonic": "mov",
+          "operands": "x0, x8"
+        },
+        {
+          "rva": "0x1F270E8",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F270EC",
+          "mnemonic": "mov",
+          "operands": "w0, w23"
+        },
+        {
+          "rva": "0x1F270F0",
+          "mnemonic": "mov",
+          "operands": "x1, xzr"
+        },
+        {
+          "rva": "0x1F270F4",
+          "mnemonic": "bl",
+          "operands": "#0x36fdeac"
+        },
+        {
+          "rva": "0x1F270F8",
+          "mnemonic": "cbz",
+          "operands": "x24, #0x1f27190"
+        },
+        {
+          "rva": "0x1F270FC",
+          "mnemonic": "ldr",
+          "operands": "w8, [x24, #0x18]"
+        },
+        {
+          "rva": "0x1F27100",
+          "mnemonic": "cmp",
+          "operands": "x21, x8"
+        },
+        {
+          "rva": "0x1F27104",
+          "mnemonic": "b.hs",
+          "operands": "#0x1f27194"
+        },
+        {
+          "rva": "0x1F27108",
+          "mnemonic": "add",
+          "operands": "x8, x24, x21, lsl #1"
+        },
+        {
+          "rva": "0x1F2710C",
+          "mnemonic": "and",
+          "operands": "x1, x19, #0xffffffff"
+        },
+        {
+          "rva": "0x1F27110",
+          "mnemonic": "mov",
+          "operands": "x2, xzr"
+        },
+        {
+          "rva": "0x1F27114",
+          "mnemonic": "strh",
+          "operands": "w0, [x8, #0x20]"
+        },
+        {
+          "rva": "0x1F27118",
+          "mnemonic": "mov",
+          "operands": "x0, x22"
+        },
+        {
+          "rva": "0x1F2711C",
+          "mnemonic": "bl",
+          "operands": "#0x1f30620"
+        },
+        {
+          "rva": "0x1F27120",
+          "mnemonic": "ldrsw",
+          "operands": "x3, [x20, #0x10]"
+        },
+        {
+          "rva": "0x1F27124",
+          "mnemonic": "add",
+          "operands": "x21, x21, #1"
+        },
+        {
+          "rva": "0x1F27128",
+          "mnemonic": "mov",
+          "operands": "w22, w0"
+        },
+        {
+          "rva": "0x1F2712C",
+          "mnemonic": "cmp",
+          "operands": "x21, x3"
+        },
+        {
+          "rva": "0x1F27130",
+          "mnemonic": "b.lt",
+          "operands": "#0x1f26fb0"
+        },
+        {
+          "rva": "0x1F27134",
+          "mnemonic": "adrp",
+          "operands": "x19, #0x44ea000"
+        },
+        {
+          "rva": "0x1F27138",
+          "mnemonic": "ldr",
+          "operands": "x19, [x19, #0x750]"
+        },
+        {
+          "rva": "0x1F2713C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19]"
+        },
+        {
+          "rva": "0x1F27140",
+          "mnemonic": "ldr",
+          "operands": "w8, [x0, #0xe4]"
+        },
+        {
+          "rva": "0x1F27144",
+          "mnemonic": "cbnz",
+          "operands": "w8, #0x1f27154"
+        },
+        {
+          "rva": "0x1F27148",
+          "mnemonic": "bl",
+          "operands": "#0x1b23be4"
+        },
+        {
+          "rva": "0x1F2714C",
+          "mnemonic": "ldr",
+          "operands": "x0, [x19]"
+        },
+        {
+          "rva": "0x1F27150",
+          "mnemonic": "ldr",
+          "operands": "w3, [x20, #0x10]"
+        },
+        {
+          "rva": "0x1F27154",
+          "mnemonic": "ldr",
+          "operands": "x8, [x0, #0xb8]"
+        },
+        {
+          "rva": "0x1F27158",
+          "mnemonic": "mov",
+          "operands": "x0, xzr"
+        },
+        {
+          "rva": "0x1F2715C",
+          "mnemonic": "mov",
+          "operands": "w2, wzr"
+        },
+        {
+          "rva": "0x1F27160",
+          "mnemonic": "mov",
+          "operands": "x4, xzr"
+        },
+        {
+          "rva": "0x1F27164",
+          "mnemonic": "ldr",
+          "operands": "x1, [x8, #0xc0]"
+        },
+        {
+          "rva": "0x1F27168",
+          "mnemonic": "bl",
+          "operands": "#0x36176c8"
+        },
+        {
+          "rva": "0x1F2716C",
+          "mnemonic": "b",
+          "operands": "#0x1f27174"
+        },
+        {
+          "rva": "0x1F27170",
+          "mnemonic": "mov",
+          "operands": "x0, x20"
+        },
+        {
+          "rva": "0x1F27174",
+          "mnemonic": "ldp",
+          "operands": "x20, x19, [sp, #0x40]"
+        },
+        {
+          "rva": "0x1F27178",
+          "mnemonic": "mov",
+          "operands": "x1, xzr"
+        },
+        {
+          "rva": "0x1F2717C",
+          "mnemonic": "ldp",
+          "operands": "x22, x21, [sp, #0x30]"
+        },
+        {
+          "rva": "0x1F27180",
+          "mnemonic": "ldp",
+          "operands": "x24, x23, [sp, #0x20]"
+        },
+        {
+          "rva": "0x1F27184",
+          "mnemonic": "ldp",
+          "operands": "x26, x25, [sp, #0x10]"
+        },
+        {
+          "rva": "0x1F27188",
+          "mnemonic": "ldr",
+          "operands": "x30, [sp], #0x50"
+        },
+        {
+          "rva": "0x1F2718C",
+          "mnemonic": "b",
+          "operands": "#0x1f2ce50"
+        },
+        {
+          "rva": "0x1F27190",
+          "mnemonic": "bl",
+          "operands": "#0x1b23d18"
+        },
+        {
+          "rva": "0x1F27194",
+          "mnemonic": "bl",
+          "operands": "#0x1b23d20"
+        }
+      ],
+      "branch_and_call_targets": [
+        {
+          "from_rva": "0x1F26F44",
+          "opcode": "tbnz",
+          "target_rva": "0x1F26F68",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 76
+        },
+        {
+          "from_rva": "0x1F26F50",
+          "opcode": "bl",
+          "target_rva": "0x1B23A68",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F26F5C",
+          "opcode": "bl",
+          "target_rva": "0x1B23A68",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F26F70",
+          "opcode": "bl",
+          "target_rva": "0x1F30638",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ],
+          "nearest_method_rva": "0x1F30638",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F26F7C",
+          "opcode": "bl",
+          "target_rva": "0x3610B64",
+          "exact_method_candidates": [
+            "System.String$$IsNullOrEmpty"
+          ],
+          "nearest_method_rva": "0x3610B64",
+          "nearest_method_names": [
+            "System.String$$IsNullOrEmpty"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F26F80",
+          "opcode": "tbnz",
+          "target_rva": "0x1F27170",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 596
+        },
+        {
+          "from_rva": "0x1F26F84",
+          "opcode": "cbz",
+          "target_rva": "0x1F27190",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 628
+        },
+        {
+          "from_rva": "0x1F26FBC",
+          "opcode": "bl",
+          "target_rva": "0x360B5C4",
+          "exact_method_candidates": [
+            "System.String$$get_Chars"
+          ],
+          "nearest_method_rva": "0x360B5C4",
+          "nearest_method_names": [
+            "System.String$$get_Chars"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F26FCC",
+          "opcode": "cbnz",
+          "target_rva": "0x1F26FD8",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 188
+        },
+        {
+          "from_rva": "0x1F26FD4",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F26FE0",
+          "opcode": "bl",
+          "target_rva": "0x36FAEA0",
+          "exact_method_candidates": [
+            "System.Convert$$ToInt32"
+          ],
+          "nearest_method_rva": "0x36FAEA0",
+          "nearest_method_names": [
+            "System.Convert$$ToInt32"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F26FF0",
+          "opcode": "bl",
+          "target_rva": "0x1F33B70",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_Addition"
+          ],
+          "nearest_method_rva": "0x1F33B70",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_Addition"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F27000",
+          "opcode": "cbnz",
+          "target_rva": "0x1F27010",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 244
+        },
+        {
+          "from_rva": "0x1F27008",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F27024",
+          "opcode": "bl",
+          "target_rva": "0x1F33B78",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_GreaterThan"
+          ],
+          "nearest_method_rva": "0x1F33B78",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_GreaterThan"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F27034",
+          "opcode": "tbz",
+          "target_rva": "0x1F2705C",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 320
+        },
+        {
+          "from_rva": "0x1F27038",
+          "opcode": "cbnz",
+          "target_rva": "0x1F27044",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 296
+        },
+        {
+          "from_rva": "0x1F2703C",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F27054",
+          "opcode": "bl",
+          "target_rva": "0x1F33B84",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_Subtraction"
+          ],
+          "nearest_method_rva": "0x1F33B84",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_Subtraction"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F27058",
+          "opcode": "b",
+          "target_rva": "0x1F270A8",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 396
+        },
+        {
+          "from_rva": "0x1F2705C",
+          "opcode": "cbnz",
+          "target_rva": "0x1F27068",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 332
+        },
+        {
+          "from_rva": "0x1F27060",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F27078",
+          "opcode": "bl",
+          "target_rva": "0x1F33B8C",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_LessThan"
+          ],
+          "nearest_method_rva": "0x1F33B8C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_LessThan"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F2707C",
+          "opcode": "tbz",
+          "target_rva": "0x1F270AC",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 400
+        },
+        {
+          "from_rva": "0x1F27088",
+          "opcode": "cbnz",
+          "target_rva": "0x1F27094",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 376
+        },
+        {
+          "from_rva": "0x1F2708C",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F270A4",
+          "opcode": "bl",
+          "target_rva": "0x1F30620",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_Addition"
+          ],
+          "nearest_method_rva": "0x1F30620",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_Addition"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F270B4",
+          "opcode": "cbnz",
+          "target_rva": "0x1F270C0",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 420
+        },
+        {
+          "from_rva": "0x1F270B8",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F270D0",
+          "opcode": "bl",
+          "target_rva": "0x1F2FCF0",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_Implicit"
+          ],
+          "nearest_method_rva": "0x1F2FCF0",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_Implicit"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F270E0",
+          "opcode": "cbnz",
+          "target_rva": "0x1F270EC",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 464
+        },
+        {
+          "from_rva": "0x1F270E8",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F270F4",
+          "opcode": "bl",
+          "target_rva": "0x36FDEAC",
+          "exact_method_candidates": [
+            "System.Convert$$ToChar"
+          ],
+          "nearest_method_rva": "0x36FDEAC",
+          "nearest_method_names": [
+            "System.Convert$$ToChar"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F270F8",
+          "opcode": "cbz",
+          "target_rva": "0x1F27190",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 628
+        },
+        {
+          "from_rva": "0x1F2711C",
+          "opcode": "bl",
+          "target_rva": "0x1F30620",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Soporifik$$op_Addition"
+          ],
+          "nearest_method_rva": "0x1F30620",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Soporifik$$op_Addition"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F27144",
+          "opcode": "cbnz",
+          "target_rva": "0x1F27154",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 568
+        },
+        {
+          "from_rva": "0x1F27148",
+          "opcode": "bl",
+          "target_rva": "0x1B23BE4",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F27168",
+          "opcode": "bl",
+          "target_rva": "0x36176C8",
+          "exact_method_candidates": [
+            "System.String$$CreateString"
+          ],
+          "nearest_method_rva": "0x36176C8",
+          "nearest_method_names": [
+            "System.String$$CreateString"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F2716C",
+          "opcode": "b",
+          "target_rva": "0x1F27174",
+          "exact_method_candidates": [],
+          "nearest_method_rva": "0x1F26F1C",
+          "nearest_method_names": [
+            "ILib.Unity.Net.ApiRequestBase$$Charmillon"
+          ],
+          "distance_from_nearest": 600
+        },
+        {
+          "from_rva": "0x1F2718C",
+          "opcode": "b",
+          "target_rva": "0x1F2CE50",
+          "exact_method_candidates": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ],
+          "nearest_method_rva": "0x1F2CE50",
+          "nearest_method_names": [
+            "ILib.Unity.Net.Draco$$op_Implicit"
+          ],
+          "distance_from_nearest": 0
+        },
+        {
+          "from_rva": "0x1F27190",
+          "opcode": "bl",
+          "target_rva": "0x1B23D18",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        },
+        {
+          "from_rva": "0x1F27194",
+          "opcode": "bl",
+          "target_rva": "0x1B23D20",
+          "exact_method_candidates": [],
+          "nearest_method_rva": null,
+          "nearest_method_names": [],
+          "distance_from_nearest": null
+        }
+      ]
+    },
+    {
+      "method": "ILib.Unity.Net.Soporifik.op_Implicit",
+      "rva": "0x1F2FCF4",
+      "elf_file_offset": "0x1F2BCF4",
+      "script_method_labels": [
+        "ILib.Unity.Net.Soporifik$$op_Implicit"
+      ],
+      "recovered_script_signatures": [
+        {
+          "Name": "ILib.Unity.Net.Soporifik$$op_Implicit",
+          "Signature": "ILib_Unity_Net_Soporifik_o ILib_Unity_Net_Soporifik__op_Implicit (int32_t val, const MethodInfo* method);",
+          "TypeSignature": "iii"
+        }
+      ],
+      "bytes": 4,
+      "decoded_instructions": 1,
+      "last_decoded_address": "0x1F2FCF4",
+      "instructions": [
+        {
+          "rva": "0x1F2FCF4",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ],
+      "branch_and_call_targets": []
     }
   ]
 }
