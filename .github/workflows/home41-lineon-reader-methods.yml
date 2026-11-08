@@ -1,0 +1,89 @@
+name: HOME 4.1.0 Lineon reader-method context audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-lineon-reader-methods.yml'
+      - 'Android/Smali/tools/trace_lineon_reader_methods.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-lineon-reader-methods
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/home41-lineon-reader-methods.yml
+            Android/Smali/tools/trace_lineon_reader_methods.py
+            Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so
+            Android/Smali/4.1.0/LINEON_STATIC_XREF_AUDIT.json
+            Android/Smali/4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json
+            Unpack/Android/4.1.0/il2cpp/script.json
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate method-audit source
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'capstone==5.0.6' 'pyelftools==0.32'
+          python -m py_compile Android/Smali/tools/trace_lineon_reader_methods.py
+      - name: Inspect Parecool and Ningale actual AArch64 method body
+        shell: bash
+        run: |
+          set -euo pipefail
+          python Android/Smali/tools/trace_lineon_reader_methods.py \
+            --binary Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --confirmed Android/Smali/4.1.0/LINEON_STATIC_XREF_AUDIT.json \
+            --broad Android/Smali/4.1.0/LINEON_BROAD_OFFSET_CANDIDATES.json \
+            --out Android/Smali/4.1.0/LINEON_READER_METHOD_TRACE.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path("Android/Smali/4.1.0/LINEON_READER_METHOD_TRACE.json")
+          r=json.loads(p.read_text())
+          assert r["unique_verified_read_instruction_count"]==1
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as f:
+            f.write("## One static Lineon reader and one offset-only candidate\n\n")
+            for method in r["methods"]:
+              f.write(f"- {method['method']}: {method['method_script_records']}\n")
+              f.write(f"  - Read instruction: {method['read_instruction']}\n")
+              f.write(f"  - Static Lineon provenance: {method['confirmed_static_lineon']}\n")
+            f.write("\nStatic disassembly cannot establish the official server's rejection cause.\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-lineon-parecool-ningale-context
+          path: Android/Smali/4.1.0/LINEON_READER_METHOD_TRACE.json
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Commit method context report to private branch
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/LINEON_READER_METHOD_TRACE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'analysis(home41): verified Parecool Lineon reader and Ningale candidate context [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
