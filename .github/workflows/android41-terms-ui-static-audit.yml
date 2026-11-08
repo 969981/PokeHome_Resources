@@ -86,6 +86,31 @@ jobs:
           assert classes["FirstBootBodyController"]["located"]
           assert classes["FirstBootViewCheckBoxText"]["located"]
           PY
+      - name: Extract neighboring FirstBoot mode/phase enum declarations
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re,json
+          from pathlib import Path
+          s=Path("Unpack/Android/4.1.0/il2cpp/dump.cs").read_text(encoding="utf-8-sig")
+          marker="class FirstBootBodyController : MonoBehaviour"
+          idx=s.find(marker)
+          if idx<0:
+              raise SystemExit("FirstBootBodyController missing")
+          look=s[idx:idx+45000]
+          results=[]
+          for m in re.finditer(r"(?m)^.*\b(?:enum|class|struct)\s+(?:Phase|Mode|FadeStep)\b",look):
+              results.append({"declaration":look[m.start():min(m.start()+2500,len(look))]})
+          for i in range(1978,2000):
+              found=re.search(r"(?m)^.*TypeDefIndex: "+str(i)+r"\b",look)
+              if found:
+                  results.append({"typedef_index":i,
+                                  "declaration":look[max(0,found.start()-200):
+                                                       min(len(look),found.start()+1700)]})
+          Path("ci-terms-static/firstboot_enum_neighborhood.json").write_text(
+              json.dumps(results,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("Adjacent FirstBoot enum/declaration candidates:",len(results))
+          PY
       - name: Upload private source method candidates (not runtime proof)
         if: always()
         uses: actions/upload-artifact@v4
