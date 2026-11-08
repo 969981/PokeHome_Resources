@@ -77,6 +77,14 @@ Gest 是原版符号的原始拼写。TermsOfServiceConfirmDialog 可能由标�
 
 截图取证已改为 **只有原版 Phase 3 + 原生 Terms 控制器事件 + 未注册**才允许保存遮蔽系统栏的图像。普通 UIAutomator 无法给出具体按钮，不猜坐标、不调用原生条款写入函数。原版状态扫描不读取 token 或 UTID。
 
+## 原版协议页用户授权同意 UI 已成功验证
+
+- [Actions #42462814367](https://github.com/969981/Home_Android/actions/runs/42462814367)：Frida 原版阶段 3 与协议入口共证，安全取得「确认用户协议及隐私权政策」真实截图。
+- [Actions #42463584108](https://github.com/969981/Home_Android/actions/runs/42463584108)：第一个 checkbox 真实勾选 A/B 成功，第二个未改动。
+- [Actions #42464173987](https://github.com/969981/Home_Android/actions/runs/42464173987)：首轮 Frida GitHub Release 504 下载失败，重跑后在原版 HOME 中两个 checkbox 均真实选中；单次点击原版协议「下一步」，新页面出现，日志 status=terms_next_clicked_new_page_seen，后续页面未保存或点击。
+- 协议点击只是用户授权的客户端 UI 行为；服务器是否持久化条款同意仍未独立确认，也没有证据证明游客账号创建、任天堂账号解绑或 basic.utid 到达。
+- 独立的正式账号流程仍应在用户可保存会话的设备上完成；临时 AVD 测试不作为正式建号成果。
+
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
