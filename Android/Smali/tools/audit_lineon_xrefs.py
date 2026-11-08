@@ -21,7 +21,7 @@ from pathlib import Path
 TYPEINFO_POINTER_RVA = 0x44EA750
 FIELD_OFFSET = 0x78
 STATIC_FIELDS_OFFSET = 0xB8
-MAX_INSNS = 120
+MAX_INSNS = 800
 MAX_ANCHORS = 12000
 MAX_RECORDS = 900
 RXMEM = re.compile(
@@ -305,6 +305,7 @@ def main():
             ) for kind in ("field_read","field_write","field_address")
         },
         "known_control_write_detected":True,
+        "scan_window_instructions":MAX_INSNS,
         "scope_limitations":[
             "This is a conservative straight-line register-chain scan with no full control-flow analysis",
             "Indirect aliases, cached class-info pointers, stack spills, inlined readers and unrecognized ARM64 opcodes may be missed",
