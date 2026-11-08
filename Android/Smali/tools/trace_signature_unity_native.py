@@ -62,8 +62,25 @@ def main():
     a=p.parse_args()
     from capstone import Cs, CS_ARCH_ARM64, CS_MODE_ARM
 
-    method_index=method_map(json.loads(a.script.read_text(encoding="utf-8")))
+    script_data=json.loads(a.script.read_text(encoding="utf-8"))
+    method_index=method_map(script_data)
     addresses=sorted(method_index)
+    exact_signature_records={}
+    wanted_addrs={x[1] for x in TARGETS}
+    if a.include_downstream:
+        wanted_addrs.update((0x1F2CE50,0x1F26E78))
+    stack=[script_data]
+    while stack:
+        node=stack.pop()
+        if isinstance(node,dict):
+            if node.get("Address") in wanted_addrs and isinstance(node.get("Name"),str):
+                exact_signature_records.setdefault(node["Address"],[]).append({
+                    k:node[k] for k in ("Name","Signature","TypeSignature")
+                    if k in node
+                })
+            stack.extend(v for v in node.values() if isinstance(v,(dict,list)))
+        elif isinstance(node,list):
+            stack.extend(v for v in node if isinstance(v,(dict,list)))
     binary=a.binary.read_bytes()
     dump_text=a.dump.read_text(encoding="utf-8",errors="replace")
     reader=Cs(CS_ARCH_ARM64,CS_MODE_ARM)
@@ -112,6 +129,7 @@ def main():
         targets.append({
             "method":name,"rva":f"0x{rva:X}","elf_file_offset":f"0x{offset:X}",
             "script_method_labels":method_index.get(rva,[])[:10],
+            "recovered_script_signatures":exact_signature_records.get(rva,[])[:8],
             "bytes":size,"decoded_instructions":len(ins),
             "last_decoded_address":f"0x{ins[-1].address:X}",
             "instructions":instructions,"branch_and_call_targets":calls,
@@ -125,7 +143,7 @@ def main():
         "downstream_dump_matches":[
             {"term": term,"excerpt":dump_text[max(0,m.start()-800):m.end()+500][:1300]}
             for term in ("Chenipotte","op_Implicit")
-            for m in list(re.finditer(r"\\b"+re.escape(term)+r"\\b",dump_text))[:35]
+            for m in list(re.finditer(r"\b"+re.escape(term)+r"\b",dump_text))[:35]
         ] if a.include_downstream else [],
         "script_methods_count":sum(len(x) for x in method_index.values()),
         "targets":targets,
