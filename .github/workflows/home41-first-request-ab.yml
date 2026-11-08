@@ -1,0 +1,225 @@
+name: HOME 4.1.0 original vs resigned first HTTP request metadata A/B
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-first-request-ab.yml'
+      - 'Android/Smali/tools/home41_first_request_ab.py'
+      - 'Android/Smali/tools/home41_first_request_java.js'
+      - 'Android/Smali/tools/home41_first_request_native.js'
+      - 'Android/Smali/tools/resolve_first_request_rvas.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-first-request-ab
+  cancel-in-progress: false
+
+jobs:
+  first-request-ab:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 85
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            Android/Smali/tools
+            tools/home41_frida_server_setup.py
+            Unpack/Android/4.1.0/il2cpp/script.json
+            .github/workflows/home41-first-request-ab.yml
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile Frida Java bridge and verify security allowlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p first-request-evidence
+          python -m pip install -q frida==17.26.1 pillow
+          python -m compileall -q Android/Smali/tools/home41_first_request_ab.py Android/Smali/tools/resolve_first_request_rvas.py
+          node --check Android/Smali/tools/home41_first_request_java.js
+          node --check Android/Smali/tools/home41_first_request_native.js
+          npm install --no-save --no-package-lock --no-audit --no-fund frida-java-bridge frida-compile
+          ./node_modules/.bin/frida-compile Android/Smali/tools/home41_first_request_java.js \
+            -o "$RUNNER_TEMP/first_request_java_bundle.js" -S -c
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,"Android/Smali/tools")
+          from home41_first_request_ab import clean
+          event=clean({
+            "event":"java_http_response_status", "http_status":400,
+            "request_category":"other", "raw_url":"https://sensitive.example?q=token",
+            "cert":"SECRET", "body":"secret","headers":{"Authorization":"secret"},
+            "cookies":"secret","utid":12345678
+          },1234)
+          assert event=={"event":"java_http_response_status",
+                         "elapsed_ms":1234, "request_category":"other",
+                         "http_status":400},event
+          assert clean({"event":"unrecognized","body":"SECRET"},2) is None
+          assert clean({"event":"unity_http_response_status","http_status":9007},3)=={
+            "event":"unity_http_response_status","elapsed_ms":3
+          }
+          assert clean({"event":"api_response_callback_enter","result_kind":"http_status_range",
+                        "result_code_if_http_range":400},4)=={
+            "event":"api_response_callback_enter","elapsed_ms":4,
+            "result_kind":"http_status_range","result_code_if_http_range":400
+          }
+          print("No credentials/URL/body serialization; strict response-status distinction passed")
+          PY
+          echo "JAVA_BUNDLE=$RUNNER_TEMP/first_request_java_bundle.js" >> "$GITHUB_ENV"
+      - name: Resolve Unity networking response-status RVAs from exact v4.1.0 IL2CPP map
+        shell: bash
+        run: |
+          set -euo pipefail
+          python Android/Smali/tools/resolve_first_request_rvas.py \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --template Android/Smali/tools/home41_first_request_native.js \
+            --out "$RUNNER_TEMP/first_request_native_runtime.js" \
+            --report first-request-evidence/native_network_method_map.json
+          node --check "$RUNNER_TEMP/first_request_native_runtime.js"
+          echo "NATIVE_AGENT=$RUNNER_TEMP/first_request_native_runtime.js" >> "$GITHUB_ENV"
+      - name: Prepare verified original and resign-only comparison (not Smali rebuild)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth=1 --filter=blob:none --sparse \
+            https://github.com/969981/Home_Android.git "$RUNNER_TEMP/ref-home-apk"
+          git -C "$RUNNER_TEMP/ref-home-apk" sparse-checkout set ROMS/4.1.0
+          mapfile -t files < <(find "$RUNNER_TEMP/ref-home-apk/ROMS/4.1.0" -type f -name '*.apk')
+          test "${#files[@]}" -eq 1
+          echo "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1  ${files[0]}" | sha256sum -c -
+          echo "ORIGINAL_APK=${files[0]}" >> "$GITHUB_ENV"
+          build_dir=$(find "${ANDROID_HOME:-/usr/local/lib/android/sdk}/build-tools" \
+            -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)
+          test -x "$build_dir/apksigner"
+          keytool -genkeypair -noprompt -alias ci-firstrequest-only \
+            -keyalg RSA -keysize 2048 -validity 2 \
+            -keystore "$RUNNER_TEMP/firstrequest-ci.jks" -storepass changeit \
+            -keypass changeit -dname "CN=Disposable HOME API timing test"
+          "$build_dir/apksigner" sign --ks "$RUNNER_TEMP/firstrequest-ci.jks" \
+            --ks-key-alias ci-firstrequest-only --ks-pass pass:changeit \
+            --key-pass pass:changeit --out "$RUNNER_TEMP/resign-only.apk" "${files[0]}"
+          "$build_dir/apksigner" verify -v "$RUNNER_TEMP/resign-only.apk"
+          python Android/Smali/tools/audit_direct_resign.py \
+            --original "${files[0]}" --resigned "$RUNNER_TEMP/resign-only.apk" \
+            --output first-request-evidence/resign_payload_audit.json
+          echo "RESIGNED_APK=$RUNNER_TEMP/resign-only.apk" >> "$GITHUB_ENV"
+      - name: Enable KVM for one disposable Android 15 test emulator
+        shell: bash
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' \
+            | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          test -e /dev/kvm
+      - name: Compare identical first-launch observation under original vs testing cert
+        id: emulator
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          ram-size: 4096M
+          heap-size: 512M
+          disable-animations: true
+          emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: |
+            python tools/home41_frida_server_setup.py --output first-request-evidence/frida_server_setup.json
+            python - <<'PY'
+            import json
+            r=json.load(open('first-request-evidence/frida_server_setup.json'))
+            assert r.get('status')=='ready', r
+            PY
+            python Android/Smali/tools/home41_first_request_ab.py \
+              --original "$ORIGINAL_APK" --resigned "$RESIGNED_APK" \
+              --java-bundle "$JAVA_BUNDLE" --native-agent "$NATIVE_AGENT" \
+              --out first-request-evidence
+      - name: Summarize verified status codes and stage time, without asserting 9007 cause
+        if: always()
+        shell: bash
+        env:
+          EMULATOR_RESULT: ${{ steps.emulator.outcome }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path('first-request-evidence/comparison.json')
+          summary=json.loads(p.read_text()) if p.exists() else {"status":"no_runtime_data"}
+          result={
+            "workflow":f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+            "emulator_outcome":os.environ.get('EMULATOR_RESULT'),
+            "status":summary.get('status'),
+            "test_version":"4.1.0",
+            "original":summary.get('original',{}),
+            "resigned":summary.get('resigned',{}),
+            "certificates_or_api_requests_modified":False,
+            "account_actions":False,
+            "http_status_is_real_only_if_native_or_java_http_status_hook_hit":True,
+            "unknown_9007_cause_not_assumed":True,
+          }
+          target=Path('Android/Smali/4.1.0/FIRST_REQUEST_READONLY_AB.json')
+          target.parent.mkdir(parents=True,exist_ok=True)
+          target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as f:
+            f.write('## HOME 4.1.0 first HTTP request read-only A/B\n\n')
+            f.write(f"- Emulator: {result['emulator_outcome']}\n")
+            for variant in ('original','resigned'):
+              x=result[variant]
+              f.write(f"- {variant}: Language UI={x.get('home_language_verified')}, ARM64 probe={x.get('native_probe_ready')}, real HTTP statuses={x.get('observed_http_response_codes')}, native callback code candidates={x.get('observed_api_callback_result_in_http_range')}\n")
+            f.write('\nNo account actions; the 9007 cause is not proven by a screen or HTTP 400 alone.\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-first-request-readonly-ab-evidence
+          path: first-request-evidence/
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Commit sanitized timeline to private branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/FIRST_REQUEST_READONLY_AB.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test(home41): record sanitized original-versus-resign first request timeline [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
+      - name: Check comparison has real original UI, but never reinterpret missing HTTP as zero
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('first-request-evidence/comparison.json')
+          if not p.is_file():
+            raise SystemExit('No runtime comparison produced; no online success can be claimed')
+          r=json.loads(p.read_text())
+          if not r.get('original',{}).get('home_language_verified'):
+            raise SystemExit('Original HOME UI not verified in this run; reject A/B conclusions')
+          if not r.get('original',{}).get('frida_spawn_attached') or not r.get('resigned',{}).get('frida_spawn_attached'):
+            raise SystemExit('Both APKs must be instrumented')
+          print('Read-only A/B ran: original language chooser verified; no online repair claimed')
+          PY
