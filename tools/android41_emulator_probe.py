@@ -399,9 +399,17 @@ def main():
             from home41_guest_onboarding import (
                 load_guest_profile, run_known_guest_setup)
             profile=load_guest_profile(args.guest_profile)
+            year_arm = (
+                frida_monitor.arm_local_year1999
+                if frida_monitor is not None
+                and report.get("frida_spawn_attach_succeeded")
+                and profile.get("probe_local_year_1999",False)
+                else None
+            )
             onboarding=run_known_guest_setup(
                 adb,args.output,profile,max_checks=70,interval_seconds=3,
-                on_first_verified_page=arm64_ui_hook)
+                on_first_verified_page=arm64_ui_hook,
+                arm_local_year_1999=year_arm)
             report["onboarding"]=onboarding
             completed=set(onboarding["completed"])
             report["home_language_screen_recognized"]="choose_language" in completed
@@ -436,6 +444,7 @@ def main():
             report["year_anchor_diagnostics"]=onboarding.get("year_anchor_diagnostics")
             report["year_edge_drag_diagnostics"]=onboarding.get("year_edge_drag_diagnostics")
             report["month_day_candidate_diagnostics"]=onboarding.get("month_day_candidate_diagnostics")
+            report["local_year_1999_diagnostics"]=onboarding.get("local_year_1999_diagnostics")
             report["birth_year_dropdown_tap_succeeded"]=(
                 "inspect_birth_year_picker" in completed)
             # UI moved past country prompt, but remote account profile does not
