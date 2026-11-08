@@ -51,6 +51,30 @@ def extract_class(dump_text):
     }
 
 
+def extract_field_context(dump_text, type_name):
+    lines=dump_text.splitlines()
+    candidates=[
+        i for i,line in enumerate(lines)
+        if re.search(r"\\b(?:class|struct)\\s+"+re.escape(type_name)+r"\\b",line)
+        and not line.strip().startswith("//")
+    ]
+    if not candidates:
+        return {"status":"type_not_found"}
+    for i in candidates:
+        look="\\n".join(lines[max(0,i-3):i+3])
+        if type_name=="ApiRequestBase" and "ILib.Unity.Net" not in look:
+            continue
+        next_methods=next((j for j in range(i+1,min(i+170,len(lines)))
+                           if lines[j].strip()=="// Methods"),min(i+95,len(lines)))
+        return {
+            "status":"found",
+            "source_start_line":i+1,
+            "header":lines[i].strip(),
+            "field_excerpt":"\\n".join(lines[i:next_methods])[:12500],
+        }
+    return {"status":"namespace_not_matched"}
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--binary", required=True, type=Path)
@@ -145,6 +169,8 @@ def main():
         "note":"Script method addresses are static IL2CppDumper candidates; branch targets do not prove application-level signature rejection.",
         "callback":"UnitySendMessage receiver=Azurill method=Tarinor; CSM.Tarinor(string message)",
         "class_context":extract_class(dump_text),
+        "downstream_api_request_base_fields":extract_field_context(dump_text,"ApiRequestBase") if a.include_downstream else {},
+        "downstream_draco_fields":extract_field_context(dump_text,"Draco") if a.include_downstream else {},
         "downstream_dump_matches":[
             {"term": term,"excerpt":dump_text[max(0,m.start()-800):m.end()+500][:1300]}
             for term in ("Chenipotte","op_Implicit")
