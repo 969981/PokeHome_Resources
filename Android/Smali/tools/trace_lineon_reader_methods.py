@@ -127,8 +127,60 @@ def main():
                 "Only +0x78 offset match; must discriminate instance Goelise"
             )
         })
+    by_name={x["method"]:x for x in methods}
+    parecool=by_name["ApiRequestBase.Parecool"]
+    ningale=by_name["ApiRequestBase.Ningale"]
+    def code_index(m):
+        # The captured windows overlap, but each RVA represents one
+        # immutable original ARM64 instruction.
+        return {x["rva"]:x for x in (
+            m["first_48_instructions"]+
+            m["context_before"]+
+            [m["read_instruction"]]+
+            m["context_after"]
+        )}
+    c=code_index(parecool)
+    n=code_index(ningale)
+    expected_parecool=[
+        ("0x1F28468","mov","w0, #-4"),
+        ("0x1F28474","ldr","x22, [x8, #0x78]"),
+        ("0x1F28478","bl","#0x1f2fcf4"),
+        ("0x1F28480","mov","w0, #-3"),
+        ("0x1F28488","bl","#0x1f2fcf4"),
+        ("0x1F28494","mov","x0, x22"),
+        ("0x1F28498","bl","#0x1f26f1c"),
+        ("0x1F284A0","bl","#0x1f30638"),
+        ("0x1F284AC","str","x1, [x0, #0x58]!"),
+        ("0x1F284C4","bl","#0x27395f0")
+    ]
+    expected_instance=[
+        ("0x1F29E80","mov","x19, x0"),
+        ("0x1F29FC4","ldr","x3, [x19, #0x78]")
+    ]
+    for rva,mn,ops in expected_parecool:
+        row=c.get(rva)
+        if not row or row["mnemonic"]!=mn or row["operands"]!=ops:
+            raise SystemExit("Parecool pipeline evidence mismatch at "+rva)
+    for rva,mn,ops in expected_instance:
+        row=n.get(rva)
+        if not row or row["mnemonic"]!=mn or row["operands"]!=ops:
+            raise SystemExit("Ningale instance-field proof mismatch at "+rva)
+    parecool_pipeline={
+        "status":"verified_arm64_instructions",
+        "native_method":"ILib.Unity.Net.ApiRequestBase.Parecool",
+        "field_read":"0x1F28474",
+        "charmillon_second_pass_parameters":[-4,-3],
+        "charmillon_call":"0x1F28498",
+        "draco_to_string_call":"0x1F284A0",
+        "object_field_store":{"rva":"0x1F284AC","offset":"0x58"},
+        "serialize_to_json_call":"0x1F284C4",
+        "scope":"Static method instructions; final HTTP request bytes not inspected",
+    }
     out={
         "status":"method_contexts_recovered",
+        "parecool_transform_and_serialization_pipeline":parecool_pipeline,
+        "ningale_offset_is_instance_field":True,
+        "ningale_proof":"0x1F29E80 mov x19,x0 (this); 0x1F29FC4 ldr x3,[x19,#0x78]",
         "unique_confirmed_field_reads":sorted([
             v for v in events.values() if v["kind"]=="field_read"
         ],key=lambda r:r["rva"]),
