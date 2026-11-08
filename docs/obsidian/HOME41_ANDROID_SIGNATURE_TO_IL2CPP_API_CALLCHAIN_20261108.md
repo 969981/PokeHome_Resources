@@ -106,7 +106,18 @@ handler_method="Tarinor"
 - `Charmillon` 包含 `String.IsNullOrEmpty`、`String.get_Chars`、`Convert.ToInt32`、字符构造和算术比较等调用。
 - `Charmillon` 返回后，`Chenipotte` 在 `0x1F26F08` 执行 ARM64 `str x0, [x9, #0x78]`。这里 `x9` 由类元数据静态存储指针派生，说明结果被写入该类的一块共享状态。
 
-这条证据把签名消息从 Java -> Unity -> 网络组件扩展到**转换后结果的存储**。但尚未识别共享字段的原始业务名、后续读取方、真实 HTTP 请求字段或服务器响应语义。不能据此称为“官方签名校验已经被完全定位”，更不能将混淆算法替代受信任的官方签名。
+这条证据把签名消息从 Java -> Unity -> 网络组件扩展到**转换后结果的存储**。
+
+新补齐的字段布局同样来自这次 CI 的原始 IL2CPP dump：
+
+```csharp
+// ILib.Unity.Net.ApiRequestBase (TypeDefIndex: 3589)
+private static Draco Lineon; // 0x78
+// ILib.Unity.Net.Draco (TypeDefIndex: 3602)
+private string <Value>k__BackingField; // 0x0
+```
+
+这里 `Chenipotte` 返回的转换结果经 `str x0,[x9,#0x78]` 写入的 **正是静态 `ApiRequestBase.Lineon` 字段**；`Draco` 结构体内封装一个字符串。该字段后续的消费者尚未通过独立静态交叉引用或真实运行事件定位。但尚未识别共享字段的原始业务名、后续读取方、真实 HTTP 请求字段或服务器响应语义。不能据此称为“官方签名校验已经被完全定位”，更不能将混淆算法替代受信任的官方签名。
 
 ## 四、源码与复测
 
