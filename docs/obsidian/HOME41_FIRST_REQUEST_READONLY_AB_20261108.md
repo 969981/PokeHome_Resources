@@ -60,3 +60,27 @@ CheckSignatureCore.Check (Java)
 - [签名到请求构建与 Lineon 静态引用详解](HOME41_ANDROID_SIGNATURE_TO_IL2CPP_API_CALLCHAIN_20261108.md)
 - [这次真实 GitHub Actions](https://github.com/969981/PokeHome_Resources/actions/runs/42459657452)
 
+
+
+## 原版首次 ARM64 事件链（2026-11-08，首轮实测，单边证据）
+
+本次原版事件来源：[Actions #42459952862 的私有 Artifact](https://github.com/969981/PokeHome_Resources/actions/runs/42459952862)，路径为 `official_unmodified/events.jsonl`、`official_unmodified/summary.json`。
+
+**原版 Android HOME 4.1.0 实测正常进入语言选择页（截图 130 秒）**。通过 Frida emulated realm ARM64 成功加载 10 个 native Hook；Java 4 个 Hook 均 ready；Frida 脚本异常数为 0。完整事件包含：
+
+| 启动相对时间 | 实际命中事件 | 语义界限 |
+| --- | --- | --- |
+| 29.252s | Java `CheckSignatureCore.Check`；发出第一个 Unity 签名消息 | 从 Java 实际观察 |
+| 35.746s | `ApiRequestBase.Lineon` 静态签名衍生字段写入 | 原始 RVA 0x1F26F08 |
+| 42.137s | `ApiRequestBase.Parecool` 请求构造入口 | 实际函数命中 |
+| 42.166s | `Lineon` 静态字段读取 | 原始 RVA 0x1F28474 |
+| 42.177s | 对象字段 `+0x58` 写入、JSON 序列化入口 | 原始 RVA 0x1F284AC、0x27395F0 |
+| 42.280s | `UnityWebRequest.SendWebRequest` | 仅证明请求发送方法被调用 |
+| 70.949s | `ApiRequestBase.Ningale` 回调 `resultCode=200` | **未验证等价于 HTTP 200** |
+| 92.520s | 第二次 `UnityWebRequest.SendWebRequest` | 不代表第二个请求的用途 |
+
+本次 `UnityWebRequest.get_responseCode` 的 RVA `0x421AD30` 和 `SendWebRequest` RVA `0x421A6DC` 均由原版 script.json 找到**唯一**静态定义并且 Hook 就绪；**未捕获真实网络层 HTTP 状态码**。不能把 `Ningale(resultCode=200)` 误记成 HTTP 200。
+
+首轮在完成原版采样后，因为 Python 调试输出处误将 `flush=True` 传进 `json.dumps`，在进入第二组测试前异常终止。原版事件与截图保存在 Artifact 中，但**未完成同轮重签名对照**。根因已定位，输出代码改为 `print(json.dumps(...), flush=True)`，下一轮重新运行完整 A/B。
+
+因此此节是**原版单边已验证证据**，不是双包差异结论，也不能证明 `400/9007` 出现在某个具体 HTTP 响应上。尤其不能由 callback result 200 断言后端 HTTP 返回 200。
