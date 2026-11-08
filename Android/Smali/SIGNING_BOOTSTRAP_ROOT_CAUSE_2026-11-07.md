@@ -65,3 +65,19 @@
 
 - 已验证：签名及来源元数据改变**足以复现**初始化错误；DEX/资源内容改变**不是触发该错误的必要条件**。
 - 未验证：具体是哪项签名/来源元数据触发、校验方、服务端返回值的内部语义、修改版能否在官方服务中完成登录。
+
+
+## 2026-11-08：签名的 Unity 接收对象、回调方法已由真实事件锁定
+
+本次重新核对 [Frida 双包测试 #42376455037](https://github.com/969981/PokeHome_Resources/actions/runs/42376455037) 的原始 Artifact `official_unmodified/events.jsonl` 和 `directly_resigned/events.jsonl`，不再依赖汇总报告。
+
+两份 APK 均在启动约 15–19 秒命中 `CheckSignatureCore.Check`，并观察到三条签名信息传给 Unity：
+- `UnityPlayer.UnitySendMessage("Azurill","Tarinor","PackageName:...")`
+- `UnityPlayer.UnitySendMessage("Azurill","Tarinor","toCharsString:...")`
+- `UnityPlayer.UnitySendMessage("Azurill","Tarinor","hash:...")`
+
+只读观察器原始事件仅保存 `receiver_class=Azurill`、`handler_method=Tarinor` 以及消息**类别**和单调时间，未记录第三参数正文、证书、token 或 HTTP 流量。**`Azurill` 是 UnitySendMessage 的 GameObject 接收名，不一定是 C# 类名；`Tarinor` 是其目标方法名。名称可能经过混淆，与宝可梦实体无关。**
+
+原版在 95 秒显示 HOME 语言选择页；重签名版直到 130 秒仍未通过。由此可验证两者**都执行签名读取与转交**，但不能单凭回调命中认定签名检查就是 `400/9007` 的具体发出点。
+
+现在通过 [UNITY_SIGNATURE_CALLBACK_AUDIT.json](4.1.0/UNITY_SIGNATURE_CALLBACK_AUDIT.json) 做原始 IL2CPP dump / script / stringliteral 的精确查找，见 [新审核工作流](https://github.com/969981/PokeHome_Resources/actions/workflows/home41-signature-unity-callback-audit.yml)。下一步要找出真正消费 `Tarinor` 内容的 IL2CPP 接收方法和之后的分支，而非修改证书检查结果。
