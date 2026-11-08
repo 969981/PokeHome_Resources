@@ -1,0 +1,83 @@
+name: HOME 4.1.0 signature data downstream API audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-signature-downstream-api.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-signature-downstream-api
+  cancel-in-progress: false
+
+jobs:
+  native-downstream:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            Android/Smali/tools/trace_signature_unity_native.py
+            Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so
+            Unpack/Android/4.1.0/il2cpp/dump.cs
+            Unpack/Android/4.1.0/il2cpp/script.json
+            .github/workflows/home41-signature-downstream-api.yml
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Trace CSM.Tarinor through CSM.Skitty into network API base
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'capstone==5.0.6'
+          python -m py_compile Android/Smali/tools/trace_signature_unity_native.py
+          python Android/Smali/tools/trace_signature_unity_native.py \
+            --binary Android/Smali/4.1.0/lib/arm64-v8a/libil2cpp.so \
+            --dump Unpack/Android/4.1.0/il2cpp/dump.cs \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --include-downstream \
+            --output Android/Smali/4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path('Android/Smali/4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json').read_text())
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as f:
+            f.write('## Signature callback downstream, original HOME IL2CPP ARM64\n\n')
+            for method in r['targets']:
+              f.write(f"- {method['method']}: RVA {method['rva']} ({method['decoded_instructions']} instructions)\n")
+              for branch in method['branch_and_call_targets']:
+                if branch['opcode']=='bl':
+                  f.write(f"  - BL {branch['target_rva']}: {', '.join(branch['exact_method_candidates'][:2])}\n")
+            f.write('\nStatic callgraph only; it does not establish server-side trust handling.\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-signature-downstream-arm64-api-callgraph
+          path: Android/Smali/4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Commit source-backed trace
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f Android/Smali/4.1.0/UNITY_SIGNATURE_DOWNSTREAM_TRACE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'analysis(android): record downstream CSM signature forwarding branches [skip ci]'
+            git fetch origin 4.1.0
+            git rebase FETCH_HEAD
+            git push origin HEAD:4.1.0
+          fi
