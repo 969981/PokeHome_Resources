@@ -1,5 +1,24 @@
 {
   "status": "method_contexts_recovered",
+  "parecool_transform_and_serialization_pipeline": {
+    "status": "verified_arm64_instructions",
+    "native_method": "ILib.Unity.Net.ApiRequestBase.Parecool",
+    "field_read": "0x1F28474",
+    "charmillon_second_pass_parameters": [
+      -4,
+      -3
+    ],
+    "charmillon_call": "0x1F28498",
+    "draco_to_string_call": "0x1F284A0",
+    "object_field_store": {
+      "rva": "0x1F284AC",
+      "offset": "0x58"
+    },
+    "serialize_to_json_call": "0x1F284C4",
+    "scope": "Static method instructions; final HTTP request bytes not inspected"
+  },
+  "ningale_offset_is_instance_field": true,
+  "ningale_proof": "0x1F29E80 mov x19,x0 (this); 0x1F29FC4 ldr x3,[x19,#0x78]",
   "unique_confirmed_field_reads": [
     {
       "rva": "0x1F28474",
