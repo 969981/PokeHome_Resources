@@ -25,6 +25,28 @@
         }
       ]
     },
+    "api_response_dispatcher_Monaflemit": {
+      "rva": "0x1F28E58",
+      "definitions": [
+        {
+          "name": "ILib.Unity.Net.ApiRequestBase$$Monaflemit",
+          "signature": "void ILib_Unity_Net_ApiRequestBase__Monaflemit (ILib_Unity_Net_ApiRequestBase_o* __this, int32_t resultCode, System_Collections_Generic_Dictionary_string__string__o* dicHeader, System_Byte_array* data, const MethodInfo* method);"
+        }
+      ],
+      "count": 0,
+      "direct_callers": []
+    },
+    "unity_api_send_coroutine_IAWWW": {
+      "rva": "0x1F39198",
+      "definitions": [
+        {
+          "name": "ILib.Unity.Net.IAWWW.<CoSendRequest>d__18$$MoveNext",
+          "signature": "bool ILib_Unity_Net_IAWWW__CoSendRequest_d__18__MoveNext (ILib_Unity_Net_IAWWW__CoSendRequest_d__18_o* __this, const MethodInfo* method);"
+        }
+      ],
+      "count": 0,
+      "direct_callers": []
+    },
     "request_prepare_Parecool": {
       "rva": "0x1F27F5C",
       "definitions": [
