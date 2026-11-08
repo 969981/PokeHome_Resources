@@ -142,15 +142,8 @@ jobs:
           emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
           script: |
             python tools/home41_frida_server_setup.py --output first-request-evidence/frida_server_setup.json
-            python - <<'PY'
-            import json
-            r=json.load(open('first-request-evidence/frida_server_setup.json'))
-            assert r.get('status')=='ready', r
-            PY
-            python Android/Smali/tools/home41_first_request_ab.py \
-              --original "$ORIGINAL_APK" --resigned "$RESIGNED_APK" \
-              --java-bundle "$JAVA_BUNDLE" --native-agent "$NATIVE_AGENT" \
-              --out first-request-evidence
+            python -c "import json; r=json.load(open('first-request-evidence/frida_server_setup.json')); assert r.get('status')=='ready', r"
+            python Android/Smali/tools/home41_first_request_ab.py --original "$ORIGINAL_APK" --resigned "$RESIGNED_APK" --java-bundle "$JAVA_BUNDLE" --native-agent "$NATIVE_AGENT" --out first-request-evidence
       - name: Summarize verified status codes and stage time, without asserting 9007 cause
         if: always()
         shell: bash
@@ -202,9 +195,14 @@ jobs:
           git add --sparse -f Android/Smali/4.1.0/FIRST_REQUEST_READONLY_AB.json
           if ! git diff --cached --quiet; then
             git commit -m 'test(home41): record sanitized original-versus-resign first request timeline [skip ci]'
-            git fetch origin 4.1.0
-            git rebase FETCH_HEAD
-            git push origin HEAD:4.1.0
+            for attempt in 1 2 3 4; do
+              git fetch origin 4.1.0
+              git rebase FETCH_HEAD
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            echo 'Concurrent branch update prevented non-forced report push' >&2
+            exit 1
           fi
       - name: Check comparison has real original UI, but never reinterpret missing HTTP as zero
         if: always()
