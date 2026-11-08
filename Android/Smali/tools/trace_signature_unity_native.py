@@ -55,13 +55,13 @@ def extract_field_context(dump_text, type_name):
     lines=dump_text.splitlines()
     candidates=[
         i for i,line in enumerate(lines)
-        if re.search(r"\\b(?:class|struct)\\s+"+re.escape(type_name)+r"\\b",line)
+        if re.search(r"\b(?:class|struct)\s+"+re.escape(type_name)+r"\b",line)
         and not line.strip().startswith("//")
     ]
     if not candidates:
         return {"status":"type_not_found"}
     for i in candidates:
-        look="\\n".join(lines[max(0,i-3):i+3])
+        look="\n".join(lines[max(0,i-3):i+3])
         if type_name=="ApiRequestBase" and "ILib.Unity.Net" not in look:
             continue
         next_methods=next((j for j in range(i+1,min(i+170,len(lines)))
@@ -70,7 +70,7 @@ def extract_field_context(dump_text, type_name):
             "status":"found",
             "source_start_line":i+1,
             "header":lines[i].strip(),
-            "field_excerpt":"\\n".join(lines[i:next_methods])[:12500],
+            "field_excerpt":"\n".join(lines[i:next_methods])[:12500],
         }
     return {"status":"namespace_not_matched"}
 
