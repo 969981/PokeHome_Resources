@@ -68,7 +68,7 @@ def main():
     exact_signature_records={}
     wanted_addrs={x[1] for x in TARGETS}
     if a.include_downstream:
-        wanted_addrs.update((0x1F2CE50,0x1F26E78))
+        wanted_addrs.update((0x1F2CE50,0x1F26E78,0x1F26F1C,0x1F2FCF4))
     stack=[script_data]
     while stack:
         node=stack.pop()
@@ -92,6 +92,8 @@ def main():
         for name,rva in (
             ("ILib.Unity.Net.Draco.op_Implicit",0x1F2CE50),
             ("ILib.Unity.Net.ApiRequestBase.Chenipotte",0x1F26E78),
+            ("ILib.Unity.Net.ApiRequestBase.Charmillon",0x1F26F1C),
+            ("ILib.Unity.Net.Soporifik.op_Implicit",0x1F2FCF4),
         ):
             assert any(
                 name.replace(".", "$",1).endswith("$" + target_name.split("$")[-1])
