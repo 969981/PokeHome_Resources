@@ -85,12 +85,12 @@ def extract_declarations(dump: str) -> dict:
     ]
     result = {}
     for name in wanted:
-        pat = re.compile(r"(?m)^.*\\b(?:class|enum|struct)\\s+"+re.escape(name)+r"(?=\\s|:)")
+        pat = re.compile(r"(?m)^.*\b(?:class|enum|struct)\s+"+re.escape(name)+r"(?=\s|:)")
         hits=list(pat.finditer(dump))
         segments=[]
         for m in hits[:3]:
             a=max(0,dump.rfind("// Namespace:",0,m.start()))
-            b=dump.find("\\n}\\n",m.end())
+            b=dump.find("\n}\n",m.end())
             if b<0 or b-a>38000:
                 b=min(len(dump),m.end()+38000)
             segments.append(dump[a:b+2][:38000])
@@ -110,7 +110,7 @@ def main() -> int:
     dump=args.dump.read_text(encoding="utf-8-sig")
     report["declarations"]=extract_declarations(dump)
     args.output.parent.mkdir(exist_ok=True,parents=True)
-    args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("STATIC ORIGINAL 4.1.0 METHOD COUNT",report["total_methods"])
     for key,arr in report["methods"].items():
         print("=== GROUP",key,"total",report["counts"].get(key,0),
