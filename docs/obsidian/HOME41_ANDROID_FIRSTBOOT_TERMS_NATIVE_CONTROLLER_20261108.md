@@ -114,6 +114,14 @@ HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_
 但是同一个 Frida agent 在动作后再次读取原生 `_currentPhase=4`，最近请求 Phase=4，GoToPhase 计数仍为 4。因此**不能把该步骤视为进入 Phase5**；即便 UI 已变化，也可能存在额外确认页或内部等待回调。
 
 新增 [点击后遮蔽截图 Actions #42540554942](https://github.com/969981/Home_Android/actions/runs/42540554942)：只有用户信息使用页的「不同意」真实点击、画面变化、原生当前和最近请求 Phase 均为 4、尚未注册时，才截取被系统栏遮蔽的画面。不执行任何额外操作。
+## Phase4 不同意后的二次确认弹窗（2026-11-09）
+
+[HOME Actions #42540554942](https://github.com/969981/Home_Android/actions/runs/42540554942) 使用同一 ARM64 原生代理确认在首次「不同意」后仍为 Phase 4、最近请求仍为 4，且读取了遮蔽后的实际 Unity 界面。
+弹窗原文：**「即使你不同意此条款，仍然可以使用 Pokémon HOME。」**
+底部按钮为左「返回」、右侧橙色「下一步」。因此前一次没有进入 Phase5，是因为还有 **二次确认**，并非错误调用 GoToPhase。
+
+已提交 `ci/home41_phase4_decline_modal_next_once.py` 及严格图像门控测试，只允许点击该原版已验收弹窗的右侧橙色 Next 一次，绝不选择数据收集的「同意」。
+[完整原生 Phase5 再验收 Actions #42541431359](https://github.com/969981/Home_Android/actions/runs/42541431359) 已启动，在同一个 Frida 代理中检验 `_currentPhase`、最近请求 Phase 和 GoToPhase 增量。当前未取得最终 Phase5 证据，不应提前声称通过。
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
