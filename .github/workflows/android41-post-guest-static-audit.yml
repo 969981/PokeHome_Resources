@@ -1,0 +1,63 @@
+name: HOME Android 4.1.0 static post-guest UI and auth symbol audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/android41-post-guest-static-audit.yml'
+      - 'tools/home41_post_guest_symbols.py'
+      - 'tools/test_home41_post_guest_symbols.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  post-guest-symbols:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            tools/home41_post_guest_symbols.py
+            tools/test_home41_post_guest_symbols.py
+            Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/il2cpp/dump.cs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Offline regression tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/home41_post_guest_symbols.py tools/test_home41_post_guest_symbols.py
+          PYTHONPATH=tools python -m unittest discover -s tools -p 'test_home41_post_guest_symbols.py' -v
+      - name: Audit original 4.1.0 static symbols, no HOME process
+        run: |
+          set -euo pipefail
+          test -s Unpack/Android/4.1.0/il2cpp/script.json
+          test -s Unpack/Android/4.1.0/il2cpp/dump.cs
+          python tools/home41_post_guest_symbols.py \
+            --script Unpack/Android/4.1.0/il2cpp/script.json \
+            --dump Unpack/Android/4.1.0/il2cpp/dump.cs \
+            --output ci-post-guest-static/methods.json
+          python - <<'PY'
+          import json
+          d=json.load(open('ci-post-guest-static/methods.json',encoding='utf8'))
+          assert d['total_methods'] > 100000
+          assert not d['account_created']
+          assert not d['post_guest_ui_observed']
+          assert not d['registration_observed']
+          print("Original static symbols",d["counts"])
+          PY
+      - name: Save bounded original public symbol report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-original-post-guest-static-symbols
+          path: ci-post-guest-static/methods.json
+          retention-days: 7
+          if-no-files-found: warn
