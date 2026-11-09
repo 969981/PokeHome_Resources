@@ -131,6 +131,23 @@ HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_
 - AVD 仍未注册账号，测试不创建账号、不绑定 Nintendo Account、不导出 UTID、Token 或网络正文。
 
 旧路径对照结果：[Actions #42541431359](https://github.com/969981/Home_Android/actions/runs/42541431359) 「不同意」→二次弹窗「下一步」后，原生 GoToPhase 累计调用从 4 增加到 6，最后请求阶段 7 = NA_LINK_CONTINUE；此时 _currentPhase 返回 null，可能因控制器在转场中不可读。原流程虽然因只允许 Phase 5 验收而标记失败，但有继续前进的原生请求证据。严禁将最后请求 Phase 7 冒充已完成 Nintendo Account 绑定或账号注册。
+## Phase 4 同意：原版 ARM64 A/B 通过
+
+[HOME Actions #42542169594](https://github.com/969981/Home_Android/actions/runs/42542169594) 已完成用户明确授权的 Phase 4 可选设备操作记录和性能错误信息收集「同意」A/B。
+
+| 项目 | 运行结果 |
+|---|---|
+| 原版 Phase 4 右侧「同意」 | 点击成功 |
+| 画面切换 | post_agree_screen_changed=true |
+| 误点击左侧「不同意」 | false |
+| GoToPhase 调用累计 | 4 → 6 |
+| 最后请求阶段 | 7 = NA_LINK_CONTINUE |
+| 当前阶段 | null（转场控制器不可读），不可声称当前 7 已稳定驻留 |
+| Nintendo Account 绑定 / 账号注册 / UTID | 均未执行或未观测 |
+
+这证明了客户端执行原版右侧「同意」及后续阶段请求，不证明服务器持久化该可选隐私选择；更不代表已创建正式游客号。
+
+下一步 [HOME Actions #42542835109](https://github.com/969981/Home_Android/actions/runs/42542835109) 增加只读遮蔽取证：只有原版 Phase4 的同意真实点击、原生 GoToPhase(7) 请求、尚未注册/绑定三项条件同时成立时，才保存 Nintendo Account 关联流程入口**实际显示的页面**。截图不是自动点击，不会直接绑定账户，也不能单凭 GoToPhase 请求确认已进入最终稳定 Phase7。
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
