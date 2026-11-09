@@ -108,6 +108,12 @@ HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_
 已加入原版 Phase4 一次性操作 [HOME Actions #42539800940](https://github.com/969981/Home_Android/actions/runs/42539800940)：在原生 Phase 4、原版中文像素特征、HOME 前台、已完成两项条款确认全部吻合时，才允许点击左侧「不同意」一次；随后使用**同一个仍附加的 ARM64 Frida agent** 读取 Phase 和 GoToPhase 的真实变更，尝试验证 Phase 5 WARNING。该实验不点击右侧「同意」、不注册账号、不绑定 Nintendo Account、不读取 UTID。
 
 **结果边界**：该 Phase5 A/B 工作流尚未取得运行结论，不能提前声称 Phase 5 已到达。
+## Phase 4 不同意：第一次真实按钮 A/B 结果
+
+[HOME Actions #42539800940](https://github.com/969981/Home_Android/actions/runs/42539800940) 在原版 ARM64 FirstBoot Phase4 页面完成了左侧「不同意」的一次性点击。视觉取证报告：decline_button_tapped=true、post_decline_screen_changed=true、agree_button_tapped=false。
+但是同一个 Frida agent 在动作后再次读取原生 `_currentPhase=4`，最近请求 Phase=4，GoToPhase 计数仍为 4。因此**不能把该步骤视为进入 Phase5**；即便 UI 已变化，也可能存在额外确认页或内部等待回调。
+
+新增 [点击后遮蔽截图 Actions #42540554942](https://github.com/969981/Home_Android/actions/runs/42540554942)：只有用户信息使用页的「不同意」真实点击、画面变化、原生当前和最近请求 Phase 均为 4、尚未注册时，才截取被系统栏遮蔽的画面。不执行任何额外操作。
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
