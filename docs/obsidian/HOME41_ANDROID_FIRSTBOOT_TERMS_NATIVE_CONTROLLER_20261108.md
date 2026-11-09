@@ -122,6 +122,15 @@ HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_
 
 已提交 `ci/home41_phase4_decline_modal_next_once.py` 及严格图像门控测试，只允许点击该原版已验收弹窗的右侧橙色 Next 一次，绝不选择数据收集的「同意」。
 [完整原生 Phase5 再验收 Actions #42541431359](https://github.com/969981/Home_Android/actions/runs/42541431359) 已启动，在同一个 Frida 代理中检验 `_currentPhase`、最近请求 Phase 和 GoToPhase 增量。当前未取得最终 Phase5 证据，不应提前声称通过。
+## 2026-11-09：用户追加授权 Phase 4 的可选信息收集同意
+
+这项授权与前面的「用户协议」「隐私政策」是分开的。原版广告 SDK 信息使用页有两个选项：左「不同意」、右「同意」。用户本轮明确允许右侧「同意」。因此在全新的、未注册的临时 AVD 上新增独立 opt-in 路径，不在已经执行左侧 opt-out 的同一会话上反复点选。
+
+- [HOME Actions #42542169594](https://github.com/969981/Home_Android/actions/runs/42542169594)：按授权独立验证原版 Phase 4 右侧「同意」单击，保留 Frida ARM64 观察器记录后续阶段请求。
+- `ci/home41_phase4_agree_once.py` 与 `ci/test_home41_phase4_agree_once.py` 复用已成功实测的 Phase 4 原始页面严格图像签名，只将点击目标改为右侧，不点击左侧或未知按钮。
+- AVD 仍未注册账号，测试不创建账号、不绑定 Nintendo Account、不导出 UTID、Token 或网络正文。
+
+旧路径对照结果：[Actions #42541431359](https://github.com/969981/Home_Android/actions/runs/42541431359) 「不同意」→二次弹窗「下一步」后，原生 GoToPhase 累计调用从 4 增加到 6，最后请求阶段 7 = NA_LINK_CONTINUE；此时 _currentPhase 返回 null，可能因控制器在转场中不可读。原流程虽然因只允许 Phase 5 验收而标记失败，但有继续前进的原生请求证据。严禁将最后请求 Phase 7 冒充已完成 Nintendo Account 绑定或账号注册。
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
