@@ -97,11 +97,43 @@ def extract_declarations(dump: str) -> dict:
         result[name]=segments
     return result
 
+def render_markdown(report: dict) -> str:
+    out=[
+        "---", "title: HOME 4.1.0 原始游客确认后 FirstBoot 符号索引",
+        "date: 2026-11-09", "status: 静态候选，动态执行路径未证实",
+        "tags: [HOME, Android, FirstBoot, IL2CPP, symbols]",
+        "---", "",
+        "# HOME 4.1.0 游客确认后静态候选 RVA", "",
+        "来源：\`Unpack/Android/4.1.0/il2cpp/script.json\` 原版索引、"
+        "\`dump.cs\` 原始类定义；程序没有启动 HOME 或发起网络请求。", "",
+        f"索引包含 **{report['total_methods']}** 个方法。下表只说明静态命名与 RVA，"
+        "不证明运行时方法会被执行，也不证明游客号已注册。", "",
+    ]
+    for group, methods in report["methods"].items():
+        out += [f"## {group} (total {report['counts'].get(group,0)})", "",
+                "| RVA | IL2CPP 原始名称 |", "|---|---|"]
+        for item in methods:
+            out.append(f"| \`{item['rva']}\` | \`{item['name']}\` |")
+        out.append("")
+    out += ["## FirstBoot 原始类声明（节选）", ""]
+    for key in ("FirstBootBodyController.Phase", "FirstBootBodyController"):
+        out += [f"### {key}", ""]
+        sections=report["declarations"].get(key) or []
+        if sections:
+            out += ["\`\`\`csharp", sections[0][:24000], "\`\`\`", ""]
+        else:
+            out += ["原始 dump 未定位到该声明。", ""]
+    out += ["静态审计无运行时状态：\`post_guest_ui_observed=false\`，"
+            "\`registration_observed=false\`，\`account_created=false\`。", ""]
+    return "\n".join(out)
+
+
 def main() -> int:
     ap=argparse.ArgumentParser()
     ap.add_argument("--script",required=True,type=Path)
     ap.add_argument("--dump",required=True,type=Path)
     ap.add_argument("--output",required=True,type=Path)
+    ap.add_argument("--markdown",type=Path)
     args=ap.parse_args()
     data=json.loads(args.script.read_text(encoding="utf-8-sig"))
     report=audit_methods(data)
@@ -111,6 +143,9 @@ def main() -> int:
     report["declarations"]=extract_declarations(dump)
     args.output.parent.mkdir(exist_ok=True,parents=True)
     args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    if args.markdown:
+        args.markdown.parent.mkdir(exist_ok=True,parents=True)
+        args.markdown.write_text(render_markdown(report),encoding="utf-8")
     print("STATIC ORIGINAL 4.1.0 METHOD COUNT",report["total_methods"])
     for key,arr in report["methods"].items():
         print("=== GROUP",key,"total",report["counts"].get(key,0),
