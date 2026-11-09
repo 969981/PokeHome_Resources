@@ -153,3 +153,13 @@ HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
 
 本轮所有证据都不证明协议已同意、游客号已创建、服务器曾下发 basic.utid 或六位 ID 已获得。用户已授权这次正常注册中的协议同意；该授权不等于完成了 UI 操作。
+
+## 2026-11-09：Phase 4 同意及 Nintendo Account 关联选项原版取证
+
+[HOME Actions #42542169594](https://github.com/969981/Home_Android/actions/runs/42542169594) 已实测在新原版 Android AVD 中点击 Phase4 信息收集页面右侧「同意」一次，画面改变，GoToPhase 累计 4→6，最后请求 Phase7 NA_LINK_CONTINUE；当前 Phase 值因控制器转场暂不可读。没有注册账号或实际绑定 Nintendo Account。
+
+[HOME Actions #42542835109](https://github.com/969981/Home_Android/actions/runs/42542835109) 再次完整验证此路径，成功保存经过系统栏遮蔽的下一个真实页面；运行日志标明 masked_image_saved=true，脚本未点击此页。
+
+**新页面标题**：关联 Nintendo Account。下方两个官方按钮为橙色「关联」、白色「不关联」。该页警告：**「若现在不关联，以后将无法关联。」** 与后续 Switch 版联动、跨设备迁移、冠军赛成绩及部分功能存在关联限制。
+
+**关键限制与决策门禁**：用户原始目标为不绑定 Nintendo Account 进行单次游客初始化，但最新截图显示「不关联」具有不可逆后果。临时 Actions 模拟器仍未点击此按钮、未注册或删除账号，也没有首次 basic.utid。不得把 GoToPhase(7) 当作已选择不关联。今后只有用户在看到该不可逆提示后仍明确同意不关联，才应在用户可持久保有的设备上沿官方页面继续，避免把唯一游客号建立在会被回收的临时 CI AVD 中。
