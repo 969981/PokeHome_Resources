@@ -1,0 +1,88 @@
+name: HOME41 original 4.1.0 registration callee SymbolMethod exact audit
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-original-registration-symbol-audit.yml'
+      - 'tools/home41_original_symbol_exact_audit.py'
+      - 'tools/test_home41_original_symbol_exact_audit.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-original-register-method-identities
+  cancel-in-progress: false
+
+jobs:
+  exact-symbol-audit:
+    name: Map original 0x1D35CC8 and register tail method entries
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/home41-original-registration-symbol-audit.yml
+            tools/home41_original_symbol_exact_audit.py
+            tools/test_home41_original_symbol_exact_audit.py
+            Unpack/Android/4.1.0/il2cpp/script.json
+            docs/obsidian/HOME41_AtuhRegisterUser_1D35CC8_Original_ScriptMethod_20261109.md
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Assert original large private symbol index blob and run fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          s="Unpack/Android/4.1.0/il2cpp/script.json"
+          test -s "$s"
+          test "$(git hash-object "$s")" = '895419550af1e00a2482f01fcc6d1c07592a5995'
+          python -m py_compile tools/home41_original_symbol_exact_audit.py
+          PYTHONPATH=tools python -m unittest discover -s tools -p 'test_home41_original_symbol_exact_audit.py' -v
+      - name: Resolve original exact function identity and create Obsidian evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/home41_original_symbol_exact_audit.py \
+            --script "Unpack/Android/4.1.0/il2cpp/script.json" \
+            --output "ci-original-register-symbols/method_names.json" \
+            --markdown "docs/obsidian/HOME41_AtuhRegisterUser_1D35CC8_Original_ScriptMethod_20261109.md"
+          python - <<'PY'
+          import json,os
+          r=json.load(open('ci-original-register-symbols/method_names.json',encoding='utf8'))
+          assert r['source_method_count']>100000
+          assert r['server_guest_account_confirmed'] is False
+          target=r['methods']['manager_tail_direct_callee']
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('## Exact original HOME 4.1.0 method index\n')
+              f.write('- 0x1D35CC8 exact ScriptMethod entry: '+str(target['is_exact_method_entry'])+'\n')
+              for name in target['exact_names']:
+                  f.write('- Original name: `'+name+'`\n')
+              f.write('- Runtime guest registration/UTID: NOT TESTED\n')
+          PY
+      - name: Commit only generated Obsidian static research evidence
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse docs/obsidian/HOME41_AtuhRegisterUser_1D35CC8_Original_ScriptMethod_20261109.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs(home41): original 4.1.0 exact register callsite names [skip ci]'
+            git push origin HEAD:4.1.0
+          fi
+      - name: Preserve only static symbol index audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-original-register-callee-method-index
+          path: ci-original-register-symbols/method_names.json
+          retention-days: 7
+          if-no-files-found: warn
