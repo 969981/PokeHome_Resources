@@ -104,8 +104,8 @@ def render_markdown(report: dict) -> str:
         "tags: [HOME, Android, FirstBoot, IL2CPP, symbols]",
         "---", "",
         "# HOME 4.1.0 游客确认后静态候选 RVA", "",
-        "来源：\`Unpack/Android/4.1.0/il2cpp/script.json\` 原版索引、"
-        "\`dump.cs\` 原始类定义；程序没有启动 HOME 或发起网络请求。", "",
+        "来源：`Unpack/Android/4.1.0/il2cpp/script.json` 原版索引、"
+        "`dump.cs` 原始类定义；程序没有启动 HOME 或发起网络请求。", "",
         f"索引包含 **{report['total_methods']}** 个方法。下表只说明静态命名与 RVA，"
         "不证明运行时方法会被执行，也不证明游客号已注册。", "",
     ]
@@ -113,18 +113,18 @@ def render_markdown(report: dict) -> str:
         out += [f"## {group} (total {report['counts'].get(group,0)})", "",
                 "| RVA | IL2CPP 原始名称 |", "|---|---|"]
         for item in methods:
-            out.append(f"| \`{item['rva']}\` | \`{item['name']}\` |")
+            out.append(f"| `{item['rva']}` | `{item['name']}` |")
         out.append("")
     out += ["## FirstBoot 原始类声明（节选）", ""]
     for key in ("FirstBootBodyController.Phase", "FirstBootBodyController"):
         out += [f"### {key}", ""]
         sections=report["declarations"].get(key) or []
         if sections:
-            out += ["\`\`\`csharp", sections[0][:24000], "\`\`\`", ""]
+            out += ["```csharp", sections[0][:24000], "```", ""]
         else:
             out += ["原始 dump 未定位到该声明。", ""]
-    out += ["静态审计无运行时状态：\`post_guest_ui_observed=false\`，"
-            "\`registration_observed=false\`，\`account_created=false\`。", ""]
+    out += ["静态审计无运行时状态：`post_guest_ui_observed=false`，"
+            "`registration_observed=false`，`account_created=false`。", ""]
     return "\n".join(out)
 
 
