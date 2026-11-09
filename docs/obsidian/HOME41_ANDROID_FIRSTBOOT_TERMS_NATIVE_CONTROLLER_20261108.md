@@ -96,6 +96,18 @@ HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_
 现在必须同时验证两份报告，才允许保存已遮蔽系统栏的图像。
 
 [修复后的 Phase 4 可视化实测 Actions #42538845441](https://github.com/969981/Home_Android/actions/runs/42538845441) 已启动。该任务不点击广告 SDK 页的任何选项，也不读取账号资料。尚未有新截图验收。
+## Phase 4 页面已经获得原版截屏（2026-11-09）
+
+[HOME Actions #42538845441](https://github.com/969981/Home_Android/actions/runs/42538845441) 成功完成 Phase4 原生证据合并与屏幕取证：
+当前 Phase=4 ADVERTISEMENT_SDK、最近请求 Phase=4、ConfirmAdvertisementSDK 原生入口命中。工具输出 masked_screenshot_saved=true。
+
+**页面标题**：关于用户信息的使用。
+**页面正文**：HOME 为优化功能、保持稳定和改善服务，收集应用操作记录、性能相关错误信息，依照隐私政策使用；页面明确「即使不同意上述内容，你仍可使用 Pokémon HOME」。
+**底部两个原版按钮**：左「不同意」，右「同意」。这是一个非必需的额外数据收集选择，和上一步的用户协议+隐私政策勾选不同。此前用户仅授权同意服务协议，因此应走官方左侧「不同意」选项以避免额外信息收集。
+
+已加入原版 Phase4 一次性操作 [HOME Actions #42539800940](https://github.com/969981/Home_Android/actions/runs/42539800940)：在原生 Phase 4、原版中文像素特征、HOME 前台、已完成两项条款确认全部吻合时，才允许点击左侧「不同意」一次；随后使用**同一个仍附加的 ARM64 Frida agent** 读取 Phase 和 GoToPhase 的真实变更，尝试验证 Phase 5 WARNING。该实验不点击右侧「同意」、不注册账号、不绑定 Nintendo Account、不读取 UTID。
+
+**结果边界**：该 Phase5 A/B 工作流尚未取得运行结论，不能提前声称 Phase 5 已到达。
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
