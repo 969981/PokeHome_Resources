@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   post-guest-symbols:
@@ -25,6 +25,7 @@ jobs:
           sparse-checkout: |
             tools/home41_post_guest_symbols.py
             tools/test_home41_post_guest_symbols.py
+            docs/obsidian/HOME41_POST_GUEST_STATIC_SYMBOLS_20261109.md
             Unpack/Android/4.1.0/il2cpp/script.json
             Unpack/Android/4.1.0/il2cpp/dump.cs
       - uses: actions/setup-python@v5
@@ -43,7 +44,8 @@ jobs:
           python tools/home41_post_guest_symbols.py \
             --script Unpack/Android/4.1.0/il2cpp/script.json \
             --dump Unpack/Android/4.1.0/il2cpp/dump.cs \
-            --output ci-post-guest-static/methods.json
+            --output ci-post-guest-static/methods.json \
+            --markdown docs/obsidian/HOME41_POST_GUEST_STATIC_SYMBOLS_20261109.md
           python - <<'PY'
           import json
           d=json.load(open('ci-post-guest-static/methods.json',encoding='utf8'))
@@ -53,6 +55,17 @@ jobs:
           assert not d['registration_observed']
           print("Original static symbols",d["counts"])
           PY
+      - name: Commit static Obsidian symbol evidence to the 4.1.0 branch
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse docs/obsidian/HOME41_POST_GUEST_STATIC_SYMBOLS_20261109.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs(home41): original post-guest symbol evidence [skip ci]'
+            git push origin HEAD:4.1.0
+          fi
       - name: Save bounded original public symbol report
         if: always()
         uses: actions/upload-artifact@v4
