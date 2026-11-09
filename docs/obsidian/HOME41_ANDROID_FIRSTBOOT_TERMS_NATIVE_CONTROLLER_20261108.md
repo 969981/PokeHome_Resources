@@ -85,6 +85,17 @@ Gest 是原版符号的原始拼写。TermsOfServiceConfirmDialog 可能由标�
 - 协议点击只是用户授权的客户端 UI 行为；服务器是否持久化条款同意仍未独立确认，也没有证据证明游客账号创建、任天堂账号解绑或 basic.utid 到达。
 - 独立的正式账号流程仍应在用户可保存会话的设备上完成；临时 AVD 测试不作为正式建号成果。
 
+## 协议后 Phase 4 的原版动态证据（2026-11-09）
+
+[Actions #42475979434](https://github.com/969981/Home_Android/actions/runs/42475979434) 的原版 HOME 4.1.0 ARM64 Frida 实测表明，已经在 Phase 3 成功勾选用户协议和隐私政策、点击一次原版「下一步」后，
+原生 FirstBootBodyController._currentPhase = 4、最近一次 GoToPhase 请求参数 = 4、ConfirmationAdvertisementSDK 方法入口计数 = 1、GoToPhase 入口累计 = 4。
+根据原版 Phase 枚举，Phase 4 对应 ADVERTISEMENT_SDK。日志没有显示账号创建或 Nintendo Account 绑定。
+
+后续 [Actions #42496860432](https://github.com/969981/Home_Android/actions/runs/42496860432) 的首次执行在 ADB/语言页初始化失败，没有取得 Phase 4 画面；并非推翻已证明的 3→4 转移。
+HOME Android 的 Phase 4 遮蔽截图工具已修复两份报告衔接：home41_emulator_report.json 保留日期/进程状态，home41_post_terms_phase_report.json 才是原生 Terms 后 Phase 结果。
+现在必须同时验证两份报告，才允许保存已遮蔽系统栏的图像。
+
+[修复后的 Phase 4 可视化实测 Actions #42538845441](https://github.com/969981/Home_Android/actions/runs/42538845441) 已启动。该任务不点击广告 SDK 页的任何选项，也不读取账号资料。尚未有新截图验收。
 ## 下一项动态验证
 
 Home_Android 已增加只读 Frida Hook：协议内容设置、同意条款区域、checkbox 状态变化、条款对话框打开及 OK 调用。先独立验证真实调用次数和事件顺序，之后再辨别协议 Next 与 I agree 的原版对象。
