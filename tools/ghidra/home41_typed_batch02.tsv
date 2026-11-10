@@ -18,4 +18,4 @@ rva	label	prototype	status	literal_evidence	static_behavior	unknowns
 0x53505C	HOME_Record_UpdatePacked2Bits_B	void HOME_Record_UpdatePacked2Bits_B(void *owner, int index, int value)	STATIC_ABI_PARTIAL	if ((param_2 < 6) && (param_3 < 3))	alternative 2bit update entry	interchangeability unproven
 0x53784C	HOME_Packed2Bit_Set	unsigned int HOME_Packed2Bit_Set(unsigned int word, unsigned int index, int value)	STATIC_ABI_PARTIAL	return param_1 & (3 <<	2bit slot assignment	shift bounds unproven
 0x537830	HOME_Packed2Bit_Get	unsigned int HOME_Packed2Bit_Get(unsigned int word, unsigned int index)	STATIC_ABI_PARTIAL	return (3 <<	2bit slot extraction	shift bounds unproven
-0x205BA4	HOME_Manager_CopyPreDirtyRegion	void HOME_Manager_CopyPreDirtyRegion(void *offset)	STATIC_ABI_PARTIAL	memcpy((void *)(lVar1 + 0x7d1e8),	copies 0x2A30 ending at manager+0x7FC18	persistence not proven
+0x205BA4	HOME_Manager_CopyPreDirtyRegion	void HOME_Manager_CopyPreDirtyRegion(unsigned long long offset)	STATIC_ABI_PARTIAL	memcpy((void *)(lVar1 + 0x7d1e8),	copies 0x2A30 ending at manager+0x7FC18	persistence not proven
