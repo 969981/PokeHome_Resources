@@ -82,7 +82,7 @@ jobs:
           find "$RUNNER_TEMP/ghidra_dist" -maxdepth 3 -type f -name 'analyzeHeadless' -print
           find "$RUNNER_TEMP/ghidra_dist" -maxdepth 2 -type d -print | head -n 30
           echo "::endgroup::"
-          root="$(find "$RUNNER_TEMP/ghidra_dist" -maxdepth 2 -type f -path '*/support/analyzeHeadless' -print -quit)"
+          root="$(find "$RUNNER_TEMP/ghidra_dist" -maxdepth 4 -type f -path '*/support/analyzeHeadless' -print -quit)"
           if [ -z "$root" ]; then
             echo "::error::Ghidra distribution has no support/analyzeHeadless"
             find "$RUNNER_TEMP/ghidra_dist" -maxdepth 3 -type f -name '*Headless*' -print | head -n 30
