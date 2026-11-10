@@ -5,6 +5,7 @@ on:
     branches: ["4.1.0"]
     paths:
       - "tools/nx2elf_home41.py"
+      - "tools/test_nx2elf_home41.py"
       - ".github/workflows/home41-nx2elf.yml"
       - "57b83ea8c0af21ef26e2519b9580b373_NCA/0/main"
   workflow_dispatch:
@@ -32,6 +33,9 @@ jobs:
         with:
           ref: 4.1.0
           fetch-depth: 1
+
+      - name: Check converter helper and committed ELF identity
+        run: python3 -m unittest discover -s tools -p 'test_nx2elf_home41.py' -v
 
       - name: Checkout upstream shuffle2/nx2elf at pinned revision
         uses: actions/checkout@v4
