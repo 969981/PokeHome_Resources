@@ -73,8 +73,22 @@ public class Home41Batch06ReferenceProbe extends GhidraScript {
             0x655114L, 0x64fe24L, 0x662ee8L, 0x674030L,
             0x67447cL, 0x678718L, 0x678ee8L, 0x678bb0L, 0x670d60L
         };
-        for (long a : netRoots) refs(out, "NETWORK_FUNCTION", toAddr(a),
-            "Ghidra VA 0x" + Long.toHexString(a));
+        // The HOME ELF uses a .text overlay address space. toAddr(a) resolves the
+        // default space, which is *not* .text::a and can yield false NO_XREF.
+        for (long a : netRoots) {
+            String name = String.format(java.util.Locale.ROOT, ".text::%08x", a);
+            Address target = currentProgram.getAddressFactory().getAddress(name);
+            if (target == null) {
+                out.append("NETWORK_FUNCTION\t").append(name)
+                    .append("\tADDRESS_NOT_RESOLVED\t\t\t\t\n");
+                continue;
+            }
+            Function f = currentProgram.getFunctionManager().getFunctionAt(target);
+            out.append("NETWORK_ENTRY\t").append(target).append("\t")
+                .append(f == null ? "NO_FUNCTION_AT_TARGET" : clean(f.getName()))
+                .append("\t\tENTRY\t\t\n");
+            refs(out, "NETWORK_FUNCTION", target, "Ghidra .text overlay VA 0x" + Long.toHexString(a));
+        }
         out.append("# matched_string_items=").append(matched).append("\n");
         Files.write(Paths.get(args[0]), out.toString().getBytes(StandardCharsets.UTF_8));
         println("Batch06 native reference probe: " + matched + " matching string data items; output=" + args[0]);
