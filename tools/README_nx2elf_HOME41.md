@@ -71,6 +71,9 @@ py -3 .\tools\nx2elf_home41.py --mode verify --nx2elf 'C:\tools\nx2elf\build\Rel
 
 **默认只做验证，不偷偷改动二进制。** 手动运行时指定 `commit_generated=true` 才在新旧字节不一致的情况下更新 `main.elf` 并提交到 `4.1.0`；相同则不会创建重复提交。是否真实跑通以 [GitHub Actions 运行记录](https://github.com/969981/PokeHome_Resources/actions/workflows/home41-nx2elf.yml) 为准。
 
+**首次运行审计（2026-11-10）**：[Actions #42754440095](https://github.com/969981/PokeHome_Resources/actions/runs/42754440095) 于 04:13:12 UTC 触发，04:13:17 UTC 结束，Job `convert` 状态 `failure`，但 GitHub REST API 返回 `steps=[]`、`runner_name=""`，因此**没有任何 nx2elf 代码构建或 main 转换步骤实际被执行**。当前无法从该记录确定是 Runner 分配、账单/额度、平台策略或其他启动失败原因；请不要把它表述为转换算法失败，也不能把当前 ELF 与固定上游版本的字节相同标成 PASS。GitHub Job Logs 下载返回 `BlobNotFound`，说明这次没有可用的标准作业日志。
+
+
 ## 本版本 ELF RVA 研究
 
 已提交 ELF 的 SHA256/Build ID 与 [HOME-Live-Plugin-CHS 的 PKM/ELF/PKHeX 研究](https://github.com/969981/HOME-Live-Plugin-CHS/tree/home-core-editor/docs/research/home-pkm-knowledge-base) 相同：`main+0x53A140` 对应游戏 PKM XOR；`main+0x530214` 对应 EH4 AES 加密；`main+0x50D280` 对应剑盾 PK8→PH4 的转换器。它们是主模块的 RVA，不是 ASLR 后的绝对地址。
