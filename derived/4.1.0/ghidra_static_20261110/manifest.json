@@ -1,0 +1,48 @@
+{
+  "description": "Actual static ELF audit. NOT an executed Ghidra decompilation.",
+  "source": "57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf",
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "elf_size_bytes": 8261352,
+  "build_id": "325195bcb7366b15bae55171070dc4b8d7f33c0d",
+  "machine": "AArch64",
+  "elf_type": "ET_DYN",
+  "sections": 33,
+  "dynsym": {
+    "total": 593,
+    "undefined": 574,
+    "defined": 19
+  },
+  "relocations": {
+    "rela_dyn": 526,
+    "rela_plt": 535
+  },
+  "exception_frame": {
+    "fde_count": 25803,
+    "unique_starts": 25803,
+    "valid_fde_pc_and_ranges": 25803,
+    "invalid": 0,
+    "overlaps": 0,
+    "covered_text_bytes": 5979476,
+    "text_bytes": 6259360,
+    "text_coverage_percent": 95.529
+  },
+  "direct_control_flow": {
+    "internal_bl_count": 74629,
+    "unique_internal_bl_targets": 12674,
+    "internal_b_count": 39517,
+    "indirect_blr_included": false
+  },
+  "focus": {
+    "verified_function_starts": 54,
+    "asm_full_fde_exports": 54,
+    "asm_machine_word_size": 4
+  },
+  "ghidra": {
+    "installed": false,
+    "actual_headless_run": false,
+    "actual_decompiled_c_count": 0,
+    "ghidra_version_target": "12.2",
+    "jdk_required": "25"
+  },
+  "reproduce": "python tools/home41_ghidra_elf_atlas.py --asm"
+}
