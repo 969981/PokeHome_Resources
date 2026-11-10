@@ -185,7 +185,7 @@ public class Home41Export extends GhidraScript {
         }
     }
 
-    private void exportInstructions(ReferenceManager rm) throws Exception {
+    private void exportInstructions() throws Exception {
         InstructionIterator iterator = currentProgram.getListing().getInstructions(true);
         while (iterator.hasNext()) {
             Instruction ins = iterator.next();
@@ -203,13 +203,12 @@ public class Home41Export extends GhidraScript {
                 r.put("read_error", clipped(e.toString(), 300));
             }
             emit(r);
-            refsAt(rm, ins.getAddress());
             instructions++;
             if ((instructions % 16384) == 0) monitor.checkCancelled();
         }
     }
 
-    private void exportDefinedData(ReferenceManager rm) throws Exception {
+    private void exportDefinedData() throws Exception {
         DataIterator iterator = currentProgram.getListing().getDefinedData(true);
         while (iterator.hasNext()) {
             Data d = iterator.next();
@@ -223,9 +222,20 @@ public class Home41Export extends GhidraScript {
             r.put("value", value instanceof String ? value : clipped(value, 1024));
             r.put("is_string", value instanceof String);
             emit(r);
-            refsAt(rm, d.getAddress());
             definedData++;
             if ((definedData % 16384) == 0) monitor.checkCancelled();
+        }
+    }
+
+    // Enumerate *every* Ghidra reference source, including addresses not defined
+    // as an instruction or typed data start. One pass avoids duplicate edges.
+    private void exportReferences(ReferenceManager rm) throws Exception {
+        AddressIterator origins = rm.getReferenceSourceIterator((AddressSetView)null, true);
+        long sources = 0;
+        while (origins.hasNext()) {
+            refsAt(rm, origins.next());
+            sources++;
+            if ((sources % 16384) == 0) monitor.checkCancelled();
         }
     }
 
@@ -279,8 +289,9 @@ public class Home41Export extends GhidraScript {
             }
             exportFunctions(decomp, all, timeout);
             ReferenceManager rm = currentProgram.getReferenceManager();
-            exportInstructions(rm);
-            exportDefinedData(rm);
+            exportInstructions();
+            exportDefinedData();
+            exportReferences(rm);
             exportSymbols();
             LinkedHashMap<String,Object> summary = row("summary");
             summary.put("functions", functions);
