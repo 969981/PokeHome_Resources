@@ -25,7 +25,6 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       REPO: "969981/PokeHome_Resources"
       DEST: "derived/4.1.0/Ghidra_12.2_Run_42763137320"
-      RUN_TEMP: ${{ runner.temp }}
     steps:
       - name: Checkout targeted 4.1.0 files, retain publish credentials
         uses: actions/checkout@v4
@@ -62,11 +61,11 @@ jobs:
             HOME41-Ghidra12-all-decompiled-C \
             HOME41-Ghidra12-NDJSON \
             HOME41-Ghidra12-FDE-recovery; do
-            mkdir -p "$RUN_TEMP/ghidra_artifacts/$name"
+            mkdir -p "$RUNNER_TEMP/ghidra_artifacts/$name"
             gh run download "$SOURCE_RUN" -R "$REPO" \
-              --name "$name" --dir "$RUN_TEMP/ghidra_artifacts/$name"
-            test -n "$(find "$RUN_TEMP/ghidra_artifacts/$name" -type f -print -quit)"
-            du -sh "$RUN_TEMP/ghidra_artifacts/$name"
+              --name "$name" --dir "$RUNNER_TEMP/ghidra_artifacts/$name"
+            test -n "$(find "$RUNNER_TEMP/ghidra_artifacts/$name" -type f -print -quit)"
+            du -sh "$RUNNER_TEMP/ghidra_artifacts/$name"
           done
 
       - name: Extract native .gpr/.rep, individual C, FDE; split raw SQLite and NDJSON
@@ -74,7 +73,7 @@ jobs:
         run: |
           set -euo pipefail
           python tools/ghidra/home41_publish_split.py \
-            --artifacts "$RUN_TEMP/ghidra_artifacts" \
+            --artifacts "$RUNNER_TEMP/ghidra_artifacts" \
             --output "$DEST"
           python - <<'PY'
           import json,os
@@ -100,9 +99,9 @@ jobs:
           set -euo pipefail
           python tools/ghidra/home41_restore_split.py \
             --source "$DEST" \
-            --out "$RUN_TEMP/ghidra_reconstruction" \
+            --out "$RUNNER_TEMP/ghidra_reconstruction" \
             --no-project
-          cat "$RUN_TEMP/ghidra_reconstruction/restore_report.json"
+          cat "$RUNNER_TEMP/ghidra_reconstruction/restore_report.json"
 
       - name: Commit and push uncompressed project, SQLite/NDJSON shards, FDE and indexes
         shell: bash
@@ -128,7 +127,7 @@ jobs:
         run: |
           set -euo pipefail
           mapfile -d '' -t files < <(find "$DEST/c" -type f -name '*.c' -print0 | sort -z)
-          test "$${#files[@]}" -eq 15415
+          test "${#files[@]}" -eq 15415
           batch=0
           for (( offset=0; offset < ${#files[@]}; offset+=1500 )); do
             batch=$((batch+1))
