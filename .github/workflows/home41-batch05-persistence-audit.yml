@@ -1,0 +1,49 @@
+name: HOME41 Batch05 Tracker and local-save boundary audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-batch05-persistence-audit.yml'
+      - 'tools/ghidra/home41_batch05_persistence_audit.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  persistence-boundaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout audit script
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+      - name: Download exact Ghidra SQLite artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: HOME41-Ghidra12-SQLite
+          path: ${{ runner.temp }}/home41-sqlite
+          repository: ${{ github.repository }}
+          run-id: 42763137320
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Batch05 static scope audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/ghidra/home41_batch05_persistence_audit.py
+          DB="$(find "$RUNNER_TEMP/home41-sqlite" -type f -name 'home41_main_410.sqlite' -print -quit)"
+          test -n "$DB"
+          mkdir -p "$RUNNER_TEMP/home41-batch05"
+          python tools/ghidra/home41_batch05_persistence_audit.py --db "$DB" --out "$RUNNER_TEMP/home41-batch05/persistence-audit.json"
+      - name: Upload machine-readable report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Batch05-persistence-audit
+          path: ${{ runner.temp }}/home41-batch05/
+          retention-days: 30
+          if-no-files-found: warn
