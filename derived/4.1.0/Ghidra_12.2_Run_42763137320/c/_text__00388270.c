@@ -1,0 +1,102 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::00388270; name: FUN_.text__00388270
+ */
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+uint FUN__text__00388270(ulong param_1,uint *param_2)
+
+{
+  MutexType *pMVar1;
+  uint *puVar2;
+  uint *puVar3;
+  uint uVar4;
+  long *plVar5;
+  uint *puVar6;
+  uint *puVar7;
+  ulong uVar8;
+  long local_b0;
+  long local_a8;
+  undefined8 uStack_a0;
+  long local_98;
+  undefined8 local_90;
+  undefined8 uStack_88;
+  undefined1 local_80;
+  long local_78;
+  undefined8 uStack_70;
+  undefined8 local_68;
+  undefined8 uStack_60;
+  long local_58;
+  undefined8 local_50;
+  uint local_48;
+  uint uStack_44;
+  
+  pMVar1 = (MutexType *)(param_1 + 0x78);
+  nn::os::LockMutex(pMVar1);
+  plVar5 = *(long **)(param_1 + 0x58);
+  if (plVar5 != (long *)0x0) {
+    (**(code **)(*plVar5 + 0x28))(plVar5,param_2);
+  }
+  nn::os::LockMutex(pMVar1);
+  puVar6 = *(uint **)(param_1 + 8);
+  puVar2 = *(uint **)(param_1 + 0x10);
+  uVar8 = (long)puVar2 - (long)puVar6;
+  if (0 < (long)uVar8) {
+    puVar7 = puVar2;
+    do {
+      puVar3 = puVar6 + (uVar8 >> 6) * 8;
+      if (*puVar3 == *param_2) {
+        if (puVar3 != puVar2) {
+          nn::os::UnlockMutex(pMVar1);
+          local_90 = *(undefined8 *)(puVar3 + 2);
+          uStack_88 = *(undefined8 *)(puVar3 + 6);
+          local_b0 = _DAT_008a3278 + 0x10;
+          uStack_44 = *puVar3;
+          local_78 = _DAT_008a3280 + 0x10;
+          local_48 = 0;
+          local_50 = 0;
+          local_58 = local_78;
+          if (uStack_44 == 0) {
+            local_48 = 0;
+          }
+          else {
+            uVar4 = uStack_44 - (uStack_44 >> 1 & 0x55555555);
+            uVar4 = (uVar4 & 0x33333333) + (uVar4 >> 2 & 0x33333333);
+            uVar8 = (ulong)((uVar4 + (uVar4 >> 4) & 0xf0f0f0f) * 0x1010101 >> 0x18);
+            do {
+              (**(code **)(local_58 + 0x10))(&local_58);
+              uVar8 = uVar8 - 1;
+            } while (uVar8 != 0);
+            local_48 = uStack_44;
+          }
+          local_68 = CONCAT44(uStack_44,local_48);
+          local_98 = _DAT_008a3288 + 0x10;
+          local_80 = 0;
+          uStack_60 = 0;
+          local_a8 = _DAT_008a3290 + 0x10;
+          uStack_a0 = 0;
+          uStack_70 = local_50;
+          uVar4 = FUN__text__0038842c(&local_b0);
+          param_1 = (ulong)(uVar4 >> 8 & 0xff);
+          goto LAB__text__003883b0;
+        }
+        break;
+      }
+      if (*puVar3 < *param_2) {
+        puVar6 = puVar3 + 8;
+        puVar3 = puVar7;
+      }
+      puVar7 = puVar3;
+      uVar8 = (long)puVar7 - (long)puVar6;
+    } while (0 < (long)uVar8);
+  }
+  nn::os::UnlockMutex(pMVar1);
+  uVar4 = 0;
+LAB__text__003883b0:
+  nn::os::UnlockMutex(pMVar1);
+  return uVar4 & 0xff | (int)param_1 << 8;
+}
+
+

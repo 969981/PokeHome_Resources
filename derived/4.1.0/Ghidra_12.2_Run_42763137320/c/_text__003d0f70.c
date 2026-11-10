@@ -1,0 +1,119 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::003d0f70; name: FUN_.text__003d0f70
+ */
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN__text__003d0f70(long *param_1)
+
+{
+  long lVar1;
+  long lVar2;
+  long lVar3;
+  long lVar4;
+  
+  *(undefined4 *)(param_1 + 1) = 0;
+  lVar1 = _DAT_008a3738;
+  param_1[0x1a] = 0;
+  param_1[0x1b] = 0;
+  param_1[0x1c] = 0;
+  param_1[0x1d] = 0;
+  param_1[10] = 0;
+  param_1[0xb] = 0;
+  *param_1 = lVar1 + 0x10;
+  param_1[0xc] = 0;
+  param_1[0xd] = 0;
+  param_1[6] = 0;
+  param_1[7] = 0;
+  param_1[2] = 0;
+  param_1[3] = 0;
+  lVar1 = _DAT_0089f4c0 + 0x10;
+  *(undefined4 *)(param_1 + 4) = 0;
+  *(undefined1 *)(param_1 + 0x2a) = 0;
+  param_1[0x41] = 0;
+  param_1[0x3e] = 0;
+  param_1[0x3f] = 0;
+  param_1[0x40] = 0;
+  param_1[0x2e] = 0;
+  param_1[0x2f] = 0;
+  param_1[8] = lVar1;
+  param_1[9] = 0;
+  param_1[0x30] = 0;
+  param_1[0x31] = 0;
+  lVar2 = _DAT_0089f6e0 + 0x10;
+  param_1[0x2c] = lVar2;
+  param_1[0x2d] = 0;
+  lVar3 = _DAT_008a0110 + 0x10;
+  param_1[0x4f] = 0;
+  *(undefined4 *)(param_1 + 0x50) = 0;
+  param_1[0x51] = 0;
+  param_1[0x52] = 0;
+  param_1[0x53] = 0;
+  param_1[0x54] = 0;
+  param_1[0x56] = -1;
+  param_1[0x4e] = lVar3;
+  lVar4 = _DAT_008a36f8 + 0x10;
+  param_1[0x7e] = lVar2;
+  param_1[0x5a] = lVar1;
+  param_1[0xa0] = lVar3;
+  param_1[0xa8] = -1;
+  *(undefined4 *)(param_1 + 0x57) = 0;
+  param_1[0x6f] = 0;
+  param_1[0x6e] = 0;
+  param_1[0x6d] = 0;
+  param_1[0x6c] = 0;
+  param_1[0x5f] = 0;
+  param_1[0x5e] = 0;
+  param_1[0x5d] = 0;
+  param_1[0x5c] = 0;
+  param_1[0x5b] = 0;
+  param_1[0x59] = 0;
+  param_1[0x58] = 0;
+  *(undefined1 *)(param_1 + 0x7c) = 0;
+  param_1[0x90] = 0;
+  param_1[0x91] = 0;
+  param_1[0x92] = 0;
+  param_1[0x93] = 0;
+  param_1[0x83] = 0;
+  param_1[0x82] = 0;
+  param_1[0x81] = 0;
+  param_1[0x80] = 0;
+  param_1[0x55] = lVar4;
+  param_1[0x7f] = 0;
+  param_1[0xa1] = 0;
+  *(undefined4 *)(param_1 + 0xa2) = 0;
+  param_1[0xa6] = 0;
+  param_1[0xa5] = 0;
+  param_1[0xa4] = 0;
+  param_1[0xa3] = 0;
+  param_1[0xa7] = lVar4;
+  *(undefined4 *)(param_1 + 0xa9) = 0;
+  *(undefined2 *)(param_1 + 0xaa) = 0x100;
+  param_1[0xab] = 0;
+  param_1[0xac] = -0x340d631b7bddd9bb;
+  param_1[0xad] = 0x70f683;
+  *(undefined4 *)(param_1 + 0xb0) = 0;
+  param_1[0xaf] = 0;
+  param_1[0xae] = 0;
+  *(undefined4 *)(param_1 + 0xb1) = 0;
+  *(undefined1 *)((long)param_1 + 0x58c) = 0;
+  param_1[0xb2] = 0;
+  *(undefined4 *)(param_1 + 0xb3) = 2;
+  param_1[0xb7] = 0;
+  param_1[0xb6] = 0;
+  param_1[0xb5] = 0;
+  param_1[0xb4] = 0;
+  *(undefined2 *)(param_1 + 0xc4) = 0x100;
+  *(undefined1 *)((long)param_1 + 0x622) = 0;
+  param_1[0xc5] = 0;
+  param_1[0xc6] = -0x340d631b7bddd9bb;
+  param_1[199] = 0x70f683;
+  *(undefined4 *)(param_1 + 0xca) = 0;
+  param_1[0xc9] = 0;
+  param_1[200] = 0;
+  return;
+}
+
+

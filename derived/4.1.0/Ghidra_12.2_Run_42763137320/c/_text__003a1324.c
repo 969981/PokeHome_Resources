@@ -1,0 +1,36 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::003a1324; name: FUN_.text__003a1324
+ */
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN__text__003a1324(undefined8 *param_1)
+
+{
+  undefined8 local_60;
+  undefined8 uStack_58;
+  undefined8 local_50;
+  undefined8 uStack_48;
+  undefined8 local_40;
+  undefined8 uStack_38;
+  undefined8 local_30;
+  undefined8 uStack_28;
+  
+  *param_1 = 0;
+  *(undefined1 *)(param_1 + 1) = 0;
+  nn::crypto::detail::Sha256Impl::Initialize();
+  local_40 = _DAT_0073a6a4;
+  uStack_38 = _DAT_0073a6ac;
+  local_30 = _DAT_0073a6b4;
+  uStack_28 = _DAT_0073a6bc;
+  local_60 = _DAT_0073a684;
+  uStack_58 = _DAT_0073a68c;
+  local_50 = _DAT_0073a694;
+  uStack_48 = _DAT_0073a69c;
+  nn::crypto::detail::Sha256Impl::Update(param_1 + 2,(ulong)&local_60);
+  return;
+}
+
+
