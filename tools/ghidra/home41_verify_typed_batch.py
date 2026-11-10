@@ -29,7 +29,7 @@ DEFAULT_TSV = Path(__file__).with_name("home41_typed_batch01.tsv")
 
 def proposed_arg_count(prototype: str, label: str) -> int:
     match = re.fullmatch(
-        rf"\s*.+?\s+{re.escape(label)}\s*\(([^()]*)\)\s*", prototype
+        rf"\s*.+?\s+\**{re.escape(label)}\s*\(([^()]*)\)\s*", prototype
     )
     if not match:
         raise ValueError(f"Invalid or mismatched function prototype: {prototype}")
