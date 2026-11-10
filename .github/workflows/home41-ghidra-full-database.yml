@@ -1,6 +1,10 @@
 name: HOME 4.1.0 full main.elf Ghidra analysis + SQLite database
 
 on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-ghidra-full-database.yml'
   workflow_dispatch:
     inputs:
       decompile_all:
