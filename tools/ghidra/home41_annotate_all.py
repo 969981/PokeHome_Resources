@@ -198,6 +198,13 @@ def execute(db_path,c_root,index_path,fde_path,out):
             try:starts.append((address(fun["min_addr"]),address(fun["max_addr"]),entry))
             except (ValueError,TypeError):pass
     annotation_db.commit()
+    # Ghidra importer receives a safe tab-delimited stream, not CSV with
+    # quoted commas and variable newlines.
+    with (out/"function_catalog.csv").open(newline="",encoding="utf-8") as f, (
+         out/"ghidra_function_comments.tsv").open("w",encoding="utf-8") as tsv:
+        for row in csv.DictReader(f):
+            fields=[row["entry"],row["label"],row["purpose"],row["evidence_level"]]
+            tsv.write("\t".join(safe(x).replace("\t"," ") for x in fields)+"\n")
     starts.sort()
     startnums=[x[0] for x in starts]
     asm_dir=out/"asm_annotated";asm_dir.mkdir()
@@ -212,7 +219,8 @@ def execute(db_path,c_root,index_path,fde_path,out):
             except (ValueError,TypeError):cand=""
             annotation_db.execute("INSERT INTO instruction_annotations VALUES(?,?,?,?,?,?,?)",
                                   (addr,b,m,display,kind,note,cand))
-            line=(f"{addr}\t{b or '-'}\t{display or m or ''}"
+            pretty=safe(display or m or "").replace("\t"," ")
+            line=(f"{addr}\t{b or '-'}\t{pretty}"
                   f"\t// [{kind}] {note}\t{cand or 'NO_FUNCTION_CANDIDATE'}\n").encode()
             if asm is None or curbytes+len(line)>PART_SIZE:
                 if asm:asm.close()
@@ -265,6 +273,7 @@ def execute(db_path,c_root,index_path,fde_path,out):
         "- c_annotated/: 15,415 个 C 函数逐条非空代码行的解释，保留原代码不改写\n"
         "- asm_annotated/: 1,029,451 条真实 Ghidra 指令地址/机器码/操作数/解释，一行一条\n"
         "- function_catalog.csv: 每个 Ghidra 函数的用途、来源和置信度\n"
+        "- ghidra_function_comments.tsv: 注释回填到真正 Ghidra 数据库的安全 TSV\n"
         "- fde_catalog.csv: 原始 25,803 条 FDE，未识别者标记 NOT_DECOMPILED\n"
         "- annotation_db/: 独立 SQLite 注释数据库的可无损拼接原始字节片（<=40MiB）\n"
         "- annotation_manifest.json: 统计、原始版本、完整 SHA256 和每片 SHA256\n\n"
