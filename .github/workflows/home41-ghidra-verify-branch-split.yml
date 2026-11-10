@@ -1,0 +1,99 @@
+name: HOME 4.1.0 verify committed unpacked Ghidra database and C
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-ghidra-verify-branch-split.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    env:
+      DEST: derived/4.1.0/Ghidra_12.2_Run_42763137320
+    steps:
+      - name: Checkout actual committed unpacked files
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/
+            tools/ghidra/home41_restore_split.py
+            .github/workflows/home41-ghidra-verify-branch-split.yml
+
+      - name: Check all original uncompressed pieces and exact C-file count
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import csv,json,os
+          from pathlib import Path
+          r=Path(os.environ['DEST'])
+          m=json.loads((r/'parts_manifest.json').read_text())
+          assert m['status']=='UNCOMPRESSED_SPLIT_VERIFIED'
+          assert m['source_run_id']==42763137320
+          assert m['c_files']==15415
+          c=list((r/'c').glob('*.c'))
+          assert len(c)==15415,len(c)
+          with (r/'decompiled_index.csv').open(newline='',encoding='utf-8') as fp:
+              index=list(csv.DictReader(fp))
+          assert len(index)==15415,len(index)
+          assert all(row['status']=='OK' for row in index)
+          assert len(m['sqlite']['parts'])==6
+          assert len(m['ndjson']['parts'])==8
+          assert all(x['size']<=45*1024*1024 for x in m['sqlite']['parts']+m['ndjson']['parts'])
+          assert (r/'project/HOME410.gpr').is_file()
+          assert (r/'project/HOME410.rep').is_dir()
+          assert (r/'fde_recovery.csv').is_file()
+          with (r/'fde_recovery.csv').open(newline='',encoding='utf-8') as fp:
+              rows=sum(1 for _ in csv.DictReader(fp))
+          assert rows==25803, rows
+          print('Committed C files:',len(c))
+          print('Committed SQLite parts:',len(m['sqlite']['parts']))
+          print('Committed NDJSON parts:',len(m['ndjson']['parts']))
+          print('Original FDE recovery audit rows:',rows)
+          print('Verified manifest status:',m['status'])
+          PY
+
+      - name: Losslessly rebuild original SQLite NDJSON and complete native Ghidra project
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/ghidra/home41_restore_split.py \
+            --source "$DEST" \
+            --out "$RUNNER_TEMP/home41-restored"
+          test -f "$RUNNER_TEMP/home41-restored/home41_main_410.sqlite"
+          test -f "$RUNNER_TEMP/home41-restored/home41_ghidra_events.ndjson"
+          test -f "$RUNNER_TEMP/home41-restored/project/HOME410.gpr"
+          test -f "$RUNNER_TEMP/home41-restored/project/HOME410.rep/idata/00/~00000000.db/db.1.gbf"
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          x=json.loads((Path(os.environ['RUNNER_TEMP'])/'home41-restored/restore_report.json').read_text())
+          assert x['status']=='RECONSTRUCTED_AND_SHA256_VERIFIED'
+          assert x['sqlite_integrity_check']=='ok'
+          assert x['sqlite_counts']['functions']==15415
+          assert x['sqlite_counts']['decompilation']==15415
+          assert x['sqlite_counts']['instructions']==1029451
+          assert x['sqlite_counts']['references_full']==423988
+          assert x['project_reconstructed'] is True
+          print(json.dumps(x,indent=2))
+          PY
+          test -z "$(git status --porcelain -- "$DEST")"
+
+      - name: Upload small immutable publication verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Ghidra12-branch-publication-verified
+          path: ${{ runner.temp }}/home41-restored/restore_report.json
+          if-no-files-found: warn
+          retention-days: 30
