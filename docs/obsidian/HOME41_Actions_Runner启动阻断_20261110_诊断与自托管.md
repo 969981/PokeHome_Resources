@@ -1,11 +1,14 @@
 ---
 title: "HOME 4.1.0：GitHub Actions Runner 无法启动的实证、计费检查与自托管方案"
 date: 2026-11-10
-status: RUNNER_START_BLOCKED_BILLING_NOT_CONFIRMED
+status: RUNNER_RECOVERED_GHIDRA_ANALYSIS_ACTIVE
 tags: [github-actions, ghidra, pokemon-home, self-hosted-runner, troubleshooting]
 ---
 
 # GitHub Actions Runner 启动阻断
+
+> [!success] **2026-11-10 更新：已解决本仓库的 GitHub-hosted Runner 启动阻断**
+> 仓库 `969981/PokeHome_Resources` 现已公开；[Runner 冒烟测试 #42760889941](https://github.com/969981/PokeHome_Resources/actions/runs/42760889941) **success**，`GitHub Actions 1000023560` 实际完成全部三个步骤。之后的 [Ghidra #42761206265](https://github.com/969981/PokeHome_Resources/actions/runs/42761206265) 已真实执行 Java、ELF SHA 与官方 Ghidra 安装，进入 `Fully analyze original ARM64 ELF in Ghidra Headless`。原有故障诊断仍保留作历史说明，**不能再说本仓库 Runner 尚未启动**。Ghidra 分析结果与 SQLite 是否成功仍须以该 Run 的后续 Job/Artifacts 为准。
 
 > [!warning] 当前状态
 > 2026-11-10 私有仓库 `969981/PokeHome_Resources` 的多个 Actions Job 都在数秒内失败，`runner_name=""` 且 `steps=[]`。工作流代码**没有实际执行**。
