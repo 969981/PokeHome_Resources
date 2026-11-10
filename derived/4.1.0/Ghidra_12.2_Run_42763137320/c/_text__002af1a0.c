@@ -1,0 +1,107 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::002af1a0; name: FUN_.text__002af1a0
+ */
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8 FUN__text__002af1a0(long param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  MutexType *pMVar1;
+  long lVar2;
+  long lVar3;
+  long lVar4;
+  uint uVar5;
+  long *plVar6;
+  undefined8 uVar7;
+  undefined8 uVar8;
+  ulong uVar9;
+  long local_c0;
+  long local_b8;
+  undefined8 uStack_b0;
+  long local_a8;
+  undefined8 local_a0;
+  undefined8 uStack_98;
+  undefined1 local_90;
+  long local_88;
+  undefined8 uStack_80;
+  undefined8 local_78;
+  undefined8 uStack_70;
+  long local_68;
+  undefined8 local_60;
+  uint local_58;
+  uint uStack_54;
+  uint *local_38;
+  
+  pMVar1 = (MutexType *)(param_1 + 0x78);
+  nn::os::LockMutex(pMVar1);
+  plVar6 = *(long **)(param_1 + 0x58);
+  if (plVar6 != (long *)0x0) {
+    (**(code **)(*plVar6 + 0x38))(plVar6,param_2);
+  }
+  FUN__text__002aa790(&local_38,param_1,param_2,5);
+  if (local_38 != (uint *)0x0) {
+    *(undefined1 *)(local_38 + 10) = 1;
+    uVar7 = *(undefined8 *)(local_38 + 2);
+    local_c0 = _DAT_008a23d8 + 0x10;
+    uStack_54 = *local_38;
+    uVar8 = *(undefined8 *)(local_38 + 8);
+    lVar2 = _DAT_008a2398 + 0x10;
+    local_58 = 0;
+    local_60 = 0;
+    local_68 = lVar2;
+    if (uStack_54 != 0) {
+      uVar5 = uStack_54 - (uStack_54 >> 1 & 0x55555555);
+      uVar5 = (uVar5 & 0x33333333) + (uVar5 >> 2 & 0x33333333);
+      uVar9 = (ulong)((uVar5 + (uVar5 >> 4) & 0xf0f0f0f) * 0x1010101 >> 0x18);
+      do {
+        (**(code **)(local_68 + 0x10))(&local_68);
+        uVar9 = uVar9 - 1;
+      } while (uVar9 != 0);
+    }
+    local_78 = CONCAT44(uStack_54,uStack_54);
+    local_a8 = _DAT_008a2380 + 0x10;
+    local_90 = 0;
+    uStack_70 = 0;
+    local_b8 = _DAT_008a23b0 + 0x10;
+    uStack_b0 = 0;
+    local_a0 = uVar7;
+    uStack_98 = uVar8;
+    local_88 = lVar2;
+    uStack_80 = local_60;
+    local_58 = uStack_54;
+    uVar9 = FUN__text__002ae0d0(&local_c0,param_3);
+    if ((uVar9 & 1) != 0) {
+      nn::os::LockMutex(pMVar1);
+      lVar3 = *(long *)(param_1 + 8);
+      lVar4 = *(long *)(param_1 + 0x10);
+      uVar7 = 1;
+      lVar2 = 0;
+      if (lVar4 != lVar3) {
+        lVar2 = LZCOUNT((lVar4 - lVar3 >> 4) * -0x5555555555555555) * -2 + 0x7e;
+      }
+      FUN__text__002aabf0(lVar3,lVar4,&local_68,lVar2,1);
+      nn::os::UnlockMutex(pMVar1);
+      goto LAB__text__002af388;
+    }
+    if ((*(long *)(local_38 + 2) != 0) && (*(long *)(local_38 + 4) != 0)) {
+      plVar6 = *(long **)(param_1 + 0x38);
+      (**(code **)(*plVar6 + 0x18))(plVar6,*(long *)(local_38 + 2),*(undefined8 *)(local_38 + 6));
+      (**(code **)(*plVar6 + 0x18))
+                (plVar6,*(undefined8 *)(local_38 + 4),*(undefined8 *)(local_38 + 6));
+      local_38[6] = 0;
+      local_38[7] = 0;
+      local_38[8] = 0;
+      local_38[9] = 0;
+    }
+    *(long *)(param_1 + 0x10) = *(long *)(param_1 + 0x10) + -0x30;
+  }
+  uVar7 = 0;
+LAB__text__002af388:
+  nn::os::UnlockMutex(pMVar1);
+  return uVar7;
+}
+
+

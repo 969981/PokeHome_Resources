@@ -1,0 +1,115 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::0028e860; name: FUN_.text__0028e860
+ */
+
+
+void FUN__text__0028e860(long *param_1,ulong param_2)
+
+{
+  long lVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  ulong uVar5;
+  ulong uVar6;
+  ulong uVar7;
+  long lVar8;
+  undefined4 *puVar9;
+  long lVar10;
+  
+  puVar3 = (undefined4 *)param_1[1];
+  if (param_2 <= (ulong)(param_1[2] - (long)puVar3 >> 2)) {
+    puVar4 = puVar3;
+    if (param_2 != 0) {
+      uVar7 = tpidr_el0;
+      puVar4 = puVar3 + param_2;
+      lVar10 = param_2 << 2;
+      uVar7 = uVar7 & 0xffffffffffffe000;
+      lVar1 = *(long *)(uVar7 + 0x98);
+      do {
+        if (lVar1 == 0x10) goto LAB__text__0028ea3c;
+        lVar10 = lVar10 + -4;
+        *(long *)((uVar7 | 0x18) + lVar1 * 8) = param_1[3];
+        *(long *)(uVar7 + 0x98) = *(long *)(uVar7 + 0x98) + 1;
+        *puVar3 = 0;
+        lVar1 = *(long *)(uVar7 + 0x98) + -1;
+        *(long *)(uVar7 + 0x98) = lVar1;
+        puVar3 = puVar3 + 1;
+      } while (lVar10 != 0);
+    }
+    param_1[1] = (long)puVar4;
+    return;
+  }
+  lVar10 = (long)puVar3 - *param_1 >> 2;
+  uVar7 = lVar10 + param_2;
+  if (uVar7 >> 0x3e != 0) {
+    FUN__text__0028ea48(param_1);
+                    /* WARNING: Subroutine does not return */
+    FUN__text__001187c0(0x71a95e);
+  }
+  uVar5 = param_1[2] - *param_1;
+  uVar6 = (long)uVar5 >> 1;
+  if (uVar6 <= uVar7) {
+    uVar6 = uVar7;
+  }
+  if (0x7ffffffffffffffb < uVar5) {
+    uVar6 = 0x3fffffffffffffff;
+  }
+  if (uVar6 != 0) {
+    lVar1 = (**(code **)(*(long *)param_1[3] + 0x10))((long *)param_1[3],uVar6 << 2,4);
+    if (lVar1 != 0) goto LAB__text__0028e8f4;
+    (**(code **)(*(long *)param_1[3] + 0xb8))();
+  }
+  lVar1 = 0;
+LAB__text__0028e8f4:
+  uVar7 = tpidr_el0;
+  puVar3 = (undefined4 *)(lVar1 + lVar10 * 4);
+  lVar10 = param_2 * 4;
+  uVar7 = uVar7 & 0xffffffffffffe000;
+  lVar8 = *(long *)(uVar7 + 0x98);
+  puVar4 = puVar3 + param_2;
+  puVar9 = puVar3;
+  do {
+    if (lVar8 == 0x10) goto LAB__text__0028ea3c;
+    lVar10 = lVar10 + -4;
+    *(long *)((uVar7 | 0x18) + lVar8 * 8) = param_1[3];
+    *(long *)(uVar7 + 0x98) = *(long *)(uVar7 + 0x98) + 1;
+    *puVar9 = 0;
+    lVar8 = *(long *)(uVar7 + 0x98) + -1;
+    *(long *)(uVar7 + 0x98) = lVar8;
+    puVar9 = puVar9 + 1;
+  } while (lVar10 != 0);
+  puVar9 = (undefined4 *)*param_1;
+  puVar2 = (undefined4 *)param_1[1];
+  if (puVar2 != puVar9) {
+    do {
+      if (lVar8 == 0x10) {
+LAB__text__0028ea3c:
+                    /* WARNING: Subroutine does not return */
+        FUN__text__00102c10();
+      }
+      *(long *)((uVar7 | 0x18) + lVar8 * 8) = param_1[3];
+      *(long *)(uVar7 + 0x98) = *(long *)(uVar7 + 0x98) + 1;
+      puVar2 = puVar2 + -1;
+      puVar3 = puVar3 + -1;
+      *puVar3 = *puVar2;
+      lVar8 = *(long *)(uVar7 + 0x98) + -1;
+      *(long *)(uVar7 + 0x98) = lVar8;
+    } while (puVar2 != puVar9);
+    puVar2 = (undefined4 *)*param_1;
+  }
+  *param_1 = (long)puVar3;
+  param_1[1] = (long)puVar4;
+  lVar10 = param_1[2];
+  param_1[2] = lVar1 + uVar6 * 4;
+  if (puVar2 == (undefined4 *)0x0) {
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x0028e9cc. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*(long *)param_1[3] + 0x18))((long *)param_1[3],puVar2,lVar10 - (long)puVar2,4);
+  return;
+}
+
+
