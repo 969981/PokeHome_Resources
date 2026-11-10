@@ -1,0 +1,165 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::0014b218; name: FUN_.text__0014b218
+ */
+
+
+void FUN__text__0014b218(long param_1,undefined8 param_2)
+
+{
+  long lVar1;
+  undefined8 uVar2;
+  long lVar3;
+  long lVar4;
+  undefined4 local_264;
+  undefined4 local_260;
+  undefined4 uStack_25c;
+  undefined8 local_58;
+  
+  if (*(char *)(param_1 + 0xd1) == '\0') {
+    return;
+  }
+  local_58 = param_2;
+  if (*(long *)(param_1 + 0x80) != 0) {
+    FUN__text__0014cc10(&local_260,param_2);
+    if (*(long *)(param_1 + 0x188) != 0) {
+      (**(code **)(*(long *)(*(long *)(param_1 + 0x188) + 0x48) + 0x18))();
+    }
+    uVar2 = CONCAT44(uStack_25c,local_260);
+    *(undefined8 *)(param_1 + 0x188) = uVar2;
+    FUN__text__0014953c(&local_260,*(undefined8 *)(*(long *)(param_1 + 0xf0) + 0xb0));
+    FUN__text__005f1e84(uVar2,&local_260);
+    FUN__text__0014821c(&local_260);
+    lVar3 = *(long *)(param_1 + 0x188);
+    lVar4 = *(long *)(*(long *)(param_1 + 0x108) + 0x130);
+    if (lVar4 != 0) {
+      (**(code **)(*(long *)(lVar4 + 0x48) + 0x10))();
+    }
+    lVar1 = *(long *)(lVar3 + 0x130);
+    if (lVar1 != 0) {
+      (**(code **)(*(long *)(lVar1 + 0x48) + 0x18))();
+    }
+    *(long *)(lVar3 + 0x130) = lVar4;
+    *(undefined1 *)(*(long *)(param_1 + 0x188) + 0xb8) = 0;
+    *(undefined1 *)(*(long *)(param_1 + 0x188) + 0x1ac) = 0;
+    *(undefined1 *)(*(long *)(param_1 + 0x188) + 0x208) = 1;
+    FUN__text__005c5e00(*(undefined8 *)(param_1 + 0x60),*(undefined8 *)(param_1 + 0x188));
+    FUN__text__0014cd04(&local_260,param_2);
+    if (*(long *)(param_1 + 400) != 0) {
+      (**(code **)(*(long *)(*(long *)(param_1 + 400) + 0x48) + 0x18))();
+    }
+    lVar3 = CONCAT44(uStack_25c,local_260);
+    *(long *)(param_1 + 400) = lVar3;
+    lVar4 = *(long *)(param_1 + 0x188);
+    if (lVar3 != 0) {
+      (**(code **)(*(long *)(lVar3 + 0x48) + 0x10))();
+    }
+    lVar1 = *(long *)(lVar4 + 0x210);
+    *(long *)(lVar4 + 0x210) = lVar3;
+    if (lVar1 != 0) {
+      (**(code **)(*(long *)(lVar1 + 0x48) + 0x18))();
+    }
+    (**(code **)(**(long **)(param_1 + 0x188) + 0x70))(*(long **)(param_1 + 0x188),1,0);
+    lVar3 = *(long *)(DAT_008e15a0 + 0x78);
+    if (lVar3 != 0) {
+      (**(code **)(*(long *)(lVar3 + 0x48) + 0x10))();
+    }
+    lVar4 = *(long *)(param_1 + 0x88);
+    *(undefined8 *)(param_1 + 0x198) = 0;
+    if ((lVar4 != 0) && (*(long *)(param_1 + 0x90) != 0)) {
+      (**(code **)(*(long *)(lVar4 + 0x48) + 0x10))();
+      lVar1 = *(long *)(param_1 + 0x1c0);
+      *(long *)(param_1 + 0x1c0) = lVar4;
+      if (lVar1 != 0) {
+        (**(code **)(*(long *)(lVar1 + 0x48) + 0x18))();
+      }
+      lVar4 = *(long *)(param_1 + 0x90);
+      if (lVar4 != 0) {
+        (**(code **)(*(long *)(lVar4 + 0x48) + 0x10))();
+      }
+      lVar1 = *(long *)(param_1 + 0x1c8);
+      *(long *)(param_1 + 0x1c8) = lVar4;
+      if (lVar1 != 0) {
+        (**(code **)(*(long *)(lVar1 + 0x48) + 0x18))();
+      }
+      lVar4 = FUN__text__0014d020(&local_260,param_2,0x717b86);
+      if (lVar4 != 0) {
+        (**(code **)(*(long *)(lVar4 + 0x48) + 0x10))();
+      }
+      if (*(long *)(param_1 + 0x1a0) != 0) {
+        (**(code **)(*(long *)(*(long *)(param_1 + 0x1a0) + 0x48) + 0x18))();
+      }
+      lVar1 = *(long *)(param_1 + 0x1c0);
+      *(long *)(param_1 + 0x1a0) = lVar4;
+      if (lVar1 != 0) {
+        (**(code **)(*(long *)(lVar1 + 0x48) + 0x10))();
+      }
+      if (*(long *)(lVar4 + 0xb0) != 0) {
+        (**(code **)(*(long *)(*(long *)(lVar4 + 0xb0) + 0x48) + 0x18))();
+      }
+      *(long *)(lVar4 + 0xb0) = lVar1;
+      lVar1 = *(long *)(param_1 + 0x1a0);
+      lVar4 = *(long *)(lVar1 + 0x130);
+      if (lVar4 != 0) {
+        (**(code **)(*(long *)(lVar4 + 0x48) + 0x18))();
+      }
+      *(undefined8 *)(lVar1 + 0x130) = 0;
+      FUN__text__005c5e00(*(undefined8 *)(param_1 + 0x60),*(undefined8 *)(param_1 + 0x1a0));
+      (**(code **)(**(long **)(param_1 + 0x1a0) + 0x68))(*(long **)(param_1 + 0x1a0),0);
+      lVar4 = FUN__text__0014d140(&local_260,param_2,0x70acfa);
+      if (lVar4 != 0) {
+        (**(code **)(*(long *)(lVar4 + 0x48) + 0x10))();
+      }
+      if (*(long *)(param_1 + 0x1a8) != 0) {
+        (**(code **)(*(long *)(*(long *)(param_1 + 0x1a8) + 0x48) + 0x18))();
+      }
+      lVar1 = *(long *)(param_1 + 0x1c8);
+      *(long *)(param_1 + 0x1a8) = lVar4;
+      if (lVar1 != 0) {
+        (**(code **)(*(long *)(lVar1 + 0x48) + 0x10))();
+      }
+      if (*(long *)(lVar4 + 0xb0) != 0) {
+        (**(code **)(*(long *)(*(long *)(lVar4 + 0xb0) + 0x48) + 0x18))();
+      }
+      *(long *)(lVar4 + 0xb0) = lVar1;
+      lVar1 = *(long *)(param_1 + 0x1a8);
+      lVar4 = *(long *)(lVar1 + 0x130);
+      if (lVar4 != 0) {
+        (**(code **)(*(long *)(lVar4 + 0x48) + 0x18))();
+      }
+      *(undefined8 *)(lVar1 + 0x130) = 0;
+      FUN__text__005c5e00(*(undefined8 *)(param_1 + 0x60),*(undefined8 *)(param_1 + 0x1a8));
+      (**(code **)(**(long **)(param_1 + 0x1a8) + 0x68))(*(long **)(param_1 + 0x1a8),0);
+      FUN__text__0014ce28(&local_260,param_2,&local_58);
+      if (*(long *)(param_1 + 0x1b0) != 0) {
+        (**(code **)(*(long *)(*(long *)(param_1 + 0x1b0) + 0x48) + 0x18))();
+      }
+      lVar4 = CONCAT44(uStack_25c,local_260);
+      *(long *)(param_1 + 0x1b0) = lVar4;
+      uVar2 = FUN__text__00145fcc(lVar3);
+      local_264 = 1;
+      local_260 = FUN__text__005bd8c0(*(undefined8 *)(lVar4 + 0xb0),uVar2,&local_264);
+      FUN__text__005bd83c(*(undefined8 *)(lVar4 + 0xb0),&local_260);
+      (**(code **)(**(long **)(param_1 + 0x1a0) + 0x78))
+                (*(long **)(param_1 + 0x1a0),*(undefined8 *)(param_1 + 0x1b0));
+      FUN__text__0014ce28(&local_260,local_58,&local_58);
+      if (*(long *)(param_1 + 0x1b8) != 0) {
+        (**(code **)(*(long *)(*(long *)(param_1 + 0x1b8) + 0x48) + 0x18))();
+      }
+      lVar4 = CONCAT44(uStack_25c,local_260);
+      *(long *)(param_1 + 0x1b8) = lVar4;
+      uVar2 = FUN__text__00145fcc(lVar3);
+      local_264 = 1;
+      local_260 = FUN__text__005bd8c0(*(undefined8 *)(lVar4 + 0xb0),uVar2,&local_264);
+      FUN__text__005bd83c(*(undefined8 *)(lVar4 + 0xb0),&local_260);
+      (**(code **)(**(long **)(param_1 + 0x1a8) + 0x78))
+                (*(long **)(param_1 + 0x1a8),*(undefined8 *)(param_1 + 0x1b8));
+      (**(code **)(*(long *)(lVar3 + 0x48) + 0x18))((long *)(lVar3 + 0x48));
+      return;
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  nn::diag::detail::AbortImpl();
+}
+
+

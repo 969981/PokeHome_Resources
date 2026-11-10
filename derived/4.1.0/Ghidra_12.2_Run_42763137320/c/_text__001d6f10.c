@@ -1,0 +1,98 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::001d6f10; name: FUN_.text__001d6f10
+ */
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN__text__001d6f10(undefined8 *param_1,long *param_2,long *param_3)
+
+{
+  long *plVar1;
+  long lVar2;
+  long lVar3;
+  ulong uVar4;
+  
+  plVar1 = (long *)(**(code **)(*param_2 + 0x10))(param_2,0x8bc0,8);
+  lVar2 = _DAT_008a0e98;
+  uVar4 = tpidr_el0;
+  uVar4 = uVar4 & 0xffffffffffffe000;
+  if (*(long *)(uVar4 + 0x98) == 0x10) {
+                    /* WARNING: Subroutine does not return */
+    FUN__text__00102c10();
+  }
+  *(long **)(uVar4 + 0x18 + *(long *)(uVar4 + 0x98) * 8) = param_2;
+  *(long *)(uVar4 + 0x98) = *(long *)(uVar4 + 0x98) + 1;
+  *plVar1 = lVar2 + 0x10;
+  plVar1[1] = *param_3;
+  plVar1[2] = param_3[1];
+  lVar3 = param_3[2];
+  *(undefined1 *)(plVar1 + 4) = 1;
+  lVar2 = _DAT_008a0ec0;
+  plVar1[5] = 0;
+  plVar1[0x1142] = 0;
+  plVar1[0x1143] = 0;
+  plVar1[0x1144] = 0;
+  plVar1[3] = lVar3;
+  *plVar1 = lVar2 + 0x10;
+  memset(plVar1 + 6,0,0x89ac);
+  plVar1[0x113c] = 0;
+  plVar1[0x113d] = 0;
+  plVar1[0x113e] = 0;
+  *(undefined1 *)(plVar1 + 0x113f) = 0;
+  *(undefined8 *)((long)plVar1 + 0x89fc) = 0;
+  *(undefined8 *)((long)plVar1 + 0x8a01) = 0;
+  if (((uVar4 == 0) || (*(long *)(uVar4 + 0x98) == 0)) ||
+     (lVar2 = *(long *)(uVar4 + 0x18 + *(long *)(uVar4 + 0x98) * 8 + -8), lVar2 == 0)) {
+    lVar2 = FUN__text__005f52b0();
+  }
+  *(undefined4 *)(plVar1 + 0x1147) = 0;
+  plVar1[0x1145] = lVar2;
+  plVar1[0x1146] = 0;
+  plVar1[0x1166] = 0;
+  *(undefined1 *)(plVar1 + 0x1167) = 0;
+  plVar1[0x1148] = 0;
+  plVar1[0x1149] = 0;
+  plVar1[0x114a] = 0;
+  plVar1[0x114b] = 0;
+  plVar1[0x114c] = 0;
+  plVar1[0x114d] = 0;
+  plVar1[0x114e] = 0;
+  plVar1[0x114f] = 0;
+  plVar1[0x1150] = 0;
+  plVar1[0x1151] = 0;
+  plVar1[0x1152] = 0;
+  plVar1[0x1153] = 0;
+  plVar1[0x1154] = 0;
+  plVar1[0x1155] = 0;
+  plVar1[0x1156] = 0;
+  plVar1[0x1157] = 0;
+  plVar1[0x1158] = 0;
+  plVar1[0x1159] = 0;
+  plVar1[0x115a] = 0;
+  plVar1[0x115b] = 0;
+  plVar1[0x115c] = 0;
+  plVar1[0x115d] = 0;
+  plVar1[0x115e] = 0;
+  plVar1[0x115f] = 0;
+  plVar1[0x1160] = 0;
+  plVar1[0x1161] = 0;
+  plVar1[0x1162] = 0;
+  plVar1[0x1163] = 0;
+  plVar1[0x1164] = 0;
+  plVar1[0x1165] = 0;
+  FUN__text__0019c35c((long)plVar1 + 0x8b3c);
+  *param_1 = plVar1;
+  param_1[1] = param_2;
+  plVar1[0x1177] = 0;
+  plVar1[0x1176] = 0;
+  plVar1[0x1174] = 0;
+  *(undefined8 *)((long)plVar1 + 0x8ba5) = 0;
+  param_1[2] = 0x8bc0;
+  param_1[3] = 8;
+  *(long *)(uVar4 + 0x98) = *(long *)(uVar4 + 0x98) + -1;
+  return;
+}
+
+
