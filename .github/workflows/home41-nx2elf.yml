@@ -1,0 +1,119 @@
+name: HOME 4.1.0 main to ELF (shuffle2/nx2elf)
+
+on:
+  push:
+    branches: ["4.1.0"]
+    paths:
+      - "tools/nx2elf_home41.py"
+      - ".github/workflows/home41-nx2elf.yml"
+      - "57b83ea8c0af21ef26e2519b9580b373_NCA/0/main"
+  workflow_dispatch:
+    inputs:
+      commit_generated:
+        description: "Explicitly replace and commit main.elf if rebuilt bytes differ"
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-nx2elf-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout HOME 4.1.0 resources
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+
+      - name: Checkout upstream shuffle2/nx2elf at pinned revision
+        uses: actions/checkout@v4
+        with:
+          repository: shuffle2/nx2elf
+          ref: a1760ba54e2aefb41444933f53b90e6e8b05c399
+          path: .ci-upstream/nx2elf
+          persist-credentials: false
+
+      - name: Build upstream nx2elf (no vendored binaries)
+        shell: bash
+        run: |
+          set -euo pipefail
+          cmake -S .ci-upstream/nx2elf -B "$RUNNER_TEMP/nx2elf-build" -DCMAKE_BUILD_TYPE=Release
+          cmake --build "$RUNNER_TEMP/nx2elf-build" --parallel 2
+
+      - name: Verify existing tracked main.elf is ELF64 AArch64
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/nx2elf_home41.py --mode inspect \
+            --target 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --report "$RUNNER_TEMP/main-elf-inspect.json"
+          readelf -h 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+
+      - name: Convert original main via pinned nx2elf
+        id: conversion
+        shell: bash
+        env:
+          COMMIT_GENERATED: ${{ inputs.commit_generated || false }}
+        run: |
+          set -euo pipefail
+          mode=verify
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" && "$COMMIT_GENERATED" == "true" ]]; then
+            [[ "$GITHUB_REF" == "refs/heads/4.1.0" ]] || {
+              echo "::error::write-back is restricted to refs/heads/4.1.0"
+              exit 1
+            }
+            mode=write
+          fi
+          mkdir -p "$RUNNER_TEMP/home41-output"
+          set +e
+          python3 tools/nx2elf_home41.py \
+            --mode "$mode" \
+            --source 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main \
+            --target 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --nx2elf "$RUNNER_TEMP/nx2elf-build/nx2elf" \
+            --artifact "$RUNNER_TEMP/home41-output/main.elf" \
+            --report "$RUNNER_TEMP/home41-output/nx2elf-validation.json"
+          status=$?
+          set -e
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          if [[ "$status" -eq 2 ]]; then
+            echo "::error::Newly generated main.elf differs from tracked main.elf. Download artifact to inspect or manually dispatch commit_generated=true."
+          fi
+          exit "$status"
+
+      - name: Commit updated main.elf (only when explicitly requested)
+        if: github.event_name == 'workflow_dispatch' && inputs.commit_generated == true && steps.conversion.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+          if git diff --cached --quiet; then
+            echo "ELF is already identical; no duplicate binary commit necessary."
+          else
+            git commit -m "build(home41): regenerate main.elf with pinned shuffle2/nx2elf"
+            git push origin HEAD:4.1.0
+          fi
+
+      - name: Upload regenerated ELF and verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-main-elf-nx2elf
+          path: |
+            ${{ runner.temp }}/home41-output/main.elf
+            ${{ runner.temp }}/home41-output/nx2elf-validation.json
+            ${{ runner.temp }}/main-elf-inspect.json
+          if-no-files-found: warn
+          retention-days: 30
+          compression-level: 6
