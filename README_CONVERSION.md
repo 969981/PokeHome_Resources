@@ -5,6 +5,35 @@
 这个工具将可验证的二进制内容导出为便于检索的 **UTF-8 JSON、CSV**，按需要解包 SARC 中的 BFLYT、BFLAN、BNTX，并可在安装外部解码器时输出 **PNG**。它不是“所有二进制都变成语义明确的 JSON”——未知 schema/编码会保留结构字段及验证状态。
 
 
+## HOME 4.1.0 全量 Ghidra 原生工程、SQLite 与 15,415 C 源码：无压缩 Git 分片
+
+已将 [Ghidra 12.2 完整成功 Run #42763137320](https://github.com/969981/PokeHome_Resources/actions/runs/42763137320) 的产物**实际解压并提交到本仓库 `4.1.0` 分支**：
+
+- [**完整的未压缩 Git 目录（C、数据库分片、NDJSON、Ghidra 原生工程）**](derived/4.1.0/Ghidra_12.2_Run_42763137320/)
+- [**原始大小、分片 SHA-256、所有源产物追溯清单**](derived/4.1.0/Ghidra_12.2_Run_42763137320/parts_manifest.json)
+- [**无损重组与 SQLite 完整性验收程序**](tools/ghidra/home41_restore_split.py)
+- [**已提交数据再验收的 GitHub Actions**](.github/workflows/home41-ghidra-verify-branch-split.yml)
+
+| 数据 | 已提交（均为未压缩文件） | 原始总大小 |
+|---|---:|---:|
+| Ghidra C 伪代码 | **15,415 个独立 `.c`** | 28,305,757B |
+| SQLite | **6 个二进制分片**（每片 ≤45MiB） | **253,399,040B** |
+| NDJSON | **8 个纯文本分片**（完整 JSON 行边界） | **347,613,872B** |
+| Ghidra `.gpr/.rep` | 原生目录；仅一个 130,088,960B 的内部分片成 3 片 | 可无损恢复 |
+| FDE | `fde_recovery.csv` | 25,803 条 |
+
+普通 GitHub 单文件上限 100MiB，因此这里**不使用 Git LFS，也不把数据库伪装成小文件**：超大文件仅做原始字节分片，每片拥有 SHA-256，重组后的整个原文件再次验证 SHA-256 和 `PRAGMA integrity_check=ok`。原生 Ghidra 工程里唯一超限的 `db.1.gbf` 也由恢复脚本处理。
+
+在仓库根目录执行即可得到可直接打开的完整 Ghidra 工程、一个原始 SQLite 数据库以及一份原始 NDJSON：
+
+```bash
+python tools/ghidra/home41_restore_split.py \\
+  --source derived/4.1.0/Ghidra_12.2_Run_42763137320 \\
+  --out /path/to/HOME41_Ghidra_Restored
+```
+
+恢复目录中的 `project/HOME410.gpr` 可用 Ghidra 12.2 打开；`home41_main_410.sqlite` 可用 SQLite 工具查询；15,415 个独立 C 文件**已直接在 Git 中，无需重建**。这些是 Ghidra 恢复的 C 风格伪代码，不是任天堂原始源码。
+
 ## HOME 4.1.0 ELF 静态拆解与 Ghidra 反编译
 
 已直接审计本分支原始 `main.elf`：25,803 条 FDE 的 PC/长度均有效，54 个重点函数的地址与 FDE 完全对应；扫描得到 74,629 条模块内 AArch64 直接 BL，并导出完整 FDE 索引与重点汇编。**这些是实际 ELF 静态分析结果，不是 Ghidra C 反编译运行结果**。
