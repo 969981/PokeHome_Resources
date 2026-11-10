@@ -64,3 +64,79 @@ jobs:
           rm -rf "$ANNOT"
           python tools/ghidra/home41_annotate_all.py --db "$RUNNER_TEMP/home41.sqlite" --c-root "$SOURCE/c" --index "$SOURCE/decompiled_index.csv" --fde "$SOURCE/fde_recovery.csv" --out "$ANNOT"
           python tools/ghidra/home41_restore_annotations.py --source "$ANNOT" --out "$RUNNER_TEMP/home41_annotations.sqlite"
+
+      - name: Verify annotation coverage and FDE reconciliation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,sqlite3
+          from pathlib import Path
+          root=Path(os.environ["ANNOT"])
+          m=json.loads((root/"annotation_manifest.json").read_text())
+          assert m["status"]=="STATIC_ANNOTATION_GENERATED"
+          assert m["annotated_functions"]==15415
+          assert m["annotated_c_files"]==15415
+          assert m["annotated_instructions"]==1029451
+          assert m["fde_total"]==25803
+          assert m["fde_ghidra_matches"]>0
+          assert m["fde_ghidra_matches"]+m["fde_not_ghidra_matches"]==25803
+          assert len(list((root/"c_annotated").glob("*.c")))==15415
+          with sqlite3.connect(Path(os.environ["RUNNER_TEMP"])/"home41_annotations.sqlite") as db:
+              assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
+              assert db.execute("SELECT COUNT(*) FROM instruction_annotations").fetchone()[0]==1029451
+              assert db.execute("SELECT COUNT(*) FROM function_annotations").fetchone()[0]==15415
+          print("Validated 15415 C functions, 1029451 instruction comments, 25803 FDE entries")
+          PY
+      - name: Commit function descriptions and 25803 evidence-graded FDE records
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- "$ANNOT/README.md" "$ANNOT/function_catalog.csv" \
+            "$ANNOT/ghidra_function_comments.tsv" \
+            "$ANNOT/fde_catalog.csv" "$ANNOT/annotation_manifest.json"
+          git commit -m 'docs(home41): annotate 15415 function purposes with evidence grades and 25803 FDE entries'
+          git push origin HEAD:4.1.0
+      - name: Commit per-instruction machine code notes and SQLite raw pieces
+        shell: bash
+        run: |
+          set -euo pipefail
+          count=0
+          while IFS= read -r -d '' path; do
+            count=$((count+1))
+            test "$(stat -c %s "$path")" -le 41943040
+            git add -f -- "$path"
+            git commit -m "data(home41): instruction annotations / SQLite raw shard $count"
+            git push origin HEAD:4.1.0
+          done < <(find "$ANNOT/annotation_db" "$ANNOT/asm_annotated" -type f -print0 | sort -z)
+          test "$count" -ge 2
+          echo "Committed $count annotation shards (not zip or LFS)"
+      - name: Commit 15415 commented C sources without replacing original C
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -d '' -t files < <(find "$ANNOT/c_annotated" -name '*.c' -type f -print0 | sort -z)
+          test "${#files[@]}" -eq 15415
+          batch=0
+          for ((k=0; k<${#files[@]}; k+=1250)); do
+            batch=$((batch+1))
+            git add -f -- "${files[@]:k:1250}" 
+            if ! git diff --cached --quiet; then
+              git commit -m "data(home41): C source inline annotations batch $batch"
+              git push origin HEAD:4.1.0
+            fi
+          done
+          test -z "$(git status --porcelain -- "$ANNOT")"
+          echo "Committed ${#files[@]} annotated C files"
+      - name: Upload verification summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-line-comments-verified
+          path: |
+            ${{ github.workspace }}/derived/4.1.0/Ghidra_12.2_Run_42763137320/annotation_v1/annotation_manifest.json
+            ${{ github.workspace }}/derived/4.1.0/Ghidra_12.2_Run_42763137320/annotation_v1/README.md
+          if-no-files-found: warn
+          retention-days: 30
