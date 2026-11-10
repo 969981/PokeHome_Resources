@@ -198,7 +198,7 @@ def build(elf: Path, source: Path, dest: Path, allow_partial=False, with_fts=Tru
         "status": "COMPLETE" if final and final.get("complete") else "PARTIAL",
         "elf_sha256": sha, "source": str(source),
         "database": str(dest), "counts": dict(counts),
-        "decompile_requested": bool(meta.get("decompile_requested") == "True"),
+        "decompile_requested": meta.get("decompile_requested") in (True, "True", "true", 1, "1"),
         "decompiled_ok": int(final.get("decompiled_ok", 0)) if final else 0,
         "decompiled_failed": int(final.get("decompiled_failed", 0)) if final else 0,
         "evidence": "STATIC_GHIDRA_ONLY_NO_RUNTIME_UI_PROOF",
