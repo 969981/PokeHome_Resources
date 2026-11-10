@@ -8,6 +8,7 @@ Python 3.10+; standard library only. Does not modify source RomFS.
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import subprocess
@@ -15,6 +16,7 @@ import sys
 from pathlib import Path
 
 from build_home41_item_catalog import build
+from home41_romfs_core import ahtb_labels, dat_lines
 
 NCA = "57b83ea8c0af21ef26e2519b9580b373_NCA"
 RAW_ITEM_SHA256 = "4f5edd3f0ca8ed0c60ceb91fda0c5385f20ec986a66dcf4aa68d1c145903a1a2"
@@ -92,6 +94,37 @@ def verify_decoded_manifest(root: Path) -> None:
                 raise ValueError(f"Decoder output hash mismatch: {file}")
 
 
+
+def validate_message_pairs(root: Path) -> None:
+    """Always independently verify raw .tbl/.dat pairs, including --skip-unpack.
+
+    The decoder manifest hashes .dat itself. Its paired .tbl can change
+    independently, so check label/hash/text against the actual raw files.
+    """
+    for locale in LOCALES:
+        relative = Path("bin/message") / locale / "megaturtle/itemname.dat"
+        raw_dir = root / NCA / "1"
+        labels = ahtb_labels((raw_dir / relative).with_suffix(".tbl").read_bytes())
+        lines = dat_lines((raw_dir / relative).read_bytes())
+        if len(labels) != 2685 or len(lines) != 2685:
+            raise ValueError(f"Source itemname row count differs: {locale}")
+        target = root / "Unpack" / NCA / "1" / relative.with_suffix(".csv")
+        with target.open("r", encoding="utf-8-sig", newline="") as stream:
+            decoded = list(csv.DictReader(stream))
+        if len(decoded) != len(labels):
+            raise ValueError(f"Decoded itemname row count mismatch: {locale}")
+        for idx, ((label, name_hash), raw_line, decoded_line) in enumerate(
+            zip(labels, lines, decoded)
+        ):
+            if (decoded_line["index"] != str(idx)
+                    or decoded_line["label"] != label
+                    or decoded_line["hash_fnv64"] != f"{name_hash:016X}"
+                    or decoded_line["text"] != raw_line["text"]
+                    or decoded_line["flags"] != str(raw_line["flags"])
+                    or decoded_line["source_offset"] != str(raw_line["offset"])):
+                raise ValueError(f"Raw DAT/TBL differs from generated CSV: {locale} ItemID {idx}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, default=Path("."),
@@ -106,6 +139,7 @@ def main() -> None:
     if not args.skip_unpack:
         decode_sources(root)
     verify_decoded_manifest(root)
+    validate_message_pairs(root)
     target = args.out_dir.resolve() if args.out_dir is not None else root / "derived/4.1.0/item_catalog"
     if target == root / NCA / "1" or (root / NCA / "1") in target.parents:
         raise ValueError("Output may not overlap original RomFS input")
