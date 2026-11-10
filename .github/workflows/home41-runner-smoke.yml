@@ -1,6 +1,10 @@
 name: HOME 4.1.0 Runner availability smoke test
 
 on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-runner-smoke.yml'
   workflow_dispatch:
     inputs:
       runner_target:
