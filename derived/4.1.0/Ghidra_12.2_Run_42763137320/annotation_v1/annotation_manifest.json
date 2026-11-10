@@ -1,0 +1,73 @@
+{
+  "status": "STATIC_ANNOTATION_GENERATED",
+  "source_run": 42763137320,
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "input_counts": {
+    "functions": 15415,
+    "instructions": 1029451,
+    "references_full": 423988,
+    "decompilation": 15415
+  },
+  "annotated_functions": 15415,
+  "function_levels": {
+    "SYMBOL_EVIDENCE": 1545,
+    "BEHAVIOR_OBSERVED": 13833,
+    "VERIFIED_NATIVE_STATIC": 37
+  },
+  "annotated_c_files": 15415,
+  "annotated_c_lines": 701612,
+  "annotated_instructions": 1029451,
+  "opcode_categories": {
+    "UNRESOLVED": 30984,
+    "MATH": 116496,
+    "WRITE": 147381,
+    "PC_REL": 23370,
+    "READ": 249637,
+    "BRANCH": 92673,
+    "CALL": 49402,
+    "COMPARE": 41669,
+    "INDIRECT_CALL": 25868,
+    "RETURN": 16128,
+    "MOVE": 176992,
+    "BITWISE": 26526,
+    "JUMP": 24709,
+    "HINT": 7078,
+    "SYNC": 538
+  },
+  "asm_parts": 3,
+  "annotation_sqlite": {
+    "size": 180781056,
+    "sha256": "6f9163489c1ea2e40ccf84517127d8289532174523f277bb7c209f2a5c0032f1",
+    "parts": [
+      {
+        "path": "annotations.sqlite.part0000.bin",
+        "size": 41943040,
+        "sha256": "b7ff7e31c52f4af831c1677bfb2a60cf374b2638daa228a65713a5b2a1d0790c"
+      },
+      {
+        "path": "annotations.sqlite.part0001.bin",
+        "size": 41943040,
+        "sha256": "96f56dc5b55a01f55e3e4f65c350a0bef4d3f76d5a75b0d830f37189354cb114"
+      },
+      {
+        "path": "annotations.sqlite.part0002.bin",
+        "size": 41943040,
+        "sha256": "8bc850631cda40825379a933ebb472e08e89a20948a6f807c072f259a2b7fade"
+      },
+      {
+        "path": "annotations.sqlite.part0003.bin",
+        "size": 41943040,
+        "sha256": "ade467a1066c583dce833b312adbbff5872bf884d2b949f594183086a8e4c399"
+      },
+      {
+        "path": "annotations.sqlite.part0004.bin",
+        "size": 13008896,
+        "sha256": "7a05d0697f6ea583837b57df592d1819cc473f47267365adb99e4394da980ead"
+      }
+    ]
+  },
+  "fde_total": 25803,
+  "fde_ghidra_matches": 13034,
+  "fde_not_ghidra_matches": 12769,
+  "important_caveat": "These are static opcode and C-expression annotations; unknown business purposes remain UNKNOWN; not official source."
+}
