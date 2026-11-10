@@ -92,10 +92,11 @@ def verify(tsv: Path, c_root: Path, expect_count: int = 14) -> dict:
                     rf"\bbool\s+FUN__text__{rva + 0x100000:08x}\s*\(", content
                 ):
                     raise ValueError("Bool return not supported by Ghidra C")
+                # undefined4 establishes return width, not signedness semantics.
                 if row["prototype"].startswith("unsigned int ") and not re.search(
-                    rf"\buint\s+FUN__text__{rva + 0x100000:08x}\s*\(", content
+                    rf"\b(?:uint|undefined4)\s+FUN__text__{rva + 0x100000:08x}\s*\(", content
                 ):
-                    raise ValueError("32-bit integer return not supported by Ghidra C")
+                    raise ValueError("4-byte return width not supported by Ghidra C")
                 checks.append({
                     "rva": row["rva"],
                     "prototype": row["prototype"],
