@@ -1,0 +1,178 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::0040632c; name: FUN_.text__0040632c
+ */
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN__text__0040632c(undefined8 *param_1,undefined8 *param_2,undefined8 param_3,
+                        undefined1 param_4,undefined1 param_5)
+
+{
+  long lVar1;
+  long lVar2;
+  undefined8 uVar3;
+  
+  param_1[2] = 0;
+  param_1[3] = 0;
+  param_1[5] = param_3;
+  *(undefined4 *)(param_1 + 6) = 0xffffffff;
+  param_1[10] = 0;
+  param_1[0xb] = 0;
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  *param_1 = 0x887050;
+  param_1[1] = 0;
+  uVar3 = *param_2;
+  *(undefined8 *)((long)param_1 + 0x6c) = param_2[1];
+  *(undefined8 *)((long)param_1 + 100) = uVar3;
+  param_1[0xf] = 0;
+  param_1[0x10] = 0;
+  param_1[0x11] = 0;
+  param_1[0x12] = 0;
+  *(undefined8 *)((long)param_1 + 0x96) = 0;
+  FUN__text__004df2cc(param_1 + 0x14);
+  FUN__text__00488fc4(param_1 + 0x19);
+  param_1[0x2f] = 0;
+  param_1[0x30] = 0;
+  param_1[0x2d] = 0;
+  param_1[0x2e] = 0;
+  *(undefined1 *)(param_1 + 0x30) = 0xff;
+  param_1[0x31] = 0;
+  param_1[0x32] = 0;
+  *(undefined1 *)(param_1 + 0x31) = 0xff;
+  param_1[0x33] = 0;
+  param_1[0x34] = 0;
+  param_1[0x35] = 0;
+  param_1[0x36] = 0;
+  param_1[0x37] = 0;
+  param_1[0x38] = 0;
+  param_1[0x39] = 0;
+  param_1[0x3a] = 0;
+  lVar1 = _DAT_008a4830 + 0x10;
+  lVar2 = _DAT_008a4830 + 0x58;
+  param_1[0x42] = 0;
+  param_1[0x43] = 0;
+  param_1[0x41] = 0;
+  *(undefined1 *)(param_1 + 0x42) = 0xff;
+  *(undefined1 *)(param_1 + 0x43) = 0xff;
+  param_1[0x44] = 0;
+  param_1[0x45] = 0;
+  param_1[0x46] = 0;
+  param_1[0x47] = 0;
+  param_1[0x48] = 0;
+  param_1[0x49] = 0;
+  param_1[0x4a] = 0;
+  param_1[0x4b] = 0;
+  param_1[0x4c] = 0;
+  param_1[0x4d] = 0;
+  param_1[0x54] = 0;
+  param_1[0x55] = 0;
+  param_1[0x4e] = 0;
+  param_1[0x4f] = 0;
+  param_1[0x50] = 0;
+  param_1[0x51] = 0;
+  param_1[0x52] = 0;
+  param_1[0x53] = 0;
+  *(undefined1 *)(param_1 + 0x54) = 0xff;
+  *(undefined1 *)(param_1 + 0x55) = 0xff;
+  param_1[0x56] = 0;
+  param_1[0x57] = 0;
+  param_1[0x58] = 0;
+  param_1[0x59] = 0;
+  param_1[0x5a] = 0;
+  param_1[0x5b] = 0;
+  param_1[0x5c] = 0;
+  param_1[0x5d] = 0;
+  param_1[0x5e] = 0;
+  param_1[0x5f] = 0;
+  param_1[0x4f] = lVar1;
+  param_1[0x50] = lVar2;
+  param_1[0x67] = 0;
+  param_1[0x66] = 0;
+  param_1[0x65] = 0;
+  param_1[100] = 0;
+  param_1[99] = 0;
+  param_1[0x62] = 0;
+  param_1[0x61] = 0;
+  param_1[0x60] = 0;
+  *(undefined1 *)(param_1 + 0x66) = 0xff;
+  *(undefined1 *)(param_1 + 0x67) = 0xff;
+  param_1[0x71] = 0;
+  param_1[0x70] = 0;
+  param_1[0x6f] = 0;
+  param_1[0x6e] = 0;
+  param_1[0x6d] = 0;
+  param_1[0x6c] = 0;
+  param_1[0x6b] = 0;
+  param_1[0x6a] = 0;
+  param_1[0x69] = 0;
+  param_1[0x68] = 0;
+  param_1[0x61] = lVar1;
+  param_1[0x62] = lVar2;
+  param_1[0x72] = 0;
+  param_1[0x2b] = lVar1;
+  param_1[0x2c] = lVar2;
+  param_1[0x3f] = 0;
+  param_1[0x40] = 0;
+  param_1[0x3d] = 0;
+  param_1[0x3e] = 0;
+  param_1[0x3b] = 0;
+  param_1[0x3c] = 0;
+  param_1[0x3d] = lVar1;
+  param_1[0x3e] = lVar2;
+  FUN__text__004062fc(param_1 + 0x73,param_1,0);
+  FUN__text__004062fc(param_1 + 0x77,param_1,1);
+  FUN__text__004062fc(param_1 + 0x7b,param_1,2);
+  FUN__text__004062fc(param_1 + 0x7f,param_1,3);
+  FUN__text__00406278(param_1 + 0x83,param_1);
+  param_1[0x86] = 0;
+  param_1[0x89] = 0;
+  *(undefined4 *)(param_1 + 0x8a) = 0;
+  *(undefined4 *)(param_1 + 0x8b) = 0;
+  *(undefined1 *)(param_1 + 0x8c) = 0xff;
+  *(undefined1 *)(param_1 + 0x8d) = 0xff;
+  param_1[0x8e] = 0;
+  param_1[0x8f] = 0;
+  param_1[0x90] = 0;
+  param_1[0x91] = 0;
+  param_1[0x92] = 0;
+  param_1[0x93] = 0;
+  param_1[0x94] = 0;
+  param_1[0x95] = 0;
+  param_1[0x96] = 0;
+  param_1[0x97] = 0;
+  lVar1 = _DAT_008a4828 + 0x10;
+  param_1[0x88] = _DAT_008a4828 + 0x58;
+  param_1[0x87] = lVar1;
+  param_1[0x99] = 0x3f8000003f800000;
+  param_1[0x98] = 0;
+  *(undefined4 *)(param_1 + 0x9b) = 0;
+  *(undefined4 *)(param_1 + 0xa1) = 0;
+  *(undefined4 *)(param_1 + 0xa6) = 0;
+  param_1[0xa9] = 0;
+  param_1[0xa8] = 0;
+  param_1[0xa7] = 0;
+  *(undefined4 *)(param_1 + 0xaa) = 2;
+  *(undefined1 *)((long)param_1 + 0x554) = 0;
+  *(undefined1 *)((long)param_1 + 0x555) = param_4;
+  *(undefined1 *)((long)param_1 + 0x556) = 0;
+  *(undefined1 *)((long)param_1 + 0x557) = param_5;
+  *(undefined2 *)(param_1 + 0xab) = 0;
+  *(undefined1 *)((long)param_1 + 0x55a) = 0;
+  param_1[0x9a] = 0;
+  *(undefined8 *)((long)param_1 + 0x4dc) = 0x2b;
+  *(undefined8 *)((long)param_1 + 0x4e4) = 0;
+  *(undefined8 *)((long)param_1 + 0x4ec) = 0x3f800000ffffffff;
+  *(undefined8 *)((long)param_1 + 0x4f4) = 0x1ffffffff;
+  param_1[0xa0] = 0;
+  *(undefined4 *)(param_1 + 0xa2) = 0;
+  *(undefined4 *)((long)param_1 + 0x50c) = 0x2b;
+  *(undefined8 *)((long)param_1 + 0x514) = 0;
+  *(undefined8 *)((long)param_1 + 0x51c) = 0x3f800000ffffffff;
+  *(undefined8 *)((long)param_1 + 0x524) = 0x1ffffffff;
+  *(undefined1 *)(param_1 + 0x1f) = *(undefined1 *)(param_2 + 1);
+  return;
+}
+
+
