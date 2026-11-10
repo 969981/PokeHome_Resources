@@ -5,6 +5,17 @@
 这个工具将可验证的二进制内容导出为便于检索的 **UTF-8 JSON、CSV**，按需要解包 SARC 中的 BFLYT、BFLAN、BNTX，并可在安装外部解码器时输出 **PNG**。它不是“所有二进制都变成语义明确的 JSON”——未知 schema/编码会保留结构字段及验证状态。
 
 
+## HOME 4.1.0 ELF 静态拆解与 Ghidra 反编译
+
+已直接审计本分支原始 `main.elf`：25,803 条 FDE 的 PC/长度均有效，54 个重点函数的地址与 FDE 完全对应；扫描得到 74,629 条模块内 AArch64 直接 BL，并导出完整 FDE 索引与重点汇编。**这些是实际 ELF 静态分析结果，不是 Ghidra C 反编译运行结果**。
+
+- [**Obsidian：原始 ELF / Ghidra 函数恢复、FDE、BL XREF 和反编译流程**](docs/obsidian/HOME41_main_ELF_Ghidra_函数恢复与反编译_20261110.md)
+- [**只读 Python：完整 25,803 FDE 和 54 个核心函数 ASM/XREF 导出**](tools/home41_ghidra_elf_atlas.py)
+- [**Ghidra 12.2 Java Headless：批量标记 54 函数并导出选定 C 伪代码**](tools/ghidra/Home41Analyze.java)
+- [**可选 Ghidra 12.2 / Temurin JDK25 GitHub Actions**](.github/workflows/home41-ghidra-headless.yml)
+
+**运行状态**：本轮已完成原始 ELF 结构、FDE、BL、LLVM 汇编的实际检查；当前环境尚未安装可运行的 Ghidra 12.2，Ghidra Headless 的真实运行日志、C 伪代码和项目文件仍待验收。
+
 ## HOME 4.1.0 main NSO → main.elf（shuffle2/nx2elf）
 
 本分支的 `57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf` **已经提交**，并通过 SHA256（`bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a`）及 ELF64/AArch64/Build ID 检查。新增引用上游 [shuffle2/nx2elf](https://github.com/shuffle2/nx2elf)，固定提交 `a1760ba54e2aefb41444933f53b90e6e8b05c399`，提供标准化重建、可重复验证和手动提交入口。
