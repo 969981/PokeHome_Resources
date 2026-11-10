@@ -91,3 +91,7 @@
 下一步验证应沿 ELF **字段 Getter 本体**推进，特别是 `item.dat` 的 48-byte member 取值、位掩码判断、使用效果分支；以及从 `topics_data.bin` 的 `x19+0x508` 追到 312-byte 槽位中实际读取偏移。静态计算路径之外仍需必要的实机只读对照。
 
 **不能只因为剩下 3 个 unsupported 就宣称完全解包：5,371 个 partial 仍是未完全恢复语义的真实工作量。**
+
+## 2026-11-10：HOME 11 语言名称 × Item8 物理记录的重建入口
+
+本仓库已经有 [原始 RomFS 一键解包并生成双 CSV](../tools/rebuild_home41_from_romfs.py) 和 [独立关联生成模块](../tools/build_home41_item_catalog.py)，不再依赖另一仓库才能执行。预计产生 2685 行、17 列多语言名称和 1829 行、25 列 PML ID 中文/英文/价格/Pouch/图标 key/原始偏移交叉表；采用 1166 条 48B 物理记录，额外 663 个 ID 共享默认记录。具体来源、DAT/TBL XOR、原版 ELF 和验证边界参见 [Obsidian 指南](obsidian/HOME41_道具名称2685语言与PML1829_RomFS重建_20261110.md)。
