@@ -51,6 +51,7 @@ jobs:
           sparse-checkout: |
             57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
             tools/ghidra/
+            tools/home41_ghidra_elf_atlas.py
             .github/workflows/home41-ghidra-full-database.yml
 
       - name: Install Java 25 for official Ghidra 12.2
@@ -70,6 +71,24 @@ jobs:
           python -m unittest discover -s tools/ghidra -p 'test_*.py' -v
           file "$MAIN_ELF"
           readelf -h "$MAIN_ELF" | grep -E 'ELF64|AArch64|Machine:'
+
+      - name: Verify all 25803 original ELF FDE function ranges for recovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/home41_ghidra_elf_atlas.py \
+            --elf "$MAIN_ELF" --out "$RUNNER_TEMP/home41-fde"
+          test -s "$RUNNER_TEMP/home41-fde/fde_25803.csv.gz"
+          python - <<'PY'
+          import gzip,csv,os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"home41-fde"/"fde_25803.csv.gz"
+          with gzip.open(p,"rt",encoding="utf-8") as stream:
+              rows=list(csv.DictReader(stream))
+          assert len(rows)==25803,len(rows)
+          assert all(int(x["length_bytes"])>0 for x in rows)
+          print("Validated 25803 exact FDE start/length pairs")
+          PY
 
       - name: Download official Ghidra and verify release SHA256
         shell: bash
@@ -114,6 +133,9 @@ jobs:
               -scriptPath "$GITHUB_WORKSPACE/tools/ghidra" \
               -analysisTimeoutPerFile 15000 \
               -max-cpu 2 \
+              -postScript Home41RecoverFDE.java \
+                "$RUNNER_TEMP/home41-fde/fde_25803.csv.gz" \
+                "$RUNNER_TEMP/home41_out/fde_recovery.csv" \
               -postScript Home41Export.java \
                 "$RUNNER_TEMP/home41_out/home41_ghidra_events.ndjson.gz" \
                 "$mode" 20 \
@@ -220,6 +242,18 @@ jobs:
             ${{ runner.temp }}/home41_out/HOME410_all_decompiled_C.zip
             ${{ runner.temp }}/home41_out/decompiled_index.csv
             ${{ runner.temp }}/home41_out/decompiled_manifest.json
+
+      - name: Upload full original FDE recovery audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Ghidra12-FDE-recovery
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/home41-fde/fde_25803.csv.gz
+            ${{ runner.temp }}/home41-fde/manifest.json
+            ${{ runner.temp }}/home41_out/fde_recovery.csv
 
       - name: Upload raw machine-readable Ghidra export
         if: always()
