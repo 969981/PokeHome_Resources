@@ -1,0 +1,60 @@
+name: HOME41 Batch03 X0 and Tracker provenance audit
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-batch03-provenance-audit.yml'
+      - 'tools/ghidra/home41_batch03_provenance_audit.py'
+      - 'tools/ghidra/home41_batch03_provenance.tsv'
+      - 'tools/ghidra/home41_partial_record_dirty_batch02.h'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  provenance-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout 4.1.0 analysis scripts
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+      - name: Download exact Ghidra SQLite artifact from Run 42763137320
+        uses: actions/download-artifact@v4
+        with:
+          name: HOME41-Ghidra12-SQLite
+          path: ${{ runner.temp }}/home41-ghidra-sqlite
+          repository: ${{ github.repository }}
+          run-id: 42763137320
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run instruction-level X0 and Tracker provenance audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/ghidra/home41_batch03_provenance_audit.py
+          DB="$(find "$RUNNER_TEMP/home41-ghidra-sqlite" -type f -name 'home41_main_410.sqlite' -print -quit)"
+          test -n "$DB"
+          mkdir -p "$RUNNER_TEMP/home41-batch03"
+          python tools/ghidra/home41_batch03_provenance_audit.py \
+            --db "$DB" \
+            --out "$RUNNER_TEMP/home41-batch03/provenance.json"
+      - name: Compile corrected GameDataCore and Tracker offsets (C11)
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%s\n' '#include "tools/ghidra/home41_partial_record_dirty_batch02.h"' 'int main(void){return 0;}' > "$RUNNER_TEMP/home41_layout.c"
+          cc -std=c11 -m64 -Wall -Wextra -Werror -I. "$RUNNER_TEMP/home41_layout.c" -o "$RUNNER_TEMP/home41_layout"
+          "$RUNNER_TEMP/home41_layout"
+      - name: Publish machine-readable provenance report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Batch03-provenance-audit
+          path: ${{ runner.temp }}/home41-batch03/
+          retention-days: 30
+          if-no-files-found: warn
