@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE",
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "source": "/home/runner/work/_temp/home41_out/home41_ghidra_events.ndjson.gz",
+  "database": "/home/runner/work/_temp/home41_out/home41_main_410.sqlite",
+  "counts": {
+    "meta": 1,
+    "memory": 23,
+    "function": 15415,
+    "decompile": 15415,
+    "instruction": 1029451,
+    "data": 164699,
+    "reference": 423988,
+    "symbol": 154889,
+    "summary": 1
+  },
+  "decompile_requested": false,
+  "decompiled_ok": 15415,
+  "decompiled_failed": 0,
+  "evidence": "STATIC_GHIDRA_ONLY_NO_RUNTIME_UI_PROOF"
+}

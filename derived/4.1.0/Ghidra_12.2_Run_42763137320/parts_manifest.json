@@ -1,0 +1,131 @@
+{
+  "status": "UNCOMPRESSED_SPLIT_VERIFIED",
+  "source_run_id": 42763137320,
+  "source_url": "https://github.com/969981/PokeHome_Resources/actions/runs/42763137320",
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "chunk_limit_bytes": 47185920,
+  "project": {
+    "regular_files": 9,
+    "split_files": {
+      "HOME410.rep/idata/00/~00000000.db/db.1.gbf": {
+        "size": 130088960,
+        "sha256": "f01816612e76035defff2eada9bd723de729500d8a53619efd534f2b40d6911f",
+        "parts": [
+          {
+            "path": "HOME410.rep/idata/00/~00000000.db/db.1.gbf.part0000.bin",
+            "sha256": "e47dfca0c3d8232eeb585816032f931345e2fd877d96b7c99467f798538fd1a8",
+            "size": 47185920
+          },
+          {
+            "path": "HOME410.rep/idata/00/~00000000.db/db.1.gbf.part0001.bin",
+            "sha256": "5b9c494eb574175c6eabddeb74e6f62557fc7d582881a7a9e184e9a8cc39a882",
+            "size": 47185920
+          },
+          {
+            "path": "HOME410.rep/idata/00/~00000000.db/db.1.gbf.part0002.bin",
+            "sha256": "0537b7cc27ec9215b1faa9ed129f5ebc7b512a85c40c71e311994500c4ca6b97",
+            "size": 35717120
+          }
+        ]
+      }
+    }
+  },
+  "sqlite": {
+    "size": 253399040,
+    "sha256": "bfb721adca1b6a293fb6c4c3c8ed0541fee9e127e8a8665ba1817f25ed63d2c9",
+    "parts": [
+      {
+        "path": "home41_main_410.sqlite.part0000.bin",
+        "size": 47185920,
+        "sha256": "f2da5439b329b651448ab673f500f3a57f0f6f0eb124bb8db6594d1cb539d666"
+      },
+      {
+        "path": "home41_main_410.sqlite.part0001.bin",
+        "size": 47185920,
+        "sha256": "3b6759710a02d5b95c228e11fba03c3cce9506b73683a324667a54025d65af90"
+      },
+      {
+        "path": "home41_main_410.sqlite.part0002.bin",
+        "size": 47185920,
+        "sha256": "fdaafea9ff6d7b8413eac52edca353d7127d0245595f89ac3a40c214c8e8b26e"
+      },
+      {
+        "path": "home41_main_410.sqlite.part0003.bin",
+        "size": 47185920,
+        "sha256": "3c794aa844cb934f78e2fc0765dcc09f4394b999f73aee03e48cd15bee8609e9"
+      },
+      {
+        "path": "home41_main_410.sqlite.part0004.bin",
+        "size": 47185920,
+        "sha256": "bb0a77b33c62698ac09486d012e2822a2635bb17a6d02be49de7a4ca76b4eee0"
+      },
+      {
+        "path": "home41_main_410.sqlite.part0005.bin",
+        "size": 17469440,
+        "sha256": "832b716cdc2d9a486c5f97f8ab2f8e19640c4272076020b01ee999fe1ac73699"
+      }
+    ]
+  },
+  "ndjson": {
+    "size": 347613872,
+    "sha256": "5c2e0337e8a6fa0c4fb9717e383531aa2a36eb7b5490b141266e2865642f198d",
+    "parts": [
+      {
+        "path": "events.part0000.ndjson",
+        "size": 47185758,
+        "sha256": "ecfc065ac4534853a24c6d2c9327e4f73ea49176aa3d7e09195ee4e318e847c9"
+      },
+      {
+        "path": "events.part0001.ndjson",
+        "size": 47185841,
+        "sha256": "b945696673fc456c0cf8de8f1edf4535c2ee6804823510f62db9e2f1bb4cfbbb"
+      },
+      {
+        "path": "events.part0002.ndjson",
+        "size": 47185786,
+        "sha256": "255048b0f63024ed4df572843de4da1cf8d21b160d12c506f36bc2a7c478c807"
+      },
+      {
+        "path": "events.part0003.ndjson",
+        "size": 47185838,
+        "sha256": "41be590eb104f6d380392eef1a1e06f321a33a505a8976e6f60a8c69892d7b02"
+      },
+      {
+        "path": "events.part0004.ndjson",
+        "size": 47185886,
+        "sha256": "808ad218b2df2af030e310c3faf9f9fef613c3e6582d06d45efd8e37cd74fb88"
+      },
+      {
+        "path": "events.part0005.ndjson",
+        "size": 47185861,
+        "sha256": "870d826c08e1ba8fbecdf95b67b3e7216bf79527297100cefb3023e5f4e6a60c"
+      },
+      {
+        "path": "events.part0006.ndjson",
+        "size": 47185909,
+        "sha256": "e1ce365f6aba2568546e1198fe8343a6605e632db85e323da279816d4a18e523"
+      },
+      {
+        "path": "events.part0007.ndjson",
+        "size": 17312993,
+        "sha256": "38f2a4edaab94a910b24919d896ea50abab7a89b9687d614e2d97cb279eb8381"
+      }
+    ],
+    "gzip_source_sha256": "9129bdac631eef7f8d0de20c2eccbe753b028a0e7f646e496a5fa296e92545e2"
+  },
+  "c_files": 15415,
+  "sqlite_table_counts": {
+    "functions": 15415,
+    "instructions": 1029451,
+    "references_full": 423988,
+    "decompilation": 15415,
+    "c_ok": 15415
+  },
+  "source_artifact_names": {
+    "project": "HOME41-Ghidra12-native-project",
+    "sqlite": "HOME41-Ghidra12-SQLite",
+    "c": "HOME41-Ghidra12-all-decompiled-C",
+    "ndjson": "HOME41-Ghidra12-NDJSON",
+    "fde": "HOME41-Ghidra12-FDE-recovery"
+  }
+}
