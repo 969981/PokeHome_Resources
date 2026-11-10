@@ -4,6 +4,51 @@
 
 这个工具将可验证的二进制内容导出为便于检索的 **UTF-8 JSON、CSV**，按需要解包 SARC 中的 BFLYT、BFLAN、BNTX，并可在安装外部解码器时输出 **PNG**。它不是“所有二进制都变成语义明确的 JSON”——未知 schema/编码会保留结构字段及验证状态。
 
+
+## HOME 4.1.0 道具双 CSV 重建（2685 名称 / 1829 PML）
+
+**不必再克隆 HOME-Live-Plugin-CHS**：本仓库已包含完整的 [ROMFS 一键重建入口](tools/rebuild_home41_from_romfs.py) 和 [ItemID 关联模块](tools/build_home41_item_catalog.py)。前者直接从本分支的 `57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin` 原始资源解析，后者从本仓库 `Unpack` 的已解码数据合并两份 CSV。Python 3.10+，仅标准库。
+
+Linux/macOS（仓库根目录）：
+
+```bash
+python tools/rebuild_home41_from_romfs.py
+# 指定输出文件夹
+python tools/rebuild_home41_from_romfs.py --source-root . --out-dir ./my_item_csv
+```
+
+Windows PowerShell：
+
+```powershell
+py -3 .\tools\rebuild_home41_from_romfs.py --out-dir .\derived\4.1.0\item_catalog
+```
+
+默认写入 `derived/4.1.0/item_catalog/`，三个文件：
+
+| 文件 | 预期数量 | 内容 |
+|---|---:|---|
+| `HOME41_itemname_2685_11lang.csv` | **2685 行 × 17 列** | `ItemID 0..2684`、简繁中/英日等 11 语言、文本标签 FNV64、PML 域判定 |
+| `HOME41_itemid_1829_pml_crosswalk.csv` | **1829 行 × 25 列** | `ItemID 0..1828`、中英日名、价格、Pouch 背包分类、Sprite 图标键、`record_index`、原始字节偏移及 `raw48` |
+| `HOME41_item_catalog_validation.json` | 1 份 | 来源信息、源 SHA256、1166 条物理记录与分类计数、输出 SHA256 |
+
+转换从 11 个语言目录的 `bin/message/<locale>/megaturtle/itemname.dat + itemname.tbl` 解码文本（AHTB 标签、FNV64、DAT XOR/UTF-16），从 `bin/pml/item/item.dat` 取出 1829 个有效索引和 1166 个 48B 物理记录，并与 `item_hash_to_index.dat` 分别按 ItemID/行号交叉校验。图标列是原版 ELF 使用的 `item_%04d^o` 或 `item_dummy^o` **资源键**，不是已验证的 PNG atlas 位置。
+
+已经存在解析完毕的 `Unpack` 时，可加 `--skip-unpack` 复用，但仍核对 manifest、原始 `item.dat` 和全部 11 组原始 `.dat/.tbl` 标签、文本和偏移：
+
+```bash
+python tools/rebuild_home41_from_romfs.py --skip-unpack
+```
+
+仅重新做 CSV join、不重新读取原始 RomFS 的快速入口：
+
+```bash
+python tools/build_home41_item_catalog.py --source-root . --out-dir ./derived/4.1.0/item_catalog
+```
+
+**重要限制**：`ItemID` 不直接等于 `record_index`；真实偏移 `0x1404 + 0x30*lookup[ItemID]`。2,685 个名称并不意味着有 2,685 个 PML 道具；`1829..2684` 的 856 项在本版 PML 域外。1,829 个有效 PML ID 中还有 663 个共用默认物理记录。静态数据与 Native Getter 不足以证明 HOME 服务器、跨游戏转移是否合法。本仓库迁移脚本仍需通过实跑 CI/本地验证；原有双 CSV 已单独完成逐行核对。
+
+完整证据、伪代码、原版 ELF 地址与复现说明见 [Obsidian 技术笔记：HOME41 道具名称与 PML 重建](docs/obsidian/HOME41_道具名称2685语言与PML1829_RomFS重建_20261110.md)；相关原始物理索引见 [P4](docs/UNPACK_POKEMON_ITEM_V4.md) 与 [Item8/P5](docs/UNPACK_ITEM8_SEMANTICS_V5.md)。
+
 ## 快速开始
 
 Windows PowerShell，仓库根目录执行：
