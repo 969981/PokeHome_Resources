@@ -1,0 +1,153 @@
+name: HOME 4.1.0 publish unpacked Ghidra database, C source and project
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-ghidra-publish-split.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: home41-ghidra-split-publish-42763137320
+  cancel-in-progress: false
+
+jobs:
+  publish-unpacked:
+    name: Publish native project, 15415 C and lossless DB/NDJSON pieces
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      SOURCE_RUN: "42763137320"
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: "969981/PokeHome_Resources"
+      DEST: "derived/4.1.0/Ghidra_12.2_Run_42763137320"
+      RUN_TEMP: ${{ runner.temp }}
+    steps:
+      - name: Checkout targeted 4.1.0 files, retain publish credentials
+        uses: actions/checkout@v4
+        with:
+          ref: "4.1.0"
+          fetch-depth: 1
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/home41-ghidra-publish-split.yml
+            tools/ghidra/home41_publish_split.py
+            tools/ghidra/home41_restore_split.py
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/
+
+      - name: Verify complete successful source Ghidra run
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$REPO/actions/runs/$SOURCE_RUN" --jq '.conclusion')" = "success"
+          python -m py_compile tools/ghidra/home41_publish_split.py tools/ghidra/home41_restore_split.py
+          if ! command -v zstd >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y zstd
+          fi
+          echo "Source Ghidra run $SOURCE_RUN succeeded; checked split publisher syntax."
+
+      - name: Download only the five verified GitHub Actions artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in \
+            HOME41-Ghidra12-native-project \
+            HOME41-Ghidra12-SQLite \
+            HOME41-Ghidra12-all-decompiled-C \
+            HOME41-Ghidra12-NDJSON \
+            HOME41-Ghidra12-FDE-recovery; do
+            mkdir -p "$RUN_TEMP/ghidra_artifacts/$name"
+            gh run download "$SOURCE_RUN" -R "$REPO" \
+              --name "$name" --dir "$RUN_TEMP/ghidra_artifacts/$name"
+            test -n "$(find "$RUN_TEMP/ghidra_artifacts/$name" -type f -print -quit)"
+            du -sh "$RUN_TEMP/ghidra_artifacts/$name"
+          done
+
+      - name: Extract native .gpr/.rep, individual C, FDE; split raw SQLite and NDJSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/ghidra/home41_publish_split.py \
+            --artifacts "$RUN_TEMP/ghidra_artifacts" \
+            --output "$DEST"
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          root=Path(os.environ['DEST'])
+          m=json.loads((root/'parts_manifest.json').read_text())
+          assert m['status']=='UNCOMPRESSED_SPLIT_VERIFIED'
+          assert m['c_files']==15415
+          assert m['sqlite_table_counts']['functions']==15415
+          assert m['sqlite_table_counts']['c_ok']==15415
+          assert len(m['sqlite']['parts'])>=2
+          assert all(p['size']<=45*1024*1024 for p in m['sqlite']['parts']+m['ndjson']['parts'])
+          assert (root/'project/HOME410.gpr').is_file()
+          assert (root/'project/HOME410.rep').is_dir()
+          print('READY:', m['c_files'],'C files;',
+                len(m['sqlite']['parts']),'SQLite parts;',
+                len(m['ndjson']['parts']),'plain NDJSON parts.')
+          PY
+
+      - name: Reconstruct from shards, verify SHA256 and SQLite integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/ghidra/home41_restore_split.py \
+            --source "$DEST" \
+            --out "$RUN_TEMP/ghidra_reconstruction" \
+            --no-project
+          cat "$RUN_TEMP/ghidra_reconstruction/restore_report.json"
+
+      - name: Commit and push uncompressed project, SQLite/NDJSON shards, FDE and indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for item in \
+            "$DEST/README.md" "$DEST/parts_manifest.json" \
+            "$DEST/decompiled_index.csv" "$DEST/decompiled_manifest.json" \
+            "$DEST/home41_ghidra_manifest.json" "$DEST/fde_recovery.csv" \
+            "$DEST/project" "$DEST/database" "$DEST/ndjson"; do
+            if [ -e "$item" ]; then git add -f -- "$item"; fi
+          done
+          if [ -d "$DEST/project_parts" ]; then git add -f -- "$DEST/project_parts"; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'data(home41): publish unpacked native Ghidra project, raw SQLite/NDJSON parts and FDE audit'
+            git push origin HEAD:4.1.0
+          fi
+
+      - name: Commit and push all 15415 real C pseudocode files in safe batches
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -d '' -t files < <(find "$DEST/c" -type f -name '*.c' -print0 | sort -z)
+          test "$${#files[@]}" -eq 15415
+          batch=0
+          for (( offset=0; offset < ${#files[@]}; offset+=1500 )); do
+            batch=$((batch+1))
+            git add -f -- "${files[@]:offset:1500}"
+            if ! git diff --cached --quiet; then
+              git commit -m "data(home41): publish Ghidra C source batch $batch (original run $SOURCE_RUN)"
+              git push origin HEAD:4.1.0
+            fi
+          done
+          test -z "$(git status --porcelain)"
+          echo "Published all ${#files[@]} individual uncompressed C files to 4.1.0"
+
+      - name: Upload source fidelity and reconstructed database report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Ghidra12-branch-split-publication-proof
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ github.workspace }}/derived/4.1.0/Ghidra_12.2_Run_42763137320/parts_manifest.json
+            ${{ runner.temp }}/ghidra_reconstruction/restore_report.json
