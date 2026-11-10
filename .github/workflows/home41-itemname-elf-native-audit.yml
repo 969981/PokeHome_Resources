@@ -1,0 +1,80 @@
+name: HOME 4.1.0 itemname native ELF and message source audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-itemname-elf-native-audit.yml'
+      - 'tools/home41_itemname_elf_xrefs.py'
+      - 'tools/home41_itemname_elf_trace_report.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: home41-itemname-elf-native-audit
+  cancel-in-progress: false
+
+jobs:
+  itemname-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout HOME 4.1.0 original ELF and ROMFS
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install ARM64 static disassembly dependency
+        run: python -m pip install capstone==5.0.6
+      - name: Verify source script syntax
+        run: |
+          python -m py_compile tools/home41_itemname_elf_xrefs.py \
+            tools/home41_itemname_elf_trace_report.py tools/home41_romfs_core.py
+      - name: Audit original main.elf and all eleven DAT/TBL pairs
+        run: |
+          python tools/home41_itemname_elf_trace_report.py \
+            --root . \
+            --out-json derived/4.1.0/native_itemname_xrefs/itemname_elf_xrefs.json \
+            --out-md docs/obsidian/HOME41_itemname_原版ELF静态XREF自动证据.md
+      - name: Check exact source provenance and report status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('derived/4.1.0/native_itemname_xrefs/itemname_elf_xrefs.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['elf_sha256'] == 'bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          assert len(d['language_proof']) == 11
+          assert all(v['rows'] == 2685 for v in d['language_proof'].values())
+          assert d['counts']['PML'] >= 1, 'Missing known PML ELF XREF'
+          assert d['verification']['full_chain_closed'] is False
+          print('SUCCESS: original ELF + raw multilingual sources validated; native UI NOT_OBSERVED')
+          print('XREF COUNTS', d['counts'])
+          PY
+      - name: Upload artifact for independent verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-itemname-original-elf-xrefs
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            derived/4.1.0/native_itemname_xrefs/itemname_elf_xrefs.json
+            docs/obsidian/HOME41_itemname_原版ELF静态XREF自动证据.md
+      - name: Commit exact ELF XREF evidence in source repository
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- derived/4.1.0/native_itemname_xrefs/itemname_elf_xrefs.json \
+            docs/obsidian/HOME41_itemname_原版ELF静态XREF自动证据.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'research(home41): publish 4.1.0 itemname DAT/TBL exact ELF references'
+            git push origin HEAD:4.1.0
+          fi
