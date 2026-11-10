@@ -73,7 +73,7 @@ cd "$HOME/actions-runner-home41"
 
 ## 4. 数据完整性与真实验收
 
-`runner_target` 是手动运行的可选输入，`github-hosted` 为默认；已有 push 事件仍会沿用官方 `ubuntu-latest`。没有注册到此仓库、并带 `home41-ghidra` 标签的 Linux x64 自托管 Runner 时，手动选择 `self-hosted` **只会排队，不会自动创建 Runner**。
+`runner_target` 是手动运行的可选输入，`github-hosted` 为默认。**Ghidra 全量任务现已设置为仅 `workflow_dispatch` 手动触发**（避免每次代码提交都消耗私人账户托管计算额度），没有注册到此仓库、并带 `home41-ghidra` 标签的 Linux x64 自托管 Runner 时，手动选择 `self-hosted` **只会排队，不会自动创建 Runner**。
 
 成功执行 Ghidra 后必须看到：
 - `main.elf` SHA256 校验成功；
