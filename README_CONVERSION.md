@@ -47,6 +47,8 @@ python tools/build_home41_item_catalog.py --source-root . --out-dir ./derived/4.
 
 **重要限制**：`ItemID` 不直接等于 `record_index`；真实偏移 `0x1404 + 0x30*lookup[ItemID]`。2,685 个名称并不意味着有 2,685 个 PML 道具；`1829..2684` 的 856 项在本版 PML 域外。1,829 个有效 PML ID 中还有 663 个共用默认物理记录。静态数据与 Native Getter 不足以证明 HOME 服务器、跨游戏转移是否合法。本仓库迁移脚本仍需通过实跑 CI/本地验证；原有双 CSV 已单独完成逐行核对。
 
+[GitHub Actions：自动重建并校验双 CSV（成功时提供 30 天 Artifact）](.github/workflows/home41-item-catalog-rebuild.yml) 可以从 Actions 页面手动触发，或在脚本/工作流发生变更时运行；**是否真正成功必须看具体 run 结果，不因工作流文件存在而认定通过**。
+
 完整证据、伪代码、原版 ELF 地址与复现说明见 [Obsidian 技术笔记：HOME41 道具名称与 PML 重建](docs/obsidian/HOME41_道具名称2685语言与PML1829_RomFS重建_20261110.md)；相关原始物理索引见 [P4](docs/UNPACK_POKEMON_ITEM_V4.md) 与 [Item8/P5](docs/UNPACK_ITEM8_SEMANTICS_V5.md)。
 
 ## 快速开始
