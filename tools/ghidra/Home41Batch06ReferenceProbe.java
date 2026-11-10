@@ -30,6 +30,47 @@ public class Home41Batch06ReferenceProbe extends GhidraScript {
         if (n == 0) rows.add(kind + "\t" + target + "\t" + clean(value) + "\t\tNO_XREF\t\t");
         for (String row : rows) out.append(row).append("\n");
     }
+    // This is a region-based candidate scan, not a classification of HOME save logic.
+    // It finds direct calls entering the native transport region from other .text functions.
+    private void probeNetworkBoundary(StringBuilder out) {
+        final long lo = 0x64c000L, hi = 0x68ffffL;
+        int regionFunctions = 0, crossCalls = 0, indirectRefs = 0;
+        int emitted = 0;
+        FunctionIterator fi = currentProgram.getFunctionManager().getFunctions(true);
+        while (fi.hasNext()) {
+            Function callee = fi.next();
+            Address target = callee.getEntryPoint();
+            if (!".text".equals(target.getAddressSpace().getName())) continue;
+            long addr = target.getOffset();
+            if (addr < lo || addr > hi) continue;
+            regionFunctions++;
+            ReferenceIterator it = currentProgram.getReferenceManager().getReferencesTo(target);
+            while (it.hasNext()) {
+                Reference r = it.next();
+                Function caller = currentProgram.getFunctionManager().getFunctionContaining(r.getFromAddress());
+                if (caller == null) continue;
+                Address source = caller.getEntryPoint();
+                if (!".text".equals(source.getAddressSpace().getName())) continue;
+                if (source.getOffset() >= lo && source.getOffset() <= hi) continue;
+                if (!r.getReferenceType().isCall() && !r.getReferenceType().isData()) continue;
+                if (r.getReferenceType().isCall()) crossCalls++;
+                else indirectRefs++;
+                if (emitted++ >= 400) continue;
+                Instruction ins = currentProgram.getListing().getInstructionAt(r.getFromAddress());
+                out.append("NETWORK_REGION_BOUNDARY\t").append(target).append("\t")
+                    .append(clean(callee.getName())).append("\t")
+                    .append(r.getFromAddress()).append("\t").append(r.getReferenceType())
+                    .append("\t").append(clean(caller.getName()+"@"+source))
+                    .append("\t").append(ins == null ? "" : clean(ins.toString()))
+                    .append("\n");
+            }
+        }
+        out.append("# network_region_functions=").append(regionFunctions)
+            .append(" cross_calls=").append(crossCalls)
+            .append(" cross_data_refs=").append(indirectRefs)
+            .append(" rows_emitted=").append(Math.min(400, emitted)).append("\n");
+    }
+
     @Override
     public void run() throws Exception {
         String[] args = getScriptArgs();
@@ -89,6 +130,7 @@ public class Home41Batch06ReferenceProbe extends GhidraScript {
                 .append("\t\tENTRY\t\t\n");
             refs(out, "NETWORK_FUNCTION", target, "Ghidra .text overlay VA 0x" + Long.toHexString(a));
         }
+        probeNetworkBoundary(out);
         out.append("# matched_string_items=").append(matched).append("\n");
         Files.write(Paths.get(args[0]), out.toString().getBytes(StandardCharsets.UTF_8));
         println("Batch06 native reference probe: " + matched + " matching string data items; output=" + args[0]);
