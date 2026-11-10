@@ -55,7 +55,7 @@ flowchart TD
 
 ## 4. 运行命令与产物
 
-[GitHub Actions：HOME41 Ghidra 数据库](https://github.com/969981/PokeHome_Resources/actions/workflows/home41-ghidra-full-database.yml)，默认 `workflow_dispatch` 可选全部反编译，push 更新相关脚本时自动触发。
+[GitHub Actions：HOME41 Ghidra 数据库](https://github.com/969981/PokeHome_Resources/actions/workflows/home41-ghidra-full-database.yml)，现为 **仅 `workflow_dispatch` 手动触发**，可选择全部反编译与 `runner_target`（`github-hosted` 或已注册的 `self-hosted`）。为了避免私有仓库托管计算意外耗费，更新脚本时不再自动启动长时间分析；详见 [Runner 启动阻断与修复](HOME41_Actions_Runner启动阻断_20261110_诊断与自托管.md)。
 
 生成成功才会显示的四组 Artifacts：
 
