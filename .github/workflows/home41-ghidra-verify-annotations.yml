@@ -1,0 +1,83 @@
+name: HOME41 independently verify committed per-line annotations
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-ghidra-verify-annotations.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SRC: derived/4.1.0/Ghidra_12.2_Run_42763137320/annotation_v1
+    steps:
+      - name: Checkout actual annotated C ASM and SQLite shards from Git
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/annotation_v1/
+            tools/ghidra/home41_restore_annotations.py
+            .github/workflows/home41-ghidra-verify-annotations.yml
+      - name: Verify all C, opcode and FDE rows from newly cloned files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv,json,os
+          from pathlib import Path
+          p=Path(os.environ['SRC'])
+          m=json.loads((p/'annotation_manifest.json').read_text())
+          assert m['status']=='STATIC_ANNOTATION_GENERATED'
+          assert m['source_run']==42763137320
+          assert m['annotated_functions']==15415
+          assert m['annotated_instructions']==1029451
+          assert m['fde_total']==25803
+          assert m['fde_ghidra_matches']==13034
+          assert m['fde_not_ghidra_matches']==12769
+          files=list((p/'c_annotated').glob('*.c'))
+          assert len(files)==15415,len(files)
+          with (p/'function_catalog.csv').open(encoding='utf-8',newline='') as f:
+              assert sum(1 for row in csv.DictReader(f))==15415
+          with (p/'fde_catalog.csv').open(encoding='utf-8',newline='') as f:
+              assert sum(1 for row in csv.DictReader(f))==25803
+          lines=0
+          for piece in sorted((p/'asm_annotated').glob('asm.part*.tsv')):
+              with piece.open('rb') as f:
+                  lines+=sum(1 for _ in f)
+          assert lines==1029451,lines
+          print('Verified 15415 C, 1029451 original instruction rows, 25803 FDE records')
+          PY
+      - name: Rebuild Ghidra annotation SQLite and verify integrity and source hash
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/ghidra/home41_restore_annotations.py \
+            --source "$SRC" --out "$RUNNER_TEMP/annotation_verified.sqlite" \
+            | tee "$RUNNER_TEMP/annotations_verified.json"
+          python3 - <<'PY'
+          import os,sqlite3,json
+          from pathlib import Path
+          root=Path(os.environ['RUNNER_TEMP'])
+          manifest=json.loads((root/'annotations_verified.json').read_text())
+          assert manifest['status']=='SHA256_VERIFIED_AND_SQLITE_OK'
+          assert manifest['counts']=={'functions':15415,'instructions':1029451}
+          db=root/'annotation_verified.sqlite'
+          with sqlite3.connect(db) as c:
+              assert c.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+              assert c.execute("SELECT COUNT(*) FROM function_annotations WHERE evidence_level='VERIFIED_NATIVE_STATIC'").fetchone()[0]==37
+          print('Verified source branch annotation SQLite, bytes:',db.stat().st_size)
+          PY
+      - name: Upload source branch verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-annotation-source-branch-audit
+          retention-days: 30
+          if-no-files-found: warn
+          path: ${{ runner.temp }}/annotations_verified.json
