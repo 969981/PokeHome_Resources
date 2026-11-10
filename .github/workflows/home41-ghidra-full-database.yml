@@ -128,14 +128,22 @@ jobs:
           PY
 
       - name: Archive editable native Ghidra project database
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
-          tar -I 'zstd -T2 -5' \
-            -C "$RUNNER_TEMP/ghidra_work" \
-            -cf "$RUNNER_TEMP/home41_out/HOME410_ghidra_project.tar.zst" \
-            HOME410.gpr HOME410.rep
-          ls -lh "$RUNNER_TEMP/home41_out"
+          if [ -f "$RUNNER_TEMP/ghidra_work/HOME410.gpr" ] && \
+             [ -d "$RUNNER_TEMP/ghidra_work/HOME410.rep" ]; then
+            mkdir -p "$RUNNER_TEMP/home41_out"
+            tar -I 'zstd -T2 -5' \
+              -C "$RUNNER_TEMP/ghidra_work" \
+              -cf "$RUNNER_TEMP/home41_out/HOME410_ghidra_project.tar.zst" \
+              HOME410.gpr HOME410.rep
+            echo "Native project archive exists; examine SQLite manifest for completeness."
+          else
+            echo "Ghidra did not produce a native project (runner startup/import failed)."
+          fi
+          ls -lh "$RUNNER_TEMP/home41_out" 2>/dev/null || true
 
       - name: Upload native Ghidra project
         if: always()
