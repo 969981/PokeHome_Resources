@@ -27,9 +27,7 @@
 在仓库根目录执行即可得到可直接打开的完整 Ghidra 工程、一个原始 SQLite 数据库以及一份原始 NDJSON：
 
 ```bash
-python tools/ghidra/home41_restore_split.py \\
-  --source derived/4.1.0/Ghidra_12.2_Run_42763137320 \\
-  --out /path/to/HOME41_Ghidra_Restored
+python tools/ghidra/home41_restore_split.py --source derived/4.1.0/Ghidra_12.2_Run_42763137320 --out /path/to/HOME41_Ghidra_Restored
 ```
 
 恢复目录中的 `project/HOME410.gpr` 可用 Ghidra 12.2 打开；`home41_main_410.sqlite` 可用 SQLite 工具查询；15,415 个独立 C 文件**已直接在 Git 中，无需重建**。这些是 Ghidra 恢复的 C 风格伪代码，不是任天堂原始源码。
