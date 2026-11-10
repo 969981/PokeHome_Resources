@@ -1,0 +1,16 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::006f67b0; name: SetSubText
+ */
+
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+void nn::swkbd::SetSubText(KeyboardConfig *param_1,wchar16 *param_2)
+
+{
+  (*(code *)PTR_SetSubText_008a8340)();
+  return;
+}
+
+
