@@ -78,3 +78,32 @@ jobs:
             git commit -m 'research(home41): publish 4.1.0 itemname DAT/TBL exact ELF references'
             git push origin HEAD:4.1.0
           fi
+
+      - name: Optional sync of verified ELF report to home-core-editor research
+        if: success()
+        env:
+          TARGET_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$TARGET_TOKEN" ]; then
+            echo "Private destination token not configured; source repository Artifact remains available."
+            exit 0
+          fi
+          git clone --depth 1 --branch home-core-editor \
+            "https://x-access-token:${TARGET_TOKEN}@github.com/969981/HOME-Live-Plugin-CHS.git" \
+            _home_core_editor
+          dest="_home_core_editor/docs/research/home-item-catalog/evidence"
+          mkdir -p "$dest"
+          cp derived/4.1.0/native_itemname_xrefs/itemname_elf_xrefs.json \
+            "$dest/home41_itemname_elf_xrefs.json"
+          cp docs/obsidian/HOME41_itemname_原版ELF静态XREF自动证据.md \
+            "$dest/HOME41_itemname_原版ELF静态XREF自动证据.md"
+          cd _home_core_editor
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- docs/research/home-item-catalog/evidence/
+          if ! git diff --cached --quiet; then
+            git commit -m "research(home41): sync exact itemname ELF XREF and 11-lang evidence"
+            git push origin HEAD:home-core-editor
+          fi
