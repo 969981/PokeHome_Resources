@@ -41,9 +41,14 @@ def sha(path: Path) -> str:
 
 def source(root: Path, typ: str, filename: str) -> Path:
     path = root / ARTIFACTS[typ] / filename
-    if not path.is_file():
-        raise FileNotFoundError(str(path))
-    return path
+    if path.is_file():
+        return path
+    # actions/upload-artifact preserves nested paths when its inputs have
+    # different parent folders (notably the original FDE recovery audit).
+    matches = [p for p in (root / ARTIFACTS[typ]).rglob(filename) if p.is_file()]
+    if len(matches) != 1:
+        raise FileNotFoundError(f"Expected exactly one {filename} in {root / ARTIFACTS[typ]}, got {len(matches)}")
+    return matches[0]
 
 
 def split_binary(file: Path, target: Path, base: str) -> dict:
