@@ -1,0 +1,46 @@
+/* HOME41 静态自动注释；并非任天堂原始源代码
+ * 函数研究名：SUB_0052B7B0
+ * 用途/行为：用途尚未确认；代码可观察到：内存复制/初始化, 有返回值
+ * 证据等级：BEHAVIOR_OBSERVED；原有 Ghidra C 表达式未改动
+ */
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::0062b7b0; name: FUN_.text__0062b7b0
+ */
+
+
+void FUN__text__0062b7b0(void *param_1,undefined8 *param_2) // [自动静态注释] 调用尚未恢复正式名称的函数
+
+{ // [自动静态注释] 作用域/控制流边界
+  char *pcVar1; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  ulong uVar2; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  undefined8 uVar3; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  undefined8 local_2f0; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  undefined1 auStack_2e8 [8]; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  undefined1 auStack_2e0 [8]; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  long local_2d8; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  undefined1 auStack_2ce [662]; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  undefined8 local_38; // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  
+  memcpy(auStack_2ce,param_1,0x296); // [自动静态注释] 内存复制、清零或移动
+  FUN__text__0063041c(auStack_2ce); // [自动静态注释] 调用尚未恢复正式名称的函数
+  FUN__text__0060e784(auStack_2e0,auStack_2ce); // [自动静态注释] 调用尚未恢复正式名称的函数
+  pcVar1 = (char *)(local_2d8 + 0xd8); // [自动静态注释] 赋值或状态更新，字段名称仍待恢复
+  uVar2 = FUN__text__0060e994(auStack_2e0,pcVar1); // [自动静态注释] 调用尚未恢复正式名称的函数
+  while ((uVar2 & 1) != 0) { // [自动静态注释] 循环/迭代
+    if (*pcVar1 == '\a') goto LAB__text__0062b88c; // [自动静态注释] 条件判断/分支
+    pcVar1 = pcVar1 + (ulong)*(ushort *)(pcVar1 + 1) + 3; // [自动静态注释] 赋值或状态更新，字段名称仍待恢复
+    uVar2 = FUN__text__0060e994(auStack_2e0,pcVar1); // [自动静态注释] 调用尚未恢复正式名称的函数
+  } // [自动静态注释] 作用域/控制流边界
+  FUN__text__0060e8b0(auStack_2e0,auStack_2e8,&local_2f0,7,0x40); // [自动静态注释] 调用尚未恢复正式名称的函数
+  uVar3 = FUN__text__0060e7f8(auStack_2e0); // [自动静态注释] 调用尚未恢复正式名称的函数
+  local_38 = local_2f0; // [自动静态注释] 赋值或状态更新，字段名称仍待恢复
+  (*(code *)*param_2)(param_2 + 4,&local_38,uVar3); // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  FUN__text__006305fc(auStack_2ce); // [自动静态注释] 调用尚未恢复正式名称的函数
+  memcpy(param_1,auStack_2ce,0x296); // [自动静态注释] 内存复制、清零或移动
+LAB__text__0062b88c: // [自动静态注释] 反编译表达式/局部变量；未验证业务语义
+  FUN__text__0060e79c(auStack_2e0); // [自动静态注释] 调用尚未恢复正式名称的函数
+  return; // [自动静态注释] 返回表达式；具体返回语义取决于调用者
+} // [自动静态注释] 作用域/控制流边界
+
+
