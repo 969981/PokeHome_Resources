@@ -5,6 +5,16 @@
 这个工具将可验证的二进制内容导出为便于检索的 **UTF-8 JSON、CSV**，按需要解包 SARC 中的 BFLYT、BFLAN、BNTX，并可在安装外部解码器时输出 **PNG**。它不是“所有二进制都变成语义明确的 JSON”——未知 schema/编码会保留结构字段及验证状态。
 
 
+## HOME 4.1.0 全量 ELF 逐指令／逐函数 C 注释（保留证据等级）
+
+已基于成功的 Ghidra 12.2 分析恢复真实函数 15,415 个，并对 **1,029,451 条已识别机器指令**、**701,612 行 C 伪代码**附加静态中文说明。原始 C 文件保留在 `c/`，新注释位于 `annotation_v1/c_annotated/`。每个函数在 `function_catalog.csv` 中有用途或待确认说明和证据等级。**仅 37 个函数已有较明确的原始静态机器码功能证据，其他函数不伪造业务用途。**
+
+- [**Obsidian：全量代码逐行注释与函数用途证据账本**](docs/obsidian/HOME41_ELF_全量逐行注释与函数用途证据分级_20261110.md)
+- [**全部 15,415 份带注释 C 文件、3 份逐指令 ASM、注释数据库分片与清单**](derived/4.1.0/Ghidra_12.2_Run_42763137320/annotation_v1/)
+- [**SQLite 注释数据库无损还原工具**](tools/ghidra/home41_restore_annotations.py)
+- [**Ghidra 12.2 原生函数备注与指令 EOL 评论回填脚本**](tools/ghidra/Home41ImportAllAnnotations.java)
+- [**实际生成并入库的 GitHub Actions #42768648384**](https://github.com/969981/PokeHome_Resources/actions/runs/42768648384)
+
 ## HOME 4.1.0 全量 Ghidra 原生工程、SQLite 与 15,415 C 源码：无压缩 Git 分片
 
 已将 [Ghidra 12.2 完整成功 Run #42763137320](https://github.com/969981/PokeHome_Resources/actions/runs/42763137320) 的产物**实际解压并提交到本仓库 `4.1.0` 分支**：
