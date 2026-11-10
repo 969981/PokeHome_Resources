@@ -130,10 +130,12 @@ def untar_project(src: Path, target: Path, parts_dir: Path) -> dict:
                         parts = []
                         i = 0
                         rem = entry.size
+                        original_digest = hashlib.sha256()
                         while rem:
                             data = inp.read(min(LIMIT, rem))
                             if not data:
                                 raise ValueError("Short read from native Ghidra project")
+                            original_digest.update(data)
                             p = parts_dir / name.parent / (name.name + ".part" + format(i, "04d") + ".bin")
                             p.parent.mkdir(parents=True, exist_ok=True)
                             p.write_bytes(data)
@@ -142,7 +144,8 @@ def untar_project(src: Path, target: Path, parts_dir: Path) -> dict:
                             rem -= len(data)
                             i += 1
                         result["split_files"][name.as_posix()] = {
-                            "size": entry.size, "parts": parts}
+                            "size": entry.size, "sha256": original_digest.hexdigest(),
+                            "parts": parts}
                 else:
                     output.parent.mkdir(parents=True, exist_ok=True)
                     with inp, output.open("wb") as dest:
