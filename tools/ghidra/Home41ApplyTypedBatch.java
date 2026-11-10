@@ -1,7 +1,7 @@
 // Ghidra 12.2 research helper: conservative, opt-in import of HOME 4.1.0
 // function prototypes verified against published decompiled C.
 //@category PokemonHOME
-// Usage: -postScript Home41ApplyTypedBatch.java <home41_typed_batch01.tsv> [DRY_RUN|APPLY]
+// Usage: -postScript Home41ApplyTypedBatch.java <batch.tsv> [DRY_RUN|APPLY] [BATCH01|BATCH02]
 // Default: DRY_RUN; no program mutations.
 // Requires matching original ELF SHA256 to APPLY. Does not overwrite
 // pre-existing USER_DEFINED signatures, create functions or force renames.
@@ -20,7 +20,7 @@ import java.util.HashSet;
 public class Home41ApplyTypedBatch extends GhidraScript {
     private static final String ORIGINAL_ELF_SHA256 =
         "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a";
-    private static final String COMMENT_TAG = "[HOME41_TYPED_BATCH01]";
+    private static final String COMMENT_PREFIX = "[HOME41_TYPED_";
     private static final long ORIGINAL_GHIDRA_BASE = 0x100000L;
 
     private Address functionAddress(long rva) {
@@ -39,11 +39,16 @@ public class Home41ApplyTypedBatch extends GhidraScript {
     @Override
     public void run() throws Exception {
         String[] args = getScriptArgs();
-        if (args.length < 1 || args.length > 2) {
+        if (args.length < 1 || args.length > 3) {
             throw new IllegalArgumentException(
-                "<home41_typed_batch01.tsv> [DRY_RUN|APPLY]");
+                "<batch.tsv> [DRY_RUN|APPLY] [BATCH01|BATCH02]");
         }
-        String mode = args.length == 2 ? args[1] : "DRY_RUN";
+        String mode = args.length >= 2 ? args[1] : "DRY_RUN";
+        String batch = args.length >= 3 ? args[2] : "BATCH01";
+        if (!batch.matches("BATCH[0-9]{2}")) {
+            throw new IllegalArgumentException("Invalid batch label: " + batch);
+        }
+        String commentTag = COMMENT_PREFIX + batch + "]";
         if (!"DRY_RUN".equals(mode) && !"APPLY".equals(mode)) {
             throw new IllegalArgumentException("Mode must be DRY_RUN or APPLY");
         }
@@ -118,8 +123,8 @@ public class Home41ApplyTypedBatch extends GhidraScript {
                     // Preserve existing comments and note that the business domain
                     // and object layouts are still partially inferred.
                     String existing = fn.getComment();
-                    if (existing == null || !existing.contains(COMMENT_TAG)) {
-                        String note = COMMENT_TAG + " STATIC_ABI_PARTIAL :: " + row[1] +
+                    if (existing == null || !existing.contains(commentTag)) {
+                        String note = commentTag + " STATIC_ABI_PARTIAL :: " + row[1] +
                             "\nEvidence: " + row[4] + "\nBehavior: " + row[5] +
                             "\nUnresolved: " + row[6] +
                             "\nOriginal ELF SHA256=" + ORIGINAL_ELF_SHA256;
