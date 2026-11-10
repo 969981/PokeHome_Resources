@@ -90,6 +90,6 @@ _Static_assert(offsetof(HOME41_DirtyOwner94_Partial, child_58) == 0x58, "child")
 _Static_assert(offsetof(HOME41_DirtyOwner94_Partial, home_tracker_60) == 0x60, "key");
 _Static_assert(offsetof(HOME41_DirtyOwner94_Partial, mode_90) == 0x90, "mode");
 _Static_assert(HOME41_PRE_DIRTY_COPY_OFFSET + HOME41_PRE_DIRTY_COPY_BYTES ==
-               HOME41_DIRTY_KEY_LIST_OFFSET, "copy end boundary");
+               HOME41_TRACKER_DIRTY_SET_OFFSET, "copy end boundary");
 
 #endif /* HOME41_PARTIAL_RECORD_DIRTY_BATCH02_H */
