@@ -44,11 +44,20 @@ public class Home41Batch06ReferenceProbe extends GhidraScript {
             Object v = d.getValue();
             String value = v == null ? d.getDefaultValueRepresentation() : String.valueOf(v);
             if (value == null) continue;
-            if (value.contains("SaveRequest") || value.contains("ApogeeSaveRequest") ||
+            boolean requestLiteral = value.contains("SaveRequest") || value.contains("ApogeeSaveRequest") ||
                 value.contains("/api/box/operation") || value.contains("/api/mile/operation") ||
                 value.contains("savedata.bin") || value.contains("MtSaveThread") ||
-                value.equals("SaveThread")) {
-                refs(out, "STRING", d.getAddress(), value);
+                value.equals("SaveThread");
+            boolean httpLiteral = value.contains("Failed sending POST request") ||
+                value.contains("Failed sending HTTP POST request") || value.contains("HTTP/2") ||
+                value.contains("HTTP/1.1") || value.contains("Host:") ||
+                value.contains("Content-Length") || value.contains("Authorization:") ||
+                value.contains("User-Agent:") || value.contains("Content-Type") ||
+                value.contains("Transfer-Encoding") || value.contains("Connection:") ||
+                value.contains("chunked") || value.contains("application/json") ||
+                value.contains("application/octet-stream") || value.contains("Accept: */*");
+            if (requestLiteral || httpLiteral) {
+                refs(out, requestLiteral ? "REQUEST_LITERAL" : "HTTP_LITERAL", d.getAddress(), value);
                 matched++;
             }
         }
