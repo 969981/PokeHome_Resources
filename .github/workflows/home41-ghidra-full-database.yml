@@ -147,7 +147,7 @@ jobs:
           PY
 
       - name: Export every successfully decompiled function as C source files
-        if: github.event_name == 'push' || inputs.decompile_all == true
+        if: always() && (github.event_name == 'push' || inputs.decompile_all == true)
         shell: bash
         run: |
           set -euo pipefail
