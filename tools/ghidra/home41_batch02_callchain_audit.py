@@ -17,7 +17,7 @@ DEFAULT_C = REPO_ROOT / "derived/4.1.0/Ghidra_12.2_Run_42763137320/c"
 
 # Each literal was individually observed in the published, unmodified Ghidra C.
 EVIDENCE = {
-    0x5306B4: ("EH4_CRC_MISMATCH_WRITER", [
+    0x5306B4: ("GAME_DATA_CORE_CRC_MISMATCH_MARKS_IS_BAD_EGG", [
         "iVar2 = FUN__text__00630120(param_1);",
         "FUN__text__0063041c(param_1);",
         "if (iVar1 != iVar2)",
@@ -26,7 +26,7 @@ EVIDENCE = {
     0x50E7F8: ("RECORD_PLUS_0x12_ACCESSOR", [
         "return *(long *)(param_1 + 8) + 0x12;",
     ]),
-    0x50FC9C: ("STATUS_1E_BOOLEAN_CONSUMER", [
+    0x50FC9C: ("GAME_DATA_CORE_IS_BAD_EGG_CONSUMER", [
         "lVar2 = FUN__text__0060e7f8(param_1);",
         "cVar1 = *(char *)(lVar2 + 0xc);",
         "return cVar1 != '\\0';",
@@ -36,7 +36,7 @@ EVIDENCE = {
         "uVar2 = *(undefined1 *)(lVar1 + 0x93);",
         "uVar2 = DAT_00c15e45;",
     ]),
-    0x51C860: ("STATUS_1E_EXPLICIT_MUTATOR", [
+    0x51C860: ("GAME_DATA_CORE_IS_BAD_EGG_SETTER", [
         "param_2 = param_2 & 1;",
         "*(byte *)(lVar7 + 0xc) = param_2;",
     ]),
