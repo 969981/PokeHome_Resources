@@ -1,0 +1,33 @@
+name: HOME 4.1.0 Runner availability smoke test
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner_target:
+        description: 'Runner environment to verify (no original ELF download)'
+        required: true
+        type: choice
+        default: github-hosted
+        options:
+          - github-hosted
+          - self-hosted
+
+permissions:
+  contents: read
+
+jobs:
+  runner-smoke:
+    name: Check that GitHub actually assigns a Runner
+    runs-on: ${{ inputs.runner_target == 'self-hosted' && fromJSON('["self-hosted", "Linux", "X64", "home41-ghidra"]') || 'ubuntu-latest' }}
+    timeout-minutes: 5
+    steps:
+      - name: Prove actual runner started
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Runner is live. OS=$RUNNER_OS ARCH=$RUNNER_ARCH NAME=$RUNNER_NAME"
+          echo "Job=$GITHUB_JOB Run=$GITHUB_RUN_ID Attempt=$GITHUB_RUN_ATTEMPT"
+          echo "Repository=$GITHUB_REPOSITORY SHA=$GITHUB_SHA"
+          uname -a
+          python3 --version
+          echo "HOME41_RUNNER_SMOKE_PASS"
