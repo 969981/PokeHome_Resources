@@ -97,8 +97,8 @@ struct RecordView_Partial {
     -> main + 0x7E5630
 
 0x2068C0 HOME_Dirty_AppendUnique(owner, arg2, arg3)
-    ├─ 调用 0x631268(manager/owner 相邻对象，语义待确认)
-    ├─ owner + 0x90 == 2 时调用 0x63505C (可选分支)
+    ├─ 调用 0x531268(manager/owner 相邻对象，语义待确认)
+    ├─ owner + 0x90 == 2 时调用 0x53505C (可选分支)
     ├─ key = *(uint64_t *)(owner + 0x60)
     ├─ 搜索 manager + 0x7FC18 的 8-byte key 数组
     ├─ count = *(int32_t *)(manager + 0x93498)
