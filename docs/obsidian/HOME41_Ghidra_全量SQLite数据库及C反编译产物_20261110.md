@@ -5,11 +5,38 @@ date: 2026-11-10
 home_version: "4.1.0"
 source_elf_sha256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
 analysis_engine: Ghidra-12.2
-status: workflow_started_final_artifact_verification_pending
+status: ghidra_15415_c_and_sqlite_verified_fde_25803_recovery_pending
 tags: [pokemon-home, elf, ghidra, aarch64, decompile, sqlite, obsidian]
 ---
 
 # HOME41 完整 Ghidra 数据库与 C 伪代码导出
+
+## 0. 已完成的真实全量 Ghidra 导出（2026-11-10）
+
+[**完整成功的 GitHub Actions Run #42762729226**](https://github.com/969981/PokeHome_Resources/actions/runs/42762729226) 的每个步骤（Ghidra Headless、SQLite、C ZIP、原生项目归档、各 Artifact 上传）结论均为 `success`。
+
+| 指标 | 实际数值（Ghidra 12.2） |
+|---|---:|
+| Ghidra 自动发现函数 | **15,415** |
+| 逐函数 C 反编译成功 | **15,415 / 15,415** |
+| Ghidra C 失败 / 空文本 | **0** |
+| 导出指令 | **1,029,451** |
+| 导出全局引用/XREF | **423,988** |
+| SQLite `PRAGMA integrity_check` | **ok** |
+| 原生 Ghidra 项目 Artifact | **23,971,958B** |
+| SQLite Artifact | **54,940,637B**（原始 sqlite 约 242 MiB） |
+| C ZIP Artifact | **12,349,420B**（内部约 11MiB 的 C ZIP） |
+| 原始 NDJSON Artifact | **24,242,104B** |
+
+**四种可下载真实产物：**
+- [Ghidra 原生 `.gpr/.rep` 项目](https://github.com/969981/PokeHome_Resources/actions/runs/42762729226/artifacts/13738248720)
+- [Ghidra-derived SQLite 数据库与 Manifest](https://github.com/969981/PokeHome_Resources/actions/runs/42762729226/artifacts/13739080332)
+- [**15,415 个单独 C 文件 ZIP + 全函数清单**](https://github.com/969981/PokeHome_Resources/actions/runs/42762729226/artifacts/13737949810)
+- [可重建 SQLite 的完整 Ghidra NDJSON](https://github.com/969981/PokeHome_Resources/actions/runs/42762729226/artifacts/13739125238)
+
+**重要限制**：原始 ELF 有 `25,803` 个有效 FDE，Ghidra 自动分析只发现 `15,415` 个函数。这里的“全量成功”严格指 **对当前 Ghidra 所识别的 15,415 个函数全部成功反编译**，不是对 25,803 FDE 的 100% C 覆盖。后续 [FDE 自动补建增强 Run #42763137320](https://github.com/969981/PokeHome_Resources/actions/runs/42763137320) 尝试逐个补建缺失 FDE 入口，并记录重叠/未能建函数的状态；其结果要以实际 Run 为准。
+
+**小型报告字段修正**：成功 Run 的 `home41_build_sqlite.py` 在构建报告时把 JSON 布尔值 `true` 与字符串 `"True"` 比较，导致 `decompile_requested=false` 的报告字段误报；实际 `decompiled_ok=15415`，`decompiled_failed=0`，且 `C ZIP 15415/15415` 通过。该报告布尔字段已在后续源码提交 `e0821ea1` 修复，**不影响已有 SQLite 和 C 文件的真实性**。
 
 ## 1. 源数据身份与执行边界
 
