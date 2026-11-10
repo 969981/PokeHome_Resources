@@ -142,6 +142,29 @@ jobs:
                   print(table, db.execute('SELECT count(*) FROM ' + table).fetchone()[0])
           PY
 
+      - name: Export every successfully decompiled function as C source files
+        if: github.event_name == 'push' || inputs.decompile_all == true
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/ghidra/home41_extract_c.py \
+            --input "$RUNNER_TEMP/home41_out/home41_ghidra_events.ndjson.gz" \
+            --zip "$RUNNER_TEMP/home41_out/HOME410_all_decompiled_C.zip" \
+            --index "$RUNNER_TEMP/home41_out/decompiled_index.csv" \
+            --report "$RUNNER_TEMP/home41_out/decompiled_manifest.json" \
+            --elf-sha "$ELF_SHA256"
+          python - <<'PY'
+          import json,os,zipfile
+          from pathlib import Path
+          d=Path(os.environ['RUNNER_TEMP'])/'home41_out'
+          v=json.loads((d/'decompiled_manifest.json').read_text())
+          assert v['decompiler_attempted']==v['functions'] and v['functions']>0
+          assert v['c_success']>0
+          with zipfile.ZipFile(d/'HOME410_all_decompiled_C.zip') as z:
+              assert len(z.namelist())==v['c_success']+2
+          print('C export checked:',v['functions'],'functions;',v['c_success'],'C outputs;',v['c_fail_or_empty'],'failures')
+          PY
+
       - name: Archive editable native Ghidra project database
         if: always()
         shell: bash
@@ -180,6 +203,19 @@ jobs:
           path: |
             ${{ runner.temp }}/home41_out/home41_main_410.sqlite
             ${{ runner.temp }}/home41_out/home41_ghidra_manifest.json
+
+      - name: Upload all recovered C pseudocode and per-function coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Ghidra12-all-decompiled-C
+          retention-days: 30
+          if-no-files-found: warn
+          compression-level: 0
+          path: |
+            ${{ runner.temp }}/home41_out/HOME410_all_decompiled_C.zip
+            ${{ runner.temp }}/home41_out/decompiled_index.csv
+            ${{ runner.temp }}/home41_out/decompiled_manifest.json
 
       - name: Upload raw machine-readable Ghidra export
         if: always()
