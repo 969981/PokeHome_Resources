@@ -1,0 +1,70 @@
+name: HOME 4.1.0 verify 2685 language names and 1829 PML items
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - 'tools/rebuild_home41_from_romfs.py'
+      - 'tools/build_home41_item_catalog.py'
+      - '.github/workflows/home41-item-catalog-rebuild.yml'
+permissions:
+  contents: read
+concurrency:
+  group: home41-item-catalog-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout original HOME 4.1.0 RomFS repository
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile migrated scripts and RomFS parser modules
+        run: |
+          python -m py_compile tools/rebuild_home41_from_romfs.py tools/build_home41_item_catalog.py tools/unpack_home41.py tools/home41_romfs_core.py
+      - name: Rebuild both CSVs directly from original RomFS
+        run: |
+          python tools/rebuild_home41_from_romfs.py --source-root . --out-dir derived/4.1.0/item_catalog
+      - name: Verify exact record counts and cross-check report
+        run: |
+          python - <<'PY'
+          import csv, hashlib, json
+          from pathlib import Path
+          root=Path("derived/4.1.0/item_catalog")
+          checks=[
+            ("HOME41_itemname_2685_11lang.csv",2685,17),
+            ("HOME41_itemid_1829_pml_crosswalk.csv",1829,25),
+          ]
+          report=json.loads((root/"HOME41_item_catalog_validation.json").read_text(encoding="utf-8"))
+          for filename,count,cols in checks:
+              data=(root/filename).read_bytes()
+              with (root/filename).open(encoding="utf-8",newline="") as fp:
+                  reader=csv.reader(fp); header=next(reader); rows=list(reader)
+              assert len(header)==cols and len(rows)==count,(filename,len(header),len(rows))
+              assert all(len(row)==cols for row in rows),filename
+              assert report["outputs_sha256"][filename]==hashlib.sha256(data).hexdigest(),filename
+              print(filename,"OK",len(rows),"rows",cols,"columns")
+          assert report["pml_physical_records"]==1166
+          assert report["shared_default_logical_ids"]==663
+          assert report["icon_fallback_logical_ids"]==683
+          print("REPORT PASS",json.dumps(report,ensure_ascii=False,indent=2))
+          PY
+      - name: Upload independently rebuilt CSV and verification JSON
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-item-catalog-2685x11-1829pml
+          path: |
+            derived/4.1.0/item_catalog/HOME41_itemname_2685_11lang.csv
+            derived/4.1.0/item_catalog/HOME41_itemid_1829_pml_crosswalk.csv
+            derived/4.1.0/item_catalog/HOME41_item_catalog_validation.json
+          retention-days: 30
+          if-no-files-found: error
