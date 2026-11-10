@@ -1,0 +1,262 @@
+/* Recovered by Ghidra 12.2, not original Nintendo source.
+ * HOME 4.1.0 original ELF SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
+ * Ghidra function entry: .text::00542d40; name: FUN_.text__00542d40
+ */
+
+
+void FUN__text__00542d40(undefined1 param_1 [16],double param_2,double param_3,undefined8 param_4,
+                        long param_5,float *param_6,long param_7,undefined4 param_8)
+
+{
+  undefined8 uVar1;
+  long lVar2;
+  double dVar3;
+  double dVar4;
+  double dVar5;
+  double dVar6;
+  double dVar7;
+  double dVar8;
+  double dVar9;
+  double dVar10;
+  double dVar11;
+  double dVar12;
+  float fVar13;
+  float fVar14;
+  float fVar15;
+  float fVar16;
+  float fVar17;
+  double dVar18;
+  float fVar19;
+  float fVar20;
+  float fVar21;
+  float fVar22;
+  float fVar23;
+  float fVar24;
+  float fVar25;
+  float fVar26;
+  float fVar27;
+  float fVar28;
+  float fVar29;
+  float fVar30;
+  float fVar31;
+  float fVar32;
+  float fVar33;
+  float fVar34;
+  float fVar35;
+  float fVar36;
+  float fVar37;
+  float fVar38;
+  float fVar39;
+  float fVar40;
+  float fVar41;
+  float fVar42;
+  float fVar43;
+  float fVar44;
+  float fVar45;
+  double dVar46;
+  float fVar47;
+  float fVar48;
+  double dVar49;
+  float fVar50;
+  float fVar51;
+  float fVar52;
+  float fVar53;
+  float local_e0;
+  float fStack_dc;
+  float local_d8;
+  float local_d4;
+  float fStack_d0;
+  float local_cc;
+  float local_c8;
+  float fStack_c4;
+  float local_c0;
+  float local_bc;
+  float fStack_b8;
+  float local_b4;
+  float local_b0;
+  float fStack_ac;
+  float local_a8;
+  float local_a4;
+  float fStack_a0;
+  float local_9c;
+  float local_98;
+  float fStack_94;
+  float local_90;
+  float local_8c;
+  float local_88;
+  float local_84;
+  
+  if ((param_6 != (float *)0x0) && (param_7 != 0)) {
+    fVar16 = *(float *)(param_5 + 0x3c);
+    fVar14 = *(float *)(param_5 + 0x40);
+    fVar19 = *(float *)(param_5 + 0x44);
+    fVar24 = -fVar19;
+    local_8c = -fVar16;
+    local_88 = -fVar14;
+    local_84 = fVar24;
+    dVar3 = (double)FUN__text__0052129c(param_5,&local_8c);
+    dVar7 = param_2;
+    dVar10 = param_3;
+    local_8c = -fVar16;
+    local_88 = fVar14;
+    local_84 = fVar24;
+    dVar4 = (double)FUN__text__0052129c(param_5,&local_8c);
+    dVar8 = dVar7;
+    dVar11 = dVar10;
+    local_8c = fVar16;
+    local_88 = fVar14;
+    local_84 = fVar24;
+    dVar5 = (double)FUN__text__0052129c(param_5,&local_8c);
+    dVar9 = dVar8;
+    dVar12 = dVar11;
+    local_8c = fVar16;
+    local_88 = -fVar14;
+    local_84 = fVar24;
+    dVar6 = (double)FUN__text__0052129c(param_5,&local_8c);
+    fVar19 = fVar19 + fVar19;
+    fVar14 = fVar19 * *(float *)(param_5 + 0x30);
+    fVar16 = fVar19 * *(float *)(param_5 + 0x34);
+    fVar36 = *(float *)(param_7 + 0x18);
+    fVar24 = *(float *)(param_7 + 0x1c);
+    fVar19 = fVar19 * *(float *)(param_5 + 0x38);
+    fVar13 = *(float *)(param_7 + 0x10);
+    fVar33 = *(float *)(param_7 + 0x14);
+    fVar44 = param_6[2];
+    fVar40 = fVar14 * fVar36 - fVar16 * fVar33;
+    fVar34 = fVar16 * fVar24 - fVar19 * fVar36;
+    fVar38 = fVar19 * fVar33 - fVar14 * fVar24;
+    fVar40 = fVar40 + fVar40;
+    fVar34 = fVar34 + fVar34;
+    fVar38 = fVar38 + fVar38;
+    fVar39 = *param_6;
+    fVar41 = param_6[1];
+    fVar31 = ((fVar16 + fVar33 * fVar40 + fVar13 * fVar38) - fVar24 * fVar34) /
+             *(float *)(param_7 + 0x3c);
+    fVar14 = ((fVar14 - fVar36 * fVar40) + fVar13 * fVar34 + fVar24 * fVar38) /
+             *(float *)(param_7 + 0x38);
+    fVar43 = SQRT(fVar39 * fVar39 + fVar41 * fVar41 + fVar44 * fVar44);
+    fVar47 = 1.0 / fVar43;
+    fVar39 = fVar47 * fVar39;
+    fVar16 = ((fVar19 + fVar13 * fVar40 + fVar36 * fVar34) - fVar33 * fVar38) /
+             *(float *)(param_7 + 0x40);
+    fVar41 = fVar47 * fVar41;
+    fVar47 = fVar47 * fVar44;
+    fVar19 = fVar14 * fVar39 + fVar41 * fVar31 + fVar47 * fVar16;
+    if (fVar19 != 0.0) {
+      dVar49 = *(double *)(param_7 + 0x20);
+      dVar46 = *(double *)(param_7 + 0x28);
+      dVar18 = *(double *)(param_7 + 0x30);
+      fVar38 = (float)(dVar9 - dVar46);
+      fVar51 = (float)(dVar8 - dVar46);
+      uVar1 = *(undefined8 *)(param_6 + 0xc);
+      fVar34 = (float)(dVar6 - dVar49);
+      fVar50 = (float)(dVar5 - dVar49);
+      fVar40 = (float)(dVar12 - dVar18);
+      fVar20 = (float)(dVar11 - dVar18);
+      fVar52 = (float)(dVar4 - dVar49);
+      fVar15 = (float)(dVar7 - dVar46);
+      fVar48 = (float)(dVar3 - dVar49);
+      fVar22 = fVar36 * fVar34 - fVar33 * fVar38;
+      fVar27 = fVar36 * fVar50 - fVar33 * fVar51;
+      fVar25 = fVar24 * fVar38 - fVar36 * fVar40;
+      fVar26 = fVar33 * fVar40 - fVar24 * fVar34;
+      fVar35 = fVar33 * fVar20 - fVar24 * fVar50;
+      fVar21 = (float)(dVar10 - dVar18);
+      fVar45 = (float)(param_2 - dVar46);
+      fVar17 = (float)(param_3 - dVar18);
+      fVar44 = fVar24 * fVar15 - fVar36 * fVar21;
+      fVar30 = fVar33 * fVar21 - fVar24 * fVar52;
+      fVar32 = fVar24 * fVar45 - fVar36 * fVar17;
+      fVar42 = fVar33 * fVar17 - fVar24 * fVar48;
+      fVar22 = fVar22 + fVar22;
+      fVar27 = fVar27 + fVar27;
+      fVar25 = fVar25 + fVar25;
+      fVar35 = fVar35 + fVar35;
+      fVar23 = fVar24 * fVar51 - fVar36 * fVar20;
+      fVar28 = fVar36 * fVar52 - fVar33 * fVar15;
+      fVar44 = fVar44 + fVar44;
+      fVar32 = fVar32 + fVar32;
+      fVar30 = fVar30 + fVar30;
+      fVar42 = fVar42 + fVar42;
+      fVar28 = fVar28 + fVar28;
+      fVar23 = fVar23 + fVar23;
+      fVar29 = fVar36 * fVar48 - fVar33 * fVar45;
+      fVar29 = fVar29 + fVar29;
+      fVar26 = fVar26 + fVar26;
+      fVar53 = 1.0 / *(float *)(param_7 + 0x38);
+      fVar37 = 1.0 / *(float *)(param_7 + 0x3c);
+      fVar48 = ((fVar48 - fVar36 * fVar29) + fVar13 * fVar32 + fVar24 * fVar42) * fVar53;
+      local_98 = ((fVar52 - fVar36 * fVar28) + fVar13 * fVar44 + fVar24 * fVar30) * fVar53;
+      fVar34 = ((fVar34 - fVar36 * fVar22) + fVar13 * fVar25 + fVar24 * fVar26) * fVar53;
+      fVar53 = ((fVar50 - fVar36 * fVar27) + fVar13 * fVar23 + fVar24 * fVar35) * fVar53;
+      fVar38 = ((fVar38 + fVar33 * fVar22 + fVar13 * fVar26) - fVar24 * fVar25) * fVar37;
+      fVar50 = ((fVar51 + fVar33 * fVar27 + fVar13 * fVar35) - fVar24 * fVar23) * fVar37;
+      fStack_94 = ((fVar15 + fVar33 * fVar28 + fVar13 * fVar30) - fVar24 * fVar44) * fVar37;
+      fVar37 = ((fVar45 + fVar33 * fVar29 + fVar13 * fVar42) - fVar24 * fVar32) * fVar37;
+      fVar43 = param_6[3] / fVar43;
+      fVar45 = fVar43 * fVar41;
+      fVar51 = fVar43 * fVar39;
+      fVar43 = fVar43 * fVar47;
+      fVar15 = 1.0 / *(float *)(param_7 + 0x40);
+      fVar24 = ((fVar40 + fVar13 * fVar22 + fVar36 * fVar25) - fVar33 * fVar26) * fVar15;
+      fVar40 = ((fVar20 + fVar13 * fVar27 + fVar36 * fVar23) - fVar33 * fVar35) * fVar15;
+      local_90 = ((fVar21 + fVar13 * fVar28 + fVar36 * fVar44) - fVar33 * fVar30) * fVar15;
+      fVar15 = ((fVar17 + fVar13 * fVar29 + fVar36 * fVar32) - fVar33 * fVar42) * fVar15;
+      fVar19 = 1.0 / fVar19;
+      fVar13 = ((fVar51 - fVar48) * fVar39 + fVar41 * (fVar45 - fVar37) + fVar47 * (fVar43 - fVar15)
+               ) * fVar19;
+      fVar33 = ((fVar51 - local_98) * fVar39 + fVar41 * (fVar45 - fStack_94) +
+               fVar47 * (fVar43 - local_90)) * fVar19;
+      fVar36 = ((fVar51 - fVar53) * fVar39 + fVar41 * (fVar45 - fVar50) + fVar47 * (fVar43 - fVar40)
+               ) * fVar19;
+      fVar19 = ((fVar51 - fVar34) * fVar39 + fVar41 * (fVar45 - fVar38) + fVar47 * (fVar43 - fVar24)
+               ) * fVar19;
+      fVar48 = fVar48 + fVar14 * fVar13;
+      fVar37 = fVar37 + fVar31 * fVar13;
+      fVar15 = fVar15 + fVar16 * fVar13;
+      local_98 = local_98 + fVar14 * fVar33;
+      fStack_94 = fStack_94 + fVar31 * fVar33;
+      local_90 = local_90 + fVar16 * fVar33;
+      fVar53 = fVar53 + fVar14 * fVar36;
+      fVar50 = fVar50 + fVar31 * fVar36;
+      fVar40 = fVar40 + fVar16 * fVar36;
+      fVar34 = fVar34 + fVar14 * fVar19;
+      fVar38 = fVar38 + fVar31 * fVar19;
+      fVar24 = fVar24 + fVar16 * fVar19;
+      local_b0 = fVar34;
+      fStack_ac = fVar38;
+      local_a8 = fVar24;
+      local_a4 = fVar53;
+      fStack_a0 = fVar50;
+      local_9c = fVar40;
+      local_8c = fVar48;
+      local_88 = fVar37;
+      local_84 = fVar15;
+      lVar2 = FUN__text__005220cc(param_5,param_7,*(undefined8 *)(param_6 + 0xe),param_8);
+      *(undefined8 *)(lVar2 + 0x38) = uVar1;
+      local_bc = (fVar48 + fVar48) - fVar34;
+      fStack_b8 = (fVar37 + fVar37) - fVar38;
+      local_b4 = (fVar15 + fVar15) - fVar24;
+      FUN__text__005169ec(lVar2,&local_8c,&local_98,&local_bc,param_6);
+      *(undefined8 *)(lVar2 + 0x90) = uVar1;
+      local_c8 = (fVar53 + fVar53) - local_98;
+      fStack_c4 = (fVar50 + fVar50) - fStack_94;
+      local_c0 = (fVar40 + fVar40) - local_90;
+      FUN__text__005169ec(lVar2 + 0x58,&local_b0,&local_a4,&local_c8,param_6);
+      *(undefined8 *)(lVar2 + 0xe8) = uVar1;
+      fStack_d0 = (fStack_94 + fStack_94) - local_88;
+      local_d4 = (local_98 + local_98) - local_8c;
+      local_cc = (local_90 + local_90) - local_84;
+      FUN__text__005169ec(lVar2 + 0xb0,&local_98,&local_a4,&local_d4,param_6);
+      *(undefined8 *)(lVar2 + 0x140) = uVar1;
+      fStack_dc = (local_88 + local_88) - fStack_94;
+      local_e0 = (local_8c + local_8c) - local_98;
+      local_d8 = (local_84 + local_84) - local_90;
+      FUN__text__005169ec(lVar2 + 0x108,&local_8c,&local_b0,&local_e0,param_6);
+      FUN__text__005209ec(param_5);
+    }
+  }
+  return;
+}
+
+
