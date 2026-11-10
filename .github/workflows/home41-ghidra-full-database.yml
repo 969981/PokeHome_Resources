@@ -16,11 +16,6 @@ on:
         options:
           - github-hosted
           - self-hosted
-  push:
-    branches: ['4.1.0']
-    paths:
-      - '.github/workflows/home41-ghidra-full-database.yml'
-      - 'tools/ghidra/**'
 
 permissions:
   contents: read
