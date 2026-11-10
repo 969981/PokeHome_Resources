@@ -1,0 +1,66 @@
+name: HOME41 all C and ASM static annotations
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-ghidra-annotate-all.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: home41-ghidra-static-annotation
+  cancel-in-progress: false
+jobs:
+  annotate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 200
+    env:
+      SOURCE: derived/4.1.0/Ghidra_12.2_Run_42763137320
+      ANNOT: derived/4.1.0/Ghidra_12.2_Run_42763137320/annotation_v1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/database/
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/decompiled_index.csv
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/parts_manifest.json
+            tools/ghidra/home41_restore_split.py
+            tools/ghidra/home41_annotate_all.py
+            tools/ghidra/home41_restore_annotations.py
+            tools/ghidra/test_home41_annotate_all.py
+            .github/workflows/home41-ghidra-annotate-all.yml
+      - name: Validate scripts and original Ghidra export
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/ghidra/home41_annotate_all.py
+          python -m unittest discover -s tools/ghidra -p test_home41_annotate_all.py -v
+      - name: Restore original SQLite database from uncompressed Git shards
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,sys,sqlite3
+          from pathlib import Path
+          sys.path.insert(0,'tools/ghidra')
+          from home41_restore_split import combine
+          src=Path(os.environ['SOURCE'])
+          manifest=json.loads((src/'parts_manifest.json').read_text())
+          assert manifest['source_run_id']==42763137320
+          assert manifest['c_files']==15415
+          out=Path(os.environ['RUNNER_TEMP'])/'home41.sqlite'
+          combine(src/'database',manifest['sqlite'],out)
+          with sqlite3.connect(out) as db:
+              assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+              assert db.execute('SELECT count(*) FROM instructions').fetchone()[0]==1029451
+          print('Source Ghidra database verified:',out.stat().st_size)
+          PY
+      - name: Generate all function comments and instruction explanations
+        run: |
+          set -euo pipefail
+          rm -rf "$ANNOT"
+          python tools/ghidra/home41_annotate_all.py --db "$RUNNER_TEMP/home41.sqlite" --c-root "$SOURCE/c" --index "$SOURCE/decompiled_index.csv" --fde "$SOURCE/fde_recovery.csv" --out "$ANNOT"
+          python tools/ghidra/home41_restore_annotations.py --source "$ANNOT" --out "$RUNNER_TEMP/home41_annotations.sqlite"
