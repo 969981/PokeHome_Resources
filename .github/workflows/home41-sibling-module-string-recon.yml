@@ -1,0 +1,48 @@
+name: HOME41 sibling-module save/network string reconnaissance
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-sibling-module-string-recon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  module-recon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout HOME 4.1.0 NCA modules
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+      - name: Identify module formats and scan relevant strings
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT='57b83ea8c0af21ef26e2519b9580b373_NCA/0'
+          OUT="$RUNNER_TEMP/home41-module-recon"
+          mkdir -p "$OUT"
+          : > "$OUT/module-summary.txt"
+          : > "$OUT/relevant-strings.txt"
+          for name in main main.elf rtld sdk subsdk0 subsdk1; do
+            f="$ROOT/$name"
+            if [[ ! -f "$f" ]]; then echo "MISSING $f" >> "$OUT/module-summary.txt"; continue; fi
+            { echo "### $name"; stat -c 'size=%s' "$f"; file "$f"; sha256sum "$f"; od -An -tx1 -N16 "$f"; } >> "$OUT/module-summary.txt"
+            echo "### $name" >> "$OUT/relevant-strings.txt"
+            strings -a -n 6 -t x "$f" | grep -Ei 'SaveRequest|ApogeeSaveRequest|/api/box/operation|/api/mile/operation|savedata\.bin|MtSaveThread|SaveThread|BoxRequest|OperationRequest|/api/box/|/api/mile/' >> "$OUT/relevant-strings.txt" || true
+          done
+          cat "$OUT/module-summary.txt"
+          cat "$OUT/relevant-strings.txt"
+      - name: Upload sibling-module reconnaissance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-sibling-module-string-recon
+          path: ${{ runner.temp }}/home41-module-recon/
+          retention-days: 30
+          if-no-files-found: warn
