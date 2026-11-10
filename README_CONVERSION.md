@@ -13,6 +13,8 @@
 - [**只读 Python：完整 25,803 FDE 和 54 个核心函数 ASM/XREF 导出**](tools/home41_ghidra_elf_atlas.py)
 - [**Ghidra 12.2 Java Headless：批量标记 54 函数并导出选定 C 伪代码**](tools/ghidra/Home41Analyze.java)
 - [**Ghidra PH4/EH4 812 个 BL Callsite、60 个共同调用者与 SQLite 导入说明**](docs/obsidian/HOME41_Ghidra_PH4_EH4_SideData_调用者数据库_20261110.md)
+- [**Ghidra 12.2 全量原生项目 / SQLite / 逐函数 C 伪代码 ZIP 导出规范**](docs/obsidian/HOME41_Ghidra_全量SQLite数据库及C反编译产物_20261110.md)
+- [**逐函数 Ghidra C 代码归档器，保留失败函数和完整覆盖率清单**](tools/ghidra/home41_extract_c.py)
 - [**Ghidra 项目导入脚本：248 个研究名称和 812 个调用书签**](tools/ghidra/Home41ImportSeed.java)
 
 - [**可选 Ghidra 12.2 / Temurin JDK25 GitHub Actions**](.github/workflows/home41-ghidra-headless.yml)
