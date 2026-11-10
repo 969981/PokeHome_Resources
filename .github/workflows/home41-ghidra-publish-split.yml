@@ -1,10 +1,6 @@
 name: HOME 4.1.0 publish unpacked Ghidra database, C source and project
 
 on:
-  push:
-    branches: ['4.1.0']
-    paths:
-      - '.github/workflows/home41-ghidra-publish-split.yml'
   workflow_dispatch:
 
 permissions:
@@ -72,6 +68,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # A manual rerun replaces only this derived output folder locally;
+          # source artifacts are revalidated before any Git write occurs.
+          rm -rf "$DEST"
           python tools/ghidra/home41_publish_split.py \
             --artifacts "$RUNNER_TEMP/ghidra_artifacts" \
             --output "$DEST"
@@ -137,7 +136,7 @@ jobs:
               git push origin HEAD:4.1.0
             fi
           done
-          test -z "$(git status --porcelain)"
+          test -z "$(git status --porcelain -- "$DEST")"
           echo "Published all ${#files[@]} individual uncompressed C files to 4.1.0"
 
       - name: Upload source fidelity and reconstructed database report
