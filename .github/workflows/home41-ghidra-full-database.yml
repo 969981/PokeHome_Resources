@@ -59,7 +59,8 @@ jobs:
           mkdir -p "$RUNNER_TEMP/ghidra_work" "$RUNNER_TEMP/ghidra_dist" "$RUNNER_TEMP/home41_out"
           test -s "$MAIN_ELF"
           printf '%s  %s\n' "$ELF_SHA256" "$MAIN_ELF" | sha256sum --check
-          python -m py_compile tools/ghidra/home41_build_sqlite.py
+          python -m py_compile tools/ghidra/home41_build_sqlite.py tools/ghidra/test_home41_build_sqlite.py
+          python -m unittest discover -s tools/ghidra -p 'test_*.py' -v
           file "$MAIN_ELF"
           readelf -h "$MAIN_ELF" | grep -E 'ELF64|AArch64|Machine:'
 
