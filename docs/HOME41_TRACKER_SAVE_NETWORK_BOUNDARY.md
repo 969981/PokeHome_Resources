@@ -45,6 +45,18 @@ C-code evidence:
 
 All C paths are under `derived/4.1.0/Ghidra_12.2_Run_42763137320/` and are Ghidra pseudocode, not original source.
 
+## Region-entry call scan (read-only follow-up)
+
+[Run 42855464229](https://github.com/969981/PokeHome_Resources/actions/runs/42855464229) succeeded. The scoped probe examined 915 Ghidra functions in the candidate `.text::0064C000–0068FFFF` region and recovered 302 direct cross-region call edges, 0 cross-region data refs. All 302 edges were included in the TSV (the script's 400-row cap did not truncate this pass).
+
+**This is not 302 HTTP/Box operations.** The region deliberately overapproximates transport and includes shared allocation, object management and destructors.
+
+- 36 incoming calls to `.text::0064C260` merely call a function returning global `DAT_00C5F590`; the Box-manager init function `.text::00325490` is one caller. This is not evidence of a save request.
+- 20 incoming calls to `.text::0068D884` originate from repeated cleanup in `.text::00161070` (many object fields); they do not by themselves identify HTTP.
+- `.text::003E93D4 → .text::0068BB40` is a direct cross-region call, but the destination body is container/data-object handling and is not a proven HTTP sender.
+
+**Next filter:** begin with request-body construction / URL binding, classify call targets by actual decompiled code, then trace only the corresponding callbacks and upward owners. Do not infer a network save from address-range overlap or a generic helper call.
+
 ## Continuing evidence gates
 
 1. **Network boundary:** enumerate incoming direct calls and callback/data pointers crossing into the candidate transport region `.text::0064C000–0068FFFF`. Region membership alone is not a reliable business classification.
