@@ -230,9 +230,10 @@ public class Home41Export extends GhidraScript {
     }
 
     // Enumerate *every* Ghidra reference source, including addresses not defined
-    // as an instruction or typed data start. One pass avoids duplicate edges.
+    // as an instruction or typed data start. Iterate the full program memory
+    // AddressSetView: Ghidra's DB adapter throws NPE for null despite API docs.
     private void exportReferences(ReferenceManager rm) throws Exception {
-        AddressIterator origins = rm.getReferenceSourceIterator((AddressSetView)null, true);
+        AddressIterator origins = rm.getReferenceSourceIterator(currentProgram.getMemory(), true);
         long sources = 0;
         while (origins.hasNext()) {
             refsAt(rm, origins.next());
