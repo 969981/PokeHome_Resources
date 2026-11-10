@@ -1,0 +1,15 @@
+rva	label	prototype	status	literal_evidence	static_behavior	unknowns
+0x50E76C	HOME_RecordView_Init50E76C	void HOME_RecordView_Init50E76C(void *view, void *record)	STATIC_ABI_PARTIAL	param_1[1] = param_2;	writes record pointer at wrapper+8; initializes vtable	object ownership unknown
+0x50E784	HOME_RecordView_Init50E784	void HOME_RecordView_Init50E784(void *view, void *record)	STATIC_ABI_PARTIAL	param_1[1] = param_2;	initializes second wrapper entrypoint	do not assume entrypoints interchangeable
+0x50E7E4	HOME_RecordView_GetRecord	void *HOME_RecordView_GetRecord(void *view)	STATIC_ABI_PARTIAL	*(undefined8 *)(param_1 + 8)	returns wrapper.record	concrete record type unknown
+0x50E7EC	HOME_RecordView_GetOffset10	unsigned char *HOME_RecordView_GetOffset10(void *view)	STATIC_ABI_PARTIAL	param_1 + 8) + 0x10	returns record+0x10	business field unknown
+0x50E7F8	HOME_RecordView_GetOffset12	unsigned char *HOME_RecordView_GetOffset12(void *view)	STATIC_ABI_PARTIAL	param_1 + 8) + 0x12	returns record+0x12	business field unknown
+0x50E8B0	HOME_SideData_AppendTLV	void HOME_SideData_AppendTLV(void *view, void **header_out, void **data_out, unsigned char tag, unsigned int length)	STATIC_ABI_PARTIAL	*param_2 = puVar3;	writes TLV tag u16 length zeroed payload and two output pointers	capacity bound not verified
+0x50E994	HOME_SideData_CursorHasNext	bool HOME_SideData_CursorHasNext(void *view, const unsigned char *cursor)	STATIC_ABI_PARTIAL	return (param_2 - *(long *)(param_1 + 8))	u16 SideData length boundary test	not a tag lookup; requires valid cursor
+0x530120	HOME_EH4_CiphertextCRC	unsigned int HOME_EH4_CiphertextCRC(void *record)	STATIC_ABI_PARTIAL	return uVar6;	CRC32 per chunk XOR result	not authentication
+0x530214	HOME_EH4_AES_CBC_Encrypt	void HOME_EH4_AES_CBC_Encrypt(void *record)	STATIC_ABI_PARTIAL	FUN__text__005971f0	native AES-CBC encrypt helper and copy	key layout unresolved
+0x53041C	HOME_EH4_AES_CBC_Decrypt	void HOME_EH4_AES_CBC_Decrypt(void *record)	STATIC_ABI_PARTIAL	FUN__text__005973a0	native AES-CBC decrypt helper and copy	key layout unresolved
+0x5305FC	HOME_PH4_Seal	void HOME_PH4_Seal(void *record)	STATIC_ABI_PARTIAL	FUN__text__00630120(param_1);	encrypt then write CRC to record+0x0A	not a persistence transaction
+0x5306B4	HOME_EH4_CRC_CheckedDecrypt	void HOME_EH4_CRC_CheckedDecrypt(void *record)	STATIC_ABI_PARTIAL	*(undefined1 *)(lVar4 + 0xc) = 1;	CRC compare after decrypt and invalid flag write	no bool result or server ACK
+0x221AC0	HOME_DirtyManager_Get	void *HOME_DirtyManager_Get(void)	STATIC_ABI_PARTIAL	DAT_008e5630	global manager is main+0x7E5630	manager layout partial
+0x2068C0	HOME_Dirty_AppendUnique	void HOME_Dirty_AppendUnique(void *owner, unsigned int arg2, unsigned int arg3)	STATIC_ABI_PARTIAL	0x93498	deduplicates owner+0x60 against manager+0x7FC18 then increments manager+0x93498	arg2 arg3 and later save unresolved
