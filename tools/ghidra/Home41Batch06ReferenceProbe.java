@@ -69,6 +69,12 @@ public class Home41Batch06ReferenceProbe extends GhidraScript {
             0x960df0L  // main+0x860df0: companion records
         };
         for (long a : globals) refs(out, "GLOBAL", toAddr(a), "Ghidra VA 0x" + Long.toHexString(a));
+        long[] netRoots = {
+            0x655114L, 0x64fe24L, 0x662ee8L, 0x674030L,
+            0x67447cL, 0x678718L, 0x678ee8L, 0x678bb0L, 0x670d60L
+        };
+        for (long a : netRoots) refs(out, "NETWORK_FUNCTION", toAddr(a),
+            "Ghidra VA 0x" + Long.toHexString(a));
         out.append("# matched_string_items=").append(matched).append("\n");
         Files.write(Paths.get(args[0]), out.toString().getBytes(StandardCharsets.UTF_8));
         println("Batch06 native reference probe: " + matched + " matching string data items; output=" + args[0]);
