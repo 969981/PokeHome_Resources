@@ -240,7 +240,7 @@ def execute(db_path,c_root,index_path,fde_path,out):
     (out/"annotation_work.sqlite").unlink()
     lookup={}
     with (out/"function_catalog.csv").open(newline="",encoding="utf-8") as f:
-        for frow in csv.DictReader(f):lookup[frow["rva"].upper()]=frow
+        for frow in csv.DictReader(f):lookup[f"0x{int(frow['rva'],16):X}"]=frow
     fde_match=0;fde_total=0
     with fde_path.open(newline="",encoding="utf-8") as f,(
          out/"fde_catalog.csv").open("w",newline="",encoding="utf-8") as o:
@@ -256,6 +256,7 @@ def execute(db_path,c_root,index_path,fde_path,out):
                 item["label"] if item else "",
                 item["purpose"] if item else "有效 FDE 起点；本次 Ghidra 未识别为独立 C 函数，业务用途待查"])
     if fde_total!=25803:raise ValueError("Incomplete FDE catalog "+str(fde_total))
+    if fde_match==0:raise ValueError("FDE-to-Ghidra RVA reconciliation unexpectedly matched zero functions")
     report={"status":"STATIC_ANNOTATION_GENERATED",
       "source_run":42763137320,"elf_sha256":SHA,"input_counts":counts,
       "annotated_functions":15415,"function_levels":dict(source_count),
