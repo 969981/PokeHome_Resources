@@ -1,6 +1,10 @@
 name: HOME 4.1.0 full main.elf Ghidra analysis + SQLite database
 
 on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-ghidra-full-database.yml'
   workflow_dispatch:
     inputs:
       decompile_all:
@@ -74,9 +78,21 @@ jobs:
           curl --fail --location --retry 3 --retry-delay 8 --output "$RUNNER_TEMP/$GHIDRA_ASSET" "$GHIDRA_DOWNLOAD"
           printf '%s  %s\n' "$GHIDRA_ZIP_SHA256" "$RUNNER_TEMP/$GHIDRA_ASSET" | sha256sum --check
           unzip -q "$RUNNER_TEMP/$GHIDRA_ASSET" -d "$RUNNER_TEMP/ghidra_dist"
-          root="$(find "$RUNNER_TEMP/ghidra_dist" -maxdepth 1 -type d -name 'ghidra_*' -print -quit)"
-          test -x "$root/support/analyzeHeadless"
+          echo "::group::Ghidra distribution layout"
+          find "$RUNNER_TEMP/ghidra_dist" -maxdepth 3 -type f -name 'analyzeHeadless' -print
+          find "$RUNNER_TEMP/ghidra_dist" -maxdepth 2 -type d -print | head -n 30
+          echo "::endgroup::"
+          root="$(find "$RUNNER_TEMP/ghidra_dist" -maxdepth 2 -type f -path '*/support/analyzeHeadless' -print -quit)"
+          if [ -z "$root" ]; then
+            echo "::error::Ghidra distribution has no support/analyzeHeadless"
+            find "$RUNNER_TEMP/ghidra_dist" -maxdepth 3 -type f -name '*Headless*' -print | head -n 30
+            exit 1
+          fi
+          chmod +x "$root"
+          test -x "$root"
+          root="$(dirname "$(dirname "$root")")"
           echo "GHIDRA_HOME=$root" >> "$GITHUB_ENV"
+          echo "Verified Ghidra home: $root"
 
       - name: Fully analyze original ARM64 ELF in Ghidra Headless
         shell: bash
