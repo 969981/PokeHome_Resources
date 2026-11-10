@@ -5,6 +5,23 @@
 这个工具将可验证的二进制内容导出为便于检索的 **UTF-8 JSON、CSV**，按需要解包 SARC 中的 BFLYT、BFLAN、BNTX，并可在安装外部解码器时输出 **PNG**。它不是“所有二进制都变成语义明确的 JSON”——未知 schema/编码会保留结构字段及验证状态。
 
 
+## HOME 4.1.0 main NSO → main.elf（shuffle2/nx2elf）
+
+本分支的 `57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf` **已经提交**，并通过 SHA256（`bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a`）及 ELF64/AArch64/Build ID 检查。新增引用上游 [shuffle2/nx2elf](https://github.com/shuffle2/nx2elf)，固定提交 `a1760ba54e2aefb41444933f53b90e6e8b05c399`，提供标准化重建、可重复验证和手动提交入口。
+
+- [完整转换说明、现有 ELF 指纹和 Obsidian 研究链接](tools/README_nx2elf_HOME41.md)；
+- [源代码重建/检查脚本（默认只读验证，不覆盖）](tools/nx2elf_home41.py)；
+- [GitHub Actions 自动构建、ELF 对账及可选写回](.github/workflows/home41-nx2elf.yml)。
+
+```bash
+# 从上游固定源码编译 nx2elf 后，在仓库根目录
+python3 tools/nx2elf_home41.py --mode verify --nx2elf /path/to/nx2elf
+# 若经审阅确定需要更新现有 main.elf，显式选择写入
+python3 tools/nx2elf_home41.py --mode write --nx2elf /path/to/nx2elf
+```
+
+默认 CI 生成新的 `main.elf` 作为 Artifact，并与原仓已有 ELF 比较；只有手动 Workflow 设置 `commit_generated=true` 才可能更新已跟踪的文件。**已提交原始 ELF 的存在与重新运行固定版本 nx2elf 后字节完全一致，是两个不同的验收状态**；新建 workflow 不能替代执行日志。
+
 ## HOME 4.1.0 道具双 CSV 重建（2685 名称 / 1829 PML）
 
 **不必再克隆 HOME-Live-Plugin-CHS**：本仓库已包含完整的 [ROMFS 一键重建入口](tools/rebuild_home41_from_romfs.py) 和 [ItemID 关联模块](tools/build_home41_item_catalog.py)。前者直接从本分支的 `57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin` 原始资源解析，后者从本仓库 `Unpack` 的已解码数据合并两份 CSV。Python 3.10+，仅标准库。
