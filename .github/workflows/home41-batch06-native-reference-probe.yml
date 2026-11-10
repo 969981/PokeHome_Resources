@@ -1,0 +1,71 @@
+name: HOME41 Batch06 native Ghidra string and global xref probe
+
+on:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-batch06-native-reference-probe.yml'
+      - 'tools/ghidra/Home41Batch06ReferenceProbe.java'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  native-reference-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout probe script
+        uses: actions/checkout@v4
+        with:
+          ref: 4.1.0
+          fetch-depth: 1
+      - name: Download exact native Ghidra project artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: HOME41-Ghidra12-native-project
+          path: ${{ runner.temp }}/home41-native-project
+          repository: ${{ github.repository }}
+          run-id: 42763137320
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Restore native project archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/HOME410-project"
+          tar --zstd -xf "$RUNNER_TEMP/home41-native-project/HOME410_ghidra_project.tar.zst" -C "$RUNNER_TEMP/HOME410-project"
+          test -f "$RUNNER_TEMP/HOME410-project/HOME410.gpr"
+          test -d "$RUNNER_TEMP/HOME410-project/HOME410.rep"
+      - name: Set up JDK 25 for Ghidra 12.2
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Download and verify Ghidra 12.2
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 'https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.2_build/ghidra_12.2_PUBLIC_20261016.zip' --output "$RUNNER_TEMP/ghidra.zip"
+          echo "2c2cd776db3c1f6a097ba418922378ac3649cadd5e844a6f5f088ae628a7be67  $RUNNER_TEMP/ghidra.zip" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/ghidra-install"
+          unzip -q "$RUNNER_TEMP/ghidra.zip" -d "$RUNNER_TEMP/ghidra-install"
+      - name: Probe native Ghidra data references and global xrefs
+        shell: bash
+        run: |
+          set -euo pipefail
+          HEADLESS="$(find "$RUNNER_TEMP/ghidra-install" -path '*/support/analyzeHeadless' -type f -print -quit)"
+          test -n "$HEADLESS"
+          mkdir -p "$RUNNER_TEMP/home41-batch06"
+          bash "$HEADLESS" "$RUNNER_TEMP/HOME410-project" HOME410 -process main.elf -noanalysis -scriptPath "$GITHUB_WORKSPACE/tools/ghidra" -postScript Home41Batch06ReferenceProbe.java "$RUNNER_TEMP/home41-batch06/native-xrefs.tsv" -log "$RUNNER_TEMP/home41-batch06/headless.log" -scriptlog "$RUNNER_TEMP/home41-batch06/script.log"
+          test -s "$RUNNER_TEMP/home41-batch06/native-xrefs.tsv"
+          cat "$RUNNER_TEMP/home41-batch06/native-xrefs.tsv"
+      - name: Upload native reference probe
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Batch06-native-xrefs
+          path: ${{ runner.temp }}/home41-batch06/
+          retention-days: 30
+          if-no-files-found: warn
