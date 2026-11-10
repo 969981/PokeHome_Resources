@@ -123,3 +123,7 @@ purported complete legal item database.
   It was built from the earlier pre-P4.2 snapshot. For the latest
   parsed arrays and current manifest, use the **Git branch**, not that
   older Release bundle.
+
+## 2026-11-10：11 语言名称和 PML 全表可复现工具
+
+在此历史分析之后，已将 [tools/rebuild_home41_from_romfs.py](../tools/rebuild_home41_from_romfs.py) 与 [tools/build_home41_item_catalog.py](../tools/build_home41_item_catalog.py) **实际提交到 PokeHome_Resources / 4.1.0**。前者直接从原始 11 组 DAT/TBL、PML item.dat 和独立 hash 索引表重建两份 CSV，后者完成 ItemID join；默认输出到 `derived/4.1.0/item_catalog/`。预期输出 `2685×11` 个名称及 `1829` 个 PML 逻辑 ID（**1166** 条唯一记录）。完整命令和源偏移、ELF 证据请看 [对应 Obsidian](obsidian/HOME41_道具名称2685语言与PML1829_RomFS重建_20261110.md) 和 [README_CONVERSION](../README_CONVERSION.md#home-410-道具双-csv-重建2685-名称-1829-pml)。迁移后脚本是否端到端通过，需以实际运行记录为准，不把静态行数核验冒充运行通过。
