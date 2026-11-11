@@ -1,0 +1,59 @@
+name: HOME41 Batch13 runtime-observer preparation and parser xrefs
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-batch13-runtime-observer.yml'
+      - 'tools/ghidra/home41_batch13_detail_callsite_scan.py'
+      - 'tools/home41_switch_guest_observer.py'
+      - 'tools/home41_switch_trace_validate.py'
+      - 'tools/test_home41_switch_trace_validate.py'
+permissions:
+  contents: read
+jobs:
+  verify-observer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Read-only sparse checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            tools/ghidra/home41_batch07_request_adrp_audit.py
+            tools/ghidra/home41_batch09_box_save_cfg.py
+            tools/ghidra/home41_batch10_dispatch_audit.py
+            tools/ghidra/home41_batch13_detail_callsite_scan.py
+            tools/home41_switch_guest_observer.py
+            tools/home41_switch_trace_validate.py
+            tools/test_home41_switch_trace_validate.py
+          persist-credentials: false
+      - name: Recover target /detail parser callsites from pristine ELF
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/home41-batch13"
+          python -m py_compile tools/ghidra/home41_batch13_detail_callsite_scan.py
+          python tools/ghidra/home41_batch13_detail_callsite_scan.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out "$RUNNER_TEMP/home41-batch13/parser_xrefs.json" \
+            | tee "$RUNNER_TEMP/home41-batch13/summary.log"
+      - name: Check optional observer and parser offline tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e tools/home41_switch_guest_observer.py || python -m py_compile tools/home41_switch_guest_observer.py
+          test ! -e tools/home41_switch_trace_validate.py || python -m py_compile tools/home41_switch_trace_validate.py
+          test ! -e tools/test_home41_switch_trace_validate.py || python -m unittest -v tools/test_home41_switch_trace_validate.py
+      - name: Upload xref evidence only (no game/credential bytes)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: HOME41-Batch13-Parser-Observer-Preparation
+          path: ${{ runner.temp }}/home41-batch13/
+          retention-days: 30
+          if-no-files-found: warn
