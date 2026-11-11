@@ -133,7 +133,12 @@ public class Home41Batch08BoxOperationRecovery extends GhidraScript {
                 // Batch07 confirmed MOVZ/MOVK field-offset materialization in the
                 // Box SaveRequest candidate; dump surrounding decoded instructions
                 // without assigning Dirty clear/read semantics by name alone.
-                long[] dirtySites={0x34d344L,0x34d4e4L,0x34db9cL,0x34dbb4L,0x34dd6cL};
+                long[] dirtySites={
+                    0x34d344L,0x34d3e4L,0x34d450L,0x34d4e4L,0x34d5b8L,
+                    0x34d768L,0x34d7a8L,0x34da50L,0x34db9cL,0x34dbb4L,
+                    0x34dc60L,0x34dcb8L,0x34dcf0L,0x34dd24L,0x34dd6cL,
+                    0x34de2cL,0x34df00L,0x34e400L
+                };
                 if(i==3){
                     Listing dl=currentProgram.getListing();
                     for(long dv:dirtySites){
