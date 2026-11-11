@@ -264,10 +264,64 @@ def audit_fde_offset_constants(data, segs):
         out[group]={"status":"STATIC_IMMEDIATE_ONLY","hits":hits}
     return out
 
+
+# Incoming BL into native state, request-body builder and HTTP setup functions.
+# This is an ELF instruction scan across executable PT_LOAD segments, not a
+# semantic interprocedural analysis and not a proof of online save completion.
+INCOMING_TARGETS = {
+    0x22c1cc: "box_cancel_FDE",
+    0x22cb94: "box_start_FDE",
+    0x248bb0: "apogee_state_FDE",
+    0x24c470: "box_save_state_FDE",
+    0x252cc4: "mile_state_FDE",
+    0x225d10: "state_gate",
+    0x2279dc: "endpoint_format",
+    0x2154a0: "compressed_encrypted_payload",
+    0x21b870: "crypto_format_data",
+    0x54b5b0: "http_transport_setup",
+    0x54bae4: "transport_result_accessor",
+    0x2200a0: "play_report",
+    0x2043f0: "box_lookup_by_tracker",
+}
+def load_fdes(path):
+    import csv
+    if path is None:return []
+    rows=[]
+    with path.open("r",encoding="utf-8",newline="") as f:
+        reader=csv.DictReader(f)
+        for row in reader:
+            rva=int(row["rva"],16)
+            length=int(row["fde_bytes"])
+            if length>0:rows.append((rva,rva+length))
+    rows.sort()
+    return rows
+
+def audit_incoming_calls(data,segs,fdes):
+    import bisect
+    starts=[x[0] for x in fdes]
+    refs=defaultdict(list)
+    for seg in segs:
+        if not(seg["flags"]&1):continue
+        for off in range(0,seg["filesz"]-3,4):
+            ins=struct.unpack_from("<I",data,seg["off"]+off)[0]
+            if(ins&0xfc000000)!=0x94000000:continue
+            src=seg["va"]+off
+            dst=src+(sign_extend(ins&0x3ffffff,26)<<2)
+            if dst not in INCOMING_TARGETS:continue
+            i=bisect.bisect_right(starts,src)-1
+            owner=(fdes[i][0] if i>=0 and src<fdes[i][1] else None)
+            refs[dst].append({"callsite_va":hex(src+IMAGE_BASE),
+                              "caller_fde_va":hex(owner+IMAGE_BASE) if owner is not None else None,
+                              "caller_offset":hex(src-owner) if owner is not None else None})
+    return {INCOMING_TARGETS[k]:{"target_va":hex(k+IMAGE_BASE),"count":len(refs[k]),
+                                 "callsites":refs[k][:100]}
+            for k in INCOMING_TARGETS}
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf", required=True, type=Path)
     ap.add_argument("--out", required=True, type=Path)
+    ap.add_argument("--fde-csv", type=Path)
     a = ap.parse_args()
     raw = a.elf.read_bytes()
     sha = hashlib.sha256(raw).hexdigest()
@@ -276,13 +330,15 @@ def main():
     result = scan(raw)
     result["call_analysis"] = audit_fde_calls(raw, segments(raw), result["hits"])
     result["field_offset_scan"] = audit_fde_offset_constants(raw, segments(raw))
+    result["incoming_edges"] = audit_incoming_calls(raw, segments(raw), load_fdes(a.fde_csv))
     result["elf_sha256"] = sha
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": result["status"], "elf_sha256": sha,
         "literal_count": result["literal_count"], "hits_count": len(result["hits"]),
         "literal_summary": result["literal_summary"], "hits": result["hits"],
-        "call_analysis": result["call_analysis"], "field_offset_scan": result["field_offset_scan"]}, indent=2, ensure_ascii=False))
+        "call_analysis": result["call_analysis"], "field_offset_scan": result["field_offset_scan"],
+        "incoming_edges": result["incoming_edges"]}, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
