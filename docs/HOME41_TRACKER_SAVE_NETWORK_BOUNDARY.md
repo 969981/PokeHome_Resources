@@ -57,6 +57,68 @@ All C paths are under `derived/4.1.0/Ghidra_12.2_Run_42763137320/` and are Ghidr
 
 **Next filter:** begin with request-body construction / URL binding, classify call targets by actual decompiled code, then trace only the corresponding callbacks and upward owners. Do not infer a network save from address-range overlap or a generic helper call.
 
+## Batch07/08: executable request/string constructor evidence (2026-11-11)
+
+**Verified read-only ELF scanner:** [Batch07 Run 42929158903](https://github.com/969981/PokeHome_Resources/actions/runs/42929158903), 3/3 synthetic-ELF tests pass, ELF SHA-256 matches immutable baseline. The scanner found 25 substring matches (some nested matches, e.g. \`SaveRequest\` within \`ApogeeSaveRequest\`) and **23 exact AArch64 \`ADRP+ADD\` code address references**. Do not add 25 literal matches and 23 code hits as if all represented different workflows.
+
+| Literal | AArch64 instruction Ghidra VA |
+|---|---|
+| \`/api/box/operation/cancel\` | \`0x32C250\` |
+| \`/api/box/operation/start\` | \`0x32CC1C\` |
+| \`/api/box/operation\` | \`0x34C54C\` |
+| \`/api/box/operation/precommit\` | \`0x34C8C8\` |
+| \`/api/box/operation/commit\` | \`0x34CA0C\` |
+| \`SaveRequestSEND_COMMIT_WAIT_SAVE_COMMIT\` | \`0x34D248\` |
+| \`SaveRequestSEND_OPERATION\` | \`0x34E418\` |
+| \`ApogeeSaveRequestSEND_COMMIT_ROLLBACK\` | \`0x3495BC\` |
+
+The earlier Batch06 string \`NO_XREF\` findings therefore represent limits of the Ghidra indexed reference database, **not** absence of the instructions that materialize string addresses.
+
+The original FDE audit marked the surrounding ranges \`UNMAPPED\`, and these functions are not among the published 15,415 successful Ghidra C exports. \`Home41RecoverFDE.java\` originally computed FDE addresses in the default address space; Batch06 showed that the executable uses \`.text\` overlay addresses. Do not attribute a hit to the nearest *other* C-file entry.
+
+| FDE entry Ghidra VA | Original FDE span | Verified anchors inside |
+|---|---:|---|
+| \`0x32C1CC\` | 856 bytes | cancel |
+| \`0x32CB94\` | 1,280 bytes | start |
+| \`0x348BB0\` | 3,916 bytes | five Apogee state labels |
+| \`0x34C470\` | 8,372 bytes | eight Box operation / SaveRequest labels |
+| \`0x352CC4\` | 2,736 bytes | Mile operation, precommit, commit |
+
+**Disposable Ghidra recovery:** [Batch08 Run 42929947957](https://github.com/969981/PokeHome_Resources/actions/runs/42929947957). All five original FDE spans were set as function bodies in the temporary project with \`anchor_in_body=true\`, and targeted assembly windows were recovered. **Their decompiler C files remain tiny stubs (~419–436 C characters)** due to early-return/CFG recovery limits. A body-length match does not establish semantic C recovery or valid reachability of all branches. The original Ghidra database, ELF, and previously published C files were left unchanged.
+
+**Callsite extraction:** [Batch07 Run 42930249059](https://github.com/969981/PokeHome_Resources/actions/runs/42930249059), same original ELF and exact FDE intervals:
+
+| FDE group | Direct BL count | Unique direct targets | BLR count |
+|---|---:|---:|---:|
+| Box cancel | 22 | 18 | 2 |
+| Box start | 31 | 23 | 3 |
+| Apogee state | 116 | 53 | 15 |
+| Box SaveRequest state | 184 | 67 | 27 |
+| Mile operation | 92 | 46 | 8 |
+
+These numbers describe *static instructions inside FDEs*, not executed requests or call-graph proof of all CFG branches.
+
+### Concrete common endpoint builder
+
+- Cancel: \`0x32C250\` string reference → \`BL 0x3279DC\` at \`0x32C25C\`.
+- Start: \`0x32CC1C\` → \`BL 0x3279DC\` at \`0x32CC30\`.
+- Box precommit: \`0x34C8C8\` → \`BL 0x3279DC\` at \`0x34C8D4\`.
+- Box commit: \`0x34CA0C\` → \`BL 0x3279DC\` at \`0x34CA18\`.
+- Mile precommit and commit also call \`0x3279DC\` at \`0x352E10\` and \`0x352F44\` respectively.
+
+Published \`c/_text__003279dc.c\` shows that \`0x3279DC\` clears a 256-byte output buffer and calls \`snprintf\`. Thus it is an **endpoint/request-path string formatting helper**. The API HTTP verb, payload serialization, response object, and network submission point still need tracing beyond this helper.
+
+### State, error and Tracker boundaries
+
+- \`0x34C470\` FDE contains six direct BL callsites targeting \`0x3028C4\`; the latter's published C checks Tracker membership in active Box slots (\`manager+0x700FDC\`, repeated \`0x330\` slot stride). **This is an actual static link between a Box save candidate and Tracker presence checking**, but it does not prove \`0x7FC18\` Dirty-set serialization.
+- \`0x3200A0\` (called around several \`SaveRequest*\` logging labels) uses \`nn::prepo::PlayReport\`. **PlayReport is not an HTTP ACK**. String references in this logging branch alone cannot classify success/failure.
+- \`0x3330E0\` updates \`BoxManager+0x934D4\` and constructs an error-related event; \`+0x934D4\` is **not** Dirty Count \`+0x93498\`.
+- Visible state assignments in the scoped assembly include writes such as \`str w8,[x9,#0x14]\` near \`0x34E4A8\` and \`str w8,[x19,#0x14]\` near Apogee state logs. Numeric state transitions cannot yet be identified as server ACK.
+- No verified code flow has yet connected \`0x965248\` Dirty List or \`0x978AC8\` Dirty Count to the request body or to a server-success clear. Those are still **OPEN** evidence gates.
+
+Next: focus on \`0x34C470\` caller/CFG and the request object following \`0x3279DC\`, classify the response/error path, then only if supported connect a specific callback to Dirty-set mutations. Prefer no-trace read-only runtime comparisons (success vs failed save) before naming business functions.
+
+
 ## Continuing evidence gates
 
 1. **Network boundary:** enumerate incoming direct calls and callback/data pointers crossing into the candidate transport region `.text::0064C000–0068FFFF`. Region membership alone is not a reliable business classification.
