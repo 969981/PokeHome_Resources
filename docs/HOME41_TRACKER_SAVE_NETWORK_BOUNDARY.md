@@ -158,6 +158,27 @@ The compiled code in published `c/_text__003043f0.c` locates active Box records 
 **Revised status:** Both Dirty and secondary collections have actual consumers and reset sites in the recovered FDE. Previous Batch05 claims of "no independent consumer found" applied to the smaller set of published Ghidra-decompiled C functions only, and must not be extended to the full ELF. We still have no identified `server ACK → branch → clear` link and have not demonstrated error-path requeue/retry. Retain research labels rather than naming this an ACK callback.
 
 
+## Batch09: method-table dispatch evidence and post-packaging ordering
+
+[Batch07 Run 42932604464](https://github.com/969981/PokeHome_Resources/actions/runs/42932604464) independently scanned **all executable program segments** for direct AArch64 `BL` callsites into exact FDE entries, using `fde_recovery.csv` for caller ownership. It found **zero direct BL calls to the exact entries** `0x32C1CC`, `0x32CB94`, `0x348BB0`, `0x34C470`, `0x352CC4`. This does not mean these functions are unused: an indirect/virtual dispatch is a likely alternative.
+
+[Batch07 Run 42932832941](https://github.com/969981/PokeHome_Resources/actions/runs/42932832941) examined raw non-executable qword pointer values and 1,061 ELF RELA entries. Five **exact qword pointer slots** were found:
+
+| Function entry VA | Function pointer slot VA |
+|---|---|
+| `0x32C1CC` | `0x87DDD0` |
+| `0x32CB94` | `0x87DE40` |
+| `0x348BB0` | `0x87F380` |
+| `0x34C470` | `0x87F4D0` |
+| `0x352CC4` | `0x87F6A8` |
+
+[Batch07 Run 42933058256](https://github.com/969981/PokeHome_Resources/actions/runs/42933058256) expanded these pointer sites into bounded qword neighborhoods. Each site lies in a repeated layout strongly resembling a C++ virtual-method table: two null qwords, then adjacent destructor-like entries, followed by the target state method, a related method, and the same group of eight common methods (`0x21B4CC`, `0x21B500`, `0x21B510`, `0x21B518`, `0x21B520`, `0x21B528`, `0x21B530`, `0x21B538`). For Box Save, the immediately adjacent entries are `0x34ED80`, `0x34EEB0`, `0x34C470`, `0x34ED78`, then the shared methods. Published `c/_text__0034ed80.c` and `c/_text__0034eeb0.c` both have destructor-like bodies, bolstering (but not independently proving) this virtual-table classification.
+
+No exact matching ADR/ADRP+ADD constructor reference to these *small sampled table neighborhoods* was found; the source of object construction and ultimate callback dispatch remain **unresolved**. Do not infer a named C++ class or a server ACK callback just from adjacent method pointers.
+
+**Dirty lifecycle caveat:** Batch08 disassembly proves the read/encode/clear sequence at `0x34DBA4` through `0x34DD74`. Within the same long FDE, `0x34E3D0` later calls `0x64B5B0` (generic HTTP transfer-object creation/setup in published C), with state flags written at `0x34E3F4`, `0x34E454`, `0x34E468`, `0x34E4A8` on condition-dependent paths. The precise CFG post-dominance, server request issue point, async completion, error retry and Dirty restore are still **not proved**. The observed Dirty clear is *not* an ACK success marker. A plausible two-stage snapshot/queue design remains a hypothesis to test by following the virtual-method table and request-buffer ownership.
+
+
 ## Continuing evidence gates
 
 1. **Network boundary:** enumerate incoming direct calls and callback/data pointers crossing into the candidate transport region `.text::0064C000–0068FFFF`. Region membership alone is not a reliable business classification.
