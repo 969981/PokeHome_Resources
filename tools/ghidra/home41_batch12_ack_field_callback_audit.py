@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 from home41_batch07_request_adrp_audit import EXPECTED_SHA, IMAGE_BASE, segments
-from home41_batch09_box_save_cfg import BOX, decode, read_scope
+from home41_batch09_box_save_cfg import BOX, decode, read_scope, graph, shortest_path
 from home41_batch10_dispatch_audit import raw_at, va
 
 # Every address below is Ghidra VA; the ELF reader accepts RVA.
@@ -41,6 +41,9 @@ BRANCHES = {
     0x34D298:("CBZ",0x34D2A0),
     0x34D2A4:("TBZ",0x34D2AC),
     0x34E4E0:("B.cond",0x34E4FC),
+    0x34C9E8:("B",0x34CB30),
+    0x34CB38:("B",0x34D328),
+    0x34D32C:("B",0x34E4A4),
 }
 # Native load and call instruction signatures, not inferred C class names.
 RAW_ASSERT = {
@@ -56,6 +59,9 @@ RAW_ASSERT = {
     0x34C8C0:0x39259668, # strb w8,[x19,#0x965]
     0x34C9EC:0x3925967F, # strb wzr,[x19,#0x965]
     0x34C9F8:0x3925927F, # strb wzr,[x19,#0x964]
+    0x34CB30:0xB9000F28, # Save stage counter from precommit or commit
+    0x34CB34:0x528000E8, # mov w8,#7 (next asynchronous state)
+    0x34E4A8:0xB9001528, # actual Box Request state field store
     0x34E4D0:0xB9400F28, # local stage counter
     0x34E4D4:0x11000508, # increment by one
     0x34E4D8:0x71001D1F, # compare seven
@@ -136,7 +142,33 @@ def audit(raw, c_root):
     # source params: Parser's top-level numeric code is only assigned if
     # 0x710FB3-key lookup returns true. Need confirm the actual UTF8 key.
     strings=[inspect_string(raw,s,gva) for gva in sorted(set(RESPONSE_LITERAL_VAS))]
+    succ,_,_,_=graph(box)
+    stage_sources={
+       "precommit":(0x34C8B0,0x34C9E4,4),
+       "commit":(0x34CA04,0x34CB2C,6)
+    }
+    stage_routes={}
+    for endpoint,(case_entry,stage_mov,stage_id) in stage_sources.items():
+        p1=shortest_path(succ,case_entry-IMAGE_BASE,stage_mov-IMAGE_BASE)
+        p2=shortest_path(succ,stage_mov-IMAGE_BASE,0x34CB30-IMAGE_BASE)
+        p3=shortest_path(succ,0x34CB30-IMAGE_BASE,0x34E4A8-IMAGE_BASE)
+        if not p1 or not p2 or not p3:
+            raise AssertionError("lost request-to-pending state path: "+endpoint)
+        # MOV W8,#imm -> STR W8,[X25,#0xC] -> MOV W8,#7 ->
+        # shared STR W8,[X9,#0x14]. No HTTP ACK along this path.
+        w=word(box,stage_mov)
+        if w != (0x52800008 | (stage_id<<5)):
+            raise AssertionError("request stage value drift "+endpoint+" "+hex(w))
+        stage_routes[endpoint]={
+          "entry_va":hex(case_entry),
+          "stage_mov_va":hex(stage_mov),"stage_value":stage_id,
+          "stage_counter_store_va":"0x34CB30",
+          "next_request_state_value":7,
+          "shared_state_write_va":"0x34E4A8",
+          "shortest_cfg_edges":[len(p1)-1,len(p2)-1,len(p3)-1],
+          "caution":"This shows locally queued/pending transition, not server ACK."}
     return {
+      "request_to_response_stage7":stage_routes,
       "status":"STATIC_PARSER_FIELD_AND_DUAL_CALLBACK_AUDIT_NO_REMOTE_ACK",
       "sha256":sha,"native_assertions":verified,"published_c":cverified,
       "response_key_strings":strings,
