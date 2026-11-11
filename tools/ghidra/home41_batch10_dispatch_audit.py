@@ -81,7 +81,7 @@ def exact_six_way_gate(raw,segs):
         raise ValueError("gate global LDR W8,[X8,#offset] differs")
     if ((ins[start+4]>>10)&0xfff)*4!=0x50:
         raise ValueError("gate global word offset differs")
-    if (ins[start+8]&0xffc003ff)!=0x51000508:
+    if (ins[start+8]&0xffc003ff)!=0x51000108:
         raise ValueError("gate SUB W8,W8,#1 differs")
     if ((ins[start+8]>>10)&0xfff)!=1:
         raise ValueError("gate SUB immediate differs")
