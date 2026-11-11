@@ -199,6 +199,65 @@ def tables(raw,segs):
     return out
 
 
+def exact_box_state_switch(raw,segs,box):
+    """Decode 11-case object state table from original .rodata halfwords.
+
+    Unlike the earlier generic CFG, these are the actual BR targets for
+    x0+0x14 = 0..10, so case-to-marker reachability can be classified
+    separately, without assuming an HTTP success outcome.
+    """
+    from home41_batch09_box_save_cfg import graph,shortest_path,ANCHORS
+    entry=BOX[0]
+    if word_at(raw,segs,entry)!=0xb9401408:
+        raise ValueError("expected ldr w8,[x0,#0x14]")
+    if word_at(raw,segs,entry+4)!=0x7100291f:
+        raise ValueError("expected cmp w8,#0xa")
+    if decode(word_at(raw,segs,entry+8),entry+8)[0]!="B.cond":
+        raise ValueError("expected upper-bound branch")
+    table_pc=0x34c4c0-IMAGE_BASE
+    page=adrp_page(word_at(raw,segs,table_pc),table_pc)
+    add=word_at(raw,segs,table_pc+4)
+    if (word_at(raw,segs,table_pc)&31)!=9 or (add&31)!=9:
+        raise ValueError("unexpected register holding branch offsets")
+    addr=page+add_immediate(add,9)
+    if addr+22>max(s["va"]+s["filesz"] for s in segs):
+        raise ValueError("jump table outside file-backed region")
+    base=adr_target(word_at(raw,segs,0x34c4c8-IMAGE_BASE),0x34c4c8-IMAGE_BASE)
+    if base!=0x34c4e4-IMAGE_BASE:
+        raise ValueError("computed BR base mismatch")
+    if word_at(raw,segs,0x34c4cc-IMAGE_BASE)!=0x7868792c or \
+       word_at(raw,segs,0x34c4d0-IMAGE_BASE)!=0x8b0c096b or \
+       word_at(raw,segs,0x34c4e0-IMAGE_BASE)!=0xd61f0160:
+        raise ValueError("LDRH/add-shifted/BR pattern mismatch")
+    b=raw_at(raw,segs,addr,22)
+    halfwords=struct.unpack("<11H",b)
+    succ,_,_,_=graph(box)
+    markers=("precommit_url","commit_url","state_commit_wait",
+             "secondary_clear","dirty_count_read","dirty_list_read",
+             "dirty_encoding","dirty_copy","dirty_clear","save_operation_state")
+    cases=[]
+    for state,delta in enumerate(halfwords):
+        target=base+delta*4
+        start_valid=target in box
+        edges={}
+        for name in markers:
+            a=ANCHORS[name]-IMAGE_BASE
+            path=shortest_path(succ,target,a) if start_valid else None
+            edges[name]={"static_direct_path":path is not None,
+                         "shortest_path_edges":len(path)-1 if path else None}
+        cases.append({"state":state,"halfword_offset":delta,
+                      "entry_va":va(target),"entry_word":"%08x"%word_at(raw,segs,target),
+                      "in_verified_box_fde":start_valid,
+                      "static_direct_paths_to_markers":edges})
+    return {"status":"EXACT_11_CASE_HALFWORD_TABLE",
+            "object_state_field_offset":0x14,
+            "allowed_values":[0,10],
+            "other_state_path":va(decode(word_at(raw,segs,entry+8),entry+8)[1][0]),
+            "jump_halfword_table_va":va(addr),"raw_table_bytes_hex":b.hex(),
+            "branch_base_va":va(base),"cases":cases,
+            "caveat":"Static path permits either branch outcome and ignores indirect/external callback effects. No ACK proven."}
+
+
 def audit(raw):
     segs=segments(raw)
     box=read_scope(raw,segs,BOX)
@@ -216,6 +275,7 @@ def audit(raw):
         "status":"STATIC_INDIRECT_DISPATCH_ONLY_NOT_HTTP_ACK",
         "elf_sha256":EXPECTED_SHA,
         "gate":exact_six_way_gate(raw,segs),
+        "box_state_switch":exact_box_state_switch(raw,segs,box),
         "box_fde_va":hex(BOX_ENTRY_VA),
         "box_indirect_counts":dict(collections.Counter(x["kind"] for x in box_indirect)),
         "box_indirect_sites":box_indirect,
@@ -263,6 +323,7 @@ def main():
     opts.out.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print(json.dumps({
         "status":report["status"],"elf_sha256":sha,"gate":report["gate"],
+        "box_state_switch":report["box_state_switch"],
         "box_indirect_counts":report["box_indirect_counts"],
         "box_indirect_sites":[{"site":x["site_va"],"type":x["kind"],
                                "target_register":x["target_register"],
