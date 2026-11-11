@@ -12,18 +12,20 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class Home41Batch08BoxOperationRecovery extends GhidraScript {
-    static final long[] RVAS={0x22c1ccL,0x22cb94L,0x248bb0L,0x24c470L,0x252cc4L,0x225d10L};
-    static final long[] FDE_BYTES={856,1280,3916,8372,2736,124};
+    static final long[] RVAS={0x22c1ccL,0x22cb94L,0x248bb0L,0x24c470L,0x252cc4L,0x225d10L,0x250130L,0x250150L};
+    static final long[] FDE_BYTES={856,1280,3916,8372,2736,124,32,936};
     static final String[] LABELS={
         "box_operation_cancel_candidate",
         "box_operation_start_candidate",
         "apogee_save_state_candidate",
         "box_operation_commit_state_candidate",
         "mile_operation_candidate",
-        "network_state_gate_candidate"
+        "network_state_gate_candidate",
+        "table_page_small_getter_candidate",
+        "table_page_adjacent_function_candidate"
     };
     static final long[] SITE_VA={
-        0x32c250L,0x32cc1cL,0x3495bcL,0x34c54cL,0x352d50L,0x325d10L
+        0x32c250L,0x32cc1cL,0x3495bcL,0x34c54cL,0x352d50L,0x325d10L,0x350138L,0x350160L
     };
     private String esc(String s){
         return s==null?"":s.replace("\t"," ").replace("\n"," ").replace("\r"," ").replace("\"","'");
