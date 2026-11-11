@@ -24,6 +24,7 @@ jobs:
             tools/ghidra/home41_batch07_request_adrp_audit.py
             tools/ghidra/test_home41_batch07_request_adrp_audit.py
             57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv
           persist-credentials: false
       - name: Python static self-checks
         run: |
@@ -37,6 +38,7 @@ jobs:
           mkdir -p "$RUNNER_TEMP/home41-batch07"
           python tools/ghidra/home41_batch07_request_adrp_audit.py \
             --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --fde-csv derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv \
             --out "$RUNNER_TEMP/home41-batch07/request_literal_adrp_audit.json" \
             | tee "$RUNNER_TEMP/home41-batch07/summary.log"
           test -s "$RUNNER_TEMP/home41-batch07/request_literal_adrp_audit.json"
