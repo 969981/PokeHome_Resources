@@ -444,6 +444,7 @@ def audit_pointer_table_neighborhood(data,segs,fdes,refs):
         neighborhoods[label]=entries
     # Find ADRP/ADD referring directly to these table slots or nearby bases.
     sites=defaultdict(list)
+    page_candidates=defaultdict(list)
     for seg in segs:
         if not(seg["flags"]&1):continue
         base,va,n=seg["off"],seg["va"],seg["filesz"]
@@ -454,6 +455,9 @@ def audit_pointer_table_neighborhood(data,segs,fdes,refs):
             imm=sign_extend((((op>>5)&0x7ffff)<<2)|((op>>29)&3),21)
             page=(pc&~4095)+(imm<<12)
             if page not in pages:continue
+            i=bisect.bisect_right(starts,pc)-1
+            owner=hex(fdes[i][0]+IMAGE_BASE) if i>=0 and pc<fdes[i][1] else None
+            page_candidates[hex(page+IMAGE_BASE)].append({"adrp_va":hex(pc+IMAGE_BASE),"owner_fde_va":owner,"register":op&31})
             src_reg=op&31
             for step in range(1,13):
                 j=off+4*step
@@ -473,7 +477,8 @@ def audit_pointer_table_neighborhood(data,segs,fdes,refs):
                 if(ins&0xfc000000) in (0x94000000,0x14000000):break
     return {"neighborhoods":neighborhoods,
             "pc_relative_table_references":{name:{"count":len(sites[name]),
-                      "sites":sites[name][:100]} for name in neighborhoods}}
+                      "sites":sites[name][:100]} for name in neighborhoods},
+            "page_candidates":{k:{"total_adrp":len(v),"examples":v[:100]} for k,v in page_candidates.items()}}
 
 def main():
     ap = argparse.ArgumentParser()
