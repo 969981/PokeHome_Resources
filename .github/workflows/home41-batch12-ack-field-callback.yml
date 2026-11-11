@@ -1,0 +1,72 @@
+name: HOME41 Batch12 response field and dual callback acceptance audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-batch12-ack-field-callback.yml'
+      - 'tools/ghidra/home41_batch12_ack_field_callback_audit.py'
+permissions:
+  contents: read
+jobs:
+  static-response-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout original immutable ELF and bounded native analysis sources
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            tools/ghidra/home41_batch07_request_adrp_audit.py
+            tools/ghidra/home41_batch09_box_save_cfg.py
+            tools/ghidra/home41_batch10_dispatch_audit.py
+            tools/ghidra/home41_batch12_ack_field_callback_audit.py
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0034e638.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064bb9c.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064baec.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__00317e00.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__00317c34.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__00322470.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__00322870.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0030cc20.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0029e598.c
+          persist-credentials: false
+      - name: Verify script and original AArch64 checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/ghidra/home41_batch12_ack_field_callback_audit.py
+          python tools/ghidra/home41_batch12_ack_field_callback_audit.py --self-test
+      - name: Verify response fields, virtual slots and reconciliation guards
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/home41-batch12"
+          python tools/ghidra/home41_batch12_ack_field_callback_audit.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --published-c derived/4.1.0/Ghidra_12.2_Run_42763137320/c \
+            --out "$RUNNER_TEMP/home41-batch12/response_callback_report.json" \
+            | tee "$RUNNER_TEMP/home41-batch12/summary.log"
+          python - "$RUNNER_TEMP/home41-batch12/response_callback_report.json" <<'PY'
+          import json,sys
+          p=json.load(open(sys.argv[1]))
+          assert p['status']=='STATIC_PARSER_FIELD_AND_DUAL_CALLBACK_AUDIT_NO_REMOTE_ACK'
+          assert p['native_assertions']['direct_calls']>=15
+          assert p['state8_virtual_call']['method_slot_offset']==0
+          assert p['state10_virtual_call']['method_slot_offset']==8
+          assert len(p['published_c'])==9
+          assert p['response_key_strings'][0]['status']=='ORIGINAL_ELF_BYTES'
+          print('Original ELF and published Ghidra C verified. Response business ACK unproven.')
+          PY
+      - name: Publish bounded evidence artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: HOME41-Batch12-Response-Callback-Guard-Evidence
+          path: ${{ runner.temp }}/home41-batch12/
+          retention-days: 30
+          if-no-files-found: warn
