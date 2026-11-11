@@ -123,9 +123,39 @@ In the published C from Run 42763137320:
 - `0x3200A0` (called around several `SaveRequest*` logging labels) uses `nn::prepo::PlayReport`. **PlayReport is not an HTTP ACK**. String references in this logging branch alone cannot classify success/failure.
 - `0x3330E0` updates `BoxManager+0x934D4` and constructs an error-related event; `+0x934D4` is **not** Dirty Count `+0x93498`.
 - Visible state assignments in the scoped assembly include writes such as `str w8,[x9,#0x14]` near `0x34E4A8` and `str w8,[x19,#0x14]` near Apogee state logs. Numeric state transitions cannot yet be identified as server ACK.
-- No verified code flow has yet connected `0x965248` Dirty List or `0x978AC8` Dirty Count to the request body or to a server-success clear. Those are still **OPEN** evidence gates.
+- **Later Batch08 native disassembly now confirms Dirty List traversal and Dirty Count clear within the request-state FDE; direct server ACK causality remains an OPEN evidence gate.**
 
 Next: focus on `0x34C470` caller/CFG and the request object following `0x3279DC`, classify the response/error path, then only if supported connect a specific callback to Dirty-set mutations. Prefer no-trace read-only runtime comparisons (success vs failed save) before naming business functions.
+
+
+## Batch08 confirmation: real Dirty collection reads and clears
+
+**Definitive static machine-code evidence (no runtime ACK proof):**
+[Batch08 Run 42931022279](https://github.com/969981/PokeHome_Resources/actions/runs/42931022279), disposable Ghidra project; exact AArch64 decoded instruction addresses and original FDE provenance. This **supersedes** earlier negative consumer findings that scanned only already-exported C functions.
+
+**Box SaveRequest FDE: `.text::0034C470`**, verified 8,372 bytes.
+
+| Instruction VA | Native operation | Evidence |
+|---|---|---|
+| `0x34DB98` | `bl 0x00321AC0` | get Box Manager base |
+| `0x34DB9C-0x34DBA4` | `mov/movk 0x93498; ldrh w19,[x0,x8]` | read Dirty Count from manager+0x93498 |
+| `0x34DBA8` | `cbz w19,0x34DD78` | zero-count skip |
+| `0x34DBB4-0x34DBB8` | `mov/movk 0x7FC18` | base of Dirty Tracker qword list |
+| `0x34DBD0-0x34DBD8` | `subs x19,x19,#1; add x25,x25,#8; b.eq ...` | loop through eight-byte Tracker entries |
+| `0x34DBDC-0x34DBF0` | manager getter; `ldr x8,[x0,x25]`; `str x8,[sp,#0x1A8]` | actual Tracker entry read and stash |
+| `0x34DBFC-0x34DC14` | `0x3204D0 → 0x3043F0 → 0x306588` | resolve Tracker to a Box record, then test record presence |
+| `0x34DD54` | `bl 0x003D60A8` | encoded record output (published C indicates Base64) |
+| `0x34DD64` | `bl 0x006F65E0` | memcpy encoded bytes |
+| `0x34DD68-0x34DD74` | manager getter; `mov/movk 0x93498; str wzr,[x0,x8]` | **real Dirty Count clear** |
+
+The compiled code in published `c/_text__003043f0.c` locates active Box records by Tracker equality. `c/_text__003d60a8.c` implements encoded data emission resembling Base64 (3-byte to 4-character expansion and `=` padding), rather than a server response callback. Therefore the sequence **read Dirty Tracker → resolve Box data → encode/copy record data → clear count** is grounded. Its positioning within successful HTTP response handling is **not** established.
+
+**Secondary collection:**
+
+- `0x34D344-0x34D350`: materialize `+0x7B498`, then `ldr x8,[x0,x8]`, read its low 16-bit length/count and branch on zero at `0x34D35C`.
+- `0x34D4DC-0x34D4F8`: manager getter, offset `+0x7B498`, `str xzr,[x0,x8]`; **clear 64-bit collection header** after encoding/copy operations.
+
+**Revised status:** Both Dirty and secondary collections have actual consumers and reset sites in the recovered FDE. Previous Batch05 claims of "no independent consumer found" applied to the smaller set of published Ghidra-decompiled C functions only, and must not be extended to the full ELF. We still have no identified `server ACK → branch → clear` link and have not demonstrated error-path requeue/retry. Retain research labels rather than naming this an ACK callback.
 
 
 ## Continuing evidence gates
