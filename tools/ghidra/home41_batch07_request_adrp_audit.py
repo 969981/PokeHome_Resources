@@ -166,6 +166,56 @@ def scan(data):
                 "No server ACK or Dirty Tracker linkage inferred from literal matches",
                 "Ghidra address conversion assumes published image_base=0x100000"]}
 
+
+# A call edge is not an ACK; collect it separately from string-reference proof.
+FDE_FOCUS = {
+    "box_cancel": (0x22c1cc, 856),
+    "box_start": (0x22cb94, 1280),
+    "apogee_state": (0x248bb0, 3916),
+    "box_save_state": (0x24c470, 8372),
+    "mile_operation": (0x252cc4, 2736),
+}
+
+def audit_fde_calls(data, segs, hits):
+    bygroup = {}
+    for name, (start, length) in FDE_FOCUS.items():
+        seg = next((p for p in segs if p["flags"] & 1 and
+                    p["va"] <= start and start + length <= p["va"] + p["filesz"]), None)
+        if seg is None:
+            bygroup[name] = {"status": "NO_EXEC_SEGMENT"}
+            continue
+        base = seg["off"] + start - seg["va"]
+        calls = []
+        indirect = []
+        for off in range(0, length - 3, 4):
+            word = struct.unpack_from("<I", data, base + off)[0]
+            pc = start + off
+            if (word & 0xfc000000) == 0x94000000:
+                target = pc + (sign_extend(word & 0x3ffffff, 26) << 2)
+                calls.append({"at_va": hex(pc + IMAGE_BASE), "target_va": hex(target + IMAGE_BASE)})
+            elif (word & 0xfffffc1f) == 0xd63f0000:
+                indirect.append({"at_va": hex(pc + IMAGE_BASE),
+                                 "register": (word >> 5) & 31})
+        anchors = [h for h in hits if start <= int(h.get("instruction_va","0"),16) < start+length]
+        buckets = defaultdict(list)
+        for c in calls:
+            buckets[c["target_va"]].append(c["at_va"])
+        top = [{"callee": k, "calls": len(v), "examples": v[:8]}
+               for k,v in sorted(buckets.items(), key=lambda kv:(-len(kv[1]), kv[0]))]
+        around = []
+        for anchor in anchors:
+            pc = int(anchor["instruction_va"],16)+IMAGE_BASE
+            local = [c for c in calls if 0 <= int(c["at_va"],16) - pc <= 0x100]
+            around.append({"literal": anchor["literal"],
+                           "anchor_ghidra_va": hex(pc), "following_direct_calls_0x100": local[:15]})
+        bygroup[name]={"status": "STATIC_CALL_EDGES_ONLY",
+                       "start_ghidra_va": hex(start+IMAGE_BASE), "fde_bytes": length,
+                       "direct_bl_count": len(calls), "unique_targets": len(buckets),
+                       "indirect_blr_count": len(indirect),
+                       "indirect_sample": indirect[:20], "top_direct_callees": top[:30],
+                       "literal_windows": around}
+    return bygroup
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf", required=True, type=Path)
@@ -176,12 +226,14 @@ def main():
     if sha != EXPECTED_SHA:
         raise SystemExit("ELF SHA mismatch: " + sha)
     result = scan(raw)
+    result["call_analysis"] = audit_fde_calls(raw, segments(raw), result["hits"])
     result["elf_sha256"] = sha
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": result["status"], "elf_sha256": sha,
         "literal_count": result["literal_count"], "hits_count": len(result["hits"]),
-        "literal_summary": result["literal_summary"], "hits": result["hits"]}, indent=2, ensure_ascii=False))
+        "literal_summary": result["literal_summary"], "hits": result["hits"],
+        "call_analysis": result["call_analysis"]}, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
