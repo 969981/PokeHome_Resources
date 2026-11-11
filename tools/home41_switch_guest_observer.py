@@ -62,7 +62,7 @@ POINTS = {
     "state7_entry":0x34CB3C,
 }
 GROUPS = {
-    "core":("parser_enter","detail_atoi","parser_result","write_state9"),
+    "core":("parser_enter","detail_atoi","parser_result","write_state8"),
     "states":("write_state7_shared","write_state_counter","write_state8","write_state4","write_state10"),
     "callbacks":("state8_slot0","state10_slot8"),
     "dirty":("dirty_count_read","dirty_clear_before","dirty_clear_after"),
@@ -181,7 +181,7 @@ def on_hit(name):
                  detail_numeric_valid=valid)
     elif name=="parser_result":
         req=reg("x19")
-        emit("parser_result",parser_return=reg("w0")&0xffffffff,
+        emit("parser_result",parser_return=reg("x0")&0xffffffff,
              detail_observed=bool(ctx.get("detail_seen")),
              detail_numeric=ctx.get("detail_value"),
              manager_dirty_count=maybe_count(),
@@ -191,7 +191,7 @@ def on_hit(name):
             "x20" if name=="write_state10" else "x19")
         req=reg(base_reg)
         emit("state_write_before",site=name,prior_state=u32(req+0x14),
-             new_state=reg("w8")&0xffffffff,
+             new_state=reg("x8")&0xffffffff,
              manager_dirty_count=maybe_count(),
              **{k:v for k,v in request_stage(req).items() if k!="state"})
     elif name in ("state8_slot0","state10_slot8"):
@@ -229,8 +229,8 @@ def on_hit(name):
     elif name=="reconcile_copy":
         emit("reconcile_copy_invoked")
     elif name=="reconcile_compare_result":
-        emit("reconcile_compare_result",comparison_word=reg("w0")&0xffffffff,
-             differs=bool(reg("w0")&1))
+        emit("reconcile_compare_result",comparison_word=reg("x0")&0xffffffff,
+             differs=bool(reg("x0")&1))
     elif name=="transport_completion_entry":
         emit("transport_callback_enter")
     elif name=="state7_entry":
