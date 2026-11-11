@@ -219,6 +219,8 @@ def audit(raw):
         "box_fde_va":hex(BOX_ENTRY_VA),
         "box_indirect_counts":dict(collections.Counter(x["kind"] for x in box_indirect)),
         "box_indirect_sites":box_indirect,
+        "box_dispatch_entry_window":[{"va":va(pc),"word":"%08x"%box[pc],
+              "kind":decode(box[pc],pc)[0]} for pc in range(BOX[0],BOX[0]+0x90,4)],
         "gate_indirect_sites":gate_indirect,
         "method_pointer_groups":tables(raw,segs),
         "box_fde_direct_calls_to_gate":direct_to_gate,
