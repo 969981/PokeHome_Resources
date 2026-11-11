@@ -1,0 +1,59 @@
+name: HOME41 Batch09 Box SaveRequest Dirty-clear CFG audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-batch09-box-save-cfg.yml'
+      - 'tools/ghidra/home41_batch09_box_save_cfg.py'
+permissions:
+  contents: read
+jobs:
+  bounded-static-cfg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout immutable source and two audit scripts only
+        uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            tools/ghidra/home41_batch07_request_adrp_audit.py
+            tools/ghidra/home41_batch09_box_save_cfg.py
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+          persist-credentials: false
+      - name: Check syntax and synthetic AArch64 control-flow assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/ghidra/home41_batch07_request_adrp_audit.py tools/ghidra/home41_batch09_box_save_cfg.py
+          python tools/ghidra/home41_batch09_box_save_cfg.py --self-test
+      - name: Audit only original Box state FDE and network gate bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/home41-batch09"
+          python tools/ghidra/home41_batch09_box_save_cfg.py \
+            --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf \
+            --out "$RUNNER_TEMP/home41-batch09/box_save_cfg.json" \
+            | tee "$RUNNER_TEMP/home41-batch09/summary.log"
+          test -s "$RUNNER_TEMP/home41-batch09/box_save_cfg.json"
+          python - "$RUNNER_TEMP/home41-batch09/box_save_cfg.json" <<'PY'
+          import json,sys
+          x=json.load(open(sys.argv[1]))
+          assert x["status"]=="STATIC_CFG_ONLY_NOT_ACK"
+          assert x["box_fde_bytes"]==8372
+          assert x["elf_sha256"]=="bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a"
+          assert "dirty_clear" in x["branch_anchors"]
+          print("Scope and original ELF validated; ACK not inferred.")
+          PY
+      - name: Upload bounded read-only evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: HOME41-Batch09-Box-Save-CFG
+          path: ${{ runner.temp }}/home41-batch09/
+          retention-days: 30
+          if-no-files-found: warn
