@@ -26,6 +26,9 @@ jobs:
             tools/ghidra/home41_batch11_callback_state_audit.py
             57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
             derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064bb9c.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064baec.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064b5b0.c
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__00317c34.c
             derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064ba4c.c
             derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064bab8.c
             derived/4.1.0/Ghidra_12.2_Run_42763137320/c/_text__0064bad0.c
@@ -59,7 +62,7 @@ jobs:
           assert p['sha256']=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
           assert p['direct_branch_transitions']['response_parser_nonzero_to_state9']['reachable_in_conservative_cfg']
           assert p['direct_branch_transitions']['failed_transport_fields_to_error_notification']['reachable_in_conservative_cfg']
-          assert len(p['state_windows'])==3 and len(p['published_c'])==10
+          assert len(p['state_windows'])==3 and len(p['published_c'])==13
           print('Pinned native and published C evidence validated; no server ACK inferred.')
           PY
       - name: Upload bounded evidence only
