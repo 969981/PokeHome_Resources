@@ -50,6 +50,19 @@ jobs:
           test ! -e tools/home41_switch_guest_observer.py || python -m py_compile tools/home41_switch_guest_observer.py
           test ! -e tools/home41_switch_trace_validate.py || python -m py_compile tools/home41_switch_trace_validate.py
           test ! -e tools/test_home41_switch_trace_validate.py || PYTHONPATH=tools python -m unittest -v tools/test_home41_switch_trace_validate.py tools/test_home41_switch_guest_observer.py
+      - name: Publish explicit NO-GUEST status (never pretend CI is a Switch runtime)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/home41_switch_trace_validate.py \\
+            --out "$RUNNER_TEMP/home41-batch13/no_guest_status.json"
+          python - "$RUNNER_TEMP/home41-batch13/no_guest_status.json" <<'PY'
+          import json,sys
+          r=json.load(open(sys.argv[1]))
+          assert r["status"]=="UNVERIFIED_NO_GUEST_TRACE"
+          assert r["application_ack_verified"] is False
+          assert r["dirty_failure_recovery_verified"] is False
+          PY
       - name: Upload xref evidence only (no game/credential bytes)
         if: always()
         uses: actions/upload-artifact@v4
