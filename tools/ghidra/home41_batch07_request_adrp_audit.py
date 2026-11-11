@@ -399,6 +399,82 @@ def audit_address_taken(data,segs,fdes):
                                 "references":out[dest][:100], "count":len(out[dest])}
                          for dest,label in roots.items()}}
 
+
+def audit_pointer_table_neighborhood(data,segs,fdes,refs):
+    """Inspect bounded raw pointer table slots and PC-relative references.
+
+    A slot's proximity to another pointer does not by itself prove a C++ vtable.
+    """
+    import bisect
+    starts=[x[0] for x in fdes]
+    def fn(rva):
+        if rva in dict((r,label) for label,(r,_) in FDE_FOCUS.items()):
+            return dict((r,label) for label,(r,_) in FDE_FOCUS.items())[rva]
+        i=bisect.bisect_right(starts,rva)-1
+        return ("FDE:"+hex(fdes[i][0]+IMAGE_BASE)) if i>=0 and rva<fdes[i][1] else None
+    targets=defaultdict(list)
+    pages=defaultdict(set)
+    neighborhoods={}
+    for label,item in refs["functions"].items():
+        ptrs=[int(r["slot_va"],16)-IMAGE_BASE
+              for r in item["references"] if r["type"]=="ALIGNED_POINTER_LITERAL"]
+        entries=[]
+        for slot in ptrs[:5]:
+            seg=next((z for z in segs if not(z["flags"]&1) and
+                       z["va"]<=slot and slot+8<=z["va"]+z["filesz"]),None)
+            if seg is None:continue
+            neighborhood=[]
+            for d in range(-0x80,0x88,8):
+                p=slot+d
+                if p<seg["va"] or p+8>seg["va"]+seg["filesz"]:continue
+                val=struct.unpack_from("<Q",data,seg["off"]+p-seg["va"])[0]
+                exec_target=any(z["flags"]&1 and z["va"]<=val<z["va"]+z["filesz"] for z in segs)
+                entry={"slot_ghidra_va":hex(p+IMAGE_BASE),"value_rva":hex(val),
+                       "category":"EXECUTABLE_POINTER" if exec_target else ("ZERO" if val==0 else "DATA_OR_IMMEDIATE")}
+                if exec_target:entry["function_fde"]=fn(val)
+                if d==0:entry["target_function_here"]=label
+                neighborhood.append(entry)
+            entries.append({"target_slot_ghidra_va":hex(slot+IMAGE_BASE),"nearby_qwords":neighborhood})
+            # C++ Itanium ABI often installs vptr at table+0x10, but do not
+            # claim ABI or function slot without observing the constructor.
+            for offset in (-0x20,-0x18,-0x10,-0x08,0,0x08,0x10,0x18,0x20):
+                p=slot+offset
+                targets[p].append({"target_label":label,"slot_delta":offset})
+                pages[p&~4095].add(p)
+        neighborhoods[label]=entries
+    # Find ADRP/ADD referring directly to these table slots or nearby bases.
+    sites=defaultdict(list)
+    for seg in segs:
+        if not(seg["flags"]&1):continue
+        base,va,n=seg["off"],seg["va"],seg["filesz"]
+        for off in range(0,n-7,4):
+            op=struct.unpack_from("<I",data,base+off)[0]
+            pc=va+off
+            if(op&0x9f000000)!=0x90000000:continue
+            imm=sign_extend((((op>>5)&0x7ffff)<<2)|((op>>29)&3),21)
+            page=(pc&~4095)+(imm<<12)
+            if page not in pages:continue
+            src_reg=op&31
+            for step in range(1,13):
+                j=off+4*step
+                if j+4>n:break
+                ins=struct.unpack_from("<I",data,base+j)[0]
+                if (ins&0xff000000)==0x91000000 and ((ins>>5)&31)==src_reg:
+                    dest=page+(((ins>>10)&0xfff)<<(12 if(ins>>22)&1 else 0))
+                    if dest in targets:
+                        i=bisect.bisect_right(starts,pc)-1
+                        owner=hex(fdes[i][0]+IMAGE_BASE) if i>=0 and pc<fdes[i][1] else None
+                        for target in targets[dest]:
+                            sites[target["target_label"]].append({"address_ghidra_va":hex(pc+IMAGE_BASE),
+                                 "paired_instruction_va":hex(va+j+IMAGE_BASE),
+                                 "data_target_ghidra_va":hex(dest+IMAGE_BASE),
+                                 "slot_delta":target["slot_delta"],"owner_fde_va":owner})
+                    break
+                if(ins&0xfc000000) in (0x94000000,0x14000000):break
+    return {"neighborhoods":neighborhoods,
+            "pc_relative_table_references":{name:{"count":len(sites[name]),
+                      "sites":sites[name][:100]} for name in neighborhoods}}
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf", required=True, type=Path)
@@ -414,6 +490,7 @@ def main():
     result["field_offset_scan"] = audit_fde_offset_constants(raw, segments(raw))
     result["incoming_edges"] = audit_incoming_calls(raw, segments(raw), load_fdes(a.fde_csv))
     result["address_taken"] = audit_address_taken(raw, segments(raw), load_fdes(a.fde_csv))
+    result["pointer_tables"] = audit_pointer_table_neighborhood(raw, segments(raw), load_fdes(a.fde_csv), result["address_taken"])
     result["elf_sha256"] = sha
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -422,7 +499,7 @@ def main():
         "literal_summary": result["literal_summary"], "hits": result["hits"],
         "call_analysis": result["call_analysis"], "field_offset_scan": result["field_offset_scan"],
         "incoming_edges": result["incoming_edges"],
-        "address_taken": result["address_taken"]}, indent=2, ensure_ascii=False))
+        "address_taken": result["address_taken"], "pointer_tables": result["pointer_tables"]}, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
