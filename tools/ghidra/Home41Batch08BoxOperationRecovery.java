@@ -88,8 +88,52 @@ public class Home41Batch08BoxOperationRecovery extends GhidraScript {
                     emitAssembly(report,SITE_VA[i],LABELS[i]);
                     continue;
                 }
+                // Recover only the verified FDE interval in this disposable project.
+                // Ghidra's initial CreateFunctionCmd stops at an early RET and otherwise
+                // loses the switch/state bodies containing our exact ADRP+ADD sites.
+                Address end=entry.add(FDE_BYTES[i]-1);
+                AddressSet exactBody=new AddressSet(entry,end);
+                try {
+                    FunctionIterator overlapping=manager.getFunctions(exactBody,true);
+                    boolean conflict=false;
+                    while(overlapping.hasNext()){
+                        Function other=overlapping.next();
+                        if(!other.getEntryPoint().equals(fn.getEntryPoint())){
+                            conflict=true;
+                            report.append("OVERLAP\t").append(LABELS[i]).append("\t")
+                                .append(other.getEntryPoint()).append("\t")
+                                .append(esc(other.getName())).append("\n");
+                        }
+                    }
+                    if(!conflict){
+                        fn.setBody(exactBody);
+                        status += ";EXACT_FDE_BODY_SET";
+                    }else status += ";BODY_EXPANSION_SKIPPED_OVERLAP";
+                }catch(Exception expandError){
+                    status += ";BODY_EXPANSION_FAILED:"+esc(expandError.toString());
+                }
+                long[] allSiteVAs={
+                    0x32c250L,0x32cc1cL,0x3495bcL,0x349928L,0x34994cL,
+                    0x34996cL,0x3499e4L,0x34c54cL,0x34c8c8L,0x34ca0cL,
+                    0x34d248L,0x34d260L,0x34d30cL,0x34e418L,0x34e484L,
+                    0x352d50L,0x352e04L,0x352f38L
+                };
+                int seenAnchors=0;
+                for(long av:allSiteVAs){
+                    if(av>=va && av<va+FDE_BYTES[i]){
+                        Address ad=at(av);
+                        if(ad!=null){
+                            if(currentProgram.getListing().getInstructionAt(ad)==null)
+                                disassemble(ad);
+                            if(fn.getBody().contains(ad))seenAnchors++;
+                            emitAssembly(report,av,LABELS[i]);
+                        }
+                    }
+                }
                 boolean covers=fn.getBody().contains(site);
                 long body=fn.getBody().getNumAddresses();
+                report.append("COVERAGE\t").append(LABELS[i]).append("\t")
+                    .append(seenAnchors).append("\tverified_references_in_body\n");
                 report.append("FDE\t").append(LABELS[i]).append("\t").append(entry)
                     .append("\t").append(status).append(";body=").append(body)
                     .append(";fde=").append(FDE_BYTES[i]).append(";anchor_in_body=")
