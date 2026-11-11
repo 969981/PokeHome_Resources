@@ -38,8 +38,8 @@ BRANCHES = {
     0x34CC30:("CBZ",0x34CC38), # +0x965 flag false bypasses 0x326FE0
     0x34CC3C:("CBZ",0x34CC44), # +0x964 false bypasses local copy
     0x34CC48:("TBZ",0x34CC50), # compare zero bypasses reconcile helper
-    0x34D298:("CBZ",0x34D2A4),
-    0x34D2A4:("TBZ",0x34D2B0),
+    0x34D298:("CBZ",0x34D2A0),
+    0x34D2A4:("TBZ",0x34D2AC),
     0x34E4E0:("B.cond",0x34E4FC),
 }
 # Native load and call instruction signatures, not inferred C class names.
@@ -50,12 +50,12 @@ RAW_ASSERT = {
     0x34D2EC:0xF9400008, # ldr x8,[x0]   same ownership selection
     0x34D2F0:0xF9400508, # ldr x8,[x8,#8] slot 1
     0x34D2F4:0xD63F0100, # blr x8
-    0x34CC28:0x39425928, # ldrb w8,[x9,#0x965] (verified byte provenance)
-    0x34CC38:0x39425528, # ldrb w8,[x9,#0x964]
-    0x34C8A8:0x790D3288, # strh w8,[x20,#0x964]
-    0x34C8C0:0x390D3688, # strb w8,[x20,#0x965]
-    0x34C9EC:0x390D367F, # strb wzr,[x19,#0x965]
-    0x34C9F8:0x390D327F, # strb wzr,[x19,#0x964]
+    0x34CC28:0x39659668, # ldrb w8,[x19,#0x965] (verified byte provenance)
+    0x34CC38:0x39659268, # ldrb w8,[x19,#0x964]
+    0x34C8A8:0x7912CA68, # strh w8,[x19,#0x964]
+    0x34C8C0:0x39259668, # strb w8,[x19,#0x965]
+    0x34C9EC:0x3925967F, # strb wzr,[x19,#0x965]
+    0x34C9F8:0x3925927F, # strb wzr,[x19,#0x964]
     0x34E4D0:0xB9400F28, # local stage counter
     0x34E4D4:0x11000508, # increment by one
     0x34E4D8:0x71001D1F, # compare seven
