@@ -31,6 +31,7 @@ jobs:
             tools/home41_switch_guest_observer.py
             tools/home41_switch_trace_validate.py
             tools/test_home41_switch_trace_validate.py
+            tools/test_home41_switch_guest_observer.py
           persist-credentials: false
       - name: Recover target /detail parser callsites from pristine ELF
         shell: bash
@@ -48,7 +49,7 @@ jobs:
           set -euo pipefail
           test ! -e tools/home41_switch_guest_observer.py || python -m py_compile tools/home41_switch_guest_observer.py
           test ! -e tools/home41_switch_trace_validate.py || python -m py_compile tools/home41_switch_trace_validate.py
-          test ! -e tools/test_home41_switch_trace_validate.py || PYTHONPATH=tools python -m unittest -v tools/test_home41_switch_trace_validate.py
+          test ! -e tools/test_home41_switch_trace_validate.py || PYTHONPATH=tools python -m unittest -v tools/test_home41_switch_trace_validate.py tools/test_home41_switch_guest_observer.py
       - name: Upload xref evidence only (no game/credential bytes)
         if: always()
         uses: actions/upload-artifact@v4
