@@ -54,8 +54,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python tools/home41_switch_trace_validate.py \\
-            --out "$RUNNER_TEMP/home41-batch13/no_guest_status.json"
+          python tools/home41_switch_trace_validate.py --out "$RUNNER_TEMP/home41-batch13/no_guest_status.json"
           python - "$RUNNER_TEMP/home41-batch13/no_guest_status.json" <<'PY'
           import json,sys
           r=json.load(open(sys.argv[1]))
