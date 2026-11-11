@@ -179,6 +179,26 @@ No exact matching ADR/ADRP+ADD constructor reference to these *small sampled tab
 **Dirty lifecycle caveat:** Batch08 disassembly proves the read/encode/clear sequence at `0x34DBA4` through `0x34DD74`. Within the same long FDE, `0x34E3D0` later calls `0x64B5B0` (generic HTTP transfer-object creation/setup in published C), with state flags written at `0x34E3F4`, `0x34E454`, `0x34E468`, `0x34E4A8` on condition-dependent paths. The precise CFG post-dominance, server request issue point, async completion, error retry and Dirty restore are still **not proved**. The observed Dirty clear is *not* an ACK success marker. A plausible two-stage snapshot/queue design remains a hypothesis to test by following the virtual-method table and request-buffer ownership.
 
 
+## Batch09 targeted object-creation control
+
+[Run 42933493709](https://github.com/969981/PokeHome_Resources/actions/runs/42933493709) scanned **ADRP references to the pages** containing the candidate method tables. There were 14 such references to page `0x87D000` and 3 to `0x87F000`. Page-level overlap alone is not a pointer to the target virtual-method table.
+
+[Run 42933658319](https://github.com/969981/PokeHome_Resources/actions/runs/42933658319) re-opened the original read-only Ghidra project in a disposable copy and recovered exact FDE `0x350130` (32 bytes) and adjacent `0x350150` (936 bytes). Its assembly confirms:
+
+```asm
+.text::00350130  cmp  w0,#0x2
+.text::00350134  b.gt 0x00350148
+.text::00350138  adrp x8,0x87f000
+.text::0035013C  add  x8,x8,#0x590
+.text::00350140  ldr  x0,[x8,w0,SXTW #3]
+.text::00350144  ret
+```
+
+This loads an indexed qword from `0x87F590`, **not** the Box Save callback slot at `0x87F4D0`. It is therefore a **page-sharing false positive**, not proof of a SaveRequest constructor. The precise constructor/owner of the Box Save method table is still open.
+
+The latest static findings establish a strong virtual-table-shaped group and an authentic Dirty data packaging/clear implementation but **do not yet establish any particular server ACK, requeue or retry behavior**. Code-address order inside a switch-driven function is not a validated temporal sequence across invocations. Do not label `0x34DD74` as either server-success clear or server-failure data loss without runtime/CFG evidence.
+
+
 ## Continuing evidence gates
 
 1. **Network boundary:** enumerate incoming direct calls and callback/data pointers crossing into the candidate transport region `.text::0064C000–0068FFFF`. Region membership alone is not a reliable business classification.
