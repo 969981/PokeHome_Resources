@@ -130,6 +130,25 @@ public class Home41Batch08BoxOperationRecovery extends GhidraScript {
                         }
                     }
                 }
+                // Batch07 confirmed MOVZ/MOVK field-offset materialization in the
+                // Box SaveRequest candidate; dump surrounding decoded instructions
+                // without assigning Dirty clear/read semantics by name alone.
+                long[] dirtySites={0x34d344L,0x34d4e4L,0x34db9cL,0x34dbb4L,0x34dd6cL};
+                if(i==3){
+                    Listing dl=currentProgram.getListing();
+                    for(long dv:dirtySites){
+                        Address adr=at(dv);
+                        if(adr!=null && dl.getInstructionAt(adr)==null)disassemble(adr);
+                        for(long delta=-72;delta<=112;delta+=4){
+                            Address insAddr=at(dv+delta);
+                            Instruction ins=insAddr==null?null:dl.getInstructionAt(insAddr);
+                            if(ins!=null)report.append("DIRTY_ASM\t")
+                                .append(String.format(Locale.ROOT,"0x%08x",dv))
+                                .append("\t").append(insAddr).append("\t")
+                                .append(esc(ins.toString())).append("\n");
+                        }
+                    }
+                }
                 boolean covers=fn.getBody().contains(site);
                 long body=fn.getBody().getNumAddresses();
                 report.append("COVERAGE\t").append(LABELS[i]).append("\t")
