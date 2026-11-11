@@ -320,6 +320,10 @@ def main():
     if sha!=EXPECTED_SHA:raise SystemExit("Refusing non-baseline ELF: "+sha)
     report=audit(raw)
     opts.out.parent.mkdir(parents=True,exist_ok=True)
+    # Small immutable byte slices for local disassembly, not modified ELF files.
+    segs=segments(raw)
+    opts.out.with_name("box_state_original_fde.bin").write_bytes(raw_at(raw,segs,BOX[0],BOX[1]))
+    opts.out.with_name("gate_original_fde.bin").write_bytes(raw_at(raw,segs,GATE[0],GATE[1]))
     opts.out.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print(json.dumps({
         "status":report["status"],"elf_sha256":sha,"gate":report["gate"],
