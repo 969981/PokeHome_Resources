@@ -317,6 +317,88 @@ def audit_incoming_calls(data,segs,fdes):
                                  "callsites":refs[k][:100]}
             for k in INCOMING_TARGETS}
 
+
+# Function address references are *candidates* for virtual dispatch or callbacks.
+# Explicit AArch64 ADR/ADRP+ADD and ELF RELA addends are verified separately.
+def audit_address_taken(data,segs,fdes):
+    import bisect
+    starts=[x[0] for x in fdes]
+    roots={r:label for r,label in
+           ((a,name) for name,(a,_size) in FDE_FOCUS.items())}
+    page_map=defaultdict(set)
+    for r in roots:page_map[r&~4095].add(r)
+    out=defaultdict(list)
+    def annotate(src):
+        i=bisect.bisect_right(starts,src)-1
+        own=fdes[i][0] if i>=0 and src<fdes[i][1] else None
+        return hex(own+IMAGE_BASE) if own is not None else None
+    for seg in segs:
+        if not(seg["flags"]&1):continue
+        base,va,n=seg["off"],seg["va"],seg["filesz"]
+        for off in range(0,n-3,4):
+            op=struct.unpack_from("<I",data,base+off)[0]
+            pc=va+off
+            if(op&0x9f000000)==0x10000000:
+                imm=sign_extend((((op>>5)&0x7ffff)<<2)|((op>>29)&3),21)
+                dest=pc+imm
+                if dest in roots:
+                    out[dest].append({"type":"ADR","address_va":hex(pc+IMAGE_BASE),
+                                      "owner_fde_va":annotate(pc)})
+            if(op&0x9f000000)!=0x90000000:continue
+            imm=sign_extend((((op>>5)&0x7ffff)<<2)|((op>>29)&3),21)
+            page=(pc&~4095)+(imm<<12)
+            if page not in page_map:continue
+            reg=op&31
+            for step in range(1,17):
+                j=off+4*step
+                if j+4>n:break
+                nxt=struct.unpack_from("<I",data,base+j)[0]
+                if(nxt&0xff000000)==0x91000000 and (nxt&0x1f)==reg:
+                    # Only a 64-bit ADD (opcode 0x91), not immediate MOV or 32-bit ADD.
+                    if((nxt>>5)&31)==reg:
+                        dest=page+(((nxt>>10)&0xfff)<<(12 if(nxt>>22)&1 else 0))
+                        if dest in roots:
+                            out[dest].append({"type":"ADRP_ADD","address_va":hex(pc+IMAGE_BASE),
+                                              "paired_instruction_va":hex(va+j+IMAGE_BASE),
+                                              "owner_fde_va":annotate(pc)})
+                    break
+                if(nxt&0xfc000000) in (0x94000000,0x14000000):break
+    for dest in roots:
+        for seg in segs:
+            if seg["flags"]&1:continue
+            needle=struct.pack("<Q",dest)
+            start,stop=seg["off"],seg["off"]+seg["filesz"]
+            pos=start
+            while True:
+                pos=data.find(needle,pos,stop)
+                if pos<0:break
+                if(pos-start)%8==0:
+                    out[dest].append({"type":"ALIGNED_POINTER_LITERAL",
+                                      "slot_va":hex(seg["va"]+pos-start+IMAGE_BASE)})
+                pos+=1
+    # NX2ELF may use SHT_RELA addends even when binary pointer slots are zero.
+    shoff=struct.unpack_from("<Q",data,40)[0]
+    shentsz=struct.unpack_from("<H",data,58)[0]
+    shnum=struct.unpack_from("<H",data,60)[0]
+    rela_seen=0
+    if shentsz>=64 and shoff+shentsz*shnum<=len(data):
+        for i in range(shnum):
+            sh=struct.unpack_from("<IIQQQQIIQQ",data,shoff+i*shentsz)
+            if sh[1]!=4:continue
+            start,size,entsize=sh[4],sh[5],sh[9]
+            if entsize<24 or start+size>len(data):continue
+            for pos in range(start,start+size,entsize):
+                slot,info,addend=struct.unpack_from("<QQq",data,pos)
+                rela_seen+=1
+                if addend in roots:
+                    out[addend].append({"type":"RELA_ADDEND",
+                                         "slot_va":hex(slot+IMAGE_BASE),
+                                         "relocation_type":info&0xffffffff})
+    return {"rela_entries_examined":rela_seen,
+            "functions":{label:{"rva":hex(dest),
+                                "references":out[dest][:100], "count":len(out[dest])}
+                         for dest,label in roots.items()}}
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf", required=True, type=Path)
@@ -331,6 +413,7 @@ def main():
     result["call_analysis"] = audit_fde_calls(raw, segments(raw), result["hits"])
     result["field_offset_scan"] = audit_fde_offset_constants(raw, segments(raw))
     result["incoming_edges"] = audit_incoming_calls(raw, segments(raw), load_fdes(a.fde_csv))
+    result["address_taken"] = audit_address_taken(raw, segments(raw), load_fdes(a.fde_csv))
     result["elf_sha256"] = sha
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -338,7 +421,8 @@ def main():
         "literal_count": result["literal_count"], "hits_count": len(result["hits"]),
         "literal_summary": result["literal_summary"], "hits": result["hits"],
         "call_analysis": result["call_analysis"], "field_offset_scan": result["field_offset_scan"],
-        "incoming_edges": result["incoming_edges"]}, indent=2, ensure_ascii=False))
+        "incoming_edges": result["incoming_edges"],
+        "address_taken": result["address_taken"]}, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
