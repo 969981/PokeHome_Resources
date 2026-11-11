@@ -108,6 +108,15 @@ These numbers describe *static instructions inside FDEs*, not executed requests 
 
 Published `c/_text__003279dc.c` shows that `0x3279DC` clears a 256-byte output buffer and calls `snprintf`. Thus it is an **endpoint/request-path string formatting helper**. The API HTTP verb, payload serialization, response object, and network submission point still need tracing beyond this helper.
 
+### Additional payload transformation evidence
+
+In the published C from Run 42763137320:
+
+- `.text::003154A0` uses `nn::util::CompressGzip` followed by `nn::crypto::EncryptAes128Cbc`; it consumes buffers and bytes derived in part from `FUN__text__00321AC0` (Box Manager root). A direct `BL 0x3154A0` occurs after the Box `precommit` and `commit` endpoint construction sites (`0x34C920`, `0x34CA68`). This is a **candidate request-payload preparation link**, not yet a byte-accurate Tracker record serialization proof.
+- `.text::0031B870` similarly uses `EncryptAes128Cbc` and copies encoded bytes into application buffers; the Box candidate calls it at `0x34C9A0` and `0x34CAE8`. Classify it as a cryptographic/formatting transformation, without assigning a protocol role until upstream/downstream parameters are tracked.
+- The Box candidate calls `.text::003028C4` at `0x34C758`, `0x34C788`, `0x34D788`, `0x34D7B8`, `0x34DC34`, `0x34DC64`. The callee checks current Box Tracker membership, **not Dirty-set consumption**.
+- `.text::006F66F0` is the imported `snprintf` thunk, not an application save ACK; this is important because the region's frequent calls to it reflect text formatting.
+
 ### State, error and Tracker boundaries
 
 - `0x34C470` FDE contains six direct BL callsites targeting `0x3028C4`; the latter's published C checks Tracker membership in active Box slots (`manager+0x700FDC`, repeated `0x330` slot stride). **This is an actual static link between a Box save candidate and Tracker presence checking**, but it does not prove `0x7FC18` Dirty-set serialization.
