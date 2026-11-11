@@ -181,7 +181,7 @@ def main():
     a.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": result["status"], "elf_sha256": sha,
         "literal_count": result["literal_count"], "hits_count": len(result["hits"]),
-        "literal_summary": result["literal_summary"]}, indent=2, ensure_ascii=False))
+        "literal_summary": result["literal_summary"], "hits": result["hits"]}, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
