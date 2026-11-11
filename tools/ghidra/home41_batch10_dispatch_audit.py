@@ -235,13 +235,16 @@ def exact_box_state_switch(raw,segs,box):
     markers=("precommit_url","commit_url","state_commit_wait",
              "secondary_clear","dirty_count_read","dirty_list_read",
              "dirty_encoding","dirty_copy","dirty_clear","save_operation_state")
+    extra_sites={"transport_setup_candidate":0x34e3d0,"state_write_4":0x34d208,
+                 "state_write_8":0x34e51c,"state_write_9":0x34e4a8,
+                 "state_write_10":0x34d234}
     cases=[]
     for state,delta in enumerate(halfwords):
         target=base+delta*4
         start_valid=target in box
         edges={}
-        for name in markers:
-            a=ANCHORS[name]-IMAGE_BASE
+        for name in markers+tuple(extra_sites):
+            a=(ANCHORS[name] if name in ANCHORS else extra_sites[name])-IMAGE_BASE
             path=shortest_path(succ,target,a) if start_valid else None
             edges[name]={"static_direct_path":path is not None,
                          "shortest_path_edges":len(path)-1 if path else None}
@@ -249,7 +252,12 @@ def exact_box_state_switch(raw,segs,box):
                       "entry_va":va(target),"entry_word":"%08x"%word_at(raw,segs,target),
                       "in_verified_box_fde":start_valid,
                       "static_direct_paths_to_markers":edges})
+    clear_to_transport=shortest_path(succ,0x34dd74-IMAGE_BASE,0x34e3d0-IMAGE_BASE)
     return {"status":"EXACT_11_CASE_HALFWORD_TABLE",
+            "dirty_clear_to_transport_setup_candidate":{
+                "direct_static_path":clear_to_transport is not None,
+                "shortest_path_edges":len(clear_to_transport)-1 if clear_to_transport else None,
+                "meaning":"transport setup routine, NOT HTTP send or server ACK"},
             "object_state_field_offset":0x14,
             "allowed_values":[0,10],
             "other_state_path":va(decode(word_at(raw,segs,entry+8),entry+8)[1][0]),
