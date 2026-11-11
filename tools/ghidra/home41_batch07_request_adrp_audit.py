@@ -216,6 +216,54 @@ def audit_fde_calls(data, segs, hits):
                        "literal_windows": around}
     return bygroup
 
+
+# Look for explicit MOVZ/MOVK materialization of known Box Manager field offsets.
+# Absence only rules out this *literal encoding* within the FDE: it does not rule
+# out loads from tables, arithmetic, inlined pointers, or other callers.
+TRACKED_OFFSETS = {
+    0x93498: "dirty_count",
+    0x7fc18: "dirty_tracker_key",
+    0x7b498: "secondary_tracker",
+    0x934d4: "box_error_flag",
+    0x700fdc: "active_box_count",
+}
+def audit_fde_offset_constants(data, segs):
+    out={}
+    for group,(start,length) in FDE_FOCUS.items():
+        seg=next((p for p in segs if (p["flags"]&1) and p["va"]<=start and
+                  start+length<=p["va"]+p["filesz"]),None)
+        if seg is None:
+            out[group]={"status":"NO_EXEC_SEGMENT"}
+            continue
+        base=seg["off"]+start-seg["va"]
+        hits=[]
+        for off in range(0,length-3,4):
+            op=struct.unpack_from("<I",data,base+off)[0]
+            # MOVZ (32 or 64) followed by MOVK into the same X/W register.
+            if (op & 0x7f800000)!=0x52800000:
+                continue
+            reg=op&31
+            value=((op>>5)&0xffff)<<(((op>>21)&3)*16)
+            seen=set()
+            for step in range(0,5):
+                j=off+step*4
+                if j+4>length:break
+                p=struct.unpack_from("<I",data,base+j)[0]
+                if step:
+                    if (p&0x7f800000)==0x72800000 and (p&31)==reg:
+                        shift=((p>>21)&3)*16
+                        value=(value&~(0xffff<<shift))|(((p>>5)&0xffff)<<shift)
+                    elif (p&0xfc000000) in (0x94000000,0x14000000):
+                        break
+                if value in TRACKED_OFFSETS and value not in seen:
+                    hits.append({"literal_offset":hex(value),"field":TRACKED_OFFSETS[value],
+                                 "movz_ghidra_va":hex(start+off+IMAGE_BASE),
+                                 "last_instruction_ghidra_va":hex(start+j+IMAGE_BASE),
+                                 "register":reg})
+                    seen.add(value)
+        out[group]={"status":"STATIC_IMMEDIATE_ONLY","hits":hits}
+    return out
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf", required=True, type=Path)
@@ -227,13 +275,14 @@ def main():
         raise SystemExit("ELF SHA mismatch: " + sha)
     result = scan(raw)
     result["call_analysis"] = audit_fde_calls(raw, segments(raw), result["hits"])
+    result["field_offset_scan"] = audit_fde_offset_constants(raw, segments(raw))
     result["elf_sha256"] = sha
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": result["status"], "elf_sha256": sha,
         "literal_count": result["literal_count"], "hits_count": len(result["hits"]),
         "literal_summary": result["literal_summary"], "hits": result["hits"],
-        "call_analysis": result["call_analysis"]}, indent=2, ensure_ascii=False))
+        "call_analysis": result["call_analysis"], "field_offset_scan": result["field_offset_scan"]}, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
