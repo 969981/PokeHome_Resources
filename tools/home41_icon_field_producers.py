@@ -40,7 +40,7 @@ def audit(root,out):
   r=rows(pc,before,after)
   return [f"{x['va']:08x} {x['raw']} {x['op']} {x['args']}" for x in r]
  strings={hex(x):cstr(x) for x in (0x62b880,0x62b888,0x62b890,0x60cf95)}
- tables={hex(x):read(x,n).hex() for x,n in [(0x625450,13),(0x625368,11),(0x625374,44),(0x63a7f0,48),(0x63a948,136)]}
+ tables={hex(x):read(x,n).hex() for x,n in [(0x627130,20),(0x625450,13),(0x625368,11),(0x625374,44),(0x63a7f0,48),(0x63a948,136)]}
  report=dict(elf_sha256=ELF_SHA,callers=callers,strings=strings,tables=tables,windows={hex(x):rows(x,*a) for x,a in CENTERS.items()},scope="bounded static disassembly; record layout and function extent not assumed")
  out.mkdir(parents=True,exist_ok=True)
  (out/"producer_evidence.json").write_text(json.dumps(report,indent=2)+"\n")
@@ -77,7 +77,7 @@ def audit(root,out):
  print("TABLES",json.dumps(tables));print("STRINGS",json.dumps(strings))
  from collections import Counter
  print("CALLERS",json.dumps({hex(k):v for k,v in Counter(c["target"] for c in callers).items()}))
- for pc in (0x516c70,0x105790,0x12f148):
+ for pc in (0x105790,):
   print("WINDOW",hex(pc));print("\n".join(block(pc,*CENTERS[pc])))
 if __name__=="__main__":
  p=argparse.ArgumentParser();p.add_argument("--root",type=Path,default=Path("."));p.add_argument("--out",type=Path,required=True);a=p.parse_args();audit(a.root,a.out)
