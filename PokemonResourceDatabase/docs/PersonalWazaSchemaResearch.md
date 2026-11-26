@@ -41,3 +41,9 @@
 `uv run tools/home41_pml_schema_audit.py --out export/pml-evidence`
 
 输出 personal_candidates.csv、waza_candidates.csv、两份原始字段CSV、field_profiles.csv、summary.json；保留源偏移、原始字段跨度、版本域及哈希。未改变原始 NCA、Unpack、已发布 migration。当前仅结构/样本锚点验收，后续应反查 ELF 的 Personal/Waza 资源加载、Getter 及默认值；尤其 f16/f21、22–24、Waza f3/f8+。未确认字段不进入正式跨游戏业务表。
+
+## 实测验收与嵌套向量突破
+- [首轮 CI 45817030854](https://github.com/969981/PokeHome_Resources/actions/runs/45817030854) 成功：8485 Personal、5089 Waza、157049 Personal 非空字段、32327 Waza 非空字段；Ikkaku Waza 最大9字段，其他5套最大8字段。
+- 独立读取七套原始文件的 field21 向量：Global 72250、Beluga 38083、Delphis 29625、Hayabusa 11075、Ikkaku 66192、Orion 66463、Titan 76796；共360484个嵌套表，子表指针解析错误0，每套1个空向量。
+- Global 妙蛙种子样本 (1,33),(1,45),(3,22),(6,74),(9,73)，支持 level/move 解释；101、102 是特殊原始编码，不解释为普通等级。Hayabusa 皮卡丘 (84,1,9),(98,5,14),(86,9,18),(129,15,25) 支持 move/level/extra 顺序；Ikkaku 妙蛙种子 (33,1) 对应原始表 (1,33,10)，第三字段保留候选等级。禁止推定所有版本完全同构。
+- 新脚本 [home41_personal_learnset_audit.py](../../tools/home41_personal_learnset_audit.py) 输出完整原始子表三字段、父记录键、序号、偏移、源哈希及候选解释；独立 CI 重跑验收尚未取得结果。建议 schema V3 增设 native_personal_learnset_entries，以 release/dataset/record_index/ordinal 为主键，原始字段不可丢失。业务 learnset 及学习方式映射待原生 Getter 证据。
