@@ -1,3 +1,11 @@
+# HOMEImageResources — HOME 4.1.0 图片资源
+
+**[打开 Obsidian / Markdown 图片资源导航](docs/README.md)**
+
+已归档：3538立绘、3506小图标、38原生球种显示资源（含占位）、179独立属性图片/360逻辑键。Switch BRTI 9362/9377 成功解码。普通道具、缎带、证章、成就尚未取得完整业务图片映射；补充候选归档及来源审计见 [覆盖率](docs/08-Coverage.md)。旧 manifest 为历史基线，不代表当前完整数量。以下保留旧审计记录以追踪来源。
+
+---
+
 # HOMEImageResourceAudit / HomeImageResources
 
 HOME 4.1.0 原版素材的独立衍生包（不更改原始 NCA 和 Unpack 镜像）。基准 commit: 067114503d166d34795515fb0794b8559e617cc5。
