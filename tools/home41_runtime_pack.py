@@ -1,11 +1,14 @@
 # /// script
 # requires-python = ">=3.11,<3.14"
-# dependencies = ["Pillow==12.0.0"]
+# dependencies = ["Pillow==12.0.0", "numpy==2.2.6", "scikit-image==0.25.2"]
 # ///
 """Build a read-only HOME 4.1.0 runtime image pack (no original archives or ELF)."""
 import argparse
 import hashlib
 import io
+import math
+import csv
+from collections import Counter
 import json
 import os
 import shutil
@@ -32,7 +35,61 @@ def checked(root,rel):
         raise ValueError("missing/unsafe source "+rel)
     return f
 
-def build(src,out,profile):
+# Compare visible RGB against the *same resized* lossless reference, never hidden
+# transparent RGB. Two opaque backgrounds make alpha-edge/chroma errors visible.
+QUALITY_LEVELS = (88, 94, 97)
+MIN_PSNR = 35.0
+MIN_SSIM = 0.970
+
+def webp(image, quality=None):
+    buffer=io.BytesIO()
+    if quality is None:
+        image.save(buffer,format="WEBP",lossless=True,method=4,exact=True)
+    else:
+        image.save(buffer,format="WEBP",lossless=False,quality=quality,alpha_quality=100,method=4,exact=True)
+    data=buffer.getvalue()
+    with Image.open(io.BytesIO(data)) as im:
+        decoded=im.convert("RGBA")
+    if decoded.size!=image.size or decoded.getchannel("A").tobytes()!=image.getchannel("A").tobytes():
+        raise ValueError("image size/alpha mismatch")
+    if quality is None and decoded.tobytes()!=image.tobytes():
+        raise ValueError("lossless pixel mismatch")
+    return data,decoded
+
+def metrics(ref,decoded):
+    import numpy as np
+    from skimage.metrics import structural_similarity
+    psnr=[];ssim=[]
+    for bg in (24,245):
+        backdrop=Image.new("RGBA",ref.size,(bg,bg,bg,255))
+        a=np.asarray(Image.alpha_composite(backdrop,ref).convert("RGB"))
+        b=np.asarray(Image.alpha_composite(backdrop,decoded).convert("RGB"))
+        mse=float(np.mean((a.astype(np.float32)-b.astype(np.float32))**2))
+        psnr.append(99.0 if mse==0 else 10*math.log10(255**2/mse))
+        ssim.append(float(structural_similarity(a,b,data_range=255,channel_axis=2)))
+    return min(psnr),min(ssim)
+
+def balanced(image):
+    for q in QUALITY_LEVELS:
+        data,decoded=webp(image,q)
+        p,s=metrics(image,decoded)
+        if p>=MIN_PSNR and s>=MIN_SSIM:
+            return data,q,p,s
+    data,_=webp(image)
+    return data,"lossless",99.0,1.0
+
+def summary(rows):
+    if not rows:return {}
+    def stat(key):
+        values=sorted(r[key] for r in rows)
+        return {"min":round(values[0],6),"p05":round(values[int(.05*(len(values)-1))],6),
+                "median":round(values[len(values)//2],6),"mean":round(sum(values)/len(values),6)}
+    return {"unique_source_portraits":len(rows),"accepted_quality_counts":dict(Counter(str(r["quality"]) for r in rows)),
+            "psnr_db":stat("psnr"),"ssim":stat("ssim"),"alpha_exact":len(rows),
+            "encoded_bytes_before_output_dedup":sum(r["bytes"] for r in rows),
+            "thresholds":{"min_psnr_db":MIN_PSNR,"min_ssim":MIN_SSIM}}
+
+def build(src,out,profile,quality_report=None):
     core=read(src/"core/resource_core.json")
     types=read(src/"core/types/index.json")
     aliases=read(src/"native_names/index.json")["rows"]
@@ -51,7 +108,7 @@ def build(src,out,profile):
     out.mkdir()
     for rel in ("core/resource_core.json","core/types/index.json"):
         p=out/rel;p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(checked(src,rel),p)
-    entries={}; blobs={}; source_cache={}; counts={}; total_original=0
+    entries={}; blobs={}; source_cache={}; counts={}; total_original=0; quality_rows=[]
     with (out/"images.pack").open("wb") as pack:
         for rel,kind in sorted(paths.items()):
             data=checked(src,rel).read_bytes();total_original+=len(data)
@@ -63,18 +120,19 @@ def build(src,out,profile):
                 image=im.convert("RGBA")
             if kind=="icon" and image.size!=(112,112): raise ValueError("icon size "+rel)
             if kind=="portrait" and image.size not in ((112,112),(512,512)): raise ValueError("portrait size "+rel)
-            if kind=="portrait" and profile=="compact":
+            if kind=="portrait" and profile in ("compact","balanced"):
                 image.thumbnail((256,256),Image.Resampling.LANCZOS)
             if kind=="ui":
                 p=out/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)
                 encoded=data;mime="image/png"
             else:
-                buffer=io.BytesIO()
-                image.save(buffer,format="WEBP",lossless=True,method=4,exact=True)
-                encoded=buffer.getvalue();mime="image/webp"
-                with Image.open(io.BytesIO(encoded)) as decoded:
-                    if decoded.size!=image.size or decoded.convert("RGBA").tobytes()!=image.tobytes():
-                        raise ValueError("lossless pixel mismatch "+rel)
+                if kind=="portrait" and profile=="balanced":
+                    encoded,q,p,s=balanced(image)
+                    quality_rows.append({"path":rel,"source_sha256":key[1],"quality":q,
+                                         "psnr":p,"ssim":s,"bytes":len(encoded)})
+                else:
+                    encoded,_=webp(image)
+                mime="image/webp"
             h=sha(encoded)
             if h not in blobs:
                 blobs[h]={"offset":pack.tell(),"length":len(encoded),"mime":mime}
@@ -91,6 +149,12 @@ def build(src,out,profile):
         "pack_bytes":pack_bytes,"total_bytes_before_manifest":sum(x["bytes"] for x in files.values()),
         "logical_counts":{k:sum(v==k for v in paths.values()) for k in ("icon","portrait","ui")},
         "unique_source_by_kind":counts,"files":files}
+    if profile=="balanced":
+        report["portrait_quality"]=summary(quality_rows)
+        if quality_report:
+            quality_report.parent.mkdir(parents=True,exist_ok=True)
+            with quality_report.open("w",encoding="utf-8",newline="") as f:
+                w=csv.DictWriter(f,fieldnames=["path","source_sha256","quality","psnr","ssim","bytes"]);w.writeheader();w.writerows(quality_rows)
     write(out/"runtime-manifest.json",report)
     verify(out)
     print(json.dumps({k:v for k,v in report.items() if k!="files"},indent=2))
@@ -124,13 +188,16 @@ if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--source",type=Path,default=Path("HomeImageResources"))
     p.add_argument("--out",type=Path,required=True)
-    p.add_argument("--profile",choices=("compact","full"),default="compact")
+    p.add_argument("--profile",choices=("compact","balanced","full"),default="compact")
     p.add_argument("--verify",action="store_true")
+    p.add_argument("--quality-report",type=Path,help="external CSV of unique balanced portrait quality")
     a=p.parse_args();out=a.out.resolve();src=a.source.resolve()
+    if a.quality_report and (a.quality_report.resolve().is_relative_to(out) or a.quality_report.resolve().is_relative_to(src)):
+        raise ValueError("quality report must be outside source and runtime package")
     if a.verify: verify(out)
     else:
         if out==src or out.is_relative_to(src) or src.is_relative_to(out): raise ValueError("source/output overlap")
         if out.exists(): raise ValueError("output already exists; use a new directory")
         out.parent.mkdir(parents=True,exist_ok=True)
         with tempfile.TemporaryDirectory(prefix=".runtime-",dir=out.parent) as td:
-            tmp=Path(td)/"pack";build(src,tmp,a.profile);os.replace(tmp,out)
+            tmp=Path(td)/"pack";build(src,tmp,a.profile,a.quality_report);os.replace(tmp,out)

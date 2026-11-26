@@ -5,6 +5,7 @@ on:
     branches: [research/home-image-resource-audit]
     paths:
       - 'tools/home41_runtime_pack.py'
+      - 'tools/home41_runtime_quality.py'
       - '.github/workflows/home41-runtime-pack.yml'
 permissions:
   contents: read
@@ -27,14 +28,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install Pillow==12.0.0
-      - name: Build verified compact pack
-        run: python tools/home41_runtime_pack.py --source HomeImageResources --out "$RUNNER_TEMP/home41-images" --profile compact
-      - name: Verify package
-        run: python tools/home41_runtime_pack.py --out "$RUNNER_TEMP/home41-images" --verify
+      - run: python -m pip install Pillow==12.0.0 numpy==2.2.6 scikit-image==0.25.2
+      - name: Sweep 192 unique portraits and five quality levels
+        run: python tools/home41_runtime_quality.py --out "$RUNNER_TEMP/quality" --sample 192
+      - name: Build verified compact reference
+        run: python tools/home41_runtime_pack.py --source HomeImageResources --out "$RUNNER_TEMP/compact" --profile compact
+      - name: Build quality-gated balanced pack
+        run: python tools/home41_runtime_pack.py --source HomeImageResources --out "$RUNNER_TEMP/balanced" --profile balanced --quality-report "$RUNNER_TEMP/quality/balanced-portraits.csv"
+      - name: Verify complete pack and compare nonportrait hashes
+        run: |
+          python tools/home41_runtime_pack.py --out "$RUNNER_TEMP/balanced" --verify
+          python tools/home41_runtime_quality.py --out "$RUNNER_TEMP/quality" --compact "$RUNNER_TEMP/compact" --balanced "$RUNNER_TEMP/balanced"
       - uses: actions/upload-artifact@v4
         with:
-          name: home41-runtime-compact
-          path: ${{ runner.temp }}/home41-images
+          name: home41-runtime-balanced
+          path: ${{ runner.temp }}/balanced
           retention-days: 14
           compression-level: 0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-runtime-quality-evidence
+          path: ${{ runner.temp }}/quality
+          retention-days: 14
+          if-no-files-found: warn
