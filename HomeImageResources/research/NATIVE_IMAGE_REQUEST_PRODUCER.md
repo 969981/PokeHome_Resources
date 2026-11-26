@@ -34,3 +34,12 @@ Species 890 = 无极汰那（Eternatus）；414 = 绅士蛾（Mothim）。其他
 tools/home41_image_request_adapter.py: 仅支持已解码普通 Core 快照；8 个合成单测；特殊默认对象分支拒绝，球种读取依赖已取得的 Getter 结果，不冒充完整 PKM 转换。
 tools/home41_image_producer_evidence.py: SHA 门控，读取缺失物种常量、游戏分组表及三组间接跳转表和指令窗口，扫描直接调用者。跳转基址从 Ghidra 推导，需对原始 ARM64 校验。
 独立只读 Actions 不修改 NCA、Unpack、编辑器或已归档图像。CI 尚待验收；最终 HomeImageResourceCore 继续阻塞于侧数据球字段分支、游戏转换规则、原始 Core 格式与真实 PKM 字段对应及独立运行时验证。
+
+## 追加实测验收（2026-11-26）
+Actions 45769731018 succeeded at 8ff8cb40; downloaded artifact 15093048652, ZIP SHA256 62021e0492bef095eb2f48fead3eeab92f84d8c54e0a19459d8b9225979e38c4, CRC passed. All three dispatch tables confirmed from original bytes; 1405 aligned direct B/BL references across expanded targets. 0x105D60 has six direct BL callsites (0x15C034,0x15C198,0x15C2B8,0x1C0FB4,0x26DCB0,0x26E4BC).
+0x61E360 literal: 0000_000_uk_n_00000000_f_n; selector model updated in af22d113.
+0x94B7C game group table (13 bytes): 00 01 01 02 02 04 04 03 05 05 07 02 02.
+0x6B220 exact game filter: raw zero ->0; target1/2 preserve nonzero 1,2,3,4,12,16 (mask0x1101E), else27; target7 preserve28..37, else27; target3..6,8..10 clamp unsigned ball to27; other target IDs preserve nonzero input.
+0x5300E0 origin IDs42..53 -> side [1,1,2,2,0,3,4,4,5,5,7,6]; other IDs->0. 0x522F84 checks preferred then1 then2, only presence triggers fallback; selected side with ball0 returns27 via0x5312F0, does not retry subsequent side.
+0x50E7F8 returns owner[8]+0x12. Record base owner[8]; length u16 at+0xD6; TLV starts+0xD8; tag u8, length u16 LE, payload+3; scan first matching tag. 0x50E994 confirms boundary. Original0x518760 payload ball byte offsets: side1 +0x36, side2 +0x3F, side3 +0x27, side4 +0x26, side5 +0x1B, side7 +0x37; side6 directly returns zero (w21 initialized zero). Absent side reads default global, not yet modeled; ordinary cross-game selection checks presence first.
+Adapter d2444229 implements these normal decoded-record rules with bounds checking and synthetic tests, plus resolve_native_record() combining portrait lookup and cross-game ball key. Latest CI still pending; raw PKM->decoded owner record, default globals, same-group raw context predicate, PNG resource path lookup integration and native runtime parity remain pending. Older eight/ten tests passed on 45769605689/45769709775, prior native selector model CI 45769301068 passed. Full texture package independent CI not yet accepted.
