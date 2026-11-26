@@ -24,7 +24,7 @@ date: 2026-11-26
 | 10 | 8 | `icon_lang_cht_00^q` |
 | 11 | 9 | `icon_lang_ltm_00^q` |
 
-输入6被 bitmask 0x7DF 排除；尽管转换表对应槽为9，不能将其解释为拉美西语。0x2C68D8 的外层 wrapper 调 0x6A6F8，此函数从 0x625368 读取0..10的 u8表，超界返回2，尚未读取表值。
+输入6被 bitmask 0x7DF 排除。0x6A6F8 的 0x625368 表已恢复。见 [字段生产者](PRODUCER_CHAIN.md)。
 
 ## 出身标记（0x2C594C）
 
@@ -43,7 +43,7 @@ date: 2026-11-26
 | 10 | 10 | `icon_generation_10^t` | `icon_generation_10_color^t` |
 | 11 | 11 | `icon_generation_11^t` | `icon_generation_11_color^t` |
 
->11回退索引2；负数不暴露给安全 API。普通直接调用者 0xAEEDC、0x15BFF4；color 0xE7F2C。0xAEEDC 上游 0x2069D0 返回值保存到 w20 后转入 w1，值得进一步验证。图片用 [origin_swizzle](../origin_swizzle/) 的真实灰度+alpha。
+>11回退索引2；负数不暴露给安全 API。普通直接调用者 0xAEEDC、0x15BFF4；color 0xE7F2C。纠正：0x2069D0 的返回值通过分支进入 0xAF7A4 语言选择器，非 0xAEEDC。已验证 0x15BFB4 → 0x2069B0 → 0x105790 → 0x15BFF4 的出身标记链。图片用 [origin_swizzle](../origin_swizzle/) 的真实灰度+alpha。
 
 ## 游戏版本转换（0x2D5164）
 
@@ -86,7 +86,7 @@ date: 2026-11-26
 
 范围外返回0，映射到9999空白。原生表中 Bank/HOME 图案在索引14/15，但上述34行没有对应输入；不能自行补映射。版本直接显示表25行独立存储。0x10F218 之前调用 0x6AF80，0x195F28 从半字列表取值；这两处证明转换消费者存在，但尚不足以区分 Pokémon origin game 与 current game。0x13AD30 和0x13ADA0 分别从栈+0x68/+0x6C 读取 display index 并调用0x2D5144，作为下一轮重点。
 
-## 四个独立业务域
+## 四个独立业务域（历史 staging 状态；后续见 [PRODUCER_CHAIN](PRODUCER_CHAIN.md)）
 
 - pokemon_language：10条静态输入；待验证实体字段和外层转换。
 - game_version_code：34条静态输入；版本来源语义待证明。
@@ -94,3 +94,6 @@ date: 2026-11-26
 - origin_mark：12个输入，每个 normal/color；未证明上游业务字段。
 
 额外 version_display_index：25条，可按原生显示索引直接查询。Tauri2 接入之前应保留 typed enum、明确 fallback，严格禁止把 BRTI index 当作 display index。正式数据库建议复用 native_enum_values、native_enum_compatibility、native_resource_keys、resource_selection_rules，不为候选伪造 confirmed 记录。当前 staging SQL 仅建立独立映射表；没有执行 production schema 迁移。
+
+
+[本轮原生字段生产者、完整 OriginVersion 转换表和 Rust 接口](PRODUCER_CHAIN.md)。

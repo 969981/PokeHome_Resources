@@ -2,6 +2,8 @@
 use serde::Deserialize;
 use std::{collections::{BTreeMap,HashSet},path::{Path,PathBuf}};
 mod type_image;
+mod native_icons;
+pub use native_icons::*;
 pub use type_image::{TypeImageResolver,TypeAsset,TypeKind,LANGUAGES};
 const ELF:&str="bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a";
 const MISSING:&str="0000_000_uk_n_00000000_f_n";
