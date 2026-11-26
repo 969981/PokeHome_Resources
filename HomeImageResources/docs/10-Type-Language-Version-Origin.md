@@ -186,3 +186,7 @@ uv run --with texture2ddecoder==1.0.6 --with Pillow==12.0.0 --with capstone==5.0
 建议 CSV / SQL 将 `source_asset`（version/platform/arc/member/BRTI index/raw_name/format/size/source hash）、`pixel_asset`（RGBA hash/path）、`semantic_mapping`（ID domain / native key / locale / variant / evidence/status）分离。语言可将100来源行关联到10个物理图；版本和出身标记不要使用同一 ID 域。缺失映射状态置 unresolved，不填猜测值。
 
 后续：验证 ELF 中 `icon_lang_*`、`icon_version_*`、`icon_generation_*` 的原生资源选择函数、版本枚举转换与 BC5 native material/shader，核对 game version、origin mark、当前所在游戏三个业务语义。原始素材权利归原权利人。
+
+## 9. 后续通道修复
+
+[24张恢复透明背景的 RGBA PNG 与原始通道证据](../research/origin_swizzle/README.md)：原版 BRTI +0x58 为 02 02 02 03，恢复 (R,R,R,G)，普通白色、color 灰度100；尚无运行时 tint 和业务 ID 证明。[ELF selector 候选扫描器](../../tools/home41_icon_selector_audit.py) · [Actions](../../.github/workflows/home-icon-selector-audit.yml)。旧图保留为原始通道预览。
