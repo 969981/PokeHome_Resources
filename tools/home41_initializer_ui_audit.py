@@ -122,9 +122,10 @@ def run(raw,out):
             if i.mnemonic=="mov" and i.op_str.startswith("w3,"):args["ordinal"]=o[1].imm if o[1].type==ARM64_OP_IMM else 0 if md.reg_name(o[1].reg)=="wzr" else None
             if i.mnemonic=="bl" and o[0].imm==0x5f66f0:call=i.address;break
         if call is None or args.get("ordinal") is None or "suffix_va" not in args:raise ValueError("marking call args")
-        for i in md.disasm(read(call+4,0x60),call+4):
-            if i.mnemonic=="str" and i.op_str.startswith("x10, [x19,"):
-                destination=i.operands[1].mem.disp;break
+        expected=0x458+8*len(marking)
+        for i in md.disasm(read(call+4,0x90),call+4):
+            if i.mnemonic=="str" and len(i.operands)==2 and i.operands[1].type==ARM64_OP_MEM and md.reg_name(i.operands[1].mem.base)=="x19" and i.operands[1].mem.disp==expected:
+                destination=expected;break
         if destination is None:raise ValueError("marking hash destination")
         suffix=cstr(args["suffix_va"]);name=r["text"]%(args["ordinal"],suffix)
         marking.append(dict(ordinal=args["ordinal"],suffix=suffix,suffix_va=hex(args["suffix_va"]),name=name,hash=f"{fnv(name):016x}",format_call=hex(call),owner_offset=hex(destination)))
