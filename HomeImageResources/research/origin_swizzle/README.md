@@ -52,3 +52,5 @@ CI [45816209360](https://github.com/969981/PokeHome_Resources/actions/runs/45816
 版本表以 9999 占位开头，后面 0000,0001,0010,0011,0020,0021,0030,0031,0040,0041,0050,0051,0060,0070,0080,0100,0101,0090,0110,0111,0120,0130,0140,0141。0x2D5144/0x2D5154 直接按 w1 索引；相邻 0x2D5164 对输入24..57查 0x63A948 i32 表，其余返回0。消费者语义需要直接调用者核对，不能据此把 current game 与 origin game 当作相同域。
 
 新增 [整数转换表与调用者审计脚本](../../../tools/home41_icon_selector_tables.py)，独立恢复上述三个转换表及直接调用者。静态映射及 runtime shader/tint 分开验收。
+
+[实际验收后的三组整数转换表、25个版本显示键及独立 staging SQL](../native_icon_selectors/README.md)。CI 45816392865 已通过；当前游戏域仍 unresolved。
