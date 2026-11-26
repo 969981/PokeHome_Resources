@@ -1,0 +1,73 @@
+name: HOME image resolver evidence
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_image_resolver_evidence.py'
+      - 'tools/home41_image_resource_core.py'
+      - '.github/workflows/home-image-resolver-evidence.yml'
+permissions:
+  contents: write
+jobs:
+  evidence:
+    if: github.ref == 'refs/heads/research/home-image-resource-audit'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            HomeImageResources
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install texture2ddecoder==1.0.6 capstone==5.0.6 Pillow==12.0.0
+      - name: Syntax and real fixture tests
+        run: |
+          python -m py_compile tools/home41_image_resolver_evidence.py tools/home41_image_resource_core.py
+          python -m unittest discover -s tools -p test_home41_bntx.py -v
+      - name: Original icon decode
+        run: python tools/home41_icon_brti_audit.py --root . --out resolver_output/icons --decode
+      - name: Layout, UIKIT, native resource evidence and static core
+        run: python tools/home41_image_resolver_evidence.py --root . --icons resolver_output/icons --out resolver_output/evidence
+      - name: Validate static resolver API
+        run: |
+          PYTHONPATH=tools python - <<'PY'
+          from home41_image_resource_core import HomeImageResourceCore
+          c=HomeImageResourceCore('HomeImageResources')
+          assert len(c.pokemon)==3506 and len(c.balls)==38
+          for k in c.pokemon:
+              assert c.resolve_pokemon_exact(*k).is_file()
+              assert c.resolve_pokemon_exact(*k,portrait=True).is_file()
+          for k in c.balls: assert c.resolve_ball_display(k).is_file()
+          assert c.resolve_ball_display(38) is None
+          assert c.resolve_item(1) is None and c.resolve_ribbon(0) is None
+          assert c.resolve_mark(0) is None and c.resolve_type(0) is None
+          assert c.resolve_achievement(0) is None
+          print('3506 exact Pokemon keys, 38 display inputs; unresolved resolvers fail closed')
+          PY
+      - name: Archive verified static core to research branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add HomeImageResources/core/
+          if ! git diff --cached --quiet; then
+            git commit -m 'assets: archive static HOME image resource core'
+            git push origin HEAD:refs/heads/research/home-image-resource-audit
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-image-resolver-evidence
+          path: |
+            resolver_output/
+            HomeImageResources/core/
+          if-no-files-found: error
