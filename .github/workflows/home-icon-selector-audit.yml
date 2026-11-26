@@ -6,6 +6,7 @@ on:
     paths:
       - 'tools/home41_origin_swizzle_audit.py'
       - 'tools/home41_icon_selector_audit.py'
+      - 'tools/home41_icon_selector_tables.py'
       - '.github/workflows/home-icon-selector-audit.yml'
       - 'HomeImageResources/research/origin_swizzle/**'
 permissions:
@@ -36,6 +37,8 @@ jobs:
           python tools/home41_origin_swizzle_audit.py --root . --out origin_audit --verify
       - name: Scan original ELF for selector candidates
         run: python tools/home41_icon_selector_audit.py --root . --out selector_audit
+      - name: Recover native input translation tables and direct callers
+        run: python tools/home41_icon_selector_tables.py --root . --candidates selector_audit/selector_candidates.json --out selector_audit
       - uses: actions/upload-artifact@v4
         if: always()
         with:
