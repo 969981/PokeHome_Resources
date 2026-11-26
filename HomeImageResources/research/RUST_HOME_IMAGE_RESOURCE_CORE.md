@@ -27,3 +27,10 @@ HomeImageResources/rust/home-image-resource-core 独立 crate，版本0.1.0，se
 
 ## 接入边界
 现有编辑器提供解密明文 PH4；Rust 不负责 EH4 或 raw PKM 转换。不自动写回、不修改 editor 或原始 NCA/Unpack。BadEgg、默认对象运行时初始化、同组完整 UI 上下文、其他资源类别尚未接入。CI 以实际运行结果为准，PR 保持 Draft。
+
+## 实际 CI 验收 2026-11-26
+- Rust Actions [45771215137](https://github.com/969981/PokeHome_Resources/actions/runs/45771215137) 在 81328864 成功：cargo test 3/3 集成测试通过，3506 selector rows、3506 icon paths、3506 portrait paths、38 ball paths verified。路径检查不是全图像像素重解码，也不是原生运行时差分。
+- 默认对象 Actions [45771274455](https://github.com/969981/PokeHome_Resources/actions/runs/45771274455) 在 9342f3f0 成功；artifact 15094390716（79467 bytes）独立复核 ZIP CRC 与 SHA256 1e36ebbe0b2d216c6e95384665f075577640b20f4a77800ef16eeaacf2ef303a。
+- 395 ADR/ADRP seeds；265 address materialization、112 load、264 control-flow candidates（98 TBZ、84 CBZ、81 B、1 CBNZ），0 direct store / pointer-store candidates。全部265个地址物化事件仍在 Getter 区间。扫描在分支处停止，可能漏掉初始化间接访问。
+- 8 aligned file-backed literal pointer candidates：0x7A6258->0xB15DB2，0x7A6270->0xB15EB7，0x7A6280->0xB15E78，0x7A6288->0xB15EFF，0x7A6290->0xB15F3F，0x7A6298->0xB15F6E，0x7A62A0->0xB15FB8，0x7A62E0->0xB15E76。最后一项为 Core 末端，不证明实际语义。
+- 74d44ebd 新增 ELF section / RELA 分类；待该 commit 的 CI。仍不宣称默认对象运行时为零。
