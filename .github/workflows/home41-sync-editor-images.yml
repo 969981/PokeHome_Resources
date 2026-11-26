@@ -1,0 +1,148 @@
+name: HOME 4.1.0 image archive to editor develop
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - '.github/workflows/home41-sync-editor-images.yml'
+      - 'tools/home41_export_editor_images.py'
+      - 'tools/home41_rebuild_image_subset.py'
+      - 'docs/HOME41_IMAGE_EDITOR_IMPORT.md'
+
+permissions:
+  contents: read
+concurrency:
+  group: home41-image-editor-develop
+  cancel-in-progress: false
+
+jobs:
+  verify-and-import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            HomeImageResources
+            tools
+            docs
+            .github/workflows
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/compress_capture_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_type
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_language
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_version
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_generation
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_item
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_type
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_language
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_version
+            Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_generation
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install scoped conversion dependencies
+        run: python -m pip install Pillow==12.0.0 texture2ddecoder==1.0.6 capstone==5.0.6
+      - name: Stage and verify actual raw files, PNGs, aliases and source hashes
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/home41_export_editor_images.py tools/home41_rebuild_image_subset.py
+          python tools/home41_export_editor_images.py --root . --out "$RUNNER_TEMP/home41-images"
+          python tools/home41_export_editor_images.py --verify-bundle "$RUNNER_TEMP/home41-images"
+      - name: Re-decode all scoped UI images and sample Pokemon from original containers
+        run: |
+          set -euo pipefail
+          B="$RUNNER_TEMP/home41-images"
+          python "$B/tools/home41_rebuild_image_subset.py" --root "$B" --out "$RUNNER_TEMP/home41-ui-audit"
+          python "$B/tools/home41_export_pokemon_images_uv.py" --root "$B" --species 25 --verify-existing --out "$RUNNER_TEMP/home41-pikachu-audit"
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Verify imported Rust image contract
+        run: |
+          B="$RUNNER_TEMP/home41-images"
+          HOME_IMAGE_PACKAGE="$B/HomeImageResources" CARGO_TARGET_DIR="$RUNNER_TEMP/home41-cargo-target" cargo test --manifest-path "$B/HomeImageResources/rust/home-image-resource-core/Cargo.toml" -- --nocapture
+      - name: Upload import manifest and sample conversion evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-image-import-evidence
+          path: |
+            ${{ runner.temp }}/home41-images/IMPORT-MANIFEST.json
+            ${{ runner.temp }}/home41-pikachu-audit/summary.json
+            ${{ runner.temp }}/home41-ui-audit/origin_swizzle/audit.json
+          if-no-files-found: warn
+      - name: Require explicitly configured private editor credential
+        env:
+          TARGET_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        run: |
+          if [ -z "$TARGET_TOKEN" ]; then
+            echo "::error::Configure HOME_CORE_EDITOR_PUSH_TOKEN with Contents read/write on 969981/HOME-Live-Plugin-CHS."
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: develop
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: _plugin_target
+          persist-credentials: true
+          sparse-checkout: |
+            docs/pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0
+            docs/progress
+            docs/devlog
+      - name: Copy verified archive and publish only owned paths to develop
+        shell: bash
+        run: |
+          set -euo pipefail
+          dst="docs/pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0"
+          B="$RUNNER_TEMP/home41-images"
+          cd _plugin_target
+          if [ -d "$dst" ] && [ ! -f "$dst/IMPORT-MANIFEST.json" ]; then
+            echo "::error::Refusing to overwrite an unowned archive directory"
+            exit 1
+          fi
+          mkdir -p "$dst"
+          rsync -a --delete -- "$B/" "$dst/"
+          python "$B/tools/home41_export_editor_images.py" --verify-bundle "$dst"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          dst=Path("docs/pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0")
+          m=json.loads((dst/"IMPORT-MANIFEST.json").read_text())
+          sha=m["source_commit"]
+          def append_once(p, text, marker):
+              content=p.read_text(encoding="utf-8")
+              start=f"<!-- {marker}:start -->"
+              end=f"<!-- {marker}:end -->"
+              block=start+"\n"+text+"\n"+end
+              if start in content:
+                  if end not in content: raise ValueError("broken navigation marker")
+                  a,b=content.split(start,1); _,c=b.split(end,1)
+                  content=a+block+c
+              else: content=content.rstrip()+"\n\n"+block+"\n"
+              p.write_text(content,encoding="utf-8")
+          append_once(Path("docs/pokemon_home_reverse/4.1.0/README.md"),
+              "**原版图片资源：** [HOME 4.1.0 图片归档与转换指南](resources/home41_images_4_1_0/README.md) · [兼容文件名图览](resources/home41_images_4_1_0/HomeImageResources/native_names_compat/README.md)",
+              "home41-image-import")
+          append_once(Path("docs/progress/README.md"),
+              "**原版图片归档（M2 / OPT-007–012）：** [资源、原始文件、脚本和索引](../pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0/README.md) 已通过源仓库离线校验并同步；源 SHA "+sha+"。尚未接入编辑器 UI、绿色版、安装版或实机。",
+              "home41-image-import")
+          Path("docs/devlog/2026-11-26-home41-native-image-import.md").write_text(
+              "---\ntype: devlog\nstatus: offline_verified\nversion: '4.1.0'\ntags: [HOME, image-resources, Tauri2]\n---\n# HOME 原版图片资源导入\n\n源提交: "+sha+"。\n\n"+
+              "归档 "+str(m["file_count"])+" 源文件，"+str(m["bytes"])+" 字节，立绘3538、小图标3506、原名419、兼容名419。"+
+              "实际源 Actions 校验通过后复制；目标 SHA256 再校验。未改业务代码、未做实机验证。\n\n"+
+              "[归档入口与脚本](../pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0/README.md) · "+
+              "[SHA256清单](../pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0/IMPORT-MANIFEST.json)\n",encoding="utf-8")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -A -- "$dst" docs/pokemon_home_reverse/4.1.0/README.md docs/progress/README.md docs/devlog/2026-11-26-home41-native-image-import.md
+          if git diff --cached --quiet; then echo "Already imported"; exit 0; fi
+          git commit -m "data(home41): import original image resources, converters and evidence"
+          git push origin HEAD:develop
+          echo "Published target commit $(git rev-parse HEAD)"
