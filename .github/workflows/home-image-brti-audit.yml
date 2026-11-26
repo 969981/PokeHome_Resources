@@ -7,6 +7,8 @@ on:
       - 'tools/home41_icon_brti_audit.py'
       - 'tools/home41_bntx_to_png.py'
       - 'tools/home41_image_reverse_index.py'
+      - 'tools/home41_selector_followup.py'
+      - 'HomeImageResources/research/pokemon_image_selector_v2.csv'
       - '.github/workflows/home-image-brti-audit.yml'
 permissions:
   contents: read
@@ -31,7 +33,7 @@ jobs:
         run: python -m pip install texture2ddecoder==1.0.6 capstone==5.0.6
       - name: Compile and existing BNTX tests
         run: |
-          python -m py_compile tools/home41_icon_brti_audit.py tools/home41_bntx_to_png.py tools/home41_image_reverse_index.py
+          python -m py_compile tools/home41_icon_brti_audit.py tools/home41_bntx_to_png.py tools/home41_image_reverse_index.py tools/home41_selector_followup.py
           python -m unittest discover -s tools -p test_home41_bntx.py -v
       - name: All SARC names and missing item keys
         run: python tools/home41_image_reverse_index.py --root . --out audit_output/reverse --mode archives
@@ -39,6 +41,8 @@ jobs:
         run: python tools/home41_image_reverse_index.py --root . --out audit_output/elf --mode elf
       - name: Audit metadata and extract supported PNG
         run: python tools/home41_icon_brti_audit.py --root . --out audit_output/icons --decode
+      - name: Exact image key joins and native selector evidence
+        run: python tools/home41_selector_followup.py --root . --icons audit_output/icons --out audit_output/selector
       - uses: actions/upload-artifact@v4
         if: always()
         with:
