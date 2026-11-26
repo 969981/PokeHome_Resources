@@ -104,6 +104,43 @@ def run(raw,out):
             pc=s["vaddr"]+off
             if pc+(signed(op&0x3ffffff,26)<<2)==ENTRY:direct.append(dict(pc=hex(pc),opcode=f"{op:08x}"))
     report=dict(elf_sha256=ELF_SHA,entry=hex(ENTRY),ret=hex(ins[-1].address),instruction_count=len(ins),slot_loads=loads,store_candidates=stores,calls=calls,direct_callers=direct,ui_strings=strings,ui_refs=refs,scope="Straight-line tracked stores only; dynamic values, unknown aliases, and all UI semantics not established.")
+    # Exact 18 marking animation names and hash destinations.
+    marking=[]
+    def cstr(va):
+        return read(va,128).split(b"\0",1)[0].decode("ascii")
+    def fnv(s):
+        h=0xcbf29ce484222645
+        for v in s.encode("ascii"):h=((h^v)*0x100000001b3)&0xffffffffffffffff
+        return h
+    for r in refs:
+        if "marking_dis_%02d_%s" not in r["text"]:continue
+        pc=r["pc"];args={};suffix_page=None;call=None;destination=None
+        for i in md.disasm(read(pc,0x50),pc):
+            o=i.operands
+            if i.mnemonic=="adrp" and i.op_str.startswith("x4,"):suffix_page=o[1].imm
+            if i.mnemonic=="add" and i.op_str.startswith("x4, x4,") and suffix_page is not None:args["suffix_va"]=suffix_page+o[2].imm
+            if i.mnemonic=="mov" and i.op_str.startswith("w3,"):args["ordinal"]=o[1].imm if o[1].type==ARM64_OP_IMM else 0 if md.reg_name(o[1].reg)=="wzr" else None
+            if i.mnemonic=="bl" and o[0].imm==0x5f66f0:call=i.address;break
+        if call is None or args.get("ordinal") is None or "suffix_va" not in args:raise ValueError("marking call args")
+        for i in md.disasm(read(call+4,0x60),call+4):
+            if i.mnemonic=="str" and i.op_str.startswith("x10, [x19,"):
+                destination=i.operands[1].mem.disp;break
+        if destination is None:raise ValueError("marking hash destination")
+        suffix=cstr(args["suffix_va"]);name=r["text"]%(args["ordinal"],suffix)
+        marking.append(dict(ordinal=args["ordinal"],suffix=suffix,suffix_va=hex(args["suffix_va"]),name=name,hash=f"{fnv(name):016x}",format_call=hex(call),owner_offset=hex(destination)))
+    if len(marking)!=18 or {(r["ordinal"],r["suffix"]) for r in marking}!={(i,s) for i in range(6) for s in ("default","red","blue")}:raise ValueError("marking domain")
+    labels={}
+    for i in range(320):
+        for fmt in ("mes_ribbon_name_%03d","mes_ribbon_info_%03d"):
+            name=fmt%i;h=fnv(name);needle=struct.pack("<Q",h);hits=[]
+            for s in segs:
+                if s["executable"]:continue
+                start=s["file_offset"];end=start+s["size"];p=raw.find(needle,start,end)
+                while p>=0:
+                    hits.append(hex(s["vaddr"]+p-start));p=raw.find(needle,p+1,end)
+            if hits:labels[name]=dict(hash=f"{h:016x}",hits=hits)
+    report["marking_animation_keys"]=marking
+    report["ribbon_literal_hash_candidates"]=labels
     out.mkdir(parents=True,exist_ok=True)
     (out/"initializer_ui_evidence.json").write_text(json.dumps(report,indent=2)+"\n")
     lines=["# Native initializer and UI candidates","",ELF_SHA,"","## Initializer","~~~asm"]
