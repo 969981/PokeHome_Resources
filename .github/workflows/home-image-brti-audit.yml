@@ -8,6 +8,7 @@ on:
       - 'tools/home41_bntx_to_png.py'
       - 'tools/home41_image_reverse_index.py'
       - 'tools/home41_selector_followup.py'
+      - 'tools/home41_image_selector_model.py'
       - 'HomeImageResources/research/pokemon_image_selector_v2.csv'
       - '.github/workflows/home-image-brti-audit.yml'
 permissions:
@@ -25,6 +26,8 @@ jobs:
             57b83ea8c0af21ef26e2519b9580b373_NCA/0
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
       - uses: actions/setup-python@v5
         with:
@@ -43,6 +46,8 @@ jobs:
         run: python tools/home41_icon_brti_audit.py --root . --out audit_output/icons --decode
       - name: Exact image key joins and native selector evidence
         run: python tools/home41_selector_followup.py --root . --icons audit_output/icons --out audit_output/selector
+      - name: Reproduce native image selector static model
+        run: python tools/home41_image_selector_model.py --root . --icons audit_output/icons --out audit_output/selector/native_model_audit.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
