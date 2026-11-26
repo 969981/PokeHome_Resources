@@ -12,3 +12,5 @@
 ## 立绘与小图标像素对账
 
 [PokemonPortraitIconParityAudit](../research/POKEMON_PORTRAIT_ICON_PARITY.md) · [全量 CI](https://github.com/969981/PokeHome_Resources/actions/workflows/home-portrait-icon-parity.yml)。按 3506 原生选择键对比，结果以 CI artifact 为准。
+
+实测分辨率：3522张512×512，16张112×112（1007/1008形态001–004普通/异色，与小图标RGBA完全相等）。3506组对账 PASS_COVERAGE；其余3490组最佳候选均需构图对齐，不能直接缩小替代。详见上方研究文档。
