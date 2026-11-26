@@ -39,4 +39,19 @@ Artifact home41-portrait-icon-parity:
 
 ## 当前状态
 
-代码和 CI 已提交；实际运行结果需以 Actions artifact 为准。未取得结果前不得声称3506组像素一致、已通过测试或来源相同。后续可加入线性光重采样、独立解码验证和原版渲染器证据。
+以下保留本次真实验收结果。后续可加入线性光重采样、独立解码验证和原版渲染器证据。
+
+
+## 2026-11-26 全量实测结果（已验收）
+
+[Run 45808165667](https://github.com/969981/PokeHome_Resources/actions/runs/45808165667) at 4fe883cbf7f5671e1d977761d5c02ed0906a77b5, success; all four synthetic regression tests passed. [Artifact 15109339076](https://github.com/969981/PokeHome_Resources/actions/runs/45808165667/artifacts/15109339076), 7,747,601 bytes, independently downloaded and verified SHA256 944385e4924f8d7cd8241812cf0f939530d8db6f7725aed2b45dda5eb38b1f03 and ZIP CRC. Four files present; 3506 JSONL and CSV pairs.
+
+- PASS_COVERAGE: 3538 portraits, 3506 icons, 3506 pairs, no missing or extra icons. Actual portrait dimensions: 3522 × 512x512 and 16 × 112x112. The 16 low-resolution files are species 1007/1008 forms 001–004, normal and shiny; all 16 have exact RGBA equality with their icons. Other 3490 paired portraits are 512x512; no exact RGBA match after the tested transforms.
+- Categories: exact_canvas_visual 16; near_canvas 0; near_after_alignment 343; needs_visual_review 3147. This is threshold classification, not provenance.
+- Median direct/aligned: premultiplied RGBA MAE 10.526661/3.4153415; SSIM .78877445/.94039095; silhouette IoU .85007745/.96686905. Direct best filters bilinear 3168, box 287, bicubic 51. Best overall 3462 uniform_bbox_BILINEAR, 28 stretch_bbox_BILINEAR, 16 canvas_BICUBIC. For 3490 high-resolution pairs the median icon foreground bbox width/height ratios against direct scaling are .957529/.959184, normalized center offset x=0/y=-.00251115. Strong visual relation and altered composition; no claim of identical native render pipeline.
+- Largest residual MAE: 0701_001_mf_n_00000000_f_n (10.335938), 0006_000_mf_g_00000000_f_r (10.200013), 0006_000_mf_g_00000000_f_n (10.139292). Inspect worst_pairs.png and individual metrics for details; the sheet previews direct Lanczos, not the best aligned image.
+
+## 32 unreferenced portraits
+
+Independently compared complete portrait index blob a20205665c2aa9ee01b8bf78eb70508488ee317f and selector CSV ac401a447ba0f9dff77fbb6a61f5c93ac8be14a7. All 32 extra names have distinct PNG Git blobs; none matches the referenced PNG blobs. This does not establish decoded RGBA uniqueness. 30 have same species/form/color candidate differing in gender tag; 2 (0918 form001 normal/shiny) have only form000 candidate. All are normal/shiny pairs. Species: 0128 (6), 0902 (4), 0905 (4), 0916 (4), 0918 (2), 0924 (2), 0925 (4), 0957 (2), 0958 (2), 0959 (2).
+[Supplemental pixel audit](../../tools/home41_unreferenced_portrait_audit.py) verifies all 3538 PNG blob identities and decoded RGBA/visible equality, and compares same-species form candidates. [Run 45808571811](https://github.com/969981/PokeHome_Resources/actions/runs/45808571811) triggered; its actual results remain pending at this revision. Do not infer historical or unused status without caller/version evidence.
