@@ -7,3 +7,8 @@
 处理：gzip → BNTX/BRTI → mip0 反平铺和解码 → PNG；保留 n/r 等完整原始 stem。立绘3538张；小图标3506张112×112 BC7、3136不同 RGBA；3506原始选择键已闭合。
 
 [立绘索引](../pokemon_image_index.csv) · [小图标索引](../pokemon_icons/index.csv) · [选择器研究](../research/NATIVE_IMAGE_SELECTOR_MODEL.md) · [提取脚本](../../tools/home41_icon_brti_audit.py) · [资源包脚本](../../tools/home41_full_texture_package.py)。
+
+
+## 立绘与小图标像素对账
+
+[PokemonPortraitIconParityAudit](../research/POKEMON_PORTRAIT_ICON_PARITY.md) · [全量 CI](https://github.com/969981/PokeHome_Resources/actions/workflows/home-portrait-icon-parity.yml)。按 3506 原生选择键对比，结果以 CI artifact 为准。
