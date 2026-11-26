@@ -85,12 +85,36 @@ def audit(raw):
         for rel in range(0,s["size"]-7,8):
             x=struct.unpack_from("<Q",raw,st+rel)[0]
             if LO<=x<HI:literals.append(dict(va=hex(s["vaddr"]+rel),target=hex(x)))
+    # Identify candidate slots via ELF64 section metadata and RELA entries.
+    # Some stripped NSO-derived ELF files have no useful section table.
+    sections=[]
+    shoff=struct.unpack_from("<Q",raw,0x28)[0]
+    entsize,count,stridx=struct.unpack_from("<HHH",raw,0x3a)
+    if entsize>=64 and shoff and shoff+entsize*count<=len(raw):
+        headers=[struct.unpack_from("<IIQQQQIIQQ",raw,shoff+i*entsize) for i in range(count)]
+        strings=b""
+        if stridx<count:
+            h=headers[stridx];strings=raw[h[4]:h[4]+h[5]]
+        for h in headers:
+            name=strings[h[0]:].split(b"\0",1)[0].decode("ascii",errors="replace") if strings else ""
+            sections.append(dict(name=name,type=h[1],va=h[3],offset=h[4],size=h[5],entsize=h[9]))
+    for x in literals:
+        va=int(x["va"],16)
+        x["section_candidates"]=[s["name"] for s in sections if s["va"]<=va<s["va"]+s["size"]]
+    relocations=[]
+    for s in sections:
+        if s["type"]!=4 or s["entsize"]<24 or s["offset"]+s["size"]>len(raw):continue
+        for p in range(s["offset"],s["offset"]+s["size"]-23,s["entsize"]):
+            dst,info,addend=struct.unpack_from("<QQq",raw,p)
+            if LO<=addend<HI or LO<=dst<HI or any(dst==int(x["va"],16) for x in literals):
+                relocations.append(dict(section=s["name"],entry_va=hex(s["va"]+p-s["offset"]),destination=hex(dst),type=info&0xffffffff,symbol=info>>32,addend=hex(addend)))
+    init_arrays=[s for s in sections if s["type"]==14 or s["name"] in (".init_array",".preinit_array")]
     from collections import Counter
-    return dict(elf_sha256=ELF_SHA,range=[hex(LO),hex(HI)],page_seeds=pages,events=list(events.values()),literal_pointer_candidates=literals,counts=dict(Counter(x["kind"] for x in events.values())),scope="Straight-line bounded static candidates only; not proof of absence of writers, startup constructors, relocations or runtime aliases.")
+    return dict(elf_sha256=ELF_SHA,range=[hex(LO),hex(HI)],page_seeds=pages,events=list(events.values()),literal_pointer_candidates=literals,sections=sections,relocation_candidates=relocations,init_arrays=init_arrays,counts=dict(Counter(x["kind"] for x in events.values())),scope="Straight-line bounded static candidates only; not proof of absence of writers, startup constructors, relocations or runtime aliases.")
 
 def main():
     p=argparse.ArgumentParser();p.add_argument("--root",type=Path,default=Path("."));p.add_argument("--out",type=Path,required=True);a=p.parse_args()
     report=audit((a.root/NCA/"0/main.elf").read_bytes());a.out.mkdir(parents=True,exist_ok=True)
     (a.out/"default_writer_candidates.json").write_text(json.dumps(report,indent=2)+"\n")
-    print(json.dumps(dict(page_seeds=len(report["page_seeds"]),counts=report["counts"],literal_pointer_candidates=len(report["literal_pointer_candidates"]))))
+    print(json.dumps(dict(page_seeds=len(report["page_seeds"]),counts=report["counts"],literal_pointer_candidates=len(report["literal_pointer_candidates"]),relocations=len(report["relocation_candidates"]),init_arrays=len(report["init_arrays"]))))
 if __name__=="__main__":main()
