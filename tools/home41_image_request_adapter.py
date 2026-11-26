@@ -58,6 +58,44 @@ def ball_display_number(converted: int, current_group: int, target_group: int,
         return 4
     return converted
 
+GAME_GROUP = bytes.fromhex("00010102020404030505070202")
+
+def game_group(game: int) -> int:
+    return GAME_GROUP[game] if 0 <= game < len(GAME_GROUP) else 0
+
+def same_group_ball_number(ball: int, target_game: int) -> int:
+    """0x6B220: original ARM64 branches, unsigned comparisons."""
+    ball &= 0xffffffff
+    target_game &= 0xffffffff
+    if not ball:
+        return 0
+    if target_game in (1, 2):
+        return ball if ball <= 16 and ((0x1101e >> ball) & 1) else 27
+    if target_game == 7:
+        return ball if 28 <= ball <= 37 else 27
+    if 3 <= target_game <= 10:
+        return min(ball, 27)
+    return ball
+
+def side_presence_from_record(record: bytes) -> set[int]:
+    """0x50EC80 TLV container; safe bounds checking for malformed input."""
+    if len(record) < 0xd8:
+        raise ValueError("short side container")
+    pos=0xd8
+    end=pos+u16(record,0xd6)
+    if end>len(record):
+        raise ValueError("side container size exceeds record")
+    seen=set()
+    while pos<end:
+        if end-pos<3:
+            raise ValueError("truncated TLV header")
+        size=u16(record,pos+1)
+        if pos+3+size>end:
+            raise ValueError("truncated TLV payload")
+        seen.add(record[pos])
+        pos+=3+size
+    return seen
+
 class Tests(unittest.TestCase):
     def core(self, species=25, form=0, gender=0, shiny_xor=0, egg=0, decoration=0):
         b=bytearray(0x98)
@@ -89,6 +127,19 @@ class Tests(unittest.TestCase):
         b[0xc]=1
         with self.assertRaises(ValueError):
             from_native_core(b)
+    def test_game_filter(self):
+        self.assertEqual([n for n in range(1,38) if same_group_ball_number(n,1)==n and n!=27],[1,2,3,4,12,16])
+        self.assertEqual(same_group_ball_number(37,7),37)
+        self.assertEqual(same_group_ball_number(4,7),27)
+        self.assertEqual(same_group_ball_number(37,3),27)
+        self.assertEqual(same_group_ball_number(37,11),37)
+        self.assertEqual(game_group(7),3)
+    def test_side_presence(self):
+        b=bytearray(0xd8)
+        data=bytes([1,2,0,9,8,7,1,0,0])
+        struct.pack_into("<H",b,0xd6,len(data))
+        b.extend(data)
+        self.assertEqual(side_presence_from_record(b),{1,7})
     def test_ball(self):
         self.assertEqual(cross_game_ball_number(0),27)
         self.assertEqual(cross_game_ball_number(16),16)
