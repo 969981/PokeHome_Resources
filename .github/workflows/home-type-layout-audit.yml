@@ -1,0 +1,40 @@
+name: HOME type and layout binding
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_type_layout_audit.py'
+      - '.github/workflows/home-type-layout-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install texture2ddecoder==1.0.6 capstone==5.0.6 Pillow==12.0.0
+      - name: Compile and decoder fixtures
+        run: |
+          python -m py_compile tools/home41_type_layout_audit.py
+          python -m unittest discover -s tools -p test_home41_bntx.py -v
+      - name: Type resources, layout bindings and ELF evidence
+        run: python tools/home41_type_layout_audit.py --root . --out type_layout_output
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-type-layout-audit
+          path: type_layout_output/
+          if-no-files-found: error
