@@ -1,0 +1,68 @@
+name: HOME Android native atlas and material audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_android_native_atlas.py'
+      - '.github/workflows/home-android-native-atlas.yml'
+permissions:
+  contents: write
+concurrency:
+  group: home41-android-native-atlas
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/research/home-image-resource-audit'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            tools/home41_android_native_atlas.py
+            Unpack/Android/4.1.0/il2cpp/script.json
+            HomeImageResources/research/android_native_atlas
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install UnityPy==1.25.4 Pillow==12.0.0 capstone==5.0.6 pyelftools==0.32
+      - name: Fetch pinned original source and reconstruct serialized streams
+        run: |
+          git init "$RUNNER_TEMP/home_android"
+          git -C "$RUNNER_TEMP/home_android" remote add origin https://github.com/969981/Home_Android.git
+          git -C "$RUNNER_TEMP/home_android" fetch --depth=1 origin 46f4dd1827c70236bcd3b63faf21f0384798dffb
+          git -C "$RUNNER_TEMP/home_android" checkout --detach FETCH_HEAD
+          src="$RUNNER_TEMP/home_android"
+          python "$src/tools/home.py" audit --version 4.1.0
+          python "$src/tools/home.py" extract --version 4.1.0
+          python "$src/tools/reassemble_splits.py" --version 4.1.0
+          python "$src/tools/home.py" scan --version 4.1.0
+      - name: Resolve PPtrs and inspect native bytes
+        run: |
+          src="$RUNNER_TEMP/home_android"
+          raw="$src/Unpack/4.1.0/apk/raw"
+          apk="$(find "$src/ROMS/4.1.0" -maxdepth 1 -name '*.apk' -print -quit)"
+          python -m py_compile tools/home41_android_native_atlas.py
+          python tools/home41_android_native_atlas.py --apk "$apk" --elf "$raw/lib/arm64-v8a/libil2cpp.so" --raw "$raw" --reassembled "$src/Unpack/4.1.0/unity/reassembled" --candidates "$src/reports/4.1.0/resource_candidates.csv" --methods Unpack/Android/4.1.0/il2cpp/script.json --out HomeImageResources/research/android_native_atlas
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-android-native-atlas
+          path: HomeImageResources/research/android_native_atlas/
+          if-no-files-found: warn
+      - name: Persist derived evidence only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add HomeImageResources/research/android_native_atlas/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'research: archive Android native atlas and material evidence'
+          for attempt in 1 2 3; do
+            git fetch origin refs/heads/research/home-image-resource-audit
+            git rebase FETCH_HEAD
+            if git push origin HEAD:refs/heads/research/home-image-resource-audit; then exit 0; fi
+          done
+          exit 1
