@@ -1,0 +1,37 @@
+name: HOME uv Pokemon export
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_export_pokemon_images_uv.py'
+      - '.github/workflows/home-uv-pokemon-export.yml'
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon
+            HomeImageResources/pokemon
+            HomeImageResources/pokemon_icons
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install uv
+      - name: Export native Alcremie portraits and icons
+        run: uv run --python 3.12 tools/home41_export_pokemon_images_uv.py --species 869 --verify-existing --out uv_export
+      - name: Check coverage
+        run: |
+          python -c "import json; s=json.load(open('uv_export/summary.json')); assert s['status']=='PASS' and s['selected_keys']==s['portraits']==s['icons']==252 and s['verified_existing'],s"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-uv-alcremie
+          path: uv_export/
+          if-no-files-found: warn
