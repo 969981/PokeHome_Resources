@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """HOME 4.1.0 image selection: offline model from SHA-bound Ghidra and ARM64 evidence.
-Not native execution parity. Missing species returns None (native constant unresolved).
+Not native execution parity. Missing species uses SHA-qualified native constant.
 Inputs are raw native request fields, not arbitrary PKM fields.
 """
 from __future__ import annotations
@@ -61,7 +61,7 @@ def resolve(rows, species, form, color, view, gender, variant, decoration, speci
         species,form,color,gender,variant,decoration = 0,int(species==490),0,2,0,0
     current = [r for r in rows if r[0] == species]
     if not current:
-        return None, ["missing_species_constant_unresolved"]
+        return "0000_000_uk_n_00000000_f_n", ["missing_species_constant"]
     trace=[]
     for col,req,label in ((1,form,"form"),(2,int(bool(color)),"color"),(3,view&1,"view")):
         chosen = next((v for v in (req,0) if any(r[col]==v for r in current)),current[0][col])
@@ -112,7 +112,7 @@ def audit(root, out, icons=None):
         {"request":[25,99,1,1,1,2,0],"expected":"0025_000_mf_g_00000000_f_r"},
         {"request":[869,0,0,0,1,2,7],"expected":"0869_000_fo_g_00000000_f_n"},
         {"request":[1,0,0,0,2,0,0],"expected":"0001_000_mf_n_00000000_f_n"},
-        {"request":[99999,0,0,0,0,0,0],"expected":None},
+        {"request":[99999,0,0,0,0,0,0],"expected":"0000_000_uk_n_00000000_f_n"},
     ]
     for case in samples:
         case["actual"],case["trace"]=resolve(rows,*case["request"])
@@ -122,7 +122,7 @@ def audit(root, out, icons=None):
             "item_sha256":hashlib.sha256(item).hexdigest(),"source_order_match":True,
             "selector_rows":len(rows),"reachable_model_rows":len(rows)-len(misses),"misses":misses,
             "item_table_offset":0x364+2*u16(item,2)+2*item[8],"item_inputs":mapping,
-            "samples":samples,"missing_species_constant":"ELF VA 0x61E360 not read"}
+            "samples":samples,"missing_species_constant":"ELF VA 0x61E360: 0000_000_uk_n_00000000_f_n"}
     if icons:
         with (icons/"items/brti_index.csv").open(newline="",encoding="utf-8") as f:
             names=[r["raw_name"] for r in csv.DictReader(f)]
