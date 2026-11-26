@@ -5,6 +5,7 @@ on:
     branches: [research/home-image-resource-audit]
     paths:
       - 'tools/home41_default_object_audit.py'
+      - 'tools/home41_default_writer_audit.py'
       - '.github/workflows/home-image-default-object-audit.yml'
 permissions:
   contents: read
@@ -23,6 +24,7 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install capstone==5.0.6
       - run: python tools/home41_default_object_audit.py --root . --out default_output
+      - run: python tools/home41_default_writer_audit.py --root . --out default_output
       - uses: actions/upload-artifact@v4
         with:
           name: home41-default-object-audit
