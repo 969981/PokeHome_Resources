@@ -2,6 +2,11 @@ name: HOME 4.1.0 image archive to editor develop
 
 on:
   workflow_dispatch:
+    inputs:
+      require_publish:
+        description: 'Fail if direct private develop publication is unavailable'
+        type: boolean
+        default: true
   push:
     branches: [research/home-image-resource-audit]
     paths:
@@ -79,15 +84,45 @@ jobs:
             ${{ runner.temp }}/home41-pikachu-audit/summary.json
             ${{ runner.temp }}/home41-ui-audit/origin_swizzle/audit.json
           if-no-files-found: warn
-      - name: Require explicitly configured private editor credential
+      - name: Build portable verified archive for local or direct import
+        shell: bash
+        run: |
+          set -euo pipefail
+          B="$RUNNER_TEMP/home41-images"
+          python -B "$B/tools/home41_export_editor_images.py" --verify-bundle "$B"
+          tar -C "$B" -czf "$RUNNER_TEMP/home41-images-4.1.0.tar.gz" .
+          cd "$RUNNER_TEMP"
+          sha256sum home41-images-4.1.0.tar.gz > home41-images-4.1.0.tar.gz.sha256
+      - name: Upload full verified resource bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: home41-images-full-4.1.0
+          path: |
+            ${{ runner.temp }}/home41-images-4.1.0.tar.gz
+            ${{ runner.temp }}/home41-images-4.1.0.tar.gz.sha256
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
+      - name: Check private editor credential
+        id: credential
         env:
           TARGET_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
         run: |
           if [ -z "$TARGET_TOKEN" ]; then
-            echo "::error::Configure HOME_CORE_EDITOR_PUSH_TOKEN with Contents read/write on 969981/HOME-Live-Plugin-CHS."
-            exit 1
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Verified archive ready; private develop publication BLOCKED: HOME_CORE_EDITOR_PUSH_TOKEN is absent."
+            echo "### Publication BLOCKED: missing HOME_CORE_EDITOR_PUSH_TOKEN" >> "$GITHUB_STEP_SUMMARY"
+            echo "Download home41-images-full-4.1.0 and use the destination repository local importer. No private branch was changed." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Enforce explicitly requested publication
+        if: steps.credential.outputs.available != 'true' && inputs.require_publish == true
+        run: |
+          echo "::error::Direct publication requested; configure HOME_CORE_EDITOR_PUSH_TOKEN on the source repository."
+          exit 1
       - uses: actions/checkout@v4
+        if: steps.credential.outputs.available == 'true'
         with:
           repository: 969981/HOME-Live-Plugin-CHS
           ref: develop
@@ -99,6 +134,7 @@ jobs:
             docs/progress
             docs/devlog
       - name: Copy verified archive and publish only owned paths to develop
+        if: steps.credential.outputs.available == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -149,3 +185,4 @@ jobs:
           git commit -m "data(home41): import original image resources, converters and evidence"
           git push origin HEAD:develop
           echo "Published target commit $(git rev-parse HEAD)"
+          echo "### Published develop commit $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
