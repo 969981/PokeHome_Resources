@@ -6,33 +6,42 @@ on:
     paths:
       - 'tools/home41_icon_brti_audit.py'
       - 'tools/home41_bntx_to_png.py'
+      - 'tools/home41_image_reverse_index.py'
       - '.github/workflows/home-image-brti-audit.yml'
 permissions:
   contents: read
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |
             tools
+            HomeImageResources/research
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
-            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_item
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install decoders
+        run: python -m pip install texture2ddecoder==1.0.6 capstone==5.0.6
       - name: Compile and existing BNTX tests
         run: |
-          python -m py_compile tools/home41_icon_brti_audit.py tools/home41_bntx_to_png.py
+          python -m py_compile tools/home41_icon_brti_audit.py tools/home41_bntx_to_png.py tools/home41_image_reverse_index.py
           python -m unittest discover -s tools -p test_home41_bntx.py -v
+      - name: All SARC names and missing item keys
+        run: python tools/home41_image_reverse_index.py --root . --out audit_output/reverse --mode archives
+      - name: ELF image resource references
+        run: python tools/home41_image_reverse_index.py --root . --out audit_output/elf --mode elf
       - name: Audit metadata and extract supported PNG
-        run: |
-          python tools/home41_icon_brti_audit.py --root . --out audit_output --decode
+        run: python tools/home41_icon_brti_audit.py --root . --out audit_output/icons --decode
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: home41-icon-brti-audit
           path: audit_output/
-          if-no-files-found: warn
+          if-no-files-found: error
