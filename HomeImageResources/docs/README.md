@@ -25,6 +25,7 @@ version: "4.1.0"
 | 属性、语言、游戏版本、出身标记 | 属性360/179；语言100/10；版本25；出身24 | [10 原版图标路径、图览与转换](10-Type-Language-Version-Origin.md) | [语言图片](../languages/switch/) / [版本及出身图片](../origins/switch/) |
 | 出身标记通道修复 | 24 PNG；BRTI swizzle已恢复，运行时颜色待验证 | [11 出身标记原始通道恢复](../research/origin_swizzle/README.md) | [普通](../research/origin_swizzle/normal/) / [color](../research/origin_swizzle/color/) |
 | 原版图标调用验收 | Rust 9 项集成测试通过；PH4 语言及出身已闭合 | [12 原生图标调用与 Tauri2 接入](11-Native-Icon-Integration.md) | [原生接口](../rust/home-image-resource-core/src/native_icons.rs) |
+| 原版名称 PNG 库 | 419 张逻辑 PNG，保留原始 BRTI 名称 | [原版名称图览](../native_names/README.md) | [映射索引](../native_names/index.json) |
 | 其他 UI | 旧包，语义待验证 | [07 提取流程与来源](07-Pipeline.md) | [来源索引](../asset_source_index.csv) |
 
 ## 使用规则
