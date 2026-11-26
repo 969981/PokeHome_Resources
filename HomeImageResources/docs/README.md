@@ -18,7 +18,7 @@ version: "4.1.0"
 | 精灵球 | 38 原生显示键，含占位 | [03 精灵球与道具](03-Balls-Items.md) | [Core](../core/resource_core.json) |
 | 普通道具 | 有文本/记录；图片尚未闭合 | [03 精灵球与道具](03-Balls-Items.md) | [历史道具索引](../item_image_index.csv) |
 | 缎带与证章 | 有原生文本，独立图片未确认 | [04 缎带证章](04-Ribbons-Marks.md) | [缎带原始文本](../../57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message/Simp_Chinese/megaturtle/ribbon.dat) |
-| 盒子标记 | 30 Switch 层纹理 + Android 12 符号目标 | [05 盒子标记](05-Box-Markings.md) | [补充素材目录](../supplemental/README.md)（待新 CI 归档） |
+| 盒子标记 | 30 Switch 层纹理 + Android 12 符号目标 | [05 盒子标记](05-Box-Markings.md) | [补充素材目录](../supplemental/README.md)（已归档） |
 | 奖章与成就 | Android 图集、材质、UI | [06 奖章成就](06-Achievements.md) | [原始 Achievement 图集](../../Unpack/Android/4.1.0/images/9eaea10cde8e_19_sactx-0-1024x1024-ETC2-Achievement-ccbb449d.png) |
 | 其他 UI | 旧包，语义待验证 | [07 提取流程与来源](07-Pipeline.md) | [来源索引](../asset_source_index.csv) |
 

@@ -6,4 +6,4 @@ Switch 两个直接源：[mtt_context_marking_00.arc](../../57b83ea8c0af21ef26e2
 
 Android [BankMarks 图集](../../Unpack/Android/4.1.0/images/8e869aaca31e_25_sactx-0-256x256-ETC2-BankMarks-03c791f1.png)；现有 UnityPy Sprite 名称 circle/square/triangle/star/diamond/heart 各含 active 与 none 文件（名称状态，不等同 native 状态编码）。
 
-[原始候选表](../research/targeted_sarc_scan.json) · [补充素材预览](../supplemental/README.md)（待 CI）。
+[原始候选表](../research/targeted_sarc_scan.json) · [补充素材预览](../supplemental/README.md)（已归档）。

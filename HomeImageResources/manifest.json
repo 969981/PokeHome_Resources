@@ -52,5 +52,41 @@
     "item_image_index.csv",
     "texture_atlas_index.json",
     "asset_source_index.csv"
-  ]
+  ],
+  "current_verified_snapshot": {
+    "home_version": "4.1.0",
+    "checked_commit": "5e3fcd13f6efb6c146d9557391d100f953fd5dc5",
+    "note": "Top-level legacy statistics retained for original audit. Current package counts below; supplemental source rows may overlap older UI folders.",
+    "pokemon_portraits": 3538,
+    "pokemon_icons": 3506,
+    "ball_display_png": 38,
+    "type_distinct_png": 179,
+    "type_logical_keys": 360,
+    "switch_brti": {
+      "logical": 9377,
+      "decoded": 9362,
+      "unsupported": 15
+    },
+    "supplemental": {
+      "source_rows": 97,
+      "distinct_rgba": 94,
+      "switch": 30,
+      "android": 67,
+      "box_marking": 42,
+      "medal_material": 8,
+      "medal_ui": 25,
+      "achievement_atlas": 1,
+      "message_rows": 54738
+    },
+    "unresolved": [
+      "general_held_item_image",
+      "ribbon_image",
+      "encounter_mark_image",
+      "achievement_id_to_sprite",
+      "runtime_cache",
+      "shader_parity"
+    ],
+    "docs": "docs/README.md",
+    "supplemental_index": "supplemental/index.json"
+  }
 }
