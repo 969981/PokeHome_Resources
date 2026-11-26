@@ -34,8 +34,8 @@ class SchemaV1(unittest.TestCase):
     def bad(self,sql,args=()):
         with self.assertRaises(sqlite3.IntegrityError):self.con.execute(sql,args)
     def test_idempotence(self):
-        self.assertEqual(migrate(self.con),1)
-        self.assertEqual(self.con.execute("PRAGMA user_version").fetchone()[0],1)
+        self.assertEqual(migrate(self.con),len(__import__('schema_manager').migration_files()))
+        self.assertEqual(self.con.execute("PRAGMA user_version").fetchone()[0],len(__import__("schema_manager").migration_files()))
     def test_version_isolation_and_raw_zero(self):
         self.assertEqual(self.con.execute("SELECT count(*) FROM native_pokemon_keys").fetchone()[0],4)
         self.bad("INSERT INTO pokemon_species VALUES(0)")
