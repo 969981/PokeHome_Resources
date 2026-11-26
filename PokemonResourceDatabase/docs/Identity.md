@@ -26,3 +26,6 @@ UUIDv5 固定 namespace：`7fa765ae-c864-5c47-9d8b-187e38df7a1b`（本项目约�
 - 正式升级前先备份 SQLite 文件（关闭写入或使用 SQLite backup API），对副本执行验证。V1 不提供自动降级；回退用旧 CSV + 旧 schema 重新构建或备份恢复。
 - 旧 CSV 必须有 schema_version 和 source revision manifest；字段重命名或拆表提供独立迁移脚本。禁止默默用空字符串代替 SQL NULL。
 - 多版本并行写入需由上层构建器串行化。生成物仅发布经完整验收的快照。
+
+## 可执行 ID 规范
+[identity.py](../tools/identity.py) 是 V1 参考实现。appearance UUIDv5 输入固定为 JSON 数组 `["appearance",form_uid,gender_id,color_id,variant_id,[[attribute_id,value_id],...]]`，subject 为 `["subject",type_id,stable_business_id]`。两个域隔离；重复属性报错；保留完全透明 RGB。导入器必须调用这些函数而非另造 ID。SQL 不自动重算哈希，后续导入校验负责执行。
