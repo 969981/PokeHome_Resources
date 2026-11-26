@@ -1,6 +1,8 @@
 //! Static read-only HOME 4.1.0 PH4 image model. No mutation, network or decryption.
 use serde::Deserialize;
 use std::{collections::{BTreeMap,HashSet},path::{Path,PathBuf}};
+mod type_image;
+pub use type_image::{TypeImageResolver,TypeAsset,TypeKind,LANGUAGES};
 const ELF:&str="bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a";
 const MISSING:&str="0000_000_uk_n_00000000_f_n";
 const ORIGIN:[u8;12]=[1,1,2,2,0,3,4,4,5,5,7,6];
@@ -75,7 +77,7 @@ pub struct PokemonAsset{pub key:[u32;7],pub stem:String,pub icon:String,pub port
 pub struct BallAsset{pub input:u32,pub item_id:u32,pub raw_name:String,pub path:String}
 #[derive(Deserialize)] struct BallRows{rows:Vec<BallAsset>}
 #[derive(Deserialize)] struct Index{schema_version:u32,home_version:String,elf_sha256:String,pokemon:Vec<PokemonAsset>,ball_display:BallRows}
-pub struct HomeImageResourceCore{root:PathBuf,index:Index,species:BTreeMap<u32,Vec<usize>>}
+pub struct HomeImageResourceCore{root:PathBuf,index:Index,species:BTreeMap<u32,Vec<usize>>,types:TypeImageResolver}
 #[derive(Debug)]
 pub struct Resolved<'a>{pub pokemon:&'a PokemonAsset,pub ball:&'a BallAsset,pub icon_path:PathBuf,pub portrait_path:PathBuf,pub ball_path:PathBuf}
 impl HomeImageResourceCore{
@@ -91,7 +93,9 @@ impl HomeImageResourceCore{
         }
         let ids:HashSet<_>=index.ball_display.rows.iter().map(|r|r.input).collect();
         if ids.len()!=38 || !(0..=37).all(|i|ids.contains(&i)) || !stems.contains(MISSING){return Err(Error::InvalidIndex("ball domain or missing stem".into()));}
-        Ok(Self{root,index,species})
+        let type_text=std::fs::read_to_string(root.join("core/types/index.json")).map_err(|e|Error::InvalidIndex(e.to_string()))?;
+        let types=TypeImageResolver::from_json(&type_text)?;
+        Ok(Self{root,index,species,types})
     }
     pub fn pokemon_assets(&self)->&[PokemonAsset]{&self.index.pokemon}
     pub fn ball_assets(&self)->&[BallAsset]{&self.index.ball_display.rows}
