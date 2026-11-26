@@ -22,6 +22,7 @@ version: "4.1.0"
 | 奖章与成就 | Android 图集、材质、UI | [06 奖章成就](06-Achievements.md) | [原始 Achievement 图集](../../Unpack/Android/4.1.0/images/9eaea10cde8e_19_sactx-0-1024x1024-ETC2-Achievement-ccbb449d.png) |
 | 跨游戏资源数据库 Schema V1 | 规范化结构与约束，待导入 | [数据库首页](../../PokemonResourceDatabase/README.md) | [ER 图](../../PokemonResourceDatabase/docs/ER.md) |
 | 原版图片 uv 提取 | 立绘 / 小图标 / 原生选择键 | [09 uv 提取指南](09-Pokemon-UV-Extraction.md) | [Python 脚本](../../tools/home41_export_pokemon_images_uv.py) |
+| 属性、语言、游戏版本、出身标记 | 属性360/179；语言100/10；版本25；出身24 | [10 原版图标路径、图览与转换](10-Type-Language-Version-Origin.md) | [语言图片](../languages/switch/) / [版本及出身图片](../origins/switch/) |
 | 其他 UI | 旧包，语义待验证 | [07 提取流程与来源](07-Pipeline.md) | [来源索引](../asset_source_index.csv) |
 
 ## 使用规则
