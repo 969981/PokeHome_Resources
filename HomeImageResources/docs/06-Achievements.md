@@ -7,3 +7,7 @@ Android 原版现有解包发现 [Achievement 图集](../../Unpack/Android/4.1.0
 ![Achievement 图集](../../Unpack/Android/4.1.0/images/9eaea10cde8e_19_sactx-0-1024x1024-ETC2-Achievement-ccbb449d.png)
 
 处理：复用 UnityPy 导出，原样复制 PNG、校验像素 SHA、保存容器前缀及 PathID 候选。需从 SpriteAtlas packed sprite、rect、rotation、pivot 及原生 AchievementID 查到确定映射才可裁切。不可用连通域直接假定 ID。奖章模型贴图不等于成品图片。[补充索引](../supplemental/index.json)（已归档）。[Unity 审计](../../Unpack/Android/4.1.0/_meta/unity_summary.json) · [运行时缓存状态](../../Unpack/Android/4.1.0/_meta/runtime_inventory_summary.json)。
+
+## 2026-11-26 原生引用审计
+
+已确认 Achievement SpriteAtlas 有 12 条外部 PPtr，奖章 OBJ 有 218 顶点和 144 三角形；业务 ID 与 UV 尚未闭合。详见 [Android 原生证据](../research/ANDROID_ACHIEVEMENT_MEDAL_EVIDENCE.md) · [12 条原始引用](../research/achievement_packed_refs.csv)。

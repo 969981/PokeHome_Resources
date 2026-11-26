@@ -1,0 +1,35 @@
+name: HOME Android image evidence
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_android_image_evidence.py'
+      - '.github/workflows/home-android-image-evidence.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/home41_android_image_evidence.py
+            Unpack/Android/4.1.0/_meta
+            Unpack/Android/4.1.0/il2cpp/script.json
+            Unpack/Android/4.1.0/models/7376f9962a00_1_Medal.obj
+            HomeImageResources/supplemental/index.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m py_compile tools/home41_android_image_evidence.py
+          python tools/home41_android_image_evidence.py --root . --out android_image_evidence.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: home41-android-image-evidence
+          path: android_image_evidence.json
+          if-no-files-found: error
