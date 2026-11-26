@@ -97,9 +97,9 @@ def build(src,out,profile,quality_report=None):
     assert len(core["pokemon"])==3506 and len(core["ball_display"]["rows"])==38 and len(types["rows"])==360
     paths={}
     for r in core["pokemon"]:
-        for kind in ("icon","portrait"):
+        for kind in (("icon",) if profile=="icons" else ("icon","portrait")):
             paths[r[kind]]=kind
-    assert len(paths)==7012
+    assert len(paths)==(3506 if profile=="icons" else 7012)
     for r in core["ball_display"]["rows"]: paths[r["path"]]="ui"
     for r in types["rows"]: paths[r["path"]]="ui"
     for r in aliases:
@@ -167,7 +167,19 @@ def verify(root):
     idx=read(root/"runtime-index.json");m=read(root/"runtime-manifest.json")
     assert idx["schema_version"]==m["schema_version"]==1 and idx["home_version"]==m["home_version"]=="4.1.0"
     assert set(idx["entries"].values())==set(idx["blobs"])
-    assert len(idx["entries"])==7288
+    profile=idx["profile"]
+    assert profile==m["profile"] and profile in ("icons","compact","balanced","full")
+    assert len(idx["entries"])==(3782 if profile=="icons" else 7288)
+    core=read(root/"core/resource_core.json")
+    icon_paths={r["icon"] for r in core["pokemon"]}
+    portrait_paths={r["portrait"] for r in core["pokemon"]}
+    assert len(icon_paths)==len(portrait_paths)==3506
+    paths=set(idx["entries"])
+    assert icon_paths<=paths
+    assert (not paths.intersection(portrait_paths)) if profile=="icons" else portrait_paths<=paths
+    assert m["logical_counts"]=={"icon":3506,"portrait":0 if profile=="icons" else 3506,"ui":276}
+    icon_ids={idx["entries"][p] for p in icon_paths}
+    assert all(idx["blobs"][h]["mime"]=="image/webp" for h in icon_ids)
     assert {p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file()}==set(m["files"])|{"runtime-manifest.json"}
     for rel,row in m["files"].items():
         p=checked(root,rel)
@@ -181,6 +193,7 @@ def verify(root):
             with Image.open(io.BytesIO(data)) as im:
                 if im.format!=("WEBP" if row["mime"]=="image/webp" else "PNG"): raise ValueError("mime")
                 im.load()
+                if h in icon_ids and im.size!=(112,112): raise ValueError("icon dimensions "+h)
     if pos!=idx["pack_bytes"] or pos!=(root/"images.pack").stat().st_size: raise ValueError("pack length")
     print("PASS runtime bundle:",len(idx["entries"]),"logical assets,",len(idx["blobs"]),"physical blobs")
 
@@ -188,7 +201,7 @@ if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--source",type=Path,default=Path("HomeImageResources"))
     p.add_argument("--out",type=Path,required=True)
-    p.add_argument("--profile",choices=("compact","balanced","full"),default="compact")
+    p.add_argument("--profile",choices=("icons","compact","balanced","full"),default="compact")
     p.add_argument("--verify",action="store_true")
     p.add_argument("--quality-report",type=Path,help="external CSV of unique balanced portrait quality")
     a=p.parse_args();out=a.out.resolve();src=a.source.resolve()
