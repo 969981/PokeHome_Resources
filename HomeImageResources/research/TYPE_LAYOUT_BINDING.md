@@ -21,3 +21,10 @@
 
 ## 后续门槛
 原生类型输入 -> 资源名称及语言分支；材质颜色/BC1 alpha 与 native shader 对账；对复杂 mat1 flags 补齐字段并验证裁切；完整运行时证据后再接入 HomeTypeImageResolver。当前不宣称完成全量映射或渲染复原。
+
+## 实际验收：run 45770241935
+- 10/10 语言包、360/360 PNG；179 个不同 RGBA（18 symbol、161 text）。Artifact 15093068740 ZIP SHA256 2da157352371011d3eab637f958dd51da2b6bf2a18cb34b2e95651937ea87030，独立下载核验 CRC 和 360 个 PNG/RGBA hash、尺寸均通过。文本图 alpha 全 255，符号 alpha 0..255；不证明原版 shader 颜色。
+- 1608 FLYT，0 解析错误；6904 pic1：5178 exact local、1532 no texture、194 unsupported。5069 normalized full rect，无 partial rect。194 未解码材质: 0x415/88B 110，0x8015/104B 44，0x6a/128B 39，0x80155/212B 1。不能宣称全部材质和 UV 已恢复。
+- ELF 39 strings / 7 candidate refs；0x2D3AFC 入口在 0x2D3B14/18 加载 type_dummy.arc，调用 0x2CC3C4 后 0x2D3B34 -> 0x2D3B98；0x66ADC/0x66BCC 为 typename DAT/TBL 加载。0x56F4CC 的候选来自跨寄存器覆盖的 ADRP/ADD 配对，不能当作 selector；需要真正的地址表/重定位/消费者。
+- 全量纹理 run 45769361763 成功：9362/9377 logical decoded，15 unsupported (0x0501)；6241 unique member textures，6235 decoded，4306 RGBA hash。上一轮 core CI 45769854022 解码/路径/API 验证通过，唯 Git push 遇并发分支前进失败；新增非强推 fetch/rebase 重试，尚待验收。原始资源不变。
+- 新增 type pointer/RELATIVE relocation 扫描，追踪连续表及表基址引用；目前尚未执行完成，不声称 TypeID 原生选择器已恢复。

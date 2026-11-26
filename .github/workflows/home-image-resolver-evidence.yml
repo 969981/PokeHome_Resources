@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           sparse-checkout: |
             tools
             HomeImageResources
@@ -61,7 +62,12 @@ jobs:
           git add HomeImageResources/core/
           if ! git diff --cached --quiet; then
             git commit -m 'assets: archive static HOME image resource core'
-            git push origin HEAD:refs/heads/research/home-image-resource-audit
+            for attempt in 1 2 3; do
+              git fetch origin refs/heads/research/home-image-resource-audit
+              git rebase FETCH_HEAD
+              if git push origin HEAD:refs/heads/research/home-image-resource-audit; then exit 0; fi
+            done
+            exit 1
           fi
       - uses: actions/upload-artifact@v4
         if: always()

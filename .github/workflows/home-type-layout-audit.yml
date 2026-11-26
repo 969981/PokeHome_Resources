@@ -5,6 +5,7 @@ on:
     branches: [research/home-image-resource-audit]
     paths:
       - 'tools/home41_type_layout_audit.py'
+      - 'tools/home41_type_native_tables.py'
       - '.github/workflows/home-type-layout-audit.yml'
 permissions:
   contents: read
@@ -32,6 +33,8 @@ jobs:
           python -m unittest discover -s tools -p test_home41_bntx.py -v
       - name: Type resources, layout bindings and ELF evidence
         run: python tools/home41_type_layout_audit.py --root . --out type_layout_output
+      - name: Native type pointer and relocation tables
+        run: python tools/home41_type_native_tables.py --root . --out type_layout_output
       - uses: actions/upload-artifact@v4
         if: always()
         with:
