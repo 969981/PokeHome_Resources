@@ -33,13 +33,15 @@ def run(root,out):
     reports=[];lines=["# Android HOME 4.1.0 ARM64 method windows","","libil2cpp SHA256 "+SHA,""]
     for m in methods:
         name=m["Name"];va=m.get("Address")
-        if name not in NAMES or not isinstance(va,int) or va<=0:continue
+        if not (name in NAMES or re.search(r"^(?:StaticSpriteManager\$\$(?:\.ctor|Awake|Start|Initialize|Init|Load|Set|Create|Register|On)|PokemonRibbonUtility\$\$(?:MakeHasRibbonList|GetHasRibbonList)|MasterDataManagerBase\$\$(?:GetMasterDataSingle|GetMasterData)|MD_Data_Ribbon\$\$|MD_Data_Achievement\$\$)",name)) or not isinstance(va,int) or va<=0:continue
         idx=bisect.bisect_right(addresses,va)
         if idx==len(addresses):continue
         end=addresses[idx];size=end-va
-        if size<=0 or size>0x10000:raise ValueError(f"method boundary {name} {size}")
+        if size<=0 or size>0x10000:continue
         ins=list(md.disasm(read(va,size),va))
-        if len(ins)*4!=size:raise ValueError(f"decode incomplete {name}")
+        if len(ins)*4!=size:
+            if name in NAMES:raise ValueError(f"decode incomplete {name}")
+            continue
         calls=[];literals=[];refs=[];pages={}
         def reg(r):
             n=md.reg_name(r)
@@ -84,7 +86,18 @@ def run(root,out):
             end=dump.find("\n}",m.end())
             chunk=dump[m.start():end+2]
             classes[name]=chunk[:120000]
+    header=(a/"il2cpp/il2cpp.h").read_text(encoding="utf-8-sig")
+    native_structs={}
+    for name in CLASSES:
+        for suffix in ("_Fields","_o"):
+            key=name+suffix
+            match=re.search(r"^struct "+re.escape(key)+r"\b[^\n]*\n\{",header,re.M)
+            if not match:match=re.search(r"^struct "+re.escape(key)+r"\b[^\n]*\{",header,re.M)
+            if match:
+                end=header.find("\n};",match.end())
+                if end>=0:native_structs[key]=header[match.start():end+3]
     out.mkdir(parents=True,exist_ok=True)
+    (out/"android_native_structs.json").write_text(json.dumps(native_structs,indent=2,ensure_ascii=False)+"\n")
     (out/"android_ribbon_methods.json").write_text(json.dumps(dict(lib_sha256=SHA,methods=reports,scope="Original ARM64 direct call and metadata address candidates; no runtime invocation or resolved business ID"),indent=2,ensure_ascii=False)+"\n")
     (out/"android_ribbon_methods.md").write_text("\n".join(lines))
     (out/"android_ribbon_classes.json").write_text(json.dumps(classes,indent=2,ensure_ascii=False)+"\n")
