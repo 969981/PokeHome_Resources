@@ -95,7 +95,11 @@ def export(root,dst,out):
             if not re.fullmatch(r"ribbon(?:_[A-Z]+)?|itemname(?:_.*)?|[A-Z]+_iteminfo",tbl.stem): continue
             dat=tbl.with_suffix(".dat")
             if not dat.exists(): continue
-            labels=ahtb_labels(tbl.read_bytes()); rows=dat_lines(dat.read_bytes())
+            try:
+                labels=ahtb_labels(tbl.read_bytes()); rows=dat_lines(dat.read_bytes())
+            except (ValueError, UnicodeError) as e:
+                table_summary.append(dict(language=lang,table=tbl.stem,status="parse_error",reason=repr(e)))
+                continue
             if len(labels)==len(rows)+1 and labels[-1][0].lower().endswith("max"): labels=labels[:-1]
             if len(labels)!=len(rows):
                 table_summary.append(dict(language=lang,table=tbl.stem,status="count_mismatch",labels=len(labels),texts=len(rows)))
@@ -132,7 +136,7 @@ def export(root,dst,out):
     dump(dst/"summary.json",summary);dump(out/"summary.json",summary)
     # GitHub + Obsidian compatible Markdown links and previews; same package relative paths.
     lines=["# 补充素材索引","","> 本页由审计脚本生成。图片为原始纹理/既有 Unity 导出；未证实的业务 ID 不作为 Resolver。","",
-           "[返回资源导航](../../docs/README.md) · [JSON 索引](index.json) · [统计](summary.json) · [文本字典](message_dictionary.csv)",""]
+           "[返回资源导航](../docs/README.md) · [JSON 索引](index.json) · [统计](summary.json) · [文本字典](message_dictionary.csv)",""]
     groups=defaultdict(list)
     for r in assets:groups[r["category"]].append(r)
     for cat,rs in sorted(groups.items()):

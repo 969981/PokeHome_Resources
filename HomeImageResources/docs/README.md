@@ -24,5 +24,5 @@ version: "4.1.0"
 
 ## 使用规则
 - 生产 Resolver 仅使用已证实 ID 域；原始资源、候选、确认映射分层保存。
-- [处理流程](07-Pipeline.md) · [已知缺口](08-Coverage.md) · [原生 Core](../research/HOME_IMAGE_RESOURCE_CORE.md) · [Rust Core](../rust/Cargo.toml)。
+- [处理流程](07-Pipeline.md) · [已知缺口](08-Coverage.md) · [原生 Core](../research/HOME_IMAGE_RESOURCE_CORE.md) · [Rust Core](../rust/home-image-resource-core/Cargo.toml)。
 - 原始素材权利归权利人；不修改 NCA、Unpack 或编辑器。
