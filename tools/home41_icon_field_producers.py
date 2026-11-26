@@ -7,8 +7,8 @@ from home41_elf_resource_xrefs import elf_segments,signed
 from home41_elf_disasm_windows import window
 from capstone import Cs,CS_ARCH_ARM64,CS_MODE_ARM
 
-TARGETS={0x2069d0,0x6af80,0x6a6f8,0x10b890,0x2d5164,0x2d5144,0x2d5154,0x2c594c,0x2c596c,0x2c5654,0x2c68d8}
-CENTERS={0x2069d0:(0x30,0x220),0x6af80:(0x40,0x200),0x13ad30:(0x700,0x110),0x13ada0:(0x100,0x100),0x10b890:(0x30,0x300),0x6a6f8:(0x10,0x60),0xaeedc:(0x110,0x50),0x10f218:(0x100,0x80),0x195f28:(0x200,0x60),0x2d0ed4:(0x10,0x150)}
+TARGETS={0x5312d0,0x223c30,0x221ac0,0x13a7ac,0x2069d0,0x6af80,0x6a6f8,0x10b890,0x2d5164,0x2d5144,0x2d5154,0x2c594c,0x2c596c,0x2c5654,0x2c68d8}
+CENTERS={0x5312d0:(0x30,0x160),0x223c30:(0x20,0x100),0x221ac0:(0x10,0x80),0x2069d0:(0x30,0x220),0x6af80:(0x40,0x200),0x13ad30:(0x700,0x110),0x13ada0:(0x100,0x100),0x10b890:(0x30,0x300),0x6a6f8:(0x10,0x60),0xaeedc:(0x110,0x50),0x10f218:(0x100,0x80),0x195f28:(0x200,0x60),0x2d0ed4:(0x10,0x150)}
 def audit(root,out):
  raw=(root/NCA/"0/main.elf").read_bytes()
  if hashlib.sha256(raw).hexdigest()!=ELF_SHA:raise ValueError("ELF SHA mismatch")
@@ -40,7 +40,7 @@ def audit(root,out):
   r=rows(pc,before,after)
   return [f"{x['va']:08x} {x['raw']} {x['op']} {x['args']}" for x in r]
  strings={hex(x):cstr(x) for x in (0x62b880,0x62b888,0x62b890,0x60cf95)}
- tables={hex(x):read(x,n).hex() for x,n in [(0x625368,11),(0x625374,44),(0x63a7f0,48),(0x63a948,136)]}
+ tables={hex(x):read(x,n).hex() for x,n in [(0x625450,13),(0x625368,11),(0x625374,44),(0x63a7f0,48),(0x63a948,136)]}
  report=dict(elf_sha256=ELF_SHA,callers=callers,strings=strings,tables=tables,windows={hex(x):rows(x,*a) for x,a in CENTERS.items()},scope="bounded static disassembly; record layout and function extent not assumed")
  out.mkdir(parents=True,exist_ok=True)
  (out/"producer_evidence.json").write_text(json.dumps(report,indent=2)+"\n")
@@ -51,7 +51,7 @@ def audit(root,out):
  print("TABLES",json.dumps(tables));print("STRINGS",json.dumps(strings))
  from collections import Counter
  print("CALLERS",json.dumps({hex(k):v for k,v in Counter(c["target"] for c in callers).items()}))
- for pc in (0x2069d0,0x6af80,0x13ad30,0x10b890):
+ for pc in (0x5312d0,0x223c30,0x221ac0):
   print("WINDOW",hex(pc));print("\n".join(block(pc,*CENTERS[pc])))
 if __name__=="__main__":
  p=argparse.ArgumentParser();p.add_argument("--root",type=Path,default=Path("."));p.add_argument("--out",type=Path,required=True);a=p.parse_args();audit(a.root,a.out)
