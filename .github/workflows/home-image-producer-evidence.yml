@@ -1,0 +1,35 @@
+name: HOME image producer evidence
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_image_request_adapter.py'
+      - 'tools/home41_image_producer_evidence.py'
+      - '.github/workflows/home-image-producer-evidence.yml'
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install capstone==5.0.6
+      - name: Request adapter model unit tests
+        run: python tools/home41_image_request_adapter.py
+      - name: Original ELF dispatch evidence
+        run: python tools/home41_image_producer_evidence.py --root . --out producer_output
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-image-producer-evidence
+          path: producer_output/
+          if-no-files-found: error
