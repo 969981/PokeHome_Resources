@@ -2,7 +2,7 @@
 
 [返回 HOME 图片导航](../HomeImageResources/docs/README.md) · [ER 图](docs/ER.md) · [字段字典与 CSV 约定](docs/CSV.md) · [ID 与版本规范](docs/Identity.md)
 
-状态：Schema V1，**只创建结构和通用字典，不导入 HOME 数据**。首个导入器将在单独阶段实施。原 NCA/Unpack/图片归档保持只读。SQLite >=3.37，CSV 为人工审计和版本管理输入，SQLite/JSON/flat CSV 为生成物。
+状态：V1 基线保留，V2 迁移与 HOME 导入器已提交，实际数据发布以 CI 验收为准。原 NCA/Unpack/图片归档保持只读。SQLite >=3.37，CSV 为人工审计和版本管理输入，SQLite/JSON/flat CSV 为生成物。
 
 ## 构建与验证
 ```powershell
@@ -22,3 +22,6 @@ uv run --no-project python -m unittest discover -s PokemonResourceDatabase/tools
 
 ## 初始架构验收（2026-11-26）
 [Run 45810966448](https://github.com/969981/PokeHome_Resources/actions/runs/45810966448) 成功：38 张业务表、158 字段、6 项合成测试通过；[产物 15114200283](https://github.com/969981/PokeHome_Resources/actions/runs/45810966448/artifacts/15114200283) SHA256 `83ca41d0fa292a4c1eda6334ec00e0d8a122b9d9284a2d11ba42be8deabe5562`，下载后独立 CRC、SQLite integrity_check、foreign_key_check 通过，38 个 CSV 模板；source_releases/native_pokemon_keys/image_assets/pokemon_species 均为0。产物有保留期，使用构建脚本可复现。后续 [ID 实现](tools/identity.py) 和 [ID/迁移回归](tools/test_identity.py) 为补充，按对应新运行验收。
+
+## V2 HOME 数据导入
+[数据清单与导入契约](docs/HomeResourceDataInventory.md) · [V2 SQL](schemas/migrations/0002_gameplay_data.sql) · [构建器](tools/build_home_resources.py) · [实际 CI](https://github.com/969981/PokeHome_Resources/actions/runs/45815350921)。
