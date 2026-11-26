@@ -1,0 +1,62 @@
+name: HOME full texture package
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_full_texture_package.py'
+      - '.github/workflows/home-full-texture-package.yml'
+permissions:
+  contents: write
+concurrency:
+  group: home-full-texture-package-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  extract:
+    if: github.ref == 'refs/heads/research/home-image-resource-audit'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            HomeImageResources
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/pokemon_list
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml/item
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install texture2ddecoder==1.0.6 capstone==5.0.6 Pillow==12.0.0
+      - name: Compile and real fixture tests
+        run: |
+          python -m py_compile tools/home41_full_texture_package.py
+          python -m unittest discover -s tools -p test_home41_bntx.py -v
+      - name: Extract verified box icons
+        run: |
+          python tools/home41_icon_brti_audit.py --root . --out full_output/icons --decode
+          python tools/home41_full_texture_package.py --root . --icons full_output/icons
+      - name: Commit verified icon package on research branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add HomeImageResources/pokemon_icons/
+          if ! git diff --cached --quiet; then
+            git commit -m 'assets: archive 3506 verified HOME box icons'
+            git push origin HEAD:refs/heads/research/home-image-resource-audit
+          fi
+      - name: Full BRTI mip0 decode and category evidence
+        run: python tools/home41_full_texture_package.py --root . --out full_output/global
+      - name: Native selector and reachable item inputs
+        if: always()
+        run: python tools/home41_image_selector_model.py --root . --icons full_output/icons --out full_output/native_model.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-full-texture-package
+          path: full_output/
+          if-no-files-found: error
