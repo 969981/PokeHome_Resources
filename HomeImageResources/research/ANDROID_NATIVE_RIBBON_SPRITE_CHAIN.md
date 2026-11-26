@@ -43,3 +43,13 @@ Current device runtime cache status runtime_cache_not_supplied, 0 files. Need ac
 
 ## Next
 Expanded audit commit ebd6440: MakeHasRibbonList/GetHasRibbonList, MasterDataManagerBase, StaticSpriteManager initialization and native struct definitions. Actions 45774637164 pending at initial doc creation; check result separately. Independent Android atlas audit 45774597113 running at time of writing. Neither is treated as passed in this initial document.
+
+## 第二轮已验收：字段定义与128位选择模型
+Actions [45774637164](https://github.com/969981/PokeHome_Resources/actions/runs/45774637164) PASS，head ebd6440，artifact 15094579786，SHA256 6e8987492017d687e8bbddf76bc7602d1649083073a360fe3f18668f695c306e；ZIP CRC/SHA 独立验证。26 个方法、2067 条指令。
+原版 il2cpp.h 恢复 MD_Data_Ribbon_Fields（继承 MD_Data_Base_Fields）：image_a、image_b、order、lumpingIndex、lumpingMax、softwareAppearIds、no。结合 LDR，+0x20 image_a，+0x28 image_b，+0x30 order（负值排除）。+0x18 是继承字段的 int32 访问点；暂不将其命名为 no，后者是派生结构尾部字段。StaticSpriteManager_Fields 明确有 _ribbonIconSpriteDic，对象+0x50 访问与该字典一致。
+MakeHasRibbonList 0x1EAED08：调用 GetRibbons 取得表50数组；分别读取 get_ribbonA/B/C/D (0x1E620BC/0x1E620D4/0x1E620EC/0x1E62104)，各32位，测试 bit i，将其映射到原始数组 ordinal i+0/32/64/96，数组长度检查，row+0x30 的 signed order<0 时跳过。证据: 1EAEDB4/1EAEE64/1EAEF14/1EAEFC4 LSR；1EAEDD0/1EAEE80/1EAEF30/1EAEFE0 LDR W8,[X1,#0x30]，TBNZ sign。总共最多128个 bit 槽，不代表128张图或128条有效缎带。原始数组顺序不能排序。HasRibbon 比较 row+0x18。GetHasRibbonList 0x1EAF34C 另有分组列表及 CurtSoftwareAppearId + FindAll 消费，尚未闭合软件筛选、分组计数及其与 PH4 位图的跨平台关系。
+GetMasterDataSingle 0x1CD8B40 实际调用 Dictionary<int,object>.TryGetValue 和 Dictionary<object,object>.TryGetValue；table=50 的运行时字典访问已证明，真实数据尚未取得。
+StaticSpriteManager.LoadForFirstBoot/LoadForTitle/LoadForMain 是 coroutine factory（0x23809D4/0x2380A68/0x2380AFC）；需转向 MoveNext 与底层字典构造方法，不能把 factory 当加载完成。
+
+## Android 原始图集验收
+独立 Actions [45774597113](https://github.com/969981/PokeHome_Resources/actions/runs/45774597113) PASS，artifact 15095546269，SHA256 2aeb32a555964db3826cd51c3320dd6b58ef39fbc8e26cd3de2f0c095071be4b，ZIP CRC/SHA 独立验证。UnityPy1.25.4，1507 个源、1471 serialized files、0 load failures。Achievement 与 BankMarks 各12/12 PPtr 解析、12/12 Sprite 解码。Achievement 12项实际为 ach_colormap_01..07、ach_pattern_01..03、ach_icon_search、ach_icon_question_01；不是按业务ID区分的成就图标。输出记录保留 m_Rect / m_RenderDataKey / textureRect / uvTransform / settingsRaw / PNG与RGBA SHA256。BankMarks 6 shapes × filled/none；未验证红蓝 shader 状态。奖章3个 Material 及 shader/纹理 PPtr 已解析；例如 medal_front _BumpMap -> MTmedal_front_normal、_MainTex -> MTmedal_front_albedo 1、_OcclusionMap -> MTmedal_front_ao、_ParallaxMap -> MTmedal_front_height、_EmissionMap -> Gradation02_TX。无成品渲染 parity 或 medalID。实际成就/缎带业务映射仍0。未在本轮修改 Rust 生产 resolver。
