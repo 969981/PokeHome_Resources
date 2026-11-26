@@ -80,14 +80,14 @@ jobs:
           token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
           path: editor
           sparse-checkout: |
-            tauri2-app/resources/home41/4.1.0
+            tauri2-app/resources/images/home41/4.1.0
           fetch-depth: 1
       - name: Publish verified icons resource and provenance to develop
         shell: bash
         run: |
           set -euo pipefail
           dir="$RUNNER_TEMP/home41-publish"
-          dst=tauri2-app/resources/home41/4.1.0
+          dst=tauri2-app/resources/images/home41/4.1.0
           cd editor
           mkdir -p "$dst/icons"
           rsync -a --delete "$dir/icons/" "$dst/icons/"
