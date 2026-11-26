@@ -17,7 +17,7 @@ class Request:
     gender: int
     shiny: bool
     special_0d: bool
-    unknown_10: int
+    unknown_10: int  # EncryptionConstant; field name retained for compatibility
     variant: int
     decoration: int
 
@@ -127,6 +127,40 @@ def cross_game_ball_from_record(record: bytes) -> int:
             return cross_game_ball_number(side_ball(payloads,side))
     return 27
 
+SIDE_LENGTHS = {1:0x3f,2:0x48,3:0x40,4:0x2f,5:0x4a,6:0x19,7:0x40}
+
+def validate_ph4(plaintext: bytes) -> None:
+    """Strict standalone plaintext PH4 reader, not a decoder or native malformed-input emulator."""
+    if len(plaintext)<0xe0 or u16(plaintext,0)!=4 or u16(plaintext,0x10)!=0xc4:
+        raise ValueError("not a standalone PH4 plaintext record")
+    n=u16(plaintext,0xe)
+    if n==0 or n%16 or len(plaintext)!=0x10+n:
+        raise ValueError("invalid encoded payload length")
+    end=0xd8+u16(plaintext,0xd6)
+    if end>len(plaintext):
+        raise ValueError("invalid side data length")
+    pad=16-((end-0x10)%16)
+    if len(plaintext)-end!=pad or plaintext[end:]!=bytes([pad])*pad:
+        raise ValueError("invalid plaintext padding")
+    pos=0xd8
+    tags=set()
+    while pos<end:
+        if end-pos<3:
+            raise ValueError("short TLV header")
+        tag=plaintext[pos]
+        size=u16(plaintext,pos+1)
+        if not size or pos+3+size>end or tag in tags:
+            raise ValueError("invalid or duplicate TLV")
+        if tag in SIDE_LENGTHS and size!=SIDE_LENGTHS[tag]:
+            raise ValueError("known TLV has wrong length")
+        tags.add(tag)
+        pos+=3+size
+
+def resolve_ph4_plaintext(plaintext: bytes, rows, item_data: bytes, view: int=0):
+    """Read-only editor bridge; accepts already decoded and strictly validated PH4."""
+    validate_ph4(plaintext)
+    return resolve_native_record(plaintext,rows,item_data,view)
+
 def resolve_native_record(record: bytes, rows, item_data: bytes, view: int=0):
     """Partial unified offline entry: ordinary decoded record -> portrait stem and cross-game ball key.
     Same-group UI context and final PNG path lookup remain separate.
@@ -199,6 +233,30 @@ class Tests(unittest.TestCase):
         self.assertEqual(cross_game_ball_from_record(record(53,[(6,4),(1,4)])),27)
         self.assertEqual(cross_game_ball_from_record(record(42,[])),27)
         self.assertEqual(cross_game_ball_from_record(record(42,[(1,0),(2,4)])),27)
+    def test_standalone_ph4(self):
+        b=bytearray(0xd8)
+        struct.pack_into("<H",b,0,4)
+        struct.pack_into("<H",b,0x10,0xc4)
+        b.extend(bytes([8])*8)
+        struct.pack_into("<H",b,0xe,len(b)-0x10)
+        validate_ph4(b)
+        b[-1]=0
+        with self.assertRaises(ValueError):
+            validate_ph4(b)
+    def test_standalone_ph4_sides(self):
+        b=bytearray(0xd8)
+        struct.pack_into("<H",b,0,4)
+        struct.pack_into("<H",b,0x10,0xc4)
+        payload=bytes([2])+struct.pack("<H",0x48)+bytes(0x48)
+        b.extend(payload)
+        struct.pack_into("<H",b,0xd6,len(payload))
+        pad=16-((len(b)-0x10)%16)
+        b.extend(bytes([pad])*pad)
+        struct.pack_into("<H",b,0xe,len(b)-0x10)
+        validate_ph4(b)
+        b[0xd9]=0x47
+        with self.assertRaises(ValueError):
+            validate_ph4(b)
     def test_ball(self):
         self.assertEqual(cross_game_ball_number(0),27)
         self.assertEqual(cross_game_ball_number(16),16)
