@@ -1,0 +1,35 @@
+{
+  "source_commit": "b9adf78007bd3ae02b84a53cd73a1a2614e22509",
+  "plist": {
+    "species": 1026,
+    "forms": 1492,
+    "level3": 2984,
+    "level4": 2994,
+    "leaves": 3506,
+    "unique_names": 3506,
+    "missing_png": 0,
+    "unreferenced_png": 32
+  },
+  "item": {
+    "geometry": [
+      1829,
+      1832,
+      1166,
+      5124
+    ],
+    "counts": {
+      "native_dummy_key": 683,
+      "exact_brti_name": 38,
+      "missing_in_icon_item_arc": 1108
+    },
+    "brti": 38,
+    "distinct_requested_keys": 598,
+    "missing_keys": 560
+  },
+  "icon_pokemon": {
+    "status": "blocked_large_blob",
+    "source_sha": "625c98b592bb51a02744b002eebe2d518706dadf",
+    "bntx_member_bytes": 52879496
+  },
+  "scope": "Direct binary structural reads, existing native getter opcode evidence; no new pixel decoding or runtime proof"
+}
