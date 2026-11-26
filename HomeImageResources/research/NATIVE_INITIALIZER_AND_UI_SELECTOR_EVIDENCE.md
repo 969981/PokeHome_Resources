@@ -30,3 +30,23 @@ Tag1 和 Tag4 各存在1字节重复写入，无越界。最终 Core+0x0D = 02 0
 缎带通用 ribbon 文本表每语言320行，含 name 系列209（含其它后缀）、info111；另有 BDSP298、LA294、LPLE100、SV320、SWSH295、USUM100。不以此推断独立缎带 ID；补充包所有文本共54738。AHTB/DAT 是文本资源，不是图片索引。下一步应定位 Core flags +0x30/+0x3A 和 AffixedRibbon +0x98 的 UI 消费者，使用已知 hash/表结构验证，不按 label 序号猜图。
 Android Achievement SpriteAtlas: source assets/bin/Data/6e26bfd444fa55b46903a2904dda6ee6, PathID1, 12 m_PackedSprites 外部引用。FileID1..12 与 PathID 序列 [2,1,2,2,2,2,1,1,1,2,2,2]；atlas texture candidate assets/bin/Data/00000000000000000000000000000000 PathID19, sactx-0-1024x1024-ETC2-Achievement-ccbb449d。需要外部文件表和 Sprite render data 才能闭合，未把文件名关联当作已验证 SpriteAtlas 绑定。Switch ELF 不适用于 Android Unity Sprite 消费者。
 原始 NCA/Unpack/编辑器均未修改，Rust 生产映射本轮不扩大。上一轮 Rust 5/5 已通过。补充包 run 45771943727 归档失败，未声称新归档成功。
+
+## 第二轮取证验收
+2baa431 的首轮扩展 CI 45772957016 失败，原因是末尾 hash store 采用不同寄存器；7ff5454 修复后 Actions 45773057296 成功。artifact 15094807325 SHA256 a688292caac2844f6bbc9161680a9450a47fe6aac9bc13505990708690d17e1d，独立 CRC/SHA 校验通过。18 个 format 调用 0xADBE8..0xAE138，对应 owner+0x458..0x4E0，按 ordinal 0..5、default/blue/red 顺序，全部从真实 ELF 读取后缀。[[marking_animation_keys.json]] 为已验收的注册键证据，不是 PH4 packed marking state 或 PNG 图层映射。320个编号候选的 name/info 共640个 FNV-1a 哈希在非执行 file-backed 段字面搜索无命中，不排除动态 hash/其它编码或间接表。
+## Android IL2CPP 方法入口
+独立 Actions 45772878715 success，artifact 15095056482，SHA256 2d525e37f76f13d3c011eb7a4c470624687a93609a8d6a20bcd6dcda970f268d；CRC/SHA 验证。已有 metadata 扫描180628方法，2229关键词候选，0已验证业务ID。以下是 metadata method address，不是 Switch VA，函数体尚未验收。
+| Method | Address | Signature/role candidate |
+| --- | --- | --- |
+| StaticSpriteManager.GetRibbonIcon | 0x23813E8 | fileName -> Sprite |
+| StaticSpriteManager.GetRibbonIcon | 0x2381478 | ribbonId, type -> Sprite |
+| RibbonField.SingleRibbon | 0x1E62430 | MD_Data_Ribbon |
+| RibbonField.LumpingRibbon | 0x1E62134 | ribbonNum, MD_Data_Ribbon |
+| PokemonRibbonUtility.HasRibbon | 0x1EAF06C | PokemonIndividualData, ribbonID |
+| MasterDataHelper.GetRibbon | 0x1CDC69C | id -> MD_Data_Ribbon |
+| AchievementScrollerCellView._LoadImage | 0x1D4F3CC | MD_Data_Achievement, AchievementRewardData |
+| AchievementScrollerCellView._SetIcon | 0x1D4F56C | Sprite, Material, curtStep |
+| AchievementDetailDialog._SetupRewardIcon | 0x1C5DD80 | UI reward icon |
+| MedalResourceData._CoDownloadTexture | 0x1D1054C | coroutine method candidate |
+| MedalResourceData._LoadTextureFromBase64Str | 0x1D10758 | texture input method candidate |
+
+BankMarks control has 12 same-file resolved Sprite references; Achievement has 12 external unresolved references. Medal OBJ 218 vertices/218 UV/218 normals/144 faces, no usemtl/mtllib; no verified rendered medal business ID. Android runtime cache not supplied. Names indicate priority, not executed semantics. Production Rust remains unchanged.

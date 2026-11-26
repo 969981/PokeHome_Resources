@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "home_version": "4.1.0",
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "source_run": 45773057296,
+  "artifact_id": 15094807325,
+  "scope": "Native animation registration keys only; not stored marking state or rendered PNG mapping",
+  "rows": [
+    {
+      "ordinal": 0,
+      "suffix": "default",
+      "suffix_va": "0x61735f",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_00_default",
+      "hash": "73e06932c49a1253",
+      "format_call": "0xadbe8",
+      "owner_offset": "0x458"
+    },
+    {
+      "ordinal": 0,
+      "suffix": "blue",
+      "suffix_va": "0x61c20a",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_00_blue",
+      "hash": "9c694382003dfb76",
+      "format_call": "0xadc38",
+      "owner_offset": "0x460"
+    },
+    {
+      "ordinal": 0,
+      "suffix": "red",
+      "suffix_va": "0x614ec4",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_00_red",
+      "hash": "70647e29cc3a83a5",
+      "format_call": "0xadc88",
+      "owner_offset": "0x468"
+    },
+    {
+      "ordinal": 1,
+      "suffix": "default",
+      "suffix_va": "0x61735f",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_01_default",
+      "hash": "589f80cd11117380",
+      "format_call": "0xadcd8",
+      "owner_offset": "0x470"
+    },
+    {
+      "ordinal": 1,
+      "suffix": "blue",
+      "suffix_va": "0x61c20a",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_01_blue",
+      "hash": "c5f5a62376b66a53",
+      "format_call": "0xadd28",
+      "owner_offset": "0x478"
+    },
+    {
+      "ordinal": 1,
+      "suffix": "red",
+      "suffix_va": "0x614ec4",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_01_red",
+      "hash": "e200b24fd14e0d7e",
+      "format_call": "0xadd78",
+      "owner_offset": "0x480"
+    },
+    {
+      "ordinal": 2,
+      "suffix": "default",
+      "suffix_va": "0x61735f",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_02_default",
+      "hash": "f79b204c9705637d",
+      "format_call": "0xaddc8",
+      "owner_offset": "0x488"
+    },
+    {
+      "ordinal": 2,
+      "suffix": "blue",
+      "suffix_va": "0x61c20a",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_02_blue",
+      "hash": "52b5d857b13b24bc",
+      "format_call": "0xade18",
+      "owner_offset": "0x490"
+    },
+    {
+      "ordinal": 2,
+      "suffix": "red",
+      "suffix_va": "0x614ec4",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_02_red",
+      "hash": "7c7e721fb50a4c97",
+      "format_call": "0xade68",
+      "owner_offset": "0x498"
+    },
+    {
+      "ordinal": 3,
+      "suffix": "default",
+      "suffix_va": "0x61735f",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_03_default",
+      "hash": "691cc715cb5abf3a",
+      "format_call": "0xadeb8",
+      "owner_offset": "0x4a0"
+    },
+    {
+      "ordinal": 3,
+      "suffix": "blue",
+      "suffix_va": "0x61c20a",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_03_blue",
+      "hash": "1b8e748cc0184469",
+      "format_call": "0xadf08",
+      "owner_offset": "0x4a8"
+    },
+    {
+      "ordinal": 3,
+      "suffix": "red",
+      "suffix_va": "0x614ec4",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_03_red",
+      "hash": "57c5b4333c5514d8",
+      "format_call": "0xadf58",
+      "owner_offset": "0x4b0"
+    },
+    {
+      "ordinal": 4,
+      "suffix": "default",
+      "suffix_va": "0x61735f",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_04_default",
+      "hash": "caa9c5a0a06e781f",
+      "format_call": "0xadfa8",
+      "owner_offset": "0x4b8"
+    },
+    {
+      "ordinal": 4,
+      "suffix": "blue",
+      "suffix_va": "0x61c20a",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_04_blue",
+      "hash": "a425b30f9fe75602",
+      "format_call": "0xadff8",
+      "owner_offset": "0x4c0"
+    },
+    {
+      "ordinal": 4,
+      "suffix": "red",
+      "suffix_va": "0x614ec4",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_04_red",
+      "hash": "a87d5c592f471901",
+      "format_call": "0xae048",
+      "owner_offset": "0x4c8"
+    },
+    {
+      "ordinal": 5,
+      "suffix": "default",
+      "suffix_va": "0x61735f",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_05_default",
+      "hash": "bcdf846eee7098cc",
+      "format_call": "0xae098",
+      "owner_offset": "0x4d0"
+    },
+    {
+      "ordinal": 5,
+      "suffix": "blue",
+      "suffix_va": "0x61c20a",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_05_blue",
+      "hash": "9ae7ba00a83b2a9f",
+      "format_call": "0xae0e8",
+      "owner_offset": "0x4d8"
+    },
+    {
+      "ordinal": 5,
+      "suffix": "red",
+      "suffix_va": "0x614ec4",
+      "name": "anime_L_info_poke_00_L_btn_info_marking_00_L_icon_marking_dis_05_red",
+      "hash": "872c7a419c548b6a",
+      "format_call": "0xae138",
+      "owner_offset": "0x4e0"
+    }
+  ]
+}
