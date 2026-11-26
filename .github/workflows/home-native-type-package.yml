@@ -1,0 +1,81 @@
+name: HOME native type resource package
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_type_native_package.py'
+      - 'tools/home41_type_image_resolver.py'
+      - '.github/workflows/home-native-type-package.yml'
+permissions:
+  contents: write
+concurrency:
+  group: home-native-type-package-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  package:
+    if: github.ref == 'refs/heads/research/home-image-resource-audit'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          sparse-checkout: |
+            tools
+            HomeImageResources/core
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/icon_pokemon
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/message
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install texture2ddecoder==1.0.6 capstone==5.0.6 Pillow==12.0.0
+      - name: Reproduce source textures
+        run: |
+          python -m py_compile tools/home41_type_native_package.py tools/home41_type_image_resolver.py
+          python -m unittest discover -s tools -p test_home41_bntx.py -v
+          python tools/home41_type_layout_audit.py --root . --out native_type_output
+      - name: Validate native selector and complex material maps
+        run: python tools/home41_type_native_package.py --root . --out native_type_output
+      - name: Validate 360 resolver keys and 179 stored images
+        run: |
+          PYTHONPATH=tools python - <<'PY'
+          from home41_type_image_resolver import HomeTypeImageResolver
+          import hashlib
+          r=HomeTypeImageResolver('HomeImageResources')
+          paths=set()
+          for key,entry in r.rows.items():
+              p=r.resolve(*key)
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==entry['stored_png_sha256']
+              assert r.resolve_message_label(entry['message_label_id'],key[1],key[2])==p
+              paths.add(p)
+          assert len(paths)==179
+          assert r.resolve(-1) is None and r.resolve(18) is None and r.resolve(256) is None
+          assert r.resolve_message_label(9) is None and r.resolve(0,'unknown') is None
+          print('360 native display keys / 179 images; invalid inputs rejected')
+          PY
+      - name: Commit type pack without force push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add HomeImageResources/core/types/
+          if ! git diff --cached --quiet; then
+            git commit -m 'assets: archive 179 verified native HOME type images'
+            for attempt in 1 2 3; do
+              git fetch origin refs/heads/research/home-image-resource-audit
+              git rebase FETCH_HEAD
+              if git push origin HEAD:refs/heads/research/home-image-resource-audit; then exit 0; fi
+            done
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-native-type-package
+          path: |
+            native_type_output/
+            HomeImageResources/core/types/
+          if-no-files-found: error

@@ -1,6 +1,7 @@
 """Fail-closed HOME image resource resolver, usable offline with resource_core.json."""
 import json
 from pathlib import Path
+from home41_type_image_resolver import HomeTypeImageResolver
 
 class HomeImageResourceCore:
     def __init__(self, package):
@@ -25,5 +26,10 @@ class HomeImageResourceCore:
     def resolve_item(self,item_id): return None
     def resolve_ribbon(self,ribbon_id): return None
     def resolve_mark(self,mark_id): return None
-    def resolve_type(self,type_id,language=None): return None
+    def resolve_type(self,type_id,language=None):
+        # Explicit native display-index API below; do not coerce generic type_id.
+        return None
+    def resolve_type_display(self,native_display_index,kind='symbol',language='JPN'):
+        if not (self.package/'core/types/index.json').is_file(): return None
+        return HomeTypeImageResolver(self.package).resolve(native_display_index,kind,language)
     def resolve_achievement(self,achievement_id): return None
