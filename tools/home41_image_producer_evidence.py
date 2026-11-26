@@ -13,7 +13,7 @@ TARGETS=(0x105D60,0x206BC4,0x5312F0,0x522F84,0x518760,0x50F6E0,
          0x50EC80,0x5300E0,0x516C70,0x206734,0x5312E0,0x6B220,
          0x94B7C,0x207E54,0x15B7C8,0xAF924,0x50E7F8,0x531008,
          0x531010,0x53378C,0x534538,0x533B34,0x534578,0x5319D4,
-         0x531324,0x515940,0x51AE24,0x5497F4,0x5229B0,0x14AD0,0x15190)
+         0x531324,0x515940,0x51AE24,0x5497F4,0x5229B0,0x14AD0,0x15190,0x50E994)
 
 def main():
     p=argparse.ArgumentParser()
@@ -53,13 +53,24 @@ def main():
             if dest in TARGETS:
                 refs.append(dict(pc=hex(pc),target=hex(dest),opcode=f"{op:08x}",kind="BL" if kind==0x94000000 else "B"))
     missing=read(0x61e360,64).split(b"\0",1)[0]
-    report=dict(elf_sha256=ELF_SHA,tables=tables,game_group_raw=read(0x62596c,13).hex(),
+    origin_indices=struct.unpack("<12Q",read(0x65a768,96))
+    origin_table=[]
+    for i,idx in enumerate(origin_indices):
+        if ((0xfef>>i)&1)==0:
+            origin_table.append(dict(origin=42+i,side=0,index=idx))
+        elif idx<128:
+            origin_table.append(dict(origin=42+i,side=read(0x65a710+idx*8,1)[0],index=idx))
+        else:
+            origin_table.append(dict(origin=42+i,side=None,index=idx))
+    report=dict(elf_sha256=ELF_SHA,tables=tables,game_group_raw=read(0x62596c,13).hex(),origin_side_candidates=origin_table,
                 missing_species_raw_hex=missing.hex(),missing_species_ascii=missing.decode("ascii",errors="replace"),
                 refs=refs,scope="Static evidence; dispatch targets need semantic and control-flow review.")
     (a.out/"producer_evidence.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
     md=Cs(CS_ARCH_ARM64,CS_MODE_ARM)
     md.skipdata=True
     windows=[(x,0x240,"entry") for x in TARGETS]
+    windows.append((0x518840,0x400,"complete ball side dispatch including shared read tails"))
+    windows.append((0x5300e0,0xa0,"origin-game side selection"))
     windows.extend((int(e["target"],16),0x200,t["label"]) for t in tables for e in t["entries"])
     windows.extend((max(0,int(r["pc"],16)-0x80),0x100,"direct caller") for r in refs if int(r["target"],16) in (0x105D60,0x5312F0,0x6B220))
     lines=["# Image producer and ball dispatch raw windows","",ELF_SHA,""]
