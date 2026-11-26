@@ -21,6 +21,9 @@ jobs:
             tools
             57b83ea8c0af21ef26e2519b9580b373_NCA/0
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_generation
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_label
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_pokerus
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
             HomeImageResources/research/origin_swizzle
       - uses: actions/setup-python@v5
         with:
