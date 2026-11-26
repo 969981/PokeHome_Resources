@@ -1,0 +1,249 @@
+{
+  "exported_rows": 97,
+  "categories": {
+    "box_marking": 42,
+    "medal_material": 8,
+    "medal_ui": 25,
+    "pokemon_status": 10,
+    "box_marking_atlas": 1,
+    "stamp_candidate": 8,
+    "achievement_atlas": 1,
+    "ball_atlas_candidate": 1,
+    "mint_atlas_candidate": 1
+  },
+  "platforms": {
+    "switch": 30,
+    "android": 67
+  },
+  "distinct_rgba": 94,
+  "switch_name_hits": 466,
+  "android_name_hits": 73,
+  "message_rows": 54738,
+  "message_tables": [
+    {
+      "language": "Simp_Chinese",
+      "table": "BDSP_iteminfo",
+      "status": "parsed",
+      "rows": 1623
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "LPLE_iteminfo",
+      "status": "parsed",
+      "rows": 1058
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "SV_iteminfo",
+      "status": "parsed",
+      "rows": 2558
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "SWSH_iteminfo",
+      "status": "parsed",
+      "rows": 1608
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ZA_iteminfo",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "itemname",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "itemname_acc",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "itemname_acc_classified",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "itemname_classified",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "itemname_plural",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "itemname_plural_classified",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon",
+      "status": "parsed",
+      "rows": 320
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon_BDSP",
+      "status": "parsed",
+      "rows": 298
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon_LA",
+      "status": "parsed",
+      "rows": 294
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon_LPLE",
+      "status": "parsed",
+      "rows": 100
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon_SV",
+      "status": "parsed",
+      "rows": 320
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon_SWSH",
+      "status": "parsed",
+      "rows": 295
+    },
+    {
+      "language": "Simp_Chinese",
+      "table": "ribbon_USUM",
+      "status": "parsed",
+      "rows": 100
+    },
+    {
+      "language": "English",
+      "table": "BDSP_iteminfo",
+      "status": "parsed",
+      "rows": 1623
+    },
+    {
+      "language": "English",
+      "table": "LPLE_iteminfo",
+      "status": "parsed",
+      "rows": 1058
+    },
+    {
+      "language": "English",
+      "table": "SV_iteminfo",
+      "status": "parsed",
+      "rows": 2558
+    },
+    {
+      "language": "English",
+      "table": "SWSH_iteminfo",
+      "status": "parsed",
+      "rows": 1608
+    },
+    {
+      "language": "English",
+      "table": "ZA_iteminfo",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "itemname",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "itemname_acc",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "itemname_acc_classified",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "itemname_classified",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "itemname_plural",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "itemname_plural_classified",
+      "status": "parsed",
+      "rows": 2685
+    },
+    {
+      "language": "English",
+      "table": "ribbon",
+      "status": "parsed",
+      "rows": 320
+    },
+    {
+      "language": "English",
+      "table": "ribbon_BDSP",
+      "status": "parsed",
+      "rows": 298
+    },
+    {
+      "language": "English",
+      "table": "ribbon_LA",
+      "status": "parsed",
+      "rows": 294
+    },
+    {
+      "language": "English",
+      "table": "ribbon_LPLE",
+      "status": "parsed",
+      "rows": 100
+    },
+    {
+      "language": "English",
+      "table": "ribbon_SV",
+      "status": "parsed",
+      "rows": 320
+    },
+    {
+      "language": "English",
+      "table": "ribbon_SWSH",
+      "status": "parsed",
+      "rows": 295
+    },
+    {
+      "language": "English",
+      "table": "ribbon_USUM",
+      "status": "parsed",
+      "rows": 100
+    }
+  ],
+  "android_metadata_hits": {
+    "unity_objects.csv": 65,
+    "unity_references.csv": 27,
+    "resource_candidates.csv": 0,
+    "apk_entries.csv": 0,
+    "unity_failures.csv": 0
+  },
+  "runtime_cache": "not supplied",
+  "semantic_scope": "No generic ItemID/RibbonID/MarkID/AchievementID proof"
+}
