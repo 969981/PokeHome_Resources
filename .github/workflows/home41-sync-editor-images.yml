@@ -20,6 +20,8 @@ jobs:
   verify-and-import:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -65,7 +67,8 @@ jobs:
       - name: Verify imported Rust image contract
         run: |
           B="$RUNNER_TEMP/home41-images"
-          HOME_IMAGE_PACKAGE="$B/HomeImageResources" CARGO_TARGET_DIR="$RUNNER_TEMP/home41-cargo-target" cargo test --manifest-path "$B/HomeImageResources/rust/home-image-resource-core/Cargo.toml" -- --nocapture
+          cp -a "$B/HomeImageResources/rust/home-image-resource-core" "$RUNNER_TEMP/home41-rust-test"
+          HOME_IMAGE_PACKAGE="$B/HomeImageResources" CARGO_TARGET_DIR="$RUNNER_TEMP/home41-cargo-target" cargo test --manifest-path "$RUNNER_TEMP/home41-rust-test/Cargo.toml" -- --nocapture
       - name: Upload import manifest and sample conversion evidence
         if: always()
         uses: actions/upload-artifact@v4
