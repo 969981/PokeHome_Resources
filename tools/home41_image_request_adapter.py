@@ -3,8 +3,7 @@
 
 Input is a decoded native core record returned by 0x50E7F8, not a raw PKM
 or HOME storage blob. Exceptional/default-object branch intentionally rejected.
-Ball input is already obtained from the native game-side getter; its dispatch
-tables are not yet reconstructed. No claim of raw PKM or native runtime parity.
+Ball dispatch is modeled for present side records; absent-side default globals remain unknown. No claim of raw PKM or native runtime parity.
 """
 from __future__ import annotations
 from dataclasses import dataclass
@@ -77,7 +76,7 @@ def same_group_ball_number(ball: int, target_game: int) -> int:
         return min(ball, 27)
     return ball
 
-def side_presence_from_record(record: bytes) -> set[int]:
+def side_payloads(record: bytes) -> dict[int, bytes]:
     """0x50EC80 TLV container; safe bounds checking for malformed input."""
     if len(record) < 0xd8:
         raise ValueError("short side container")
@@ -85,16 +84,58 @@ def side_presence_from_record(record: bytes) -> set[int]:
     end=pos+u16(record,0xd6)
     if end>len(record):
         raise ValueError("side container size exceeds record")
-    seen=set()
+    seen={}
     while pos<end:
         if end-pos<3:
             raise ValueError("truncated TLV header")
         size=u16(record,pos+1)
         if pos+3+size>end:
             raise ValueError("truncated TLV payload")
-        seen.add(record[pos])
+        seen.setdefault(record[pos],record[pos+3:pos+3+size])
         pos+=3+size
     return seen
+
+
+ORIGIN_SIDES = (1,1,2,2,0,3,4,4,5,5,7,6)
+BALL_OFFSETS = {1:0x36,2:0x3f,3:0x27,4:0x26,5:0x1b,7:0x37}
+
+def side_presence_from_record(record: bytes) -> set[int]:
+    return set(side_payloads(record))
+
+def side_ball(payloads: dict[int, bytes], side: int) -> int:
+    """0x518760, present TLV only; side 6 returns zero without loading data."""
+    if side==6 or side not in BALL_OFFSETS:
+        return 0
+    if side not in payloads:
+        raise ValueError("absent-side default global not modeled")
+    p=payloads[side]
+    i=BALL_OFFSETS[side]
+    if i>=len(p):
+        raise ValueError("truncated side ball field")
+    return p[i]
+
+def cross_game_ball_from_record(record: bytes) -> int:
+    """Ordinary decoded owner+8 record; Core is record+0x12 (0x50E7F8)."""
+    core=record[0x12:]
+    if len(core)<0x98 or core[0xc]:
+        raise ValueError("exceptional or truncated decoded Core")
+    origin=core[0x91]
+    preferred=ORIGIN_SIDES[origin-42] if 42<=origin<=53 else 0
+    payloads=side_payloads(record)
+    for side in (preferred,1,2):
+        if side and side in payloads:
+            return cross_game_ball_number(side_ball(payloads,side))
+    return 27
+
+def resolve_native_record(record: bytes, rows, item_data: bytes, view: int=0):
+    """Partial unified offline entry: ordinary decoded record -> portrait stem and cross-game ball key.
+    Same-group UI context and final PNG path lookup remain separate.
+    """
+    from home41_image_selector_model import resolve, item_key
+    q=from_native_core(record[0x12:])
+    stem,trace=resolve(rows,q.species,q.form,q.shiny,view,q.gender,q.variant,q.decoration,q.special_0d)
+    ball=cross_game_ball_from_record(record)
+    return {"resource_stem":stem,"selector_trace":trace,"cross_game_ball":item_key(item_data,ball)}
 
 class Tests(unittest.TestCase):
     def core(self, species=25, form=0, gender=0, shiny_xor=0, egg=0, decoration=0):
@@ -140,6 +181,24 @@ class Tests(unittest.TestCase):
         struct.pack_into("<H",b,0xd6,len(data))
         b.extend(data)
         self.assertEqual(side_presence_from_record(b),{1,7})
+    def test_cross_game_side_ball(self):
+        def record(origin, entries):
+            b=bytearray(0xd8)
+            b[0x12:0x12+0x98]=self.core()
+            b[0x12+0x91]=origin
+            data=bytearray()
+            for side, ball in entries:
+                p=bytearray(0x40)
+                p[BALL_OFFSETS.get(side,0)]=ball
+                data.extend(bytes([side])+struct.pack("<H",len(p))+p)
+            struct.pack_into("<H",b,0xd6,len(data))
+            b.extend(data)
+            return b
+        self.assertEqual(cross_game_ball_from_record(record(52,[(1,4),(7,37)])),37)
+        self.assertEqual(cross_game_ball_from_record(record(52,[(1,4)])),4)
+        self.assertEqual(cross_game_ball_from_record(record(53,[(6,4),(1,4)])),27)
+        self.assertEqual(cross_game_ball_from_record(record(42,[])),27)
+        self.assertEqual(cross_game_ball_from_record(record(42,[(1,0),(2,4)])),27)
     def test_ball(self):
         self.assertEqual(cross_game_ball_number(0),27)
         self.assertEqual(cross_game_ball_number(16),16)
