@@ -79,6 +79,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: home41-image-import-evidence
+          overwrite: true
           path: |
             ${{ runner.temp }}/home41-images/IMPORT-MANIFEST.json
             ${{ runner.temp }}/home41-pikachu-audit/summary.json
@@ -97,6 +98,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: home41-images-full-4.1.0
+          overwrite: true
           path: |
             ${{ runner.temp }}/home41-images-4.1.0.tar.gz
             ${{ runner.temp }}/home41-images-4.1.0.tar.gz.sha256
@@ -181,8 +183,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f -A -- "$dst" docs/pokemon_home_reverse/4.1.0/README.md docs/progress/README.md docs/devlog/2026-11-26-home41-native-image-import.md
-          if git diff --cached --quiet; then echo "Already imported"; exit 0; fi
-          git commit -m "data(home41): import original image resources, converters and evidence"
-          git push origin HEAD:develop
-          echo "Published target commit $(git rev-parse HEAD)"
-          echo "### Published develop commit $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          if git diff --cached --quiet; then
+            echo "Already imported"
+          else
+            git commit -m "data(home41): import original image resources, converters and evidence"
+            git push origin HEAD:develop
+          fi
+          published=$(git rev-parse HEAD)
+          remote=$(git ls-remote --exit-code origin refs/heads/develop | cut -f1)
+          if [ "$published" != "$remote" ]; then
+            echo "::error::Remote develop HEAD differs from verified local commit; inspect concurrent pushes."
+            exit 1
+          fi
+          git ls-tree -r --name-only HEAD -- "$dst" | wc -l
+          echo "Published target commit $published"
+          echo "### Published develop commit $published" >> "$GITHUB_STEP_SUMMARY"
