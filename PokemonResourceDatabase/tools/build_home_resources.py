@@ -53,6 +53,8 @@ class Build:
                 name=dat.stem;d=f"text:{lang}:{name}"
                 module=("PokedexCore" if name.startswith(("zukan_comment","zkn_","topics_")) else "LocationCore" if "place_name" in name else "AbilityCore" if name.startswith("tokusei") else "MoveCore" if name.startswith("waza") else "ItemCore" if "itemname" in name or "iteminfo" in name else "RibbonMarkCore" if name.startswith("ribbon") else "LocalizationCore")
                 a=dat_lines(dat.read_bytes());b=ahtb_labels(tbl.read_bytes())
+                # Match the established unpack parser: trailing MAX is an enum sentinel, not a DAT row.
+                if len(b)==len(a)+1 and b[-1][0].lower().endswith("max"): b=b[:-1]
                 check(len(a)==len(b),str(dat)+" label count")
                 self.dataset(d,module,name,"decoded",[(dat,"data"),(tbl,"labels")],dat.relative_to(self.root).as_posix())
                 insert(self.c,"native_text_tables",R,d,lang,name)

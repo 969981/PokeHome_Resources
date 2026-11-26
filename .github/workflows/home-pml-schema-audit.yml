@@ -1,0 +1,28 @@
+name: HOME PML schema evidence audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_pml_schema_audit.py'
+      - '.github/workflows/home-pml-schema-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install uv
+      - run: uv run tools/home41_pml_schema_audit.py --out dist/pml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: home41-pml-schema-evidence
+          path: dist/pml/
