@@ -7,8 +7,8 @@ from home41_elf_resource_xrefs import elf_segments,signed
 from home41_elf_disasm_windows import window
 from capstone import Cs,CS_ARCH_ARM64,CS_MODE_ARM
 
-TARGETS={0x5312d0,0x223c30,0x221ac0,0x13a7ac,0x2069d0,0x6af80,0x6a6f8,0x10b890,0x2d5164,0x2d5144,0x2d5154,0x2c594c,0x2c596c,0x2c5654,0x2c68d8}
-CENTERS={0x5312d0:(0x30,0x160),0x223c30:(0x20,0x100),0x221ac0:(0x10,0x80),0x2069d0:(0x30,0x220),0x6af80:(0x40,0x200),0x13ad30:(0x700,0x110),0x13ada0:(0x100,0x100),0x10b890:(0x30,0x300),0x6a6f8:(0x10,0x60),0xaeedc:(0x110,0x50),0x10f218:(0x100,0x80),0x195f28:(0x200,0x60),0x2d0ed4:(0x10,0x150)}
+TARGETS={0x510d20,0x5312d0,0x223c30,0x13a7ac,0x2069d0,0x6af80,0x6a6f8,0x10b890,0x2d5164,0x2d5144,0x2d5154,0x2c594c,0x2c596c,0x2c5654,0x2c68d8}
+CENTERS={0x510d20:(0x10,0x200),0x225bc0:(0x10,0x90),0x223f38:(0x40,0x100),0x5312d0:(0x30,0x160),0x223c30:(0x20,0x100),0x221ac0:(0x10,0x80),0x2069d0:(0x30,0x220),0x6af80:(0x40,0x200),0x13ad30:(0x700,0x110),0x13ada0:(0x100,0x100),0x10b890:(0x30,0x300),0x6a6f8:(0x10,0x60),0xaeedc:(0x110,0x50),0x10f218:(0x100,0x80),0x195f28:(0x200,0x60),0x2d0ed4:(0x10,0x150)}
 def audit(root,out):
  raw=(root/NCA/"0/main.elf").read_bytes()
  if hashlib.sha256(raw).hexdigest()!=ELF_SHA:raise ValueError("ELF SHA mismatch")
@@ -48,10 +48,36 @@ def audit(root,out):
  for pc,(b,a) in CENTERS.items():lines += ["",f"## {pc:#x}","","~~~asm"]+block(pc,b,a)+["~~~"]
  for c in callers:lines += ["",f"## {c['pc']:#x} -> {c['target']:#x}","","~~~asm"]+block(c["pc"],0x80,0x30)+["~~~"]
  (out/"producer_windows.md").write_text("\n".join(lines)+"\n")
+ # Candidate stride 0x50 address producers (MADD/UMADDL) and nearby writes.
+ # Record offsets are relative to the base before +0x84, not PH4.
+ md.detail=True
+ stride_candidates=[]
+ for seg in segs:
+  if not seg["executable"]:continue
+  beg=seg["file_offset"];size=seg["size"]
+  for rel in range(0,size-3,4):
+   op=struct.unpack_from("<I",raw,beg+rel)[0];pc=seg["vaddr"]+rel
+   # movz wN,#0x50 or xN,#0x50
+   if op&0x7fffffe0 != 0x52800a00:continue
+   buf=raw[beg+rel:min(beg+size,beg+rel+0xc0)]
+   ins=list(md.disasm(buf,pc))
+   if not ins:continue
+   reg=ins[0].op_str.split(",")[0].strip()
+   madd=[i for i in ins[1:] if i.mnemonic in ("madd","umaddl","smaddl") and reg in [p.strip() for p in i.op_str.split(",")[1:3]]]
+   if not madd:continue
+   stores=[i for i in ins if i.mnemonic.startswith(("str","stp","stur")) and any(("#"+x) in i.op_str for x in ("0xcc","0xd0","0xc8","0x48","0x4c","0x84","0x88","0xa0"))]
+   if not stores:continue
+   stride_candidates.append(dict(pc=pc,madd=[i.address for i in madd],stores=[dict(pc=i.address,op=i.mnemonic,args=i.op_str) for i in stores]))
+ report["stride_store_candidates"]=stride_candidates
+ (out/"producer_evidence.json").write_text(json.dumps(report,indent=2)+"\n")
+ for q in stride_candidates:
+  lines += ["",f"## Row stride candidate {q['pc']:#x}","","~~~asm"]+block(q["pc"],0x20,0xc0)+["~~~"]
+ (out/"producer_windows.md").write_text("\n".join(lines)+"\n")
+ print("ROW_STRIDE_STORE_CANDIDATES",json.dumps(stride_candidates))
  print("TABLES",json.dumps(tables));print("STRINGS",json.dumps(strings))
  from collections import Counter
  print("CALLERS",json.dumps({hex(k):v for k,v in Counter(c["target"] for c in callers).items()}))
- for pc in (0x5312d0,0x223c30,0x221ac0):
+ for pc in (0x510d20,0x225bc0,0x223f38):
   print("WINDOW",hex(pc));print("\n".join(block(pc,*CENTERS[pc])))
 if __name__=="__main__":
  p=argparse.ArgumentParser();p.add_argument("--root",type=Path,default=Path("."));p.add_argument("--out",type=Path,required=True);a=p.parse_args();audit(a.root,a.out)
