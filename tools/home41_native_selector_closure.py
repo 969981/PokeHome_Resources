@@ -46,7 +46,7 @@ def audit(b,report,out):
         expect(start+0x84,"ldr",f"x8, [x8, #{slot&4095:#x}]")
         expect(start+0x90,"add","x9, x8, #0x10")
         expect(start+0xa0,"stp","x9, x20, [x19]")
-        expect(store,"str","x19, [x20]" if sel==0 else f"x19, [x20, #{sel*8:#x}]")
+        expect(store,"str","x19, [x20]" if sel==0 else ("x19, [x20, #8]" if sel==1 else f"x19, [x20, #{sel*8:#x}]"))
         expect(CALLS[g],"bl",f"#{loader:#x}")
         # Independently verify each lookup's indexed base address, not the
         # resource holder itself; the holder and dispatch objects are distinct.
