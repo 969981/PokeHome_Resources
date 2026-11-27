@@ -109,6 +109,16 @@ for cell in range(0x7a2f40,0x7a2f88,8):
     if t is not None:report.append(f'- SWSH cell {cell:#x} -> {t:#x}, key {struct.unpack("<I",e.read(t,4))[0]:#010x}')
 report.append(f'- SWSH direct constant 0x634ff8: {struct.unpack("<I",e.read(0x634ff8,4))[0]:#010x}')
 focus.update([0x296c34,0x1f2760,0x1b1fcc,0x25b448,0x25c668,0x25c9a0,0x25b280,0x25bc90,0x25bea0,0x1b4930,0x226420,0x225e80])
+report+=['','## SWSH second-region reference audit']
+for a,n in sorted(fde.items()):
+    if not (0x250000<=a<0x280000) or n>0x10000 or not e.executable(a):continue
+    ii=body(a)
+    hits=[fmt(i) for i in ii if re.search(r'#0x(?:2f3|2f3e20|2f3dc0|e20|3dc0|2f3d|3e20)\b',i.op_str)]
+    if not hits:continue
+    if not any('#0x2f3' in h or '#0x3dc0' in h or '#0x3e20' in h for h in hits):continue
+    report += [f'### region candidate {a:#x}']+hits
+    if n<=0x3000:focus.add(a)
+focus.update([0x1b0d00,0x1b350c,0x25e820,0x25ea30,0x25d3c4,0x25d528,0x25d670])
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
