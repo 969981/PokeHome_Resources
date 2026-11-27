@@ -57,6 +57,19 @@ for cell in [0x7a3150,0x7a2688,0x7a23e8,0x7a32a0,0x7a25d8]:
                 a=ptr(v+off);report.append(f'  vptr {v:#x}+{off:#x}: {hex(a) if a is not None else "unresolved"}')
                 if a in fde and e.executable(a):focus.add(a)
 focus.update([0x286180,0x284180,0x1ea550,0x1e9e90,0x1bc700,0x1bac00,0x1b145c,0x1bde6c,0x270a20,0x273654,0x274c00,0x274880,0x25b280,0x27a6d0,0x27127c,0x1b19ac,0x1c44a8])
+report+=['','## Reverse vtable lookup']
+for wanted in [0x1bae30,0x283dd0,0x1e7ff0]:
+    for slot in sorted(relr):
+        try:t=ptr(slot)
+        except ValueError:continue
+        if t!=wanted:continue
+        report.append(f'- target {wanted:#x} at slot {slot:#x}')
+        for a in range(slot-0x40,slot+0x30,8):
+            try:t=ptr(a)
+            except ValueError:continue
+            report.append(f'  {a:#x}: {hex(t) if t is not None else "unresolved"}')
+            if t in fde and e.executable(t):focus.add(t)
+focus.update([0x25aa20,0x29d88c,0x1fb510,0x2981e0,0x29da38,0x1fb6e0,0x1c43d4,0x1c44b0,0x1b1b84,0x1bb1b8,0x1bb1ec,0x1bb248,0x1bb258])
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
