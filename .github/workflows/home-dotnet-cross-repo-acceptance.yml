@@ -10,7 +10,7 @@ concurrency:
   group: home-dotnet-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: ad4c020b1e758b93e345472bc7c2fc415441cc0a
+  TARGET_SHA: e0a5b1f9ea7a934bd60d26a0d7f7cdc3d1926a6b
   TARGET_BRANCH: fix/pokemon-detail-layout-icons
   DOTNET_CLI_UI_LANGUAGE: en-US
   DOTNET_NOLOGO: 'true'
@@ -47,6 +47,12 @@ jobs:
             echo "::error::.NET SDK unavailable"
             exit 1
           fi
+          sdk_version="$(tr -d '\r\n' <"$evidence/sdk.txt")"
+          if [[ "$sdk_version" != 10.* ]]; then
+            echo "::error::Expected stable .NET 10 SDK; actual SDK is not 10.x"
+            exit 1
+          fi
+          echo "Selected .NET SDK $sdk_version"
           result_dir="$(cygpath -w "$evidence")"
           failed=0
           run_private() {
@@ -96,6 +102,9 @@ jobs:
               }
             });
             return {name,status:exit===''?'NOT_RUN':exit==='0'?'PASS':'FAIL',exitCode:exit===''?null:Number(exit),
+              warningCount:(()=>{const m=log.join('\n').match(/(\d+) Warning\(s\)/g);return m?.length?Number(m[m.length-1].match(/\d+/)[0]):null;})(),
+              warningCodes:[...new Set(log.flatMap(line=>[...line.matchAll(/\bwarning ((?:CS|MSB|NU|NETSDK)\d+)/gi)].map(m=>m[1].toUpperCase())))],
+              warnings:[...new Set(log.filter(line=>/\bwarning (CS|MSB|NU|NETSDK)\d+/i.test(line)))].slice(0,80).map(line=>line.slice(0,1200)),
               diagnostics:[...selected].sort((a,b)=>a-b).slice(-100).map(i=>log[i].slice(0,1200)),
               tail:log.slice(-35).map(line=>line.slice(0,1000))};
           });
