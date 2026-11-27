@@ -46,6 +46,18 @@ for slot in sorted(relr):
     except ValueError:continue
     if t==0x25afd0:
         report.append(f'- slot {slot:#x}, inferred address point {slot-0x40:#x}')
+report+=['','## Baseline load / recovery candidate edges']
+extra={0x222470,0x222a70,0x226fe0,0x203c94,0x300180,0x200180,0x204b90,0x205bd8,0x201ddc,0x274690,0x274640,0x271b14,0x27ae98,0x274c00,0x271aac,0x20ccf0,0x19e630,0x25b330,0x25b448,0x2116dc,0x1a3654,0x1bb8e4,0x285000}
+focus.update(extra)
+for a,n in sorted(fde.items()):
+    if not e.executable(a):continue
+    ii=body(a)
+    hits=[fmt(i) for i in ii if i.mnemonic in ('bl','b') and i.op_str.startswith('#0x') and int(i.op_str[1:],16) in extra]
+    # Direct offset references to the Manager conditional byte. This is not exhaustive alias analysis.
+    hits += [fmt(i) for i in ii if re.search(r'#0x(?:9a36|a36)\b',i.op_str)]
+    if hits:
+        report += [f'### candidate {a:#x}']+hits
+        if n<=0x3000 and (any('#0x9a36' in h for h in hits) or any('#0x274690' in h or '#0x274640' in h for h in hits)):focus.add(a)
 report+=['','## Complete function bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
