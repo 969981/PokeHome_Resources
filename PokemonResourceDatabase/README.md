@@ -25,3 +25,6 @@ uv run --no-project python -m unittest discover -s PokemonResourceDatabase/tools
 
 ## V2 HOME 数据导入
 [数据清单与导入契约](docs/HomeResourceDataInventory.md) · [V2 SQL](schemas/migrations/0002_gameplay_data.sql) · [构建器](tools/build_home_resources.py) · [实际 CI](https://github.com/969981/PokeHome_Resources/actions/runs/45815350921)。
+
+## V3 原生学习表与 Selector
+[Schema V3](docs/NativeLearnsetSchemaV3.md) · [0003 migration](schemas/migrations/0003_native_learnsets.sql) · [importer](tools/import_native_learnsets.py)。全量构建以 CI 为准；V1/V2 迁移保留。

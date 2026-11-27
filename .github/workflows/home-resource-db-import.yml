@@ -5,7 +5,9 @@ on:
     branches: [research/home-image-resource-audit]
     paths:
       - 'PokemonResourceDatabase/tools/build_home_resources.py'
-      - 'PokemonResourceDatabase/schemas/migrations/0002_gameplay_data.sql'
+      - 'PokemonResourceDatabase/schemas/migrations/**'
+      - 'PokemonResourceDatabase/tools/import_native_learnsets.py'
+      - 'PokemonResourceDatabase/tools/test_native_v3.py'
       - '.github/workflows/home-resource-db-import.yml'
 permissions:
   contents: read
@@ -19,6 +21,7 @@ jobs:
           sparse-checkout: |
             PokemonResourceDatabase
             tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
             HomeImageResources
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pml
             57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon
@@ -32,5 +35,5 @@ jobs:
       - run: uv run PokemonResourceDatabase/tools/build_home_resources.py --out dist/home
       - uses: actions/upload-artifact@v4
         with:
-          name: home-resource-db-v2
+          name: home-resource-db-v3
           path: dist/home/

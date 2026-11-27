@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.11,<3.14"
-# dependencies = ["Pillow==12.0.0"]
+# dependencies = ["Pillow==12.0.0", "capstone==5.0.6"]
 # ///
 """Build a read-only-source HOME 4.1.0 database snapshot; no inferred cross-game semantics."""
 import argparse,csv,hashlib,json,os,re,sqlite3,struct,sys
@@ -176,9 +176,9 @@ def export(c,out):
     target=out/"csv";target.mkdir()
     tables=[x[0] for x in c.execute("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name<>'schema_migrations' ORDER BY name")]
     counts={}
-    for t in tables+["v_native_pokemon_images"]:
+    for t in tables+["v_native_pokemon_images","v_native_personal_learnsets"]:
         cols=c.execute(f"PRAGMA table_info({t})").fetchall();pk=[x[1] for x in sorted(cols,key=lambda x:x[5]) if x[5]]
-        order=",".join(pk) if pk else ",".join(x[1] for x in cols[:4])
+        order=",".join(pk) if pk else ",".join(x[1] for x in cols)
         cur=c.execute(f"SELECT * FROM {t} ORDER BY {order}")
         with (target/(t+".csv")).open("w",encoding="utf-8",newline="") as f:
             w=csv.writer(f);w.writerow([x[0] for x in cur.description]);n=0
@@ -196,7 +196,9 @@ def main():
     c=connect(db);version=migrate(c)
     with c:
         build=Build(c,root,out,a.with_cas);build.run()
-        expected={"native_pokemon_keys":3506,"native_resource_keys":3506,"native_key_images":7012,"image_assets":7044,"native_item_ids":1829,"native_item_records":1166,"native_move_records":5089,"pokemon_species_names":11275}
+        from import_native_learnsets import import_native
+        import_native(build)
+        expected={"native_pokemon_keys":3506,"native_resource_keys":3506,"native_key_images":7012,"image_assets":7044,"native_item_ids":1829,"native_item_records":1166,"native_move_records":5089,"pokemon_species_names":11275,"native_personal_selectors":8,"native_personal_dispatch":7,"native_learnset_layouts":7,"native_personal_records":8485,"native_personal_learnset_entries":360484,"native_move_guard_tables":4,"native_move_guard_entries":1546,"native_move_guard_rules":8,"native_move_exclusion_entries":32}
         for t,n in expected.items():check(c.execute(f"SELECT count(*) FROM {t}").fetchone()[0]==n,t+" coverage")
         quality=dict(c.execute("SELECT quality_status,count(*) FROM image_assets GROUP BY quality_status"))
         check(quality=={"native":6996,"native_lowres":16,"unreferenced_alternative":24,"unreferenced_placeholder":8},"quality counts")
