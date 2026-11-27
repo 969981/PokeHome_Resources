@@ -10,7 +10,7 @@ concurrency:
   group: home-develop-clean-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: e8386c6719a0f0ec680be0cc5d4e43c96caa0934
+  TARGET_SHA: ddd8c0185a7b56bd293c72211aac24295e5000a4
 jobs:
   verify:
     if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
@@ -90,6 +90,15 @@ jobs:
             Pop-Location
           }
           if ($script:failed) { exit 1 }
+      - name: Validate launcher PowerShell syntax
+        if: always()
+        working-directory: target
+        shell: pwsh
+        run: |
+          $tokens = $null; $errors = $null
+          $null = [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'scripts/Start-TauriDev.ps1'), [ref]$tokens, [ref]$errors)
+          if ($errors.Count) { throw 'Launcher PowerShell parser failed (private diagnostics suppressed)' }
+          'launcher-syntax PASS' >> $env:GITHUB_STEP_SUMMARY
       - name: Remove private diagnostic logs
         if: always()
         shell: pwsh
