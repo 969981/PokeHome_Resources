@@ -10,7 +10,7 @@ concurrency:
   group: home-release-host-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 5a4151f2fdd6524b43650387cf5ee8c9cd408fb8
+  TARGET_SHA: 73d4c58c8eb96fefebc9ee5e0779d098caaba629
   TARGET_BRANCH: feat/home-release-host-410
   DOTNET_CLI_UI_LANGUAGE: en-US
   DOTNET_NOLOGO: 'true'
