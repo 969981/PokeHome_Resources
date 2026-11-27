@@ -215,6 +215,40 @@ jobs:
                       for k in range(a-16,a+0x50,8):
                           q=qword(k)
                           if q is not None: out.append(f'  - 0x{k:X}: 0x{q:X}')
+          out+=['','## Session complete-object constructor neighborhood']
+          for a in range(0x76de80,0x76df90,8):
+              val=qword(a)
+              if val is not None: out.append(f'- 0x{a:X}: 0x{val:X}')
+          # vtable address point of the -0x50 secondary base and nearby full table.
+          wanted=set(range(0x76de80,0x76df90,8))
+          slots={}
+          for o,v,fs in allsegs:
+              if any(o==e[0] for e in segs): continue
+              for j in range(0,fs-7,8):
+                  val=struct.unpack_from('<Q',b,o+j)[0]
+                  if val in wanted: slots[v+j]=val
+          out+=['','### GOT/data cells referencing candidate table']
+          for a,z in sorted(slots.items()): out.append(f'- 0x{a:X} -> 0x{z:X}')
+          # Scan ADRP/LDR GOT usage, including ADD address formation.
+          hits=set()
+          pages=collections.defaultdict(set)
+          for a in slots: pages[a&~0xfff].add(a)
+          for o,v,fs in segs:
+              for j in range(0,fs-3,4):
+                  a=v+j; w=struct.unpack_from('<I',b,o+j)[0]
+                  if (w&0x9f000000)!=0x90000000: continue
+                  imm=sg(((w>>5)&0x7ffff)<<2|((w>>29)&3),21)
+                  page=(a&~0xfff)+(imm<<12)
+                  if page not in pages: continue
+                  reg=w&31
+                  for k in range(j+4,min(j+64,fs-3),4):
+                      n=struct.unpack_from('<I',b,o+k)[0]
+                      if (n&0xffc00000)==0xf9400000 and ((n>>5)&31)==reg and page+((n>>10)&0xfff)*8 in slots:
+                          hits.add(owner(a)); break
+          for s,n in fde:
+              if 0xc8000<=s<0xc86c0: hits.add((s,n))
+          for s,n in sorted(hits):
+              out += [f'### candidate FDE 0x{s:X} length 0x{n:X}, calls '+', '.join(hex(x) for x in calls[s][:30])]+dump(s,s+min(n,0x1800))
           out+=['','## Boundaries','Pair/bulk reset or indirect aliases can be missed; no same-object or runtime lifecycle claim from matching offsets.']
           q=pathlib.Path('docs/HOME41_RELEASE_SESSION_LIFECYCLE_ELF_AUDIT.md')
           q.write_text('\n'.join(out)+'\n',encoding='utf-8')
