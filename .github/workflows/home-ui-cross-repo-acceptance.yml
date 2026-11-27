@@ -10,7 +10,7 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: ddae105db5f0a6b21ef6378a8b06cd35afefd4b1
+  TARGET_SHA: 5110b14b7193ab32243266ac47d4560c49170d01
   TARGET_BRANCH: fix/detail-icons-pkhex-hover
 jobs:
   verify:
