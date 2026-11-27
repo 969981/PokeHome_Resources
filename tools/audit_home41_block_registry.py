@@ -96,6 +96,19 @@ for a,n in sorted(fde.items()):
     if hits:
         report += [f'### global candidate {a:#x}']+hits
         if n<=0x3000 and (0x200000<=a<=0x225000 or any('#0x878000' in h for h in hits)):focus.add(a)
+report+=['','## PLA owner box identity and association block constants']
+for a,n in sorted(fde.items()):
+    if not (0x1a8000<=a<0x1c5000) or n>0x10000 or not e.executable(a):continue
+    ii=body(a)
+    hits=[fmt(i) for i in ii if re.search(r'#0x230\b',i.op_str)]
+    if hits:
+        report += [f'### PLA owner candidate {a:#x}']+hits
+        if n<=0x3000:focus.add(a)
+for cell in range(0x7a2f40,0x7a2f88,8):
+    t=ptr(cell)
+    if t is not None:report.append(f'- SWSH cell {cell:#x} -> {t:#x}, key {struct.unpack("<I",e.read(t,4))[0]:#010x}')
+report.append(f'- SWSH direct constant 0x634ff8: {struct.unpack("<I",e.read(0x634ff8,4))[0]:#010x}')
+focus.update([0x296c34,0x1f2760,0x1b1fcc,0x25b448,0x25c668,0x25c9a0,0x25b280,0x25bc90,0x25bea0,0x1b4930,0x226420,0x225e80])
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
