@@ -127,3 +127,21 @@ BL loader +0x28 调用 0x13bb0（输出栈槽 x29+0x18），+0x2c/+0x30 ADRP/ADD
 ### 实际 Selector/guard 验收（45927376807）
 [Run 45927376807](https://github.com/969981/PokeHome_Resources/actions/runs/45927376807) 成功；artifact 15167275720 SHA256 d85df8d7ae22ae3337484b172d4b4183c025ba8009988a7227f2aace9e35cd4f；独立 CRC/SHA256 通过。DT_RELR 展开27112地址，0x7a5d78确实在其中。0xb15c78 八个槽及七个 holder 均为 PT_LOAD 零填充区，无原始指针值。init_array 0x7673e0 ->0x4fdc20，0x4fdc3c..48四个 STP 清零8槽；七个注册函数有实际 STR x19 写入，selector 0/1/2/4/3/5/7 对应 store 0x4fdd80/0x4fdef0/0x4fe060/0x4fe1d0/0x4fe340/0x4fe4b0/0x4fe620。0x4fe6c4 为清除slot0的生命周期路径。init_array 0x767400..430 每8字节为 holder 初始化函数 0x53efb0/0x5406b0/0x542010/0x543280/0x5449c0/0x546410/0x54a370，分别在0x53eff0/0x5406f0/0x542050/0x5432c0/0x544a00/0x546450/0x54a3b0 写入 holder 首字段。尚需恢复 X19 构造及 vtable GOT 值，holder 与注册对象不可先等同。
 跳表 bytes [0,2,3,4,5,0,6]。0x53db50 move=0 返回true；selector low8 1/6直接true；2及非1..7进入0x53dc20，拒绝move2及160个ID（0x65b9b0起，0x65bc30止，实测160 unique），其余true；3用177项白名单；4用512项白名单；5用697项白名单(0x65bc30起，inclusive last offset0xae0)；7转0x53c5d0(move,7)，后者通过0x7a6308对象表、0x53d690查询、0xb16298对象表及虚表+0x30返回bit0，不等同静态表。前两表512/177均无重复。已补充四表导出及7个注册函数、holder init与GOT完整窗口，新CI待验收。此处称白/黑名单仅为局部函数成员逻辑，不等于游戏合法性。
+
+## Selector 静态映射闭合与动态 guard（2026-11-27）
+[Run 45927489997](https://github.com/969981/PokeHome_Resources/actions/runs/45927489997) 成功。artifact 15166463594，ZIP SHA256 0eccc1ff4ece079d31157ac9eedff13ea75d3a22ecb2b88b9e2f13c6583c9a5a，独立下载 SHA256/CRC 验证。另复核 Run 45919323225 artifact 15163761145，SHA256 03012765fdab94056647041f4ae5ad9e3b7761eabd07f3e822a8d38cdd6c7930。
+七个注册函数成功路径：allocator vfunc+0x10(x0,0x60,8)，返回指针保存x19，清零96字节对象，初始化+0x48子对象，读取 RELR GOT，再加0x10为主虚表地址点，写入[x19]；+0x48和+0x50写入另外两个地址点；保存allocator、self、大小和对齐；调用子对象+0x10，再检查旧槽对象、调用其+0x48子对象虚函数+0x18，最后 STR x19。失败尾和生命周期具体语义尚未命名。动态分派对象与静态资源 holder 不同；七个 holder init 均读取共用 GOT 0x79f6e0=0x767928，加0x10写 holder 首字段，并非七套 Personal 分派虚表。
+| Selector | Dataset | group | GOT | vtable | register | store |
+|---|---|---|---|---|---|---|
+| 0 | Global | C | 0x7a5d80 | 0x799000 | 0x4fdc9c | 0x4fdd80 |
+| 1 | Beluga | A | 0x7a5d88 | 0x798b60 | 0x4fde0c | 0x4fdef0 |
+| 2 | Orion | F | 0x7a5d90 | 0x7995d8 | 0x4fdf7c | 0x4fe060 |
+| 3 | Hayabusa | D | 0x7a5da0 | 0x799150 | 0x4fe25c | 0x4fe340 |
+| 4 | Delphis | B | 0x7a5d98 | 0x798da0 | 0x4fe0ec | 0x4fe1d0 |
+| 5 | Titan | G | 0x7a5da8 | 0x799838 | 0x4fe3cc | 0x4fe4b0 |
+| 6 | unsupported | — | — | — | — | — |
+| 7 | Ikkaku | E | 0x7a5db0 | 0x799390 | 0x4fe53c | 0x4fe620 |
+All GOT entries above have RELR coverage. Prior getter lookup windows independently show index bases holder+0x110 for each group, with 32-byte species stride and per-form pointer lookup. Combined with loader calls and holder+8 writes, static dataset mapping is supported. No mapping to commercial game names asserted. Four filter tables 512/177/160/697 entries all unique within each table (1546 rows, not 1546 distinct union IDs).
+### Selector 7 dynamic filter
+0x53db94 tailcalls 0x53c5d0(move,7). 0x7a6308 relocated pointer=0xb16258 (record-provider table). 0x53c5d0 rejects selector6, normalizes selector0 to5; for selector7 loads provider slot7 at 0xb16290; if null false. Calls provider+0x48 subobject virtual+0x10, then 0x53d690(provider,move). That function reads vector begin/end at provider+0x60/+0x68, divides byte extent by 0x110, selects record by unsigned MoveID; entry+8 pointer must exist, byte pointed object+0x170 nonzero, returns pointer at +0x190. Out-of-range, NULL entry or inactive uses index0's +0x190, **not immediate false**. If query result null, false. Then reads separate object table 0xb16298 (selector7 slot 0xb162d0); if absent false. Otherwise calls object+0x48 subobject vfunc+0x10, stores result pointer to object+0x60, calls provider subobject+0x18, invokes second object's vtable+0x30 and returns bit0 after subobject+0x18. Neither predicate's final implementation nor Waza file identity yet closed; cannot treat as direct existence check.
+New [closure verifier](../../tools/home41_native_selector_closure.py) validates exact registration/lookup instruction anchors and relocated slots, produces personal_dataset_selectors.csv, exports full registration windows including failure tails and candidate dynamic table references. New CI pending; official DB V2 unchanged.
