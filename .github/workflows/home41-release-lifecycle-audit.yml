@@ -200,6 +200,21 @@ jobs:
               for a in arr[:160]:
                   s,n=owner(a)
                   out += [f'#### 0x{a:X}, FDE 0x{s:X}']+dump(max(s,a-0x30),min(s+n,a+0x38))
+          out+=['','## ED278 upstream binding and type wrappers']
+          for a in [0xed278,0xc8690,0xc86a4,0xc86a8,0x8e520,0xd6f10,0xd70dc]:
+              s,n=owner(a)
+              out += [f'### anchor 0x{a:X} FDE 0x{s:X} length 0x{n:X}']+dump(s,s+min(n,0x1800))
+          out+=['','## Relevant raw vtable pointer cells']
+          for o,v,fs in allsegs:
+              if any(o==e[0] for e in segs): continue
+              for j in range(0,fs-7,8):
+                  val=struct.unpack_from('<Q',b,o+j)[0]
+                  if val in type_wrappers or val==0x8d6a0:
+                      a=v+j
+                      out.append(f'- 0x{a:X}: 0x{val:X}')
+                      for k in range(a-16,a+0x50,8):
+                          q=qword(k)
+                          if q is not None: out.append(f'  - 0x{k:X}: 0x{q:X}')
           out+=['','## Boundaries','Pair/bulk reset or indirect aliases can be missed; no same-object or runtime lifecycle claim from matching offsets.']
           q=pathlib.Path('docs/HOME41_RELEASE_SESSION_LIFECYCLE_ELF_AUDIT.md')
           q.write_text('\n'.join(out)+'\n',encoding='utf-8')
