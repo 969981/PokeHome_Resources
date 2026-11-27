@@ -120,10 +120,29 @@ def audit(b,out):
     jt=raw(0x65aede,7)
     jump=[{"selector":i+1,"raw_byte":v,"target":0x53db7c+4*v} for i,v in enumerate(jt)]
     tables=[]
-    for name,a,n in [("guard_53dba0",0x65aee8,512),("guard_53dbe0",0x65b6e8,177)]:
+    for name,a,n in [("guard_53dba0",0x65aee8,512),("guard_53dbe0",0x65b6e8,177),("guard_53dc20_exclusion",0x65b9b0,160),("guard_53dc80",0x65bc30,697)]:
         values=list(struct.unpack("<"+"I"*n,raw(a,n*4)))
         tables.append({"name":name,"address":a,"count":n,"values":values,"unique":len(set(values))})
     report={"status":"STATIC_EVIDENCE_ONLY","elf_sha256":SHA,"slot":{"address":SLOT,"raw_pointer":ptr(SLOT),"relr":SLOT in sites},"relr_count":len(sites),"selector_slots":slots,"objects":objects,"refs":refs,"raw_pointer_sites":{hex(k):v for k,v in pointers.items()},"init_array":init_array,"guard_jump_table":jump,"guard_tables":tables,"guard_tail_raw_hex":raw(0x65b9ac,0x700).hex(),"windows":{"guard":dis(0x53db50,0x53dd20),"guard_tailcall":dis(0x53c5d0,0x53c700),**{g:dis(pc-0x140,pc+0x200) for g,pc in CALLS.items()}},"limitations":["RELR proves relocation coverage only, not runtime registration.","Static pointer values may be zero-fill or unresolved. Bounded register facts are not full SSA.","Guard tailcall and pair-table semantics require review; raw bytes retained."]}
+    # Exact registration call chain and constructors. Slot values remain runtime
+    # objects, not necessarily identical to static resource holders.
+    registrations=[(0,0x4fdc9c,0x4fdd80),(1,0x4fde0c,0x4fdef0),(2,0x4fdf7c,0x4fe060),(4,0x4fe0ec,0x4fe1d0),(3,0x4fe25c,0x4fe340),(5,0x4fe3cc,0x4fe4b0),(7,0x4fe53c,0x4fe620)]
+    reg=[]
+    for selector,start,store in registrations:
+        w=dis(start,store+0x14)
+        ins=next(i for i in w if i["pc"]==store)
+        if ins["op"]!="str" or not ins["args"].startswith("x19, [x20"):raise ValueError("registration anchor")
+        reg.append({"selector":selector,"start":start,"store":store,"window":w})
+    ctor=[]
+    for name,init in zip(OBJECTS,(0x53efb0,0x5406b0,0x542010,0x543280,0x5449c0,0x546410,0x54a370)):
+        ctor.append({"dataset":name,"init":init,"window":dis(init,init+0x68)})
+    # Registration code uses relocated GOT pointers; export the full small
+    # range so subsequent data-flow can resolve exact pointer loads.
+    report["registrations"]=reg
+    report["holder_constructors"]=ctor
+    report["init_dispatch"]=dis(0x4fdc20,0x4fdc9c)
+    report["got_words"]=[{"site":a,"raw_pointer":ptr(a),"relr":a in sites} for a in range(0x79e000,0x7a6600,8) if ptr(a) is not None]
+    report["windows"]["guard_53d690"]=dis(0x53d690,0x53d7c0)
     out.mkdir(parents=True,exist_ok=True)
     (out/"selector_guard.json").write_text(json.dumps(report,indent=2)+"\n")
     with (out/"guard_move_tables.csv").open("w",newline="") as f:
