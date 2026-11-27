@@ -107,6 +107,74 @@ def reaching(rows, edges, register, candidates=()):
                 q.append(b)
     return incoming
 
+def callback_references(md, data, segs, fdes, secs):
+    """Find direct and address-taken callback references. A raw qword, relocation
+    or ADRP/ADD pair is only a reference candidate, not a registration proof."""
+    import bisect
+    targets = {0xDAEA0, 0xDCB18, 0xDCD30, 0xD6D28}
+    starts = sorted(fdes)
+    rows = []
+    def owner(pc):
+        index = bisect.bisect_right(starts, pc)-1
+        if index >= 0:
+            s = starts[index]
+            if pc < s + fdes[s]:
+                return hx(s)
+        return None
+    def signed(n, bits):
+        return n-(1<<bits) if n & (1<<(bits-1)) else n
+    def window(pc, start, end):
+        left=max(start,pc-0x20)
+        right=min(end,pc+0x30)
+        return [{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str}
+                for i in md.disasm(read_rva(data,segs,left,right-left,True),left)]
+    for off, va, size, flags in segs:
+        if flags & 1:
+            for pos in range(0,size-3,4):
+                w=struct.unpack_from("<I",data,off+pos)[0]
+                pc=va+pos
+                if (w&0x7c000000)==0x14000000:
+                    dest=pc+4*signed(w&0x3ffffff,26)
+                    if dest in targets:
+                        rows.append({"kind":"direct-b/bl","site":hx(pc),"target":hx(dest),"owner":owner(pc),
+                                     "window":window(pc,va,va+size)})
+                if (w&0x9f000000) not in (0x10000000,0x90000000):
+                    continue
+                imm=signed(((w>>5)&0x7ffff)*4+((w>>29)&3),21)
+                if (w&0x9f000000)==0x10000000:
+                    dest=pc+imm
+                    if dest in targets:
+                        rows.append({"kind":"adr","site":hx(pc),"target":hx(dest),"owner":owner(pc),
+                                     "window":window(pc,va,va+size)})
+                else:
+                    page=(pc&~0xfff)+(imm<<12)
+                    if not any((t&~0xfff)==page for t in targets):
+                        continue
+                    reg=w&31
+                    for k in range(pos+4,min(pos+36,size-3),4):
+                        n=struct.unpack_from("<I",data,off+k)[0]
+                        if (n&0xffc00000)==0x91000000 and ((n>>5)&31)==reg:
+                            dest=page+((n>>10)&0xfff)
+                            if dest in targets:
+                                site=va+k
+                                rows.append({"kind":"adrp-add-candidate","site":hx(pc),"add_site":hx(site),
+                                             "target":hx(dest),"owner":owner(pc),
+                                             "window":window(site,va,va+size)})
+        else:
+            for pos in range((-va)%8,size-7,8):
+                val=struct.unpack_from("<Q",data,off+pos)[0]
+                if val in targets:
+                    rows.append({"kind":"raw-qword-candidate","site":hx(va+pos),"target":hx(val)})
+    for sec in secs.values():
+        if sec["type"]!=4 or sec["entry_size"]<24:
+            continue
+        for pos in range(sec["file_offset"],sec["file_offset"]+sec["size"],sec["entry_size"]):
+            loc,info,addend=struct.unpack_from("<QQq",data,pos)
+            if addend in targets:
+                rows.append({"kind":"rela-addend-candidate","site":hx(loc),"target":hx(addend),
+                             "relocation_type":info&0xffffffff})
+    return rows
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf",type=Path,required=True)
@@ -170,6 +238,7 @@ def main():
             rows=scope(md,data,segs,s,fdes[s])
             report["caller_windows"].append({"rva":hx(s),"size":fdes[s],
                 "instructions":[{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str} for i in rows]})
+    report["callback_reference_candidates"] = callback_references(md,data,segs,fdes,secs)
     args.out.parent.mkdir(parents=True,exist_ok=True)
     args.out.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
     print("Full FDE instruction coverage:", [(f["rva"],f["instruction_count"]) for f in report["functions"]])
