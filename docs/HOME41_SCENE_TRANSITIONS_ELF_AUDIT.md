@@ -640,6 +640,21 @@ GOT 0017030C 083947f9 ldr      x8, [x8, #0xe70]
 0019D99C 492dfa97 bl       #0x28ec0
 0019D9BC 412dfa97 bl       #0x28ec0
 
+## Parent dispatcher jump table and referenced strings
+- state 0: 0x16f794
+- state 1: 0x16f860
+- state 2: 0x16f87c
+- state 3: 0x16f898
+- state 4: 0x16f828
+- state 5: 0x16f8d0
+- state 6: 0x16f8ec
+- state 7: 0x16f91c
+- state 8: 0x16f970
+- state 9: 0x16f844
+- 0x61cc66: b'execute'
+- 0x61e39f: b'SystemMessageView'
+- 0x6119c7: b'Play_mt_UI_common_report'
+
 ## Helper jump tables
 - table 0x625696: 0:0x6d2ec, 1:0x6d310, 2:0x6d304, 3:0x6d30c
 - table 0x62569a: 0:0x6d4e8, 1:0x6d518, 2:0x6d528, 3:0x6d538
