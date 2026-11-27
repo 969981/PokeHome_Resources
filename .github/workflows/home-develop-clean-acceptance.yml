@@ -60,10 +60,10 @@ jobs:
               $script:failed = $true
               "$Stage FAIL" >> $env:GITHUB_STEP_SUMMARY
               if (Test-Path $log) {
-                $codes = [regex]::Matches((Get-Content -Raw $log),'\b(?:CS\d{4}|TS\d{4}|MSB\d{4}|NU\d{4}|NETSDK\d{4}|ERESOLVE|ETARGET|E404|EUSAGE|EBADENGINE|ENOTFOUND|EAI_AGAIN)\b') | ForEach-Object Value | Sort-Object -Unique | Select-Object -First 30
+                $codes = [regex]::Matches(([string](Get-Content -Raw $log)),'\b(?:CS\d{4}|TS\d{4}|MSB\d{4}|NU\d{4}|NETSDK\d{4}|ERESOLVE|ETARGET|E404|EUSAGE|EBADENGINE|ENOTFOUND|EAI_AGAIN)\b') | ForEach-Object Value | Sort-Object -Unique | Select-Object -First 30
                 if ($codes) { "Diagnostic codes: $($codes -join ', ')" >> $env:GITHUB_STEP_SUMMARY }
               }
-              Write-Output "::error::$Stage failed (private diagnostics suppressed)"
+              Write-Host "::error::$Stage failed (private diagnostics suppressed)"
             }
             return $ok
           }
