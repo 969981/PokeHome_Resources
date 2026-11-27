@@ -22,7 +22,7 @@ def ptr(a):
 
 
 # Bounded call and relocation census: direct branch + address point evidence.
-targets={0x271ba4,0x27a1ac,0x274690,0x274640,0x274a10,0x25afd0,0xf1e7c,0x221dc0,0x2221c0,0x224e80,0x225490,0x225930,0x226fe0,0x222470,0x222a70}
+targets={0x271718,0x27a2f0,0x6c208,0x271ba4,0x27a1ac,0x274690,0x274640,0x274a10,0x25afd0,0xf1e7c,0x221dc0,0x2221c0,0x224e80,0x225490,0x225930,0x226fe0,0x222470,0x222a70}
 focus=set(targets)|{0x24c470,0x27ae98,0x2749d0}
 report=['# HOME41 Registry reload and scene lifecycle', 'SHA256: '+SHA,'## Direct callers']
 for a,n in sorted(fde.items()):
@@ -43,6 +43,16 @@ for slot in sorted(relr|set(rela)):
             except ValueError:continue
             report.append(f'  {a:#x}: {hex(v) if v is not None else "unresolved"}')
             if v in fde and e.executable(v) and fde[v]<=0x1000:focus.add(v)
+report+=['','## Scene state jump table']
+for idx in range(47):
+    v=struct.unpack('<H',e.read(0x625638+2*idx,2))[0]
+    report.append(f'- state {idx}: {0x6c2cc+4*v:#x}')
+report+=['','## Scene vtable address candidates']
+for slot in range(0x7a0b60,0x7a0be8,8):
+    try:t=ptr(slot)
+    except ValueError:continue
+    report.append(f'- {slot:#x}: {hex(t) if t is not None else "unresolved"}')
+    if t in fde and e.executable(t):focus.add(t)
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
