@@ -1,0 +1,52 @@
+name: HOME41 save callback provider audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home41-save-callback-audit.yml']
+permissions:
+  contents: write
+concurrency:
+  group: home41-save-callback-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv
+            tools/audit_home41_save_serializers.py
+            tools/audit_home41_save_callbacks.py
+            docs/HOME41_SAVE_CALLBACK_PROVIDER_ELF_AUDIT.md
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install capstone==5.0.6
+      - name: Verify BDSP and extract native callbacks
+        run: |
+          set -euo pipefail
+          python tools/audit_home41_save_callbacks.py --self-test
+          python tools/audit_home41_save_callbacks.py --audit 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv docs/HOME41_SAVE_CALLBACK_PROVIDER_ELF_AUDIT.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: home41-save-callback-evidence
+          path: docs/HOME41_SAVE_CALLBACK_PROVIDER_ELF_AUDIT.md
+          if-no-files-found: error
+      - name: Publish static report
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f docs/HOME41_SAVE_CALLBACK_PROVIDER_ELF_AUDIT.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: HOME41 native callback provider evidence'
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
