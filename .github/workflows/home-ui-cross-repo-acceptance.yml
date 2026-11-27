@@ -10,7 +10,7 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 86ea21abda51f5dce406a190481f3ab5a168aecc
+  TARGET_SHA: 923256e5036b12b6ce447cad473a3661aebb7ffa
   TARGET_BRANCH: fix/pokemon-detail-layout-icons
 jobs:
   verify:
