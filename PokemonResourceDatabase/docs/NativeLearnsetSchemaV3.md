@@ -18,3 +18,6 @@ WHERE release_id='home-switch-4.1.0' AND native_species=25 AND native_form=0
 ORDER BY selector,ordinal;
 ```
 数据库只描述已恢复的原生事实。research_name 并非原版符号。所有 ELF 地址为静态 VA；未执行实机行为测试。原生语义的学习方式及合法性规则仍在研究。
+
+## Schema CI 验收（2026-11-27）
+[Run 45966490348](https://github.com/969981/PokeHome_Resources/actions/runs/45966490348) 成功：schema_version=3、59业务表、294字段、13/13 tests。artifact 15183166244 SHA256 b0f0c970b889579841e554c2fbbe2701ca7fd9ddb80689871d1116b347480cda，下载独立 CRC、SHA256、SQLite integrity_check、foreign_key_check 均通过。结构产物因沿用历史工作流文件名仍叫 schema_v1.sqlite，PRAGMA user_version 实际为3；它是空结构，不是已导入数据的数据库。全量原版数据导入：[Run 45966490493](https://github.com/969981/PokeHome_Resources/actions/runs/45966490493)，数据量以最终 PASS 及实际产物为准。
