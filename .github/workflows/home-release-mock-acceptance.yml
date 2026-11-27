@@ -1,0 +1,99 @@
+name: HOME release Mock UI acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-release-mock-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-release-mock-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: c35aaefaa123660906a0d7359c497cb826c1b07f
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout pinned private revision
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: target
+          persist-credentials: false
+          sparse-checkout: |
+            tauri2-app/frontend
+            tauri2-app/public
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Frontend acceptance
+        id: acceptance
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -u
+          status="$RUNNER_TEMP/release-status.txt"
+          failed=0
+          run_check() {
+            local stage="$1"; shift
+            if "$@" >"$RUNNER_TEMP/release-$stage.log" 2>&1; then
+              echo "$stage PASS" | tee -a "$status" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "$stage FAIL" | tee -a "$status" >> "$GITHUB_STEP_SUMMARY"
+              return 1
+            fi
+          }
+          run_check install npm ci --no-audit --no-fund || exit 1
+          run_check typecheck npm run typecheck || failed=1
+          run_check lint npm run lint || failed=1
+          run_check release-test npm run test -- tests/release-mock.test.ts || failed=1
+          run_check test npm run test || failed=1
+          run_check build npm run build || failed=1
+          browser_dir="$RUNNER_TEMP/release-browser"
+          mkdir -p "$browser_dir"
+          if run_check browser-install npm install --prefix "$browser_dir" --no-save --no-audit --no-fund playwright@1.58.2 &&
+             run_check chromium "$browser_dir/node_modules/.bin/playwright" install --with-deps chromium; then
+            cp tests/browser/release-smoke.mjs "$browser_dir/"
+            npm run dev -- --host 127.0.0.1 >"$RUNNER_TEMP/release-vite.log" 2>&1 &
+            server=$!
+            trap 'kill "$server" 2>/dev/null || true' EXIT
+            for attempt in $(seq 1 60); do
+              curl -fsS http://127.0.0.1:5173/ >/dev/null 2>&1 && break
+              sleep 1
+            done
+            run_check browser node "$browser_dir/release-smoke.mjs" || failed=1
+          else
+            failed=1
+          fi
+          exit "$failed"
+      - name: Publish diagnostics only to private repository
+        if: always() && steps.checkout.outcome == 'success'
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA"
+          mkdir -p docs/devlog
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const t=process.env.RUNNER_TEMP;
+          const read=(name)=>{try{return fs.readFileSync(path.join(t,name),'utf8');}catch{return '';}};
+          const stages=['install','typecheck','lint','release-test','test','build','browser-install','chromium','browser','vite'];
+          const diagnostics=Object.fromEntries(stages.map(s=>[s,read('release-'+s+'.log').split('\n').filter(x=>/error|fail|TS\d+|PASS|Test Files|Tests /i.test(x)).slice(-50).map(x=>x.slice(0,800))]));
+          fs.writeFileSync('docs/devlog/2026-11-27-release-mock-ci.json',JSON.stringify({target:process.env.TARGET_SHA,runId:process.env.GITHUB_RUN_ID,stages:read('release-status.txt').trim().split('\n').filter(Boolean),diagnostics},null,2)+'\n');
+          JS
+          git add --sparse -- docs/devlog/2026-11-27-release-mock-ci.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ci: private Mock release acceptance diagnostics" >/dev/null
+          gh auth setup-git --hostname github.com
+          git push origin "HEAD:refs/heads/ci/release-mock-${GITHUB_RUN_ID}" >"$RUNNER_TEMP/release-push.log" 2>&1
+          echo "Private diagnostic report published" >> "$GITHUB_STEP_SUMMARY"
