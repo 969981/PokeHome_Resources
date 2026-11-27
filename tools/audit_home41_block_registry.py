@@ -72,7 +72,7 @@ for wanted in [0x1bae30,0x283dd0,0x1e7ff0]:
 focus.update([0x25aa20,0x29d88c,0x1fb510,0x2981e0,0x29da38,0x1fb6e0,0x1c43d4,0x1c44b0,0x1b1b84,0x1bb1b8,0x1bb1ec,0x1bb248,0x1bb258,0x1f4260,0x1c45dc,0x1c46a8,0x29be30,0x29b9a4,0x25ad90,0x25c080,0x1b4930])
 report+=['','## Registry identity / dual buffer cross references']
 # Scan complete FDE ranges for direct calls and immediate materialization candidates.
-targets={0x2839f0,0x1e7cf0,0x1ba960,0x1b1fcc,0x1f0d40,0x2859b8,0x25b5c0,0x25b1f8,0x25b280,0x273654,0x284a54,0x1e87ac,0x1bb4dc}
+targets={0x27d020,0x1dab28,0x2839f0,0x1e7cf0,0x1ba960,0x1b1fcc,0x1f0d40,0x2859b8,0x25b5c0,0x25b1f8,0x25b280,0x273654,0x284a54,0x1e87ac,0x1bb4dc}
 focus.update(targets)
 focus.update([0x25bc90,0x25bea0,0x25d528,0x25d670,0x25d3c4,0x284990,0x1e8698,0x1bb820,0x1b1fe8,0x1f0cb0,0x1e4338,0x1e4480,0x286354,0x287a68,0x28bdcc,0x220ca0,0x221ac0])
 for a,n in sorted(fde.items()):
@@ -86,7 +86,16 @@ for a,n in sorted(fde.items()):
             hits.append('offset candidate '+fmt(i))
     if hits:
         report += [f'### xref {a:#x}']+hits
-        if n<=0x3000:focus.add(a)
+        if n<=0x3000 and (any(h.startswith('direct') or '#0x349d' in h for h in hits)):focus.add(a)
+# Match ADRP references to the concrete selector byte page and the containing global.
+report+=['','## Selector global / registry factory followup']
+for a,n in sorted(fde.items()):
+    if n>0x10000 or not e.executable(a):continue
+    ii=body(a)
+    hits=[fmt(i) for i in ii if (i.mnemonic=='adrp' and any(i.op_str.endswith('#'+hex(p)) for p in [0x878000,0x7e5000])) or re.search(r'#0x(?:9349c|9349d|349c|349d|93498|3498|ac[dD])\b',i.op_str)]
+    if hits:
+        report += [f'### global candidate {a:#x}']+hits
+        if n<=0x3000 and (0x200000<=a<=0x225000 or any('#0x878000' in h for h in hits)):focus.add(a)
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
