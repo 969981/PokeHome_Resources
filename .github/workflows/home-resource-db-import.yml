@@ -7,6 +7,8 @@ on:
       - 'PokemonResourceDatabase/tools/build_home_resources.py'
       - 'PokemonResourceDatabase/schemas/migrations/**'
       - 'PokemonResourceDatabase/tools/import_native_learnsets.py'
+      - 'PokemonResourceDatabase/tools/import_native_scalars.py'
+      - 'PokemonResourceDatabase/tools/test_native_v4.py'
       - 'PokemonResourceDatabase/tools/test_native_v3.py'
       - '.github/workflows/home-resource-db-import.yml'
 permissions:
@@ -35,5 +37,5 @@ jobs:
       - run: uv run PokemonResourceDatabase/tools/build_home_resources.py --out dist/home
       - uses: actions/upload-artifact@v4
         with:
-          name: home-resource-db-v3
+          name: home-resource-db-v4
           path: dist/home/

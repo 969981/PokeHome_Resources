@@ -176,7 +176,7 @@ def export(c,out):
     target=out/"csv";target.mkdir()
     tables=[x[0] for x in c.execute("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name<>'schema_migrations' ORDER BY name")]
     counts={}
-    for t in tables+["v_native_pokemon_images","v_native_personal_learnsets"]:
+    for t in tables+["v_native_pokemon_images","v_native_personal_learnsets","v_native_scalar_values","v_native_personal_base_data","v_native_waza_base_data"]:
         cols=c.execute(f"PRAGMA table_info({t})").fetchall();pk=[x[1] for x in sorted(cols,key=lambda x:x[5]) if x[5]]
         order=",".join(pk) if pk else ",".join(x[1] for x in cols)
         cur=c.execute(f"SELECT * FROM {t} ORDER BY {order}")
@@ -198,13 +198,15 @@ def main():
         build=Build(c,root,out,a.with_cas);build.run()
         from import_native_learnsets import import_native
         import_native(build)
-        expected={"native_pokemon_keys":3506,"native_resource_keys":3506,"native_key_images":7012,"image_assets":7044,"native_item_ids":1829,"native_item_records":1166,"native_move_records":5089,"pokemon_species_names":11275,"native_personal_selectors":8,"native_personal_dispatch":7,"native_learnset_layouts":7,"native_personal_records":8485,"native_personal_learnset_entries":360484,"native_move_guard_tables":4,"native_move_guard_entries":1546,"native_move_guard_rules":8,"native_move_exclusion_entries":32}
+        from import_native_scalars import import_scalars
+        import_scalars(build)
+        expected={"native_pokemon_keys":3506,"native_resource_keys":3506,"native_key_images":7012,"image_assets":7044,"native_item_ids":1829,"native_item_records":1166,"native_move_records":5089,"pokemon_species_names":11275,"native_personal_selectors":8,"native_personal_dispatch":7,"native_learnset_layouts":7,"native_personal_records":8485,"native_personal_learnset_entries":360484,"native_move_guard_tables":4,"native_move_guard_entries":1546,"native_move_guard_rules":8,"native_move_exclusion_entries":32,"native_scalar_getters":181}
         for t,n in expected.items():check(c.execute(f"SELECT count(*) FROM {t}").fetchone()[0]==n,t+" coverage")
         quality=dict(c.execute("SELECT quality_status,count(*) FROM image_assets GROUP BY quality_status"))
         check(quality=={"native":6996,"native_lowres":16,"unreferenced_alternative":24,"unreferenced_placeholder":8},"quality counts")
         check(not c.execute("PRAGMA foreign_key_check").fetchone(),"FK failure")
         check(c.execute("PRAGMA integrity_check").fetchone()==("ok",),"integrity failure")
     counts=export(c,out);dictionary(c,out/"schema");c.close()
-    summary={"status":"PASS","schema_version":version,"release":R,"source_revision":build.revision,"cas_included":a.with_cas,"counts":counts,"quality":quality,"inventory":build.inventory,"db_sha256":sha(db.read_bytes()),"limitations":["Personal and Waza raw fields are structural only","form names remain native labels; no inferred cross-game form IDs","image archives verified, not re-decoded","ribbon/mark/achievement images not imported"]}
+    summary={"status":"PASS","schema_version":version,"release":R,"source_revision":build.revision,"cas_included":a.with_cas,"counts":counts,"quality":quality,"inventory":build.inventory,"db_sha256":sha(db.read_bytes()),"limitations":["Personal and Waza common scalar Getter reads are statically verified; semantic labels carry evidence grades","form names remain native labels; no inferred cross-game form IDs","image archives verified, not re-decoded","ribbon/mark/achievement images not imported"]}
     (out/"summary.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False)+"\n",encoding="utf-8");print(json.dumps(summary,ensure_ascii=False))
 if __name__=="__main__":main()
