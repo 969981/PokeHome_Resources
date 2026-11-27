@@ -1,0 +1,51 @@
+name: Cleanup merged HOME PR 51 branch
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-merged-home-pr51.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cleanup-merged-home-pr51
+  cancel-in-progress: false
+
+jobs:
+  delete-merged-branch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+      TARGET_BRANCH: feat/ui-foundation-20261127
+      EXPECTED_SHA: 123b7c2ef0f730b45f8f56f255092b681f8a82c4
+      TARGET_BASE: develop
+      VERIFIED_MERGE_SHA: 537ffb3b2f1399854063214abf1ef650e3285238
+    steps:
+      - name: Verify merge ancestry and delete only its unchanged head
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN" || { echo "::error::Missing existing target repository authorization"; exit 1; }
+          # PR #51 was independently confirmed merged at VERIFIED_MERGE_SHA.
+          # This token has Contents access, not Pull Requests access.
+          gh api "repos/$TARGET_REPO/compare/$TARGET_BASE...$VERIFIED_MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh auth setup-git --hostname github.com
+          git init -q "$RUNNER_TEMP/home-pr51-cleanup"
+          cd "$RUNNER_TEMP/home-pr51-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          ref="refs/heads/$TARGET_BRANCH"
+          remote_line="$(git ls-remote --heads origin "$ref")"
+          if [ -z "$remote_line" ]; then
+            echo "Branch already absent; no deletion needed."
+            exit 0
+          fi
+          actual="$(printf '%s\n' "$remote_line" | cut -f1)"
+          test "$actual" = "$EXPECTED_SHA" || { echo "::error::Branch head changed; refusing deletion"; exit 1; }
+          gh api "repos/$TARGET_REPO/compare/$TARGET_BASE...$EXPECTED_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          git push --force-with-lease="$ref:$EXPECTED_SHA" origin ":$ref"
+          test -z "$(git ls-remote --heads origin "$ref")"
+          echo "Verified deletion of $TARGET_REPO:$TARGET_BRANCH; base untouched."
