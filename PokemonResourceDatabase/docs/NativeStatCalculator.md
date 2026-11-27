@@ -1,0 +1,4 @@
+# HOME 4.1.0 Native Stat Calculator
+[V4](NativeScalarSchemaV4.md) · [Getter evidence](PersonalWazaNativeGetters.md) · [audit](../../tools/home41_native_stat_calculator.py)
+
+V4 full import [46011533477](https://github.com/969981/PokeHome_Resources/actions/runs/46011533477) success, artifact 15203887965, ZIP SHA256 cfe4fac0049d79ecaa6ad0eddb2a7f6a05d11bb19bd2e0913c41e224d320dbd2 (CI metadata). Native stat study begins from six wrapper call anchors 0x531eb4/0x531fa4/0x5320a0/0x53219c/0x532298/0x532394. Prior raw evidence each uses 0x522cc0 bit0..5 to select 31 vs individual value read via 0x513300/480/600/780/900/a80. No formula claim until arithmetic and branches reviewed. New SHA-qualified audit exports full bounded region and direct callee/helper windows. No editor or schema modification in this phase.
