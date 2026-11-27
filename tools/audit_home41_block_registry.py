@@ -45,7 +45,7 @@ for start in [0x7806d0,0x7807a0,0x77aae8]:
         t=ptr(a);report.append(f'- {a:#x}: {hex(t) if t is not None else "unresolved"}')
         if t in fde and e.executable(t):focus.add(t)
 report+=['','## Registry address points and constant cells']
-for cell in [0x7a3150,0x7a2688,0x7a23e8,0x7a32a0,0x7a25d8,0x7a2f28]:
+for cell in [0x7a3150,0x7a2688,0x7a23e8,0x7a32a0,0x7a25d8,0x7a2f28,0x7a2f30]:
     t=ptr(cell)
     report.append(f'- cell {cell:#x}, target {hex(t) if t is not None else "unresolved"}')
     if t is not None:
@@ -69,7 +69,7 @@ for wanted in [0x1bae30,0x283dd0,0x1e7ff0]:
             except ValueError:continue
             report.append(f'  {a:#x}: {hex(t) if t is not None else "unresolved"}')
             if t in fde and e.executable(t):focus.add(t)
-focus.update([0x25aa20,0x29d88c,0x1fb510,0x2981e0,0x29da38,0x1fb6e0,0x1c43d4,0x1c44b0,0x1b1b84,0x1bb1b8,0x1bb1ec,0x1bb248,0x1bb258,0x1f4260,0x1c45dc,0x1c46a8,0x29be30,0x29b9a4])
+focus.update([0x25aa20,0x29d88c,0x1fb510,0x2981e0,0x29da38,0x1fb6e0,0x1c43d4,0x1c44b0,0x1b1b84,0x1bb1b8,0x1bb1ec,0x1bb248,0x1bb258,0x1f4260,0x1c45dc,0x1c46a8,0x29be30,0x29b9a4,0x25ad90,0x25c080,0x1b4930])
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
