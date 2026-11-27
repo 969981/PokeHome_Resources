@@ -28,3 +28,6 @@ uv run --no-project python -m unittest discover -s PokemonResourceDatabase/tools
 
 ## V3 原生学习表与 Selector
 [Schema V3](docs/NativeLearnsetSchemaV3.md) · [0003 migration](schemas/migrations/0003_native_learnsets.sql) · [importer](tools/import_native_learnsets.py)。全量构建以 CI 为准；V1/V2 迁移保留。
+
+## V4 Native Scalar Core
+[原生 Getter 研究](docs/PersonalWazaNativeGetters.md) · [V4 规范](docs/NativeScalarSchemaV4.md) · [V4 migration](schemas/migrations/0004_native_scalar_getters.sql)。结构验收通过，完整数据快照以 [CI](https://github.com/969981/PokeHome_Resources/actions/runs/46011533477) 为准。V3 完整数据已发布 Actions 产物。
