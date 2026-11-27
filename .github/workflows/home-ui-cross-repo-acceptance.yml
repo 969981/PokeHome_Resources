@@ -10,11 +10,11 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: a6381868d242f3c7d2f43b246ecaf71773b36d6a
+  TARGET_SHA: 3673b0c51f3a44a797d61d4f0c5a9a9ec0b81b77
   TARGET_BRANCH: feat/ui-foundation-20261127
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
       - name: Checkout pinned private UI revision
