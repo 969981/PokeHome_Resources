@@ -53,6 +53,18 @@ def audit(b,out):
             if 0x531c80<=a<0x532408:refs[hex(a)].append(pc)
     out.mkdir(parents=True,exist_ok=True)
     report={"status":"STATIC_STAT_EVIDENCE","elf_sha256":SHA,"windows":windows,"stat_wrapper_calls":CALLS,"direct_targets":sorted(targets),"incoming_refs":dict(refs),"limitations":["Window boundaries not recovered function boundaries.","No live object execution or universal game formula claimed."]}
+    # Resolve tail-call arithmetic targets and six dataset dispatch blocks.
+    windows["arithmetic_region"]=render(dis(0x5378fc,0x538c00))
+    windows["dataset_dispatch_region"]=render(dis(0x5318c0,0x531e20))
+    windows["dataset_calculators"]=render(dis(0x5347b0,0x537870))
+    windows["growth_select"]=render(dis(0x5013f0,0x501550))
+    jump_tables={}
+    for a,n in [(0x65a7e6,0x42),(0x65a828,0x30)]:
+        jump_tables[hex(a)]=raw(a,n).hex()
+    report["jump_table_bytes"]=jump_tables
+    # Export contiguous literal bytes near arithmetic table xrefs after
+    # disassembly review; this interval is not yet an interpreted nature table.
+    report["arithmetic_constants"]=raw(0x65a000,0x1000).hex()
     (out/"stat_evidence.json").write_text(json.dumps(report,indent=2)+"\n")
     with (out/"stat_evidence.asm").open("w") as f:
         for name,ins in windows.items():
