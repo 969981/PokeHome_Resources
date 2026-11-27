@@ -7,10 +7,10 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: home-dotnet-cross-repo-acceptance
+  group: home-layered-cache-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 972d9d59968d00665029026fcf5d9ce17296d813
+  TARGET_SHA: f5a66de366b285d0b699c5e0e341373c1d841386
   TARGET_BRANCH: fix/linked-game-hot-refresh
   DOTNET_CLI_UI_LANGUAGE: en-US
   DOTNET_NOLOGO: 'true'
@@ -117,7 +117,7 @@ jobs:
             const metrics = Object.fromEntries(['total','executed','passed','failed','notExecuted','error','timeout','aborted','inconclusive'].map(k=>[k,attrs[k]===undefined?null:Number(attrs[k])]));
             return [name,{status:'RECORDED',...metrics}];
           }));
-          fs.writeFileSync('docs/devlog/2026-11-27-linked-game-hot-refresh-dotnet-ci-result.json',JSON.stringify({
+          fs.writeFileSync('docs/devlog/2026-11-27-layered-cache-dotnet-ci-result.json',JSON.stringify({
             target:process.env.TARGET_SHA,runId:process.env.GITHUB_RUN_ID,runner:process.env.RUNNER_OS,
             sdkSetup:process.env.SDK_OUTCOME,sdkVersion:read('sdk.txt').trim().slice(0,200),
             checksOutcome:process.env.CHECKS_OUTCOME,stages,suites
@@ -133,15 +133,22 @@ jobs:
         run: |
           set -euo pipefail
           log="$(cygpath -u "$RUNNER_TEMP")/home-dotnet-private-push.log"
-          relative=docs/devlog/2026-11-27-linked-game-hot-refresh-dotnet-ci-result.json
+          relative=docs/devlog/2026-11-27-layered-cache-dotnet-ci-result.json
           test "$(git rev-parse HEAD)" = "$TARGET_SHA" || { echo "::error::Pinned checkout mismatch"; exit 1; }
           gh auth setup-git --hostname github.com >"$log" 2>&1 || { echo "::error::Private authentication setup failed"; exit 1; }
           remote="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" 2>>"$log" | cut -f1)"
-          test "$remote" = "$TARGET_SHA" || { echo "::error::Target advanced or unavailable; refusing stale report"; exit 1; }
+          if [ "$remote" != "$TARGET_SHA" ]; then
+            git fetch --depth=8 origin "refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/layered-report-fetch.log" 2>&1 || { echo "::error::Private report fetch failed"; exit 1; }
+            git merge-base --is-ancestor "$TARGET_SHA" FETCH_HEAD || { echo "::error::Target history changed"; exit 1; }
+            test "$(git diff --name-only "$TARGET_SHA" FETCH_HEAD)" = "docs/devlog/2026-11-27-layered-cache-ui-ci-result.json" || { echo "::error::Target code changed; refusing stale report"; exit 1; }
+          fi
           git add -- "$relative" >"$log" 2>&1 || { echo "::error::Report staging failed"; exit 1; }
           test "$(git diff --cached --name-only)" = "$relative" || { echo "::error::Unexpected staged paths"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "ci(detail): record private Windows dotnet acceptance diagnostics" >"$log" 2>&1 || { echo "::error::Private report commit failed"; exit 1; }
+          if [ "$remote" != "$TARGET_SHA" ]; then
+            git rebase FETCH_HEAD >"$RUNNER_TEMP/layered-report-rebase.log" 2>&1 || { echo "::error::Private report rebase failed"; exit 1; }
+          fi
           git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$log" 2>&1 || { echo "::error::Private report push rejected"; exit 1; }
           echo "Private report published; failed checks remain failing."
