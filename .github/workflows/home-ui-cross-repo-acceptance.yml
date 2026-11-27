@@ -7,11 +7,11 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: home-ui-cross-repo-acceptance
+  group: home-layered-cache-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 5110b14b7193ab32243266ac47d4560c49170d01
-  TARGET_BRANCH: fix/detail-icons-pkhex-hover
+  TARGET_SHA: f5a66de366b285d0b699c5e0e341373c1d841386
+  TARGET_BRANCH: fix/linked-game-hot-refresh
 jobs:
   verify:
     runs-on: ubuntu-24.04
@@ -162,7 +162,7 @@ jobs:
             }
           }
           const codes = Object.fromEntries(['typecheck','build'].map(stage => [stage,[...new Set(read('home-ui-'+stage+'.log').match(/error TS[0-9]+/g) ?? [])]]));
-          fs.writeFileSync('docs/devlog/2026-11-27-pokemon-hover-ci-result.json', JSON.stringify({
+          fs.writeFileSync('docs/devlog/2026-11-27-layered-cache-ui-ci-result.json', JSON.stringify({
             target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID,
             install:read('home-ui-status.txt').includes('install PASS')?'PASS':read('home-ui-status.txt').includes('install FAIL')?'FAIL':'UNKNOWN',
             installDiagnostics:read('home-ui-install.log').split('\n').filter(line => /npm error|npm ERR!|ERESOLVE|EUSAGE|ETARGET/.test(line)).slice(-25).map(line=>line.slice(0,350)),
@@ -177,19 +177,26 @@ jobs:
             diagnosticCodes:codes
           },null,2)+'\n');
           JS
-          git add --sparse -- docs/devlog/2026-11-27-pokemon-hover-ci-result.json
+          git add --sparse -- docs/devlog/2026-11-27-layered-cache-ui-ci-result.json
           if git diff --cached --quiet; then exit 0; fi
           while IFS= read -r changed; do
             case "$changed" in
-              docs/devlog/2026-11-27-pokemon-hover-ci-result.json) ;;
+              docs/devlog/2026-11-27-layered-cache-ui-ci-result.json) ;;
               *) echo "::error::Unexpected staged path"; exit 1;;
             esac
           done < <(git diff --cached --name-only)
           gh auth setup-git --hostname github.com
           remote_sha="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)"
-          test "$remote_sha" = "$TARGET_SHA" || { echo "::error::Target advanced; refusing stale diagnostics publish"; exit 1; }
+          if [ "$remote_sha" != "$TARGET_SHA" ]; then
+            git fetch --depth=8 origin "refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/layered-report-fetch.log" 2>&1 || { echo "::error::Private report fetch failed"; exit 1; }
+            git merge-base --is-ancestor "$TARGET_SHA" FETCH_HEAD || { echo "::error::Target history changed"; exit 1; }
+            test "$(git diff --name-only "$TARGET_SHA" FETCH_HEAD)" = "docs/devlog/2026-11-27-layered-cache-dotnet-ci-result.json" || { echo "::error::Target code changed; refusing stale report"; exit 1; }
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "ci(detail): record private cross-repository acceptance diagnostics" >/dev/null
+          if [ "$remote_sha" != "$TARGET_SHA" ]; then
+            git rebase FETCH_HEAD >"$RUNNER_TEMP/layered-report-rebase.log" 2>&1 || { echo "::error::Private report rebase failed"; exit 1; }
+          fi
           git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Diagnostics publish rejected"; exit 1; }
           echo "Diagnostics published privately; failed checks remain failing" >> "$GITHUB_STEP_SUMMARY"
