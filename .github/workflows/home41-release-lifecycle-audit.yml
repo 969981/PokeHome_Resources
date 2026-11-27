@@ -128,6 +128,78 @@ jobs:
               if not ins: continue
               if 0x70000<=a<0x120000 or ('wzr' in ins[0].op_str and '#0x2a8' in ins[0].op_str):
                   out += [f'### 0x{a:X} FDE 0x{s:X}']+dump(a-0x14,a+0x18)
+          # Follow View_List's borrowed session pointer and type-token consumers.
+          allsegs=[]
+          for i in range(num):
+              t,f,o,v,pa,fs,ms,al=struct.unpack_from('<IIQQQQQQ',b,phoff+i*entsize)
+              if t==1: allsegs.append((o,v,fs))
+          def readva(a,n):
+              for o,v,fs in allsegs:
+                  if v<=a and a+n<=v+fs: return b[o+a-v:o+a-v+n]
+              return b''
+          def qword(a):
+              x=readva(a,8)
+              return struct.unpack('<Q',x)[0] if len(x)==8 else None
+          out+=['','## View_List and session binding','### View_List vtable neighborhood']
+          for a in range(0x76e150,0x76e200,8):
+              val=qword(a)
+              out.append(f'- 0x{a:X}: '+(f'0x{val:X}' if val is not None else 'unmapped'))
+          candidates=collections.defaultdict(list); type_wrappers=set()
+          for a in calls[0x8d6a0]:
+              ins=list(window(a,a+4))
+              if ins and ins[0].mnemonic=='b':
+                  s,n=owner(a)
+                  if n<=0x40: type_wrappers.add(s)
+          out+=['','### Type-token direct tail wrappers',', '.join(hex(x) for x in sorted(type_wrappers))]
+          relocs=[]
+          shoff=struct.unpack_from('<Q',b,40)[0]
+          shentsize,shnum=struct.unpack_from('<HH',b,58)
+          for i in range(shnum):
+              sh=struct.unpack_from('<IIQQQQIIQQ',b,shoff+i*shentsize)
+              if sh[1]==4 and sh[9]>=24:
+                  for off in range(sh[4],sh[4]+sh[5],sh[9]):
+                      loc,info,addend=struct.unpack_from('<QQq',b,off)
+                      if addend in type_wrappers or addend==0x8d6a0:
+                          relocs.append((loc,addend,info&0xffffffff))
+          out+=['','### Type-token relocation cells (candidates)']
+          for loc,addend,t in relocs:
+              out.append(f'- cell 0x{loc:X} => 0x{addend:X}, type {t}')
+              for a in range(loc-16,loc+48,8):
+                  val=qword(a)
+                  out.append(f'  - 0x{a:X}: '+(f'0x{val:X}' if val is not None else 'unmapped'))
+          targets={0x76e160,0x76e170}
+          for loc,addend,t in relocs:
+              targets.update([loc,loc-16])
+          # Also consider vtable function pointer cells stored as raw qwords.
+          for o,v,fs in allsegs:
+              if any(o==e[0] for e in segs): continue
+              for j in range(0,fs-7,8):
+                  val=struct.unpack_from('<Q',b,o+j)[0]
+                  if val in type_wrappers or val==0x8d6a0:
+                      targets.update([v+j,v+j-16])
+          for o,v,fs in segs:
+              for j in range(0,fs-3,4):
+                  a=v+j; w=struct.unpack_from('<I',b,o+j)[0]
+                  if (w&0xffc00000)==0xf9000000 and ((w>>10)&0xfff)*8==0x640:
+                      candidates['STR X to +0x640'].append(a)
+                  if (w&0x9f000000)==0x10000000:
+                      imm=sg(((w>>5)&0x7ffff)<<2|((w>>29)&3),21)
+                      if a+imm in targets: candidates['ADR vtable candidate'].append(a)
+                  if (w&0x9f000000)==0x90000000:
+                      imm=sg(((w>>5)&0x7ffff)<<2|((w>>29)&3),21)
+                      page=(a&~0xfff)+(imm<<12)
+                      matching={t for t in targets if (t&~0xfff)==page}
+                      if matching:
+                          reg=w&31
+                          for k in range(j+4,min(j+40,fs-3),4):
+                              n=struct.unpack_from('<I',b,o+k)[0]
+                              if (n&0xffc00000)==0x91000000 and ((n>>5)&31)==reg and page+((n>>10)&0xfff) in matching:
+                                  candidates['ADRP+ADD vtable candidate'].append(a); break
+          for label,arr in candidates.items():
+              out+=['',f'### {label}: {len(arr)}']
+              for a in arr[:160]:
+                  s,n=owner(a)
+                  out += [f'#### 0x{a:X}, FDE 0x{s:X}']+dump(max(s,a-0x30),min(s+n,a+0x38))
           out+=['','## Boundaries','Pair/bulk reset or indirect aliases can be missed; no same-object or runtime lifecycle claim from matching offsets.']
           q=pathlib.Path('docs/HOME41_RELEASE_SESSION_LIFECYCLE_ELF_AUDIT.md')
           q.write_text('\n'.join(out)+'\n',encoding='utf-8')
