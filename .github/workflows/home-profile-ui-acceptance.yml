@@ -1,0 +1,202 @@
+name: HOME profile ui acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-profile-ui-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-profile-identity-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 4c8b2d7cde86795a8479eed6a97d8331cfe6a25e
+  TARGET_BRANCH: feat/home-profile-identity
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout pinned private UI revision
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: target
+          persist-credentials: false
+          sparse-checkout: |
+            tauri2-app/frontend
+            tauri2-app/public
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Resolve npm lock and verify clean install
+        id: npm
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -euo pipefail
+          # This runner repo is public: never publish private source, lock or raw logs.
+          run_private() {
+            local stage="$1"; shift
+            local logfile="$RUNNER_TEMP/home-ui-$stage.log"
+            if "$@" >"$logfile" 2>&1; then
+              echo "$stage PASS" >> "$GITHUB_STEP_SUMMARY"
+              echo "$stage PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            else
+              echo "$stage FAIL" >> "$GITHUB_STEP_SUMMARY"
+              echo "$stage FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+              for code in ERESOLVE ETARGET E404 EAI_AGAIN ENOTFOUND ELOCKVERIFY EBADENGINE EUSAGE; do
+                if grep -q "$code" "$logfile"; then echo "$stage npm-code: $code" >> "$GITHUB_STEP_SUMMARY"; fi
+              done
+              echo "::error::$stage failed (private log suppressed)"
+              return 1
+            fi
+          }
+          # The generated lock is already committed; verify it rather than rewriting it.
+          run_private install npm ci --no-audit --no-fund
+          git diff --exit-code -- package-lock.json >/dev/null 2>&1
+      - name: Typecheck lint test build
+        id: checks
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -u
+          failed=0
+          for stage in typecheck lint test build; do
+            args=()
+            if [ "$stage" = test ]; then args=(-- --reporter=json --outputFile="$RUNNER_TEMP/home-ui-vitest.json"); fi
+            if npm run "$stage" "${args[@]}" >"$RUNNER_TEMP/home-ui-$stage.log" 2>&1; then
+              printf "%s PASS\n" "$stage" >> "$RUNNER_TEMP/home-ui-status.txt"
+              echo "$stage PASS" >> "$GITHUB_STEP_SUMMARY"
+            else
+              printf "%s FAIL\n" "$stage" >> "$RUNNER_TEMP/home-ui-status.txt"
+              echo "$stage FAIL" >> "$GITHUB_STEP_SUMMARY"
+              # Expose only standard TS diagnostic numbers, not source paths or messages.
+              if [ "$stage" = typecheck ]; then
+                grep -oE 'error TS[0-9]+' "$RUNNER_TEMP/home-ui-$stage.log" | sort -u | head -20 >> "$GITHUB_STEP_SUMMARY" || true
+              fi
+              echo "::error::$stage failed (private log suppressed)"
+              failed=1
+            fi
+          done
+          exit "$failed"
+      - name: Independent browser smoke and detail visual tests (MockHost only)
+        if: ${{ !cancelled() && steps.npm.outcome == 'success' }}
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser_dir="$RUNNER_TEMP/home-ui-browser"
+          mkdir -p "$browser_dir"
+          log="$RUNNER_TEMP/home-ui-browser.log"
+          run_browser() (
+            set -euo pipefail
+            npm install --prefix "$browser_dir" --no-save --no-audit --no-fund playwright@1.58.2
+            "$browser_dir/node_modules/.bin/playwright" install --with-deps chromium
+            cp tests/browser/{ui-smoke,pokemon-detail-visual}.mjs "$browser_dir/"
+            npm run dev -- --host 127.0.0.1 >"$RUNNER_TEMP/home-ui-vite.log" 2>&1 &
+            server=$!
+            trap 'kill "$server" 2>/dev/null || true' EXIT
+            for attempt in $(seq 1 60); do
+              if curl -fsS http://127.0.0.1:5173/ >/dev/null; then break; fi
+              sleep 1
+            done
+            curl -fsS http://127.0.0.1:5173/ >/dev/null
+            local_status=0
+            if node "$browser_dir/ui-smoke.mjs" >"$RUNNER_TEMP/home-ui-smoke.log" 2>&1; then
+              echo "smoke PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            else
+              echo "smoke FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+              local_status=1
+            fi
+            if HOME_DETAIL_SCREENSHOT_DIR="$RUNNER_TEMP/home-detail-screenshots" node "$browser_dir/pokemon-detail-visual.mjs" >"$RUNNER_TEMP/home-ui-visual.log" 2>&1; then
+              echo "visual PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            else
+              echo "visual FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+              local_status=1
+            fi
+            exit "$local_status"
+          )
+          set +e
+          (run_browser) >"$log" 2>&1
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ]; then
+            echo "browser PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            echo "browser PASS" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "browser FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+            echo "::error::Browser smoke failed (private log suppressed)"
+            exit 1
+          fi
+      - name: Publish private CI diagnostics
+        if: always() && steps.checkout.outcome == 'success'
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA"
+          # Only a bounded structured diagnostic is written into the private target.
+          # No source, lock, test output, or diagnostic file is uploaded publicly.
+          mkdir -p docs/devlog
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const t = process.env.RUNNER_TEMP;
+          const read = name => { try { return fs.readFileSync(path.join(t,name),'utf8'); } catch { return ''; } };
+          let report = {};
+          try { report = JSON.parse(read('home-ui-vitest.json')); } catch {}
+          const failures = [];
+          for (const suite of report.testResults ?? []) {
+            for (const a of suite.assertionResults ?? []) {
+              if (a.status !== 'failed') continue;
+              failures.push({suite:path.basename(suite.name ?? ''),test:String(a.fullName ?? a.title ?? '').slice(0,240),message:String(a.failureMessages?.[0] ?? '').split('\n').slice(0,4).join('\n').slice(0,600)});
+            }
+            if (suite.status === 'failed' && !(suite.assertionResults ?? []).some(a => a.status === 'failed')) {
+              failures.push({suite:path.basename(suite.name ?? ''),message:String(suite.message ?? '').split('\n').slice(0,4).join('\n').slice(0,600)});
+            }
+          }
+          const codes = Object.fromEntries(['typecheck','build'].map(stage => [stage,[...new Set(read('home-ui-'+stage+'.log').match(/error TS[0-9]+/g) ?? [])]]));
+          fs.writeFileSync('docs/devlog/2026-11-27-home-profile-ui-ci-result.json', JSON.stringify({
+            target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID,
+            install:read('home-ui-status.txt').includes('install PASS')?'PASS':read('home-ui-status.txt').includes('install FAIL')?'FAIL':'UNKNOWN',
+            installDiagnostics:read('home-ui-install.log').split('\n').filter(line => /npm error|npm ERR!|ERESOLVE|EUSAGE|ETARGET/.test(line)).slice(-25).map(line=>line.slice(0,350)),
+            compileDiagnostics:Object.fromEntries(['typecheck','lint','build'].map(stage=>[stage,read('home-ui-'+stage+'.log').split('\n').filter(line=>/error TS[0-9]+|error\s|Error:|✖/.test(line)).slice(-35).map(line=>line.slice(0,450))])),
+            stages:read('home-ui-status.txt').trim().split('\n').filter(Boolean),
+            vitest:{total:report.numTotalTests ?? null,passed:report.numPassedTests ?? null,failed:report.numFailedTests ?? null,failures:failures.slice(0,20)},
+            browserDiagnostics:read('home-ui-browser.log').split('\n').slice(-40).map(line=>line.slice(0,500)),
+            smokeDiagnostics:read('home-ui-smoke.log').split('\n').slice(-100).map(line=>line.slice(0,1000)),
+            visualDiagnostics:read('home-ui-visual.log').split('\n').slice(-100).map(line=>line.slice(0,1000)),
+            screenshotNames:(()=>{try{return fs.readdirSync(path.join(t,'home-detail-screenshots')).filter(n=>/^[a-z0-9-]+\.png$/.test(n));}catch{return [];}})(),
+            viteDiagnostics:read('home-ui-vite.log').split('\n').slice(-40).map(line=>line.slice(0,600)),
+            diagnosticCodes:codes
+          },null,2)+'\n');
+          JS
+          git add --sparse -- docs/devlog/2026-11-27-home-profile-ui-ci-result.json
+          if git diff --cached --quiet; then exit 0; fi
+          while IFS= read -r changed; do
+            case "$changed" in
+              docs/devlog/2026-11-27-home-profile-ui-ci-result.json) ;;
+              *) echo "::error::Unexpected staged path"; exit 1;;
+            esac
+          done < <(git diff --cached --name-only)
+          gh auth setup-git --hostname github.com
+          remote_sha="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)"
+          if [ "$remote_sha" != "$TARGET_SHA" ]; then
+            git fetch --depth=8 origin "refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/layered-report-fetch.log" 2>&1 || { echo "::error::Private report fetch failed"; exit 1; }
+            git merge-base --is-ancestor "$TARGET_SHA" FETCH_HEAD || { echo "::error::Target history changed"; exit 1; }
+            test "$(git diff --name-only "$TARGET_SHA" FETCH_HEAD)" = "docs/devlog/2026-11-27-home-profile-dotnet-ci-result.json" || { echo "::error::Target code changed; refusing stale report"; exit 1; }
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ci(detail): record private cross-repository acceptance diagnostics" >/dev/null
+          if [ "$remote_sha" != "$TARGET_SHA" ]; then
+            git rebase FETCH_HEAD >"$RUNNER_TEMP/layered-report-rebase.log" 2>&1 || { echo "::error::Private report rebase failed"; exit 1; }
+          fi
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Diagnostics publish rejected"; exit 1; }
+          echo "Diagnostics published privately; failed checks remain failing" >> "$GITHUB_STEP_SUMMARY"
