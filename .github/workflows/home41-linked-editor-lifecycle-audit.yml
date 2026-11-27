@@ -1,0 +1,52 @@
+name: HOME41 linked editor lifecycle audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home41-linked-editor-lifecycle-audit.yml', 'tools/audit_home41_linked_editor_lifecycle.py']
+permissions:
+  contents: write
+concurrency:
+  group: home41-linked-editor-lifecycle-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv
+            tools/audit_home41_save_serializers.py
+            tools/audit_home41_linked_editor_lifecycle.py
+            docs/HOME41_LINKED_EDITOR_LIFECYCLE_ELF_AUDIT.md
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install capstone==5.0.6
+      - name: Extract original ELF
+        run: python tools/audit_home41_linked_editor_lifecycle.py 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv docs/HOME41_LINKED_EDITOR_LIFECYCLE_ELF_AUDIT.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: home41-linked-editor-lifecycle-evidence
+          path: docs/HOME41_LINKED_EDITOR_LIFECYCLE_ELF_AUDIT.md
+          if-no-files-found: error
+      - name: Publish report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f docs/HOME41_LINKED_EDITOR_LIFECYCLE_ELF_AUDIT.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: original ELF linked editor lifecycle candidate evidence'
+            for attempt in 1 2 3; do
+              git pull --rebase origin 4.1.0
+              if git push origin HEAD:4.1.0; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
