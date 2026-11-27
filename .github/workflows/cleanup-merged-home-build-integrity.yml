@@ -1,0 +1,43 @@
+name: Cleanup merged HOME build integrity branch
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-merged-home-build-integrity.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cleanup-merged-home-build-integrity
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    if: github.repository == '969981/PokeHome_Resources' && github.ref == 'refs/heads/4.1.0' && github.actor == '969981'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+      TARGET_BRANCH: fix/develop-build-integrity-20261127
+      EXPECTED_SHA: 6786da85bb2b969ce06f0da5a70f5e323c9c04b5
+      VERIFIED_SHA: 82b67051f0b7ca94e520a6a1b55aa203387c1c19
+    steps:
+      - name: Verify private repository and merged ancestry then delete only unchanged branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN"
+          gh api "repos/$TARGET_REPO" 2>/dev/null | jq -e '.private == true and .full_name == "969981/HOME-Live-Plugin-CHS" and .default_branch != "fix/develop-build-integrity-20261127"' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$VERIFIED_SHA" 2>/dev/null | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh auth setup-git --hostname github.com >/dev/null 2>&1
+          git init -q "$RUNNER_TEMP/home-build-cleanup"
+          cd "$RUNNER_TEMP/home-build-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          ref="refs/heads/$TARGET_BRANCH"
+          actual="$(git ls-remote --heads origin "$ref" 2>/dev/null | cut -f1)"
+          if [ -z "$actual" ]; then echo "Branch already absent"; exit 0; fi
+          test "$actual" = "$EXPECTED_SHA" || { echo "::error::Branch changed; refusing deletion"; exit 1; }
+          gh api "repos/$TARGET_REPO/compare/develop...$EXPECTED_SHA" 2>/dev/null | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          git push --force-with-lease="$ref:$EXPECTED_SHA" origin ":$ref" >/dev/null 2>&1 || { echo "::error::Guarded branch deletion failed"; exit 1; }
+          remaining="$(git ls-remote --heads origin "$ref" 2>/dev/null)"
+          test -z "$remaining"
+          echo "Merged repair branch deleted; develop and diagnostic branches untouched."
