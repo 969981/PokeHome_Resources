@@ -10,7 +10,7 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 84a2eb7165668ba4e53d7796789d62da8a1185ad
+  TARGET_SHA: 8dda9661c304911dddb635132de94ab4690d4cd9
   TARGET_BRANCH: fix/pokemon-detail-layout-icons
 jobs:
   verify:
@@ -83,7 +83,7 @@ jobs:
             fi
           done
           exit "$failed"
-      - name: Real browser interaction smoke (MockHost only)
+      - name: Independent browser smoke and detail visual tests (MockHost only)
         if: ${{ !cancelled() && steps.npm.outcome == 'success' }}
         working-directory: target/tauri2-app/frontend
         shell: bash
@@ -96,7 +96,7 @@ jobs:
             set -euo pipefail
             npm install --prefix "$browser_dir" --no-save --no-audit --no-fund playwright@1.58.2
             "$browser_dir/node_modules/.bin/playwright" install --with-deps chromium
-            cp tests/browser/ui-smoke.mjs "$browser_dir/ui-smoke.mjs"
+            cp tests/browser/{ui-smoke,pokemon-detail-visual}.mjs "$browser_dir/"
             npm run dev -- --host 127.0.0.1 >"$RUNNER_TEMP/home-ui-vite.log" 2>&1 &
             server=$!
             trap 'kill "$server" 2>/dev/null || true' EXIT
@@ -105,7 +105,20 @@ jobs:
               sleep 1
             done
             curl -fsS http://127.0.0.1:5173/ >/dev/null
-            node "$browser_dir/ui-smoke.mjs"
+            local_status=0
+            if node "$browser_dir/ui-smoke.mjs" >"$RUNNER_TEMP/home-ui-smoke.log" 2>&1; then
+              echo "smoke PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            else
+              echo "smoke FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+              local_status=1
+            fi
+            if HOME_DETAIL_SCREENSHOT_DIR="$RUNNER_TEMP/home-detail-screenshots" node "$browser_dir/pokemon-detail-visual.mjs" >"$RUNNER_TEMP/home-ui-visual.log" 2>&1; then
+              echo "visual PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            else
+              echo "visual FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+              local_status=1
+            fi
+            exit "$local_status"
           )
           set +e
           (run_browser) >"$log" 2>&1
@@ -156,7 +169,11 @@ jobs:
             compileDiagnostics:Object.fromEntries(['typecheck','lint','build'].map(stage=>[stage,read('home-ui-'+stage+'.log').split('\n').filter(line=>/error TS[0-9]+|error\s|Error:|✖/.test(line)).slice(-35).map(line=>line.slice(0,450))])),
             stages:read('home-ui-status.txt').trim().split('\n').filter(Boolean),
             vitest:{total:report.numTotalTests ?? null,passed:report.numPassedTests ?? null,failed:report.numFailedTests ?? null,failures:failures.slice(0,20)},
-            browserDiagnostics:read('home-ui-browser.log').split('\n').filter(line => /PASS |Error:|AssertionError|TimeoutError|ERR!/.test(line)).slice(-20).map(line => line.slice(0,350)),
+            browserDiagnostics:read('home-ui-browser.log').split('\n').slice(-40).map(line=>line.slice(0,500)),
+            smokeDiagnostics:read('home-ui-smoke.log').split('\n').slice(-100).map(line=>line.slice(0,1000)),
+            visualDiagnostics:read('home-ui-visual.log').split('\n').slice(-100).map(line=>line.slice(0,1000)),
+            screenshotNames:(()=>{try{return fs.readdirSync(path.join(t,'home-detail-screenshots')).filter(n=>/^[a-z0-9-]+\.png$/.test(n));}catch{return [];}})(),
+            viteDiagnostics:read('home-ui-vite.log').split('\n').slice(-40).map(line=>line.slice(0,600)),
             diagnosticCodes:codes
           },null,2)+'\n');
           JS
@@ -170,9 +187,9 @@ jobs:
           done < <(git diff --cached --name-only)
           gh auth setup-git --hostname github.com
           remote_sha="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)"
-          test "$remote_sha" = "$TARGET_SHA" || { echo "::error::Target advanced; refusing stale lock publish"; exit 1; }
+          test "$remote_sha" = "$TARGET_SHA" || { echo "::error::Target advanced; refusing stale diagnostics publish"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "ci(detail): record private cross-repository acceptance diagnostics" >/dev/null
-          git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Lock publish rejected"; exit 1; }
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Diagnostics publish rejected"; exit 1; }
           echo "Diagnostics published privately; failed checks remain failing" >> "$GITHUB_STEP_SUMMARY"
