@@ -108,3 +108,18 @@ Verified loader entrypoints 0x501ad0 Global, 0x501b70 Beluga, 0x501c10 Orion, 0x
 邻近组不是完整的对象初始化证据，待提取各 callsite 所在函数及构造/虚表关系。0x7a5d78 可能通过重定位或间接指针初始化；新脚本扩展 PT_DYNAMIC/DT_RELA 检查（仅普通 RELA，不含所有压缩/间接形式）和 loader caller 窗口，待新 CI。
 排除表实际32行，所有 word0=7、raw_u16_0a=0，其他三字段与消费者匹配。示例 (species,form,move)=(7,0,396),(150,0/1/2,36),(672/673,0,345/437),(865,0,533)。完整 CSV 见 artifact；不将其解释为完整合法性规则。
 0x532408 的实际窗口显示先读 object+0x2f0，再调用 0x50f008，按 bit0 分支到 0x50fec8 或 0x50fed0/0x515940/0x510350 等路径；阈值语义仍待闭合。0x532ed8 -> 0x512e70；0x532e20 内调用 0x5120d0 查询索引槽。以上仅静态证据。
+
+## Selector 间接指针、资源持有对象与 0x53db50（2026-11-27）
+[Run 45919661660](https://github.com/969981/PokeHome_Resources/actions/runs/45919661660) 成功；artifact 15164335864 ZIP SHA256 be131fd1e5f8abcbd0702afab3bb02308f0ce6029d5dbfb4809f5d7807fc9cb0，独立 CRC/SHA256 通过。原 ELF 0x7a5d78 原始8字节为 785cb10000000000，即 0xb15c78；普通 DT_RELA 无匹配，动态段含 DT_RELR=6288400, DT_RELRSZ=4424, DT_RELRENT=8，需展开压缩位图。不能把无普通 RELA 当成无重定位。
+| Dataset | Holder VA | BL loader | store handle at holder+8 |
+|---|---|---|---|
+| Beluga | 0xb16300 | 0x53f150 | 0x53f19c |
+| Delphis | 0xb1e480 | 0x540850 | 0x54089c |
+| Global | 0xb26790 | 0x5421b0 | 0x5421fc |
+| Hayabusa | 0xb2e910 | 0x543420 | 0x54346c |
+| Ikkaku | 0xb36bf0 | 0x544b60 | 0x544bac |
+| Orion | 0xb3eec0 | 0x5465b0 | 0x5465fc |
+| Titan | 0xb472d0 | 0x54a510 | 0x54a55c |
+BL loader +0x28 调用 0x13bb0（输出栈槽 x29+0x18），+0x2c/+0x30 ADRP/ADD x21 为 holder，+0x4c STR x19,[x21,#8]。七组结构相同。此为资源句柄发布证据，非构造函数或 Selector 绑定的完整证明。
+0x53db50: move=0 直接返回1（collector 自身先拒绝0）；selector 低8位减1，与6无符号比较。1..7 读取 0x65aede 的7字节跳转表，目标=0x53db7c+4*byte；其他走 0x53dc20。0x53dba0 遍历 0x65aee8 的512个u32，0x53dbe0 遍历 0x65b6e8 的177个u32，匹配返回1，否则0。0x53db94 将 w1=7 并尾调用0x53c5d0。0x53dc20 对 move=2 直接返回0，其余分支需完整窗口。
+新增 [selector guard 审计](../../tools/home41_native_selector_guard.py)：展开 DT_RELR，记录 slot/holder 的文件或零填充状态、静态指针及重定位、初始化数组、精确地址形成及 store 候选、7项 jump table、两个已证明长度的 ID 表及剩余原生窗口。运行后按实际产物进一步核对。尚未发布正式 Selector 或业务方法映射。
