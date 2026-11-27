@@ -1,0 +1,94 @@
+name: Cleanup explicitly selected HOME branches 20261128
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-home-ci-and-selected-20261128.yml']
+permissions:
+  contents: read
+concurrency:
+  group: cleanup-home-ci-and-selected-20261128
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    if: github.repository == '969981/PokeHome_Resources' && github.ref == 'refs/heads/4.1.0' && github.actor == '969981'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+    steps:
+      - name: Verify pinned refs, archive unmerged heads, and delete selected branches
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN"
+          gh api "repos/$TARGET_REPO" 2>/dev/null | jq -e '.private == true and .full_name == "969981/HOME-Live-Plugin-CHS" and .default_branch != null' >/dev/null
+          default_branch="$(gh api "repos/$TARGET_REPO" --jq .default_branch 2>/dev/null)"
+          gh auth setup-git --hostname github.com >/dev/null 2>&1
+          git init -q "$RUNNER_TEMP/home-cleanup"
+          cd "$RUNNER_TEMP/home-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          cat > targets.txt <<'TARGETS'
+          ci/detail-clean-45976269377-1 a78303b4e4a61c42f8854289a9989c893ddf77e6 ci -
+          ci/detail-clean-45976516591-1 befca4d8f609f42118ef4179944bde8fcd1a936f ci -
+          ci/develop-clean-45960138608-1 b20436b6f60d4d4ea0bd1039f81d15b190a1b439 ci -
+          ci/develop-clean-45960323080-1 a2105c1bf5a9e154b39c497eb99f401aff91287e ci -
+          ci/develop-clean-45962449675-1 82e4f7aa0851bcb4547541d5f417f4a5d700c767 ci -
+          ci/develop-clean-45962711799-1 a3094e427d1baca6d96609f205c94593903b96f8 ci -
+          ci/develop-clean-45965989413-1 6867cf0bcfc6f6e552c25c5eda1bd3a970c1dfba ci -
+          ci/release-host-46022776242 2a4ca0cbac8ee1cb1352cb6ce4c71b5b72df1c5b ci -
+          ci/release-host-46023589727 83590bb423d36e5cc586baf8642bd6ddc280b1b7 ci -
+          ci/release-host-46024397839 998c74d183328c513a5e9ba06ce23c0497448202 ci -
+          ci/release-host-46025598917 f4e071eb85d0a5ef61400942efd8d908a542c44e ci -
+          ci/release-host-46026877471 ad5ae67622d9c691f4803d2a3159f44864302d4a ci -
+          ci/release-host-46027624181 0ab702e8110cd6d84b1eca4a4f40e7e0e5039a37 ci -
+          ci/release-mock-46020463538 1fbcdda171f60e7bfa1e804fa58f4c75bee41c70 ci -
+          ci/release-mock-46021119023 d2a0ed6db69c5334a92ac5ae84a7b7109412e3ca ci -
+          ci/release-mock-46021178494 50f7366f13e68014d2401462a8ecc4931091e84e ci -
+          ci/ui-webview2-45952908284-1 38fc96d781a517aaef5b5b2db904ab7548684436 ci -
+          feat/home-release-host-410 68248f557659b20bcc56c39126d9ca4f9bcf87de archive archive/home-release-host-410-20261128
+          feat/release-mock-ui-20261127 5103b18690ad61f5fdfa295c0f249e6e8e7cfdb8 merged -
+          feat/tauri2-native-image-runtime-20261126 052e80469c2a7bb10f26268cf2fbcaed17ea634d archive archive/tauri2-native-image-runtime-20261126-20261128
+          fix/concurrency-p0-20261127 c9ae453df05956c11eff223cd76e33d63ed2c76e merged -
+          TARGETS
+          # Validate the whole allowlist before deleting anything.
+          while read -r branch sha mode tag; do
+            ref="refs/heads/$branch"
+            test "$branch" != develop && test "$branch" != "$default_branch"
+            case "$branch" in ci/*|fix/concurrency-p0-20261127|feat/tauri2-native-image-runtime-20261126|feat/release-mock-ui-20261127|feat/home-release-host-410) ;; *) exit 1;; esac
+            actual="$(git ls-remote --heads origin "$ref" 2>/dev/null | cut -f1)"
+            if [ -z "$actual" ]; then continue; fi
+            test "$actual" = "$sha" || { echo "::error::A selected branch changed; no cleanup performed"; exit 1; }
+            if [ "$mode" = merged ]; then
+              gh api "repos/$TARGET_REPO/compare/develop...$sha" 2>/dev/null | jq -e '.ahead_by == 0' >/dev/null
+            fi
+            if [ "$mode" = archive ]; then
+              tagref="refs/tags/$tag"
+              old="$(git ls-remote --tags origin "$tagref" 2>/dev/null | cut -f1)"
+              if [ -z "$old" ]; then
+                git fetch --no-tags --depth=1 origin "$ref" >/dev/null 2>&1
+                test "$(git rev-parse FETCH_HEAD)" = "$sha"
+                git push --force-with-lease="$tagref:" origin "$sha:$tagref" >/dev/null 2>&1 || { echo "::error::Archive tag creation failed"; exit 1; }
+              fi
+              test "$(git ls-remote --tags origin "$tagref" 2>/dev/null | cut -f1)" = "$sha"
+            fi
+          done < targets.txt
+          deleted=0
+          failed=0
+          while read -r branch sha mode tag; do
+            ref="refs/heads/$branch"
+            actual="$(git ls-remote --heads origin "$ref" 2>/dev/null | cut -f1)"
+            if [ -z "$actual" ]; then deleted=$((deleted+1)); continue; fi
+            if [ "$actual" != "$sha" ]; then failed=$((failed+1)); continue; fi
+            if [ "$mode" = archive ]; then
+              test "$(git ls-remote --tags origin "refs/tags/$tag" 2>/dev/null | cut -f1)" = "$sha"
+            fi
+            if git push --force-with-lease="$ref:$sha" origin ":$ref" >/dev/null 2>&1 && [ -z "$(git ls-remote --heads origin "$ref" 2>/dev/null)" ]; then
+              deleted=$((deleted+1))
+            else
+              failed=$((failed+1))
+            fi
+          done < targets.txt
+          echo "Selected branch refs absent: $deleted; failures: $failed"
+          test "$failed" -eq 0
+          test "$deleted" -eq 21
