@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.11,<3.14"
-# dependencies = ["unicorn==2.1.4"]
+# dependencies = ["unicorn==2.1.4", "capstone==5.0.6"]
 # ///
 """Pure arithmetic reference models compared against original HOME AArch64 leaf functions.
 
