@@ -73,7 +73,7 @@ jobs:
           out=['# HOME 4.1.0 release counter — original ELF static audit','',f'SHA-256: {sha}','', 'Only static instructions. No device access, no mutation, no bypass or persistence claim. Offsets are main RVA. Byte hex is little endian.', '', '## Direct BL/B cross references']
           for k,v in calls.items(): out.append(f'- 0x{k:X}: '+', '.join(f'0x{x:X}' for x in v))
           out+=['','## Focused native windows']
-          for s,e in [(0xDCB18,0xDCD30),(0xDCD30,0xDCF00),(0xA0B8C,0xA0C80),(0xA1728,0xA17E8),(0xC1E90,0xC1FD0)]:
+          for s,e in [(0xDCD30,0xDCFC0),(0xA0C78,0xA0E00),(0xB2890,0xB2F00),(0xDB160,0xDB410),(0xE3500,0xE3680),(0xECB00,0xECE80)]:
               out += [f'### 0x{s:X}..0x{e:X} (bounded window, not claimed FDE)', '```asm']+[line(i) for i in window(s,e)]+['```']
           out+=['','## All direct +0x2A8 candidates (raw immediate scan)','',f'Count: {len(candidates)}. Same displacement is not proof of same object. Pair/bulk reset and indirect accesses require separate follow-up.']
           for a,kind in candidates:
@@ -87,6 +87,14 @@ jobs:
               out += [f'- {kind}: {line(ins)}'+(' [near 99/100 candidate]' if cmp else '')]
               if focus or cmp:
                   out+=['```asm']+[line(i)+('  ; candidate' if i.address==a else '') for i in near]+['```']
+          out+=['','## MOV 99/100 and register comparisons in UI RVA range']
+          for o,v,fs in segs:
+              for j in range(0,fs-3,4):
+                  a=v+j
+                  if not 0x80000<=a<0x100000: continue
+                  w=struct.unpack_from('<I',b,o+j)[0]
+                  if ((w&0x7f800000)==0x52800000 and ((w>>5)&0xffff) in (99,100) and ((w>>21)&3)==0):
+                      out+=['```asm']+[line(i)+(' ; immediate candidate' if i.address==a else '') for i in window(a-0x20,a+0x44)]+['```']
           out+=['','## Resource hash byte occurrences']
           h=0xBCE53BB3B69C5600
           pattern=h.to_bytes(8,'little'); start=0
@@ -95,7 +103,7 @@ jobs:
               if idx<0: break
               out.append(f'- file offset 0x{idx:X}');start=idx+1
           out+=['','## Limitations','No receiver dataflow proof solely from displacement; compare candidates require manual branch validation. No runtime reset, server ACK, or executable patch.']
-          q=pathlib.Path('docs/HOME41_RELEASE_COUNTER_ORIGINAL_ELF_AUDIT.md');q.parent.mkdir(exist_ok=True);q.write_text('\n'.join(out)+'\n',encoding='utf-8')
+          q=pathlib.Path('docs/HOME41_RELEASE_LIMIT_CONFIG_ELF_AUDIT.md');q.parent.mkdir(exist_ok=True);q.write_text('\n'.join(out)+'\n',encoding='utf-8')
           print(f'original ELF hash verified; {len(candidates)} displacement candidates')
           PY
       - name: Publish static text evidence
@@ -104,7 +112,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f docs/HOME41_RELEASE_COUNTER_ORIGINAL_ELF_AUDIT.md
+          git add -f docs/HOME41_RELEASE_LIMIT_CONFIG_ELF_AUDIT.md
           if ! git diff --cached --quiet; then
             git commit -m 'docs: original ELF release counter and multi-selection audit'
             git pull --rebase origin 4.1.0
@@ -114,5 +122,5 @@ jobs:
         if: always()
         with:
           name: home41-release-counter-static-audit
-          path: docs/HOME41_RELEASE_COUNTER_ORIGINAL_ELF_AUDIT.md
+          path: docs/HOME41_RELEASE_LIMIT_CONFIG_ELF_AUDIT.md
           if-no-files-found: warn
