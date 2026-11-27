@@ -1,0 +1,97 @@
+name: HOME observability rust acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-observability-rust-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-observability-dotnet-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 7aac3335254d1f300181a2a303a1359af4d1af83
+  TARGET_BRANCH: feat/unified-observability
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Enable long paths
+        shell: bash
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v4
+        id: checkout
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          persist-credentials: false
+          path: target
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Compile shell and run Rust unit tests
+        working-directory: target
+        shell: bash
+        run: |
+          set -u
+          evidence="$(cygpath -u "$RUNNER_TEMP")/observability-rust"
+          mkdir -p "$evidence"
+          failed=0
+          run_private() {
+            local stage="$1"; shift
+            local rc=0
+            "$@" >"$evidence/$stage.log" 2>&1 || rc=$?
+            printf '%s\n' "$rc" >"$evidence/$stage.exit"
+            if [ "$rc" -eq 0 ]; then echo "$stage PASS"; else echo "::error::$stage failed (private output suppressed)"; failed=1; fi
+          }
+          run_private host-publish dotnet publish HomeLive.Host/HomeLive.Host.csproj -c Release -r win-x64 --self-contained false -o "$evidence/host"
+          if [ "$failed" -ne 0 ]; then exit 1; fi
+          mkdir -p tauri2-app/src-tauri/binaries tauri2-app/frontend/dist
+          cp "$evidence/host/homelive-host.exe" tauri2-app/src-tauri/binaries/homelive-host-x86_64-pc-windows-msvc.exe
+          # Minimal frontend fixture for shell compile/test only, not packaging acceptance.
+          printf '<!doctype html><title>CI shell fixture</title>\n' >tauri2-app/frontend/dist/index.html
+          cd tauri2-app/src-tauri
+          run_private rust-check cargo check --all-targets --locked
+          run_private rust-test cargo test --lib --locked
+          exit "$failed"
+      - name: Publish bounded report privately
+        if: always() && steps.checkout.outcome == 'success'
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs/devlog
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const root=path.join(process.env.RUNNER_TEMP,'observability-rust');
+          const read=n=>{try{return fs.readFileSync(path.join(root,n),'utf8')}catch{return ''}};
+          const stages=['host-publish','rust-check','rust-test'].map(name=>{
+            const exit=read(name+'.exit').trim();
+            const lines=read(name+'.log').split(/\r?\n/);
+            return {name,status:exit===''?'NOT_RUN':exit==='0'?'PASS':'FAIL',exitCode:exit===''?null:Number(exit),diagnostics:lines.filter(l=>/error|warning:|FAILED|test result:/i.test(l)).slice(-80).map(l=>l.slice(0,1200)),tail:lines.slice(-35).map(l=>l.slice(0,1200))};
+          });
+          fs.writeFileSync('docs/devlog/2026-11-27-observability-rust-ci-result.json',JSON.stringify({target:process.env.TARGET_SHA,runId:process.env.GITHUB_RUN_ID,scope:'shell compile and unit tests; frontend fixture only',stages},null,2)+'\n');
+          JS
+          relative=docs/devlog/2026-11-27-observability-rust-ci-result.json
+          log="$(cygpath -u "$RUNNER_TEMP")/observability-private-push.log"
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA"
+          gh auth setup-git --hostname github.com >"$log" 2>&1
+          remote="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" 2>>"$log" | cut -f1)"
+          if [ "$remote" != "$TARGET_SHA" ]; then
+            git fetch --depth=8 origin "refs/heads/$TARGET_BRANCH" >>"$log" 2>&1
+            git merge-base --is-ancestor "$TARGET_SHA" FETCH_HEAD
+            test "$(git diff --name-only "$TARGET_SHA" FETCH_HEAD)" = "docs/devlog/2026-11-27-observability-dotnet-ci-result.json"
+          fi
+          git add -- "$relative" >>"$log" 2>&1
+          test "$(git diff --cached --name-only)" = "$relative"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ci(observability): record private Rust acceptance diagnostics" >>"$log" 2>&1
+          if [ "$remote" != "$TARGET_SHA" ]; then git rebase FETCH_HEAD >>"$log" 2>&1; fi
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH" >>"$log" 2>&1
+          echo "Private report published."
