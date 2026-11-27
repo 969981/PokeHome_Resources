@@ -5,6 +5,7 @@ on:
     branches: [research/home-image-resource-audit]
     paths:
       - 'tools/home41_native_learnset_focus.py'
+      - 'tools/home41_native_learnset_dispatch.py'
       - '.github/workflows/home-learnset-focus.yml'
 permissions:
   contents: read
@@ -22,6 +23,7 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install uv
       - run: uv run tools/home41_native_learnset_focus.py --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf --out dist/focus
+      - run: uv run tools/home41_native_learnset_dispatch.py --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf --out dist/focus
       - uses: actions/upload-artifact@v4
         with:
           name: home-learnset-focused-callchain
