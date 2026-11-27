@@ -10,14 +10,15 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 3673b0c51f3a44a797d61d4f0c5a9a9ec0b81b77
-  TARGET_BRANCH: feat/ui-foundation-20261127
+  TARGET_SHA: 84a2eb7165668ba4e53d7796789d62da8a1185ad
+  TARGET_BRANCH: fix/pokemon-detail-layout-icons
 jobs:
   verify:
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
       - name: Checkout pinned private UI revision
+        id: checkout
         uses: actions/checkout@v4
         with:
           repository: 969981/HOME-Live-Plugin-CHS
@@ -43,8 +44,10 @@ jobs:
             local logfile="$RUNNER_TEMP/home-ui-$stage.log"
             if "$@" >"$logfile" 2>&1; then
               echo "$stage PASS" >> "$GITHUB_STEP_SUMMARY"
+              echo "$stage PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
             else
               echo "$stage FAIL" >> "$GITHUB_STEP_SUMMARY"
+              echo "$stage FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
               for code in ERESOLVE ETARGET E404 EAI_AGAIN ENOTFOUND ELOCKVERIFY EBADENGINE EUSAGE; do
                 if grep -q "$code" "$logfile"; then echo "$stage npm-code: $code" >> "$GITHUB_STEP_SUMMARY"; fi
               done
@@ -116,8 +119,8 @@ jobs:
             echo "::error::Browser smoke failed (private log suppressed)"
             exit 1
           fi
-      - name: Publish install-verified lock and private CI result
-        if: always() && steps.npm.outcome == 'success'
+      - name: Publish private CI diagnostics
+        if: always() && steps.checkout.outcome == 'success'
         working-directory: target
         env:
           GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
@@ -146,19 +149,22 @@ jobs:
             }
           }
           const codes = Object.fromEntries(['typecheck','build'].map(stage => [stage,[...new Set(read('home-ui-'+stage+'.log').match(/error TS[0-9]+/g) ?? [])]]));
-          fs.writeFileSync('docs/devlog/2026-11-27-ui-foundation-ci-result.json', JSON.stringify({
-            target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID, install:'PASS',
+          fs.writeFileSync('docs/devlog/2026-11-27-pokemon-detail-ci-result.json', JSON.stringify({
+            target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID,
+            install:read('home-ui-status.txt').includes('install PASS')?'PASS':read('home-ui-status.txt').includes('install FAIL')?'FAIL':'UNKNOWN',
+            installDiagnostics:read('home-ui-install.log').split('\n').filter(line => /npm error|npm ERR!|ERESOLVE|EUSAGE|ETARGET/.test(line)).slice(-25).map(line=>line.slice(0,350)),
+            compileDiagnostics:Object.fromEntries(['typecheck','lint','build'].map(stage=>[stage,read('home-ui-'+stage+'.log').split('\n').filter(line=>/error TS[0-9]+|error\s|Error:|✖/.test(line)).slice(-35).map(line=>line.slice(0,450))])),
             stages:read('home-ui-status.txt').trim().split('\n').filter(Boolean),
             vitest:{total:report.numTotalTests ?? null,passed:report.numPassedTests ?? null,failed:report.numFailedTests ?? null,failures:failures.slice(0,20)},
             browserDiagnostics:read('home-ui-browser.log').split('\n').filter(line => /PASS |Error:|AssertionError|TimeoutError|ERR!/.test(line)).slice(-20).map(line => line.slice(0,350)),
             diagnosticCodes:codes
           },null,2)+'\n');
           JS
-          git add --sparse -- tauri2-app/frontend/package-lock.json docs/devlog/2026-11-27-ui-foundation-ci-result.json
+          git add --sparse -- docs/devlog/2026-11-27-pokemon-detail-ci-result.json
           if git diff --cached --quiet; then exit 0; fi
           while IFS= read -r changed; do
             case "$changed" in
-              tauri2-app/frontend/package-lock.json|docs/devlog/2026-11-27-ui-foundation-ci-result.json) ;;
+              docs/devlog/2026-11-27-pokemon-detail-ci-result.json) ;;
               *) echo "::error::Unexpected staged path"; exit 1;;
             esac
           done < <(git diff --cached --name-only)
@@ -167,6 +173,6 @@ jobs:
           test "$remote_sha" = "$TARGET_SHA" || { echo "::error::Target advanced; refusing stale lock publish"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "build(ui): sync npm lock and private cross-repo CI evidence" >/dev/null
+          git commit -m "ci(detail): record private cross-repository acceptance diagnostics" >/dev/null
           git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Lock publish rejected"; exit 1; }
-          echo "Install-verified lock and result published privately; failed checks remain failing" >> "$GITHUB_STEP_SUMMARY"
+          echo "Diagnostics published privately; failed checks remain failing" >> "$GITHUB_STEP_SUMMARY"
