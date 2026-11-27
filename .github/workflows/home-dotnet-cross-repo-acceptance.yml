@@ -1,0 +1,118 @@
+name: HOME Windows .NET cross-repository acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-dotnet-cross-repo-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-dotnet-cross-repo-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: ad4c020b1e758b93e345472bc7c2fc415441cc0a
+  TARGET_BRANCH: fix/pokemon-detail-layout-icons
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout pinned private revision
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: target
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        id: sdk
+        with:
+          dotnet-version: '10.0.x'
+      - name: Independent Release builds and offline test suites
+        working-directory: target
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $evidence = Join-Path $env:RUNNER_TEMP 'home-dotnet-evidence'
+          New-Item -ItemType Directory -Force $evidence | Out-Null
+          $results = [System.Collections.Generic.List[object]]::new()
+          $sdk = (& dotnet --version | Select-Object -First 1)
+          function Invoke-PrivateStage([string]$Name, [string[]]$Arguments) {
+            $log = Join-Path $evidence "$Name.log"
+            $clock = [System.Diagnostics.Stopwatch]::StartNew()
+            & dotnet @Arguments *> $log
+            $code = $LASTEXITCODE
+            $clock.Stop()
+            $status = if ($code -eq 0) { 'PASS' } else { 'FAIL' }
+            $lines = @(Get-Content -LiteralPath $log -ErrorAction SilentlyContinue)
+            $diagnostics = @($lines | Where-Object { $_ -match 'error (CS|MSB|NU|NETSDK)\d+|\bFailed\b|Error Message:|Stack Trace:|Exception:|Test Run Aborted|Expected:|But was:' } | Select-Object -Last 60 | ForEach-Object { $_.Substring(0,[Math]::Min($_.Length,1200)) })
+            $results.Add([ordered]@{name=$Name; status=$status; exitCode=$code; elapsedSeconds=[Math]::Round($clock.Elapsed.TotalSeconds,2); diagnostics=$diagnostics; tail=@($lines | Select-Object -Last 30 | ForEach-Object { $_.Substring(0,[Math]::Min($_.Length,1000)) })})
+            $results | ConvertTo-Json -Depth 8 -AsArray | Set-Content -LiteralPath (Join-Path $evidence 'stages.json') -Encoding utf8
+            "$Name $status" | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY
+            Write-Host "$Name $status"
+          }
+          $sdk | Set-Content -LiteralPath (Join-Path $evidence 'sdk.txt') -Encoding utf8
+          Invoke-PrivateStage 'core-build' @('build','HomeLive.Core/HomeLive.Core.csproj','-c','Release','--nologo')
+          Invoke-PrivateStage 'host-build' @('build','HomeLive.Host/HomeLive.Host.csproj','-c','Release','--nologo')
+          Invoke-PrivateStage 'winforms-build' @('build','HomeLive.App/HomeLive.App.csproj','-c','Release','--nologo')
+          Invoke-PrivateStage 'core-test' @('test','HomeLive.Core.Tests/HomeLive.Core.Tests.csproj','-c','Release','--nologo','--logger','trx;LogFileName=core.trx','--results-directory',$evidence)
+          Invoke-PrivateStage 'host-test' @('test','HomeLive.Host.Tests/HomeLive.Host.Tests.csproj','-c','Release','--nologo','--logger','trx;LogFileName=host.trx','--results-directory',$evidence)
+          if (@($results | Where-Object { $_.exitCode -ne 0 }).Count -gt 0) { exit 1 }
+      - name: Return bounded diagnostics to private repository
+        if: always() && steps.checkout.outcome == 'success'
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          SDK_OUTCOME: ${{ steps.sdk.outcome }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $evidence = Join-Path $env:RUNNER_TEMP 'home-dotnet-evidence'
+          $checked = (& git rev-parse HEAD).Trim()
+          if ($LASTEXITCODE -ne 0 -or $checked -ne $env:TARGET_SHA) { throw 'Pinned checkout mismatch' }
+          $stages = @()
+          $stageFile = Join-Path $evidence 'stages.json'
+          if (Test-Path -LiteralPath $stageFile) { $stages = @(Get-Content -LiteralPath $stageFile -Raw | ConvertFrom-Json) }
+          $sdkVersion = $null
+          $sdkFile = Join-Path $evidence 'sdk.txt'
+          if (Test-Path -LiteralPath $sdkFile) { $sdkVersion = (Get-Content -LiteralPath $sdkFile -Raw).Trim() }
+          $suites = [ordered]@{}
+          foreach ($name in @('core','host')) {
+            $trx = Join-Path $evidence "$name.trx"
+            if (!(Test-Path -LiteralPath $trx)) { $suites[$name] = @{status='NO_TRX'}; continue }
+            try {
+              [xml]$xml = Get-Content -LiteralPath $trx -Raw
+              $counter = $xml.SelectSingleNode("//*[local-name()='ResultSummary']/*[local-name()='Counters']")
+              $summary = [ordered]@{status='RECORDED'; total=[int]$counter.GetAttribute('total'); executed=[int]$counter.GetAttribute('executed'); passed=[int]$counter.GetAttribute('passed'); failed=[int]$counter.GetAttribute('failed'); notExecuted=[int]$counter.GetAttribute('notExecuted'); errors=[int]$counter.GetAttribute('error')}
+              $failures = @($xml.SelectNodes("//*[local-name()='UnitTestResult'][@outcome='Failed' or @outcome='Error']") | Select-Object -First 30 | ForEach-Object {
+                $message = [string]$_.SelectSingleNode(".//*[local-name()='Message']").InnerText
+                $stack = [string]$_.SelectSingleNode(".//*[local-name()='StackTrace']").InnerText
+                [ordered]@{test=$_.GetAttribute('testName'); message=$message.Substring(0,[Math]::Min($message.Length,1800)); stack=$stack.Substring(0,[Math]::Min($stack.Length,1800))}
+              })
+              $summary.failures = $failures
+              $suites[$name] = $summary
+            } catch { $suites[$name] = @{status='TRX_PARSE_FAILED'} }
+          }
+          $report = [ordered]@{target=$env:TARGET_SHA; runId=$env:GITHUB_RUN_ID; runner=$env:RUNNER_OS; sdkSetup=$env:SDK_OUTCOME; sdkVersion=$sdkVersion; stages=$stages; suites=$suites}
+          $relative = 'docs/devlog/2026-11-27-pokemon-detail-dotnet-ci-result.json'
+          New-Item -ItemType Directory -Force 'docs/devlog' | Out-Null
+          $report | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $relative -Encoding utf8
+          $gitLog = Join-Path $env:RUNNER_TEMP 'home-dotnet-private-push.log'
+          # Never emit private source, build logs, TRX files, or credentials to public Actions.
+          & gh auth setup-git --hostname github.com *> $gitLog
+          if ($LASTEXITCODE -ne 0) { throw 'Private git authentication setup failed' }
+          $remote = & git ls-remote origin "refs/heads/$env:TARGET_BRANCH" 2>> $gitLog
+          if ($LASTEXITCODE -ne 0 -or (($remote -split '\s+')[0] -ne $env:TARGET_SHA)) { throw 'Target branch advanced or unavailable; refusing stale diagnostics push' }
+          & git add -- $relative *> $gitLog
+          if ($LASTEXITCODE -ne 0) { throw 'Diagnostic staging failed' }
+          $changed = @(& git diff --cached --name-only)
+          if ($LASTEXITCODE -ne 0 -or $changed.Count -ne 1 -or $changed[0] -ne $relative) { throw 'Unexpected staged paths' }
+          & git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'ci(detail): record private Windows dotnet acceptance diagnostics' *> $gitLog
+          if ($LASTEXITCODE -ne 0) { throw 'Diagnostic commit failed' }
+          & git push origin "HEAD:refs/heads/$env:TARGET_BRANCH" *> $gitLog
+          if ($LASTEXITCODE -ne 0) { throw 'Private diagnostics push rejected' }
+          Write-Host 'Diagnostics published privately; build and test failures remain failures.'
