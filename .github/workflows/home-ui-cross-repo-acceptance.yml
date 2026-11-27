@@ -10,7 +10,7 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 09c19f7df9b4ff3e3b6a3e23b31d912b55de054e
+  TARGET_SHA: 507922edc35064527395ed43f9ddfd5588266c93
   TARGET_BRANCH: feat/ui-foundation-20261127
 jobs:
   verify:
@@ -52,8 +52,9 @@ jobs:
               return 1
             fi
           }
-          run_private resolve npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          # The generated lock is already committed; verify it rather than rewriting it.
           run_private install npm ci --no-audit --no-fund
+          git diff --exit-code -- package-lock.json >/dev/null 2>&1
       - name: Typecheck lint test build
         id: checks
         working-directory: target/tauri2-app/frontend
