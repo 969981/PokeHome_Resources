@@ -1,0 +1,97 @@
+name: HOME UI cross-repository acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-ui-cross-repo-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-ui-cross-repo-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 8528606793025a38d41f4d8d7a44083426a484d8
+  TARGET_BRANCH: feat/ui-foundation-20261127
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout pinned private UI revision
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: target
+          persist-credentials: false
+          sparse-checkout: |
+            tauri2-app/frontend
+            tauri2-app/public
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Resolve npm lock and verify clean install
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -euo pipefail
+          # This runner repo is public: never publish private source, lock or raw logs.
+          run_private() {
+            local stage="$1"; shift
+            local logfile="$RUNNER_TEMP/home-ui-$stage.log"
+            if "$@" >"$logfile" 2>&1; then
+              echo "$stage PASS" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "$stage FAIL" >> "$GITHUB_STEP_SUMMARY"
+              for code in ERESOLVE ETARGET E404 EAI_AGAIN ENOTFOUND ELOCKVERIFY EBADENGINE EUSAGE; do
+                if grep -q "$code" "$logfile"; then echo "$stage npm-code: $code" >> "$GITHUB_STEP_SUMMARY"; fi
+              done
+              echo "::error::$stage failed (private log suppressed)"
+              return 1
+            fi
+          }
+          run_private resolve npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          run_private install npm ci --no-audit --no-fund
+      - name: Typecheck lint test build
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -u
+          failed=0
+          for stage in typecheck lint test build; do
+            if npm run "$stage" >"$RUNNER_TEMP/home-ui-$stage.log" 2>&1; then
+              echo "$stage PASS" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "$stage FAIL" >> "$GITHUB_STEP_SUMMARY"
+              # Expose only standard TS diagnostic numbers, not source paths or messages.
+              if [ "$stage" = typecheck ]; then
+                grep -oE 'error TS[0-9]+' "$RUNNER_TEMP/home-ui-$stage.log" | sort -u | head -20 >> "$GITHUB_STEP_SUMMARY" || true
+              fi
+              echo "::error::$stage failed (private log suppressed)"
+              failed=1
+            fi
+          done
+          exit "$failed"
+      - name: Publish verified lock only to unchanged private feature branch
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA"
+          git add -- tauri2-app/frontend/package-lock.json
+          if git diff --cached --quiet; then
+            echo "Lock already synchronized" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          test "$(git diff --cached --name-only)" = tauri2-app/frontend/package-lock.json
+          gh auth setup-git --hostname github.com
+          remote_sha="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)"
+          test "$remote_sha" = "$TARGET_SHA" || { echo "::error::Target advanced; refusing stale lock publish"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "build(ui): sync cross-repository verified npm lock" >/dev/null
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Lock publish rejected"; exit 1; }
+          echo "Verified lock published to private feature branch" >> "$GITHUB_STEP_SUMMARY"
