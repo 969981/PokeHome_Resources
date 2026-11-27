@@ -119,19 +119,8 @@ for a,n in sorted(fde.items()):
     report += [f'### region candidate {a:#x}']+hits
     if n<=0x3000:focus.add(a)
 focus.update([0x1b0d00,0x1b350c,0x25e820,0x25ea30,0x25d3c4,0x25d528,0x25d670])
-report+=['','## Save route caller census and snapshot candidates']
-routes={0x225d10,0x225d90,0x225e80,0x226420,0x2267b0,0x2555d0,0x255970,0x25aa70,0x25afd0,0x25b1f8,0x271d20}
-focus.update(routes)
-focus.update([0x24c470,0x252d00,0x1ba830,0x225bc0,0x2717bc,0x271974,0x27ad68,0x255c80])
-for a,n in sorted(fde.items()):
-    if not e.executable(a):continue
-    ii=body(a)
-    hits=[fmt(i) for i in ii if i.mnemonic in ('bl','b') and i.op_str.startswith('#0x') and int(i.op_str[1:],16) in routes]
-    if hits:
-        report += [f'### route caller {a:#x}']+hits
-        if n<=0x4000:focus.add(a)
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
-    if a in fde and fde[a]<=0x4000:report+=dump(a)
+    if a in fde and fde[a]<=0x3000:report+=dump(a)
 Path(out).parent.mkdir(parents=True,exist_ok=True);Path(out).write_text('\n'.join(report)+'\n',encoding='utf8')
 print('selected',len(focus),'field candidates',len(cached))
