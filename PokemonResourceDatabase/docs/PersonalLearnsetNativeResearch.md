@@ -77,3 +77,19 @@ focused.json raw_pointer_candidates 中7组 count/entry 指针都连续，相差
 | G | 0x799838 | 0x799900 | 0x799908 |
 
 A/B/C/F/G 写 +0=f1、+4=f0；D 写 +0=f0、+4=f1、+8=f2；E 写 +0=f1、+4=f0、+8=f2（0x544624/0x544648/0x5446a8）。据结构匹配，D 与 Hayabusa、E 与 Ikkaku 对应关系是强候选，尚未通过初始化闭合。新 [dispatch 审计](../../tools/home41_native_learnset_dispatch.py) 检查7组 raw pair、10处指令锚点、地址点引用及 collector/初始化完整窗口。其 CI 尚待验收，不修改正式数据库语义。
+
+## Collector、membership 与初始化证据（2026-11-27）
+[Run 45919323225](https://github.com/969981/PokeHome_Resources/actions/runs/45919323225) 成功；artifact 15163761145 SHA256 03012765fdab94056647041f4ae5ad9e3b7761eabd07f3e822a8d38cdd6c7930，独立 CRC、SHA256 验证成功，7组虚表指针对与10处指令锚点通过。旧 address_refs 唯一命中 0x561ca4 -> 0x799000 是误报：实际 0x561ca8 add x9,x9,#0xf78，而 0x561cbc 重写 x9 后 0x561cc0 add #0，不能关联旧 ADRP。因此尚未闭合对象初始化。
+
+### 0x4fcce0 (collector, end ret 0x4fce70)
+ABI: x0=context,w1=move,w2=source domain candidate,w3=target domain candidate,x4=pokemon object,w5=mode. 0x4fcc50 caller passes source from count/entry selector and target from caller w3. Correction: previous pseudocode used generic dataset/argument labels. 
+- move==0 returns; 0x53db50(move,target) must return bit0 true.
+- If target low8=2, source low8 in {1,2}, mode in {1,2}, object 0x5312d8 result not 44 or 45, require 0x500108(object,move,target,0,0) bit0.
+- Otherwise same source/target low8 skips membership; different requires 0x500108(object,move,target,1,1) bit0.
+- target low8=7: compare 32 fixed 16-byte entries at 0x657db8..0x657fb8 (exclusive): entry+0xc move, entry+4 matches 0x531008(object), entry+8 u16 matches 0x531010(object) low16; match returns without appending. Other bytes unknown.
+- context+0xe64 count, context+4*i move IDs. Reject duplicate, otherwise append and increment. No explicit capacity check in this function; do not infer overall buffer capacity without caller proof. Native 102 only bypasses caller threshold, not these filters.
+
+### 0x500108 (membership; args object,move,target,flag3,flag4)
+0x50013c/148 get identities; select object via 0x7a5d78, virtual slots +0xc8 count and +0xd0 indexed entry. Loop 0x5001f8..258 compares output+0 to requested move, success branch 0x5001dc sets result1. If no match: flag3 bit0 + 0x535c70 guard allows four 0x532ed8(object,index,target) comparisons; flag4 bit0 + guard allows 0x532e20(object,move,target). Finally explicit numerical exceptions: identity0=25/26/172 and move=344, identity0=479 with (form,move)=(1,315),(2,56),(3,59),(4,403),(5,435). Return true on match; otherwise false. These exceptions are raw IDs (not proof of legal move acquisition). Query failure in indexed loop uses move=0 fallback, so callers must reject zero (collector does).
+### Initialization
+Verified loader entrypoints 0x501ad0 Global, 0x501b70 Beluga, 0x501c10 Orion, 0x501cb0 Delphis, 0x501d50 Hayabusa, 0x501df0 Titan, 0x501e90 Ikkaku; each uses 0x502950 and corresponding pointer +0x18,+0x20,+0x28,+0x30,+0x38,+0x40,+0x48 respectively, then formats resource path and calls 0x50213c. These are path context fields, not selector indices. Thunks demonstrate fixed selectors 1,2,4,3,5,7 but do not name datasets. New [object init audit](../../tools/home41_native_learnset_object_init.py) tracks register writes within straight-line blocks for ADRP/ADD/LDR/STR, includes indirect raw pointer candidates, direct loader callers, exclusion table extraction and guard/threshold windows; new CI pending. Formal dataset mapping and method semantics remain unconfirmed.
