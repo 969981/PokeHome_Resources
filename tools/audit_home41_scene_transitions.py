@@ -41,7 +41,7 @@ for slot in sorted(relr|set(rela)):
             try:v=ptr(a)
             except ValueError:continue
             report.append(f'  {a:#x}: {hex(v) if v is not None else "unresolved"}')
-            if v in fde and e.executable(v) and fde[v]<=0x1000:focus.add(v)
+            if v in fde and e.executable(v) and fde[v]<=0x400:focus.add(v)
         cells.add(slot)
 report+=['','## Table header GOT candidates']
 got=set()
@@ -75,7 +75,7 @@ for a,n in sorted(fde.items()):
             pages.pop(op.split(',')[0],None)
     if hits:
         report += [f'### caller {a:#x}']+hits
-        if n<=0x1800:focus.add(a)
+        if n<=0x1800 and (any('GOT ' in h for h in hits) and 0x60000<=a<=0x180000 and len(focus)<100):focus.add(a)
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
