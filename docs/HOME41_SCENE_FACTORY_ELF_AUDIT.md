@@ -13,6 +13,10 @@ SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
 ## Direct caller census
 ### caller 0x2ea0
 00003514 5fa10194 bl       #0x6ba90
+### caller 0x158b0
+000158E0 ea030094 bl       #0x16888
+### caller 0x160b0
+000160B4 fffdff17 b        #0x158b0
 ### caller 0x1686c
 00016870 ccffff17 b        #0x167a0
 ### caller 0x16874
@@ -1495,6 +1499,11 @@ SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
 00015A38 fd7bc2a8 ldp      x29, x30, [sp], #0x20
 00015A3C c0035fd6 ret      
 ~~~
+### 0x160b0 (2 slots)
+~~~asm
+000160B0 003841f9 ldr      x0, [x0, #0x270]
+000160B4 fffdff17 b        #0x158b0
+~~~
 ### 0x166d8 (50 slots)
 ~~~asm
 000166D8 ffc300d1 sub      sp, sp, #0x30
@@ -1606,6 +1615,57 @@ SHA256: bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a
 ~~~asm
 00016874 004001d1 sub      x0, x0, #0x50
 00016878 caffff17 b        #0x167a0
+~~~
+### 0x16888 (48 slots)
+~~~asm
+00016888 086c40b9 ldr      w8, [x0, #0x6c]
+0001688C 1f090071 cmp      w8, #2
+00016890 80050054 b.eq     #0x16940
+00016894 fd7bbea9 stp      x29, x30, [sp, #-0x20]!
+00016898 f44f01a9 stp      x20, x19, [sp, #0x10]
+0001689C fd030091 mov      x29, sp
+000168A0 f40301aa mov      x20, x1
+000168A4 f30300aa mov      x19, x0
+000168A8 1f050071 cmp      w8, #1
+000168AC e0010054 b.eq     #0x168e8
+000168B0 08040035 cbnz     w8, #0x16930
+000168B4 680240f9 ldr      x8, [x19]
+000168B8 e00313aa mov      x0, x19
+000168BC e10314aa mov      x1, x20
+000168C0 081d40f9 ldr      x8, [x8, #0x38]
+000168C4 00013fd6 blr      x8
+000168C8 40030036 tbz      w0, #0, #0x16930
+000168CC 680240f9 ldr      x8, [x19]
+000168D0 e00313aa mov      x0, x19
+000168D4 e10314aa mov      x1, x20
+000168D8 082140f9 ldr      x8, [x8, #0x40]
+000168DC 00013fd6 blr      x8
+000168E0 28008052 mov      w8, #1
+000168E4 686e00b9 str      w8, [x19, #0x6c]
+000168E8 680240f9 ldr      x8, [x19]
+000168EC e00313aa mov      x0, x19
+000168F0 e10314aa mov      x1, x20
+000168F4 082540f9 ldr      x8, [x8, #0x48]
+000168F8 00013fd6 blr      x8
+000168FC 1f040071 cmp      w0, #1
+00016900 21010054 b.ne     #0x16924
+00016904 680240f9 ldr      x8, [x19]
+00016908 e00313aa mov      x0, x19
+0001690C e10314aa mov      x1, x20
+00016910 082940f9 ldr      x8, [x8, #0x50]
+00016914 00013fd6 blr      x8
+00016918 48008052 mov      w8, #2
+0001691C 20008052 mov      w0, #1
+00016920 686e00b9 str      w8, [x19, #0x6c]
+00016924 f44f41a9 ldp      x20, x19, [sp, #0x10]
+00016928 fd7bc2a8 ldp      x29, x30, [sp], #0x20
+0001692C c0035fd6 ret      
+00016930 e0031f2a mov      w0, wzr
+00016934 f44f41a9 ldp      x20, x19, [sp, #0x10]
+00016938 fd7bc2a8 ldp      x29, x30, [sp], #0x20
+0001693C c0035fd6 ret      
+00016940 20008052 mov      w0, #1
+00016944 c0035fd6 ret      
 ~~~
 ### 0x16948 (1 slots)
 ~~~asm
