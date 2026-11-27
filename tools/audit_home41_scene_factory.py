@@ -26,8 +26,8 @@ def ptr(a):
 
 
 report=['# HOME41 Scene factory and ownership lifecycle','SHA256: '+SHA]
-targets={0x6bb1c,0x6bcec,0x6be00,0x6bf94,0x6bfb0,0x6c1f4,0x166d8,0x167a0,0x6f2b4}
-focus=set(targets)|{0x6c208,0x6caa4,0x6cb40}
+targets={0x6ba90,0x157d8,0x6bb1c,0x6bcec,0x6be00,0x6bf94,0x6bfb0,0x6c1f4,0x166d8,0x167a0,0x6f2b4}
+focus=set(targets)|{0x6f650,0x16948,0x10090,0x1029c,0x102b8,0x10310,0x10360,0x16870,0x16874,0x6c208,0x6caa4,0x6cb40}
 got=set()
 report+=['','## Relocation slots and factory table candidates']
 for slot in sorted(relr|set(rela)):
@@ -35,7 +35,7 @@ for slot in sorted(relr|set(rela)):
     except ValueError:continue
     if t in targets:
         report.append(f'- {slot:#x} -> {t:#x}')
-        if t==0x6bb1c:
+        if t in {0x6ba90,0x6bb1c}:
             for a in range(slot-0x40,slot+0x48,8):
                 try:v=ptr(a)
                 except ValueError:continue
@@ -49,7 +49,7 @@ for a,n in sorted(fde.items()):
     hits=[fmt(i) for i in ii if i.mnemonic in ('bl','b') and i.op_str.startswith('#0x') and int(i.op_str[1:],16) in targets]
     if hits:
         report += [f'### caller {a:#x}']+hits
-        if n<=0x1800 and any('#0x6bb1c' in h or '#0x6bcec' in h or '#0x6be00' in h or '#0x6c1f4' in h for h in hits):focus.add(a)
+        if n<=0x1800 and any('#0x6ba90' in h or '#0x6bb1c' in h or '#0x6bcec' in h or '#0x6be00' in h or '#0x6c1f4' in h for h in hits):focus.add(a)
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
