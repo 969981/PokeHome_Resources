@@ -27,8 +27,8 @@ def ptr(a):
 
 
 report=['# HOME41 linked editor child ownership and Model root','SHA256: '+SHA]
-targets={0x157d8,0x160b0,0x158b0,0x6d750,0x74844,0x74944,0x8c130,0x87f60,0x6d930,0x6d89c}
-focus=set(targets)|{0x6c208,0x74a30}
+targets={0xc8098,0xc81b8,0x4d87d4,0x8d190,0x8d140,0x6f970,0x157d8,0x160b0,0x158b0,0x6d750,0x74844,0x74944,0x8c130,0x87f60,0x6d930,0x6d89c}
+focus=set(targets)|{0x248f0,0x74a80,0x90de0,0x6c208,0x74a30}
 got=set()
 report+=['','## Relocations to Model root and lifecycle targets']
 for slot in sorted(relr|set(rela)):
@@ -59,7 +59,17 @@ for a,n in sorted(fde.items()):
             pages.pop(op.split(',')[0],None)
     if hits:
         report += [f'### caller {a:#x}']+hits
-        if n<=0x1800 and (len(focus)<85 or any('#0x157d8' in h or '#0x160b0' in h for h in hits)):focus.add(a)
+        if n<=0x2400 and (any('ROOT ' in h or '#0xc8098' in h or '#0xc81b8' in h for h in hits) or (len(focus)<45 and any('#0x4d87d4' not in h for h in hits))):focus.add(a)
+report+=['','## Owner and Model vtables']
+for slot in [0x7a0528,0x7a1100]:
+    t=ptr(slot)
+    report.append(f'- GOT {slot:#x} -> {hex(t) if t is not None else "unresolved"}')
+    if t is None:continue
+    for a in range(t+0x10,t+0xf0,8):
+        try:v=ptr(a)
+        except ValueError:continue
+        report.append(f'  {a:#x} (+{a-t-0x10:#x}): {hex(v) if v is not None else "unresolved"}')
+        if v in fde and e.executable(v) and fde[v]<=0x500:focus.add(v)
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
