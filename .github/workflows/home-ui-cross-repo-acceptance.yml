@@ -10,7 +10,7 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 8528606793025a38d41f4d8d7a44083426a484d8
+  TARGET_SHA: 09c19f7df9b4ff3e3b6a3e23b31d912b55de054e
   TARGET_BRANCH: feat/ui-foundation-20261127
 jobs:
   verify:
@@ -32,6 +32,7 @@ jobs:
         with:
           node-version: '24'
       - name: Resolve npm lock and verify clean install
+        id: npm
         working-directory: target/tauri2-app/frontend
         shell: bash
         run: |
@@ -54,15 +55,20 @@ jobs:
           run_private resolve npm install --package-lock-only --ignore-scripts --no-audit --no-fund
           run_private install npm ci --no-audit --no-fund
       - name: Typecheck lint test build
+        id: checks
         working-directory: target/tauri2-app/frontend
         shell: bash
         run: |
           set -u
           failed=0
           for stage in typecheck lint test build; do
-            if npm run "$stage" >"$RUNNER_TEMP/home-ui-$stage.log" 2>&1; then
+            args=()
+            if [ "$stage" = test ]; then args=(-- --reporter=json --outputFile="$RUNNER_TEMP/home-ui-vitest.json"); fi
+            if npm run "$stage" "${args[@]}" >"$RUNNER_TEMP/home-ui-$stage.log" 2>&1; then
+              printf "%s PASS\n" "$stage" >> "$RUNNER_TEMP/home-ui-status.txt"
               echo "$stage PASS" >> "$GITHUB_STEP_SUMMARY"
             else
+              printf "%s FAIL\n" "$stage" >> "$RUNNER_TEMP/home-ui-status.txt"
               echo "$stage FAIL" >> "$GITHUB_STEP_SUMMARY"
               # Expose only standard TS diagnostic numbers, not source paths or messages.
               if [ "$stage" = typecheck ]; then
@@ -73,7 +79,8 @@ jobs:
             fi
           done
           exit "$failed"
-      - name: Publish verified lock only to unchanged private feature branch
+      - name: Publish install-verified lock and private CI result
+        if: always() && steps.npm.outcome == 'success'
         working-directory: target
         env:
           GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
@@ -81,17 +88,47 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$TARGET_SHA"
-          git add -- tauri2-app/frontend/package-lock.json
-          if git diff --cached --quiet; then
-            echo "Lock already synchronized" >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-          test "$(git diff --cached --name-only)" = tauri2-app/frontend/package-lock.json
+          # Only a bounded structured diagnostic is written into the private target.
+          # No source, lock, test output, or diagnostic file is uploaded publicly.
+          mkdir -p docs/devlog
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const t = process.env.RUNNER_TEMP;
+          const read = name => { try { return fs.readFileSync(path.join(t,name),'utf8'); } catch { return ''; } };
+          let report = {};
+          try { report = JSON.parse(read('home-ui-vitest.json')); } catch {}
+          const failures = [];
+          for (const suite of report.testResults ?? []) {
+            for (const a of suite.assertionResults ?? []) {
+              if (a.status !== 'failed') continue;
+              failures.push({suite:path.basename(suite.name ?? ''),test:String(a.fullName ?? a.title ?? '').slice(0,240),message:String(a.failureMessages?.[0] ?? '').split('\n').slice(0,4).join('\n').slice(0,600)});
+            }
+            if (suite.status === 'failed' && !(suite.assertionResults ?? []).some(a => a.status === 'failed')) {
+              failures.push({suite:path.basename(suite.name ?? ''),message:String(suite.message ?? '').split('\n').slice(0,4).join('\n').slice(0,600)});
+            }
+          }
+          const codes = Object.fromEntries(['typecheck','build'].map(stage => [stage,[...new Set(read('home-ui-'+stage+'.log').match(/error TS[0-9]+/g) ?? [])]]));
+          fs.writeFileSync('docs/devlog/2026-11-27-ui-foundation-ci-result.json', JSON.stringify({
+            target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID, install:'PASS',
+            stages:read('home-ui-status.txt').trim().split('\n').filter(Boolean),
+            vitest:{total:report.numTotalTests ?? null,passed:report.numPassedTests ?? null,failed:report.numFailedTests ?? null,failures:failures.slice(0,20)},
+            diagnosticCodes:codes
+          },null,2)+'\n');
+          JS
+          git add --sparse -- tauri2-app/frontend/package-lock.json docs/devlog/2026-11-27-ui-foundation-ci-result.json
+          if git diff --cached --quiet; then exit 0; fi
+          while IFS= read -r changed; do
+            case "$changed" in
+              tauri2-app/frontend/package-lock.json|docs/devlog/2026-11-27-ui-foundation-ci-result.json) ;;
+              *) echo "::error::Unexpected staged path"; exit 1;;
+            esac
+          done < <(git diff --cached --name-only)
           gh auth setup-git --hostname github.com
           remote_sha="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)"
           test "$remote_sha" = "$TARGET_SHA" || { echo "::error::Target advanced; refusing stale lock publish"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "build(ui): sync cross-repository verified npm lock" >/dev/null
+          git commit -m "build(ui): sync npm lock and private cross-repo CI evidence" >/dev/null
           git push origin "HEAD:refs/heads/$TARGET_BRANCH" >"$RUNNER_TEMP/home-ui-push.log" 2>&1 || { echo "::error::Lock publish rejected"; exit 1; }
-          echo "Verified lock published to private feature branch" >> "$GITHUB_STEP_SUMMARY"
+          echo "Install-verified lock and result published privately; failed checks remain failing" >> "$GITHUB_STEP_SUMMARY"
