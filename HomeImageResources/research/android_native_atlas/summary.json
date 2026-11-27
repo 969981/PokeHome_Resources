@@ -1,0 +1,25 @@
+{
+  "apk_sha256": "8dee598028cd70441f645c8fff96b093b76778d625cdf07c60109eced50ffac1",
+  "elf_sha256": "80bfbc3d480bf3c91297d65a441a37e40260b70fd8b0ddc8da70c34f0870b6fe",
+  "unitypy": "1.25.4",
+  "sources": 1507,
+  "serialized_files": 1471,
+  "load_failures": 0,
+  "atlases": {
+    "BankMarks": {
+      "packed": 12,
+      "resolved": 12,
+      "decoded": 12
+    },
+    "Achievement": {
+      "packed": 12,
+      "resolved": 12,
+      "decoded": 12
+    }
+  },
+  "medal_materials": 3,
+  "native_windows": 41,
+  "native_candidates_total": 41,
+  "verified_business_ids": 0,
+  "runtime_cache": "not supplied"
+}

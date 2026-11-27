@@ -1,0 +1,919 @@
+{
+  "elf_sha256": "bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a",
+  "scope": "verified static selector input domains; record field semantics and current game consumers require caller proof",
+  "pointer_tables": {
+    "origin_color": [
+      "icon_generation_02_color^t",
+      "icon_generation_03_color^t",
+      "icon_generation_01_color^t",
+      "icon_generation_00_color^t",
+      "icon_generation_06_color^t",
+      "icon_generation_05_color^t",
+      "icon_generation_04_color^t",
+      "icon_generation_08_color^t",
+      "icon_generation_07_color^t",
+      "icon_generation_09_color^t",
+      "icon_generation_10_color^t",
+      "icon_generation_11_color^t"
+    ],
+    "origin_normal": [
+      "icon_generation_02^t",
+      "icon_generation_03^t",
+      "icon_generation_01^t",
+      "icon_generation_00^t",
+      "icon_generation_06^t",
+      "icon_generation_05^t",
+      "icon_generation_04^t",
+      "icon_generation_08^t",
+      "icon_generation_07^t",
+      "icon_generation_09^t",
+      "icon_generation_10^t",
+      "icon_generation_11^t"
+    ],
+    "language": [
+      "icon_lang_jpn_00^q",
+      "icon_lang_eng_00^q",
+      "icon_lang_fra_00^q",
+      "icon_lang_ger_00^q",
+      "icon_lang_ita_00^q",
+      "icon_lang_kor_00^q",
+      "icon_lang_spa_00^q",
+      "icon_lang_chs_00^q",
+      "icon_lang_cht_00^q",
+      "icon_lang_ltm_00^q"
+    ],
+    "version": [
+      "icon_version_9999^q",
+      "icon_version_0000^q",
+      "icon_version_0001^q",
+      "icon_version_0010^q",
+      "icon_version_0011^q",
+      "icon_version_0020^q",
+      "icon_version_0021^q",
+      "icon_version_0030^q",
+      "icon_version_0031^q",
+      "icon_version_0040^q",
+      "icon_version_0041^q",
+      "icon_version_0050^q",
+      "icon_version_0051^q",
+      "icon_version_0060^q",
+      "icon_version_0070^q",
+      "icon_version_0080^q",
+      "icon_version_0100^q",
+      "icon_version_0101^q",
+      "icon_version_0090^q",
+      "icon_version_0110^q",
+      "icon_version_0111^q",
+      "icon_version_0120^q",
+      "icon_version_0130^q",
+      "icon_version_0140^q",
+      "icon_version_0141^q"
+    ]
+  },
+  "origin_table_va": 6531056,
+  "origin_rows": [
+    {
+      "input": 0,
+      "index": 0,
+      "normal": "icon_generation_02^t",
+      "color": "icon_generation_02_color^t"
+    },
+    {
+      "input": 1,
+      "index": 1,
+      "normal": "icon_generation_03^t",
+      "color": "icon_generation_03_color^t"
+    },
+    {
+      "input": 2,
+      "index": 2,
+      "normal": "icon_generation_01^t",
+      "color": "icon_generation_01_color^t"
+    },
+    {
+      "input": 3,
+      "index": 3,
+      "normal": "icon_generation_00^t",
+      "color": "icon_generation_00_color^t"
+    },
+    {
+      "input": 4,
+      "index": 4,
+      "normal": "icon_generation_06^t",
+      "color": "icon_generation_06_color^t"
+    },
+    {
+      "input": 5,
+      "index": 5,
+      "normal": "icon_generation_05^t",
+      "color": "icon_generation_05_color^t"
+    },
+    {
+      "input": 6,
+      "index": 6,
+      "normal": "icon_generation_04^t",
+      "color": "icon_generation_04_color^t"
+    },
+    {
+      "input": 7,
+      "index": 7,
+      "normal": "icon_generation_08^t",
+      "color": "icon_generation_08_color^t"
+    },
+    {
+      "input": 8,
+      "index": 8,
+      "normal": "icon_generation_07^t",
+      "color": "icon_generation_07_color^t"
+    },
+    {
+      "input": 9,
+      "index": 9,
+      "normal": "icon_generation_09^t",
+      "color": "icon_generation_09_color^t"
+    },
+    {
+      "input": 10,
+      "index": 10,
+      "normal": "icon_generation_10^t",
+      "color": "icon_generation_10_color^t"
+    },
+    {
+      "input": 11,
+      "index": 11,
+      "normal": "icon_generation_11^t",
+      "color": "icon_generation_11_color^t"
+    }
+  ],
+  "origin_above_11_fallback": 2,
+  "language_table_va": 6531192,
+  "language_raw_table": [
+    0,
+    1,
+    2,
+    4,
+    3,
+    9,
+    6,
+    5,
+    7,
+    8,
+    9
+  ],
+  "language_rows": [
+    {
+      "input": 1,
+      "index": 0,
+      "key": "icon_lang_jpn_00^q"
+    },
+    {
+      "input": 2,
+      "index": 1,
+      "key": "icon_lang_eng_00^q"
+    },
+    {
+      "input": 3,
+      "index": 2,
+      "key": "icon_lang_fra_00^q"
+    },
+    {
+      "input": 4,
+      "index": 4,
+      "key": "icon_lang_ita_00^q"
+    },
+    {
+      "input": 5,
+      "index": 3,
+      "key": "icon_lang_ger_00^q"
+    },
+    {
+      "input": 7,
+      "index": 6,
+      "key": "icon_lang_spa_00^q"
+    },
+    {
+      "input": 8,
+      "index": 5,
+      "key": "icon_lang_kor_00^q"
+    },
+    {
+      "input": 9,
+      "index": 7,
+      "key": "icon_lang_chs_00^q"
+    },
+    {
+      "input": 10,
+      "index": 8,
+      "key": "icon_lang_cht_00^q"
+    },
+    {
+      "input": 11,
+      "index": 9,
+      "key": "icon_lang_ltm_00^q"
+    }
+  ],
+  "version_table_va": 6531400,
+  "version_rows": [
+    {
+      "input": 24,
+      "index": 1,
+      "key": "icon_version_0000^q"
+    },
+    {
+      "input": 25,
+      "index": 2,
+      "key": "icon_version_0001^q"
+    },
+    {
+      "input": 26,
+      "index": 4,
+      "key": "icon_version_0011^q"
+    },
+    {
+      "input": 27,
+      "index": 3,
+      "key": "icon_version_0010^q"
+    },
+    {
+      "input": 28,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 29,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 30,
+      "index": 5,
+      "key": "icon_version_0020^q"
+    },
+    {
+      "input": 31,
+      "index": 6,
+      "key": "icon_version_0021^q"
+    },
+    {
+      "input": 32,
+      "index": 7,
+      "key": "icon_version_0030^q"
+    },
+    {
+      "input": 33,
+      "index": 8,
+      "key": "icon_version_0031^q"
+    },
+    {
+      "input": 34,
+      "index": 13,
+      "key": "icon_version_0060^q"
+    },
+    {
+      "input": 35,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 36,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 37,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 38,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 39,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 40,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 41,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 42,
+      "index": 9,
+      "key": "icon_version_0040^q"
+    },
+    {
+      "input": 43,
+      "index": 10,
+      "key": "icon_version_0041^q"
+    },
+    {
+      "input": 44,
+      "index": 11,
+      "key": "icon_version_0050^q"
+    },
+    {
+      "input": 45,
+      "index": 12,
+      "key": "icon_version_0051^q"
+    },
+    {
+      "input": 46,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 47,
+      "index": 18,
+      "key": "icon_version_0090^q"
+    },
+    {
+      "input": 48,
+      "index": 16,
+      "key": "icon_version_0100^q"
+    },
+    {
+      "input": 49,
+      "index": 17,
+      "key": "icon_version_0101^q"
+    },
+    {
+      "input": 50,
+      "index": 19,
+      "key": "icon_version_0110^q"
+    },
+    {
+      "input": 51,
+      "index": 20,
+      "key": "icon_version_0111^q"
+    },
+    {
+      "input": 52,
+      "index": 22,
+      "key": "icon_version_0130^q"
+    },
+    {
+      "input": 53,
+      "index": 21,
+      "key": "icon_version_0120^q"
+    },
+    {
+      "input": 54,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 55,
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "input": 56,
+      "index": 23,
+      "key": "icon_version_0140^q"
+    },
+    {
+      "input": 57,
+      "index": 24,
+      "key": "icon_version_0141^q"
+    }
+  ],
+  "version_outside_range_fallback": 0,
+  "version_display_rows": [
+    {
+      "index": 0,
+      "key": "icon_version_9999^q"
+    },
+    {
+      "index": 1,
+      "key": "icon_version_0000^q"
+    },
+    {
+      "index": 2,
+      "key": "icon_version_0001^q"
+    },
+    {
+      "index": 3,
+      "key": "icon_version_0010^q"
+    },
+    {
+      "index": 4,
+      "key": "icon_version_0011^q"
+    },
+    {
+      "index": 5,
+      "key": "icon_version_0020^q"
+    },
+    {
+      "index": 6,
+      "key": "icon_version_0021^q"
+    },
+    {
+      "index": 7,
+      "key": "icon_version_0030^q"
+    },
+    {
+      "index": 8,
+      "key": "icon_version_0031^q"
+    },
+    {
+      "index": 9,
+      "key": "icon_version_0040^q"
+    },
+    {
+      "index": 10,
+      "key": "icon_version_0041^q"
+    },
+    {
+      "index": 11,
+      "key": "icon_version_0050^q"
+    },
+    {
+      "index": 12,
+      "key": "icon_version_0051^q"
+    },
+    {
+      "index": 13,
+      "key": "icon_version_0060^q"
+    },
+    {
+      "index": 14,
+      "key": "icon_version_0070^q"
+    },
+    {
+      "index": 15,
+      "key": "icon_version_0080^q"
+    },
+    {
+      "index": 16,
+      "key": "icon_version_0100^q"
+    },
+    {
+      "index": 17,
+      "key": "icon_version_0101^q"
+    },
+    {
+      "index": 18,
+      "key": "icon_version_0090^q"
+    },
+    {
+      "index": 19,
+      "key": "icon_version_0110^q"
+    },
+    {
+      "index": 20,
+      "key": "icon_version_0111^q"
+    },
+    {
+      "index": 21,
+      "key": "icon_version_0120^q"
+    },
+    {
+      "index": 22,
+      "key": "icon_version_0130^q"
+    },
+    {
+      "index": 23,
+      "key": "icon_version_0140^q"
+    },
+    {
+      "index": 24,
+      "key": "icon_version_0141^q"
+    }
+  ],
+  "run_id": 45816392865,
+  "artifact_id": 15115976868,
+  "artifact_sha256": "b8c4de56c693ef92fba89be33df04a03d025cc29c803b1ed72ee0a8f31190763",
+  "direct_caller_count": 68,
+  "domain_mappings": {
+    "pokemon_language": {
+      "status": "static_selector_input_confirmed_record_field_not_certified",
+      "selector": "0x2C6808",
+      "rows": [
+        {
+          "input": 1,
+          "index": 0,
+          "key": "icon_lang_jpn_00^q"
+        },
+        {
+          "input": 2,
+          "index": 1,
+          "key": "icon_lang_eng_00^q"
+        },
+        {
+          "input": 3,
+          "index": 2,
+          "key": "icon_lang_fra_00^q"
+        },
+        {
+          "input": 4,
+          "index": 4,
+          "key": "icon_lang_ita_00^q"
+        },
+        {
+          "input": 5,
+          "index": 3,
+          "key": "icon_lang_ger_00^q"
+        },
+        {
+          "input": 7,
+          "index": 6,
+          "key": "icon_lang_spa_00^q"
+        },
+        {
+          "input": 8,
+          "index": 5,
+          "key": "icon_lang_kor_00^q"
+        },
+        {
+          "input": 9,
+          "index": 7,
+          "key": "icon_lang_chs_00^q"
+        },
+        {
+          "input": 10,
+          "index": 8,
+          "key": "icon_lang_cht_00^q"
+        },
+        {
+          "input": 11,
+          "index": 9,
+          "key": "icon_lang_ltm_00^q"
+        }
+      ]
+    },
+    "game_version_code": {
+      "status": "static_selector_input_confirmed_caller_semantics_pending",
+      "selector": "0x2D5164",
+      "rows": [
+        {
+          "input": 24,
+          "index": 1,
+          "key": "icon_version_0000^q"
+        },
+        {
+          "input": 25,
+          "index": 2,
+          "key": "icon_version_0001^q"
+        },
+        {
+          "input": 26,
+          "index": 4,
+          "key": "icon_version_0011^q"
+        },
+        {
+          "input": 27,
+          "index": 3,
+          "key": "icon_version_0010^q"
+        },
+        {
+          "input": 28,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 29,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 30,
+          "index": 5,
+          "key": "icon_version_0020^q"
+        },
+        {
+          "input": 31,
+          "index": 6,
+          "key": "icon_version_0021^q"
+        },
+        {
+          "input": 32,
+          "index": 7,
+          "key": "icon_version_0030^q"
+        },
+        {
+          "input": 33,
+          "index": 8,
+          "key": "icon_version_0031^q"
+        },
+        {
+          "input": 34,
+          "index": 13,
+          "key": "icon_version_0060^q"
+        },
+        {
+          "input": 35,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 36,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 37,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 38,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 39,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 40,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 41,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 42,
+          "index": 9,
+          "key": "icon_version_0040^q"
+        },
+        {
+          "input": 43,
+          "index": 10,
+          "key": "icon_version_0041^q"
+        },
+        {
+          "input": 44,
+          "index": 11,
+          "key": "icon_version_0050^q"
+        },
+        {
+          "input": 45,
+          "index": 12,
+          "key": "icon_version_0051^q"
+        },
+        {
+          "input": 46,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 47,
+          "index": 18,
+          "key": "icon_version_0090^q"
+        },
+        {
+          "input": 48,
+          "index": 16,
+          "key": "icon_version_0100^q"
+        },
+        {
+          "input": 49,
+          "index": 17,
+          "key": "icon_version_0101^q"
+        },
+        {
+          "input": 50,
+          "index": 19,
+          "key": "icon_version_0110^q"
+        },
+        {
+          "input": 51,
+          "index": 20,
+          "key": "icon_version_0111^q"
+        },
+        {
+          "input": 52,
+          "index": 22,
+          "key": "icon_version_0130^q"
+        },
+        {
+          "input": 53,
+          "index": 21,
+          "key": "icon_version_0120^q"
+        },
+        {
+          "input": 54,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 55,
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "input": 56,
+          "index": 23,
+          "key": "icon_version_0140^q"
+        },
+        {
+          "input": 57,
+          "index": 24,
+          "key": "icon_version_0141^q"
+        }
+      ],
+      "fallback_index": 0
+    },
+    "current_game": {
+      "status": "unresolved_no_assumed_crosswalk",
+      "rows": []
+    },
+    "origin_mark": {
+      "status": "static_selector_input_confirmed_record_field_not_certified",
+      "selector": "0x2C594C",
+      "rows": [
+        {
+          "input": 0,
+          "index": 0,
+          "normal": "icon_generation_02^t",
+          "color": "icon_generation_02_color^t"
+        },
+        {
+          "input": 1,
+          "index": 1,
+          "normal": "icon_generation_03^t",
+          "color": "icon_generation_03_color^t"
+        },
+        {
+          "input": 2,
+          "index": 2,
+          "normal": "icon_generation_01^t",
+          "color": "icon_generation_01_color^t"
+        },
+        {
+          "input": 3,
+          "index": 3,
+          "normal": "icon_generation_00^t",
+          "color": "icon_generation_00_color^t"
+        },
+        {
+          "input": 4,
+          "index": 4,
+          "normal": "icon_generation_06^t",
+          "color": "icon_generation_06_color^t"
+        },
+        {
+          "input": 5,
+          "index": 5,
+          "normal": "icon_generation_05^t",
+          "color": "icon_generation_05_color^t"
+        },
+        {
+          "input": 6,
+          "index": 6,
+          "normal": "icon_generation_04^t",
+          "color": "icon_generation_04_color^t"
+        },
+        {
+          "input": 7,
+          "index": 7,
+          "normal": "icon_generation_08^t",
+          "color": "icon_generation_08_color^t"
+        },
+        {
+          "input": 8,
+          "index": 8,
+          "normal": "icon_generation_07^t",
+          "color": "icon_generation_07_color^t"
+        },
+        {
+          "input": 9,
+          "index": 9,
+          "normal": "icon_generation_09^t",
+          "color": "icon_generation_09_color^t"
+        },
+        {
+          "input": 10,
+          "index": 10,
+          "normal": "icon_generation_10^t",
+          "color": "icon_generation_10_color^t"
+        },
+        {
+          "input": 11,
+          "index": 11,
+          "normal": "icon_generation_11^t",
+          "color": "icon_generation_11_color^t"
+        }
+      ],
+      "positive_out_of_range_fallback_index": 2
+    },
+    "version_display_index": {
+      "status": "static_selector_input_confirmed",
+      "selector": "0x2D5144/0x2D5154",
+      "rows": [
+        {
+          "index": 0,
+          "key": "icon_version_9999^q"
+        },
+        {
+          "index": 1,
+          "key": "icon_version_0000^q"
+        },
+        {
+          "index": 2,
+          "key": "icon_version_0001^q"
+        },
+        {
+          "index": 3,
+          "key": "icon_version_0010^q"
+        },
+        {
+          "index": 4,
+          "key": "icon_version_0011^q"
+        },
+        {
+          "index": 5,
+          "key": "icon_version_0020^q"
+        },
+        {
+          "index": 6,
+          "key": "icon_version_0021^q"
+        },
+        {
+          "index": 7,
+          "key": "icon_version_0030^q"
+        },
+        {
+          "index": 8,
+          "key": "icon_version_0031^q"
+        },
+        {
+          "index": 9,
+          "key": "icon_version_0040^q"
+        },
+        {
+          "index": 10,
+          "key": "icon_version_0041^q"
+        },
+        {
+          "index": 11,
+          "key": "icon_version_0050^q"
+        },
+        {
+          "index": 12,
+          "key": "icon_version_0051^q"
+        },
+        {
+          "index": 13,
+          "key": "icon_version_0060^q"
+        },
+        {
+          "index": 14,
+          "key": "icon_version_0070^q"
+        },
+        {
+          "index": 15,
+          "key": "icon_version_0080^q"
+        },
+        {
+          "index": 16,
+          "key": "icon_version_0100^q"
+        },
+        {
+          "index": 17,
+          "key": "icon_version_0101^q"
+        },
+        {
+          "index": 18,
+          "key": "icon_version_0090^q"
+        },
+        {
+          "index": 19,
+          "key": "icon_version_0110^q"
+        },
+        {
+          "index": 20,
+          "key": "icon_version_0111^q"
+        },
+        {
+          "index": 21,
+          "key": "icon_version_0120^q"
+        },
+        {
+          "index": 22,
+          "key": "icon_version_0130^q"
+        },
+        {
+          "index": 23,
+          "key": "icon_version_0140^q"
+        },
+        {
+          "index": 24,
+          "key": "icon_version_0141^q"
+        }
+      ]
+    }
+  }
+}

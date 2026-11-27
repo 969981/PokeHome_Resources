@@ -1,0 +1,10 @@
+# HOME 4.1.0 Native TypeImageResolver / complex materials
+
+## Verified evidence (run 45770431594)
+Artifact 15093533648 independently downloaded, SHA256 540984b26ff7e8f976cf2b410c9bfafa0deb84fea305a0edfd310252ab460adb; ZIP CRC passed. ELF SHA bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a. VA 0x784898 contiguous 36 pointer slots, 18 interleaved pairs; symbol +0, text +8, stride16. 0x2D3DAC readiness check; 0x2D3DCC/0x2D3DD0 load table, 0x2D3DD4 ADD X8,X8,W1,UXTB #4; 0x2D3DE4 LDR X22,[X8,W2,SXTW #3]; 0x2D3DEC BL 0x2E7418, later binds resource to material. All 36 names match original BRTI. Native display argument 0..17 is proven; upstream PKM type enum conversion and out-of-range native behavior not assumed. Safe API rejects out-of-domain values. Direct callers extracted in next CI.
+
+## Complex material records
+Independently inspected raw material bytes in layout_bindings.json. 194 previously unsupported pic1 refs: 0x415/88B 110 (1 map), 0x8015/104B 44 (1 map), 0x6A/128B 39 (2 maps), 0x80155/212B 1 (1 map). Map entries at +44, stride4, u16 texture index +0 and two raw sampler bytes. All 194 index sets within txl1 bounds. Additional 0x815/84B and 0x215/92B records not referenced by pic1; include inventory, do not assert wnd1 parsing. Full raw tail preserved; complex blending, SRT, shader, window panes, animation and cropping not established. CI validates every map against local BRTI names.
+
+## Type pack and interface
+179 physical PNGs deduplicated by RGBA SHA256, 360 language/kind logical rows. core/types/index.json retains source path, BRTI name, original and stored PNG SHA, RGBA SHA, pointer slot VA and string VA, label ID separately from display index. HomeTypeImageResolver.resolve(display_index,kind,language) and resolve_message_label(label_id,kind,language); HomeImageResourceCore.resolve_type_display is explicit. Legacy generic resolve_type stays unresolved; no implicit PKM coercion. JSON for Rust/Tauri2, no editor changes. CI validates and commits only core/types; non-force rebase retry. Status: code submitted; CI results and persistent files pending. Raw decoded pixels are not native shader parity.

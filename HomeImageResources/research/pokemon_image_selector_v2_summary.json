@@ -1,0 +1,33 @@
+{
+  "source": "pokemon_image_list.bin",
+  "source_git_blob": "83cb3d083ee7f8e4542aa29e70ef63508276306b",
+  "records": 3506,
+  "selector_keys": 3506,
+  "duplicate_keys": [],
+  "gender_code_to_filename": {
+    "2->uk": 608,
+    "3->mf": 1972,
+    "0->md": 212,
+    "1->fd": 212,
+    "4->mo": 106,
+    "5->fo": 396
+  },
+  "variant_to_filename": {
+    "0->n": 3314,
+    "1->g": 192
+  },
+  "decoration_to_filename": {
+    "0->00000000": 3290,
+    "1->00000001": 36,
+    "2->00000002": 36,
+    "3->00000003": 36,
+    "4->00000004": 36,
+    "5->00000005": 36,
+    "6->00000006": 36
+  },
+  "view_to_filename": {
+    "0->f": 3486,
+    "1->b": 20
+  },
+  "certainty": "Exact FlatBuffers pointer and field/name correlation; enum business labels and runtime precedence still require independent ELF evidence."
+}

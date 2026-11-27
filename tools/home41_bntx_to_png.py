@@ -120,13 +120,13 @@ def png_rgba(width, height, rgba):
             + chunk(b"IDAT", zlib.compress(scan, 9))
             + chunk(b"IEND", b""))
 
-def decode_bntx(source):
+def decode_bntx(source, *, max_textures=1000):
     if not source.startswith(b"BNTX") or source[12:14] != b"\xff\xfe":
         raise ValueError("not a supported little endian Switch BNTX")
     if source[32:36] != b"NX  ":
         raise ValueError("unsupported BNTX target")
     count, table = u32(source, 36), u64(source, 40)
-    if not 1 <= count <= 1000 or table + 8 * count > len(source):
+    if not 1 <= count <= max_textures or table + 8 * count > len(source):
         raise ValueError("invalid BNTX texture pointer table")
     for index in range(count):
         b = u64(source, table + index * 8)

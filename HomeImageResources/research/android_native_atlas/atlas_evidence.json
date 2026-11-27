@@ -1,0 +1,2134 @@
+[
+  {
+    "serialized_file": "sharedassets0.assets",
+    "path_id": 1289,
+    "type": "SpriteAtlas",
+    "name": "BankMarks",
+    "packed_names": [
+      "bnk_mark_symbol_triangle_none",
+      "bnk_mark_symbol_square_none",
+      "bnk_mark_symbol_star_none",
+      "bnk_mark_symbol_diamond_none",
+      "bnk_mark_symbol_square",
+      "bnk_mark_symbol_triangle",
+      "bnk_mark_symbol_diamond",
+      "bnk_mark_symbol_star",
+      "bnk_mark_symbol_circle",
+      "bnk_mark_symbol_heart_none",
+      "bnk_mark_symbol_heart",
+      "bnk_mark_symbol_circle_none"
+    ],
+    "sprites": [
+      {
+        "file_id": 0,
+        "path_id": 153,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 153,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_triangle_none",
+        "packed_index": 0,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_triangle_none",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=541278144, data_1_=1196337687, data_2_=544307855, data_3_=3029917016)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 132.0,
+            "y": 131.0761260986328,
+            "width": 63.92387771606445,
+            "height": 56.91096496582031
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 6.076120376586914
+          },
+          "atlasRectOffset": {
+            "x": 132.0,
+            "y": 125.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 164.0,
+            "z": 100.0,
+            "w": 157.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/00_bnk_mark_symbol_triangle_none.png",
+        "size": [
+          64,
+          57
+        ],
+        "png_sha256": "f617b7af32134f4cb2a5997521edc90f63ba2c157cb5bacce47e0b5688046597",
+        "rgba_sha256": "6ac96a7de9a41f0bbba56da04e307c46e9b2e412a81421bd9662750087591533"
+      },
+      {
+        "file_id": 0,
+        "path_id": 167,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 167,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_square_none",
+        "packed_index": 1,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_square_none",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=765292337, data_1_=1331921465, data_2_=3252471725, data_3_=1903104090)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 132.0761260986328,
+            "y": 192.0761260986328,
+            "width": 53.847755432128906,
+            "height": 53.847755432128906
+          },
+          "textureRectOffset": {
+            "x": 5.076120376586914,
+            "y": 5.076120376586914
+          },
+          "atlasRectOffset": {
+            "x": 127.0,
+            "y": 187.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 159.0,
+            "z": 100.0,
+            "w": 219.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/01_bnk_mark_symbol_square_none.png",
+        "size": [
+          54,
+          54
+        ],
+        "png_sha256": "dc2611828b84218b2cba9ec57cf5fcee8970813c3d5fd26daf04932c1e6f0fa2",
+        "rgba_sha256": "ed4bb39db7bce66f49657082f3de482be6f23091113695b6c447fa301b821c24"
+      },
+      {
+        "file_id": 0,
+        "path_id": 428,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 428,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_star_none",
+        "packed_index": 2,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_star_none",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=1531161228, data_1_=1331931270, data_2_=1197110942, data_3_=11103688)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 136.0,
+            "y": 0.02675098180770874,
+            "width": 64.0,
+            "height": 63.897125244140625
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.02675098180770874
+          },
+          "atlasRectOffset": {
+            "x": 136.0,
+            "y": 0.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 168.0,
+            "z": 100.0,
+            "w": 32.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/02_bnk_mark_symbol_star_none.png",
+        "size": [
+          64,
+          64
+        ],
+        "png_sha256": "aabf380ac51dd0aad699dc4de26136a9518b88a865faf9669a650e35d8f8dda7",
+        "rgba_sha256": "e001932da876f30d7f4f02ebf265f12b8085c7918e384aa10a43f36b044df014"
+      },
+      {
+        "file_id": 0,
+        "path_id": 418,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 418,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_diamond_none",
+        "packed_index": 3,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_diamond_none",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=2079768364, data_1_=1302454378, data_2_=3044400538, data_3_=976339763)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 32.0,
+            "z": 100.0,
+            "w": 32.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/03_bnk_mark_symbol_diamond_none.png",
+        "size": [
+          64,
+          64
+        ],
+        "png_sha256": "145aad5c80974672686805792d4f5cc5319978f7d84cdbc76a2af3998e4de524",
+        "rgba_sha256": "6cb357c1f66505cbd929064a191f0fbc7c1403488da673e4887480bfa6184571"
+      },
+      {
+        "file_id": 0,
+        "path_id": 284,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 284,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_square",
+        "packed_index": 4,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_square",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=2350815398, data_1_=1269517787, data_2_=2316521147, data_3_=3082798787)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 190.0761260986328,
+            "y": 192.0761260986328,
+            "width": 53.847755432128906,
+            "height": 53.847755432128906
+          },
+          "textureRectOffset": {
+            "x": 5.076120376586914,
+            "y": 5.076120376586914
+          },
+          "atlasRectOffset": {
+            "x": 185.0,
+            "y": 187.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 217.0,
+            "z": 100.0,
+            "w": 219.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/04_bnk_mark_symbol_square.png",
+        "size": [
+          54,
+          54
+        ],
+        "png_sha256": "953823d2e8ddb65e9b8d2e9d3d8e63e6c6838781fa9a52f63024ede0e38d5c2c",
+        "rgba_sha256": "9aa3faa5bd1c361f8c2adc87fc408b6b636e7976556224adb304da2b3eef3741"
+      },
+      {
+        "file_id": 0,
+        "path_id": 260,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 260,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_triangle",
+        "packed_index": 5,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_triangle",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=2484181845, data_1_=1134167421, data_2_=718751931, data_3_=3827424299)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 64.0,
+            "y": 196.0761260986328,
+            "width": 63.92387771606445,
+            "height": 56.91096496582031
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 6.076120376586914
+          },
+          "atlasRectOffset": {
+            "x": 64.0,
+            "y": 190.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 96.0,
+            "z": 100.0,
+            "w": 222.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/05_bnk_mark_symbol_triangle.png",
+        "size": [
+          64,
+          57
+        ],
+        "png_sha256": "c42021bc93753ce1f40a34f9b9910bcec62750ada9d13214046e53d873ecfb07",
+        "rgba_sha256": "b74505210fcb9d6d8383c126dc8b96c13d8496e620f5aca66d37030935e947ce"
+      },
+      {
+        "file_id": 0,
+        "path_id": 494,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 494,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_diamond",
+        "packed_index": 6,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_diamond",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=2760259727, data_1_=1318300251, data_2_=364602252, data_3_=416696257)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 68.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 68.0,
+            "y": 0.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 100.0,
+            "z": 100.0,
+            "w": 32.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/06_bnk_mark_symbol_diamond.png",
+        "size": [
+          64,
+          64
+        ],
+        "png_sha256": "37de9b25c716d705095688c139722565384f64c8a314d497fdb7befe0baffc09",
+        "rgba_sha256": "1b83caf8650393f39c996b4c3696f6a88edff7886cb63c2b54b55fe07c0659d4"
+      },
+      {
+        "file_id": 0,
+        "path_id": 174,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 174,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_star",
+        "packed_index": 7,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_star",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=3025927809, data_1_=1229047844, data_2_=1724659353, data_3_=2247820875)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.0,
+            "y": 68.02674865722656,
+            "width": 64.0,
+            "height": 63.897125244140625
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.02675098180770874
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 68.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 32.0,
+            "z": 100.0,
+            "w": 100.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/07_bnk_mark_symbol_star.png",
+        "size": [
+          64,
+          64
+        ],
+        "png_sha256": "0adee7bed9bf64934e4cc3b9ce081bd31940a33c727d8d48296609b71ab48577",
+        "rgba_sha256": "c688370d126f31e341687e687b49c69ad885c56346b4353dc9fb7f85c2fea55f"
+      },
+      {
+        "file_id": 0,
+        "path_id": 253,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 253,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_circle",
+        "packed_index": 8,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_circle",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=3643189029, data_1_=1281680604, data_2_=430808223, data_3_=3931277630)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.07612037658691406,
+            "y": 136.0761260986328,
+            "width": 59.847755432128906,
+            "height": 60.847755432128906
+          },
+          "textureRectOffset": {
+            "x": 2.076120376586914,
+            "y": 2.076120376586914
+          },
+          "atlasRectOffset": {
+            "x": -2.0,
+            "y": 134.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 30.0,
+            "z": 100.0,
+            "w": 166.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/08_bnk_mark_symbol_circle.png",
+        "size": [
+          60,
+          61
+        ],
+        "png_sha256": "3b4c26d0fa7dbed696c714e7a43d4dc397c9b85e8d607de7cdc2d72f120ec8ec",
+        "rgba_sha256": "e0f451fdc3c4edbdba1e42be161e56006791cfffeab361c433e7e878d326810a"
+      },
+      {
+        "file_id": 0,
+        "path_id": 334,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 334,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_heart_none",
+        "packed_index": 9,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_heart_none",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=3778497432, data_1_=1235397756, data_2_=800095877, data_3_=4178640761)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 68.0,
+            "y": 68.07611846923828,
+            "width": 64.0,
+            "height": 58.897125244140625
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 1.0761204957962036
+          },
+          "atlasRectOffset": {
+            "x": 68.0,
+            "y": 67.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 100.0,
+            "z": 100.0,
+            "w": 99.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/09_bnk_mark_symbol_heart_none.png",
+        "size": [
+          64,
+          59
+        ],
+        "png_sha256": "4ae2eb20e8920dffb0960a318cf2cd4baef109e3d564ce765f73a6bc13ca1d8c",
+        "rgba_sha256": "a3ecfe6a2ea3216f96f4d777731128582d4f1d73b95b251cd5fed9652ff2f357"
+      },
+      {
+        "file_id": 0,
+        "path_id": 471,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 471,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_heart",
+        "packed_index": 10,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_heart",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=4023462798, data_1_=1256439403, data_2_=2941817785, data_3_=3704230011)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 136.0,
+            "y": 68.07611846923828,
+            "width": 64.0,
+            "height": 58.897125244140625
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 1.0761204957962036
+          },
+          "atlasRectOffset": {
+            "x": 136.0,
+            "y": 67.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 168.0,
+            "z": 100.0,
+            "w": 99.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/10_bnk_mark_symbol_heart.png",
+        "size": [
+          64,
+          59
+        ],
+        "png_sha256": "295bd064fa65ee7ab86e28de3f7c46509891a9f301498eac4e560c03fc36cecf",
+        "rgba_sha256": "25a8dcc3d73071cdb9ba7bdfa25e847131c3984d4b53bed9f98616e9c7b12b67"
+      },
+      {
+        "file_id": 0,
+        "path_id": 287,
+        "status": "resolved",
+        "target": {
+          "serialized_file": "sharedassets0.assets",
+          "path_id": 287,
+          "type": "Sprite"
+        },
+        "target_name": "bnk_mark_symbol_circle_none",
+        "packed_index": 11,
+        "achievement_id": null,
+        "sprite_name": "bnk_mark_symbol_circle_none",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=4057157846, data_1_=1183823516, data_2_=735759744, data_3_=2863391295)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 68.07611846923828,
+            "y": 131.0761260986328,
+            "width": 59.847755432128906,
+            "height": 60.847755432128906
+          },
+          "textureRectOffset": {
+            "x": 2.076120376586914,
+            "y": 2.076120376586914
+          },
+          "atlasRectOffset": {
+            "x": 66.0,
+            "y": 129.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 98.0,
+            "z": 100.0,
+            "w": 161.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 0,
+          "path_id": 25,
+          "status": "resolved",
+          "target": {
+            "serialized_file": "sharedassets0.assets",
+            "path_id": 25,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-256x256-ETC2-BankMarks-03c791f1"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/BankMarks/11_bnk_mark_symbol_circle_none.png",
+        "size": [
+          60,
+          61
+        ],
+        "png_sha256": "9047f0aaaf33a26eda2f72acdab089892b910d2c66373c798630223f315a4818",
+        "rgba_sha256": "ab124d97d1cf063abbb1c2d77ee4f3adf614e3dfbbcdddfa69aa61b582a607c4"
+      }
+    ]
+  },
+  {
+    "serialized_file": "6e26bfd444fa55b46903a2904dda6ee6",
+    "path_id": 1,
+    "type": "SpriteAtlas",
+    "name": "Achievement",
+    "packed_names": [
+      "ach_colormap_06",
+      "ach_icon_search",
+      "ach_colormap_03",
+      "ach_colormap_04",
+      "ach_pattern_02",
+      "ach_colormap_05",
+      "ach_pattern_01",
+      "ach_colormap_07",
+      "ach_icon_question_01",
+      "ach_colormap_02",
+      "ach_colormap_01",
+      "ach_pattern_03"
+    ],
+    "sprites": [
+      {
+        "file_id": 1,
+        "path_id": 2,
+        "external_path": "09a1f630c2888564382958f4a092ca9f",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "09a1f630c2888564382958f4a092ca9f",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_06",
+        "packed_index": 0,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_06",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 0.0,
+            "z": 2.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=57612944, data_1_=1180207148, data_2_=1334153859, data_3_=4188809482)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 343.0,
+            "y": 161.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 343.0,
+            "y": 161.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 345.0,
+            "z": 100.0,
+            "w": 289.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/00_ach_colormap_06.png",
+        "size": [
+          4,
+          256
+        ],
+        "png_sha256": "201c20f5dc25ecc7e46546ef54a5e9993c6ed2fe4cb004d628d1469d9abc91af",
+        "rgba_sha256": "5954eec474afb8014674895353c91d9a325625860398b194787c88facf5ff728"
+      },
+      {
+        "file_id": 2,
+        "path_id": 1,
+        "external_path": "3f2fccd08fac37f43bda6e9553048776",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "3f2fccd08fac37f43bda6e9553048776",
+          "path_id": 1,
+          "type": "Sprite"
+        },
+        "target_name": "ach_icon_search",
+        "packed_index": 1,
+        "achievement_id": null,
+        "sprite_name": "ach_icon_search",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 80.0,
+            "height": 80.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0,
+            "w": 4.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=231535347, data_1_=1332988664, data_2_=1508289971, data_3_=1735934005)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 276.07611083984375,
+            "y": 161.00885009765625,
+            "width": 62.921363830566406,
+            "height": 65.95240020751953
+          },
+          "textureRectOffset": {
+            "x": 11.076120376586914,
+            "y": 6.008848190307617
+          },
+          "atlasRectOffset": {
+            "x": 265.0,
+            "y": 155.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 305.0,
+            "z": 100.0,
+            "w": 195.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/01_ach_icon_search.png",
+        "size": [
+          63,
+          66
+        ],
+        "png_sha256": "68cca7eb03505a3323dcb43fd4956bf74dfb2ab222ce6bca97dc261526f82d40",
+        "rgba_sha256": "be8eba9201cfaa448f853d3f1cbaefdbb5e91a9682cf8aec77657837e924c362"
+      },
+      {
+        "file_id": 3,
+        "path_id": 2,
+        "external_path": "204263c118700c2499a8275b1027a95b",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "204263c118700c2499a8275b1027a95b",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_03",
+        "packed_index": 2,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_03",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=473310210, data_1_=1119881089, data_2_=3044182681, data_3_=3046797825)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 351.0,
+            "y": 161.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 351.0,
+            "y": 161.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 353.0,
+            "z": 100.0,
+            "w": 289.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/02_ach_colormap_03.png",
+        "size": [
+          4,
+          256
+        ],
+        "png_sha256": "e677587ba6a16c2fbedb8c7e4f53bd9c57f828fe7af27c340993f29886d9abaa",
+        "rgba_sha256": "e1ebd45307d74ac372aa2d59d7df1ee430d8d7933b6c1e677c11b1023285632e"
+      },
+      {
+        "file_id": 4,
+        "path_id": 2,
+        "external_path": "60fb58e1a6bc6dc43b936c39054fd001",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "60fb58e1a6bc6dc43b936c39054fd001",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_04",
+        "packed_index": 3,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_04",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 0.0,
+            "z": 2.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=512081670, data_1_=1289145194, data_2_=2479241651, data_3_=269349968)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.0,
+            "y": 736.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 736.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 2.0,
+            "z": 100.0,
+            "w": 864.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/03_ach_colormap_04.png",
+        "size": [
+          4,
+          256
+        ],
+        "png_sha256": "75c355e252a2446d45955eb8fa003b9fcf9fec19802c6a0adc12041d91b9c610",
+        "rgba_sha256": "213e85de12ac20e6c8d6b7c0d1daf97eb03cd255a688bcd483dd805e3adadb2a"
+      },
+      {
+        "file_id": 5,
+        "path_id": 2,
+        "external_path": "f60b6e22b5720a84d81d4b7e80296a4e",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "f60b6e22b5720a84d81d4b7e80296a4e",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_pattern_02",
+        "packed_index": 4,
+        "achievement_id": null,
+        "sprite_name": "ach_pattern_02",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 60.0,
+            "height": 60.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0,
+            "w": 4.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=585543791, data_1_=1218455387, data_2_=3887387021, data_3_=3836121608)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 276.0,
+            "y": 231.0,
+            "width": 60.0,
+            "height": 60.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 276.0,
+            "y": 231.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 306.0,
+            "z": 100.0,
+            "w": 261.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/04_ach_pattern_02.png",
+        "size": [
+          60,
+          60
+        ],
+        "png_sha256": "e13c6078ec0b3a315a8a7b8b8756ad0dc85d8159ccaf3fccd764a9b4d50237f0",
+        "rgba_sha256": "437ed550aaad1dd25cd5625e269025f07486482c0e8a4a13878ad25687647ec6"
+      },
+      {
+        "file_id": 6,
+        "path_id": 2,
+        "external_path": "56577545e9e545242bee78f3af8b3ba0",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "56577545e9e545242bee78f3af8b3ba0",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_05",
+        "packed_index": 5,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_05",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1000.0,
+            "height": 160.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=1415017829, data_1_=1112825502, data_2_=1065873074, data_3_=179550458)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.07612049579620361,
+            "y": 0.0,
+            "width": 997.8477783203125,
+            "height": 156.9238739013672
+          },
+          "textureRectOffset": {
+            "x": 1.0761204957962036,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 499.0,
+            "z": 100.0,
+            "w": 80.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/05_ach_colormap_05.png",
+        "size": [
+          998,
+          157
+        ],
+        "png_sha256": "c43fdec34df351a8b65505a29a5626efef35325f4d7e9783b7204241cfa3ede6",
+        "rgba_sha256": "74c490d23b52f85aac61002527a672809878e036ed34a85e5c3d321a079f6d46"
+      },
+      {
+        "file_id": 7,
+        "path_id": 1,
+        "external_path": "b4b35c967a488e241b5a4973bc76f853",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "b4b35c967a488e241b5a4973bc76f853",
+          "path_id": 1,
+          "type": "Sprite"
+        },
+        "target_name": "ach_pattern_01",
+        "packed_index": 6,
+        "achievement_id": null,
+        "sprite_name": "ach_pattern_01",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 60.0,
+            "height": 60.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0,
+            "w": 4.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=1774533451, data_1_=1122534567, data_2_=932488625, data_3_=898590667)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.0,
+            "y": 608.0,
+            "width": 60.0,
+            "height": 60.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 608.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 30.0,
+            "z": 100.0,
+            "w": 638.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/06_ach_pattern_01.png",
+        "size": [
+          60,
+          60
+        ],
+        "png_sha256": "c4035748d7588c66e68175e81f0b451903fec8876c8b7b7ee4ddc6261e437f23",
+        "rgba_sha256": "c19b9a5a25675a47005f215ce1c90e1be86f885a30677ae338118cc420005848"
+      },
+      {
+        "file_id": 8,
+        "path_id": 1,
+        "external_path": "b6fe7cb612ed7dd42a4d59bf1a190297",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "b6fe7cb612ed7dd42a4d59bf1a190297",
+          "path_id": 1,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_07",
+        "packed_index": 7,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_07",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 564.0,
+            "height": 64.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=1808265067, data_1_=1305992737, data_2_=4220900514, data_3_=2032177569)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.07612049579620361,
+            "y": 540.0761108398438,
+            "width": 563.8477783203125,
+            "height": 63.847755432128906
+          },
+          "textureRectOffset": {
+            "x": 0.07612049579620361,
+            "y": 0.07612049579620361
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 540.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 282.0,
+            "z": 100.0,
+            "w": 572.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/07_ach_colormap_07.png",
+        "size": [
+          564,
+          64
+        ],
+        "png_sha256": "c423d91a7aa0679770d2d4132b2a58fd2eddd021421e6fb87d21481bc2c59e2a",
+        "rgba_sha256": "1c23e38b14a74fe788540dc82ce145ba97154b61fa2f91705e8a8f4edd6c325f"
+      },
+      {
+        "file_id": 9,
+        "path_id": 1,
+        "external_path": "434030a8a1b0050428e4aeba5114cdaa",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "434030a8a1b0050428e4aeba5114cdaa",
+          "path_id": 1,
+          "type": "Sprite"
+        },
+        "target_name": "ach_icon_question_01",
+        "packed_index": 8,
+        "achievement_id": null,
+        "sprite_name": "ach_icon_question_01",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 272.0,
+            "height": 376.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0,
+            "w": 4.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=2315453492, data_1_=1078987546, data_2_=2884259458, data_3_=2866561301)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.07612049579620361,
+            "y": 161.0761260986328,
+            "width": 271.92388916015625,
+            "height": 374.8547058105469
+          },
+          "textureRectOffset": {
+            "x": 0.07612049579620361,
+            "y": 1.0761204957962036
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 160.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 136.0,
+            "z": 100.0,
+            "w": 348.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/08_ach_icon_question_01.png",
+        "size": [
+          272,
+          375
+        ],
+        "png_sha256": "6188874aba640fa6e7be42841562505ff6a1150c840f953fce368f2f02fb298c",
+        "rgba_sha256": "7b1dd734bf91986b91e40c7fae79622016939b82ce20f0fbf67d9fd0faf31f0a"
+      },
+      {
+        "file_id": 10,
+        "path_id": 2,
+        "external_path": "42cc8f1abf3dac548a2874cfc5d66c31",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "42cc8f1abf3dac548a2874cfc5d66c31",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_02",
+        "packed_index": 9,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_02",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=2717436964, data_1_=1170920443, data_2_=4232544936, data_3_=331771228)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 359.0,
+            "y": 161.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 359.0,
+            "y": 161.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 361.0,
+            "z": 100.0,
+            "w": 289.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/09_ach_colormap_02.png",
+        "size": [
+          4,
+          256
+        ],
+        "png_sha256": "1a3198b5ff611bc2d997f99423ec4ca9c4ab43c3506df630c01367d79e70a87b",
+        "rgba_sha256": "b2faf05829f463b2246bb85aaf0486f77842c46badad79056517dd7360d37fbd"
+      },
+      {
+        "file_id": 11,
+        "path_id": 2,
+        "external_path": "9594b53d9964e0948a4061cb402b8b63",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "9594b53d9964e0948a4061cb402b8b63",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_colormap_01",
+        "packed_index": 10,
+        "achievement_id": null,
+        "sprite_name": "ach_colormap_01",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=3545975129, data_1_=1225672345, data_2_=3155559592, data_3_=918073860)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 64.0,
+            "y": 608.0,
+            "width": 4.0,
+            "height": 256.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 64.0,
+            "y": 608.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 66.0,
+            "z": 100.0,
+            "w": 736.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/10_ach_colormap_01.png",
+        "size": [
+          4,
+          256
+        ],
+        "png_sha256": "4ad38348118ebd56136dca85f85e5ea074ca7c4043ea97fbdf75fc48a478ab02",
+        "rgba_sha256": "e674cbf9fb5fdd9222e3cf931d085223b30b3790040d11a9bf8386565265fbf7"
+      },
+      {
+        "file_id": 12,
+        "path_id": 2,
+        "external_path": "0eb01e0f3f3ed0649b89ccbbd3254c39",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "0eb01e0f3f3ed0649b89ccbbd3254c39",
+          "path_id": 2,
+          "type": "Sprite"
+        },
+        "target_name": "ach_pattern_03",
+        "packed_index": 11,
+        "achievement_id": null,
+        "sprite_name": "ach_pattern_03",
+        "sprite": {
+          "m_Rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 60.0,
+            "height": 60.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_Border": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0,
+            "w": 4.0
+          },
+          "m_PixelsToUnits": 100.0,
+          "m_Offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "m_RenderDataKey": [
+            "GUID(data_0_=4041280480, data_1_=1175315443, data_2_=3150747833, data_3_=2479116861)",
+            21300000
+          ]
+        },
+        "render_map_matches": 1,
+        "atlas_render_data": {
+          "textureRect": {
+            "x": 0.0,
+            "y": 672.0,
+            "width": 60.0,
+            "height": 60.0
+          },
+          "textureRectOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "atlasRectOffset": {
+            "x": 0.0,
+            "y": 672.0
+          },
+          "uvTransform": {
+            "x": 100.0,
+            "y": 30.0,
+            "z": 100.0,
+            "w": 702.0
+          },
+          "settingsRaw": 67,
+          "downscaleMultiplier": 1.0
+        },
+        "texture": {
+          "file_id": 13,
+          "path_id": 19,
+          "external_path": "00000000000000000000000000000000",
+          "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+          "status": "resolved",
+          "target": {
+            "serialized_file": "00000000000000000000000000000000",
+            "path_id": 19,
+            "type": "Texture2D"
+          },
+          "target_name": "sactx-0-1024x1024-ETC2-Achievement-ccbb449d"
+        },
+        "image_status": "decoded_atlas_sprite",
+        "png": "sprites/Achievement/11_ach_pattern_03.png",
+        "size": [
+          60,
+          60
+        ],
+        "png_sha256": "883654a3260a92d0297a534c4bd90387782e9db53bb99ee754d5487aab7aeb26",
+        "rgba_sha256": "1183afa91cccb7824f24020445aa71fd9b492e20d7e7517c50a01beeb1f0c2ff"
+      }
+    ]
+  }
+]

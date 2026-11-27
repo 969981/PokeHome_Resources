@@ -1,0 +1,38 @@
+name: HOME portrait icon parity audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_portrait_icon_parity.py'
+      - 'tools/test_home41_portrait_icon_parity.py'
+      - '.github/workflows/home-portrait-icon-parity.yml'
+permissions:
+  contents: read
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            HomeImageResources/pokemon
+            HomeImageResources/pokemon_icons
+            HomeImageResources/research
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install Pillow==12.0.0 numpy==2.2.6 scikit-image==0.25.2
+      - name: Synthetic regression tests
+        run: python -m unittest discover -s tools -p test_home41_portrait_icon_parity.py -v
+      - name: Full native-key parity audit
+        run: python tools/home41_portrait_icon_parity.py --root . --out parity_output
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-portrait-icon-parity
+          path: parity_output/
+          if-no-files-found: warn

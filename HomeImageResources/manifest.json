@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "home_version": "4.1.0",
+  "source_commit": "067114503d166d34795515fb0794b8559e617cc5",
+  "audit_level": "git_tree_path_and_blob_identity_only",
+  "pokemon": {
+    "files": 3538,
+    "source_files": 3538,
+    "distinct_blobs": 3169,
+    "numbered_species_keys": 1026,
+    "paired_stems": 1769,
+    "semantic_status": "filename_candidate",
+    "source_prefix": "57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/compress_capture_pokemon/",
+    "unpack_prefix": "Unpack/57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/pokemon/compress_capture_pokemon/"
+  },
+  "ui_source_records": 7121,
+  "category_source_counts": {
+    "ui": 6527,
+    "origins": 49,
+    "items": 38,
+    "languages": 100,
+    "types": 378,
+    "wallpapers": 6,
+    "marks": 22,
+    "balls": 1
+  },
+  "category_package_counts": {
+    "pokemon_icons": 0,
+    "items": 38,
+    "balls": 1,
+    "ribbons": 0,
+    "marks": 22,
+    "types": 197,
+    "origins": 49,
+    "languages": 10,
+    "wallpapers": 6,
+    "ui": 2074
+  },
+  "atlas_groups": 207,
+  "item_texture_count": 38,
+  "limitations": [
+    "No full PNG pixel decode or shader reconstruction",
+    "Git blob SHA-1 is not raw SHA-256",
+    "No independent Pokemon box icon extraction yet",
+    "No verified item ID/texture mapping",
+    "No verified ribbon atlas",
+    "Android classifications are filename candidates; no runtime bundles",
+    "Only Unpack assets included; derived and Smali copies excluded"
+  ],
+  "indexes": [
+    "pokemon_image_index.csv",
+    "item_image_index.csv",
+    "texture_atlas_index.json",
+    "asset_source_index.csv"
+  ],
+  "current_verified_snapshot": {
+    "home_version": "4.1.0",
+    "checked_commit": "5e3fcd13f6efb6c146d9557391d100f953fd5dc5",
+    "note": "Top-level legacy statistics retained for original audit. Current package counts below; supplemental source rows may overlap older UI folders.",
+    "pokemon_portraits": 3538,
+    "pokemon_icons": 3506,
+    "ball_display_png": 38,
+    "type_distinct_png": 179,
+    "type_logical_keys": 360,
+    "switch_brti": {
+      "logical": 9377,
+      "decoded": 9362,
+      "unsupported": 15
+    },
+    "supplemental": {
+      "source_rows": 97,
+      "distinct_rgba": 94,
+      "switch": 30,
+      "android": 67,
+      "box_marking": 42,
+      "medal_material": 8,
+      "medal_ui": 25,
+      "achievement_atlas": 1,
+      "message_rows": 54738
+    },
+    "unresolved": [
+      "general_held_item_image",
+      "ribbon_image",
+      "encounter_mark_image",
+      "achievement_id_to_sprite",
+      "runtime_cache",
+      "shader_parity"
+    ],
+    "docs": "docs/README.md",
+    "supplemental_index": "supplemental/index.json"
+  }
+}

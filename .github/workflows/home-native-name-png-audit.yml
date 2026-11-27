@@ -1,0 +1,51 @@
+name: HOME native-name PNG decode audit
+on:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'HomeImageResources/native_names/**'
+      - '.github/workflows/home-native-name-png-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==12.0.0
+      - name: Decode every named PNG, compare source bytes and Git blob
+        shell: python
+        run: |
+          import base64, hashlib, json, io
+          from pathlib import Path
+          from PIL import Image
+          root = Path("HomeImageResources")
+          index = json.loads((root / "native_names/index.json").read_text(encoding="utf-8"))
+          rows = index["rows"]
+          assert len(rows) == 419
+          expected = {root / r["named_path"] for r in rows}
+          assert len(expected) == len(rows)
+          assert expected == set((root / "native_names").rglob("*.png"))
+          for r in rows:
+              p = root / r["named_path"]
+              data = p.read_bytes()
+              assert data == (root / r["source_path"]).read_bytes(), p
+              assert hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest() == r["git_blob"], p
+              with Image.open(io.BytesIO(data)) as im:
+                  assert im.format == "PNG", p
+                  im.verify()
+              with Image.open(io.BytesIO(data)) as im:
+                  im.load()
+                  rgba = im.convert("RGBA")
+                  if r.get("rgba_sha256"):
+                      assert hashlib.sha256(rgba.tobytes()).hexdigest() == r["rgba_sha256"], p
+          sample = root / "native_names/types/English/typeIcon_00_normal_00^q.png"
+          with Image.open(sample) as im:
+              print("SAMPLE", sample, im.size, im.mode)
+          print("SAMPLE_BASE64=" + base64.b64encode(sample.read_bytes()).decode())
+          print("PASS: 419/419 PNG decode and byte/blob identity")

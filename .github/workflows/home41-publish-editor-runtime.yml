@@ -1,0 +1,150 @@
+name: HOME 4.1.0 publish verified runtime resources to editor develop
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - '.github/workflows/home41-publish-editor-runtime.yml'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: home41-publish-editor-runtime
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 81b9eadded631cebe63d6454fa8607b9507c4c28
+          sparse-checkout: tools
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==12.0.0
+      - name: Download exact source artifacts and verify SHA256
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/home41-publish"
+          cd "$RUNNER_TEMP/home41-publish"
+          fetch() {
+            local name="$1" id="$2" sha="$3"
+            curl --fail --silent --show-error --location --retry 3 \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H 'Accept: application/vnd.github+json' \
+              "https://api.github.com/repos/969981/PokeHome_Resources/actions/artifacts/$id/zip" \
+              -o "$name.zip"
+            echo "$sha  $name.zip" | sha256sum --check
+          }
+          fetch home41-runtime-icons 15130420757 4e89b0dbb7470f14e250255e73b9b47bec68d953402f090b0a88bf2350b168f6
+          fetch home41-runtime-compact 15125291523 bcdc3b1a98b226f2366444a5f21e047b366b1e967e5eeb894c527888db93605c
+          fetch home41-runtime-balanced 15130485233 46de4a84af2330a7edc961c4fb1feb7a84c85602ce5382f74c2ef2f66478b56c
+          fetch home41-runtime-quality-evidence 15130530206 9d1e4f3959ae9ad1fc42b4845071b989e42af252900f9e44c7da7d7045091c50
+      - name: Verify runtime files, logical counts, and all content hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          dir="$RUNNER_TEMP/home41-publish"
+          for profile in icons compact balanced; do
+            python -m zipfile -e "$dir/home41-runtime-$profile.zip" "$dir/$profile"
+            python tools/home41_runtime_pack.py --out "$dir/$profile" --verify
+          done
+          python - "$dir" <<'PY'
+          import json, sys
+          from pathlib import Path
+          r=Path(sys.argv[1])
+          indexes={p:json.loads((r/p/"runtime-index.json").read_text()) for p in ("icons","compact","balanced")}
+          a,b,c=[indexes[p] for p in ("icons","compact","balanced")]
+          assert a["profile"]=="icons" and b["profile"]=="compact" and c["profile"]=="balanced"
+          assert len(a["entries"])==3782 and len(b["entries"])==len(c["entries"])==7288
+          assert a["entries"]=={k:b["entries"][k] for k in a["entries"]}
+          assert a["entries"]=={k:c["entries"][k] for k in a["entries"]}
+          print("PASS: 3782 icon/UI paths are identical in all three profiles")
+          PY
+      - name: Require private editor publication credential
+        env:
+          TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        run: |
+          test -n "$TOKEN" || { echo "::error::HOME_CORE_EDITOR_PUSH_TOKEN missing"; exit 1; }
+      - name: Checkout latest develop
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: develop
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: editor
+          sparse-checkout: |
+            tauri2-app/resources/images/home41/4.1.0
+          fetch-depth: 1
+      - name: Publish verified icons resource and provenance to develop
+        shell: bash
+        run: |
+          set -euo pipefail
+          dir="$RUNNER_TEMP/home41-publish"
+          dst=tauri2-app/resources/images/home41/4.1.0
+          cd editor
+          mkdir -p "$dst/icons"
+          rsync -a --delete "$dir/icons/" "$dst/icons/"
+          python - "$dst/icons.provenance.json" <<'PY'
+          import json,sys
+          from pathlib import Path
+          doc={
+            "schema_version":1,"home_version":"4.1.0","profile":"icons",
+            "source_repository":"969981/PokeHome_Resources",
+            "source_commit":"81b9eadded631cebe63d6454fa8607b9507c4c28",
+            "source_run":45843235907,"artifact_id":15130420757,
+            "artifact_zip_sha256":"4e89b0dbb7470f14e250255e73b9b47bec68d953402f090b0a88bf2350b168f6",
+            "artifact_zip_bytes":25690101,"logical_assets":3782,"unique_blobs":3412,
+            "optional_resource_release_tag":"home41-image-packs-4.1.0-20261126"
+          }
+          Path(sys.argv[1]).write_text(json.dumps(doc,indent=2)+"\n")
+          PY
+          python ../tools/home41_runtime_pack.py --out "$dst/icons" --verify
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -A -- "$dst/icons" "$dst/icons.provenance.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "data(home41): publish verified icon-only runtime image pack"
+            git push origin HEAD:develop
+          fi
+          published=$(git rev-parse HEAD)
+          git ls-remote --exit-code origin refs/heads/develop | grep -q "^$published"
+          git ls-tree -r --name-only HEAD -- "$dst/icons" | wc -l
+          echo "PUBLISHED_ICONS_COMMIT=$published"
+          echo "### Icons resource published: $published" >> "$GITHUB_STEP_SUMMARY"
+      - name: Archive optional exact ZIPs as private draft release assets (not software release)
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target=969981/HOME-Live-Plugin-CHS
+          tag=home41-image-packs-4.1.0-20261126
+          dir="$RUNNER_TEMP/home41-publish"
+          if gh release view "$tag" --repo "$target" --json isDraft > "$RUNNER_TEMP/release-status.json" 2>/dev/null; then
+            python -c 'import json,sys; assert json.load(open(sys.argv[1]))["isDraft"],"Refusing to modify a published release"' "$RUNNER_TEMP/release-status.json"
+          else
+            gh release create "$tag" --repo "$target" --target develop --draft \
+              --title "HOME 4.1.0 optional image resource packs (archive only)" \
+              --notes "Optional verified Compact and Balanced image resource ZIPs plus quality evidence. This is a private resource archive, not an application release. Default editor runtime uses the committed Icons pack."
+          fi
+          gh release upload "$tag" --repo "$target" --clobber \
+            "$dir/home41-runtime-compact.zip" \
+            "$dir/home41-runtime-balanced.zip" \
+            "$dir/home41-runtime-quality-evidence.zip"
+          gh release view "$tag" --repo "$target" --json isDraft,url,assets > "$RUNNER_TEMP/release-assets.json"
+          python - "$RUNNER_TEMP/release-assets.json" <<'PY'
+          import json,sys
+          r=json.load(open(sys.argv[1]))
+          assert r["isDraft"]
+          expected={"home41-runtime-compact.zip":123842398,"home41-runtime-balanced.zip":74803041,"home41-runtime-quality-evidence.zip":1175266}
+          assets={a["name"]:a["size"] for a in r["assets"]}
+          assert all(assets.get(k)==v for k,v in expected.items()),assets
+          print("OPTIONAL_ARCHIVE",r["url"],assets)
+          PY

@@ -1,0 +1,1066 @@
+[
+  {
+    "serialized_file": "326cd1d6e986e90479974e750894ef82",
+    "path_id": 1,
+    "type": "Material",
+    "name": "medal_front",
+    "refs": [
+      {
+        "file_id": 1,
+        "path_id": 7,
+        "external_path": "0000000000000000f000000000000000",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "0000000000000000f000000000000000",
+          "path_id": 7,
+          "type": "Shader"
+        },
+        "target_name": "",
+        "property_path": "$.m_Shader"
+      },
+      {
+        "file_id": 2,
+        "path_id": 1,
+        "external_path": "bc1d008da29107741844e8a2eb7f6ded",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "bc1d008da29107741844e8a2eb7f6ded",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_front_normal",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[0][1].m_Texture"
+      },
+      {
+        "file_id": 3,
+        "path_id": 1,
+        "external_path": "274c6412e4ee36b499cc69d37c34154b",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "274c6412e4ee36b499cc69d37c34154b",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "Gradation02_TX",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[4][1].m_Texture"
+      },
+      {
+        "file_id": 4,
+        "path_id": 1,
+        "external_path": "2a8ce168831e78d4f970d02570cd1025",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "2a8ce168831e78d4f970d02570cd1025",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_front_albedo 1",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[5][1].m_Texture"
+      },
+      {
+        "file_id": 5,
+        "path_id": 1,
+        "external_path": "7c874afb56585f241ae3af7617b11271",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "7c874afb56585f241ae3af7617b11271",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_front_ao",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[7][1].m_Texture"
+      },
+      {
+        "file_id": 6,
+        "path_id": 1,
+        "external_path": "dfe13af62b4713e4aa98e5aaa1c96d10",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "dfe13af62b4713e4aa98e5aaa1c96d10",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_front_height",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[8][1].m_Texture"
+      }
+    ],
+    "saved_properties": {
+      "m_TexEnvs": [
+        [
+          "_BumpMap",
+          {
+            "m_Texture": {
+              "m_FileID": 2,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_DetailAlbedoMap",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_DetailMask",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_DetailNormalMap",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_EmissionMap",
+          {
+            "m_Texture": {
+              "m_FileID": 3,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_MainTex",
+          {
+            "m_Texture": {
+              "m_FileID": 4,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_MetallicGlossMap",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_OcclusionMap",
+          {
+            "m_Texture": {
+              "m_FileID": 5,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_ParallaxMap",
+          {
+            "m_Texture": {
+              "m_FileID": 6,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ]
+      ],
+      "m_Ints": [],
+      "m_Floats": [
+        [
+          "_BumpScale",
+          0.4000000059604645
+        ],
+        [
+          "_Cutoff",
+          0.5
+        ],
+        [
+          "_DetailNormalMapScale",
+          1.0
+        ],
+        [
+          "_DstBlend",
+          0.0
+        ],
+        [
+          "_GlossMapScale",
+          0.5339999794960022
+        ],
+        [
+          "_Glossiness",
+          0.6000000238418579
+        ],
+        [
+          "_GlossyReflections",
+          0.0
+        ],
+        [
+          "_Metallic",
+          1.0
+        ],
+        [
+          "_Mode",
+          0.0
+        ],
+        [
+          "_OcclusionStrength",
+          0.4000000059604645
+        ],
+        [
+          "_Parallax",
+          0.019999999552965164
+        ],
+        [
+          "_SmoothnessTextureChannel",
+          0.0
+        ],
+        [
+          "_SpecularHighlights",
+          1.0
+        ],
+        [
+          "_SrcBlend",
+          1.0
+        ],
+        [
+          "_UVSec",
+          0.0
+        ],
+        [
+          "_ZWrite",
+          1.0
+        ]
+      ],
+      "m_Colors": [
+        [
+          "_Color",
+          {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        ],
+        [
+          "_EmissionColor",
+          {
+            "r": 2.0,
+            "g": 1.003921627998352,
+            "b": 0.5960784554481506,
+            "a": 1.0
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "serialized_file": "3ce7ac26ed1e5be40b55737872cda53b",
+    "path_id": 1,
+    "type": "Material",
+    "name": "medal_back",
+    "refs": [
+      {
+        "file_id": 1,
+        "path_id": 7,
+        "external_path": "0000000000000000f000000000000000",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "0000000000000000f000000000000000",
+          "path_id": 7,
+          "type": "Shader"
+        },
+        "target_name": "",
+        "property_path": "$.m_Shader"
+      },
+      {
+        "file_id": 2,
+        "path_id": 1,
+        "external_path": "c3790d60e5e56f34eb0546ed750aed79",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "c3790d60e5e56f34eb0546ed750aed79",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_back_normal",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[0][1].m_Texture"
+      },
+      {
+        "file_id": 3,
+        "path_id": 1,
+        "external_path": "274c6412e4ee36b499cc69d37c34154b",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "274c6412e4ee36b499cc69d37c34154b",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "Gradation02_TX",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[4][1].m_Texture"
+      },
+      {
+        "file_id": 4,
+        "path_id": 1,
+        "external_path": "8ba84b0aef026794ca45d2ce2698bb29",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "8ba84b0aef026794ca45d2ce2698bb29",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_back_albedo 1",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[5][1].m_Texture"
+      },
+      {
+        "file_id": 5,
+        "path_id": 1,
+        "external_path": "eaad0a42b3bac3840b1a89555350feaa",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "eaad0a42b3bac3840b1a89555350feaa",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_back_ao",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[7][1].m_Texture"
+      },
+      {
+        "file_id": 6,
+        "path_id": 1,
+        "external_path": "8205316133318d5468af3d32d585068e",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "8205316133318d5468af3d32d585068e",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "MTmedal_back_height",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[8][1].m_Texture"
+      }
+    ],
+    "saved_properties": {
+      "m_TexEnvs": [
+        [
+          "_BumpMap",
+          {
+            "m_Texture": {
+              "m_FileID": 2,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_DetailAlbedoMap",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_DetailMask",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_DetailNormalMap",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_EmissionMap",
+          {
+            "m_Texture": {
+              "m_FileID": 3,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_MainTex",
+          {
+            "m_Texture": {
+              "m_FileID": 4,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_MetallicGlossMap",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_OcclusionMap",
+          {
+            "m_Texture": {
+              "m_FileID": 5,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_ParallaxMap",
+          {
+            "m_Texture": {
+              "m_FileID": 6,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ]
+      ],
+      "m_Ints": [],
+      "m_Floats": [
+        [
+          "_BumpScale",
+          0.4000000059604645
+        ],
+        [
+          "_Cutoff",
+          0.5
+        ],
+        [
+          "_DetailNormalMapScale",
+          1.0
+        ],
+        [
+          "_DstBlend",
+          0.0
+        ],
+        [
+          "_GlossMapScale",
+          0.5339999794960022
+        ],
+        [
+          "_Glossiness",
+          0.6000000238418579
+        ],
+        [
+          "_GlossyReflections",
+          0.0
+        ],
+        [
+          "_Metallic",
+          1.0
+        ],
+        [
+          "_Mode",
+          0.0
+        ],
+        [
+          "_OcclusionStrength",
+          0.4000000059604645
+        ],
+        [
+          "_Parallax",
+          0.019999999552965164
+        ],
+        [
+          "_SmoothnessTextureChannel",
+          0.0
+        ],
+        [
+          "_SpecularHighlights",
+          1.0
+        ],
+        [
+          "_SrcBlend",
+          1.0
+        ],
+        [
+          "_UVSec",
+          0.0
+        ],
+        [
+          "_ZWrite",
+          1.0
+        ]
+      ],
+      "m_Colors": [
+        [
+          "_Color",
+          {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        ],
+        [
+          "_EmissionColor",
+          {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "serialized_file": "a43b6ffb691531448a3185e1b298fafa",
+    "path_id": 1,
+    "type": "Material",
+    "name": "Medal_01",
+    "refs": [
+      {
+        "file_id": 1,
+        "path_id": 1,
+        "external_path": "818f16e62fce9f5449b563d161478867",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "818f16e62fce9f5449b563d161478867",
+          "path_id": 1,
+          "type": "Shader"
+        },
+        "target_name": "",
+        "property_path": "$.m_Shader"
+      },
+      {
+        "file_id": 2,
+        "path_id": 1,
+        "external_path": "e337c6b81ef19c348bc2897235aa93a0",
+        "external_guid": "b'\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'",
+        "status": "resolved",
+        "target": {
+          "serialized_file": "e337c6b81ef19c348bc2897235aa93a0",
+          "path_id": 1,
+          "type": "Texture2D"
+        },
+        "target_name": "ui_Medal_Effect_01",
+        "property_path": "$.m_SavedProperties.m_TexEnvs[0][1].m_Texture"
+      }
+    ],
+    "saved_properties": {
+      "m_TexEnvs": [
+        [
+          "_LightTex",
+          {
+            "m_Texture": {
+              "m_FileID": 2,
+              "m_PathID": 1
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ],
+        [
+          "_MainTex",
+          {
+            "m_Texture": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_Offset": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ]
+      ],
+      "m_Ints": [],
+      "m_Floats": [
+        [
+          "_BumpScale",
+          1.0
+        ],
+        [
+          "_ColorMask",
+          15.0
+        ],
+        [
+          "_Cutoff",
+          0.5
+        ],
+        [
+          "_DetailNormalMapScale",
+          1.0
+        ],
+        [
+          "_DstBlend",
+          0.0
+        ],
+        [
+          "_GlossMapScale",
+          1.0
+        ],
+        [
+          "_Glossiness",
+          0.0
+        ],
+        [
+          "_GlossyReflections",
+          1.0
+        ],
+        [
+          "_HighlightAngle",
+          -0.5
+        ],
+        [
+          "_HighlightAngle01",
+          -0.5
+        ],
+        [
+          "_HighlightAngle02",
+          -0.5
+        ],
+        [
+          "_HighlightBand",
+          2.0
+        ],
+        [
+          "_HighlightBand01",
+          3.0
+        ],
+        [
+          "_HighlightBand02",
+          4.0
+        ],
+        [
+          "_HighlightBlur",
+          1.0
+        ],
+        [
+          "_HighlightBlur01",
+          1.0
+        ],
+        [
+          "_HighlightBlur02",
+          1.0
+        ],
+        [
+          "_HighlightCycle",
+          24.0
+        ],
+        [
+          "_HighlightCycle01",
+          24.0
+        ],
+        [
+          "_HighlightCycle02",
+          34.0
+        ],
+        [
+          "_HighlightCycleOffset02",
+          -0.20000000298023224
+        ],
+        [
+          "_HighlightOffset02",
+          -0.30000001192092896
+        ],
+        [
+          "_HighlightPowMulti01",
+          1.0
+        ],
+        [
+          "_HighlightPowMulti02",
+          1.2000000476837158
+        ],
+        [
+          "_HighlightPowOffset01",
+          0.0
+        ],
+        [
+          "_HighlightPowOffset02",
+          0.0
+        ],
+        [
+          "_HighlightSpeed",
+          -60.0
+        ],
+        [
+          "_HighlightSpeed01",
+          -48.0
+        ],
+        [
+          "_HighlightSpeed02",
+          -60.0
+        ],
+        [
+          "_LightAngle",
+          0.5059999823570251
+        ],
+        [
+          "_LightColorAngle",
+          0.75
+        ],
+        [
+          "_LightColorBand",
+          1.0
+        ],
+        [
+          "_LightColorSpeed",
+          0.0
+        ],
+        [
+          "_LightMoveCycle",
+          0.20000000298023224
+        ],
+        [
+          "_LightSpeed",
+          0.0
+        ],
+        [
+          "_LightTile",
+          1.0
+        ],
+        [
+          "_MSizeFlag",
+          0.0
+        ],
+        [
+          "_MapMoveCycle",
+          0.019999999552965164
+        ],
+        [
+          "_MapSpeed",
+          0.10000000149011612
+        ],
+        [
+          "_Mat",
+          1.0
+        ],
+        [
+          "_Metallic",
+          0.0
+        ],
+        [
+          "_Mode",
+          0.0
+        ],
+        [
+          "_OcclusionStrength",
+          1.0
+        ],
+        [
+          "_OutlineThick",
+          1.0
+        ],
+        [
+          "_OutlineThreshold",
+          0.0
+        ],
+        [
+          "_Parallax",
+          0.019999999552965164
+        ],
+        [
+          "_SmoothnessTextureChannel",
+          0.0
+        ],
+        [
+          "_SpecularHighlights",
+          1.0
+        ],
+        [
+          "_SrcBlend",
+          1.0
+        ],
+        [
+          "_Stencil",
+          32.0
+        ],
+        [
+          "_StencilComp",
+          8.0
+        ],
+        [
+          "_StencilOp",
+          0.0
+        ],
+        [
+          "_StencilReadMask",
+          255.0
+        ],
+        [
+          "_StencilWriteMask",
+          255.0
+        ],
+        [
+          "_Tile",
+          1.0
+        ],
+        [
+          "_UVSec",
+          0.0
+        ],
+        [
+          "_UseUIAlphaClip",
+          0.0
+        ],
+        [
+          "_ZWrite",
+          1.0
+        ]
+      ],
+      "m_Colors": [
+        [
+          "_BaseColor",
+          {
+            "r": 0.929411768913269,
+            "g": 0.9411764740943909,
+            "b": 0.9215686321258545,
+            "a": 1.0
+          }
+        ],
+        [
+          "_Color",
+          {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        ],
+        [
+          "_EmissionColor",
+          {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0,
+            "a": 1.0
+          }
+        ],
+        [
+          "_LightColor01",
+          {
+            "r": 0.6084905862808228,
+            "g": 1.0,
+            "b": 0.7006103992462158,
+            "a": 1.0
+          }
+        ],
+        [
+          "_LightColor02",
+          {
+            "r": 1.0,
+            "g": 0.7971698045730591,
+            "b": 0.8000882267951965,
+            "a": 0.6941176652908325
+          }
+        ],
+        [
+          "_LightColor03",
+          {
+            "r": 0.730201005935669,
+            "g": 0.6745283007621765,
+            "b": 1.0,
+            "a": 0.3176470696926117
+          }
+        ],
+        [
+          "_LightColor04",
+          {
+            "r": 1.0,
+            "g": 0.9228211045265198,
+            "b": 0.6078431606292725,
+            "a": 0.09019608050584793
+          }
+        ],
+        [
+          "_OutlineColor",
+          {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        ],
+        [
+          "_ShadowColor",
+          {
+            "r": 0.07450980693101883,
+            "g": 0.0784313753247261,
+            "b": 0.07450980693101883,
+            "a": 1.0
+          }
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,49 @@
+name: HOME origin swizzle and icon selector evidence
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_origin_swizzle_audit.py'
+      - 'tools/home41_icon_selector_audit.py'
+      - 'tools/home41_icon_selector_tables.py'
+      - '.github/workflows/home-icon-selector-audit.yml'
+      - 'HomeImageResources/research/origin_swizzle/**'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_generation
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_label
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/bin/appli/icon_pokerus
+            57b83ea8c0af21ef26e2519b9580b373_NCA/1/system_resource/texture
+            HomeImageResources/research/origin_swizzle
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==12.0.0 capstone==5.0.6
+      - name: Verify recovered texture pixels
+        run: |
+          python -m py_compile tools/home41_origin_swizzle_audit.py tools/home41_icon_selector_audit.py
+          python -m unittest discover -s tools -p test_home41_bntx.py -v
+          python tools/home41_origin_swizzle_audit.py --root . --out origin_audit --verify
+      - name: Scan original ELF for selector candidates
+        run: python tools/home41_icon_selector_audit.py --root . --out selector_audit
+      - name: Recover native input translation tables and direct callers
+        run: python tools/home41_icon_selector_tables.py --root . --candidates selector_audit/selector_candidates.json --out selector_audit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-origin-swizzle-selector-evidence
+          path: |
+            origin_audit/
+            selector_audit/
+          if-no-files-found: error

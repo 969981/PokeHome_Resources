@@ -1,0 +1,42 @@
+name: HOME 4.1.0 icon-only runtime pack
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'tools/home41_runtime_pack.py'
+      - '.github/workflows/home41-runtime-icons.yml'
+permissions:
+  contents: read
+jobs:
+  icons:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            HomeImageResources/core
+            HomeImageResources/pokemon_icons
+            HomeImageResources/languages
+            HomeImageResources/origins
+            HomeImageResources/research/origin_swizzle
+            HomeImageResources/native_names/index.json
+            tools
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==12.0.0
+      - name: Build icon-only pack without any portrait PNG checkout
+        run: |
+          test ! -d HomeImageResources/pokemon
+          python tools/home41_runtime_pack.py --source HomeImageResources --out "$RUNNER_TEMP/icons" --profile icons
+      - name: Verify all indexed images and original selector keys
+        run: python tools/home41_runtime_pack.py --out "$RUNNER_TEMP/icons" --verify
+      - uses: actions/upload-artifact@v4
+        with:
+          name: home41-runtime-icons
+          path: ${{ runner.temp }}/icons
+          retention-days: 14
+          compression-level: 0

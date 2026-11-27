@@ -1,0 +1,24 @@
+name: HOME Rust image core
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/home-image-resource-audit]
+    paths:
+      - 'HomeImageResources/rust/**'
+      - 'HomeImageResources/core/resource_core.json'
+      - '.github/workflows/home-image-rust-core.yml'
+permissions:
+  contents: read
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            HomeImageResources
+      - name: Compile and test original asset contract
+        env:
+          HOME_IMAGE_PACKAGE: ${{ github.workspace }}/HomeImageResources
+        run: cargo test --manifest-path HomeImageResources/rust/home-image-resource-core/Cargo.toml -- --nocapture
