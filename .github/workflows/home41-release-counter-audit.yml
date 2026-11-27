@@ -1,0 +1,118 @@
+name: HOME41 release counter original ELF audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home41-release-counter-audit.yml']
+permissions:
+  contents: write
+concurrency:
+  group: home41-release-counter-audit
+  cancel-in-progress: false
+jobs:
+  static-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            docs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install capstone==5.0.6
+      - name: Read-only scan of original ELF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, struct, pathlib
+          from capstone import Cs, CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN
+          p=pathlib.Path('57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf')
+          b=p.read_bytes()
+          sha=hashlib.sha256(b).hexdigest()
+          assert sha=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a',sha
+          assert b[:6]==b'\x7fELF\x02\x01'
+          phoff=struct.unpack_from('<Q',b,32)[0]
+          entsize,num=struct.unpack_from('<HH',b,54)
+          segs=[]
+          for i in range(num):
+              t,f,o,v,pa,fs,ms,al=struct.unpack_from('<IIQQQQQQ',b,phoff+i*entsize)
+              if t==1 and f&1: segs.append((o,v,fs))
+          assert segs
+          d=Cs(CS_ARCH_ARM64,CS_MODE_LITTLE_ENDIAN)
+          def window(start,end):
+              for o,v,fs in segs:
+                  a=max(start,v); z=min(end,v+fs)
+                  if a<z:
+                      for ins in d.disasm(b[o+a-v:o+z-v],a):
+                          yield ins
+          def line(i):
+              return f'0x{i.address:08X}  {i.bytes.hex()}  {i.mnemonic:<9} {i.op_str}'
+          def sign(v,bits):
+              return v-(1<<bits) if v&(1<<(bits-1)) else v
+          candidates=[]; calls={k:[] for k in [0xDCB18,0xDCD30,0xA0B8C,0xA1728,0xC1FA4,0xC2650]}
+          for o,v,fs in segs:
+              for j in range(0,fs-3,4):
+                  w=struct.unpack_from('<I',b,o+j)[0]; a=v+j
+                  if (w&0xFC000000) in (0x94000000,0x14000000):
+                      target=a+4*sign(w&0x3ffffff,26)
+                      if target in calls: calls[target].append(a)
+                  # Unsigned immediate loads/stores of any access size; exclude SIMD.
+                  if (w&0x3b000000)==0x39000000 and not w&0x04000000:
+                      off=((w>>10)&0xfff)<<(w>>30)
+                      if off==0x2a8: candidates.append((a,'direct memory'))
+                  # ADD/SUB immediate materialising the offset; includes SP/general registers.
+                  if (w&0x1f000000)==0x11000000 and not w&0x00400000 and ((w>>10)&0xfff)==0x2a8:
+                      candidates.append((a,'address arithmetic'))
+          out=['# HOME 4.1.0 release counter — original ELF static audit','',f'SHA-256: {sha}','', 'Only static instructions. No device access, no mutation, no bypass or persistence claim. Offsets are main RVA. Byte hex is little endian.', '', '## Direct BL/B cross references']
+          for k,v in calls.items(): out.append(f'- 0x{k:X}: '+', '.join(f'0x{x:X}' for x in v))
+          out+=['','## Focused native windows']
+          for s,e in [(0xDCB18,0xDCD30),(0xDCD30,0xDCF00),(0xA0B8C,0xA0C80),(0xA1728,0xA17E8),(0xC1E90,0xC1FD0)]:
+              out += [f'### 0x{s:X}..0x{e:X} (bounded window, not claimed FDE)', '```asm']+[line(i) for i in window(s,e)]+['```']
+          out+=['','## All direct +0x2A8 candidates (raw immediate scan)','',f'Count: {len(candidates)}. Same displacement is not proof of same object. Pair/bulk reset and indirect accesses require separate follow-up.']
+          for a,kind in candidates:
+              center=list(window(a,a+4))
+              if not center: continue
+              ins=center[0]
+              # Capture nearby comparisons, plus full focused UI code windows.
+              near=list(window(max(0,a-0x30),a+0x34))
+              focus=0x90000<=a<0xF8000
+              cmp=any(i.mnemonic in ('cmp','cmn','subs','adds','sub','add','mov','movz') and any(x in i.op_str for x in ('#0x64','#0x63','#100','#99')) for i in near)
+              out += [f'- {kind}: {line(ins)}'+(' [near 99/100 candidate]' if cmp else '')]
+              if focus or cmp:
+                  out+=['```asm']+[line(i)+('  ; candidate' if i.address==a else '') for i in near]+['```']
+          out+=['','## Resource hash byte occurrences']
+          h=0xBCE53BB3B69C5600
+          pattern=h.to_bytes(8,'little'); start=0
+          while True:
+              idx=b.find(pattern,start)
+              if idx<0: break
+              out.append(f'- file offset 0x{idx:X}');start=idx+1
+          out+=['','## Limitations','No receiver dataflow proof solely from displacement; compare candidates require manual branch validation. No runtime reset, server ACK, or executable patch.']
+          q=pathlib.Path('docs/HOME41_RELEASE_COUNTER_ORIGINAL_ELF_AUDIT.md');q.parent.mkdir(exist_ok=True);q.write_text('\n'.join(out)+'\n',encoding='utf-8')
+          print(f'original ELF hash verified; {len(candidates)} displacement candidates')
+          PY
+      - name: Publish static text evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f docs/HOME41_RELEASE_COUNTER_ORIGINAL_ELF_AUDIT.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: original ELF release counter and multi-selection audit'
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-release-counter-static-audit
+          path: docs/HOME41_RELEASE_COUNTER_ORIGINAL_ELF_AUDIT.md
+          if-no-files-found: warn
