@@ -23,6 +23,7 @@ def ptr(a):
 
 
 targets={0x22867c,0x2286a4,0x228388,0x11a14c,0x54e4e0,0x54db90,0x54dc38,0x54dc74,0x6c208,0x6cb40,0x233050,0x24c50,0x20cc20,0x24c470}
+targets.update({0x11a2e0,0x11a470,0x11a418,0x54db88,0x54dd40,0x6bfb0,0x6bfa8,0x6c1f4,0x22815c,0x2288e8})
 focus=set(targets)|{0x228a90,0x24ed78,0x11b520,0x16fd20,0x24e524}
 report=['# HOME41 SaveTick completion and scene handoff','SHA256: '+SHA,'## SaveTick jump table']
 for i in range(11):
@@ -48,6 +49,13 @@ for slot in sorted(relr|set(rela)):
                 except ValueError:continue
                 report.append(f'  {a:#x}: {hex(v) if v is not None else "unresolved"}')
                 if v in fde and e.executable(v) and fde[v]<=0x1000:focus.add(v)
+report+=['','## Scene address point references']
+# Find GOT cells that resolve to the vtable header candidate, and code references to that page.
+for slot in sorted(relr|set(rela)):
+    try:t=ptr(slot)
+    except ValueError:continue
+    if t is not None and 0x76b670<=t<=0x76b6d8:
+        report.append(f'- {slot:#x} -> {t:#x}')
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
