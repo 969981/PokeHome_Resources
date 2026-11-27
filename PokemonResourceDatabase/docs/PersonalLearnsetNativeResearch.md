@@ -13,3 +13,18 @@ uv run tools/home41_learnset_code_crosswalk.py --csv export/learnsets/personal_l
 uv run tools/home41_native_learnset_scan.py --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf --out export/native
 ```
 当前 scanner 与 CI 新增，等待实际原生输出，未宣称 Getter 或方法语义已经闭合。保留 V2 schema，不把猜测写入业务表。
+
+## 原生扫描验收与具体 Getter（2026-11-27）
+[Run 45915330321](https://github.com/969981/PokeHome_Resources/actions/runs/45915330321) 成功，artifact 15161583622 ZIP SHA256 336d7a58a50728ba5145ea751b603e40c6d58bd21bc2bf88a482119a8f969d5a，独立下载 CRC/哈希通过。1564840 executable words，16字符串/17 xrefs，30个0x2e读取候选，71个100/101/102比较候选。路径引用 Global 0x501b34、Beluga 0x501bd4、Orion 0x501c74、Delphis 0x501d14、Hayabusa 0x501db4、Titan 0x501e54、Ikkaku 0x501ef4，均于引用+0x20 调用0x50213c（共用资源加载入口）。
+| 组（不预设数据域） | count | entry | lookup |
+|---|---|---|---|
+| A | 0x53ea48 | 0x53ea7c | 0x53f468 |
+| B | 0x5401ec | 0x540220 | 0x540b68 |
+| C | 0x541c48 | 0x541c7c | 0x5424c8 |
+| D | 0x542d50 | 0x542d84 | 0x543738 |
+| E | 0x54454c | 0x544580 | 0x544e78 |
+| F | 0x545f58 | 0x545f8c | 0x5468c8 |
+| G | 0x549fa0 | 0x549fd4 | 0x54a828 |
+
+A: 0x53ea58 BL lookup; ldrsw [x0], sub, ldrh vtable+0x2e, add, ldr uoffset, ldr vector length. Entry 0x53eac4 cmp length,index; 0x53eb10 loads element uoffset; 0x53eb2c child slot6 (f1), 0x53eb48 store output+0; 0x53eba0 slot4 (f0), 0x53ebb4 store output+4. Missing child scalar -> 0. D output +0 from f0, +4 from f1, +8 from f2 (0x542f1c/0x542f30). Do not silently replace raw NULL with runtime zero. E exact output layout pending full window.
+101/102 shared upstream: 0xfc6c8 BL 0x4ffce8, 0xfc6cc AND w8,w0,#0xffff, 0xfc6d0 CMP w8,#0x65, EQ -> 0xfc4d4; 0x4fcc84 BL same, saves w27, 0x4fcc9c BL 0x500044, 0x4fcca8 CMP w8,#0x66, EQ -> 0x4fcc50; otherwise 0x4fccb0 CMP w25,w8, unsigned lower -> 0x4fcc68 else 0x4fcc50. Shared return is concrete evidence; input provenance, destinations, method semantics not yet closed. 0x539408 stack/struct +0x2e clamp and ASCII parser 0x582xxx not promoted as field21 getter. New [focused script](../../tools/home41_native_learnset_focus.py) exports full windows, BL/B and raw pointer/RELA candidates, fixed SHA and instruction anchors. No official business mapping changes.
