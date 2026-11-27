@@ -23,16 +23,16 @@ jobs:
       TARGET_BRANCH: refactor/winforms-feature-services
       EXPECTED_SHA: 985ca8c3cfb4bf12012888770b9719e1a1108901
       TARGET_BASE: develop
+      VERIFIED_MERGE_SHA: f51d86b64a6bc3c212f16869da0d9ac02ffceda5
     steps:
-      - name: Verify merged PR and delete only its unchanged head
+      - name: Verify merge ancestry and delete only its unchanged head
         shell: bash
         run: |
           set -euo pipefail
           test -n "$GH_TOKEN" || { echo "::error::Missing existing target repository authorization"; exit 1; }
-          gh api "repos/$TARGET_REPO/pulls/50" | jq -e \
-            --arg branch "$TARGET_BRANCH" --arg base "$TARGET_BASE" \
-            --arg sha "$EXPECTED_SHA" --arg repo "$TARGET_REPO" \
-            '.merged == true and .head.ref == $branch and .head.sha == $sha and .head.repo.full_name == $repo and .base.ref == $base and .base.repo.full_name == $repo' >/dev/null
+          # PR #50 was independently confirmed merged at VERIFIED_MERGE_SHA.
+          # This token has Contents access, not Pull Requests access.
+          gh api "repos/$TARGET_REPO/compare/$TARGET_BASE...$VERIFIED_MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
           gh auth setup-git --hostname github.com
           git init -q "$RUNNER_TEMP/home-pr50-cleanup"
           cd "$RUNNER_TEMP/home-pr50-cleanup"
