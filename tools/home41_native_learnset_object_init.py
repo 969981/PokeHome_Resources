@@ -89,6 +89,29 @@ def audit(b,out):
     entries=[{"ordinal":j,"address":0x657db8+j*16,"raw_hex":table[j*16:j*16+16].hex(),"word0":struct.unpack_from("<I",table,j*16)[0],"identity0":struct.unpack_from("<I",table,j*16+4)[0],"identity1":struct.unpack_from("<H",table,j*16+8)[0],"raw_u16_0a":struct.unpack_from("<H",table,j*16+10)[0],"move_id":struct.unpack_from("<I",table,j*16+12)[0]} for j in range(32)]
     windows={name:dis(addr,addr+(0x100 if name not in ("collector","membership") else (0x194 if name=="collector" else 0x2f0))) for addr,name in CALLS.items()}
     report={"status":"STATIC_EVIDENCE_ONLY","elf_sha256":SHA,"global_slot":GLOBAL,"references":refs,"pointer_sites":{hex(k):v for k,v in pointer_sites.items()},"direct_callers":callers,"exclusion_table":entries,"windows":windows,"limitations":["Bounded straight-line register tracking misses cross-branch, indirect and relocation-only references.","Address formation or store candidates do not by themselves prove global initialization or dataset identity.","Exclusion rows preserve raw identities; no legality mapping inferred."]}
+    # Examine static pointer slot and dynamic relocations, including stripped ELF.
+    # A relocation addend is a static address candidate, not a runtime value.
+    phoff=struct.unpack_from("<Q",b,32)[0]
+    ents,n=struct.unpack_from("<HH",b,54)
+    dynamic={}
+    for j in range(n):
+        typ,flags,off,va,pa,sz,ms,align=struct.unpack_from("<IIQQQQQQ",b,phoff+j*ents)
+        if typ!=2 or off+sz>len(b):continue
+        for tag,val in struct.iter_unpack("<qQ",memoryview(b)[off:off+sz-sz%16]):
+            if tag==0:break
+            dynamic[tag]=val
+    reloc=[]
+    if all(t in dynamic for t in (7,8,9)) and dynamic[9]==24 and dynamic[8]%24==0:
+        for site,info,addend in struct.iter_unpack("<QQq",raw(dynamic[7],dynamic[8])):
+            if site==GLOBAL or addend in targets:
+                reloc.append({"site":site,"type":info&0xffffffff,"symbol":info>>32,"addend":addend})
+    try:global_bytes=raw(GLOBAL,8).hex()
+    except ValueError:global_bytes=None
+    loader_windows={r["label"]:dis(r["pc"]-0x100,r["pc"]+0x100) for r in callers if r["target"] in LOADERS}
+    report["global_slot_raw_hex"]=global_bytes
+    report["dynamic_relocations"]=reloc
+    report["loader_caller_windows"]=loader_windows
+    report["dynamic_tags"]={hex(k):v for k,v in dynamic.items()}
     out.mkdir(parents=True,exist_ok=True)
     (out/"object_init.json").write_text(json.dumps(report,indent=2)+"\n")
     with (out/"exclusion_table.csv").open("w",newline="") as f:

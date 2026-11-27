@@ -93,3 +93,18 @@ ABI: x0=context,w1=move,w2=source domain candidate,w3=target domain candidate,x4
 0x50013c/148 get identities; select object via 0x7a5d78, virtual slots +0xc8 count and +0xd0 indexed entry. Loop 0x5001f8..258 compares output+0 to requested move, success branch 0x5001dc sets result1. If no match: flag3 bit0 + 0x535c70 guard allows four 0x532ed8(object,index,target) comparisons; flag4 bit0 + guard allows 0x532e20(object,move,target). Finally explicit numerical exceptions: identity0=25/26/172 and move=344, identity0=479 with (form,move)=(1,315),(2,56),(3,59),(4,403),(5,435). Return true on match; otherwise false. These exceptions are raw IDs (not proof of legal move acquisition). Query failure in indexed loop uses move=0 fallback, so callers must reject zero (collector does).
 ### Initialization
 Verified loader entrypoints 0x501ad0 Global, 0x501b70 Beluga, 0x501c10 Orion, 0x501cb0 Delphis, 0x501d50 Hayabusa, 0x501df0 Titan, 0x501e90 Ikkaku; each uses 0x502950 and corresponding pointer +0x18,+0x20,+0x28,+0x30,+0x38,+0x40,+0x48 respectively, then formats resource path and calls 0x50213c. These are path context fields, not selector indices. Thunks demonstrate fixed selectors 1,2,4,3,5,7 but do not name datasets. New [object init audit](../../tools/home41_native_learnset_object_init.py) tracks register writes within straight-line blocks for ADRP/ADD/LDR/STR, includes indirect raw pointer candidates, direct loader callers, exclusion table extraction and guard/threshold windows; new CI pending. Formal dataset mapping and method semantics remain unconfirmed.
+
+### 实际 CI 验收（45919541075）
+[Run 45919541075](https://github.com/969981/PokeHome_Resources/actions/runs/45919541075) 成功，artifact 15164425248 ZIP SHA256 b21101c42ea12154c745aa1efa965c618e5098b8dc7fd1ded78ed146bad5242a，独立 CRC/SHA256 验证通过。修正后 27 个 0x7a5d78 读取，无直接写入或虚表地址形成，raw pointer candidate 空；扫描器不是跨基本块的数据流分析，不能据此证明没有初始化写入。171 条目标直接调用，七个 loader 各有唯一直接调用：
+| loader | BL | 所在 Getter 邻近组候选 |
+|---|---|---|
+| Beluga | 0x53f150 | A |
+| Delphis | 0x540850 | B |
+| Global | 0x5421b0 | C |
+| Hayabusa | 0x543420 | D |
+| Ikkaku | 0x544b60 | E |
+| Orion | 0x5465b0 | F |
+| Titan | 0x54a510 | G |
+邻近组不是完整的对象初始化证据，待提取各 callsite 所在函数及构造/虚表关系。0x7a5d78 可能通过重定位或间接指针初始化；新脚本扩展 PT_DYNAMIC/DT_RELA 检查（仅普通 RELA，不含所有压缩/间接形式）和 loader caller 窗口，待新 CI。
+排除表实际32行，所有 word0=7、raw_u16_0a=0，其他三字段与消费者匹配。示例 (species,form,move)=(7,0,396),(150,0/1/2,36),(672/673,0,345/437),(865,0,533)。完整 CSV 见 artifact；不将其解释为完整合法性规则。
+0x532408 的实际窗口显示先读 object+0x2f0，再调用 0x50f008，按 bit0 分支到 0x50fec8 或 0x50fed0/0x515940/0x510350 等路径；阈值语义仍待闭合。0x532ed8 -> 0x512e70；0x532e20 内调用 0x5120d0 查询索引槽。以上仅静态证据。
