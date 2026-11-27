@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: ['4.1.0']
-    paths: ['.github/workflows/home41-save-callback-audit.yml']
+    paths: ['.github/workflows/home41-save-callback-audit.yml', 'tools/audit_home41_save_callbacks.py']
 permissions:
   contents: write
 concurrency:
