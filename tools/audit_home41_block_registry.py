@@ -70,6 +70,23 @@ for wanted in [0x1bae30,0x283dd0,0x1e7ff0]:
             report.append(f'  {a:#x}: {hex(t) if t is not None else "unresolved"}')
             if t in fde and e.executable(t):focus.add(t)
 focus.update([0x25aa20,0x29d88c,0x1fb510,0x2981e0,0x29da38,0x1fb6e0,0x1c43d4,0x1c44b0,0x1b1b84,0x1bb1b8,0x1bb1ec,0x1bb248,0x1bb258,0x1f4260,0x1c45dc,0x1c46a8,0x29be30,0x29b9a4,0x25ad90,0x25c080,0x1b4930])
+report+=['','## Registry identity / dual buffer cross references']
+# Scan complete FDE ranges for direct calls and immediate materialization candidates.
+targets={0x2839f0,0x1e7cf0,0x1ba960,0x1b1fcc,0x1f0d40,0x2859b8,0x25b5c0,0x25b1f8,0x25b280,0x273654,0x284a54,0x1e87ac,0x1bb4dc}
+focus.update(targets)
+focus.update([0x25bc90,0x25bea0,0x25d528,0x25d670,0x25d3c4,0x284990,0x1e8698,0x1bb820,0x1b1fe8,0x1f0cb0,0x1e4338,0x1e4480,0x286354,0x287a68,0x28bdcc,0x220ca0,0x221ac0])
+for a,n in sorted(fde.items()):
+    if n>0x10000 or not e.executable(a):continue
+    ii=body(a)
+    hits=[]
+    for k,i in enumerate(ii):
+        if i.mnemonic in ('bl','b') and i.op_str.startswith('#0x') and int(i.op_str[1:],16) in targets:
+            hits.append('direct '+fmt(i))
+        if re.search(r'#0x(?:9349d|349d|49d|2f3e20|3e20|2f3dc0|3dc0|5e7be0|7be0)\b',i.op_str):
+            hits.append('offset candidate '+fmt(i))
+    if hits:
+        report += [f'### xref {a:#x}']+hits
+        if n<=0x3000:focus.add(a)
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
