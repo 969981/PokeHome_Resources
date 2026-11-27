@@ -101,6 +101,45 @@ def audit(elf,fde_path,outpath):
     out+=['','## Game-range direct writer bodies']
     for a in sorted(writers):
         if fde[a]<=0x3000:out+=dump(a)
+    # Follow concrete callback entrypoints and second-level worker / writer callers.
+    extra={0x29dbe0,0x1fb8b8,0x1f3ef8,0x1ff6e8,0x1bb2f8,0x4fc210,0x4fc278,0x274300,0x2978e0,0x1f3650,0x1b41b0,0x2717bc}
+    follow={0x274120,0x297700,0x1f3320,0x1b3fd0,0x1f3ef8,0x1ff6e8}
+    callrefs={}
+    for p in e.loads:
+        if not p[1]&1:continue
+        raw=b[p[2]:p[2]+p[5]]
+        for j in range(0,len(raw)-3,4):
+            a=p[3]+j;w=struct.unpack_from('<I',raw,j)[0]
+            if w&0x7c000000!=0x14000000:continue
+            br=direct_branch(a,w);t=int(br['target'],16)
+            if t in follow:callrefs.setdefault(t,[]).append((a,owner(a)))
+    out+=['','## Callback and concrete file writer incoming edges']
+    for t,sites in sorted(callrefs.items()):
+        out.append(f'### Target {t:#x}')
+        for a,o in sites:
+            out.append(f'- site {a:#x}, owner {hex(o) if o is not None else "unknown"}')
+            if o is not None:extra.add(o)
+    relr,rela=e.relocations()
+    # Read the second-level ZA worker address point and analogous SV table neighborhood.
+    out+=['','## Nested worker vtable candidates']
+    for start,end in [(0x77c808,0x77c880),(0x781688,0x781700)]:
+        for a in range(start,end,8):
+            raw=struct.unpack('<Q',e.read(a,8))[0];rr=rela.get(a)
+            t=raw if a in relr else rr[2] if rr and rr[0]==1027 else None
+            out.append(f'- {a:#x}: raw {raw:#x}, target {hex(t) if t is not None else "unresolved"}')
+            if t in fde and e.executable(t):extra.add(t)
+    # Add directly called family-local helpers from callback entries and concrete writer owners.
+    for a in list(extra):
+        for i in body(a):
+            if i.mnemonic not in ('bl','b'):continue
+            m=re.fullmatch(r'#(0x[0-9a-f]+)',i.op_str)
+            if not m:continue
+            t=int(m[1],16)
+            if t in fde and (0x1b0000<=t<0x1c8000 or 0x1e0000<=t<0x200000 or 0x260000<=t<0x2b0000):
+                extra.add(t)
+    out+=['','## Additional complete FDEs']
+    for a in sorted(extra):
+        if a in fde and fde[a]<=0x3000:out+=dump(a)
     Path(outpath).parent.mkdir(parents=True,exist_ok=True)
     Path(outpath).write_text('\n'.join(out)+'\n',encoding='utf8')
     print('focused',len(targets),'owner candidates',len(selected),'game-range writer FDEs',len(writers))
@@ -117,6 +156,9 @@ if __name__=='__main__':
     if a.validate:
         data=a.validate.read_bytes()
         r=validate(data)
-        if a.compare:r['comparison']=compare(data,a.compare.read_bytes())
+        if a.compare:
+            other=a.compare.read_bytes()
+            r['comparison_input_validation']=validate(other)
+            r['comparison']=compare(data,other)
         print(json.dumps(r,indent=2))
-        if not r.get('md5_valid',False):raise SystemExit(1)
+        if not r.get('md5_valid',False) or (a.compare and not r['comparison_input_validation'].get('md5_valid',False)):raise SystemExit(1)
