@@ -10,8 +10,8 @@ concurrency:
   group: home-dotnet-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: e0a5b1f9ea7a934bd60d26a0d7f7cdc3d1926a6b
-  TARGET_BRANCH: fix/pokemon-detail-layout-icons
+  TARGET_SHA: 1e494c993bf8ef3cdf7f1df8e639048f8cf813f0
+  TARGET_BRANCH: fix/detail-icons-pkhex-hover
   DOTNET_CLI_UI_LANGUAGE: en-US
   DOTNET_NOLOGO: 'true'
 jobs:
@@ -69,11 +69,11 @@ jobs:
               failed=1
             fi
           }
-          run_private core-build build HomeLive.Core/HomeLive.Core.csproj -c Release --nologo
-          run_private host-build build HomeLive.Host/HomeLive.Host.csproj -c Release --nologo
-          run_private winforms-build build HomeLive.App/HomeLive.App.csproj -c Release --nologo
-          run_private core-test test HomeLive.Core.Tests/HomeLive.Core.Tests.csproj -c Release --nologo --logger 'trx;LogFileName=core.trx' --results-directory "$result_dir"
-          run_private host-test test HomeLive.Host.Tests/HomeLive.Host.Tests.csproj -c Release --nologo --logger 'trx;LogFileName=host.trx' --results-directory "$result_dir"
+          run_private core-build build HomeLive.Core/HomeLive.Core.csproj -c Release --nologo -warnaserror
+          run_private host-build build HomeLive.Host/HomeLive.Host.csproj -c Release --nologo -warnaserror
+          run_private winforms-build build HomeLive.App/HomeLive.App.csproj -c Release --nologo -warnaserror
+          run_private core-test test HomeLive.Core.Tests/HomeLive.Core.Tests.csproj -c Release --nologo -warnaserror --logger 'trx;LogFileName=core.trx' --results-directory "$result_dir"
+          run_private host-test test HomeLive.Host.Tests/HomeLive.Host.Tests.csproj -c Release --nologo -warnaserror --logger 'trx;LogFileName=host.trx' --results-directory "$result_dir"
           exit "$failed"
       - name: Generate bounded private report
         id: report
@@ -117,7 +117,7 @@ jobs:
             const metrics = Object.fromEntries(['total','executed','passed','failed','notExecuted','error','timeout','aborted','inconclusive'].map(k=>[k,attrs[k]===undefined?null:Number(attrs[k])]));
             return [name,{status:'RECORDED',...metrics}];
           }));
-          fs.writeFileSync('docs/devlog/2026-11-27-pokemon-detail-dotnet-ci-result.json',JSON.stringify({
+          fs.writeFileSync('docs/devlog/2026-11-27-pokemon-hover-dotnet-ci-result.json',JSON.stringify({
             target:process.env.TARGET_SHA,runId:process.env.GITHUB_RUN_ID,runner:process.env.RUNNER_OS,
             sdkSetup:process.env.SDK_OUTCOME,sdkVersion:read('sdk.txt').trim().slice(0,200),
             checksOutcome:process.env.CHECKS_OUTCOME,stages,suites
@@ -133,7 +133,7 @@ jobs:
         run: |
           set -euo pipefail
           log="$(cygpath -u "$RUNNER_TEMP")/home-dotnet-private-push.log"
-          relative=docs/devlog/2026-11-27-pokemon-detail-dotnet-ci-result.json
+          relative=docs/devlog/2026-11-27-pokemon-hover-dotnet-ci-result.json
           test "$(git rev-parse HEAD)" = "$TARGET_SHA" || { echo "::error::Pinned checkout mismatch"; exit 1; }
           gh auth setup-git --hostname github.com >"$log" 2>&1 || { echo "::error::Private authentication setup failed"; exit 1; }
           remote="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" 2>>"$log" | cut -f1)"
