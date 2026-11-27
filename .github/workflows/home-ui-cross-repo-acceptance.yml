@@ -10,8 +10,8 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 923256e5036b12b6ce447cad473a3661aebb7ffa
-  TARGET_BRANCH: fix/pokemon-detail-layout-icons
+  TARGET_SHA: ddae105db5f0a6b21ef6378a8b06cd35afefd4b1
+  TARGET_BRANCH: fix/detail-icons-pkhex-hover
 jobs:
   verify:
     runs-on: ubuntu-24.04
@@ -162,7 +162,7 @@ jobs:
             }
           }
           const codes = Object.fromEntries(['typecheck','build'].map(stage => [stage,[...new Set(read('home-ui-'+stage+'.log').match(/error TS[0-9]+/g) ?? [])]]));
-          fs.writeFileSync('docs/devlog/2026-11-27-pokemon-detail-ci-result.json', JSON.stringify({
+          fs.writeFileSync('docs/devlog/2026-11-27-pokemon-hover-ci-result.json', JSON.stringify({
             target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID,
             install:read('home-ui-status.txt').includes('install PASS')?'PASS':read('home-ui-status.txt').includes('install FAIL')?'FAIL':'UNKNOWN',
             installDiagnostics:read('home-ui-install.log').split('\n').filter(line => /npm error|npm ERR!|ERESOLVE|EUSAGE|ETARGET/.test(line)).slice(-25).map(line=>line.slice(0,350)),
@@ -177,11 +177,11 @@ jobs:
             diagnosticCodes:codes
           },null,2)+'\n');
           JS
-          git add --sparse -- docs/devlog/2026-11-27-pokemon-detail-ci-result.json
+          git add --sparse -- docs/devlog/2026-11-27-pokemon-hover-ci-result.json
           if git diff --cached --quiet; then exit 0; fi
           while IFS= read -r changed; do
             case "$changed" in
-              docs/devlog/2026-11-27-pokemon-detail-ci-result.json) ;;
+              docs/devlog/2026-11-27-pokemon-hover-ci-result.json) ;;
               *) echo "::error::Unexpected staged path"; exit 1;;
             esac
           done < <(git diff --cached --name-only)
