@@ -10,7 +10,7 @@ concurrency:
   group: home-ui-cross-repo-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 507922edc35064527395ed43f9ddfd5588266c93
+  TARGET_SHA: a6381868d242f3c7d2f43b246ecaf71773b36d6a
   TARGET_BRANCH: feat/ui-foundation-20261127
 jobs:
   verify:
@@ -80,6 +80,42 @@ jobs:
             fi
           done
           exit "$failed"
+      - name: Real browser interaction smoke (MockHost only)
+        if: ${{ !cancelled() && steps.npm.outcome == 'success' }}
+        working-directory: target/tauri2-app/frontend
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser_dir="$RUNNER_TEMP/home-ui-browser"
+          mkdir -p "$browser_dir"
+          log="$RUNNER_TEMP/home-ui-browser.log"
+          run_browser() (
+            set -euo pipefail
+            npm install --prefix "$browser_dir" --no-save --no-audit --no-fund playwright@1.58.2
+            "$browser_dir/node_modules/.bin/playwright" install --with-deps chromium
+            cp tests/browser/ui-smoke.mjs "$browser_dir/ui-smoke.mjs"
+            npm run dev -- --host 127.0.0.1 >"$RUNNER_TEMP/home-ui-vite.log" 2>&1 &
+            server=$!
+            trap 'kill "$server" 2>/dev/null || true' EXIT
+            for attempt in $(seq 1 60); do
+              if curl -fsS http://127.0.0.1:5173/ >/dev/null; then break; fi
+              sleep 1
+            done
+            curl -fsS http://127.0.0.1:5173/ >/dev/null
+            node "$browser_dir/ui-smoke.mjs"
+          )
+          set +e
+          (run_browser) >"$log" 2>&1
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ]; then
+            echo "browser PASS" >> "$RUNNER_TEMP/home-ui-status.txt"
+            echo "browser PASS" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "browser FAIL" >> "$RUNNER_TEMP/home-ui-status.txt"
+            echo "::error::Browser smoke failed (private log suppressed)"
+            exit 1
+          fi
       - name: Publish install-verified lock and private CI result
         if: always() && steps.npm.outcome == 'success'
         working-directory: target
@@ -114,6 +150,7 @@ jobs:
             target:process.env.TARGET_SHA, runId:process.env.GITHUB_RUN_ID, install:'PASS',
             stages:read('home-ui-status.txt').trim().split('\n').filter(Boolean),
             vitest:{total:report.numTotalTests ?? null,passed:report.numPassedTests ?? null,failed:report.numFailedTests ?? null,failures:failures.slice(0,20)},
+            browserDiagnostics:read('home-ui-browser.log').split('\n').filter(line => /PASS |Error:|AssertionError|TimeoutError|ERR!/.test(line)).slice(-20).map(line => line.slice(0,350)),
             diagnosticCodes:codes
           },null,2)+'\n');
           JS
