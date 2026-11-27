@@ -25,7 +25,7 @@ def ptr(a):
 
 
 report=['# HOME41 scene state graph and transition descriptor evidence','SHA256: '+SHA,'## Scene state entry table']
-targets={0x16fd20,0x31da0,0x31e04,0x28ec0,0x32134,0x6c208,0x6d2b4,0x6d4a0,0x6d6b0,0x2232a0,0x220500,0x119960}
+targets={0x16f740,0x6bcec,0x16fd20,0x31da0,0x31e04,0x28ec0,0x32134,0x6c208,0x6d2b4,0x6d4a0,0x6d6b0,0x2232a0,0x220500,0x119960}
 focus=set(targets)|{0x6caa4,0x6cb40,0x6ccb0,0x6ce20,0x6ce60,0x6cfe0,0x6d150,0x6d330,0x6d550,0x6d750,0x6d89c,0x6d930,0x6daa0,0x6dbfc,0x6dc90,0x6dde0,0x6df90,0x6e0f0,0x6e270,0x6e3e0,0x6e550,0x6e6a0,0x6e7f0}
 for i in range(47):
     a=0x6c2cc+4*struct.unpack('<H',e.read(0x625638+2*i,2))[0]
@@ -35,7 +35,7 @@ cells=set()
 for slot in sorted(relr|set(rela)):
     try:t=ptr(slot)
     except ValueError:continue
-    if t in {0x16fd20,0x6c208,0x119960}:
+    if t in {0x16f740,0x16fd20,0x6c208,0x119960}:
         report.append(f'- {slot:#x} -> {t:#x}')
         for a in range(slot-0x60,slot+0x38,8):
             try:v=ptr(a)
@@ -76,6 +76,10 @@ for a,n in sorted(fde.items()):
     if hits:
         report += [f'### caller {a:#x}']+hits
         if n<=0x1800 and (any('GOT ' in h for h in hits) and 0x60000<=a<=0x180000 and len(focus)<100):focus.add(a)
+report+=['','## Helper jump tables']
+for table,base,n in [(0x625696,0x6d2ec,4),(0x62569a,0x6d4e8,4),(0x62569e,0x6d6dc,11)]:
+    report.append(f'- table {table:#x}: '+', '.join(f'{i}:{base+4*v:#x}' for i,v in enumerate(e.read(table,n))))
+focus.update([0x16ee90,0x16fb20,0x16fc20,0x2236f0,0x200180,0x16f86c,0x166d8,0x32a80,0x33648,0x2c4b4c,0x2c4c48,0x2c4c58,0x2c4c60,0x2c4c50])
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
