@@ -1,0 +1,163 @@
+name: HOME UI native WebView2 acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-ui-webview2-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-ui-webview2-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 3673b0c51f3a44a797d61d4f0c5a9a9ec0b81b77
+jobs:
+  webview2:
+    runs-on: windows-2025
+    timeout-minutes: 50
+    steps:
+      - name: Enable long paths
+        shell: pwsh
+        run: git config --global core.longpaths true
+      - name: Checkout pinned private Tauri source
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: target
+          persist-credentials: false
+          sparse-checkout: |
+            tauri2-app/frontend
+            tauri2-app/public
+            tauri2-app/src-tauri
+            docs/pokemon_home_reverse/4.1.0/resources/home41_images_4_1_0/HomeImageResources/rust/home-image-resource-core
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build and exercise real Tauri WebView2 window (MockHost only)
+        id: native
+        working-directory: target/tauri2-app
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $temp = Join-Path $env:RUNNER_TEMP 'home-ui-native'
+          New-Item -ItemType Directory -Force $temp | Out-Null
+          $stage = 'environment'
+          $result = 'FAIL'
+          $server = $null
+          $app = $null
+          try {
+            $env:HOMELIVE_DATA_DIR = Join-Path $temp 'isolated-data'
+            $env:HOMELIVE_HOST_PATH = Join-Path $temp 'never-start-host.exe'
+            Remove-Item Env:HOMELIVE_HOST_PATH_FILE -ErrorAction SilentlyContinue
+            $env:WEBVIEW2_USER_DATA_FOLDER = Join-Path $temp 'webview-profile'
+            $env:WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS = '--remote-debugging-port=9222 --remote-debugging-address=127.0.0.1'
+            $env:HOME_UI_BROWSER_BASE_URL = 'http://127.0.0.1:5173'
+            $stage = 'npm-ci'
+            & npm.cmd --prefix frontend ci --no-audit --no-fund *> (Join-Path $temp 'npm.log')
+            if ($LASTEXITCODE -ne 0) { throw 'npm ci failed' }
+            & git diff --exit-code -- frontend/package-lock.json *> (Join-Path $temp 'lock.log')
+            if ($LASTEXITCODE -ne 0) { throw 'lock changed' }
+            $stage = 'playwright-install'
+            & npm.cmd install --prefix $temp --no-save --no-audit --no-fund playwright@1.58.2 *> (Join-Path $temp 'playwright-install.log')
+            if ($LASTEXITCODE -ne 0) { throw 'Playwright install failed' }
+            $stage = 'tauri-debug-build'
+            # Runner-only configuration: do not bundle a real sidecar or launch any device Host.
+            $configPath = Join-Path $PWD 'src-tauri/tauri.conf.json'
+            $config = Get-Content -Raw $configPath | ConvertFrom-Json -AsHashtable
+            $config.build.devUrl = 'http://127.0.0.1:5173/?mock=1'
+            $config.bundle.externalBin = @()
+            $config | ConvertTo-Json -Depth 100 | Set-Content -Encoding utf8NoBOM $configPath
+            & cargo build --locked --manifest-path src-tauri/Cargo.toml --bin homelive-desktop *> (Join-Path $temp 'cargo.log')
+            if ($LASTEXITCODE -ne 0) { throw 'Tauri debug build failed' }
+            $stage = 'vite-start'
+            $vite = Join-Path $PWD 'frontend/node_modules/vite/bin/vite.js'
+            $server = Start-Process -FilePath node.exe -ArgumentList @('"' + $vite + '"','--host','127.0.0.1') -WorkingDirectory (Join-Path $PWD 'frontend') -RedirectStandardOutput (Join-Path $temp 'vite.log') -RedirectStandardError (Join-Path $temp 'vite.err') -PassThru
+            $ready = $false
+            for ($i=0; $i -lt 60; $i++) {
+              try { if ((Invoke-WebRequest http://127.0.0.1:5173/ -TimeoutSec 2).StatusCode -eq 200) { $ready = $true; break } } catch {}
+              Start-Sleep -Seconds 1
+            }
+            if (-not $ready) { throw 'Vite failed to start' }
+            $stage = 'native-launch'
+            $exe = Join-Path $PWD 'src-tauri/target/debug/homelive-desktop.exe'
+            if (-not (Test-Path $exe)) { throw 'Native executable missing' }
+            $app = Start-Process -FilePath $exe -WorkingDirectory (Split-Path $exe) -RedirectStandardOutput (Join-Path $temp 'native.log') -RedirectStandardError (Join-Path $temp 'native.err') -PassThru
+            $ready = $false
+            for ($i=0; $i -lt 90; $i++) {
+              if ($app.HasExited) { throw 'Native executable exited before CDP' }
+              try {
+                $version = Invoke-RestMethod http://127.0.0.1:9222/json/version -TimeoutSec 2
+                if ($version.webSocketDebuggerUrl) { $ready = $true; break }
+              } catch {}
+              Start-Sleep -Seconds 1
+            }
+            if (-not $ready) { throw 'Native WebView2 CDP unavailable' }
+            $stage = 'webview2-interaction'
+            # Reuse every existing assertion, replace only browser creation/selection.
+            $script = Get-Content -Raw frontend/tests/browser/ui-smoke.mjs
+            $old = "const browser = await chromium.launch({ headless: true });`nconst page = await browser.newPage({ viewport: { width: 1280, height: 800 } });"
+            $script = $script.Replace("`r`n","`n")
+            if (-not $script.Contains($old)) { throw 'Browser launcher contract changed' }
+            $replacement = @'
+          const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+          const context = browser.contexts()[0];
+          const page = context?.pages()[0];
+          assert.ok(page, 'Expected existing native Tauri WebView2 page');
+          await page.waitForFunction(() => Boolean(window.__TAURI_INTERNALS__), { timeout: 15000 });
+          console.log('PASS native Tauri WebView2 context');
+          '@
+            $script = $script.Replace($old, $replacement)
+            Set-Content -Path (Join-Path $temp 'ui-smoke.mjs') -Value $script -Encoding utf8NoBOM
+            & node.exe (Join-Path $temp 'ui-smoke.mjs') *> (Join-Path $temp 'interaction.log')
+            if ($LASTEXITCODE -ne 0) { throw 'WebView2 interaction failed' }
+            if (Test-Path $env:HOMELIVE_HOST_PATH) { throw 'Unexpected real Host path' }
+            $result = 'PASS'
+          } catch {
+            $_ | Out-String | Set-Content (Join-Path $temp 'failure.log')
+          } finally {
+            if ($app -and -not $app.HasExited) { Stop-Process -Id $app.Id -Force -ErrorAction SilentlyContinue }
+            if ($server -and -not $server.HasExited) { Stop-Process -Id $server.Id -Force -ErrorAction SilentlyContinue }
+            $diagnostics = @()
+            foreach ($name in @('failure.log','interaction.log','cargo.log','native.err','npm.log','playwright-install.log')) {
+              $file = Join-Path $temp $name
+              if (Test-Path $file) {
+                $diagnostics += @(Get-Content $file | Where-Object { $_ -match 'PASS |error\[|error:|Error:|AssertionError|TimeoutError|failed|Exception|ERR!' } | Select-Object -Last 12 | ForEach-Object { $_.Substring(0,[Math]::Min(350,$_.Length)) })
+              }
+            }
+            [ordered]@{target=$env:TARGET_SHA;runId=$env:GITHUB_RUN_ID;runtime='native Tauri WebView2';mockOnly=$true;result=$result;stage=$stage;browserVersion=$version.Browser;diagnostics=$diagnostics} | ConvertTo-Json -Depth 5 | Set-Content -Encoding utf8NoBOM (Join-Path $temp 'result.json')
+            "Native WebView2: $result ($stage)" >> $env:GITHUB_STEP_SUMMARY
+          }
+          if ($result -ne 'PASS') { Write-Output 'Native WebView2 acceptance failed (private diagnostics suppressed)'; exit 1 }
+      - name: Publish private evidence on independent run branch
+        if: always() && steps.native.outcome != 'skipped'
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $temp = Join-Path $env:RUNNER_TEMP 'home-ui-native'
+          try {
+            if ((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA) { throw 'Target mismatch' }
+            New-Item -ItemType Directory -Force docs/devlog | Out-Null
+            Copy-Item (Join-Path $temp 'result.json') docs/devlog/2026-11-27-ui-webview2-result.json
+            git add --sparse -- docs/devlog/2026-11-27-ui-webview2-result.json
+            if ($LASTEXITCODE -ne 0) { throw 'stage failed' }
+            $staged = @(git diff --cached --name-only)
+            if ($staged.Count -ne 1 -or $staged[0] -ne 'docs/devlog/2026-11-27-ui-webview2-result.json') { throw 'Unexpected staged paths' }
+            gh auth setup-git --hostname github.com *> (Join-Path $temp 'publish.log')
+            if ($LASTEXITCODE -ne 0) { throw 'auth failed' }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'test(ui): retain private native WebView2 evidence' *> (Join-Path $temp 'commit.log')
+            if ($LASTEXITCODE -ne 0) { throw 'commit failed' }
+            $ref = "refs/heads/ci/ui-webview2-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+            git push origin "HEAD:$ref" *> (Join-Path $temp 'push.log')
+            if ($LASTEXITCODE -ne 0) { throw 'push failed' }
+            'Native result published privately' >> $env:GITHUB_STEP_SUMMARY
+          } catch {
+            Write-Output 'Private native evidence publication failed'
+            exit 1
+          }
