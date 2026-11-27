@@ -1,0 +1,152 @@
+name: HOME41 release session lifecycle audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-release-lifecycle-audit.yml'
+permissions:
+  contents: write
+concurrency:
+  group: home41-release-lifecycle-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '4.1.0'
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv
+            docs/HOME41_RELEASE_LIMIT_CONFIG_ELF_AUDIT.md
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install capstone==5.0.6
+      - name: Original ELF FDE and lifecycle candidate scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import pathlib,struct,hashlib,csv,bisect,re,collections
+          from capstone import Cs,CS_ARCH_ARM64,CS_MODE_LITTLE_ENDIAN
+          p=pathlib.Path('57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf')
+          b=p.read_bytes()
+          sha=hashlib.sha256(b).hexdigest()
+          assert sha=='bdb558f795710a89aee1af7ed3b5de359a4ca0b4fef6dcdca62e597b9d45df7a'
+          phoff=struct.unpack_from('<Q',b,32)[0]; entsize,num=struct.unpack_from('<HH',b,54)
+          segs=[]
+          for i in range(num):
+              t,f,o,v,pa,fs,ms,al=struct.unpack_from('<IIQQQQQQ',b,phoff+i*entsize)
+              if t==1 and f&1: segs.append((o,v,fs))
+          d=Cs(CS_ARCH_ARM64,CS_MODE_LITTLE_ENDIAN)
+          d.skipdata=True
+          def window(s,e):
+              for o,v,fs in segs:
+                  a=max(s,v); z=min(e,v+fs)
+                  if a<z:
+                      yield from d.disasm(b[o+a-v:o+z-v],a)
+          def line(i):
+              return f'0x{i.address:08X}  {i.bytes.hex()}  {i.mnemonic:<9} {i.op_str}'
+          fde=sorted((int(x['rva'],0),int(x['fde_bytes'])) for x in csv.DictReader(open('derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv')) if int(x['fde_bytes'])>0)
+          starts=[a for a,n in fde]
+          def owner(a):
+              i=bisect.bisect_right(starts,a)-1
+              if i>=0 and a<fde[i][0]+fde[i][1]: return fde[i]
+              return (a,4)
+          def dump(s,e):
+              return ['```asm']+[line(i) for i in window(s,e)]+['```']
+          def sg(v,bits): return v-(1<<bits) if v&(1<<(bits-1)) else v
+          anchors=[0xb2d20,0xdb1f8,0xe35f8,0xecbac,0xa0bf4,0xa1770,0xdccd4,0xdcf2c,0xd64dc,0xd70dc]
+          owners=sorted(set(owner(a) for a in anchors))
+          # Find direct zero stores and pair/vector stores overlapping the four-byte counter.
+          # FDE scope and base-register provenance still need manual verification.
+          zeros=[]; limits=[]; pointer_groups=collections.defaultdict(list); calls=collections.defaultdict(list)
+          for o,v,fs in segs:
+              for j in range(0,fs-3,4):
+                  a=v+j; w=struct.unpack_from('<I',b,o+j)[0]
+                  if (w&0xfc000000) in (0x94000000,0x14000000):
+                      target=a+sg(w&0x3ffffff,26)*4
+                      calls[target].append(a)
+                  # MOVZ W/X imm16 = 100, any register. Also MOVN complement.
+                  if ((w&0x7f800000)==0x52800000 and ((w>>5)&0xffff)==100 and ((w>>21)&3)==0):
+                      limits.append(a)
+                  if 0x80000<=a<0x110000:
+                      # Raw candidate store group, common receiver construction.
+                      if (w&0xffc00000)==0xf9000000:
+                          off=((w>>10)&0xfff)*8
+                          if off in (8,0x10,0x38,0x40,0x48,0x50):
+                              pointer_groups[(owner(a)[0],(w>>5)&31)].append((a,off))
+                  # single or pair/vector store candidates, disassemble selected nearby offsets
+                  candidate=False
+                  if (w&0x3b000000)==0x39000000 and ((w>>22)&3)==0:
+                      off=((w>>10)&0xfff)<<(w>>30)
+                      candidate=0x298<=off<=0x2ab
+                  if (w&0x3b200c00)==0x38000000 and ((w>>22)&3)==0:
+                      off=sg((w>>12)&0x1ff,9)
+                      candidate=candidate or 0x298<=off<=0x2ab
+                  if (w&0x3a000000)==0x28000000 and not (w&0x00400000):
+                      scale=(4,8,16,16)[w>>30] if w&0x04000000 else (4,4,8,8)[w>>30]
+                      off=sg((w>>15)&127,7)*scale
+                      candidate=candidate or off<=0x2a8<off+2*scale
+                  if candidate:
+                      ins=list(window(a,a+4))
+                      if ins and ('zr' in ins[0].op_str or ins[0].mnemonic.startswith(('stp','str','stur'))):
+                          zeros.append(a)
+          out=['# HOME41 release session lifecycle — original ELF static candidate audit','',f'SHA-256: {sha}','',f'FDE ranges: {len(fde)}. Machine bytes little-endian. No device, save or modification.','', '## Known receiver functions and direct callers']
+          for a in anchors:
+              s,n=owner(a); out.append(f'- anchor 0x{a:X}: FDE 0x{s:X} length 0x{n:X}, direct B/BL sites: '+', '.join(f'0x{x:X}' for x in calls[s][:100]))
+          out+=['','## Receiver entry / exit windows']
+          for s,n in owners:
+              out += [f'### FDE 0x{s:X} length 0x{n:X}']+dump(s,min(s+n,s+0x90))+dump(max(s,s+n-0x50),s+n)
+          out+=['','## Caller windows for known receiver FDEs']
+          seen=set()
+          for s,n in owners:
+              for a in calls[s][:30]:
+                  if a in seen: continue
+                  seen.add(a)
+                  out += [f'### callsite 0x{a:X}, caller FDE 0x{owner(a)[0]:X}']+dump(a-0x50,a+0x20)
+          out+=['','## MOVZ 100 candidates',f'Total: {len(limits)} (not all ways of materialising 100).']
+          for a in limits:
+              if 0x70000<=a<0x120000:
+                  out += [f'### 0x{a:X} FDE 0x{owner(a)[0]:X}']+dump(a-0x30,a+0x40)
+          out+=['','## Candidate receiver constructors: STR Xn with shared base and +8/+40/+50','', 'Only direct stores in UI code, not proof of type.']
+          for (s,reg),v in sorted(pointer_groups.items()):
+              offs={off for a,off in v}
+              if {8,0x40,0x50}<=offs and reg!=31:
+                  out.append(f'### FDE 0x{s:X}, base X{reg}, offsets {sorted(offs)}')
+                  for a,off in v: out+=dump(a-0xc,a+0x10)
+          out+=['','## Candidate writes overlapping +0x2A8',f'Total raw store candidates: {len(zeros)}. Includes unrelated fields.']
+          for a in zeros:
+              s,n=owner(a)
+              ins=list(window(a,a+4))
+              if not ins: continue
+              if 0x70000<=a<0x120000 or ('wzr' in ins[0].op_str and '#0x2a8' in ins[0].op_str):
+                  out += [f'### 0x{a:X} FDE 0x{s:X}']+dump(a-0x14,a+0x18)
+          out+=['','## Boundaries','Pair/bulk reset or indirect aliases can be missed; no same-object or runtime lifecycle claim from matching offsets.']
+          q=pathlib.Path('docs/HOME41_RELEASE_SESSION_LIFECYCLE_ELF_AUDIT.md')
+          q.write_text('\n'.join(out)+'\n',encoding='utf-8')
+          print('FDEs',len(fde),'limit candidates',len(limits),'store candidates',len(zeros))
+          PY
+      - name: Publish static evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f docs/HOME41_RELEASE_SESSION_LIFECYCLE_ELF_AUDIT.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: HOME41 release session original ELF lifecycle candidates'
+            git pull --rebase origin 4.1.0
+            git push origin HEAD:4.1.0
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-release-session-lifecycle
+          path: docs/HOME41_RELEASE_SESSION_LIFECYCLE_ELF_AUDIT.md
+          if-no-files-found: warn
