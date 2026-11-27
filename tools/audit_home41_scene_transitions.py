@@ -76,6 +76,10 @@ for a,n in sorted(fde.items()):
     if hits:
         report += [f'### caller {a:#x}']+hits
         if n<=0x1800 and (any('GOT ' in h for h in hits) and 0x60000<=a<=0x180000 and len(focus)<100):focus.add(a)
+report+=['','## Parent dispatcher jump table and referenced strings']
+for i,v in enumerate(e.read(0x62cff8,10)):report.append(f'- state {i}: {0x16f794+4*v:#x}')
+for a in [0x61cc66,0x61e39f,0x6119c7]:
+    report.append(f'- {a:#x}: {e.read(a,128).split(bytes([0]))[0]!r}')
 report+=['','## Helper jump tables']
 for table,base,n in [(0x625696,0x6d2ec,4),(0x62569a,0x6d4e8,4),(0x62569e,0x6d6dc,11)]:
     report.append(f'- table {table:#x}: '+', '.join(f'{i}:{base+4*v:#x}' for i,v in enumerate(e.read(table,n))))
