@@ -10,7 +10,7 @@ concurrency:
   group: home-release-mock-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: c02f1cfaf2e000d94da9bfb53b5031837b7c686d
+  TARGET_SHA: 5103b18690ad61f5fdfa295c0f249e6e8e7cfdb8
 jobs:
   verify:
     runs-on: ubuntu-24.04
