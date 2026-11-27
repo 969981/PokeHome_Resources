@@ -44,6 +44,19 @@ for start in [0x7806d0,0x7807a0,0x77aae8]:
     for a in range(start,start+0x68,8):
         t=ptr(a);report.append(f'- {a:#x}: {hex(t) if t is not None else "unresolved"}')
         if t in fde and e.executable(t):focus.add(t)
+report+=['','## Registry address points and constant cells']
+for cell in [0x7a3150,0x7a2688,0x7a23e8,0x7a32a0,0x7a25d8]:
+    t=ptr(cell)
+    report.append(f'- cell {cell:#x}, target {hex(t) if t is not None else "unresolved"}')
+    if t is not None:
+        try:report.append(f'  target raw bytes: {e.read(t,32).hex()}')
+        except ValueError:pass
+        if cell in [0x7a32a0,0x7a25d8]:
+            v=t+0x10
+            for off in range(0,0x60,8):
+                a=ptr(v+off);report.append(f'  vptr {v:#x}+{off:#x}: {hex(a) if a is not None else "unresolved"}')
+                if a in fde and e.executable(a):focus.add(a)
+focus.update([0x286180,0x284180,0x1ea550,0x1e9e90,0x1bc700,0x1bac00,0x1b145c,0x1bde6c,0x270a20,0x273654,0x274c00,0x274880,0x25b280,0x27a6d0,0x27127c,0x1b19ac,0x1c44a8])
 report+=['','## Complete candidate bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x3000:report+=dump(a)
