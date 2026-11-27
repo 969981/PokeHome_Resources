@@ -10,3 +10,6 @@ uv run PokemonResourceDatabase/tools/build_home_resources.py --out export/home-v
 ```
 
 CI result pending; keep V3 as verified baseline until full V4 passes.
+
+## Verified schema CI
+[46011533391](https://github.com/969981/PokeHome_Resources/actions/runs/46011533391) success, schema_version4,60 business tables,308 fields,14/14 tests. Artifact 15203797949 ZIP SHA256 a5fd94d972926500ff069bbe74cfe08598b2bae4c3e4b0865c31c86417ca477b; independently downloaded and verified SHA256/CRC, SQLite user_version=4, integrity_check=ok and foreign_key_check empty. Historical artifact/file naming schema_v1 is retained by legacy workflow but version is4. Full V4 data import [46011533477](https://github.com/969981/PokeHome_Resources/actions/runs/46011533477) still running at verification; this schema package contains no real imported scalar records. V3 remains verified full-data baseline until V4 data import succeeds.
