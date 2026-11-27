@@ -31,6 +31,7 @@ jobs:
       - name: Extract and verify original ELF
         run: |
           set -euo pipefail
+          mkdir -p docs
           python tools/audit_home41_save_serializers.py --self-test
           python tools/audit_home41_save_serializers.py --expanded 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf derived/4.1.0/Ghidra_12.2_Run_42763137320/fde_recovery.csv docs/HOME41_SAVE_SERIALIZER_ORIGINAL_ELF_AUDIT.md
       - uses: actions/upload-artifact@v4
