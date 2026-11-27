@@ -1,0 +1,145 @@
+name: HOME release Host dotnet acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-release-host-dotnet-acceptance.yml']
+permissions:
+  contents: read
+concurrency:
+  group: home-release-host-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 4c679a39417ead704f0a88c83a213cfcf0d1f0ea
+  TARGET_BRANCH: feat/home-release-host-410
+  DOTNET_CLI_UI_LANGUAGE: en-US
+  DOTNET_NOLOGO: 'true'
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Prepare Windows git checkout
+        shell: bash
+        run: git config --global core.longpaths true
+      - name: Checkout pinned private revision
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          path: target
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        id: sdk
+        with:
+          dotnet-version: '10.0.x'
+      - name: Independent Release builds and offline test suites
+        id: checks
+        working-directory: target
+        shell: bash
+        run: |
+          set -euo pipefail
+          evidence="$(cygpath -u "$RUNNER_TEMP")/home-dotnet-evidence"
+          mkdir -p "$evidence"
+          if ! dotnet --version >"$evidence/sdk.txt" 2>&1; then
+            echo "::error::.NET SDK unavailable"
+            exit 1
+          fi
+          sdk_version="$(tr -d '\r\n' <"$evidence/sdk.txt")"
+          if [[ "$sdk_version" != 10.* ]]; then
+            echo "::error::Expected stable .NET 10 SDK; actual SDK is not 10.x"
+            exit 1
+          fi
+          echo "Selected .NET SDK $sdk_version"
+          result_dir="$(cygpath -w "$evidence")"
+          failed=0
+          run_private() {
+            local stage="$1"; shift
+            local rc=0
+            MSYS2_ARG_CONV_EXCL='*' dotnet "$@" >"$evidence/$stage.log" 2>&1 || rc=$?
+            printf '%s\n' "$rc" >"$evidence/$stage.exit"
+            if [ "$rc" -eq 0 ]; then
+              printf '%s PASS\n' "$stage" >> "$GITHUB_STEP_SUMMARY"
+              printf '%s PASS\n' "$stage"
+            else
+              printf '%s FAIL\n' "$stage" >> "$GITHUB_STEP_SUMMARY"
+              echo "::error::$stage failed (private output suppressed)"
+              failed=1
+            fi
+          }
+          run_private core-build build HomeLive.Core/HomeLive.Core.csproj -c Release --nologo -warnaserror
+          run_private host-build build HomeLive.Host/HomeLive.Host.csproj -c Release --nologo -warnaserror
+          run_private winforms-build build HomeLive.App/HomeLive.App.csproj -c Release --nologo -warnaserror
+          run_private core-test test HomeLive.Core.Tests/HomeLive.Core.Tests.csproj -c Release --nologo -warnaserror --logger 'trx;LogFileName=core.trx' --results-directory "$result_dir"
+          run_private host-test test HomeLive.Host.Tests/HomeLive.Host.Tests.csproj -c Release --nologo -warnaserror --logger 'trx;LogFileName=host.trx' --results-directory "$result_dir"
+          exit "$failed"
+      - name: Generate bounded private report
+        id: report
+        if: always() && steps.checkout.outcome == 'success'
+        working-directory: target
+        env:
+          SDK_OUTCOME: ${{ steps.sdk.outcome }}
+          CHECKS_OUTCOME: ${{ steps.checks.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs/devlog
+          # Node is preinstalled on GitHub hosted Windows runners.
+          node --input-type=module >"$(cygpath -u "$RUNNER_TEMP")/home-dotnet-report.log" 2>&1 <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const dir = path.join(process.env.RUNNER_TEMP, 'home-dotnet-evidence');
+          const read = file => { try { return fs.readFileSync(path.join(dir,file),'utf8').replace(/^\uFEFF/,''); } catch { return ''; } };
+          const stages = ['core-build','host-build','winforms-build','core-test','host-test'].map(name => {
+            const exit = read(name+'.exit').trim();
+            const log = read(name+'.log').split(/\r?\n/);
+            const selected = new Set();
+            log.forEach((line,i) => {
+              if (/error (CS|MSB|NU|NETSDK)\d+|\bFailed\b|Error Message:|Stack Trace:|Exception:|Test Run Aborted|Expected:|But was:/i.test(line)) {
+                for (let j=Math.max(0,i-1);j<Math.min(log.length,i+5);j++) selected.add(j);
+              }
+            });
+            return {name,status:exit===''?'NOT_RUN':exit==='0'?'PASS':'FAIL',exitCode:exit===''?null:Number(exit),
+              warningCount:(()=>{const m=log.join('\n').match(/(\d+) Warning\(s\)/g);return m?.length?Number(m[m.length-1].match(/\d+/)[0]):null;})(),
+              warningCodes:[...new Set(log.flatMap(line=>[...line.matchAll(/\bwarning ((?:CS|MSB|NU|NETSDK)\d+)/gi)].map(m=>m[1].toUpperCase())))],
+              warnings:[...new Set(log.filter(line=>/\bwarning (CS|MSB|NU|NETSDK)\d+/i.test(line)))].slice(0,80).map(line=>line.slice(0,1200)),
+              diagnostics:[...selected].sort((a,b)=>a-b).slice(-100).map(i=>log[i].slice(0,1200)),
+              tail:log.slice(-35).map(line=>line.slice(0,1000))};
+          });
+          const suites = Object.fromEntries(['core','host'].map(name => {
+            const trx = read(name+'.trx');
+            if (!trx) return [name,{status:'NO_TRX'}];
+            const counters = trx.match(/<(?:\w+:)?Counters\b([^>]+)>/)?.[1];
+            if (!counters) return [name,{status:'TRX_PARSE_FAILED'}];
+            const attrs = Object.fromEntries([...counters.matchAll(/([\w]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
+            const metrics = Object.fromEntries(['total','executed','passed','failed','notExecuted','error','timeout','aborted','inconclusive'].map(k=>[k,attrs[k]===undefined?null:Number(attrs[k])]));
+            return [name,{status:'RECORDED',...metrics}];
+          }));
+          fs.writeFileSync('docs/devlog/2026-11-27-home-release-host-dotnet-ci-result.json',JSON.stringify({
+            target:process.env.TARGET_SHA,runId:process.env.GITHUB_RUN_ID,runner:process.env.RUNNER_OS,
+            sdkSetup:process.env.SDK_OUTCOME,sdkVersion:read('sdk.txt').trim().slice(0,200),
+            checksOutcome:process.env.CHECKS_OUTCOME,stages,suites
+          },null,2)+'\n');
+          JS
+          echo "Private report generated"
+      - name: Publish only report to private target branch
+        if: always() && steps.report.outcome == 'success'
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          log="$(cygpath -u "$RUNNER_TEMP")/home-dotnet-private-push.log"
+          relative=docs/devlog/2026-11-27-home-release-host-dotnet-ci-result.json
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA" || { echo "::error::Pinned checkout mismatch"; exit 1; }
+          gh auth setup-git --hostname github.com >"$log" 2>&1 || { echo "::error::Private authentication setup failed"; exit 1; }
+          git add -- "$relative" >"$log" 2>&1 || { echo "::error::Report staging failed"; exit 1; }
+          test "$(git diff --cached --name-only)" = "$relative" || { echo "::error::Unexpected staged paths"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ci(release): record private Windows acceptance diagnostics" >"$log" 2>&1
+          git push origin "HEAD:refs/heads/ci/release-host-${GITHUB_RUN_ID}" >"$log" 2>&1 || { echo "::error::Private report push rejected"; exit 1; }
+          echo "Private report published; failed checks remain failing."
