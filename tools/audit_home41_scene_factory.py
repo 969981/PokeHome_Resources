@@ -26,7 +26,7 @@ def ptr(a):
 
 
 report=['# HOME41 Scene factory and ownership lifecycle','SHA256: '+SHA]
-targets={0x2ea0,0x6ba90,0x157d8,0x6bb1c,0x6bcec,0x6be00,0x6bf94,0x6bfb0,0x6c1f4,0x166d8,0x167a0,0x6f2b4}
+targets={0x158b0,0x16888,0x2ea0,0x6ba90,0x157d8,0x6bb1c,0x6bcec,0x6be00,0x6bf94,0x6bfb0,0x6c1f4,0x166d8,0x167a0,0x6f2b4}
 focus=set(targets)|{0x16954,0x158a4,0x158a8,0x6f650,0x16948,0x10090,0x1029c,0x102b8,0x10310,0x10360,0x16870,0x16874,0x6c208,0x6caa4,0x6cb40}
 got=set()
 report+=['','## Relocation slots and factory table candidates']
@@ -49,7 +49,7 @@ for a,n in sorted(fde.items()):
     hits=[fmt(i) for i in ii if i.mnemonic in ('bl','b') and i.op_str.startswith('#0x') and int(i.op_str[1:],16) in targets]
     if hits:
         report += [f'### caller {a:#x}']+hits
-        if n<=0x1800 and any('#0x6ba90' in h or '#0x6bb1c' in h or '#0x6bcec' in h or '#0x6be00' in h or '#0x6c1f4' in h for h in hits):focus.add(a)
+        if n<=0x1800 and any('#0x158b0' in h or '#0x16888' in h or '#0x6ba90' in h or '#0x6bb1c' in h or '#0x6bcec' in h or '#0x6be00' in h or '#0x6c1f4' in h for h in hits):focus.add(a)
 report+=['','## Root holder cells']
 for a in [0x79f3d8,0x79f4f0,0x7a1468]:
     v=ptr(a)
