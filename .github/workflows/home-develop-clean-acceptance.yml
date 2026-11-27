@@ -1,0 +1,96 @@
+name: HOME develop clean Windows acceptance
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-develop-clean-acceptance.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: home-develop-clean-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 537ffb3b2f1399854063214abf1ef650e3285238
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: windows-2025
+    timeout-minutes: 50
+    steps:
+      - name: Enable long paths
+        shell: pwsh
+        run: git config --global core.longpaths true
+      - name: Checkout pinned private develop
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          persist-credentials: false
+          path: target
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Clean Host and frontend acceptance (no device)
+        shell: pwsh
+        working-directory: target
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          if ((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA) { throw 'Pinned target mismatch' }
+          $temp = Join-Path $env:RUNNER_TEMP 'home-develop-clean'
+          New-Item -ItemType Directory -Force $temp | Out-Null
+          $script:failed = $false
+          function Invoke-PrivateStage {
+            param([string]$Stage,[scriptblock]$Command)
+            $log = Join-Path $temp "$Stage.log"
+            $ok = $false
+            try {
+              & $Command *> $log
+              $ok = ($LASTEXITCODE -eq 0)
+            } catch {
+              $_ | Out-String | Add-Content $log
+            }
+            if ($ok) {
+              "$Stage PASS" >> $env:GITHUB_STEP_SUMMARY
+            } else {
+              $script:failed = $true
+              "$Stage FAIL" >> $env:GITHUB_STEP_SUMMARY
+              if (Test-Path $log) {
+                $codes = [regex]::Matches((Get-Content -Raw $log),'\b(?:CS\d{4}|TS\d{4}|MSB\d{4}|NU\d{4}|NETSDK\d{4}|ERESOLVE|ETARGET|E404|EUSAGE|EBADENGINE|ENOTFOUND|EAI_AGAIN)\b') | ForEach-Object Value | Sort-Object -Unique | Select-Object -First 30
+                if ($codes) { "Diagnostic codes: $($codes -join ', ')" >> $env:GITHUB_STEP_SUMMARY }
+              }
+              Write-Output "::error::$Stage failed (private diagnostics suppressed)"
+            }
+            return $ok
+          }
+          "Target: $env:TARGET_SHA" >> $env:GITHUB_STEP_SUMMARY
+          $releaseService = Test-Path 'HomeLive.Host/Services/HostReleaseService.cs'
+          "Release service present in clean checkout: $releaseService" >> $env:GITHUB_STEP_SUMMARY
+          $null = Invoke-PrivateStage 'host-debug-build' { dotnet build HomeLive.Host/HomeLive.Host.csproj -c Debug --nologo }
+          $null = Invoke-PrivateStage 'host-tests' { dotnet test HomeLive.Host.Tests/HomeLive.Host.Tests.csproj -c Release --nologo }
+          $null = Invoke-PrivateStage 'core-tests' { dotnet test HomeLive.Core.Tests/HomeLive.Core.Tests.csproj -c Release --nologo }
+          Push-Location tauri2-app/frontend
+          try {
+            $installed = Invoke-PrivateStage 'npm-ci' { npm.cmd ci --no-audit --no-fund }
+            if ($installed) {
+              $null = Invoke-PrivateStage 'radix-resolution' { node.exe -e "require.resolve('@radix-ui/react-switch')" }
+              $null = Invoke-PrivateStage 'lock-unchanged' { git diff --exit-code -- package-lock.json }
+              $null = Invoke-PrivateStage 'typecheck' { npm.cmd run typecheck }
+              $null = Invoke-PrivateStage 'lint' { npm.cmd run lint }
+              $null = Invoke-PrivateStage 'frontend-tests' { npm.cmd test }
+              $null = Invoke-PrivateStage 'frontend-build' { npm.cmd run build }
+            } else {
+              'Frontend checks SKIPPED (npm ci failed)' >> $env:GITHUB_STEP_SUMMARY
+            }
+          } finally {
+            Pop-Location
+          }
+          if ($script:failed) { exit 1 }
+      - name: Remove private diagnostic logs
+        if: always()
+        shell: pwsh
+        run: Remove-Item (Join-Path $env:RUNNER_TEMP 'home-develop-clean') -Recurse -Force -ErrorAction SilentlyContinue
