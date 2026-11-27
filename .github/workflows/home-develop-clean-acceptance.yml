@@ -55,13 +55,14 @@ jobs:
               $_ | Out-String | Add-Content $log
             }
             if ($ok) {
+              Write-Host "$Stage PASS"
               "$Stage PASS" >> $env:GITHUB_STEP_SUMMARY
             } else {
               $script:failed = $true
               "$Stage FAIL" >> $env:GITHUB_STEP_SUMMARY
               if (Test-Path $log) {
                 $codes = [regex]::Matches(([string](Get-Content -Raw $log)),'\b(?:CS\d{4}|TS\d{4}|MSB\d{4}|NU\d{4}|NETSDK\d{4}|ERESOLVE|ETARGET|E404|EUSAGE|EBADENGINE|ENOTFOUND|EAI_AGAIN)\b') | ForEach-Object Value | Sort-Object -Unique | Select-Object -First 30
-                if ($codes) { "Diagnostic codes: $($codes -join ', ')" >> $env:GITHUB_STEP_SUMMARY }
+                if ($codes) { "Diagnostic codes: $($codes -join ', ')" >> $env:GITHUB_STEP_SUMMARY; Write-Host "::notice::$Stage diagnostic codes: $($codes -join ', ')" }
               }
               Write-Host "::error::$Stage failed (private diagnostics suppressed)"
             }
@@ -99,6 +100,47 @@ jobs:
           $null = [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'scripts/Start-TauriDev.ps1'), [ref]$tokens, [ref]$errors)
           if ($errors.Count) { throw 'Launcher PowerShell parser failed (private diagnostics suppressed)' }
           'launcher-syntax PASS' >> $env:GITHUB_STEP_SUMMARY
+      - name: Preserve bounded diagnostics in private repository
+        if: always() && !cancelled()
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $temp = Join-Path $env:RUNNER_TEMP 'home-develop-clean'
+          if (-not (Test-Path $temp)) { throw 'No private diagnostic directory' }
+          if ((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA) { throw 'Pinned target mismatch' }
+          $meta = & gh api repos/969981/HOME-Live-Plugin-CHS 2>$null
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot verify destination visibility' }
+          $repo = $meta | ConvertFrom-Json
+          if (-not $repo.private -or $repo.full_name -ne '969981/HOME-Live-Plugin-CHS') { throw 'Destination is not the expected private repository' }
+          $stages = @()
+          foreach ($file in Get-ChildItem -LiteralPath $temp -Filter '*.log' -File) {
+            $lines = @(Get-Content -LiteralPath $file.FullName)
+            $interesting = @($lines | Where-Object { $_ -match 'error|failed|exception|assert|expected|actual|received|passed|total|test files|tests ' } | Select-Object -Last 160)
+            $tail = @($lines | Select-Object -Last 50)
+            $stages += [ordered]@{stage=$file.BaseName;diagnostics=@($interesting | ForEach-Object { $_.Substring(0,[Math]::Min(1500,$_.Length)) });tail=@($tail | ForEach-Object { $_.Substring(0,[Math]::Min(1500,$_.Length)) })}
+          }
+          $dir = 'docs/devlog/ci'
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          $filePath = "$dir/home-develop-clean-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT.json"
+          [ordered]@{target=$env:TARGET_SHA;runId=$env:GITHUB_RUN_ID;attempt=$env:GITHUB_RUN_ATTEMPT;stages=$stages} | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $filePath -Encoding utf8NoBOM
+          & git add -- $filePath *> (Join-Path $temp 'publish-stage.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence staging failed' }
+          $staged = @(git diff --cached --name-only)
+          if ($staged.Count -ne 1 -or $staged[0] -ne $filePath) { throw 'Unexpected staged paths' }
+          & gh auth setup-git --hostname github.com *> (Join-Path $temp 'publish-auth.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence authentication failed' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          & git commit -m 'test: retain private develop acceptance diagnostics' *> (Join-Path $temp 'publish-commit.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence commit failed' }
+          $branch = "refs/heads/ci/develop-clean-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          & git push 'https://github.com/969981/HOME-Live-Plugin-CHS.git' "HEAD:$branch" *> (Join-Path $temp 'publish-push.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence push failed' }
+          'Bounded diagnostics published privately' >> $env:GITHUB_STEP_SUMMARY
       - name: Remove private diagnostic logs
         if: always()
         shell: pwsh
