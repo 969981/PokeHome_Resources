@@ -1,0 +1,61 @@
+name: HOME41 release receiver CFG audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths:
+      - '.github/workflows/home41-release-receiver-cfg.yml'
+      - 'tools/home41_release_receiver_cfg.py'
+permissions:
+  contents: write
+concurrency:
+  group: home41-release-receiver-cfg
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf
+            tools/home41_ghidra_elf_atlas.py
+            tools/home41_release_receiver_cfg.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned static disassembler
+        run: python -m pip install capstone==5.0.6
+      - name: Decode exact original FDEs and receiver definitions
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/home41_release_receiver_cfg.py
+          python tools/home41_release_receiver_cfg.py --elf 57b83ea8c0af21ef26e2519b9580b373_NCA/0/main.elf --out derived/4.1.0/release_receiver_cfg/report.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('derived/4.1.0/release_receiver_cfg/report.json')
+          d = json.loads(p.read_text())
+          expected = {'0xB2160': 901, '0xDAEA0': 344, '0xDCB18': 133, '0xDCD30': 162}
+          assert {f['rva']: f['instruction_count'] for f in d['functions']} == expected
+          assert len(d['jump_table_candidate']['entries']) == 7
+          print('Complete instruction coverage verified; indirect edge and alias conclusions remain unproven.')
+          PY
+      - name: Publish isolated static research report
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -f derived/4.1.0/release_receiver_cfg/report.json
+          git commit -m 'research: full release FDE CFG evidence'
+          git push origin "HEAD:refs/heads/ci/release-cfg-${GITHUB_RUN_ID}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home41-release-receiver-cfg
+          path: derived/4.1.0/release_receiver_cfg/report.json
+          if-no-files-found: warn
