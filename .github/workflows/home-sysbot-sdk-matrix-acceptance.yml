@@ -10,11 +10,95 @@ concurrency:
   group: home-sysbot-sdk-matrix-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: 44fc216b4886c9cac283e8eeb7eadbc5fd0055fe
-  SDK_SHA: 517f14b98515de79504cbcba5a1650cd71aa8050
+  TARGET_SHA: 56f94a12a47fb2e6240f9b826114530ab20861e5
+  SDK_SHA: f7292d6144eb9d1dac1f0b6d2182e96f41e52e64
   SDK_VERSION: 0.1.0-preview.1
 jobs:
+  prepare:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: windows-2025
+    timeout-minutes: 20
+    outputs:
+      target: ${{ steps.install.outputs.target }}
+    steps:
+      - name: Enable long paths before private checkout
+        shell: pwsh
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          persist-credentials: false
+          path: target
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Generate pinned candidate DLL and manifest
+        id: install
+        shell: pwsh
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $tmp = Join-Path $env:RUNNER_TEMP 'sdk-prepare'
+          New-Item -ItemType Directory -Force $tmp | Out-Null
+          $log = Join-Path $tmp 'prepare.log'
+          try {
+            if ((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA) { throw 'Pinned target mismatch' }
+            $meta = & gh api repos/969981/HOME-Live-Plugin-CHS 2>$null
+            if ($LASTEXITCODE -ne 0) { throw 'Cannot verify private target' }
+            $repo = $meta | ConvertFrom-Json
+            if (-not $repo.private -or $repo.full_name -ne '969981/HOME-Live-Plugin-CHS') { throw 'Unexpected target' }
+            $ref = & gh api repos/969981/HOME-Live-Plugin-CHS/git/ref/heads/feat/configurable-sysbot-sdk --jq .object.sha 2>$null
+            if ($LASTEXITCODE -ne 0 -or $ref.Trim() -ne $env:TARGET_SHA) { throw 'PR head changed; refusing push' }
+            $sdk = Join-Path $tmp 'sdk'
+            $feed = Join-Path $tmp 'feed'
+            git clone --no-checkout https://github.com/969981/SysBot.Platform.git $sdk *> $log
+            if ($LASTEXITCODE -ne 0) { throw 'SDK clone failed' }
+            git -C $sdk checkout --detach $env:SDK_SHA *>> $log
+            if ($LASTEXITCODE -ne 0 -or (git -C $sdk rev-parse HEAD).Trim() -ne $env:SDK_SHA) { throw 'SDK pin mismatch' }
+            dotnet pack "$sdk/src/SysBot.Base/SysBot.Base.csproj" -c Release -o $feed "-p:PackageVersion=$env:SDK_VERSION" "-p:RepositoryCommit=$env:SDK_SHA" *>> $log
+            if ($LASTEXITCODE -ne 0) { throw 'SDK pack failed' }
+            $pkg = Join-Path $feed "SysBot.Platform.Sdk.$env:SDK_VERSION.nupkg"
+            $zip = Join-Path $tmp 'candidate.zip'
+            Copy-Item $pkg $zip
+            Expand-Archive $zip (Join-Path $tmp 'unpacked')
+            $dll = Join-Path $tmp 'unpacked/lib/net10.0/SysBot.Base.dll'
+            $dir = "HomeLive.Core/deps/sdk/$env:SDK_VERSION"
+            New-Item -ItemType Directory -Force $dir | Out-Null
+            Copy-Item $dll "$dir/SysBot.Base.dll"
+            $hash = (Get-FileHash "$dir/SysBot.Base.dll" -Algorithm SHA256).Hash
+            [ordered]@{sourceRepository='969981/SysBot.Platform';sourceCommit=$env:SDK_SHA;packageVersion=$env:SDK_VERSION;assemblyVersion=[Reflection.AssemblyName]::GetAssemblyName((Resolve-Path "$dir/SysBot.Base.dll").Path).Version.ToString();dllSha256=$hash;packageSha256=(Get-FileHash $pkg -Algorithm SHA256).Hash;dotnetSdk=(dotnet --version);runId=$env:GITHUB_RUN_ID;attempt=$env:GITHUB_RUN_ATTEMPT} | ConvertTo-Json | Set-Content "$dir/manifest.json" -Encoding utf8NoBOM
+            git add -f -- "$dir/SysBot.Base.dll" "$dir/manifest.json" *>> $log
+            if ($LASTEXITCODE -ne 0) { throw 'Staging failed' }
+            $staged = @(git diff --cached --name-only)
+            if ($staged.Count -ne 2 -or "$dir/SysBot.Base.dll" -notin $staged -or "$dir/manifest.json" -notin $staged) { throw 'Unexpected staged paths' }
+            gh auth setup-git --hostname github.com *>> $log
+            if ($LASTEXITCODE -ne 0) { throw 'Private authentication failed' }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'build: vendor pinned SDK candidate DLL with provenance' *>> $log
+            if ($LASTEXITCODE -ne 0) { throw 'Commit failed' }
+            $new = (git rev-parse HEAD).Trim()
+            git push 'https://github.com/969981/HOME-Live-Plugin-CHS.git' HEAD:refs/heads/feat/configurable-sysbot-sdk *>> $log
+            if ($LASTEXITCODE -ne 0) { throw 'Private non-force push failed' }
+            "target=$new" >> $env:GITHUB_OUTPUT
+            'Versioned DLL committed to private PR; old binary retained' >> $env:GITHUB_STEP_SUMMARY
+          } catch {
+            Write-Host '::error::Candidate preparation failed; private details suppressed'
+            exit 1
+          } finally {
+            Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
+          }
+      - name: Remove private checkout
+        if: always()
+        shell: pwsh
+        run: Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'target') -Recurse -Force -ErrorAction SilentlyContinue
   verify:
+    needs: prepare
     if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
     name: Windows / ${{ matrix.mode }}
     runs-on: windows-2025
@@ -25,6 +109,7 @@ jobs:
         mode: [Source, Dll, NuGet]
     env:
       SDK_MODE: ${{ matrix.mode }}
+      TARGET_SHA: ${{ needs.prepare.outputs.target }}
     steps:
       - name: Enable long paths
         shell: pwsh
