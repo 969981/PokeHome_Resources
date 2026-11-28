@@ -239,6 +239,28 @@ def main():
             report["caller_windows"].append({"rva":hx(s),"size":fdes[s],
                 "instructions":[{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str} for i in rows]})
     report["callback_reference_candidates"] = callback_references(md,data,segs,fdes,secs)
+
+    # The first callback audit found a raw function-pointer cell for DAEA0.
+    # Export the actual descriptor cells and their FDEs rather than guessing
+    # wrapper addresses or treating a member pointer as a plain function.
+    descriptor_cells=[]
+    helpers=set()
+    for cell in range(0x7A1080,0x7A10E8,8):
+        value=struct.unpack("<Q",read_rva(data,segs,cell,8))[0]
+        descriptor_cells.append({"rva":hx(cell),"raw_qword":hx(value),"fde_entry":value in fdes})
+        if value in fdes:
+            helpers.add(value)
+    assert next(c["raw_qword"] for c in descriptor_cells if c["rva"]=="0x7A10C8")=="0xDAEA0"
+    report["callback_descriptor_cells"]=descriptor_cells
+    report["callback_binding_functions"]=[]
+    for start in sorted(helpers | {0xD97F0,0xD6D28,0xD70DC}):
+        if start not in fdes:
+            report["callback_binding_functions"].append({"rva":hx(start),"missing_fde":True})
+            continue
+        rows=scope(md,data,segs,start,fdes[start])
+        report["callback_binding_functions"].append({"rva":hx(start),"size":fdes[start],
+            "instructions":[{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str} for i in rows]})
+
     args.out.parent.mkdir(parents=True,exist_ok=True)
     args.out.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
     print("Full FDE instruction coverage:", [(f["rva"],f["instruction_count"]) for f in report["functions"]])
