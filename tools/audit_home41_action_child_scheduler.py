@@ -29,7 +29,7 @@ def ptr(a):
 
 report=['# HOME41 editor action dispatch and child scheduler','SHA256: '+SHA,'## 26 action routes']
 ii=body(0x8c130)
-targets={0x4d87d4,0x8c130,0x8ccd0,0xc81a0,0x8d584}
+targets={0x4d8504,0x4d862c,0x4d82d8,0x89390,0x4d87d4,0x8c130,0x8ccd0,0xc81a0,0x8d584}
 focus=set(targets)|{0x87f60,0x8d190,0x6d750,0xc8098,0xc81b8,0x248f0}
 entries=[0x8c1f0+4*struct.unpack('<H',e.read(0x6258fa+2*i,2))[0] for i in range(26)]
 for i,a in enumerate(entries):
@@ -47,12 +47,25 @@ for a,n in sorted(fde.items()):
     hits=[fmt(i) for i in ii if i.mnemonic in ('bl','b') and i.op_str.startswith('#0x') and int(i.op_str[1:],16) in targets]
     if hits:
         report += [f'### caller {a:#x}']+hits
-        if n<=0x2000 and any('#0x8d584' in h or '#0xc81a0' in h for h in hits):focus.add(a)
+        if n<=0x2000 and any(any('#'+hex(t)==x.split()[-1] for t in targets-{0x4d87d4}) for x in hits):focus.add(a)
     if 0x4d7000<=a<0x4d9900:
         h=[fmt(i) for i in ii if i.mnemonic.startswith(('ldr','str','ldp','stp')) and re.search(r'#0x(?:60|61|62|68|70|78|80|88)\]',i.op_str)]
         if h:
             report += [f'### scheduler candidate {a:#x}']+h
             if n<=0x2000:focus.add(a)
+report+=['','## Child scheduler jump table']
+for i,v in enumerate(e.read(0x657d30,5)):report.append(f'- state {i}: {0x4d8680+4*v:#x}')
+report+=['','## Relocation references to scheduler functions']
+for slot in sorted(relr|set(rela)):
+    try:t=ptr(slot)
+    except ValueError:continue
+    if t in {0x4d8504,0x4d862c,0x4d82d8,0x4d87d4,0x8c130,0x8ccd0}:
+        report.append(f'- {slot:#x} -> {t:#x}')
+        for a in range(slot-0x30,slot+0x38,8):
+            try:v=ptr(a)
+            except ValueError:continue
+            report.append(f'  {a:#x}: {hex(v) if v is not None else "unresolved"}')
+            if v in fde and e.executable(v) and fde[v]<=0x400:focus.add(v)
 report+=['','## Complete bodies']
 for a in sorted(focus):
     if a in fde and fde[a]<=0x4000:report+=dump(a)
