@@ -1,0 +1,44 @@
+name: Cleanup merged HOME PR 68 branches
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-merged-home-pr68.yml']
+permissions:
+  contents: read
+jobs:
+  cleanup:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+      EXPECTED: 39f30a0d28f18a7ac3859f1111b70da2d1763689
+      MERGE_SHA: 8f0fed6a33948579452772cb89c07cd099fc8131
+      DIAG_SHA: 24f030a1a1a3d2dba629c93683903759164ba346
+    steps:
+      - name: Verify merged ancestry and remove exact feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN"
+          gh api "repos/$TARGET_REPO/pulls/68" | jq -e --arg sha "$MERGE_SHA" '.merged == true and .merge_commit_sha == $sha' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$EXPECTED" | jq -e '.ahead_by == 0' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0' >/dev/null
+          gh auth setup-git --hostname github.com
+          git init -q "$RUNNER_TEMP/home-pr68-cleanup"
+          cd "$RUNNER_TEMP/home-pr68-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          remove_exact() {
+            local ref="$1" expected="$2" actual
+            actual="$(git ls-remote --heads origin "$ref" | cut -f1)"
+            if [ -n "$actual" ]; then
+              test "$actual" = "$expected" || { echo "::error::Branch head changed; refusing deletion"; exit 1; }
+              git push --force-with-lease="$ref:$expected" origin ":$ref"
+            fi
+            test -z "$(git ls-remote --heads origin "$ref")"
+            echo "Verified deletion: $ref"
+          }
+          remove_exact refs/heads/feat/pokemon-detail-stats-size-nature "$EXPECTED"
+          # Retain private diagnostics as acceptance evidence.
