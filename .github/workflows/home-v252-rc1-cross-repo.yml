@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 env:
-  TARGET_SHA: b80ededba260486f52ae21a1c431f920130e6ceb
+  TARGET_SHA: b8c544107874799ef9207f062a91c3b6bc5f9140
   SDK_SHA: 8282051c9763efd7c8a576847a634b1a4a72a8be
   SDK_VERSION: 2.5.2-rc.1
   SDK_ARTIFACT: '15250977223'
@@ -114,7 +114,7 @@ jobs:
           try {
             $tokens=$null; $parseErrors=$null
             $null=[System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path './scripts/Invoke-SysBotRc1Matrix.ps1').Path,[ref]$tokens,[ref]$parseErrors)
-            if($parseErrors.Count){$parseErrors | Out-String | Set-Content "$out/parser.log";throw 'Matrix PowerShell parser failed'}
+            if($parseErrors.Count){$parseErrors | ForEach-Object { "Line $($_.Extent.StartLineNumber):$($_.Extent.StartColumnNumber) $($_.Message)" } | Set-Content "$out/parser.log";throw 'Matrix PowerShell parser failed'}
             $args=@('-NoProfile','-File','./scripts/Invoke-SysBotRc1Matrix.ps1','-Mode',$env:SDK_MODE,'-PackageVersion',$env:SDK_VERSION,'-OutputDirectory',$out)
             switch($env:SDK_MODE){
               'Source' { $args+=@('-CandidateSourceProject',$env:RC_PROJECT) }
