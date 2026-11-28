@@ -175,6 +175,46 @@ def callback_references(md, data, segs, fdes, secs):
                              "relocation_type":info&0xffffffff})
     return rows
 
+def dispatch_candidates(md, data, segs, fdes):
+    """Search the original text for a local descriptor invoke pattern.
+    Matching offsets alone do not establish an object type or a feasible path.
+    Windows intentionally include the instruction bytes for manual verification.
+    """
+    import bisect
+    starts=sorted(fdes)
+    candidates=[]
+    for off,va,size,flags in segs:
+        if not flags&1:
+            continue
+        for p in range(0,size-3,4):
+            w=struct.unpack_from("<I",data,off+p)[0]
+            # LDR Xt,[Xn,#0x240] unsigned scaled imm12.
+            if (w & 0xfffffc00) != (0xf9400000 | ((0x240//8)<<10)):
+                continue
+            reg=w&31
+            base=(w>>5)&31
+            pc=va+p
+            idx=bisect.bisect_right(starts,pc)-1
+            if idx<0:
+                continue
+            owner=starts[idx]
+            end=owner+fdes[owner]
+            if pc>=end:
+                continue
+            left=max(owner,pc-0x50)
+            right=min(end,pc+0x84)
+            rows=list(md.disasm(read_rva(data,segs,left,right-left,True),left))
+            # Capture nearby formation of a descriptor context and a register
+            # call/tailcall. Do not require one ordering: compiler schedules vary.
+            ctx=[i for i in rows if i.mnemonic=="add" and re.search(r", #0x260$",i.op_str)]
+            calls=[i for i in rows if i.address>pc and i.mnemonic in ("blr","br") and i.op_str==f"x{reg}"]
+            if ctx and calls:
+                candidates.append({"owner":hx(owner),"load":hx(pc),"loaded_register":f"x{reg}",
+                    "base_register":f"x{base}","context_candidates":[hx(i.address) for i in ctx],
+                    "call_candidates":[hx(i.address) for i in calls],
+                    "window":[{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str} for i in rows]})
+    return candidates
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--elf",type=Path,required=True)
@@ -261,6 +301,23 @@ def main():
         report["callback_binding_functions"].append({"rva":hx(start),"size":fdes[start],
             "instructions":[{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str} for i in rows]})
 
+    report["descriptor_dispatch_candidates"]=dispatch_candidates(md,data,segs,fdes)
+    # Constructor D6FBC/D6FD0 publishes the Handler vtable address point
+    # from this original ELF cell plus 0x10. Inspect only file-backed values.
+    table_base=struct.unpack("<Q",read_rva(data,segs,0x7A0EC0,8))[0]
+    handler_table={"cell":"0x7A0EC0","raw_qword":hx(table_base),"slots":[]}
+    try:
+        for index in range(8):
+            slot=table_base+0x10+8*index
+            value=struct.unpack("<Q",read_rva(data,segs,slot,8))[0]
+            item={"slot":index,"rva":hx(slot),"raw_qword":hx(value),"fde_entry":value in fdes}
+            if index==0 and value in fdes:
+                rows=scope(md,data,segs,value,fdes[value])
+                item["instructions"]=[{"rva":hx(i.address),"bytes":i.bytes.hex(),"asm":i.mnemonic+" "+i.op_str} for i in rows]
+            handler_table["slots"].append(item)
+    except ValueError as exc:
+        handler_table["unresolved"]=str(exc)
+    report["handler_vtable_candidate"]=handler_table
     args.out.parent.mkdir(parents=True,exist_ok=True)
     args.out.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
     print("Full FDE instruction coverage:", [(f["rva"],f["instruction_count"]) for f in report["functions"]])
