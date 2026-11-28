@@ -460,6 +460,15 @@ visited 7
 - 0x6951884aa529101d: 0 exact LE matches: 
 - 0x2d5743d6ac63d786: 0 exact LE matches: 
 
+## Mode jump table and callback descriptors
+- mode 0: 0x35c8c
+- mode 1: 0x35d54
+- mode 2: 0x35dfc
+- mode 3: 0x35e70
+
+## Key name hypotheses (ELF ASCII strings; exact hash matches only)
+Checked 10773 distinct ELF ASCII candidates; no match is inconclusive.
+
 ## Caller evidence windows
 ### 0x2c378 caller 0x35c44 @ 0x35d4c
 ~~~asm
@@ -7783,6 +7792,126 @@ visited 7
 00035FD8 fd7bc2a8 ldp      x29, x30, [sp], #0x20
 00035FDC c0035fd6 ret      
 ~~~
+### 0x36064 (11 slots)
+~~~asm
+00036064 fd7bbfa9 stp      x29, x30, [sp, #-0x10]!
+00036068 fd030091 mov      x29, sp
+0003606C 080040f9 ldr      x8, [x0]
+00036070 010840b9 ldr      w1, [x0, #8]
+00036074 e00308aa mov      x0, x8
+00036078 090140f9 ldr      x9, [x8]
+0003607C 293140f9 ldr      x9, [x9, #0x60]
+00036080 20013fd6 blr      x9
+00036084 20008052 mov      w0, #1
+00036088 fd7bc1a8 ldp      x29, x30, [sp], #0x10
+0003608C c0035fd6 ret      
+~~~
+### 0x36090 (1 slots)
+~~~asm
+00036090 c0035fd6 ret      
+~~~
+### 0x36094 (3 slots)
+~~~asm
+00036094 082440a9 ldp      x8, x9, [x0]
+00036098 282400a9 stp      x8, x9, [x1]
+0003609C c0035fd6 ret      
+~~~
+### 0x360a0 (3 slots)
+~~~asm
+000360A0 082440a9 ldp      x8, x9, [x0]
+000360A4 282400a9 stp      x8, x9, [x1]
+000360A8 c0035fd6 ret      
+~~~
+### 0x360ac (11 slots)
+~~~asm
+000360AC fd7bbfa9 stp      x29, x30, [sp, #-0x10]!
+000360B0 fd030091 mov      x29, sp
+000360B4 080040f9 ldr      x8, [x0]
+000360B8 010840b9 ldr      w1, [x0, #8]
+000360BC e00308aa mov      x0, x8
+000360C0 090140f9 ldr      x9, [x8]
+000360C4 293140f9 ldr      x9, [x9, #0x60]
+000360C8 20013fd6 blr      x9
+000360CC 20008052 mov      w0, #1
+000360D0 fd7bc1a8 ldp      x29, x30, [sp], #0x10
+000360D4 c0035fd6 ret      
+~~~
+### 0x360d8 (1 slots)
+~~~asm
+000360D8 c0035fd6 ret      
+~~~
+### 0x360dc (3 slots)
+~~~asm
+000360DC 082440a9 ldp      x8, x9, [x0]
+000360E0 282400a9 stp      x8, x9, [x1]
+000360E4 c0035fd6 ret      
+~~~
+### 0x360e8 (3 slots)
+~~~asm
+000360E8 082440a9 ldp      x8, x9, [x0]
+000360EC 282400a9 stp      x8, x9, [x1]
+000360F0 c0035fd6 ret      
+~~~
+### 0x360f4 (11 slots)
+~~~asm
+000360F4 fd7bbfa9 stp      x29, x30, [sp, #-0x10]!
+000360F8 fd030091 mov      x29, sp
+000360FC 080040f9 ldr      x8, [x0]
+00036100 010840b9 ldr      w1, [x0, #8]
+00036104 e00308aa mov      x0, x8
+00036108 090140f9 ldr      x9, [x8]
+0003610C 293140f9 ldr      x9, [x9, #0x60]
+00036110 20013fd6 blr      x9
+00036114 20008052 mov      w0, #1
+00036118 fd7bc1a8 ldp      x29, x30, [sp], #0x10
+0003611C c0035fd6 ret      
+~~~
+### 0x36120 (1 slots)
+~~~asm
+00036120 c0035fd6 ret      
+~~~
+### 0x36124 (3 slots)
+~~~asm
+00036124 082440a9 ldp      x8, x9, [x0]
+00036128 282400a9 stp      x8, x9, [x1]
+0003612C c0035fd6 ret      
+~~~
+### 0x36130 (3 slots)
+~~~asm
+00036130 082440a9 ldp      x8, x9, [x0]
+00036134 282400a9 stp      x8, x9, [x1]
+00036138 c0035fd6 ret      
+~~~
+### 0x3613c (11 slots)
+~~~asm
+0003613C fd7bbfa9 stp      x29, x30, [sp, #-0x10]!
+00036140 fd030091 mov      x29, sp
+00036144 080040f9 ldr      x8, [x0]
+00036148 010840b9 ldr      w1, [x0, #8]
+0003614C e00308aa mov      x0, x8
+00036150 090140f9 ldr      x9, [x8]
+00036154 293140f9 ldr      x9, [x9, #0x60]
+00036158 20013fd6 blr      x9
+0003615C 20008052 mov      w0, #1
+00036160 fd7bc1a8 ldp      x29, x30, [sp], #0x10
+00036164 c0035fd6 ret      
+~~~
+### 0x36168 (1 slots)
+~~~asm
+00036168 c0035fd6 ret      
+~~~
+### 0x3616c (3 slots)
+~~~asm
+0003616C 082440a9 ldp      x8, x9, [x0]
+00036170 282400a9 stp      x8, x9, [x1]
+00036174 c0035fd6 ret      
+~~~
+### 0x36178 (3 slots)
+~~~asm
+00036178 082440a9 ldp      x8, x9, [x0]
+0003617C 282400a9 stp      x8, x9, [x1]
+00036180 c0035fd6 ret      
+~~~
 ### 0x5e5bc (78 slots)
 ~~~asm
 0005E5BC ff4306d1 sub      sp, sp, #0x190
@@ -11408,6 +11537,18 @@ visited 7
 002EB460 00004039 ldrb     w0, [x0]
 002EB464 c0035fd6 ret      
 ~~~
+### 0x2eb584 (9 slots)
+~~~asm
+002EB584 e80300aa mov      x8, x0
+002EB588 000440f9 ldr      x0, [x0, #8]
+002EB58C c00000b4 cbz      x0, #0x2eb5a4
+002EB590 21000012 and      w1, w1, #1
+002EB594 010d0039 strb     w1, [x8, #3]
+002EB598 080040f9 ldr      x8, [x0]
+002EB59C 021140f9 ldr      x2, [x8, #0x20]
+002EB5A0 40001fd6 br       x2
+002EB5A4 c0035fd6 ret      
+~~~
 ### 0x2eb5a8 (2 slots)
 ~~~asm
 002EB5A8 000c4039 ldrb     w0, [x0, #3]
@@ -11446,6 +11587,16 @@ visited 7
 002EB72C e923c36c ldp      d9, d8, [sp], #0x30
 002EB730 c0035fd6 ret      
 ~~~
+### 0x2eb73c (2 slots)
+~~~asm
+002EB73C 01040039 strb     w1, [x0, #1]
+002EB740 c0035fd6 ret      
+~~~
+### 0x2eb744 (2 slots)
+~~~asm
+002EB744 000440f9 ldr      x0, [x0, #8]
+002EB748 c0035fd6 ret      
+~~~
 ### 0x2eec14 (4 slots)
 ~~~asm
 002EEC14 083440f9 ldr      x8, [x0, #0x68]
@@ -11469,4 +11620,18 @@ visited 7
 004E9284 090840f9 ldr      x9, [x0, #0x10]
 004E9288 097d01a9 stp      x9, xzr, [x8, #0x10]
 004E928C c0035fd6 ret      
+~~~
+### 0x597398 (3 slots)
+~~~asm
+00597398 080c40f9 ldr      x8, [x0, #0x18]
+0059739C 00114079 ldrh     w0, [x8, #8]
+005973A0 c0035fd6 ret      
+~~~
+### 0x5973b0 (5 slots)
+~~~asm
+005973B0 080c40f9 ldr      x8, [x0, #0x18]
+005973B4 08294039 ldrb     w8, [x8, #0xa]
+005973B8 1f010071 cmp      w8, #0
+005973BC e0079f1a cset     w0, ne
+005973C0 c0035fd6 ret      
 ~~~
