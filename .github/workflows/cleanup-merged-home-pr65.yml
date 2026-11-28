@@ -1,0 +1,53 @@
+name: Cleanup merged HOME PR 65 branch
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-merged-home-pr65.yml']
+permissions:
+  contents: read
+concurrency:
+  group: cleanup-merged-home-pr65
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+      MERGE_SHA: 3cd936dab99a139603dfefec18230030e2e2035f
+    steps:
+      - name: Verify merged ancestry and exact cleanup refs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN"
+          gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh auth setup-git --hostname github.com
+          git init -q "$RUNNER_TEMP/home-pr65-cleanup"
+          cd "$RUNNER_TEMP/home-pr65-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          delete_exact() {
+            local branch="$1" expected="$2" ancestor="$3"
+            local ref="refs/heads/$branch" actual
+            actual="$(git ls-remote --heads origin "$ref" | cut -f1)"
+            if [ -z "$actual" ]; then
+              echo "$branch already absent"
+              return
+            fi
+            test "$actual" = "$expected" || { echo "::error::Unexpected head for $branch"; exit 1; }
+            gh api "repos/$TARGET_REPO/compare/develop...$ancestor" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+            git push --force-with-lease="$ref:$expected" origin ":$ref"
+            test -z "$(git ls-remote --heads origin "$ref")"
+            echo "Verified deletion of $branch"
+          }
+          gh api "repos/$TARGET_REPO/compare/c75b7bf93a720b0d3954f2e96d4e300b4c8eafce...c8aad0e82e908c67a3198edb778f19a43b29f45b" | jq -e '.ahead_by == 1 and .behind_by == 0 and (.files | length == 1) and .files[0].filename == "docs/devlog/ci/home-trainer-side-details-clean-46101564099-1.json" and .files[0].status == "added"' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/591042a86569c10a3cfd93cd000c46b39e843adf...b8184db4c7c0344967e989c299b16cb9f284cdc4" | jq -e '.ahead_by == 1 and .behind_by == 0 and (.files | length == 1) and .files[0].filename == "docs/devlog/ci/home-trainer-side-details-clean-46102001248-1.json" and .files[0].status == "added"' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/d067a315f4efd5908ee4dbd8d6177d33fe304005...5e63c9d022a8da20ff2d4b6963b2b203b38dfab9" | jq -e '.ahead_by == 1 and .behind_by == 0 and (.files | length == 1) and .files[0].filename == "docs/devlog/ci/home-trainer-side-details-clean-46102426931-1.json" and .files[0].status == "added"' >/dev/null
+          delete_exact feat/pokemon-trainer-side-details d067a315f4efd5908ee4dbd8d6177d33fe304005 d067a315f4efd5908ee4dbd8d6177d33fe304005
+          delete_exact ci/trainer-side-details-clean-46101564099-1 c8aad0e82e908c67a3198edb778f19a43b29f45b c75b7bf93a720b0d3954f2e96d4e300b4c8eafce
+          delete_exact ci/trainer-side-details-clean-46102001248-1 b8184db4c7c0344967e989c299b16cb9f284cdc4 591042a86569c10a3cfd93cd000c46b39e843adf
+          delete_exact ci/trainer-side-details-clean-46102426931-1 5e63c9d022a8da20ff2d4b6963b2b203b38dfab9 d067a315f4efd5908ee4dbd8d6177d33fe304005
+          echo "develop untouched; PR 65 source and diagnostic branches verified absent."
