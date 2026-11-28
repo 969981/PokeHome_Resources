@@ -122,6 +122,34 @@ for k in keys:
         pos = data.find(needle, pos+1)
     report.append(f"- {k:#018x}: {len(offsets)} exact LE matches: {', '.join(offsets[:100])}")
 
+report += ["", "## Mode jump table and callback descriptors"]
+for mode, offset in enumerate(e.read(0x6219d0, 4)):
+    report.append(f"- mode {mode}: {0x35c8c+4*offset:#x}")
+focus.update({0x36064,0x36090,0x36094,0x360a0,0x360ac,0x360d8,0x360dc,0x360e8,
+              0x360f4,0x36120,0x36124,0x36130,0x3613c,0x36168,0x3616c,0x36178,
+              0x597398,0x5973b0,0x2eb584,0x2eb73c,0x2eb744})
+report += ["", "## Key name hypotheses (ELF ASCII strings; exact hash matches only)"]
+import re
+# Candidate algorithms only, no assumed original hash implementation.
+wanted = set(keys) | {0xd5a646e9eb5de80c,0x31b5f77ad1a1d139,0x08e89686f5660e8f,
+                      0xbf2bb2531b7cde14,0x3b8f5513c2470901}
+def fnv(raw, variant):
+    h = 0xcbf29ce484222325
+    for v in raw:
+        h = ((h ^ v)*0x100000001b3 if variant == 1 else (h*0x100000001b3)^v) & 0xffffffffffffffff
+    return h
+strings = set()
+for m in re.finditer(rb"[ -~]{3,160}\x00", data):
+    raw = m.group()[:-1]
+    strings.add(raw)
+    strings.update(re.findall(rb"[A-Za-z_][A-Za-z0-9_.-]{2,100}",raw))
+for raw in sorted(strings):
+    for variant in (1,0):
+        h = fnv(raw,variant)
+        if h in wanted:
+            report.append(f"- FNV{'1a' if variant else '1'} {h:#018x}: {raw!r}")
+report.append(f"Checked {len(strings)} distinct ELF ASCII candidates; no match is inconclusive.")
+
 report += ["", "## Caller evidence windows"]
 for a in sorted(roots):
     for fn, pc, kind in callers[a]:
