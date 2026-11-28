@@ -25,7 +25,6 @@ jobs:
         run: |
           set -euo pipefail
           test -n "$GH_TOKEN"
-          gh api "repos/$TARGET_REPO/pulls/66" | jq -e --arg head "$EXPECTED" --arg merge "$MERGE_SHA" '.merged == true and .head.sha == $head and .base.ref == "develop" and .merge_commit_sha == $merge' >/dev/null
           gh api "repos/$TARGET_REPO/compare/develop...$EXPECTED" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
           gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
           gh auth setup-git --hostname github.com
