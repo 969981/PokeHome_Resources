@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 env:
-  TARGET_SHA: 4f0287db0d6854d66e4e150dc0452b0474f96475
+  TARGET_SHA: b80ededba260486f52ae21a1c431f920130e6ceb
   SDK_SHA: 8282051c9763efd7c8a576847a634b1a4a72a8be
   SDK_VERSION: 2.5.2-rc.1
   SDK_ARTIFACT: '15250977223'
@@ -112,6 +112,9 @@ jobs:
           $out=Join-Path $env:RUNNER_TEMP 'rc1-private-evidence'
           $ok=$false
           try {
+            $tokens=$null; $parseErrors=$null
+            $null=[System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path './scripts/Invoke-SysBotRc1Matrix.ps1').Path,[ref]$tokens,[ref]$parseErrors)
+            if($parseErrors.Count){$parseErrors | Out-String | Set-Content "$out/parser.log";throw 'Matrix PowerShell parser failed'}
             $args=@('-NoProfile','-File','./scripts/Invoke-SysBotRc1Matrix.ps1','-Mode',$env:SDK_MODE,'-PackageVersion',$env:SDK_VERSION,'-OutputDirectory',$out)
             switch($env:SDK_MODE){
               'Source' { $args+=@('-CandidateSourceProject',$env:RC_PROJECT) }
