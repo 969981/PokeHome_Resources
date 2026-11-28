@@ -1,0 +1,147 @@
+name: HOME linked game scan clean Windows acceptance
+on:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/home-linked-scan-clean-acceptance.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: home-linked-scan-clean-acceptance
+  cancel-in-progress: false
+env:
+  TARGET_SHA: 27ab8a1a3eecb1847740ec1bb66a7897fbdf09ba
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: windows-2025
+    timeout-minutes: 50
+    steps:
+      - name: Enable long paths
+        shell: pwsh
+        run: git config --global core.longpaths true
+      - name: Checkout pinned private scan fix
+        uses: actions/checkout@v4
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          persist-credentials: false
+          path: target
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Clean Host and frontend acceptance (no device)
+        shell: pwsh
+        working-directory: target
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          if ((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA) { throw 'Pinned target mismatch' }
+          $temp = Join-Path $env:RUNNER_TEMP 'home-linked-scan-clean'
+          New-Item -ItemType Directory -Force $temp | Out-Null
+          $script:failed = $false
+          function Invoke-PrivateStage {
+            param([string]$Stage,[scriptblock]$Command)
+            $log = Join-Path $temp "$Stage.log"
+            $ok = $false
+            try {
+              & $Command *> $log
+              $ok = ($LASTEXITCODE -eq 0)
+            } catch {
+              $_ | Out-String | Add-Content $log
+            }
+            if ($ok) {
+              Write-Host "$Stage PASS"
+              "$Stage PASS" >> $env:GITHUB_STEP_SUMMARY
+            } else {
+              $script:failed = $true
+              "$Stage FAIL" >> $env:GITHUB_STEP_SUMMARY
+              if (Test-Path $log) {
+                $codes = [regex]::Matches(([string](Get-Content -Raw $log)),'\b(?:CS\d{4}|TS\d{4}|MSB\d{4}|NU\d{4}|NETSDK\d{4}|ERESOLVE|ETARGET|E404|EUSAGE|EBADENGINE|ENOTFOUND|EAI_AGAIN)\b') | ForEach-Object Value | Sort-Object -Unique | Select-Object -First 30
+                if ($codes) { "Diagnostic codes: $($codes -join ', ')" >> $env:GITHUB_STEP_SUMMARY; Write-Host "::notice::$Stage diagnostic codes: $($codes -join ', ')" }
+              }
+              Write-Host "::error::$Stage failed (private diagnostics suppressed)"
+            }
+            return $ok
+          }
+          "Target: $env:TARGET_SHA" >> $env:GITHUB_STEP_SUMMARY
+          $releaseService = Test-Path 'HomeLive.Host/Services/HostReleaseService.cs'
+          "Release service present in clean checkout: $releaseService" >> $env:GITHUB_STEP_SUMMARY
+          $null = Invoke-PrivateStage 'host-debug-build' { dotnet build HomeLive.Host/HomeLive.Host.csproj -c Debug --nologo }
+          $null = Invoke-PrivateStage 'host-tests' { dotnet test HomeLive.Host.Tests/HomeLive.Host.Tests.csproj -c Release --nologo }
+          $null = Invoke-PrivateStage 'core-tests' { dotnet test HomeLive.Core.Tests/HomeLive.Core.Tests.csproj -c Release --nologo }
+          Push-Location tauri2-app/frontend
+          try {
+            $installed = Invoke-PrivateStage 'npm-ci' { npm.cmd ci --no-audit --no-fund }
+            if ($installed) {
+              $null = Invoke-PrivateStage 'radix-resolution' { node.exe -e "require.resolve('@radix-ui/react-switch')" }
+              $null = Invoke-PrivateStage 'lock-unchanged' { git diff --exit-code -- package-lock.json }
+              $null = Invoke-PrivateStage 'typecheck' { npm.cmd run typecheck }
+              $null = Invoke-PrivateStage 'lint' { npm.cmd run lint }
+              $null = Invoke-PrivateStage 'frontend-tests' { npm.cmd test }
+              $null = Invoke-PrivateStage 'frontend-build' { npm.cmd run build }
+            } else {
+              'Frontend checks SKIPPED (npm ci failed)' >> $env:GITHUB_STEP_SUMMARY
+            }
+          } finally {
+            Pop-Location
+          }
+          if ($script:failed) { exit 1 }
+      - name: Validate launcher PowerShell syntax
+        if: always()
+        working-directory: target
+        shell: pwsh
+        run: |
+          $tokens = $null; $errors = $null
+          $null = [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'scripts/Start-TauriDev.ps1'), [ref]$tokens, [ref]$errors)
+          if ($errors.Count) { throw 'Launcher PowerShell parser failed (private diagnostics suppressed)' }
+          'launcher-syntax PASS' >> $env:GITHUB_STEP_SUMMARY
+      - name: Preserve bounded diagnostics in private repository
+        if: always() && !cancelled()
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $temp = Join-Path $env:RUNNER_TEMP 'home-linked-scan-clean'
+          if (-not (Test-Path $temp)) { throw 'No private diagnostic directory' }
+          if ((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA) { throw 'Pinned target mismatch' }
+          $meta = & gh api repos/969981/HOME-Live-Plugin-CHS 2>$null
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot verify destination visibility' }
+          $repo = $meta | ConvertFrom-Json
+          if (-not $repo.private -or $repo.full_name -ne '969981/HOME-Live-Plugin-CHS') { throw 'Destination is not the expected private repository' }
+          $stages = @()
+          foreach ($file in Get-ChildItem -LiteralPath $temp -Filter '*.log' -File) {
+            $lines = @(Get-Content -LiteralPath $file.FullName)
+            $interesting = @($lines | Where-Object { $_ -match 'error|failed|exception|assert|expected|actual|received|passed|total|test files|tests ' } | Select-Object -Last 160)
+            $tail = @($lines | Select-Object -Last 50)
+            $stages += [ordered]@{stage=$file.BaseName;diagnostics=@($interesting | ForEach-Object { $_.Substring(0,[Math]::Min(1500,$_.Length)) });tail=@($tail | ForEach-Object { $_.Substring(0,[Math]::Min(1500,$_.Length)) })}
+          }
+          $dir = 'docs/devlog/ci'
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          $filePath = "$dir/home-linked-scan-clean-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT.json"
+          [ordered]@{target=$env:TARGET_SHA;runId=$env:GITHUB_RUN_ID;attempt=$env:GITHUB_RUN_ATTEMPT;stages=$stages} | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $filePath -Encoding utf8NoBOM
+          & git add -- $filePath *> (Join-Path $temp 'publish-stage.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence staging failed' }
+          $staged = @(git diff --cached --name-only)
+          if ($staged.Count -ne 1 -or $staged[0] -ne $filePath) { throw 'Unexpected staged paths' }
+          & gh auth setup-git --hostname github.com *> (Join-Path $temp 'publish-auth.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence authentication failed' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          & git commit -m 'test: retain private linked scan acceptance diagnostics' *> (Join-Path $temp 'publish-commit.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence commit failed' }
+          $branch = "refs/heads/ci/linked-scan-clean-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          & git push 'https://github.com/969981/HOME-Live-Plugin-CHS.git' "HEAD:$branch" *> (Join-Path $temp 'publish-push.txt')
+          if ($LASTEXITCODE -ne 0) { throw 'Private evidence push failed' }
+          'Bounded diagnostics published privately' >> $env:GITHUB_STEP_SUMMARY
+      - name: Remove private diagnostic logs
+        if: always()
+        shell: pwsh
+        run: Remove-Item (Join-Path $env:RUNNER_TEMP 'home-linked-scan-clean') -Recurse -Force -ErrorAction SilentlyContinue
