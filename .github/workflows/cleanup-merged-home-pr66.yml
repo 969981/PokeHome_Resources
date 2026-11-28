@@ -1,0 +1,42 @@
+name: Cleanup merged HOME PR 66 branch
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-merged-home-pr66.yml']
+permissions:
+  contents: read
+concurrency:
+  group: cleanup-merged-home-pr66
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+      MERGE_SHA: 86a7faaf986bea0378ae19381ff4368707b14554
+      EXPECTED: d2df1486918c6abdb8d02556e9c98c730aa545f1
+    steps:
+      - name: Verify merged ancestry and delete only exact source branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN"
+          gh api "repos/$TARGET_REPO/pulls/66" | jq -e --arg head "$EXPECTED" --arg merge "$MERGE_SHA" '.merged == true and .head.sha == $head and .base.ref == "develop" and .merge_commit_sha == $merge' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$EXPECTED" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh auth setup-git --hostname github.com
+          git init -q "$RUNNER_TEMP/home-pr66-cleanup"
+          cd "$RUNNER_TEMP/home-pr66-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          ref=refs/heads/feat/unified-home-edit-session
+          actual="$(git ls-remote --heads origin "$ref" | cut -f1)"
+          if [ -n "$actual" ]; then
+            test "$actual" = "$EXPECTED" || { echo "::error::Branch head changed; refusing deletion"; exit 1; }
+            git push --force-with-lease="$ref:$EXPECTED" origin ":$ref"
+          fi
+          test -z "$(git ls-remote --heads origin "$ref")"
+          echo "Verified deletion of feat/unified-home-edit-session; diagnostic branches retained."
