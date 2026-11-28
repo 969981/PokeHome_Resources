@@ -1,4 +1,4 @@
-name: Cleanup explicitly selected HOME branches 20261128
+name: Cleanup merged PR70 and finished HOME CI branches 20261128
 on:
   push:
     branches: ['4.1.0']
@@ -29,36 +29,75 @@ jobs:
           cd "$RUNNER_TEMP/home-cleanup"
           git remote add origin "https://github.com/$TARGET_REPO.git"
           cat > targets.txt <<'TARGETS'
-          ci/detail-clean-45976269377-1 a78303b4e4a61c42f8854289a9989c893ddf77e6 ci -
-          ci/detail-clean-45976516591-1 befca4d8f609f42118ef4179944bde8fcd1a936f ci -
-          ci/develop-clean-45960138608-1 b20436b6f60d4d4ea0bd1039f81d15b190a1b439 ci -
-          ci/develop-clean-45960323080-1 a2105c1bf5a9e154b39c497eb99f401aff91287e ci -
-          ci/develop-clean-45962449675-1 82e4f7aa0851bcb4547541d5f417f4a5d700c767 ci -
-          ci/develop-clean-45962711799-1 a3094e427d1baca6d96609f205c94593903b96f8 ci -
-          ci/develop-clean-45965989413-1 6867cf0bcfc6f6e552c25c5eda1bd3a970c1dfba ci -
-          ci/release-host-46022776242 2a4ca0cbac8ee1cb1352cb6ce4c71b5b72df1c5b ci -
-          ci/release-host-46023589727 83590bb423d36e5cc586baf8642bd6ddc280b1b7 ci -
-          ci/release-host-46024397839 998c74d183328c513a5e9ba06ce23c0497448202 ci -
-          ci/release-host-46025598917 f4e071eb85d0a5ef61400942efd8d908a542c44e ci -
-          ci/release-host-46026877471 ad5ae67622d9c691f4803d2a3159f44864302d4a ci -
-          ci/release-host-46027624181 0ab702e8110cd6d84b1eca4a4f40e7e0e5039a37 ci -
-          ci/release-mock-46020463538 1fbcdda171f60e7bfa1e804fa58f4c75bee41c70 ci -
-          ci/release-mock-46021119023 d2a0ed6db69c5334a92ac5ae84a7b7109412e3ca ci -
-          ci/release-mock-46021178494 50f7366f13e68014d2401462a8ecc4931091e84e ci -
-          ci/ui-webview2-45952908284-1 38fc96d781a517aaef5b5b2db904ab7548684436 ci -
-          feat/home-release-host-410 68248f557659b20bcc56c39126d9ca4f9bcf87de archive archive/home-release-host-410-20261128
-          feat/release-mock-ui-20261127 5103b18690ad61f5fdfa295c0f249e6e8e7cfdb8 merged -
-          feat/tauri2-native-image-runtime-20261126 052e80469c2a7bb10f26268cf2fbcaed17ea634d archive archive/tauri2-native-image-runtime-20261126-20261128
-          fix/concurrency-p0-20261127 c9ae453df05956c11eff223cd76e33d63ed2c76e merged -
+          ci/actions-runner-probe-20261128 d5a760a138db7a5fe5fc1f3d5415af5748111401 ci -
+          ci/continuous-drag-clean-46094331485-1 311a3721ba1b1e687c130a1aaf0fa9ceab0b901f ci -
+          ci/continuous-drag-clean-46095136798-1 79eca671def8124f373e9dce39ea243212fc9543 ci -
+          ci/continuous-drag-clean-46097481923-1 49e2b14f0d25c8d8c33941954fa25b63ab79404e ci -
+          ci/rc1-matrix-dll-46115715053-1 d39482f120cc19d214af5716528c80aba7ce3e17 ci -
+          ci/rc1-matrix-dll-46116093919-1 4b07d98d2c8edaedcc8bc444ecc1dc107c370377 ci -
+          ci/rc1-matrix-dll-46116271400-1 d33de483306bfa0cc9fa405f87a1d4a60656799b ci -
+          ci/rc1-matrix-nuget-46115715053-1 435d4ab04bd78ec7cbc726675d79667d9a28683c ci -
+          ci/rc1-matrix-nuget-46116093919-1 c8229a05879e65bf74b2c84c172112b0b7eb66b6 ci -
+          ci/rc1-matrix-nuget-46116271400-1 c1633cb4a0294b81051e7ff24bead75d187aae09 ci -
+          ci/rc1-matrix-source-46115715053-1 8e199971ba8c9df145c908df5d4bfa810ef1d20a ci -
+          ci/rc1-matrix-source-46116093919-1 338ab467b04e436aa2c81de367c489e5e0eaefbf ci -
+          ci/rc1-matrix-source-46116271400-1 ecd004676c3a97e5fcd5aeb7d2c6dbd632823537 ci -
+          ci/rc3-matrix-dll-46120182689-1 6c9a8caa33478b2465e878c99113623dabe6cc08 ci -
+          ci/rc3-matrix-dll-46120417337-1 4a9fe0a4b403d2c58813afa3be535c487d8b9e9c ci -
+          ci/rc3-matrix-dll-46121436476-1 86d9448209c6dc20a2b97cacbb459502f09b7522 ci -
+          ci/rc3-matrix-dll-46121729280-1 8e3ed799a7262de8f4411ba276a8c7f4165d6afd ci -
+          ci/rc3-matrix-nuget-46120182689-1 9a1a4bc6927d583299adf9aa2bcfca8a380e7759 ci -
+          ci/rc3-matrix-nuget-46120417337-1 60c73518f38be6740c08a322e6b49579b6bfbe1e ci -
+          ci/rc3-matrix-nuget-46121436476-1 1c0487c134a86ba5845ba144c370f30220701bca ci -
+          ci/rc3-matrix-nuget-46121729280-1 4d095de0af76736f322e202b3e93d4bdf4133858 ci -
+          ci/rc3-matrix-source-46120182689-1 fb3b70253e61ab5d26231b567783c39ed775050a ci -
+          ci/rc3-matrix-source-46120417337-1 7c7b146ad5680633a38fe16ee5c4f60913283bc8 ci -
+          ci/rc3-matrix-source-46121436476-1 27b726f1bc6d34ee02880d43d661b616529f2c66 ci -
+          ci/rc3-matrix-source-46121729280-1 1ca29142997b4ee2cc624b506f836da606fd3ed7 ci -
+          ci/sdk-matrix-dll-46103984329-1 e9e2b2e1cbcbaf0691b1949bcebaed801d01867a ci -
+          ci/sdk-matrix-dll-46105060876-1 c4126a4654573c412bf237eedd425c9a633c1d3f ci -
+          ci/sdk-matrix-dll-46105330581-1 539ed7d97e3a2ca5ab81a68ecf6bff8db92c87ef ci -
+          ci/sdk-matrix-dll-46106415122-1 9d9287f7b734d70d8be90d2346a8bafbf2f5116c ci -
+          ci/sdk-matrix-nuget-46103984329-1 91a1ae68ff5fc0872c01e74f8939b386b3a8bc58 ci -
+          ci/sdk-matrix-nuget-46105060876-1 f645cb147736a8d62fe98653a724a4f0ebb7800f ci -
+          ci/sdk-matrix-nuget-46105330581-1 692af85778d11715f998aa5d51b5a1842417f8f8 ci -
+          ci/sdk-matrix-nuget-46106415122-1 d7f2cb27b218c268f40f97c9827a517e6b8c3db0 ci -
+          ci/sdk-matrix-source-46103984329-1 52d120c02c3ec4315bdd95f65a1480f245858fb8 ci -
+          ci/sdk-matrix-source-46105060876-1 b84e7d3833f97b74aa443be7882e045156f1ad03 ci -
+          ci/sdk-matrix-source-46105330581-1 d21eb887df0c96834dbca994e2a85029def9e37d ci -
+          ci/sdk-matrix-source-46106415122-1 8d087906035a75ee516b03c100921e6661c20af8 ci -
+          ci/sysbot-platform-preview-compat 6f2a8d6424103ffb2831935d65a8356d29b7074b ci -
+          ci/sysbot-v252-rc1-compat b8c544107874799ef9207f062a91c3b6bc5f9140 ci -
+          ci/sysbot-v252-rc3-compat 44b4b2dd41bf086ff11a8a36f9fa235cce61038a ci -
+          ci/unified-edit-session-46103832579-1 8c9deacf7db6e6c9b856f2dc547f97307367779e ci -
+          ci/unified-edit-session-46104536597-1 4067bade939c5465a9f1b2eb77947106f2c71687 ci -
+          ci/unified-edit-session-46104916611-1 14f187ff53511f72be854b5be514b6c7160d4fd4 ci -
+          ci/unified-edit-session-46105441497-1 79815fae4b12a21ae30026505f354bc78d5bdc84 ci -
+          ci/unified-edit-session-46105947376-1 7f15a47a97171d0119f19f12d3a023a98ea6ef52 ci -
+          ci/unified-edit-session-46106397882-1 7a39391e0f2e7d83235a6ae8b4fa24accf6cf858 ci -
+          ci/unified-edit-session-46106909828-1 37e72f5a72b2e9d9fc10c21bc93e777318d80263 ci -
+          ci/unified-edit-session-46107702286-1 68adc0e325c55cc058ac02d1af988d740ed8f678 ci -
+          ci/unified-edit-session-46108185725-1 4cc6993c2607f1e44de09183bb173cb76f34bfa4 ci -
+          ci/unified-edit-session-46109910255-1 24f030a1a1a3d2dba629c93683903759164ba346 ci -
+          ci/unified-edit-session-clean-46103530999-1 171d00b97d1797af7aff6ab12bed6470b2f6b2e8 ci -
+          ci/unified-pr70-46119785547-1 b7c23dadfd90a04d1d3401a91bfd2b3551604c85 ci -
+          ci/unified-pr70-46121497773-1 1483e6f95a960012629d0004d110d25b007cb4d5 ci -
+          ci/unified-pr70-46123081329-1 ed8663c17bb0b4fd4f6fd4f6fc58af80bd288fe6 ci -
+          ci/unified-pr70-46124970029-1 b54768dbf34ec2c3a6d470fb39b326eb7f447aeb ci -
+          feat/configurable-sysbot-sdk 365d84cffa1750404426b6747acd4e0cfc9d7995 merged -
+          fix/tauri-box-refresh-release-import-20261127 51afc51b05282c2eb617d82930e905ce26ec8d16 merged -
+          fix/unified-cross-side-drag-session 1e85fe770940f28ba67161ef116abd9744f343e3 merged -
           TARGETS
           # Validate the whole allowlist before deleting anything.
           while read -r branch sha mode tag; do
             ref="refs/heads/$branch"
             test "$branch" != develop && test "$branch" != "$default_branch"
-            case "$branch" in ci/*|fix/concurrency-p0-20261127|feat/tauri2-native-image-runtime-20261126|feat/release-mock-ui-20261127|feat/home-release-host-410) ;; *) exit 1;; esac
+            case "$branch" in ci/*|feat/configurable-sysbot-sdk|fix/tauri-box-refresh-release-import-20261127|fix/unified-cross-side-drag-session) ;; *) exit 1;; esac
             actual="$(git ls-remote --heads origin "$ref" 2>/dev/null | cut -f1)"
             if [ -z "$actual" ]; then continue; fi
             test "$actual" = "$sha" || { echo "::error::A selected branch changed; no cleanup performed"; exit 1; }
+            test "$(gh api --method GET "repos/$TARGET_REPO/pulls" -f state=open -f head="969981:$branch" --jq length 2>/dev/null)" = 0
+            test "$(gh api --method GET "repos/$TARGET_REPO/pulls" -f state=open -f base="$branch" --jq length 2>/dev/null)" = 0
             if [ "$mode" = merged ]; then
               gh api "repos/$TARGET_REPO/compare/develop...$sha" 2>/dev/null | jq -e '.ahead_by == 0' >/dev/null
             fi
@@ -91,4 +130,4 @@ jobs:
           done < targets.txt
           echo "Selected branch refs absent: $deleted; failures: $failed"
           test "$failed" -eq 0
-          test "$deleted" -eq 21
+          test "$deleted" -eq 58
