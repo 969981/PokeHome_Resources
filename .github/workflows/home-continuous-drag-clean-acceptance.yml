@@ -10,7 +10,7 @@ concurrency:
   group: home-continuous-drag-clean-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: ee2485501550078c81db5bf4f6d6c03229dc4687
+  TARGET_SHA: e719739863a71b1ee099d6952fb71e8144b09ef4
 jobs:
   verify:
     if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
