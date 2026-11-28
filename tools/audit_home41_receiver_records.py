@@ -152,6 +152,55 @@ for root in sorted(roots | {0x96fbc,0xdbe5c}):
             if t not in seen and len(seen)<2000:
                 seen.add(t);q.append((t,p+[(pc,t)]))
     report.append(f"- {root:#x}: visited={len(seen)} cap={len(seen)>=2000} path={path!r}")
+report += ["", "## Exact token-thunk relocation windows"]
+anchors={0x76dd18,0x76dda8,0x76ddc0,0x76e1a0,0x76e230,0x76e248}
+for anchor in sorted(anchors):
+    report.append(f"### token thunk slot {anchor:#x}")
+    for slot in range(anchor-0x20,anchor+0x90,8):
+        raw=struct.unpack("<Q",e.read(slot,8))[0]
+        t=slots.get(slot)
+        report.append(f"- {slot:#x} delta={slot-anchor:+#x} raw={raw:#x} executable={hex(t) if t is not None else '-'}")
+        if t is not None: focus.add(t)
+# Token-specific primary candidates and known UI name strings
+report += ["", "## UI name anchors"]
+for va in (0x6167d4,0x615c42):
+    raw=e.read(va,64).split(b"\\0")[0]
+    report.append(f"- {va:#x}: {raw!r}")
+report += ["", "## Exact thunk window reference materializers"]
+targets={p+i for p in anchors for i in range(-0x20,0x20,8)}
+# Also include relocated cells pointing to these windows.
+cells={}
+for slot in sorted(relr|set(rela)):
+    try: t=pointer(slot)
+    except ValueError: continue
+    if t in targets: cells[slot]=t
+for slot,t in cells.items(): report.append(f"- relocated cell {slot:#x} -> {t:#x}")
+pages={t&~0xfff for t in targets|set(cells)}
+for a,n in sorted(fde.items()):
+    if not e.executable(a): continue
+    raw=e.read(a,n-n%4)
+    for off,(w,) in enumerate(struct.iter_unpack("<I",raw)):
+        if w&0x9f000000!=0x90000000: continue
+        imm=((w>>29)&3)|(((w>>5)&0x7ffff)<<2)
+        if imm&(1<<20): imm-=1<<21
+        pc=a+off*4;page=(pc&~0xfff)+(imm<<12);reg=w&31
+        if page not in pages: continue
+        for delta in range(4,48,4):
+            if off*4+delta+4>len(raw): break
+            v=struct.unpack_from("<I",raw,off*4+delta)[0]
+            if (v>>5)&31!=reg: continue
+            if v&0xffc00000==0x91000000:
+                val=page+((v>>10)&0xfff)
+                if val in targets:
+                    report.append(f"- {a:#x} @ {pc:#x}/{pc+delta:#x} ADD {val:#x}")
+                    focus.add(a)
+            elif v&0xffc00000==0xf9400000:
+                val=page+8*((v>>10)&0xfff)
+                if val in cells:
+                    report.append(f"- {a:#x} @ {pc:#x}/{pc+delta:#x} LDR {val:#x} -> {cells[val]:#x}")
+                    focus.add(a)
+focus.update({0x201310,0x9a14c,0x2c9f8})
+
 report += ["", "## Function bodies"]
 for a in sorted(focus):
     ii=body(a)
