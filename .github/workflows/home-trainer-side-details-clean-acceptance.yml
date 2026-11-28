@@ -10,7 +10,7 @@ concurrency:
   group: home-trainer-side-details-clean-acceptance
   cancel-in-progress: false
 env:
-  TARGET_SHA: c75b7bf93a720b0d3954f2e96d4e300b4c8eafce
+  TARGET_SHA: 591042a86569c10a3cfd93cd000c46b39e843adf
 jobs:
   verify:
     if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
