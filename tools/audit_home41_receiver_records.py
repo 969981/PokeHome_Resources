@@ -156,7 +156,7 @@ report += ["", "## Exact token-thunk relocation windows"]
 anchors={0x76dd18,0x76dda8,0x76ddc0,0x76e1a0,0x76e230,0x76e248}
 for anchor in sorted(anchors):
     report.append(f"### token thunk slot {anchor:#x}")
-    for slot in range(anchor-0x20,anchor+0x90,8):
+    for slot in range(anchor-0x80,anchor+0x90,8):
         raw=struct.unpack("<Q",e.read(slot,8))[0]
         t=slots.get(slot)
         report.append(f"- {slot:#x} delta={slot-anchor:+#x} raw={raw:#x} executable={hex(t) if t is not None else '-'}")
@@ -167,7 +167,7 @@ for va in (0x6167d4,0x615c42):
     raw=e.read(va,64).split(b"\\0")[0]
     report.append(f"- {va:#x}: {raw!r}")
 report += ["", "## Exact thunk window reference materializers"]
-targets={p+i for p in anchors for i in range(-0x20,0x20,8)}
+targets={p+i for p in anchors for i in range(-0x80,0x20,8)}
 # Also include relocated cells pointing to these windows.
 cells={}
 for slot in sorted(relr|set(rela)):
@@ -199,7 +199,7 @@ for a,n in sorted(fde.items()):
                 if val in cells:
                     report.append(f"- {a:#x} @ {pc:#x}/{pc+delta:#x} LDR {val:#x} -> {cells[val]:#x}")
                     focus.add(a)
-focus.update({0x201310,0x9a14c,0x2c9f8})
+focus.update({0x201310,0x9a14c,0x2c9f8,0x27f78,0x27f7c,0x27f80})
 
 report += ["", "## Function bodies"]
 for a in sorted(focus):
