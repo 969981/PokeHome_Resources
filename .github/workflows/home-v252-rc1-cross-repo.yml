@@ -1,0 +1,187 @@
+name: HOME V2.5.2 RC1 cross-repository acceptance
+on:
+  push:
+    branches: [ci/home-v252-rc1-cross-repo]
+    paths: ['.github/workflows/home-v252-rc1-cross-repo.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  TARGET_SHA: 4f0287db0d6854d66e4e150dc0452b0474f96475
+  SDK_SHA: 8282051c9763efd7c8a576847a634b1a4a72a8be
+  SDK_VERSION: 2.5.2-rc.1
+  SDK_ARTIFACT: '15250977223'
+  SDK_ARTIFACT_SHA256: fdea1d4b1d8644157d2f37e63b69d1e201661f350143ecfd4dc219aa8b636a69
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/ci/home-v252-rc1-cross-repo' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    name: RC1 / Windows / ${{ matrix.mode }}
+    runs-on: windows-2025
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [Source, Dll, NuGet]
+    env:
+      SDK_MODE: ${{ matrix.mode }}
+    steps:
+      - run: git config --global core.longpaths true
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: 969981/HOME-Live-Plugin-CHS
+          ref: ${{ env.TARGET_SHA }}
+          token: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+          persist-credentials: false
+          path: target
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        with:
+          dotnet-version: '10.0.x'
+      - name: Prepare exact SDK (no private output)
+        id: prepare
+        shell: pwsh
+        working-directory: target
+        env:
+          ARTIFACT_TOKEN: ${{ secrets.SYSBOT_ARTIFACT_READ_TOKEN || secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        run: |
+          $ErrorActionPreference='Stop'
+          $PSNativeCommandUseErrorActionPreference=$false
+          $out=Join-Path $env:RUNNER_TEMP 'rc1-private-evidence'
+          New-Item -ItemType Directory -Force $out | Out-Null
+          $log=Join-Path $out 'prepare.log'
+          try {
+            if((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA){throw 'Private target pin mismatch'}
+            $env:TARGET_SHA | Set-Content "$out/home-commit.txt"
+            $env:SDK_SHA | Set-Content "$out/sdk-commit.txt"
+            if($env:SDK_MODE -eq 'Source'){
+              $sdk=Join-Path $env:RUNNER_TEMP 'rc1-source'
+              git clone --no-checkout https://github.com/969981/SysBot.Platform.git $sdk *> $log
+              if($LASTEXITCODE){throw 'SDK checkout failed'}
+              git -C $sdk checkout --detach $env:SDK_SHA *>> $log
+              if($LASTEXITCODE -or (git -C $sdk rev-parse HEAD).Trim() -ne $env:SDK_SHA){throw 'SDK pin mismatch'}
+              $v=Get-Content "$sdk/versions.json" -Raw | ConvertFrom-Json
+              if($v.sdk -ne $env:SDK_VERSION){throw 'SDK version mismatch'}
+              "project=$sdk/src/SysBot.Base/SysBot.Base.csproj" >> $env:GITHUB_OUTPUT
+            } else {
+              $zip=Join-Path $env:RUNNER_TEMP 'rc1-sdk.zip'
+              $dest=Join-Path $env:RUNNER_TEMP 'rc1-sdk'
+              $url="https://api.github.com/repos/969981/SysBot.Platform/actions/artifacts/$env:SDK_ARTIFACT/zip"
+              & curl.exe --fail --silent --show-error --location --header "Authorization: Bearer $env:ARTIFACT_TOKEN" --header "Accept: application/vnd.github+json" --output $zip $url *> $log
+              if($LASTEXITCODE){throw 'Original RC1 artifact download failed; Actions read permission may be required. No fallback.'}
+              $hash=(Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash
+              if($hash -ne $env:SDK_ARTIFACT_SHA256){throw 'Original artifact archive SHA256 mismatch'}
+              $hash | Set-Content "$out/sdk-artifact-sha256.txt"
+              Expand-Archive -LiteralPath $zip -DestinationPath $dest
+              $root=Join-Path $dest 'sdk'
+              $manifest=Get-Content "$root/manifest.json" -Raw | ConvertFrom-Json
+              if($manifest.commit -ne $env:SDK_SHA -or $manifest.sdk_version -ne $env:SDK_VERSION -or $manifest.hardware_verified -ne $false -or $manifest.release -ne $false){throw 'RC1 manifest mismatch'}
+              foreach($line in Get-Content "$root/SHA256SUMS"){
+                if($line -notmatch '^([0-9a-f]{64})  (.+)$'){throw 'Invalid checksum record'}
+                $expected=$Matches[1];$path=$Matches[2]
+                if((Get-FileHash -LiteralPath (Join-Path $root $path) -Algorithm SHA256).Hash -ne $expected){throw 'Internal checksum mismatch'}
+              }
+              Copy-Item "$root/manifest.json" "$out/sdk-manifest.json"
+              $dll=Join-Path $root 'dll/SysBot.Base.dll'
+              $dllHash=(Get-FileHash -LiteralPath $dll -Algorithm SHA256).Hash
+              $feed=Join-Path $root 'nuget'
+              $pkgHash=(Get-FileHash -LiteralPath "$feed/SysBot.Platform.Sdk.$env:SDK_VERSION.nupkg" -Algorithm SHA256).Hash
+              $dllHash | Set-Content "$out/candidate-dll-sha256.txt"
+              $pkgHash | Set-Content "$out/candidate-package-sha256.txt"
+              "dll=$dll" >> $env:GITHUB_OUTPUT
+              "dllhash=$dllHash" >> $env:GITHUB_OUTPUT
+              "feed=$feed" >> $env:GITHUB_OUTPUT
+              "pkghash=$pkgHash" >> $env:GITHUB_OUTPUT
+            }
+            Write-Host 'Exact SDK preparation PASS'
+          } catch {
+            $_ | Out-String | Set-Content "$out/prepare-fatal.log"
+            Write-Host '::error::SDK preparation failed; see private evidence'
+            exit 1
+          }
+      - name: Strict six-project matrix (private logs)
+        shell: pwsh
+        working-directory: target
+        env:
+          RC_PROJECT: ${{ steps.prepare.outputs.project }}
+          RC_DLL: ${{ steps.prepare.outputs.dll }}
+          RC_DLL_HASH: ${{ steps.prepare.outputs.dllhash }}
+          RC_FEED: ${{ steps.prepare.outputs.feed }}
+          RC_PKG_HASH: ${{ steps.prepare.outputs.pkghash }}
+        run: |
+          $ErrorActionPreference='Stop'
+          $PSNativeCommandUseErrorActionPreference=$false
+          $out=Join-Path $env:RUNNER_TEMP 'rc1-private-evidence'
+          $ok=$false
+          try {
+            $args=@('-NoProfile','-File','./scripts/Invoke-SysBotRc1Matrix.ps1','-Mode',$env:SDK_MODE,'-PackageVersion',$env:SDK_VERSION,'-OutputDirectory',$out)
+            switch($env:SDK_MODE){
+              'Source' { $args+=@('-CandidateSourceProject',$env:RC_PROJECT) }
+              'Dll' { $args+=@('-CandidateDll',$env:RC_DLL,'-CandidateDllSha256',$env:RC_DLL_HASH) }
+              'NuGet' { $args+=@('-Feed',$env:RC_FEED,'-CandidatePackageSha256',$env:RC_PKG_HASH,'-CandidateDllSha256',$env:RC_DLL_HASH) }
+            }
+            & pwsh @args *> "$out/matrix-driver.log"
+            if($LASTEXITCODE){throw 'Matrix build or regression failed'}
+            $summary=@(Get-Content "$out/summary.json" -Raw | ConvertFrom-Json)
+            foreach($stage in @('restore','build','HomeLive.Core.Tests-tests','HomeLive.Host.Tests-tests','sdk-identity')){
+              if(@($summary | Where-Object {$_.name -eq $stage -and $_.status -eq 'PASS' -and $_.exitCode -eq 0}).Count -ne 1){throw 'Required stage missing'}
+            }
+            if(@($summary | Where-Object {$_.status -ne 'PASS' -or $_.exitCode -ne 0}).Count){throw 'Matrix stage failure'}
+            $identities=@(Get-Content "$out/sdk-identities.json" -Raw | ConvertFrom-Json)
+            if($identities.Count -ne 6){throw 'Incomplete identity evidence'}
+            $ok=$true
+          } catch { $_ | Out-String | Set-Content "$out/cross-fatal.log" }
+          if(!$ok){Write-Host '::error::RC1 matrix failed; see private evidence';exit 1}
+          Write-Host "$env:SDK_MODE PASS"
+          "$env:SDK_MODE PASS (six projects and full Core/Host regression)" >> $env:GITHUB_STEP_SUMMARY
+      - name: Preserve bounded evidence only in private repository
+        if: always() && !cancelled()
+        working-directory: target
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+        run: |
+          $ErrorActionPreference='Stop'
+          $PSNativeCommandUseErrorActionPreference=$false
+          $out=Join-Path $env:RUNNER_TEMP 'rc1-private-evidence'
+          if(!(Test-Path $out)){throw 'Private evidence missing'}
+          if((git rev-parse HEAD).Trim() -ne $env:TARGET_SHA){throw 'Private target mismatch'}
+          $meta=& gh api repos/969981/HOME-Live-Plugin-CHS 2>$null
+          if($LASTEXITCODE){throw 'Private destination check failed'}
+          $repo=$meta | ConvertFrom-Json
+          if(!$repo.private -or $repo.full_name -ne '969981/HOME-Live-Plugin-CHS'){throw 'Private destination visibility mismatch'}
+          $stages=@(Get-ChildItem $out -Filter '*.log' -File | ForEach-Object {
+            $lines=@(Get-Content -LiteralPath $_.FullName)
+            [ordered]@{stage=$_.BaseName;tail=@($lines | Select-Object -Last 60 | ForEach-Object {$_.Substring(0,[Math]::Min(1200,$_.Length))});diagnostics=@($lines | Where-Object {$_ -match 'error|failed|exception|assert|expected|actual|passed|total'} | Select-Object -Last 80 | ForEach-Object {$_.Substring(0,[Math]::Min(1200,$_.Length))})}
+          })
+          $tests=@(Get-ChildItem $out -Filter '*.trx' -File | ForEach-Object {
+            [xml]$trx=Get-Content -LiteralPath $_.FullName -Raw
+            $c=$trx.TestRun.ResultSummary.Counters
+            [ordered]@{file=$_.Name;total=$c.total;passed=$c.passed;failed=$c.failed;notExecuted=$c.notExecuted}
+          })
+          $summary=$null;$identities=$null
+          if(Test-Path "$out/summary.json"){$summary=Get-Content "$out/summary.json" -Raw | ConvertFrom-Json}
+          if(Test-Path "$out/sdk-identities.json"){$identities=Get-Content "$out/sdk-identities.json" -Raw | ConvertFrom-Json}
+          $mode=$env:SDK_MODE.ToLowerInvariant()
+          $dir='docs/devlog/ci'
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          $path="$dir/home-rc1-$mode-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT.json"
+          [ordered]@{target=$env:TARGET_SHA;sdkCandidate=$env:SDK_SHA;sdkVersion=$env:SDK_VERSION;artifact=$env:SDK_ARTIFACT;mode=$env:SDK_MODE;runId=$env:GITHUB_RUN_ID;attempt=$env:GITHUB_RUN_ATTEMPT;summary=$summary;identities=$identities;tests=$tests;stages=$stages} | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $path -Encoding utf8NoBOM
+          git add -- $path *> "$out/publish.log"
+          if($LASTEXITCODE){throw 'Private staging failed'}
+          $staged=@(git diff --cached --name-only)
+          if($staged.Count -ne 1 -or $staged[0] -ne $path){throw 'Unexpected staged paths'}
+          gh auth setup-git --hostname github.com *>> "$out/publish.log"
+          if($LASTEXITCODE){throw 'Private auth failed'}
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'test: preserve private RC1 matrix evidence' *>> "$out/publish.log"
+          if($LASTEXITCODE){throw 'Private commit failed'}
+          $branch="refs/heads/ci/rc1-matrix-$mode-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          git push 'https://github.com/969981/HOME-Live-Plugin-CHS.git' "HEAD:$branch" *>> "$out/publish.log"
+          if($LASTEXITCODE){throw 'Private evidence push failed'}
+          Write-Host 'Private evidence retained'
+      - name: Clean private files
+        if: always()
+        shell: pwsh
+        run: |
+          Remove-Item (Join-Path $env:RUNNER_TEMP 'rc1-private-evidence') -Recurse -Force -ErrorAction SilentlyContinue
+          Remove-Item (Join-Path $env:GITHUB_WORKSPACE 'target') -Recurse -Force -ErrorAction SilentlyContinue
