@@ -56,13 +56,7 @@ for a in [0xdf2f0,0xe1a70,0x24c50,0x24b48,0x6dde0,0x6df90]:
         if i.mnemonic=='adrp':
             reg,p=i.op_str.split(', ');pages[reg]=int(p[1:],16)
         elif i.mnemonic=='add':
-            m=re.match(r'(\w+), (\w+), #(0x[0-9a-f]+|\d+)
-for a in sorted(focus):
-    if a in fde and fde[a]<=0x4000:report+=dump(a)
-Path(out).parent.mkdir(parents=True,exist_ok=True)
-Path(out).write_text('\n'.join(report)+'\n',encoding='utf8')
-print('selected',len(focus))
-,i.op_str)
+            m=re.fullmatch(r'(\w+), (\w+), #(0x[0-9a-f]+|\d+)',i.op_str)
             if m:
                 dst,base,off=m.groups()
                 if base in pages:
