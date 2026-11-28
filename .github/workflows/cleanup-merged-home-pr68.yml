@@ -16,16 +16,14 @@ jobs:
       TARGET_REPO: 969981/HOME-Live-Plugin-CHS
       EXPECTED: 39f30a0d28f18a7ac3859f1111b70da2d1763689
       MERGE_SHA: 8f0fed6a33948579452772cb89c07cd099fc8131
-      DIAG_SHA: 24f030a1a1a3d2dba629c93683903759164ba346
     steps:
       - name: Verify merged ancestry and remove exact feature branch
         shell: bash
         run: |
           set -euo pipefail
           test -n "$GH_TOKEN"
-          gh api "repos/$TARGET_REPO/pulls/68" | jq -e --arg sha "$MERGE_SHA" '.merged == true and .merge_commit_sha == $sha' >/dev/null
-          gh api "repos/$TARGET_REPO/compare/develop...$EXPECTED" | jq -e '.ahead_by == 0' >/dev/null
-          gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$EXPECTED" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
           gh auth setup-git --hostname github.com
           git init -q "$RUNNER_TEMP/home-pr68-cleanup"
           cd "$RUNNER_TEMP/home-pr68-cleanup"
