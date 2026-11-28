@@ -1,0 +1,51 @@
+name: Cleanup merged HOME PR 62 and scan CI branches
+on:
+  workflow_dispatch:
+  push:
+    branches: ['4.1.0']
+    paths: ['.github/workflows/cleanup-merged-home-pr62.yml']
+permissions:
+  contents: read
+concurrency:
+  group: cleanup-merged-home-pr62
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    if: github.ref == 'refs/heads/4.1.0' && github.repository == '969981/PokeHome_Resources' && github.actor == '969981'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.HOME_CORE_EDITOR_PUSH_TOKEN }}
+      TARGET_REPO: 969981/HOME-Live-Plugin-CHS
+      MERGE_SHA: 99eced68b656732e58d32bcbfb7c034e55d790e8
+    steps:
+      - name: Verify merged ancestry and exact cleanup refs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN"
+          gh api "repos/$TARGET_REPO/compare/develop...$MERGE_SHA" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+          gh auth setup-git --hostname github.com
+          git init -q "$RUNNER_TEMP/home-pr62-cleanup"
+          cd "$RUNNER_TEMP/home-pr62-cleanup"
+          git remote add origin "https://github.com/$TARGET_REPO.git"
+          delete_exact() {
+            local branch="$1" expected="$2" ancestor="$3"
+            local ref="refs/heads/$branch" actual
+            actual="$(git ls-remote --heads origin "$ref" | cut -f1)"
+            if [ -z "$actual" ]; then
+              echo "$branch already absent"
+              return
+            fi
+            test "$actual" = "$expected" || { echo "::error::Unexpected head for $branch"; exit 1; }
+            gh api "repos/$TARGET_REPO/compare/develop...$ancestor" | jq -e '.ahead_by == 0 and (.status == "behind" or .status == "identical")' >/dev/null
+            git push --force-with-lease="$ref:$expected" origin ":$ref"
+            test -z "$(git ls-remote --heads origin "$ref")"
+            echo "Verified deletion of $branch"
+          }
+          # The three CI refs were independently inspected: each contains only its own diagnostic JSON commit.
+          delete_exact fix/linked-box-scan-sync 00f14a97d146f7012b0f8f9978bff5c4a0f66ca7 00f14a97d146f7012b0f8f9978bff5c4a0f66ca7
+          delete_exact ci/linked-scan-clean-46091265401-1 6ed47f975cfde5acae4a0d77ab60de2b5cea07e7 27ab8a1a3eecb1847740ec1bb66a7897fbdf09ba
+          delete_exact ci/linked-scan-clean-46091683547-1 69f95add1655687a8f22a2958f56b55894b52cf1 1422bb7be4e945a335160348aba00593503d121c
+          delete_exact ci/linked-scan-clean-46092218707-1 ea6a7c2042d62fa617d9737843f43802c03e6006 00f14a97d146f7012b0f8f9978bff5c4a0f66ca7
+          echo "develop untouched; all four cleanup refs verified absent."
